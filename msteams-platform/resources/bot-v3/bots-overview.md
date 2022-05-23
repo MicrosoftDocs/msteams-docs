@@ -3,7 +3,7 @@ title: Add bots to Microsoft Teams apps
 description: Describes how to get started developing bots in Microsoft Teams
 ms.topic: conceptual
 keywords: teams bots development
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2018
 ---
 # Add bots to Microsoft Teams apps
@@ -13,7 +13,7 @@ ms.date: 05/20/2018
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
+> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not available in Department of Defense (DOD).
 
 ![Example of a bot assisting a user](~/assets/images/bot_example.png)
 
