@@ -32,7 +32,7 @@ As a Teams admin, you can upload and pre-install the app package for your organi
 
 ### Microsoft Admin Center
 
-As a global admin, you can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+As a global admin, you can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). For more information, see [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
 ## Multitenant distribution
 
