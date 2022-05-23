@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Teams Developer Documentation # < 60 chars
-summary: Welcome to overview of Microsoft Teams Developer Documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
+title: Microsoft Teams developer documentation # < 60 chars
+summary: Welcome to overview of Microsoft Teams developer documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
   ms.service: service #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.subservice: subservice # Optional; Remove if no subservice is used.
