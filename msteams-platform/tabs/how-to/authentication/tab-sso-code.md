@@ -18,11 +18,11 @@ You need to configure your tab app's client-side code to obtain an access token 
 
 This section covers:
 
-- [Update client-side code to get an access token](#update-client-side-code-to-get-an-access-token)
+- [Add client-side code](#add-client-side-code)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 - [Validate the access token](#validate-the-access-token)
 
-## Update client-side code to get an access token
+## Add client-side code
 
 To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
 
@@ -35,6 +35,7 @@ To obtain app access for the current app user, your client-side code must make a
 ### Client-side code to obtain access token
 
 You need to update client-side code for using `getAuthToken()` to initiate the validation process.
+
 <br>
 <details>
 <summary>Learn more about getAuthToken()</summary>
@@ -55,7 +56,7 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 
 #### Add code for getAuthToken
 
-Add the following code snippet to the client-side code to:
+Add JavaScript code snippet to the tab app to:
 
 - Call `getAuthToken()`.
 - Parse the access token or pass it to the server-side code.
