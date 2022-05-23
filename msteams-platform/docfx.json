@@ -41,7 +41,7 @@
         "manager": "billbl",
         "author": "surbhigupta",
         "ms.suite": "office365",
-        "ms.prod": "msteams",
+        "ms.service": "msteams",
         "ms.author": "lajanuar",
         "searchScope": [ "Teams" ],
         "feedback_system": "GitHub",
