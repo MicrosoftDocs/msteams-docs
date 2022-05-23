@@ -111,7 +111,7 @@ const { container } = await client.joinContainer(schema);
 // ... ready to start app sync logic
 ```
 
-That's all it took to setup your container and join the session for the meeting. Now, let's review the different types of _distributed-data structures_ that you can use with Live Share.
+That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with Live Share.
 
 ## Fluid distributed data structures (DDS)
 
@@ -152,7 +152,7 @@ function onClickAddToPlaylist(video) {
 
 ## Live Share ephemeral data structures
 
-Live Share includes a set of new ephemeral `SharedObject` classes which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – like our popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
+Live Share includes a set of new ephemeral `SharedObject` classes which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – such as the popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -162,7 +162,7 @@ Live Share includes a set of new ephemeral `SharedObject` classes which provide 
 
 ### EphemeralPresence example
 
-The `EphemeralPresence` class makes knowing whom is attending a meeting easier than ever. Presence updates are periodically sent so that each client can keep track of who is online, away, or offline. When you call the `.start()` or `.updatePresence()` functions, you can assign a custom `userId`, as well as custom metadata (e.g., name).
+The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign a custom metadata, such as an unique identifier or name.
 
 ```javascript
 import { EphemeralPresence, PresenceState } from "live-share";
