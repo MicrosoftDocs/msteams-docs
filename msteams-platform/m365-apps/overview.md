@@ -47,7 +47,7 @@ With an aim toward simplifying and streamlining the Microsoft 365 developer ecos
 ### Graph connectors
 
 With Microsoft Graph connectors, your organization can index third-party data so that it appears as Microsoft Search results, expanding the types of searchable content sources in your Teams apps.
-To learn more, see [Microsoft Graph connectors overview for Microsoft Search](/microsoftsearch/connectors-overview).
+For more information, see [Microsoft Graph connectors overview for Microsoft Search](/microsoftsearch/connectors-overview).
 
 To get started with graph connectors in Teams apps, check out the [Teams Toolkit Graph connectors sample](https://aka.ms/teamsfx-graph-connector-sample) and [Microsoft Teams Developer preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) reference.
 
