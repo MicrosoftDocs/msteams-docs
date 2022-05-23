@@ -22,55 +22,52 @@ Choose to add authentication for your app in one of the two ways:
 Enable authentication with SSO or third party OAuth IdPs in your tab app, bot app, and messaging extension app. Select one of the two methods for your app:
 
 :::row:::
-    :::column span="2":::
+    :::column span="1":::
         SSO
     :::column-end:::
     :::column span="1":::
         &nbsp;
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         OAuth
     :::column-end:::
 :::row-end:::
 :::row:::
-    :::column span="2":::
+    :::column span="1":::
         :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
     :::column-end:::
     :::column span="1":::
         <br>
-
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tab app**
         
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentication with third-party OAuth provider for tab app." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
     :::column-end:::
 :::row-end:::
 :::row:::
-    :::column span="2":::
+    :::column span="1":::
         :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
     :::column-end:::
     :::column span="1":::
         <br>
-
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
         
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentication with third-party OAuth provider for bot app." link="../../bots/how-to/authentication/add-authentication.md" border="false":::
     :::column-end:::
 :::row-end:::
 :::row:::
-    :::column span="2":::
+    :::column span="1":::
         :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
     :::column-end:::
     :::column span="1":::
         <br>
-
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Message extension app**
         
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
     :::column-end:::
 :::row-end:::
