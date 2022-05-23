@@ -42,9 +42,9 @@ items:
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 3.8.1 version. |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0 version. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    | **Optional** | &nbsp; | &nbsp; |
@@ -428,7 +428,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created three types of Teams apps! 
+        Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -451,7 +451,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created three types of Teams apps! 
+        Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
@@ -480,17 +480,17 @@ items:
 
     You've done it!
 
-    You've created three apps, each with a different capability: a tab app, a bot app, and a message extension app.
+    You've created a bot app.
 
-    Now that you've learned to create basic apps, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+    Now that you've learned to create basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
 
     To add capabilities to your existing app:
 
-    1. Select **Add capability** from the **Development** section of the Teams Toolkit sidebar.
+    1. Select **Add features** from the **Development** section of the Teams Toolkit sidebar.
 
     1. Select the capability you want to add to your app.
 
     That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
 
-    You've completed the tutorial to build apps with JavaScript.
+    You've completed the tutorial to build bot with JavaScript.
     
