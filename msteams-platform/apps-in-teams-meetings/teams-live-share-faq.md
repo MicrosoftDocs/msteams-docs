@@ -8,7 +8,7 @@ ms.author: v-ypalikila
 
 ---
 
-# Live Share FAQ
+# Live Share SDK FAQ
 
 Get answers to common questions when using Live Share.<br>
 
@@ -18,7 +18,7 @@ Get answers to common questions when using Live Share.<br>
 
 <summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
 
-Yes. When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share will still associate containers you create with meetings, but you'll need to create your own Azure `ITokenProvider` to sign tokens for your containers and regional requirements. For more information, see Azure [Fluid Relay documentation](/azure/azure-fluid-relay/).
+Yes. When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share  associates containers you create with meetings, but you'll need to create your own Azure `ITokenProvider` to sign tokens for your containers and regional requirements. For more information, see Azure [Fluid Relay documentation](/azure/azure-fluid-relay/).
 
 <br>
 
