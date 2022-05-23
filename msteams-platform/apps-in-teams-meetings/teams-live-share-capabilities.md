@@ -17,6 +17,20 @@ Live Share can be added to your meeting extension's side panel and stage context
 > [!Note]
 > At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Support for other meeting types are coming soon.
 
+## Installing
+
+To add the latest version of the SDK to your application using NPM:
+
+```bash
+npm install @microsoft/live-share --save
+```
+
+or using [Yarn](https://yarnpkg.com/):
+
+```bash
+yarn add @microsoft/live-share
+```
+
 ## Register RSC permissions
 
 To enable Live Share for your meeting extension, you must first add the following RSC permissions into your app manifest:

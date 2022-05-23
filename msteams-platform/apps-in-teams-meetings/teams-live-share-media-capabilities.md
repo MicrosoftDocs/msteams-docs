@@ -16,6 +16,22 @@ Video and audio are instrumental parts of the modern world and workplace. We've 
 
 Live Share makes enabling **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, developers can individually attribute views and license, while providing the highest possible quality available through your app.
 
+## Installing
+
+To add the latest version of the SDK to your application using NPM:
+
+```bash
+npm install @microsoft/live-share --save
+npm install @microsoft/live-share-media --save
+```
+
+or using [Yarn](https://yarnpkg.com/):
+
+```bash
+yarn add @microsoft/live-share
+yarn add @microsoft/live-share-media
+```
+
 ## Media sync overview
 
 Live Share has two primary classes related to media synchronization:
