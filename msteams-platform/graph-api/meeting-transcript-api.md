@@ -17,7 +17,7 @@ Teams Graph Service allows you to access post- meeting transcript.
 > [!NOTE]
 > For information on how to choose permissions, see [Permissions](/graph/permissions-reference?branch=main)
 
-Teams Graph Service allows you to access post- meeting transcript using APIs. To call the APIs any one of the permission listed in the following table is required:
+Teams Graph Service allows you to access post- meeting transcript using APIs. To call the APIs any one of the permissions listed in the following table is required:
 
 |Permission type      | Permissions (from least to most privileged)              |
 |--------------------|---------------------------------------------------------|
@@ -29,7 +29,7 @@ To use application permission for the API, tenant administrators must create an 
 
 ## List of APIs
 
-Teams Graph Service will leverage Meeting Artifacts Service (https://aka.ms/meetingArtifactsApi) using the following APIs to get meeting’s transcripts. 
+Teams Graph Service will apply Meeting Artifacts Service (https://aka.ms/meetingArtifactsApi) using the following APIs to get meeting’s transcripts. 
 
 <br>
 
@@ -45,13 +45,13 @@ GET /users({userId})/onlineMeetings({meetingId})/transcripts
 
 **Optional query parameters**
 
-This method supports the `$skipToken` and `$top` [OData query parameters](/graph/query-parameters) to help customize the response.
+The method supports the `$skipToken` and `$top` [OData query parameters](/graph/query-parameters) to help customize the response.
 
 **Supported query patterns**
 
 | Pattern                | Supported | Syntax                                 | Notes |
 | ---------------------- | ------- | -------------------------------------- | ----- |
-| Server-side pagination |     ✓     | `@odata.nextLink`                      | You will get a continuation token in the response, when a result set spans multiple pages. |
+| Server-side pagination |     ✓     | `@odata.nextLink`                      | Get a continuation token in the response, when a result set spans multiple pages. |
 | Page limit             |     ✓     | `/transcripts?$top=20` | Get transcripts with page size 20. Default page limit is 10. Max page limit is 100. |
 
 **Request headers**
@@ -62,7 +62,7 @@ This method supports the `$skipToken` and `$top` [OData query parameters](/graph
 
 **Request body**
 
-Do not supply a request body for this method.
+Don't supply a request body for this method.
 
 **Response**
 
@@ -131,7 +131,7 @@ GET users({userId})/onlineMeetings({meetingId})/transcripts({transcriptId})
 
 **Request body**
 
-Do not supply a request body for this method.
+Don't supply a request body for this method.
 
 **Response**
 
