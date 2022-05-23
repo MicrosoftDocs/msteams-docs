@@ -3,7 +3,7 @@ title: Public developer preview manifest schema reference
 description: Sample manifest file and description of all its components that are supported for Microsoft Teams
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
 ---
 # Reference: Public developer preview manifest schema for Microsoft Teams
