@@ -20,16 +20,9 @@ This section covers:
 
 - [Update client-side code to get an access token](#update-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
-- [Decode and validate the access token](#decode-and-validate-the-access-token)
+- [Validate the access token](#Validate-the-access-token)
 
 ## Update client-side code to get an access token
-
-<!--Your app user must give consent to Teams for using the Teams identity token (ID token) to get user-level permission. Azure AD receives the app user's Teams ID token, and sends an access token to Teams.
-
-Here's a quick look at types of tokens:
-
-- **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses this token to pre-fetch access token for an app user who is currently logged into Teams.
-- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app.-->
 
 To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
 
@@ -42,11 +35,13 @@ To obtain app access for the current app user, your client-side code must make a
 ### Client-side code to obtain access token
 
 You need to add the client-side code for using `getAuthToken()` to initiate the validation process.
+<br>
+<details>
+<summary>Learn more about getAuthToken()</summary>
+`getAuthToken()` is a method in Microsoft Teams JavaScript SDK. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
 
-> [!NOTE]
-> `getAuthToken()` is a method in Microsoft Teams JavaScript SDK. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
->
-> For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken).
+ For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
+</details>
 
 #### When to call getAuthToken
 
@@ -63,7 +58,7 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 > As a best practice for security of access token:
 >
 > - Always call `getAuthToken()` only when you need an access token.
-> - Teams will cache access token for you. Don't cache or store the access token in your app's code.
+> - Teams will cache the access token for you. Don't cache or store it in your app's code.
 
 #### Add code for getAuthToken
 
@@ -107,15 +102,17 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-When an app user accesses your tab app for the first time and your tab app makes the `getAuthToken()` call, the app user must give consent. The following consent dialogs appear at runtime:
+When an app user accesses your tab app for the first time and your tab app makes the `getAuthToken()` call, the app user must give consent. The consent dialog that appears is for open-id scopes.
 
-1. **Teams consent dialog**:
-  It's the first consent dialog that appears. The app user must give consent to Teams for using Teams ID token.
+The following consent dialogs appear at runtime:
+
+1. **Teams dialog**:
+  It's the first consent dialog that appears. Teams informs the app user through this dialog that the tab app will require app user's information before they can access it. It prepares the app user for the Azure AD dialog.
 
 1. **Azure AD consent dialog**:
-  After Teams receives the app user's consent for using the ID token to obtain access token, it displays the Azure AD consent dialog. It seeks the app user's consent for user-level permissions that you've configured as scope in Azure AD.
+  Azure AD consent dialog is displayed to get the consent from the app user for open-id scope.
 
-The consent given in these two dialogs is to be given only once. The app user is able to access and use your tab app for the granted permissions and scopes.
+The consent given in these two dialogs is to be given only once. The app user can access and use your tab app for the granted permissions and scopes.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
@@ -176,9 +173,9 @@ $.ajax({
 });
 ```
 
-### Decode and validate the access token
+### Validate the access token
 
-Web APIs on your server must decode the access token, and validate if it is sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.
+Web APIs on your server must decode the access token, and verify if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
