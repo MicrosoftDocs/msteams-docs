@@ -21,7 +21,7 @@ To get started, install the following:
 * [Latest version of Visual Studio Code](https://code.visualstudio.com/).
 * [Git](https://git-scm.com/downloads)
 
-## Build the Dice Roller app
+## Build and run the Dice Roller app
 
 1. Go to the [Dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample app.
 
@@ -48,15 +48,22 @@ To get started, install the following:
    ```bash
    $ npm start
    ```
+  
+     A new browser tab opens a http://localhost:8080 and the Dice Roller game appears. 
 
-  A new browser tab opens a http://localhost:8000 and the Dice Roller game appears. To see collaboration in
-  action, copy the complete URL in the browser, including the ID and paste the URL in a new window or a different browser. This opens a second client for your dice roller application. With both windows open, select the **Roll** button in either and note that the state of the dice changes in both clients.
+1. Copy the complete URL in the browser, including the ID and paste the URL in a new window or a different browser.
 
-  **Congratulations** you have successfully taken the first step towards unlocking the world of Live Share based collaboration.
+   A second client for your dice roller application opens.
 
-### Configure the Dice Roller app
+1. Open both the windows and select the **Roll** button in one window. The state of the dice changes in both clients.
 
-In the Dice Roller sample, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
+   **Congratulations** you have successfully taken the first step towards unlocking the world of Live Share based collaboration.
+
+   :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller multiple tabs":::
+
+## Dice Roller app code walkthrough
+
+In this walkthrough, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -307,17 +314,19 @@ function renderSettings(elem) {
 }
 ```
 
-## Run the Dice Roller app
+## Code samples
 
-The [complete code for this application is available](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) for you to try out. Try opening it in multiple browser windows to see the changes reflected between clients.
+|Sample name|Description|JavaScript|
+|:----------- |:------ |:------ |
+|Dice Roller|Enable all connected clients to roll a dice and view the result.|[View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)|.
 
 ## Next step
 
 > [!div class="nextstepaction"] 
-> [Core Capabilities](teams-live-share-capabilities.md)
+> [Core capabilities](teams-live-share-capabilities.md)
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Reference docs](https://aka.ms/livesharedocs)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Reference docs](https://aka.ms/livesharedocs)
+* [Teams apps in meetings](teams-apps-in-meetings.md)

@@ -16,11 +16,11 @@ ms.author: v-ypalikila
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
 > [!Note]
-> At this time, only scheduled meetings are supported, and all participants must be on the meeting calendar. Support for other meeting types is coming soon.
+> At this time, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
 
 ## Install the JavaScript SDK
 
-The Live Share SDK is a JavaScript package published on NPM, and can be downloaded through NPM or Yarn.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [NPM](https://www.npmjs.com/package/@microsoft/live-share), and can be downloaded through NPM or Yarn.
 
 **NPM**
 
@@ -63,19 +63,19 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
         // ...other permissions here​
         {​
           "name": "LiveShareSession.ReadWrite.Chat",​
-          "type": "Delegated“​
+          "type": "Delegated"
         },
         {​
           "name": "LiveShareSession.ReadWrite.Group",​
-          "type": "Delegated“​
+          "type": "Delegated"
         },
         {​
           "name": "MeetingStage.Write.Chat",​
-          "type": "Delegated“​
+          "type": "Delegated"
         },
         {​
           "name": "ChannelMeetingStage.Write.Group",​
-          "type": "Delegated“​
+          "type": "Delegated"
         }
       ]​
     }​
@@ -274,7 +274,7 @@ function onSelectPresentMode(documentId) {
 ## Next step
 
 > [!div class="nextstepaction"] 
-> [Live Share Media Capabilities](teams-live-share-media-capabilities.md)
+> [Live Share media capabilities](teams-live-share-media-capabilities.md)
 
 ## See also
 
