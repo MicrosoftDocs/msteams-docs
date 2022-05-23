@@ -10,15 +10,13 @@ ms.author: v-ypalikila
 
 # Live Share media capabilities
 
-For complete API-level documentation, please visit the Live Share [API reference docs](https://aka.ms/livesharedocs).
-
 Video and audio are instrumental parts of the modern world and workplace. We've heard wide ranging feedback that there is more we can do to increase the quality, accessibility, and license protections of watching videos together in meetings.
 
 The Live Share SDK makes enabling **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, developers can individually attribute views and license, while providing the highest possible quality available through your app.
 
 ## Installing
 
-To add the latest version of the SDK to your application using NPM:
+To add the latest version of the SDK to your application using npm:
 
 ```bash
 npm install @microsoft/live-share --save
@@ -41,7 +39,7 @@ The Live Share SDK has two primary classes related to media synchronization:
 | [EphemeralMediaSession](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSession.html)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
 | [MediaPlayerSynchronizer](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.MediaPlayerSynchronizer.html) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
 
-Let's look at an example of this in the code.
+The following code is an example:
 
 ```html
 <body>
@@ -76,7 +74,7 @@ const allowedRoles = ["Organizer", "Presenter"];
 await mediaSession.start(allowedRoles);
 ```
 
-The `EphemeralMediaSession` automatically listens for changes to the group's playback state and automatically applies changes through the `MediaPlayerSynchronizer`. To avoid playback state changes that a user didn't intentionally initiate, such as a buffer event, we must call transport controls through the synchronizer, rather than directly through the player.
+The `EphemeralMediaSession` automatically listens for changes to the group's playback state and applies changes through the `MediaPlayerSynchronizer`. To avoid playback state changes that a user didn't intentionally initiate, such as a buffer event, we must call transport controls through the synchronizer, rather than directly through the player.
 
 Let's do that now.
 
@@ -117,11 +115,11 @@ document.getElementById("change-track-button").onclick = () => {
 ```
 
 > [!Note]
-> While you can use the `EphemeralMediaSession` object to synchronize media directly, we recommend using the `MediaPlayerSynchronizer` unless you want more fine tuned control of the synchronization logic. Depending on the player you use in your app, you may want to create a delegate shim to make your web player's interface match the HTML media interface.
+> While you can use the `EphemeralMediaSession` object to synchronize media directly, using the `MediaPlayerSynchronizer` unless you want more fine tuned control of the synchronization logic. Depending on the player you use in your app, you might want to create a delegate shim to make your web player's interface match the HTML media interface.
 
 ## Suspensions and wait points
 
-If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSessionCoordinatorSuspension.html) object is local by default, which can be helpful in cases where a user may want to catch up on something they missed, take a break, etc. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSessionCoordinatorSuspension.html) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 ```javascript
 // Suspend the media session coordinator
@@ -210,5 +208,6 @@ To enable audio ducking, you must also add the following [RSC](/microsoftteams/p
 ## See also
 
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 - [Reference docs](https://aka.ms/livesharedocs)
 - [Teams apps in meetings](teams-apps-in-meetings.md)
