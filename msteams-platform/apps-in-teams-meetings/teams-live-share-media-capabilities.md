@@ -203,11 +203,12 @@ To enable audio ducking, you must also add the following [RSC](/microsoftteams/p
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Live Share FAQ](teams-live-share-faq.md)
+> [Agile Poker Tutorial](../sbs-teams-live-share.yml)
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-- [Reference docs](https://aka.ms/livesharedocs)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [Live Share FAQ](teams-live-share-faq.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
+* [Reference docs](https://aka.ms/livesharedocs)
+* [Teams apps in meetings](teams-apps-in-meetings.md)
