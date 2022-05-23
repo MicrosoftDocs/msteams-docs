@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/19/2022|Bots and Message extensions for GCC and GCCH| • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/28/2022| Common reasons for app validation failure | Distribute your app > Publish to the Teams store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
@@ -269,6 +270,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |04/06/2022| Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
