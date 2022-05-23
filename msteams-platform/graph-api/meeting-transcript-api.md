@@ -197,7 +197,7 @@ Do not supply a request body for this method.
 
 **Response**
 
-If successful, this method returns a `200 OK` response code and contains bytes for [callTranscript](../resources/callTranscript.md) object in the response body. `content-type` header specifies type of the transcript content.
+If successful, this method returns a `200 OK` response code and contains bytes for callTranscript object in the response body. `content-type` header specifies type of the transcript content.
 
 **Examples** 
 
@@ -304,4 +304,4 @@ If successful, this method returns a `200 OK` response code and contains bytes f
     
 <br>
 
-</details>
+</details
