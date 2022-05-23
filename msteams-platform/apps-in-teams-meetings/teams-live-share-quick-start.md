@@ -7,9 +7,9 @@ ms.author: stevenic
 ---
 ---
 
-# Live Share quick start
+# Get started with Live Share SDK
 
-This quick start is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
+This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
@@ -17,8 +17,8 @@ This quick start is an evolution of the [Fluid Framework Quick Start](https://fl
 
 To get started, install the following:
 
-* [Node.js](https://nodejs.org/en/download): Live Share supports Node.js LTS versions 12.17 and greater.
-* Code editor: We recommend [Visual Studio Code](https://code.visualstudio.com/).
+* [Node.js](https://nodejs.org/en/download): The Live Share SDK supports Node.js LTS versions 12.17 and later.
+* [Latest version of Visual Studio Code](https://code.visualstudio.com/).
 * [Git](https://git-scm.com/downloads)
 
 ## Get started

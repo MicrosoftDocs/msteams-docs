@@ -13,14 +13,14 @@ ms.author: v-ypalikila
 > [!NOTE]
 > For more information, see Live Share [API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 
-Live Share can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate Live Share into your app and key capabilities of the SDK.
+The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
 > [!Note]
 > At this time, only scheduled meetings are supported, and all participants must be on the meeting calendar. Support for other meeting types is coming soon.
 
 ## Install the JavaScript SDK
 
-Live Share is a JavaScript package published on NPM, and can be downloaded through NPM or Yarn.
+The Live Share SDK is a JavaScript package published on NPM, and can be downloaded through NPM or Yarn.
 
 **NPM**
 
@@ -36,7 +36,7 @@ $ yarn add @microsoft/live-share
 
 ## Register RSC permissions
 
-To enable Live Share for your meeting extension, you must first add the following RSC permissions into your app manifest:
+To enable the Live Share SDK for your meeting extension, you must first add the following RSC permissions into your app manifest:
 
 ```json
 {
@@ -112,11 +112,11 @@ const { container } = await client.joinContainer(schema);
 // ... ready to start app sync logic
 ```
 
-That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with Live Share.
+That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 ## Fluid distributed data structures (DDS)
 
-Live Share supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available to you:
+The Live Share SDK supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available to you:
 
 | Shared Object                                                                       | Description                                                                                                                                  |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -153,7 +153,7 @@ function onClickAddToPlaylist(video) {
 
 ## Live Share ephemeral data structures
 
-Live Share includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – such as the popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
+The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – such as the popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |

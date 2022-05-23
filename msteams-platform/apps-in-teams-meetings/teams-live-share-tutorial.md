@@ -7,13 +7,60 @@ ms.author: stevenic
 ---
 ---
 
-# Live Share: DiceRoller Tutorial
+# Get started
 
-In this article, you'll learn about using the Live Share SDK by exploring the [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller). To get started, go through the [Quick Start](teams-live-share-quick-start.md) guide.
+This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
+
+:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
+
+## Set up your development environment
+
+To get started, install the following:
+
+* [Node.js](https://nodejs.org/en/download): The Live Share SDK supports Node.js LTS versions 12.17 and later.
+* [Latest version of Visual Studio Code](https://code.visualstudio.com/).
+* [Git](https://git-scm.com/downloads)
+
+## Get started
+
+1. Go to the [Dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample app.
+
+1. Clone the [Live Share SDK](https://github.com/microsoft/live-share-sdk) repository to test the sample app:
+
+    ```bash
+    $ git clone https://github.com/microsoft/live-share-sdk.git
+    ```
+
+1. Run the following command to go to the Dice Roller sample app folder:
+
+   ```bash
+    $ cd live-share-sdk\samples\01.dice-roller
+   ```
+
+1. Run the following command to install the dependency package:
+
+    ```bash
+    $ npm install
+    ```
+
+1. Run the following command to start the client and the local server:
+
+   ```bash
+   $ npm start
+   ```
+
+A new browser tab opens a http://localhost:8000 and the Dice Roller game appears. To see collaboration in
+action, copy the complete URL in the browser, including the ID and paste the URL in a new window or a different browser. This opens a second client for your dice roller application. With both windows open, select the **Roll** button in either and note that the state of the dice changes in both clients.
+
+**Congratulations** You have successfully taken the first step towards unlocking the world of Live Share based collaboration.
+
+## Build the Dice Roller sample using the Live Share SDk
+
+You'll learn about using the Live Share SDK by exploring the [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller). Go through the [Quick Start](teams-live-share-quick-start.md) guide.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller Sample":::
 
-In the Dice Roller sample, users are shown a dice with a button to roll it. When the dice is rolled, Live Share uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
+In the Dice Roller sample, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -226,7 +273,7 @@ function renderSidePanel(elem) {
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
 > [!Important]
-> Live Share's [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) is not supported in the tab `settings` context.
+> The Live Share SDK's [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 

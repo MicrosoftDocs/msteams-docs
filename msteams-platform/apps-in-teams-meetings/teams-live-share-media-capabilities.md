@@ -14,7 +14,7 @@ For complete API-level documentation, please visit the Live Share [API reference
 
 Video and audio are instrumental parts of the modern world and workplace. We've heard wide ranging feedback that there is more we can do to increase the quality, accessibility, and license protections of watching videos together in meetings.
 
-Live Share makes enabling **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, developers can individually attribute views and license, while providing the highest possible quality available through your app.
+The Live Share SDK makes enabling **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, developers can individually attribute views and license, while providing the highest possible quality available through your app.
 
 ## Installing
 
@@ -34,7 +34,7 @@ yarn add @microsoft/live-share-media
 
 ## Media sync overview
 
-Live Share has two primary classes related to media synchronization:
+The Live Share SDK has two primary classes related to media synchronization:
 
 | Classes                                                                                                                                  | Description                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |

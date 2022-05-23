@@ -299,18 +299,16 @@
     items:
     - name: Overview
       href: apps-in-teams-meetings/teams-live-share-overview.md
-    - name: Quick start
-      href: apps-in-teams-meetings/teams-live-share-quick-start.md
-    - name: DiceRoller tutorial
+    - name: Get started with DiceRoller sample
       href: apps-in-teams-meetings/teams-live-share-tutorial.md
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
     - name: Media capabilities
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-    - name: Live ShareFAQ
-      href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Agile Poker tutorial
       href: sbs-teams-live-share.yml
+    - name: Live Share SDK FAQ
+      href: apps-in-teams-meetings/teams-live-share-faq.md  
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
