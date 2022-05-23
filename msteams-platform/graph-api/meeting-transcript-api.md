@@ -10,7 +10,7 @@ keywords: Access meeting transcript using Graph API
 
 # Access meeting transcript using Graph API
 
-Teams Graph Service allows you to access post- meeting transcript. 
+Teams Graph Service allows you to access post- meeting transcript.
 
 ## Permissions
 
