@@ -12,9 +12,9 @@ ms.author: v-ypalikila
 
 Video and audio are instrumental parts of the modern world and workplace. We've heard wide ranging feedback that there is more we can do to increase the quality, accessibility, and license protections of watching videos together in meetings.
 
-The Live Share SDK makes enabling **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, developers can individually attribute views and license, while providing the highest possible quality available through your app.
+The Live Share SDK enables **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, you can individually attribute views and license, while providing the highest possible quality available through your app.
 
-## Installing
+## Install
 
 To add the latest version of the SDK to your application using npm:
 
@@ -23,7 +23,9 @@ npm install @microsoft/live-share --save
 npm install @microsoft/live-share-media --save
 ```
 
-or using [Yarn](https://yarnpkg.com/):
+OR
+
+To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
 yarn add @microsoft/live-share
@@ -39,7 +41,7 @@ The Live Share SDK has two primary classes related to media synchronization:
 | [EphemeralMediaSession](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSession.html)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
 | [MediaPlayerSynchronizer](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.MediaPlayerSynchronizer.html) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
 
-The following code is an example:
+Example:
 
 ```html
 <body>
@@ -76,7 +78,7 @@ await mediaSession.start(allowedRoles);
 
 The `EphemeralMediaSession` automatically listens for changes to the group's playback state and applies changes through the `MediaPlayerSynchronizer`. To avoid playback state changes that a user didn't intentionally initiate, such as a buffer event, we must call transport controls through the synchronizer, rather than directly through the player.
 
-Let's do that now.
+Example:
 
 ```html
 <body>
@@ -147,7 +149,7 @@ document.getElementById("ready-up-button").onclick = () => {
 
 ## Audio ducking
 
-At Build 2022, we announced intelligent audio ducking. In the coming months, we will be refining this feature to ultimately integrate with the MediaSynchronizer by default. Until then, if you want to try this _experimental_ feature in your application, add the following to your code.
+Live SHare SDK supports intelligent audio ducking. You can use the _experimental_ feature in your application, add the following to your code:
 
 ```javascript
 import * as microsoftTeams from "@microsoft/teams-js";
@@ -167,7 +169,7 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
 });
 ```
 
-To enable audio ducking, you must also add the following [RSC](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions into your app manifest:
+To enable audio ducking, you must add the following [RSC](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions into your app manifest:
 
 ```json
 {
@@ -203,11 +205,11 @@ To enable audio ducking, you must also add the following [RSC](/microsoftteams/p
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Agile Poker Tutorial](../sbs-teams-live-share.yml)
+> [Agile Poker tutorial](../sbs-teams-live-share.yml)
 
 ## See also
 
-* [Live Share FAQ](teams-live-share-faq.md)
+* [Live Share SDK FAQ](teams-live-share-faq.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 * [Reference docs](https://aka.ms/livesharedocs)

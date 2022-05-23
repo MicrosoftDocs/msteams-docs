@@ -13,13 +13,13 @@ ms.author: v-ypalikila
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
 > [!Note]
-Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
+> Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
 
 ## Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [NPM](https://www.npmjs.com/package/@microsoft/live-share), and can be downloaded through npm or Yarn.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
 
-**NPM**
+**npm**
 
 ```bash
 $ npm install @microsoft/live-share --save
@@ -80,16 +80,16 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 }
 ```
 
-## Joining a meeting session
+## Join a meeting session
 
-Follow the steps to join a session that is associated with a user's meeting: 
+Follow the steps to join a session that is associated with a user's meeting:
 
 1. Initialize the Teams Client SDK
 2. Initialize the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html)
-3. Define the data structures you want to synchronize. For example, `SharedMap`.
+3. Define the data structures you want to synchronize. For example, `SharedMap`
 4. Join the container
 
-Let's look at the code.
+Example:
 
 ```javascript
 import * as microsoftTeams from "@microsoft/teams-js";
@@ -113,7 +113,7 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 ## Fluid distributed data structures
 
-The Live Share SDK supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available:
+The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available:
 
 | Shared Object                                                                       | Description                                                                                                                                  |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -146,11 +146,11 @@ function onClickAddToPlaylist(video) {
 ```
 
 > [!Note]
-> Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting will be able to change data stored through these objects.
+> Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change data stored through these objects.
 
 ## Live Share ephemeral data structures
 
-The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app, such as the popular PowerPoint Live integration that might be better to use our `EphemeralEvent` or `EphemeralState` objects.
+The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app, such as the popular PowerPoint Live integration, you can use our `EphemeralEvent` or `EphemeralState` objects.
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -160,7 +160,9 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 
 ### EphemeralPresence example
 
-The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign custom metadata for that user, such as a unique identifier or name.
+The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as a unique identifier or name.
+
+Example:
 
 ```javascript
 import { EphemeralPresence, PresenceState } from "@microsoft/live-share";
@@ -225,9 +227,11 @@ notifications.sendEvent({
 
 ## Role verification for ephemeral data structures
 
-Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. We've designed our ephemeral objects to support role verification, allowing developers to define the roles that are allowed to send messages for each individual ephemeral object. For example, developers could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Ephemeral objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual ephemeral object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
-We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+You must listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+
+Example:
 
 ```javascript
 import { EphemeralState, UserMeetingRole } from "@microsoft/live-share";
