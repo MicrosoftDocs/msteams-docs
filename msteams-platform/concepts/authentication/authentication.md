@@ -38,7 +38,8 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
     :::column span="1":::
         <br>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tab app**
+
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Tab app**
         
     :::column-end:::
     :::column span="1":::
@@ -51,7 +52,8 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
     :::column span="1":::
         <br>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
+
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
         
     :::column-end:::
     :::column span="1":::
@@ -64,7 +66,8 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
     :::column span="1":::
         <br>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Message extension app**
+
+        &nbsp; &nbsp; &nbsp; **Message extension app**
         
     :::column-end:::
     :::column span="1":::
