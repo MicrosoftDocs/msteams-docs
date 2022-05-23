@@ -1,6 +1,6 @@
 ---
 title: Live Share FAQ
-description: Frequently-asked questions for the Live Share SDK.
+description:  In this module, learn more about Live Share Frequently Asked Questions.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila

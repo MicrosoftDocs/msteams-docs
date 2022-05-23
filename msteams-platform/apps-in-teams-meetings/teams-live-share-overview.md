@@ -1,6 +1,6 @@
 ---
 title: Live Share overview
-description: Overview of Microsoft Live Share for Teams.
+description: In this module, learn what is Microsoft Live Share SDK and its user scenarios.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
