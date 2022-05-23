@@ -24,17 +24,7 @@ This section covers:
 
 ## Add client-side code
 
-To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
-
-<!--This section includes:
-
-- [Client-side code to obtain access token](#client-side-code-to-obtain-access-token)
-- [Consent dialog for getting access token](#consent-dialog-for-getting-access-token)
-- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)-->
-
-### Client-side code to obtain access token
-
-You need to update client-side code for using `getAuthToken()` to initiate the validation process.
+To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token. You need to update client-side code for using `getAuthToken()` to initiate the validation process.
 
 <br>
 <details>
@@ -45,7 +35,7 @@ You need to update client-side code for using `getAuthToken()` to initiate the v
  For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
 </details>
 
-#### When to call getAuthToken
+### When to call getAuthToken
 
 Use `getAuthToken()` at the time when you need access token for the current app user:
 
@@ -54,7 +44,7 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 | When app user accesses the app | From inside `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
-#### Add code for getAuthToken
+### Add code for getAuthToken
 
 Add JavaScript code snippet to the tab app to:
 
