@@ -48,17 +48,17 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-## Azure bot service
+## Azure Bot Service
 
-The Azure bot service, along with the Bot Framework, provides tools to build, test, deploy, and manage intelligent bots, all in one place. You can also create your bot in Azure bot service.
+The Azure Bot Service, along with the Bot Framework, provides tools to build, test, deploy, and manage intelligent bots, all in one place. You can also create your bot in Azure Bot Service.
 
 > [!IMPORTANT]
-> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
+> Bot applications within Microsoft Teams are available in GCC-High through [Azure Bot Service](/azure/bot-service/channel-connect-teams).
 
 > [!NOTE]
 > * Bots in GCCH only support  up to manifest version v1.10.
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
-> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
+> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the Azure Bot Service only (no app service).
 >   <details>
 >   <summary><b>If you want to do bot registration only</b></summary>
 >
