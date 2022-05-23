@@ -295,7 +295,7 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
-  - name: Live Share SDK
+  - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
       href: apps-in-teams-meetings/teams-live-share-overview.md
