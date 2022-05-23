@@ -12,7 +12,7 @@ Before you add code to enable SSO, ensure that you've registered your app with A
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
 
-You need to configure your app's code to handle access tokens. Add the client-side code to obtain an access token from Azure AD using Teams identity of the app user. Teams caches this access token for future use. You can also use the access token as an identity token for authenticating and authorizing your app users. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and validate the token for Graph permissions.
+You need to configure your app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. It's acquired from cache, if it isn't expired. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and exchange it for Microsoft Graph token.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
 
@@ -67,7 +67,7 @@ Add the following code snippet to the client-side code to:
 - Call `getAuthToken()`.
 - Parse the access token or pass it to the server-side code.
 
-The following code snippet shows an example of calling `getAuthToken()` and parsing the token for user name and other credentials.
+The following code snippet shows an example of calling `getAuthToken()`.
 
 ```javascript
 var authTokenRequest = {
@@ -76,11 +76,11 @@ var authTokenRequest = {
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
-
+<!--
 <br>
-As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.-->
 
-<br>
+<br><br>
 <details>
 <summary>Here's an example of the client-side code:</summary>
 
