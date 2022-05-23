@@ -165,7 +165,7 @@ Live Share includes a set of new ephemeral `SharedObject` classes which provide 
 The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign custom metadata for that user, such as an unique identifier or name.
 
 ```javascript
-import { EphemeralPresence, PresenceState } from "live-share";
+import { EphemeralPresence, PresenceState } from "@microsoft/live-share";
 // ...
 const schema = {
   initialObjects: { presence: EphemeralPresence },
@@ -197,7 +197,7 @@ function onUserDidLogIn(userName, profilePicture) {
 `EphemeralEvent` is a great way to send simple events to other clients in a meeting. It is useful for scenarios like sending session notifications.
 
 ```javascript
-import { EphemeralEvent } from "live-share";
+import { EphemeralEvent } from "@microsoft/live-share";
 // ...
 const schema = {
   initialObjects: { notifications: EphemeralEvent },
@@ -232,7 +232,7 @@ Meetings in Teams can range from one-on-one calls to all-hands meetings, and may
 We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the "Organizer" role. There is no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either "Organizer" or "Presenter" when collaborating within an organization. If a user is an "Attendee", it is usually an intentional decision on behalf of a meeting organizer.
 
 ```javascript
-import { EphemeralState, UserMeetingRole } from "live-share";
+import { EphemeralState, UserMeetingRole } from "@microsoft/live-share";
 // ...
 const schema = {
   initialObjects: { appState: EphemeralState },
