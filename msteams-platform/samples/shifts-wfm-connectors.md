@@ -4,7 +4,7 @@ description: Learn about the benefits of using Workforce management Shifts conne
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
 ---
@@ -36,34 +36,6 @@ Open shifts view in Teams:
 The shifts view in Teams is shown in the following image:
 
 ![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
-
-## Kronos-to-Teams Shifts connector
-
-With open-source code, you can integrate Kronos Workforce Central Version 8.1 and above, with Teams Shifts such as, desktop or mobile Teams app for the following first-line worker and manager scenarios:
-
-* View schedule.
-
-* Publish and request open shifts.
-
-* Swap shifts.
-
-* Request time off.
-
-* Offer shifts.
-
-For more information on deployment of Kronos-to-Teams Shifts connector, see [Get it on GitHub](https://aka.ms/KronosShiftsConnector).
-
-## JDA-to-Teams Shifts connector
-
-With open-source code, you can integrate JDA, such as BlueYonder Version 17.2 and above, with Teams Shifts  such as, desktop or mobile Teams app for the following first-line worker and manager scenarios:
-
-* Publish shifts and schedule groups in JDA and view them in Teams.
-
-* Enable rich scheduling scenarios, including requesting shift swaps and time off.
-
-* Set user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
-
-For more information on contribution and suggestion, see [Get it on GitHub](https://aka.ms/JDAShiftsConnector).
 
 ## See also
 

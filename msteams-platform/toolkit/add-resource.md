@@ -3,7 +3,7 @@ title: Add Resources to Your Teams apps
 author: MuyangAmigo
 description:  Describes Add Resources of Teams Toolkit
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---

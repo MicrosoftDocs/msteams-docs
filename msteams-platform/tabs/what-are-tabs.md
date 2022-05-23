@@ -13,6 +13,8 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 > [!IMPORTANT]
 > Currently, custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+>
+> We recommend you to use the Teams client SDK via [npm package](https://www.npmjs.com/package/@microsoft/teams-js) and bundle it with your app as currently Teams client SDK is not available in Government Cloud CDN.
 
 The following image shows personal tabs:
 
@@ -68,6 +70,9 @@ You can use one of the following methods to create tabs:
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
 
 Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
+
+> [!Note]
+> Teams app doesn't recognize sub iframes. Therefore, it'll not load if there is an iframe within the tab app.
 
 For channel or group tabs, you can also create an additional configuration page. This page allows you to configure content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab can be added to multiple teams or group chats. On each subsequent install, your users can configure the tab, allowing you to tailor the experience as required. When users add or configure a tab, a URL is associated with the tab that is presented in the Teams user interface (UI). Configuring a tab simply adds additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose, which board the tab loads. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
