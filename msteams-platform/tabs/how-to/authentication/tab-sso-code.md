@@ -5,9 +5,9 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Update code to enable SSO
+# Add code to enable SSO
 
-Before you update code to enable SSO, ensure that you've registered your app with Azure AD.
+Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
@@ -33,26 +33,26 @@ Here's a quick look at types of tokens:
 
 To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
 
-This section includes:
+<!--This section includes:
 
 - [Client-side code to obtain access token](#client-side-code-to-obtain-access-token)
 - [Consent dialog for getting access token](#consent-dialog-for-getting-access-token)
-- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
+- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)-->
 
 ### Client-side code to obtain access token
 
-The tab app needs to make a JavaScript call towards Teams to obtain access token in exchange for the ID token of the current app user. You need to configure the client-side code for using `getAuthToken()` to initiate the validation process.
+You need to add the client-side code for using `getAuthToken()` to initiate the validation process.
 
 #### When to call getAuthToken
 
-Use `getAuthToken()` at the time when you need to obtain access token for the current app user:
+Use `getAuthToken()` at the time when you need access token for the current app user:
 
 | If access token is needed... | Call getAuthToken()... |
 | --- | --- |
 | When app user accesses the app | From inside `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
-When Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
+When Teams receives the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
 > As a best practice for security of access token:

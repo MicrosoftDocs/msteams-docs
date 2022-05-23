@@ -49,25 +49,11 @@ Now, let's see what happens at the backend during runtime to achieve true SSO us
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app, Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
+Achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app client and server, Teams client, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
-
-<!--
-```mermaid
-sequenceDiagram
-    User->>Tab app: Opens Teams app
-    Tab app->>Teams Client: 1. Call getAuthToken()
-    Teams Client->>Sign-in and Consent: 2. Check if consent is required
-    Sign-in and Consent->>Teams Client: Prompt for consent from new user
-    Teams Client->>Azure AD: 3. Request access token from Azure AD
-    Azure AD->>Teams Client: 4. Send access token to Teams Client
-    Teams Client->>Tab app: 5. Respond to getAuthToken() with access token
-    Tab app->>Tab app: 6. Parse access token to give access to user
-```
--->
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
@@ -184,4 +170,18 @@ Here are some use cases where enabling SSO is beneficial. Call `getAuthToken()` 
 - To authenticate an app user in Stage view.
 
 - To authenticate users for [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+-->
+
+<!--
+```mermaid
+sequenceDiagram
+    User->>Tab app: Opens Teams app
+    Tab app->>Teams Client: 1. Call getAuthToken()
+    Teams Client->>Sign-in and Consent: 2. Check if consent is required
+    Sign-in and Consent->>Teams Client: Prompt for consent from new user
+    Teams Client->>Azure AD: 3. Request access token from Azure AD
+    Azure AD->>Teams Client: 4. Send access token to Teams Client
+    Teams Client->>Tab app: 5. Respond to getAuthToken() with access token
+    Tab app->>Tab app: 6. Parse access token to give access to user
+```
 -->
