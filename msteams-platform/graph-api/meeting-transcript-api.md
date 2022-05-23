@@ -68,7 +68,7 @@ Do not supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of [callTranscript](../resources/callTranscript.md) objects in the response body.
 
-**Example**
+**Example: List of callTranscript**
 
 **Request**
 
@@ -116,6 +116,51 @@ Content-Type: application/json
 <details>
 <summary><b>Get callTranscript</b></summary>
 
+**HTTP request**
+
+```http
+GET me/onlineMeetings({meetingId})/transcripts({transcriptId})
+GET users({userId})/onlineMeetings({meetingId})/transcripts({transcriptId})
+```
+
+## Request headers
+
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer {token}. Required.  |
+
+## Request body
+
+Do not supply a request body for this method.
+
+## Response
+
+If successful, this method returns a `200 OK` response code and a [callTranscript](../resources/callTranscript.md) object in the response body.
+
+**Example: Get a callTranscript**
+
+**Request**
+
+``` http
+GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4
+```
+
+**Response**
+
+> [!NOTE]
+> The response object shown here might be shortened for readability.
+
+-->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('ba321e0d-79ee-478d-8e28-85a19507f456')/onlineMeetings('MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ')/transcripts/$entity",
+    "id": "MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4",
+    "createdDateTime": "2021-09-17T06:09:24.8968037Z"
+}
+```
 
 <br>
 
