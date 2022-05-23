@@ -10,17 +10,14 @@ ms.author: v-ypalikila
 
 # Live Share capabilities
 
-> [!NOTE]
-> For more information, see Live Share [API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-
-The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
+The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
 > [!Note]
-> At this time, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
+Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
 
 ## Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [NPM](https://www.npmjs.com/package/@microsoft/live-share), and can be downloaded through NPM or Yarn.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [NPM](https://www.npmjs.com/package/@microsoft/live-share), and can be downloaded through npm or Yarn.
 
 **NPM**
 
@@ -85,7 +82,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 ## Joining a meeting session
 
-Joining a session associated with a user's meeting can be done in a few simple steps, as follows:
+Follow the steps to join a session that is associated with a user's meeting: 
 
 1. Initialize the Teams Client SDK
 2. Initialize the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html)
@@ -116,11 +113,11 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 ## Fluid distributed data structures
 
-The Live Share SDK supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available to you:
+The Live Share SDK supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available:
 
 | Shared Object                                                                       | Description                                                                                                                                  |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone else in the session. |
+| [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                                    |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing document text editing.                                                                     |
 
@@ -149,17 +146,17 @@ function onClickAddToPlaylist(video) {
 ```
 
 > [!Note]
-> Core Fluid Framework DDS objects do not support meeting role verification. Everyone in the meeting will be able to change data stored through these objects.
+> Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting will be able to change data stored through these objects.
 
 ## Live Share ephemeral data structures
 
-The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – such as the popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
+The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app, such as the popular PowerPoint Live integration that might be better to use our `EphemeralEvent` or `EphemeralState` objects.
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [EphemeralPresence](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralPresence.html) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
 | [EphemeralEvent](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralEvent.html)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role (for example, the presenter) |
+| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter |
 
 ### EphemeralPresence example
 
@@ -279,5 +276,6 @@ function onSelectPresentMode(documentId) {
 ## See also
 
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 - [Reference docs](https://aka.ms/livesharedocs)
 - [Teams apps in meetings](teams-apps-in-meetings.md)
