@@ -8,7 +8,7 @@ ms.author: v-ypalikila
 
 ---
 
-# Live Share Capabilities
+# Live Share capabilities
 
 > [!NOTE]
 > For more information, see Live Share [API reference docs](https://livesharesdk.z5.web.core.windows.net/).
@@ -114,7 +114,7 @@ const { container } = await client.joinContainer(schema);
 
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
-## Fluid distributed data structures (DDS)
+## Fluid distributed data structures
 
 The Live Share SDK supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available to you:
 
@@ -230,7 +230,7 @@ notifications.sendEvent({
 
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. We've designed our ephemeral objects to support role verification, allowing developers to define the roles that are allowed to send messages for each individual ephemeral object. For example, developers could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
-We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the "Organizer" role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either "Organizer" or "Presenter" when collaborating within an organization. If a user is an "Attendee", it's usually an intentional decision on behalf of a meeting organizer.
+We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
 ```javascript
 import { EphemeralState, UserMeetingRole } from "@microsoft/live-share";
