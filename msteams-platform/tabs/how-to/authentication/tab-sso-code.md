@@ -34,10 +34,11 @@ To obtain app access for the current app user, your client-side code must make a
 
 ### Client-side code to obtain access token
 
-You need to add the client-side code for using `getAuthToken()` to initiate the validation process.
+You need to update client-side code for using `getAuthToken()` to initiate the validation process.
 <br>
 <details>
 <summary>Learn more about getAuthToken()</summary>
+<br>
 `getAuthToken()` is a method in Microsoft Teams JavaScript SDK. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
 
  For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
@@ -51,14 +52,6 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 | --- | --- |
 | When app user accesses the app | From inside `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
-
-When Teams receives the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
-
-> [!IMPORTANT]
-> As a best practice for security of access token:
->
-> - Always call `getAuthToken()` only when you need an access token.
-> - Teams will cache the access token for you. Don't cache or store it in your app's code.
 
 #### Add code for getAuthToken
 
@@ -78,6 +71,8 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
+You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
+
 <br>
 <details>
 <summary>Here's an example of the client-side code:</summary>
@@ -85,6 +80,14 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
 
 </details>
+
+When Teams receives the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD.
+
+> [!IMPORTANT]
+> As a best practice for security of access token:
+>
+> - Always call `getAuthToken()` only when you need an access token.
+> - Teams will cache the access token for you. Don't cache or store it in your app's code.
 
 #### ID token and access token
 
@@ -184,7 +187,7 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by the Azure AD. The `iss` claim in the token should start with this value.
+- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
 - The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
