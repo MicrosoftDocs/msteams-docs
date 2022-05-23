@@ -278,4 +278,5 @@ function onSelectPresentMode(documentId) {
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 - [Reference docs](https://aka.ms/livesharedocs)
+- [Live Share FAQ](teams-live-share-faq.md)
 - [Teams apps in meetings](teams-apps-in-meetings.md)
