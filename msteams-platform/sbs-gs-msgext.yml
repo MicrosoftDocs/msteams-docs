@@ -196,7 +196,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
-    1. Select **Create a new Teams app**  or **Start from a sample** to create an app using the Teams Toolkit.
+    1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
@@ -511,7 +511,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Message Extension capabilities. The final step is to deploy your app on Azure.
 
     Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
 
@@ -537,7 +537,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created three types of Teams apps! 
+        Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -560,7 +560,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created three types of Teams apps! 
+        Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
@@ -589,13 +589,13 @@ items:
 
     You've done it!
 
-    You've created three apps, each with a different capability: a tab app, a bot app, and a message extension app.
+    You've created a message extension app.
 
-    Now that you've learned to create basic apps, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
 
     To add capabilities to your existing app:
 
-    1. Select **Add capability** from the **Development** section of the Teams Toolkit sidebar.
+    1. Select **Add feature** from the **Development** section of the Teams Toolkit sidebar.
 
     1. Select the capability you want to add to your app.
 
