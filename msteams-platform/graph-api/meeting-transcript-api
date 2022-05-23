@@ -1,11 +1,11 @@
 ---
-title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
-description: Describes proactive messaging in Teams and how to implement it. Learn about enabling proactive app installation and messaging using code sample. 
+title: Access meeting transcript using Graph API
+description: How to access meeting transcript using Graph API
 ms.localizationpriority: medium
-author: akjo
-ms.author: lajanuar
+author: v-abira
+ms.author: Surbhigupta12
 ms.topic: Overview
-keywords: teams proactive messaging chat installation Graph
+keywords: Access meeting transcript using Graph API
 ---
 
 # Access meeting transcript using Graph API
