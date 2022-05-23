@@ -49,7 +49,7 @@ Here are some key benefits of the Live Share SDK:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Quick start](teams-live-share-quick-start.md)
+> [Get started with Dice Roller sample](teams-live-share-quick-start.md)
 
 ## See also
 

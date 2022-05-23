@@ -7,9 +7,9 @@ ms.author: stevenic
 ---
 ---
 
-# Get started with the Live Share SDK
+# Get started with Live Share SDK
 
-This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
+Get started with Live Share SDK using the Dice Roller sample. This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
@@ -21,7 +21,7 @@ To get started, install the following:
 * [Latest version of Visual Studio Code](https://code.visualstudio.com/).
 * [Git](https://git-scm.com/downloads)
 
-## Get started
+## Build the Dice Roller app
 
 1. Go to the [Dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample app.
 
@@ -49,16 +49,12 @@ To get started, install the following:
    $ npm start
    ```
 
-A new browser tab opens a http://localhost:8000 and the Dice Roller game appears. To see collaboration in
-action, copy the complete URL in the browser, including the ID and paste the URL in a new window or a different browser. This opens a second client for your dice roller application. With both windows open, select the **Roll** button in either and note that the state of the dice changes in both clients.
+  A new browser tab opens a http://localhost:8000 and the Dice Roller game appears. To see collaboration in
+  action, copy the complete URL in the browser, including the ID and paste the URL in a new window or a different browser. This opens a second client for your dice roller application. With both windows open, select the **Roll** button in either and note that the state of the dice changes in both clients.
 
-**Congratulations** You have successfully taken the first step towards unlocking the world of Live Share based collaboration.
+  **Congratulations** you have successfully taken the first step towards unlocking the world of Live Share based collaboration.
 
-## Build the Dice Roller sample using the Live Share SDk
-
-You'll learn about using the Live Share SDK by exploring the [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller). Go through the [Quick Start](teams-live-share-quick-start.md) guide.
-
-:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller Sample":::
+### Configure the Dice Roller app
 
 In the Dice Roller sample, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
 
@@ -69,7 +65,7 @@ In the Dice Roller sample, users are shown a dice with a button to roll it. When
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 
-## Set up the application
+### Set up the application
 
 Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html) from the Live Share SDK. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
   
@@ -142,7 +138,7 @@ async function start() {
 start().catch((error) => console.error(error));
 ```
 
-## Join a Fluid container
+### Join a Fluid container
 
 Not all of your apps views will need to be collaborative. The `stage` view will _always_ need collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
@@ -175,11 +171,11 @@ async function joinContainer() {
 > [!NOTE]
 > When testing locally, the TeamsFluidClient updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the TeamsFluidClient to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](https://livesharesdk.z5.web.core.windows.net/interfaces/_microsoft_live_share.ITeamsFluidClientOptions.html#setLocalTestContainerId) and [getLocalTestContainerId](https://livesharesdk.z5.web.core.windows.net/interfaces/_microsoft_live_share.ITeamsFluidClientOptions.html#getLocalTestContainerId) options passed to the TeamsFluidClient.
 
-## Write the stage view
+### Write the stage view
 
 Many Teams Meeting Extensibility applications will be designed to use React for their view framework, but it isn't required. To keep things simple, this sample uses standard HTML/DOM methods to render a view.
 
-### Start with a static view
+#### Start with a static view
 
 It is easy to create the view using local data without any Fluid functionality, then add Fluid by changing some key pieces of the app. 
 
@@ -209,9 +205,9 @@ function renderStage(diceMap, elem) {
 }
 ```
 
-## Connect the stage view to Fluid data
+### Connect the stage view to Fluid data
 
-### Modifying Fluid data
+#### Modifying Fluid data
 
 To begin using Fluid in the application, the first thing to change is what happens when the user selects the `rollButton`. Instead of updating the local state directly, the button updates the number stored in the `value` key of the passed in `diceMap`. Because the `diceMap` is a Fluid `SharedMap`, changes will be distributed to all clients. Any changes to the `diceMap` will cause a `valueChanged` event to be emitted, and an event handler can trigger an update of the view.
 
@@ -222,7 +218,7 @@ This pattern is common in Fluid because it enables the view to behave the same w
 ```
 
 
-### Relying on Fluid data
+#### Relying on Fluid data
 
 The next change that needs to be made is to change the `updateDice` function so it no longer accepts an arbitrary value. This means the app can no longer directly modify the local dice value. Instead, the value will be retrieved from the `SharedMap` each time `updateDice` is called.
 
@@ -234,7 +230,7 @@ The next change that needs to be made is to change the `updateDice` function so 
     updateDice();
 ```
 
-### Handling remote changes
+#### Handling remote changes
 
 The values returned from `diceMap` are only a snapshot in time. To keep the data up to date as it changes an event handler must be set on the `diceMap` to call `updateDice` each time that the `valueChanged` event is sent. To get a list of events fired and the values passed to those events, see [SharedMap](https://fluidframework.com/docs/data-structures/map/). 
 
@@ -242,7 +238,7 @@ The values returned from `diceMap` are only a snapshot in time. To keep the data
     diceMap.on("valueChanged", updateDice);
 ```
 
-## Write the side panel view
+### Write the side panel view
 
 The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For Live Share apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) from the side panel view will connect to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
 
@@ -268,7 +264,7 @@ function renderSidePanel(elem) {
 }
 ```
 
-## Write the settings view
+### Write the settings view
 
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
@@ -311,7 +307,7 @@ function renderSettings(elem) {
 }
 ```
 
-## Run the app
+## Run the Dice Roller app
 
 The [complete code for this application is available](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) for you to try out. Try opening it in multiple browser windows to see the changes reflected between clients.
 
