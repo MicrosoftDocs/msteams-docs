@@ -67,9 +67,9 @@ If you want to host your application related resources or access resources withi
 * **Verify sideloading permission using Visual Studio Code**
 
     1. Open **Visual Studio Code**.
-    1. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
-    1. Select **Accounts** and log in to your Microsoft 365 account.
-    1. Check whether you can view the option **Sideloading enabled** as shown in the following image:
+    2. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
+    3. Select **Accounts** and log in to your Microsoft 365 account.
+    4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading" border="true":::
 
