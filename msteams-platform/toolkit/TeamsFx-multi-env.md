@@ -171,7 +171,7 @@ Perform the following steps for customization:
   }
   ```
 
-8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit)
+8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 </details>
 <br>
