@@ -20,7 +20,7 @@
   items:
   - name: Get started overview
     href: get-started/get-started-overview.md  
-  - name: Build your first app using JavaScript
+  - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first messaging extension app using JavaScript
     href: sbs-gs-msgext.yml
