@@ -94,13 +94,11 @@ Here's a quick look at types of tokens used in the authentication and authorizat
 
 ### Consent dialog for getting access token
 
-When you call `getAuthToken()` and user consent is required for user-level permissions, a dialog is shown to the app user who is currently signed in.
+When you call `getAuthToken()` and app user's consent is required for user-level permissions, an Azure AD dialog is shown to the app user who is currently signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-When an app user accesses your tab app for the first time and your tab app makes the `getAuthToken()` call, the app user must give consent. The Azure AD consent dialog that appears is for open-id scopes.
-
-The consent is to be given only once. The app user can access and use your tab app for the granted permissions and scopes.
+This consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your tab app for the granted permissions and scopes.
 
 <!--The following consent dialogs appear at runtime:
 
