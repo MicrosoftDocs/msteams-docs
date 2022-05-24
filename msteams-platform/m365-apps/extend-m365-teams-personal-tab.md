@@ -20,7 +20,7 @@ Updating your personal app to run in Outlook and Office involves these steps:
 > * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO)
 > * Sideload your updated app in Teams
 
-The rest of this guide will walk you through these steps and show you how to preview your personal tab in other Microsoft 365 applications.
+The rest of this guide walks you through these steps and show you how to preview your personal tab in other Microsoft 365 applications.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update SDK references
 
-To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions  is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
+To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
@@ -101,8 +101,7 @@ Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.
 > * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Code inside *.html* files is not supported by the upgrade tooling and will require manual changes.
-
+> Code inside *.html* files is not supported by the upgrade tooling and require manual changes.
 
 ## Configure Content Security Policy headers
 
@@ -129,15 +128,15 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
-|Microsoft 365 client application | Client ID |
-|--|--|
-|Teams desktop, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-|Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Microsoft 365 client application | Client ID |
+    |--|--|
+    |Teams desktop, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+    |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## Sideload your app in Teams
 
@@ -159,23 +158,23 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
 
-After it's sideloaded to Teams, your personal tab will be available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
+After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
 
-You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams will not pin it as an app in Office or Outlook.
+You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams don't pin it as an app in Office or Outlook.
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
 Here's how to preview your app running in Office and Outlook, web and Windows desktop clients.
 
 > [!NOTE]
-> Uninstalling your app from Teams will also remove it from the **More Apps** catalogs in Outlook and Office. If you're using the Teams Toolkit sample app provided above
+> Uninstalling your app from Teams also removes it from the **More Apps** catalogs in Outlook and Office. If you're using the Teams Toolkit sample app provided above.
 
 ### Outlook on Windows
 
 To view your app running in Outlook on Windows desktop:
 
 1. Launch Outlook and sign in using your dev tenant account.
-1. On the side bar, select  **More Apps**. Your sideloaded app title will appear among your installed apps.
+1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs":::
@@ -185,7 +184,7 @@ To view your app running in Outlook on Windows desktop:
 To view your app in Outlook on the web:
 
 1. Navigate to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
@@ -195,7 +194,7 @@ To view your app in Outlook on the web:
 To view your app running in Office on Windows desktop:
 
 1. Launch Office and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
@@ -204,15 +203,15 @@ To view your app running in Office on Windows desktop:
 
 To preview your app running in Office on the web:
 
-1. Log into office.com with test tenant credentials.
-1. Select the **Apps** icon on the side bar. Your sideloaded app title will appear among your installed apps.
+1. Log into **office.com** with test tenant credentials.
+1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office on the web.
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
 
 ## Troubleshooting
 
-Currently, a subset of Teams application types and capabilities are supported in Outlook and Office clients. This support will expand over time. 
+Currently, a subset of Teams application types and capabilities are supported in Outlook and Office clients. This support expands over time.
 
 Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
 
@@ -234,7 +233,7 @@ Upon first run of local debug to Office or Outlook, you'll be prompted to sign i
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## Next steps
+## Next step
 
 Publish your app to be discoverable in Teams, Outlook, and Office:
 
