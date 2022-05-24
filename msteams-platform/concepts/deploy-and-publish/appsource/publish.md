@@ -149,7 +149,7 @@ When you feel your app is production ready, you can begin the process of getting
 
      1. The **Manage Subscriptions** section in Microsoft Admin Center shows the correct details of the subscriptions brought by your test users. Subscription status, number of licenses, and other details must be accurate.
 
-     1. Buying and removal of license workflows are working as expected. Ensure purchasers can increase the number of licenses from Microsoft Admin Center. Ensure license count and assignment on your SaaS application reflects respective licenses and the right assignees. Also ensure your SaaS application provides a way to take away a license from an user. Post removal of a license, ensure remaining assignments and count remain intact on your SaaS application and the correct details are reflected in the Microsoft Admin Center.
+     1. Buying and removal of license workflows are working as expected. Ensure purchasers can increase the number of licenses from Microsoft Admin Center. Ensure license count and assignment on your SaaS application reflects respective licenses and the right assignees. Also, ensure your SaaS application provides a way to take away a license from an user. Post removal of a license, ensure remaining assignments and count remain intact on your SaaS application and the correct details are reflected in the Microsoft Admin Center.
 
      1. Subscription cancellation is working as expected. Purchasers can cancel a subscription. Post cancellation, check if the correct subscription status is reflected in the Microsoft Admin Center and your SaaS application. Verify that the purchaser has lost access to the subscription after successful cancellation.
 
