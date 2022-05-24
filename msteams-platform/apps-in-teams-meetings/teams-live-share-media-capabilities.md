@@ -36,10 +36,10 @@ yarn add @microsoft/live-share-media
 
 The Live Share SDK has two primary classes related to media synchronization:
 
-| Classes                                                                                                                                  | Description                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [EphemeralMediaSession](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSession.html)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
-| [MediaPlayerSynchronizer](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.MediaPlayerSynchronizer.html) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
+| Classes                                                                                                                  | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| [EphemeralMediaSession](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
+| [MediaPlayerSynchronizer](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
 
 Example:
 
@@ -204,13 +204,12 @@ To enable audio ducking, add the following [RSC](/microsoftteams/platform/graph-
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Agile Poker tutorial](../sbs-teams-live-share.yml)
+> [!div class="nextstepaction"] > [Agile Poker tutorial](../sbs-teams-live-share.yml)
 
 ## See also
 
-* [Live Share SDK FAQ](teams-live-share-faq.md)
-* [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-* [Reference docs](https://aka.ms/livesharedocs)
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Live Share SDK FAQ](teams-live-share-faq.md)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
+- [Reference docs](https://aka.ms/livesharedocs)
+- [Teams apps in meetings](teams-apps-in-meetings.md)

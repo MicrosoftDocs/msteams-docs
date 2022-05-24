@@ -87,7 +87,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 Follow the steps to join a session that is associated with a user's meeting:
 
 1. Initialize the Teams Client SDK
-2. Initialize the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html)
+2. Initialize the [TeamsFluidClient](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient)
 3. Define the data structures you want to synchronize. For example, `SharedMap`
 4. Join the container
 
@@ -156,9 +156,9 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralPresence](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralPresence.html) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
-| [EphemeralEvent](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralEvent.html)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter.|
+| [EphemeralPresence](https://docs.microsoft.com/javascript/api/@microsoft/live-share/ephemeralpresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
+| [EphemeralEvent](https://docs.microsoft.com/javascript/api/@microsoft/live-share/ephemeralevent)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
+| [EphemeralState](https://docs.microsoft.com/javascript/api/@microsoft/live-share/ephemeralstate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter.|
 
 ### EphemeralPresence example
 
