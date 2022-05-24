@@ -31,7 +31,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
 
     If you want you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
@@ -45,6 +45,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
+Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
 
 # [Command Line](#tab/cli)
 
@@ -81,10 +82,21 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Add**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot showing the app being installed." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot showing the app being installed." border="false":::
+
+   The toolkit displays a message to indicate that the app is added to Teams.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
+ 
+    - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
+    - If you select **Try it**, Teams loads your app.
 
    Your app is loaded on the Azure site.
+   
+1. Select **Try it**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
+   The Message Extension app is loaded in a chat bot app.
 
-    Congratulations! Your tab app is now running remotely from Azure!
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
+
+
