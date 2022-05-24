@@ -101,6 +101,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-live-share-overview
+          itemType: concept
+          text: Enhanced collaboration with Live Share SDK
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
           text: Monetize your Teams app with a transactable SaaS offer

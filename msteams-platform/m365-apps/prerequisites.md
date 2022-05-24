@@ -25,9 +25,9 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 
 You'll also need to enable sideloading for your tenant:
 
-1. Sign in to Microsoft 365 admin center (https://admin.microsoft.com) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*
-1. Select: Teams apps > Manage apps > **Org-wide app settings**
-1. Under **Custom apps**, toggle on the option *Interaction with custom apps*
+1. Sign in to Microsoft 365 admin center (https://admin.microsoft.com) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*.
+1. Select: Teams apps > Manage apps > **Org-wide app settings**.
+1. Under **Custom apps**, toggle on the option *Interaction with custom apps*.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
 
@@ -93,5 +93,7 @@ The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolki
 
 Create or update a Teams app to run across Microsoft 365:
 
-* [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
-* [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
