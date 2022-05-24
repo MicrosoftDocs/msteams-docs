@@ -13,18 +13,18 @@ ms.author: v-ypalikila
 > [!Note]
 > The Live Share SDK is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the Live Share SDK.
 
-Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Using Live Share as a service includes a free, hosted, ready-to-use [Azure Relay Service](/azure/azure-relay/relay-what-is-it) to build your real-time interactive app without back-end hassle.
+Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Live Share provides a free, fully managed, and ready to use [Azure Fluid Relay](https://docs.microsoft.com/azure/azure-relay/relay-what-is-it)) backed by the security and global scale of Teams.
 
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
 
-The Live Share SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Container associated with each meeting in a few lines of code. The Live Share SDK also supports a new set of distributed data structure (DDS) classes to simplify building applications for common meeting scenarios, such as shared media playback.
+The Live Share SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Container associated with each meeting in a few lines of code. In addition to the data structures provided by Fluid Framework, Live Share also supports a new set of distributed data structure (DDS) classes to simplify building applications for common meeting scenarios, such as shared media playback.
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-video-sharing.png" alt-text="Live Share video sharing experience":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Live Share video sharing experience":::
 
 ## Why build apps using the Live Share SDK?
 
-It can be difficult, time consuming, require expensive infrastructure and complex compliance requirements at scale to build next-level collaborative apps. Teams users spend significant amount of time reviewing work with teammates, watching videos together, and brainstorming new ideas through screen sharing. The Live Share SDK enables you to transform your app into something more interactively collaborative with minimal investment, such as multiple participants being able to whiteboard on the same canvas in real time.
+Building collaborative apps can be difficult, time consuming, costly, and includes complex compliance requirements at scale. Teams users spend significant amount of time reviewing work with teammates, watching videos together, and brainstorming new ideas through screen sharing. The Live Share SDK enables you to transform your app into something more collaborative with minimal investment.
 
 Here are some key benefits of the Live Share SDK:
 
@@ -33,7 +33,7 @@ Here are some key benefits of the Live Share SDK:
 * Media extensions to easily synchronize video and audio
 * Respect meeting privileges using role verification
 * Free and fully managed service with low latency
-* Intelligent Audio ducking
+* Intelligent audio ducking
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 
