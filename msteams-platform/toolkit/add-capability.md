@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Teams apps
 
-Teams app capability helps you to create a new Teams app in app development. The following table lists the Teams app capabilities:
+Add capability in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
@@ -118,7 +118,7 @@ After adding tab, the changes in your project are as follows:
 
 * Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
 
-* Follow the [step-by-step guide](../sbs-gs-notificationbot.yml) to build notification bot in Microsoft Teams.
+* Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
 
 ## See also
 

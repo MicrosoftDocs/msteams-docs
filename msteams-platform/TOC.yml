@@ -20,8 +20,10 @@
   items:
   - name: Get started overview
     href: get-started/get-started-overview.md  
-  - name: Build your first app using JavaScript
+  - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first messaging extension app using JavaScript
+    href: sbs-gs-msgext.yml
   - name: Build your first app using Blazor
     href: sbs-gs-blazorupdate.yml
   - name: Build your first app using SPFx
@@ -110,7 +112,7 @@
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
-    - name: Add single sign on to Teams app
+    - name: Add single sign-on to Teams app
       href: toolkit/add-single-sign-on.md
     - name: Add API connection to Teams app
       href: toolkit/add-API-connection.md
