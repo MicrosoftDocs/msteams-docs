@@ -55,7 +55,8 @@ Here are some key benefits of the Live Share SDK:
 ## See also
 
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Reference docs](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/?view=msteams-client-js-latest&branch=CI-LiveShare)
+- [Live Share SDK reference docs](https://docs.microsoft.com/javascript/api/@microsoft/live-share/)
+- [Live Share Media SDK reference docs](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/)
 - [Live Share capabilities](teams-live-share-capabilities.md)
 - [Live Share media capabilities](teams-live-share-media-capabilities.md)
 - [Live Share FAQ](teams-live-share-faq.md)
