@@ -82,23 +82,17 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
 
-1. Select **Add**.
+1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot showing the app being installed." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
 
-   The toolkit displays a message to indicate that the app is added to Teams.
+   Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
- 
-    - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
-    - If you select **Try it**, Teams loads your app.
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
 
-   Your app is loaded on the Azure site.
-   
-1. Select **Try it**.
+   You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
-   The Message Extension app is loaded in a chat bot app.
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
 
 
