@@ -1,12 +1,15 @@
 ## Deploy your app to Azure
 
 Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the tab app.
+<br> 
 <br>
 <details>
-<summary>What's the difference between Provision and Deploy?</summary>&nbsp;
+<summary>What's the difference between Provision and Deploy?</summary>
+<br>
 The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It is common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it is separate from the deployment step.
 </details>
-</br>
+<br>
+
 # [Visual Studio Code](#tab/vscode)
 
 Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
