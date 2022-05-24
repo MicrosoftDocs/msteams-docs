@@ -160,7 +160,7 @@ To preview your app running in Outlook on the web:
 1. Select **New message**.
 1. Open **More apps** flyout menu on the bottom of the composition window.
 
-:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' menu on the bottom of the mail composition window to use your message extension":::
+    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' menu on the bottom of the mail composition window to use your message extension":::
 
 Your message extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
@@ -172,7 +172,7 @@ To preview your app running in Outlook on Windows desktop:
 1. Select **New Email**.
 1. Open the **More Apps** flyout menu on the top ribbon.
 
-:::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
+    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
 
 Your message extension will be listed. Invoking it will open an adjacent pane to display search results.
 
@@ -191,15 +191,15 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 As you test your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which will have the value of `msteams` or `outlook`, depending from where the bot request originates. For more information, see  [Search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
-## Next steps
-
-Publish your app to be discoverable in Teams, Outlook, and Office:
-
-> [!div class="nextstepaction"]
-> [Publish Teams apps for Outlook and Office](publish.md)
-
 ## Code sample
 
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+
+## Next step
+
+Publish your app to be discoverable in Teams, Outlook, and Office:
+
+> [!div class="nextstepaction"]
+> [Publish Teams apps for Outlook and Office](publish.md)
