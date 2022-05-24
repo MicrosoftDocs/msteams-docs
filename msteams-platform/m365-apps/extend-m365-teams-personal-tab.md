@@ -46,12 +46,12 @@ Alternately, you can use a basic Single Sign-On *hello world* app already enable
 
 To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, use Teams Toolkit extension for Visual Studio Code.
 
-1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`
-1. Select **SSO enabled personal tab**
+1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
+1. Select **SSO enabled personal tab**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit":::
 
-1. Select a location on your local machine for the workspace folder
+1. Select a location on your local machine for the workspace folder.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (App Service plan, Storage account, Function App, Managed Identity) in your Azure account.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
 
@@ -65,7 +65,7 @@ You have two options for updating your app manifest:
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
-1. Open the command palette: `Ctrl+Shift+P`
+1. Open the command palette: `Ctrl+Shift+P`.
 1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
 
 # [Manual steps](#tab/manifest-manual)
@@ -89,8 +89,8 @@ To run in Outlook and Office, your app will need to reference the npm package `@
 
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
-1. Open the *Command palette*: `Ctrl+Shift+P`
-1. Run the command `Teams: Upgrade Teams JS SDK and code references`
+1. Open the *Command palette*: `Ctrl+Shift+P`.
+1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
 
 Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.0.0` (or higher) and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
@@ -118,7 +118,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 ## Update Azure AD app registration for SSO
 
-[Azure Active Directory Single-sign on (SSO)](../tabs/how-to/authentication/auth-aad-sso.md) for personal tabs works the same way in Office and Outlook as it does in Teams, however you'll need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
+[Azure Active Directory (AD) Single-sign on (SSO)](../tabs/how-to/authentication/auth-aad-sso.md) for personal tabs works the same way in Office and Outlook as it does in Teams. However you'll need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
@@ -159,7 +159,7 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
 
-Once sideloaded to Teams, your personal tab will be available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
+After it's sideloaded to Teams, your personal tab will be available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
 
 You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams will not pin it as an app in Office or Outlook.
 
@@ -176,7 +176,7 @@ To view your app running in Outlook on Windows desktop:
 
 1. Launch Outlook and sign in using your dev tenant account.
 1. On the side bar, select  **More Apps**. Your sideloaded app title will appear among your installed apps.
-1. Click on your app icon to launch your app in Outlook.
+1. Select your app icon to launch your app in Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs":::
 
