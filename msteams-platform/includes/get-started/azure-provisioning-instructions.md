@@ -85,5 +85,5 @@ Once the provisioning and deployment steps are complete:
 
    Your app is loaded on the Azure site.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apps.png" alt-text="Screenshot showing the app being installed." border="false":::
 
