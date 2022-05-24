@@ -105,15 +105,15 @@ When you feel your app is production ready, you can begin the process of getting
 
   1. As you prepare for app submission, [follow the checklist](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) and include the following details as part of your submission package:
 
-    1. Thoroughly verified app package.
+        1. Thoroughly verified app package.
 
-    1. Working admin and non-admin user credentials to test your app functionality (if your app offers a premium subscription model).
+        1. Working admin and non-admin user credentials to test your app functionality (if your app offers a premium subscription model).
 
-    1. Test instructions detailing app functionality and supported scenarios.
+        1. Test instructions detailing app functionality and supported scenarios.
 
-    1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
+        1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
-    1. Link to a demo video recording key user flow for your app. This is highly recommended.
+        1. Link to a demo video recording key user flow for your app. This is highly recommended.
 
 * **Post app submission**
 
@@ -133,31 +133,31 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Prior to app submission**
 
-  1. As you prepare for app submission, be careful to ensure: 
-    
-    1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
-          
-    1. You have correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
-          
-    1. You must ensure your linked SaaS offer is designed to support licenses assigned on a named [per user model](/azure/marketplace/create-new-saas-offer-plans). Linked SaaS offers that support other pricing models such as flat rate are currently not accepted for publishing to the Teams store.
-          
-    1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
+  1. As you prepare for app submission, ensure the following:
 
-  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation. Be careful to ensure:
+      1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-    1. Both admin and non-admin users can place an order and confirm the purchase of your subscription. Purchasers can navigate to the SaaS application landing page by clicking on “Setup Now” in the Microsoft Admin Center. Test and ensure purchasers can activate and configure their subscription on your SaaS application. Messaging on your SaaS application should provide enough and clear information on the way forward to a purchaser.
-      
-    1. The “Manage Subscriptions” section in Microsoft Admin Center shows the correct details of the subscriptions brought by your test users. Subscription status, number of licenses and other details must be accurate.
-      
-    1. Buying and removal of license workflows are working as expected. Ensure purchasers can increase the number of licenses from Microsoft Admin Center. Make sure license count and assignment on your SaaS application reflects respective licenses and the right assignees. Also ensure your SaaS application provides a way to take away a license from an user. Post removal of a license, ensure remaining assignments and count remain intact on your SaaS application and the correct details are reflected in the Microsoft Admin Center.
-      
+      1. You have correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
+
+      1. You must ensure your linked SaaS offer is designed to support licenses assigned on a named [per user model](/azure/marketplace/create-new-saas-offer-plans). Linked SaaS offers that support other pricing models such as flat rate are currently not accepted for publishing to the Teams store.
+
+      1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
+
+  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation ensure:
+
+    1. Both admin and non-admin users can place an order and confirm the purchase of your subscription. Purchasers can navigate to the SaaS application landing page by selecting  **Setup Now** in the Microsoft Admin Center. Test and ensure that your purchasers can activate and configure their subscription on your SaaS application. Messaging on your SaaS application should provide enough and clear information on the way forward to a purchaser.
+
+    1. The **Manage Subscriptions** section in Microsoft Admin Center shows the correct details of the subscriptions brought by your test users. Subscription status, number of licenses, and other details must be accurate.
+
+    1. Buying and removal of license workflows are working as expected. Ensure purchasers can increase the number of licenses from Microsoft Admin Center. Ensure license count and assignment on your SaaS application reflects respective licenses and the right assignees. Also ensure your SaaS application provides a way to take away a license from an user. Post removal of a license, ensure remaining assignments and count remain intact on your SaaS application and the correct details are reflected in the Microsoft Admin Center.
+
     1. Subscription cancellation is working as expected. Purchasers can cancel a subscription. Post cancellation, check if the correct subscription status is reflected in the Microsoft Admin Center and your SaaS application. Verify that the purchaser has lost access to the subscription after successful cancellation.
-      
+
     1. Re-purchasing a subscription is seamless. After cancellation of an active subscription, thoroughly test to ensure purchasers can repurchase the subscription.
-      
-    1. Purchasers can change their subscribed plan and once a plan is modified, users can access the upgraded or downgraded plan features.
-      
-    1. Your SaaS application contains license management features. Purchasers must be able to assign, modify and re-assign available licenses to users. Check if purchasers can add or remove users to manage the licenses.
+
+    1. Purchasers can change their subscribed plan. After the plan is modified, users can access the upgraded or downgraded plan features.
+
+    1. Your SaaS application contains license management features. Purchasers must be able to assign, modify, and re-assign available licenses to users. Check if purchasers can add or remove users to manage the licenses.
   
   1. You must test and ensure both minimum and bulk license purchase flows are working as expected.
   
