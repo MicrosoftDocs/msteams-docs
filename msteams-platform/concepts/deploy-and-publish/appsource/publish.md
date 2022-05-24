@@ -97,7 +97,7 @@ When you feel your app is production ready, you can begin the process of getting
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
-     1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end-to-end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
+     1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
      1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
   
@@ -125,7 +125,7 @@ When you feel your app is production ready, you can begin the process of getting
   
   * Avoid changing app functionality during the validation process. This might lead to discovery of new issues and increase the time it takes to approve your app.
 
-### Additional Tips for rapid approval to publish your app
+## Additional tips for rapid approval to publish your app linked to a SaaS offer
 
 * **During design phase**
 
@@ -143,7 +143,7 @@ When you feel your app is production ready, you can begin the process of getting
 
       1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
 
-  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows, before you submit your app linked to a SaaS offer for validation ensure the following:
+  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation, ensure the following:
 
      1. Both admin and non-admin users can place an order and confirm the purchase of your subscription. Purchasers can navigate to the SaaS application landing page by selecting  **Setup Now** in the Microsoft Admin Center. Test and ensure that your purchasers can activate and configure their subscription on your SaaS application. Messaging on your SaaS application should provide enough and clear information on the way forward to a purchaser.
 
