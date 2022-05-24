@@ -54,7 +54,7 @@ landingContent:
         url: m365-apps/overview.md
       - text: App guidance and what's new in TeamsJS version 2.0.0
         url: tabs/how-to/using-teams-client-sdk.md
-      - text: Teams Toolkit is now GA
+      - text: Teams Toolkit 4.0.0 for Visual Studio Code is now GA
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Bots and Message extensions in GCC and GCCH
         url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
@@ -169,9 +169,9 @@ landingContent:
       
     - linkListType: tutorial
       links:
-        - text: Step-by-step guide to build command bot with JavaScript
+        - text: Build command bot with JavaScript
           url: toolkit/add-capability.md
-        - text: Step-by-step guide to build notification bot with JavaScript
+        - text: Build notification bot with JavaScript
           url: toolkit/add-capability.md
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
