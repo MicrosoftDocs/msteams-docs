@@ -84,7 +84,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ---
 
-If you use Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
 
 ## Add an Outlook channel for your bot
 
@@ -173,7 +173,7 @@ To preview your app running in Outlook on Windows desktop:
 
     :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
 
-Your message extension is listed, it will open an adjacent pane to display search results.
+Your message extension is listed, it opens an adjacent pane to display search results.
 
 ## Troubleshooting
 
