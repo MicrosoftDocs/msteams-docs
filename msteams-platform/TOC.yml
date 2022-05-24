@@ -112,7 +112,7 @@
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
-    - name: Add single sign on to Teams app
+    - name: Add single sign-on to Teams app
       href: toolkit/add-single-sign-on.md
     - name: Add API connection to Teams app
       href: toolkit/add-API-connection.md
