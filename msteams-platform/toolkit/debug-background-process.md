@@ -29,7 +29,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Project type|Node.js LTS version|
   |----------|--------------------------------|
   |Tab | 14, 16 (recommended) |
-  |SPFx Tab | 14, 16 (recommended)|
+  |SPFx Tab | 12, 14 (recommended)|
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
