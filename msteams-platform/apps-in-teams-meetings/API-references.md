@@ -4,7 +4,7 @@ author: surbhigupta
 description: Identify the meeting apps API references with examples and Code samples
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api user context notification signal query 
 ---
 
@@ -772,6 +772,7 @@ The following code provides an example of meeting end event payload:
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
+* [Live Share SDK](teams-live-share-overview.md)
 
 ## Next steps
 

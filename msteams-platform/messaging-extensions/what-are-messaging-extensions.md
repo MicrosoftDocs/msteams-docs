@@ -2,13 +2,16 @@
 title: Message extensions
 author: surbhigupta
 description: An overview of messaging extensions on the Microsoft Teams platform
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
 ---
 # Message extensions
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card.
+
+> [!IMPORTANT]
+> Message extensions are available in Government Community Cloud (GCC) and GCC-High environments but not in Department of Defense (DoD) environment.
 
 This document gives an overview of the message extension, tasks performed under different scenarios, working of message extension, action and search commands, and link unfurling.
 

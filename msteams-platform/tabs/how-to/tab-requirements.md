@@ -3,7 +3,7 @@ title: Prerequisites
 author: surbhigupta
 description: Every tab in Microsoft Teams must adhere to these requirements.
 keywords: teams tabs group channel configurable
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -41,7 +41,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |

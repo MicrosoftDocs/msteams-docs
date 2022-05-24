@@ -1,12 +1,12 @@
 ### YamlMime:Landing
 
-title: Microsoft Teams Developer Documentation # < 60 chars
-summary: Welcome to overview of Microsoft Teams Developer Documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
+title: Microsoft Teams developer documentation # < 60 chars
+summary: Welcome to overview of Microsoft Teams developer documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: service #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
@@ -20,32 +20,46 @@ metadata:
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
-- title: Explore the latest
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Common reasons for app validation failure
-        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-      - text: Upload your app in Microsoft Teams
-        url: ~/concepts/deploy-and-publish/apps-upload.md
-      - text: Share to Teams from personal app or tab
-        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
-      - text: Create Teams conversation bot
-        url: ~/sbs-teams-conversation-bot.yml
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
-      - text: Device permissions for the browser
-        url: ~/concepts/device-capabilities/browser-device-permissions.md
-      - text: Integrate People Picker
-        url: ~/concepts/device-capabilities/people-picker-capability.md
-      - text: Adaptive Cards overflow menu
-        url: ~/task-modules-and-cards/cards/cards-format.md
-      - text: Glossary
-        url: ~/get-started/glossary.md
-      - text: Overview
-        url: ~/overview.md
 
-      
+# - title: Explore the latest
+#  linkLists:
+#    - linkListType: whats-new
+#      links:
+#      - text: Common reasons for app validation failure
+#        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+#      - text: Upload your app in Microsoft Teams
+#        url: ~/concepts/deploy-and-publish/apps-upload.md
+#      - text: Share to Teams from personal app or tab
+#        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
+#      - text: Create Teams conversation bot
+#        url: ~/sbs-teams-conversation-bot.yml
+#      - text: Build your first app using Blazor
+#        url:  sbs-gs-blazorupdate.yml
+#      - text: Device permissions for the browser
+#        url: ~/concepts/device-capabilities/browser-device-permissions.md
+#      - text: Integrate People Picker
+#        url: ~/concepts/device-capabilities/people-picker-capability.md
+#      - text: Adaptive Cards overflow menu
+#        url: ~/task-modules-and-cards/cards/cards-format.md
+#      - text: Glossary
+#        url: ~/get-started/glossary.md
+#      - text: Overview
+#        url: ~/overview.md
+
+- title: Microsoft Build 2022
+  linkLists:
+    - linkListType: whats-new
+      links:
+      - text: Enhanced collaboration with Live Share SDK
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Submit your Outlook- and Office-enabled apps to the Teams store
+        url: m365-apps/overview.md
+      - text: App guidance and what's new in TeamsJS version 2.0.0
+        url: tabs/how-to/using-teams-client-sdk.md
+      - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
+        url: toolkit/teams-toolkit-fundamentals.md
+      - text: Bots and Message extensions in GCC and GCCH
+        url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 
 - title: Get started
   linkLists:
@@ -55,6 +69,10 @@ landingContent:
         url: ../msteams-platform/get-started/get-started-overview.md
       - text: Get started with GitHub
         url: /contribute/additional-resources
+      - text: Glossary
+        url: ~/get-started/glossary.md
+      - text: Overview
+        url: ~/overview.md        
     - linkListType: tutorial
       links:
       - text: Build app with JavaScript
@@ -67,7 +85,10 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
-
+      - text: Build command bot with JavaScript
+        url: sbs-gs-commandbot.yml
+      - text: Build notification bot with JavaScript
+        url: sbs-gs-notificationbot.yml
 
 - title: Monetize your app
   linkLists:
@@ -100,8 +121,6 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-     
-
 
 - title: Build app capabilities
   linkLists:
@@ -124,7 +143,6 @@ landingContent:
     - text: Public developer preview manifest schema
       url: ~/resources/schema/manifest-schema-dev-preview.md  
 
-
 - title: Step-by-step guides
   linkLists:        
     - linkListType: tutorial
@@ -135,9 +153,6 @@ landingContent:
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
-
-        - text: Grant tab device permissions
-          url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
         - text: Build tabs with adaptive cards
@@ -153,6 +168,10 @@ landingContent:
       
     - linkListType: tutorial
       links:
+        - text: Build command bot with JavaScript
+          url: sbs-gs-commandbot.yml
+        - text: Build notification bot with JavaScript
+          url: sbs-gs-notificationbot.yml
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
@@ -169,6 +188,7 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
+
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
@@ -176,18 +196,23 @@ landingContent:
     - text: Build scenarios for Teams app
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
+
 - title: Publish and distribute
   linkLists:
   - linkListType: concept
     links:
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
+    - text: Upload your app in Microsoft Teams
+      url: ~/concepts/deploy-and-publish/apps-upload.md
     - text: Publish to Teams Store
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: Store validation guidelines
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: Common reasons for app validation failure
+      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
