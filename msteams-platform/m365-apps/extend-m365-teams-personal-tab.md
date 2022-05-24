@@ -125,9 +125,9 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 1. Select the name of your personal tab application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure portal":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure portal":::
 
-In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
+1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
 |Microsoft 365 client application | Client ID |
 |--|--|
@@ -178,7 +178,7 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More Apps**. Your sideloaded app title will appear among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs":::
 
 ### Outlook on the web
 
@@ -188,7 +188,7 @@ To view your app in Outlook on the web:
 1. Select the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
 
 ### Office on Windows
 
@@ -198,7 +198,7 @@ To view your app running in Office on Windows desktop:
 1. Select the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 1. Select your app icon to launch your app in Office.
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
 
 ### Office on the web
 
@@ -208,7 +208,7 @@ To preview your app running in Office on the web:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title will appear among your installed apps.
 1. Select your app icon to launch your app in Office on the web.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
 
 ## Troubleshooting
 
@@ -230,7 +230,7 @@ From Teams Toolkit, you can Debug (`F5`) your tab application running in Office 
 
 Upon first run of local debug to Office or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then click on **Continue** to proceed to debug your app in Office/Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit dialog Teams install":::
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 

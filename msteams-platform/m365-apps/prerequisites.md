@@ -64,9 +64,13 @@ To install Office 365 Beta Channel applications in your test environment:
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
+
     :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you are running a Beta Channel build.":::
+
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for 'webview':
+
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Search for 'webview' under 'Apps and features' in your Windows Settings":::
+
     If it's not listed, install [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) to your test environment.
 
 ## Switch to the Developer Preview version of Teams
