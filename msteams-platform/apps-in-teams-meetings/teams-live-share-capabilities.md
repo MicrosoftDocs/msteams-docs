@@ -87,7 +87,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 Follow the steps to join a session that is associated with a user's meeting:
 
 1. Initialize the Teams Client SDK
-2. Initialize the [TeamsFluidClient](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient)
+2. Initialize the [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)
 3. Define the data structures you want to synchronize. For example, `SharedMap`
 4. Join the container
 
