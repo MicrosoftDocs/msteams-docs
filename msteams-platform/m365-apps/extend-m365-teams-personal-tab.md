@@ -46,8 +46,8 @@ Alternately, you can use a basic Single Sign-On *hello world* app already enable
 
 To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, use Teams Toolkit extension for Visual Studio Code.
 
-1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`
-1. Select **SSO enabled personal tab**
+1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
+1. Select **SSO enabled personal tab**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit":::
 
