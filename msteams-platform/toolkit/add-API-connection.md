@@ -8,7 +8,7 @@ ms.topic: Overview
 ms.date: 05/20/2022
 ---
 
-# Connect to existing APIs
+# Add API connection to Teams app
 
 Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.
 

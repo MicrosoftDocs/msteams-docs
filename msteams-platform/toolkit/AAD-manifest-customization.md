@@ -24,9 +24,9 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
-* [Add an application permission](#customize-requiredresourceaccess)
-* [Preauthorize a client application](#customize-preauthorizedapplications)
-* [Update redirect URL for authentication response](#customize-redirect-urls)
+   * [Add an application permission](#customize-requiredresourceaccess)
+   * [Preauthorize a client application](#customize-preauthorizedapplications)
+   * [Update redirect URL for authentication response](#customize-redirect-urls)
 
 3. [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
   
@@ -218,8 +218,8 @@ Code lens shows the application name for the per-authorized application ID for t
 
 2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and log-in to Microsoft 365 account.
   
-> [!NOTE]
-> Ensure that login credentials of Teams application and M365 account are same.
+   > [!NOTE]
+   > Ensure that login credentials of Teams application and M365 account are same.
 
 3. Open [app registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), search the Azure AD application using client ID that you copied before.
   
@@ -308,5 +308,4 @@ You need to interact with Azure AD application during various stages of your Tea
 
 ## See also
 
-* [Customize app manifest in Toolkit](TeamsFx-manifest-customization.md)
-* [Preview app manifest in Toolkit](TeamsFx-manifest-preview.md)
+* [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
