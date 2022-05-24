@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 05/24/2022 | Bots and Message extensions for GCC and GCCH | • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
+| 05/24/2022 | Teams Toolkit is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> •  |
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
