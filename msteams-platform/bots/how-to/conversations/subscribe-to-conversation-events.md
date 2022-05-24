@@ -12,11 +12,12 @@ keywords: events bot channel message reaction conversation
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
+When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture the events in your code and take action. When an app is added to a team, a welcome message is sent to the user's selected channel.
 
-* Trigger a welcome message when a new team member is added or removed
+
+<!-- * Trigger a welcome message when a new team member is added or removed
 * Trigger a notification when a channel is created, renamed, or deleted
-* Trigger a welcome message in the user's selected channel when the app is added to a team
+* Trigger a welcome message in the user's selected channel when the app is added to a team -->
 
 ## Conversation update events
 
@@ -32,12 +33,12 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 
 * When bot is added to a conversation
 * Other members are added to or removed from a conversation
-* Conversation metadata has changed
+<!-- * Conversation metadata has changed
 
   > [!NOTE]
-  > Conversation metadata is the data collected from a conversation, such as content, keywords, topics, graphics.
+  > Conversation metadata is the data collected from a conversation, such as content, keywords, topics, graphics. -->
 
- The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It receives an update when it has been added for the first time for personal conversations and channels. For more information on adding new team members to chat or channel, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
+ The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It receives an update when it has been added for the first time for personal conversations and teams. For more information on adding new team members to chat or teams, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
 
 The following table provides a list of Teams conversation update events with more details:
 
