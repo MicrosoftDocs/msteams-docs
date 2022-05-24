@@ -22,6 +22,8 @@
     href: get-started/get-started-overview.md  
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first bot app using JavaScript
+    href: sbs-gs-bot.yml
   - name: Build your first messaging extension app using JavaScript
     href: sbs-gs-msgext.yml
   - name: Build your first app using Blazor
