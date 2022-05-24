@@ -160,7 +160,7 @@ To preview your app running in Outlook on the web:
 1. Select **New message**.
 1. Open **More apps** flyout menu on the bottom of the composition window.
 
-:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' menu on the bottom of the mail composition window to use your message extension":::
+    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' menu on the bottom of the mail composition window to use your message extension":::
 
 Your message extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
@@ -172,7 +172,7 @@ To preview your app running in Outlook on Windows desktop:
 1. Select **New Email**.
 1. Open the **More Apps** flyout menu on the top ribbon.
 
-:::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
+    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
 
 Your message extension will be listed. Invoking it will open an adjacent pane to display search results.
 
