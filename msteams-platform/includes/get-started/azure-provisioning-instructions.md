@@ -87,4 +87,4 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
 
-    Congratulations! Your tab app is now running remotely from Azure!
+    

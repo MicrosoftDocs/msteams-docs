@@ -214,7 +214,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Localdebug":::
 
-        You can select **Local debug** to your project.
+        You can select **Local debug** to preview your project.
 
     <details>
     <summary>A quick recap of creating a Teams bot app.</summary>
