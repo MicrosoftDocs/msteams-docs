@@ -41,7 +41,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud-msg.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="false":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
