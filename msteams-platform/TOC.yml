@@ -106,6 +106,8 @@
       href:
     - name: Customize Azure AD manifest
       href: 
+    - name: Customize Azure AD manifest
+      href: toolkit/AAD-manifest-customization.md
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
