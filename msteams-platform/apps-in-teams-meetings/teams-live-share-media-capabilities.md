@@ -36,10 +36,10 @@ yarn add @microsoft/live-share-media
 
 The Live Share SDK has two primary classes related to media synchronization:
 
-| Classes                                                                                                                                  | Description                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [EphemeralMediaSession](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSession.html)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
-| [MediaPlayerSynchronizer](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.MediaPlayerSynchronizer.html) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
+| Classes                                                                                                                  | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| [EphemeralMediaSession](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
+| [MediaPlayerSynchronizer](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
 
 Example:
 
@@ -121,7 +121,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 ## Suspensions and wait points
 
-If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSessionCoordinatorSuspension.html) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 ```javascript
 // Suspend the media session coordinator
@@ -131,7 +131,7 @@ const suspension = mediaSession.coordinator.beginSuspension();
 suspension.end();
 ```
 
-When beginning a suspension, you can also include an optional [CoordinationWaitPoint](https://livesharesdk.z5.web.core.windows.net/interfaces/_microsoft_live_share_media.CoordinationWaitPoint.html) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
 
 ```javascript
 // Suspend the media session coordinator
@@ -204,13 +204,12 @@ To enable audio ducking, add the following [RSC](/microsoftteams/platform/graph-
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Agile Poker tutorial](../sbs-teams-live-share.yml)
+> [!div class="nextstepaction"] > [Agile Poker tutorial](../sbs-teams-live-share.yml)
 
 ## See also
 
-* [Live Share SDK FAQ](teams-live-share-faq.md)
-* [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-* [Reference docs](https://aka.ms/livesharedocs)
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Live Share SDK FAQ](teams-live-share-faq.md)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
+- [Reference docs](https://aka.ms/livesharedocs)
+- [Teams apps in meetings](teams-apps-in-meetings.md)
