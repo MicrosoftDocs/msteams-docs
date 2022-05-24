@@ -168,7 +168,7 @@ landingContent:
         - text: Step-by-step guide to build command bot with JavaScript
           url: toolkit/add-capability.md
         - text: Step-by-step guide to build notification bot with JavaScript
-          url: toolkit/add-capability.m
+          url: toolkit/add-capability.md
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
