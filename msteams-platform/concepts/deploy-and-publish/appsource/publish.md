@@ -83,7 +83,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **During design phase**
 
-  Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](~/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
