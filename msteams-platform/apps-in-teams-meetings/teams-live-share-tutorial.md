@@ -275,6 +275,6 @@ function renderSettings(elem) {
 ## See also
 
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Reference docs](https://aka.ms/livesharedocs)
+* [Reference docs](https://review.docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&branch=CI-LiveShare)
 * [Live Share FAQ](teams-live-share-faq.md)
 * [Teams apps in meetings](teams-apps-in-meetings.md)

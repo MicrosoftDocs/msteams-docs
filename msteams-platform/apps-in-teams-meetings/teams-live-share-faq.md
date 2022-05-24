@@ -61,5 +61,5 @@ Submit issues and feature requests to the SDK repository for [Live Share SDK](ht
 ## See also
 
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Reference docs](https://aka.ms/livesharedocs)
+- [Reference docs](https://review.docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&branch=CI-LiveShare)
 - [Teams apps in meetings](teams-apps-in-meetings.md)

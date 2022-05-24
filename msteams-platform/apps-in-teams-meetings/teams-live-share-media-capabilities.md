@@ -211,6 +211,5 @@ To enable audio ducking, you must add the following [RSC](/microsoftteams/platfo
 
 * [Live Share SDK FAQ](teams-live-share-faq.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-* [Reference docs](https://aka.ms/livesharedocs)
+* [Live Share API reference docs](https://review.docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&branch=CI-LiveShare).
 * [Teams apps in meetings](teams-apps-in-meetings.md)
