@@ -278,7 +278,7 @@ The `https://` URL referencing the JSON Schema for the manifest.
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. Use `m365DevPreview` only if you are previewing [Teams apps running in Office and Outlook](../../m365-apps/overview.md). Otherwise, use `devPreview` for all other Teams preview features.
+The version of the manifest schema this manifest is using.
 
 ## version
 
@@ -549,6 +549,97 @@ Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph inform
 |`id`|String|36 characters|✔|Microsoft Azure Active Directory (Azure AD) application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource URL of the app for acquiring auth token for SSO.|
 |`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
+
+## graphConnector
+
+**Optional**—object
+
+Specify the app's Graph connector configuration. If this is present then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 characters|✔|The url where Graph-connector notifications for the application should be sent.|
+
+## showLoadingIndicator
+
+**Optional**—Boolean
+
+Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
+> [!NOTE]
+> If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+
+## isFullScreen
+
+ **Optional**—Boolean
+
+Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
+
+> [!NOTE]
+> `isFullScreen` works only for apps published to your organization.
+
+## activities
+
+**Optional**—object
+
+Define the properties your app uses to post a user activity feed.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`activityTypes`|array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
+
+### activities.activityTypes
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`type`|string|32 characters|✔|The notification type. *See below*.|
+|`description`|string|128 characters|✔|A brief description of the notification. *See below*.|
+|`templateText`|string|128 characters|✔|Ex: "{actor} created task {taskId} for you"|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
 
 ## configurableProperties
 
