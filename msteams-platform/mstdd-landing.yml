@@ -50,6 +50,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Enhanced collaboration with Live Share
+        url: /apps-in-teams-meetings/teams-live-share-overview
       - text: Submit your Outlook- and Office-enabled apps to the Teams store
         url: m365-apps/overview.md
       - text: App guidance and what's new in TeamsJS version 2.0.0
