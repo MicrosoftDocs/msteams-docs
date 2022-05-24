@@ -100,7 +100,7 @@ For users to interact with your message extension from Outlook, you'll need to a
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Add an Outlook 'Message Extensions' channel for your bot from the Azure Bot Channels pane":::
 
-1. Confirm that your Outlook channel is listed along with Microsoft Teams in your bot's **Channels** pane:
+1. Confirm that your Outlook channel is listed along with Microsoft Teams in your bot's **Channels** pane.
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure Bot Channels pane listing both Microsoft Teams and Outlook channels":::
 
@@ -117,27 +117,27 @@ Azure Active Directory (AD) Single-sign on (SSO) for message extensions works th
 1. Select  **Expose an API** (under *Manage*).
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are listed:
 
-|Microsoft 365 client application | Client ID |
-|--|--|
-|Teams desktop and mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+   |Microsoft 365 client application | Client ID |
+   |--|--|
+   |Teams desktop and mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+   |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+   |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+   |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## Sideload your updated message extension in Teams
 
 The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Microsoft Teams. Once completed, your message extension will appear in your installed *Apps* from the compose message area.
 
-1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit:
+1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code":::
 
-1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: About > **Developer preview**.
+1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: **About** > **Developer preview**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="From Teams ellipses menu, open 'About', and select 'Developer Preview' option":::
 
-1. Select *Apps* to open the **Manage your apps** pane. Then select **Publish an app**.
+1. Select **Apps** to open the **Manage your apps** pane. Then select **Publish an app**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Open the 'Manage your apps' pane and select 'Publish an app'":::
 
