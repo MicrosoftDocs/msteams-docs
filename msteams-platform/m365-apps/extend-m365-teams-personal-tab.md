@@ -160,7 +160,7 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
 After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
 
-You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams do not pin it as an app in Office or Outlook.
+You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams don't pin it as an app in Office or Outlook.
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
