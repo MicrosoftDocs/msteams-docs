@@ -224,15 +224,15 @@ To preview your tab app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The tab app is sideloaded and the Teams consent dialog appears.
+    The tab app is sideloaded and the dialog appears to inform you of the additional permissions that may be required.
 
 1. Select **Continue**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams consent dialog box" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required" border="true":::
 
     The Azure AD consent dialog appears.
 
-1. Select **Accept**.
+1. Select **Accept** to give consent for open-id scopes.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog" border="true":::
 

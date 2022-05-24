@@ -80,6 +80,7 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 > - Always call `getAuthToken()` only when you need an access token.
 > - Teams will cache the access token for you. Don't cache or store it in your app's code.
 
+<!--
 #### ID token and access token
 
 Here's a quick look at types of tokens used in the authentication and authorization process:
@@ -89,6 +90,7 @@ Here's a quick look at types of tokens used in the authentication and authorizat
 
 > [!NOTE]
 > If the application needs additional Microsoft Graph permissions, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
+-->
 
 ### Consent dialog for getting access token
 
@@ -96,17 +98,17 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-When an app user accesses your tab app for the first time and your tab app makes the `getAuthToken()` call, the app user must give consent. The consent dialog that appears is for open-id scopes.
+When an app user accesses your tab app for the first time and your tab app makes the `getAuthToken()` call, the app user must give consent. The Azure AD consent dialog that appears is for open-id scopes.
 
-The following consent dialogs appear at runtime:
+The consent is to be given only once. The app user can access and use your tab app for the granted permissions and scopes.
+
+<!--The following consent dialogs appear at runtime:
 
 1. **Teams dialog**:
   It's the first consent dialog that appears. Teams informs the app user through this dialog that the tab app will require app user's information before they can access it. It prepares the app user for the Azure AD dialog.
 
 1. **Azure AD consent dialog**:
-  Azure AD consent dialog is displayed to get the consent from the app user for open-id scope.
-
-The consent given in these two dialogs is to be given only once. The app user can access and use your tab app for the granted permissions and scopes.
+  Azure AD consent dialog is displayed to get the consent from the app user for open-id scope.-->
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
