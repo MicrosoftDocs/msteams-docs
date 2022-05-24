@@ -405,7 +405,7 @@ async def on_teams_channel_restored(
 The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. After a team member is added, the bots receives unique channel Id as a conversation Id using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. To determine how bot receives the team information, see [Teams channel data](../../../resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). You can also cache for future use, such as sending a message to a specific user bots. The bot posts welcome message in the same channel by default instead.
 
 > [!NOTE]
-> When bot is added, the conversation Id is set to the channel Id, where the team member is added during the installation process or the channel where the installation occurred. Conversation Id is set to team Id for all other conversation update scenarios.
+> When bot is added, the conversation Id will be set to the channel Id that was selected by the user during the installation process or the channel where the installation occurred. Conversation Id will be set to team Id for all other conversation update scenarios.
 
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
@@ -495,7 +495,7 @@ This is the message your bot receives when the bot is added to a team.
         },
         "team": {
             "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
-            "name": "VuTestTeam2021",
+            "name": "TestTeam2022",
             "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "eventType": "teamMemberAdded",
@@ -1361,7 +1361,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
     },
     "recipient": {
         "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-        "name": "Vu Test Bot"
+        "name": "Test Bot"
     },
     "locale": "en-US",
     "entities": [
@@ -1388,7 +1388,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
         },
         "team": {
             "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
-            "name": "VuTestTeam2021",
+            "name": "TestTeam2022",
             "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "tenant": {
