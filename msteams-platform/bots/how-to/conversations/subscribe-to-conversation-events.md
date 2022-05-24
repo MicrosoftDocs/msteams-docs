@@ -14,10 +14,9 @@ keywords: events bot channel message reaction conversation
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
-* Trigger a welcome message when your bot is added to a team.
-* Trigger a welcome message when a new team member is added or removed.
-* Trigger a notification when a channel is created, renamed, or deleted.
-* Trigger a notification when a bot message is liked by a user.
+* Trigger a welcome message when a new team member is added or removed
+* Trigger a notification when a channel is created, renamed, or deleted
+* Trigger a welcome message in the user's selected channel when the app is added to a team
 
 ## Conversation update events
 
@@ -31,13 +30,16 @@ You can use conversation update events to provide better notifications and more 
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
-* When bot has been added to a conversation.
-* Other members are added to or removed from a conversation.
-* Conversation metadata has changed.
+* When bot is added to a conversation
+* Other members are added to or removed from a conversation
+* Conversation metadata has changed
 
-The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
+  > [!NOTE]
+  > Conversation metadata is the data collected from a conversation, such as content, keywords, topics, graphics.
 
-The following table shows a list of Teams conversation update events with more details:
+ The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It receives an update when it has been added for the first time for personal conversations and channels. For more information on adding new team members to chat or channel, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
+
+The following table provides a list of Teams conversation update events with more details:
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
@@ -46,7 +48,7 @@ The following table shows a list of Teams conversation update events with more d
 | Channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
 | Channel restored    | channelRestored    | OnTeamsChannelRestoredAsync | [A channel is restored](#channel-deleted). | Team |
 | Members added   | membersAdded   | OnTeamsMembersAddedAsync   | [A member is added](#team-members-added). | All |
-| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#team-members-removed). | groupChat and team |
+| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#team-members-removed). | All |
 | Team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A team is renamed](#team-renamed).       | Team |
 | Team deleted        | teamDeleted       | OnTeamsTeamDeletedAsync    | [A team is deleted](#team-deleted).       | Team |
 | Team archived        | teamArchived       | OnTeamsTeamArchivedAsync    | [A team is archived](#team-archived).       | Team |
@@ -399,7 +401,12 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. After a team member is added, the bots receives unique channel Id as a conversation Id using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. To determine how bot receives the team information, see [Teams channel data](../../../resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). You can also cache for future use, such as sending a message to a specific user bots. The bot posts welcome message in the same channel by default instead.
+
+> [!NOTE]
+> When bot is added, the conversation id will be set to the channel id that was selected by the user during the installation process or the channel where the installation occurred. Conversation id will be set to team id for all other conversation update scenarios.
+
+To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
 The following code shows an example of team members added event:
 
@@ -454,36 +461,45 @@ This is the message your bot receives when the bot is added to a team.
 
 ```json
 {
+    "type": "conversationUpdate",
     "membersAdded": [
         {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
         }
     ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
@@ -538,12 +554,11 @@ async def on_teams_members_added(
   )
  return
 ```
-
 ---
 
 ### Team members removed
 
-The `teamMemberRemoved` event is sent to your bot if it is removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it is a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
+The `teamMemberRemoved` event is sent to your bot if it's removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -735,7 +750,7 @@ async def on_teams_team_renamed(
 
 ### Team deleted
 
-Your bot is notified when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
+The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
 
 The following code shows an example of team deleted event:
 
@@ -1049,11 +1064,11 @@ async def on_teams_team_unarchived(
 
 ---
 
-Now that you have worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
+Now that you've worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message that was sent by your bot. The `replyToId` contains the Id of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1282,14 +1297,14 @@ async def on_reactions_removed(
 
 ## Installation update event
 
-The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+The `installationUpdate` event is an activity sent to the bot. The bot can use this event to send an introductory message. Uninstallation of the bot also triggers event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
 
 > [!NOTE]
 > When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
 
-### Install update event
+When a new member is added to a chat or channel, the `installationUpdate` event send an introductory message from your bot on installation. The bot also posts the message in the same channel using [conversationUpdate event](#team-members-added). This event helps you to meet your privacy and retain data requirements. You can delete user or the thread data when the bot is uninstalled.
 
-Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
+The following code shows an example of `installationupdate` event:
 
 # [C#](#tab/dotnet)
 
@@ -1332,55 +1347,57 @@ async onInstallationUpdateActivity(context: TurnContext) {
 # [JSON](#tab/json)
 
 ```json
-{ 
-  "action": "add", 
-  "type": "installationUpdate", 
-  "timestamp": "2020-10-20T22:08:07.869Z", 
-  "id": "f:3033745319439849398", 
-  "channelId": "msteams", 
-  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
-  "from": { 
-    "id": "sample id", 
-    "aadObjectId": "sample Azure AD Object ID" 
-  },
-  "conversation": { 
-    "isGroup": true, 
-    "conversationType": "channel", 
-    "tenantId": "sample tenant ID", 
-    "id": "sample conversation Id@thread.skype" 
-  }, 
-
-  "recipient": { 
-    "id": "sample reciepent bot ID", 
-    "name": "bot name" 
-  }, 
-  "entities": [ 
-    { 
-      "locale": "en", 
-      "platform": "Windows", 
-      "type": "clientInfo" 
-    } 
-  ], 
-  "channelData": { 
-    "settings": { 
-      "selectedChannel": { 
-        "id": "sample channel ID@thread.skype" 
-      } 
-    }, 
-    "channel": { 
-      "id": "sample channel ID" 
-    }, 
-    "team": { 
-      "id": "sample team ID" 
-    }, 
-    "tenant": { 
-      "id": "sample tenant ID" 
-    }, 
-    "source": { 
-      "name": "message" 
-    } 
-  }, 
-  "locale": "en" 
+{
+    {
+    "type": "installationUpdate",
+    "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+    "timestamp": "2021-11-09T04:47:30.91Z",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+    },
+    "recipient": {
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
+    },
+    "locale": "en-US",
+    "entities": [
+        {
+            "type": "clientInfo",
+            "locale": "en-US"
+        }
+    ],
+    "conversation": {
+        "isGroup": true,
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel",
+        "conversationType": "channel",
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+    },
+    "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
+        "channel": {
+            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+        },
+        "team": {
+            "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+        },
+        "tenant": {
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
+        }
+    },
+    "action": "add"
 }
 ```
 
@@ -1393,12 +1410,11 @@ async def on_installation_update(self, turn_context: TurnContext):
    else:
        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
 ```
-
 ---
 
 ## Uninstall behavior for personal app with bot
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You cannot send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
@@ -1409,7 +1425,7 @@ When you use these install and uninstall events, there are some instances where 
 * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-It is important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
 
 ## Code sample
 
