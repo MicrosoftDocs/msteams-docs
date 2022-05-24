@@ -37,6 +37,7 @@ The limitations to TeamsFx while adding more capabilities are as follows:
 > [!Note]
 > You need to perform the provision for each environment, after you successfully add capabilities to your Teams app.
 * You can add capabilities using Teams Toolkit in Visual Studio Code
+
     1. Open **Microsoft Visual Studio Code**
     1. Select **Teams Toolkit** from left panel
     1. Select **Add capabilities**
@@ -105,6 +106,11 @@ After adding tab, the changes in your project are as follows:
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated
 * The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability
 
+## Step-by-step guide
+
+* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
+
+* Follow the [step-by-step guide](../sbs-gs-notificationbot.yml) to build notification bot in Microsoft Teams.
 
 ## See also
 
