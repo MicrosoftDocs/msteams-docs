@@ -95,5 +95,5 @@ Create or update a Teams app to run across Microsoft 365:
 
 > [!div class="nextstepaction"]
 > [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
-
+> [!div class="nextstepaction"]
 > [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
