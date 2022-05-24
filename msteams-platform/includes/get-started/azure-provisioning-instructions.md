@@ -84,11 +84,7 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
-
-   Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
 
    You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
