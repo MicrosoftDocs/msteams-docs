@@ -22,6 +22,8 @@
     href: get-started/get-started-overview.md  
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first messaging extension app using JavaScript
+    href: sbs-gs-msgext.yml
   - name: Build your first app using Blazor
     href: sbs-gs-blazorupdate.yml
   - name: Build your first app using SPFx
