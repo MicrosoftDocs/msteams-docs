@@ -88,7 +88,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 
 When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-page ID if it exists.
 
-The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call ([`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
 ### Generate a deep link to your tab
 
