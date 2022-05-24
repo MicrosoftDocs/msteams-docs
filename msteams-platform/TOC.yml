@@ -24,7 +24,7 @@
     href: sbs-gs-javascript.yml
   - name: Build your first bot app using JavaScript
     href: sbs-gs-bot.yml
-  - name: Build your first messaging extension app using JavaScript
+  - name: Build your first message extension app using JavaScript
     href: sbs-gs-msgext.yml
   - name: Build your first app using Blazor
     href: sbs-gs-blazorupdate.yml
@@ -34,6 +34,10 @@
     href: sbs-gs-csharp.yml
   - name: Build your first app using Node.js
     href: sbs-gs-nodejs.yml
+  - name: Build notification bot with JavaScript
+    href: sbs-gs-notificationbot.yml
+  - name: Build command bot with JavaScript
+    href: sbs-gs-commandbot.yml  
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: Plan your app
