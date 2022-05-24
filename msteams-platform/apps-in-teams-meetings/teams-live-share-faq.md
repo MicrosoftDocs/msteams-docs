@@ -38,7 +38,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-Currently, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are not supported.
+Currently, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now aren't supported.
 
 <br>
 
@@ -60,6 +60,7 @@ Submit issues and feature requests to the SDK repository for [Live Share SDK](ht
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Reference docs](https://aka.ms/livesharedocs)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Teams apps in meetings](teams-apps-in-meetings.md)

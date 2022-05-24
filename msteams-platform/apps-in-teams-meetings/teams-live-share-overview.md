@@ -13,7 +13,7 @@ ms.author: v-ypalikila
 > [!Note]
 > The Live Share SDK is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the Live Share SDK.
 
-Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Live Share provides a free, fully managed, and ready to use [Azure Fluid Relay](https://docs.microsoft.com/azure/azure-relay/relay-what-is-it)) backed by the security and global scale of Teams.
+Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Live Share provides a free, fully managed, and ready to use [Azure Fluid Relay](/azure/azure-relay/relay-what-is-it) backed by the security and global scale of Teams.
 
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
@@ -54,9 +54,10 @@ Here are some key benefits of the Live Share SDK:
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Reference docs](https://aka.ms/livesharedocs)
-- [Live Share capabilities](teams-live-share-capabilities.md)
-- [Live Share media capabilities](teams-live-share-media-capabilities.md)
-- [Live Share FAQ](teams-live-share-faq.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Live Share capabilities](teams-live-share-capabilities.md)
+* [Live Share media capabilities](teams-live-share-media-capabilities.md)
+* [Live Share FAQ](teams-live-share-faq.md)
+* [Teams apps in meetings](teams-apps-in-meetings.md)

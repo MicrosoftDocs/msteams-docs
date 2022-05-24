@@ -52,7 +52,7 @@ To get started, install the following:
    $ npm start
    ```
   
-     A new browser tab opens a http://localhost:8080 and the Dice Roller game appears.
+     A new browser tab opens a `http://localhost:8080` url and the Dice Roller game appears.
 
 1. Copy the complete URL in the browser, including the ID and paste the URL in a new window or a different browser.
 
@@ -62,7 +62,7 @@ To get started, install the following:
 
     :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller multiple tabs":::
   
- **Congratulations** you have learned how to build and run an app using the Live Share SDK.
+ **Congratulations** you've learned how to build and run an app using the Live Share SDK.
 
 ## Next step
 
@@ -72,7 +72,8 @@ To get started, install the following:
 ## See also
 
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Reference docs](https://aka.ms/livesharedocs)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 * [Live Share capabilities](teams-live-share-capabilities.md)
 * [Live Share FAQ](teams-live-share-faq.md)
 * [Teams apps in meetings](teams-apps-in-meetings.md)
