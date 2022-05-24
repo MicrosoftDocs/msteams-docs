@@ -54,7 +54,7 @@ landingContent:
         url: m365-apps/overview.md
       - text: App guidance and what's new in TeamsJS version 2.0.0
         url: tabs/how-to/using-teams-client-sdk.md
-      - text: Teams Toolkit 4.0.0 for Visual Studio Code is now GA
+      - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Bots and Message extensions in GCC and GCCH
         url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
