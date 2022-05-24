@@ -264,7 +264,7 @@ items:
     | `bot/teamsBot.js` | Main entry point for the bot app. |
     | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
     | `templates/appPackage/manifest.template.json` | App manifest for running the app in local and remote environment.  |
-    | `templates/azure` | BICEP template files |
+    | `templates/azure` | BICEP template files. |
 
     > [!Tip]
     > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
