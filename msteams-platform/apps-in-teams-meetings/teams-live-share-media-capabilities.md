@@ -121,7 +121,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 ## Suspensions and wait points
 
-If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSessionCoordinatorSuspension.html) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 ```javascript
 // Suspend the media session coordinator
@@ -131,7 +131,7 @@ const suspension = mediaSession.coordinator.beginSuspension();
 suspension.end();
 ```
 
-When beginning a suspension, you can also include an optional [CoordinationWaitPoint](https://livesharesdk.z5.web.core.windows.net/interfaces/_microsoft_live_share_media.CoordinationWaitPoint.html) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
 
 ```javascript
 // Suspend the media session coordinator
