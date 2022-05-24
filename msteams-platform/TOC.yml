@@ -301,6 +301,24 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Enhanced collaboration with Live Share
+    items:
+    - name: Overview
+      href: apps-in-teams-meetings/teams-live-share-overview.md
+    - name: Getting started
+      items:
+      - name: Quick start
+        href: apps-in-teams-meetings/teams-live-share-quick-start.md
+      - name: Dice Roller tutorial
+        href: apps-in-teams-meetings/teams-live-share-tutorial.md
+    - name: Core capabilities
+      href: apps-in-teams-meetings/teams-live-share-capabilities.md
+    - name: Media capabilities
+      href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+    - name: Agile Poker tutorial
+      href: sbs-teams-live-share.yml
+    - name: Live Share SDK FAQ
+      href: apps-in-teams-meetings/teams-live-share-faq.md  
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
