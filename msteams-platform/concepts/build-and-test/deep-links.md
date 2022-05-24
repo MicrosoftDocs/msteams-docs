@@ -12,6 +12,8 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
+The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or even launching a chat dialog, the SDK provides strongly typed APIs that make for an improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
+
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
@@ -30,16 +32,13 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 > ✔ Text message hyperlink markdown: Directly navigates to deep link url.  
 > ✔ Link pasted in general chat conversation: Directly navigates to deep link url.
 >
-The behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
-
-- The target that the deep link points to
-- The host where Teams app is running
-
-If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
-
-## Deep linking with the Teams JavaScript client SDK
-
-The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of creating and using deep links to entities in Teams and Teams apps. Deep links can be used for scenarios such as navigating to content and information within your tab or even launching a chat dialog. While it is possible, and for some scenarios necessary, to manually create a deep link, the SDK provides strongly typed APIs that make for an improved experience. These APIs are particularly useful for Teams apps that might be run in other hosts (Outlook, Office), as they provide a way to check that the capability being used is supported by that host. The following sections highlight the uses of deep links and how the SDK facilitates their usage.
+>
+>The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
+>
+> * The target that the deep link points to
+> * The host where the Teams app is running
+>
+> If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
 
 ## Deep link to your tab
 
@@ -85,7 +84,15 @@ Alternatively, you can also generate deep links programmatically, using the form
 >[!IMPORTANT]
 > Currently, shareDeepLink does not work on mobile platforms.
 
+### Consume a deep link from a tab
+
+When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-page ID if it exists.
+
+The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call ([`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+
 ### Generate a deep link to your tab
+
+While it is recommended to use `shareDeepLink()` to generate a deep link to your tab, it is possible to manually create one too.
 
 > [!NOTE]
 >
@@ -155,21 +162,17 @@ The query parameters are:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### Consume a deep link from a tab
+## Navigation from your tab
 
-When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-page ID if it exists.
+You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using the SDK. The following sections show both methods, but where possible use of the strongly typed capabilities of the SDK is recommended.
 
-The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call ([`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (or subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
-
-## Deep linking from your tab
-
-You can deep link to content in Teams from your tab. This is useful if your tab needs to link to other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. Be aware though, that particularly for Teams apps that might run in other hosts (Outlook and Office), it's important to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS SDK organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you would want to check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
+One of the benefits of using TeamsJS, particularly for Teams apps that might run in other hosts (Outlook and Office), is that it's possible to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can easily use the `isSupported()` function associated with the namespace of the API. The TeamsJS SDK organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you could just check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
 For additional information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
-### Navigate with a deep link
+### Navigate within your app
 
-A deep link can be used to navigate within an app. The following code demonstrates how to use a deep link to navigate to a specific entity within your Teams app.
+It is possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -199,7 +202,7 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### Open a scheduling dialog
 
-You can use a deep link to open a scheduling dialog from your Teams app, as shown in the following code. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
+You can open a scheduling dialog from your Teams app, as shown in the following code. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -230,11 +233,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 ---
 
-Alternatively, you can manually create deep links to the Teams built-in scheduling dialog.
-
 #### Generate a deep link to the scheduling dialog
 
-Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
+While it's recommended to use the strongly typed APIs of TeamsJS, it is possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
@@ -257,7 +258,7 @@ To use this deep link with your bot, you can specify this as the URL target in y
 
 ### Open an app install dialog
 
-You can use a deep link to open an app install dialog from your Teams app, as shown in the following code.
+You can open an app install dialog from your Teams app, as shown in the following code.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -272,7 +273,7 @@ if(appInstallDialog.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about the install dialog. see the [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) function in the API reference documentation.
+For more information about the install dialog see the [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) function in the API reference documentation.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
@@ -283,24 +284,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ---
 
-### Deep link to mail
+### Navigate to a chat
 
-You can use deep links to open a specific mail, reply to or forward a mail, or even to compose a new mail. The following code demonstrates how to create a new mail, but you can look at the [mail](/javascript/api/@microsoft/teams-js/mail?view=msteams-client-js-latest&preserve-view=true) namespace in the reference documentation for more information about other scenarios.
-
-```javascript
-
-if(mail.isSupported()) {
-    const mailPromise = mail.composeMail({type: mail.ComposeMailType.New, toRecipients: ["joe@contoso.com","bob@contoso.com"], subject:"test mail", message:"hello world"});
-    mailPromise.
-      then((result) => {/*Successful operation*/}).
-      catch((error) => {/*Unsuccessful operation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
-
-### Deep link to a chat
-
-You can create deep links to private chats between users by specifying the set of participants. If a chat doesn’t exist with the specified participants, the link navigates the user to an empty new chat. New chats are created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can navigate to or create private chats between users with TeamsJS by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat. New chats are created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As an example use case, if you’re returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person. The following example demonstrates how to open a chat message to a group of participants with an initial message.
 
@@ -314,7 +300,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Alternatively, you can use the following format for a manually created deep link that you can use in a bot, connector, or message extension card:
+While use of the strongly typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -414,14 +400,14 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### Deep linking to an audio or audio-video call
+### Navigate to an audio or audio-video call
 
-You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. After the deep link is invoked and before placing the call, Teams client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In case of a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
 > [!NOTE]
-> This deep link cannot be used for invoking a meeting.
+> This method cannot be used for invoking a meeting.
 
 The following code demonstrates using the TeamsJS SDK to start a call:
 
@@ -436,9 +422,9 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-Alternatively, you can use a manually created deep link to start a call.
-
 #### Generate a deep link to a call
+
+While use of the strongly typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
