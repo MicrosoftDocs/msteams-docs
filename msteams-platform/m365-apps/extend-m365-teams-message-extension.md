@@ -44,9 +44,9 @@ Alternately, you can use the ready-made Outlook-enabled app in the following sec
 
 To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
 
-1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`
-1. Select **Create a new Teams app** option
-1. Select **Search-based message extension** to download sample code for a Teams message extension using the latest Teams app manifest (version `1.13`)
+1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
+1. Select **Create a new Teams app** option.
+1. Select **Search-based message extension** to download sample code for a Teams message extension using the latest Teams app manifest (version `1.13`).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Type 'Create a new Teams app' VS Code command palette to list Teams sample options":::
 
@@ -54,7 +54,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
     
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM Search Connector sample in Teams Toolkit Samples gallery":::
 
-1. Select a location on your local machine for the workspace folder
+1. Select a location on your local machine for the workspace folder.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (Azure App Service, App Service plan, Azure Bot, and Managed Identity) in your Azure account.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
 
@@ -68,7 +68,7 @@ You have two options for updating your app manifest:
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
-1. Open the command palette: `Ctrl+Shift+P`
+1. Open the command palette: `Ctrl+Shift+P`.
 1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
 
 # [Manual steps](#tab/manifest-manual)
@@ -109,7 +109,7 @@ For users to interact with your message extension from Outlook, you'll need to a
 > [!NOTE]
 > You can skip the step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Azure Active Directory (AAD) Single Sign-On authentication.
 
-Azure Active Directory Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), however you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open **App registrations**.
@@ -146,7 +146,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
 
-Once sideloaded through Teams, your message extension will be available in outlook.com and Outlook for Windows desktop.
+After it's sideloaded through Teams, your message extension will be available in outlook.com and Outlook for Windows desktop.
 
 ## Preview your message extension in Outlook
 
