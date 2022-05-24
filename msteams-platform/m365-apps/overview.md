@@ -65,7 +65,7 @@ Once published as a Microsoft 365-enabled Teams app, your app will be discoverab
 
 For more information, see [Publish Teams apps for Microsoft 365](publish.md)
 
-## Next steps
+## Next step
 
 Set up your dev environment to build Teams apps for Microsoft 365:
 
