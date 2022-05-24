@@ -103,6 +103,8 @@
     - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
     - name: Preview and customize Teams app manifest
+      href:
+    - name: Customize Azure AD manifest
       href: 
     - name: Customize Azure AD manifest
       href: toolkit/AAD-manifest-customization.md
@@ -111,7 +113,7 @@
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
     - name: Add single sign on to Teams app
-      href:
+      href: toolkit/add-single-sign-on.md
     - name: Add API connection to Teams app
       href:
     - name: Set up CI/CD pipelines
