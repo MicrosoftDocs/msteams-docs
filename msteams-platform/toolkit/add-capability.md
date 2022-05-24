@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Teams apps
 
-Teams app capability helps you to create a new Teams app in app development. The following table lists the Teams app capabilities:
+Add capability in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
