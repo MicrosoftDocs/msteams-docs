@@ -38,15 +38,15 @@ The main milestones of this journey are:
 ## Install Teams Toolkit for Visual Studio Code
 
 1. Open **Visual Studio Code.**
-1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**):
+1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="install":::
 
-1. Enter **Teams Toolkit** in the search box:
+1. Enter **Teams Toolkit** in the search box.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-2.png" alt-text="Toolkit":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Toolkit":::
 
-1. Select **Install**:
+1. Select **Install**.
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="install toolkit":::
 
@@ -63,7 +63,7 @@ You can select **Get Started** to explore the Teams Toolkit, or select **Create 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot ofteams toolkit":::
 
-Let's take a tour of the topics covered in this document:
+Let's take a tour of the topics covered in this document.
 
 ## Accounts
 
