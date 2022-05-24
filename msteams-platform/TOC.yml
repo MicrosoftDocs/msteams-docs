@@ -105,15 +105,15 @@
     - name: Preview and customize Teams app manifest
       href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
     - name: Customize Azure AD manifest
-      href: 
+      href: toolkit/AAD-manifest-customization.md
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
     - name: Add single sign on to Teams app
-      href: 
+      href: toolkit/add-single-sign-on.md
     - name: Add API connection to Teams app
-      href: 
+      href: toolkit/add-API-connection.md
     - name: Set up CI/CD pipelines
       href: toolkit/use-CICD-template.md 
     - name: Publish Teams apps using Teams Toolkit 
