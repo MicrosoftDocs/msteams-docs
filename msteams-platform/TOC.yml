@@ -103,9 +103,9 @@
     - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
     - name: Preview and customize Teams app manifest
-      
+      href:
     - name: Customize Azure AD manifest
-     
+      href: 
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
@@ -113,7 +113,7 @@
     - name: Add single sign on to Teams app
       href: toolkit/add-single-sign-on.md
     - name: Add API connection to Teams app
-      
+      href:
     - name: Set up CI/CD pipelines
       href: toolkit/use-CICD-template.md 
     - name: Publish Teams apps using Teams Toolkit 
@@ -136,8 +136,6 @@
     href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
-  - name: Teams JavaScript client SDK v2 Preview
-    href: m365-apps/using-teams-client-sdk-preview.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -425,6 +423,8 @@
     href: m365-apps/extend-m365-teams-personal-tab.md
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+  - name: Publish Teams apps for Microsoft 365
+    href: m365-apps/publish.md
 - name: Test your app
   items:
   - name: Overview
