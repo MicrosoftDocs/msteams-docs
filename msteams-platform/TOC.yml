@@ -297,8 +297,12 @@
     items:
     - name: Overview
       href: apps-in-teams-meetings/teams-live-share-overview.md
-    - name: Get started with Dice Roller sample
-      href: apps-in-teams-meetings/teams-live-share-tutorial.md
+    - name: Getting started
+      items:
+      - name: Quick start
+        href: apps-in-teams-meetings/teams-live-share-quick-start.md
+      - name: Dice Roller tutorial
+        href: apps-in-teams-meetings/teams-live-share-tutorial.md
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
     - name: Media capabilities

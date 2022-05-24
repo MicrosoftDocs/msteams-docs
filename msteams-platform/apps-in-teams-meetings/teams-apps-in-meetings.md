@@ -42,4 +42,4 @@ The new custom Together Mode scenes feature enables users to collaborate in a me
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Meeting lifecycle](meeting-app-extensibility.md#meeting-lifecycle)
-* [Live Share SDK](teams-live-share-overview.md)
+* [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)

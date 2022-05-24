@@ -54,6 +54,10 @@ No. Teams currently doesn't support encrypted media for tab applications.
 
 </details>
 
+## Have more questions or feedback?
+
+Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).
+
 ## See also
 
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
