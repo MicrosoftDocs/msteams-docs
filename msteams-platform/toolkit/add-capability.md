@@ -48,7 +48,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
    1. Select **Teams Toolkit** from left panel.
    1. Select **Add features** under **DEVELOPMENT**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature1234.png" alt-text="updated one" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one" border="true":::
 
 * **To add capabilities by using command palette:**
 
