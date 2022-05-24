@@ -92,32 +92,38 @@
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create a new Teams app
       href: toolkit/create-new-project.md
+    - name: Prepare accounts to build Teams app
+      href: toolkit/accounts.md
     - name: Debug your Teams app locally
       href: toolkit/debug-local.md
     - name: Debug background processes
       href: toolkit/debug-background-process.md
-    - name: Prepare accounts to build Teams app
-      href: toolkit/accounts.md
     - name: Provision cloud resources
       href: toolkit/provision.md
     - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
-    - name: Publish Teams apps using Teams Toolkit 
-      href: toolkit/publish.md
+    - name: Preview and customize Teams app manifest
+      href:
+    - name: Customize Azure AD manifest
+      href: 
+    - name: Customize Azure AD manifest
+      href: toolkit/AAD-manifest-customization.md
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
-    - name: Customize Teams app manifest
-      href: toolkit/TeamsFx-manifest-customization.md
-    - name: Preview Teams app manifest
-      href: toolkit/TeamsFx-manifest-preview.md
+    - name: Add single sign on to Teams app
+      href: toolkit/add-single-sign-on.md
+    - name: Add API connection to Teams app
+      href:
+    - name: Set up CI/CD pipelines
+      href: toolkit/use-CICD-template.md 
+    - name: Publish Teams apps using Teams Toolkit 
+      href: toolkit/publish.md
     - name: Manage multiple environments
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
-      href: toolkit/TeamsFx-collaboration.md
-    - name: Set up CI/CD pipelines
-      href: toolkit/use-CICD-template.md  
+      href: toolkit/TeamsFx-collaboration.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
   - name: Teams Toolkit CLI
@@ -132,8 +138,6 @@
     href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
-  - name: Teams JavaScript client SDK v2 Preview
-    href: m365-apps/using-teams-client-sdk-preview.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -421,6 +425,8 @@
     href: m365-apps/extend-m365-teams-personal-tab.md
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+  - name: Publish Teams apps for Microsoft 365
+    href: m365-apps/publish.md
 - name: Test your app
   items:
   - name: Overview
