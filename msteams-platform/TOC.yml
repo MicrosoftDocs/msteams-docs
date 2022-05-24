@@ -34,6 +34,10 @@
     href: sbs-gs-csharp.yml
   - name: Build your first app using Node.js
     href: sbs-gs-nodejs.yml
+  - name: Build notification bot with JavaScript
+    href: sbs-gs-notificationbot.yml
+  - name: Build command bot with JavaScript
+    href: sbs-gs-commandbot.yml  
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: Plan your app
