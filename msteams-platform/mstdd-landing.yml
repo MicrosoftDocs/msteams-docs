@@ -83,6 +83,10 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
+      - text: Build command bot with JavaScript
+        url: toolkit/add-capability.md
+      - text: Build notification bot with JavaScript
+        url: toolkit/add-capability.md
 
 - title: Monetize your app
   linkLists:
