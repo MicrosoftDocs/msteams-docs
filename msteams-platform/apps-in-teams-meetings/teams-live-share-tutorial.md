@@ -97,7 +97,7 @@ start().catch((error) => console.error(error));
 
 Not all of your apps views will need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient) and then calling it's [joinContainer()](https://docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
+Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient) and then calling it's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
 
 ```js
 async function joinContainer() {
@@ -124,7 +124,7 @@ async function joinContainer() {
 ```
 
 > [!NOTE]
-> When testing locally, the TeamsFluidClient updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the TeamsFluidClient to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](https://docs.microsoft.com/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) options passed to the TeamsFluidClient.
+> When testing locally, the TeamsFluidClient updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the TeamsFluidClient to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](https://review.docs.microsoft.com/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) options passed to the TeamsFluidClient.
 
 ## Write the stage view
 
@@ -194,7 +194,7 @@ The values returned from `diceMap` are only a snapshot in time. To keep the data
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](https://docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -223,7 +223,7 @@ function renderSidePanel(elem) {
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
 > [!Important]
-> The Live Share SDK's [joinContainer()](https://docs.microsoft.com/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) is not supported in the tab `settings` context.
+> The Live Share SDK's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 
@@ -263,7 +263,7 @@ function renderSettings(elem) {
 
 ## Test locally
 
-You can test your app locally, using `npm run start`. For more information, see [Quick Start Guide](./teams-live-share-quick-start.md) for more details.
+You can test your app locally, using `npm run start`. For more information, see [Quick Start Guide](./teams-live-share-quick-start.md).
 
 ## Test in Teams
 
@@ -302,9 +302,9 @@ After you've started running your app locally with `npm run start`, you can then
    > [!NOTE]
    >
    > * Do not zip the containing folder.
-   > * Give your zip file a descriptive name, e.g. `DiceRollerLiveShare`.
-
-1. For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)
+   > * Give your zip file a descriptive name. For example, `DiceRollerLiveShare`.
+  
+   For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)
 
 ### Sideload your app into a meeting
 
@@ -314,17 +314,17 @@ After you've started running your app locally with `npm run start`, you can then
 
 1. Join the meeting.
 
-1. In the meeting window at the top, Select **+ Apps** > **Manage apps**.
+1. In the meeting window at the top, select **+ Apps** > **Manage apps**.
 
-1. In the **Manage apps** pane, Select **Upload a custom app**.
+1. In the **Manage apps** pane, select **Upload a custom app**.
 
-   1. *Don't see the option to **Upload a custom app?!** Follow [instructions here](/microsoftteams/teams-custom-app-policies-and-settings) to enable custom-apps in your tenant.*
+   1. If you don't see the option to **Upload a custom app**, follow [instructions](/microsoftteams/teams-custom-app-policies-and-settings) to enable custom apps in your tenant.
 
 1. Select and upload the `manifest.zip` file from your computer.
 
 1. Select **Add** to add your sample app into the meeting.
 
-1. Select **+ Apps**, enter Dice Roller in the *Find an app* search box.
+1. Select **+ Apps**, type Dice Roller in the **Find an app** search box.
 
 1. Select the app to activate it in the meeting.
 
@@ -334,17 +334,17 @@ After you've started running your app locally with `npm run start`, you can then
 
 1. In the side panel, select the share to stage icon. Teams starts a live sync with the users on the meeting stage in the meeting.
 
-   :::image type="content" source="https://user-images.githubusercontent.com/7799064/168399675-73e67154-bdde-4d0f-bb8c-bc62aef00e66.png" alt-text="Share to stage":::
+   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-to-stage.png" alt-text="share to stage icon":::
 
    You should now see dice-roller on the meeting stage.
 
-   :::image type="content" source="https://user-images.githubusercontent.com/7799064/168399633-be29ec2b-55db-49ad-a90d-a1011baa8eaa.png" alt-text="meeting stage image":::
+   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-meeting-stage.png" alt-text="meeting stage image":::
 
 Users invited to the meeting can see your app on stage when they join the meeting.
 
 ## Deployment
 
-Once you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit) or the [Teams Developer Portal](https://dev.teams.microsoft.com/apps) to provision and upload your app's zip file.
+After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit) or the [Teams Developer Portal](https://dev.teams.microsoft.com/apps) to provision and upload your app's zip file.
 
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.

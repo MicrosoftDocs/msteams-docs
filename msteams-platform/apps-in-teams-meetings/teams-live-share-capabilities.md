@@ -156,9 +156,9 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralPresence](https://docs.microsoft.com/javascript/api/@microsoft/live-share/ephemeralpresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
-| [EphemeralEvent](https://docs.microsoft.com/javascript/api/@microsoft/live-share/ephemeralevent)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| [EphemeralState](https://docs.microsoft.com/javascript/api/@microsoft/live-share/ephemeralstate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter.|
+| [EphemeralPresence](/javascript/api/@microsoft/live-share/ephemeralpresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
+| [EphemeralEvent](/javascript/api/@microsoft/live-share/ephemeralevent)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
+| [EphemeralState](/javascript/api/@microsoft/live-share/ephemeralstate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter.|
 
 ### EphemeralPresence example
 
@@ -269,20 +269,20 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## Code samples
 
-| Sample name | Description                                                      | JavaScript                                  |
-| ----------- | ---------------------------------------------------------------- | ------------------------------------------- |
-| Dice Roller | Enable all connected clients to roll a dice and view the result. | [View](https://aka.ms/liveshare-diceroller) |
-| Agile Poker | Enable all connected clients to play Agile Poker.                | [View](https://aka.ms/liveshare-agilepoker) |
+| Sample name | Description  | JavaScript  |
+| ----------- | ---------------------------------------------- | -------------- |
+| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) |
+| Agile Poker | Enable all connected clients to play Agile Poker.| [View](https://aka.ms/liveshare-agilepoker) |
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Live Share media capabilities](teams-live-share-media-capabilities.md)
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-- [Reference docs](https://aka.ms/livesharedocs)
-- [Live Share FAQ](teams-live-share-faq.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Live Share FAQ](teams-live-share-faq.md)
+* [Teams apps in meetings](teams-apps-in-meetings.md)

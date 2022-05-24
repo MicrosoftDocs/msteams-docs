@@ -38,8 +38,8 @@ The Live Share SDK has two primary classes related to media synchronization:
 
 | Classes                                                                                                                  | Description                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| [EphemeralMediaSession](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
-| [MediaPlayerSynchronizer](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
+| [EphemeralMediaSession](/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
+| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.|
 
 Example:
 
@@ -121,7 +121,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 ## Suspensions and wait points
 
-If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 ```javascript
 // Suspend the media session coordinator
@@ -131,7 +131,7 @@ const suspension = mediaSession.coordinator.beginSuspension();
 suspension.end();
 ```
 
-When beginning a suspension, you can also include an optional [CoordinationWaitPoint](https://docs.microsoft.com/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
 
 ```javascript
 // Suspend the media session coordinator
@@ -180,11 +180,11 @@ To enable audio ducking, add the following [RSC](/microsoftteams/platform/graph-
         // ...other permissions here​
         {​
           "name": "OnlineMeetingIncomingAudio.Detect.Chat",​
-          "type": "Delegated“​
+          "type": "Delegated"
         },
         {​
-          "name": “OnlineMeetingIncomingAudio.Detect.Group",​
-          "type": "Delegated“​
+          "name": "OnlineMeetingIncomingAudio.Detect.Group",​
+          "type": "Delegated"​
         }​
       ]​
     }​
@@ -197,19 +197,20 @@ To enable audio ducking, add the following [RSC](/microsoftteams/platform/graph-
 
 ## Code samples
 
-| Sample name          | Description                                                                                                                               | Javascript                                     |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Sample name   | Description | JavaScript |
+| -------------------- | ----------------------------| -----------------|
 | React video          | Basic example showing how the EphemeralMediaSession object works with HTML5 video.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
 | React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Agile Poker tutorial](../sbs-teams-live-share.yml)
+> [!div class="nextstepaction"]
+> [Agile Poker tutorial](../sbs-teams-live-share.yml)
 
 ## See also
 
-- [Live Share SDK FAQ](teams-live-share-faq.md)
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Live Share API reference docs](https://livesharesdk.z5.web.core.windows.net/).
-- [Reference docs](https://aka.ms/livesharedocs)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [Live Share SDK FAQ](teams-live-share-faq.md)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Reference docs](https://aka.ms/livesharedocs)
+* [Teams apps in meetings](teams-apps-in-meetings.md)
