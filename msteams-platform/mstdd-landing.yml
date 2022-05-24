@@ -84,9 +84,9 @@ landingContent:
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
       - text: Build command bot with JavaScript
-        url: toolkit/add-capability.md
+        url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
-        url: toolkit/add-capability.md
+        url: sbs-gs-notificationbot.yml
 
 - title: Monetize your app
   linkLists:
@@ -151,9 +151,6 @@ landingContent:
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
-
-        - text: Grant tab device permissions
-          url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
         - text: Build tabs with adaptive cards
@@ -170,9 +167,9 @@ landingContent:
     - linkListType: tutorial
       links:
         - text: Build command bot with JavaScript
-          url: toolkit/add-capability.md
+          url: sbs-gs-commandbot.yml
         - text: Build notification bot with JavaScript
-          url: toolkit/add-capability.md
+          url: sbs-gs-notificationbot.yml
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
@@ -197,7 +194,7 @@ landingContent:
     - text: Build scenarios for Teams app
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
 
