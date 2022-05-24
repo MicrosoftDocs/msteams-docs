@@ -36,7 +36,7 @@ items:
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Visual Studio Code extension that creates a project scaffolding for your app. Use latest version. |
+    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the Node.js version 12 or 14 LTS release. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
@@ -163,7 +163,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-    1. Deselect **Tab**, select **Tab (SPFx)**, and select **OK**.
+    1. Select **(SPFx) tab**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx" border="true":::
 
@@ -180,6 +180,20 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
+    1. Select your **Workspace folder** by choosing your required folder.  
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder." border="false":::
+
+    1. Enter a suitable **Application name** for your app, such as `HelloWorld`. Press **Enter**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder." border="false":::
+    
+        After your app is created, the Teams Toolkit displays the following message:
+        
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/preview-project.png" alt-text="localdebug" border="true":::
+        
+        Select **Local debug** to preview your project.
+
         Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" border="true":::
@@ -187,20 +201,7 @@ items:
         The scaffolding takes a couple of minutes.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" border="true":::
-        
-        After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code
-        
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/location-change-new.png" alt-text="location" border="true":::
-
-        The message offers two options:
-        
-        - **Change location**
-        - **Local Debug**
-        
-        For this tutorial, you don't need to use these options.
-
-        > [!NOTE]
-        > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
+          
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
