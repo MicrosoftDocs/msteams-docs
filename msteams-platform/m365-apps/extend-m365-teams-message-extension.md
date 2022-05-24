@@ -51,7 +51,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Type 'Create a new Teams app' VS Code command palette to list Teams sample options":::
 
     The sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select *Development* > *View samples* > **NPM Search Connector**.
-    
+
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM Search Connector sample in Teams Toolkit Samples gallery":::
 
 1. Select a location on your local machine for the workspace folder.
@@ -84,7 +84,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ---
 
-If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
+If you use Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
 
 ## Add an Outlook channel for your bot
 
@@ -115,8 +115,7 @@ Azure Active Directory (AD) Single-sign on (SSO) for message extensions works th
 1. Open **App registrations**.
 1. Select the name of your application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
-
-In the **Authorized client applications** section, ensure all of the following `Client Id` values are listed:
+1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are listed:
 
 |Microsoft 365 client application | Client ID |
 |--|--|
@@ -162,7 +161,7 @@ To preview your app running in Outlook on the web:
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' menu on the bottom of the mail composition window to use your message extension":::
 
-Your message extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
+Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ### Outlook
 
@@ -174,7 +173,7 @@ To preview your app running in Outlook on Windows desktop:
 
     :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
 
-Your message extension will be listed. Invoking it will open an adjacent pane to display search results.
+Your message extension is listed, it will open an adjacent pane to display search results.
 
 ## Troubleshooting
 
