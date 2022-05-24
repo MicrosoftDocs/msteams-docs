@@ -5,7 +5,7 @@ description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/17/2022
+ms.date: 05/24/2022
 ---
 
 # Teams Toolkit Overview
@@ -67,7 +67,7 @@ Let's take a tour of the topics covered in this document.
 
 ## Accounts
 
-To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
 ## Environment
 
@@ -125,7 +125,7 @@ In this section, you can find the documentation and resources you need. You can 
 
 Let's explore Teams Toolkit features.
 
-| Teams Toolkit Features | Includes... | What you can do |
+| Teams Toolkit Features | Includes | What you can do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
 | &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
