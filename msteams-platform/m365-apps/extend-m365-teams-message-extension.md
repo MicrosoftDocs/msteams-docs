@@ -197,7 +197,7 @@ As you test your message extension, you can identify the source (originating fro
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
 
-## Next steps
+## Next step
 
 Publish your app to be discoverable in Teams, Outlook, and Office:
 
