@@ -104,7 +104,7 @@
       href: toolkit/deploy.md
     - name: Preview and customize Teams app manifest
       href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-    - name: Customize Azure AD manifes
+    - name: Customize Azure AD manifest
       href: toolkit/AAD-manifest-customization.md
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
