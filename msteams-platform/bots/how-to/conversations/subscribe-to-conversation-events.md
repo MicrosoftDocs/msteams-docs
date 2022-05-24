@@ -37,7 +37,7 @@ A bot receives a `conversationUpdate` event in either of the following cases:
   > [!NOTE]
   > Conversation metadata is the data collected from a conversation, such as content, keywords, topics, graphics.
 
- The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It receives an update when it has been added for the first time for personal conversations and channels. For more information on adding new team members to chat or channel, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
+ The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where member has been added. It receives an update when the member has been added for the first time for chats and channels. For more information on adding new team members to chat or channel, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
 
 The following table provides a list of Teams conversation update events with more details:
 
