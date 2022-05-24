@@ -37,6 +37,7 @@ The limitations to TeamsFx while adding more capabilities are as follows:
 > [!Note]
 > You need to perform the provision for each environment, after you successfully add capabilities to your Teams app.
 * You can add capabilities using Teams Toolkit in Visual Studio Code
+
     1. Open **Microsoft Visual Studio Code**
     1. Select **Teams Toolkit** from left panel
     1. Select **Add capabilities**
