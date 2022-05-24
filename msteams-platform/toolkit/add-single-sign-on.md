@@ -280,22 +280,22 @@ export async function showUserImage(context, ssoToken, param) {
 
    * Add the following line for new command registration using `addCommand` in `teamsSsoBot`:
 
-   ```bash
+     ```bash
 
-   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-   ```
+     ```
 
    * Add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
 
-   ```bash
+     ```bash
 
-   // As shown here, you can add your own parameter into the `showUserImage` method
-   // You can also use regular expression for the command here
-   const scope = ["User.Read"];
-   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+     // As shown here, you can add your own parameter into the `showUserImage` method
+     // You can also use regular expression for the command here
+     const scope = ["User.Read"];
+     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-   ```
+     ```
 
 3. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `command` in `commandLists` of your bot:
 
