@@ -143,7 +143,7 @@ When you feel your app is production ready, you can begin the process of getting
 
       1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
 
-  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation ensure:
+  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows, before you submit your app linked to a SaaS offer for validation ensure the following:
 
      1. Both admin and non-admin users can place an order and confirm the purchase of your subscription. Purchasers can navigate to the SaaS application landing page by selecting  **Setup Now** in the Microsoft Admin Center. Test and ensure that your purchasers can activate and configure their subscription on your SaaS application. Messaging on your SaaS application should provide enough and clear information on the way forward to a purchaser.
 
