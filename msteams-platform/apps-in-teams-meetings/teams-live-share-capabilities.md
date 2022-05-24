@@ -1,6 +1,6 @@
 ---
-title: Live Share SDK capabilities
-description: Learn about the core capabilities of Microsoft Live Share.
+title: Live Share getting started
+description: In this module, learn more about live share SDK capabilities, RSC permissions and ephermal data structures.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila

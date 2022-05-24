@@ -261,11 +261,83 @@ function renderSettings(elem) {
 }
 ```
 
+## Testing locally
+
+When you're ready to test the app, feel free to test locally running `npm run start`. Review the [Quick Start Guide](./teams-live-share-quick-start.md) for more details.
+
+## Testing in Teams
+
+Once you're up and running locally with `npm start`, you're ready to test your app on Teams! To test without needing to deploy your app, you will need to download and use the [`ngrok`](https://ngrok.com/) tunneling service.
+
+### Create a ngrok tunnel to allow Teams to reach your app
+
+1. [Download ngrok](https://ngrok.com/download).
+2. Launch ngrok with port 8080, or whatever port your app is running
+   `ngrok http 8080 --host-header=localhost`
+3. In your terminal, you will see a new url that looks like: `https:...ngrok.io`. This is the tunnel pointing to your app, and what you will need to add to your app `manifest.json`.
+
+### Create the app package to sideload into Teams
+
+1. Open the [`.\manifest\manifest.json`](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller/manifest) from the dice roller sample and update the values in it.
+1. You must replace `https://<<BASE_URI_DOMAIN>>` with the https path to your ngrok tunnel.
+1. It is recommended that you also update the following fields.
+   * Set `developer.name` to your name.
+   * Update `developer.websiteUrl` with your website.
+   * Update `developer.privacyUrl` with your privacy policy.
+   * Update `developer.termsOfUseUrl` with your terms of use.
+   
+1. Create a zip file with the contents of `.\manifest` directory so that manifest.json, color.png, and outline.png are in the root directory of the zip file.
+   1. On Windows, select all files in `.\manifest` directory and compress them.
+   > [!NOTE]
+   >
+   > * Do not zip the containing folder.
+   > * Give your zip file a descriptive name, e.g. `DiceRollerLiveShare`.
+
+1. For more information on manifests, visit the [Teams manifest documentation](../resources/schema/manifest-schema)
+
+### Sideload your app into a meeting
+
+1. Schedule a meeting for testing from calendar in Teams.
+1. Join the meeting.
+1. In the meeting window at the top, tap on **+ Apps** and tap on **Manage apps** in the flyout that opens.
+1. In the **Manage apps** pane, tap on **Upload a custom app**.
+   1. *Don't see the option to **Upload a custom app?!** Follow [instructions here](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) to enable custom-apps in your tenant.*
+1. Select the zip file you created earlier and upload it.
+1. In the dialog that shows up, tap **Add** to add your sample app into the meeting.
+1. Now, back in the meeting window, tap **+ Apps** again and type the name of your app in the *Find an app* textbox.
+1. Select the app to activate it in the meeting.
+1. In the configuration dialog, just tap **Save** to add your app into the meeting.
+1. In the side panel, tap the share icon to put your app on the main stage in the meeting.
+1. Schedule a meeting for testing from calendar in Teams.
+1. Join the meeting.
+1. In the meeting window, tap on **+ Apps** and tap on **Manage apps** in the flyout that opens.
+1. In the **Manage apps** pane, tap on **Upload a custom app**.
+   1. *Don't see the option to **Upload a custom app?!** Follow [instructions here](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) to enable custom-apps in your tenant.*
+
+1. Select the zip file you created earlier and upload it.
+1. In the dialog that shows up, tap **Add** to add your sample app into the meeting.
+1. Now, back in the meeting window, tap **+ Apps** again and type the name of your app in the *Find an app* textbox.
+1. Select the app to activate it in the meeting.
+1. In the configuration dialog, just tap **Save** to add your app into the meeting.
+1. In the side panel, tap the share icon to put your app on the main stage in the meeting.
+
+   <img width="216" alt="image" src="https://user-images.githubusercontent.com/7799064/168399675-73e67154-bdde-4d0f-bb8c-bc62aef00e66.png">
+
+That's it! You should now see dice-roller on the meeting stage:
+
+![meeting stage image](https://user-images.githubusercontent.com/7799064/168399633-be29ec2b-55db-49ad-a90d-a1011baa8eaa.png)
+
+Your friends/colleagues invited to the meeting should be able to see your app on stage when they join the meeting.
+
+## Deployment
+
+Once you're ready to deploy your code, you can use [Teams Toolkit](https://docs.microsoft.com/microsoftteams/platform/toolkit/provision#provision-using-teams-toolkit) or the [Teams Developer Portal](https://dev.teams.microsoft.com/apps) to provision and upload your app's zipfile. Note: you will need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.
+
 ## Code samples
 
-|Sample name |Description |JavaScript |
-|:------------ |---------------|-------|
-|Dice Roller|Enable all connected clients to roll a dice and view the result.|[View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)|
+| Sample name | Description                                                      | JavaScript                                                                           |
+| :---------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Dice Roller | Enable all connected clients to roll a dice and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## Next step
 

@@ -13,7 +13,7 @@ ms.author: v-ypalikila
 > [!Note]
 > The Live Share SDK is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the Live Share SDK.
 
-Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. This service is free, fully managed, and ready to use.
+Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Using Live Share as a service includes a free, hosted, ready-to-use [Azure Relay Service](/azure/azure-relay/relay-what-is-it) to build your real-time interactive app without back-end hassle.
 
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
@@ -24,7 +24,7 @@ The Live Share SDK provides a `TeamsFluidClient` class for connecting to a speci
 
 ## Why build apps using the Live Share SDK?
 
-It can be difficult, time consuming, require expensive infrastructure and complex compliance requirements at scale to build collaborative apps. Teams users spend significant amount of time reviewing work with teammates, watching videos together, and brainstorming new ideas through screen sharing. The Live Share SDK enables you to transform your app into something more collaborative with minimal investment.
+It can be difficult, time consuming, require expensive infrastructure and complex compliance requirements at scale to build next-level collaborative apps. Teams users spend significant amount of time reviewing work with teammates, watching videos together, and brainstorming new ideas through screen sharing. The Live Share SDK enables you to transform your app into something more interactively collaborative with minimal investment, such as multiple participants being able to whiteboard on the same canvas in real time.
 
 Here are some key benefits of the Live Share SDK:
 
@@ -33,7 +33,7 @@ Here are some key benefits of the Live Share SDK:
 * Media extensions to easily synchronize video and audio
 * Respect meeting privileges using role verification
 * Free and fully managed service with low latency
-* Audio ducking
+* Intelligent Audio ducking
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 
