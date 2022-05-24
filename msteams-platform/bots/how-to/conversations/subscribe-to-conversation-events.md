@@ -12,11 +12,7 @@ keywords: events bot channel message reaction conversation
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
-
-* Trigger a welcome message when a new team member is added or removed
-* Trigger a notification when a channel is created, renamed, or deleted
-* Trigger a welcome message in the user's selected channel when the app is added to a team
+When building your conversational bots for Microsoft Teams, you can work with conversation events. You can capture these events in your code and take appropriate actions, such as triggering a welcome message in the user's selected channel when the app is added to a team.
 
 ## Conversation update events
 
@@ -34,10 +30,7 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 * Other members are added to or removed from a conversation
 * Conversation metadata has changed
 
-  > [!NOTE]
-  > Conversation metadata is the data collected from a conversation, such as content, keywords, topics, graphics.
-
- The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where member has been added. It receives an update when the member has been added for the first time for chats and channels. For more information on adding new team members to chat or channel, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
+ The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where member has been added. It receives an update when the member has been added for the first time . You can learn how to handle [`teamMemberAdded` event](#team-members-added) and [Installation update event](#installation-update-event).
 
 The following table provides a list of Teams conversation update events with more details:
 
@@ -57,7 +50,7 @@ The following table provides a list of Teams conversation update events with mor
 
 ### Channel created
 
-The channel created event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
 The following code shows an example of channel created event:
 
@@ -146,7 +139,7 @@ async def on_teams_channel_created(
 
 ### Channel renamed
 
-The channel renamed event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
+The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
 
 The following code shows an example of channel renamed event:
 
@@ -228,7 +221,7 @@ async def on_teams_channel_renamed(
 
 ### Channel deleted
 
-The channel deleted event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
+The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
 
 The following code shows an example of channel deleted event:
 
@@ -312,7 +305,7 @@ async def on_teams_channel_deleted(
 
 ### Channel restored
 
-The channel restored event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
 The following code shows an example of channel restored event:
 
@@ -401,12 +394,14 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. After a team member is added, the bots receives unique channel Id as a conversation Id using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. To determine how bot receives the team information, see [Teams channel data](../../../resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). You can also cache for future use, such as sending a message to a specific user bots. The bot posts welcome message in the same channel by default instead.
-
-> [!NOTE]
-> When bot is added, the conversation id will be set to the channel id that was selected by the user during the installation process or the channel where the installation occurred. Conversation id will be set to team id for all other conversation update scenarios.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation.  The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user. When app is installed in team, After a team member is added, the bots receives unique channel Id as a conversation Id using the [`conversationUpdate`](#conversation-update-events) and [`installationUpdate`](#installation-update-event) events. To determine how bot receives the team information, see [Teams channel data](../../../resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). The bot posts welcome message in the same channel by default instead.
 
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
+
+[placeholder for image]
+
+> [!NOTE]
+> When bot is added, the conversation id is set to the channel id that was selected by the user during the installation process or the channel where the installation occurred. Conversation id is set to team id for all other conversation update scenarios. You can get team details using `channeldata.team` object.
 
 The following code shows an example of team members added event:
 
@@ -1297,12 +1292,10 @@ async def on_reactions_removed(
 
 ## Installation update event
 
-The `installationUpdate` event is an activity sent to the bot. The bot can use this event to send an introductory message. Uninstallation of the bot also triggers event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+When a new member is added to a team, the `installationUpdate` event is sent to your bot on installation. The bot can use this event to send an introductory message. Uninstallation of the bot also triggers event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*. The bot also posts the message in the same channel using [conversationUpdate event](#team-members-added). This event helps you to meet your privacy and retain data requirements. You can delete user or the thread data when the bot is uninstalled.
 
 > [!NOTE]
 > When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
-
-When a new member is added to a chat or channel, the `installationUpdate` event send an introductory message from your bot on installation. The bot also posts the message in the same channel using [conversationUpdate event](#team-members-added). This event helps you to meet your privacy and retain data requirements. You can delete user or the thread data when the bot is uninstalled.
 
 The following code shows an example of `installationupdate` event:
 
