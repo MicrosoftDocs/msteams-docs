@@ -50,7 +50,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Enhanced collaboration with Live Share
+      - text: Enhanced collaboration with Live Share SDK
         url: /apps-in-teams-meetings/teams-live-share-overview
       - text: Submit your Outlook- and Office-enabled apps to the Teams store
         url: m365-apps/overview.md
