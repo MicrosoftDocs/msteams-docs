@@ -105,6 +105,9 @@ After adding tab, the changes in your project are as follows:
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated
 * The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability
 
+## Step-by-step guide
+
+Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
 
 ## Step-by-step guide
 
