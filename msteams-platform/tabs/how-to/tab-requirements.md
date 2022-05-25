@@ -26,13 +26,15 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
-* Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `microsoftTeams.initialize()`, otherwise your page is not displayed.
+* Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, otherwise your page will not be displayed.
 
 * For authentication to work on mobile clients, you must upgrade to Teams JavaScript SDK 1.4.1 and later.
 
-* If you choose to have your channel or group tab to appear on Teams mobile client, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+* If you choose to have your channel or group tab to appear on Teams mobile client, the `setConfig()` configuration must have a value for the `websiteUrl` property.
 
-* Microsoft Teams tab does'nt support the ability to load intranet websites that use self-signed certificates.
+* Microsoft Teams tab doesn't support the ability to load intranet websites that use self-signed certificates.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Tools to build tabs
 
