@@ -58,6 +58,8 @@ landingContent:
         url: tabs/how-to/using-teams-client-sdk.md
       - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
         url: toolkit/teams-toolkit-fundamentals.md
+      - text: Introduced app manifest version 1.13
+        url: resources/schema/manifest-schema.md  
       - text: Bots and Message extensions in GCC and GCCH
         url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 
