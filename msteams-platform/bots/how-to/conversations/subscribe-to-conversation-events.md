@@ -21,7 +21,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and more effective bot actions.
+You can use conversation update events to provide better notifications and effective bot actions.
 
 > [!IMPORTANT]
 >
@@ -55,7 +55,7 @@ The following table shows a list of Teams conversation update events with more d
 
 ### Channel created
 
-The channel created event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
 The following code shows an example of channel created event:
 
@@ -94,37 +94,49 @@ export class MyBot extends TeamsActivityHandler {
 ```json
 {
     "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:34:07.478Z",
-    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-    "id": "f:dd6ec311",
+    "membersAdded": [
+        {
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
+        }
+    ],
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
-        "channel": {
-            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-            "name": "FunDiscussions"
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
         },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
-        "eventType": "channelCreated",
+        "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
+  )
+ return
 ```
 
 # [Python](#tab/python)
@@ -144,7 +156,7 @@ async def on_teams_channel_created(
 
 ### Channel renamed
 
-The channel renamed event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
+The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
 
 The following code shows an example of channel renamed event:
 
@@ -226,7 +238,7 @@ async def on_teams_channel_renamed(
 
 ### Channel deleted
 
-The channel deleted event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
+The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
 
 The following code shows an example of channel deleted event:
 
@@ -310,7 +322,7 @@ async def on_teams_channel_deleted(
 
 ### Channel restored
 
-The channel restored event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
 The following code shows an example of channel restored event:
 
@@ -399,7 +411,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot in the following scenarios:
+The 'teamMemberAdded' event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
@@ -462,7 +474,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is the message your bot receives when the bot is added to a team. The `id` is `19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2`.
+This is the message your bot receives when the bot is added to a team.
 
 ```json
 {
