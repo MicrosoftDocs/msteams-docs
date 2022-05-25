@@ -59,7 +59,7 @@ Suggest a feature or vote up existing feature requests.
 
 | **Community channel** | **Contact** |
 |:----------------------|:------------|
-| **Features suggestions** | Post feature suggestions on :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
+| **Features suggestions** | Post feature suggestions on :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: [Microsoft Teams feedback portal on UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform). |
 | **General questions** | Send general questions about the Microsoft Teams developer platform to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on the channels mentioned here and using email only if no other mode of communication is applicable. |
 
 ## See also
