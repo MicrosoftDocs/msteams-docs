@@ -84,7 +84,8 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     </details>
 
-6. You don't need  **Redirect URI** for this process.
+    > [!NOTE]
+    > You don't need  to enter **Redirect URI** for enabling SSO for a tab app.
     <!--
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
