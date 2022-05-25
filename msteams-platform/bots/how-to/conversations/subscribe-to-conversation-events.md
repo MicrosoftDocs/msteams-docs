@@ -412,7 +412,7 @@ The `teamMemberAdded` event is sent to your bot in the following scenarios:
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `id` field of the `MembersAdded` object is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
 
 > [!TIP]
-> It's recommended for bots to rely on the `InstallationUpdate` event to determine when it's added or removed from a conversation [installation update](#installation-update-event).
+> Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
 
 The following code shows an example of team members added event:
 
@@ -464,9 +464,6 @@ export class MyBot extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 The message your bot receives when the bot is added to a team.
-
-> [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 ```json
 {
@@ -568,7 +565,7 @@ async def on_teams_members_added(
 
 ### Team members removed
 
-The `teamMemberRemoved` event is sent to your bot if it's removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `id` field of the `MembersRemoved` object is the same as the `id` field of the `Recipient` object, then the member removed is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
+The `teamMemberRemoved` event is sent to your bot if it's removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `id` field of the `membersRemoved` object is the same as the `id` field of the `recipient` object, then the member removed is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -1428,7 +1425,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 ---
 The following image shows the selected channel:
 
-:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/addteam.png" border="true":::
+:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="search a team or channel"lightbox="../../../assets/images/bots/addteam.png" border="true":::
 
 ## Uninstall behavior for personal app with bot
 
