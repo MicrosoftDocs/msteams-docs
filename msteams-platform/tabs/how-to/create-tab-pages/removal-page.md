@@ -41,7 +41,7 @@ The `RemoveEvent` interface describes an object with two methods:
 
 * The `notifySuccess()` function is required. It indicates that the removal of the underlying resource succeeded and its content can be removed.
 
-* The `notifyFailure(string)` function is optional. It indicates that removal of the underlying resource failed and its content cannot be removed. The optional string parameter specifies a reason for the failure. If provided, this string is displayed to the user; else a generic error is displayed.
+* The `notifyFailure(string)` function is optional. It indicates that removal of the underlying resource failed and its content can't be removed. The optional string parameter specifies a reason for the failure. If provided, this string is displayed to the user; else a generic error is displayed.
 
 #### Use the `getConfig()` function
 
