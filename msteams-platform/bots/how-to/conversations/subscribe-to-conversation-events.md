@@ -403,11 +403,11 @@ The `teamMemberAdded` event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
-   * In team context, the activity's conversation.id will be set to the id of the channel selected by the user during app installation or the channel where the bot was installed from
+   In team context, the activity's conversation.id will be set to the id of the channel selected by the user during app installation or the channel where the bot was installed from
 
 2. When a user is added to a conversation where the bot is installed
 
-   * User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user
+   User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user
 
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
