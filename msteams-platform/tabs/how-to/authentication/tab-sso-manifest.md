@@ -16,7 +16,7 @@ You've registered your tab app in Azure AD, and obtained an app ID. You've also 
 
 ## webApplicationInfo property
 
-Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app, and invokes the OBO flow to help app users access your tab app seamlessly.
+Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
 
 &nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration" border="false":::
 

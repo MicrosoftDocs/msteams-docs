@@ -15,7 +15,7 @@ Registering your tab app in Azure AD and enabling it for SSO requires making app
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app" border="false":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows the Microsoft Teams client to use the OBO flow to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows the Microsoft Teams client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
 
 You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your app. Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
@@ -117,9 +117,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 ## Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and the OBO flow to enable SSO.
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trust client applications to enable SSO.
 
-To configure scope and the OBO flow, you'll need:
+To configure scope and authorize trusted client applications, you'll need:
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
