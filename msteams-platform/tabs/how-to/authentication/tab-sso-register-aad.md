@@ -84,8 +84,8 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     </details>
 
-6. Select the **Redirect URI** details.
-
+6. You don't need  **Redirect URI** for this process.
+    <!--
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
     1. Select **Web** or **SPA** as the platform from where your app is accessible.
@@ -100,7 +100,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     | --- | --- |
     | Web | Configure a redirect URI for your app where client app is redirected. It's also where Azure AD sends the access token. <br> Select this platform for standard web applications that run on a server. |
     | Single-page application | Configure a redirect URI for a client-side web app by using JavaScript or a framework like Angular, Vue.js, React.js, or Blazor WebAssembly. |
-    </details>
+    </details>-->
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
