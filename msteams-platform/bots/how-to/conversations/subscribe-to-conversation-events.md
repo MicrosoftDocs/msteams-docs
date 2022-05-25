@@ -1423,7 +1423,9 @@ Similar to conversationUpdate event that's sent when bot is added to a team, the
 > [!NOTE]
 > The selected channel id is only be set on `installationUpdate` add events which are sent when an app is installed into a team.
 
-[Placeholder for screenshot]
+The following image shows the selected channel:
+
+:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/uninstallbot.png" border="true":::
 
 ## Uninstall behavior for personal app with bot
 
