@@ -412,7 +412,7 @@ The `teamMemberAdded` event is sent to your bot in the following scenarios:
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `id` field of the `MembersAdded` object is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
 
 > [!TIP]
-> Bots to rely on the `InstallationUpdate` event to determine when it's added or removed from a conversation [installation update](#installation-update-event).
+> It's recommended for bots to rely on the `InstallationUpdate` event to determine when it's added or removed from a conversation [installation update](#installation-update-event).
 
 The following code shows an example of team members added event:
 
@@ -466,7 +466,7 @@ export class MyBot extends TeamsActivityHandler {
 The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
-> In this payload example, the channel id is: "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2".
+> The selected channel id is only to be set on the `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 ```json
 {
@@ -760,7 +760,7 @@ async def on_teams_team_renamed(
 
 ### Team deleted
 
-Your bot is notified when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
+The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
 
 The following code shows an example of team deleted event:
 
@@ -1321,10 +1321,6 @@ Similar to the `conversationUpdate` event that's sent when bot is added to a tea
 > [!NOTE]
 > The selected channel id is only to be set on the `installationUpdate` *add* events that are sent when an app is installed into a team.
 
-The following image shows the selected channel:
-
-[placeholder for image]
-
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -1430,7 +1426,9 @@ async def on_installation_update(self, turn_context: TurnContext):
        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
 ```
 
----
+The following image shows the selected channel:
+
+:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/addteam.png" border="true":::
 
 ## Uninstall behavior for personal app with bot
 
