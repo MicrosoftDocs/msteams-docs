@@ -50,7 +50,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Enhanced collaboration with Live Share SDK
+      - text: Enhanced collaboration with Live Share SDK [Developer preview]
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Submit your Outlook- and Office-enabled apps to the Teams store
         url: m365-apps/overview.md
@@ -58,6 +58,8 @@ landingContent:
         url: tabs/how-to/using-teams-client-sdk.md
       - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
         url: toolkit/teams-toolkit-fundamentals.md
+      - text: Introduced app manifest version 1.13
+        url: resources/schema/manifest-schema.md  
       - text: Bots and Message extensions in GCC and GCCH
         url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 
@@ -103,7 +105,9 @@ landingContent:
       - text: In-app purchases
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md 
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
+      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/publish.md        
 
 - title: Build apps for Teams
   linkLists:
