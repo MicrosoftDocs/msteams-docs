@@ -113,11 +113,17 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 
 </details>
 
-## To configure Teams app manifest for Azure AD registration
+## To configure Teams app manifest
 
-1. Open the app project.
-2. Open manifest.json.
-3. Append the following code snippet to the manifest file to add the new property:
+1. Open the tab app project.
+2. Open the manifest folder, and .
+
+  > [!NOTE]
+  > If you don't find the manifest folder at the root of your project, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+  > For learning how to create a manifest.json, select the Learn to create a manifest file option.
+
+1. Open the manifest.json file
+1. Append the following code snippet to the manifest file to add the new property:
 
     ```json
     "webApplicationInfo": {
