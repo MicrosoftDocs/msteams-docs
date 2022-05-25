@@ -200,10 +200,14 @@ As the Teams app manifest template is shared across all environments, we can upd
     },
     ...
   }
- ```
-3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
 You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to 
@@ -211,9 +215,7 @@ fx/configs/azure.parameters.{env}.json. file.
 
 For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
 </details>
-<br
-
-
+</br>
 
 ## See also
 
