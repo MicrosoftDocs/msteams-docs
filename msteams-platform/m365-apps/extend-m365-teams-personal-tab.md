@@ -233,13 +233,6 @@ Upon first run of local debug to Office or Outlook, you'll be prompted to sign i
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## Next step
-
-Publish your app to be discoverable in Teams, Outlook, and Office:
-
-> [!div class="nextstepaction"]
-> [Publish Teams apps for Outlook and Office](publish.md)
-
 ## Code sample
 
 | **Sample Name** | **Description** | **Node.js** |
@@ -247,3 +240,10 @@ Publish your app to be discoverable in Teams, Outlook, and Office:
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## Next step
+
+Publish your app to be discoverable in Teams, Outlook, and Office:
+
+> [!div class="nextstepaction"]
+> [Publish Teams apps for Outlook and Office](publish.md)
