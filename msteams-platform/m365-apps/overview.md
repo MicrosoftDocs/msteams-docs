@@ -63,9 +63,9 @@ Join the growing number of production Teams apps in the [Microsoft AppSource](ht
 
 Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app from the Outlook and Office app stores, in addition to the Teams store. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
-For more information, see [Publish Teams apps for Microsoft 365](publish.md)
+For more information, see [Publish Teams apps for Microsoft 365](publish.md).
 
-## Next steps
+## Next step
 
 Set up your dev environment to build Teams apps for Microsoft 365:
 
