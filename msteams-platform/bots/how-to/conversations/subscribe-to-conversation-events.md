@@ -135,7 +135,6 @@ export class MyBot extends TeamsActivityHandler {
         }
     }
 }
-	@@ -538,12 +555,11 @@ async def on_teams_members_added(
   )
  return
 ```
@@ -424,7 +423,7 @@ The 'teamMemberAdded' event is sent to your bot in the following scenarios:
 
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
-In future, we recommended bots to rely on the `InstallationUpdate` event to determine when it is added or removed from a conversation [link to installationUpdate doc]
+In future, we recommended bots to rely on the `InstallationUpdate` event to determine when it is added or removed from a conversation [Installation update](#installation-update-event).
 
 The following code shows an example of team members added event:
 
@@ -1433,7 +1432,10 @@ async def on_installation_update(self, turn_context: TurnContext):
 ---
 Similar to conversationUpdate event that's sent when bot is added to a team, the conversation.id of the installationUpdate event will be set to the id of the channel selected by a user during app installation or the channel where the installation occurred. This is the id of the channel that the user intended for the bot to operate and should be used when the bot sends a welcome message. For scenario where the general channel is explicitly required, it can be referenced using team.id.
 
-Note: the selected channel id is only be set on installationUpdate 'add' events which are sent when an app is installed into a team.
+> [!NOTE]
+> The selected channel Id is only be set on installationUpdate 'add' events which are sent when an app is installed into a team.
+
+[Placeholder for screenshot]
 
 ## Uninstall behavior for personal app with bot
 
