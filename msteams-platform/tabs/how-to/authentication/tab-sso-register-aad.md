@@ -28,7 +28,7 @@ User-level Graph API permissions are supported, that is, email, profile, offline
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
-- **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app or public app. The tenancy options may differ based on the type of your app and how you want to distribute it.
+- **Single- or multi-tenant options**: Will your application be used in only the Microsoft 365 tenant where it is registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant; applications written by an independent software vendor and used by many customers need to be multi-tenant so each customer's tenant can access the application.
 - **App platform**: Note the platform where your app is available. For tab apps, you can choose from web or Single-page application (SPA) platform.
 <!--
 - **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.-->
@@ -43,7 +43,6 @@ To create and configure your app in Azure AD for enabling SSO:
 
 - [Register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
 - [Configure scope for access token.](#configure-scope-for-access-token)
-- [Configure authentication for different platforms.](#configure-authentication-for-different-platforms)
 - [Configure access token version.](#configure-access-token-version)
 
 ## Create an app registration in Azure AD
