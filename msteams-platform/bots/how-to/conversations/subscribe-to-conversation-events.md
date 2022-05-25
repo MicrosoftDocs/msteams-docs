@@ -94,49 +94,37 @@ export class MyBot extends TeamsActivityHandler {
 ```json
 {
     "type": "conversationUpdate",
-    "membersAdded": [
-        {
-            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
-        }
-    ],
-    "timestamp": "2021-12-07T22:34:56.534Z",
-    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
     "from": {
-        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
-        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
-        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
-        "name": "2021 Test Channel"
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": {
-        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-        "name": "Test Bot"
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
     },
     "channelData": {
-        "settings": {
-            "selectedChannel": {
-                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
-            }
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "FunDiscussions"
         },
         "team": {
-            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
-            "name": "TestTeam2022",
-            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
         },
-        "eventType": "teamMemberAdded",
+        "eventType": "channelCreated",
         "tenant": {
-            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
     }
 }
-  )
- return
 ```
 
 # [Python](#tab/python)
@@ -411,7 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The 'teamMemberAdded' event is sent to your bot in the following scenarios:
+The `teamMemberAdded` event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
