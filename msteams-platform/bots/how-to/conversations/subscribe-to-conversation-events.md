@@ -21,7 +21,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and more effective bot actions.
+You can use conversation update events to provide better notifications and effective bot actions.
 
 > [!IMPORTANT]
 >
@@ -55,7 +55,7 @@ The following table shows a list of Teams conversation update events with more d
 
 ### Channel created
 
-The channel created event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
 The following code shows an example of channel created event:
 
@@ -144,7 +144,7 @@ async def on_teams_channel_created(
 
 ### Channel renamed
 
-The channel renamed event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
+The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
 
 The following code shows an example of channel renamed event:
 
@@ -226,7 +226,7 @@ async def on_teams_channel_renamed(
 
 ### Channel deleted
 
-The channel deleted event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
+The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
 
 The following code shows an example of channel deleted event:
 
@@ -310,7 +310,7 @@ async def on_teams_channel_deleted(
 
 ### Channel restored
 
-The channel restored event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
 The following code shows an example of channel restored event:
 
@@ -462,7 +462,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is the message your bot receives when the bot is added to a team. The `id` is `19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2`.
+This is the message your bot receives when the bot is added to a team.
 
 ```json
 {
