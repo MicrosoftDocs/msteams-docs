@@ -11,11 +11,11 @@ Azure AD provides access to your tab app based on the app user's Teams identity.
 
 ## Enabling SSO on Azure AD
 
-Registering your tab app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and configuring the On-behalf-of (OBO) flow.
+Registering your tab app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and pre-authorize client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app" border="false":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. The OBO flow allows app users to access your tab app without any further need of consent. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows the Microsoft Teams client to use the OBO flow to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
 
 You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your app. Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
@@ -28,9 +28,10 @@ User-level Graph API permissions are supported, that is, email, profile, offline
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
-- **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
-- **App platform**: Note the platform where your app is available. For tab apps, you can choose from web or Single-page application (SPA) platform. Mobile and desktop applications isn't available. It also includes noting the URL from where your app is accessible.
-- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.
+- **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app or public app. The tenancy options may differ based on the type of your app and how you want to distribute it.
+- **App platform**: Note the platform where your app is available. For tab apps, you can choose from web or Single-page application (SPA) platform.
+<!--
+- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.-->
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
@@ -101,20 +102,6 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     | Web | Configure a redirect URI for your app where client app is redirected. It's also where Azure AD sends the access token. <br> Select this platform for standard web applications that run on a server. |
     | Single-page application | Configure a redirect URI for a client-side web app by using JavaScript or a framework like Angular, Vue.js, React.js, or Blazor WebAssembly. |
     </details>
-
-    > [!NOTE]
-    > Mobile and desktop applications option isn't available for tab apps.
-
-    <!--
-    <details>
-    <summary><b>Platform and redirect URI options</b></summary>
-
-    | Option | Select this to... |
-    | --- | --- |
-    | Web | Configure a redirect URI for your app where client app is redirected. It's also where Azure AD sends the access token. <br> Select this platform for standard web applications that run on a server. |
-    | Mobile and desktop applications | Configure a redirect URI for mobile applications that aren't using the latest Microsoft Authentication Library (MSAL) or for desktop applications. |
-    | Single-page application | Configure a redirect URI for a client-side web app by using JavaScript or a framework like Angular, Vue.js, React.js, or Blazor WebAssembly. |
-    </details>-->
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
@@ -258,53 +245,6 @@ To configure scope and the OBO flow, you'll need:
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
-
-## Configure authentication for different platforms
-
-Depending on the platform or device where you want to target your app, additional configuration may be required such as redirect URIs, specific authentication settings, or details specific to the platform.
-
-> [!NOTE]
->
-> - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required if SSO is enabled on a tab app.
-
-The redirect URI, which you defined on the **Register an application** page for Web platform, appears on this page. You can configure authentication for other Web platforms also as long as the URL is unique.
-
-### To configure authentication for a platform
-
-1. Select **Manage** > **Authentication** from the left pane.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
-
-    The **Platform configurations** page appears.
-
-    The platform and redirect URI that you configured while registering your app on Azure AD already displays on this page.
-
-1. Select **+ Add a platform**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="true":::
-
-    The **Configure platforms** page appears.
-
-1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
-
-    You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
-
-    The configuration page appears.
-
-1. Enter the configuration details for the platform.
-
-    <!--
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
-
-    1. Enter the Application ID URI as the **Redirect URIs**. The URI should be unique.
-    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.-->
-
-1. Select **Configure**.
-
-    The platform is configured and displayed in the **Platform configurations** page.
 
 ## Configure access token version
 

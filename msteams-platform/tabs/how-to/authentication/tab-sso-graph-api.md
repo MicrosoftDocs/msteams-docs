@@ -14,6 +14,7 @@ Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app 
 In this section, you'll learn to:
 
 - [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad)
+- [Configure authentication for different platforms](#configure-authentication-for-different-platforms)
 - [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)
 
 ## Configure API permissions in Azure AD
@@ -43,11 +44,13 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     The options for Graph permissions display.
 
-5. Select **Delegated permissions** to view the list of possible permissions that you can select.
+5. Select **Delegated permissions** to view the list of permissions that you can select.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
 
-6. Select relevant permissions for your app.
+6. Select relevant permissions for your app, and then select **Add permissions**.
+
+    You can also enter the permission name in the search box to find it.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions." border="true":::
 
@@ -60,6 +63,53 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
     You've configured your app with Microsoft Graph permissions.
+
+## Configure authentication for different platforms
+
+Depending on the platform or device where you want to target your app, additional configuration may be required such as redirect URIs, specific authentication settings, or details specific to the platform.
+
+> [!NOTE]
+>
+> - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> - Implicit grant is not required if SSO is enabled on a tab app.
+
+The redirect URI, which you defined on the **Register an application** page for Web platform, appears on this page. You can configure authentication for other Web platforms also as long as the URL is unique.
+
+### To configure authentication for a platform
+
+1. Select **Manage** > **Authentication** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
+
+    The **Platform configurations** page appears.
+
+    The platform and redirect URI that you configured while registering your app on Azure AD already displays on this page.
+
+1. Select **+ Add a platform**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="true":::
+
+    The **Configure platforms** page appears.
+
+1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
+
+    You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
+
+    The configuration page appears.
+
+1. Enter the configuration details for the platform.
+
+    <!--
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
+
+    1. Enter the Application ID URI as the **Redirect URIs**. The URI should be unique.
+    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.-->
+
+1. Select **Configure**.
+
+    The platform is configured and displayed in the **Platform configurations** page.
 
 ## Acquire access token for MS Graph
 
