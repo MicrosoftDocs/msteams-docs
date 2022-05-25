@@ -14,7 +14,7 @@ The Microsoft Teams JavaScript client SDK can help you create hosted experiences
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Office](/m365-apps/overview.md), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Office.
+Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Office](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Office.
 
 Here's the current versioning guidance for various app scenarios:
 
