@@ -40,9 +40,9 @@ After creating a new project, Teams Toolkit by default creates:
 1. Select the **Teams** icon in the sidebar
 2. Select **+Teams: Create new environment** under the Environment section as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
-If you have more than one environments, you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment created.
+   If you have more than one environments, you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment created.
 
 ## Select target environment
 
