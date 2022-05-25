@@ -18,6 +18,8 @@ A content page is a webpage that is rendered within the Teams client, which is a
 
 This article is specific to using content pages as tabs; however most of the guidance here applies regardless of how the content page is presented to the user.
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## Tab content and design guidelines
 
 Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose. 
@@ -26,9 +28,31 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads.
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
 
 The following code provides an example of how your page and the Teams client communicate:
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+...
+</head>
+
+<body>
+...
+    <script>
+    app.initialize();
+    </script>
+...
+</body>
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
@@ -47,6 +71,8 @@ The following code provides an example of how your page and the Teams client com
 ...
 </body>
 ```
+
+***
 
 ## Access additional content
 
@@ -84,10 +110,10 @@ If you indicate `showLoadingIndicator : true`  in your app manifest, then all ta
 To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
-1. Call `microsoftTeams.initialize();`.
-1. As a **mandatory** step, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams then hides the loading indicator, if applicable. If `notifySuccess`  isn't called within 30 seconds, then it's assumed that your app timed out and an error screen with a retry option appears.
-1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, then you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`.
-1. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen is shown to the user. The following code provides an example of application failure reasons:
+1. Call `app.initialize();`.
+1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  is not called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
+1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`.
+1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and, optionally, provide a failure message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
     ```typescript
     /* List of failure reasons */

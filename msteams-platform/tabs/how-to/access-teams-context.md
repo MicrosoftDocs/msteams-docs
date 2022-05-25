@@ -14,6 +14,8 @@ Your tab requires contextual information to display relevant content:
 * Locale and theme information.
 * Read the `entityId` or `subEntityId` that identifies what is in this tab.
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## User context
 
 Context about the user, team, or company can be especially useful when:
@@ -35,7 +37,7 @@ You can access context information in two ways:
 
 ### Get context by inserting URL placeholder values
 
-Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following:
+Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-1.12.1&preserve-view=true) object. Common placeholders include the following:
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
@@ -63,50 +65,7 @@ When they configure the tab, Teams calls the following URL:
 
 ### Get context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
-
-The following code provides an example of context variable:
-
-```json
-{
-    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
-    "teamName": "The name of the current team",
-    "channelId": "The channel ID in the format 19:[id]@thread.skype",
-    "channelName": "The name of the current channel",
-    "chatId": "The chat ID in the format 19:[id]@thread.skype",
-    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
-    "entityId": "The developer-defined unique ID for the entity this content points to",
-    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
-    "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
-    "tid": "The Azure AD tenant ID of the current user",
-    "groupId": "Guid identifying the current Office 365 Group ID",
-    "theme": "The current UI theme: default | dark | contrast",
-    "isFullScreen": "Indicates if the tab is in full-screen",
-    "teamType": "The type of team",
-    "teamSiteUrl": "The root SharePoint site associated with the team",
-    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
-    "teamSitePath": "The relative path to the SharePoint site associated with the team",
-    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
-    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
-    "userTeamRole": "The user's role in the team",
-    "isTeamArchived": "Indicates if team is archived",
-    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
-    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
-    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
-    "userLicenseType": "The license type for the current user",
-    "parentMessageId": "The parent message ID from which this task module is launched",
-    "ringId": "The current ring ID",
-    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
-    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
-    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
-    "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
-    "isMultiWindow": "The indication whether the tab is in a pop out window"
-}
-```
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling the `app.getContext()` function. For additional information, see the properties of the [Context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
 
 ## Retrieve context in private channels
 
@@ -148,7 +107,7 @@ If your page makes use of any of these values, the value of `channelType` field 
 
 ## Handle theme change
 
-You can register your app to be informed if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
+You can register your app to be informed if the theme changes by calling `app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
