@@ -403,15 +403,16 @@ The `teamMemberAdded` event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
-   In team context, the activity's conversation.id will be set to the id of the channel selected by the user during app installation or the channel where the bot was installed from
+    In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from.
 
 2. When a user is added to a conversation where the bot is installed
 
-   User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user
+    User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
-To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
+To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `id` field of the `MembersAdded` object is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
 
-In future, we recommended bots to rely on the `InstallationUpdate` event to determine when it's added or removed from a conversation [Installation update](#installation-update-event).
+> [!TIP]
+> Bots to rely on the `InstallationUpdate` event to determine when it's added or removed from a conversation [installation update](#installation-update-event).
 
 The following code shows an example of team members added event:
 
@@ -463,6 +464,9 @@ export class MyBot extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 The message your bot receives when the bot is added to a team.
+
+> [!NOTE]
+> In this payload example, the channel id is: "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2".
 
 ```json
 {
@@ -564,7 +568,7 @@ async def on_teams_members_added(
 
 ### Team members removed
 
-The `teamMemberRemoved` event is sent to your bot if it's removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
+The `teamMemberRemoved` event is sent to your bot if it's removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `id` field of the `MembersRemoved` object is the same as the `id` field of the `Recipient` object, then the member removed is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -1312,6 +1316,15 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
+Similar to conversationUpdate event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event will be set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id of the channel that the user intended for the bot to operate and should be used when the bot sends a welcome message. For scenario where the general channel is explicitly required, it can be referenced using team.id.
+
+> [!NOTE]
+> The selected channel id is only be set on `installationUpdate` add events which are sent when an app is installed into a team.
+
+The following image shows the selected channel:
+
+:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/addteam.png" border="true":::
+
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -1418,14 +1431,6 @@ async def on_installation_update(self, turn_context: TurnContext):
 ```
 
 ---
-Similar to conversationUpdate event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event will be set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id of the channel that the user intended for the bot to operate and should be used when the bot sends a welcome message. For scenario where the general channel is explicitly required, it can be referenced using team.id.
-
-> [!NOTE]
-> The selected channel id is only be set on `installationUpdate` add events which are sent when an app is installed into a team.
-
-The following image shows the selected channel:
-
-:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/addteam.png" border="true":::
 
 ## Uninstall behavior for personal app with bot
 
