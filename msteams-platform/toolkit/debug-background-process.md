@@ -98,7 +98,6 @@ Use the following .NET Core versions:
 |Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |6.0 |
 
-
 > [!NOTE]
 > If the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
 
@@ -122,7 +121,7 @@ In the set up process, Teams Toolkit prepares the following registrations and co
 
 1. Creates a Client Secret.
 
-1. Exposes an API
+1. Exposes an API.
 
     a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or message extension,  `api://botid-{botid}`.
 
@@ -150,7 +149,7 @@ In the set up process, Teams Toolkit prepares the following registrations and co
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
     
-### Registers and configures bot 
+### Registers and configures bot
 
 For tab app or message extension app:
 
