@@ -1425,7 +1425,7 @@ async def on_installation_update(self, turn_context: TurnContext):
    else:
        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
 ```
-
+---
 The following image shows the selected channel:
 
 :::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/addteam.png" border="true":::
