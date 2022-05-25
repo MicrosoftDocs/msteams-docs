@@ -1418,10 +1418,10 @@ async def on_installation_update(self, turn_context: TurnContext):
 ```
 
 ---
-Similar to conversationUpdate event that's sent when bot is added to a team, the conversation.id of the installationUpdate event will be set to the id of the channel selected by a user during app installation or the channel where the installation occurred. This is the id of the channel that the user intended for the bot to operate and should be used when the bot sends a welcome message. For scenario where the general channel is explicitly required, it can be referenced using team.id.
+Similar to conversationUpdate event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event will be set to the id of the channel selected by a user during app installation or the channel where the installation occurred. This is the id of the channel that the user intended for the bot to operate and should be used when the bot sends a welcome message. For scenario where the general channel is explicitly required, it can be referenced using team.id.
 
 > [!NOTE]
-> The selected channel Id is only be set on installationUpdate 'add' events which are sent when an app is installed into a team.
+> The selected channel id is only be set on `installationUpdate` add events which are sent when an app is installed into a team.
 
 [Placeholder for screenshot]
 
