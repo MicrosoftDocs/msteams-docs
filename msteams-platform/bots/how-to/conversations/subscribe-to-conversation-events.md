@@ -46,7 +46,7 @@ The following table shows a list of Teams conversation update events with more d
 | Channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
 | Channel restored    | channelRestored    | OnTeamsChannelRestoredAsync | [A channel is restored](#channel-deleted). | Team |
 | Members added   | membersAdded   | OnTeamsMembersAddedAsync   | [A member is added](#team-members-added). | All |
-| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#team-members-removed). | groupChat and team |
+| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#team-members-removed). | All |
 | Team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A team is renamed](#team-renamed).       | Team |
 | Team deleted        | teamDeleted       | OnTeamsTeamDeletedAsync    | [A team is deleted](#team-deleted).       | Team |
 | Team archived        | teamArchived       | OnTeamsTeamArchivedAsync    | [A team is archived](#team-archived).       | Team |
@@ -94,37 +94,50 @@ export class MyBot extends TeamsActivityHandler {
 ```json
 {
     "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:34:07.478Z",
-    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-    "id": "f:dd6ec311",
+    "membersAdded": [
+        {
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
+        }
+    ],
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
-        "channel": {
-            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-            "name": "FunDiscussions"
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
         },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
-        "eventType": "channelCreated",
+        "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
+	@@ -538,12 +555,11 @@ async def on_teams_members_added(
+  )
+ return
 ```
 
 # [Python](#tab/python)
@@ -399,7 +412,19 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The 'teamMemberAdded' event is sent to your bot in the following scenarios:
+
+1. When the bot, itself, is installed and added to a conversation
+
+   * In team context, the activity's conversation.id will be set to the id of the channel selected by the user during app installation or the channel where the bot was installed from
+
+2. When a user is added to a conversation where the bot is installed
+
+   * User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user
+
+To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
+
+In future, we recommended bots to rely on the `InstallationUpdate` event to determine when it is added or removed from a conversation [link to installationUpdate doc]
 
 The following code shows an example of team members added event:
 
@@ -454,36 +479,45 @@ This is the message your bot receives when the bot is added to a team.
 
 ```json
 {
+    "type": "conversationUpdate",
     "membersAdded": [
         {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
         }
     ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
@@ -1332,56 +1366,58 @@ async onInstallationUpdateActivity(context: TurnContext) {
 # [JSON](#tab/json)
 
 ```json
-{ 
-  "action": "add", 
-  "type": "installationUpdate", 
-  "timestamp": "2020-10-20T22:08:07.869Z", 
-  "id": "f:3033745319439849398", 
-  "channelId": "msteams", 
-  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
-  "from": { 
-    "id": "sample id", 
-    "aadObjectId": "sample Azure AD Object ID" 
-  },
-  "conversation": { 
-    "isGroup": true, 
-    "conversationType": "channel", 
-    "tenantId": "sample tenant ID", 
-    "id": "sample conversation Id@thread.skype" 
-  }, 
-
-  "recipient": { 
-    "id": "sample reciepent bot ID", 
-    "name": "bot name" 
-  }, 
-  "entities": [ 
-    { 
-      "locale": "en", 
-      "platform": "Windows", 
-      "type": "clientInfo" 
-    } 
-  ], 
-  "channelData": { 
-    "settings": { 
-      "selectedChannel": { 
-        "id": "sample channel ID@thread.skype" 
-      } 
-    }, 
-    "channel": { 
-      "id": "sample channel ID" 
-    }, 
-    "team": { 
-      "id": "sample team ID" 
-    }, 
-    "tenant": { 
-      "id": "sample tenant ID" 
-    }, 
-    "source": { 
-      "name": "message" 
-    } 
-  }, 
-  "locale": "en" 
-}
+{
+    {
+    "type": "installationUpdate",
+    "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+    "timestamp": "2021-11-09T04:47:30.91Z",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+    },
+    "recipient": {
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
+    },
+    "locale": "en-US",
+    "entities": [
+        {
+            "type": "clientInfo",
+            "locale": "en-US"
+        }
+    ],
+    "conversation": {
+        "isGroup": true,
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel",
+        "conversationType": "channel",
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+    },
+    "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
+        "channel": {
+            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+        },
+        "team": {
+            "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+        },
+        "tenant": {
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
+        }
+    },
+    "action": "add"
+    }
 ```
 
 # [Python](#tab/python)
@@ -1395,6 +1431,9 @@ async def on_installation_update(self, turn_context: TurnContext):
 ```
 
 ---
+Similar to conversationUpdate event that's sent when bot is added to a team, the conversation.id of the installationUpdate event will be set to the id of the channel selected by a user during app installation or the channel where the installation occurred. This is the id of the channel that the user intended for the bot to operate and should be used when the bot sends a welcome message. For scenario where the general channel is explicitly required, it can be referenced using team.id.
+
+Note: the selected channel id is only be set on installationUpdate 'add' events which are sent when an app is installed into a team.
 
 ## Uninstall behavior for personal app with bot
 
@@ -1409,7 +1448,7 @@ When you use these install and uninstall events, there are some instances where 
 * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-It is important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
 
 ## Code sample
 
