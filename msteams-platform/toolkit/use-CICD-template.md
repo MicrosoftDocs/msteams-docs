@@ -10,8 +10,7 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-TeamsFx helps to automate your development workflow while building Teams application. The following are the tools and templates you can use to set up CI/CD pipelines, create workflow templates, and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home)
-
+TeamsFx helps to automate your development workflow while building Teams application. The following are the tools and templates you can use to set up CI/CD pipelines, create workflow templates, and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 |Tools and Templates | Description |
 |---|---|
@@ -19,7 +18,6 @@ TeamsFx helps to automate your development workflow while building Teams applica
 |[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
-
 
 ## Set up pipelines
 
@@ -30,7 +28,6 @@ You can set up pipelines with the following platforms:
 1. [Set up pipelines with Jenkins](#set-up-pipelines-with-jenkins)
 1. [Set up pipelines for other platforms](#set-up-pipelines-for-other-platforms)
 
-
 ### Set up pipelines with GitHub
 
 To set up pipelines with GitHub for CI/CD:
@@ -40,15 +37,14 @@ To set up pipelines with GitHub for CI/CD:
    * Visual Studio Code
    * TeamsFx CLI
 
-1. Customize CI/CD workflow.
-
+2. Customize CI/CD workflow.
 
 ## Create workflow templates with GitHub
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
-1. Select **Teams Toolkit** icon in the Visual Studio Code activity bar.
+1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
 1. Select **Add CI/CD Workflows**.
 1. Select an environment from the command prompt.
 1. Select **GitHub** as the CI/CD provider.
@@ -88,13 +84,12 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 1. Customize CI/CD workflow.
 
-
 ## Create workflow templates with Azure DevOps
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
-2. Select **Teams Toolkit** icon in the Visual Studio Code activity bar.
+2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
 3. Select **Add CI/CD Workflows**.
 4. Select an environment from the command prompt.
 5. Select **Azure DevOps** as CI/CD provider.
@@ -138,14 +133,14 @@ To set up pipelines with Jenkins for CI/CD:
    * Visual Studio Code
    * TeamsFx CLI
 
-1. Customize CI/CD workflow.
+2. Customize CI/CD workflow.
 
 ## Create workflow templates with Jenkins
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
-2. Select **Teams Toolkit** icon in the Visual Studio Code sidebar.
+2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
 3. Select **Add CI/CD Workflows**.
 4. Select an environment from the command prompt.
 5. Select **Jenkins** as CI/CD provider.
@@ -174,7 +169,6 @@ The following are some of the changes you can make to your project:
 1. Ensure you have an npm build script or customize the way you build in the automation code.
 1. Ensure you have an npm test script, which returns zero for success or change the test commands.
 
-
 ### Customize CD workflow
 
 Perform the following steps to customize the CD pipeline:
@@ -182,7 +176,6 @@ Perform the following steps to customize the CD pipeline:
 1. Change the CD flow. The default is to use the triggers of `pollSCM` when a new change is pushed into the `main` branch.
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
-
 
 ### Set up pipelines for other platforms
 
@@ -199,7 +192,6 @@ The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI
 > * To enable `@microsoft/teamsfx-cli` running in the non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In the non-interactive mode, `@microsoft/teamsfx-cli` does not prompt for inputs.
 
 Ensure to set up Azure and Microsoft 365 credentials in your environment variables safely. For example, if you're using GitHub as your source code repository, see [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
-
 
 ## Provision and deploy resources
 
@@ -228,10 +220,10 @@ To publish Teams app manually, you may leverage [Developer Portal for Teams](htt
 
 Perform the following steps to publish your app:
 
-1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
-2. Import your app package in zip by selecting `App -> Import app -> Replace`.
+1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+2. Import your app package in zip, select `App -> Import app -> Replace`.
 3. Select the target app in app list.
-4. Publish your app by selecting `Publish -> Publish to your org`.
+4. Publish your app, select `Publish -> Publish to your org`.
 
 ### See also
 
