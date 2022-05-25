@@ -399,7 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The 'teamMemberAdded' event is sent to your bot in the following scenarios:
+The `teamMemberAdded` event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
@@ -462,7 +462,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is the message your bot receives when the bot is added to a team.
+This is the message your bot receives when the bot is added to a team. The `id` is `19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2`.
 
 ```json
 {
