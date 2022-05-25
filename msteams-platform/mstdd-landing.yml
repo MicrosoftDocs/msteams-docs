@@ -52,7 +52,7 @@ landingContent:
       links:
       - text: Enhanced collaboration with Live Share SDK [Developer preview]
         url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Updated conversation and installation events in your Teams bot [Developer preview]
+      - text: Update conversation and installation events in your Teams bot [Developer preview]
         url:  bots/how-to/conversations/subscribe-to-conversation-events.md
       - text: Submit your Outlook- and Office-enabled apps to the Teams store
         url: m365-apps/overview.md
