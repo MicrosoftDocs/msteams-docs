@@ -403,11 +403,11 @@ The `teamMemberAdded` event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
-    In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from.
+   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from.
 
 2. When a user is added to a conversation where the bot is installed
 
-    User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
+   > User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `id` field of the `MembersAdded` object is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` generally is `28:<MicrosoftAppId>`.
 
@@ -466,7 +466,7 @@ export class MyBot extends TeamsActivityHandler {
 The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
-> The selected channel id is only to be set on the `installationUpdate` *add* events that are sent when an app is installed into a team.
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 ```json
 {
@@ -1319,7 +1319,7 @@ Use the `installationUpdate` event to send an introductory message from your bot
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the general channel is explicitly required, it can be referenced using team.id.
 
 > [!NOTE]
-> The selected channel id is only set on installationUpdate *add* events that are sent when an app is installed into a team.
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 # [C#](#tab/dotnet)
 
