@@ -1425,7 +1425,7 @@ Similar to conversationUpdate event that's sent when bot is added to a team, the
 
 The following image shows the selected channel:
 
-:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/uninstallbot.png" border="true":::
+:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="Add channels"lightbox="../../../assets/images/bots/addteam.png" border="true":::
 
 ## Uninstall behavior for personal app with bot
 
