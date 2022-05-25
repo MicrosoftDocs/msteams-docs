@@ -14,6 +14,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Feature | Find it here |
 | --- | --- | --- |
+| 05/25/2022| [*Developer preview*] <br> Enhanced conversation events in your Teams bot |  Build bots > Bot conversations > Conversation events in your Teams bot [Conversation events in your Teams bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 05/24/2022| [*Developer preview*] <br> Enhanced collaboration with Live Share SDK |  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
@@ -287,6 +288,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+| 05/25/2022| Enhanced conversation events in your Teams bot |  Build bots > Bot conversations > Conversation events in your Teams bot [Conversation events in your Teams bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |05/24/2022| Enhanced collaboration with Live Share SDK |  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
