@@ -52,8 +52,6 @@ landingContent:
       links:
       - text: Enhanced collaboration with Live Share SDK
         url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/publish.md
       - text: Submit your Outlook- and Office-enabled apps to the Teams store
         url: m365-apps/overview.md
       - text: App guidance and what's new in TeamsJS version 2.0.0
@@ -107,7 +105,9 @@ landingContent:
       - text: In-app purchases
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md 
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
+      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/publish.md        
 
 - title: Build apps for Teams
   linkLists:
