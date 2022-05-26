@@ -14,7 +14,7 @@ Here are some examples of how your app users can benefit from fetching transcrip
 | Use case | How Transcript APIs help... |
 | --- | --- |
 | App users may be invited to attend multiple meetings at the same time. To attend one meeting, the app user would need to forfeit the other. | The meetings transcripts provide content discussed in the meeting by all collaborators. If the app user is unable to attend one of the meetings, the transcripts are a ready reference to the discussion. |
-| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes this burden off. All participants can fully focus on the discussion and not be encumbered with taking notes, or writing meeting summary. |
+| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes off this burden. Participants can fully focus on the discussion, without having to take notes, or write meeting summary. |
 
 To implement this feature, you must:
 
@@ -26,12 +26,12 @@ To implement this feature, you must:
 
 Your app should have the required permissions for fetching transcripts. Choose from  resource specific consent (RSC) permissions or classic permissions. These options help you choose the meetings for which your app is authorized to get transcripts.
 
-Your app can access and fetch transcripts for a Teams meetings in one of the two ways:
+Your app can access and fetch transcripts for a Teams meeting in one of the two ways:
 
 - **Use RSC permission**: Your app could be installed in a Teams meeting and fetch transcript for that meeting.
-- **Use classic permission**: You app could be authorized to access any meeting across the tenant, and get transcripts for them.
+- **Use classic permission**: Your app could be authorized to access any meeting across the tenant, and get transcripts for them.
 
-In both cases, when a transcript is generated after a Teams meeting is closed, your app can fetch the transcript. The content of the transcript is available for downloading by app users as a .vtt or as a .doc file.
+In both cases, when a transcript is generated after a Teams meeting is closed, your app can fetch the transcript. The content of the transcript is available for downloading by app users as .vtt or .doc file.
 
 You can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
 
@@ -55,7 +55,7 @@ The following RSC permissions should be granted to your app:
 
 ### Use classic permissions
 
-You can configure your app to access meeting transcripts across the tenant where it is installed. In this case, the meeting organized doesn't need to install your app in the meeting chat. Because of tenant-wide classic permissions authorized by tenant administrator, the app can read and access all meetings in the tenant.
+You can configure your app to access meeting transcripts across the tenant where it's installed. In this case, the meeting organized doesn't need to install your app in the meeting chat. Because of tenant-wide classic permissions authorized by tenant administrator, the app can read and access all meetings in the tenant.
 
 The following permissions should be granted:
 
@@ -67,18 +67,18 @@ The following permissions should be granted:
 
 ## Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for events. You can choose from user-level or tenant-level change notifications. These options help you choose the meeting events for which your app can obtain transcripts, if it is authorized via required permissions.
+You can subscribe your app to receive change notifications for events. You can choose from user-level or tenant-level change notifications. These options notify your app about meeting events. It can then obtain transcripts, if it's authorized via required permissions.
 
 Your app receives notifications of meeting events for which it has subscribed:
 
-- User level notification: Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. This can be done by calendar events as well.
-- Tenant level notification: You can subscribe your app to change notifications for meetings across the tenant. Any time, a meeting is scheduled in the tenant, the app is notified. Post meeting, the app can access and retrieve the meeting transcript.
+- User level notification: Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
+- Tenant level notification: You can subscribe your app to change notifications for meetings across the tenant. Anytime, a meeting is scheduled in the tenant, the app is notified. Post meeting, the app can access and retrieve the meeting transcript.
 
 / reference to article for subscribing for notifications. /
 
 ## Use Graph APIs to fetch transcript
 
-Teams Graph Service interacts with [Meeting Artifacts Service](https://aka.ms/meetingArtifactsApi) using the following APIs to get transcripts for a particular. The transcripts are accessed based on the user ID of the meeting organizer and the meeting ID.
+Teams Graph Service interacts with [Meeting Artifacts Service](https://aka.ms/meetingArtifactsApi) using Graph REST APIs to get transcripts for a particular. The transcripts are accessed based on the user ID of the meeting organizer and the meeting ID.
 
 The following APIs are used for fetching transcripts:
 
@@ -246,7 +246,7 @@ The supported format types are `text/vtt` for vtt OR `application/vnd.openxmlfor
 
 **Request body**
 
-Do not supply a request body for this method.
+Don't supply a request body for this method.
 
 **Response**
 
