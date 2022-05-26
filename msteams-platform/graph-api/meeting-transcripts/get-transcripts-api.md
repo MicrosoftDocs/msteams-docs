@@ -120,21 +120,25 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of callTranscript objects in the response body.
 
-**Example: List of callTranscript**
+<br>
+<details>
+<summary><b>Example: List of callTranscript</b></summary>
+<br>
+<b>Request</b>
+<br>
 
-**Request**
-
-``` http
+```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts
 ```
 
-**Response**
-
+<br>
+<b>Response</b>
+<br>
 > [!Note]
 > The response object shown here might be shortened for readability.
 
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -159,6 +163,9 @@ Content-Type: application/json
 }
 ```
 
+</details>
+<br>
+
 ### Get callTranscript
 
 **HTTP request**
@@ -182,20 +189,24 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a callTranscript object in the response body.
 
-**Example: Get a callTranscript**
+<br>
+<details>
+<summary><b>Example: Get a callTranscript</b></summary>
+<br>
+<b>Request</b>
+<br>
 
-**Request**
-
-``` http
+```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4
 ```
 
-**Response**
-
+<br>
+<b>Response</b>
+<br>
 > [!NOTE]
 > The response object shown here might be shortened for readability.
 
--->
+
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -206,7 +217,8 @@ Content-type: application/json
     "createdDateTime": "2021-09-17T06:09:24.8968037Z"
 }
 ```
-
+</details>
+<br>
 
 ### Get callTranscript content
 
