@@ -84,11 +84,11 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploy-azure/remote-client.png" alt-text="Add the app to Teams":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Add the app to Teams":::
 
    Congratulations, your first app is running on Azure!
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the learn card in the app on Teams client.":::       
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot showing the learn card in the app on Teams client.":::       
 
 
 
