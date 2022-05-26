@@ -78,7 +78,7 @@ Your app receives notifications of meeting events for which it has subscribed:
 
 ## Use Graph APIs to fetch transcript
 
-Teams Graph Service will apply Meeting Artifacts Service (https://aka.ms/meetingArtifactsApi) using the following APIs to get meeting’s transcripts.
+Teams Graph Service interacts with [Meeting Artifacts Service](https://aka.ms/meetingArtifactsApi) using the following APIs to get transcripts for a particular. The transcripts are accessed based on the user ID of the meeting organizer and the meeting ID.
 
 The following APIs are used for fetching transcripts:
 
