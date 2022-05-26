@@ -5,9 +5,9 @@ ms.localizationpriority: medium
 ms.topic: concept
 keywords: teams Graph transcripts meeting organizer Azure rsc
 ---
-# Get meeting transcripts using Graph API
+# Access meeting transcripts in post-meeting scenario
 
-You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Use Graph REST APIs to access and obtain transcripts generated during a Teams meeting.
+You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Use Graph REST APIs to access and fetch transcripts generated during a Teams meeting.
 
 Here are some examples of how your app users can benefit from fetching transcripts post-meeting:
 
@@ -26,19 +26,19 @@ To implement this feature, you must:
 
 Your app should have the required permissions for fetching transcripts. Choose from  resource specific consent (RSC) permissions or classic permissions. These options help you choose the meetings for which your app is authorized to get transcripts.
 
-Your app can access and fetch transcripts for a Teams meetings in two ways:
+Your app can access and fetch transcripts for a Teams meetings in one of the two ways:
 
 - **Use RSC permission**: Your app could be installed in a Teams meeting and fetch transcript for that meeting.
 - **Use classic permission**: You app could be authorized to access any meeting across the tenant, and get transcripts for them.
 
-In both scenarios, when a transcript is generated after a Teams meeting is closed, your app can fetch the transcript. The content of the transcript is available for downloading by app users as a .vtt or as a .doc file.
+In both cases, when a transcript is generated after a Teams meeting is closed, your app can fetch the transcript. The content of the transcript is available for downloading by app users as a .vtt or as a .doc file.
 
 You can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
 
-/ suggestion - graphic to show comparative flows for both scenarios /
+/ suggestion - graphic to show comparative flows for both permission methods /
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both scenarios.
+> The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
 
 ### Use RSC permissions
 
@@ -370,15 +370,3 @@ WEBVTT
 <v User Name>This is a transcript test.</v>
 ```
 </details>
-
-<!--Your app can access and fetch transcripts for a Teams meetings in two ways:
-
-- **Use RSC permission**: Your app could be installed in a Teams meeting and fetch transcript for that meeting.
-- **Use classic permission**: You app could be authorized to access any meeting across the tenant, and get transcripts for them.
-
-In both scenarios, when a transcript is generated after a Teams meeting is closed, your app can fetch the transcript. The content of the transcript is available for downloading by app users as a .vtt or as a .doc file. The process for calling Graph APIs to access and retrieve transcripts remains the same for both scenarios.
-
-Before your app can fetch meeting transcripts, you must:
-
-- **Configure permissions**: Your app should have the required permissions for fetching transcripts. Choose from  resource specific consent (RSC) permissions or classic permissions. These options help you choose the meetings for which your app is authorized to get transcripts.
-- **Subscribe to change notifications**: You must subscribe your app to receive change notifications for events. You can choose form user-level or tenant-level change notifications. These options help you choose the meeting events for which your app can obtain transcripts, if it is authorized via required permissions.-->
