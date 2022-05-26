@@ -9,7 +9,7 @@ keywords: teams Graph transcripts meeting organizer Azure rsc
 
 You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Use Graph REST APIs to access and obtain transcripts generated during a Teams meeting.
 
-Some examples of use cases where you can use these APIs to fetch transcripts:
+Here are some examples of how your app users can benefit from fetching transcripts post-meeting:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
