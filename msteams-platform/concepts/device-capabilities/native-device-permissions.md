@@ -120,7 +120,7 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 > [!IMPORTANT]
 >
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop.
 
 For example:
 
@@ -136,7 +136,7 @@ For example:
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
-* To capture the images, Teams app asks for permission when you call `captureImage()`:
+* To capture the images on mobile, Teams mobile asks for permission when you call `captureImage()`:
 
     ```JavaScript
             function captureImage() {

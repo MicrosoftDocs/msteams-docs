@@ -16,7 +16,7 @@ For effective integration, you must have a good understanding of [code snippets]
 
 ## Advantages
 
-The following list provides the advantages of media capabilities:
+The following scenarios showcase the advantages of media capabilities:
 
 * Leverages native Teams controls to provide a rich and immersive experience to your users.
 
@@ -283,4 +283,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [Integrate People Picker](people-picker-capability.md)
 * [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
