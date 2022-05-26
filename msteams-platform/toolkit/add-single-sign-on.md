@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/20/2022
 ---
 
-# Add single sign-on experience
+# Add single sign-on to Teams app
 
 Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application.
 
@@ -280,22 +280,22 @@ export async function showUserImage(context, ssoToken, param) {
 
    * Add the following line for new command registration using `addCommand` in `teamsSsoBot`:
 
-   ```bash
+     ```bash
 
-   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-   ```
+     ```
 
    * Add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
 
-   ```bash
+     ```bash
 
-   // As shown here, you can add your own parameter into the `showUserImage` method
-   // You can also use regular expression for the command here
-   const scope = ["User.Read"];
-   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+     // As shown here, you can add your own parameter into the `showUserImage` method
+     // You can also use regular expression for the command here
+     const scope = ["User.Read"];
+     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-   ```
+     ```
 
 3. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `command` in `commandLists` of your bot:
 
@@ -334,12 +334,12 @@ Teams tabs and bots have similar flow for SSO support, for more information, see
 
 ### Simplified SSO with TeamsFx
 
-TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration.
+TeamsFx helps to reduce the developer tasks by using SSO and accessing cloud resources down to single line statements with zero configuration.
 
 With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
 
 1. User identity in browser environment: `TeamsUserCredential` represents Teams current user's identity.
-2. User identity in Node.js environment: `OnBehalfOfUserCredentail` uses On-Behalf-Of flow and Teams SSO token.
+2. User identity in Node.js environment: `OnBehalfOfUserCredentail` uses On-Behalf-Of flow and SSO token.
 3. Application Identity in Node.js environment: `AppCredential` represents the application identity.
 
 For more information about TeamsFx SDK, see:

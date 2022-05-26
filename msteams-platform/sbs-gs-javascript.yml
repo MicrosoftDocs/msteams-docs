@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Build your first app using JavaScript
+title: Build your first tab app using JavaScript
 metadata:
   title: Hello World with JavaScript
   description: In this tutorial, you'll learn to build Hello World app with JavaScript.
@@ -193,28 +193,24 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
+    1. Select your **Workspace folder** by choosing your required folder.  
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-folder.png" alt-text="select-folder" border="false":::
+
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
         The Teams tab app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Screenshot showing the app created." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created." border="false":::
 
-        After your app is created, Teams Toolkit displays a message to indicate the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings.
+        After your app is created, Teams Toolkit displays the following message:.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
-
-        The message offers two options:
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/preview-project.png" alt-text="Preview Project." border="false":::
         
-        - **Change location**
-        - **Local Debug**
+        You can select **Local debug** to preview your project. 
         
-        For this tutorial, you don't need to use these options.
-
-        > [!NOTE]
-        > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
-
         <details>
         <summary>A quick recap of creating a Teams app.</summary>
         Watch this short recap for creating a Teams app.

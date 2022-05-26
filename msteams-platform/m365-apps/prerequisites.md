@@ -25,9 +25,9 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 
 You'll also need to enable sideloading for your tenant:
 
-1. Sign in to Microsoft 365 admin center (https://admin.microsoft.com) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*
-1. Select: Teams apps > Manage apps > **Org-wide app settings**
-1. Under **Custom apps**, toggle on the option *Interaction with custom apps*
+1. Sign in to Microsoft 365 admin center (https://admin.microsoft.com) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*.
+1. Select: Teams apps > Manage apps > **Org-wide app settings**.
+1. Under **Custom apps**, toggle on the option *Interaction with custom apps*.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
 
@@ -67,7 +67,7 @@ To install Office 365 Beta Channel applications in your test environment:
 
     :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you are running a Beta Channel build.":::
 
-1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for 'webview':
+1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Search for 'webview' under 'Apps and features' in your Windows Settings":::
 
@@ -89,9 +89,11 @@ Optionally, you can use [Visual Studio Code](https://code.visualstudio.com/) to 
 
 The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. For more information, see [enable Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md).
 
-## Next steps
+## Next step
 
 Create or update a Teams app to run across Microsoft 365:
 
-* [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
-* [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
