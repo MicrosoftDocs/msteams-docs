@@ -14,6 +14,14 @@ To implement this feature, you must:
 - Prepare your app for fetching transcript
 - Use Graph APIs in your app
 
+Some examples of use cases where you can use these APIs to fetch transcripts:
+
+| Use case | How Transcript APIs help... |
+| --- | --- |
+| App users may be invited to attend multiple meetings at the same time. To attend one meeting, the app user would need to forfeit the other. | The meetings transcripts provide content discussed in the meeting by all collaborators. If the app user is unable to attend one of the meetings, the transcripts are a ready reference to the discussion. |
+| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes this burden off. All participants can fully focus on the discussion and not be encumbered with taking notes, or writing meeting summary. |
+
+
 ## Prepare your app for fetching transcript
 
 Before your app can fetch meeting transcripts, you need to:
@@ -67,7 +75,7 @@ Teams Graph Service will apply Meeting Artifacts Service (https://aka.ms/meeting
 
 The following APIs are used for fetching transcripts:
 
-- [List callTranscripts](#list-calltranscripts)c
+- [List callTranscripts](#list-calltranscripts)
 - [Get callTranscript](#get-calltranscript)
 - [Get callTranscript content](#get-calltranscript-content)
 
