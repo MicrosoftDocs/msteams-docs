@@ -244,15 +244,15 @@ If successful, this method returns a `200 OK` response code and contains bytes f
 <summary><b>Example 1: Get a callTranscript content</b></summary>
 <br>
 <b>Request</b>
-    
+<br>
 ``` http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
 ```
-
+<br>
 <b>Response</b>
-
+<br>
 Response contains bytes for the transcript in the body. The `content-type` header specifies type of the transcript content.
-    
+
 > [!NOTE]
 > The response object shown here might be shortened for readability.
 
@@ -271,13 +271,13 @@ WEBVTT
 <summary><b>Example 2: Get a callTranscript content specifying $format query param</b></summary>
 <br>
 <b>Request</b>
-
+<br>
 ``` http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content?$format=text/vtt
  ```
-
+<br>
 <b>Response</b>
-
+<br>
 Response contains bytes for the transcript in the body. The `content-type` header specifies type of the transcript content.
 
 > [!NOTE]
@@ -298,16 +298,16 @@ WEBVTT
 <summary><b>Example 3: Get a callTranscript content specifying Accept header</b></summary>
 <br>
 <b>Request</b>
-
+<br>
 ``` http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
 Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
 ```
-
+<br>
 <b>Response</b>
-
+<br>
 Response contains bytes for the transcript in the body. `Content-Type` header specifies type of the transcript content.
-    
+
 > [!NOTE]
 > The response object shown here might be shortened for readability.
 
@@ -325,28 +325,29 @@ This is a transcript test.
 <summary><b>Example 4: Get a callTranscript content with $format getting precedence over the accept header</b></summary>
 <br>
 <b>Request</b>
-
-    ``` http
-    GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content?$format=text/vtt
-    Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
-    ```
-
+<br>
+``` http
+GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content?$format=text/vtt
+Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+```
+<br>
 <b>Response</b>
-    Response contains bytes for the transcript in the body. `Content-Type` header specifies type of the transcript content.
+<br>
+Response contains bytes for the transcript in the body. `Content-Type` header specifies type of the transcript content.
 
-    > [!NOTE]
-    > The response object shown here might be shortened for readability.
+> [!NOTE]
+> The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-type: text/vtt
     
-    ```http
-    HTTP/1.1 200 OK
-    Content-type: text/vtt
-    
-    WEBVTT
-    
-    0:0:0.0 --> 0:0:5.320
-    <v User Name>This is a transcript test.</v>
-    ```
-</details> 
+WEBVTT
+   
+0:0:0.0 --> 0:0:5.320
+<v User Name>This is a transcript test.</v>
+```
+</details>
 
 <!--Your app can access and fetch transcripts for a Teams meetings in two ways:
 
