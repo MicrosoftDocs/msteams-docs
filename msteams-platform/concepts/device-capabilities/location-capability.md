@@ -14,21 +14,16 @@ ms.author: surbhigupta
 
 ## Advantages
 
-The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following list provides the advantages of location capabilities:
+The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following scenarios showcase the advantages of location capabilities:
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
-* Locate technical support staff in a specified area. The app asks for permission to use the location to find support staffs. After the user grants permission they can view the support staff profiles.
-* Report the location after completing a job in the field. The job processing app asks for permission to find the location. After the user grants permission, the app finds the exact location. The user can drag a pin to the job completion location.
-* Track attendance by using a selfie in the vicinity of the area. The location data gets captured and is sent along with the image. This scenario is specific for Teams mobile.
+* Locate technical support staff in a specified area.  The app asks support staff to share their current location, which management can use to allocate IT ticket to the nearest support person after checking their profile.
+* Report the location after completing a job in the field. The job processing app asks for permission to find the location. After the user grants permission, the app detects the exact location. The user may also select a location by dragging a pin to the job completion location over the map.
+* Capture attendance through selfies inside the retail store. The store manager can track the attendance of the workers by asking them to share a selfie through an attendance app. The location data gets captured and is sent along with the image. This scenario is applicable mainly to the frontline workers.
 
 # [Mobile](#tab/mobile)
 
-The location capabilities allow users to get locations on mobile using the following steps:
-
-1. Select `getLocation`.
-1. Select `showLocation` to show the location on map corresponding to the given coordinates.
-
-Your location detail displays:
+The following image depicts web app experience of getLocation API:
 
   <!-- ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png) -->
   
@@ -36,15 +31,11 @@ Your location detail displays:
 
 # [Desktop](#tab/desktop)
 
-The location capabilities allow users to get locations on desktop using the following steps:
+The following image depicts web app experience of getLocation API:
 
-1. Select `getLocation`.
-1. Select `showLocation` to show the location on map corresponding to the given coordinates.
 
 > [!NOTE]
 > The desktop support for `getLocation` and  `showLocation` is available after the user grants the device permission.
- 
-Your location detail displays:
 
 
   :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
@@ -79,6 +70,13 @@ The following table lists the set of APIs to enable your device's location capab
 | --- | --- |--- |--- |
 |`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | - True: Users can choose any location of their choice.</br> - False: Users cannot change their current location. |False: Fetches the current location without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
 |`showLocation`| Shows location on map. |- True: Users can choose any location of their choice.</br> - False: Users cannot change their current location.| False: Fetches the current location without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
+
+> [!NOTE]
+> `showMap` conditions for True and False:
+  * True: Show location on map
+  * False: Do not show location on map
+> `showMap`= False is not supported on Teams web or desktop.
+
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
@@ -140,4 +138,4 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-
+* [Integrate People Picker](people-picker-capability.md)
