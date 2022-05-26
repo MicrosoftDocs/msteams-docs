@@ -246,9 +246,10 @@ If successful, this method returns a `200 OK` response code and contains bytes f
 <b>Request</b>
 <br>
 
-``` http
+```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
 ```
+
 <br>
 <b>Response</b>
 <br>
@@ -274,9 +275,10 @@ WEBVTT
 <b>Request</b>
 <br>
 
-``` http
+```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content?$format=text/vtt
  ```
+
 <br>
 <b>Response</b>
 <br>
@@ -302,10 +304,11 @@ WEBVTT
 <b>Request</b>
 <br>
 
-``` http
+```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
 Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
 ```
+
 <br>
 <b>Response</b>
 <br>
@@ -329,10 +332,12 @@ This is a transcript test.
 <br>
 <b>Request</b>
 <br>
-``` http
+
+```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content?$format=text/vtt
 Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
 ```
+
 <br>
 <b>Response</b>
 <br>
