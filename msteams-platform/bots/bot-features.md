@@ -53,12 +53,11 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 The Azure Bot Service, along with the Bot Framework, provides tools to build, test, deploy, and manage intelligent bots, all in one place. You can also create your bot in Azure Bot Service.
 
 > [!IMPORTANT]
-> Bot applications within Microsoft Teams are available in GCC-High through [Azure Bot Service](/azure/bot-service/channel-connect-teams).
-
-> [!NOTE]
-> * Bots in GCCH only support  up to manifest version v1.10.
-> * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
-> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the Azure Bot Service only (no app service).
+> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams) and bot channel registration should be done in Azure Government portal.
+>
+> * Bots in GCC-High only support up to manifest version v1.10.
+> * Image URLs in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
+> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and Application Insights also but it doesn't support to provisioning the Azure Bot Service only (no app service).
 >   <details>
 >   <summary><b>If you want to do bot registration only</b></summary>
 >
@@ -68,7 +67,7 @@ The Azure Bot Service, along with the Bot Framework, provides tools to build, te
 >     1. Sign into azure and set the subscription <br> 
 >           &nbsp; az cloud set –name  "AzureUSGovernment" <br> 
 >           &nbsp; az account set –name "`subscriptionname/id`".<br>
->     1. Create app registration  
+>     1. Create app registration as multitenant <br> 
 >           &nbsp; az ad app create --display-name "`name`" <br> 
 >           &nbsp; --password "`password`" --available-to-other-tenants.<br> 
 >           Your app id would be created here.<br>
@@ -80,7 +79,7 @@ The Azure Bot Service, along with the Bot Framework, provides tools to build, te
 >
 > </details>
 
-For GCCH environment, you need to register a bot using [Azure Government portal](https://portal.azure.us).
+For GCC-High environment, you need to register a bot using [Azure Government portal](https://portal.azure.us) and Azure Government subscriptions as bots registered through Azure commercial subscription, Developer portal, or App Studio are not available in GCC-High.
 
 :::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Government portal":::
 <br>
@@ -91,7 +90,7 @@ The following changes are needed within the bot for GCC-High environment:
 <details>
 <summary><b>Configuration changes</b></summary>
 
-As the bot registration occurs in Azure Government portal, ensure to update the bot configurations to connect to Azure govermnet instances. Following are the configuration details:
+As the bot registration occurs in Azure Government portal, ensure to update the bot configurations to connect to Azure government instances. Following are the configuration details:
 
 | Configuration Name | Value |
 |----|----|
