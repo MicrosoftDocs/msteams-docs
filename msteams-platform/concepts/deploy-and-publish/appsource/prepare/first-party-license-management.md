@@ -163,8 +163,8 @@ Integrate with Graph Usage Right API to manage user permissions at the time of a
 
     * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
-> [!Note]
-> You need to have minimum `User.Read` permissions to be able to call UsageRights.
+        > [!Note]
+        > You need to have minimum `User.Read` permissions to be able to call UsageRights.
 
 **Check license usage in Partner Center Analytics**
 
