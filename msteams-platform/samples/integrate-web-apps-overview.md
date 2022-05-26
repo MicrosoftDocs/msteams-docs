@@ -55,10 +55,6 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 You can use app template to create custom made apps to suit your organizational needs. These are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions to deploy and install the app for your organization. It provides a ready-to-use application that you can install and start using immediately.
 
-## Teams Shifts Work Force Management connectors
-
-Teams Shifts Work Force Management connectors are production-ready, open-source, and community-driven integrations. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts.
-
 ## Install Moodle LMS
 
 Moodle is a popular open-source Learning Management System (LMS). It's now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
