@@ -116,7 +116,7 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 ## To configure Teams app manifest
 
 1. Open the tab app project.
-2. Open the manifest folder, and .
+2. Open the manifest folder.
 
   > [!NOTE]
   > If you don't find the manifest folder at the root of your project, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
