@@ -126,7 +126,7 @@ When you feel your app is production ready, you can begin the process of getting
   
   * Avoid changing app functionality during the validation process that might lead to discovery of new issues and increase the time it takes to approve your app.
 
-## Additional tips for rapid approval to publish your app linked to a SaaS offer
+## More tips for rapid approval to publish your app linked to a SaaS offer
 
 * **During design phase**
 
@@ -138,7 +138,7 @@ When you feel your app is production ready, you can begin the process of getting
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-      1. You have correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
+      1. You've correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
 
       1. You must ensure your linked SaaS offer is designed to support licenses assigned on a named [per user model](/azure/marketplace/create-new-saas-offer-plans). Linked SaaS offers that support other pricing models such as flat rate are currently not accepted for publishing to the Teams store.
 
