@@ -84,11 +84,11 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploy-azure/remote-client.png" alt-text="Add the app to Teams":::
 
-   You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
+   Congratulations, your first app is running on Azure!
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the learn card in the app on Teams client.":::       
 
 
 
