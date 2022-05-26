@@ -84,7 +84,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **During design phase**
 
-  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, then it will prevent any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
@@ -112,17 +112,17 @@ When you feel your app is production ready, you can begin the process of getting
 
         1. Test instructions detailing app functionality and supported scenarios.
 
-        1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
+        1. Setup instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
         1. Link to a demo video recording key user flow for your app. This is highly recommended.
 
 * **Post app submission**
 
-  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any additional support to resolve the reported issues.
+  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any extra support to resolve the reported issues.
 
   * Ensure that you've adequate developer bandwidth to resolve any reported issues until the app is approved.
 
-  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and so, the time taken to approve your app.
+  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. It helps reduce the number of iterations required to validate your app and so, the time taken to approve your app.
   
   * Avoid changing app functionality during the validation process that might lead to discovery of new issues and increase the time it takes to approve your app.
 
@@ -130,7 +130,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **During design phase**
 
-  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it will prevent any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
