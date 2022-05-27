@@ -57,9 +57,9 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM isn't installed, the Teams Toolkit installs all NPM packages.
 
-* Bot and message extension, the Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
+* Bot and message extension, the Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and message extension.
 
-* Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
+* Ports available, the local debug terminates if tab, bot, message extension, and Azure Functions ports are unavailable.
 
   The following table lists the ports available for components:
 
@@ -129,7 +129,7 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
 
 4. Configures API permissions. Adds Microsoft Graph permission to **User.Read**.
 
-    The following table lists the configuration of the authentication as follows:
+    The following table lists the configuration of the authentication:
     
       | Project type | Redirect URIs for web | Redirect URIs for single-page application |
       | --- | --- | --- |
