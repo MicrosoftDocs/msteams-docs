@@ -67,7 +67,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 The following code snippet displays use of the `selectPeople` API people from a list:
 
 ```javascript
- microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -84,7 +84,7 @@ The following code snippet displays use of the `selectPeople` API people from a 
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  });
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
 ```
 
 ## Error handling

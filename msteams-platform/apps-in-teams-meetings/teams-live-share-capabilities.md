@@ -123,7 +123,7 @@ The Live Share SDK supports any [distributed data structure](https://fluidframew
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                                    |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing document text editing.                                                                     |
 
-Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a simple playlist feature.
+Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a playlist feature.
 
 ```javascript
 import { SharedMap } from "fluid-framework";
