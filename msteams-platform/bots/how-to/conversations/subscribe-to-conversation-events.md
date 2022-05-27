@@ -18,6 +18,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 * Trigger a welcome message when a new team member is added or removed.
 * Trigger a notification when a channel is created, renamed, or deleted.
 * Trigger a notification when a bot message is liked by a user.
+* Identify and operate within the user selected or intended channel when your bot is added to a team.
 
 ## Conversation update events
 
@@ -464,6 +465,9 @@ export class MyBot extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 The message your bot receives when the bot is added to a team.
+
+> [!NOTE]
+   > In this payload, conversation.id and channelData.settings.selectedChannel.id will be the id of the channel that the user selected during app installation or where installation was triggered from.
 
 ```json
 {
