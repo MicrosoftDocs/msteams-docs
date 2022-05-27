@@ -467,7 +467,7 @@ export class MyBot extends TeamsActivityHandler {
 The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
-   > In this payload, conversation.id and channelData.settings.selectedChannel.id will be the id of the channel that the user selected during app installation or where installation was triggered from.
+> In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the id of the channel that the user selected during app installation or where installation was triggered from.
 
 ```json
 {
