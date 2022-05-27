@@ -435,6 +435,8 @@
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+  - name: Get meeting transcripts using Graph APIs
+    href: graph-api/meeting-transcripts/get-transcripts-api.md    
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
@@ -447,8 +449,6 @@
     href: m365-apps/prerequisites.md
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
-  - name: Access meeting transcripts in post-meeting scenario
-    href: graph-api/meeting-transcripts/get-transcripts-api.md  
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
   - name: Publish Teams apps for Microsoft 365

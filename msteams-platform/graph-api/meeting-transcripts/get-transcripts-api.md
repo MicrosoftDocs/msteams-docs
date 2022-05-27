@@ -5,15 +5,14 @@ ms.localizationpriority: medium
 ms.topic: concept
 keywords: teams Graph transcripts meeting organizer Azure rsc
 ---
-# Access meeting transcripts in post-meeting scenario
+# Get meeting transcripts using Graph APIs
 
-You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Use Graph REST APIs to access and fetch transcripts generated during a Teams meeting.
+You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Your app can use Graph REST APIs to access and fetch transcripts generated during a Teams meeting.
 
-Here are some examples of how your app users can benefit from fetching transcripts post-meeting:
+Here are some use cases for fetching meeting transcripts using Graph API:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
-| App users may be invited to attend multiple meetings at the same time. To attend one meeting, the app user would need to forfeit the other. | The meetings transcripts provide content discussed in the meeting by all collaborators. If the app user is unable to attend one of the meetings, the transcripts are a ready reference to the discussion. |
 | Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes off this burden. Participants can fully focus on the discussion, without having to take notes, or write meeting summary. |
 
 To implement this feature, you must:
@@ -28,17 +27,8 @@ Your app should have the required permissions for fetching transcripts. Choose f
 
 Your app can access and fetch transcripts for a Teams meeting in one of the two ways:
 
-- **Use RSC permission**: Your app could be installed in a Teams meeting and fetch transcript for that meeting.
 - **Use classic permission**: Your app could be authorized to access any meeting across the tenant, and get transcripts for them.
-
-In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available for downloading by app users as .vtt or .doc file.
-
-You can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
-
-/ suggestion - graphic to show comparative flows for both permission methods /
-
-> [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
+- **Use RSC permission**: Your app could be installed in a Teams meeting and fetch transcript for that meeting.
 
 ### Use RSC permissions
 
@@ -64,6 +54,16 @@ The following permissions should be granted:
 | ONLINEMEETINGTRANSCRIPT.READ.ALL | Read the transcript of the meeting | It allows the app to read meeting transcripts in your organization. It doesn't require an app user to be signed in. It does need the consent of the administrator. |
 
 / reference to article for configuring classic permissions. /
+
+
+In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available for downloading by app users as .vtt or .doc file.
+
+You can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
+
+/ suggestion - graphic to show comparative flows for both permission methods /
+
+> [!NOTE]
+> The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
 
 ## Subscribe to change notifications
 
@@ -370,3 +370,5 @@ WEBVTT
 <v User Name>This is a transcript test.</v>
 ```
 </details>
+
+<!--| App users may be invited to attend multiple meetings at the same time. To attend one meeting, the app user would need to forfeit the other. | The meetings transcripts provide content discussed in the meeting by all collaborators. If the app user is unable to attend one of the meetings, the transcripts are a ready reference to the discussion. |-->
