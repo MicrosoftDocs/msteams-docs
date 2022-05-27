@@ -414,9 +414,6 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 > [!TIP]
 > Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
 
-The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
-
-
 The following code shows an example of team members added event:
 
 # [C#](#tab/dotnet)
