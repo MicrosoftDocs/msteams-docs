@@ -59,7 +59,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Bot and message extension, the Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and message extension.
 
-* Ports available, the local debug terminates if tab, bot, message extension, and Azure Functions ports are unavailable.
+* Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
 
   The following table lists the ports available for components:
 
