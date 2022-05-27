@@ -45,8 +45,8 @@ The following table shows a list of Teams conversation update events with more d
 | Channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel is renamed](#channel-renamed). | Team |
 | Channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
 | Channel restored    | channelRestored    | OnTeamsChannelRestoredAsync | [A channel is restored](#channel-deleted). | Team |
-| Members added   | membersAdded   | OnTeamsMembersAddedAsync   | [A member is added](#team-members-added). | All |
-| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#team-members-removed). | All |
+| Members added   | membersAdded   | OnTeamsMembersAddedAsync   | [A member is added](#members-added). | All |
+| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#members-removed). | All |
 | Team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A team is renamed](#team-renamed).       | Team |
 | Team deleted        | teamDeleted       | OnTeamsTeamDeletedAsync    | [A team is deleted](#team-deleted).       | Team |
 | Team archived        | teamArchived       | OnTeamsTeamArchivedAsync    | [A team is archived](#team-archived).       | Team |
@@ -566,7 +566,7 @@ async def on_teams_members_added(
 
 ### Members removed
 
-The `eventType` is `teamMemberRemoved` and it's sent to your bot from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member.
+When the `eventType` is `teamMemberRemoved` it's sent to your bot from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member.
 
 A member removed event is sent to your bot in the following scenarios:
 
