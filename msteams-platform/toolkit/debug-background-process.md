@@ -40,9 +40,9 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-* Azure Functions Core Tools version 4, if Azure Functions Core Tools is'nt installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* Azure Functions Core Tools version 4, if Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 
-* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK is'nt installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
+* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
 
@@ -51,11 +51,11 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Development certificate, if the development certificate for localhost is'nt installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
+* Development certificate, if the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
 
 * Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions is not installed, the Teams Toolkit installs Azure Functions binding extensions.
 
-* NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM is'nt installed, the Teams Toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM isn't installed, the Teams Toolkit installs all NPM packages.
 
 * Bot and message extension, the Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 
@@ -107,7 +107,7 @@ When you select **Start Debugging (F5)**, the Teams Toolkit output channel displ
 
 ## Register and configure your Teams app
 
-In the set up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
+In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
 1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
 
