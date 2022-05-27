@@ -3,7 +3,6 @@ title: Share to Teams from personal app or tab
 description: Learn to add the Share in Teams embedded on your personal app or tab
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Share Teams Share to Teams
 ---
 # Share to Teams from personal app or tab
 

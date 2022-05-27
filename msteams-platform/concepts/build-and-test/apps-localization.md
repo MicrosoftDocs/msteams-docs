@@ -1,9 +1,8 @@
 ---
 title: Localize your app
-description: Describes considerations for localizing your Microsoft Teams app.
+description: Learn about localizing your Microsoft Teams app.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
 ---
 # Localize your app

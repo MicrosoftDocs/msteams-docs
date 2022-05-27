@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions
+title: Moodle Frequently asked questions
 description: Answers to some common questions
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high

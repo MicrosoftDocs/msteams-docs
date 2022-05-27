@@ -3,7 +3,6 @@ title: Share to Teams overview
 description: Describes how to create share-to-teams button
 ms.topic: how-to
 ms.localizationpriority: mediumss
-keywords: Share to Teams overview
 ---
 
 # Share to Teams

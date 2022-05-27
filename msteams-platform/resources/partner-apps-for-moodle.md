@@ -1,6 +1,6 @@
 ---
 title: Partner apps for Moodle
-description: Introduction to partner apps
+description: Introduction to partner apps for moodle
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta

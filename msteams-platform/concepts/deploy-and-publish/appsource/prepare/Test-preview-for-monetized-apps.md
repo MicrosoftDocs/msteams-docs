@@ -5,7 +5,6 @@ description: Create and test SaaS Preview offers for Teams app before pushing th
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: teams apps SaaS offer preview offer test preview monetized saas
 ---
 
 # Test preview for monetized apps

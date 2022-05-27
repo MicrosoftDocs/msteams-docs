@@ -1,10 +1,9 @@
 ---
 title: Moodle learning management system
-description: Overview of Moodle LMS integration with Teams
+description: In this module, learn Moodle LMS integration with Teams
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: moodle LMS mConnect deep links
 ---
 
 # Moodle learning management system

@@ -1,9 +1,8 @@
 ---
-title: Developer Preview
+title: Public developer preview for Microsoft Teams
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: teams preview developer features
 ---
 # Public developer preview for Microsoft Teams
 
