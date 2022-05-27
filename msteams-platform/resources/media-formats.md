@@ -1,13 +1,13 @@
 ---
 title: Supported media formats for bots
-description: Bots on Microsoft Teams supports only the following media formats for audio and video content.
+description: Bots on Microsoft Teams support only the following media formats for audio and video content.
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams bots media formats
 ---
 # Supported media formats for bots
 
-Bots on Microsoft Teams supports only the following media formats for audio and video content:
+Bots on Microsoft Teams support only the following media formats for audio and video content:
 
 | Format | More information |
 | --- | --- |

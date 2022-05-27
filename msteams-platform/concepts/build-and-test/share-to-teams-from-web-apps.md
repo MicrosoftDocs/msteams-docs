@@ -2,7 +2,7 @@
 title: Share to Teams from web apps
 description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Share Teams Share to Teams
 ---
 # Share to Teams from web apps
@@ -49,7 +49,7 @@ The following image displays the Share to Teams pop-up experience:
     </div>
     ```
 
-1. If the shared link requires user authentication, and the URL preview from your link to be shared does not render well in Teams, then you can disable the URL preview by adding the `data-preview` attribute set to `false`.
+1. If the shared link requires user authentication, and the URL preview from your link to be shared doesn't render well in Teams, then you can disable the URL preview by adding the `data-preview` attribute set to `false`.
 
     ```html
     <div
@@ -58,6 +58,17 @@ The following image displays the Share to Teams pop-up experience:
       data-preview="false">
     </div>
     ```
+
+1. To display a message of your choice in compose box, you can define your text in `data-msg-text` attribute.
+
+     ```html
+     <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-msg-text="<default-message-to-be-populated-in-compose-box>"
+      data-preview="false">
+      </div>
+     ```
 
 1. If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
 
@@ -68,7 +79,7 @@ When your website is shared to Teams, the card that is inserted into the selecte
 To display the preview:
 
 * You must include either a **Thumbnail image**, or both a **Title** and **Description**. For best results, include all three.
-* The shared URL does not require authentication. If it requires authentication, you can share it, but the preview is not created.
+* The shared URL doesn't require authentication. If it requires authentication, you can share it, but the preview isn't created.
 
 The following table outlines the necessary tags:
 
@@ -82,7 +93,7 @@ You can use either the HTML default versions or the Open Graph version.
 
 ## Share to Teams for Education
 
-For teachers using the Share to Teams button, there is an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share to Teams for education:
+For teachers using the Share to Teams button, there's an additional option to `Create an Assignment` that enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share to Teams for education:
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams popup education":::
 

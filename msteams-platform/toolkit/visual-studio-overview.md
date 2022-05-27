@@ -2,7 +2,7 @@
 title: Build apps with the Teams Toolkit and Visual Studio
 description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit. Learn to configure your app in Visual Studio, validate your app, and publish it from Visual Studio and Developer Portal. 
 keywords: teams visual studio toolkit
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
@@ -26,7 +26,7 @@ Teams Toolkit's extension for Visual Studio makes it easy to create new projects
 5. On the right, expand the **ASP.NET and web development** section and select **Microsoft Teams development tools** in the Optional list of components.
 6. Select **Install** or **Modify** in the Visual Studio Installer to complete the installation process.
 
-![Selecting the Microsoft Teams development tools in the Visual Studio installer.) installed.](images/teams-development-tools-vs-installer.png)
+   ![Selecting the Microsoft Teams development tools in the Visual Studio installer.) installed.](images/teams-development-tools-vs-installer.png)
 
 ## Get started quickly with a new project
 
@@ -44,7 +44,7 @@ The Microsoft Teams App project template allows you to specify a Microsoft 365 a
 1. In the **Configure your new project** window, type or enter _HelloTeams_ in the **Project name** box. Then, select **Create**.
 1. In the **Create a new Teams application** window, choose or sign in to a Microsoft 365 account using the **Choose an account** selector. Then, select **Create**.
 
-![Creating a new Microsoft Teams App project in Visual Studio.](images/teams-toolkit-vs-new-project.png)
+   ![Creating a new Microsoft Teams App project in Visual Studio.](images/teams-toolkit-vs-new-project.png)
 
 Visual Studio will open up your new project and Teams Toolkit will setup you new project in Teams Developer Portal. The project will be added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
 

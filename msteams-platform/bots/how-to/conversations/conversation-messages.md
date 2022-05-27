@@ -19,6 +19,8 @@ Basic conversations are handled through the Bot Framework connector, a single RE
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
+For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
+
 ## Receive a message
 
 To receive a text message, use the `Text` property of the `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
