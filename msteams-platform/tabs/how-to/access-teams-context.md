@@ -21,7 +21,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you do not require the user to enter their username again.
+* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you don't require the user to enter their username again.
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -56,7 +56,7 @@ For example, in your tab manifest you set the `configURL` attribute to `"https:/
 
 * Their username is **user@example.com**.
 * Their company tenant ID is **e2653c-etc**.
-* They are a member of the Office 365 group with id **00209384-etc**.
+* They're a member of the Office 365 group with id **00209384-etc**.
 * The user has set their Teams theme to **dark**.
 
 When they configure the tab, Teams calls the following URL:
@@ -98,12 +98,15 @@ The following fields are changed when your content page is in a shared channel:
 * `teamSitePath`: Set to the path of a distinct, unique SharePoint site for the shared channel.
 * `teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the shared channel.
 
-In addition to these field changes, there are two new fields available for shared channels:
+In addition to these field changes, there're two new fields available for shared channels:
 
 * `hostTeamGroupId`: Set to the `groupId` associated with the hosting team, or the team that created the shared channel. The property can make Microsoft Graph API calls retrieve membership of the shared channel.
 * `hostTeamTenantId`: Set to the `tenantId` associated with the hosting team, or the team that created the shared channel. The property can be cross referenced with the current user's tenant ID found in the `tid` field of `getContext` to determine if the user is internal or external to the hosting team's tenant.
 
 If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
+
+> [!NOTE]
+> Every time a user restarts or reloads the Teams desktop or web client, a new sessionID is created, which is tracked by Teams session, whereas, when a user exits the Teams apps and reloads it in Teams platform a new app sessionID is created, which is tracked by app session.
 
 ## Handle theme change
 
