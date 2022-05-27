@@ -1323,11 +1323,7 @@ Similar to the `conversationUpdate` event that's sent when bot is added to a tea
 
 The following image shows the app installation step where users select the channel where they intend to use the bot:
 
-<details>
-<summary>Selecting a channel in Teams app.</summary>
-
 ![Create a selected channel](~/assets/videos/addteam.gif)
-</details>
 
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
