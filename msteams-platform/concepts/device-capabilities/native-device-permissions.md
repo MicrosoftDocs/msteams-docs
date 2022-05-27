@@ -121,13 +121,13 @@ Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent
 
 For example:
 
-* To prompt the user to access their location you must call `getCurrentPosition()`:
+* To prompt the user to access their location, you must call `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:
+* To prompt the user to access their camera on desktop or web, you must call `getUserMedia()`:
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -229,7 +229,7 @@ For example:
 
 ## Permission behavior across login sessions
 
-Device permissions are stored for every login session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.  
+Device permissions are stored for every login session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions aren't available. Therefore, you must re-consent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.  
 
 > [!NOTE]
 > When you consent to the native device permissions, it is valid only for your _current_ login session.
