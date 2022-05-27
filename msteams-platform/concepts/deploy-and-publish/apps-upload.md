@@ -43,7 +43,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
    a. Select **Add** to add your personal app.</br>
    b. Use the dropdown menu to add your app to a Team or chat.
 
-    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Create a Teams app" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="App description" border="true":::
 
 ## Troubleshoot
 
