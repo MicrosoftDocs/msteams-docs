@@ -2,7 +2,6 @@
 title: Publish Teams apps using Teams Toolkit
 author: zyxiaoyuer
 description:  publish Teams apps
-ms.author: zyxiaoyuer
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
