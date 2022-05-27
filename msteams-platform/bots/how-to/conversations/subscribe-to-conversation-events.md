@@ -1440,8 +1440,6 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ---
 
-
-
 ## Uninstall behavior for personal app with bot
 
 When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
