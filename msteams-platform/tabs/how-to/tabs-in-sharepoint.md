@@ -3,7 +3,7 @@ title: Add Teams tab to SharePoint
 author: surbhigupta
 description: Learn how to deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 keywords: teams tabs sharepoint framework development
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -67,9 +67,9 @@ You can also implement your Microsoft Teams tabs using SharePoint Framework. Sha
 
 ## Introduction
 
-The tab used here is already hosted on Azure, to focus on the required integration work.
+The tab used here's already hosted on Azure, to focus on the required integration work.
 
-The sample app that is being used is a Talent Management application. It manages the hiring process of candidates for open positions in a team. Build a sample Teams app and load it into Teams. Do not create a real talent management application.
+The sample app that is being used is a Talent Management application. It manages the hiring process of candidates for open positions in a team. Build a sample Teams app and load it into Teams. Don't create a real talent management application.
 
 ### Benefits of this approach
 
@@ -90,7 +90,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
     ![upload a custom app](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. The file to upload is located in your **Downloads** folder. It is called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
+1. The file to upload is located in your **Downloads** folder. It's called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
 
     ![TalentMgmt in Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
@@ -113,7 +113,7 @@ The following image displays the corresponding screen:
 
 1. You can see the SharePoint pages authoring experience. Name your page as **My Teams Tab**.
 
-1. Open the web part toolbox by selecting the `+` button, and select your Teams Tab, named **Contoso HR**. Web parts are sorted alphabetically. If it is a long list, you can use the search bar to find it. This creates a web part in the canvas that contains your Teams tab. The following image displays the tab view:
+1. Open the web part toolbox by selecting the `+` button, and select your Teams Tab, named **Contoso HR**. Web parts are sorted alphabetically. If it's a long list, you can use the search bar to find it. This creates a web part in the canvas that contains your Teams tab. The following image displays the tab view:
 
    ![Tab view](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

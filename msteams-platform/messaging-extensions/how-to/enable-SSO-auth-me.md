@@ -2,7 +2,7 @@
 title: SSO support for your message extensions
 author: KirtiPereira
 description: Learn how to enable SSO support for your messaging extensions with Code samples.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
@@ -38,7 +38,7 @@ To enable SSO:
     > [!NOTE]
     > We do not support other handlers SSO, except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the TeamsMessagingExtensionsSearchAuthConfigBot.cs file.
 
-4. You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you are enabling the SSO for:
+4. You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling the SSO for:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

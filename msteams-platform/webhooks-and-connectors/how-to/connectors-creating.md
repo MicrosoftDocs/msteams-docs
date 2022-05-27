@@ -3,7 +3,7 @@ title: Create Office 365 Connectors
 author: laujan
 description: Describes how to get started with Office 365 Connectors in Microsoft Teams
 keywords: teams Office365 connector
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
 ---
@@ -20,7 +20,7 @@ To distribute your connector, register it in the [Connectors Developer Dashboard
 For a connector to work only in Microsoft Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Office 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
-> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After [publishing connectors for your organization](#publish-connectors-for-the-organization), no further action is required on the Connector Dashboard.
+> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
 
 ### Integrate the configuration experience
 
@@ -218,7 +218,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 ## Distribute webhook and connector
 
 1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
-1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and [publish your Incoming Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) in a Office 365 Connector.
+1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a Office 365 Connector.
 1. Package and publish your connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## Code sample

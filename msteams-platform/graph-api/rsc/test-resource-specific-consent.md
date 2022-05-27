@@ -1,7 +1,7 @@
 ---
 title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman with Code Samples
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
@@ -299,7 +299,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 3. Select the **Collections** tab.
 4. Select the chevron **>** next to the **Test RSC** to expand the details view and see the API requests.
 
-Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meet expectations.
+Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meets expectations.
 
 > [!NOTE]
 > To test specific DELETE and READ API calls, add those instance scenarios to the JSON file.
