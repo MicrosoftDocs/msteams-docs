@@ -5,7 +5,7 @@ description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/17/2022
+ms.date: 05/24/2022
 ---
 
 # Teams Toolkit Overview

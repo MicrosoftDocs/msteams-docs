@@ -1,9 +1,8 @@
 ---
-title: What's new
-description: Describes all the new or latest developer features in Microsoft Teams
+title: What is new for developers in Teams
+description: Learn about the new developer features and enhancements to those features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-keywords: teams what's new latest updates or developer preview and features
 ---
 
 # What's new for developers in Microsoft Teams
