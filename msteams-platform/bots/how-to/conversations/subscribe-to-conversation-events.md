@@ -566,9 +566,7 @@ async def on_teams_members_added(
 
 ### Members removed
 
-When the `eventType` is `teamMemberRemoved` it's sent to your bot from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member.
-
-A member removed event is sent to your bot in the following scenarios:
+The `eventType` is `teamMemberRemoved` and it's sent to your bot from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. A member removed event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
