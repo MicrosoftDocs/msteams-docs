@@ -1326,7 +1326,7 @@ Similar to the `conversationUpdate` event that's sent when bot is added to a tea
 
 The following image shows the app installation step where users select the channel where they intend to use the bot:
 
-:::image type="content" source="../../../assets/images/bots/addteam.png" alt-text="search a team or channel"lightbox="../../../assets/images/bots/addteam.png" border="true":::
+ ![Create a selected channel](~/assets/videos/addteam.gif)
 
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
