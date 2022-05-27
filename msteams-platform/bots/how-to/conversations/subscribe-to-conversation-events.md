@@ -414,6 +414,9 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 > [!TIP]
 > Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
 
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+
+
 The following code shows an example of team members added event:
 
 # [C#](#tab/dotnet)
@@ -571,6 +574,7 @@ A member removed event is sent to your bot in the following scenarios:
 2. When a user is removed from a conversation where the bot is installed.
 
 The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
+
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -1080,7 +1084,7 @@ Now that you've worked with the conversation update events, you can understand t
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message that was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
