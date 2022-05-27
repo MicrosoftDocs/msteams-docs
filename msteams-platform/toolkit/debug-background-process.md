@@ -33,7 +33,6 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
-
 * Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
 
 * Custom app uploading or sideloading for your developer tenant is turned on, if not then the local debug terminates.
@@ -57,7 +56,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM isn't installed, the Teams Toolkit installs all NPM packages.
 
-* Bot and message extension, the Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and message extension.
+* Bot and message extension, the Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 
 * Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
 
@@ -70,7 +69,6 @@ Teams Toolkit checks the following prerequisites during the debug process:
   | Node inspector for bot or message extension | 9239 |
   | Azure Functions | 7071 |
   | Node inspector for Azure Functions | 9229 |
-
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
 
