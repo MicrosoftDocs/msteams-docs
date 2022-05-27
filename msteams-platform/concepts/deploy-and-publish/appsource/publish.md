@@ -126,7 +126,7 @@ When you feel your app is production ready, you can begin the process of getting
   
   * Avoid changing app functionality during the validation process that might lead to discovery of new issues and increase the time it takes to approve your app.
 
-## More tips for rapid approval to publish your app linked to a SaaS offer
+## Additional tips for rapid approval to publish your app linked to a SaaS offer
 
 * **During design phase**
 
