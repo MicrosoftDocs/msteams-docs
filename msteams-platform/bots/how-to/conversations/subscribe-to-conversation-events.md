@@ -399,7 +399,7 @@ async def on_teams_channel_restored(
 
 ### Members added
 
-A member added event with `eventType`as `teamMemberAdded` is sent to your bot in the following scenarios:
+A member added event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
@@ -409,7 +409,7 @@ A member added event with `eventType`as `teamMemberAdded` is sent to your bot in
 
    > User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
-The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context.
+The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context.<br>
 To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
 > [!TIP]
@@ -566,13 +566,12 @@ async def on_teams_members_added(
 
 ### Members removed
 
-The `eventType` is `teamMemberRemoved` and it's sent to your bot from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. A member removed event is sent to your bot in the following scenarios:
+A member removed event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
 
-The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context.
-
+The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context.<br>
 To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
 > [!NOTE]
