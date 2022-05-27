@@ -43,13 +43,13 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
    a. Select **Add** to add your personal app.</br>
    b. Use the dropdown menu to add your app to a Team or chat.
 
-    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Create a Teams app" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="App description" border="true":::
 
 ## Troubleshoot
 
 If your app fails to sideload or any issues to upload, check the following options:
 
-1. Ensure that you have followed all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
+1. Ensure that you've followed all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html).
 1. Ensure your app manifest matches to the latest [schema](../../resources/schema/manifest-schema.md).
 
@@ -59,7 +59,7 @@ Manage your apps allows users to have a dedicated place to manage, update and re
 
 ### Access your app
 
-To access apps through **Manage your apps** follow the steps:
+To access apps through **Manage your apps**, follow the steps:
 
 1. Go to **Apps** and select **Manage your apps** in Teams to view the installed apps across all your channels or for personal use in a list format.
 
@@ -69,7 +69,7 @@ To access apps through **Manage your apps** follow the steps:
     
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
     
-1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope are not displayed in this view currently.
+1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view currently.
     
 Teams provide several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
@@ -77,7 +77,7 @@ Teams provide several ways to open apps. For more information, see [access your 
 
 You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations.
 
-If an update is available to your app, then the **Update available** option is enabled. To update follow the steps:
+If an update is available to your app, then the **Update available** option is enabled. To update, follow the steps:
 
 1. Select **Update available** to view update.
 
@@ -92,7 +92,7 @@ If an update is available to your app, then the **Update available** option is e
 
 ### Remove your app
 
-To remove app from Teams follow the steps:
+To remove app from Teams, follow the steps:
 
 1. Find the app in **Manage your app**.
 1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
@@ -111,7 +111,7 @@ To remove app from Teams follow the steps:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use your Teams app](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
+>[Create apps for Teams meetings](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## See also
 

@@ -2,14 +2,14 @@
 title: Configure OAuth 2.0 identity providers
 description: Describes how to configure identity providers with a focus on Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams authentication Azure AD oauth identity provider
 ---
 # Configure identity providers
 
 ## Configuring an application to use Azure AD as an identity provider
 
-Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
+Identity providers supporting OAuth 2.0 won't authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 

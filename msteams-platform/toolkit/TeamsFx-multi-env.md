@@ -3,7 +3,7 @@ title: TeamsFX multiple environments in Teams Toolkit
 author: MuyangAmigo
 description:  About TeamsFX multi environment
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
 ---
@@ -40,9 +40,9 @@ After creating a new project, Teams Toolkit by default creates:
 1. Select the **Teams** icon in the sidebar
 2. Select **+Teams: Create new environment** under the Environment section as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
-If you have more than one environments, you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment created.
+   If you have more than one environments, you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment created.
 
 ## Select target environment
 
@@ -77,7 +77,7 @@ The following table lists the common scenarios for customized resource provision
 | Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
-| Customize app manifest | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` section in `.fx/config.<envName>.json`</li>  </ul> | [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md) |
+| Customize app manifest | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` section in `.fx/config.<envName>.json`</li>  </ul> | [Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## Scenarios
 
@@ -200,10 +200,14 @@ As the Teams app manifest template is shared across all environments, we can upd
     },
     ...
   }
- ```
-3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
 You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to 
@@ -211,9 +215,7 @@ fx/configs/azure.parameters.{env}.json. file.
 
 For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
 </details>
-<br
-
-
+</br>
 
 ## See also
 
