@@ -14,8 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development with your first Teams app. You'll create a tab app with Teams.
 
+    Start Microsoft Teams app development with your first Teams app. You'll create a tab app with Teams.
+    
     Your app will have a capability, which comes with its own UI and UX:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
