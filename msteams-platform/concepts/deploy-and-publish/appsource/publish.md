@@ -90,7 +90,7 @@ When you feel your app is production ready, you can begin the process of getting
 
   1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and so, the time taken to approve your app.
+  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements, which helps reduce the number of issues observed in your app and so, the time taken to approve your app.
 
   1. Test and re-test your app:
 
@@ -114,7 +114,7 @@ When you feel your app is production ready, you can begin the process of getting
 
         1. Setup instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
-        1. Link to a demo video recording key user flow for your app. This is highly recommended.
+        1. Link to a demo video recording key user flow for your app, which is highly recommended.
 
 * **Post app submission**
 
