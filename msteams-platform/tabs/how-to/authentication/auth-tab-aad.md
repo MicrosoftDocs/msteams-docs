@@ -29,9 +29,9 @@ See the topic [Configure identity providers](~/concepts/authentication/configure
 
 Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
 
-Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
+Add a button to your configuration or content page to enable the user to sign in when needed, which can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, doesn't allow its content to be placed in an iframe. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+Azure AD, like most identity providers, doesn't allow its content to be placed in an iframe, which means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -57,7 +57,7 @@ microsoftTeams.authentication.authenticate({
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed, the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed, the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`, which also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
