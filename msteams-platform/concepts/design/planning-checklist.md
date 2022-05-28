@@ -1,7 +1,7 @@
 ---
 title: Questions to help plan Teams app development
 author: heath-hamilton
-description: Questions to consider while you plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
+description: Questions to consider while you plan your app, understand user and their need, understand the user problems that app would solve, plan user authentication and their onboarding experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
