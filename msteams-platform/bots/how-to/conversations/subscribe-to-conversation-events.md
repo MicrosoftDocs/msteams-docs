@@ -18,7 +18,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 * Trigger a welcome message when a new team member is added or removed.
 * Trigger a notification when a channel is created, renamed, or deleted.
 * Trigger a notification when a bot message is liked by a user.
-* Identify and operate within the user selected or intended channel when your bot is added to a team.
+* Identify the default channel for your bot from user input (selection) during installation.
 
 ## Conversation update events
 
