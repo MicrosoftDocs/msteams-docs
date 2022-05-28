@@ -1,9 +1,8 @@
 ---
 title: Get started - Overview
-description: Overview to Get started for Microsoft Teams Developer Documentation
+description: With this learning path, get started for Microsoft Teams developer documentation which introduces you to common tools, fundamental concepts, and advanced features.
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams developer samples
 ---
 # Get started
 
@@ -17,7 +16,7 @@ Here's an idea of what you'll learn:
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
 
-Let's take a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
+Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app" border="true":::
 
@@ -35,7 +34,7 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
-> [!NOTE]
+> [!WARNING]
 > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. <br> App studio will be deprecated by June 30, 2022.
 
 ## Build your first Teams app
