@@ -13,7 +13,7 @@ When testing your bot, you need to consider both the contexts you want your bot 
 
 ## Test by uploading to Teams
 
-The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams, which is the only method to test the full functionality available to your bot, across all scopes.
 
 There are two methods for uploading your app:
 
@@ -43,7 +43,7 @@ Occasionally, it's necessary to test your bot without installing it as an app in
 
 ### Use the Bot Emulator
 
-The Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives. This is useful to  verify that your bot is available and responding. However, the emulator doesn't permit you to test any Teams-specific functionality you've added to the bot, nor the responses from your bot are an accurate visual representation of how they're rendered in Teams. If you need to test either of these, it's best to [upload your bot](#test-by-uploading-to-teams).
+The Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives, which is useful to  verify that your bot is available and responding. However, the emulator doesn't permit you to test any Teams-specific functionality you've added to the bot, nor the responses from your bot are an accurate visual representation of how they're rendered in Teams. If you need to test either of these, it's best to [upload your bot](#test-by-uploading-to-teams).
 
 For more information, see [complete instructions on the Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
@@ -77,17 +77,17 @@ Your bot receives the `conversationUpdate` event as you add the bots to a team, 
 
 ## Block a bot in personal chat
 
-Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
+Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation** that means, your bots continue to send messages, however, the user doesn't receive the messages.
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 
 ## Remove a bot from a team
 
-Users can delete the bot by choosing the trash-can icon on the bots list in their team's view. This only removes the bot from that team's use. Individual users can still interact in personal context. Bots in personal context can't be disabled or removed by users.
+Users can delete the bot by choosing the trash-can icon on the bots list in their team's view that only removes the bot from that team's use. Individual users can still interact in personal context. Bots in personal context can't be disabled or removed by users.
 
 ## Disable a bot in Teams
 
-To stop your bot from receiving messages, go to your **Bot Dashboard** and edit the Teams channel. Clear the **Enable on Microsoft Teams** option. This prevents users from interacting with the bot, however, it's still discoverable and users can add it to Teams.
+To stop your bot from receiving messages, go to your **Bot Dashboard** and edit the Teams channel. Clear the **Enable on Microsoft Teams** option, which prevents users from interacting with the bot, however, it's still discoverable and users can add it to Teams.
 
 ## Delete a bot from Teams
 
