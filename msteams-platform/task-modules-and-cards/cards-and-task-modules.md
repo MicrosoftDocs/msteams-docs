@@ -33,7 +33,7 @@ You can add and respond to card actions that:
 * Send messages and payload to the bot
 * Initiate OAuth flow
 
-You can provide [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience within a large dataset using type ahead control in Adaptive Cards and perform type-ahead static search within limited number of choices. Invoke the task modules in channel or personal tabs, bots, or deep links. Your user's experience for any workflows that requires data input can be improved by adding a task module to the user's tab. You can invoke task modules from Teams bots using buttons on Adaptive Cards and Bot Framework cards.
+You can provide [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience within a large dataset using type-ahead control in Adaptive Cards and perform type-ahead static search within limited number of choices. Invoke the task modules in channel or personal tabs, bots, or deep links. Your user's experience for any workflows that requires data input can be improved by adding a task module to the user's tab. You can invoke task modules from Teams bots using buttons on Adaptive Cards and Bot Framework cards.
 
 ## See also
 
