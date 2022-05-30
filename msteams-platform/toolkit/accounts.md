@@ -85,7 +85,7 @@ If you want to host your application related resources or access resources withi
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app" border="true":::
 
-        If you are unable to view the option Upload a custom app,** then, it indicates that you don't have the required permission for sideloading.
+        If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
         * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
