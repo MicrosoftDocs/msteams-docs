@@ -18,11 +18,11 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 
 / Add more relevant use cases /
 
-To implement this feature, you must:
+To implement this feature, your app must be:
 
-- Configure permissions for your app to fetch transcripts
-- Subscribe to change notifications
-- Use Graph APIs in your app
+- Configured with permissions on Azure AD portal to fetch transcripts
+- Subscribed to receive change notifications
+- Configured for using Graph APIs to request and retrieve transcripts
 
 ## Configure permissions to access transcript
 
@@ -59,9 +59,7 @@ The following RSC permissions can be granted to your app:
 
 In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available for downloading by app users as .vtt or .doc file.
 
-You can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
-
-/ suggestion - graphic to show comparative flows for both permission methods /
+Next, you can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
 
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
@@ -379,3 +377,37 @@ WEBVTT
 </details>
 
 <!--| App users may be invited to attend multiple meetings at the same time. To attend one meeting, the app user would need to forfeit the other. | The meetings transcripts provide content discussed in the meeting by all collaborators. If the app user is unable to attend one of the meetings, the transcripts are a ready reference to the discussion. |-->
+
+<!--
+## Fetch transcripts at runtime
+
+When your app fetches the transcripts, it interacts with Microsoft Graph, Teams Graph Service (TGS), and Microsoft Artifacts Service (MAS). Ensure that you've configured your app with required permissions on Azure portal and subscribed to the necessary change notifications.
+
+:::image type="content" source="../../assets/images/graph-api/flow-2.png" alt-text="Graph REST APIs to fetch transcripts in post-meeting scenario" border="false":::
+
+| # | Interaction | What's going on ... |
+| --- | --- | --- |
+| 1 | Meeting notification to your app | Your app receives the notification for a meeting event. |
+| 2 | Your app → Microsoft Graph | Your app sends the API request to Microsoft. It calls for: <br> 1. list of transcripts <br> 2. Specific transcript metadata selected from the list of transcripts <br> 3. Transcript content for the selected transcript. |
+| 3 |  Microsoft Graph → TGS | Microsoft Graph forwards the API request to TGS. |
+| 4 | TGS → Permission check | TGS checks if your app is authorized with the required permissions for accessing the meeting transcripts. |
+| 5 | TGS → MAS | After successful validation, TGS forwards the APi request to MAS to fetch the transcript metadata or transcript content, depending on the API request. |
+| 6 | TGS → your app | TGS receives the API request and responds to TGS with transcript metadata or transcript content, which forwards it to Microsoft Graph, and eventually to your app. |-->
+
+<!--
+/ suggestion - graphic to show comparative flows for both permission methods /
+When your app fetches the transcripts, it interacts with Microsoft Graph, Teams Graph Service (TGS), Microsoft Artifacts Service (MAS). Ensure that you've configured your app with required permissions on Azure portal and subscribed to the necessary change notifications.
+
+:::image type="content" source="../../assets/images/graph-api/flow-2.png" alt-text="Graph REST APIs to fetch transcripts in post-meeting scenario":::
+
+| # | Interaction | What's going on ... |
+| --- | --- | --- |
+| 1 | Meeting notification to your app | Your app receives the notification for a meeting event. |
+| 2 | Your app → Microsoft Graph | Your app sends the API request to Microsoft. It calls for: <br> 1. list of transcripts <br> 2. Specific transcript metadata selected from the list of transcripts <br> 3. Transcript content for the selected transcript. |
+| 3 |  Microsoft Graph → TGS | Microsoft Graph forwards the API request to TGS. |
+| 4 | TGS → Permission check | TGS checks if your app is authorized with the required permissions for accessing the meeting transcripts. |
+| 5 | TGS → MAS | After successful validation, TGS forwards the APi request to MAS to fetch the transcript metadata or transcript content, depending on the API request. |
+| 6 | TGS → your app | TGS receives the API request and responds to TGS with transcript metadata or transcript content, which forwards it to Microsoft Graph, and eventually to your app. |
+
+-->
+
