@@ -2,7 +2,7 @@
 title: Build Agile Poker using Live Share SDK
 metadata:
   title: Build Agile Poker using Live Share SDK
-  description: In this tutorial, you'll learn how to create a agile poker sample app using Live share SDK.
+  description: In this tutorial, you'll learn how to create an agile poker sample app using Live share SDK.
   audience: Developer
   level: Beginner
   ms.date: 05/17/2022
@@ -17,7 +17,7 @@ items:
    > [!NOTE]
    > The Live Share SDK is currently available only in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the Live Share SDK.
 
-   Live Share SDK allows you to build collaborative apps and discover more ways to collaborate and connect through Teams. You can build apps to share content such as watching movies, playing live games, and so on in Teams one-on-one calls, group calls, schedule meetings, and meet now.
+   Live Share SDK allows you to build collaborative apps and discover more ways to collaborate and connect through Teams. You can build apps to share content such as watching movies, playing live games, and so on, in Teams one-on-one calls, group calls, schedule meetings, and meet now.
   
    This step-by-step guide helps you to create a Agile Poker sample app using Live Share SDK. You'll see the following output:
 
@@ -35,7 +35,7 @@ items:
     * [Latest version of ngrok](https://ngrok.com/download) or equivalent tunneling solution
       
       > [!NOTE]
-      > If you are downloading ngrok for the first time, sign up and install [authtoken](https://ngrok.com/download).
+      > If you're downloading ngrok for the first time, sign up and install [authtoken](https://ngrok.com/download).
 
 - title: Build and run the Agile Poker sample app
   durationInMinutes: 1
@@ -76,7 +76,7 @@ items:
     1. Run the following command to create a tunnel. The sample app uses port 3000:
 
         ```
-        ngrok http 3000 --host-header=localhost
+        ngrok http 3000--host-header=localhost
         ```
         ngrok tunnel is created.
         
@@ -152,6 +152,6 @@ items:
      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="play game":::
 
 - content: |
-    You've completed the tutorial to build collaborative apps for Microsoft Teams using Live Share SDk.
+    You've completed the tutorial to build collaborative apps for Microsoft Teams using Live Share SDK.
 
     :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile Poker gif":::

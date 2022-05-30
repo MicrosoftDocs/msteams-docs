@@ -28,14 +28,14 @@ The `selectPeople` API enables you to add Teams People Picker input control to t
 * Allows the user to search and select one or more people from the list.
 * Returns the ID, name, and email address of selected users to the web app.
 
-In case of a personal app, the control searches for name or email ID across the organization within Teams. If the app is added to a chat or channel, then the search context is configured based on the scenario. The search is restricted within the members of that chat or channel.
+In a personal app, the control searches for name or email ID across the organization within Teams. If the app is added to a chat or channel, then the search context is configured based on the scenario. The search is restricted within the members of that chat or channel.
 
 The `selectPeople` API comes with the following input configurations:
 
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`|String| It's an optional parameter and sets the title for the People Picker control.|`selectPeople`|
-|`setSelected`|String| It's an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In case of a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
+|`setSelected`|String| It's an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|**False**|
 |`singleSelect`|Boolean|It's an optional parameter and when set to true, it launches the People Picker and restricts the selection to only one user.|**False**|
 
@@ -66,7 +66,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 The following code snippet displays use of the `selectPeople` API people from a list:
 
 ```javascript
- microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -83,7 +83,7 @@ The following code snippet displays use of the `selectPeople` API people from a 
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  });
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
 ```
 
 ## Error handling
@@ -92,7 +92,7 @@ The following table lists the error codes and their descriptions:
 
 |Error code |  Error name     | Description|
 | --------- | --------------- | --------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error encountered while launching People Picker.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|

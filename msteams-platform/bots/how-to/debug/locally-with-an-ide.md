@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Test and debug your bot locally
 
-When testing your bot you need to consider both the contexts you want your bot to run in, and any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
+When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams
 
@@ -29,7 +29,7 @@ There are two methods for uploading your app:
 If you're hosting your bot locally during development, you need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. After you download and install ngrok, add `ngrok` to your path, and run the following command to start the tunneling service:
 
 ```bash
-ngrok http <port> -host-header=localhost:<port>
+ngrok http <port> --host-header=localhost:<port>
 ```
 
 Use the https endpoint provided by ngrok in your app manifest.
@@ -39,7 +39,7 @@ Use the https endpoint provided by ngrok in your app manifest.
 
 ## Test your bot without uploading to Teams
 
-Occasionally, it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however, it won't allow you to test the full breadth of Microsoft Teams functionality you've added to your bot. If you want to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
+Occasionally, it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding. However, it won't allow you to test the full breadth of Microsoft Teams functionality you've added to your bot. If you want to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
 
 ### Use the Bot Emulator
 
@@ -52,7 +52,7 @@ For more information, see [complete instructions on the Bot Framework Emulator](
 > [!Important]
 > Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you have added to your bot fails to work.
 
-You can initiate a conversation with your bot by using its ID. When a bot is added through one of these methods, it isn't addressable in channel conversations and you can't take advantage of other Microsoft Teams app capabilities like tabs or message extensions. You can initiate a conversation in one of the following ways:
+Initiate a conversation with your bot by using its ID. When a bot is added through one of these methods, it isn't addressable in channel conversations and you can't take advantage of other Microsoft Teams app capabilities like tabs or message extensions. Initiate a conversation in one of the following ways:
 
 * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams launches a personal chat with your bot.
 
@@ -77,13 +77,13 @@ Your bot receives the `conversationUpdate` event as you add the bots to a team, 
 
 ## Block a bot in personal chat
 
-Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continues to send messages, however, the user doesn't receive the messages.
+Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 
 ## Remove a bot from a team
 
-Users can delete the bot by choosing the trash-can icon on the bots list in their team's view. This only removes the bot from that team's use, individual users can still interact in personal context. Bots in personal context cannot be disabled or removed by users.
+Users can delete the bot by choosing the trash-can icon on the bots list in their team's view. This only removes the bot from that team's use. Individual users can still interact in personal context. Bots in personal context can't be disabled or removed by users.
 
 ## Disable a bot in Teams
 

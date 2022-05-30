@@ -63,19 +63,19 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **100** | API not supported in the current platform. |
-| **404** | The file specified was not found on the given location. |
+| **404** | The file specified wasn't found on the given location. |
 | **500** | Internal error encountered while performing the required operation. |
-| **501** | API is not supported in current context. |
+| **501** | API isn't supported in current context. |
 | **1000** | Permissions denied by user. |
 | **2000** | Network issue. |
 | **3000** | Underlying hardware doesn't support the capability. |
 | **4000** | One or more arguments are invalid. |
-| **5000** | User is not authorized for this operation. |
-| **6000** | Could not complete the operation due to insufficient resources. |
+| **5000** | User isn't authorized for this operation. |
+| **6000** | Couldn't complete the operation due to insufficient resources. |
 | **7000** | Platform throttled the request because of API was invoked too frequently. |
 | **8000** | User aborted the operation. |
 | **9000** | Platform code is old and doesn't implement this API. |
-| **10000** | The return value is too big and has exceeded our size boundries. |
+| **10000** | The return value is too big and has exceeded our size boundaries. |
 
 ## Limitations
 
