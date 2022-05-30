@@ -48,6 +48,7 @@ To integrate location capabilities, you must:
 * Have working knowledge of [code snippets](#code-snippets) for calling the [location APIs](#location-apis).
 * Handle errors in your Teams app with the help of [API response errors](#error-handling).
 
+
 ## Update manifest
 
 Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
