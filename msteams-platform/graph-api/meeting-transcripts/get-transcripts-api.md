@@ -7,22 +7,24 @@ keywords: teams Graph transcripts meeting organizer Azure rsc
 ---
 # Get meeting transcripts using Graph APIs
 
-You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Your app can use Graph REST APIs to access and fetch transcripts generated for a Teams meeting.
+You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Your app can use Graph REST APIs to access and fetch transcripts generated for a Teams meeting that has been scheduled beforehand.
 
 Here are some use cases for fetching meeting transcripts using Graph API:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
-| You need to obtain transcripts for multiple meetings for capturing action items. Keeping track of all meetings, and retrieving them one at a time is time-consuming and inefficient. You might also miss getting content for any particular meeting. | If you configure your app to automatically fetch meeting transcript following a meeting, it can automatically capture the transcripts of all meetings that are relevant for your purpose. Your app can receive meeting notifications, and get the transcript when the meeting is over. It can even access and fetch multiple transcripts simultaneously. |
-| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes off this burden. Participants can fully focus on the discussion, without having to take notes, or write meeting summary. |
+| You need to obtain transcripts for multiple meetings for capturing action items. Keeping track of all meetings, and retrieving them one at a time is time-consuming and inefficient. You might also miss getting content for any particular meeting. | If you configure your app to automatically fetch meeting transcript following a meeting, it can automatically capture the transcripts of all meetings that are relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting. |
+| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes off this burden. Participants can fully focus on the discussion. The content of the meeting transcript is available for post-meeting analysis and insights, without any need for participants taking notes, etc. |
 
 / Add more relevant use cases /
 
-To implement this feature, your app must be:
+To fetch the transcript for a particular meeting:
 
-- Configured with permissions on Azure AD portal to fetch transcripts
-- Subscribed to receive change notifications
-- Configured for using Graph APIs to request and retrieve transcripts
+- Configure required permissions for your app on Azure AD portal
+- Obtain meeting ID and the user ID of the meeting organizer using one of the two methods:
+  - Subscribe to receive change notifications
+  - Use Bot framework
+- Get transcripts using Graph REST APIs
 
 ## Configure permissions to access transcript
 
@@ -43,6 +45,7 @@ The following permissions can be granted to your app:
 | OnlineMeetingTranscript.Read.All in Delegated (work or school account) context | Read the transcript of the meeting. | It allows your app to read meeting transcripts in your organization for a signed-in app user. It needs the administrator to consent. |
 
 / reference to article for configuring classic permissions. /
+/ reference to article for admin page. /
 
 ### Use RSC permissions
 
@@ -57,7 +60,7 @@ The following RSC permissions can be granted to your app:
 
 / reference to article for configuring RSC permissions. /
 
-In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available for downloading by app users as .vtt or .doc file.
+In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available as .vtt or .doc file.
 
 Next, you can [subscribe](#subscribe-to-change-notifications) your app to receive notifications of all relevant meeting events.
 
@@ -77,7 +80,7 @@ Your app receives notifications of meeting events for which it has subscribed:
 
 ## Use Graph APIs to fetch transcript
 
-Teams Graph Service interacts with [Meeting Artifacts Service](https://aka.ms/meetingArtifactsApi) using Graph REST APIs to get transcripts for a particular meeting. Your app fetches the transcripts based on the user ID of the meeting organizer and the meeting ID.
+Leverage Graph REST APIs to get transcripts for a particular meeting. Your app fetches the transcripts based on the user ID of the meeting organizer and the meeting ID.
 
 The following APIs are used for fetching transcripts:
 
