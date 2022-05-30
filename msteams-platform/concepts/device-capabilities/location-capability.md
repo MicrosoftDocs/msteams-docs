@@ -1,6 +1,6 @@
 ---
 title: Integrate location capabilities
-author: Rajeshwari-v
+author: surbhigupta
 description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
 keywords:  location map capabilities native device permissions 
 ms.topic: conceptual
@@ -67,14 +67,13 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 The following table lists the set of APIs to enable your device's location capabilities:
 
-| API      | Description |Input configuration `allowChooseLocation` |Input configuration `showMap` |
-| --- | --- |--- |--- |
-|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | - True: Users can choose any location of their choice.</br> - False: Users cannot change their current location. |False: Fetches the current location without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
-|`showLocation`| Shows location on map. |- True: Users can choose any location of their choice.</br> - False: Users cannot change their current location.| False: Fetches the current location without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
+| API      | Description |Input configuration |
+| --- | --- |--- |
+|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | The `getLocation` API takes in the following two input parameters as part of the [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) interface: `allowChooseLocation`, `showMap`:<br> The experience is derived from the combination of these two input parameters:<br>- (true, true): A map is launched and the user gets to pick any location on it.<br>- (true, false): A map is launched and the user gets to pick any location on it.<br>- (false, true): A map is launched. The user can only submit the current location.<br>- (false,false): Map is not launched. User's current location is fetched. Note: This configuration is only supported only on mobile.<br>|
+|`showLocation`| Shows location on map. |It takes in a single input parameter location, which contains the coordinates of the location to be shown on the map.|
 
 > [!NOTE]
-> `showMap` conditions for True and False:<br> - True: Show location on map <br> - False: Do not show location on map<br>`showMap`= False is not supported on Teams web or desktop.
-
+> `showMap` conditions for True and False:<br> - True: Show location on map <br> - False: Do not show location on map<br>-`showMap`= False is not supported on Teams web or desktop.<br>-If `allowChooseLocation` is set to true, then `showMap` is ignored.
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
@@ -97,7 +96,6 @@ Ensure to handle errors appropriately in your Teams app. The following table lis
 
 
 ### Code snippets
-
 
 * Call `getLocation` API to retrieve the location:
 
