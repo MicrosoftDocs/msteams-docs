@@ -54,7 +54,7 @@ Ensure to install and download the following before proceeding with the Microsof
 
 ### Microsoft 365 Moodle plugins
 
-1. Download the plugins, extract them, and upload to their corresponding folders. e.g. extract the OpenID Connect plugin (auth_oidc) to a folder called **oidc**, and upload to the **auth** folder of your Moodle document root. 
+1. Download the plugins, extract them, and upload to their corresponding folders. For example, extract the OpenID Connect plugin (auth_oidc) to a folder called **oidc**, and upload to the **auth** folder of your Moodle document root. 
 
 1. Sign in to your Moodle server as an administrator and select **Site administration**.
 
