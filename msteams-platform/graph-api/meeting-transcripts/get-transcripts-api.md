@@ -69,7 +69,7 @@ Next, you can [subscribe](#subscribe-to-change-notifications) your app to receiv
 
 You can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID passed as parameters in the API.
 
-To obtain meeting ID and organizer ID fetching transcript, choose one of the two ways:
+To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
 
 - [Subscribe to change notifications](#subscribe-to-change-notifications)
 - [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
@@ -80,16 +80,14 @@ You can subscribe your app to receive change notifications for scheduled meeting
 
 Your app receives notifications of meeting events for which it has subscribed:
 
-- **Tenant-level notification**: You can subscribe your app to change notifications for meetings across the tenant. Anytime, a meeting is scheduled in the tenant, your app is notified. Post meeting, your app can access and retrieve the meeting transcript.
-- **User-level notification**: Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
+- [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
+- [User-level notification](#obtain-meeting-details-using-user-level-notification)
 
-After your app receives meeting notifications, your app can retrieve the meeting ID and organizer ID.  
+When your app is notified of a scheduled meeting, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details, your app can fetch the meeting transcripts after the meeting has ended.
 
-/ reference to article for subscribing for notifications. /
+#### Obtain meeting details using tenant-level notification
 
-### Obtain meeting details using tenant-level notification
-
-Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant.
+Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. You can subscribe your app to receive notifications for meetings scheduled across the tenant. Post meeting, your app can access and retrieve the meeting transcript.
 
 For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
@@ -108,6 +106,10 @@ To obtain meeting ID and organizer ID with tenant-level notification:
 3. Get `OnlineMeetingId` through joinWebUrl and `OrganizerId`.
 
 / `id` /
+
+#### Obtain meeting details using user-level notification
+
+Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
