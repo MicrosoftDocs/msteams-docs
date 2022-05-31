@@ -13,6 +13,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Feature | Find it here |
 | --- | --- | --- |
+|06/05/2022| Updated RSC permissions to receive meeting start and end events from channel meetings.| •[Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 | 05/24/2022| [*Developer preview*] <br> Enhanced collaboration with Live Share SDK |  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
