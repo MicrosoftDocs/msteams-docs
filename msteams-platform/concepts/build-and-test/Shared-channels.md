@@ -18,7 +18,7 @@ Shared channels in Teams allow members of a channel to collaborate with users ac
 * Individuals within the same organization
 * Individuals and other Teams of other organizations 
 
-This allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. This is adventageous because, unlike when using guest accounts, where members must sign out of Teams and sign in again using a guest account, shared channels facilitates this collaboration seamlessly. Teams applications can now extend this powerful collaboration space. 
+This allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. This is advantageous because, unlike when using guest accounts, where members must sign out of Teams and sign in again using a guest account, shared channels facilitates this collaboration seamlessly. Teams applications can now extend this powerful collaboration space. 
 
 [Place holder for image]
 
@@ -64,7 +64,7 @@ You can classify members as in-tenant or out-tenant by comparing `tenantID` of t
     ```
 2.	Using `getContext`, compare the `tenantID` of the member to the `hostTenantID` property.
 
-## AAD native identity
+## Azure AD native identity
 
 Apps must function cross-tenant in installation and usage. The following table lists the channel types and their corresponding group IDs: 
      
