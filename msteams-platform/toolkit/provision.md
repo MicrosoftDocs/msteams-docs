@@ -277,7 +277,7 @@ The following steps are:
     }
     ```
 
-### Scenerio
+### Scenario 
 
 To add other Azure resource or storage to the application:
 

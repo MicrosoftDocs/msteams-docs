@@ -621,6 +621,11 @@ You must be familiar with the `TurnContext` object available through the Bot SDK
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. You can choose to receive the meeting start and end events through regular calendar meetings, channel meetings or both in Teams. Update the manifest with the following RSC permissions to receive the meeting start and end events:
 
+* `OnlineMeeting.ReadBasic.Chat` - To receive actual meeting events from regular calendar meetings or private meetings.
+* `ChannelMeeting.ReadBasic.Group` - To receive meeting events from channel meetings.
+
+Use the following examples to configure your manifest:
+
 <br>
 
 <details>
@@ -659,7 +664,8 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
