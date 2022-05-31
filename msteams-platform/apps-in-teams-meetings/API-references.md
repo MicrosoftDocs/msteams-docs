@@ -619,7 +619,7 @@ You must be familiar with the `TurnContext` object available through the Bot SDK
 
 ### Prerequisite
 
-Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following examples to configure your manifest:
+Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. You can choose to receive the meeting start and end events through regular calendar meetings, channel meetings or both in Teams. Update the manifest with the following RSC permissions to receive the meeting start and end events:
 
 <br>
 
