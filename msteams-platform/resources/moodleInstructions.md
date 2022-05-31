@@ -58,9 +58,9 @@ Ensure to install and download the following before proceeding with the Microsof
 
 1. Sign in to your Moodle server as an administrator and select **Site administration**.
 
-1. Upon detection of new plugins to be installed, Moodle should redirect you to the install new plugins page. If this does not happen, in the **Site administration** page, select **Notifications** in the **General** tab, this should trigger the installation of the plugins.
+1. After the detection of new plugins to be installed, Moodle should redirect you to the install new plugins page. If this doesn't happen, in the **Site administration** page, select **Notifications** in the **General** tab, this should trigger the installation of the plugins.
 
-1. After the plugins are install, go to the **Plugins** tab in the **Site administrator** page, click **Authentication** section link, and enable **OpenID Connect**. It is OK to leave the plugin configuration blank - they will be filled in later.
+1. After the plugins are install, go to the **Plugins** tab in the **Site administrator** page, select **Authentication** section link, and enable **OpenID Connect**. It is OK to leave the plugin configuration blank - they will be filled in later.
 
 1. In the **Site administrator** page, scroll down to the **Local plugins** section and select the **Microsoft 365 Integration** link.
 
