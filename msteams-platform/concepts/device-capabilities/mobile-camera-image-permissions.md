@@ -24,7 +24,6 @@ The following scenarios showcase the advantages of media capabilities:
 
 * Allows the user to scan the physical documents from the smartphone to claim a car insurance to the insurance company.
 
-
 > [!NOTE]
 >
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
@@ -40,8 +39,6 @@ You can capture or select media using any one of the following:
 * Select **Camera**, then select **PHOTO** to capture the image, and select **Done**
 * Select **Open photo library** to pick images as attachments from your device, and select **Done**
 
-<!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
-
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile." border="true":::
 
 The `selectMedia` API for microphone capability allows user to record audio on mobile using the following steps:
@@ -49,8 +46,6 @@ The `selectMedia` API for microphone capability allows user to record audio on m
 1. Select **Record description**.
 1. The recording bar shows progression at the bottom of the mobile.
 1. Recorded audio gets returned back to the app.
-
-<!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
 
 :::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile." border="true":::
 
@@ -67,7 +62,13 @@ You can capture or select media using any one of the following:
 
 ---
 
-## Update manifest
+It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+
+> [!NOTE]
+>
+> * Currently, Microsoft Teams supports for media capabilities is available for mobile clients only.
+> * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
+> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation. The update for app manifest is as follows:
 
@@ -91,9 +92,8 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
   
 > [!IMPORTANT]
 >
-> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).</br>
-> * The microphone and audio properties support `selectMedia` API.
-> * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
+> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more information, see [Entry points for Teams apps](../extensibility-points.md).
+> * `selectMedia` API has been extended to support microphone and audio properties.
 
 The following table lists set of APIs to enable your device's media capabilities:
 
@@ -111,14 +111,14 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 |Error code |  Error name     | Description|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
+| **404** | FILE_NOT_FOUND | File specified isn't found in the given location.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
 | **1000** | PERMISSION_DENIED |Permission is denied by the user.|
-| **3000** | NO_HW_SUPPORT | The hardware does not support the capability.|
+| **3000** | NO_HW_SUPPORT | Underlying hardware doesn't support the capability.|
 | **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
 |  **8000** | USER_ABORT |User aborts the operation.|
-| **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
+| **9000**| OLD_PLATFORM | Platform code is outdated and doesn't implement this API.|
 | **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
 
 ## Code snippets

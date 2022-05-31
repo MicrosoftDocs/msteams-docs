@@ -8,7 +8,7 @@ keywords: devtools debug mobile chrome desktop client developer tools tab
 
 # DevTools for Microsoft Teams tabs
 
-When Teams is running in a browser, it is easy to access the browser's DevTools: F12 on Windows or Command-Option-I on MacOS. The DevTools gives you access to:
+When Teams is running in a browser, it's easy to access the browser's DevTools: F12 on Windows or Command-Option-I on MacOS. The DevTools gives you access to:
 
 1. View console logs.
 1. View or modify HTML, CSS, and network requests during runtime.

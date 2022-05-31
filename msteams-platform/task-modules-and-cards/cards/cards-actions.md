@@ -18,7 +18,7 @@ Cards used by bots and message extensions in Teams support the following activit
 | `openUrl` | Opens a URL in the default browser. |
 | `messageBack` | Sends a message and payload to the bot from the user who selected the button or tapped the card. Sends a separate message to the chat stream. |
 | `imBack`| Sends a message to the bot from the user who selected the button or tapped the card. This message from user to bot is visible to all conversation participants. |
-| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. This message is not visible. |
+| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. This message isn't visible. |
 | `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
 
 > [!NOTE]
@@ -89,11 +89,11 @@ With `messageBack`, you can create a fully customized action with the following 
 | Property | Description |
 | --- | --- |
 | `title` | Appears as the button label. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text is not sent to your bot. |
+| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text isn't sent to your bot. |
 | `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
 | `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
-The flexibility of `messageBack` means that your code cannot leave a visible user message in the history simply by not using `displayText`.
+The flexibility of `messageBack` means that your code can't leave a visible user message in the history simply by not using `displayText`.
 
 # [JSON](#tab/json)
 
@@ -422,7 +422,7 @@ Adaptive Cards support four action types:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provide details on how to use existing Bot Framework actions with Adaptive Cards.
+You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
 > Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
@@ -437,7 +437,7 @@ To include a `messageBack` action with an Adaptive Card include the following de
 | Property | Description |
 | --- | --- |
 | `type` | Set to `messageBack`. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text is not sent to your bot. |
+| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text isn't sent to your bot. |
 | `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
 | `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
