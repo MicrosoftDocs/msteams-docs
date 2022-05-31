@@ -1,5 +1,5 @@
 ---
-title: First party license management enabled in Microsoft Teams
+title: Microsoft Teams app license management
 description: Learn how to enable customers to easily assign, use, and track SaaS licenses purchased in Teams storefront.
 author: v-dreddipogu
 ms.author: surbhigupta
@@ -69,7 +69,7 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/number-of-licenses-determined.png" alt-text="Number of licenses determined":::
 
-## End user license management experience
+## Publishing an offer in Partner Center with Microsoft license management
 
 1. Create an offer in Partner Center.
 1. Define the licensing options.
