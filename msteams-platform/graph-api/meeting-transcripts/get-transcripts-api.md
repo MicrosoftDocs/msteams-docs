@@ -80,10 +80,34 @@ You can subscribe your app to receive change notifications for scheduled meeting
 
 Your app receives notifications of meeting events for which it has subscribed:
 
+- **Tenant-level notification**: You can subscribe your app to change notifications for meetings across the tenant. Anytime, a meeting is scheduled in the tenant, your app is notified. Post meeting, your app can access and retrieve the meeting transcript.
 - **User-level notification**: Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
-- **Tenant-level notification**: You can subscribe your app to change notifications for meetings across the tenant. Anytime, a meeting is scheduled in the tenant, your app is notified. Post meeting, your app can access and retrieve the meeting transcript. Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant.
+
+After your app receives meeting notifications, your app can retrieve the meeting ID and organizer ID.  
 
 / reference to article for subscribing for notifications. /
+
+### Obtain meeting details using tenant-level notification
+
+Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. 
+
+For subscribing your app to tenant-level notifications, see [/chats/getAllMessages](https://docs.microsoft.com/en-us/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
+
+After subscribing, your app receives notifications for meeting events across the tenant. Your app can search through the notifications for transcription started and meeting ended events.
+
+To obtain meeting ID using tenant-level notification:
+
+1. Get chat ID.
+
+/ 1. Sample Payload for Transcription Started event (event type: `callTranscriptEventMessageDetail`). 1a. chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2" and "@odata.type": "#Microsoft.Teams.GraphSvc.callTranscriptEventMessageDetail. 2. Sample Payload for CallEnded event  (event type: `callEndedEventMessageDetail`) 2a. chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2 and odata.type": "#Microsoft.Teams.GraphSvc.callEndedEventMessageDetail.  
+
+2. Get chat entity.
+
+3. Get `OnlineMeetingId` through joinWebUrl and `OrganizerId`.
+
+To obtain organizer ID using tenant-level notification:
+
+1. / Add steps /
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
