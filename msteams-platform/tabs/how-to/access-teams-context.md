@@ -108,7 +108,7 @@ The following code provides an example of context variable:
 }
 ```
 
-## Get context in private channels
+## Retrieve context in private channels
 
 > [!NOTE]
 > Private channels are currently in private developer preview only.
@@ -131,7 +131,7 @@ If your page makes use of any of these values, the value of `channelType` field 
 ## Retrieve context in Microsoft Teams Connect shared channels
 
 > [!NOTE]
-> Currently, Microsoft Teams Connect shared channels are in [developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+> Currently, Microsoft Teams Connect shared channels are in developer preview only.
 
 When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels.
 The following fields are changed when your content page is in a shared channel:
