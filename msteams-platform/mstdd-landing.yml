@@ -121,6 +121,8 @@ landingContent:
         url: ~/concepts/design/design-teams-app-overview.md
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+      - text: Unified meetings apps
+        url:  ~/apps-in-teams-meetings/meeting-app-extensibility.md
     - linkListType: whats-new
       links:
       - text: What's new

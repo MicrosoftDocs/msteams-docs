@@ -33,6 +33,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
 |04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| Share to Teams from personal app or tab (developer preview) | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|03/10/2022| Updated information on unified meetings apps | Build apps for Teams meetings > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |04/01/2022| Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
 |03/30/2022| Updated the Get started module with Blazor app using tabs and bots|  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
 |03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
@@ -89,6 +90,7 @@ Microsoft Teams platform features that are available to all app developers.
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build message extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
 |03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
 |03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
+|03/10/2022| Updated information on unified meetings apps | Build apps for Teams meetings > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |03/10/2022 | Added information on Moodle LMS and Microsoft 365 plugins | Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|  
 |03/03/2022 | How to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 02/25/2022| Introduced step-by-step guide to invoke task modules in Teams| Build cards and task modules > Build task modules > Use task modules from bots > [Invoke task module from Teams](sbs-botbuilder-taskmodule.yml)|
