@@ -76,7 +76,7 @@ To obtain meeting ID and organizer ID for fetching the transcript, choose one of
 
 ### Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for scheduled meeting events. Your app is notified about meetings, and it can obtain transcripts, if it's authorized via required permissions.
+You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about meetings, it can obtain transcripts, if it's authorized via required permissions.
 
 Your app receives notifications of meeting events for which it has subscribed:
 
@@ -167,10 +167,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         }
     }
     ```
-
-
-
-/ Add details: 1. Sample Payload for Transcription Started event (event type: `callTranscriptEventMessageDetail`). 1a. chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2" and "@odata.type": "#Microsoft.Teams.GraphSvc.callTranscriptEventMessageDetail. 2. Sample Payload for CallEnded event  (event type: `callEndedEventMessageDetail`) 2a. chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2 and odata.type": "#Microsoft.Teams.GraphSvc.callEndedEventMessageDetail. /
 
 2. Get chat entity.
 
