@@ -32,7 +32,7 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 * [Planning checklist](../concepts/design/planning-checklist.md)
 
 ## Apps in Shared channel
-You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [shared channels](~/concepts/build-and-test/shared-channels.md) follow host team's app roster and host tenant's app policy.
+You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [Shared channels](build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
 
 ### Before you build
 
