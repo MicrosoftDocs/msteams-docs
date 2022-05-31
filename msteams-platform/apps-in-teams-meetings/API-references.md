@@ -11,9 +11,9 @@ ms.localizationpriority: medium
 
 The meeting extensibility provide APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
 
-* Build apps or integrate existing apps within meeting lifecycle.
-* Use APIs to make your app aware of meeting.
-* Select required APIs to improve the meeting experience.
+* Build apps or integrate existing apps within meeting lifecycle
+* Use APIs to make your app aware of meeting
+* Select required APIs to improve the meeting experience
 
 > [!NOTE]
 > Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
