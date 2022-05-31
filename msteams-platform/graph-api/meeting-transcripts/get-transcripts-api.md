@@ -91,7 +91,7 @@ After your app receives meeting notifications, your app can retrieve the meeting
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant.
 
-For subscribing your app to tenant-level notifications, see [/chats/getAllMessages](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
+For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
 After subscribing, your app receives notifications for meeting events across the tenant. Your app can search through the notifications for transcription started and meeting ended events.
 
@@ -103,8 +103,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
 
 2. Get chat entity.
 
-/ Add details: * When the `joinWebUrl` is available in onlineMeetingInfo property > `joinWebUrl` and `organizer` > `id`. * When the `joinWebUrl` is not available, `onlineMeetingInfo` >`calendarEventId` > `joinWebUrl` and `organizer` > `id` / 
-
+/ Add details: * When the `joinWebUrl` is available in onlineMeetingInfo property > `joinWebUrl` and `organizer` > `id`. * When the `joinWebUrl` is not available, `onlineMeetingInfo` >`calendarEventId` > `joinWebUrl` and `organizer` > `id` /
 
 3. Get `OnlineMeetingId` through joinWebUrl and `OrganizerId`.
 
