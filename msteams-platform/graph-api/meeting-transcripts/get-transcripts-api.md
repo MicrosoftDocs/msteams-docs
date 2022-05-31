@@ -95,7 +95,80 @@ After subscribing, your app receives notifications for meeting events across the
 
 To obtain meeting ID and organizer ID with tenant-level notification:
 
-1. Get chat ID.
+1. **Get chat ID**: The app needs the `chatId` property from the payload to make subsequent calls. You can get the chat ID from the payloads of Transcription Started event and CallEnded event.
+
+    - Example of payload for Transcription Started event: event type: `callTranscriptEventMessageDetail`
+
+    ```json
+    {
+        "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
+        "changeType": "created",
+        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
+        "resource": "chats('19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2')/messages('1649787549174')",
+        "contentDecryptedBySimulator": {
+            "@odata.context": "https://graph.microsoft.com/$metadata#chats('19%3Ameeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk%40thread.v2')/messages/$entity",
+            "messageType": "systemEventMessage",
+            "createdDateTime": "2022-04-12T18:19:09.174Z",
+            "lastModifiedDateTime": "2022-04-12T18:19:09.174Z",
+            "chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2",
+            "body": {
+                "contentType": "html",
+                "content": "<systemEventMessage/>"
+            },
+            "channelIdentity": null,
+            "eventDetail": {
+                "@odata.type": "#Microsoft.Teams.GraphSvc.callTranscriptEventMessageDetail",
+                "callId": "16481de8-3262-419b-abc7-0139e6239515",
+                "callTranscriptICalUid": "",
+                "meetingOrganizer": {
+                    "application": null,
+                    "device": null,
+                    "user": {
+                        "userIdentityType": "aadUser",
+                        "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
+                        "displayName": null
+                    }
+                }
+            }
+        },
+        "encryptedContent": {}
+    }
+    ```
+
+    - Example of payload for CallEnded event: event type: `callEndedEventMessageDetail`
+
+    ```json
+    {
+        "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
+        "changeType": "created",
+        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
+        "resource": "chats('19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2')/messages('1649787585457')",
+        "resourceData": {},
+        "contentDecryptedBySimulator": {
+            "@odata.context": "https://graph.microsoft.com/$metadata#chats('19%3Ameeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk%40thread.v2')/messages/$entity",
+            "createdDateTime": "2022-04-12T18:19:45.457Z",
+            "lastModifiedDateTime": "2022-04-12T18:19:45.457Z",     
+            "chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2",
+            "eventDetail": {
+                "@odata.type": "#Microsoft.Teams.GraphSvc.callEndedEventMessageDetail",
+                "callId": null,
+                "callDuration": "PT1M44S",
+                "callEventType": "meeting",
+                "callParticipants": [
+                
+                ],
+                "initiator": {
+                
+                }
+            }
+        },
+        "encryptedContent": {
+        
+        }
+    }
+    ```
+
+
 
 / Add details: 1. Sample Payload for Transcription Started event (event type: `callTranscriptEventMessageDetail`). 1a. chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2" and "@odata.type": "#Microsoft.Teams.GraphSvc.callTranscriptEventMessageDetail. 2. Sample Payload for CallEnded event  (event type: `callEndedEventMessageDetail`) 2a. chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2 and odata.type": "#Microsoft.Teams.GraphSvc.callEndedEventMessageDetail. /
 
