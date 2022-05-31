@@ -25,15 +25,10 @@ items:
 
      :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot" border="true":::
 
-- title: Prerequisites.
+- title: Prerequisites
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
-
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-
-      > [!TIP]
-      > Ensure the Microsoft Teams account isn't a guest account.
 
     * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
 
@@ -41,6 +36,14 @@ items:
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
+
+    Ensure you have the following accounts and set up your development environment: 
+
+    * [Microsoft](https://teams.microsoft.com/) account
+
+      > [!TIP]
+      > Ensure the Microsoft Teams account isn't a guest account.
+
     * [Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md) or access to Teams account with the appropriate permissions to install an app
 
 - title: Create and register your bot
@@ -48,74 +51,96 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal:
 
-    * Create Azure Bot resource to register bot with Azure Bot Service
-    * Create client secret to enable SSO authentication of the bot
-    * Add Teams channel to deploy the bot
-    * Use ngrok to create a tunnel to your web server's endpoints
-    * Add messaging endpoint to the ngrok tunnel you created
+    1. Create Azure Bot resource to register bot with Azure Bot Service
+    1. Create client secret to enable SSO authentication of the bot
+    1. Add Teams channel to deploy the bot
+    1. Use ngrok to create a tunnel to your web server's endpoints
+    1. Add messaging endpoint to the ngrok tunnel you created
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to login with your Microsoft account credentials.
 
     1. Select **Create a resource**.
 
+       :::image type="content" source="~/assets/images/bots/Createaresource.png" alt-text="Create Resource" border="true":::
+
     1. In the search box, enter **Azure bot**.
+
+       :::image type="content" source="~/assets/images/bots/searchazurebot.png" alt-text="Create Resource" border="true":::
 
     1. Select **Enter**.
 
     1. Select **Azure Bot**.
 
-        :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectazurebot.png" alt-text="Select Azure Bot" border="true":::
 
     1. Select **Create**.
 
-    1. Enter required bot handle name in **Bot handle**.
+        :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
 
-    1. Select your **Subscription** from the dropdown list.
-    
-    1. Select your **Resource group** from the dropdown list.
+        The following create a Azure Bot page appears:
+
+        :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Azure bot page" border="true":::
+
+    1. Enter the details to create Azure bot.
 
         :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Create resource Azure bot" border="true":::
-        
-        You can also create a new resource group (select **Create new** > enter resource name > select **OK**)
 
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
-        
-        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource" border="true":::
+        1. Enter required bot handle name in **Bot handle** and it is a unique identifier for your bot.
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
+        1. Select your **Subscription** from the dropdown list.
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+        1. Select your **Resource group** from the dropdown list and it is a collection of resources that share the same lifecycle, permissions and policies.
+        
+         > [!NOTE]
+         > You can also create a new resource group by the following steps:
+           1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-       > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**.
+                :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="New resource creation" border="true":::
 
-    1. Select **Type of App** as **Multi Tenant**.
+           1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+        
+                :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource" border="true":::
 
-    1. Select **Review + create**.
+        1. Select **Type of App** as **Multi Tenant**.
 
-        :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Review Create" border="true":::
+        1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
-    1. If the validation passes, select **Create**.
+           You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+
+           > [!NOTE]
+           > You can't create more than one bot with the same **Microsoft App ID**.
+
+        1. Select **Review + create**.
+
+            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Review Create" border="true":::
+    
+    1. After the validation passes, select **Create**.
+
+         :::image type="content" source="~/assets/images/bots/validationpass.png" alt-text="Validation Pass" border="true":::
   
-        It takes a few moments for your bot service to be provisioned.
+       It takes a few moments for your bot service to be provisioned and the following page appears:
+
+         :::image type="content" source="~/assets/images/bots/provisionpage.png" alt-text="Provision Page" border="true":::
 
     1. Select **Go to resource**.
 
         :::image type="content" source="~/assets/images/bots/gotoresource.png" alt-text="Resource" border="true":::
 
-       Your Azure bot is created.
+       Your Azure bot is created and you can see the Resource group and Subscription ID in the Azure bot.
 
          :::image type="content" source="~/assets/images/bots/Azurebotresource.png" alt-text="Azure bot resource created" border="true":::
 
     **To create client secret**
 
-     Perform the following steps if you've created a new **Microsoft App ID**:
+     Perform the following steps to create client secret:
 
     1. In the left panel, select **Configuration**.
 
-       > [!TIP]
+        :::image type="content" source="~/assets/images/bots/selectconfigure.png" alt-text="Select Configure" border="true":::
+
+       > [Important]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
     1. Next to **Microsoft App ID**, select **Manage**.
@@ -138,21 +163,27 @@ items:
 
         :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Value of client secret" border="true":::
 
-       > [!TIP]
+       > [!Important]
        > Save the **Client secrets** value or app password for future reference.
        
-    **To add the Teams channel**
+    **Add bot to the Teams channel**
 
     1. Select **Home**.
 
-        :::image type="content" source="~/assets/images/bots/homepage.png" alt-text="Home page" border="true":::
+        :::image type="content" source="~/assets/images/bots/selecthome.png" alt-text="Home page" border="true":::
 
     1. Select your bot from **Recent resources**.
 
+        :::image type="content" source="~/assets/images/bots/selectrecentresources.png" alt-text="Select recent resources" border="true":::
+
     1. Select **Channels** in the left pane.
+
+        :::image type="content" source="~/assets/images/bots/selectchannel.png" alt-text="Select recent" border="true":::
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
     
+        :::image type="content" source="~/assets/images/bots/selectmicrosoftteams.png" alt-text="Select Microsoft Teams" border="true":::
+
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
