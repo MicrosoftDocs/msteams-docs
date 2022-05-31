@@ -176,7 +176,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     </details>
     <br>
 
-2. **Get chat entity**: Based on the chat ID, retrieve the chat entity to obtain the meeting ID and organizer ID using 'joinWebUrl`. For more information, see [Get chat](graph/api/chat-get.md).
+2. **Get chat entity**: Based on the chat ID, retrieve the chat entity to obtain the meeting ID and organizer ID using 'joinWebUrl`. For more information, see [Get chat](/graph/api/chat-get.md).
 
     Use the following example to request chat entity:
 
@@ -216,7 +216,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     </details>
     <br>
 
-    - If the meeting was not created as an online meeting from Teams client or Outlook client, then `joinWebUrl` is not available in the response payload. The `calendarEventId` is present in the  `onlineMeetingInfo` property. You can use the `calendarEventId` member of the `onlineMeetingInfo` property to get the `joinWebUrl`. For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http).
+    - If the meeting was not created as an online meeting from Teams client or Outlook client, then `joinWebUrl` is not available in the response payload. The `calendarEventId` is present in the  `onlineMeetingInfo` property. You can use the `calendarEventId` member of the `onlineMeetingInfo` property to get the `joinWebUrl`. For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
     <br>
 
     <details>
