@@ -91,7 +91,7 @@ After your app receives meeting notifications, your app can retrieve the meeting
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant.
 
-For subscribing your app to tenant-level notifications, see [/chats/getAllMessages](https://docs.microsoft.com/en-us/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
+For subscribing your app to tenant-level notifications, see [/chats/getAllMessages](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
 After subscribing, your app receives notifications for meeting events across the tenant. Your app can search through the notifications for transcription started and meeting ended events.
 
