@@ -20,11 +20,9 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 
 To fetch the transcript for a particular meeting:
 
-- Configure required permissions for your app on Azure AD portal
-- Obtain meeting ID and the user ID of the meeting organizer using one of the two methods:
-  - Subscribe to receive change notifications
-  - Use Bot framework
-- Get transcripts using Graph REST APIs
+- [Configure required permissions for your app on Azure AD portal](#configure-permissions-to-access-transcript)
+- [Obtain meeting ID and the user ID of the meeting organizer](#obtain-meeting-id-and-organizer-id)
+- [Get transcripts using Graph REST APIs](#use-graph-apis-to-fetch-transcript)
 
 ## Configure permissions to access transcript
 
@@ -67,7 +65,16 @@ Next, you can [subscribe](#subscribe-to-change-notifications) your app to receiv
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
 
-## Subscribe to change notifications
+## Obtain meeting ID and organizer ID
+
+You can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID passed as parameters in the API.
+
+To obtain meeting ID and organizer ID fetching transcript, choose one of the two ways:
+
+- [Subscribe to change notifications](#subscribe-to-change-notifications)
+- [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
+
+### Subscribe to change notifications
 
 You can subscribe your app to receive change notifications for scheduled meeting events. Your app is notified about meetings, and it can obtain transcripts, if it's authorized via required permissions.
 
@@ -77,6 +84,10 @@ Your app receives notifications of meeting events for which it has subscribed:
 - **Tenant-level notification**: You can subscribe your app to change notifications for meetings across the tenant. Anytime, a meeting is scheduled in the tenant, your app is notified. Post meeting, your app can access and retrieve the meeting transcript. Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant.
 
 / reference to article for subscribing for notifications. /
+
+### Use Bot Framework to get meeting ID and organizer ID
+
+/ Add details /
 
 ## Use Graph APIs to fetch transcript
 
