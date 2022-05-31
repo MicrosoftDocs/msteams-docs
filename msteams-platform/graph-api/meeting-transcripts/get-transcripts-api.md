@@ -100,6 +100,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     <details>
     <summary><b>Example of payload for Transcription Started event: event type: `callTranscriptEventMessageDetail`</b></summary>
     <br>
+    
     ```json
     {
     "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
@@ -142,6 +143,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     <details>
     <summary><b>Example of payload for CallEnded event: event type: `callEndedEventMessageDetail`</b></summary>
     <br>
+    
     ```json
     {
         "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
@@ -188,6 +190,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     <details>
     <summary><b>Example of response payload, if `joinWebUrl` is available:</b></summary>
     <br>
+    
     ```json
     {
         "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
@@ -219,6 +222,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     <details>
     <summary><b>Example of response payload, if `joinWebUrl` is available:</b></summary>
     <br>
+    
     ```json
     {
         "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
@@ -253,9 +257,9 @@ To obtain meeting ID and organizer ID with tenant-level notification:
       The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
       <br>
       <details>
-      <summary><b>Example of response payload that contains the `joinUrl` in the `onlineMeeting` property:<b></summary>
+      <summary><b>Example of response payload that contains the `joinUrl` in the `onlineMeeting` property:</b></summary>
       <br>
-
+        
       ```json
         {
             "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/events/$entity",
