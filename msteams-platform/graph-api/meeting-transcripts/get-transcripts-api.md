@@ -95,10 +95,12 @@ After subscribing, your app receives notifications for meeting events across the
 
 To obtain meeting ID and organizer ID with tenant-level notification:
 
-1. **Get chat ID**: The app needs the `chatId` property from the payload to make subsequent calls. You can get the chat ID from the payloads of Transcription Started event and CallEnded event.
-    <br>
+1. **Get chat ID**: The app needs the `chatId` property from the payload to make subsequent calls. You can get the chat ID from the payloads of:
+
+   a. Transcription Started event.
+
     <details>
-    <summary><b>Example of payload for Transcription Started event: event type: `callTranscriptEventMessageDetail`</b></summary>
+    <summary><b>Example</b>: Payload for `callTranscriptEventMessageDetail` event type</summary>
     <br>
     
     ```json
@@ -139,9 +141,10 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     </details>
 
     <br>
-
+   b. CallEnded event
+    <br>
     <details>
-    <summary><b>Example of payload for CallEnded event: event type: `callEndedEventMessageDetail`</b></summary>
+    <summary><b>Example</b>: Payload for `callEndedEventMessageDetail` event type</summary>
     <br>
     
     ```json
