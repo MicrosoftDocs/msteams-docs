@@ -190,7 +190,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     There are two response scenarios to this request depending on whether `joinWebUrl` is a part of response:
 
     - The response payload contains the `joinWebUrl` member in the `onlineMeetingInfo` property
-
+    
         <details>
         <summary><b>Example</b>: Response payload, if `joinWebUrl` is available:</b></summary>
         <br>
@@ -220,7 +220,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         </details>
         <br>
 
-    - If the meeting was not created as an online meeting from Teams client or Outlook client, then `joinWebUrl` is not available in the response payload. The `calendarEventId` is present in the  `onlineMeetingInfo` property. You can use the `calendarEventId` member of the `onlineMeetingInfo` property to get the `joinWebUrl`. For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+    - If the meeting was not created as an online meeting from Teams client or Outlook client, then `joinWebUrl` is not available in the response payload. The `calendarEventId` is present in the  `onlineMeetingInfo` property. Use the `calendarEventId` member of the `onlineMeetingInfo` property to get the `joinWebUrl`. For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
     <br>
 
         <details>
@@ -252,7 +252,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         </details>
         <br>
 
-        - Use the following example to obtain `joinWebUrl`.
+        - Use the following example to get `joinWebUrl` from the `calendarEventId`:
           
           ``` http
             GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
@@ -287,9 +287,58 @@ To obtain meeting ID and organizer ID with tenant-level notification:
           </details>
             <br>
 
-3. Get `OnlineMeetingId` through joinWebUrl and `OrganizerId`.
+3. Get `OnlineMeetingId` using `joinWebUrl` and `OrganizerId`.
 
-/ `id` /
+    Use the following example to request the online meeting ID:
+
+    ``` http
+    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
+    ```
+
+    The response payload contains the meeting id in the `id` member of the `value` property.
+    <br>
+    <details>
+    <summary><b>Example</b>: Response payload with meeting ID</summary>
+    <br>
+    
+    ```json
+    {
+        "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
+        "value": [
+            {
+                "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
+                "creationDateTime": "2022-04-26T07:41:17.3736455Z",
+                "startDateTime": "2022-04-26T10:30:00Z",
+                "endDateTime": "2022-04-26T11:00:00Z",
+                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "chatInfo": {
+                    "threadId": "19:meeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2@thread.v2",
+                    "messageId": "0",
+                    "replyChainMessageId": null
+                }
+            }
+        ]
+    }
+    ```
+    </details>
+    <br>
+
+4. Fetch transcripts using meeting ID and organizer ID
+
+    The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
+
+    Use the following example to request the transcripts for a specific meeting:
+
+    ```http
+    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
+    ```
+
+    In this example: 
+    - The meeting ID is *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy*
+    - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
+
+    The response payload will contain the transcripts.
 
 #### Obtain meeting details using user-level notification
 
