@@ -28,7 +28,10 @@ You can set up pipelines with the following platforms:
 1. [Set up pipelines with Jenkins](#set-up-pipelines-with-jenkins)
 1. [Set up pipelines for other platforms](#set-up-pipelines-for-other-platforms)
 
-### Set up pipelines with GitHub
+<br>
+
+<details>
+<summary><b>Set up pipelines with GitHub</b></summary>
 
 To set up pipelines with GitHub for CI/CD:
 
@@ -39,7 +42,7 @@ To set up pipelines with GitHub for CI/CD:
 
 2. Customize CI/CD workflow.
 
-## Create workflow templates with GitHub
+### Create workflow templates with GitHub
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
@@ -73,7 +76,9 @@ You can change or remove the test scripts to customize CI/CD workflow:
 1. Change the build scripts if necessary.
 1. Remove the test scripts as required.
 
-### Set up pipelines with Azure DevOps
+</details>
+<details>
+<summary><b>Set up pipelines with Azure DevOps</b></summary>
 
 To set up pipelines with Azure DevOps for CI/CD:
 
@@ -84,7 +89,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 1. Customize CI/CD workflow.
 
-## Create workflow templates with Azure DevOps
+### Create workflow templates with Azure DevOps
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
@@ -124,7 +129,9 @@ The following are the changes you can make for the script or workflow definition
 1. Ensure you have an npm build script or customize the way you build in the automation code.
 1. Ensure you have an npm test script, which returns zero for success or change the test commands.
 
-### Set up pipelines with Jenkins
+</details>
+<details>
+<summary><b>Set up pipelines with Jenkins</b></summary>
 
 To set up pipelines with Jenkins for CI/CD:
 
@@ -135,7 +142,7 @@ To set up pipelines with Jenkins for CI/CD:
 
 2. Customize CI/CD workflow.
 
-## Create workflow templates with Jenkins
+### Create workflow templates with Jenkins
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
@@ -177,7 +184,9 @@ Perform the following steps to customize the CD pipeline:
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
-### Set up pipelines for other platforms
+</details>
+<details>
+<summary><b>Set up pipelines for other platforms</b></summary>
 
 You can follow the predefined listed example bash scripts to build and customize CI/CD pipelines on the other platforms:
 
