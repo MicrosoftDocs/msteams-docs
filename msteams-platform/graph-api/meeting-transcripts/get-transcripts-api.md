@@ -91,7 +91,21 @@ Tenant-level notifications are useful if your app is authorized to access all me
 →
 For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
-:::image type="content" source="../../assets/images/graph-api/chat-id.png" alt-text="Get chat ID" link="#get-chat-id" border="false":::  :::image type="content" source="../../assets/images/graph-api/chat-entity.png" alt-text="Get chat entity" link="#get-chat-entity" border="false":::  :::image type="content" source="../../assets/images/graph-api/meeting-id.png" alt-text="Get meeting ID" link="#get-meeting-id" border="false":::  :::image type="content" source="../../assets/images/graph-api/get-transcript.png" alt-text="Get transcripts" link="#fetch-transcript" border="false":::
+:::row:::
+    :::column span="":::
+        :::image type="content" source="../../assets/images/graph-api/chat-id.png" alt-text="Get chat ID" link="#get-chat-id" border="false":::
+    :::column-end:::
+    :::column span="":::
+          :::image type="content" source="../../assets/images/graph-api/chat-entity.png" alt-text="Get chat entity" link="#get-chat-entity" border="false":::
+    :::column-end:::
+    :::column span="":::
+          :::image type="content" source="../../assets/images/graph-api/meeting-id.png" alt-text="Get meeting ID" link="#get-meeting-id" border="false":::
+    :::column-end:::
+    :::column span="":::
+          :::image type="content" source="../../assets/images/graph-api/get-transcript.png" alt-text="Get transcripts" link="#fetch-transcript" border="false":::
+    :::column-end:::
+:::row-end:::
+
 
 When your app is notified about meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
@@ -391,7 +405,7 @@ To obtain meeting ID and organizer ID with user-level notification:
     }
     ```
 
-    In this example, the eventID is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
+    In this example, the `eventID` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
     </details>
 
 2. Get `joinUrl`
