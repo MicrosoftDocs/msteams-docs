@@ -71,6 +71,9 @@ After you get the appropriate address information, you can send your message.
 
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
+> [!NOTE]
+> Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
+
 Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
 ## Best practices for proactive messaging
