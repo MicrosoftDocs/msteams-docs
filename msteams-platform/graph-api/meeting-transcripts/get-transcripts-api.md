@@ -97,12 +97,12 @@ To obtain meeting ID and organizer ID with tenant-level notification:
 
 1. **Get chat ID**: The app needs the `chatId` property from the payload to make subsequent calls. You can get the chat ID from the payloads of:
 
-   a. Transcription Started event.
+   a. Transcription Started event
 
     <details>
     <summary><b>Example</b>: Payload for `callTranscriptEventMessageDetail` event type</summary>
     <br>
-    
+
     ```json
     {
     "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
@@ -146,7 +146,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     <details>
     <summary><b>Example</b>: Payload for `callEndedEventMessageDetail` event type</summary>
     <br>
-    
+
     ```json
     {
         "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
@@ -179,112 +179,113 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     </details>
     <br>
 
-2. **Get chat entity**: Based on the chat ID, retrieve the chat entity to obtain the meeting ID and organizer ID using 'joinWebUrl`. For more information, see [Get chat](/graph/api/chat-get.md).
+2. **Get chat entity**: Using the chat ID, retrieve the chat entity to obtain the meeting ID using `joinWebUrl`. The organizer ID is also a part of the response payload in the `id` member of the `organizer` property. For more information, see [Get chat](/graph/api/chat-get.md).
 
-    Use the following example to request chat entity:
+    Use the following example to request chat entity based on the chat ID:
 
     ``` http
     GET https://graph.microsoft.com/beta/chats/19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2
     ```
 
     There are two response scenarios to this request depending on whether `joinWebUrl` is a part of response:
-    - The response payload contains the `joinWebUrl` in the `onlineMeetingInfo` property and `id` of the organizer in the `organizer` property.</b></summary>
-    <br>
-    <details>
-    <summary><b>Example of response payload, if `joinWebUrl` is available:</b></summary>
-    <br>
-    
-    ```json
-    {
-        "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
-        "id": "19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2",
-        "topic": "Test Meet Create Online Meeting",
-        "createdDateTime": "2022-04-14T11:30:45.903Z",
-        "lastUpdatedDateTime": "2022-04-26T06:27:45.265Z",
-        "chatType": "meeting",
-        "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "viewpoint": null,
-        "onlineMeetingInfo": {
-        "calendarEventId": null,
-            "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-            "organizer": {
-                "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
-                "displayName": null,
-                "userIdentityType": "aadUser"
+
+    - The response payload contains the `joinWebUrl` member in the `onlineMeetingInfo` property
+
+        <details>
+        <summary><b>Example</b>: Response payload, if `joinWebUrl` is available:</b></summary>
+        <br>
+        
+        ```json
+        {
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
+            "id": "19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2",
+            "topic": "Test Meet Create Online Meeting",
+            "createdDateTime": "2022-04-14T11:30:45.903Z",
+            "lastUpdatedDateTime": "2022-04-26T06:27:45.265Z",
+            "chatType": "meeting",
+            "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
+            "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
+            "viewpoint": null,
+            "onlineMeetingInfo": {
+            "calendarEventId": null,
+                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "organizer": {
+                    "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
+                    "displayName": null,
+                    "userIdentityType": "aadUser"
+                }
             }
         }
-    }
-    ```
-    </details>
-    <br>
+        ```
+        </details>
+        <br>
 
     - If the meeting was not created as an online meeting from Teams client or Outlook client, then `joinWebUrl` is not available in the response payload. The `calendarEventId` is present in the  `onlineMeetingInfo` property. You can use the `calendarEventId` member of the `onlineMeetingInfo` property to get the `joinWebUrl`. For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
     <br>
 
-    <details>
-    <summary><b>Example of response payload, if `joinWebUrl` is available:</b></summary>
-    <br>
-    
-    ```json
-    {
-        "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
-        "id": "19:meeting_YzM1NGFiZWYtOGFiOS00NjM5LTg4OTktYmU0MjI4NTQyNGZm@thread.v2",
-        "topic": "Non Online Meeting Teams Client",
-        "createdDateTime": "2022-04-26T09:43:23.711Z",
-        "lastUpdatedDateTime": "2022-04-26T09:43:46.157Z",
-        "chatType": "meeting",
-        "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_YzM1NGFiZWYtOGFiOS00NjM5LTg4OTktYmU0MjI4NTQyNGZm%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "viewpoint": null,
-        "onlineMeetingInfo": {
-            "calendarEventId": "AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYeAAA=",
-            "joinWebUrl": null,
-            "organizer": {
-                "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
-                "displayName": null,
-                "userIdentityType": "aadUser"
+        <details>
+        <summary><b>Example</b>: Response payload, if `joinWebUrl` is not available</summary>
+        <br>
+        
+        ```json
+        {
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
+            "id": "19:meeting_YzM1NGFiZWYtOGFiOS00NjM5LTg4OTktYmU0MjI4NTQyNGZm@thread.v2",
+            "topic": "Non Online Meeting Teams Client",
+            "createdDateTime": "2022-04-26T09:43:23.711Z",
+            "lastUpdatedDateTime": "2022-04-26T09:43:46.157Z",
+            "chatType": "meeting",
+            "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_YzM1NGFiZWYtOGFiOS00NjM5LTg4OTktYmU0MjI4NTQyNGZm%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
+            "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
+            "viewpoint": null,
+            "onlineMeetingInfo": {
+                "calendarEventId": "AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYeAAA=",
+                "joinWebUrl": null,
+                "organizer": {
+                    "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
+                    "displayName": null,
+                    "userIdentityType": "aadUser"
+                }
             }
         }
-    }
-    ```
-    </details>
-    <br>
-
-    - Use the following example to obtain `joinWebUrl`.
-      
-      ``` http
-        GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
-      ```
-      <br>
-      The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
-      <br>
-      <details>
-      <summary><b>Example of response payload that contains the `joinUrl` in the `onlineMeeting` property:</b></summary>
-      <br>
-        
-      ```json
-        {
-            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/events/$entity",
-            "@odata.etag": "W/\"bMMOQZSMbU+4hcmFq11dwAAAkc3Tmw==\"",
-            "id": "AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=",    
-            "start": {
-                "dateTime": "2022-04-26T10:30:00.0000000",
-                "timeZone": "UTC"
-            },
-            "end": {
-                "dateTime": "2022-04-26T11:00:00.0000000",
-                "timeZone": "UTC"
-            },    
-            "onlineMeeting": {
-                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d"
-            },
-            "calendar@odata.associationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')/$ref",
-            "calendar@odata.navigationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')"
-        }
         ```
-      </details>
+        </details>
         <br>
+
+        - Use the following example to obtain `joinWebUrl`.
+          
+          ``` http
+            GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
+          ```
+          <br>
+          The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
+          <br>
+          <details>
+          <summary><b>Example</b>: Response payload that contains the `joinUrl` in the `onlineMeeting` property</summary>
+          <br>
+            
+          ```json
+            {
+                "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/events/$entity",
+                "@odata.etag": "W/\"bMMOQZSMbU+4hcmFq11dwAAAkc3Tmw==\"",
+                "id": "AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=",    
+                "start": {
+                    "dateTime": "2022-04-26T10:30:00.0000000",
+                    "timeZone": "UTC"
+                },
+                "end": {
+                    "dateTime": "2022-04-26T11:00:00.0000000",
+                    "timeZone": "UTC"
+                },    
+                "onlineMeeting": {
+                    "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d"
+                },
+                "calendar@odata.associationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')/$ref",
+                "calendar@odata.navigationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')"
+            }
+            ```
+          </details>
+            <br>
 
 3. Get `OnlineMeetingId` through joinWebUrl and `OrganizerId`.
 
