@@ -106,7 +106,6 @@ For subscribing your app to tenant-level notifications, see [Get change notifica
     :::column-end:::
 :::row-end:::
 
-
 When your app is notified about meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID with tenant-level notification:
@@ -408,7 +407,43 @@ To obtain meeting ID and organizer ID with user-level notification:
     In this example, the `eventID` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
     </details>
 
-2. Get `joinUrl`
+2. **Get meeting URL**: Use the event ID to retrieve the `joinUrl`. For more information, see [Get event](/graph/api/event-get.md).
+
+    Use the following example to request the meeting URL:
+
+    ```http
+    GET https://graph.microsoft.com/beta/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
+    ```
+
+    The response payload contains the  `joinUrl`.
+
+    <details>
+    <summary><b>Example</b>: Response payload for getting meeting URL</summary>
+    <br>
+    
+        ```json
+        {
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
+            "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
+            "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
+            "start": {
+                "dateTime": "2022-05-06T15:00:00.0000000",
+                "timeZone": "UTC"
+            },
+            "end": {
+                "dateTime": "2022-05-06T15:30:00.0000000",
+                "timeZone": "UTC"
+            },
+            
+            "onlineMeeting": {
+                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjExYzJiMTItZDY1MS00ZGZkLWE5YzQtZTBmNWI1MDg2M2Uw%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%221273a016-201d-4f95-8083-1b7f99b3edeb%22%7d",
+                "conferenceId": "438824583",
+                "tollNumber": "+1 213-279-1007"
+            }    
+        }
+        ```
+
+    </details>
 
 3. Get chat thread ID
 
