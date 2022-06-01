@@ -21,7 +21,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 | [**Graph connectors**](/microsoftsearch/connectors-overview)| `graphConnector` | Web, Desktop, Mobile| Web, Desktop | Web| See [notes](#graph-connectors)
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
-\* The [Microsoft 365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) enrollment require admin opt-in for the entire organization or selected users.
+\* The [Microsoft 365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) enrollment require admin opt-in for the entire organization or selected users. Update channels are device-specific and apply only to installations of Office running on Windows.
 
 For guidance about the Teams app manifest and SDK versioning guidance, as well as further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
 
