@@ -21,7 +21,7 @@ Multiple developers can work together to debug, provision and deploy for the sam
   * Microsoft 365 subscription
   * Azure with valid subscription
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+
 
 > [!TIP]
 > Ensure you have a Teams app project opened in Microsoft Visual Studio code.
@@ -54,11 +54,11 @@ The following list guides us to understand the collaboration process and its lim
 
 ### As project collaborator
 
-* Clone the project from GitHub.
-* Log in to Microsoft 365 account.
-* Log in to Azure account, which has contributor permission for all the Azure resources being used in this project.
-* To preview your Teams app, deploy the project to remote.
-* Launch remote to have a preview of the Teams app.
+* Clone the project from GitHub
+* Log in to Microsoft 365 account
+* Log in to Azure account, which has contributor permission for all the Azure resources being used in this project
+* To preview your Teams app, deploy the project to remote
+* Launch remote to have a preview of the Teams app
 
 For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
@@ -78,8 +78,8 @@ You can't remove collaborators directly from Teams Toolkit extension. Perform th
 
 > [!NOTE]
 >
-> * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-> * Azure related permissions must be set manually by Azure subscription administrator on Microsoft Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
+> * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline
+> * Azure related permissions must be set manually by Azure subscription administrator on Microsoft Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project
 
 ## See also
 
