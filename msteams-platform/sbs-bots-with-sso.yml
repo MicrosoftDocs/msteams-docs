@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times. The Single sign-on (SSO) authentication method in Azure Active Directory (Azure AD) silently refreshes the authentication token. The users don't require to use their sign-in credentials multiple times. 
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without SSO authentication. With Single sign-on (SSO) authentication methods, a users don't need to sign-in to the bot multiple times.
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -43,8 +43,6 @@ items:
 
       > [!TIP]
       > Ensure the Microsoft Teams account isn't a guest account.
-
-    * [Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md) or access to Teams account with the appropriate permissions to install an app
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -79,7 +77,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
 
-        The create a Azure Bot page appears:
+       Create an Azure Bot page appears:
 
         :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Azure bot page" border="true":::
 
@@ -117,7 +115,7 @@ items:
 
         1. Select **Review + create**.
     
-    1. After the validation passes, select **Create**.
+    1. After the validation passed, select **Create**.
 
          :::image type="content" source="~/assets/images/bots/validationpass.png" alt-text="Validation Pass" border="true":::
   
@@ -256,8 +254,8 @@ items:
 
     1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
 
-             * **ID tokens**
-             * **Access tokens**
+        * **ID tokens**
+        * **Access tokens**
     
     1. Select **Configure**.
 
@@ -329,7 +327,7 @@ items:
 
        Add a client application panel appears:
 
-    1. Enter the Client ID for desktop and web application separately that you want to authorize.It is a application ID of the client application that you want to authorize.
+    1. Enter the Client ID for desktop and web application separately that you want to authorize. It is a application ID of the client application that you want to authorize.
 
     1. Select **Authorized scopes** to determine which type of token will be returned by the service.
 
