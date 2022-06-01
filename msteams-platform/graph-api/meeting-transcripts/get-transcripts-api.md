@@ -337,7 +337,9 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     ```
 
     In this example:
-    - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy*
+    - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
+VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
+1pqWTJAdGhyZWFkLnYy*
     - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
 
     The response payload will contain the transcripts in .vtt format.
