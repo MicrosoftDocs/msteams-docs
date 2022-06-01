@@ -191,12 +191,13 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     - **Organizer ID**: It's contained in the `id` member of the `organizer` property of response payload.
     - **URL for meeting call**: Join meeting URL is used to retrieve the meeting ID later. It can be available in two scenarios:
         - If the meeting is an online Teams meeting, the `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL.
-        - If the meeting was not created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member is present in the `onlineMeetingInfo` property. Use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
+        - If the meeting was not created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
+      
       For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
     Examples for response payload scenarios depending on the type of URL for joining the meeting call:
 
-    - The response payload contains the `joinWebUrl` member in the `onlineMeetingInfo` property
+    - Online Teams meeting
     
         <details>
         <summary><b>Example</b>: Response payload, if `joinWebUrl` is available:</b></summary>
@@ -227,7 +228,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         </details>
         <br>
 
-    - The response payload contains the `calendarEventId` member in the `onlineMeetingInfo` property
+    - Meeting scheduled through Teams client or Outlook client, not marked as an Online meeting
         
         <details>
         <summary><b>Example</b>: Response payload, if `calendarEventId` is available</summary>
@@ -265,6 +266,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
           ```
           <br>
           The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
+
           <br>
           <details>
           <summary><b>Example</b>: Response payload that contains the `joinUrl` in the `onlineMeeting` property</summary>
