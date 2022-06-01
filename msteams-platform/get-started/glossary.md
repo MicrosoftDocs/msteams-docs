@@ -1,13 +1,12 @@
 ---
-title: Microsoft Teams Developer Documentation - Glossary
-description: Glossary for Microsoft Teams Developer Documentation
+title: Microsoft Teams developer documentation - Glossary
+description: Learn about the terms used in Microsoft Teams developer documentation
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams developer definition
 ---
 # Glossary
 
-Common terms and definitions used in Teams Developer Documentation.
+Common terms and definitions used in Teams developer documentation.
 
 ## A
 
@@ -182,7 +181,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
-| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. The functionalities in [latest version](~/m365-apps/using-teams-client-sdk-preview.md) extend Teams app to run in Outlook and Office. |
+| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. Starting with TeamsJS v.2.0.0, you can extend Teams apps to run in Outlook and Office. |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
