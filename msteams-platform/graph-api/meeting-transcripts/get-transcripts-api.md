@@ -88,14 +88,16 @@ When your app is notified of a scheduled meeting, it can retrieve the meeting ID
 #### Obtain meeting details using tenant-level notification
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. Post meeting, your app can access and retrieve the meeting transcript.
-
+→
 For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
+
+:::image type="content" source="../../assets/images/graph-api/chat-id.png" alt-text="Get chat ID" link="#get-chat-id" border="false":::  :::image type="content" source="../../assets/images/graph-api/chat-entity.png" alt-text="Get chat entity" link="#get-chat-entity" border="false":::  :::image type="content" source="../../assets/images/graph-api/meeting-id.png" alt-text="Get meeting ID" link="#get-meeting-id" border="false":::  :::image type="content" source="../../assets/images/graph-api/get-transcript.png" alt-text="Get transcripts" link="#fetch-transcript" border="false":::
 
 When your app is notified about meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID with tenant-level notification:
 
-1. **Get chat ID**: The app needs the `chatId` property from the payload to make subsequent calls. You can get the chat ID from the payloads of:
+1. **Get chat ID**: Your app gets the `chatId` property from the notification to make subsequent calls. You can get the chat ID from the payloads of:
 
     - Transcription Started event
 
@@ -257,7 +259,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         ```
         </details>
         <br>
-
         - Use the following example to get `joinWebUrl` from the `calendarEventId`:
           
           ``` http
@@ -292,7 +293,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
             }
             ```
           </details>
-            <br>
 
 3. **Get meeting ID**: Use `joinWebUrl` to get the meeting ID.
 
@@ -334,7 +334,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     > [!NOTE]
     > The response payload also contains the `threadID` member in the `chatInfo` property. This value is used for obtaining meeting ID if your app is subscribed receiving user-level notifications.
 
-4. **Fetch transcripts**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
+4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
 
     Use the following example to request the transcripts for a specific meeting in the .vtt format:
 
@@ -373,7 +373,26 @@ When your app is notified about a meeting event, it looks for calendar event ID 
 
 To obtain meeting ID and organizer ID with user-level notification:
 
-1. Get event ID
+1. **Get event ID**: Your app gets the `eventId` property from the notification payload.
+
+    <details>
+    <summary><b>Example</b>: Notification payload</summary>
+    <br>
+    
+    ```json
+    {
+        "subscriptionId": "ef30cdc6-b5ae-4702-b924-f458fd9e5fc3",
+        "changeType": "created",
+        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
+        "clientState": "ClientSecret",
+        "subscriptionExpirationDateTime": "2022-05-05T07:54:53.1886542-07:00",
+        "resource": "Users/1273a016-201d-4f95-8083-1b7f99b3edeb/Events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",
+        "resourceData": {}
+    }
+    ```
+
+    In this example, the eventID is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
+    </details>
 
 2. Get `joinUrl`
 
