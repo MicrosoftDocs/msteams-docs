@@ -35,15 +35,15 @@ To get a free Teams developer account, join the Microsoft 365 developer program 
 
 ### Microsoft 365 developer account types
 
-You can sign up for the developer program by using one of the following account types:
+You can sign-up for the developer program by using one of the following account types:
 
 - **Microsoft account for personal use**
 
-    The Microsoft account provides you access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
+    The Microsoft account provides you access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
 - **Microsoft work account for business**
 
-     This account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
+     This account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
 
 - **Visual Studio user id**
 
