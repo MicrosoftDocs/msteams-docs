@@ -431,11 +431,48 @@ To obtain meeting ID and organizer ID with user-level notification:
 
     </details>
 
-3. Get chat thread ID
+3. **Get chat thread ID**: Use `joinWebUrl` to get the chat's thread ID.
 
-4. Subscribe to chat messages using chat ID
+    Use the following example to request the thread ID:
 
-5. Follow steps for tenant-level notifications for obtaining meeting and ID and organizer ID.
+    ``` http
+    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
+    ```
+
+    The response payload contains the `threadID` member in the `chatInfo` property.
+    <br>
+    <details>
+    <summary><b>Example</b>: Response payload with thread ID</summary>
+    
+    ```json
+    {
+        "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
+        "value": [
+            {
+                "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
+                "creationDateTime": "2022-04-26T07:41:17.3736455Z",
+                "startDateTime": "2022-04-26T10:30:00Z",
+                "endDateTime": "2022-04-26T11:00:00Z",
+                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "chatInfo": {
+                    "threadId": "19:meeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2@thread.v2",
+                    "messageId": "0",
+                    "replyChainMessageId": null
+                }
+            }
+        ]
+    }
+    ```
+    </details>
+    <br>
+
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
+    
+    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
+
+
+5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) for obtaining meeting and ID and organizer ID.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
