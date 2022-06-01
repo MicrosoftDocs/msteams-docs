@@ -520,15 +520,17 @@ items:
 
     1. Select **Add** to add the conversation bot to your chat.
 
-        You can interact with the bot by sending it a message. The bot exchanges an SSO token and call to the Graph API on your behalf.It results to keeps you signed in unless you send a message to **sign-out**.
+        :::image type="content" source="~/assets/images/bots/add-conversation-bot.png" alt-text="Add conversation Bot" border="true":::
 
-    1. Send a message to the bot. The conversation bot asks for permissions for the first time.
+        You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to **sign-out**.
+
+    1. Send a message to the bot. The conversation bot asks for concern for the first time.
 
     1. Select **Continue** to accept the permissions.
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Permissions to bot" border="true":::
 
-    1. Select **Accept** for **Permissions requested**.
+    1. Select **Accept** for **Permissions requested** in mobile.
 
         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Mobile signed in to bot" border="true":::
 
@@ -540,5 +542,5 @@ items:
      :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot" border="true":::
     
 - content: |
-    You've completed the tutorial to get started with SSO in a bot for Teams using the Bot Framework.
+    You've completed the tutorial to get started with build a bot with SSO authentication.
 
