@@ -2,17 +2,15 @@
 title: Manifest schema reference
 description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
+ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams manifest schema
 ---
 
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
+The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., and 1.12 are also supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
-
-> [!Important]
-> Version `1.13` of the Microsoft Teams app manifest schema enables support for [extending Teams apps to Outlook and Office](../../m365-apps/overview.md). For Teams-only apps, use version `1.12` (or earlier). The 1.12 and 1.13 schemas are otherwise the same. Refer to [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) overview for further guidance.
 
 The following schema sample shows all extensibility options:
 
@@ -20,8 +18,8 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.12",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -268,7 +266,7 @@ The following schema sample shows all extensibility options:
             ]
         }
     },
-    "showLoadingIndicator": false,
+    "showLoadingIndicator": true,
     "isFullScreen": false,
     "activities": {
         "activityTypes": [
@@ -333,7 +331,7 @@ The schema defines the following properties:
 
 ## $schema
 
-Optional, but recommended—string
+Optional, however recommended—string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
@@ -341,7 +339,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required**—string
 
-The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Office; use `1.12` (or earlier) for Teams-only apps.
+The version of manifest schema this manifest is using.
 
 ## version
 
@@ -440,7 +438,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required**—HTML Hex color code
 
-A color to use and as a background for your outline icons.
+A color to use and a background color for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
@@ -448,7 +446,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**—array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added. configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -493,15 +491,15 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 |---|---|---|---|---|
 |`botId`|string|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`scopes`|array of enums|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
-|`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
+|`needsChannelSelector`|Boolean|||Describes whether the bot uses a user hint to add the bot to a specific channel Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
-|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
+|`supportsCalling`|Boolean|||A value indicating whether a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -533,25 +531,25 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 **Optional**—array
 
-Defines a message extension for the app.
+Defines a messaging extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, however the manifest name remains the same so that existing extensions continue to function.
 
-The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
+The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
-|`commands`|array of objects|10|✔|Array of commands the message extension supports.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
+|`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
+|`commands`|array of objects|10|✔|Array of commands the messaging extension supports.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
 
 ### composeExtensions.commands
 
-Your message extension must declare one or more commands with a maximum of 10 commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
+Your messaging extension must declare one or more commands with a maximum of 10 commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
 
 Each command item is an object with the following structure:
 
@@ -562,9 +560,9 @@ Each command item is an object with the following structure:
 |`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
-|`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
+|`context`|array of Strings|3||Defines from where the message extension can be invoked. Any combination of `compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
-|`taskInfo`|object|||Specify the task module to pre-load when using a message extension command.|
+|`taskInfo`|object|||Specify the task module to pre-load when using a messaging extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
 |`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -583,7 +581,7 @@ Each command item is an object with the following structure:
 
 **Optional**—array of strings
 
-An array of `string`, which specifies which permissions the app requests, which let end users know how the extension does. The following options are non-exclusive:
+An `array of string`, which specifies what permissions the app requests and, which let end users know how the extension works. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
@@ -628,29 +626,20 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |`id`|string|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|string|2048 characters|✔|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you are not using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, https://notapplicable to avoid an error response. |
 
-## graphConnector
-
-**Optional**—object
-
-Specify the app's Graph connector configuration. If this is present then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`notificationUrl`|string|2048 characters|✔|The url where Graph-connector notifications for the application should be sent.|
-
 ## showLoadingIndicator
 
 **Optional**—Boolean
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
->[!NOTE]
->If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+Indicates if or not to show the loading indicator when an app or tab is loading. The default value is **true**. When you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in  [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+
+> [!NOTE]
+> The value of `showLoadingIndicator` must be **true** for Store apps from v1.13.
 
 ## isFullScreen
 
  **Optional**—Boolean
 
-Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
+Indicates where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
 > `isFullScreen` works only for apps published to your organization.

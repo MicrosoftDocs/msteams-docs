@@ -13,6 +13,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Feature | Find it here |
 | --- | --- | --- |
+|06/01/2022| Update the App Manifest for `showLoadingIndicator` in Manifest schema for Teams | App manifest > [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/24/2022| [*Developer preview*] <br> Enhanced collaboration with Live Share SDK |  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
