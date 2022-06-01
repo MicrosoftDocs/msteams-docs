@@ -43,7 +43,7 @@ items:
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that has not been tested.
+   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
    
    ## Prepare development environment
 
@@ -83,7 +83,7 @@ items:
    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
    ```
 
-   It is more common on Linux and macOS systems.
+   It's more common on Linux and macOS systems.
 
    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
 
@@ -163,7 +163,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::    
 
     1. Select the location for project workspace.
-    1. Select **Select Folder**.
+    1. Select the **Select Folder**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder" border="true":::
     
@@ -289,7 +289,7 @@ items:
         1. Use your own storage location instead of **MyStorage**.
 
             > [!NOTE]
-            > It is required to use your own storage for production environment. If storage is not provided, default local file storage is considered.
+            > It's required to use your own storage for production environment. If storage isn't provided, default local file storage is considered.
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
@@ -363,7 +363,7 @@ items:
 
     ## Deploy your app to Azure
 
-      Under **DEPLOYMENT** you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
+      Under **DEPLOYMENT**, you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -392,7 +392,7 @@ items:
 
     1. Select **Deploy to the Cloud** under **DEPLOYMENT** after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to select to deploy to cloud." border="true":::
 
     1. Select **Deploy**
 
