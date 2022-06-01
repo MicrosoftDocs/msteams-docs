@@ -10,9 +10,6 @@ keywords: teams apps SaaS offer preview offer test preview monetized saas
 
 # Test preview for monetized apps
 
-> [!NOTE]
-> Test preview for monetized apps is currently available only in [**Developer preview**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
-
 You can  create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps  in Teams. Users who are added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
 ## Create a Preview offer ID

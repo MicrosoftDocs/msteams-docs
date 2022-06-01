@@ -35,8 +35,8 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample Node.js app repo from GitHub. |
@@ -358,7 +358,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
-    1. Open the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
+    1. Open the app package `helloworldapp.zip` from the following path in your C# sample repo directory structure:
 
         `<path to cloned node.js sample repo>\Source\Repos\Microsoft-Teams-Samples\samples\app-hello-world\nodejs\manifest`
 
@@ -564,7 +564,7 @@ items:
 
     #### Configure message extension
 
-    Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
+    Message extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Message extensions appear at the bottom of the compose box.
 
     To add a new message extension:
 

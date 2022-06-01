@@ -93,7 +93,7 @@ To upload a file to a user:
 
 The following desktop message contains a simple attachment object requesting user permission to upload the file:
 
-![Consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Consent card requesting user permission to upload file"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 The following mobile message contains an attachment object requesting user permission to upload the file:
 
@@ -194,7 +194,7 @@ The following table describes the content properties of the attachment:
 
 Fetch inline images that are part of the message using the Bot's access token.
 
-![Inline image](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Inline image"border="true":::
 
 The following code shows an example of fetching inline images from message:
 
@@ -321,7 +321,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload files to Teams from a bot.
+Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload file in Teams using bot.
 
 ## Next step
 

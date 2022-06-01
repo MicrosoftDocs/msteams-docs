@@ -46,7 +46,7 @@ Following are the steps to create a channel or group tab:
     yo teams
     ```
 
-1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file:
+1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -132,13 +132,17 @@ Following are the steps to create a channel or group tab:
     </details>
 
 > [!IMPORTANT]
-> The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
->
-> For example: DefaultTabName is **MyTab** then **/MyTabTab/**
+> The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**. For example, `DefaultTabName` is **MyTab** then **/MyTabTab/**.
+
+<!--- TBD: this info seems removed from the main branch.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
+--->
 
 ### Create your app package
 
-You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
+You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the `manifest.json` file and generates the zip folder in the `./package` directory. At the command prompt, enter the following command:
 
 ```cmd
 gulp manifest
@@ -148,7 +152,7 @@ gulp manifest
 
 #### Build your application
 
-Enter the following command at the command prompt to transpile your solution into the **./dist** folder:
+Enter the following command at the command prompt to transpile your solution into the `./dist` folder:
 
 ```cmd
 gulp build
@@ -183,18 +187,14 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps**.
-1. Select **Publish an app** and **Upload a custom app**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
-
+1. Go to Microsoft Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
-    
+
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab" border="true":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
-    
+
     > [!NOTE]
     > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
     >
@@ -209,7 +209,7 @@ gulp ngrok-serve
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded" border="true":::
-    
+
     Now you have succesfully created and added your channel or group tab in Teams.
 
 ::: zone-end
@@ -284,7 +284,7 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
@@ -382,6 +382,11 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     > [!TIP]
     > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
 
+<!--- TBD: This note seems to be removed from main. Commenting it for now.
+> [!NOTE]
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
+--->
+
 ### Update your app package with Developer Portal
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
@@ -390,13 +395,18 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Open **Apps** and select **Import app**.
 
-1. The name of your app package is **tab.zip**. It's available in the following path:
+<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+--->
+
+1. The name of your app package is `tab.zip`. It's available in the following path:
 
     ```bash
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Select **tab.zip** and open it in the Developer Portal.
+1. Select `tab.zip` and open it in the Developer Portal.
 
 1. A default **App ID** is created and populated in **Basic information** section.
 
@@ -486,7 +496,7 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams.
 

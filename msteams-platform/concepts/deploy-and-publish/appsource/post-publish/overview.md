@@ -23,7 +23,7 @@ Data for newly published apps takes about a week to appear in the report.
 >
 > Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
 
-You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes requires a new review process.
+You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
 Ensure the following when publishing updates:
 
@@ -40,7 +40,7 @@ If you make any of the following changes to your app, however, your existing use
 * Change the bot ID.
 * Modify a bot's one-way notification configuration.
 * Modify a bot's support for uploading and downloading files.
-* Add or remove a messaging extension.
+* Add or remove a message extension.
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.

@@ -30,9 +30,9 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a
 
 ## Update app manifest
 
- For a bot to receive messages without @mention, one or both of the RSC permissions must be specified in the Teams app manifest under `webApplicationInfo.applicationPermissions`.
+For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
 
- ![App Manifest](~/assets/images/bots/manifest_image.png)
+![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
 
 The following list describes the `webApplicationInfo` object:
 
@@ -65,23 +65,25 @@ The following steps guide you to sideload and validate bot that receives all cha
 
     ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
 
+      :::image type="content" source="Media/managingteam.png" alt-text="managing team"border="true":::
+
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner":
 
-    ![Uploading custom app](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
-
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="uploading custom app":::
+  
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**:
 
-    ![Selecting app package](~/bots/how-to/conversations/Media/selectapppackage.png)
+      :::image type="content" source="Media/selectapppackage.png" alt-text="Select the app package"lightbox="Media/selectapppackage.png"border="true":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team:
 
-    ![Adding the bot](~/bots/how-to/conversations/Media/addingbot.png)
+      :::image type="content" source="Media/addingbot.png" alt-text="Adding bot"lightbox="Media/addingbot.png"border="true":::
 
 1. Select a channel and enter a message in the channel for your bot:
 
-    ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot receiving message"lightbox="Media/botreceivingmessage.png"border="true":::
 
    The bot receives the message without being @mentioned.
 

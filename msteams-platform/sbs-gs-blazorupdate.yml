@@ -316,23 +316,23 @@ items:
 
     You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
 
-    1. [Provision in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
-    1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
-    1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
+    1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
+    1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
+    1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
     Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
     #### **To provision your tab app in the cloud**
     
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.?
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 
-    1. Enter the following in the **Provision** dialog box:
+    1. Enter the following in the **Provision** dialog:
 
        1. **Subscription name**: Visual Studio Enterprise Subscription. </br>
        1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
-       1. **Region**: East Asia.
+       1. Select your **Region**.
        1. Select **Provision**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
@@ -347,7 +347,7 @@ items:
         
     1. After the provision is complete, select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Resource group is generated" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Resource group is generated" border="true":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
@@ -365,7 +365,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="true":::
 
     1. Select **OK**. 
 
@@ -402,7 +402,6 @@ items:
         Your photograph and details appear in your **Personal Tab**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot showing user information in the tab" border="true":::
-
 
 - title: Create project workspace for your bot app
   durationInMinutes: 1
@@ -570,6 +569,88 @@ items:
 
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
+- title: Preview your first bot app
+  durationInMinutes: 1
+  content: |
+
+    You've learned to create, build, and run Teams app with bot capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+
+    1. [Provision your bot app in the cloud](#to-provision-your-bot-app-in-the-cloud): You can provision your bot app in the cloud.
+    1. [Deploy your bot app to cloud](#to-deploy-your-bot-app-to-cloud): You can deploy your bot app to cloud. 
+    1. [Preview your bot app in Teams](#to-preview-your-bot-app-in-teams): Your bot app opens in Teams. 
+
+    Let's deploy the first bot app on Azure using Teams Toolkit.
+
+    #### **To provision your bot app in the cloud**
+    
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud" border="false":::
+
+    1. Enter the following in the **Provision** dialog:
+
+        1. **Subscription name**: Teams Cloud - Dev Test with TTL = 3 Days. </br>
+        1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
+        1. Select your **Region**.
+        1. Select **Provision**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window" border="false":::
+
+           Provision warning displays. 
+
+    1. Select **Provision**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="warning" border="false":::
+
+       It takes a few minutes for your resource group to provision in the cloud.
+        
+    1. After the provision is complete, select **OK**. 
+  
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="permission ok" border="false":::
+
+    1. Select **View Provisioned Resources** to view on Azure portal. 
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="provisioned resource" border="false":::
+
+    1. Sign in to your Azure portal account on sign in prompt. 
+
+        Your app-dev-rg appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure.png" alt-text="Azure app created" border="true":::
+
+        Your resources are provisioned in the Azure portal!
+
+    #### **To deploy your bot app to cloud**
+
+     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure.png" alt-text="deploy to cloud" border="true":::
+
+     1. Select **OK**. 
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="deployment success" border="true":::
+
+        Your bot app is successfully deployed to the cloud!
+
+    #### **To preview your bot app in Teams** 
+
+     1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure.png" alt-text="Select preview in Azure" border="false":::
+
+     1. Select **Add** when prompted to install the app to Teams.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-app-azure.png" alt-text="Screenshot showing how to add app to Teams.":::
+
+        Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
+ 
+     1. You can type `welcome` to show an introduction card.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="introduction card opens" border="true":::
+
+     1. You can type `learn` to go to adaptive card and bot command documentation.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="bot and adaptive card opens" border="true":::
 
 - title: Congratulations!
   durationInMinutes: 1

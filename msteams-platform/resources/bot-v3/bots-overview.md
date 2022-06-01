@@ -13,9 +13,9 @@ ms.date: 05/20/2018
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
+> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not available in Department of Defense (DOD).
 
-![Example of a bot assisting a user](~/assets/images/bot_example.png)
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user" border="true":::
 
 ## What you need to know: Bots
 
@@ -29,7 +29,7 @@ A bot behaves differently depending on what kind of conversation it is involved 
 
 For more information, see [Have a conversation with a Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md).
+With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## Bot APIs
 
@@ -37,7 +37,7 @@ Microsoft Teams supports most of the [Microsoft Bot Framework](https://dev.botfr
 
 * Using specialized card types like the Office 365 Connector card.
 * Consuming and setting Teams-specific channel data on activities.
-* Processing messaging extension requests.
+* Processing message extension requests.
 
 The SDK extensions install dependencies, including the Bot Builder SDK.
 

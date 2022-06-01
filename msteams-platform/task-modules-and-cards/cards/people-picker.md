@@ -1,7 +1,7 @@
 ---
 title: People Picker in Adaptive Cards
 description: Describes how to use the People Picker control in Adaptive Cards
-localization_priority: Normal
+localization_priority: Medium
 keywords: Adaptive Cards People Picker
 ms.topic: reference
 author: Rajeshwari-v
@@ -151,7 +151,7 @@ The code example for creating People Picker with organization search is as follo
 
 The following image illustrates People Picker in Adaptive Cards with organization search:
 
-![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
+:::image type="content" source="../../assets/images/Cards/peoplepicker-org-search.png" alt-text="People picker org search":::
 
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple users  in the control. It's set to false by default and this setting allows you to select single user only.
 
@@ -299,7 +299,7 @@ The following example describes static choices:
 
 The following image illustrates People Picker in Adaptive Cards with static choices in organization search:
 
-![People Picker static choice](../../assets/images/cards/peoplepicker-static-choice.png)
+:::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
 You can implement People Picker for efficient task management in different scenarios.  
 

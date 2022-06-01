@@ -14,7 +14,7 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 
 * The tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a sharepoint site.
 * The backend APIs are deployed to Azure functions.
-* The bot or messaging extension is deployed to Azure app service.
+* The bot or message extension is deployed to Azure app service.
 
 ## Prerequisite
 
@@ -39,7 +39,7 @@ The get started guides help you to deploy using Teams Toolkit. You can use the f
 |Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure storage |
 |Tabs with SharePoint </br> The frontend workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
 |APIs on Azure functions </br> The backend workload | `yourProjectFolder/api`| Not applicable |Azure functions |
-|Bots and messaging extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure app service |
+|Bots and message extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure app service |
 
 > [!NOTE]
 > When you include Azure API management resource in your project and trigger deploy. You can publish your APIs in Azure functions to Azure API management service.

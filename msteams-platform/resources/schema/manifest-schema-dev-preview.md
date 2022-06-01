@@ -11,7 +11,7 @@ ms.date: 11/15/2021
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> If you aren't using developer preview features, including running [Teams personal tabs and messaging extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -278,13 +278,13 @@ The `https://` URL referencing the JSON Schema for the manifest.
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. Use `m365DevPreview` only if you are previewing [Teams apps running in Office and Outlook](../../m365-apps/overview.md). Otherwise, use `devPreview` for all other Teams preview features.
+The version of the manifest schema this manifest is using.
 
 ## version
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it is approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
 
@@ -294,7 +294,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
+The unique Microsoft-generated identifier for this app. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## packageName
 
@@ -320,7 +320,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 Optional:
 
-Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
+Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -333,13 +333,13 @@ An array of objects specifying additional language translations.
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`languageTag`|4 characters|✔|The language tag of the strings in the provided file.|
-|`file`|4 characters|✔|A relative file path to a the .json file containing the translated strings.|
+|`file`|4 characters|✔|A relative file path to the .json file containing the translated strings.|
 
 ## name
 
 Required:
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` should not be the same.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -352,7 +352,7 @@ Required:
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
-Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` should not be the same.  Your short description must not be repeated within the long description and must not include any other app name.
+Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` shouldn't be the same.  Your short description must not be repeated within the long description and must not include any other app name.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -374,7 +374,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required** &ndash; String
 
-A color to use in conjunction with and as a background for your outline icons.
+A color to use with and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
@@ -382,7 +382,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 Optional:
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
+Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
 The object is an array with all elements of the type `object`. This block is required only for solutions that provide a configurable channel tab solution.
 
@@ -457,22 +457,22 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 Optional:
 
-Defines a messaging extension for the app.
+Defines a message extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
+The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. The default is `false`.|
-|`commands`|Array of object|10|✔|Array of commands the messaging extension supports|
+|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
+|`commands`|Array of object|10|✔|Array of commands the message extension supports|
 
 ### composeExtensions.commands
 
-Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
+Your message extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There's a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 
@@ -483,9 +483,9 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the messaging extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
+|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the task module dynamically.|
-|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
+|`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -506,7 +506,7 @@ Each command item is an object with the following structure:
 
 Optional:
 
-An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension will perform. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
@@ -531,7 +531,7 @@ Specifies the native features on a user's device that your app may request acces
 
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
-It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you should not include accounts.google.com in `validDomains[]`.
+It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you shouldn't include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
@@ -542,13 +542,104 @@ The object is an array with all elements of the type `string`.
 
 Optional:
 
-Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Auzre AD app.
+Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String|36 characters|✔|Microsoft Azure Active Directory (Azure AD) application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource URL of the app for acquiring auth token for SSO.|
 |`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
+
+## graphConnector
+
+**Optional**—object
+
+Specify the app's Graph connector configuration. If this is present then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 characters|✔|The url where Graph-connector notifications for the application should be sent.|
+
+## showLoadingIndicator
+
+**Optional**—Boolean
+
+Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
+> [!NOTE]
+> If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+
+## isFullScreen
+
+ **Optional**—Boolean
+
+Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
+
+> [!NOTE]
+> `isFullScreen` works only for apps published to your organization.
+
+## activities
+
+**Optional**—object
+
+Define the properties your app uses to post a user activity feed.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`activityTypes`|array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
+
+### activities.activityTypes
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`type`|string|32 characters|✔|The notification type. *See below*.|
+|`description`|string|128 characters|✔|A brief description of the notification. *See below*.|
+|`templateText`|string|128 characters|✔|Ex: "{actor} created task {taskId} for you"|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
 
 ## configurableProperties
 
@@ -566,7 +657,7 @@ You can define any of the following properties:
 * `longDescription`: The app's detailed description.
 * `smallImageUrl`: The app's outline icon.
 * `largeImageUrl`: The app's color icon.
-* `accentColor`: The color to use in conjunction with and as a background for your outline icons.
+* `accentColor`: The color to use with and as a background for your outline icons.
 * `developerUrl`: The HTTPS URL of the developer's website.
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
@@ -631,7 +722,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional** — object
+**Optional** - object
 
 Specify and consolidate authorization related information for the app.
 
@@ -682,6 +773,15 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |**Name**|**Description**|
     |---|---|
     |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
+
+* **Resource-specific permissions for Teams live share**
+
+   |Name| Description |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## See also
 
