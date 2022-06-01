@@ -17,8 +17,8 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 * Account prerequisites
   To provision cloud resources, you must have the following accounts:
 
-  * Microsoft 365 account with valid subscription
-  * Azure with valid subscription
+  * Microsoft 365 account with valid subscription.
+  * Azure with valid subscription.
   For more information, see [how to prepare accounts for building Teams app](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
@@ -36,9 +36,9 @@ Provision is performed with single command in Teams Toolkit for Visual Studio Co
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
-* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant
-* Teams app registration under your Microsoft 365 tenant's Teams platform
-* Azure resources under your selected Azure subscription
+* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
+* Teams app registration under your Microsoft 365 tenant's Teams platform.
+* Azure resources under your selected Azure subscription.
 
 When you create a new project, you can use all the Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add new capability resource](./add-resource.md) to an existing project, the updated ARM template reflects the latest change.
 
@@ -259,7 +259,7 @@ The following steps are:
 
 1. Open `.fx/configs/azure.parameters.{env}.json` for your current environment.
 2. Add a new property `functionAppName` to the value of parameter `provisionParameters`.
-3. Enter `contosoteamsappapi` as value of `functionAppName`
+3. Enter `contosoteamsappapi` as value of `functionAppName`.
 4. Final parameter file is shown in the following snippet:
 
     ```json
@@ -340,7 +340,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <summary><b>How can I change resource group while provisioning?</b></summary>
 
-Before provision, the tool will ask you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
+Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
 <br>
 
