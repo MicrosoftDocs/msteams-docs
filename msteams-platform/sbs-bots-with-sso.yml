@@ -79,11 +79,11 @@ items:
 
         :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
 
-        The following create a Azure Bot page appears:
+        The create a Azure Bot page appears:
 
         :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Azure bot page" border="true":::
 
-    1. Enter the details to create Azure bot.
+    1. Enter the following details to create Azure bot.
 
         :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Create resource Azure bot" border="true":::
 
@@ -98,11 +98,11 @@ items:
 
               1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-                :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="New resource creation" border="true":::
+                   :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="New resource creation" border="true":::
 
               1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
         
-                :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource" border="true":::
+                   :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource" border="true":::
 
         1. Select **Type of App** as **Multi Tenant**.
 
@@ -255,6 +255,7 @@ items:
         :::image type="content" source="~/assets/images/bots/redirectURI1.png" alt-text="Redirect URI 1" border="true":::
 
     1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
+
              * **ID tokens**
              * **Access tokens**
     
@@ -295,14 +296,14 @@ items:
 
          :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Add a scope to app" border="true":::
 
-         1. Enter `access_as_user` as the **Scope Name**.
+          1. Enter `access_as_user` as the **Scope Name**.
 
              > [!NOTE]
              > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
 
-         1. Set **Who can consent?** to `Admins and users`.
+          1. Set **Who can consent?** to `Admins and users`.
 
-         1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+          1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
               * Enter `Teams can access the user’s profile` as **Admin consent display name**
 
@@ -312,7 +313,7 @@ items:
 
               * Enter `Enable Teams to call this app’s APIs with the same rights as you have` as **User consent description**
 
-         1. Ensure that **State** is set to **Enabled**.
+          1. Ensure that **State** is set to **Enabled**.
 
     1. Select **Add scope** to save.
 
@@ -373,26 +374,6 @@ items:
     1. Select **Add permissions**.
 
         :::image type="content" source="~/assets/images/bots/userread.png" alt-text="User Read" border="true":::
-
-    1. From the left panel, select **Authentication** to set a redirect URI.
-
-       > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-               
-         1. Select **Add a platform**.
-
-         1. Select **Web**.
-
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://your ngrok/auth-end`. </br>
-
-         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
-   
-              :::image type="content" source="~/assets/images/bots/authenticationcheckboxes.png" alt-text="Authentication check boxes for the app" border="true":::
-
-         1. Select **Save**.
 
     **To update manifest**
 
