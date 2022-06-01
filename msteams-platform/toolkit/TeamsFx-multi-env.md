@@ -14,9 +14,9 @@ ms.date: 11/29/2021
 
  You can perform the following with the multiple environments:
 
-1. **Test before production**: You can set up multiple environments such as dev, test, and staging before publishing a Teams App to production environment in modern app development lifecycle
+1. **Test before production**: You can set up multiple environments such as dev, test, and staging before publishing a Teams App to production environment in modern app development lifecycle.
 
-2. **Manage app behaviors in different environments**: You can set up different behaviors for multiple environments such as enable telemetry in production environment, however disable it in development environment
+2. **Manage app behaviors in different environments**: You can set up different behaviors for multiple environments such as enable telemetry in production environment, however disable it in development environment.
 
 ## Prerequisite
 
@@ -37,7 +37,7 @@ After creating a new project, Teams Toolkit by default creates:
 
 **To add another remote environment**:
 
-1. Select the **Teams** icon in the sidebar
+1. Select the **Teams** icon in the sidebar.
 2. Select **+Teams: Create new environment** under the Environment section as shown in the following image:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
@@ -92,8 +92,8 @@ You can set the Teams app name to `myapp(dev)` for the default environment `dev`
 
 Perform the following steps for customization:
 
-1. Open config file `.fx/configs/config.dev.json`
-2. Update the property of *manifest > appName > short* to `myapp(dev)`
+1. Open config file `.fx/configs/config.dev.json`.
+2. Update the property of *manifest > appName > short* to `myapp(dev)`.
 
   The updates to `.fx/configs/config.dev.json` are as follows:
 
@@ -111,10 +111,10 @@ Perform the following steps for customization:
   }
   ```
 
-3. Create a new environment and name it `staging` if it doesn't exist
-4. Open config file `.fx/configs/config.staging.json`
-5. Update the same property `myapp(staging)`
-6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit)
+3. Create a new environment and name it `staging` if it doesn't exist.
+4. Open config file `.fx/configs/config.staging.json`.
+5. Update the same property `myapp(staging)`.
+6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 </details>
 <br>
 
@@ -129,8 +129,8 @@ In this scenario, you will learn how to set different Teams app description for 
 
 Perform the following steps for customization:
 
-1. Open config file `.fx/configs/config.dev.json`
-2. Add new property of *manifest > description > short* with value `my app description for dev`
+1. Open config file `.fx/configs/config.dev.json`.
+2. Add new property of *manifest > description > short* with value `my app description for dev`.
 
   The updates to `.fx/configs/config.dev.json` are as follows:
 
@@ -149,11 +149,11 @@ Perform the following steps for customization:
   }
   ```
 
-3. Create a new environment and name it `staging` if it doesn't exist
-4. Open config file `.fx/configs/config.staging.json`
-5. Add the same property to `my app description for staging`
-6. Open Teams app manifest template `templates/appPackage/manifest.template.json`
-7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`
+3. Create a new environment and name it `staging` if it doesn't exist.
+4. Open config file `.fx/configs/config.staging.json`.
+5. Add the same property to `my app description for staging`.
+6. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
+7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`.
   
   The updates to `manifest.template.json` are as follows:
 
@@ -171,7 +171,7 @@ Perform the following steps for customization:
   }
   ```
 
-8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit)
+8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 </details>
 <br>
@@ -183,8 +183,8 @@ In this scenario, you will learn how to set the description of Teams app to `my 
 
 As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
 
-1. Open Teams app manifest template `templates/appPackage/manifest.template.json`
-2. Update the property `description > short` with **hard-coded string** `my app description`
+1. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
+2. Update the property `description > short` with **hard-coded string** `my app description`.
   
   The updates to `manifest.template.json` are as follows:
 
