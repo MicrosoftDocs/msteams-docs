@@ -38,11 +38,11 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Custom app uploading or sideloading for your developer tenant is turned on, if not then the local debug terminates
 
-* Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`
+* Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin` manages the Ngrok binary
 
 * Azure Functions Core Tools version 3, if Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates
 
-* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates
+* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates
 
   The following table lists the .NET Core versions:
 
@@ -109,7 +109,7 @@ When you select **Start Debugging (F5)**, the Teams Toolkit output channel displ
 
 ## Register and configure your Teams app
 
-In the set up process, Teams Toolkit prepares the following registrations and configurations your Teams app:
+In the set up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
 1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
 
@@ -170,7 +170,7 @@ For tab app or message extension app:
 
 Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.template.json`.
 
-After registering and configuring the app, local debug files generates.
+After registration and configuration of the app, local debug files are generated.
 
 ## Take a tour of your app source code
 
