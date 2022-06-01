@@ -88,7 +88,7 @@ When your app is notified of a scheduled meeting, it can retrieve the meeting ID
 #### Obtain meeting details using tenant-level notification
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. Post meeting, your app can access and retrieve the meeting transcript.
-→
+
 For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
 When your app is notified about meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
@@ -197,7 +197,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     - Online Teams meeting
     
         <details>
-        <summary><b>Example</b>: Response payload, if `joinWebUrl` is available:</b></summary>
+        <summary><b>Example</b>: Response payload, if `joinWebUrl` is available</b></summary>
         
         ```json
         {
@@ -258,9 +258,8 @@ To obtain meeting ID and organizer ID with tenant-level notification:
           ``` http
             GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
           ```
-          <br>
-          The response payload of this request contains `joinUrl`.
 
+          The response payload of this request contains `joinUrl`.
 
             > [!NOTE]
             > `joinUrl` is the same as `joinWebUrl`.
@@ -299,7 +298,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
     ```
 
-    The response payload contains the meeting id in the `id` member of the `value` property.
+    The response payload contains the meeting ID in the `id` member of the `value` property.
     <br>
     <details>
     <summary><b>Example</b>: Response payload with meeting ID</summary>
@@ -325,7 +324,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     }
     ```
     </details>
-    <br>
 
     > [!NOTE]
     > The response payload also contains the `threadID` member in the `chatInfo` property. This value is used for obtaining meeting ID if your app is subscribed receiving user-level notifications.
@@ -339,7 +337,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     ```
 
     In this example:
-    - The meeting ID is *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy*
+    - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy*
     - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
 
     The response payload will contain the transcripts in .vtt format.
