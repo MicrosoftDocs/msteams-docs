@@ -295,7 +295,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
           </details>
             <br>
 
-3. Get `OnlineMeetingId` using `joinWebUrl` and `OrganizerId`.
+3. **Get meeting ID**: Use `joinWebUrl` to get the meeting ID.
 
     Use the following example to request the online meeting ID:
 
@@ -332,6 +332,9 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     </details>
     <br>
 
+    > [!NOTE]
+    > The response payload also contains the `threadID` member in the `chatInfo` property. This value is used for obtaining meeting ID if your app is subscribed receiving user-level notifications.
+
 4. Fetch transcripts using meeting ID and organizer ID
 
     The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
@@ -351,6 +354,37 @@ To obtain meeting ID and organizer ID with tenant-level notification:
 #### Obtain meeting details using user-level notification
 
 Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
+
+For subscribing your app to tenant-level notifications, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
+
+Use the following example to subscribe to user-level notifications.
+
+```http
+    
+POST https://graph.microsoft.com/beta/subscriptions/
+{
+    "changeType": "created,updated,deleted",
+    "notificationUrl": "https://tgsrelaynandanmankad.servicebus.windows.net/notifynandanmankadpc/notifications",
+    "resource": "users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events",
+    "expirationDateTime": "2022-05-05T14:58:56.7951795+00:00",
+    "clientState": "ClientSecret",
+    "includeResourceData": false
+}
+```
+
+When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for to retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, following the steps for obtaining meeting ID and organizer ID as given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification).
+
+To obtain meeting ID and organizer ID with user-level notification:
+
+1. Get event ID
+
+2. Get `joinUrl`
+
+3. Get chat thread ID
+
+4. Subscribe to chat messages using chat ID
+
+5. Follow steps for tenant-level notifications for obtaining meeting and ID and organizer ID.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
@@ -656,39 +690,3 @@ WEBVTT
 <v User Name>This is a transcript test.</v>
 ```
 </details>
-
-<!--| App users may be invited to attend multiple meetings at the same time. To attend one meeting, the app user would need to forfeit the other. | The meetings transcripts provide content discussed in the meeting by all collaborators. If the app user is unable to attend one of the meetings, the transcripts are a ready reference to the discussion. |-->
-
-<!--
-## Fetch transcripts at runtime
-
-When your app fetches the transcripts, it interacts with Microsoft Graph, Teams Graph Service (TGS), and Microsoft Artifacts Service (MAS). Ensure that you've configured your app with required permissions on Azure portal and subscribed to the necessary change notifications.
-
-:::image type="content" source="../../assets/images/graph-api/flow-2.png" alt-text="Graph REST APIs to fetch transcripts in post-meeting scenario" border="false":::
-
-| # | Interaction | What's going on ... |
-| --- | --- | --- |
-| 1 | Meeting notification to your app | Your app receives the notification for a meeting event. |
-| 2 | Your app → Microsoft Graph | Your app sends the API request to Microsoft. It calls for: <br> 1. list of transcripts <br> 2. Specific transcript metadata selected from the list of transcripts <br> 3. Transcript content for the selected transcript. |
-| 3 |  Microsoft Graph → TGS | Microsoft Graph forwards the API request to TGS. |
-| 4 | TGS → Permission check | TGS checks if your app is authorized with the required permissions for accessing the meeting transcripts. |
-| 5 | TGS → MAS | After successful validation, TGS forwards the APi request to MAS to fetch the transcript metadata or transcript content, depending on the API request. |
-| 6 | TGS → your app | TGS receives the API request and responds to TGS with transcript metadata or transcript content, which forwards it to Microsoft Graph, and eventually to your app. |-->
-
-<!--
-/ suggestion - graphic to show comparative flows for both permission methods /
-When your app fetches the transcripts, it interacts with Microsoft Graph, Teams Graph Service (TGS), Microsoft Artifacts Service (MAS). Ensure that you've configured your app with required permissions on Azure portal and subscribed to the necessary change notifications.
-
-:::image type="content" source="../../assets/images/graph-api/flow-2.png" alt-text="Graph REST APIs to fetch transcripts in post-meeting scenario":::
-
-| # | Interaction | What's going on ... |
-| --- | --- | --- |
-| 1 | Meeting notification to your app | Your app receives the notification for a meeting event. |
-| 2 | Your app → Microsoft Graph | Your app sends the API request to Microsoft. It calls for: <br> 1. list of transcripts <br> 2. Specific transcript metadata selected from the list of transcripts <br> 3. Transcript content for the selected transcript. |
-| 3 |  Microsoft Graph → TGS | Microsoft Graph forwards the API request to TGS. |
-| 4 | TGS → Permission check | TGS checks if your app is authorized with the required permissions for accessing the meeting transcripts. |
-| 5 | TGS → MAS | After successful validation, TGS forwards the APi request to MAS to fetch the transcript metadata or transcript content, depending on the API request. |
-| 6 | TGS → your app | TGS receives the API request and responds to TGS with transcript metadata or transcript content, which forwards it to Microsoft Graph, and eventually to your app. |
-
--->
-
