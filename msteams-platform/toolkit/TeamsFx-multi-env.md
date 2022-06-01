@@ -37,7 +37,7 @@ After creating a new project, Teams Toolkit by default creates:
 
 **To add another remote environment**:
 
-1. Select the **Teams** icon in the sidebar.
+1. Select the **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
 2. Select **+Teams: Create new environment** under the Environment section as shown in the following image:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
@@ -81,7 +81,7 @@ The following table lists the common scenarios for customized resource provision
 
 ## Scenarios
 
-There are four scenarios to customized the resources provision in different environments.
+There are four scenarios to customize the resources provision in different environments.
 <br>
 
 <br><details>
@@ -115,9 +115,8 @@ Perform the following steps for customization:
 4. Open config file `.fx/configs/config.staging.json`.
 5. Update the same property `myapp(staging)`.
 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
-</details>
-<br>
 
+</details>
 
 <details>
 <summary><b>Scenario 2: Customize Teams app description for different environment</b></summary>
@@ -174,7 +173,6 @@ Perform the following steps for customization:
 8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 </details>
-<br>
 
 <details>
 <summary><b>Scenario 3: Customize Teams app description for all environments</b></summary>
@@ -205,8 +203,7 @@ As the Teams app manifest template is shared across all environments, we can upd
 
 3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
-<br></details>
-<br>
+</details>
 
 <details>
 <br><summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
