@@ -222,7 +222,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         }
         ```
         </details>
-        <br>
 
     - Meeting scheduled through Teams client or Outlook client, not marked as an online meeting
         
@@ -260,13 +259,15 @@ To obtain meeting ID and organizer ID with tenant-level notification:
             GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
           ```
           <br>
-          > [!NOTE]
-          > The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
+          The response payload of this request contains `joinUrl`.
+
+
+            > [!NOTE]
+            > `joinUrl` is the same as `joinWebUrl`.
 
           <br>
           <details>
           <summary><b>Example</b>: Response payload that contains the `joinUrl` in the `onlineMeeting` property</summary>
-          <br>
             
           ```json
             {
