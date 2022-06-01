@@ -18,7 +18,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 3. VS Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
-4.  Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
+4. Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |SPFx Tab | 12, 14 (recommended)|
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
-   
+
 * Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in
 * Custom app uploading or sideloading for your developer tenant is turned on, if not then the local debug terminates.
 * Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin` manages the Ngrok binary
@@ -160,7 +160,7 @@ For tab app or message extension app:
 
 Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.template.json`.
 
-After registration and configuration of the app, local debug files are generated.
+After registration and configuration of the app, local debug files generates.
 
 ## Take a tour of your app source code
 
