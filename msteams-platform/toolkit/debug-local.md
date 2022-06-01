@@ -121,6 +121,7 @@ Toolkit launches a new Edge or Chrome browser instance based on your selection a
 
 Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
+---
 ### Debug your app
 
 After the initial set up process, the Teams Toolkit starts the following processes:
