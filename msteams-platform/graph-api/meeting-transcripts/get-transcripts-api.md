@@ -272,6 +272,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         ```
         </details>
         <br>
+
         - Use the following example to get `joinWebUrl` from the `calendarEventId`:
           
           ``` http
