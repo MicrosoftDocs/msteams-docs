@@ -337,20 +337,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     - The meeting ID is *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy*
     - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
 
-    The response payload will contain the transcripts.
-
-    <details>
-    <summary><b>Example</b>: Response payload with transcript content in .vtt format</summary>
-    <br>
-    
-        ```webvtt
-        WEBVTT
-        
-        0:0:0.0 --> 0:0:1.380
-        <v User Name>Transcription test</v>
-        ```
-    </details>
-
+    The response payload will contain the transcripts in .vtt format.
 
 #### Obtain meeting details using user-level notification
 
