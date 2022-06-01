@@ -101,7 +101,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
 
         <details>
         <summary><b>Example</b>: Payload for `callTranscriptEventMessageDetail` event type</summary>
-        <br>
     
         ```json
         {
@@ -144,7 +143,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
 
         <details>
         <summary><b>Example</b>: Payload for `callEndedEventMessageDetail` event type</summary>
-        <br>
     
         ```json
         {
@@ -200,7 +198,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     
         <details>
         <summary><b>Example</b>: Response payload, if `joinWebUrl` is available:</b></summary>
-        <br>
         
         ```json
         {
@@ -227,11 +224,10 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         </details>
         <br>
 
-    - Meeting scheduled through Teams client or Outlook client, not marked as an Online meeting
+    - Meeting scheduled through Teams client or Outlook client, not marked as an online meeting
         
         <details>
         <summary><b>Example</b>: Response payload, if `calendarEventId` is available</summary>
-        <br>
         
         ```json
         {
@@ -264,7 +260,8 @@ To obtain meeting ID and organizer ID with tenant-level notification:
             GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
           ```
           <br>
-          The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
+          > [!NOTE]
+          > The response payload of this request contains the `joinUrl`, which is the same as `joinWebUrl`.
 
           <br>
           <details>
@@ -305,7 +302,6 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     <br>
     <details>
     <summary><b>Example</b>: Response payload with meeting ID</summary>
-    <br>
     
     ```json
     {
@@ -376,7 +372,6 @@ To obtain meeting ID and organizer ID with user-level notification:
 
     <details>
     <summary><b>Example</b>: Notification payload</summary>
-    <br>
     
     ```json
     {
@@ -405,7 +400,6 @@ To obtain meeting ID and organizer ID with user-level notification:
 
     <details>
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
-    <br>
     
     ```json
         {
@@ -465,12 +459,10 @@ To obtain meeting ID and organizer ID with user-level notification:
     }
     ```
     </details>
-    <br>
 
 4. **Subscribe to chat messages**: Use chat ID to subscribe your app to chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
     
     If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
-
 
 5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) for obtaining meeting and ID and organizer ID.
 
