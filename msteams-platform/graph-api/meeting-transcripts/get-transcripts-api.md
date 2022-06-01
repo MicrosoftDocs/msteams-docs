@@ -407,7 +407,7 @@ To obtain meeting ID and organizer ID with user-level notification:
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
     <br>
     
-        ```json
+    ```json
         {
             "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
             "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
