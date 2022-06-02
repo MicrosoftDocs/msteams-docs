@@ -1,11 +1,10 @@
 ---
 title: Enable resource-specific consent in Teams
-description: Describes resource-specific consent in Teams and how to make advantage of it.
+description: In this learning module, you'll learn resource-specific consent in Teams and how to make advantage of it.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams authorization OAuth SSO Azure AD rsc Graph
 ---
 
 # Resource-specific consent
