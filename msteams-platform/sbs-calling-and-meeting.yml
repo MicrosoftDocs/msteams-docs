@@ -34,7 +34,7 @@ items:
     Ensure that you install the following tools and set up your development environment:  
 
     * [Office 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program)
-    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
+    * [Ngrok](https://ngrok.com/) or equivalent tunneling solution
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
@@ -161,9 +161,9 @@ items:
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
         > [!NOTE]
-        > In `Creation type` of Microsoft App ID section, `Create new Microsoft App ID` is already selected to create a new bot. You can also select `Use existing app registration`, if you have already registered a bot. Enter Microsoft App ID in `Existing app id` field, and enter value in `Existing app password` field.
+        > In `Creation type` of Microsoft App ID section, `Create new Microsoft App ID` is already selected to create a new bot. You can also select `Use existing app registration`, if you've already registered a bot. Enter Microsoft App ID in `Existing app id` field, and enter value in `Existing app password` field.
 
-    1. Select **Use existing app registration** and enter **App ID** and **App secret** of your azure app registered in demo tenant.
+    1. Select **Use existing app registration** and enter **App ID** and **App secret** of your Azure app registered in demo tenant.
     1. Select **Review + create**.
 
         :::image type="content" source="./assets/images/calls-and-meetings/review-create.png" alt-text="Multi tenant.":::
@@ -222,7 +222,7 @@ items:
 - title: Update and create Teams App Package
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams App Package and upload it to the organisation.
+    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams App Package and upload it to the organization.
     
     1. Update appsettings.json in Visual Studio.
     1. Update manifest.json in Visual Studio and compress it to the zip file in File explorer.
@@ -275,8 +275,8 @@ items:
     1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
         > [!NOTE]
-        > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        > Upload your manifest in your demo tenant for organisation or your Teams account and run your solution in Visual Studio.
+        > The `manifest.zip` shouldn't contain any extra folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
     
     1. Go to Teams.
     1. To upload `manifest.zip`, select **Store > Manage your apps > Upload a custom app** and open `manifest.zip` from the repo folder in File explorer.
