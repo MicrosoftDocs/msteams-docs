@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: In this learning path, get started for Microsoft Teams developer documentation that introduces you to common tools, fundamental concepts, and advanced features.
+description: In this module, learn how to get started with Microsoft Teams developer documentation that introduces you to common tools, fundamental concepts, and advanced features.
 ms.localizationpriority: high
 ms.topic: reference
 ---
