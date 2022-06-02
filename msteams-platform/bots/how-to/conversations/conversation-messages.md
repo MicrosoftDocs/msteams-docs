@@ -377,9 +377,26 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
 
-You can select **Close** or switch chat to dismiss the message.
+     You can select **Close** or switch chat to dismiss the message.
+
+     You can also choose to not display the success message by setting the attribute `hide` to `false`. Following is an example:
+    
+     ```json
+        {
+          "type": "Action.Submit",
+          "title": "button title",
+          "data": {},
+          "msTeams": {
+            "feedback": {
+              "hide": true | false, 
+              "text": string,       // in the future maybe       
+              // .. other customized fields     
+            } 
+          }
+        } 
+     ```
 
 **Response on mobile**:
 
