@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A proactive message is any message sent by a bot that isn't in response to a request from a user, which can include messages, such as:
+    A proactive message is any message sent by a bot that isn't in response to a request from a user that includes messages, such as:
      - Welcome messages
      - Notifications
      - Scheduled messages
@@ -86,7 +86,8 @@ items:
 
         ![Bot set up](~/assets/images/proactive-scenario/bot-setup.png)  
 
-    1. In the **Set up a bot** window that appears, enter **Name** (for example, **Proactive Message Demo**), select **Personal**, and select **Create bot** to create the bot.
+    1. In the **Set up a bot** window, enter **Name** (for example, **Proactive Message Demo**).
+    1. Select **Personal** and then select **Create bot** to create the bot.
 
         ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
@@ -142,7 +143,8 @@ items:
 
         ![Add Adaptive Card package1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)
 
-    1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards** . Select **Install**. 
+    1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards**. 
+    1. Select **Install**. 
 
         ![Add Adaptive Card package2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)
 
