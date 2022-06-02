@@ -1,6 +1,6 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
-description: Here are the prerequisites for extending your Teams apps across Microsoft 365
+description: In this learning module, you'll see the prerequisites for extending your Teams apps across Microsoft 365.
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
