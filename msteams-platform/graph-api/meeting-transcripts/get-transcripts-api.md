@@ -75,10 +75,133 @@ You can subscribe your app to receive change notifications for scheduled meeting
 
 Your app receives notification for the type of meeting events for which it's subscribed:
 
-- [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
 - [User-level notification](#obtain-meeting-details-using-user-level-notification)
+- [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
 
 When your app is notified of a scheduled meeting, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details, your app can fetch the meeting transcripts after the meeting has ended.
+
+#### Obtain meeting details using user-level notification
+
+Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
+
+For subscribing your app to tenant-level notifications, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
+
+Use the following example to subscribe to user-level notifications.
+
+```http
+    
+POST https://graph.microsoft.com/beta/subscriptions/
+{
+    "changeType": "created,updated,deleted",
+    "notificationUrl": "https://tgsrelaynandanmankad.servicebus.windows.net/notifynandanmankadpc/notifications",
+    "resource": "users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events",
+    "expirationDateTime": "2022-05-05T14:58:56.7951795+00:00",
+    "clientState": "ClientSecret",
+    "includeResourceData": false
+}
+```
+
+When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for to retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, following the steps for obtaining meeting ID and organizer ID as given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification).
+
+To obtain meeting ID and organizer ID with user-level notification:
+
+1. **Get event ID**: Your app gets the `eventId` property from the notification payload.
+
+    <details>
+    <summary><b>Example</b>: Notification payload</summary>
+    
+    ```json
+    {
+        "subscriptionId": "ef30cdc6-b5ae-4702-b924-f458fd9e5fc3",
+        "changeType": "created",
+        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
+        "clientState": "ClientSecret",
+        "subscriptionExpirationDateTime": "2022-05-05T07:54:53.1886542-07:00",
+        "resource": "Users/1273a016-201d-4f95-8083-1b7f99b3edeb/Events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",
+        "resourceData": {}
+    }
+    ```
+
+    In this example, the `eventID` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
+    </details>
+
+2. **Get meeting URL**: Use the event ID to retrieve the `joinUrl`. For more information, see [Get event](/graph/api/event-get.md).
+
+    Use the following example to request the meeting URL:
+
+    ```http
+    GET https://graph.microsoft.com/beta/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
+    ```
+
+    The response payload contains the  `joinUrl`.
+
+    <details>
+    <summary><b>Example</b>: Response payload for getting meeting URL</summary>
+    
+    ```json
+        {
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
+            "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
+            "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
+            "start": {
+                "dateTime": "2022-05-06T15:00:00.0000000",
+                "timeZone": "UTC"
+            },
+            "end": {
+                "dateTime": "2022-05-06T15:30:00.0000000",
+                "timeZone": "UTC"
+            },
+            
+            "onlineMeeting": {
+                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjExYzJiMTItZDY1MS00ZGZkLWE5YzQtZTBmNWI1MDg2M2Uw%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%221273a016-201d-4f95-8083-1b7f99b3edeb%22%7d",
+                "conferenceId": "438824583",
+                "tollNumber": "+1 213-279-1007"
+            }    
+        }
+        ```
+
+    </details>
+
+3. **Get chat thread ID**: Use `joinWebUrl` to get the chat's thread ID.
+
+    Use the following example to request the thread ID:
+
+    ``` http
+    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
+    ```
+
+    The response payload contains the `threadID` member in the `chatInfo` property.
+    <br>
+    <details>
+    <summary><b>Example</b>: Response payload with thread ID</summary>
+    
+    ```json
+    {
+        "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
+        "value": [
+            {
+                "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
+                "creationDateTime": "2022-04-26T07:41:17.3736455Z",
+                "startDateTime": "2022-04-26T10:30:00Z",
+                "endDateTime": "2022-04-26T11:00:00Z",
+                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
+                "chatInfo": {
+                    "threadId": "19:meeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2@thread.v2",
+                    "messageId": "0",
+                    "replyChainMessageId": null
+                }
+            }
+        ]
+    }
+    ```
+    </details>
+
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
+    
+    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
+
+5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) for obtaining meeting and ID and organizer ID.
 
 #### Obtain meeting details using tenant-level notification
 
@@ -337,129 +460,6 @@ VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
     - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
 
     The response payload will contain the transcripts in .vtt format.
-
-#### Obtain meeting details using user-level notification
-
-Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
-
-For subscribing your app to tenant-level notifications, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
-
-Use the following example to subscribe to user-level notifications.
-
-```http
-    
-POST https://graph.microsoft.com/beta/subscriptions/
-{
-    "changeType": "created,updated,deleted",
-    "notificationUrl": "https://tgsrelaynandanmankad.servicebus.windows.net/notifynandanmankadpc/notifications",
-    "resource": "users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events",
-    "expirationDateTime": "2022-05-05T14:58:56.7951795+00:00",
-    "clientState": "ClientSecret",
-    "includeResourceData": false
-}
-```
-
-When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for to retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, following the steps for obtaining meeting ID and organizer ID as given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification).
-
-To obtain meeting ID and organizer ID with user-level notification:
-
-1. **Get event ID**: Your app gets the `eventId` property from the notification payload.
-
-    <details>
-    <summary><b>Example</b>: Notification payload</summary>
-    
-    ```json
-    {
-        "subscriptionId": "ef30cdc6-b5ae-4702-b924-f458fd9e5fc3",
-        "changeType": "created",
-        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "clientState": "ClientSecret",
-        "subscriptionExpirationDateTime": "2022-05-05T07:54:53.1886542-07:00",
-        "resource": "Users/1273a016-201d-4f95-8083-1b7f99b3edeb/Events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",
-        "resourceData": {}
-    }
-    ```
-
-    In this example, the `eventID` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
-    </details>
-
-2. **Get meeting URL**: Use the event ID to retrieve the `joinUrl`. For more information, see [Get event](/graph/api/event-get.md).
-
-    Use the following example to request the meeting URL:
-
-    ```http
-    GET https://graph.microsoft.com/beta/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
-    ```
-
-    The response payload contains the  `joinUrl`.
-
-    <details>
-    <summary><b>Example</b>: Response payload for getting meeting URL</summary>
-    
-    ```json
-        {
-            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
-            "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
-            "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
-            "start": {
-                "dateTime": "2022-05-06T15:00:00.0000000",
-                "timeZone": "UTC"
-            },
-            "end": {
-                "dateTime": "2022-05-06T15:30:00.0000000",
-                "timeZone": "UTC"
-            },
-            
-            "onlineMeeting": {
-                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjExYzJiMTItZDY1MS00ZGZkLWE5YzQtZTBmNWI1MDg2M2Uw%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%221273a016-201d-4f95-8083-1b7f99b3edeb%22%7d",
-                "conferenceId": "438824583",
-                "tollNumber": "+1 213-279-1007"
-            }    
-        }
-        ```
-
-    </details>
-
-3. **Get chat thread ID**: Use `joinWebUrl` to get the chat's thread ID.
-
-    Use the following example to request the thread ID:
-
-    ``` http
-    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
-    ```
-
-    The response payload contains the `threadID` member in the `chatInfo` property.
-    <br>
-    <details>
-    <summary><b>Example</b>: Response payload with thread ID</summary>
-    
-    ```json
-    {
-        "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
-        "value": [
-            {
-                "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
-                "creationDateTime": "2022-04-26T07:41:17.3736455Z",
-                "startDateTime": "2022-04-26T10:30:00Z",
-                "endDateTime": "2022-04-26T11:00:00Z",
-                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                "chatInfo": {
-                    "threadId": "19:meeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2@thread.v2",
-                    "messageId": "0",
-                    "replyChainMessageId": null
-                }
-            }
-        ]
-    }
-    ```
-    </details>
-
-4. **Subscribe to chat messages**: Use chat ID to subscribe your app to chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
-    
-    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
-
-5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) for obtaining meeting and ID and organizer ID.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
