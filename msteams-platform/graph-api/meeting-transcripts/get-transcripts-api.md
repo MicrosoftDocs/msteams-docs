@@ -765,3 +765,8 @@ WEBVTT
 <v User Name>This is a transcript test.</v>
 ```
 </details>
+
+## See also
+
+- [Resource-specific consent](/graph-api/rsc/resource-specific-consent)
+- 
