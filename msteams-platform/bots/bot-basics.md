@@ -21,7 +21,7 @@ Teams activity handler is derived from Microsoft Bot Framework's activity handle
 When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
 
 > [!NOTE]
-> If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, by design it is an expected behavior that developers see duplicate requests in their bot.
+> If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, the expected behavior is that you'll see duplicate requests in your bot.
 
 # [C#](#tab/csharp)
 
