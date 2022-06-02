@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 plugins
-description: Learn Microsoft 365 plugins details
+description: In this module, learn about Microsoft 365 plugins details
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
