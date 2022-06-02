@@ -1,13 +1,13 @@
 ---
 title: Request device permissions for your Microsoft Teams app
-description: Learn how to update your app manifest and request access to native features involving user consent, location, QR code and barcode, image, audio, and video capabilities
+description: In this module, you'll learn how to update your app manifest and request access to native features involving user consent, location, QR code and more.
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
 
 # Request device permissions for your Microsoft Teams app
 
-You can enrich your Teams app with native device capabilities, such as camera, microphone, and location. This document guides you on how to request user consent and access the native device permissions.
+You can enrich your Tseams app with native device capabilities, such as camera, microphone, and location. This document guides you on how to request user consent and access the native device permissions.
 
 > [!NOTE]
 >
