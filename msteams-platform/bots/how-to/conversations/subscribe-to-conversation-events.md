@@ -1323,9 +1323,9 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the general channel is explicitly required, it can be referenced using team.id.
+Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
-The following image shows the app installation step where users select the channel where they intend to use the bot:
+In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the "Response" channel in the "Daves Demo" team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
