@@ -1,6 +1,6 @@
 ---
 title: Public developer preview for Microsoft Teams
-description: Describes the features in the Public Developer Preview of Microsoft Teams
+description: In this module, it describes the features in the Public Developer Preview of Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
