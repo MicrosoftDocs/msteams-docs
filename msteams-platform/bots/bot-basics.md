@@ -15,7 +15,7 @@ This document builds on the article on [how bots work](https://aka.ms/how-bots-w
 To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Microsoft Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
 > [!NOTE]
-> Teams sends retry request to bot endpoint, if the bot activity takes more than 15 seconds to process. Hence, by design it is an expected behavior that developers see duplicate requests in their bot.
+> Teams send a retry request to bot endpoint, if the bot activity takes more than 15 seconds to process. Hence, by design it is an expected behavior that developers see duplicate requests in their bot.
 
 ## Teams activity handlers
 
