@@ -46,7 +46,7 @@ The preview local appears as shown in the image:
 
 **To preview manifest file in remote environment**
 
-* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension or 
+* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension or
 * Trigger **Teams: Provision in the cloud** from command palette.
  
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
@@ -67,25 +67,25 @@ You can also preview manifest file in remote environment by following steps:
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-1. Deploy Teams app manifest
+1. Deploy Teams app manifest.
 
    You can deploy Teams app manifest in any of the following ways:
 
-   * Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu
+   * Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
 
-   * Trigger `Teams: Deploy Teams app manifest` from command palette
+   * Trigger `Teams: Deploy Teams app manifest` from command palette.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
 
-2. Update to Teams platform
+2. Update to Teams platform.
 
    You can update to Teams platform in any of the following ways:
 
-   * Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`
+   * Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`.
 
-   * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
+   * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
@@ -109,12 +109,11 @@ You can also trigger **Teams: Update manifest to Teams platform** from the comma
 
 If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
 
-* **Preview only**: Local manifest file is overwritten according to current configuration
-* **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform
-* **Cancel**: No action is taken
+* **Preview only**: Local manifest file is overwritten according to current configuration.
+* **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform.
+* **Cancel**: No action is taken.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
-
 
 ## Customize Teams app manifest
 
@@ -172,8 +171,8 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
-> [!NOTE] 
-> Provision the environment or execute local debug to generate values for placeholders. 
+> [!NOTE]
+> Provision the environment or execute local debug to generate values for placeholders.
 
 You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
@@ -182,7 +181,6 @@ You can navigate to state file or configuration file by selecting the codelens, 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
-
 
 ## See also
 
