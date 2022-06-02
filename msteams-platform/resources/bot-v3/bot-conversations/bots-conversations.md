@@ -1,6 +1,7 @@
 ---
 title: Send and receive messages with a bot
-description: In this module, learn how to send and receive messages with bots in Microsoft Teams
+description: In this module, learn to have a conversation with a Microsoft Teams bot, Proactive messages, Conversation basics, Message content and formatting
+
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 05/20/2019

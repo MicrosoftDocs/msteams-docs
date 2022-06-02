@@ -1,7 +1,7 @@
 ---
 title: Create a command menu for your bot
 author: surbhigupta
-description: In this module, learn how to create a command menu for your Microsoft Teams bot with Code samples.
+description: In this module, learn how to create and handle a command menu for your Microsoft Teams bot with Code samples.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear

@@ -1,7 +1,7 @@
 ---
 title: Bot activity handlers
 author: surbhigupta
-description: In this module, learn bot activity handlers in Teams and bot logic.
+description: In this module, learn bot activity handlers, Teams activity handlers and bot logic in Microsoft Teams 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear

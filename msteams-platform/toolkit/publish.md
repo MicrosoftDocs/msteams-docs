@@ -1,7 +1,7 @@
 ---
 title: Publish Teams apps using Teams Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to publish Teams apps using Teams Toolkit
+description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or sideload permission
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021

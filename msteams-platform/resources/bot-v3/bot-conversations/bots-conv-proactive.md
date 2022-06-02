@@ -1,6 +1,6 @@
 ---
 title:  Proactive messaging for bots
-description: In this module, learn how to use proactive messaging for bots in Microsoft Teams
+description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---

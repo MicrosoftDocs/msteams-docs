@@ -1,7 +1,7 @@
 ---
 title: Design your app with basic Fluent UI components
 author: heath-hamilton
-description: Learn about the primitive UI components commonly used to build Microsoft Teams apps and get the Microsoft Teams UI Kit. Learn about components, such as breadcrumbs, card, carousel, dropdown, coachmark, picker, pivot, toggle, tooltip, and more. 
+description: Learn about the primitive UI components commonly used to build Microsoft Teams apps and get the Microsoft Teams UI Kit.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference

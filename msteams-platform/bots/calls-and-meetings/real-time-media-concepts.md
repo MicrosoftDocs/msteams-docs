@@ -1,6 +1,6 @@
 ---
 title: Real-time media calls and online meetings with Microsoft Teams
-description: In this module, understand key concepts in building bot that can conduct real-time audio and video calls and online meetings. Learn about media sessions, frame rate, audio/video format, and reference to developer resources
+description: Learn key concepts in building bot that can conduct real-time audio and video calls and online meetings.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---

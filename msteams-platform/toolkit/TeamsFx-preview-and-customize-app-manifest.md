@@ -1,7 +1,7 @@
 ---
 title: Teams App Manifest in Teams Toolkit
 author: zyxiaoyuer
-description: Teams App Manifest
+description: In this module, learn how to edit, preview and customize Teams App Manifest in the different environment.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
@@ -27,8 +27,8 @@ You can preview manifest file in  local and remote environments.
 
 * [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
 * [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
- 
-### Preview manifest file in local environment
+
+## Preview manifest file in local environment
 
 To preview manifest file in local environment, you can press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under `build/appPackage` folder.
 
@@ -42,13 +42,13 @@ The preview local appears as shown in the image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
 
-### Preview manifest file in remote environment
+## Preview manifest file in remote environment
 
 **To preview manifest file in remote environment**
 
 * Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension or
 * Trigger **Teams: Provision in the cloud** from command palette.
- 
+
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
 You can also preview manifest file in remote environment by following steps:
@@ -107,7 +107,7 @@ You can also trigger **Teams: Update manifest to Teams platform** from the comma
 > [!NOTE]
 > The change updates to Dev Portal. Any manual updates in Dev Portal are overwritten.
 
-If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
+If the manifest file is outdated due to configuration file change or template change, select any one of the following actions:
 
 * **Preview only**: Local manifest file is overwritten according to current configuration.
 * **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform.
@@ -146,7 +146,7 @@ The following list provides supported placeholders in `manifest.template.json`:
      }
      ```
 
-2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
+2. You can navigate to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
 
 ### Validate manifest
 

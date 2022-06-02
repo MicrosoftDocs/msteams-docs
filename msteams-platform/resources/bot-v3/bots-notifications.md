@@ -1,6 +1,6 @@
 ---
 title: Handle bot events
-description: In this module, learn how to handle events in bots for Microsoft Teams
+description: In this module, learn how to handle events in bots for Microsoft Teams, Teams member or bot addition, Team member or bot removed and more
 ms.date: 05/20/2019
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -21,7 +21,7 @@ Microsoft Teams sends notifications to your bot for changes or events that happe
 
 Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Teams and group events, triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
+Teams and group events, triggered off the `conversationUpdate` type, have more Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and more event-specific metadata.
 
 The following table lists the events that your bot can receive and take action on.
 

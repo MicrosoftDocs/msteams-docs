@@ -1,7 +1,7 @@
 ---
 title: Customize your Teams app
 author: heath-hamilton
-description: In this module, understand how Teams admins can customize your Teams app for their org.
+description: In this module, understand how Teams admins can customize your Teams app for their org and hide Teams app until admin approves.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview

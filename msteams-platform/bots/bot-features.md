@@ -1,7 +1,7 @@
 ---
 title: Bots and SDKs
 author: surbhigupta
-description: In this module, learn tools and SDKs for building Microsoft Teams bots.
+description: In this module, learn tools and SDKs for building Microsoft Teams bots and Bots with the Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear

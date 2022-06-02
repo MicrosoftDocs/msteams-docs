@@ -1,6 +1,6 @@
 ---
 title: Get started with App Studio for Microsoft Teams
-description: In this module, learn how to build and manage your apps in Microsoft Teams using App Studio
+description: In this module, learn how to build and manage your apps with app studio for Microsoft Teams and installing app studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ---

@@ -1,6 +1,6 @@
 ---
 title: Test and debug your bot
-description: In this module, learn how to test bots in Microsoft Teams
+description: In this module, learn how to test and debug your bots in Microsoft Teams and Test your bot without uploading to Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
@@ -63,7 +63,7 @@ Your bot will receive the `conversationUpdate` event just like bots added to a t
 
 ## Blocking a bot in personal chat
 
-Note that users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user won't receive those messages.
+Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user won't receive those messages.
 
   :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blocking a bot"border="true":::
 
@@ -79,7 +79,7 @@ To stop your bot receiving messages, go to your Bot Dashboard and edit the Micro
 
 ## Deleting a bot from Teams
 
-To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. Note that this doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
+To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. This doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
 
 ## Removing your bot from AppSource
 

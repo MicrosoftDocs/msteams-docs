@@ -1,6 +1,6 @@
 ---
 title: Designing your message extension
-description: Learn how to design a Teams message extension and get the Microsoft Teams UI Kit.
+description: In this module, learn how to design a Microsoft Teams message extension and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta

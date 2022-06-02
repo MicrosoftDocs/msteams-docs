@@ -1,7 +1,7 @@
 ---
 title: Connect to existing APIs
 author: MuyangAmigo
-description: In this module, learn how to add API connection to Teams app
+description: In this module, learn how to add API connection to Teams app, advantages, how to connect to the API and more
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview

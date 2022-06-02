@@ -1,7 +1,7 @@
 ---
 title: Prerequisites
 author: surbhigupta
-description: In this module, learn the requirements for every tab in Microsoft Teams must adhere.
+description: In this module, learn the requirements for every tab in Microsoft Teams must adhere and Tools to build tabs.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar

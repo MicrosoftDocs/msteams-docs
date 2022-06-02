@@ -1,6 +1,6 @@
 ---
 title: Combine bots with tabs
-description: In this module, learn how to use tabs and bots together
+description: In this module, learn how to use tabs and bots together, constructing deep links to tabs in messages from your bot and more
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018

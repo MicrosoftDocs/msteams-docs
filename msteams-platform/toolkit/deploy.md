@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description:  In this module, learn how to deploy app to the cloud, Azure, or SharePoint
+description:  In this module, learn how to deploy app to the cloud, Azure, or SharePoint and deploy Teams apps using Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

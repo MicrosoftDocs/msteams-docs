@@ -1,6 +1,6 @@
 ---
 title: Designing your bot
-description: Learn how to design and add a Teams bot and its use cases, and get the Microsoft Teams UI Kit.
+description: In this module, learn how to design and add a Teams bot and its use cases, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high

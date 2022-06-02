@@ -1,6 +1,6 @@
 ---
 title: Using cards in bots
-description: In this module, learn cards and how they're used in bot messages
+description: With this learning path, get started with cards and how they're used in bot messages in the Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 03/29/2018

@@ -1,7 +1,7 @@
 ---
 title: Get Teams specific context for your bot
 author: surbhigupta
-description: In this module, learn how to get Microsoft Team's specific context for your bot, including the conversation roster, single member or team's details, channel list, code samples.
+description: Learn how to get Teams specific context for your bot, including the conversation roster, single member or team's details, channel list, code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar

@@ -1,7 +1,7 @@
 ---
 title: Collaborate on TeamsFx Project using Teams Toolkit
 author: yanjiang
-description: In this module, learn how to collaborate on TeamsFx Project using Teams Toolkit
+description: In this module, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview

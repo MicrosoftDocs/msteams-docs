@@ -1,7 +1,7 @@
 ---
 title: Create a content page
 author: surbhigupta
-description: In this module, learn how to create a content page
+description: In this module, learn how to create a content page for your tab and tab content and design guidelines
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar

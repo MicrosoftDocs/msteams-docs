@@ -1,6 +1,6 @@
 ---
 title: Supported text formatting in conversations
-description: In this module, learn text formatting support in bot conversations
+description: In this module, learn text formatting support in bot conversations and formatting text content in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018

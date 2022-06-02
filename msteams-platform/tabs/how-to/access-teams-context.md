@@ -1,6 +1,6 @@
 ---
 title: Get context for your tab
-description: In this module, learn how to get user context to your tabs
+description: In this module, learn how to get user context to your tabs, user context and Access context information
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
