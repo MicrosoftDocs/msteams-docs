@@ -381,21 +381,26 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
      You can select **Close** or switch chat to dismiss the message.
 
-     You can also choose not to display the success message by setting the attribute `hide` to `true`. Following is an example:
+     You can also choose not to display the success message by setting the attribute `hide` to `true` in `msTeams` `feedback` property. Following is an example:
     
      ```json
-        {
-          "type": "Action.Submit",
-          "title": "button title",
-          "data": {},
-          "msTeams": {
-            "feedback": {
-              "hide": true, 
-             } 
-          }
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
         } 
      ```
-
     
 **Response on mobile**:
 
