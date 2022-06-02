@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without SSO authentication. With Single sign-on (SSO) authentication methods, a users don't need to sign-in to the bot multiple times.
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without Single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign-in to the bot multiple times.
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -43,6 +43,46 @@ items:
 
       > [!TIP]
       > Ensure the Microsoft Teams account isn't a guest account.
+
+    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app  
+
+    ## Set up your Teams development tenant
+
+       A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+
+    ### Check for sideloading option
+
+       After creating the app, you must load your app in Teams without disturbing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+
+       > [!NOTE]
+       > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+
+       Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    To verify sideload apps in Teams:
+
+    1. In the Teams client, select **Store**.
+    1. Select **Manage your apps**.
+    1. Select **Publish an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+        > [!NOTE]
+        > Contact Teams administrator, if you don't have the option to upload a custom app.
+
+    ### Create a free Teams developer tenant (optional)
+
+        If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. Select **Set up E5 subscription** from the welcome screen.
+    1. Set up administrator account. After you finish, the following screen displays.
+
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+
+    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -77,7 +117,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
 
-       Create an Azure Bot page appears:
+       Create an Azure Bot page appears.
 
         :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Azure bot page" border="true":::
 
@@ -89,7 +129,7 @@ items:
 
         1. Select your **Subscription** from the dropdown list.
     
-        1. Select your **Resource group** from the dropdown list and it is a collection of resources that share the same lifecycle, permissions and policies.
+        1. Select your **Resource group** from the dropdown list that you want to provision for your bot app.
         
          
            You can also create a new resource group by the following steps:
@@ -288,7 +328,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Expose an API" border="true":::
 
-       Add a scope panel appears:
+       Add a scope panel appears.
 
     1. Enter the details for configuring scope.    
 
@@ -325,16 +365,16 @@ items:
 
         :::image type="content" source="~/assets/images/bots/addaclientapplication.png" alt-text="Add a Client Application" border="true":::
 
-       Add a client application panel appears:
+       Add a client application panel appears.
 
-    1. Enter the Client ID for desktop and web application separately that you want to authorize. It is a application ID of the client application that you want to authorize.
+    1. Enter the Client ID for desktop and web application separately that you want to authorize. It is the application ID of client application that you want to authorize.
+       
+       |**Client ID**|**For authorizing**|
+       |--------|-------------|
+       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
 
     1. Select **Authorized scopes** to determine which type of token will be returned by the service.
-
-        |**Use Client ID**|**For authorizing**|
-        |--------|-------------|
-        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
 
         :::image type="content" source="~/assets/images/bots/add-desktop-app.png" alt-text="Add client application to app" border="true":::
        
@@ -409,6 +449,8 @@ items:
     1. Select **Save**.
 
     1. Select **Apply**.
+
+       You have now configured SSO for your bot.
 
 - title: Configure and run your bot sample
   durationInMinutes: 1
@@ -503,13 +545,19 @@ items:
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to **sign-out**.
 
-    1. Send a message to the bot. The conversation bot asks for concern for the first time.
+    1. Send a message to the bot. The conversation bot asks for consent for the first time.
 
-    1. Select **Continue** to accept the permissions.
+    1. Select **Continue** to give permissions to Teams client for accessing the bot.
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Permissions to bot" border="true":::
+        
+        > [!NOTE]
+        > Now you have configured SSO with your bot app and this is the only time you will have to give consent.
 
-    1. Select **Accept** for **Permissions requested** in mobile.
+    1. For mobile device, select **Accept** for **Permissions requested**.
+
+        > [!NOTE]
+        > Now you have configured SSO with your bot app in mobile and this is the only time you will have to give consent.
 
         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Mobile signed in to bot" border="true":::
 
