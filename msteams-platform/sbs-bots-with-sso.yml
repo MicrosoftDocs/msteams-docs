@@ -127,7 +127,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/gotoresource.png" alt-text="Resource" border="true":::
 
-       Your Azure bot is created and you can see the Resource group and Subscription ID in the Azure bot.
+       Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
          :::image type="content" source="~/assets/images/bots/Azurebotresource.png" alt-text="Azure bot resource created" border="true":::
 
@@ -483,13 +483,13 @@ items:
 
         :::image type="content" source="~/assets/images/bots/manifest.png" alt-text="Manifest" border="true":::
 
-    1. Go to Teams client
-    1. Select **Store**
+    1. Go to Teams client.
+    1. Select **Store**.
     1. Select **Manage your apps**.
 
         :::image type="content" source="~/assets/images/bots/manage-your-app.png" alt-text="Manage your app" border="true":::
 
-    1. Select **Upload a custom app** 
+    1. Select **Upload a custom app**.
     
         :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Upload custom app" border="true":::
 
