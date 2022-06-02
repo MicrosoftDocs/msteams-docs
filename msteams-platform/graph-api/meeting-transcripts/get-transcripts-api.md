@@ -468,22 +468,19 @@ Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 > [!NOTE]
 > The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
 
+For more information, see [Meeting apps API references](/apps-in-teams-meetings/api-references.md).
+
 To obtain meeting ID and organizer ID from a bot app:
 
-1. **Meeting URL**: The bot app can get the URL for joining the meeting call that is used to get the meeting ID eventually. The organizer ID is also a part of the response payload.
+1. **Meeting URL**: The bot app can get the URL for joining the meeting, which is used to get the meeting ID eventually.
 
-    Use the following example to request meeting details:
+    Use the following example to request meeting URL:
 
     ```json
     GET /v1/meetings/{meetingId}
     ```
 
-    The response payload contains the following:
-    
-    - **Organizer ID**: It's contained in the `id` member of the `organizer` property of response payload.
-    - **URL for meeting call**: This URL is used to retrieve the meeting ID. It's contained in the 'joinUrl' member of the `details` property.
-
-    For more information, see [Meeting apps API references](/apps-in-teams-meetings/api-references.md).
+    The response payload contains the URL for meeting call in the `joinUrl` member of the `details` property.
 
     <details>
     <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
@@ -517,6 +514,64 @@ To obtain meeting ID and organizer ID from a bot app:
 
     </details>
 
+2. **Get meeting ID and organizer ID**: Use `joinUrl` to get the meeting ID.
+
+    Use the following example to request the online meeting ID using the URL:
+
+    ```http
+    GET https://graph.microsoft.com/beta/me/onlineMeetings?$filter=joinUrl%20eq%20'https%3A%2F%2Fteams.microsoft.com%2Fl%2Fmeetup-join%2F19%253ameeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2%2540thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522909c6581-5130-43e9-88f3-fcb3582cde37%2522%252c%2522Oid%2522%253a%2522dc17674c-81d9-4adb-bfb2-8f6a442e4622%2522%257d'
+    ```
+
+    The response payload contains:
+    - Meeting ID in  `value` > `id`.
+    - Organizer ID in `participants` > `organizer` > `identity` > `user` > `id`.
+    <br>
+    <details>
+    <summary><b>Example</b>: Response payload with meeting ID</summary>
+    
+    ```json
+    {
+    "value": [
+        {
+            "id": "dc17674c-81d9-4adb-bfb2-8f6a442e4622_19:meeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2@thread.v2",
+            "creationDateTime": "2020-09-29T22:35:33.1594516Z",
+            "startDateTime": "2020-09-29T22:35:31.389759Z",
+            "endDateTime": "2020-09-29T23:35:31.389759Z",
+            "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2%40thread.v2/0?context=%7b%22Tid%22%3a%22909c6581-5130-43e9-88f3-fcb3582cde37%22%2c%22Oid%22%3a%22dc17674c-81d9-4adb-bfb2-8f6a442e4622%22%7d",
+            "subject": null,
+            "autoAdmittedUsers": "EveryoneInCompany",
+            "isEntryExitAnnounced": true,
+            "allowedPresenters": "everyone",
+            "allowMeetingChat": "enabled",
+            "allowTeamworkReactions": true,
+            "videoTeleconferenceId": "(redacted)",
+            "participants": {
+                "organizer": {
+                    "upn": "(redacted)",
+                    "role": "presenter",
+                    "identity": {
+                        "user": {
+                            "id": "dc17674c-81d9-4adb-bfb2-8f6a442e4622",
+                            "displayName": null,
+                            "tenantId": "909c6581-5130-43e9-88f3-fcb3582cde38",
+                            "identityProvider": "AAD"
+                        }
+                    }
+                },
+                "attendees": [],
+                "producers": [],
+                "contributors": []
+            },
+            "lobbyBypassSettings": {
+                "scope": "organization",
+                "isDialInBypassEnabled": false
+            }
+        }
+    ]
+    }
+    ```
+    
+    </details>
 
 ## Use Graph APIs to fetch transcript
 
