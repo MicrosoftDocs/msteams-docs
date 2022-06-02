@@ -12,7 +12,7 @@ ms.author: anclear
 
 ## Identify the user
 
-Every request to your services includes the user ID, the user's display name, and Azure Active Directory object ID.
+Every request to your services include the user ID, the user's display name, and Azure Active Directory object ID.
 
 ```json
 "from": {
@@ -36,7 +36,7 @@ The sequence is as follows:
 1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
 1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
 
-Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user doesn't try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify the authentication code received in step 6 matches the one from step 5. It ensures that a malicious user doesn't try to spoof or compromise the sign in flow. It effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign in action
 
@@ -76,7 +76,7 @@ As with other embedded experiences running inside Microsoft Teams, your code ins
 
 When the sign in request completes and redirects back to your page, it must perform the following steps:
 
-1. Generate a security code, a random number. You must cache this code on your service, along with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
+1. Generate a security code, a random number. You must cache this code on your service, with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
 1. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
 At this point, the window closes and the control is passed to the Teams client. The client now reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
