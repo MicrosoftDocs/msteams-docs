@@ -1,7 +1,7 @@
 ---
 title: TeamsFX multiple environments in Teams Toolkit
 author: MuyangAmigo
-description:  About TeamsFX multi environment
+description: In this module, learn about TeamsFX multi environment
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment

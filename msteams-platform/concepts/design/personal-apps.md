@@ -5,7 +5,6 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: ui kit personal app webview navigation bot tab iframe dashboard form template
 --- 
 # Designing your personal app for Microsoft Teams
 

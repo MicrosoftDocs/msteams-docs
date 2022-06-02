@@ -1,9 +1,8 @@
 ---
 title: Get context for your tab
-description: Describes how to get user context to your tabs
+description: In this module, learn how to get user context to your tabs
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams tabs user context
 ---
 
 # Get context for your tab

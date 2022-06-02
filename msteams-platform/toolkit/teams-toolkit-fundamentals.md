@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
+description: In this moduile, learn Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

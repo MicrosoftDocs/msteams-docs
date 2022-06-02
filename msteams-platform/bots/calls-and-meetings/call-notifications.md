@@ -1,9 +1,8 @@
 ---
 title: Incoming call notifications
-description: Learn about detailed technical information on handling notifications from incoming calls, redirecting and authenticating calls using code samples
+description: In this module, learn about detailed technical information on handling notifications from incoming calls, redirecting and authenticating calls using code samples
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
 ---
 

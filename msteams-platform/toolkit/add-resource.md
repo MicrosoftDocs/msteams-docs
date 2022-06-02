@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description:  Describes Add Resources of Teams Toolkit
+description:  In this module, learn how to add Resources of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

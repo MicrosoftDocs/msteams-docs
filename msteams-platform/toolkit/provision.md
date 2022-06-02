@@ -1,7 +1,7 @@
 ---
 title: Use Teams Toolkit to provision cloud resources
 author: MuyangAmigo
-description: Provision cloud resources
+description: In this module, learn how to do provision cloud resources using Teams Toolkit
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview

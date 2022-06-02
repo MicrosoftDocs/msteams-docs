@@ -1,8 +1,7 @@
 ---
 title: Create a content page
 author: surbhigupta
-description: how to create a content page
-keywords: teams tabs group channel configurable static
+description: In this module, learn how to create a content page
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar

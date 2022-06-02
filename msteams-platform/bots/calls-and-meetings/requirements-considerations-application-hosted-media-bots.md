@@ -1,9 +1,8 @@
 ---
 title: Requirements and considerations for application-hosted media bots
-description: Understand important requirements and considerations, and scalability and performance considerations related to creating application-hosted media bots for Microsoft Teams using code example and samples. 
+description: In this module, understand important requirements and considerations, and scalability and performance considerations related to creating application-hosted media bots for Teams using code example and samples. 
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: application-hosted media Windows server Azure VM
 ms.date: 11/16/2018
 ---
 

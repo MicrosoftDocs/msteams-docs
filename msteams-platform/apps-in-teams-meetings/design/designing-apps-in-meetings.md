@@ -5,7 +5,6 @@ description: Learn how to design apps in Teams meetings and get the Microsoft Te
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI kit template in-meeting responsive behavior shared meeting stage
 ---
 # Designing your Microsoft Teams meeting extension
 

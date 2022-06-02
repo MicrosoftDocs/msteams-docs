@@ -1,10 +1,9 @@
 ---
 title: Messages in bot conversations
-description: Describes ways to have a conversation with a Microsoft Teams bot. Learn about Teams channel data, notification to your message, picture messages, adaptive cards using Code samples.
+description: In this module, learn ways to have a conversation with a Microsoft Teams bot. Learn about Teams channel data, notification to your message, picture messages, adaptive cards using Code samples.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
 ---
 
 # Messages in bot conversations

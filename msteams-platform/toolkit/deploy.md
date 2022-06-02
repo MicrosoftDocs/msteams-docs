@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description:  Deploy app to the cloud, Azure, or SharePoint
+description:  In this module, learn how to deploy app to the cloud, Azure, or SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

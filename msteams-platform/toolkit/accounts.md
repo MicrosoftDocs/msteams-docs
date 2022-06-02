@@ -1,7 +1,7 @@
 ---
 title: Prepare accounts to build Teams apps
 author: zyxiaoyuer
-description:  Prepare accounts to build Teams apps
+description: In this module, Learn how to prepare accounts to build Teams apps
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview

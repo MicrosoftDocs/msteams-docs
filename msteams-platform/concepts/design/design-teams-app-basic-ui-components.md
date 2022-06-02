@@ -5,7 +5,6 @@ description: Learn about the primitive UI components commonly used to build Micr
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-keywords: UI components fluent kit breadcrumb button card carousel dropdown coachmark picker pivot toggle tooltip
 ---
 # Designing your Microsoft Teams app with basic Fluent UI components
 

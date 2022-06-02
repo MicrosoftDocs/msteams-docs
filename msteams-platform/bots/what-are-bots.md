@@ -1,7 +1,7 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: An overview of bots in Microsoft Teams.
+description: In this module, learn bots in Microsoft Teams and it's code samples.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear

@@ -1,7 +1,7 @@
 ---
 title: TeamsFx SDK
 author: MuyangAmigo
-description:  About TeamsFx SDK
+description: In this module, learn about TeamsFx SDK and its core concepts and code structure
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview

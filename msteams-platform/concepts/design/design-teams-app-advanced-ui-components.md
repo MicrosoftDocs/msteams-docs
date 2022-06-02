@@ -1,7 +1,7 @@
 ---
 title: Design your app with advanced UI components
 author: heath-hamilton
-description: Learn about the Teams UI components, such as Breadcrumbs, Notification bar, Stage view along with relevant use cases. 
+description: In this module, learn about the Teams UI components, such as Breadcrumbs, Notification bar, Stage view along with relevant use cases. 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference

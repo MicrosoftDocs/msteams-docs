@@ -1,11 +1,10 @@
 ---
 title: Bot activity handlers
 author: surbhigupta
-description: Understand the bot activity handlers in Teams.
+description: In this module, learn bot activity handlers in Teams and bot logic.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: activity handler framework bot card consent channel event
 ---
 
 # Bot activity handlers

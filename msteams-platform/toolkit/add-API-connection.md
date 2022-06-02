@@ -1,7 +1,7 @@
 ---
 title: Connect to existing APIs
 author: MuyangAmigo
-description:  Describes connection to existing APIs
+description: In this module, learn how to add API connection to Teams app
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
@@ -75,7 +75,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
+   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot--alias example --user-name exampleuser --interactive false|
    |API Key|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
@@ -89,7 +89,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
-3. Add environment variables to `.env.teamsfx.local`. They are the configurations for the selected authentication type. The generated code reads values from the environment variables.
+3. Add environment variables to `.env.teamsfx.local`. They're the configurations for the selected authentication type. The generated code reads values from the environment variables.
 
 ## Test API connection in local environment
 

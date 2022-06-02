@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: An overview of messaging extensions on the Microsoft Teams platform
+description: In this module, learn messaging extensions on the Microsoft Teams platform
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear

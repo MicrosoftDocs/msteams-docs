@@ -1,11 +1,10 @@
 ---
 title: Design your app - Understand the app structure
-description: Understand what you can and can't customize in Microsoft Teams when designing your app.
+description: Learn what you can and can't customize in Microsoft Teams when designing your app structure.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: wireframe channel chat meeting message extensions mobile desktop
 --- 
 # Understand the Microsoft Teams app structure
 

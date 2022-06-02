@@ -1,7 +1,7 @@
 ---
 title: Receive all channel messages with RSC
 author: surbhigupta12
-description: Receive all channel messages with RSC permissions
+description: In this module, learn how to receive all channel messages with RSC permissions
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---

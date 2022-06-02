@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Command Line Interface
 author: MuyangAmigo
-description:  Describes TeamsFx Command Line Interface
+description: In this module, learn TeamsFx Command Line Interface
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -100,7 +100,7 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 ## `teamsfx add`
 
-The following table lists diffetent features to your Teams application along with their descrition.
+The following table lists different features to your Teams application along with their descrition.
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -120,12 +120,12 @@ The following table lists diffetent features to your Teams application along wit
 
 ## `teamsfx account`
 
-The following table lists the cloud service accounts,such as Azure and Microsoft 365.
+The following table lists the cloud service accounts, such as Azure and Microsoft 365.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are M365 or Azure. |
-| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are M365 or Azure. |
+| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsfx account set --subscription` | Update account settings to set a subscription ID. |
 
 ## `teamsfx env`
@@ -160,7 +160,7 @@ Provision the cloud resources in the current application.
 |`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
 |`--resource-group`| No | Set the name of an existing resource group. |
-|`--sql-admin-name`| No | Applicable when there is SQL resource in the project. Admin name of SQL.|
+|`--sql-admin-name`| No | Applicable when there's SQL resource in the project. Admin name of SQL.|
 |`--sql-password`| No| Applicable when there is SQL resource in the project. Admin password of SQL.|
 
 ## `teamsfx deploy`
@@ -172,9 +172,9 @@ This command is used to deploy the current application. By default it deploys en
 | Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
-|`--open-api-document`| No | Applicable when there is APIM resource in the project. The open API document file path. |
-|`--api-prefix`| No | Applicable when there is APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
-|`--api-version`| No | Applicable when there is APIM resource in the project. The API version. |
+|`--open-api-document`| No | Applicable when there's APIM resource in the project. The open API document file path. |
+|`--api-prefix`| No | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
+|`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
 |`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
 |`--include-aad-manifest`| No | Whether to deploy aad manifest. Options are `yes` and `not`. The default value is `no`. |
 
@@ -272,7 +272,7 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 * Disable environment checker
 
-  There are three configuration to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the   configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
+  There are three configurations to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the   configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
 
   * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
   * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
@@ -373,7 +373,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * To login to Microsoft 365 account and Azure account:
+    * To log in to Microsoft 365 account and Azure account:
 
       ```bash
       teamsfx account login azure
@@ -407,13 +407,13 @@ The following list provides required permissions for `TeamsFx` projects:
   * As a Project Collaborator:
 
     * Clone the project from GitHub.
-    * Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
+    * Log in to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
 
       ```bash
       teamsfx account login Microsoft 365
       ```
 
-    * Login to Azure account with contributor permission for all Azure resources.
+    * Log in to Azure account with contributor permission for all Azure resources.
 
       ```bash
       teamsfx account login azure
