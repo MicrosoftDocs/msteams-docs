@@ -22,7 +22,7 @@ If you have a Visual Studio Enterprise or Professional subscription, both progra
 
 ### Microsoft 365 developer program
 
-To get a free Teams developer account, join the Microsoft 365 developer program and perform the following steps:
+To get a free Teams developer account, join the Microsoft 365 developer program and follow the steps:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
