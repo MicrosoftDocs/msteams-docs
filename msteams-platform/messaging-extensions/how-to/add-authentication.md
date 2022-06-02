@@ -12,7 +12,7 @@ ms.author: anclear
 
 ## Identify the user
 
-Every request to your services include the user ID, the user's display name, and Azure Active Directory object ID.
+Every request to your services includes the user ID, the user's display name, and Azure Active Directory object ID.
 
 ```json
 "from": {
