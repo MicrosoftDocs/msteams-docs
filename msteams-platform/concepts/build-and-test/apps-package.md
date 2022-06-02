@@ -1,6 +1,6 @@
 ---
 title: Package your app
-description: Learn how to package your Microsoft Teams app for testing, uploading, and store publishing.
+description: In this module, learn how to package your Microsoft Teams app for testing, uploading, and store publishing.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---

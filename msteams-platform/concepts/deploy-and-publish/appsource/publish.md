@@ -1,6 +1,6 @@
 ---
 title: Overview - Publish your app to the Microsoft Teams store
-description: Describes the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
+description: Learn the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
