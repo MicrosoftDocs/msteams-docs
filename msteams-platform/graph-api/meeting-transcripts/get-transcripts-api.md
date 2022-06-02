@@ -13,10 +13,8 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
-| You need to obtain transcripts for multiple meetings for capturing action items. Keeping track of all meetings, and retrieving them one at a time is time-consuming and inefficient. You might also miss getting content for any particular meeting. | If you configure your app to automatically fetch meeting transcript following a meeting, it can automatically capture the transcripts of all meetings that are relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting. |
-| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. | Using these APIs to fetch transcripts post-meeting takes off this burden. Participants can fully focus on the discussion. The content of the meeting transcript is available for post-meeting analysis and insights, without any need for participants taking notes, etc. |
-
-/ Add more relevant use cases /
+| You need to obtain transcripts for multiple meetings for capturing action items. Keeping track of all meetings, and retrieving them manually is time-consuming and inefficient. After the meeting is over, you'd need to examine conversations in multiple meetings to obtain meaningful information. | If you configure your app to fetch the meeting transcript automatically after a meeting, it fetches the transcripts from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting. This data can then be used to gain aggregated insights, highlights, and meeting summaries. |
+| Participants in a brainstorming meeting need to continually take notes and provide summary post discussion. It impedes the flow of thoughts and participants stand to lose useful ideas or suggestions. Post meeting, the organizer or one of the participants would need to analyze the discussion and bring out ideas, suggestions, or  | Using these APIs to fetch transcripts post-meeting frees the participants to fully focus on the discussion. The content of the meeting transcript is available for post-meeting engagement analysis, listing tasks or issues, and follow-up meetings and notifications. |
 
 To fetch the transcript for a particular meeting:
 
@@ -26,10 +24,7 @@ To fetch the transcript for a particular meeting:
 
 ## Configure permissions to access transcript
 
-Your app must have the required permissions for fetching transcripts. Your app can access and fetch transcripts for a Teams meeting in one of the two ways:
-
-- [Use classic permission](#use-classic-permissions)
-- [Use RSC permission](#use-rsc-permissions)
+Your app must have the required permissions for fetching transcripts. Your app can access and fetch transcripts for a Teams meeting using classic permissions or RSC permissions.
 
 ### Use classic permissions
 
@@ -186,9 +181,9 @@ To obtain meeting ID and organizer ID with tenant-level notification:
     The response payload contains the following:
     
     - **Organizer ID**: It's contained in the `id` member of the `organizer` property of response payload.
-    - **URL for meeting call**: Join meeting URL is used to retrieve the meeting ID later. It can be available in two scenarios:
+    - **URL for meeting call**: This URL is used to retrieve the meeting ID, and it's available in the response payload in one of the two scenarios:
         - If the meeting is an online Teams meeting, the `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL.
-        - If the meeting was not created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
+        - If the meeting was not created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Your app can use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
       
       For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
