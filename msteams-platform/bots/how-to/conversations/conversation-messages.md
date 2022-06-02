@@ -381,7 +381,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
      You can select **Close** or switch chat to dismiss the message.
 
-     You can also choose to not display the success message by setting the attribute `hide` to `false`. Following is an example:
+     You can also choose not to display the success message by setting the attribute `hide` to `true`. Following is an example:
     
      ```json
         {
@@ -390,14 +390,13 @@ Form completion message appears in Adaptive Cards while sending a response to th
           "data": {},
           "msTeams": {
             "feedback": {
-              "hide": true | false, 
-              "text": string,       // in the future maybe       
-              // .. other customized fields     
-            } 
+              "hide": true, 
+             } 
           }
         } 
      ```
 
+    
 **Response on mobile**:
 
 The error message appears at the bottom of the Adaptive Card.
