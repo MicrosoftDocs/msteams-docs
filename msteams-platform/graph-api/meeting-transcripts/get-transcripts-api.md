@@ -769,4 +769,3 @@ WEBVTT
 ## See also
 
 - [Resource-specific consent](/graph-api/rsc/resource-specific-consent)
-- 
