@@ -1,6 +1,6 @@
 ---
 title: Publish Teams apps for Microsoft 365
-description: Make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office
+description: In this learning path, you'll learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office.
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
