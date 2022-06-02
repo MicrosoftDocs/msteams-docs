@@ -121,7 +121,7 @@ To authenticate the user as part of loading your page, see [authentication flow 
 #### `GetSettings` response properties
 
 >[!NOTE]
->The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-1.12.1).
 
 The following table provides the parameters and the details of `GetSetting` response properties:
 
