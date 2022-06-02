@@ -170,7 +170,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         ```
         </details>
 
-2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload. For more information, see [Get chat](/graph/api/chat-get.md).
+2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload. For more information, see [Get chat](/graph/api/chat-get.md).
 
     Use the following example to request chat entity based on the chat ID:
 
@@ -463,7 +463,60 @@ To obtain meeting ID and organizer ID with user-level notification:
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
-/ Add details /
+Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
+
+> [!NOTE]
+> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+
+To obtain meeting ID and organizer ID from a bot app:
+
+1. **Meeting URL**: The bot app can get the URL for joining the meeting call that is used to get the meeting ID eventually. The organizer ID is also a part of the response payload.
+
+    Use the following example to request meeting details:
+
+    ```json
+    GET /v1/meetings/{meetingId}
+    ```
+
+    The response payload contains the following:
+    
+    - **Organizer ID**: It's contained in the `id` member of the `organizer` property of response payload.
+    - **URL for meeting call**: This URL is used to retrieve the meeting ID. It's contained in the 'joinUrl' member of the `details` property.
+
+    For more information, see [Meeting apps API references](/apps-in-teams-meetings/api-references.md).
+
+    <details>
+    <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
+    
+    ```json
+    { 
+   "details": { 
+        "id": "meeting ID", 
+        "msGraphResourceId": "", 
+        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+        "joinUrl": "https://teams.microsoft.com/l/xx", 
+        "title": "All Hands", 
+        "type": "Scheduled" 
+    }, 
+    "conversation": { 
+            "isGroup": true, 
+            "conversationType": "groupchat", 
+            "id": "meeting chat ID" 
+    }, 
+    "organizer": { 
+        "id": "<organizer user ID>", 
+        "aadObjectId": "<AAD ID>", 
+        "tenantId": "<Tenant ID>" 
+    }
+    }
+    ```
+
+    > [!NOTE]
+    > The meeting ID contained in the `id` member of the `details` property is different from the id that your app needs to fetch transcripts. Use `joinUrl` to get the correct meeting ID for fetching transcripts.
+
+    </details>
+
 
 ## Use Graph APIs to fetch transcript
 
