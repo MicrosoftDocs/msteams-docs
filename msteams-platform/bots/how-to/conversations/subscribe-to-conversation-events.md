@@ -1325,7 +1325,7 @@ Use the `installationUpdate` event to send an introductory message from your bot
 
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
-In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the "Response" channel in the "Daves Demo" team.
+In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
