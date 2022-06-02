@@ -11,14 +11,14 @@ ms.date: 03/14/2022
 
 To create and upload a Teams app, you need to prepare the following accounts:
 
-* [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
+* [Microsoft 365 account with valid subscription](accounts.md#microsoft-365-account)
 * [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources)
 
 ## Microsoft 365 account
 
 To create a Microsoft 365 account, sign-up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 
-If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
+If you have a Visual Studio Enterprise or Professional subscription, both programs include free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
 ### Microsoft 365 developer program
 
@@ -39,15 +39,15 @@ You can sign-up for the developer program by using one of the following account 
 
 - **Microsoft account for personal use**
 
-    The Microsoft account provides you access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
+    The account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
 - **Microsoft work account for business**
 
-     This account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
+     The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
 
 - **Visual Studio user id**
 
-    The user ID created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
+    The user ID for Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
 ## Azure account to host backend resources
 
@@ -57,7 +57,7 @@ Azure account is optional if your existing application is hosted on other cloud 
 
 If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
-## Teams custom app upload or sideload permission
+## Upload custom app 
 
 > [!IMPORTANT]
 > After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
