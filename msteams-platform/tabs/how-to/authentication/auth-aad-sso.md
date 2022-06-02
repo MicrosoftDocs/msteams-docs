@@ -1,9 +1,8 @@
 ---
 title: Single sign-on support for tabs
-description: Describes single sign-on (SSO)
+description: In this module, learn single sign-on (SSO) support for tabs, how SSO works at runtime and develop an SSO Microsoft Teams tab
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
 ---
 
 # Single sign-on (SSO) support for tabs

@@ -1,8 +1,7 @@
 ---
 title: Types of cards
-description: Describes all the cards and card actions available to bots in Teams
+description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards
 ms.localizationpriority: high
-keywords: bots cards reference
 ms.topic: reference
 ---
 
