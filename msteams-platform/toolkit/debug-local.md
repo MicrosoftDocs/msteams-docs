@@ -97,22 +97,22 @@ Toolkit launches a new Edge or Chrome browser instance depending on your selecti
 <details>
 <summary><b>macOS</b></summary>
 
-1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug** in the activity bar
+1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug** in the activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists" border="false":::
 
-1. Select **Start Debugging (F5)** or  **Run** to run your Teams app in debug mode
+1. Select **Start Debugging (F5)** or  **Run** to run your Teams app in debug mode.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debug your app" border="false":::
 
-3. Select **Sign in** to Microsoft 365 account
+3. Select **Sign in** to Microsoft 365 account.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign into M365 account" border="true":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign in to your Microsoft 365 account using your credentials.
 
-4. Select **Install** to install the development certificate for localhost
+4. Select **Install** to install the development certificate for localhost.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate" border="true":::
 
@@ -123,10 +123,9 @@ Toolkit launches a new Edge or Chrome browser instance depending on your selecti
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
-Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client. 
+Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
 </details>
-
 
 #### 2. Debug your app
 
@@ -134,7 +133,7 @@ After the initial set up process, the Teams Toolkit starts the following process
 
 a. [Starts app services](#starts-app-services) </br>
 b. [Launches debuggers](#launches-debuggers)   </br>
-      c. [Sideloads the Teams app](#sideloads-the-teams-app)
+c. [Sideloads the Teams app](#sideloads-the-teams-app)
         
 #### Starts app services
 
@@ -189,9 +188,9 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <details>
 <summary><b>Use your bot endpoint</b></summary>
 
-1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**
+1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
 
-1. Set siteEndpoint configuration in `.fx/configs/config.local.json` to your endpoint
+1. Set siteEndpoint configuration in `.fx/configs/config.local.json` to your endpoint.
 
 ```json
 {
@@ -209,9 +208,9 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <details>
 <summary><b>Use your development certificate</b></summary>
 
-1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**
+1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
 
-1. Set `sslCertFile` and `sslKeyFile` configuration in `.fx/configs/config.local.json` to your certificate file path and key file path
+1. Set `sslCertFile` and `sslKeyFile` configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
 
 ```json
 {
@@ -229,11 +228,11 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <details>
 <summary><b>Use your start scripts to start app services</b></summary>
 
-1. For tab, update `dev:teamsfx` script in `tabs/package.json`
+1. For tab, update `dev:teamsfx` script in `tabs/package.json`.
 
-1. For bot or message extension, update `dev:teamsfx` script in `bot/package.json`
+1. For bot or message extension, update `dev:teamsfx` script in `bot/package.json`.
 
-1. For Azure Functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script
+1. For Azure Functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
 
    > [!NOTE]
    > Currently, the tab, bot, message extension apps, and Azure Functions ports don't support customization.
@@ -256,7 +255,7 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 
 Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, message extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
 
-1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
+1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`.
 
    ```json
    {
@@ -276,7 +275,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
    }
    ```
 
-2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
+2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json.
 
    ```json
    {
@@ -293,7 +292,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
    ```
 
 </details>
-
 
 ## Next step
 

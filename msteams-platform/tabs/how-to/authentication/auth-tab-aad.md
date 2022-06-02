@@ -10,7 +10,8 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 > [!Note]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
-There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and Teams. Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
+Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
 
@@ -100,16 +101,16 @@ After the user completes authorization, the user is redirected to the callback p
 
 ### Notes
 
-* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
+* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign in, which means the user might need to type less. Remember that you shouldn't use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
-* The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
-* It is not necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
+* The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback doesn't match the parameter you sent during the call, then the return call isn't verified and should be terminated.
+* It isn't necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
 
 ## The callback page
 
-In the last section you called the Azure AD authorization service and passed in user and app information so that Azure AD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Azure AD calls the  callback page that you provided (`/tab-auth/simple-end`).
+In the last section, you called the Azure AD authorization service and passed in user and app information so that Azure AD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Azure AD calls the  callback page that you provided (`/tab-auth/simple-end`).
 
-In this page you need to determine success or failure based on the information returned by Azure AD and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()`. If the login was successful you will have access to service resources.
+In this page, you need to determine success or failure based on the information returned by Azure AD and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()`. If the login was successful, you'll have access to service resources.
 
 ````javascript
 // Split the key-value pairs passed from Azure AD
@@ -148,7 +149,7 @@ This code parses the key-value pairs received from Azure AD in `window.location.
 `NotifyFailure()` has the following predefined failure reasons:
 
 * `CancelledByUser` the user closed the pop-up window before completing the authentication flow.
-* `FailedToOpenWindow` the pop-up window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
+* `FailedToOpenWindow` the pop-up window couldn't be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
 
 If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, it displays an error message.
 
@@ -159,7 +160,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
 > * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
 
-For more information on Single Sign-On (SSO) see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
+For more information on Single Sign-On (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## Code sample
 
