@@ -187,7 +187,7 @@ items:
 
     1. Reinstall the same app to get the `conversationUpdate` event.   
 
-    1. Select the [http://localhost:3978/api/notify](http://localhost:3978/api/notify) URL to get a proactive hello message in the Adaptive Card.     
+    1. Select the [`http://localhost:3978/api/notify`](`http://localhost:3978/api/notify`) URL to get a proactive hello message in the Adaptive Card.     
   
 - title: Complete challenge
   durationInMinutes: 3
