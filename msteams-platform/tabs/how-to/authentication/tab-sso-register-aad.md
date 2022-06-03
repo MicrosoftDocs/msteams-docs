@@ -15,23 +15,23 @@ Registering your tab app in Azure AD and enabling it for SSO requires making app
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app" border="false":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows the Microsoft Teams client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
 
-You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your app. Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
+You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
 
 User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 
+Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
+
 > [!NOTE]
-> The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
+> Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
 
 ### Before you register with Azure AD
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
 - **Single- or multi-tenant options**: Will your application be used in only the Microsoft 365 tenant where it is registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant; applications written by an independent software vendor and used by many customers need to be multi-tenant so each customer's tenant can access the application.
-- **App platform**: Note the platform where your app is available. For tab apps, you can choose from web or Single-page application (SPA) platform.
-<!--
-- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.-->
+- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
@@ -47,7 +47,7 @@ To create and configure your app in Azure AD for enabling SSO:
 
 ## Create an app registration in Azure AD
 
-Register a new app in Azure AD, and configure the tenancy and app's platform and URI options. You'll generate a new app ID that will be updated later in your Teams app manifest file.
+Register a new app in Azure AD, and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
 
 ### To register a new app in Azure AD
 
@@ -112,13 +112,13 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="true":::
 
-8. Note and save the **Application ID**. You'll need it for updating the Teams app manifest later.
+8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Azure AD. You should now have app ID for your tab app.
 
 ## Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trust client applications to enable SSO.
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you'll need:
 
@@ -169,7 +169,7 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     >    Use the lower case option *demoapplication* as base resource name.
 
-2. Select **Save**.
+1. Select **Save**.
 
     A message pops up on the browser stating that the application ID URI was updated.
 
@@ -178,6 +178,8 @@ To configure scope and authorize trusted client applications, you'll need:
     The application ID URI displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
+
+1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
 
 ### To configure API scope
 
@@ -220,20 +222,20 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application" border="true":::
 
-   | Use client ID | For authorizing... |
-   | --- | --- |
-   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
-   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-
     > [!NOTE]
-    > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
-<br>
-    > [!NOTE]
-    > For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
+    >
+    > - The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
+    > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
-1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
+    1. Choose one of the following client IDs:
+       | Use client ID | For authorizing... |
+       | --- | --- |
+       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+       | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
 
-1. Select **Add application**.
+    1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
+
+    1. Select **Add application**.
 
     A message pops up on the browser stating that the authorized client app was added.
 
