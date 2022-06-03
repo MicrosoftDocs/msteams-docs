@@ -32,7 +32,7 @@ items:
     To set up your development environment, install the following tools:
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
-    * [Ngrok](https://ngrok.com/) or an equivalent tunnelling solution
+    * [Ngrok](https://ngrok.com/) or an equivalent tunneling solution
     * Latest version of [Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download)
     * Microsoft Teams and a Teams account
@@ -73,12 +73,12 @@ items:
 
         To create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
 
-        :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create azure bot.":::
+        :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create Azure bot.":::
 
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
         > [!NOTE]
-        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you have already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
+        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
 
     1. Select **Review + create**.
 
@@ -207,7 +207,7 @@ items:
     1. Zip the contents of the **TeamsAppManifest** folder to create **manifest.zip**.
     
         > [!NOTE]
-        > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > The `manifest.zip` shouldn't contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Run your solution in Visual Studio and upload your manifest in your demo tenant for organization or your Teams account.
     
     **To run solution in Visual Studio**
