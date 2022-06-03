@@ -82,7 +82,7 @@ To manually add your message extension search command to your app manifest, you 
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
-You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
+You must add the details of the search parameter, that defines the text visible to your user in the Teams client. The default value of the parameters specified for messaging extension is ignored as you can't specify default search value in search bar.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
