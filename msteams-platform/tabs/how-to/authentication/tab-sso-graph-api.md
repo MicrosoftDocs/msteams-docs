@@ -201,8 +201,8 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 ## Known limitations
 
-Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
-  
+Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
+
 You can ask for consent using the Auth API. Another approach for getting Graph scopes is to present a consent dialog using our existing [third party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
 <details>
@@ -220,7 +220,6 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
 
 ## See also
 
-- [On-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
 - [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Get access for MS Graph](/graph/auth-v2-user)
 - [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)

@@ -86,22 +86,6 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
 
     > [!NOTE]
     > You don't need  to enter **Redirect URI** for enabling SSO for a tab app.
-    <!--
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
-
-    1. Select **Web** or **SPA** as the platform from where your app is accessible.
-    2. Enter the URL for your app.
-       After user authentication is successful, Azure AD sends the access token to this URL after successful authentication.
-       You can change this URL at a later stage, if needed.
-    <br>
-    <details>
-    <summary><b>Platform and redirect URI options</b></summary>
-
-    | Option | Select this to... |
-    | --- | --- |
-    | Web | Configure a redirect URI for your app where client app is redirected. It's also where Azure AD sends the access token. <br> Select this platform for standard web applications that run on a server. |
-    | Single-page application | Configure a redirect URI for a client-side web app by using JavaScript or a framework like Angular, Vue.js, React.js, or Blazor WebAssembly. |
-    </details>-->
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
@@ -281,8 +265,7 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 ## See also
 
 - [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
-- [App scopes](/azure/active-directory/develop/v2-permissions-and-consent.md#openid-connect-scopes)
-- [Get an access token with Graph permissions](/tabs/how-to/authentication/auth-aad-sso?tabs=dotnet#get-an-access-token-with-graph-permissions)
+- [Extend tab app with Microsoft Graph permissions and scope](tab-sso-graph-api.md)
 - [Quickstart - Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 - [Quickstart: Configure an application to expose a web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
