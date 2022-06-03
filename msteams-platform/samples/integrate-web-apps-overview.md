@@ -1,11 +1,10 @@
 ---
 title: Integrate web apps
 author: Rajeshwari-v
-description: An overview of integrating web applications and device capabilities with Microsoft Teams app.
+description: With this learning path, get started with integrating web applications and device capabilities with Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
 ---
 
 # Integrate web apps

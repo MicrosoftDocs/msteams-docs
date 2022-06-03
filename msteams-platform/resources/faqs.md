@@ -1,6 +1,6 @@
 ---
 title: Frequently asked questions
-description: Answers to some common questions
+description: With this learning module, fetch answers to some frequently asked questions while using the Moodle LMS. 
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta

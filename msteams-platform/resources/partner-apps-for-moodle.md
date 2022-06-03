@@ -1,6 +1,6 @@
 ---
 title: Partner apps for Moodle
-description: Introduction to partner apps
+description: In this module, learn partner apps for Moodle, key benefits of partner apps for Moodle, and mConnect
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
