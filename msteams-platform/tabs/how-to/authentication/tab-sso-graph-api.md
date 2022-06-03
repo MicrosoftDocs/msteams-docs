@@ -106,7 +106,7 @@ You can configure authentication for multiple platforms as long as the URL is un
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
 
     1. Enter the redirect URI. The URI should be unique.
-    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.
+    2. Enter the front-channel logout URL.
     3. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.
