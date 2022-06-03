@@ -228,7 +228,7 @@ Explore updates from the previous GA releases listed here.
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
 | 09/13/2019 | Request bot is installed from action-based message extension. | [Initiate actions with message extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | Support for private channels in tabs and Connectors. | [Get context for your tab](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 06/20/2019 | Share an external website, from an external website, into a Teams channel. | [Share to Teams](~/share-to-teams.md) |
+| 06/20/2019 | Share an external website, from an external website, into a Teams channel. | [Share to Teams](concepts/build-and-test/share-to-teams-overview.md). |
 | 05/25/2019 | Respond with bot message from task module. | [Respond with bot message from task module](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in group chats. | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | App manifest localization. | [App localization](~/publishing/apps-localization.md) |
