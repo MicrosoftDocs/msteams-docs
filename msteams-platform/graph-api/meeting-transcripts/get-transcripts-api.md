@@ -62,7 +62,7 @@ Next, you can configure your app to receive notifications for all relevant meeti
 
 ## Obtain meeting ID and organizer ID
 
-You can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID passed as parameters in the API.
+Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID passed as parameters in the API.
 
 To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
 
@@ -82,9 +82,9 @@ When your app is notified of a scheduled meeting, it can retrieve the meeting ID
 
 #### Obtain meeting details using user-level notification
 
-Choose to subscribe your app to user-level notifications. When a meeting is scheduled for a particular user, the notification is sent to your app. It can be done using calendar events as well.
+Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
-For subscribing your app to tenant-level notifications, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
+For subscribing your app to calendar events, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
 
 Use the following example to subscribe to user-level notifications.
 
@@ -103,7 +103,7 @@ POST https://graph.microsoft.com/beta/subscriptions/
 
 When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for to retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, following the steps for obtaining meeting ID and organizer ID as given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification).
 
-To obtain meeting ID and organizer ID with user-level notification:
+To obtain meeting ID and organizer ID from user-level notification:
 
 1. **Get event ID**: Your app gets the `eventId` property from the notification payload.
 
@@ -211,7 +211,7 @@ For subscribing your app to tenant-level notifications, see [Get change notifica
 
 When your app is notified about meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
-To obtain meeting ID and organizer ID with tenant-level notification:
+To obtain meeting ID and organizer ID from tenant-level notification:
 
 1. **Get chat ID**: Your app gets the `chatId` property from the notification to make subsequent calls. Your app can get the chat ID from the payloads of:
 
