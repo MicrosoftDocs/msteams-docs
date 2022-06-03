@@ -78,7 +78,7 @@ You can enable SSO in Teams for all apps that support Azure AD as an identity pr
 
 Some scenarios where you can use the SSO API to authenticate your app users are:
 
-- If you want to authenticate your app within a Teams tab app, the SSO API allows app users to use your app in Teams with no additional authentication needed. Based on the app user's Teams identity, you can obtain access token for them from Azure AD.
+- If you want to authenticate your app users within a Teams tab app, the SSO API allows app users to use your app in Teams with no additional authentication needed. Based on the app user's Teams identity, you can obtain access token for them from Azure AD.
 - If your app uses task module from within a bot, a tab, a message extension, or Adaptive Cards, then you can use the SSO API to authenticate your app users.
 - You can also use the SSO API for authenticating your app users who want to access to Stage view without need to be validated again.
 

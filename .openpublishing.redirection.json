@@ -733,12 +733,12 @@
         "redirect_url": "/msteams-platform/platform/sbs-gs-blazorupdate"
       },
       {
-        "source_path": "msteams-platform/platform/tabs/how-to/authentication/auth-aad-sso.md",
-        "redirect_url": "/msteams-platform/platform/tabs/how-to/tab-sso-overview"
-      },
-      {
         "source_path": "msteams-platform/platform/m365-apps/using-teams-client-sdk-preview.md",
         "redirect_url": "/msteams-platform/platform/tabs/how-to/using-teams-client-sdk"
+      },
+      {
+        "source_path": "msteams-platform/platform/tabs/how-to/authentication/auth-aad-sso.md",
+        "redirect_url": "/msteams-platform/platform/tabs/how-to/tab-sso-overview"
       }
     ]
 }
