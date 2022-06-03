@@ -63,7 +63,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 Microsoft Teams platform features that are available to all app developers.
 
-<br>
+<br>    
 
 <details>
 <summary><b>2022</b></summary>
