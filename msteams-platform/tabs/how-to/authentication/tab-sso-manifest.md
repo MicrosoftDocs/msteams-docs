@@ -33,76 +33,6 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
 The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
 
 For more information, see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
-<br>
-<details>
-<summary><b>Learn to create a manifest file</b></summary>
-
-If your tab app doesn't have a Teams app manifest file, you'll need to create it. To create a Teams app manifest file, use the content given below to create a .json file named, `manifest.json`.
-
-> [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI and package name. For more information, see [Manifest schema](/resources/schema/manifest-schema).
-
-  ```json
-{ 
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
- "manifestVersion": "1.12", 
- "version": "1.0.0", 
- "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
- "developer": { 
- "name": "Microsoft", 
- "websiteUrl": "https://www.microsoft.com", 
- "privacyUrl": "https://www.microsoft.com/privacy", 
- "termsOfUseUrl": "https://www.microsoft.com/termsofuse" 
-  }, 
-
-  "name": { 
-    "short": "Teams Auth SSO", 
-    "full": "Teams Auth SSO" 
-  }, 
-
-
-  "description": { 
-    "short": "Teams Auth SSO app", 
-    "full": "The Teams Auth SSO app" 
-  }, 
-
-  "icons": { 
-    "outline": "outline.png", 
-    "color": "color.png" 
-  }, 
-
-  "accentColor": "#60A18E", 
-  "staticTabs": [ 
-    { 
-     "entityId": "auth", 
-     "name": "Auth", 
-     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
-     "scopes": [ "personal" ] 
-    } 
-  ], 
-
-  "configurableTabs": [ 
-    { 
-     "configurationUrl": "https://subdomain.example.com/Home/Configure", 
-     "canUpdateConfiguration": true, 
-     "scopes": [ 
-     "team" 
-      ] 
-    } 
-  ], 
-  "permissions": [ "identity", "messageTeamMembers" ], 
-  "validDomains": [ 
-   "{subdomain or ngrok url}" 
-  ], 
-  "webApplicationInfo": { 
-    "id": "{Azure AD AppId}", 
-    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
-  }
-} 
-```
-
-</details>
 
 ## To configure Teams app manifest
 
@@ -112,7 +42,7 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
   > [!NOTE]
   >
   > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-  > - For learning how to create a manifest.json, select the Learn to create a manifest file option.
+  > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the manifest.json file
 1. Append the following code snippet to the manifest file to add the new property:
