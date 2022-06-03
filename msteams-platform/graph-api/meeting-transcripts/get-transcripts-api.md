@@ -20,7 +20,7 @@ To fetch the transcript for a particular meeting:
 
 - [Configure required permissions for your app on Azure AD portal](#configure-permissions-to-access-transcript)
 - [Obtain meeting ID and the user ID of the meeting organizer](#obtain-meeting-id-and-organizer-id)
-- [Get transcripts using Graph REST APIs](#use-graph-apis-to-fetch-transcript)
+- [Use Graph APIs to fetch transcript](#use-graph-apis-to-fetch-transcript)
 
 ## Configure permissions to access transcript
 
@@ -201,7 +201,7 @@ To obtain meeting ID and organizer ID with user-level notification:
     
     If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
-5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) for obtaining meeting and ID and organizer ID.
+5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting and ID and organizer ID.
 
 #### Obtain meeting details using tenant-level notification
 
@@ -293,7 +293,9 @@ To obtain meeting ID and organizer ID with tenant-level notification:
         ```
         </details>
 
-2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload. For more information, see [Get chat](/graph/api/chat-get.md).
+2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload. 
+
+    For more information, see [Get chat](/graph/api/chat-get.md).
 
     Use the following example to request chat entity based on the chat ID:
 
@@ -310,7 +312,7 @@ To obtain meeting ID and organizer ID with tenant-level notification:
       
       For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
-      Examples for response payload scenarios depending on the type of URL for joining the meeting call:
+      Examples for response payload scenarios depending on the type of join meeting URL:
 
         - Online Teams meeting
         
@@ -510,11 +512,11 @@ To obtain meeting ID and organizer ID from a bot app:
     ```
 
     > [!NOTE]
-    > The meeting ID contained in the `id` member of the `details` property is different from the id that your app needs to fetch transcripts. Use `joinUrl` to get the correct meeting ID for fetching transcripts.
+    > The meeting ID contained in the `id` member of the `details` property is different from the meeting ID that your app needs to fetch transcripts. Use `joinUrl` to get the correct meeting ID for fetching transcripts.
 
     </details>
 
-2. **Get meeting ID and organizer ID**: Use `joinUrl` to get the meeting ID.
+2. **Get meeting ID and organizer ID**: Use `joinUrl` to get the meeting details to fetch transcript.
 
     Use the following example to request the online meeting ID using the URL:
 
@@ -572,6 +574,8 @@ To obtain meeting ID and organizer ID from a bot app:
     ```
     
     </details>
+
+After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
 
 ## Use Graph APIs to fetch transcript
 
@@ -664,7 +668,6 @@ Content-Type: application/json
 ```
 
 </details>
-<br>
 
 ### Get callTranscript
 
@@ -721,7 +724,6 @@ Content-type: application/json
 }
 ```
 </details>
-<br>
 
 ### Get callTranscript content
 
