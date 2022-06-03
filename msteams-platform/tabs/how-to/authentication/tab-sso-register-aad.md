@@ -228,6 +228,7 @@ To configure scope and authorize trusted client applications, you'll need:
     > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Choose one of the following client IDs:
+
        | Use client ID | For authorizing... |
        | --- | --- |
        | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
