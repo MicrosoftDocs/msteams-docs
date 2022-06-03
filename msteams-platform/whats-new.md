@@ -169,14 +169,14 @@ Explore updates from the previous GA releases listed here.
 |08/19/2020|Import Teams messages with Microsoft Graph |[Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 |08/12/2020 |Adaptive Cards support in incoming webhook moved to GA |[Send adaptive cards using an incoming webhook](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Get started building Teams apps with the Visual Studio Toolkit |[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-overview.md) |
-|08/06/2020|Support for Tabs SSO authentication |[Develop an SSO Microsoft Teams Tab](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|08/06/2020|Support for Tabs SSO authentication |[Develop an SSO Microsoft Teams Tab](tabs/how-to/authentication/tab-sso-overview.md) |
 |07/27/2020 | Graph proactive bots and messages (Public Preview) |[Enable proactive bot installation and proactive messaging in Teams with Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |07/22/2020 |Mobile device capability updates |[Request device permissions for your Microsoft Teams tab](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Teams App Validation Tool for AppSource submissions |[Teams App Validation Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Create a virtual assistant for Teams |[Virtual Assistant for Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Surfacing a native loading indicator documentation |[Showing a native loading indicator](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit |[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
-|07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients |[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients |[Single Sign-On (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |06/05/2020| Manifest schema updated to version 1.7.| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integrate Power Virtual Agents with Teams |[Integrate a Power Virtual Agents chatbot with Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrate WFM systems with Shifts Connector for Teams |[Microsoft Teams Shifts WFM connectors](samples/shifts-wfm-connectors.md)
@@ -195,7 +195,7 @@ Explore updates from the previous GA releases listed here.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
-| 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
+| 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/tab-sso-overview.md) |
 | 10/31/2019 | Conversational bots and message extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and message extension documentation |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
 | 09/13/2019 | Request bot is installed from action-based message extension. | [Initiate actions with message extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
