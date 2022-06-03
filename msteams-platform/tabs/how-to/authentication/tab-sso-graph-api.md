@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Extend tab app with Microsoft Graph permissions and scope
 
-You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens upon app user's consent.
+You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
 
 Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
 
@@ -23,8 +23,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 ### To configure API permissions
 
-1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
-   The Microsoft Azure AD Portal page opens.
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
 2. Select **Manage** > **API permission** from the left pane.
 
@@ -44,15 +43,15 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     The options for Graph permissions display.
 
-5. Select **Delegated permissions** to view the list of permissions that you can select.
+5. Select **Delegated permissions** to view the list of permissions.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
 
 6. Select relevant permissions for your app, and then select **Add permissions**.
 
-    You can also enter the permission name in the search box to find it.
-
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions." border="true":::
+
+    You can also enter the permission name in the search box to find it.
 
     A message pops up on the browser stating that the permissions were updated.
 
@@ -73,17 +72,17 @@ Depending on the platform or device where you want to target your app, additiona
 > - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
 > - Implicit grant is not required if SSO is enabled on a tab app.
 
-The redirect URI, which you defined on the **Register an application** page for Web platform, appears on this page. You can configure authentication for other Web platforms also as long as the URL is unique.
+You can configure authentication for multiple platforms as long as the URL is unique.
 
 ### To configure authentication for a platform
+
+1. Open the app you registered in the the [Azure portal](https://ms.portal.azure.com/).
 
 1. Select **Manage** > **Authentication** from the left pane.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
 
     The **Platform configurations** page appears.
-
-    The platform and redirect URI that you configured while registering your app on Azure AD already displays on this page.
 
 1. Select **+ Add a platform**.
 
@@ -101,11 +100,11 @@ The redirect URI, which you defined on the **Register an application** page for 
 
 1. Enter the configuration details for the platform.
 
-    <!--
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
 
     1. Enter the Application ID URI as the **Redirect URIs**. The URI should be unique.
-    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.-->
+    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.
+    3. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.
 
@@ -195,7 +194,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.
 
 > [!IMPORTANT]
-> As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
+> As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
 
 ## Known limitations
 

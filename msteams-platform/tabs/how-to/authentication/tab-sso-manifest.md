@@ -20,28 +20,19 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
 
 &nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration" border="false":::
 
-:::row:::
-  :::column span="2":::
-    `webApplicationInfo` has two elements, `id` and `resource`.
+`webApplicationInfo` has two elements, `id` and `resource`.
 
-    | Element | Description |
-    | --- | --- |
-    | id | Enter the app ID (GUID) that you created in Azure AD. |
-    | resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy the value from the **Azure AD** > **Expose an API** section. |
+| Element | Description |
+| --- | --- |
+| id | Enter the app ID (GUID) that you created in Azure AD. |
+| resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
 
-  :::column-end:::
-  :::column span="1":::
-    <br>
-
-    > [!NOTE]
-    > Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
-  :::column-end:::
-:::row-end:::
+> [!NOTE]
+> Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
 
 The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
 
 For more information, see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
-<br>
 <br>
 <details>
 <summary><b>Learn to create a manifest file</b></summary>
@@ -119,8 +110,9 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 2. Open the manifest folder.
 
   > [!NOTE]
-  > If you don't find the manifest folder at the root of your project, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-  > For learning how to create a manifest.json, select the Learn to create a manifest file option.
+  >
+  > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+  > - For learning how to create a manifest.json, select the Learn to create a manifest file option.
 
 1. Open the manifest.json file
 1. Append the following code snippet to the manifest file to add the new property:
@@ -253,59 +245,3 @@ To preview your tab app in Teams:
 - [Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md)
 - [Manifest schema format](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
 - [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md)
-
-<!--
-### Configure code in app settings - Specific to Bot apps
-
-The `appsettings.json` file includes the configuration for Azure AD app.
-
-#### To configure Teams app settings for Azure AD registration
-
-1. Open the app project.
-2. Open appsettings.json.
-3. Update the `AzureAd` code snippet with configured app details on Azure AD portal:
-
-   ```json
-     "AzureAd": {
-    "Instance": "https://login.microsoftonline.com/",
-    "TenantId": "[AzureAD Tenant Id]",
-    "ClientId": "[AzureAD Client Id]",
-    "AppSecret": "[Azure App secret]",
-    "ApplicationIdURI": "[Application ID URI]",
-    "AuthUrl": "/oauth2/v2.0/token",
-    "ValidIssuers": "https://login.microsoftonline.com/TENANT_ID/v2.0,https://sts.windows.net/TENANT_ID/"
-    },
-    ```
-    where,
-    - `[AzureAD Tenant Id]` is **Directory (tenant) ID**
-    - `[AzureAD Client Id]` is **Application (client) ID**
-    - `[Azure App secret]` is the **Value** of **Client credentials**, which is client secret
-    - `[Application ID URI]` is **Application ID URI**
-    - `TENANT_ID` is **Directory (tenant) ID**
-
-4. Save the file.
-
-#### View the updated app settings
-
-<details>
-<summary>Here's an example of app settings update:</summary>
-
-This following sample details are configured in Azure AD:
-
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-overview.png" alt-text="Overview of app details on Azure AD portal":::
-
-The authentication details from Azure AD are updated in `appsettings.json`:
-
-```json
-    "AzureAd": {
-    "Instance": "https://login.microsoftonline.com/",
-    "TenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "ClientId": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-    "AppSecret": "p-t7Q~wiGyaPdXcmn6E_XnQBmfANChRx5QtZG",
-    "ApplicationIdURI": "api://bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-    "AuthUrl": "/oauth2/v2.0/token",
-    "ValidIssuers": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0,https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/"
-  },
-```
-
-</details>-->

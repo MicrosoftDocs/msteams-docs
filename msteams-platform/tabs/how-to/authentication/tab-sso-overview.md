@@ -112,8 +112,8 @@ After the iOS 14 update, Apple has blocked the [third-party cookie](https://webk
 For Teams mobile, client versions that support SSO are:
 
 - Teams for Android (1416/1.0.0.2020073101 and later)
-- Teams for iOS (_Version_: 2.0.18 and later)  
-- Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
+- Teams for iOS (version: 2.0.18 and later)  
+- Teams JavaScript SDK (version: 1.11 and later) for SSO to work in meeting side panel
 
 For the best experience with Teams, use the latest version of iOS and Android.
 
