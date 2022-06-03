@@ -83,7 +83,8 @@ For more information, see [Provide optional claims to your app](/azure/active-di
 <br>
 To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 
-For more information on application ID URI, see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+For more information on application ID URI, see [To expose an API](tab-sso-register-aad.md#to-expose-an-api).
+
 </details>
 <br>
 
