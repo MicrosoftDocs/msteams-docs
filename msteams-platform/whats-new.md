@@ -20,6 +20,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
 | 05/24/2022 | Bots and Message extensions in GCC and GCCH | • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 
+
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
 
