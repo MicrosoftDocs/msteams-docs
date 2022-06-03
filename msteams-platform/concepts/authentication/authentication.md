@@ -11,15 +11,15 @@ Authentication is all about validating app users, and securing the app and app u
 
 Choose to add authentication for your app in one of the two ways:
 
-- **Enable single sign-on (SSO) in a Teams app**
-  SSO within Teams is an authentication method that uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the user, the Teams app retrieves access details for them from Azure Active Directory (AD). After the app user has given consent, they can access the app even from different devices without having to be validated again.
+- **Enable single sign-on (SSO) in a Teams app**:
+  SSO within Teams is an authentication method that uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Azure Active Directory (AD). After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
-- **Enable authentication using third-party OAuth provider**
-  You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them access to the app. Azure AD is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
+- **Enable authentication using third-party OAuth provider**:
+  You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them access to your app. Azure AD is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
 
 ## Select authentication method
 
-Enable authentication with SSO or third party OAuth IdPs in your tab app, bot app, and messaging extension app. Select one of the two methods for your app:
+Enable authentication with SSO or third party OAuth IdPs in your tab app, bot app, and messaging extension app. Select one of the two methods for adding authentication in your app:
 
 :::row:::
     :::column span="1":::
@@ -76,10 +76,11 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 
 > [!NOTE]
-> The Silent authentication page is moved to the Resources module. See [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md) for more details.
+> The Silent authentication page is moved to the Resources module. For more information, see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
 
 ## See also
 
+- [Enable single sign-on in a tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
 - [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 - [Single sign-on support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
 - [Add authentication to your message extension](~/messaging-extensions/how-to/add-authentication.md)

@@ -123,7 +123,7 @@ Here's a list of best practices:
 
 - **Call access token only when you need it**: Call `getAuthToken()` only when you need an access token. You can call it when an app user accesses your tab app, or for using a particular function that requires app user validation.
 - **Don't store access token on client-side code**: Don’t cache or store the access token in your app's client-side code. Teams Client caches the access token (or request a new one if it expires). This ensures that there's no accidental leak of your token from your web app.
-- **Use server-side code for Microsoft Graph calls**: Always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
+- **Use server-side code for Microsoft Graph calls**: Always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information, see [Extend tab app with Microsoft Graph permissions and scope](tab-sso-graph-api.md).
 
 ## Known limitations
 
