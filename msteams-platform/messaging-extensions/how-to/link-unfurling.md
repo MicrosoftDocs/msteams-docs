@@ -39,7 +39,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 ### Add link unfurling manually
 
 > [!NOTE]
-> If authentication is added through Azure AD, [Unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 To enable your message extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually:
 
