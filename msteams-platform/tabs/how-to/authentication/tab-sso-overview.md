@@ -76,15 +76,15 @@ Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab 
 
 You can enable SSO in Teams for all apps that support Azure AD as an identity provider. In addition to using SSO for authenticating app users in a tab app, you can also use it to enable seamless access across Teams.
 
-Some scenarios where you can use `getAuthToken()` to allow access to your app users are:
+Some scenarios where you can use the SSO API to authenticate your app users are:
 
-- If you want your existing app to be available within a Teams tab app, `getAuthToken()` allows your app users to use your app in Teams with no additional sign in needed. Based on the app user's Teams identity, you can obtain access token for them from Azure AD.
+- If you want your existing app to be available within a Teams tab app, the SSO API allows your signed-in app users to use your app in Teams with no additional authentication needed. Based on the app user's Teams identity, you can obtain access token for them from Azure AD.
 
-- If your app has configurable tabs, you can use `getAuthToken()` to allow app users into the tab app without signing in again. SSO is applicable to some settings that need to be configured at a configuration stage.
+<!--
+- If your app has configurable tabs, you can use `getAuthToken()` to allow app users into the tab app without signing in again. SSO is applicable to some settings that need to be configured at a configuration stage.-->
+- Your app may have a bot, a tab, a message extension, or Adaptive Cards, and allows your app users to invoke task module from within a tab or a bot. The SSO API will authenticate your app users who attempt to access the task module. Teams can use the app user's Teams identity and obtain an access token from Azure AD.
 
-- Your app may have a bot, a tab, a message extension, or Adaptive Cards, and allows your app users to invoke task module from within a bot or a tab. Enabling SSO and using `getAuthToken()` will let your app users access a task module from within a bot app without having to sign in again. Teams can use the app user's Teams identity and obtain an access token from Azure AD.
-
-- You can also use SSO to allow your app users to obtain access to Stage view without need to be authenticated again. The access token obtained for the app user when they first used your app can be used to allow them to use Stage view.
+- You can also use the SSO API for authenticating your app users who want to access to Stage view without need to be validated again. The access token obtained for the app user when they first used your app can be used to allow them to use Stage view.
 
 > [!TIP]
 > You can also use the SSO API to authenticate app users in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
