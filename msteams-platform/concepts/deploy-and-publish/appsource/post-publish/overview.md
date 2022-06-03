@@ -33,7 +33,7 @@ Ensure the following when publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new versions of your app install automatically.
+When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.

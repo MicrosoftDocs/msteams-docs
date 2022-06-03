@@ -76,7 +76,7 @@ items:
         ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
 
         > [!NOTE]
-        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you have already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
+        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
 
     1. Select **Review + create**.
 
@@ -245,7 +245,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
         
         > [!NOTE]
-        > If you are already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
+        > If you're already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
 
         ![Update Manifest](~/assets/images/adaptive-cards/manifest.png)
 
@@ -313,7 +313,7 @@ items:
     1. Zip the contents of the **AppPackage** folder to create `manifest.zip`.
 
         > [!NOTE]
-        > The `manifest.zip` should not contain any additional folders in it. It should have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
+        > The `manifest.zip` shouldn't contain any additional folders in it. It should have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
 
     1. Go to Teams.
     1. To upload `manifest.zip`, select **Store > Manage your apps > Upload a custom app** and open `manifest.zip`.
