@@ -401,7 +401,7 @@ async def on_teams_channel_restored(
 ### Members added
 
 > [!NOTE]
-> The user selected channel id is currently only available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> The user selected channel id is currently only available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 A member added event is sent to your bot in the following scenarios:
 
@@ -1325,7 +1325,7 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 ### Install update event
 
 > [!NOTE]
-> The user selected channel id is currently only available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> The user selected channel id is currently only available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
