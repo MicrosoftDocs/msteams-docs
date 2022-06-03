@@ -240,7 +240,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) object.
+The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) object.
 
 The following code provides an example of adding this function to the configuration page to retrieve context values:
 
