@@ -65,7 +65,6 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) to `4` in `selectMedia` API for accessing microphone  capability. This API also allows users to record audio from the device microphone and return recorded clips to the web-app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
-|Video||
 
 The following image depicts web app experience of `selectMedia` API for image capability:
 
@@ -122,6 +121,73 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
         img.src = ("data:" + y.mimeType + ";base64," + y.preview);
     }
 });
+```
+
+**Calling `selectMedia` API** for capturing videos using camera:
+
+```javascript
+
+const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+    maxDuration: 30,
+    isFullScreenMode: true,
+    isStopButtonVisible: false,
+    videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+  }
+
+  const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+    mediaType: microsoftTeams.media.MediaType.Video,
+    maxMediaCount: 1,
+    videoProps: defaultNativeVideoProps
+  }
+
+  const defaultLensVideoProps: microsoftTeams.media.VideoProps = {
+    sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+    startMode: microsoftTeams.media.CameraStartMode.Photo,
+    cameraSwitcher: true,
+    maxDuration: 30
+  }
+
+  const defaultLensVideoMediaInput: microsoftTeams.media.MediaInputs = {
+    mediaType: microsoftTeams.media.MediaType.Video,
+    maxMediaCount: 6,
+    videoProps: defaultLensVideoProps
+  }
+
+```
+
+> [!IMPORTANT]
+>
+> * Video property is not supported in Android version 7 or below. `maxDuration` for video recording is currently limited to 300 seconds only, you can set it upto 300 seconds only.
+> * If `isFullScreenMode` is set to false a toggle appears on the screen, in which you can minimize the video recording and continue reading the content on the screen while your video gets recorded in the background.
+
+**Calling `selectMedia` API** for capturing images and video using camera:
+
+```javascript
+
+const defaultVideoAndImageProps: microsoftTeams.media.VideoAndImageProps = {
+    sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+    startMode: microsoftTeams.media.CameraStartMode.Photo,
+    ink: true,
+    cameraSwitcher: true,
+    textSticker: true,
+    enableFilter: true,
+    maxDuration: 30
+  }
+
+  const defaultVideoAndImageMediaInput: microsoftTeams.media.MediaInputs = {
+    mediaType: microsoftTeams.media.MediaType.VideoAndImage,
+    maxMediaCount: 6,
+    videoAndImageProps: defaultVideoAndImageProps
+  }
+
+  let videoControllerCallback: microsoftTeams.media.VideoControllerCallback = {
+    onRecordingStarted() {
+      console.log('onRecordingStarted Callback Invoked');
+      output("onRecordingStarted Callback Invoked");
+      stopMedia.style.display = 'block'
+    },
+  };
+
 ```
 
 **Calling `getMedia` API** to retrieve large media in chunks:
