@@ -85,14 +85,6 @@ After you've created a new app registration, configure scope (permission) option
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI" border="true":::
 
     - The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
-    - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
-    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
-
-    where,
-    - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
-
-      If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
-    - `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
     > [!IMPORTANT]
     >
@@ -117,6 +109,8 @@ After you've created a new app registration, configure scope (permission) option
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message" border="true":::
 
     The application ID URI displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
 
 1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
 
@@ -207,3 +201,14 @@ You must define the access token version that is acceptable for your app. This c
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
+
+<!-- 
+    -    - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
+
+    where,
+    - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
+
+      If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+    - `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
+-->

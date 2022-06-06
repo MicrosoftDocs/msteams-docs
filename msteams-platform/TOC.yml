@@ -407,7 +407,7 @@
         href: tabs/how-to/authentication/auth-oauth-provider.md 
   - name: Bots
     items:
-    - name: Authentication flow in bots
+    - name: Overview
       href: bots/how-to/authentication/auth-flow-bot.md
     - name: Enable SSO for bot app
       items:
