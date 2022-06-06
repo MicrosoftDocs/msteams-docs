@@ -5,7 +5,7 @@ description:  About TeamsFX multi environment
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
-ms.date: 11/29/2022
+ms.date: 11/29/2021
 ---
 
 # Manage multiple environments
@@ -23,7 +23,7 @@ ms.date: 11/29/2022
 * Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
-> Ensure you have Teams app project opened in Microsoft Visual Studio code.
+> Ensure you have Teams app project opened in VS code.
 
 ## Create a new environment
 
@@ -52,7 +52,7 @@ You can select the target environment for all environment-related operations. Th
 
 ## Project folder structure
 
-After creating the project, you can view the project folders and files in the explorer area of Visual Studio Code. Besides the custom codes, Teams Toolkit uses some files to maintain the config, state, and template of the app. The following list provides files and outlines their relationship with multiple environments.
+After creating the project, you can view the project folders and files in the **explorer area** of VS Code. Besides the custom codes, Teams Toolkit uses some files to maintain the config, state, and template of the app. The following list provides files and outlines their relationship with multiple environments.
 
 * `.fx/configs`: configure files that user can customize for the Teams app
   * `config.<envName>.json`: configuration file for per environment
@@ -207,8 +207,8 @@ As the Teams app manifest template is shared across all environments, we can upd
 
 <details>
 <br><summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
-You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to
-fx/configs/azure.parameters.{env}.json. file.
+You can customize Azure resources for each environment, for example edit the environment corresponding to
+fx/configs/azure.parameters.{env}.json file to specify Azure Function name.
 
 For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
 </details>
