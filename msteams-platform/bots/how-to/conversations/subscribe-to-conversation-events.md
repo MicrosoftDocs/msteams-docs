@@ -400,14 +400,11 @@ async def on_teams_channel_restored(
 
 ### Members added
 
-> [!NOTE]
-> The user selected channel id is currently only available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md).
-
 A member added event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
-   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from.
+   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from (currently available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
 
 2. When a user is added to a conversation where the bot is installed
 
@@ -1324,9 +1321,6 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 
 ### Install update event
 
-> [!NOTE]
-> The user selected channel id is currently only available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md).
-
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
@@ -1336,7 +1330,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team (currently available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
 
 # [C#](#tab/dotnet)
 
