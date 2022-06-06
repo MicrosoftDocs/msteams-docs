@@ -21,19 +21,19 @@ You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following tools are installed by the Visual Studio Code extension when they are needed. If already installed, the installed version is used instead. If using Linux (including WSL), you must install these tools before use:
+The following tools are installed by the Visual Studio Code extension when they're needed. If already installed, the installed version is used instead. If using Linux (including WSL), you must install these tools before use:
 
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 
-    Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It is installed within the project directory using the npm `devDependencies`.
+    Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory using the npm `devDependencies`.
 
 - [.NET SDK](/dotnet/core/install/)
 
-    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 or later SDK globally, the portable version is installed.
+    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 or later SDK globally, the portable version is installed.
 
 - [ngrok](https://ngrok.com/download)
 
-    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.  You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs.  This package is installed within the project directory (using npm `devDependencies`).
+    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.  You need to expose your development system to Teams through a tunnel. A tunnel isn't required for apps that only include tabs.  This package is installed within the project directory (using npm `devDependencies`).
 
 ## Use the Teams Toolkit for Visual Studio Code
 
@@ -75,7 +75,7 @@ The Teams Toolkit can create React apps that are hosted in Azure or SPFx web par
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
 
-1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
+1. Select a workspace folder. A folder is created within your workspace folder for the project you're creating.
 
 1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
