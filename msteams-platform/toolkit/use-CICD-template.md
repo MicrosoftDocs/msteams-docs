@@ -177,7 +177,7 @@ The following are some of the changes you can make to your project:
 
 ### Customize CD workflow
 
-Perform the following steps to customize the CD pipeline:
+Follow the steps to customize the CD pipeline:
 
 1. Change the CD flow. The default is to use the triggers of `pollSCM` when a new change is pushed into the `main` branch.
 1. Change the build scripts if necessary.
@@ -203,7 +203,7 @@ Ensure to set up Azure and Microsoft 365 credentials in your environment variabl
 
 To provision and deploy resources targeting Azure inside CI/CD, you must create an Azure service principal for use.
 
-Perform the following steps to create Azure service principals:
+Follow the steps to create Azure service principals:
 
 1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
 2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
@@ -224,7 +224,7 @@ If there are any changes related to Teams app's manifest file, you can update th
 
 To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-Perform the following steps to publish your app:
+Follow the steps to publish your app:
 
 1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip, select `App -> Import app -> Replace`.
