@@ -306,7 +306,9 @@
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
   - name: Get meeting transcripts using Graph APIs
-    href: graph-api/meeting-transcripts/get-transcripts-api.md   
+    href: graph-api/meeting-transcripts/get-transcripts-api.md
+  - name: Custom Together Mode scenes in Teams
+    href: apps-in-teams-meetings/teams-together-mode.md    
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -324,9 +326,7 @@
     - name: Agile Poker tutorial
       href: sbs-teams-live-share.yml
     - name: Live Share SDK FAQ
-      href: apps-in-teams-meetings/teams-live-share-faq.md  
-  - name: Custom Together Mode scenes in Teams
-    href: apps-in-teams-meetings/teams-together-mode.md   
+      href: apps-in-teams-meetings/teams-live-share-faq.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
