@@ -18,7 +18,7 @@ items:
     domain is pasted into the compose message area. The invoke contains the full URL and you can respond to it with a card. User can unfurl the link using bot with additional information to get an enhanced experience.
 
      > [!NOTE]
-     > Currently, link unfurling is not supported on mobile clients.
+     > Currently, link unfurling isn't supported on mobile clients.
 
      **Key features of link unfurling** 
 
@@ -84,7 +84,7 @@ items:
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
+    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
        :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
 
@@ -115,7 +115,7 @@ items:
         
       **To create client secret**
 
-       Perform the following steps if you have created a new **Microsoft App ID**:
+       Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -185,7 +185,7 @@ items:
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -307,7 +307,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
          1. Select **Web**.
@@ -422,7 +422,7 @@ items:
   content: |
     1. In your cloned repository, navigate to **csharp_dotnetcore > 55.teams-link-unfurling > TeamsAppManifest**.
 
-    1. Create a .zip with the following files, that are present in the **Manifest** folder: 
+    1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png

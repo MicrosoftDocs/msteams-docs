@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory silently refreshes the authentication token. This results in reduction of the number of times users need to enter their sign-in credentials. 
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory silently refreshes the authentication token, which results in reduction of the number of times users need to enter their sign-in credentials. 
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -33,7 +33,7 @@ items:
     * Active Microsoft Teams account with profile picture
 
       > [!TIP]
-      > Ensure the Microsoft Teams account is not a guest account.
+      > Ensure the Microsoft Teams account isn't a guest account.
 
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
 
@@ -163,7 +163,7 @@ items:
 
     **To add Redirect URI to the Azure bot resource**
 
-    1. Adjacent to **Microsoft App ID**, select **Manage**.</br>
+    1. Next to **Microsoft App ID**, select **Manage**.</br>
         ![Manage app ID](~/assets/images/bots/select-manage.png)
     1. From the left pane of your bot resource, select **Authentication**.
     1. In **Platform configurations**, select **Add a platform**.
@@ -229,7 +229,7 @@ items:
     **To update manifest**
 
     1. Select **Manifest** from the left pane.
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you're already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
         ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
     **To set up Bot Service connection**
