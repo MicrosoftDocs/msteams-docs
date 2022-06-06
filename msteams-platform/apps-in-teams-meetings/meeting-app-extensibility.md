@@ -28,7 +28,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
 
 > [!IMPORTANT]
-> If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
+> If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md).
 
 > [!NOTE]
 >
@@ -84,7 +84,6 @@ To use tabs during a meeting:
 # [Desktop](#tab/desktop)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktop view":::
-
 
 # [Mobile](#tab/mobile)
 

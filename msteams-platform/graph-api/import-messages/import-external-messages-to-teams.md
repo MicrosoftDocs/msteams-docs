@@ -41,7 +41,7 @@ At a high level, the import process consists of the following:
 
 ## Step 1: Create a team
 
-Since you are migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
+Since you're migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
@@ -319,7 +319,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Action called on a `team` or `channel` that is not in `migrationMode`.
+Action called on a `team` or `channel` that isn't in `migrationMode`.
 
 ## Step five: Add team members
 
@@ -349,7 +349,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* After the `completeMigration` request is made, you cannot import further messages into the team.
+* After the `completeMigration` request is made, you can't import further messages into the team.
 
 * You can only add team members to the new team after the `completeMigration` request has returned a successful response.
 

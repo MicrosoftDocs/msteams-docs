@@ -3,7 +3,7 @@ title: TeamsFx SDK
 author: MuyangAmigo
 description:  About TeamsFx SDK
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
@@ -228,20 +228,26 @@ const profile = await graphClient.api("/me").get();
 <br>
 
 <details>
+<summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
+
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Create api client" border="false":::
+
+
+</details>
+
+<br>
+
+<details>
 <summary><b>Call Azure Function in tab app</b></summary>
 
 Use `axios` library to make HTTP request to Azure Function.
 
 ```ts
 const teamsfx = new TeamsFx();
-const token = teamsfx.getCredential().getToken(""); // Get SSO token for the use
-// Call API hosted in Azure Functions on behalf of user
-const apiEndpoint = teamsfx.getConfig("apiEndpoint");
-const response = await axios.default.get(apiEndpoint + "api/httptrigger1", {
-  headers: {
-    authorization: "Bearer " + token,
-  },
-});
+const credential = teamsfx.getCredential(); //Create an API Client that uses SSO token to authenticate requests
+const apiClient = CreateApiClient(teamsfx.getConfig("apiEndpoint")),
+new BearerTokenAuthProvider(async () =>  (await credential.getToken(""))!.token);// Call API hosted in Azure Functions on behalf of user
+const response = await apiClient.get("/api/" + functionName);
 ```
 
 </details>

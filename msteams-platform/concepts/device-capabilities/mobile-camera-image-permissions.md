@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client SDK to enable media capabilities using code examples
 keywords: camera image microphone capabilities native device permissions media api
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 ---
 
@@ -15,15 +15,15 @@ You can integrate native device capabilities, such as the **camera** and **micro
 ## Advantage of integrating media capabilities
 
 The main advantage of integrating device capabilities in your Teams apps is it leverages native Teams controls to provide a rich and immersive experience to your users.
-To integrate media capabilities you must update the app manifest file and call the media capability APIs.
+To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
 
 For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities.
 
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
 >
-> * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.
+> * Currently, Microsoft Teams supports for media capabilities is available for mobile clients only.
 > * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
@@ -54,7 +54,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
   
 > [!IMPORTANT]
 >
-> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
+> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more information, see [Entry points for Teams apps](../extensibility-points.md).
 > * `selectMedia` API has been extended to support microphone and audio properties.
 
 You must use the following set of APIs to enable your device's media capabilities:
@@ -80,14 +80,14 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
+| **404** | FILE_NOT_FOUND | File specified isn't found in the given location.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
 | **1000** | PERMISSION_DENIED |Permission is denied by the user.|
-| **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
+| **3000** | NO_HW_SUPPORT | Underlying hardware doesn't support the capability.|
 | **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
 |  **8000** | USER_ABORT |User aborts the operation.|
-| **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
+| **9000**| OLD_PLATFORM | Platform code is outdated and doesn't implement this API.|
 | **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
 
 ## Code snippets

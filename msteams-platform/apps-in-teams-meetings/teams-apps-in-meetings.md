@@ -4,7 +4,7 @@ author: surbhigupta
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api  
 ---
 
@@ -48,3 +48,4 @@ The new custom Together Mode scenes feature enables users to collaborate in a me
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Meeting lifecycle](meeting-app-extensibility.md#meeting-lifecycle)
+* [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
