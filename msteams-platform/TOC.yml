@@ -414,7 +414,7 @@
         - name: Register bot app in Azure AD
           href: bots/how-to/authentication/bot-sso-register-aad.md
     - name: Use third party OAuth IdP authentication
-      lists:
+      items:
         - name: Add authentication to your bot
           href: bots/how-to/authentication/add-authentication.md
   - name: Message extensions
