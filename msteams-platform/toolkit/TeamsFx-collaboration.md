@@ -56,7 +56,7 @@ The following list guides us to understand the collaboration process and its lim
 
 * Clone the project from GitHub
 * Log in to Microsoft 365 account
-* Log in to Azure account, which has contributor permission for all the Azure resources being used in this project
+* Log in to Azure account, it has contributor permission for all the Azure resources which are used in the project
 * To preview your Teams app, deploy the project to remote
 * Launch remote to have a preview of the Teams app
 
@@ -67,7 +67,7 @@ For more information, see [build and run your Teams app in remote environment](/
 
 ### Limitation
 
-You can't remove collaborators directly from Teams Toolkit extension. Perform the following steps to remove collaborators manually:
+You can't remove collaborators directly from Teams Toolkit extension. Follow the steps to remove collaborators manually:
 
   1. Go to Teams Developer Portal and select your Teams app by name or app ID.
   2. Select **Owners** from left panel.
@@ -78,8 +78,8 @@ You can't remove collaborators directly from Teams Toolkit extension. Perform th
 
 > [!NOTE]
 >
-> * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline
-> * Azure related permissions must be set manually by Azure subscription administrator on Microsoft Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project
+> * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
+> * Azure related permissions must be set manually by Azure subscription administrator on Microsoft Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
 
 ## See also
 
