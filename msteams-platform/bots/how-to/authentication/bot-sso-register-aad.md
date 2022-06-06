@@ -162,22 +162,22 @@ After you've created a new app registration, configure scope (permission) option
     > - For a Teams bot app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 -->
 
-    1. Choose one of the following client IDs:
+1. Choose one of the following client IDs:
 
-       | Use client ID | For authorizing... |
-       | --- | --- |
-       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
-       | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+   | Use client ID | For authorizing... |
+   | --- | --- |
+   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
 
-    1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
+1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
-    1. Select **Add application**.
+1. Select **Add application**.
 
-    A message pops up on the browser stating that the authorized client app was added.
+A message pops up on the browser stating that the authorized client app was added.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="true":::
 
-    The client ID displays on the page.
+The client ID displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
 
