@@ -305,6 +305,8 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Get meeting transcripts using Graph APIs
+    href: graph-api/meeting-transcripts/get-transcripts-api.md   
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -445,8 +447,6 @@
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-  - name: Get meeting transcripts using Graph APIs
-    href: graph-api/meeting-transcripts/get-transcripts-api.md    
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
@@ -603,5 +603,3 @@
     href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
-  
-  
