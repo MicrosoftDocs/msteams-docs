@@ -54,11 +54,11 @@ Register a new app in Azure AD.
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
 
     The page with app ID and other configurations is displayed.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="App registration is successful." border="true":::
 
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
