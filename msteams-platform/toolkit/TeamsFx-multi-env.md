@@ -5,7 +5,7 @@ description:  About TeamsFX multi environment
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
-ms.date: 11/29/2021
+ms.date: 11/29/2022
 ---
 
 # Manage multiple environments
