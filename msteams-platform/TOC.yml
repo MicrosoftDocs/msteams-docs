@@ -128,7 +128,7 @@
       href: toolkit/publish.md
     - name: Manage multiple environments
       href: toolkit/TeamsFx-multi-env.md
-    - name: Collaborating with other developers on Teams Toolkit
+    - name: Collaborate on Teams project using Teams Toolkit 
       href: toolkit/TeamsFx-collaboration.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
