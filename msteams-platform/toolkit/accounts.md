@@ -22,7 +22,7 @@ If you have a Visual Studio Enterprise or Professional subscription, both progra
 
 ### Microsoft 365 developer program
 
-To get a free Teams developer account join the Microsoft 365 developer program and perform the following steps:
+To get a free Teams developer account, join the Microsoft 365 developer program and perform the following steps:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
@@ -47,7 +47,7 @@ You can sign up for the developer program by using one of the following account 
 
 - **Visual Studio user id**
 
-    The user id created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
+    The user ID created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
 ## Azure account to host backend resources
 
@@ -55,7 +55,7 @@ Azure account is optional if your existing application is hosted on other cloud 
 
 **Visual Studio ID**
 
-If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers if they are available from the public domain.
+If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
 ## Teams custom app upload or sideload permission
 
@@ -67,7 +67,7 @@ If you want to host your application related resources or access resources withi
 * **Verify sideloading permission using Visual Studio Code**
 
     1. Open **Visual Studio Code**.
-    1. Select **Teams Toolkit** from the left panel. If you are unable to see the option ensure that you have installed Teams Toolkit extension.
+    1. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
     1. Select **Accounts** and log in to your Microsoft 365 account.
     1. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
@@ -85,7 +85,7 @@ If you want to host your application related resources or access resources withi
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app" border="true":::
 
-        If you are unable to view the option **Upload a custom app** then, it indicates that you don't have the required permission for sideloading.
+        If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
         * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
@@ -125,5 +125,5 @@ For more information, see [Manage custom app policies and settings in Teams](/mi
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Publish your Teams app](../concepts/deploy-and-publish/appsource/publish.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

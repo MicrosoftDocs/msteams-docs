@@ -43,17 +43,17 @@ Complete instructions on the Bot Framework Emulator can be found [here](/azure/b
 >[!Important]
 >Talking to your bot by ID is intended for testing purposes only.
 
-You can also initiate a conversation with your bot by using its ID. Two methods for doing so are given below. When a bot has been added through one of these methods it won't be addressable in channel conversations, and you can't take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
+You can also initiate a conversation with your bot by using its ID. Two methods for doing so are given below. When a bot has been added through one of these methods it won't be addressable in channel conversations, and you can't take advantage of other Microsoft Teams app capabilities like tabs or message extensions.
 
 1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams will launch with a personal chat with your bot.
 2. Directly reference your bot's app ID from within Microsoft Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
   
-     ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Bot Dashboard":::
   
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
   
-     ![Uploading the AppID for the bot](~/assets/images/bots_uploading.png)
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Uploading the AppID for the bot"border="true":::
 
      The app ID should resolve to your bot name.
 
@@ -66,7 +66,7 @@ Your bot will receive the `conversationUpdate` event just like bots added to a t
 
 Note that users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user won't receive those messages.
 
-![Blocking a bot](~/assets/images/bots/botdisable.png)
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blocking a bot"border="true":::
 
 ## Removing a bot from a team
 

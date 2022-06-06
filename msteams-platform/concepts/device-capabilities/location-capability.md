@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
 keywords:  location map capabilities native device permissions 
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
@@ -21,13 +21,13 @@ The main advantage of integrating location capabilities in your Teams apps is th
 Following examples show how the integration of location capabilities is used in different scenarios:
 
 * In a factory, the supervisor can track the attendance of workers by asking them to take a selfie in the vicinity of the factory and share it through the specified app. The location data also gets captured and sent along with the image.
-* The location capabilities enables the maintenance staff of a service provider to share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
+* The location capabilities enable the maintenance staff of a service provider to share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
 
 To integrate location capabilities, you must update the app manifest file and call the APIs. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs.
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
-> Currently, Microsoft Teams support for location capabilities is available for mobile clients only.
+> Currently, Microsoft Teams supports for location capabilities is available for mobile clients only.
 
 ## Update manifest
 
@@ -93,12 +93,12 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
-| **1000** | PERMISSION_DENIED |User denied location permissions to the Teams App or the web-app .|
+| **1000** | PERMISSION_DENIED |User denied location permissions to the Teams App or the web-app.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
-| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
+| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API isn't present. Upgrading the build should resolve the issue.|
 
 ### Code sample
 

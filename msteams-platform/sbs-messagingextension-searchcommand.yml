@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build search based messaging extension
+title: Build search based message extension
 metadata:
-  title: Build search based messaging extension
-  description: In this tutorial, you'll learn to build a search-based messaging extension.
+  title: Build search based message extension
+  description: In this tutorial, you'll learn to build a search-based message extension.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022
@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to search in an external system from the compose message area, the command box, or directly from a message. 
+    Message extensions allow users to interact with web services in the Microsoft Teams client. They help to search in an external system from the compose message area, the command box, or directly from a message. 
     
-    **Key features of search based messaging extension**
+    **Key features of search based message extension**
 
     * Allow users to search external systems.
     * Insert search results into a message in the form of a card.
 
-    This step-by-step guide helps you to build a search based messaging extension. You'll see the following output:
+    This step-by-step guide helps you to build a search based message extension. You'll see the following output:
 
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
@@ -82,7 +82,7 @@ items:
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
+    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
         ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
 
@@ -115,7 +115,7 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you have created a new **Microsoft App ID**:
+      Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -186,7 +186,7 @@ items:
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -312,7 +312,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
          1. Select **Web**.
@@ -405,7 +405,7 @@ items:
    
     ![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.png)
 
-- title: Add Search Messaging Extension app
+- title: Add Search Message Extension app
   durationInMinutes: 1
   content: |
     1. In your cloned repository, navigate to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
@@ -469,5 +469,5 @@ items:
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
 - content: |
-    You've completed the tutorial to get started with Teams messaging extensions search!
+    You've completed the tutorial to get started with Teams message extensions search!
 

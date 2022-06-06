@@ -3,7 +3,7 @@ title: Enable and configure your apps for Teams meetings
 author: surbhigupta
 description: Enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features, such as, in-meeting dialog, shared meeting stage, meeting sidepanel, and more  
 ms.topic: conceptual
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 
 # Enable and configure your apps for Teams meetings
@@ -32,10 +32,10 @@ The meetings app capabilities are declared in your app manifest using the `confi
 
 > [!NOTE]
 >
-> * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
 > * Apps in meetings require `groupchat` scope. The `team` scope works for tabs in channels only.
+> * Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`.
 
-The app manifest must include the following code snippet:
+The following code snippet is an example of a configurable tab used in an app for Teams meetings:
 
 ```json
 
@@ -88,7 +88,7 @@ Teams meetings provide a collaborative experience for your organization. Configu
 
 ### Before a meeting
 
-Before a meeting, users can add tabs, bots, and messaging extensions. Users with organizer and presenter roles can add tabs to a meeting.
+Before a meeting, users can add tabs, bots, and message extensions. Users with organizer and presenter roles can add tabs to a meeting.
 
 To add a tab to a meeting:
 
@@ -99,18 +99,19 @@ To add a tab to a meeting:
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
-To add a messaging extension to a meeting:
+To add a message extension to a meeting:
 
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
-1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
+1. Select the app that you want to add and follow the steps as required. The app is installed as a message extension.
 
 To add a bot to a meeting:
 
 In a meeting chat, enter the **@** key and select **Get bots**.
 
 > [!NOTE]
+>
 > * The in-meeting dialog displays a dialog in a meeting and simultaneously posts an Adaptive Card in the meeting chat that users can access. The Adaptive Card in the meeting chat helps users while attending the meeting or if the Teams app is minimized.
-> * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
+> * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/tab-sso-overview.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
 > * Role assignments can be changed while a meeting is in progress. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -124,7 +125,7 @@ The `meetingSidePanel` enables you to customize experiences in a meeting that al
 
 To use the `userContext` API to route requests, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is similar to the authentication flow for websites. So tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-Messaging extension works as expected when a user is in an in-meeting view. The user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
+Message extension works as expected when a user is in an in-meeting view. The user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
 > [!NOTE]
 > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
@@ -179,6 +180,7 @@ Participants can share specific parts of the app to the collaborative meeting st
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 > [!NOTE]
+>
 > * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
 > * Share specific parts of the app to stage is supported for Teams desktop clients only.
 

@@ -1,9 +1,9 @@
 ---
 title: Unified meetings apps
 author: surbhigupta
-description: Learn about Teams meeting lifecycle and user's meeting experience in desktop and mobile environment, participant and user roles and types, integrate bots and messaging extension in meeting lifecycle.
+description: Learn about Teams meeting lifecycle and user's meeting experience in desktop and mobile environment, participant and user roles and types, integrate bots and message extension in meeting lifecycle.
 ms.topic: conceptual
-ms.localizationpriority: none
+ms.localizationpriority: medium
 ---
 
 # Unified meetings apps
@@ -14,11 +14,11 @@ Teams unified meetings apps are based on the following concepts:
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting: in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
-This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
+This article covers the information about meeting lifecycle and how to integrate tabs, bots, and message extensions. It identifies different participant roles and user types.
 
 ## Meeting lifecycle
 
-A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle.
+A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and message extensions in each stage of the meeting lifecycle.
 
 > [!NOTE]
 > Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
@@ -28,7 +28,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
 
 > [!IMPORTANT]
-> If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
+> If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md).
 
 > [!NOTE]
 >
@@ -82,7 +82,6 @@ To use tabs during a meeting:
 # [Desktop](#tab/desktop)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktop view":::
-
 
 # [Mobile](#tab/mobile)
 
@@ -147,9 +146,9 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 Bots that are enabled in group chat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-### Integrate messaging extensions into the meeting lifecycle
+### Integrate message extensions into the meeting lifecycle
 
-To implement messaging extension, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+To implement message extension, start with [build a message extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
 
@@ -205,7 +204,7 @@ A guest or anonymous user can't add, remove, or uninstall apps.
 
 The following table provides the user types and lists the features that each user can access:
 
-| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
+| User type | Tabs | Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage only on Teams desktop client |
@@ -220,5 +219,5 @@ The following table provides the user types and lists the features that each use
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
-* [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+* [Message extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

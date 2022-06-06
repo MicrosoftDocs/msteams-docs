@@ -25,9 +25,9 @@ Task modules can be launched from almost anywhere in your app.
 
 * **Tab**: A task module can be launched from any link within a tab. Use in scenarios where you want the user to focus on an interaction.
 * **Bot**: A task module can be launched from a link inside a bot message.
-* **Adaptive Card**: A task module can be launched from an Adaptive Card (sent with a messaging extension or by a bot) when a user selects a button.
-* **Messaging extension (action commands)**: Messaging extensions allow you to take a particular action on message content. Selecting an action opens a task module.
-* **Messaging extension (compose box context)**: In the compose box, you can design a messaging extension to open a task module instead of the typical flyout. Reserve task modules for complex interactions, such as completing a form.
+* **Adaptive Card**: A task module can be launched from an Adaptive Card (sent with a message extension or by a bot) when a user selects a button.
+* **Message extension (action commands)**: Message extensions allow you to take a particular action on message content. Selecting an action opens a task module.
+* **Message extension (compose box context)**: In the compose box, you can design a message extension to open a task module instead of the typical flyout. Reserve task modules for complex interactions, such as completing a form.
 
 ## Anatomy
 

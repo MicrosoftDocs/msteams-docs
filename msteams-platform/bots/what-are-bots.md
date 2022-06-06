@@ -11,15 +11,17 @@ ms.author: anclear
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) and not available in GCC-High and Department of Defense (DOD).
+> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+> 
+> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
-![Invoke bot using text](~/assets/images/invokebotwithtext.png)
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="Web service using text"lightbox="../assets/images/invokebotwithtext.png":::
 
-![Invoke bot using card](~/assets/images/invokebotwithcard.png)
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="web service using interactive cards"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="web service using task module"lightbox="../assets/images/task-module-example.png"border="true":::
 
 Conversational bots are incredibly flexible. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
 
@@ -57,7 +59,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ## See also
 
-* [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Create a bot for Teams](../resources/bot-v3/bots-create.md)
 * [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams)
 * [Register calls and meetings bot for Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)

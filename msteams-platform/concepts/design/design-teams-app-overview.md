@@ -117,7 +117,7 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 * [Personal apps](../../concepts/design/personal-apps.md)
 * [Tabs](../../tabs/design/tabs.md)
-* [Messaging extensions](../../messaging-extensions/design/messaging-extension-design.md)
+* [Message extensions](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Meeting extensions](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
