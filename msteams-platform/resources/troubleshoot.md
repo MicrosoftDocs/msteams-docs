@@ -17,7 +17,7 @@ You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) fo
 
 ### Blank tab screen
 
-If you are not seeing your content in the tab view, it could be:
+If you're not seeing your content in the tab view, it could be:
 
 * your content cannot be displayed in an `<iframe>`.
 * the content domain is not in the [validDomains](~/resources/schema/manifest-schema.md#validdomains) list in the manifest.
@@ -44,10 +44,10 @@ When adding a tab, if you click the save buttons but are presented with an error
 
 ### Can't authenticate the user or display your auth provider in your tab
 
-Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
->We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
+> We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
 For more information about authentication, please see [Authenticate a user](~/concepts/authentication/authentication.md).
 
@@ -67,7 +67,7 @@ Bots must first be upload into a team before it is accessible within any channel
 
 ### My bot doesn't get my message in a channel
 
-Bots in channels receive messages only when they are explicitly @mentioned, even if you are replying to a previous bot message. The only exception where you might not see the bot name in a message is if the bot receives an `imBack` action as a result of a CardAction that it originally sent.
+Bots in channels receive messages only when they are explicitly @mentioned, even if you're replying to a previous bot message. The only exception where you might not see the bot name in a message is if the bot receives an `imBack` action as a result of a CardAction that it originally sent.
 
 ### My bot doesn't understand my commands when in a channel
 
