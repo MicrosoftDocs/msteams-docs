@@ -409,14 +409,14 @@
     items:
     - name: Authentication flow in bots
       href: bots/how-to/authentication/auth-flow-bot.md
-    - name: Add authentication to your bot
-      href: bots/how-to/authentication/add-authentication.md
     - name: Enable SSO for bot app
       items:
         - name: Register bot app in Azure AD
           href: bots/how-to/authentication/bot-sso-register-aad.md
-    - name: Use SSO authentication
-      href: bots/how-to/authentication/auth-aad-sso-bots.md
+    - name: Use third party OAuth IdP authentication
+      lists:
+        - name: Add authentication to your bot
+          href: bots/how-to/authentication/add-authentication.md
   - name: Message extensions
     items:
     - name: Add authentication to your message extension
