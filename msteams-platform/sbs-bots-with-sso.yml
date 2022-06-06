@@ -2,7 +2,7 @@
 title: Build a bot with SSO authentication
 metadata:
   title: Build a bot with SSO authentication
-  description: In this tutorial, you'll learn to built a bot with SSO authentication.
+  description: In this tutorial, you'll learn to build a bot with SSO authentication.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -73,7 +73,7 @@ items:
 
     ### Create a free Teams developer tenant (optional)
 
-        If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
@@ -97,7 +97,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to login with your Microsoft account credentials.
+    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to sign in with your Microsoft account credentials.
 
     1. Select **Create a resource**.
 
@@ -125,7 +125,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Create resource Azure bot" border="true":::
 
-        1. Enter required bot handle name in **Bot handle** and it is a unique identifier for your bot.
+        1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
 
         1. Select your **Subscription** from the dropdown list.
     
@@ -367,7 +367,7 @@ items:
 
        Add a client application panel appears.
 
-    1. Enter the Client ID for desktop and web application separately that you want to authorize. It is the application ID of client application that you want to authorize.
+    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
        
        |**Client ID**|**For authorizing**|
        |--------|-------------|
@@ -535,7 +535,7 @@ items:
     
         :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Upload custom app" border="true":::
 
-    1. Select **Open** to upload the .zip file that you have created in the **Manifest** folder.
+    1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
         :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Open app" border="true":::
 
@@ -552,12 +552,12 @@ items:
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Permissions to bot" border="true":::
         
         > [!NOTE]
-        > Now you have configured SSO with your bot app and this is the only time you will have to give consent.
+        > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
 
     1. For mobile device, select **Accept** for **Permissions requested**.
 
         > [!NOTE]
-        > Now you have configured SSO with your bot app in mobile and this is the only time you will have to give consent.
+        > Now you have configured SSO with your bot app in mobile and it's the only time you'll have to give consent.
 
         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Mobile signed in to bot" border="true":::
 
