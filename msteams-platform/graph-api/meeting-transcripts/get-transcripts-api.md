@@ -13,7 +13,7 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
-| You need to obtain transcripts for capturing meaningful insights from multiple meetings across the Sales vertical. Keeping track of all meetings, and retrieving them manually is time-consuming and inefficient. After the meeting is over, you'd need to examine conversations in all those meetings to obtain meaningful information. | If you configure your app to fetch meeting transcripts automatically, it gets the transcripts from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting. This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
+| You need to obtain transcripts for capturing meaningful insights from multiple meetings across the Sales vertical. It's time-consuming and inefficient to keep track of all meetings, and to retrieve meeting notes manually. After the meeting is over, you'd need to examine conversations in all those meetings to obtain meaningful information. | If you configure your app to fetch meeting transcripts automatically, it gets the transcripts from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting. This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
 | As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. Having to continually take notes to provide post-meeting summary can impede the flow of thoughts. You stand to lose useful valuable or suggestions. After the session, you'd need to analyze the discussion to gather data points for planning improvements. | Using Graph APIs to fetch transcripts post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
 
 To fetch the transcript for a particular meeting:
@@ -53,16 +53,16 @@ The following RSC permissions can be granted to your app:
 
 / reference to article for configuring RSC permissions. /
 
-In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available as .vtt or .doc file.
+In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available as `.vtt` or `.doc` file.
 
-Next, you can configure your app to receive notifications for all relevant meeting events. You app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
+Next, you can configure your app to receive notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
 
 ## Obtain meeting ID and organizer ID
 
-Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID passed as parameters in the API.
+Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID that are passed as parameters in the API.
 
 To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
 
@@ -101,7 +101,7 @@ POST https://graph.microsoft.com/beta/subscriptions/
 }
 ```
 
-When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for to retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, following the steps for obtaining meeting ID and organizer ID as given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification).
+When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, follow the steps given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from user-level notification:
 
@@ -109,7 +109,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     <details>
     <summary><b>Example</b>: Notification payload</summary>
-    
+
     ```json
     {
         "subscriptionId": "ef30cdc6-b5ae-4702-b924-f458fd9e5fc3",
@@ -137,7 +137,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     <details>
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
-    
+
     ```json
         {
             "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
@@ -174,7 +174,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     <br>
     <details>
     <summary><b>Example</b>: Response payload with thread ID</summary>
-    
+
     ```json
     {
         "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
@@ -195,10 +195,11 @@ To obtain meeting ID and organizer ID from user-level notification:
         ]
     }
     ```
+
     </details>
 
 4. **Subscribe to chat messages**: Use chat ID to subscribe your app to chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
-    
+
     If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
 5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting and ID and organizer ID.
@@ -219,7 +220,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
         <details>
         <summary><b>Example</b>: Payload for `callTranscriptEventMessageDetail` event type</summary>
-    
+
         ```json
         {
         "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
@@ -255,13 +256,14 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             "encryptedContent": {}
         }
         ```
+
         </details>
 
     - Call ended event
 
         <details>
         <summary><b>Example</b>: Payload for `callEndedEventMessageDetail` event type</summary>
-    
+
         ```json
         {
             "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
@@ -291,9 +293,10 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             }
         }
         ```
+
         </details>
 
-2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload. 
+2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload.
 
     For more information, see [Get chat](/graph/api/chat-get.md).
 
@@ -303,22 +306,22 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     GET https://graph.microsoft.com/beta/chats/19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2
     ```
 
-    The response payload contains the following:
-    
+    The response payload contains the following elements:
+
     - **Organizer ID**: It's contained in the `id` member of the `organizer` property of response payload.
     - **URL for meeting call**: This URL is used to retrieve the meeting ID, and it's available in the response payload in one of the two scenarios:
         - If the meeting is an online Teams meeting, the `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL.
-        - If the meeting was not created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Your app can use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
-      
+        - If the meeting wasn't created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Your app can use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
+
       For more information, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
       Examples for response payload scenarios depending on the type of join meeting URL:
 
         - Online Teams meeting
-        
+
             <details>
             <summary><b>Example</b>: Response payload, if `joinWebUrl` is available</b></summary>
-            
+
             ```json
             {
                 "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
@@ -341,13 +344,14 @@ To obtain meeting ID and organizer ID from tenant-level notification:
                 }
             }
             ```
+
             </details>
-    
+
         - Meeting scheduled through Teams client or Outlook client, not marked as an online meeting
-            
+
             <details>
             <summary><b>Example</b>: Response payload, if `calendarEventId` is available</summary>
-            
+
             ```json
             {
                 "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
@@ -370,23 +374,24 @@ To obtain meeting ID and organizer ID from tenant-level notification:
                 }
             }
             ```
+
             </details>
-    
+
             - Use the following example to get `joinWebUrl` from the `calendarEventId`:
-              
+
               ``` http
                 GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
               ```
-    
+
               The response payload of this request contains `joinUrl`.
-    
+
                 > [!NOTE]
                 > `joinUrl` is the same as `joinWebUrl`.
-    
+
               <br>
               <details>
               <summary><b>Example</b>: Response payload that contains the `joinUrl` in the `onlineMeeting` property</summary>
-                
+
               ```json
                 {
                     "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/events/$entity",
@@ -407,9 +412,10 @@ To obtain meeting ID and organizer ID from tenant-level notification:
                     "calendar@odata.navigationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')"
                 }
                 ```
+
               </details>
 
-3. **Get meeting ID**: Use `joinWebUrl` to get the meeting ID.
+3. **Get meeting ID**: Now, your app can use `joinWebUrl` to get the meeting ID.
 
     Use the following example to request the online meeting ID:
 
@@ -421,7 +427,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     <br>
     <details>
     <summary><b>Example</b>: Response payload with meeting ID</summary>
-    
+
     ```json
     {
         "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
@@ -442,6 +448,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         ]
     }
     ```
+
     </details>
 
     > [!NOTE]
@@ -449,7 +456,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
 
-    Use the following example to request the transcripts for a specific meeting in the .vtt format:
+    Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
 
     ```http
     GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
@@ -461,7 +468,7 @@ VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
 1pqWTJAdGhyZWFkLnYy*
     - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
 
-    The response payload will contain the transcripts in .vtt format.
+    The response payload will contain the transcripts in `.vtt` format.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
@@ -486,7 +493,7 @@ To obtain meeting ID and organizer ID from a bot app:
 
     <details>
     <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
-    
+
     ```json
     { 
    "details": { 
@@ -530,7 +537,7 @@ To obtain meeting ID and organizer ID from a bot app:
     <br>
     <details>
     <summary><b>Example</b>: Response payload with meeting ID</summary>
-    
+
     ```json
     {
     "value": [
@@ -572,14 +579,14 @@ To obtain meeting ID and organizer ID from a bot app:
     ]
     }
     ```
-    
+
     </details>
 
 After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
 
 ## Use Graph APIs to fetch transcript
 
-Leverage Graph REST APIs to get transcripts for a particular meeting. Your app fetches the transcripts based on the user ID of the meeting organizer and the meeting ID.
+Use Graph REST APIs to get transcripts for a particular meeting. Your app fetches the transcripts based on the user ID of the meeting organizer and the meeting ID.
 
 The following APIs are used for fetching transcripts:
 
@@ -640,7 +647,6 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 
 > [!Note]
 > The response object shown here might be shortened for readability.
-
 
 ```http
 HTTP/1.1 200 OK
@@ -712,7 +718,6 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 > [!NOTE]
 > The response object shown here might be shortened for readability.
 
-
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -723,6 +728,7 @@ Content-type: application/json
     "createdDateTime": "2021-09-17T06:09:24.8968037Z"
 }
 ```
+
 </details>
 
 ### Get callTranscript content
@@ -786,6 +792,7 @@ WEBVTT
 0:0:0.0 --> 0:0:5.320
 <v User Name>This is a transcript test.</v>
 ```
+
 </details>
 <br>
 <details>
@@ -815,6 +822,7 @@ WEBVTT
 0:0:0.0 --> 0:0:5.320
 <v User Name>This is a transcript test.</v>
 ```
+
 </details>
 <br>
 <details>
@@ -844,6 +852,7 @@ Content-type: application/vnd.openxmlformats-officedocument.wordprocessingml.doc
 User Name
 This is a transcript test.
 ```
+
 </details>
 <br>
 <details>
@@ -874,6 +883,7 @@ WEBVTT
 0:0:0.0 --> 0:0:5.320
 <v User Name>This is a transcript test.</v>
 ```
+
 </details>
 
 ## See also
