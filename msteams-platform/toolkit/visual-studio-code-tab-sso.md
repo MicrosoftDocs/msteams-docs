@@ -30,7 +30,7 @@ The Microsoft Teams Toolkit enables you to create single sign-on (SSO) authentic
 1. Enter the URL where your app will be hosted and select **next**. Your app registration will be configured using the provided URL.
 1. The app registration's configuration details will be stored in the `.env` files in your project's source code.
 
-If you would like to learn more about how your Azure app registration will be provisioned, *see*  our [single sign-on (SSO) support for tabs](../tabs/how-to/authentication/auth-aad-sso.md) documentation.
+If you would like to learn more about how your Azure app registration will be provisioned, *see*  our [single sign-on (SSO) support for tabs](../tabs/how-to/authentication/tab-sso-overview.md) documentation.
 
 > [!TIP]
 > You will need to go to **Azure App Registrations** and update your *API URI* and *redirect URLs* whenever you change this URL.
