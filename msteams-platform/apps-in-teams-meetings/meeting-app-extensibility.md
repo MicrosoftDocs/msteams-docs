@@ -32,7 +32,6 @@ Tabs allow the team members to access services and content in a specific space w
 
 > [!NOTE]
 >
-> * The private scheduled meetings only support apps.
 > * Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
 #### Pre-meeting app experience
@@ -71,7 +70,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
-For desktop, you can add apps during a meeting using **Add an app** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: option from the in-meeting U-bar.
+For desktop, you can add apps during a meeting using **Add an app** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: option from the in-meeting window.
 
 To use tabs during a meeting:
 
