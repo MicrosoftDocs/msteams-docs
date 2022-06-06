@@ -18,7 +18,7 @@ Get started with Live Share SDK using the Dice Roller sample. This get started i
 
 ## Set up your development environment
 
-To get started, install the following:
+To get started, install:
 
 * [Node.js](https://nodejs.org/en/download): The Live Share SDK supports Node.js LTS versions 12.17 and later.
 * [Latest version of Visual Studio Code](https://code.visualstudio.com/).
