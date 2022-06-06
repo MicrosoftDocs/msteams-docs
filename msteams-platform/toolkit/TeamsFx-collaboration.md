@@ -79,7 +79,7 @@ You can't remove collaborators directly from Teams Toolkit extension. Follow the
 > [!NOTE]
 >
 > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-> * Azure related permissions must be set manually by Azure subscription administrator on Microsoft Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
+> * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
 
 ## See also
 
