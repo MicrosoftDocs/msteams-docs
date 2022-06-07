@@ -34,16 +34,18 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    To set up your development environment, install the following:  
+    Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download) 
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
-    
-      > [!NOTE]
-      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
+    > [!NOTE]
+    > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+    
+    Ensure you install the following accounts and set up your development environment:
+
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * The Teams app must be installed for the recipient, either personally, or in a team or chat
     * The Tenant ID for sending and receiving notifications must match
 
@@ -70,26 +72,39 @@ items:
       
     **To create and register new application**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to sign in with your Microsoft account credentials
     1. Select **Azure Active Directory**.
+     
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
+
     1. In the left navigation panel, select **App Registrations**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration.png" alt-text="New registration" border="true":::
+
     1. Select **New registration**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration2.png" alt-text="New registration" border="true":::
 
-    1. On the **Register an application** page, set the value as follows:
-
-       * Set **Name** to your app name
-       * Set **Supported account types** to any account type
-       * Leave the **Redirect URI** empty
-       * Select **Register**
+       Register an application page appears.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
-    1. From the app **Overview** page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
+    1. On the **Register an application** page, set the value as follows:
+
+       1.  Set **Name** to your app name
+       1.  Set **Supported account types** to any account type
+       1.  Leave the **Redirect URI** empty
+       1.  Select **Register**
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+
+       App **Overview** page appears.copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="New registration" border="true":::
 
+       > [!Important]
+       > Save the **Application (client) ID** and **Directory (tenant) ID** for future reference.
+       
     **To create tunnel for local web server**
 
       Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
@@ -107,6 +122,9 @@ items:
   durationInMinutes: 1
   content: |
     1. In the left navigation panel, select **Expose an API**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Expose an API" border="true":::
+
     1. Select **Set**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Expose and api" border="true":::
@@ -130,26 +148,34 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
 
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
-    1. Set **Who can consent** to `Admins and users`.
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
-    
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**
-
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
-
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
-
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
-  
-    1. Ensure that **State** is set to **Enabled**.
-    1. Select **Add scope** to save.
+       Add a scope page appears.
+   
+    1. Enter the details for configuring scope.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Add scope" border="true":::
 
-       > [!NOTE]
-       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+       1. Enter `access_as_user` as the **Scope name**.
+
+          > [!NOTE]
+          > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+       1. Set **Who can consent** to `Admins and users`.
+       1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    
+            * Enter `Teams can access the user’s profile` as **Admin consent display name**
+
+            * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+
+            * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+
+            * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
+  
+       1. Ensure that **State** is set to **Enabled**.
+
+    1. Select **Add scope** to save.
+
+    Your application ID URI is created with scope name.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
 
@@ -159,23 +185,28 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Add client" border="true":::
 
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
+       Add a client application panel appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client for Teams mobile or desktop application" border="true":::
+    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
+       
+       |**Client ID**|**For authorizing**|
+       |--------|-------------|
+       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
 
-       Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+    1. Select **Authorized scopes** to determine which type of token will be returned by the service.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client application for Teams web application" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
 
-    1. Select **Authorized scopes**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png" alt-text="Authroized scope" border="true":::
-
-       The following image displays the Client ID:
+       The following image displays the Client Id:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
 
+       **Configure Graph permissions**
+
     1. In the left panel, select **API Permissions**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-api-permission.png" alt-text="Client application" border="true":::
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -184,9 +215,15 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Add a permission" border="true":::
 
+       Request API permission page appears.
+
     1. Select **Microsoft Graph**.
 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Select Microsoft graph" border="true":::
+
     1. Select **Delegated permissions**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions.png" alt-text="Select graph permission" border="true":::
 
     1. Add the following permissions:</br>
          * **User.Read** (enabled by default)
