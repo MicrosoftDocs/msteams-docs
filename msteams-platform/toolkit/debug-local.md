@@ -55,11 +55,11 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## Debug your Teams app locally
 
-Following steps helps you to debug your Teams app locally:
+The following steps helps you to debug your Teams app locally:
 
 ### Set up your Teams Toolkit
 
-Complete the following steps to debug your app after you create a new app using the Teams Toolkit:
+Perform the following steps to debug your app after you create a new app using the Teams Toolkit:
 
 # [Windows](#tab/Windows)
 
