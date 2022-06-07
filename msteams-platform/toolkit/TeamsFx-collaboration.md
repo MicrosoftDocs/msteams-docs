@@ -14,9 +14,8 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Prerequisites
 
-
- * Microsoft 365 subscription
- * Azure with valid subscription
+* Microsoft 365 subscription
+* Azure with valid subscription
   
   For more information on different accounts, see [prepare accounts to build Teams app](accounts.md).
 
@@ -27,7 +26,7 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Collaborate with other developers
 
-The following list guides us to understand the collaboration process and its limitation:
+The following steps guides us to understand the collaboration process and its limitation:
 
 ### As project owner
 
@@ -48,8 +47,8 @@ The following list guides us to understand the collaboration process and its lim
 
 * Push the project to GitHub
 
-> [!NOTE]
-> Newly added collaborator doesn't receive any notification. Project owner needs to notify collaborator.
+  > [!NOTE]
+  > The newly added collaborators do not receive any notification. The Project owner needs to notify collaborator.
 
 ### As project collaborator
 
@@ -59,21 +58,24 @@ The following list guides us to understand the collaboration process and its lim
 * To preview your Teams app, deploy the project to remote
 * Launch remote to have a preview of the Teams app
 
-For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
+  > [!NOTE]
+  > Collaborators must log in using the account that project owner adds under the same tenant with project owner for more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
-> [!NOTE]
-> Collaborators must log in using the account added by project owner, which is under the same tenant with project owner.
+### Limitations
 
-### Limitation
+You need to remove collaborators manually as you can't remove them directly from Teams Toolkit extension. Perform the following steps to remove collaborators manually:
 
-You can't remove collaborators directly from Teams Toolkit extension. Follow the steps to remove collaborators manually:
+* Using Developer Portal
 
-  1. Go to Teams Developer Portal and select your Teams app by name or app ID.
-  2. Select **Owners** from left panel.
-  3. Select and remove the collaborator.
-  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
-  5. Select **Owners** from left panel in Azure AD App management page.
-  6. Select and remove the collaborator.
+  * Go to **Teams Developer Portal** and select your Teams app by name or app ID.
+  * Select **Owners** from left panel.
+  * Select and remove the collaborator.
+
+* Using Azure Active Directory
+
+  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
+  * Select **Owners** from left panel in Azure AD App management page.
+  * Select and remove the collaborator.
 
 > [!NOTE]
 >
