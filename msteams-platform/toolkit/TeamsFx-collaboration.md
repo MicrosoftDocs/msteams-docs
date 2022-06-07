@@ -67,7 +67,7 @@ You need to remove collaborators manually as you can't remove them directly from
 
 * Using Developer Portal
 
-  * Go to **Teams Developer Portal** and select your Teams app by name or app ID.
+  * Go to [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select your Teams app by name or app ID.
   * Select **Owners** from left panel.
   * Select and remove the collaborator.
 
