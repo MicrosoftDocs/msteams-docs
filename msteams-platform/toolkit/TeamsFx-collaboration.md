@@ -26,7 +26,7 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Collaborate with other developers
 
-The following steps guides us to understand the collaboration process and its limitation:
+The following steps guide us to understand the collaboration process and its limitation:
 
 ### As project owner
 
@@ -53,8 +53,8 @@ The following steps guides us to understand the collaboration process and its li
 ### As project collaborator
 
 * Clone the project from GitHub
-* Log in to Microsoft 365 account
-* Log in to Azure account, it has contributor permission for all the Azure resources which are used in the project
+* Log on to Microsoft 365 account
+* Log in to Azure account, it has contributor permission for all the Azure resources, which are used in the project
 * To preview your Teams app, deploy the project to remote
 * Launch remote to have a preview of the Teams app
 
