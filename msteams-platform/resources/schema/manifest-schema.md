@@ -11,7 +11,7 @@ keywords: teams manifest schema
 The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
-The following table lists the manifest versions along with app scenerios:
+The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
 |                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
 |------------------|---------|--------|---|
@@ -20,7 +20,7 @@ The following table lists the manifest versions along with app scenerios:
 |**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
 
 > [!Note]
-> For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) overview for further guidance.
+> For more information on TeamsJS, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
 
 **Best practice is to use the latest TeamsJS (v.2.0 or later) whenever possible, in order to benefit from the latest improvements and new feature support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.*
 
