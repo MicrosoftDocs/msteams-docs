@@ -14,17 +14,16 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Prerequisites
 
-* Account prerequisites
 
-    To provision cloud resources, you must have the following accounts. For more information, see [prepare accounts to build Teams app](accounts.md).
-
-  * Microsoft 365 subscription
-  * Azure with valid subscription
+ * Microsoft 365 subscription
+ * Azure with valid subscription
+  
+  For more information on different accounts, see [prepare accounts to build Teams app](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+
 
 > [!TIP]
-> Ensure you have a Teams app project opened in VS Code.
+> Ensure you have a Teams app project opened in Visual Studio Code.
 
 ## Collaborate with other developers
 
