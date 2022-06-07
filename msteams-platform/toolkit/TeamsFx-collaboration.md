@@ -26,40 +26,40 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Collaborate with other developers
 
-The following steps guide us to understand the collaboration process and its limitation:
+The following lists guide us to understand the collaboration process and its limitation:
 
-### As project owner
+* As project owner
 
-> [!NOTE]
-> Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
+  > [!NOTE]
+  > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-* In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following images:
+  1. In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following images:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
-* Select **Add Microsoft 365 Teams App (with Azure AD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
+  2. Select **Add Microsoft 365 Teams App (with Azure AD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
+  3. To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
-* Push the project to GitHub
+  4. Push the project to GitHub
 
-  > [!NOTE]
-  > The newly added collaborators do not receive any notification. The Project owner needs to notify collaborator.
+    > [!NOTE]
+    > The newly added collaborators do not receive any notification. The Project owner needs to notify collaborator.
 
-### As project collaborator
+* As project collaborator
 
-* Clone the project from GitHub
-* Log on to Microsoft 365 account
-* Log in to Azure account, it has contributor permission for all the Azure resources, which are used in the project
-* To preview your Teams app, deploy the project to remote
-* Launch remote to have a preview of the Teams app
+  1. Clone the project from GitHub.
+  2. Log on to Microsoft 365 account.
+  3. Log on to Azure account, it has contributor permission for all the Azure resources, which are used in the project.
+  4. To preview your Teams app, deploy the project to remote.
+  5. Launch remote to have a preview of the Teams app.
 
-  > [!NOTE]
-  > Collaborators must log in using the account that project owner adds under the same tenant with project owner for more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
+    > [!NOTE]
+    > Collaborators must log in using the account that project owner adds under the same tenant with project owner for more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
 ### Limitations
 
