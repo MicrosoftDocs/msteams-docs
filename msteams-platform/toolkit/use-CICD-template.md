@@ -14,7 +14,7 @@ TeamsFx helps to automate your development workflow while building Teams applica
 
 |Tools and Templates | Description |
 |---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Action that integrates with TeamsFx CLI.|
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action that integrates with TeamsFx CLI.|
 |[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
@@ -41,9 +41,9 @@ To set up pipelines with GitHub for CI/CD:
 
 ### Create workflow templates
 
-You can create the following workflow templates with GitHub using:
+You can create the following workflow templates with GitHub:
 
-**Teams Toolkit in Visual Studio Code**
+**Using Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
 1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -54,7 +54,7 @@ You can create the following workflow templates with GitHub using:
 1. Open the template and customize the workflows that fit into your scenarios.
 1. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
 
-**TeamsFx CLI**
+**Using TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -88,9 +88,9 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 ### Create workflow templates
 
-You can create the following workflow templates with Azure DevOps using:
+You can create the following workflow templates with Azure DevOps:
 
-**Teams Toolkit in Visual Studio Code**
+**Using Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
 2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -101,7 +101,7 @@ You can create the following workflow templates with Azure DevOps using:
 7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
-**TeamsFx CLI**
+**Using TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -141,9 +141,9 @@ To set up pipelines with Jenkins for CI/CD:
 
 ### Create workflow templates
 
-You can create the following workflow templates with Jenkins using:
+You can create the following workflow templates with Jenkins:
 
-**Teams Toolkit in Visual Studio Code**
+**Using Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
 2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -154,7 +154,7 @@ You can create the following workflow templates with Jenkins using:
 7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.jenkins/pipelines` to set up the workflow with Jenkins.
 
-**TeamsFx CLI**
+**Using TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
