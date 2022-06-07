@@ -20,9 +20,52 @@ In this section, you will:
         1. Authorize client apps
     1. Configure access token version
 
-## Create and deploy Bot resource in Azure AD
+## Create and deploy bot resource in Azure AD
 
 / Add in details /
+
+To create and deploy bot resource
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure AD Portal page opens.
+
+1. Select the **Create a resource** icon.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-resource.png" alt-text="Create a bot resource" border="false":::
+
+    The **Create a resource** page appears.
+
+1. Type **Azure bot** in the search box, and select the Azure bot from the options that appear.
+
+    The **Azure Bot** page appears, and the plan is pre-selected as Azure Bot.
+
+1. Select **Create**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-bot.png" alt-text="Create azure bot plan" border="false":::
+
+    The **Create an Azure Bot** page appears.
+
+1. Enter the basic project details for the bot app.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-azure-bot.png" alt-text="Add an azure bot project details":::
+
+    1. Enter a bot handle. This is a unique identifier for your bot. It's not the display name, and you can choose a different display name later.
+
+    1. Select a subscription plan.
+
+    1. Select the resource group which you want to provision for your bot app.
+
+        You can also create a new resource group.
+
+1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and SIngle Tenant.
+
+1. Select the creation type.
+
+1. Select **Review + create**.
+
+    Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
+
+/ Add details post-creation. /
 
 ### Create client secret
 
