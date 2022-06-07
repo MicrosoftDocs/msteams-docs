@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 03/03/2022
 ---
 
-# Debug background process
+# Debug background processes
 
-The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code (VS Code), then the VS Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance as follows:
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code (VS Code). The VS Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance as follows:
 
 1. The `launch.json` file configures the debugger in VS Code.
 
@@ -129,7 +129,7 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
       | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
       | Bot or message extension | `https://ngrok.io/auth-end.html` | NA |
 
-    The following table lists the configurations of Microsoft 365 client application with the client Ids:
+    The following table lists the configurations of Microsoft 365 client application with the client IDs:
 
       | Microsoft 365 client application | Client ID |
       | --- | --- |
@@ -164,7 +164,7 @@ After registration and configuration of the app, local debug files generates.
 
 ## Take a tour of your app source code
 
-You can view the project folders and files in the **Explorer area** of VS Code after the Teams Toolkit registers and configures your app. The following table lists the local debug files and the configuration types:
+You can view the project folders and files under **Explorer** in VS Code after the Teams Toolkit registers and configures your app. The following table lists the local debug files and the configuration types:
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
@@ -176,7 +176,7 @@ You can view the project folders and files in the **Explorer area** of VS Code a
 
 ## See also
 
-[Debug your Teams app using Teams Toolkit](debug-local.md)
-[Use Teams Toolkit to provision cloud resources](provision.md)
-[Deploy to the cloud](deploy.md)
-[Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Debug your Teams app using Teams Toolkit](debug-local.md)
+* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Deploy to the cloud](deploy.md)
+* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
