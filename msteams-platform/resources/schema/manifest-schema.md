@@ -13,7 +13,6 @@ For more information on the changes made in each version, see [manifest change l
 
 > [!Important]
 > Version `1.13` of the Microsoft Teams app manifest schema enables support for [extending Teams apps to Outlook and Office](../../m365-apps/overview.md). For Teams-only apps, use version `1.12` (or earlier). The 1.12 and 1.13 schemas are otherwise the same. Refer to [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) overview for further guidance.
-
 > |                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
 > |------------------|---------|--------|---|
 > |**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later |
