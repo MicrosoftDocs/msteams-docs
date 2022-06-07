@@ -11,6 +11,10 @@ A client secret is a string that the application uses to prove its identity when
 
 1. Select **Manage** > **Certificates & secrets**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Client secret menu option" border="false":::
+
+    The **Certificates & secrets** page appears.
+
 2. Select **+ New client secret**.
 
     :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::

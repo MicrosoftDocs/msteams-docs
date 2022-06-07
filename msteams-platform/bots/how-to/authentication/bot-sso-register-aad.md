@@ -188,13 +188,17 @@ A client secret is a string that the application uses to prove its identity when
 
 1. Select **Manage** > **Certificates & secrets**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Client secret menu option" border="false":::
+
+    The **Certificates & secrets** page appears.
+
 2. Select **+ New client secret**.
 
-    :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-client-secret.png" alt-text="Add new client secret" border="false":::
 
    The **Add a client secret** page appears.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Add a client secret page" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Add a client secret page" border="true":::
 
 3. Enter the description.
 4. Select the duration of validity for the secret.
@@ -202,7 +206,7 @@ A client secret is a string that the application uses to prove its identity when
 
    A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-secret-added.png" alt-text="Client secret added":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
 
 6. Select the copy button next to the **Value** of client secret.
 7. Save the value that you copied for later use.
