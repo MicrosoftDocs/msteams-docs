@@ -112,7 +112,7 @@ You can create the following workflow templates with Azure DevOps using:
 8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
 > [!NOTE]
-> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in Visual Studio Code or TeamsFx CLI.
+> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in VS Code or TeamsFx CLI.
 
 ### Customize CI workflow
 
