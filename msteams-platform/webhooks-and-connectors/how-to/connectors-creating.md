@@ -3,7 +3,7 @@ title: Create Office 365 Connectors
 author: laujan
 description: Describes how to get started with Office 365 Connectors in Microsoft Teams
 keywords: teams Office365 connector
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
 ---
@@ -218,7 +218,9 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 ## Distribute webhook and connector
 
 1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
+
 1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a Office 365 Connector.
+
 1. Package and publish your connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## Code sample

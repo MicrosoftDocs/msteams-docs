@@ -3,7 +3,7 @@ title: Sending and receiving files from a bot
 description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes. Use Teams bot APIs using code samples based on the v3 Bot Framework SDK.
 keywords: teams bots files send receive
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2019
 ---
 # Send and receive files through your bot
@@ -83,7 +83,7 @@ Uploading a file to a user involves the following steps:
 
 This desktop message contains a simple attachment object requesting user permission to upload the file:
 
-![Screenshot of consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Screenshot of consent card requesting user permission to upload file" border="true":::
 
 This mobile message contains an attachment object requesting user permission to upload the file:
 
