@@ -32,14 +32,14 @@ You can set up pipelines with the following platforms:
 
 To set up pipelines with GitHub for CI/CD:
 
-1. Create workflow templates.
+* Create workflow templates.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-2. Customize CI/CD workflow.
+* Customize CI/CD workflow.
 
-### Create workflow templates with GitHub
+### Create workflow templates
 
 You can create the following workflow templates with GitHub using:
 
@@ -79,12 +79,12 @@ You can change or remove the test scripts to customize CI/CD workflow:
 
 To set up pipelines with Azure DevOps for CI/CD:
 
-1. Create workflow templates.
+* Create workflow templates.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Customize CI/CD workflow.
+* Customize CI/CD workflow.
 
 ### Create workflow templates
 
@@ -112,18 +112,18 @@ You can create the following workflow templates with Azure DevOps using:
 8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
 > [!NOTE]
-> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in VS Code or TeamsFx CLI.
+> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in Visual Studio Code or TeamsFx CLI.
 
 ### Customize CI workflow
 
-The following are the changes you can make for the script or workflow definition:
+You can make the following changes for the script or workflow definition:
 
 1. Use npm build script or customize the way you build in the automation code.
 1. Use npm test script, which returns zero for success, and change the test commands.
 
 ### Customize CD workflow
 
-The following are the changes you can make for the script or workflow definition:
+You can make the following changes for the script or workflow definition:
 
 1. Ensure you have an npm build script or customize the way you build in the automation code.
 1. Ensure you have an npm test script, which returns zero for success or change the test commands.
@@ -132,12 +132,12 @@ The following are the changes you can make for the script or workflow definition
 
 To set up pipelines with Jenkins for CI/CD:
 
-1. Create workflow templates.
+* Create workflow templates.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-2. Customize CI/CD workflow.
+* Customize CI/CD workflow.
 
 ### Create workflow templates
 
@@ -169,7 +169,7 @@ You can create the following workflow templates with Jenkins using:
 
 ### Customize CI workflow
 
-The following are some of the changes you can make to your project:
+You can make the following changes to your project:
 
 1. Change how the CI flow is triggered. The default is to use the triggers of **pollSCM** when a new change is pushed into the **dev** branch.
 1. Ensure you have an npm build script or customize the way you build in the automation code.
