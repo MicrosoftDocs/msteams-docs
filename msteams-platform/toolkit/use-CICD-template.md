@@ -238,4 +238,4 @@ Perform the following steps to publish your app:
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [Manage your apps with the Developer Portal for Microsoft Teams](/microsoftteams/platform/concepts/build-and-test/teams-developer-portal)
+* [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md)
