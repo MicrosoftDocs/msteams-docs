@@ -100,7 +100,7 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 ## `teamsfx add`
 
-The following table lists diffetent features to your Teams application along with their descrition.
+The following table lists different features to your Teams application along with their description.
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -120,7 +120,7 @@ The following table lists diffetent features to your Teams application along wit
 
 ## `teamsfx account`
 
-The following table lists the cloud service accounts,such as Azure and Microsoft 365.
+The following table lists the cloud service accounts, such as Azure and Microsoft 365.
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -160,8 +160,8 @@ Provision the cloud resources in the current application.
 |`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
 |`--resource-group`| No | Set the name of an existing resource group. |
-|`--sql-admin-name`| No | Applicable when there is SQL resource in the project. Admin name of SQL.|
-|`--sql-password`| No| Applicable when there is SQL resource in the project. Admin password of SQL.|
+|`--sql-admin-name`| No | Applicable when there's SQL resource in the project. Admin name of SQL.|
+|`--sql-password`| No| Applicable when there's SQL resource in the project. Admin password of SQL.|
 
 ## `teamsfx deploy`
 
@@ -172,9 +172,9 @@ This command is used to deploy the current application. By default it deploys en
 | Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
-|`--open-api-document`| No | Applicable when there is APIM resource in the project. The open API document file path. |
-|`--api-prefix`| No | Applicable when there is APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
-|`--api-version`| No | Applicable when there is APIM resource in the project. The API version. |
+|`--open-api-document`| No | Applicable when there's APIM resource in the project. The open API document file path. |
+|`--api-prefix`| No | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
+|`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
 |`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
 |`--include-aad-manifest`| No | Whether to deploy aad manifest. Options are `yes` and `not`. The default value is `no`. |
 
@@ -257,8 +257,8 @@ The configuration data is either in user scope or project scope.
 | Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
-|`--folder`| No | Project directory. This is used for get or set project configuration. The default value is `./`. |
-|`--global`| No | Cope of configuration. If this is true, the scope is limited to user scope instead of project scope. The default value is `false`. At present, the supported global configurations include `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
+|`--folder`| No | Project directory used for get or set project configuration. The default value is `./`. |
+|`--global`| No | Cope of configuration. If true, the scope is limited to user scope instead of project scope. The default value is `false`. Now, the supported global configurations include `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
 
 ### Scenarios for `teamsfx config`
 
@@ -272,7 +272,7 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 * Disable environment checker
 
-  There are three configuration to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the   configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
+  There are three configurations to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the   configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
 
   * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
   * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
@@ -349,7 +349,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 * Show Permission Status
 
-  Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env:
+  Project creator and collaborators can use `teamsfx permission status` command to view Microsoft 365 account permission for specific env:
 
   ```bash
   teamsfx permission status --env dev
