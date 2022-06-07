@@ -37,15 +37,15 @@ To get a free Teams developer account, join the Microsoft 365 developer program 
 
 You can sign-up for the developer program by using one of the following account types:
 
-- **Microsoft account for personal use**
+* **Microsoft account for personal use**
 
     The account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
-- **Microsoft work account for business**
+* **Microsoft work account for business**
 
      The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
 
-- **Visual Studio user id**
+* **Visual Studio user ID**
 
     The user ID for Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
@@ -57,7 +57,7 @@ Azure account is optional if your existing application is hosted on other cloud 
 
 If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
-## Upload custom app 
+## Upload custom app
 
 > [!IMPORTANT]
 > After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
@@ -86,16 +86,16 @@ If you want to host your application related resources or access resources withi
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app" border="true":::
 
         If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
-        
+
         * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
-### Upload your custom app
+* **upload the custom app in Teams**
 
 > [!IMPORTANT]
 > To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
 
-**To upload the custom app**
+Perform the following steps to upload the custom app:
 
 1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
