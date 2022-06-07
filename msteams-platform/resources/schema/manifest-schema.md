@@ -19,8 +19,7 @@ The following table lists TeamsJS version and app manifest versions as per diffe
 |**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](../../tabs/how-to/using-teams-client-sdk.md#backwards-compatibility) and [Update to TeamsJS v.2.0](../../tabs/how-to/using-teams-client-sdk.md#updating-to-the-teams-client-sdk-v200)|
 |**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
 
-> [!Note]
-> For more information on TeamsJS, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
+For more information on TeamsJS, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
 
 **Best practice is to use the latest TeamsJS (v.2.0 or later) whenever possible, in order to benefit from the latest improvements and new feature support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.*
 
