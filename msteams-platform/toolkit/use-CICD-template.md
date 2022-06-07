@@ -177,7 +177,7 @@ You can make the following changes to your project:
 
 ### Customize CD workflow
 
-Follow the steps to customize the CD pipeline:
+Perform the following steps to customize the CD pipeline:
 
 1. Change the CD flow. The default is to use the triggers of `pollSCM` when a new change is pushed into the `main` branch.
 1. Change the build scripts if necessary.
@@ -220,9 +220,7 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 ## Publish Teams app using Teams Developer Portal
 
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again.
-
-To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 Perform the following steps to publish your app:
 
