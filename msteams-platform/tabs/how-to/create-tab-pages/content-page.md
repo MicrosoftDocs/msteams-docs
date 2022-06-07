@@ -50,7 +50,7 @@ The following code provides an example of how your page and the Teams client com
 
 ## Access additional content
 
-You can access additional content by using the SDK to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array. 
+You can access additional content by using the SDK to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array.
 
 ### Use the SDK to interact with Teams
 
@@ -78,7 +78,7 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 > [!NOTE]
 >
 > * The behavior on mobile clients is not configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
-> * The value of `showLoadingIndicator` must be **true** for Store apps from v1.13.
+> * The value of `showLoadingIndicator` is set to **true** for Store apps from app manifest v1.13.
 
 When you indicate `showLoadingIndicator`: **true**  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 

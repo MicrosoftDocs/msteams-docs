@@ -633,7 +633,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 Indicates if or not to show the loading indicator when an app or tab is loading. The default value is **true**. When you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in  [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 
 > [!NOTE]
-> The value of `showLoadingIndicator` must be **true** for Store apps from v1.13.
+> The value of `showLoadingIndicator` is set to **true** for Store apps from app manifest v1.13.
 
 ## isFullScreen
 
