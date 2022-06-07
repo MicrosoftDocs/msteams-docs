@@ -92,32 +92,32 @@ If you want to host your application related resources or access resources withi
 
 * **upload the custom app in Teams**
 
-> [!IMPORTANT]
-> To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
+  > [!IMPORTANT]
+  > To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
 
-Perform the following steps to upload the custom app:
+  Perform the following steps to upload the custom app:
 
-1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+  1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
-2. Select **Show All** > **Teams**.
+  2. Select **Show All** > **Teams**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all" border="true":::
 
-   > [!Note]
-   > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
+     > [!Note]
+     > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
-3. Go to **Teams apps** > **Setup policies**.
+  3. Go to **Teams apps** > **Setup policies**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
 
-4. Set toggle **Upload custom apps** to **On** position.
+  4. Set toggle **Upload custom apps** to **On** position.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="toggle":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="toggle":::
 
-5. Select **Save**.
+  5. Select **Save**.
 
-   > [!Note]
-   > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
+     > [!Note]
+     > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
 
 For more information, see [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
