@@ -43,7 +43,7 @@ To set up pipelines with GitHub for CI/CD:
 
 You can create the following workflow templates with GitHub:
 
-**Using Teams Toolkit in Visual Studio Code**
+**Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
 1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -54,7 +54,7 @@ You can create the following workflow templates with GitHub:
 1. Open the template and customize the workflows that fit into your scenarios.
 1. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
 
-**Using TeamsFx CLI**
+**TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -90,7 +90,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 You can create the following workflow templates with Azure DevOps:
 
-**Using Teams Toolkit in Visual Studio Code**
+**Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
 2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -101,7 +101,7 @@ You can create the following workflow templates with Azure DevOps:
 7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
-**Using TeamsFx CLI**
+**TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -143,7 +143,7 @@ To set up pipelines with Jenkins for CI/CD:
 
 You can create the following workflow templates with Jenkins:
 
-**Using Teams Toolkit in Visual Studio Code**
+**Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
 2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -154,7 +154,7 @@ You can create the following workflow templates with Jenkins:
 7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.jenkins/pipelines` to set up the workflow with Jenkins.
 
-**Using TeamsFx CLI**
+**TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -203,7 +203,7 @@ Ensure to set up Azure and Microsoft 365 credentials in your environment variabl
 
 To provision and deploy resources targeting Azure inside CI/CD, you must create an Azure service principal for use.
 
-Follow the steps to create Azure service principals:
+Perform the following steps to create Azure service principals:
 
 1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
 2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
@@ -224,7 +224,7 @@ If there are any changes related to Teams app's manifest file, you can update th
 
 To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-Follow the steps to publish your app:
+Perform the following steps to publish your app:
 
 1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip, select `App -> Import app -> Replace`.
