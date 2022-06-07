@@ -35,9 +35,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 **To create a command menu for your bot using App Studio**
 
 1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**.
-   > [!NOTE]
-   > If you don't have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
-  
+    
    > [!WARNING]
    > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
 
