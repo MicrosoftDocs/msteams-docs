@@ -25,7 +25,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ## Key features of Teams Toolkit
 
-Following steps gives you key features of Teams Toolkit:
+The following list provides the key features of Teams Toolkit:
 
 ### Start debugging
 
