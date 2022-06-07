@@ -90,7 +90,7 @@ If you want to host your application related resources or access resources withi
         * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
-* **upload custom app in Teams**
+* **Upload custom app using admin center**
 
   > [!IMPORTANT]
   > To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
