@@ -9,7 +9,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. VS Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -71,7 +71,7 @@ Complete the following steps to debug your app after you create a new app using 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debugging" border="false":::
 
-3. Select **Sign-in** to Microsoft 365 account.
+3. Select **Sign in** to Microsoft 365 account.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign in" border="true":::
 
@@ -122,6 +122,7 @@ Toolkit launches a new Edge or Chrome browser instance based on your selection a
 Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
 ---
+
 ### Debug your app
 
 After the initial set up process, the Teams Toolkit starts the following processes:
@@ -190,7 +191,7 @@ Teams Toolkit unchecks some prerequisites and allows you to customize the debug 
 
 1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
 
-1. Set siteEndpoint configuration in `.fx/configs/config.local.json` to your endpoint.
+1. Set `siteEndpoint` configuration in `.fx/configs/config.local.json` to your endpoint.
 
 ```json
 {
