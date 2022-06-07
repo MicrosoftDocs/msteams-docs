@@ -243,8 +243,12 @@ items:
     1. Select **Add a permission**.
 
     1. Select **Microsoft Graph**.
+ 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Select Microsoft graph" border="true":::
 
     1. Select **Application permissions**.
+
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions1.png" alt-text="Select Microsoft graph" border="true":::
 
     1. Add the following permissions:</br> 
 
@@ -260,8 +264,9 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
 
-
     1. From the left panel, select **Authentication** to set a redirect URI. 
+
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-authentication.png" alt-text="Select Authentication" border="true":::
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -293,6 +298,8 @@ items:
 
     1. In the left panel, select **Certificates & secrets**. 
 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-certificate.png" alt-text="Select Certificate" border="true":::
+
     1. In the **Client secrets** section, select **New client secret**. 
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret.png" alt-text="Client secret" border="true":::
@@ -309,7 +316,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret-code.png" alt-text="Client secret code" border="true":::
        
-       > [!TIP]
+       > [!Important]
        > Save the **Client secrets** value or app password for future reference.
 
 
