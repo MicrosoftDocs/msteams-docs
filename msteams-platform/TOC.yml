@@ -104,13 +104,13 @@
       href: toolkit/accounts.md
     - name: Debug your Teams app locally
       href: toolkit/debug-local.md
-    - name: Debug background processes
+    - name: Debug background process
       href: toolkit/debug-background-process.md
     - name: Provision cloud resources
       href: toolkit/provision.md
     - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
-    - name: Preview and customize Teams app manifest
+    - name: Edit Teams app manifest
       href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
     - name: Azure AD manifest
       href: toolkit/AAD-manifest-customization.md
