@@ -68,6 +68,10 @@ Each activity generates a system notification. What displays depends on what the
 
 ---
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-graphactivity-feedbroadcast.yml) to send activity feed notifications in Teams.
+
 ## Next step
 
 > [!div class="nextstepaction"]

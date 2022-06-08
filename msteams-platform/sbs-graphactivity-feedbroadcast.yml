@@ -40,8 +40,8 @@ items:
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
 
-    > [!NOTE]
-    > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
     Ensure you install the following accounts and set up your development environment:
 
@@ -89,7 +89,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
-    1. On the **Register an application** page, set the value as follows:
+    1. Enter the following details to register an application.
 
        1.  Set **Name** to your app name
        1.  Set **Supported account types** to any account type
@@ -98,7 +98,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
-       App **Overview** page appears.copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
+       App **Overview** page appears.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="New registration" border="true":::
 
@@ -175,7 +175,7 @@ items:
 
     1. Select **Add scope** to save.
 
-    Your application ID URI is created with scope name.
+       Your application ID URI is created with scope name.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
 
@@ -273,7 +273,7 @@ items:
                
          1. Select **Add a platform**.
 
-         1. Select **Web**.
+         1. For this tutorial, select **Web**.
 
              :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-platform.png" alt-text="Add platform" border="true":::
 
@@ -358,6 +358,8 @@ items:
 
        1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
+       1. Select **Open**.
+
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-project.png" alt-text="Open a project" border="true":::
 
        1. Press **F5** to run the project.
@@ -382,11 +384,13 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
-    1. Go to **Microsoft Teams**.
+    1. Go to **Teams** client.
 
     1. Select **Apps**.
 
     1. Select **Manage your apps**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-your-app.png" alt-text="Manage your app" border="true":::
     
     1. Select **Upload an app to your org's app catalog**. 
 
