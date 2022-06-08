@@ -28,13 +28,14 @@ Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user h
 
 ### The tab settings can't be saved on selecting Save
 
-When adding a tab, if you select the save button but receive an error message indicating the settings can't be saved, the problem could be one of following issues:
+When adding a tab, if you select **Save** but receive an error message indicating the settings can't be saved, the problem could be one of two classes of issues:
 
-* The save success message was never received. If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`. If the callback doesn't call `saveEvent.notifySuccess()` within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error is shown.
+* **The save success message was never received**: If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`.
 
-* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made when the user selects **Save**.
+  * If the callback doesn't call `saveEvent.notifySuccess()` within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error is shown.
+  * If no save handler was registered, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 
-* The provided settings were invalid. The other reason the settings may not be saved is if the call to `microsoftTeams.setSettings(settings)` provided an invalid settings object, or the call wasn't made at all. See the next section, Common problems with the settings object.
+* **The provided settings were invalid**: The other reason the settings may not be saved is if the call to `microsoftTeams.setSettings(settings)` provided an invalid settings object, or the call wasn't made at all. See the next section, Common problems with the settings object.
 
 ### Common problems with the settings object
 
