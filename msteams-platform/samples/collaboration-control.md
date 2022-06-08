@@ -19,7 +19,7 @@ ms.topic: conceptual
 
  **Dataverse Notes:** Create notes that are assigned to a record in your app.
 
- **Outlook Meetings:** Schedule meetings with both customers and internal employees and seamlessly connect with others with Microsoft Teams with a click of a button.
+ **Outlook Meetings:** Schedule meetings with both customers and internal employees and seamlessly connect with others with Microsoft Teams with a select of a button.
 
  **Microsoft Teams channel conversations:** Participate in channel conversations with your
  colleagues to get questions quickly answered and to notify others of important events.
@@ -31,20 +31,20 @@ ms.topic: conceptual
 
 ## Install collaboration controls
 
- In this exercise, you will learn how to install Collaboration Controls.
+ In this exercise, you'll learn how to install Collaboration Controls.
 
 ### Install the Collaboration Controls solutions
 
- In this task, you will install the Collaboration Controls into your dataverse environment via a private link. This link must not be shared with any other persons inside or outside your organization. Afterwards, you will be able to configure and use the components within your own   model-driven app.
+ In this task, you'll install the Collaboration Controls into your dataverse environment via a private link. This link must not be shared with any other persons inside or outside your organization. Afterwards, you'll be able to configure and use the components within your own   model-driven app.
 
  Collaboration Controls includes the following solutions:
 
- |**Settings solutions** | |
+ |**Settings solutions** | **To do** |
  |---|---|
  | Collaboration Toolkit Settings | Hold the settings infrastructure that powers Collaboration Controls. Includes several new solution-aware components.|
  | Collaboration Toolkit Settings Objects | Provides pre-defined settings values that are leveraged by the Collaboration Controls. |
 
- |**Collaboration solutions** | |
+ |**Collaboration solutions** | **To do** |
  |---|---|
  | Collaboration Toolkit Tasks | Includes the new tasks PCF (Power Apps component framework) control, and in the future, the virtual table for Planner tasks.|
  | Collaboration Toolkit Events | Includes the new events PCF control, and in the future, the virtual table for Outlook and Bookings events. |
@@ -56,7 +56,7 @@ ms.topic: conceptual
  > [!TIP]
  > If you have an existing version of the controls installed in your environment, you may need to create a fresh environment and complete a new install to successfully upgrade to the latest   version.
 
- Before installation, you must be in a power platform environment or tenant admin. You will need a dataverse environment with a database. If you do not have one, you will need to create a new one to continue this lab.
+ Before installation, you must be in a power platform environment or tenant admin. You'll need a dataverse environment with a database. If you do not have one, you'll need to create a new one to continue this lab.
 
  To install the solutions, begin by navigating to Microsoft AppSource and then complete the following steps.
 
@@ -69,7 +69,7 @@ ms.topic: conceptual
 
      :::image type="content" source="../assets/images/Collaboration control/collaboration-controls-preview.png" alt-text="Collaboration control preview" border="true":::
 
- 1. You will be directed to Power Platform Admin Center. Select an environment from the drop down and agree to the terms and policy statements.
+ 1. You'll be directed to Power Platform Admin Center. Select an environment from the drop down and agree to the terms and policy statements.
 
      > [!TIP]
      > If you see a permissions error when you select the environment, try clicking outside the
@@ -91,7 +91,7 @@ ms.topic: conceptual
 
    :::image type="content" source="../assets/images/Collaboration control/solutions.png" alt-text="solutions collaboration control" border= "true":::
 
- Congrats! You have successfully installed all the Collaboration solutions into your environment. In the next exercise, you will build a new model-driven app that can take advantage of the Collaboration Control capabilities.
+ Congrats! You have successfully installed all the Collaboration solutions into your environment. In the next exercise, you'll build a new model-driven app that can take advantage of the Collaboration Control capabilities.
 
 ### Prerequisites
 
@@ -132,11 +132,11 @@ ms.topic: conceptual
 
  1. Select **Create**
 
- 1. Once the solution has been created, it will appear in your list of solutions. Select it to open it.
+ 1. Once the solution has been created, it'll appear in your list of solutions. Select it to open it.
 
  1. Before creating our app, we must first create a home for our data; select **New** > **Table** to get started.
 
- 1. Give your table a name, we will use **'Inspections'** for this document.
+ 1. Give your table a name, we'll use **'Inspections'** for this document.
 
  1. Under **Advanced options** select **Creating a new activity**.
 
@@ -150,7 +150,7 @@ ms.topic: conceptual
  1. Once you are done creating your table, feel free to customize it by adding additional
 columns, relationships, and more (Optional).
 
- 1. Next, we will create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
+ 1. Next, we'll create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
      :::image type="content" source="../assets/images/Collaboration control/model-driven-app.png" alt-text="New model driven app" border="true":::
 
@@ -186,9 +186,9 @@ columns, relationships, and more (Optional).
 
 ### Configure Collaboration controls for your application
 
- In this exercise, you will define the settings for Collaboration controls for the business entity (e.g., Inspections) you created in the previous exercise.
+ In this exercise, you'll define the settings for Collaboration controls for the business entity (e.g., Inspections) you created in the previous exercise.
 
- The settings you apply are **Group ID** which is needed for Tasks and internal Meetings, **Channel ID** for Conversations, and the **Booking business ID** to enable external meetings using Bookings functionality. You will also apply settings for the **Site ID and Drive ID**, which are needed for Files to be linked to your SharePoint site.
+ The settings you apply are **Group ID** which is needed for Tasks and internal Meetings, **Channel ID** for Conversations, and the **Booking business ID** to enable external meetings using Bookings functionality. You'll also apply settings for the **Site ID and Drive ID**, which are needed for Files to be linked to your SharePoint site.
 
  You can do this by creating a new Team to host your application and create settings variables, **OR if using an existing Team, you can skip to Task 2.**
 
@@ -196,7 +196,7 @@ Create a new Microsoft Teams team
 
  1. Open **Microsoft Teams** and navigate to **Teams** in the left app bar.
 
- 1. Select Join or create a team so that we can create a new team that will be leveraging the app you created. This team will be the home for all conversations and more for this app.
+ 1. Select Join or create a team so that we can create a new team that'll be leveraging the app you created. This team'll be the home for all conversations and more for this app.
 
      :::image type="content" source="../assets/images/Collaboration control/join-create-team.png" alt-text="Join or create a Team" border="true":::
 
@@ -226,20 +226,20 @@ Create a new Microsoft Teams team
 
      :::image type="content" source="../assets/images/Collaboration control/get-link.png" alt-text="get link to the Team" border="true":::
 
- 1. Now record the value of groupId from within the URL somewhere safe. You will use this value in a future step while defining the settings of your solution.
+ 1. Now record the value of groupId from within the URL somewhere safe. You'll use this value in a future step while defining the settings of your solution.
 
      `<https://teams.microsoft.com/l/team/19%3akk_TuKhjXu92yJvg4TZ10S6rouLSCgvHIb5NOOTfRjg1%40thr>ead.tacv2/conversations?groupId=4310f270-1aa5-4089-99f3-47eb3b4d69ad&tenantId=b699419be0df-47e3-9909-24076fdcf68b`
 
  **Retrieve the internal ID of the Channel you want to install the app**
 
  1. Whether you created a new Microsoft Teams team and Channel or have an existing Team and Channel,
-you will want to record its Channel ID so that it can be leveraged. To get the ID, start by finding your Channel within the team in your list of teams.
+you'll want to record its Channel ID so that it can be leveraged. To get the ID, start by finding your Channel within the team in your list of teams.
 
  1. Select ‘…’
 
  1. Select Get link to channel.
 
- 1. Record the value of channel id from within the URL somewhere safe. You will use this value in a future step while defining the settings of your solution.
+ 1. Record the value of channel id from within the URL somewhere safe. You'll use this value in a future step while defining the settings of your solution.
 
      The URL has this format: `"<https://teams.microsoft.com/l/channel/><Channel ID>/<"Channelname">?groupId=<"Group ID">&tenantId=<"Tenant ID">".`
 
@@ -250,12 +250,12 @@ you will want to record its Channel ID so that it can be leveraged. To get the I
 
  Retrieve the SharePoint Site ID and Drive ID for Files
 
- 1. To leverage the Files control, you will need to configure to an existing SharePoint site or to create a new SharePoint site. To create a new one, you can follow the steps listed here:
+ 1. To leverage the Files control, you'll need to configure to an existing SharePoint site or to create a new SharePoint site. To create a new one, you can follow the steps listed here:
   [https://docs.microsoft.com/en-us/sharepoint/create-site-collection](/sharepoint/create-site-collection)
 
  1. Once you have your preferred SharePoint site identified, return to the PowerApps Maker Portal and create a new Settings Group by navigating to New and then to More and then to Other and then to Settings Group.
 
- 1. You will then need to retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
+ 1. You'll then need to retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
      * Site ID: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) - Microsoft Graph, sign with the appropriate login and make the graph call: <https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site>}, making sure to replace hostname with the hostname and relative path to site with the site path.
 
@@ -283,19 +283,19 @@ you will want to record its Channel ID so that it can be leveraged. To get the I
 
  1. Select **Bookings** within the list of apps.
 
-   :::image type="content" source="../assets/images/Collaboration control/bookings.png" alt-text="bookings within the list" border="true":::
+     :::image type="content" source="../assets/images/Collaboration control/bookings.png" alt-text="bookings within the list" border="true":::
 
  1. If this is your first-time using Bookings, you may be prompted with a **Get it now** button, select that to continue.
 
-   :::image type="content" source="../assets/images/Collaboration control/online-scheduling.png" alt-text="Online scheduling your customers" border="true":::
+     :::image type="content" source="../assets/images/Collaboration control/online-scheduling.png" alt-text="Online scheduling your customers" border="true":::
 
  1. If you already have a Bookings business and need to create an additional one, select the chevron next to your currently active Bookings business and select **New**.
 
-   :::image type="content" source="../assets/images/Collaboration control/inspection.png" alt-text="Select new":::
+     :::image type="content" source="../assets/images/Collaboration control/inspection.png" alt-text="Select new":::
 
  1. Provide the name and type of your business before selecting **Continue.**
 
-   :::image type="content" source="../assets/images/Collaboration control/selecting-continue.png" alt-text="selecting continue" border="true":::
+     :::image type="content" source="../assets/images/Collaboration control/selecting-continue.png" alt-text="selecting continue" border="true":::
 
  1. You may now provide additional details for your Bookings business by configuring the Booking page, Staff, Services, and Business Information pages by selecting them in the left navigation.
 
@@ -341,7 +341,7 @@ you will want to record its Channel ID so that it can be leveraged. To get the I
 
  Group ID
 
- For our first settings value, we will provide the value of our teams group.
+ For our first settings value, we'll provide the value of our teams group.
 
 * Paste the value you retrieved as the Teams **Group ID** in the **Value field.**
 * Set **Settings Group ID** to the settings group you created previously
@@ -464,14 +464,14 @@ Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
  External (or guest) tasks are tasks that can be assigned to users who are not part of your
  organization or do not have access to your application e.g., when assigning a task to a customer.
 
- To enable you will need an additional step of passing an XML string to each instance of Tasks
+ To enable you'll need an additional step of passing an XML string to each instance of Tasks
  PCF control attached to the sub grid component on desired MDA form. This XML string is a
  parametrized query that allows the control to extract the required data from a table that contains customer information.
 
 * Create a new custom entity (e.g., “Customer”) or reuse an existing customer entity like
 Contacts.
 
-* Then create new fields that will hold the following information (the names can be
+* Then create new fields that'll hold the following information (the names can be
 different):
 
 * Name
@@ -479,7 +479,7 @@ different):
 * Parent (Lookup to the parent table e.g., Inspections)
 
  > [!NOTE]
- > The customer entity created above will be where the task control pulls the customer
+ > The customer entity created above'll be where the task control pulls the customer
 information from when assigning an external task. The “Parent” field ensures that the customer
 entity is linked to an Inspection record.
 
@@ -501,12 +501,14 @@ needed),
 
 Configuration XML Schema and example
 
-This pulls data from the customer table. You can adjust the <fetch /> node to specify your own
+This pulls data from the customer table. You can adjust the `<fetch />` node to specify your own
 query to display users from any other custom table.
 
 > [!NOTE]
 > The above entity & attribute name and order attribute in the XML are in this format
 "PublisherPrefix_TableColumn"
+
+```html
 
  <custom-tasks>
 
@@ -550,6 +552,8 @@ query to display users from any other custom table.
  </custom-task>
 
  </custom-tasks>
+
+```
 
 * Then repeat steps 12 – 15
 
