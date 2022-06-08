@@ -535,7 +535,7 @@ The following table provides the response codes:
 
 ## Get app content stage sharing state API
 
-The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
+The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage for both mobile and desktop.
 
 ### Query parameter
 
