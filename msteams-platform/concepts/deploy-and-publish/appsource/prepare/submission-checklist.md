@@ -12,6 +12,7 @@ keywords: submission store distribute validate app package guidelines localize
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
+See the following video to learn more about publishing your app to the Microsoft Teams app store.
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
