@@ -93,6 +93,8 @@ landingContent:
         url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
+      - text: Send activity feed notification
+        url: sbs-graphactivity-feedbroadcast.yml
 
 - title: Monetize your app
   linkLists:

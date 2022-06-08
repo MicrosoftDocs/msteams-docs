@@ -42,8 +42,6 @@ items:
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-    
-    Ensure you install the following accounts and set up your development environment:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * The Teams app must be installed for the recipient, either personally, or in a team or chat
@@ -201,8 +199,6 @@ items:
        The following image displays the Client Id:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
-
-       **Configure Graph permissions**
 
     1. In the left panel, select **API Permissions**. 
 
@@ -416,7 +412,7 @@ items:
             
     1. Enter the message title and description, and then select **Send message**. 
 
-    1. The Message broadcasted successfully appears.
+       The Message broadcasted successfully appears.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready.png" alt-text="Final output" border="true":::
 
