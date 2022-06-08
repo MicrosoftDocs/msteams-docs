@@ -39,7 +39,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
    > [!WARNING]
    > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media" "lightbox="conversations/Media/AppStudio.png:::
+   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
 2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/deploy-csharp-app-studio.md).
 
