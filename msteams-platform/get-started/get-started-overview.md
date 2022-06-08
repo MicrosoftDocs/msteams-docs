@@ -4,7 +4,7 @@ description: With this learning path, get started for Microsoft Teams developer 
 ms.localizationpriority: high
 ms.topic: reference
 ---
-# Get started
+# Get started overview
 
 Welcome to Get started for building and deploying customized apps for Microsoft Teams!
 
