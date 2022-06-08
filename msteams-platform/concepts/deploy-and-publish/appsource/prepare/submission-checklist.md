@@ -14,7 +14,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 
-Markdown:
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
 
 ## Validate your app package
