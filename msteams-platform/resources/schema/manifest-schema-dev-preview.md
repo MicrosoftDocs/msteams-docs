@@ -284,7 +284,7 @@ The version of the manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it is approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
 
@@ -294,7 +294,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
+The unique Microsoft-generated identifier for this app. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## packageName
 
@@ -320,7 +320,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 Optional:
 
-Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
+Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -333,13 +333,13 @@ An array of objects specifying additional language translations.
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`languageTag`|4 characters|✔|The language tag of the strings in the provided file.|
-|`file`|4 characters|✔|A relative file path to a the .json file containing the translated strings.|
+|`file`|4 characters|✔|A relative file path to the .json file containing the translated strings.|
 
 ## name
 
 Required:
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` should not be the same.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -352,7 +352,7 @@ Required:
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
-Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` should not be the same.  Your short description must not be repeated within the long description and must not include any other app name.
+Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` shouldn't be the same.  Your short description must not be repeated within the long description and must not include any other app name.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -374,7 +374,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required** &ndash; String
 
-A color to use in conjunction with and as a background for your outline icons.
+A color to use with and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
@@ -382,7 +382,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 Optional:
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
+Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
 The object is an array with all elements of the type `object`. This block is required only for solutions that provide a configurable channel tab solution.
 
@@ -472,7 +472,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ### composeExtensions.commands
 
-Your message extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
+Your message extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There's a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 
@@ -506,7 +506,7 @@ Each command item is an object with the following structure:
 
 Optional:
 
-An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension will perform. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
@@ -531,7 +531,7 @@ Specifies the native features on a user's device that your app may request acces
 
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
-It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you should not include accounts.google.com in `validDomains[]`.
+It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you shouldn't include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
@@ -542,7 +542,7 @@ The object is an array with all elements of the type `string`.
 
 Optional:
 
-Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Auzre AD app.
+Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -657,7 +657,7 @@ You can define any of the following properties:
 * `longDescription`: The app's detailed description.
 * `smallImageUrl`: The app's outline icon.
 * `largeImageUrl`: The app's color icon.
-* `accentColor`: The color to use in conjunction with and as a background for your outline icons.
+* `accentColor`: The color to use with and as a background for your outline icons.
 * `developerUrl`: The HTTPS URL of the developer's website.
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
@@ -722,7 +722,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional** — object
+**Optional** - object
 
 Specify and consolidate authorization related information for the app.
 

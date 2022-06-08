@@ -42,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that has not been tested.
+   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
 
    ## Prepare development environment
 
@@ -84,7 +84,7 @@ items:
    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
    ```
 
-   It is more common on Linux and macOS systems.
+   It's more common on Linux and macOS systems.
 
    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
 

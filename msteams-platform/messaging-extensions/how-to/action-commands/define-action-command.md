@@ -49,7 +49,7 @@ The following image displays the locations from where action command is invoked:
 
 In addition to selecting where your command can be invoked from, you must also select how to populate the form in the task module for your users. You have the following three options for creating the form that is rendered inside the task module:
 
-* **Static list of parameters**: This is the simplest method. You can define a list of parameters in your app manifest the Teams client renders, but cannot control the formatting in this case.
+* **Static list of parameters**: This is the simplest method. You can define a list of parameters in your app manifest the Teams client renders, but can't control the formatting in this case.
 * **Adaptive Card**:  You can select to use an Adaptive Card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
 * **Embedded web view**: You can select to embed a custom web view in the task module to have a complete control over the UI and controls.
 
@@ -57,7 +57,7 @@ If you select to create the task module with a static list of parameters and whe
 
 ## Select how the final message is sent
 
-In most cases, the action command results in a card inserted into the compose message box. The user can send it into the channel or chat. In this case, the message comes from the user, and the bot cannot edit or update the card further.
+In most cases, the action command results in a card inserted into the compose message box. The user can send it into the channel or chat. In this case, the message comes from the user, and the bot can't edit or update the card further.
 
 If the message extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You must add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
 
@@ -72,7 +72,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 You can create an action command using **App Studio** or **Developer Portal**.
 
-> [!NOTE]
+> [!WARNING]
  > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
 
 # [App Studio](#tab/AS)
@@ -83,7 +83,7 @@ You can create an action command using **App Studio** or **Developer Portal**.
 **To create an action command**
 
 1. Open **App Studio** from the Microsoft Teams client and select the **Manifest editor** tab.
-1. If you already created your app package in **App Studio**, select it from the list. If you have not created an app package, import an existing one.
+1. If you already created your app package in **App Studio**, select it from the list. If you haven't created an app package, import an existing one.
 1. After importing an app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
 1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up window:
 
@@ -144,7 +144,7 @@ To manually add your action-based message extension command to your app manifest
 | `fetchTask` | This property is set to `true` for an adaptive card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
 | `context` | This property is an optional array of values that defines where the message extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. The default value is `["compose", "commandBox"]`. | No | 1.5 |
 
-If you are using a static list of parameters, you must also add the following parameters:
+If you're using a static list of parameters, you must also add the following parameters:
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
@@ -154,7 +154,7 @@ If you are using a static list of parameters, you must also add the following pa
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of input required. The possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. The default value is set to `text`. | No | 1.4 |
 
-If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you are using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
+If you're using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you're using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
@@ -166,7 +166,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 #### App manifest example
 
-The following section is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md):
+The following section is an example of a `composeExtensions` object defining two action commands. It isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md):
 
 ```json
 ...
@@ -228,12 +228,12 @@ Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to bui
 
 ## Next step
 
-If you are using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
+If you're using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-If you are using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
+If you're using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
