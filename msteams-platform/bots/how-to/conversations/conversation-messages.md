@@ -402,9 +402,6 @@ Form completion message appears in Adaptive Cards while sending a response to th
         } 
      ```
     
-**Response on mobile**:
-
-The error message appears at the bottom of the Adaptive Card.
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
