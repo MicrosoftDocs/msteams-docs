@@ -232,6 +232,6 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 ## See also
 
 * [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
-* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)

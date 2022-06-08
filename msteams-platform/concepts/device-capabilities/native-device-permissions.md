@@ -12,7 +12,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 > [!NOTE]
 >
-> * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](mobile-camera-image-permissions.md).
+> * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](media-capabilities.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
 > * To integrate location capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
 
@@ -29,6 +29,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Use the location information of the user to display relevant information
 
 > [!NOTE]
+>
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 > * Currently, Microsoft Teams support for QR barcode scanner capability is only available for mobile clients.
@@ -225,7 +226,7 @@ For example:
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
    :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
-   
+
 # [Desktop](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
@@ -250,6 +251,6 @@ Device permissions are stored for every login session. It means that if you sign
 ## See also
 
 * [Device permissions for the browser](browser-device-permissions.md)
-* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
