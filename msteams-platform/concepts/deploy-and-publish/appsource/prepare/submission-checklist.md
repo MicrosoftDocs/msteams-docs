@@ -14,10 +14,16 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 
-Markdown:
+Markdown 1 - Video tag:
  > [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 
 <br>
+
+Markdown 1 - Watch tag:
+[![Watch the video](https://www.microsoft.com/videoplayer/embed/RE4WG3l)](https://www.microsoft.com/videoplayer/embed/RE4WG3l)
+
+<br>
+
 HTML:
 <iframe src="https://www.microsoft.com/videoplayer/embed/RE4WG3l" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
 
