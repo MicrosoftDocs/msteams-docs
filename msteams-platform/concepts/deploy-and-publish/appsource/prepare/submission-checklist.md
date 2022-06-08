@@ -11,11 +11,12 @@ keywords: submission store distribute validate app package guidelines localize
 # Prepare your Microsoft Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
-
-Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+
+<br>
+Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 
 ## Validate your app package
 
