@@ -54,9 +54,9 @@ ms.topic: conceptual
  | Collaboration Toolkit Core | Includes custom Collaboration Apis and the Collaboration Data Model |
 
  > [!TIP]
- > If you have an existing version of the controls installed in your environment, you may need to create a fresh environment and complete a new install to successfully upgrade to the latest   version.
+ > If you've an existing version of the controls installed in your environment, you may need to create a fresh environment and complete a new install to successfully upgrade to the latest   version.
 
- Before installation, you must be in a power platform environment or tenant admin. You'll need a dataverse environment with a database. If you do not have one, you'll need to create a new one to continue this lab.
+ Before installation, you must be in a power platform environment or tenant admin. You'll need a dataverse environment with a database. If you  have one, you'll need to create a new one to continue this lab.
 
  To install the solutions, begin by navigating to Microsoft AppSource and then complete the following steps.
 
@@ -85,20 +85,20 @@ ms.topic: conceptual
 
      :::image type="content" source="../assets/images/Collaboration control/power-apps.png" alt-text="power apps":::
 
- 1. Once you are in the right environment, select the Solutions tab to view all the solutions that you have just installed.
+ 1. Once you are in the right environment, select the Solutions tab to view all the solutions that you've just installed.
 
- The Collaboration controls are a preview, and any element may change over time with potential for breaking changes. The Collaboration controls are not supported on production environments.
+ The Collaboration controls are a preview, and any element may change over time with potential for breaking changes. The Collaboration controls aren't supported on production environments.
 
    :::image type="content" source="../assets/images/Collaboration control/solutions.png" alt-text="solutions collaboration control" border= "true":::
 
- Congrats! You have successfully installed all the Collaboration solutions into your environment. In the next exercise, you'll build a new model-driven app that can take advantage of the Collaboration Control capabilities.
+ Congrats! You've successfully installed all the Collaboration solutions into your environment. In the next exercise, you'll build a new model-driven app that can take advantage of the Collaboration Control capabilities.
 
 ### Prerequisites
 
  The following are required to build and deploy Collaboration Manager applications using the Collaboration Controls.
 
 * Power Apps - to build Model Driven Applications using the Collaboration Controls
-* M365 E3 or higher - to deploy custom applications to Microsoft Teams
+* Microsoft 365 E3 or higher - to deploy custom applications to Microsoft Teams
 
 ### Role Requirements
 
@@ -182,7 +182,7 @@ columns, relationships, and more (Optional).
 
  1. Select **Play** to test out your new app.
 
- **Congrats!** You’ve just built a model-driven app. In the next steps, we’ll show you how to add collaboration controls.
+ **Congrats!** You’ve built a model-driven app. In the next steps, we’ll show you how to add collaboration controls.
 
 ### Configure Collaboration controls for your application
 
@@ -253,7 +253,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
  1. To leverage the Files control, you'll need to configure to an existing SharePoint site or to create a new SharePoint site. To create a new one, you can follow the steps listed here:
   [https://docs.microsoft.com/en-us/sharepoint/create-site-collection](/sharepoint/create-site-collection)
 
- 1. Once you have your preferred SharePoint site identified, return to the PowerApps Maker Portal and create a new Settings Group by navigating to New and then to More and then to Other and then to Settings Group.
+ 1. Once you've your preferred SharePoint site identified, return to the PowerApps Maker Portal and create a new Settings Group by navigating to New and then to More and then to Other and then to Settings Group.
 
  1. You'll then need to retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
@@ -315,7 +315,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
    :::image type="content" source="../assets/images/Collaboration control/booking-page.png" alt-text="Booking page status":::
 
- Provide the settings to Collaboration controls for your application
+ **Provide the settings to Collaboration controls for your application**
 
  1. Now that we have the Channel ID, Group ID, and the optional Bookings business ID, we can set them as values within the Collaboration controls settings. To begin, open [https://make.powerapps.com/.](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home)
 
@@ -327,7 +327,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. Settings for Collaboration controls are bound to specific entities. To get started, we need to create a settings group that is related to an existing table. To get started, select New > More > Other > Settings Group.
 
-   :::image type="content" source="../assets/images/Collaboration control/settings-group.png" alt-text="settings group":::
+     :::image type="content" source="../assets/images/Collaboration control/settings-group.png" alt-text="settings group":::
 
  1. Provide a human readable **Display name** for your settings group.
 
@@ -337,9 +337,9 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. Provide the first settings value by selecting New > More > Other > Settings Value from within the solution explorer.
 
-   :::image type="content" source="../assets/images/Collaboration control/power-apps-settings-value.png" alt-text="Power apps setting value" border="true":::
+     :::image type="content" source="../assets/images/Collaboration control/power-apps-settings-value.png" alt-text="Power apps setting value" border="true":::
 
- Group ID
+ **Group ID**
 
  For our first settings value, we'll provide the value of our teams group.
 
@@ -347,7 +347,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 * Set **Settings Group ID** to the settings group you created previously
 * Set **Settings Definition ID** to **“Group ID”.**
 
-   :::image type="content" source="../assets/images/Collaboration control/new-settings-value.png" alt-text="new settings value":::
+     :::image type="content" source="../assets/images/Collaboration control/new-settings-value.png" alt-text="new settings value":::
 
  1. Select **Save & Close** once you are complete
 
@@ -357,7 +357,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 * Set **Settings Group ID** to the one you created previously
 * Set Settings Definition ID to “Booking Business ID”
 
-   :::image type="content" source="../assets/images/Collaboration control/new-settings.png" alt-text="new settings":::
+     :::image type="content" source="../assets/images/Collaboration control/new-settings.png" alt-text="new settings":::
 
  1. Select **Save & Close** once you are complete.
 
@@ -369,7 +369,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
 * Set **Settings Definition ID** to **"Channel ID"**.
 
-   :::image type="content" source="../assets/images/Collaboration control/settings-value.png" alt-text="Settings value":::
+     :::image type="content" source="../assets/images/Collaboration control/settings-value.png" alt-text="Settings value":::
 
 1. Select Save & Close once you are complete.
 
@@ -388,81 +388,81 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 > [!NOTE]
 > To use **Conversations** in the personal app, you must configure the channel ID as mentioned above and the app must **first** be added to the Channel associated with the Channel ID provided.
 
-**Congrats!** You have now configured the settings for your application.
+**Congrats!** You've now configured the settings for your application.
 
 ### Add Collaboration controls to your application
 
-Now that you have configured the Collaboration controls, you can now add collaborative capabilities to the app created.
+Now that you've configured the Collaboration controls, you can now add collaborative capabilities to the app created.
 
 Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
 
- 1. We now want to edit the Main Information form so that it includes the tasks, meetings, and notes tabs. To begin, we want to go back to the explorer & select your solution (e.g., My Collaboration Manager).
+ 1. We now want to edit the Main Information form so that it includes the tasks, meetings, and notes tabs. To begin, we want to go back to the explorer & select your solution (for example: My Collaboration Manager).
 
- 1. Select the table (e.g., Inspections) you created in [Create a new model-driven app for Teams.](#create-a-new-model-driven-app-for-teams)
+ 1. Select the table (for example: Inspections) you created in [Create a new model-driven app for Teams.](#create-a-new-model-driven-app-for-teams)
 
  1. Navigate to the Forms tab for your table.
 
-   :::image type="content" source="../assets/images/Collaboration control/forms-tab.png" alt-text="forms tab for your table" border="true":::
+     :::image type="content" source="../assets/images/Collaboration control/forms-tab.png" alt-text="forms tab for your table" border="true":::
 
  1. Select the Information form of form type “Main" to open it in the form designer.
 
  1. Once you are in the form designer, drag in a **1-column tab** from the **Components** drawer.
 
-   :::image type="content" source="../assets/images/Collaboration control/components.png" alt-text="Components power apps" border= "true"    :::
+     :::image type="content" source="../assets/images/Collaboration control/components.png" alt-text="Components power apps" border= "true"    :::
 
  1. After dragging in the tab, rename the tab to “Tasks” in the property pane.
 
  1. Now select the section within your new tab so that you can select Hide label within the property pane.
 
-   :::image type="content" source="../assets/images/Collaboration control/hide-label.png" alt-text="Hide label":::
+     :::image type="content" source="../assets/images/Collaboration control/hide-label.png" alt-text="Hide label":::
 
  1. Select the full section and select **Expand first component to full tab** in the property pane. This is required as the controls only support full tab views.
 
-   :::image type="content" source="../assets/images/Collaboration control/expand-first-component.png" alt-text=" Expand first component to full tab ":::
+     :::image type="content" source="../assets/images/Collaboration control/expand-first-component.png" alt-text=" Expand first component to full tab ":::
 
  1. Drag-and-drop a **Subgrid** control from the **Components** drawer into your section.
 
  1. In the pop up, check ‘Show related records’ and for tasks, set the values to **All Tasks** from the **Tasks (Regarding)** table.
 
-   :::image type="content" source="../assets/images/Collaboration control/all-tasks.png" alt-text="All tasks from the tasks":::
+     :::image type="content" source="../assets/images/Collaboration control/all-tasks.png" alt-text="All tasks from the tasks":::
 
  1. Repeat steps 5 – 10 for the Meetings, Notes, and Files tabs to create additional tabs and add the controls.
 
-   :::image type="content" source="../assets/images/Collaboration control/new-inspection.png" alt-text="New inspections" border="true":::
+     :::image type="content" source="../assets/images/Collaboration control/new-inspection.png" alt-text="New inspections" border="true":::
 
- > [!NOTE]
- >
- > For Files, the Table and Default view settings are not required so you can use same settings as Notes (image above) when you drag the subgrid.
- >
- > If you are unable to find the control table in the “Select subgrid views” pop up, you may have missed step 9 of Task 1 in Exercise 2. Make sure you check the option for ‘Creating a new activity’.
+     > [!NOTE]
+     >
+     > For Files, the Table and Default view settings aren't required so you can use same settings as Notes (image above) when you drag the subgrid.
+     >
+     > If you are unable to find the control table in the “Select subgrid views” pop up, you may have missed step 9 of Task 1 in Exercise 2. Make sure you check the option for ‘Creating a new activity’.
 
-   :::image type="content" source="../assets/images/Collaboration control/create-new-activity.png" alt-text="Create a new activity":::
+     :::image type="content" source="../assets/images/Collaboration control/create-new-activity.png" alt-text="Create a new activity":::
 
  1. We now need to configure the custom controls for our subgrids within the classic form designer. Select **Save** and then select **Switch to classic.**
 
  1. Scroll down in the classic form designer until you find the **Tasks** tab. Double-click on the subgrid to open its property dialog.
 
-   :::image type="content" source="../assets/images/Collaboration control/property-dialog.png" alt-text="Tasks tab property dialog":::
+     :::image type="content" source="../assets/images/Collaboration control/property-dialog.png" alt-text="Tasks tab property dialog":::
 
  1. While in the property dialog, select the Controls tab to view all custom controls assigned to it.
 
-   :::image type="content" source="../assets/images/Collaboration control/select-controls.png" alt-text="Select the controls":::
+     :::image type="content" source="../assets/images/Collaboration control/select-controls.png" alt-text="Select the controls":::
 
  1. Select **Add Control**
 
  1. For the tasks tab, select **Tasks (Preview)** and then **Add.**
 
-   :::image type="content" source="../assets/images/Collaboration control/tasks-preview.png" alt-text="add tasks preview":::
+     :::image type="content" source="../assets/images/Collaboration control/tasks-preview.png" alt-text="add tasks preview":::
 
  1. Check the Web, Phone, and Tablet radio buttons for the Tasks control to ensure that it shows across all form factors.
 
- For Pro Devs
+ **For Pro Devs**
 
  Follow the following steps if you would like to be able to create external
  tasks:
 
- External (or guest) tasks are tasks that can be assigned to users who are not part of your
- organization or do not have access to your application e.g., when assigning a task to a customer.
+ External (or guest) tasks are tasks that can be assigned to users who aren't part of your
+ organization or  have access to your application e.g., when assigning a task to a customer.
 
  To enable you'll need an additional step of passing an XML string to each instance of Tasks
  PCF control attached to the sub grid component on desired MDA form. This XML string is a
@@ -478,8 +478,8 @@ different):
 * Email
 * Parent (Lookup to the parent table e.g., Inspections)
 
- > [!NOTE]
- > The customer entity created above'll be where the task control pulls the customer
+     > [!NOTE]
+     > The customer entity created above'll be where the task control pulls the customer
 information from when assigning an external task. The “Parent” field ensures that the customer
 entity is linked to an Inspection record.
 
@@ -578,10 +578,10 @@ the Fetch XML generated above.
 
  1. Repeat steps 12-17 for the meetings, notes, and files tabs. For meetings, use Meeting (Preview), for notes use Notes (Preview) and for files use Files (Preview).
 
- > [!NOTE]
- > When in Classic Designer adding the Files control, ensure that the Name field is populated with a unique name.
+     > [!NOTE]
+     > When in Classic Designer adding the Files control, ensure that the Name field is populated with a unique name.
 
-   :::image type="content" source="../assets/images/Collaboration control/set-the-list-chart-properties.png" alt-text="Set the list or chart properties":::
+     :::image type="content" source="../assets/images/Collaboration control/set-the-list-chart-properties.png" alt-text="Set the list or chart properties":::
 
  1. Select Save.
 
@@ -589,18 +589,18 @@ the Fetch XML generated above.
 
  1. You can now close the Classic Form Designer and open your app in Power Apps by selecting it.  
 
-   :::image type="content" source="../assets/images/Collaboration control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections":::
+     :::image type="content" source="../assets/images/Collaboration control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections":::
 
  1. Create a new record via + New and then open the record.
 
-   :::image type="content" source="../assets/images/Collaboration control/power-apps-open-the-record.png" alt-text="Power apps open the record":::
+     :::image type="content" source="../assets/images/Collaboration control/power-apps-open-the-record.png" alt-text="Power apps open the record":::
 
  You should see views for each tab that appear similar to the image below.
 
    :::image type="content" source="../assets/images/Collaboration control/tabs.png" alt-text="Tasks":::
 
  > [!TIP]
- > The controls are only visible after a record is initially saved in the application. If the control tabs do not appear in your record, try to refresh your browser and/or republish the app from within Power Apps.
+ > The controls are only visible after a record is initially saved in the application. If the control tabs don't appear in your record, try to refresh your browser and/or republish the app from within Power Apps.
 
 ### Adding Collaboration controls Conversations experience
 
@@ -611,29 +611,29 @@ and in the “Apps” Section, find the MDA (Model Driven Application) app you c
 
  1. Open [Command Designer](/power-apps/maker/model-driven-apps/command-designer-overview) (currently in Preview) by clicking ‘Edit in preview’ context menu item.
 
-   :::image type="content" source="../assets/images/Collaboration control/edit-in-preview.png" alt-text="edit in preview":::
+     :::image type="content" source="../assets/images/Collaboration control/edit-in-preview.png" alt-text="edit in preview":::
 
  1. On the next screen, select ‘…’ on the right of your application table and select **Edit command bar (preview)**
 
-   :::image type="content" source="../assets/images/Collaboration control/edit-command-bar.png" alt-text="Edit command bar":::
+     :::image type="content" source="../assets/images/Collaboration control/edit-command-bar.png" alt-text="Edit command bar":::
 
  1. Select Main form and Edit
 
-   :::image type="content" source="../assets/images/Collaboration control/select-main-form.png" alt-text="select main form":::
+     :::image type="content" source="../assets/images/Collaboration control/select-main-form.png" alt-text="select main form":::
 
  1. Select +New command on Commands panel
 
-   :::image type="content" source="../assets/images/Collaboration control/select-new-command.png" alt-text="select new command":::
+     :::image type="content" source="../assets/images/Collaboration control/select-new-command.png" alt-text="select new command":::
 
- > [!NOTE]
- > If presented with this view below, select JavaScript
+     > [!NOTE]
+     > If presented with this view below, select JavaScript
 
-   :::image type="content" source="../assets/images/Collaboration control/select-java-script.png" alt-text="select java script":::
+     :::image type="content" source="../assets/images/Collaboration control/select-java-script.png" alt-text="select java script":::
 
  1. Configure the command in the opened right-hand pane
 
-*
  i   Label: **Conversations**
+
  ii  Icon: **Use web resource**
 
    :::image type="content" source="../assets/images/Collaboration control/use-web-resource.png" alt-text="Use web resource":::
