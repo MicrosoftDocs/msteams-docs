@@ -20,7 +20,7 @@ Markdown:
 <br>
 
 Markdown 1 - Watch tag:
-[![Watch the video](https://www.microsoft.com/videoplayer/embed/RE4WG3l)](https://www.microsoft.com/videoplayer/embed/RE4WG3l)
+[![Watch the video](Link)](https://www.microsoft.com/videoplayer/embed/RE4WG3l)
 
 <br>
 
