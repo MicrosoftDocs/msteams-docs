@@ -381,20 +381,30 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
-  - name: Configure identity providers
-    href: concepts/authentication/configure-identity-provider.md
   - name: Tabs
     items:
-    - name: Authentication flow in tabs
-      href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Use Azure AD authentication
-      href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Use silent authentication
-      href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Use SSO authentication
-      href: tabs/how-to/authentication/auth-aad-sso.md
-    - name: Use external OAuth providers
-      href: tabs/how-to/authentication/auth-oauth-provider.md
+    - name: Enable SSO for tab app
+      items:
+      - name: Overview
+        href: tabs/how-to/authentication/tab-sso-overview.md
+      - name: Register tab app in Azure AD
+        href: tabs/how-to/authentication/tab-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: tabs/how-to/authentication/tab-sso-code.md
+      - name: Update app manifest for SSO and preview
+        href: tabs/how-to/authentication/tab-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: tabs/how-to/authentication/tab-sso-graph-api.md
+      - name: Troubleshooting
+        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    - name: Use third party OAuth IdP authentication
+      items:
+      - name: Overview
+        href: tabs/how-to/authentication/auth-flow-tab.md
+      - name: Configure third party OAuth IdP authentication
+        href: tabs/how-to/authentication/auth-tab-aad.md
+      - name: Use external OAuth providers
+        href: tabs/how-to/authentication/auth-oauth-provider.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
@@ -583,10 +593,14 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
+  - name: Use silent authentication
+    href: tabs/how-to/authentication/auth-silent-aad.md
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
+  - name: Troubleshoot your Microsoft Teams app
+    href: resources/troubleshoot.md
 - name: Support and feedback
   href: feedback.md
   
