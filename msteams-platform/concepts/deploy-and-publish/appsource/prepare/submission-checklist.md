@@ -17,16 +17,6 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 Markdown:
 > [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 
-<br>
-<!-->
-Markdown 1 - Watch tag:
-[![Watch the video](:::image type="icon" source="../../../../assets/icons/1.svg" border="false":::)](https://www.microsoft.com/videoplayer/embed/RE4WG3l)
-
-<br>
-
-HTML:
-<iframe src="https://www.microsoft.com/videoplayer/embed/RE4WG3l" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-
 ## Validate your app package
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
