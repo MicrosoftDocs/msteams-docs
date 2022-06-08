@@ -33,10 +33,8 @@ The following image depicts web app experience of getLocation API:
 
 The following image depicts web app experience of getLocation API:
 
-
 > [!NOTE]
 > The desktop support for `getLocation` and  `showLocation` is available after the user grants the device permission.
-
 
   :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
 
@@ -47,7 +45,6 @@ To integrate location capabilities, you must:
 * [Update the app manifest file](#update-manifest) and call the APIs.
 * Have working knowledge of [code snippets](#code-snippets) for calling the [location APIs](#location-apis).
 * Handle errors in your Teams app with the help of [API response errors](#error-handling).
-
 
 ## Update manifest
 
@@ -60,6 +57,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
+>
 > * The request permissions prompt is automatically displayed when relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
 > * The device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
@@ -69,7 +67,10 @@ The following table lists the set of APIs to enable your device's location capab
 
 | API      | Description |Input configuration |
 | --- | --- |--- |
-|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | The `getLocation` API takes in the following two input parameters as part of the [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) interface: `allowChooseLocation`, `showMap`:<br> The experience is derived from the combination of these two input parameters:<br>- (true, true): A map is launched and the user gets to pick any location on it.<br>- (true, false): A map is launched and the user gets to pick any location on it.<br>- (false, true): A map is launched. The user can only submit the current location.<br>- (false,false): Map is not launched. User's current location is fetched. Note: This configuration is only supported only on mobile.<br>|
+|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | The `getLocation` API takes the following two input parameters as a part of the [LocationProps](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) interface: `allowChooseLocation`, `showMap`:<br> The experience is derived from the combination of these two input parameters:<br>- (true, true): A map is launched and the user gets to pick any location on it.<br>- (true, false): A map is launched and the user gets to pick any location on it.<br>- (false, true): A map is launched. The user can only submit the current location.<br>- (false,false): Map is not launched. User's current location is fetched.<br>
+> [NOTE!]
+> This configuration is only supported on mobile.<br>|
+
 |`showLocation`| Shows location on map. |It takes in a single input parameter location, which contains the coordinates of the location to be shown on the map.|
 
 > [!NOTE]
@@ -94,7 +95,6 @@ Ensure to handle errors appropriately in your Teams app. The following table lis
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build resolves the issue.|
 
-
 ### Code snippets
 
 * Call `getLocation` API to retrieve the location:
@@ -109,7 +109,6 @@ microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError
           output(JSON.stringify(location));
 });
 ```
-
 
 * Call `showLocation` API to display the location:
 
