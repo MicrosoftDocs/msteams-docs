@@ -17,7 +17,7 @@ You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) fo
 
 ### Blank tab screen
 
-If you're not seeing your content in the tab view, it could be:
+If you aren't seeing your content in the tab view, it could be:
 
 * your content can't be displayed in an `<iframe>`.
 * the content domain isn't in the [validDomains](~/resources/schema/manifest-schema.md#validdomains) list in the manifest.
@@ -26,15 +26,16 @@ If you're not seeing your content in the tab view, it could be:
 
 Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
 
-### After selecting the Save button, the tab settings can't be saved
+### The tab settings can't be saved on selecting Save
 
-When adding a tab, if you select the save buttons but are presented with an error message indicating the settings can't be saved, the problem could be one of two classes of issues:
+When adding a tab, if you select **Save** but receive an error message indicating the settings can't be saved, the problem could be one of two classes of issues:
 
-* The save success message was never received. If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`. If the callback doesn't call this within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error will be shown.
+* **The save success message was never received**: If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`.
 
-* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the save button.
+  * If the callback doesn't call `saveEvent.notifySuccess()` within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error is shown.
+  * If no save handler was registered, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 
-* The provided settings were invalid. The other reason the settings may not be saved is if the call to `microsoftTeams.setSettings(settings)` provided an invalid settings object, or the call wasn't made at all. See the next section, Common problems with the settings object.
+* **The provided settings were invalid**: The other reason the settings may not be saved is if the call to `microsoftTeams.setSettings(settings)` provided an invalid settings object, or the call wasn't made at all. See the next section, Common problems with the settings object.
 
 ### Common problems with the settings object
 
@@ -53,17 +54,17 @@ For more information about authentication, see [Authenticate a user](~/concepts/
 
 ### Static tabs not showing up
 
-There's a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
+There's a known issue where updating an existing bot app with a new or updated static tab won't show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
 
 ## Troubleshooting bots
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) for more information.
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. In some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ### Can't add bot as a member of a team
 
-Bots must first be upload into a team before it's accessible within any channel of that team. Please review [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md) for more information on this process.
+Bots must first be uploaded in a team before it's accessible within any channel of that team. For more information on this process, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
 ### My bot doesn't get my message in a channel
 
@@ -83,10 +84,10 @@ Common reasons for manifest read errors:
 
 * Invalid JSON. Use an IDE such as [Visual Studio Code](https://code.visualstudio.com) or [Visual Studio](https://www.visualstudio.com/vs/) that automatically validates the JSON syntax.
 * Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
-* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which will not properly load in Microsoft Teams.
+* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
 
 ### Another extension with same ID exists
 
-If you're attempting to reupload an updated package with the same ID, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
+If you're attempting to upload an updated package with the same ID again, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
