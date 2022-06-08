@@ -121,7 +121,7 @@ To authenticate the user as part of loading your page, see [authentication flow 
 #### `GetSettings` response properties
 
 >[!NOTE]
->The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings).
 
 The following table provides the parameters and the details of `GetSetting` response properties:
 
@@ -218,7 +218,9 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 ## Distribute webhook and connector
 
 1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
+
 1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a Office 365 Connector.
+
 1. Package and publish your connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## Code sample

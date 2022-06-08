@@ -14,12 +14,12 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages, such as:
+    A proactive message is any message sent by a bot that isn't in response to a request from a user that includes messages, such as:
      - Welcome messages
      - Notifications
      - Scheduled messages
      
-    This step-by-step guide helps you to send a proactive message from a bot. You will see the following outputs:
+    This step-by-step guide helps you to send a proactive message from a bot. You'll see the following outputs:
 
     * Proactive hello message in chat        
     ![Proactive hello in chat](~/assets/images/proactive-scenario/proactive-helo.png)
@@ -86,7 +86,8 @@ items:
 
         ![Bot set up](~/assets/images/proactive-scenario/bot-setup.png)  
 
-    1. In the **Set up a bot** window that appears, enter **Name** (for example, **Proactive Message Demo**), select **Personal**, and select **Create bot** to create the bot.
+    1. In the **Set up a bot** window, enter **Name** (for example, **Proactive Message Demo**).
+    1. Select **Personal** and then select **Create bot** to create the bot.
 
         ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
@@ -96,7 +97,7 @@ items:
 
     1. Wait for a few seconds for the changes to take effect.     
 
-        > If it is taking longer, select **Tabs** and then the **Bots** section to force update.
+        > If it's taking longer, select **Tabs** and then the **Bots** section to force update.
         
     1. Select **Generate new password** to generate the new App Password and copy it. 
     
@@ -142,7 +143,8 @@ items:
 
         ![Add Adaptive Card package1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)
 
-    1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards** . Select **Install**. 
+    1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards**. 
+    1. Select **Install**. 
 
         ![Add Adaptive Card package2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)
 
@@ -185,7 +187,7 @@ items:
 
     1. Reinstall the same app to get the `conversationUpdate` event.   
 
-    1. Select the [http://localhost:3978/api/notify](http://localhost:3978/api/notify) URL to get a proactive hello message in the Adaptive Card.     
+    1. Select the [api/notify] `(http://localhost:3978/api/notify)` URL to get a proactive hello message in the Adaptive Card.     
   
 - title: Complete challenge
   durationInMinutes: 3
@@ -195,7 +197,7 @@ items:
     ![proactive hello in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png)
 
 - content: |
-    You have completed the scenario.
+    You've completed the scenario.
     * You can send notifications on daily basis or request for feedback from user on periodic basis.
     * Handle throttling limits to avoid multiple notifications.
     

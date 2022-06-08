@@ -30,7 +30,7 @@ The Microsoft Teams Toolkit enables you to create single sign-on (SSO) authentic
 1. Enter the URL where your app will be hosted and select **next**. Your app registration will be configured using the provided URL.
 1. The app registration's configuration details will be stored in the `.env` files in your project's source code.
 
-If you would like to learn more about how your Azure app registration will be provisioned, please *see*  our [single sign-on (SSO) support for tabs](../tabs/how-to/authentication/auth-aad-sso.md) documentation.
+If you would like to learn more about how your Azure app registration will be provisioned, *see*  our [single sign-on (SSO) support for tabs](../tabs/how-to/authentication/tab-sso-overview.md) documentation.
 
 > [!TIP]
 > You will need to go to **Azure App Registrations** and update your *API URI* and *redirect URLs* whenever you change this URL.
@@ -39,7 +39,7 @@ If you would like to learn more about how your Azure app registration will be pr
 
 1. Select **npm install** from the `api-server` folder. Then **npm start**.
 1. Select **npm install** from the `.src` folder. Then **npm start**.
-1. If you are using a tunneling service like [ngrok](https://ngrok.com/), run it and make sure the URL matches with what you entered in the project creation wizard. If it doesn't, you will need to update your *API URI* and *redirect URL* in the app registration that was created in Azure.
+1. If you're using a tunneling service like [ngrok](https://ngrok.com/), run it and make sure the URL matches with what you entered in the project creation wizard. If it doesn't, you'll need to update your *API URI* and *redirect URL* in the app registration that was created in Azure.
 1. Navigate to the activity bar on the left side of the Visual Studio Code window.
 1. Select the **Run** icon to display the **Run and Debug** view.
 1. You can also use the keyboard shortcut **Ctrl+Shift+D**.
