@@ -73,7 +73,7 @@ The following table lists the set of APIs to enable your device's location capab
 > [!NOTE]<br>
 > `showMap` conditions for True and False:<br> - True: Show location on map <br> - False: Do not show location on map <br>-(false,false): This configuration is only supported on mobile <br> -`showMap`= False is not supported on Teams web or desktop.<br>-If `allowChooseLocation` is set to true, then `showMap` is ignored.
 
-For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
+For more information on `getLocation` and `showLocation`, see [LocationProps](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
 > [!NOTE]
 > When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at go.microsoft.com/?linkid=9710837 and the Microsoft Privacy Statement available at go.microsoft.com/fwlink/?LinkID=248686.</br>
