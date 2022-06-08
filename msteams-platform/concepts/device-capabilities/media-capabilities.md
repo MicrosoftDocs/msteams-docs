@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ---
 
-# Overview
+# Integrate media capabilities
 
 You can integrate native device capabilities, such as camera and microphone with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) that provides the necessary tools for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as camera and microphone with the Teams platform within your Microsoft Teams app, and build a richer experience. The media capability is available for Teams web client, desktop, and mobile. To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
 
@@ -16,56 +16,19 @@ For effective integration, you must have a good understanding of [code snippets]
 
 ## Advantages
 
-The following scenarios showcase the advantages of media capabilities:
+The main advantage of integrating device capabilities in your Teams apps is it leverages native Teams controls to provide a rich and immersive experience to your users. The following scenarios showcase the advantages of media capabilities:
 
-* Leverages native Teams controls to provide a rich and immersive experience to your users.
+* Allow the user to capture the rough mockups drawn on a physical whiteboard through the cell phone and use the captured images as poll options in Teams group chat.
 
-* Allows the user to create logo design with rough mockups on whiteboard in the cell phone and post a poll with scans of whiteboard designs as poll options on the group chat in Teams.
+* Allow the user to record audio message and attach it to an incident ticket.
 
-* Allows the user to scan the physical documents from the smartphone to claim a car insurance to the insurance company.
-
+* Allows the user to scan the physical documents from the smartphone to file a car insurance claim.
 
 > [!NOTE]
 >
-> * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
+> * Currently, Teams doesn't support device permissions in pop out chat window, tabs, and the meeting side panel.</br>
 > * The device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 > * The request permissions prompt is automatically displayed on mobile when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
-
-# [Mobile](#tab/mobile)
-
-The `selectMedia` API allows the user to capture or select media on mobile using the following steps:
-
-You can capture or select media using any one of the following:
-
-* Select **Camera**, then select **PHOTO** to capture the image, and select **Done**
-* Select **Open photo library** to pick images as attachments from your device, and select **Done**
-
-<!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
-
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile." border="true":::
-
-The `selectMedia` API for microphone capability allows user to record audio on mobile using the following steps:
-
-1. Select **Record description**.
-1. The recording bar shows progression at the bottom of the mobile.
-1. Recorded audio gets returned back to the app.
-
-<!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
-
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile." border="true":::
-
-# [Desktop](#tab/desktop)
-
-The `selectMedia` API allows the user to capture or select media on desktop using the following steps: 
-
-You can capture or select media using any one of the following:
-
-* Select **Camera** to capture image and then select **Attach**
-* Select **Attach** to pick images as attachments from your device
-
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
-
----
 
 ## Update manifest
 
@@ -92,7 +55,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
 > [!IMPORTANT]
 >
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).</br>
-> * The microphone and audio properties support `selectMedia` API.
+> * `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
 
 The following table lists set of APIs to enable your device's media capabilities:
@@ -104,6 +67,27 @@ The following table lists set of APIs to enable your device's media capabilities
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
+# [Mobile](#tab/mobile)
+
+The following image depicts the web app experience of `selectMedia` API for the image capability:
+
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile." border="true":::
+
+> [!NOTE]
+>
+> In devices with Android version under 7, the `selectMedia` API launches the native Android camera experience instead of the native Teams camera experience.
+
+The following image depicts the web app experience of `selectMedia` API for the microphone capability:
+
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile." border="true":::
+
+# [Desktop](#tab/desktop)
+
+The following image depicts the web app experience of `selectMedia` API for the image capability:
+
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
+
+---
 
 ## Error handling
 
