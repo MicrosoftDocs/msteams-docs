@@ -103,7 +103,7 @@ items:
 
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
-    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
+    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
         
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-south-india.png" alt-text="india" border="true":::
 
@@ -133,7 +133,7 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you have created a new **Microsoft App ID**:
+      Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -208,7 +208,7 @@ items:
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -334,7 +334,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app. </br>
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app. </br>
                
         
          1. Select **Add a platform**.
@@ -539,7 +539,7 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png" alt-text="bot home" border="true":::
 
-    1. Click an **Add**.
+    1. Select an **Add**.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png" alt-text="bot home" border="true":::
 

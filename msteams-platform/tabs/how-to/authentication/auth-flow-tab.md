@@ -1,19 +1,25 @@
 ---
-title: Authentication flow for tabs
+title: Enable authentication using third-party OAuth provider
 description: Describes authentication flow in tabs, OAuth by Azure AD, and provides code sample 
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: teams authentication flow tabs
+ms.localizationpriority: high
+keywords: teams authentication flow tabs third party OAuth provider
 ---
-# Microsoft Teams authentication flow for tabs
+# Enable authentication using third-party OAuth provider
+
+You can enable authentication in your tab app using third party OAuth Identity Providers (IdP). In this method, the app user identity is validated and granted access by an OAuth IdP, such as Azure AD, Google, Facebook, GitHub, or any other provider. You'll need to configure a trust relationship with the IdP, and your app users should also be registered with it.
 
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, you need to ensure that you're using at least 1.4.1 version of the Microsoft Teams JavaScript SDK.  
 > Teams SDK launches separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
 
+## Use OAuth IdP to enable authentication
+
 OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/) that is easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots are different because tabs are similar to websites so they can use OAuth 2.0 directly. Bots do a few things differently, but the core concepts are identical.
 
 For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
+
+This section uses Azure AD as an example of a third party OAuth provider for enabling authentication in a tab app.
 
 > [!NOTE]
 > Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
