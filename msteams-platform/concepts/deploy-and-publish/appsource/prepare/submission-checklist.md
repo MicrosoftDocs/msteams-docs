@@ -14,6 +14,8 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 
+[!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4WG3l>]
+
 ## Validate your app package
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
@@ -207,6 +209,7 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 > If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.
 
 ## Next step
+
 > [!div class="nextstepaction"]
 > [Submit your app](/office/dev/store/add-in-submission-guide)
 
