@@ -590,6 +590,9 @@ An array of `string`, which specifies which permissions the app requests, which 
 
 Changing these permissions during app update, causes your users to repeat the consent process after they run the updated app. For more information, see [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
+> [!NOTE]
+> Permissions are deprecated now.
+
 ## devicePermissions
 
 **Optional**—array of strings
