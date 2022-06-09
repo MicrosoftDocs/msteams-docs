@@ -11,6 +11,8 @@ keywords: teams manifest schema
 The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
+
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
 |                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
