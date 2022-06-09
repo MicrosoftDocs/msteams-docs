@@ -57,7 +57,7 @@ To create and deploy bot resource
 
         You can also create a new resource group.
 
-1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and SIngle Tenant.
+1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
 
 1. Select the creation type.
 
