@@ -22,7 +22,7 @@ In this section, you will:
 
 ## Create and deploy bot resource in Azure AD
 
-/ Add in details /
+/ Add details /
 
 To create and deploy bot resource
 
