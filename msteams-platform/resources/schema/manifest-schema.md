@@ -11,17 +11,9 @@ keywords: teams manifest schema
 The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
-[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
-
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
-|                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
-|------------------|---------|--------|---|
-|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new Microsoft 365 app](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](../../tabs/how-to/using-teams-client-sdk.md#backwards-compatibility) and [Update to TeamsJS v.2.0](../../tabs/how-to/using-teams-client-sdk.md#updating-to-the-teams-client-sdk-v200)|
-|**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
-
-Use the latest TeamsJS (v.2.0 or later) whenever possible, in order to leverage from the latest improvements and new feature support including Teams-only apps. TeamsJS v.1.12 continue to be supported, however, no new features or improvements will be added. For more information on TeamsJS, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 The following schema sample shows all extensibility options:
 
