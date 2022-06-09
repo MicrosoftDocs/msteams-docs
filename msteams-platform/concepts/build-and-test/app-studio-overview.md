@@ -145,34 +145,6 @@ Controls include:
 * Tables
 * Icons
 
-## App Studio deprecation
-
-Since App Studio gets deprecated, the following table provides the detailed information of the feature where it supports (App Studio or Developer Portal).
-
-| Features | App Studio | Developer portal |
-| --- | --- | --- |
-| Web Portal | [https://dev.teams.microsoft.com/appconfiguration.html#/](https://dev.teams.microsoft.com/appconfiguration.html#/) | [https://dev.teams.microsoft.com/home](https://dev.teams.microsoft.com/home) |
-| Teams app | [https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog](https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog) | [https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog](https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog) |
-| Create a new app | ✔️ | ✔️ |
-| Impart a zip package | ✔️ | ✔️ |
-| App Validation | ✔️ | ✔️ |
-| App Languages | ✔️ | ✔️ |
-| App Capabilities -Tabs | ✔️ | ✔️ |
-| Bot Management | ✔️ | ✔️ |
-| Connector setup | ✔️ | ✔️ |
-| Messaging extension | ✔️ | ✔️ |
-| Manifest Preview | ✔️ | ✔️ |
-| Publishing | ✔️ | ✔️ |
-| Permissions | ❌ | ✔️ |
-| First Party Settings | ❌ | ✔️ |
-| App Fighting | ❌ | ✔️ |
-| App plans and pricing | ❌ | ✔️ |
-| App Environments | ❌ | ✔️ |
-| App Sharing | ❌ | ✔️ |
-| Scene Studio | ❌ | ✔️ |
-| App analytics | ❌ | ✔️ |
-| App definition in line JSON editor | ❌ | ✔️ |
-
 ## See also
 
 [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
