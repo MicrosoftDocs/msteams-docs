@@ -10,7 +10,7 @@ ms.author: surbhigupta
 # Manage your Teams apps using Developer Portal
 
 > [!IMPORTANT]
-> As you have migrated from App Studio to Developer Portal, following table provides the detailed information of the features supported in developer portal.
+> As you have migrated from App Studio to Developer Portal, the following table provides the detailed information of the features supported in the Developer Portal.
 
 | Features | App Studio | Developer Portal |
 | --- | --- | --- |
