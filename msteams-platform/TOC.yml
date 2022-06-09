@@ -18,7 +18,7 @@
 - name: Get started
   expanded: false
   items:
-  - name: Get started overview
+  - name: Overview
     href: get-started/get-started-overview.md  
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
@@ -44,9 +44,9 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-  - name: Understand your use case
+  - name: Understand use case
     href: concepts/design/understand-use-cases.md
-  - name: Map your use case to Teams features
+  - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
@@ -58,13 +58,13 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-  - name: Understand the design process
+  - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
     href: concepts/design/design-teams-app-fundamentals.md
   - name: App capabilities
     items:
-    - name: Understand the app structure
+    - name: Understand app structure
       href: concepts/design/app-structure.md
     - name: Personal apps
       href: concepts/design/personal-apps.md
@@ -98,7 +98,7 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create a new Teams app
+    - name: Create new Teams app
       href: toolkit/create-new-project.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
@@ -174,7 +174,7 @@
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
-      - name: Send and receiving files
+      - name: Send and receive files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
@@ -200,15 +200,15 @@
     href: tabs/what-are-tabs.md
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
-  - name: Create a personal tab
+  - name: Create personal tab
     href: tabs/how-to/create-personal-tab.md
-  - name: Create a channel tab
+  - name: Create channel tab
     href: tabs/how-to/create-channel-group-tab.md
-  - name: Create a content page
+  - name: Create content page
     href: tabs/how-to/create-tab-pages/content-page.md
-  - name: Create a configuration page
+  - name: Create configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create a removal page
+  - name: Create removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
@@ -239,9 +239,9 @@
       items:
       - name: Receive all channel messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
-    - name: Create a commands menu for your bot
+    - name: Create commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
-    - name: Channel and group conversations
+    - name: Channel and group chat conversation bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
@@ -269,9 +269,9 @@
       href: bots/calls-and-meetings/registering-calling-bot.md
     - name: Incoming call notifications
       href: bots/calls-and-meetings/call-notifications.md
-    - name: Application-hosted media
+    - name: Requirements of application-hosted media
       href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-    - name: Supported media formats
+    - name: Supported media formats for bots
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
@@ -283,7 +283,7 @@
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
-    - name: Create a task module
+    - name: Create and send task module
       href: messaging-extensions/how-to/action-commands/create-task-module.md
     - name: Respond to action commands
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
@@ -311,7 +311,7 @@
       href: apps-in-teams-meetings/teams-live-share-overview.md
     - name: Getting started
       items:
-      - name: Quick start
+      - name: Quick start guide
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
