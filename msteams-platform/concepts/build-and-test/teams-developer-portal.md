@@ -10,25 +10,27 @@ ms.author: surbhigupta
 # Manage your Teams apps using Developer Portal
 
 > [!IMPORTANT]
-> As you have migrated from App Studio to Developer Portal, the following table provides the detailed information of the features supported in the Developer Portal.
+> As you have migrated from App Studio to Developer Portal, the following table provides the detailed information of the features supported in the Developer Portal:
 
 | Features | App Studio | Developer Portal |
 | --- | --- | --- |
 | App analytics | ❌ | ✔️ (In progress) |
-| App Capabilities -Tabs | ✔️ | ✔️ |
+| App capabilities-Tabs | ✔️ | ✔️ |
 | App definition in line JSON editor | ❌ | ✔️ (In progress) |
-| App Languages | ✔️ | ✔️ |
-| App Validation | ✔️ | ✔️ |
-| Bot Management | ✔️ | ✔️ |
+| App languages | ✔️ | ✔️ |
+| App validation | ✔️ | ✔️ |
+| Bot management | ✔️ | ✔️ |
 | Connector setup | ✔️ | ✔️ |
 | Create a new app | ✔️ | ✔️ |
 | Impart a zip package | ✔️ | ✔️ |
 | Messaging extension | ✔️ | ✔️ |
-| Manifest Preview | ✔️ | ✔️ |
+| Manifest preview | ✔️ | ✔️ |
 | Publishing | ✔️ | ✔️ |
 | Permissions | ❌ | ✔️ |
-| Teams app | [App studio Teams app](https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog) | [Developer Portal Teams app](https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog) |
+| Teams app | [App Studio Teams app](https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog) | [Developer Portal Teams app](https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog) |
 | Web Portal | [Teams App Configuration](https://dev.teams.microsoft.com/appconfiguration.html#/) | [Developer Portal](https://dev.teams.microsoft.com/home) |
+
+## Developer Portal for Teams
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
