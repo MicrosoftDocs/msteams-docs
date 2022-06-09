@@ -14,15 +14,21 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 Teams supports access to apps during meeting for the following meeting types:
 
-* Calendar scheduled meetings
-* One-on-one calls
-* Group calls
-* Meet now
+* Calendar scheduled meetings: Meetings scheduled through Teams calendar.
+* One-on-one calls: Calls initiated in one-on-one chat.
+* Group calls: Calls initiated in group chat.
+* Calendar Meet now: Meetings initiated through **Meet now** button in Teams calendar.
 
-Users can add apps to the meeting using the + option from their Teams. Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=0x4009&culture=en-in&country=IN) and explore apps designed specifically for meetings.
+Users can add apps to the meeting using the **+** option from their Teams meeting window.
+
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Add an app in meeting" border="true":::
+
+Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=0x4009) and explore apps designed specifically for meetings.
 
 > [!Note]
-> Meeting apps are currently not available for external users or people outside the organization.
+>
+> * External users or people outside the organization can only interact with the apps that are already available in a meeting and can't add and manage apps in meetings.
+> * Currently apps are not supported in meetings initiated through **Meet now** button in Teams channels.
 
 The following illustration gives you an idea of the meeting app extensibility features:
 

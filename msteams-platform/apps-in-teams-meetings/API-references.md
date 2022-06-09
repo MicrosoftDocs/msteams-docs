@@ -356,19 +356,19 @@ The following table lists the query parameter:
 # [C#](#tab/dotnet)
 
 ```csharp
-    MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
+MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
 # [JSON](#tab/json)
 
+```http
+GET /v1/meetings/{meetingId}
+```
+
+The JSON response body for Meeting Details API is as follows:
+
 * **Calendar scheduled meetings:**
-
-    ```http
-    GET /v1/meetings/{meetingId}
-    ```
-
-    The JSON response body for Meeting Details API is as follows:
 
     ```json
 
@@ -396,12 +396,6 @@ The following table lists the query parameter:
 
 * **One-on-one calls:**
 
-    ```http
-    GET /v1/meetings/{meetingId}
-    ```
-
-    The JSON response body for Meeting Details API is as follows:
-
     ```json
     {
         "details": {
@@ -423,12 +417,6 @@ The following table lists the query parameter:
     ```
 
 * **Group calls:**
-
-    ```http
-    GET /v1/meetings/{meetingId}
-    ```
-
-    The JSON response body for Meeting Details API is as follows:
 
     ```json
     {
@@ -453,12 +441,6 @@ The following table lists the query parameter:
     ```
 
 * **Calendar Meet now:**
-
-    ```http
-    GET /v1/meetings/{meetingId}
-    ```
-
-    The JSON response body for Meeting Details API is as follows:
 
     ```json
     { 
