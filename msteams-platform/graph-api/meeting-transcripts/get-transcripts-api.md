@@ -32,10 +32,10 @@ You can configure your app to access meeting transcripts across the tenant where
 
 The following permissions can be granted to your app:
 
-| Permission | Display name | Description |
-| --- | --- | --- |
-| OnlineMeetingTranscript.Read.All in Application context | Read the transcript of the meeting. | It allows the app to read meeting transcripts in your organization. It needs the administrator to consent, and doesn't require an app user to be signed in. |
-| OnlineMeetingTranscript.Read.All in Delegated (work or school account) context | Read the transcript of the meeting. | It allows your app to read meeting transcripts in your organization for a signed-in app user. It needs the administrator to consent. |
+| Permission | Permissions type |Display name | Description |
+| --- | --- | --- | --- |
+| OnlineMeetingTranscript.Read.All | Application | Read the transcript of the meeting. | It allows the app to read meeting transcripts in your organization. It needs the administrator to consent, and doesn't require an app user to be signed in. |
+| OnlineMeetingTranscript.Read.All | Delegated (work or school account) context | Read the transcript of the meeting. | It allows your app to read meeting transcripts in your organization for a signed-in app user. It needs the administrator to consent. |
 
 / reference to article for configuring classic permissions. /
 / reference to article for admin page. /
