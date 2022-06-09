@@ -18,7 +18,7 @@ Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-
 
 Here's the current versioning guidance for various app scenarios:
 
-|[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client SDK.
 
