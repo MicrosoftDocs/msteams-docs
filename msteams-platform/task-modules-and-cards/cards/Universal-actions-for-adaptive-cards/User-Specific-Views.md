@@ -8,10 +8,11 @@ ms.localizationpriority: medium
 
 # User Specific Views
 
-Earlier if Adaptive Cards were sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. Maximum 60 different users can see a different version of the card with additional information or actions. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
+Earlier if Adaptive Cards were sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
 
 > [!NOTE]
 > User Specific View is supported for Adaptive Cards sent by a bot and is dependent on Universal Actions.
+> Maximum 60 different users can see a different version of the card with additional information or actions.
 
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. Megan also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
@@ -215,11 +216,15 @@ const cardRes = {
 
 Card design guidelines to keep in mind while designing User Specific Views:
 
-* You can create a maximum of **60 User Specific Views** for a particular card sent to a chat or channel by specifying their `userIds` in the `refresh` section.
-* **Base Card:** The base version of the card that the bot developer sends to the chat. The base version is the version of the Adaptive Card for all users who are not specified in the `userIds` section.
+* **Refresh Behaviour:** You can create a maximum of **60 User Specific Views** for a particular card sent to a chat or channel by specifying their `userIds` in the `refresh` section. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 users in Teams group chats/ channels. The Teams client will automatically invoke refresh calls for all the users if the group/channel has <=60 users.
+* **Base Card:** The base version of the card that the bot developer sends to the chat. The base version is the version of the Adaptive Card sent to all the users. For users specified in the `userIds` section, the user-specific card is fetched subsequently.
+* **Refresh Timeout:** If a card is supposed to be refreshed, Teams client triggers a refresh only if the content from the last invoke is older than a minute. You can control this refresh behaviour by adding a timestamp to the data bag and checking it before sending the refreshed card.
 * A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with refresh enabled.
 * For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
 * Give a prompt to users to get a User Specific View, where they see only a particular view of the card or some actions.
+
+> [!NOTE]
+> Client cache behaviour: The user-specific card returned by the bot is locally cached on the user’s client. So, if a user switches from the web client to mobile/desktop client, that would trigger another invoke event to fetch the refreshed card.
 
 ## Code sample
 
