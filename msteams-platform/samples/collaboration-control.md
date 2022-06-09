@@ -27,7 +27,7 @@ ms.topic: conceptual
  **SharePoint Files:** Upload, view, pin/unpin, and share files with members of a record so that you can search, reference, and edit relevant artifacts in a centralized location backed by SharePoint.
 
  > [!NOTE]
- > By configuring and using the various M365 capabilities of Collaboration Controls mentioned above, you are granting permission for user data to pass through the Graph API and agreeing to [Microsoft API terms of Use](/legal/microsoft-apis/terms-of-use?context=graph%2Fcontext). To learn more about Graph APIs, go to [this link](/graph/overview)
+ > By configuring and using the various Microsoft 365 capabilities of Collaboration Controls mentioned above,' granting permission for user data to pass through the Graph API and agreeing to [Microsoft API terms of Use](/legal/microsoft-apis/terms-of-use?context=graph%2Fcontext). To learn more about Graph APIs, go to [this link](/graph/overview)
 
 ## Install collaboration controls
 
@@ -56,7 +56,7 @@ ms.topic: conceptual
  > [!TIP]
  > If you've an existing version of the controls installed in your environment, you may need to create a fresh environment and complete a new install to successfully upgrade to the latest   version.
 
- Before installation, you must be in a power platform environment or tenant admin. You'll need a dataverse environment with a database. If you  have one, you'll need to create a new one to continue this lab.
+ Before installation, you must be in a power platform environment or tenant admin. You'll need a dataverse environment with a database. If you've one, you'll need to create a new one to continue this lab.
 
  To install the solutions, begin by navigating to Microsoft AppSource and then complete the following steps.
 
@@ -81,11 +81,11 @@ ms.topic: conceptual
 
  1. Navigate to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home)
 
- 1. Make sure you are in the environment the controls were installed into. You can view the environment and change it if required on the top right of the screen.
+ 1. Make sure' in the environment the controls were installed into. You can view the environment and change it if required on the top right of the screen.
 
      :::image type="content" source="../assets/images/Collaboration control/power-apps.png" alt-text="power apps" border="true":::
 
- 1. Once you are in the right environment, select the Solutions tab to view all the solutions that you've just installed.
+ 1. Once' in the right environment, select the Solutions tab to view all the solutions that you've just installed.
 
  The Collaboration controls are a preview, and any element may change over time with potential for breaking changes. The Collaboration controls aren't supported on production environments.
 
@@ -116,7 +116,7 @@ ms.topic: conceptual
 
  Collaboration controls are designed for best model-driven applications. The following section covers how to create a model-driven app.
 
- Create a simple model-driven application
+ Create a model-driven application
 
  1. Navigate back to [https://make.powerapps.com.](https://make.powerapps.com.)
 
@@ -147,7 +147,7 @@ ms.topic: conceptual
 
  1. Select **Save**
 
- 1. Once you are done creating your table, feel free to customize it by adding additional
+ 1. Once you're done creating your table, feel free to customize it by adding additional
 columns, relationships, and more (Optional).
 
  1. Next, we'll create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
@@ -186,7 +186,7 @@ columns, relationships, and more (Optional).
 
 ### Configure Collaboration controls for your application
 
- In this exercise, you'll define the settings for Collaboration controls for the business entity (e.g., Inspections) you created in the previous exercise.
+ In this exercise, you'll define the settings for Collaboration controls for the business entity (for example, Inspections) you created in the previous exercise.
 
  The settings you apply are **Group ID** which is needed for Tasks and internal Meetings, **Channel ID** for Conversations, and the **Booking business ID** to enable external meetings using Bookings functionality. You'll also apply settings for the **Site ID and Drive ID**, which are needed for Files to be linked to your SharePoint site.
 
@@ -299,7 +299,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. You may now provide additional details for your Bookings business by configuring the Booking page, Staff, Services, and Business Information pages by selecting them in the left navigation.
 
- 1. Make sure the user you are going to test with is added to the Staff list, he also needs to be an admin to create/update and cancel bookings (adding admin permission to a staff member can take up to an hour to take effect).
+ 1. Make sure the user you're going to test with is added to the Staff list, he also needs to be an admin to create/update and cancel bookings (adding admin permission to a staff member can take up to an hour to take effect).
 
  **Retrieve the alias of the new Bookings business**
 
@@ -319,7 +319,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. Now that we have the Channel ID, Group ID, and the optional Bookings business ID, we can set them as values within the Collaboration controls settings. To begin, open [https://make.powerapps.com/.](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home)
 
- 1. Ensure you are in the correct environment by using the environment picker in the top right.
+ 1. Ensure' in the correct environment by using the environment picker in the top right.
 
  1. Navigate to the **Solutions** page in the left navigation.
 
@@ -349,7 +349,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
      :::image type="content" source="../assets/images/Collaboration control/new-settings-value.png" alt-text="new settings value" border="true":::
 
- 1. Select **Save & Close** once you are complete
+ 1. Select **Save & Close** once' complete
 
  1. **[Optional - Bookings]** Repeat step 9 above to create a new settings value.
 
@@ -359,7 +359,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
      :::image type="content" source="../assets/images/Collaboration control/new-settings.png" alt-text="new settings" border="true":::
 
- 1. Select **Save & Close** once you are complete.
+ 1. Select **Save & Close** once' complete.
 
  1. **[Channel ID]** Repeat step 9 above to create a new settings value.
 
@@ -371,14 +371,14 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
      :::image type="content" source="../assets/images/Collaboration control/settings-value.png" alt-text="Settings value" border="true":::
 
-1. Select Save & Close once you are complete.
+1. Select Save & Close once' complete.
 
 1. **[Files]** Repeat step 9 above to create a new settings value for **Site ID.**
 
 * Pass the Site ID to the field labeled Value.
 * Set the Settings Group ID to ‘Settings for Inspections’
 * Set the Settings Definition Id to ‘Site Id’
-* Select Save & Close once you are complete.
+* Select Save & Close once' complete.
 
 1. **[Files]** Repeat step 9 above to create a new settings value for Drive ID.
 
@@ -406,7 +406,7 @@ Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
 
  1. Select the Information form of form type “Main" to open it in the form designer.
 
- 1. Once you are in the form designer, drag in a **1-column tab** from the **Components** drawer.
+ 1. Once' in the form designer, drag in a **1-column tab** from the **Components** drawer.
 
      :::image type="content" source="../assets/images/Collaboration control/components.png" alt-text="Components power apps" border= "true":::
 
@@ -434,7 +434,7 @@ Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
      >
      > For Files, the Table and Default view settings aren't required so you can use same settings as Notes (image above) when you drag the subgrid.
      >
-     > If you are unable to find the control table in the “Select subgrid views” pop up, you may have missed step 9 of Task 1 in Exercise 2. Make sure you check the option for ‘Creating a new activity’.
+     > If' unable to find the control table in the “Select subgrid views” pop up, you may have missed step 9 of Task 1 in Exercise 2. Make sure you check the option for ‘Creating a new activity’.
 
      :::image type="content" source="../assets/images/Collaboration control/create-new-activity.png" alt-text="Create a new activity" border="true":::
 
@@ -640,17 +640,17 @@ and in the “Apps” Section, find the MDA (Model Driven Application) app you c
 
      1. Library:
 
-     Select + **Add web resource** and in opened dialog search and add **m365_TeamsChatIcon.svg** web resource:
+     Select + **Add web resource** and in opened dialog search and add **icrosoft _TeamsChatIcon.svg** web resource:
      :::image type="content" source="../assets/images/Collaboration control/teams-chat-icon.png" alt-text="Teams chat icon" border="true":::
 
     1. **Action:** Set **Action** (if not set) to: **Run JavaScript**
 
-    1. Select **Add library** and in opened dialog search and add **m365_chatControl** web
+    1. Select **Add library** and in opened dialog search and add **icrosoft _chatControl** web
      resource
 
      :::image type="content" source="../assets/images/Collaboration control/add-java-script.png" alt-text="Add javascript" border="true":::
 
-     1. **Function Name:** **m365_chatControl.chatControl.clickChatIcon**
+     1. **Function Name:** **icrosoft _chatControl.chatControl.clickChatIcon**
 
      1. Click + **Add Parameter**
 
@@ -706,13 +706,13 @@ overrides the visibility attribute
 * Take note of the web resource name together with automatically added prefix.
 * Return to the step #6 an modify the command by adding one more **String** parameter
   pointing to just created web resource. The parameter value should follow the convention -
-  **$webresource**:resourceName. So, if the resource name is m365_chatPaneBadgeItem then
-  the parameter value will be $webresource:m365_chatPaneBadgeItem
+  **$webresource**:resourceName. So, if the resource name is icrosoft _chatPaneBadgeItem then
+the parameter value will be $webresource:icrosoft_chatPaneBadgeItem
 
      > [!NOTE]
      > To use **Conversations** in the personal app, you must configure the channel ID (in Task 3, Step 5) and the app must **first** be added to the Channel associated with the Channel ID provided.
 
- **Congrats!** You have now added the Collaboration controls to your application!
+ **Congrats!** You've now added the Collaboration controls to your application!
 
 ## Deploy to Teams
 
@@ -750,7 +750,7 @@ overrides the visibility attribute
 
      :::image type="content" source="../assets/images/Collaboration control/default-solution.png" alt-text="Default solution" border="true":::
 
- 1. . Finally, select **Publish all customizations** to publish all the work you have completed.
+ 1. . Finally, select **Publish all customizations** to publish all the work you've completed.
 
      :::image type="content" source="../assets/images/Collaboration control/publish-cusomization.png" alt-text="Publish all customizations" border="true":::
 
@@ -758,7 +758,7 @@ overrides the visibility attribute
 
  1. Now that the settings are defined, we can now add the app to Microsoft Teams. To begin, navigate to the **Apps** page in the Power Apps maker portal.
 
- 1. Once you are there, find the app you previously created and select the '…'
+ 1. Once' there, find the app you previously created and select the '…'
 
  1. To bring the app to Teams, select **Add to Teams**.
 
@@ -792,7 +792,7 @@ overrides the visibility attribute
 
      :::image type="content" source="../assets/images/Collaboration control/select-save.png" alt-text="Select save" border="true":::
 
- 1. Once you are successful, the app will appear as a pinned tab.
+ 1. Once' successful, the app will appear as a pinned tab.
 
  **Task 4: [Optional] How to add the app as a personal app**
 
@@ -825,7 +825,7 @@ overrides the visibility attribute
      c. **Description:** Enter a description of the team. <br/>
      d. **Business unit:** Select a business unit from the dropdown list. <br/>
      e. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters. <br/>
-     f. **Team type:** Select the team type. The following task 2 assumes you have selected ‘Owner’ from the dropdown list. The other team types (M365 team and AAD team) will auto populate team members from AAD.<br/>
+     f. **Team type:** Select the team type. The following task 2 assumes you've selected ‘Owner’ from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) will auto populate team members from Azure Active Directory.<br/>
 
      :::image type="content" source="../assets/images/Collaboration control/new-team.png" alt-text="New team" border="true":::
 
@@ -835,7 +835,7 @@ overrides the visibility attribute
 
  **Task 2: Add members to the team**
 
- (This is not necessary if your team type is AAD or M365.)
+ (This is not necessary if your team type is Azure Active Directory or Microsoft 365.)
 
  1. Select a team, and then select **Manage team members**
 
@@ -913,7 +913,7 @@ overrides the visibility attribute
 
  **Admin Center does not update when installation or upgrade is complete**
 
- When following the installation steps in exercise 1, you are redirected to the Power Platform admin center. A banner is displayed when installation starts, but it is not updated when installation completes. The status is listed during installation, and when installation is complete it may disappear from the list. You can view the solutions list at <https://make.preview.powerapps.com/> to confirm that installation is complete.
+ When following the installation steps in exercise 1,' redirected to the Power Platform admin center. A banner is displayed when installation starts, but it is not updated when installation completes. The status is listed during installation, and when installation is complete it may disappear from the list. You can view the solutions list at <https://make.preview.powerapps.com/> to confirm that installation is complete.
 
  **View during installation:**
      :::image type="content" source="../assets/images/Collaboration control/view-during-installation.png" alt-text="view during installation" border="true":::
@@ -985,9 +985,9 @@ overrides the visibility attribute
 
      :::image type="content" source="../assets/images/Collaboration control/manage-apps.png" alt-text="manage apps" border="true":::
 
-* If you're updating the manifest, you have to unzip it and manually update the version number so that it is higher.
+* If you're updating the manifest, you've to unzip it and manually update the version number so that it is higher.
 
-* After changing the app catalogue in the tenant, you have to log out and log back in as the user to get the updated catalogue.
+* After changing the app catalogue in the tenant, you've to log out and log back in as the user to get the updated catalogue.
 
  **Tasks, Meetings controls fail to save**
 
