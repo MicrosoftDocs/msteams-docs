@@ -355,14 +355,10 @@ The following table lists the query parameter:
 
 # [C#](#tab/dotnet)
 
-    ```csharp
+```csharp
     MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
-    ```
-
-# [JavaScript](#tab/javascript)
-
-    Not available
+```
 
 # [JSON](#tab/json)
 
@@ -489,6 +485,8 @@ The following table lists the query parameter:
     }
     
     ```
+
+---
 
 | Property name | Purpose |
 |---|---|
