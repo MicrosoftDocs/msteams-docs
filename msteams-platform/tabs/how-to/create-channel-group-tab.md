@@ -1,5 +1,5 @@
 ---
-title: Create a channel or group tab
+title: Create a channel tab
 author: laujan
 description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams, including reviewing source code with code examples.
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Channel or group tab
+# Create a channel tab
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
