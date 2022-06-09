@@ -26,15 +26,15 @@ App Studio is a Teams app which can be found in the Teams store. Follow this lin
 
 In the store, search for App Studio.
 
-![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="Store entry for app studio":::
 
 Select the App Studio tile to open the app install page:
 
-![Configure app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="Configure app studio":::
 
 Select **install**.
 
-![app studio](~/assets/images/get-started/teamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="app studio":::
 
 Once you are in App Studio, click on the **Manifest editor** tab where you can either import an existing app or create a new app.
 
@@ -153,7 +153,7 @@ Since App Studio gets deprecated, the following table provides the detailed info
 | --- | --- | --- |
 | Web Portal | [https://dev.teams.microsoft.com/appconfiguration.html#/](https://dev.teams.microsoft.com/appconfiguration.html#/) | [https://dev.teams.microsoft.com/home](https://dev.teams.microsoft.com/home) |
 | Teams app | [https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog](https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog) | [https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog](https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog) |
-| Create a new app | ✔️ | ✔️ |
+| Create a new app |                                                     ✔️                                                       | ✔️ |
 | Impart a zip package | ✔️ | ✔️ |
 | App Validation | ✔️ | ✔️ |
 | App Languages | ✔️ | ✔️ |
