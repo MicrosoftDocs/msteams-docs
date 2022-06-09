@@ -353,54 +353,54 @@ The following table lists the query parameter:
 
 ### Example
 
-* Calendar scheduled meetings:
+* **Calendar scheduled meetings:**
 
 # [C#](#tab/dotnet)
 
-```csharp
-MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
-await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
-```
+    ```csharp
+    MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
+    ```
 
 # [JavaScript](#tab/javascript)
 
-Not available
+    Not available
 
 # [JSON](#tab/json)
 
-```http
-GET /v1/meetings/{meetingId}
-```
+    ```http
+    GET /v1/meetings/{meetingId}
+    ```
 
-The JSON response body for Meeting Details API is as follows:
+    The JSON response body for Meeting Details API is as follows:
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
-    }
-} 
-```
+    ```json
+    { 
+       "details": { 
+            "id": "meeting ID", 
+            "msGraphResourceId": "", 
+            "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+            "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+            "joinUrl": "https://teams.microsoft.com/l/xx", 
+            "title": "All Hands", 
+            "type": "Scheduled" 
+        }, 
+        "conversation": { 
+                "isGroup": true, 
+                "conversationType": "groupchat", 
+                "id": "meeting chat ID" 
+        }, 
+        "organizer": { 
+            "id": "<organizer user ID>", 
+            "aadObjectId": "<AAD ID>", 
+            "tenantId": "<Tenant ID>" 
+        }
+    } 
+    ```
 
----
+    ---
 
-* One-on-one calls:
+* **One-on-one calls:**
 
     ```http
     GET /v1/meetings/{meetingId}
@@ -428,7 +428,7 @@ The JSON response body for Meeting Details API is as follows:
     
     ```
 
-* Group calls:
+* **Group calls:**
 
     ```http
     GET /v1/meetings/{meetingId}
@@ -458,7 +458,7 @@ The JSON response body for Meeting Details API is as follows:
     
     ```
 
-* Calendar Meet now:
+* **Calendar Meet now:**
 
     ```http
     GET /v1/meetings/{meetingId}
@@ -629,7 +629,7 @@ The following table provides the response codes:
 
 ## Get app content stage sharing state API
 
-The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage for both mobile and desktop.
+The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
 
 ### Query parameter
 
