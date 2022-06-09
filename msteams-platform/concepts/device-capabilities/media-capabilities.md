@@ -22,7 +22,7 @@ The main advantage of integrating device capabilities in your Teams apps is it l
 
 * Allow the user to record audio message and attach it to an incident ticket.
 
-* Allows the user to scan the physical documents from the smartphone to file a car insurance claim.
+* Allow the user to scan the physical documents from the smartphone to file a car insurance claim.
 
 > [!NOTE]
 >
