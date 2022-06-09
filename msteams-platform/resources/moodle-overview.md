@@ -1,6 +1,6 @@
 ---
 title: Moodle learning management system
-description: In this module, learn Moodle LMS integration with Teams, Moodle learning management , accessibility and user requirement scenarios
+description: Learn Moodle LMS integration with Teams, Moodle learning management, accessibility, and user requirement scenarios. This integration provides Audio, video calls, chat, coureses and activity management, analytical insigths. 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
