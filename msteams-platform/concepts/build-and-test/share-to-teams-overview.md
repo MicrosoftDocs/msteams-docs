@@ -1,6 +1,6 @@
 ---
 title: Share to Teams overview
-description: In this module, learn share to Teams overview and where you can create share-to-teams button in the Teams apps.
+description: Learn share to Teams overview and where you can create share-to-teams button in the Teams apps.
 ms.topic: how-to
 ms.localizationpriority: mediumss
 ---
