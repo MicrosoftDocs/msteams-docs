@@ -1,6 +1,6 @@
 ---
 title: Integrate People Picker
-description: In this module, learn how to use Teams JavaScript client SDK to integrate People Picker control and advantages of using people picker
+description: In this article, learn how to use Teams JavaScript client SDK to integrate People Picker control and advantages of using people picker
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
