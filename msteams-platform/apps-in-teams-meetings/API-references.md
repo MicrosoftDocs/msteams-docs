@@ -262,7 +262,7 @@ To use the Meeting Details API, you must obtain different RSC permission based o
 
 <details>
 
-<summary><b>For app manifest version 1.12</b></summary>
+<summary><b>For app manifest version 1.12 and later</b></summary>
 
 Use the following example to configure your app manifest's `webApplicationInfo`  and `authorization` properties for any private meeting:
 
@@ -310,7 +310,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 <details>
 
-<summary><b>For app manifest version 1.11 or earlier</b></summary>
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
 
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
@@ -626,7 +626,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 <details>
 
-<summary><b>For app manifest version 1.12</b></summary>
+<summary><b>For app manifest version 1.12 and later</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -653,7 +653,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 <details>
 
-<summary><b>For app manifest version 1.11 or earlier</b></summary>
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
 
 ```json
 "webApplicationInfo": {
