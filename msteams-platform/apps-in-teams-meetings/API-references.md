@@ -402,95 +402,95 @@ The JSON response body for Meeting Details API is as follows:
 
 * One-on-one calls:
 
-```http
-GET /v1/meetings/{meetingId}
-```
+    ```http
+    GET /v1/meetings/{meetingId}
+    ```
 
-The JSON response body for Meeting Details API is as follows:
+    The JSON response body for Meeting Details API is as follows:
 
-```json
-{
-    "details": {
-        "id": "meeting ID",
-        "type": "OneToOneCall"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "groupChat",
-        "id": "meeting chat ID"
-    },
-    "organizer  ": {
-        "id": "<organizer user ID>",
-        "aadObjectId": "<AAD ID>",
-        "tenantId": "<Tenant ID>" 
+    ```json
+    {
+        "details": {
+            "id": "meeting ID",
+            "type": "OneToOneCall"
+        },
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "groupChat",
+            "id": "meeting chat ID"
+        },
+        "organizer  ": {
+            "id": "<organizer user ID>",
+            "aadObjectId": "<AAD ID>",
+            "tenantId": "<Tenant ID>" 
+        }
     }
-}
-
-```
+    
+    ```
 
 * Group calls:
 
-```http
-GET /v1/meetings/{meetingId}
-```
+    ```http
+    GET /v1/meetings/{meetingId}
+    ```
 
-The JSON response body for Meeting Details API is as follows:
+    The JSON response body for Meeting Details API is as follows:
 
-```json
-{
-    "details": {
-        "id": "meeting ID",
-        "type": "OneToOneCall",
-        "joinUrl": "https://teams.microsoft.com/l/xx"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "groupChat",
-        "id": "meeting chat ID"
-    },
-    "organizer  ": {
-        "id": "<organizer user ID>",
-        "objectId": "<object ID>",
-        "aadObjectId": "<AAD ID>",
-        "tenantId": "<Tenant ID>" 
+    ```json
+    {
+        "details": {
+            "id": "meeting ID",
+            "type": "OneToOneCall",
+            "joinUrl": "https://teams.microsoft.com/l/xx"
+        },
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "groupChat",
+            "id": "meeting chat ID"
+        },
+        "organizer  ": {
+            "id": "<organizer user ID>",
+            "objectId": "<object ID>",
+            "aadObjectId": "<AAD ID>",
+            "tenantId": "<Tenant ID>" 
+        }
     }
-}
-
-```
+    
+    ```
 
 * Calendar Meet now:
 
-```http
-GET /v1/meetings/{meetingId}
-```
+    ```http
+    GET /v1/meetings/{meetingId}
+    ```
 
-The JSON response body for Meeting Details API is as follows:
+    The JSON response body for Meeting Details API is as follows:
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "MeetNow" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" ,
-        "objectId": "<object ID>",
+    ```json
+    { 
+       "details": { 
+            "id": "meeting ID", 
+            "msGraphResourceId": "", 
+            "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+            "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+            "joinUrl": "https://teams.microsoft.com/l/xx", 
+            "title": "All Hands", 
+            "type": "MeetNow" 
+        }, 
+        "conversation": { 
+                "isGroup": true, 
+                "conversationType": "groupchat", 
+                "id": "meeting chat ID" 
+        }, 
+        "organizer": { 
+            "id": "<organizer user ID>", 
+            "aadObjectId": "<AAD ID>", 
+            "tenantId": "<Tenant ID>" ,
+            "objectId": "<object ID>",
+        }
     }
-}
-
-```
+    
+    ```
 
 | Property name | Purpose |
 |---|---|
