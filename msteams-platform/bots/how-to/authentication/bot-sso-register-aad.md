@@ -53,7 +53,7 @@ To create and deploy bot resource
 
     1. Select a subscription plan.
 
-    1. Select the resource group which you want to provision for your bot app.
+    1. Select the resource group that you want to provision for your bot app.
 
         You can also create a new resource group.
 
