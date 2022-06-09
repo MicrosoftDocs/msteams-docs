@@ -1032,5 +1032,5 @@ overrides the visibility attribute
  |**Area**| **How to** |
  |---|---|
  | Session details | Select Edit in Preview, Select the settings icon and ‘Session Details’ and select ‘Copy details’ |
- | Browser language | Get your language(s) from your browser settings |
- | Region | Determine your region from your Operating System settings |
+ | Browser language | Get your language(s) from your browser settings. |
+ | Region | Determine your region from your Operating System settings. |
