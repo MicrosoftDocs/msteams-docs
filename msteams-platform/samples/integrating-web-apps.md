@@ -1,6 +1,6 @@
 ---
 author: heath-hamilton
-description: In this module, learn best practices or considerations for integrating existing web apps with Microsoft Teams
+description: Learn best practices or considerations for integrating existing web apps with Microsoft Teams. It gives information on API requirements, authentication, and deep-linking of your app with Teams.
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
