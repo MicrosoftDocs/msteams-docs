@@ -33,9 +33,6 @@ The following image depicts web app experience of getLocation API:
 
 The following image depicts web app experience of getLocation API:
 
-> [!NOTE]
-> The desktop support for `getLocation` and  `showLocation` is available after the user grants the device permission.
-
   :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
 
 ---
@@ -72,11 +69,11 @@ The following table lists the set of APIs to enable your device's location capab
 
 > [!NOTE]
 >
-> `showMap` conditions for True and False:<br> - True: Show location on map <br> - False: Do not show location on map <br>-(false,false): This configuration is only supported on mobile <br> -`showMap`= False is not supported on Teams web or desktop.<br>-If `allowChooseLocation` is set to true, then `showMap` is ignored.
+> `showMap` conditions for True and False:<br> - True: Show location on map <br> - False: Do not show location on map <br>-(false,false): This configuration is only supported on mobile <br> -If `allowChooseLocation` is set to true, then `showMap` is ignored.<br> -`showMap`= false is not supported on Teams web or desktop.
 
 For more information on `getLocation` and `showLocation`, see [LocationProps](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
-> [!NOTE]
+> [!IMPORTANT]
 > When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at go.microsoft.com/?linkid=9710837 and the Microsoft Privacy Statement available at go.microsoft.com/fwlink/?LinkID=248686.</br>
 > Further, you must provide a hypertext link to Bing Maps TOU, which is located here, either at the bottom of each page in your Application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
