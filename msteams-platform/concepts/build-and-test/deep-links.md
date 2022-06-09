@@ -1,6 +1,6 @@
 ---
 title: Create deep links 
-description: In this module, learn how to create deep links and how to use and navigate them in your Microsoft Teams apps.
+description: Learn how to create deep links and how to use and navigate them in your Microsoft Teams apps.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
