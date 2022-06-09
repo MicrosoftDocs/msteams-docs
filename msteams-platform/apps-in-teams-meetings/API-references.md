@@ -360,6 +360,14 @@ MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
 await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
+# [JavaScript](#tab/javascript)
+
+```javascript
+
+Not available
+
+```
+
 # [JSON](#tab/json)
 
 ```http
