@@ -353,8 +353,6 @@ The following table lists the query parameter:
 
 ### Example
 
-* **Calendar scheduled meetings:**
-
 # [C#](#tab/dotnet)
 
     ```csharp
@@ -368,6 +366,8 @@ The following table lists the query parameter:
 
 # [JSON](#tab/json)
 
+* **Calendar scheduled meetings:**
+
     ```http
     GET /v1/meetings/{meetingId}
     ```
@@ -375,7 +375,7 @@ The following table lists the query parameter:
     The JSON response body for Meeting Details API is as follows:
 
     ```json
-    { 
+
        "details": { 
             "id": "meeting ID", 
             "msGraphResourceId": "", 
@@ -395,10 +395,8 @@ The following table lists the query parameter:
             "aadObjectId": "<AAD ID>", 
             "tenantId": "<Tenant ID>" 
         }
-    } 
+        } 
     ```
-
-    ---
 
 * **One-on-one calls:**
 
