@@ -155,9 +155,9 @@ const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
 
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 >
-> * Video property is not supported in Android version 7 or below. `maxDuration` for video recording is currently limited to 300 seconds only, you can set it upto 300 seconds only.
+> * Video property is not supported in Android version 7 or below. `maxDuration` for video recording is currently limited to 300 seconds only.
 > * If `isFullScreenMode` is set to false a toggle appears on the screen, in which you can minimize the video recording and continue reading the content on the screen while your video gets recorded in the background.
 
 **Calling `selectMedia` API** for capturing images and video using camera:
