@@ -41,7 +41,7 @@ When Azure AD receives a request for accessing a Microsoft Graph resource, it ch
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 
-- If the tab app needs Microsoft Graph scopes for which only an administrator can give consent, your code should throw an error.
+- If the tab app needs Microsoft Graph scopes for which only an administrator can give consent, your code should generate an error.
 - If the only scopes that are needed can be consented to by the user, then your code should fall back to an alternate system of user authentication.
 
 </details>

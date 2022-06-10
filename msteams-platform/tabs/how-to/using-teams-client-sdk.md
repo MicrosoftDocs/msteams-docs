@@ -60,14 +60,14 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 #### App permissions
 
-App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Office. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will throw an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Office. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
 
 Current guidance for now is to modify your code to catch the failure:
 
 * Check [isSupported()](#differentiate-your-app-experience) on a capability before using it. `media`, `meeting`, and `files` do not yet support *isSupported* calls and do not yet work outside of Teams.
 * Catch and handle errors when calling TeamsJS and HTML5 APIs.
 
-When an API is unsupported or throws an error, add logic to fail gracefully or provide a workaround. For example:
+When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
 
 * Direct the user to your app's website.
 * Direct the user to use the app in Teams to complete the flow.
@@ -225,7 +225,7 @@ async function example() {
 
 A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Office, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
 
-Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API will throw an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
+Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API generates an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
 
 #### Differentiate your app experience
 
