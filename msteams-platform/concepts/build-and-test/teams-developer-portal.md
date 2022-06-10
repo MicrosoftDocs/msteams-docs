@@ -14,21 +14,25 @@ ms.author: surbhigupta
 
 | Features | App Studio | Developer Portal |
 | --- | --- | --- |
-| App analytics | ❌ | ✔️ (In progress) |
+| App analytics* | ❌ | ✔️ |
+| App capabilities-Bots | ✔️ | ✔️ |
+| App capabilities-Connectors | ✔️ | ✔️ |
+| App capabilities-Messaging extension | ✔️ | ✔️ |
+| App capabilities-Meeting extension | ❌ | ✔️ |
+| App capabilities-Personal apps | ✔️ | ✔️ |
 | App capabilities-Tabs | ✔️ | ✔️ |
-| App definition in line JSON editor | ❌ | ✔️ (In progress) |
+| App environments | ❌ | ✔️ |
 | App languages | ✔️ | ✔️ |
+| App manifest preview and download | ✔️ | ✔️ |
+| App plans and pricing | ❌ | ✔️ |
+| App publishing | ✔️ | ✔️ |
+| App permissions | ❌ | ✔️ |
+| App sharing-share with co-developers | ❌ | ✔️ |
 | App validation | ✔️ | ✔️ |
-| Bot management | ✔️ | ✔️ |
-| Connector setup | ✔️ | ✔️ |
 | Create a new app | ✔️ | ✔️ |
 | Impart a zip package | ✔️ | ✔️ |
-| Messaging extension | ✔️ | ✔️ |
-| Manifest preview | ✔️ | ✔️ |
-| Publishing | ✔️ | ✔️ |
-| Permissions | ❌ | ✔️ |
-| Teams app | [App Studio Teams app](https://teams.microsoft.com/l/app/0c5cfdbb-596f-4d39-b557-5d9516c94107?source=app-details-dialog) | [Developer Portal Teams app](https://teams.microsoft.com/l/app/14072831-8a2a-4f76-9294-057bf0b42a68?source=app-details-dialog) |
-| Web Portal | [Teams App Configuration](https://dev.teams.microsoft.com/appconfiguration.html#/) | [Developer Portal](https://dev.teams.microsoft.com/home) |
+
+* *App analytics will be available for GA soon.*
 
 ## Developer Portal for Teams
 
