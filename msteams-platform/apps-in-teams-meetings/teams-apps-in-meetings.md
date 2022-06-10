@@ -29,7 +29,7 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=
 >
 > * Add apps option is not available in Teams mobile client.
 >
-> * Currently when an user (third person) is added to one-on-one call, the call is migrated to a group call and a new session will get started. Apps added to the previous one-on-one call will not be available any more. For more information, see [user types in a meeting](apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting).
+> * Currently when an user (third person) is added to one-on-one call, the call is migrated to a group call and a new session will get started. Apps added to the previous one-on-one call will not be available any more. For more information, see [user types in a meeting](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting).
 >
 > * Currently apps are not supported in meetings initiated through **Meet now** button in Teams channels.
 
