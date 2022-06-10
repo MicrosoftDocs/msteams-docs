@@ -68,6 +68,10 @@ To create and deploy bot resource
 
 / Add details post-creation. /
 
+## Configure app in Azure AD
+
+You need to configure client secret, permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
+
 ### Create client secret
 
 A client secret is a string that the application uses to prove its identity when requesting a token.
@@ -100,13 +104,17 @@ A client secret is a string that the application uses to prove its identity when
    > [!NOTE]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
-## Configure app in Azure AD
-
-You need to configure permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
-
 ### Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+Configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+
+You need:
+
+- [To configure application ID URI](#to-configure-application-id-uri)
+- [To configure API scope](#to-configure-api-scope)
+- [To configure authorized client application](#to-configure-authorized-client-application)
+
+#### To configure application ID URI
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
@@ -247,14 +255,19 @@ You must define the access token version that is acceptable for your app. This c
 ### Update OAuth connection
 
 / Add details /
+
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
 ### To update OAuth connection
 
-1. Open the [Azure Bot](https://ms.portal.azure.com/#create/Microsoft.AzureBot) on your web browser.
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
+1. Enter the name of your Azure AD app in **Search** box, and open your app.
+
 1. Select **Settings** > **Configuration**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Configure OAUth settings for your bot app" border="false":::
 
     The **Configuration** page appears.
 
@@ -264,9 +277,14 @@ With the Client ID and Client secret provided, the token store exchanges the tok
 
 1. Enter the OAuth configuration settings for the Azure bot.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="OAuth configuration settings" border="true":::
+
     1. Enter a name for the configuration setting.
     1. Select **Azure Active Directory v2** as the service provider.
         The remaining configuration details appear.
+
+        :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting-b.png" alt-text="Additional fields for OAuth configuration " border="true":::
+
     1. Enter the client ID that was generated when you created the bot app.
     1. Enter the client secret that you've created for your bot.
     1. Enter the application ID URI of your bot in the **Token Exchange URL**.
