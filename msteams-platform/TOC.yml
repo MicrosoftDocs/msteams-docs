@@ -415,6 +415,8 @@
           href: bots/how-to/authentication/bot-sso-register-aad.md
         - name: Add code to enable SSO
           href: bots/how-to/authentication/bot-sso-code.md
+        - name: Update app manifest for SSO and preview
+          href: bots/how-to/authentication/bot-sso-manifest.md
     - name: Use third party OAuth IdP authentication
       items:
         - name: Add authentication to your bot
