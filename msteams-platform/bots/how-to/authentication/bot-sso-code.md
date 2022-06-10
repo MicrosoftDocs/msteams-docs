@@ -10,7 +10,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
-> [Configure code](bot-sso-register-aad.md)
+> [Register with Azure AD](bot-sso-register-aad.md)
 
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
@@ -149,3 +149,8 @@ To understand what the bot does when the token exchange fails to trigger a conse
     ```
 
 6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Update Teams manifest and preview the app](bot-sso-manifest.md)

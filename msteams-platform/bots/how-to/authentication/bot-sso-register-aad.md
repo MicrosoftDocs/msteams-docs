@@ -293,6 +293,11 @@ With the Client ID and Client secret provided, the token store exchanges the tok
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Configure code to enable SSO](bot-sso-code.md)
+
 <!-- 
     -    - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
