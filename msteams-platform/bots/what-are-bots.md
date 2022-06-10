@@ -12,8 +12,10 @@ A bot is also referred to as a chatbot or conversational bot. It is an app that 
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
-> 
-> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams) and bot channel registration should be done in Azure Government portal.
+>
+> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration should be done in Azure Government portal.
+>
+>Bots in GCCH only support up to manifest version v1.10. Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
