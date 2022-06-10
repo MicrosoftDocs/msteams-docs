@@ -277,7 +277,8 @@ With the Client ID and Client secret provided, the token store exchanges the tok
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="OAuth configuration settings" border="true":::
 
     1. Enter a name for the configuration setting.
-    1. Select **Azure Active Directory v2** as the service provider.
+    1. Select **Azure Active Directory v2** as the service provider. /Check if this value is as per code sample.  Or if any user can select it. /
+
         The remaining configuration details appear.
 
         :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting-b.png" alt-text="Additional fields for OAuth configuration " border="true":::

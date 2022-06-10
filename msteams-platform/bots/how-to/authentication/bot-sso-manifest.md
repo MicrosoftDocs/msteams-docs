@@ -18,26 +18,6 @@ You've registered your bot app in Azure AD, and obtained an app ID. You've also 
 
 Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your bot app seamlessly.
 
-If the application contains a standalone bot, then use the following code to add new properties to the Teams application manifest:
-
-```json
-    "webApplicationInfo": 
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://botid-00000000-0000-0000-0000-000000000000"
-        }
-```
-
-If the application contains a bot and a tab, then use the following code to add new properties to the Teams application manifest:
-
-```json
-    "webApplicationInfo": 
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000"
-        }
-```
-
 `webApplicationInfo` has two elements, `id` and `resource`.
 
 | Element | Description |
@@ -63,14 +43,27 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
   > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the manifest.json file
-1. Append the following code snippet to the manifest file to add the new property:
+1. Add one of the following code snippets to the manifest file to add the new property.
 
-    ```json
-    "webApplicationInfo": {
-    "id": "{Azure AD AppId}",
-    "resource": "api://{Subdomain}.example.com/{Azure AD AppId}"
-    }
-    ```
+    - If your app has a standalone bot, add the following code snippet:
+
+        ```json
+        "webApplicationInfo": 
+        {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "resource": "api://botid-00000000-0000-0000-0000-000000000000"
+        }
+        ```
+
+    - If your app contains a bot and a tab, add the following code snippet:
+
+        ```json
+        "webApplicationInfo": 
+        {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "resource": "api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000"
+        }
+        ```
 
     where,
     - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
