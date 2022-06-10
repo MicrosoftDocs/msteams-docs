@@ -32,7 +32,7 @@ ms.author: surbhigupta
 | Create a new app | ✔️ | ✔️ |
 | Impart a zip package | ✔️ | ✔️ |
 
-* *App analytics will be available for GA soon.*
+\* *App analytics will be available for GA soon.*
 
 ## Developer Portal for Teams
 
