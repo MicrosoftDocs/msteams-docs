@@ -74,14 +74,14 @@ To obtain meeting ID and organizer ID for fetching the transcript, choose one of
 
 ### Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about meetings, it can obtain transcripts, if it's authorized via required permissions.
+You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required permissions.
 
 Your app receives notification for the type of meeting events for which it's subscribed:
 
 - [User-level notification](#obtain-meeting-details-using-user-level-notification)
 - [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
 
-When your app is notified of a scheduled meeting, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details, your app can fetch the meeting transcripts after the meeting has ended.
+When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details, your app can fetch the meeting transcripts after the meeting has ended.
 
 #### Obtain meeting details using user-level notification
 
@@ -96,7 +96,7 @@ Use the following example to subscribe to user-level notifications.
 POST https://graph.microsoft.com/beta/subscriptions/
 {
     "changeType": "created,updated,deleted",
-    "notificationUrl": "https://tgsrelaynandanmankad.servicebus.windows.net/notifynandanmankadpc/notifications",
+    "notificationUrl": "https://webhook.azurewebsites.net/api/send/myNotifyClient",
     "resource": "users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events",
     "expirationDateTime": "2022-05-05T14:58:56.7951795+00:00",
     "clientState": "ClientSecret",
