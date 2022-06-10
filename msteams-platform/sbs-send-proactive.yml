@@ -73,10 +73,21 @@ items:
         
     1. Copy the ngrok URL (as highlighted in the image) for further reference as ngrok base URL in the next steps. 
 
-        ![ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)   
+        ![ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png) 
+
+- title: Enable developer preview
+  durationInMinutes: 1
+  content: |
+
+    1. Enable uploading of apps in the admin console of your tenant.
+        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+        1. In the left panel, select **Show All**.
+        1. Select **Teams**.
+ 
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu" border="true":::  
 
 - title: Create and install Teams app
-  durationInMinutes: 5
+  durationInMinutes: 5.
   content: |
     1. Go to Teams > **App Studio** and import the `AppManifest.zip` file available in the downloaded sample code (Zip file).
 
