@@ -95,6 +95,7 @@ You can use Teams Toolkit to help identify and automate the required code change
 Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.0.0` (or higher) and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
+>
 > * Import statements for teams-js@2.0.0
 > * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.0.0
 > * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) interface changes
@@ -117,7 +118,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 ## Update Azure AD app registration for SSO
 
-[Azure Active Directory (AD) Single-sign on (SSO)](../tabs/how-to/authentication/auth-aad-sso.md) for personal tabs works the same way in Office and Outlook as it does in Teams. However you'll need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
+[Azure Active Directory (AD) Single-sign on (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) for personal tabs works the same way in Office and Outlook as it does in Teams. However you'll need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
@@ -233,13 +234,6 @@ Upon first run of local debug to Office or Outlook, you'll be prompted to sign i
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## Next step
-
-Publish your app to be discoverable in Teams, Outlook, and Office:
-
-> [!div class="nextstepaction"]
-> [Publish Teams apps for Outlook and Office](publish.md)
-
 ## Code sample
 
 | **Sample Name** | **Description** | **Node.js** |
@@ -247,3 +241,10 @@ Publish your app to be discoverable in Teams, Outlook, and Office:
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## Next step
+
+Publish your app to be discoverable in Teams, Outlook, and Office:
+
+> [!div class="nextstepaction"]
+> [Publish Teams apps for Outlook and Office](publish.md)
