@@ -63,7 +63,7 @@ The following are the features of UserIds in refresh:
 
 * UserIds is an array of user MRIs, which is part of the `refresh` property in Adaptive Cards.
 
-* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card is not automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in web or desktop and in the long press context menu in mobile, that is, Android or iOS to manually refresh the card. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
+* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card is not automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile, that is, Android or iOS to manually refresh the card. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
 
 * UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. The `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of *60 (sixty) user MRIs*.
 
