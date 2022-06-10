@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Send tenant ID and conversation ID to the request headers of the bot
+# Request headers of the bot
 
 The current outgoing requests to the bot don't contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot through a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
 
