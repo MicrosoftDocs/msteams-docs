@@ -7,6 +7,11 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Add code to enable SSO in your bot app
 
+Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
+
+> [!div class="nextstepaction"]
+> [Configure code](bot-sso-register-aad.md)
+
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
 This section covers:
