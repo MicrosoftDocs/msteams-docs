@@ -212,7 +212,7 @@ For enabling users to install your app on the Teams iOS platform, you must updat
 1. Select the **Developer** tab.
 1. Type your Apple App Store Connect Team ID.
 1. Go to the offer page and republish your Teams app.
-   Your Apple App Store Connect Team ID is now updated and users can install your app from Teams iOS platform.
+   Your Apple App Store Connect Team ID is now updated and users can install your app on the Teams iOS platform.
 
 To get Apple App Store Connect Team ID from Apple Developer portal, follow these steps:
 
