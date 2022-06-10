@@ -14,10 +14,10 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 Teams supports access to apps during meeting for the following meeting types:
 
-* Calendar scheduled meetings: Meetings scheduled through Teams calendar.
-* One-on-one calls: Calls initiated in one-on-one chat.
-* Group calls: Calls initiated in group chat.
-* Calendar Meet now: Meetings initiated through **Meet now** button in Teams calendar.
+* [**Scheduled meetings**](https://support.microsoft.com/en-us/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
+* [**One-on-one calls**](https://support.microsoft.com/en-us/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
+* [**Group calls**](https://support.microsoft.com/en-us/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
+* [**Instant meetings**](https://support.microsoft.com/en-us/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
 
 Users can add apps to the meeting using the **+** option from their Teams meeting window.
 
@@ -27,7 +27,10 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=
 
 > [!Note]
 >
-> * External users or people outside the organization can only interact with the apps that are already available in a meeting and can't add and manage apps in meetings.
+> * Add apps option is not available in Teams mobile client.
+>
+> * Currently when an user (third person) is added to one-on-one call, the call is migrated to a group call and a new session will get started. Apps added to the previous one-on-one call will not be available any more. For more information, see [user types in a meeting](apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting).
+>
 > * Currently apps are not supported in meetings initiated through **Meet now** button in Teams channels.
 
 The following illustration gives you an idea of the meeting app extensibility features:

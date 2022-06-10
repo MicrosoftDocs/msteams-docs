@@ -120,6 +120,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    },
    "conversation":{
       "id":"<conversation id>",
+      "conversationType": "groupChat", 
       "isGroup":true
    }
 }
@@ -342,6 +343,8 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 > The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+>
+> `organizer` is the is the initiator of the call.
 
 ### Query parameter
 
@@ -376,13 +379,13 @@ GET /v1/meetings/{meetingId}
 
 The JSON response body for Meeting Details API is as follows:
 
-* **Calendar scheduled meetings:**
+* **Scheduled meetings:**
 
     ```json
 
        "details": { 
             "id": "meeting ID", 
-            "msGraphResourceId": "", 
+            "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
             "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
             "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
             "joinUrl": "https://teams.microsoft.com/l/xx", 
@@ -430,7 +433,7 @@ The JSON response body for Meeting Details API is as follows:
     {
         "details": {
             "id": "meeting ID",
-            "type": "OneToOneCall",
+            "type": "GroupCall",
             "joinUrl": "https://teams.microsoft.com/l/xx"
         },
         "conversation": {
@@ -438,7 +441,7 @@ The JSON response body for Meeting Details API is as follows:
             "conversationType": "groupChat",
             "id": "meeting chat ID"
         },
-        "organizer  ": {
+        "organizer": {
             "id": "<organizer user ID>",
             "objectId": "<object ID>",
             "aadObjectId": "<AAD ID>",
@@ -448,13 +451,13 @@ The JSON response body for Meeting Details API is as follows:
     
     ```
 
-* **Calendar Meet now:**
+* **Instant meetings:**
 
     ```json
     { 
        "details": { 
             "id": "meeting ID", 
-            "msGraphResourceId": "", 
+            "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
             "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
             "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
             "joinUrl": "https://teams.microsoft.com/l/xx", 
