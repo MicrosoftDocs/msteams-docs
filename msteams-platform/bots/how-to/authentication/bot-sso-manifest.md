@@ -83,6 +83,89 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    3. `validDomains`
 6. Save the Teams app manifest file.
 
+<br>
+<details>
+<summary>Here's an example of app manifest after it's updated</summary>
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.7",
+  "version": "1.0",
+  "id": "00000000-0000-0000-0000-000000000000",
+  "packageName": "com.microsoft.teams.samples.auth",
+  "developer": {
+    "name": "Your Name Here",
+    "websiteUrl": "https://www.example.com",
+    "privacyUrl": "https://www.example.com/PrivacyStatement",
+    "termsOfUseUrl": "https://www.example.com/TermsOfUse"
+  },
+  "name": {
+    "short": "Teams AuthBot"
+  },
+  "description": {
+    "short": "Authentication sample for Microsoft Teams",
+    "full": "Authentication sample for Microsoft Teams"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#F3F4F6",
+  "configurableTabs": [
+
+  ],
+  "staticTabs": [
+    {
+      "contentUrl": "https://<<BASE_URI_DOMAIN>>/tab/simple",
+      "entityId": "simpleAuth",
+      "name": "Simple Auth",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "contentUrl": "https://<<BASE_URI_DOMAIN>>/tab/silent?loginHint={loginHint}&userObjectId={userObjectId}&tenantId={tid}",
+      "entityId": "silentAuth",
+      "name": "Silent Auth",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "contentUrl": "https://<<BASE_URI_DOMAIN>>/tab/sso",
+      "entityId": "ssoAuth",
+      "name": "SSO Auth",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "<<REGISTERED_BOT_ID>>",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "permissions": [
+    "messageTeamMembers",
+    "identity"
+  ],
+  "validDomains": [
+    "<<BASE_URI_DOMAIN>>",
+    "token.botframework.com"
+  ],
+  "webApplicationInfo": {
+      "id": "<<REGISTERED_BOT_ID>>",
+      "resource": "api://<<BASE_URI_DOMAIN>>/<<REGISTERED_BOT_ID>>"
+  }
+}
+```
+
+</details>
+
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. You'll need to update the url whenever your ngrok subdomain changes For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
