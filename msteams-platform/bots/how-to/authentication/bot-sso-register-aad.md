@@ -11,15 +11,12 @@ Azure AD provides access to your bot app based on the app user's Teams identity.
 
 In this section, you will:
 
-1. Create and deploy Bot resource in Azure AD
-    1. Create client secret
-1. Configure bot app
-    1. Configure scope
-        1. Set App ID URI
-        1. Select scope
-        1. Authorize client apps
-    1. Configure access token version
-1. Update OAuth configuration
+1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
+1. [Configure app in Azure AD](#configure-app-in-azure-ad)
+    1. [Create client secret](#create-client-secret)
+    1. [Configure scope for access token](#configure-scope-for-access-token)
+    1. [Configure access token version](#configure-access-token-version)
+1. [Update OAuth connection](#update-oauth-connection)
 
 ## Create and deploy bot resource in Azure AD
 
@@ -252,7 +249,7 @@ You must define the access token version that is acceptable for your app. This c
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 
-### Update OAuth connection
+## Update OAuth connection
 
 / Add details /
 
