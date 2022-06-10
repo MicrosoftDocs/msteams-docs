@@ -6,7 +6,7 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
 ---
-# Build bots for Micrsoft Teams
+# Build bots for Teams
 
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
