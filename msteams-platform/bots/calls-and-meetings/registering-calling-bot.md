@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: calling bot audio/video audio video media
 ---
-# Register calls and meetings bot for Microsoft Teams
+# Register calls and meetings bot 
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
