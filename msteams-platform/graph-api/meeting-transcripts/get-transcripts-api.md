@@ -104,7 +104,7 @@ POST https://graph.microsoft.com/beta/subscriptions/
 }
 ```
 
-When your app is notified about a meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, follow the steps given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
+When your app is notified about a subscribed meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, follow the steps given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from user-level notification:
 
@@ -213,7 +213,7 @@ Tenant-level notifications are useful if your app is authorized to access all me
 
 For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
-When your app is notified about meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
+When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from tenant-level notification:
 
