@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: An overview of integrating web applications and device capabilities with Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
 ---
 
@@ -41,11 +41,11 @@ Microsoft Power platform combines four robust Microsoft technologies, such as Po
 
 ### Power Apps
 
-With Power Apps, you can build business apps that connect to your business data and are tailored to your organization's needs. Power Apps enable a wide range of app scenarios to solve business challenges through canvas apps. After building the app, you can export it from the Power Apps maker portal and embed in Microsoft Teams.
+With Power Apps, you can build business apps that connect to your business data and are tailored to your organization's needs. Power Apps enables a wide range of app scenarios to solve business challenges through canvas apps. After building the app, you can export it from the Power Apps maker portal and embed in Microsoft Teams.
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. It is built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -55,13 +55,9 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 You can use app template to create custom made apps to suit your organizational needs. These are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions to deploy and install the app for your organization. It provides a ready-to-use application that you can install and start using immediately.
 
-## Teams Shifts Work Force Management connectors
-
-Teams Shifts Work Force Management connectors are production-ready, open-source, and community-driven integrations. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts.
-
 ## Install Moodle LMS
 
-Moodle is a popular open-source Learning Management System (LMS). It is now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
+Moodle is a popular open-source Learning Management System (LMS). It's now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
 
 ## Create a Share-to-Teams button for your website
 

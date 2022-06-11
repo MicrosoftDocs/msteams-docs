@@ -29,7 +29,7 @@ When publishing to the Teams store, make sure your manifest references to the la
 Your app package must include two .png versions of your app icon: A color and outline version.
 
 > [!Note]
-> If your app has a bot or messaging extension, your icons also will be included in your Microsoft Azure Bot Service registration.
+> If your app has a bot or message extension, your icons also will be included in your Microsoft Azure Bot Service registration.
 
 For your app to pass Teams store review, these icons must meet the following size requirements.
 
@@ -46,7 +46,7 @@ Teams automatically crops your icon to display a square with rounded corners in 
 An outline icon displays in two scenarios:
 
 * When your app is in use and “hoisted” on the app bar on the left side of Teams.
-* When a user pins your app's messaging extension.
+* When a user pins your app's message extension.
 
 The icon must be 32x32 pixels. It can be white with a transparent background or transparent with a white background (no other colors are permitted). The outline icon should not have any extra padding around the symbol.
 
@@ -89,7 +89,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Example showing how an app icon looks on a bot inside channel." border="false":::
 
-#### Messaging extension
+#### Message extension
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
 

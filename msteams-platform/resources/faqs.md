@@ -30,7 +30,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 
 The users have multiple sign in options from the Moodle login page.
 
-* To sign in exclusively using Microsoft 365 credentials enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
+* To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
 
 <br>
@@ -89,7 +89,7 @@ The following table provides the actions and dependencies to be performed and ch
 | Stable version| Verify that the version of Moodle is listed as a **stable**.| For more information, see [Version support](https://docs.moodle.org/dev/Releases#Version_support).|
 |Permissions| Verify that the Azure application has the necessary permissions to run the synchronization.| For more information, see [Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
 | Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
-|Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
+|Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information, see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
 <!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 <br>
 
@@ -114,7 +114,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 
 <summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
-Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** has not expired.
+Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** hasn't expired.
 
 The following image shows the error message received when user sign using their Microsoft 365 credentials:
 
@@ -171,7 +171,7 @@ For more information on editing Atto toolbar, see:
 
 <summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
 
-The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
+The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
 However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
 

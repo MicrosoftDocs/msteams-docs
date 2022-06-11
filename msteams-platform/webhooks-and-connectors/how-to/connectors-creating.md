@@ -20,7 +20,7 @@ To distribute your connector, register it in the [Connectors Developer Dashboard
 For a connector to work only in Microsoft Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Office 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
-> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After [publishing connectors for your organization](#publish-connectors-for-the-organization), no further action is required on the Connector Dashboard.
+> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
 
 ### Integrate the configuration experience
 
@@ -121,7 +121,7 @@ To authenticate the user as part of loading your page, see [authentication flow 
 #### `GetSettings` response properties
 
 >[!NOTE]
->The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings).
 
 The following table provides the parameters and the details of `GetSetting` response properties:
 
@@ -200,25 +200,6 @@ The following manifest.json file contains the elements needed to test and submit
 }
 ```
 
-## Enable or disable connectors in Teams
-
-The Exchange Online PowerShell V2 module uses modern authentication and works with multi factor authentication, called MFA for connecting to all Exchange related PowerShell environments in Microsoft 365. Admins can use Exchange Online PowerShell to disable connectors for an entire tenant or a specific group mailbox, affecting all users in that tenant or mailbox. It is not possible to disable for some and not others. Also, connectors are disabled by default for Government Community Cloud, called GCC tenants.
-
-The tenant level setting overrides the group level setting. For example, if an admin enables connectors for the group and disables them on the tenant, connectors for the group is disabled. To enable a connector in Teams, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) using modern authentication with or without MFA.
-
-### Commands to enable or disable connectors
-
-Run the following commands in Exchange Online PowerShell:
-
-* To disable connectors for the tenant: `Set-OrganizationConfig -ConnectorsEnabled:$false`.
-* To disable actionable messages for the tenant: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
-* To enable connectors for Teams, run the following commands:
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
-  * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
-  * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
-
-For more information on PowerShell module exchange, see [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). To enable or disable Outlook connectors, [connect apps to your groups in Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab).
-
 ## Test your connector
 
 To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
@@ -234,30 +215,12 @@ To verify that `HttpPOST` action is working correctly, [send messages to your co
 
 Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and test the connectors in your Microsoft Teams.
 
-## Publish connectors for the organization
-
-If you want the connector to be available only to the users in your organization, you can upload your custom connector app to your [organization's app catalog](~/concepts/deploy-and-publish/apps-publish.md).
-
-After uploading the app package to configure and use the connector in a team, install the connector from the organization's app catalog.
-
-To set up a connector:
-
-1. Select **Apps** from the left navigation bar.
-1. In the **Apps** section, select **Connectors**.
-1. Select the connector that you want to add. A pop up dialog window appears.
-1. From the dropdown menu, select **Add to a team**.
-1. In the search box, type a team or channel name.
-1. Select **Set up a Connector** from the dropdown menu in the bottom right corner of the dialog window.
-
-> [!IMPORTANT]
-> Currently, custom connectors are not available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
-
-The connector is available in the section &#9679;&#9679;&#9679; > **More options** > **Connectors** > **All** > **Connectors for your team** for that team. You can navigate by scrolling to this section or search for the connector app. To configure or modify the connector, select **Configure**.
-
 ## Distribute webhook and connector
 
 1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
-1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and [publish your Incoming Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) in a Office 365 Connector.
+
+1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a Office 365 Connector.
+
 1. Package and publish your connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## Code sample
@@ -278,3 +241,5 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
+* [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)

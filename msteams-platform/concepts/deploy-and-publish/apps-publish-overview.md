@@ -4,7 +4,7 @@ description: Describes the options for publishing your Microsoft Teams app, uplo
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: deploy publish app upload gcc 
 ---
 
@@ -40,7 +40,7 @@ For more information, see [manage your apps in the Teams admin center](/Microsof
 In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../app-fundamentals-overview.md#government-community-cloud).
 
 > [!IMPORTANT]
->If your app includes a bot or messaging extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+>If your app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
 ## Publish your app to the Teams store
 
