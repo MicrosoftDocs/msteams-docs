@@ -17,13 +17,7 @@ Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-
 
 Here's the current versioning guidance for various app scenarios:
 
-|                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
-|------------------|---------|--------|---|
-|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new Microsoft 365 app](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](#backwards-compatibility) and [Update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
-|**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
-
-**Best practice is to use the latest TeamsJS (v.2.0 or later) whenever possible, in order to benefit from the latest improvements and new feature support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client SDK.
 
@@ -59,14 +53,14 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 #### App permissions
 
-App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Office. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will throw an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Office. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
 
 Current guidance for now is to modify your code to catch the failure:
 
 * Check [isSupported()](#differentiate-your-app-experience) on a capability before using it. `media`, `meeting`, and `files` do not yet support *isSupported* calls and do not yet work outside of Teams.
 * Catch and handle errors when calling TeamsJS and HTML5 APIs.
 
-When an API is unsupported or throws an error, add logic to fail gracefully or provide a workaround. For example:
+When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
 
 * Direct the user to your app's website.
 * Direct the user to use the app in Teams to complete the flow.
@@ -224,7 +218,7 @@ async function example() {
 
 A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Office, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
 
-Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API will throw an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
+Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API generates an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
 
 #### Differentiate your app experience
 

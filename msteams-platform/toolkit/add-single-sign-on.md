@@ -192,6 +192,7 @@ The following steps help you to enable SSO in your application.
    }
 
    ```
+
 </details>
 <details>
 <summary><b>Add a new command to the bot
@@ -307,6 +308,7 @@ export async function showUserImage(context, ssoToken, param) {
    }
 
    ```
+
 </details>
 <br>
 
@@ -317,7 +319,7 @@ Press F5 to debug your application. Teams Toolkit uses the Azure AD manifest fil
 ## Customize Azure AD application registration
 
 The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of application registration. You can update the manifest as needed. If you need to include additional API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-To view your Azure AD application in Azure Portal, see [View Azure AD application in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal). 
+To view your Azure AD application in Azure Portal, see [View Azure AD application in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## SSO authentication concepts
 
@@ -329,7 +331,7 @@ Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure A
 
 Teams tabs and bots have similar flow for SSO support, for more information, see:
 
-1. [Single sign-on (SSO) authentication in Tabs](../tabs/how-to/authentication/auth-aad-sso.md)
+1. [Single sign-on (SSO) authentication in Tabs](../tabs/how-to/authentication/tab-sso-overview.md)
 2. [Single sign-on (SSO) authentication in Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
 
 ### Simplified SSO with TeamsFx

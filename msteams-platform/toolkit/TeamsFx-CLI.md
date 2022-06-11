@@ -100,7 +100,7 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 ## `teamsfx add`
 
-The following table lists different features to your Teams application along with their descrition.
+The following table lists different features to your Teams application along with their description.
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -161,7 +161,7 @@ Provision the cloud resources in the current application.
 |`--subscription`| No | Specify an Azure Subscription ID. |
 |`--resource-group`| No | Set the name of an existing resource group. |
 |`--sql-admin-name`| No | Applicable when there's SQL resource in the project. Admin name of SQL.|
-|`--sql-password`| No| Applicable when there is SQL resource in the project. Admin password of SQL.|
+|`--sql-password`| No| Applicable when there's SQL resource in the project. Admin password of SQL.|
 
 ## `teamsfx deploy`
 
@@ -257,8 +257,8 @@ The configuration data is either in user scope or project scope.
 | Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
-|`--folder`| No | Project directory. This is used for get or set project configuration. The default value is `./`. |
-|`--global`| No | Cope of configuration. If this is true, the scope is limited to user scope instead of project scope. The default value is `false`. At present, the supported global configurations include `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
+|`--folder`| No | Project directory used for get or set project configuration. The default value is `./`. |
+|`--global`| No | Cope of configuration. If true, the scope is limited to user scope instead of project scope. The default value is `false`. Now, the supported global configurations include `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
 
 ### Scenarios for `teamsfx config`
 
@@ -349,7 +349,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 * Show Permission Status
 
-  Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env:
+  Project creator and collaborators can use `teamsfx permission status` command to view Microsoft 365 account permission for specific env:
 
   ```bash
   teamsfx permission status --env dev

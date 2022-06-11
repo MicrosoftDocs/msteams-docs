@@ -15,13 +15,15 @@ Before you identify the different card types, understand how to create a hero ca
 
 To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 
-1. Go to **App Studio** from Teams.
-1. Select **Card editor**.
-1. Select **Create a new card**.
-1. Select **Create** for one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**. The metadata details, buttons, and json, csharp, and node code examples are shown for that card.
+1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+1. Select **Design and build Adaptive cards**.
+1. Select **New card**.
+1. Enter card name and select **Save**.
+1. Select one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.
 
-    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Hero card details":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. Select **Save**.
 1. Select **Send me this card**. The card is sent to you as a chat message.
 
 ## Card examples

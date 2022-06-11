@@ -1,29 +1,42 @@
 ---
-title: Authentication for tabs using Azure Active Directory
-description: In this module, learn Teams authentication tabs Microsoft Azure AD, authentication in Teams and how to use it in tabs
+title: Configure third party OAuth authentication
+description: Describes authentication in Teams and how to use it in tabs
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
-# Authenticate a user in a Microsoft Teams tab
+# Configure third party OAuth authentication
 
 > [!Note]
-> For authentication to work for your tab on mobile clients, you need to ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
-There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams. 
+There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
 Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
 
-The code in the article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
+The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Azure AD.
 
-For general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
+For overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
-Authentication flow in tabs differs slightly from authentication flow in bots.
+Authentication flow in tabs differs from authentication flow in bots.
 
-## Configuring identity providers
+## Configure your app to use Azure AD as an identity provider
 
-See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure AD as an identity provider.
+Identity providers that support OAuth 2.0 don't authenticate requests from unknown applications. You must register the applications ahead of time. To do this with Azure AD, follow these steps:
+
+1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
+
+2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
+
+3. Select **Web** from the drop down menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+
+    Redirect URLs: `https://<hostname>/bot-auth/simple-start`
+
+Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you've completed or hosted your app (or the sample app). Resume this process when you have this information.
+
+> [!NOTE]
+> You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Azure AD as a third party OAuth provider. For more information on using any third party OAuth provider, please visit the website of the particular provider.
 
 ## Initiate authentication flow
 
@@ -31,7 +44,7 @@ Authentication flow should be triggered by a user action. You shouldn't open the
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, doesn't allow its content to be placed in an iframe. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when the button is selected.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -53,11 +66,11 @@ microsoftTeams.authentication.authenticate({
 
 * Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
 
-* Failing to use `microsoftTeams.authentication.authenticate()` will cause a problem with the pop-up not closing at the end of the sign in process.
+* Failing to use `microsoftTeams.authentication.authenticate()` will cause a problem with the pop-up not closing at the end of the sign-in process.
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed, the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign-in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
