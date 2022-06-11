@@ -1,7 +1,7 @@
 ---
 title: Connect to existing APIs
 author: MuyangAmigo
-description:  In this article, learn how toolkit helps you bootstrap sample access to existing APIs. 
+description:  In this article, learn how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
@@ -75,7 +75,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
+   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
    |API Key|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
