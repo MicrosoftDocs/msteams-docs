@@ -48,7 +48,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 ### Query parameters
 
 > [!TIP]
-> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
 The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Teams Client SDK and bot activity.
 
@@ -482,7 +482,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-*  To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
+* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
 
     ```json
     "authorization": {
@@ -496,7 +496,8 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
     }
     }
     ```
-*  `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
+
+* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
 
 ### Query parameter
 
@@ -534,7 +535,7 @@ The following table provides the response codes:
 
 ## Get app content stage sharing state API
 
-The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
+The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage for both mobile and desktop.
 
 ### Query parameter
 
