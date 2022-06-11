@@ -1,7 +1,7 @@
 ---
 title: Apps for Teams meetings 
 author: surbhigupta
-description: In this module, learn how apps works in Microsoft Teams meetings based on participant and user role and app extensibility.
+description: In this article, learn how apps works in Microsoft Teams meetings based on participant and user role and app extensibility.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
