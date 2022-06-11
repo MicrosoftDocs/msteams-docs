@@ -11,8 +11,9 @@ keywords: teams manifest schema
 The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
-> [!Important]
-> Version `1.13` of the Microsoft Teams app manifest schema enables support for [extending Teams apps to Outlook and Office](../../m365-apps/overview.md). For Teams-only apps, use version `1.12` (or earlier). The 1.12 and 1.13 schemas are otherwise the same. Refer to [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) overview for further guidance.
+The following table lists TeamsJS version and app manifest versions as per different app scenarios:
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 The following schema sample shows all extensibility options:
 
@@ -589,6 +590,9 @@ An array of `string`, which specifies which permissions the app requests, which 
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
 
 Changing these permissions during app update, causes your users to repeat the consent process after they run the updated app. For more information, see [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+
+> [!NOTE]
+> Permissions are deprecated now.
 
 ## devicePermissions
 
