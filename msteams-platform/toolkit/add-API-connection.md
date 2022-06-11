@@ -1,7 +1,7 @@
 ---
 title: Connect to existing APIs
 author: MuyangAmigo
-description:  Describes connection to existing APIs
+description:  In this article, learn how toolkit helps you bootstrap sample access to existing APIs. 
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
@@ -155,6 +155,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>Connect to APIs for Azure AD permissions</b></summary>
@@ -199,6 +200,7 @@ You can follow the steps to access these APIs while using:
 
         > [!NOTE]
         > For application permission use your client ID.
+        >
 </details>
 
 ## See also
