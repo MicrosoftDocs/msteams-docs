@@ -1,7 +1,7 @@
 ---
 title: Integrate media capabilities 
 author: Rajeshwari-v
-description: In this learning path, you'll learn how to use Teams JavaScript client SDK to enable media capabilities using code examples.
+description: Learn how to use Teams JavaScript client SDK to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
