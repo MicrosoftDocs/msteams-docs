@@ -1,6 +1,6 @@
 ---
 title: Enable resource-specific consent in Teams
-description: In this learning module, you'll learn resource-specific consent in Teams and how to make advantage of it.
+description: Learn resource-specific permissions for a team and chat in Teams and also learn how to make advantage of it.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
