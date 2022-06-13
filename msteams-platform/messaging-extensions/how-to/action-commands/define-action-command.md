@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 
-# Define message extension action commands
+# Define action commands
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
