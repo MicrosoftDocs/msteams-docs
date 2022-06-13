@@ -8,7 +8,7 @@ ms.topic: Overview
 keywords: teams proactive messaging chat installation Graph
 ---
 
-# Proactive installation of apps using Graph API to send messages
+# Send proactive installation messages 
 
 ## Proactive messaging in Teams
 
