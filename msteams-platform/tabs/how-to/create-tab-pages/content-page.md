@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Create a content page
+# Create content page
 
 A content page is a webpage that is rendered within the Teams client, which is a part of:
 
