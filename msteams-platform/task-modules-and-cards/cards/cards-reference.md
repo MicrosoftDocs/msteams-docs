@@ -16,13 +16,13 @@ Before you identify the different card types, understand how to create a hero ca
 
 To create a hero card, thumbnail card, or Adaptive Card from Developer Portal:
 
-1. Go to [Developer Portal](https://dev.teams.microsoft.com/home) from Teams.
-1. Select **Design** and build Adaptive Cards.
-1. Select **New Card**.
-1. Enter card name.
-1. Select **Create** for one of the cards from **Hero Card, Thumbnail Card, or Adaptive Card**.
+1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+1. Select **Design and build Adaptive cards**.
+1. Select **New card**.
+1. Enter card name and select **Save**.
+1. Select one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.
 
-    :::image type="content" source="../../assets/images/Cards/developer-portal.png" alt-text="Developer Portal UI":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
 1. Select **Save**.
 1. Select **Send me this card**. The card is sent to you as a chat message.
