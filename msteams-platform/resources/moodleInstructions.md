@@ -169,7 +169,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration.
 
-    1. To enable **OpenID Connect**, select the **Manage Authentication** link, and select the eye icon on the **OpenId Connect** line if it is greyed out.
+    1. To enable **OpenID Connect**, select the **Manage Authentication** link, and select the eye icon on the **OpenId Connect** line if it is unavailable.
     1. To enable frame embedding, select the **HTTP Security** link, and then select the checkbox next to **Allow frame embedding**.
     1. To enable web services, which enables the Moodle API features, select the **Advanced Features** link, and then ensure the checkbox next to **Enable web services** is selected.
     1. To enable the external services for Microsoft 365, select the **External services** link, and then:  
