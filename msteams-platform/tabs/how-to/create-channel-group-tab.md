@@ -8,7 +8,7 @@ ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Create a channel tab
+# Create channel tab
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
