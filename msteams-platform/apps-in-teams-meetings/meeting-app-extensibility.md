@@ -205,7 +205,7 @@ The following list details the various user types along with their accessibility
 >
 > * If a guest or anonymous user is a part of one-on-one or group chat, then apps cannot be added by anyone in the chat or meetings.
 >
-> * If federated users are added in a chat or call, then apps don't work anyone.
+> * If federated users are added in a chat or call, then apps don't work for anyone.
 
 The following table provides the user types and lists the features that each user can access:
 
