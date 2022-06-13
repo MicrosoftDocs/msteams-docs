@@ -108,11 +108,11 @@
       href: toolkit/debug-background-process.md
     - name: Provision cloud resources
       href: toolkit/provision.md
-    - name: Deploy Teams app to the cloud
+    - name: Deploy Teams app to cloud
       href: toolkit/deploy.md
     - name: Edit Teams app manifest
       href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-    - name: Azure AD manifest
+    - name: Customize Azure AD manifest
       href: toolkit/AAD-manifest-customization.md
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
