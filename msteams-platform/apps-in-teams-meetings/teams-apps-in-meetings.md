@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api  
 ---
 
-# Apps for Teams meetings
+# Apps for Teams meetings and calls
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
@@ -27,11 +27,11 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=
 
 > [!Note]
 >
-> * Add apps option is not available in Teams mobile client. But mobile cient does support to view the app, [meeting SidePanel](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#meeting-sidepanel), and [share entire app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) when user attends an meeting through Teams mobile client.
+> * Add apps option is not available in Teams mobile client. But mobile client does support to view the app, [meeting SidePanel](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#meeting-sidepanel), and [share entire app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) when user attends an meeting through Teams mobile client.
 >
-> * Currently when an user (third person) is added to one-on-one call, the call is migrated to a group call and a new session will get started. Apps added to the previous one-on-one call will not be available any more. For more information, see [user types in a meeting](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting).
+> * Currently when an user (third person) is added to one-on-one call, the call is migrated to a group call and a new session will get started. Apps added to the previous one-on-one call will not be available any more. Also guest user can't add apps, for more information see [user types in a meeting](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting).
 >
-> * Currently apps are not supported in meetings initiated through **Meet now** button in Teams channels.
+> * Currently apps are not supported in scheduled and instant meetings in Teams channels.
 
 The following illustration gives you an idea of the meeting app extensibility features:
 

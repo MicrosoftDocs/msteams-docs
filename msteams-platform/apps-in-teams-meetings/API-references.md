@@ -342,9 +342,10 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 </details>
 
 > [!NOTE]
-> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
 >
-> `organizer` is the is the initiator of the call.
+> * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+>
+> For one-on-one and group calls `organizer` is the initiator of the call.
 
 ### Query parameter
 
@@ -698,7 +699,7 @@ The following table provides the response codes:
 ## Get real-time Teams meeting events API
 
 > [!NOTE]
-> Real-time Teams meeting events are only supported for calendar scheduled meetings.
+> Real-time Teams meeting events are only supported for scheduled meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
