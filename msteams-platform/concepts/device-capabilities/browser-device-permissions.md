@@ -1,6 +1,6 @@
 ---
 title: Device permissions for the browser
-description: In this article, you'll learn how to securely bring back device permissions support for apps in web client.
+description: Learn how to securely bring back device permissions, such as camera or microphone access for apps in web client.
 localization_priority: medium
 ms.topic: how-to
 ---
