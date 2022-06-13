@@ -1,7 +1,7 @@
 ---
 title: Integrate QR or barcode scanner capability
 author: Rajeshwari-v
-description: In this learning path, you'll learn how to use Teams JavaScript client SDK to leverage QR or barcode scanner capability.
+description: Learn how to use Teams JavaScript client SDK to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
