@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 
-# Respond to the task module submit action
+# Respond to submit action
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
