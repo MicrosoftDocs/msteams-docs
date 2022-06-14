@@ -8,7 +8,7 @@ ms.topic: reference
 ms.author: ojchoudh
 ---
 
-# Bot API changes for team and chat members
+# Bot API changes for team and chat
 
 >[!NOTE]
 > The deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs have started. Initially, they are heavily throttled to five requests per minute and return a maximum of 10K members per team. This results in the full roster not being returned as team size increases.
