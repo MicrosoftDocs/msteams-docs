@@ -18,7 +18,10 @@ To organize the conversational logic for your bot, an activity handler is used. 
 
 Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-When a bot for Teams receives an activity, it is routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+
+> [!NOTE]
+> If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
 
 # [C#](#tab/csharp)
 
@@ -26,7 +29,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `OnConversationUpdateActivityAsync` and `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` routes all conversation update activities and `OnInvokeActivityAsync` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There is no base implementation for these handlers, therefore, you must add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers, therefore, you must add the logic that you want in your override.
 
 The code snippets for Teams activity handlers:
 
@@ -96,7 +99,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()` you ensure that the next handler runs.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
 
 The code snippets for Teams activity handlers:
 
@@ -166,13 +169,13 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There is no base implementation for these handlers, therefore, you must add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers, therefore, you must add the logic that you want in your override.
 
 ---
 
 ## Bot logic
 
-The bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. This is still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+The bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
 
 # [C#](#tab/csharp)
 
@@ -185,7 +188,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` include the following:
+The list of handlers defined in `ActivityHandler` includes the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -214,7 +217,7 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler include the following:
+The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -222,12 +225,12 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a Office 365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
 
-The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
+The Invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # [JavaScript](#tab/javascript)
 
@@ -238,7 +241,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` include the following:
+The list of handlers defined in `ActivityHandler` includes the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -266,7 +269,7 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler include the following:
+The list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler includes the following:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -274,7 +277,7 @@ The list of Teams activity handlers called from the `onInvokeActivity` Teams act
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a Office 365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -290,7 +293,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` include the following:
+The list of handlers defined in `ActivityHandler` includes the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -302,7 +305,7 @@ The list of handlers defined in `ActivityHandler` include the following:
 | Event activity received | `on_event_activity` | This method calls a handler specific to the type of event. |
 | Token-response event activity received | `on_token_response_event` | This method can be overridden to handle token response events. |
 | Non-token-response event activity received | `on_event` | This method can be overridden to handle other types of events. |
-| Other activity types received | `on_unrecognized_activity_type` | This method can be overridden to handle any type of activity that is not handled. |
+| Other activity types received | `on_unrecognized_activity_type` | This method can be overridden to handle any type of activity that isn't handled. |
 
 #### Teams specific activity handlers
 
@@ -319,7 +322,7 @@ The `TeamsActivityHandler` extends the list of handlers from the core Bot Framew
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler include the following:
+The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -327,7 +330,7 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a Office 365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -338,7 +341,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 ---
 
-Now that you have familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
+Now that you've familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
 
 ## Next step
 

@@ -109,8 +109,9 @@ To add a bot to a meeting:
 In a meeting chat, enter the **@** key and select **Get bots**.
 
 > [!NOTE]
+>
 > * The in-meeting dialog displays a dialog in a meeting and simultaneously posts an Adaptive Card in the meeting chat that users can access. The Adaptive Card in the meeting chat helps users while attending the meeting or if the Teams app is minimized.
-> * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
+> * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/tab-sso-overview.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
 > * Role assignments can be changed while a meeting is in progress. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -206,6 +207,7 @@ Participants can share specific parts of the app to the collaborative meeting st
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 > [!NOTE]
+>
 > * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
 > * Share specific parts of the app to stage is supported for Teams desktop clients only.
 
