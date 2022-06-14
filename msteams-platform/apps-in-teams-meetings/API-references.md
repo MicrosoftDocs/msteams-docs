@@ -345,7 +345,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 >
 > * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
 >
-> * For one-on-one and group calls `organizer` is the initiator of the call.
+> * For one-on-one and group calls `organizer` is the initiator of the chat.
 
 ### Query parameter
 
