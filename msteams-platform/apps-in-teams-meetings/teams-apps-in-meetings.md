@@ -29,7 +29,7 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=
 >
 > * Add apps option is not available in Teams mobile client. But mobile client does support to view the app, [meeting SidePanel](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#meeting-sidepanel), and [share entire app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) when user attends a meeting through Teams mobile client.
 >
-> * Currently when a user (third person) is added to one-on-one call, the call is migrated to a group call and a new session gets started. Apps added to the previous one-on-one call won't be available any more. Also guest user can't add apps, for more information, see [user types in a meeting](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting).
+> * Currently when a user (third person) is added to one-on-one call, the call is migrated to a group call and a new session gets started. Apps added to the previous one-on-one call won't be available any more.
 >
 > * Currently apps aren't supported in scheduled and instant meetings in Teams channels.
 
