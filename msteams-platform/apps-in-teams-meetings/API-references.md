@@ -477,7 +477,7 @@ The JSON response body for Meeting Details API is as follows:
                         "id": "<organizer user ID>", 
                         "aadObjectId": "<AAD object ID>", 
                         "tenantId": "<Tenant ID>" ,
-                        "objectId": "",
+                        "objectId": ""
                      }
     }
     
