@@ -162,7 +162,7 @@
         items:
         - name: Personal conversations with bots
           href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-        - name: Channel and group conversations with bots
+        - name: Channel and group chat conversation bot
           href: resources/bot-v3/bot-conversations/bots-conv-channel.md
         - name: Starting a conversation
           href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
