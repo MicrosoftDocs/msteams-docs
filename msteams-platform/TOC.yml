@@ -557,6 +557,12 @@
       href: samples/teams-low-code-solutions.md
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+  - name: Collaboration controls
+    items:
+    - name: Overview
+      href: samples/collaboration-control.md
+    - name: Add Power Virtual Agents chatbot
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
