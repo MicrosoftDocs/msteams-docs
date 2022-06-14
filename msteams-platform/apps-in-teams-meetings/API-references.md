@@ -384,26 +384,28 @@ The JSON response body for Meeting Details API is as follows:
 
     ```json
 
-       "details": { 
-            "id": "meeting ID", 
-            "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
-            "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-            "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-            "joinUrl": "https://teams.microsoft.com/l/xx", 
-            "title": "All Hands", 
-            "type": "Scheduled" 
-        }, 
+    {
+       "details":  { 
+                        "id": "<meeting ID>", 
+                        "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+                        "scheduledStartTime": "2022-04-24T22:00:00Z", 
+                        "scheduledEndTime": "2022-04-24T23:00:00Z", 
+                        "joinUrl": "https://teams.microsoft.com/l/xx", 
+                        "title": "All Hands", 
+                        "type": "Scheduled" 
+                    }, 
         "conversation": { 
-                "isGroup": true, 
-                "conversationType": "groupchat", 
-                "id": "meeting chat ID" 
-        }, 
+                            "isGroup": true, 
+                            "conversationType": "groupchat", 
+                            "id": "meeting chat ID" 
+                        }, 
         "organizer": { 
-            "id": "<organizer user ID>", 
-            "aadObjectId": "<AAD ID>", 
-            "tenantId": "<Tenant ID>" 
-        }
-        } 
+                        "id": "<organizer user ID>", 
+                        "aadObjectId": "<AAD object ID>",
+                        "objectId": "",
+                        "tenantId": "<Tenant ID>" 
+                    }
+    } 
     ```
 
 * **One-on-one calls:**
@@ -411,19 +413,20 @@ The JSON response body for Meeting Details API is as follows:
     ```json
     {
         "details": {
-            "id": "meeting ID",
-            "type": "OneToOneCall"
-        },
+                        "id": "<meeting ID>",
+                        "type": "OneToOneCall"
+                    },
         "conversation": {
-            "isGroup": true,
-            "conversationType": "groupChat",
-            "id": "meeting chat ID"
-        },
+                            "isGroup": true,
+                            "conversationType": "groupChat",
+                            "id": "meeting chat ID"
+                        },
         "organizer  ": {
-            "id": "<organizer user ID>",
-            "aadObjectId": "<AAD ID>",
-            "tenantId": "<Tenant ID>" 
-        }
+                            "id": "<organizer user ID>",
+                            "aadObjectId": "<AAD object ID>",
+                            "objectId": "",
+                            "tenantId": "<Tenant ID>" 
+                        }
     }
     
     ```
@@ -433,21 +436,21 @@ The JSON response body for Meeting Details API is as follows:
     ```json
     {
         "details": {
-            "id": "meeting ID",
-            "type": "GroupCall",
-            "joinUrl": "https://teams.microsoft.com/l/xx"
-        },
+                        "id": "<meeting ID>",
+                        "type": "GroupCall",
+                        "joinUrl": "https://teams.microsoft.com/l/xx"
+                    },
         "conversation": {
-            "isGroup": true,
-            "conversationType": "groupChat",
-            "id": "meeting chat ID"
-        },
+                            "isGroup": true,
+                            "conversationType": "groupChat",
+                            "id": "meeting chat ID"
+                        },
         "organizer": {
-            "id": "<organizer user ID>",
-            "objectId": "<object ID>",
-            "aadObjectId": "<AAD ID>",
-            "tenantId": "<Tenant ID>" 
-        }
+                        "id": "<organizer user ID>",
+                        "objectId": "",
+                        "aadObjectId": "<AAD object ID>",
+                        "tenantId": "<Tenant ID>" 
+                     }
     }
     
     ```
@@ -457,25 +460,25 @@ The JSON response body for Meeting Details API is as follows:
     ```json
     { 
        "details": { 
-            "id": "meeting ID", 
-            "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
-            "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-            "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-            "joinUrl": "https://teams.microsoft.com/l/xx", 
-            "title": "All Hands", 
-            "type": "MeetNow" 
-        }, 
+                        "id": "<meeting ID>", 
+                        "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+                        "scheduledStartTime": "2022-04-24T22:00:00Z", 
+                        "scheduledEndTime": "2022-04-24T23:00:00Z", 
+                        "joinUrl": "https://teams.microsoft.com/l/xx", 
+                        "title": "All Hands", 
+                        "type": "MeetNow" 
+                    }, 
         "conversation": { 
-                "isGroup": true, 
-                "conversationType": "groupchat", 
-                "id": "meeting chat ID" 
-        }, 
+                            "isGroup": true, 
+                            "conversationType": "groupchat", 
+                            "id": "meeting chat ID" 
+                        },
         "organizer": { 
-            "id": "<organizer user ID>", 
-            "aadObjectId": "<AAD ID>", 
-            "tenantId": "<Tenant ID>" ,
-            "objectId": "<object ID>",
-        }
+                        "id": "<organizer user ID>", 
+                        "aadObjectId": "<AAD object ID>", 
+                        "tenantId": "<Tenant ID>" ,
+                        "objectId": "",
+                     }
     }
     
     ```
