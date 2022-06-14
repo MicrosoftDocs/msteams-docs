@@ -106,7 +106,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Navigate to **TeamsToDoAppconnector.sln** in cloned repository.
+    1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
 
        ![sln path](~/assets/images/sbs-connector/sln.png)
 
@@ -167,7 +167,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, navigate to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
+    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
