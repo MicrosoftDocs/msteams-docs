@@ -8,7 +8,7 @@ ms.author: anclear
 keywords: command menu compose message conversation @mention 
 ---
 
-# Create a commands menu for your bot
+# Create a commands menu
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
