@@ -62,7 +62,7 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/select-the-team.png" alt-text="Select the team":::
 
-> [!Note]
+> [!NOTE]
 > Here the licenses are not assigned automatically. Only the number of licenses are estimated. The user or the purchaser still needs to go and assign licenses to the team after purchase.
 
 1. The number of licenses required is automatically determined upon selecting the team. Now select **Place order**.
@@ -163,7 +163,7 @@ Integrate with Graph Usage Right API to manage user permissions at the time of a
 
     * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
-        > [!Note]
+        > [!NOTE]
         > You need to have minimum `User.Read` permissions to be able to call UsageRights.
 
 **Check license usage in Partner Center Analytics**
@@ -229,7 +229,7 @@ Integrate with Graph Usage Right API to manage user permissions at the time of a
 
 1. Purchaser can unassign licenses from one or multiple users from the license page. The purchaser can select the users and select **Unassign**.
 
-    > [!Note]
+    > [!NOTE]
     > We cannot unassign licenses to a team.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
