@@ -14,6 +14,7 @@ In this section, you will:
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
 1. [Configure app in Azure AD](#configure-app-in-azure-ad)
     1. [Add messaging endpoint](#add-messaging-endpoint)
+    1. [Configure SSO](#configure-sso)
         1. [Create client secret](#create-client-secret)
         1. [Configure scope for access token](#configure-scope-for-access-token)
         1. [Configure access token version](#configure-access-token-version)
