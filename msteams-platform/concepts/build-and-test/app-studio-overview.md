@@ -145,6 +145,32 @@ Controls include:
 * Tables
 * Icons
 
+## App Studio to Developer Portal
+
+As the App Studio will be deprecated, you can use Developer Portal. The following table provides the detailed information of the features supported in the Developer Portal:
+
+| Features | App Studio | Developer Portal |
+| --- | --- | --- |
+| App analytics* | ❌ | ✔️ |
+| App capabilities-Bots | ✔️ | ✔️ |
+| App capabilities-Connectors | ✔️ | ✔️ |
+| App capabilities-Messaging extension | ✔️ | ✔️ |
+| App capabilities-Meeting extension | ❌ | ✔️ |
+| App capabilities-Personal apps | ✔️ | ✔️ |
+| App capabilities-Tabs | ✔️ | ✔️ |
+| App environments | ❌ | ✔️ |
+| App languages | ✔️ | ✔️ |
+| App manifest preview and download | ✔️ | ✔️ |
+| App plans and pricing | ❌ | ✔️ |
+| App publishing | ✔️ | ✔️ |
+| App permissions | ❌ | ✔️ |
+| App sharing-share with co-developers | ❌ | ✔️ |
+| App validation | ✔️ | ✔️ |
+| Create a new app | ✔️ | ✔️ |
+| Impart a zip package | ✔️ | ✔️ |
+
+\* *App analytics will be available for GA soon.*
+
 ## See also
 
 [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
