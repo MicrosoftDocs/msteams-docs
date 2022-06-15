@@ -14,7 +14,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 > [!Note]
 >
-> Apps for Instant meetings, one-on-one and group calls are currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Apps for Instant meetings, one-on-one and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Teams supports access to apps during meeting for the following meeting types:
 
