@@ -4,6 +4,7 @@
         "anclear",
         "appsource",
         "Appstore",
+        "aspnet",
         "botid",
         "Chatbots",
         "commandbot",
@@ -28,11 +29,17 @@
         "webparts",
         "zyxiaoyuer"
     ],
+    "[markdown]": {
+          "editor.formatOnSave": "false",
+          "editor.wordWrap": "on",
+          "editor.renderWhitespace": "all",
+          "editor.acceptSuggestionOnEnter": "off"
+        },
     "markdownlint.config": {
         "MD028": false,
         "MD025": {
             "front_matter_title": ""
-        }
+        },
     },
     "docsImages.maxWidth": 0
 }
