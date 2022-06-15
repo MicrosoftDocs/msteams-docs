@@ -16,7 +16,7 @@ In this section, you will:
     1. [Create client secret](#create-client-secret)
     1. [Configure scope for access token](#configure-scope-for-access-token)
     1. [Configure access token version](#configure-access-token-version)
-1. [Update OAuth connection](#update-oauth-connection)
+    1. [Update OAuth connection](#update-oauth-connection)
 
 ## Create and deploy bot resource in Azure AD
 
@@ -73,21 +73,22 @@ You need to configure client secret, permissions and scopes, authorize client ap
 
 A client secret is a string that the application uses to prove its identity when requesting a token.
 
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your Azure AD app in **Search** box, and open your app.
+
 1. Select **Settings** > **Configurations**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
 
     The **Configuration** page appears.
 
 1. Select the **Manage** link shown with **Microsoft App ID**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Manage link for bot app configuration":::
+
      The **Certificates & secrets** page appears. The Manage  menu appears in left pane menu.
-
-<!--
-1. Select **Manage** > **Certificates & secrets**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Client secret menu option" border="false":::
-
-    The **Certificates & secrets** page appears.
--->
 
 2. Select **+ New client secret**.
 
