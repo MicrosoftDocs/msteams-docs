@@ -13,7 +13,7 @@ You can create apps to make meetings more productive. For example, ask people to
 
 ## Microsoft Teams UI Kit
 
-You can find more comprehensive design guidelines, including elements that you can grab and modify as needed, in the :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: Microsoft Teams UI Kit.
+You can find more comprehensive design guidelines, including elements that you can grab and modify as needed, in the :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
