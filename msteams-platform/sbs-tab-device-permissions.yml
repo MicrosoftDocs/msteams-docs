@@ -226,8 +226,8 @@ items:
       
       To test the app on mobile, the following pop-up windows are displayed to select the course of action:
 
-      * Select **ALLOW** if you want to grant permission
-      * Select **DENY** if you don't want to grant permission
+      * Select **ALLOW** if you want to grant permission.
+      * Select **DENY** if you don't want to grant permission.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png" alt-text="mobile output" border="true":::                   
     --- 
