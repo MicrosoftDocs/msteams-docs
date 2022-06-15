@@ -23,9 +23,9 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 ## App less Adaptive Card
 
-User can add metadata tags to the website, after adding user can copy the link and paste it into the compose box, the adaptive card will take the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
+User can add metadata tags to the website, and can copy the link and paste it into the compose box, the adaptive card takes the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
 
-There is one template registered for each app type product. Microsoft has incorporated its own templates, the following are the web categories:
+There is one template registered for each app type product. Microsoft has incorporated its own templates and the following are the web categories:
 
 * Creative works
 * Embedded non-text objects
