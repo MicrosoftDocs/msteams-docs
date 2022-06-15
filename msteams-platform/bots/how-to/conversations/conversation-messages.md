@@ -188,7 +188,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
@@ -201,7 +201,7 @@ The `channelData` object isn't included in messages in personal conversations, a
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
 * `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
+* `tenant.id`: :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
 * `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
   * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
@@ -382,7 +382,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
      You can select **Close** or switch chat to dismiss the message.
 
      If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -401,7 +401,6 @@ Form completion message appears in Adaptive Cards while sending a response to th
             ]
         } 
      ```
-    
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 

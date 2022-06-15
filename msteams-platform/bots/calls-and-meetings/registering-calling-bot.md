@@ -7,7 +7,7 @@ keywords: calling bot audio/video audio video media
 ---
 # Register calls and meetings bot for Microsoft Teams
 
-A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
+A bot that participates in audio or video calls and online meetings is a regular :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams bot with the following extra features used to register the bot:
 
 * There's a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
@@ -34,7 +34,7 @@ For information on creating bots, see [create a bot for Teams](../how-to/create-
 
 To create a new bot for Teams:
 
-1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
+1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure, for which you must have an Azure account.
 1. Add the Teams channel.
 1. Select the **Calling** tab on the Teams channel page. Select **Enable calling**, and then update **Webhook (for calling)** with your HTTPS URL where you receive incoming notifications, for example `https://contoso.com/teamsapp/api/calling`. For more information, see [configuring channels](/bot-framework/portal-configure-channels).
 

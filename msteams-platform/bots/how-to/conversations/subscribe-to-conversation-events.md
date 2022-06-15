@@ -12,7 +12,7 @@ keywords: events bot channel message reaction conversation
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
+When building your conversational bots for :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
 * Trigger a welcome message when your bot is added to a team.
 * Trigger a welcome message when a new team member is added or removed.
@@ -576,7 +576,6 @@ A member removed event is sent to your bot in the following scenarios:
 
 The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
@@ -668,7 +667,6 @@ The `channelData` object in the following payload example is based on adding a m
     }
 }
 ```
-
 
 # [Python](#tab/python)
 
@@ -1449,8 +1447,8 @@ When you uninstall an app, the bot is also uninstalled. When a user sends a mess
 
 When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
-* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
-* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+* You build your bot without the :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with the :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
 

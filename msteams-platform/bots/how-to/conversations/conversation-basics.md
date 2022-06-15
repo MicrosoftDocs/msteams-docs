@@ -11,7 +11,7 @@ keyword: conversations basics messages groupchap group channel
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A conversation is a series of messages sent between your Microsoft Teams bot and one or more users. The following table provides the three types of conversations, also called scopes in Teams:
+A conversation is a series of messages sent between your :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams bot and one or more users. The following table provides the three types of conversations, also called scopes in Teams:
 
 | Conversation type | Description |
 | ------- | ----------- |

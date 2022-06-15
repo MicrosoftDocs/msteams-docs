@@ -10,11 +10,11 @@ keywords: resource group bot registration Azure emulator bot manifest deploy
 
 # Add authentication to your Teams bot
 
-There are times when you may need to create bots in Microsoft Teams that can access resources on behalf of the user, such as a mail service.
+There are times when you may need to create bots in :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams that can access resources on behalf of the user, such as a mail service.
 
 This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we'll see later.
 
-OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+OAuth 2.0 is an open standard for authentication and authorization used by :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
@@ -30,7 +30,7 @@ In this article you'll learn:
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
-- The current versions of Microsoft Visual Studio and Git.
+- The current versions of :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Visual Studio and Git.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/free/).
 - The following sample:
 

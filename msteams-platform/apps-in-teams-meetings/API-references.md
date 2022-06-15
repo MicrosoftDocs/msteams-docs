@@ -18,7 +18,7 @@ The meeting extensibility provide APIs to enhance meeting experience. You can pe
 > [!NOTE]
 > Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
 
-The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
+The following table provides a list of APIs available across the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams Client (MSTC) and :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft Bot Framework (MSBF) SDKs:
 
 |Method| Description| Source|
 |---|---|----|
@@ -163,7 +163,7 @@ All users in a meeting receive the notifications sent through in-meeting notific
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications and support for webapp are not supported.
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
 
@@ -422,7 +422,7 @@ In case of Recurring meeting type,
 
 ## Send real-time captions API
 
-The send real-time captions API exposes a POST endpoint for Microsoft Teams communication access real-time translation (CART) captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
+The send real-time captions API exposes a POST endpoint for :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams communication access real-time translation (CART) captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams meeting when they have captions enabled.
 
 ### CART URL
 

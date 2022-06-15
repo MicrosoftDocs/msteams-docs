@@ -14,7 +14,7 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 > [!NOTE]
 >
 > * The guidance for developing messaging and Interactive Voice Response (IVR) bots doesn't completely apply to building application-hosted media bots.
-> * As the Microsoft Real-time Media Platform for bots is in developer preview, the guidance in this document is subject to change.
+> * As the :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Real-time Media Platform for bots is in developer preview, the guidance in this document is subject to change.
 
 ## C# or .NET and Windows Server for development
 
@@ -29,13 +29,13 @@ An application-hosted media bot requires the following:
   
 * The bot can't be deployed as an Azure web app.
 
-* The bot must be running on a recent version of the `Microsoft.Graph.Communications.Calls.Media` .NET library. The bot must use either the newest available version of the [NuGet package](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), or a version that isn't more than three months old. Older versions of the library are deprecated and don't work after a few months. Keeping the `Microsoft.Graph.Communications.Calls.Media` library up-to-date ensures the best interoperability between the bot and Microsoft Teams.
+* The bot must be running on a recent version of the `Microsoft.Graph.Communications.Calls.Media` .NET library. The bot must use either the newest available version of the [NuGet package](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), or a version that isn't more than three months old. Older versions of the library are deprecated and don't work after a few months. Keeping the `Microsoft.Graph.Communications.Calls.Media` library up-to-date ensures the best interoperability between the bot and :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams.
 
 The next section provides details on where real-time media calls are located.
 
 ## Real-time media calls stay where they're created
 
-Real-time media calls stay on the computer where they were created. A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a Microsoft Teams call or meeting flows to that VM instance, and media the bot sends back to Microsoft Teams must also originate from that VM. If there are any real-time media calls in progress when the VM is stopped, those calls are abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can end the calls.
+Real-time media calls stay on the computer where they were created. A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams call or meeting flows to that VM instance, and media the bot sends back to  Microsoft Teams must also originate from that VM. If there are any real-time media calls in progress when the VM is stopped, those calls are abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can end the calls.
 
 The next section provides details on accessibility of application-hosted media bots.
 

@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Single sign-on (SSO) support for bots
 
-Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
+Single sign-on authentication in :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
 
 >[!NOTE]
 > OAuth 2.0 is an open standard for authentication and authorization used by Azure AD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
@@ -91,7 +91,7 @@ The steps to register your app through the Azure AD portal are similar to the [t
    >
    > You must be aware of the following important restrictions:
    >
-   > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [Extend tab app with Microsoft Graph permissions and scope](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Only user-level :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [Extend tab app with Microsoft Graph permissions and scope](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Your application's domain name must be same as the domain name that you have registered for your Azure AD application.
    > * Multiple domains per app are currently not supported.
    > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
@@ -228,7 +228,7 @@ If the application contains a bot and a tab, then use the following code to add 
 The request to get the token is a normal POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
-> The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
+> The :::image type="icon" source="../../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
 If the user is using the application for the first time and user consent is required, the following dialog box appears to continue with the consent experience:
 

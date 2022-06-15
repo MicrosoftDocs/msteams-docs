@@ -13,13 +13,13 @@ In [registering a calls and meetings bot for Microsoft Teams](./registering-call
 
 ## Protocol determination
 
-The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provides the following response:
+The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provides the following response:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Your bot receives the notification again, but this time in the Microsoft Graph protocol.
+Your bot receives the notification again, but this time in the :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph protocol.
 
 In a future release of the Real-time Media Platform, you can configure the protocol your application supports to avoid receiving the initial callback in the legacy format.
 

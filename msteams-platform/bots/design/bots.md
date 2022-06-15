@@ -17,7 +17,7 @@ To guide your app design, the following information describes and illustrates ho
 
 ## Microsoft Teams UI Kit
 
-You can find more comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
+You can find more comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -184,7 +184,7 @@ Use a thesaurus and get people from as many different backgrounds as possible to
 
 ### Extract intent and data from messages
 
-Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action. 
+Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action.
 
 The following examples outline the user intent and data in messages sent to bots:
 
@@ -202,7 +202,7 @@ The following examples outline the user intent and data in messages sent to bots
 
 ### Analyze and improve
 
-Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
+Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Language Understanding (LUIS).
 
 * [Understanding LUIS](/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
 * [Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.

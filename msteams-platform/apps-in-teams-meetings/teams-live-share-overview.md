@@ -11,7 +11,7 @@ ms.author: v-ypalikila
 # Live Share SDK
 
 > [!Note]
-> The Live Share SDK is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the Live Share SDK.
+> The Live Share SDK is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams to use the Live Share SDK.
 
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Live Share provides a free, fully managed, and ready to use [Azure Fluid Relay](/azure/azure-fluid-relay/) backed by the security and global scale of Teams.
 
