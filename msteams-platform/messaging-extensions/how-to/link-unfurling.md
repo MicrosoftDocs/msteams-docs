@@ -25,13 +25,27 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 User can add metadata tags to the website, after adding user can copy the link and paste it into the compose box, the adaptive card will take the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
 
-### Schema.org
+There is one template registered for each app type product. Microsoft has incorporated its own templates, the following are the web categories:
 
-Schema.org is a collaborative, community based activity with a mission to create, maintain, and promote schemas for the structured data on the internet, web pages, email and beyond.
+* Creative works
+* Embedded non-text objects
+* Event
+* Organization
+* Person
+* Place
+* Local business
+* Restaurant
+* Products
+* Reviews
 
-Following screenshot displays metadata of how an adaptive card unfurls.
+Following screenshot displays metadata of how an adaptive card unfurls on desktop.
 
 :::image type="content" source="../../assets/images/messaging-extension/meta.png" alt-text="Meta data"border="true"lightbox="../../assets/images/messaging-extension/meta-data.png":::
+
+Following screenshot displays metadata of how an adaptive card unfurls on mobile.
+
+(Mobile experience image to be added)
+
 
 ## Add link unfurling to your app manifest
 
