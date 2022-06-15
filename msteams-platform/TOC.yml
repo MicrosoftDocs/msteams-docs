@@ -561,8 +561,12 @@
     items:
     - name: Overview
       href: samples/collaboration-control.md
-    - name: Add Power Virtual Agents chatbot
+    - name: Install collaboration controls
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+    - name: Create an app with collaboration controls
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+    - name: Deploy an app with collaboration control to Teams
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md  
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
