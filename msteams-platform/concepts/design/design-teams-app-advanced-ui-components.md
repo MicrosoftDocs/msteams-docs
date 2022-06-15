@@ -98,9 +98,9 @@ A toolbar is a container for grouping a set of controls.
 
 ### Top use cases
 
-* Contextual actions on app content
-* Contextual filter and find
-* Navigation and breadcrumbs
+* Contextual actions on app content.
+* Contextual filter and find.
+* Navigation and breadcrumbs.
 
 ### Mobile
 

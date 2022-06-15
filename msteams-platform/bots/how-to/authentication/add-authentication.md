@@ -337,7 +337,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 1. In the left panel, select **Settings**.
 1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
     > [!NOTE]
-    > Only one messaging endpoint is allowed for a bot
+    > Only one messaging endpoint is allowed for a bot.
 1. Select the **Save** button in the upper left.
 
 ## Test the bot using the Emulator

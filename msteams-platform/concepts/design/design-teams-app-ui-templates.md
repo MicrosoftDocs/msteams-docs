@@ -191,9 +191,9 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 
 ### Top use cases
 
-* Project management. Assigning tasks and tracking status
-* Brainstorming. Adding ideas in different categories
-* Sorting exercises. Organizing any kind of information into buckets
+* Project management. Assigning tasks and tracking status.
+* Brainstorming. Adding ideas in different categories.
+* Sorting exercises. Organizing any kind of information into buckets.
 
 ### Mobile
 

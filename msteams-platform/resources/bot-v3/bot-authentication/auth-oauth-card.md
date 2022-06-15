@@ -19,10 +19,10 @@ Other topics in [Authentication](~/resources/bot-v3/bot-authentication/auth-flow
 
 There are currently some restrictions to where you can use the OAuthCard. These include:
 
-* The card will not work with [guest access](/MicrosoftTeams/guest-access)
-* It will not work with [Microsoft Teams free](https://products.office.com/microsoft-teams/free)
-* It can only be used for bot authentication
-* It only works for bots registered in the [Azure Bot Service](https://azure.microsoft.com/services/bot-service/)
+* The card will not work with [guest access](/MicrosoftTeams/guest-access).
+* It will not work with [Microsoft Teams free](https://products.office.com/microsoft-teams/free).
+* It can only be used for bot authentication.
+* It only works for bots registered in the [Azure Bot Service](https://azure.microsoft.com/services/bot-service/).
 
 ## How does the Azure Bot Service help me do authentication?
 

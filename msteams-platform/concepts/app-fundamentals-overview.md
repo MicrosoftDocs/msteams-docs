@@ -16,9 +16,9 @@ At its heart, Teams is a collaboration platform. It's also a social platform, is
 
 In this section, learn how to:
 
-* Identify and map use cases to Teams features
-* Use planning checklist
-* Plan beyond app deployment
+* Identify and map use cases to Teams features.
+* Use planning checklist.
+* Plan beyond app deployment.
 
 ## Plan with Teams
 

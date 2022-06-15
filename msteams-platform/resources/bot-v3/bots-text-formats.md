@@ -26,7 +26,7 @@ Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
 Currently, the following limitations apply:
 
-* Text-only messages do not support table formatting
+* Text-only messages do not support table formatting.
 
 For information on formatting in cards, see [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
 

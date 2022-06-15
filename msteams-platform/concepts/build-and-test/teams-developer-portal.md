@@ -22,8 +22,8 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 The Developer Portal provides a couple ways to register a Teams app:
 
-* Register a brand new app
-* Import an existing app package
+* Register a brand new app.
+* Import an existing app package.
 
 > [!NOTE]
 > If you create an app using the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), you can manage that app in the Developer Portal.
