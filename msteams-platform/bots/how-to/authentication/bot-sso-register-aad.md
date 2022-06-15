@@ -126,8 +126,6 @@ You need:
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-api-menu.png" alt-text="Expose an API menu option." border="true":::
-
     The **Expose an API** page appears.
 
 1. Select **Set** to generate application ID URI in the form of `api://{AppID}`.
