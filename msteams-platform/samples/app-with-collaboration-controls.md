@@ -1,7 +1,7 @@
 ---
 title: Application with collaboration controls for Microsoft Teams
 author: surbhigupta
-description: The solutions that make up Collaboration Controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
+description: In this article, learn how to build a model driven app and add collaboration controls to the app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -293,7 +293,7 @@ Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
 
  1. We now want to edit the Main Information form so that it includes the tasks, meetings, and notes tabs. To begin, we want to go back to the explorer & select your solution (for example: My Collaboration Manager).
 
- 1. Select the table (for example: Inspections) you created in [Create a new model-driven app for Teams.](#create-a-new-model-driven-app-for-teams)
+ 1. Select the table (for example: Inspections) you created in [Create a new model-driven app for Teams.](#create-a-new-model-driven-app-with-collaboration-controls-for-teams)
 
  1. Navigate to the Forms tab for your table.
 

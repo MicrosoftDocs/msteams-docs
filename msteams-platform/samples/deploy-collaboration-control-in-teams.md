@@ -1,7 +1,7 @@
 ---
 title: Deploy app with collaboration controls in Microsoft Teams
 author: surbhigupta
-description: The solutions that make up Collaboration Controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
+description: In this article, learn about deploying your app with collaboration control in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -23,7 +23,7 @@ ms.topic: conceptual
 
      :::image type="content" source="../assets/images/Collaboration control/settings-defnition.png" alt-text="Setting definition" border="true":::
 
- 1. Search for and select **Hide the navbar** from the list of settings definitions. This will hide the left navigation in your application. Do not enable this feature if your app has multiple navigation items you want the user to leverage.
+ 1. Search for and select **Hide the navbar** from the list of settings definitions. This will hide the left navigation in your application. Don't enable this feature if your app has multiple navigation items you want the user to use.
 
      :::image type="content" source="../assets/images/Collaboration control/hide-the-nav-bar.png" alt-text="Hide the nav bar" border="true":::
 
@@ -35,7 +35,7 @@ ms.topic: conceptual
 
  1. Select **Save.**
 
- 1. Repeat steps 4-7, but this time, search for and select App high density page header. Note, there is a known issue with the chats experience where the chat icon may not appear if the high density page header is enabled.
+ 1. Repeat steps 4-7, but this time, search for and select App high density page header. Note, there's a known issue with the chats experience where the chat icon may not appear if the high density page header is enabled.
 
      :::image type="content" source="../assets/images/Collaboration control/density-page-header.png" alt-text="Density page header" border="true":::
 
@@ -47,7 +47,7 @@ ms.topic: conceptual
 
      :::image type="content" source="../assets/images/Collaboration control/publish-cusomization.png" alt-text="Publish all customizations" border="true":::
 
- **Task 2: Adding the app to the Microsoft Teams app catalogue**
+ **Task 2: Adding the app to the Microsoft Teams app catalog**
 
  1. Now that the settings are defined, we can now add the app to Microsoft Teams. To begin, navigate to the **Apps** page in the Power Apps maker portal.
 
@@ -63,13 +63,13 @@ ms.topic: conceptual
 
  1. To bring your newly downloaded app manifest to Microsoft Teams, open Teams and navigate to the app store by selecting Apps in the left app bar.
 
- 1. Next, select **Upload a custom app** at the bottom of the left navigation. [Note: The steps to select 'Upload a custom app' may vary depending on your version of Teams e.g., you may have to select **Manage your apps** > **Upload a custom app**]
+ 1. Next, select **Upload a custom app** at the bottom of the left navigation. [Note: The steps to select 'Upload a custom app' may vary depending on your version of Teams for example, you may have to select **Manage your apps** > **Upload a custom app**]
 
      :::image type="content" source="../assets/images/Collaboration control/upload-custom-app.png" alt-text="upload a custom app" border= "true":::
 
  1. Select **Upload for my org** and select the Teams app manifest you downloaded on step 4 above.
 
- 1. Once the upload is complete, the app may appear **Manage your apps** or in the **Built by your org** section of the Teams app catalogue.
+ 1. Once the upload is complete, the app may appear **Manage your apps** or in the **Built by your org** section of the Teams app catalog.
 
  **Task 3: [Optional] How to add the app as a Teams tab**
 
@@ -111,7 +111,7 @@ ms.topic: conceptual
      b. Select **Settings** > **Users** + **permissions** <br/>
      c. Select **Teams** <br/>
 
-1. Click the + Create team button on the top of the page
+1. Select the + Create team button on the top of the page
 
      a. Fill in the required fields <br/>
      b. **Team name:** Make sure this name is unique within the business unit. <br/>
@@ -128,7 +128,7 @@ ms.topic: conceptual
 
  **Task 2: Add members to the team**
 
- (This is not necessary if your team type is Azure Active Directory or Microsoft 365.)
+ (This isn't necessary if your team type is Azure Active Directory or Microsoft 365.)
 
  1. Select a team, and then select **Manage team members**
 
@@ -142,11 +142,11 @@ ms.topic: conceptual
 
  1. Return to step 1b
 
- 1. Click on Security roles
+ 1. Select on Security roles
 
      :::image type="content" source="../assets/images/Collaboration control/users-permission.png" alt-text="Users permission" border="true":::
 
- 1. Click on **New role** at the top left of the page
+ 1. Select on **New role** at the top left of the page
 
      a. A new page will now open
 
@@ -187,22 +187,22 @@ ms.topic: conceptual
 
 ## Limitations and known issues
 
- The Collaboration controls is currently intended for use as described in this document, and there are the following limitations:
+ The Collaboration controls are currently intended for use as described in this document, and there are the following limitations:
 
-* Components cannot be used in Canvas Apps.
+* Components can't be used in Canvas Apps.
 * Components only support full tab views.
 
      :::image type="content" source="../assets/images/Collaboration control/tasks-tab.png" alt-text="tasks" border="true":::
 
-* The subgrid view selected is not honored. All tasks, meetings or notes for the collaborative record will be displayed.
+* The subgrid view selected isn't honored. All tasks, meetings or notes for the collaborative record will be displayed.
 
      :::image type="content" source="../assets/images/Collaboration control/subgrid-view.png" alt-text="subgrid view" border= "true":::
 
-* Activities added to the timeline control don’t appear in the components (and tasks, meetings and notes created in the components are not included in the timeline control).
-* New records must be saved before accessing the components, otherwise you will see an empty screen.
-* The components do not inherit theming from the form or app they are added to.
+* Activities added to the timeline control don’t appear in the components (and tasks, meetings and notes created in the components aren't included in the timeline control).
+* New records must be saved before accessing the components, otherwise you'll see an empty screen.
+* The components don't inherit theming from the form or app they're added to.
 * Localization is only available when running the app inside Microsoft Teams.
-* Edge strict mode is not supported, and cross-site cookies are required.
+* Microsoft Edge strict mode isn't supported, and cross-site cookies are required.
 
  **Admin Center does not update when installation or upgrade is complete**
 

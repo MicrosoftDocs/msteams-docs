@@ -1,7 +1,7 @@
 ---
 title: Install collaboration controls
 author: surbhigupta
-description: The solutions that make up Collaboration Controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
+description: In this article, learn about installation of collaboration controls.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
