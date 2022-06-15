@@ -21,7 +21,7 @@ At a high level, you'll need to complete the following steps to create a messagi
 
 Creating your web service, creating your app package, and registering your web service with the Bot Framework can be done in any order. Because those three pieces are so intertwined, no matter which order you do them in you'll need return to update the others. Your registration needs the messaging endpoint from your deployed web service, and your web service needs the ID and password created from your registration. Your app manifest also needs that ID to connect Teams to your web service.
 
-As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your web service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change to the manifest, but there's no need to do so when you deploy changes to your web service.
+As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your web service. When working with the app manifest, ensure that you can either manually modify the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change to the manifest, but there's no need to do so when you deploy changes to your web service.
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
