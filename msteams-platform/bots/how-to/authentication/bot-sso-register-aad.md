@@ -13,9 +13,10 @@ In this section, you will:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
 1. [Configure app in Azure AD](#configure-app-in-azure-ad)
-    1. [Create client secret](#create-client-secret)
-    1. [Configure scope for access token](#configure-scope-for-access-token)
-    1. [Configure access token version](#configure-access-token-version)
+    1. [Add messaging endpoint](#add-messaging-endpoint)
+        1. [Create client secret](#create-client-secret)
+        1. [Configure scope for access token](#configure-scope-for-access-token)
+        1. [Configure access token version](#configure-access-token-version)
     1. [Update OAuth connection](#update-oauth-connection)
 
 ## Create and deploy bot resource in Azure AD
@@ -67,9 +68,13 @@ To create and deploy bot resource
 
 ## Configure app in Azure AD
 
+### Add messaging endpoint
+
+### Configure SSO
+
 You need to configure client secret, permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
 
-### Create client secret
+#### Create client secret
 
 A client secret is a string that the application uses to prove its identity when requesting a token.
 
@@ -112,7 +117,7 @@ A client secret is a string that the application uses to prove its identity when
    > [!NOTE]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
-### Configure scope for access token
+#### Configure scope for access token
 
 Configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
@@ -122,7 +127,7 @@ You need:
 - [To configure API scope](#to-configure-api-scope)
 - [To configure authorized client application](#to-configure-authorized-client-application)
 
-#### To configure application ID URI
+##### To configure application ID URI
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
@@ -168,7 +173,7 @@ You need:
 
 1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
 
-#### To configure API scope
+##### To configure API scope
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
@@ -195,7 +200,7 @@ You need:
 
     The new scope you defined displays on the page.
 
-#### To configure authorized client application
+##### To configure authorized client application
 
 1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
 
@@ -236,11 +241,11 @@ The client ID displays on the page.
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-### Configure access token version
+#### Configure access token version
 
 You must define the access token version that is acceptable for your app. This configuration is made in the Azure AD application manifest.
 
-#### To define the access token version
+##### To define the access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
@@ -258,7 +263,7 @@ You must define the access token version that is acceptable for your app. This c
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 
-## Update OAuth connection
+### Update OAuth connection
 
 / Add details /
 
