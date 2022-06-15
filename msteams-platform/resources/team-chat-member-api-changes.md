@@ -11,9 +11,9 @@ ms.author: ojchoudh
 # Teams bot API changes to fetch team or chat members
 
 > [!NOTE]
-> `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated.They are throttled to five requests per minute and return a maximum of 10K members per team. The full roster not get being returned for large teams. You must update to version 4.10 or higher of the Bot Framework SDK and switch to the paginated API endpoints, or use the `TeamsInfo.GetMemberAsync` to retrieve single users.
+> `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They're throttled to five requests per minute and return a maximum of 10 thousand members per team and the full roster not being returned for large teams. You must update to version 4.10 or higher of the Bot Framework SDK and switch to the paginated API endpoints, or use the `TeamsInfo.GetMemberAsync` to retrieve single users.
 >
-> This also applies to your bot even if you are not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) events. If you're using an SDK version earlier to 4.10, upgrade it to the latest version.
+> This also applies to your bot even if you aren't directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) events. If you're using an SDK version earlier to 4.10, upgrade it to the latest version.
 >
 > To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes).
 
