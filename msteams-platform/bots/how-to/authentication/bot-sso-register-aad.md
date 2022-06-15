@@ -73,11 +73,21 @@ You need to configure client secret, permissions and scopes, authorize client ap
 
 A client secret is a string that the application uses to prove its identity when requesting a token.
 
+1. Select **Settings** > **Configurations**.
+
+    The **Configuration** page appears.
+
+1. Select the **Manage** link shown with **Microsoft App ID**.
+
+     The **Certificates & secrets** page appears. The Manage  menu appears in left pane menu.
+
+<!--
 1. Select **Manage** > **Certificates & secrets**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Client secret menu option" border="false":::
 
     The **Certificates & secrets** page appears.
+-->
 
 2. Select **+ New client secret**.
 
