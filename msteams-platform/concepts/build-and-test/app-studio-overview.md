@@ -11,7 +11,7 @@ ms.topic: overview
 > [!WARNING]
 > **Try the Developer Portal**: App Studio has evolved. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/). <br> App Studio will be deprecated by June 30, 2022.
 
-App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
+App Studio makes it easy to start creating or integrating your own :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
 
 > [!IMPORTANT]
 > App Studio is currently not available in the following types of Teams orgs:
@@ -48,7 +48,7 @@ This is where you can see what [cards you create in App Studio](#card-editor) lo
 
 ### Manifest Editor
 
-As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
+As mentioned earlier, the most significant part of a :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
 
 The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
@@ -90,7 +90,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 ##### Message Extensions
 
-[Message extensions](~/messaging-extensions/what-are-messaging-extensions.md) are a powerful way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
+[Message extensions](~/messaging-extensions/what-are-messaging-extensions.md) are a powerful way for users to engage with your app within:::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
 
 Message extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the message extension, enter it. Otherwise, click **Register** to create one and enter the information afterward. Select whether the configuration of a message extension can be updated by the user.
 
@@ -115,7 +115,7 @@ On your project home page, you can upload your app to a team, submit your app to
 
 ### Card Editor
 
-A card is a container for short or related pieces of information. Microsoft Teams supports cards, which can have multiple properties and attachments. Cards are a key way that bots and connectors relay actionable information to users.
+A card is a container for short or related pieces of information. :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams supports cards, which can have multiple properties and attachments. Cards are a key way that bots and connectors relay actionable information to users.
 
 To make this process easier and less error-prone, the Card Editor tab lets you build Hero Cards or Thumbnail Cards using a form and verify and test the resulting card (exactly as a user would see it) through a bot. It also provides the corresponding JSON, C#, or Node.js code for the card that you can copy/paste into your app's source code.
 

@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Create a Microsoft Teams app package
 
-You need an app package however you plan to distribute your Microsoft Teams app. A valid package is a ZIP file that contains the following:
+You need an app package however you plan to distribute your :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams app. A valid package is a ZIP file that contains the following:
 
 * **App manifest**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **App icons**: Each package requires a color and outline icon for your app.
@@ -29,7 +29,7 @@ When publishing to the Teams store, make sure your manifest references to the la
 Your app package must include two .png versions of your app icon: A color and outline version.
 
 > [!Note]
-> If your app has a bot or message extension, your icons also will be included in your Microsoft Azure Bot Service registration.
+> If your app has a bot or message extension, your icons also will be included in your :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure Bot Service registration.
 
 For your app to pass Teams store review, these icons must meet the following size requirements.
 
@@ -75,7 +75,7 @@ The color icon submitted in your app package must be square. Don’t round the c
 
 #### Don't: Copy other brands
 
-Your icons must not mimic any copyrighted products that you don't own. For example, a design similar to a Microsoft product or brand.
+Your icons must not mimic any copyrighted products that you don't own. For example, a design similar to a :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft product or brand.
 
 ### Examples
 

@@ -8,7 +8,7 @@ keywords: Configure Microsoft 365 tenant Teams uploading test app
 
 # Test your app
 
-After integrating your app with Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For testing your app:
+After integrating your app with :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For testing your app:
 
 * Prepare your Microsoft 365 tenant.
 * Choose a workspace to test and debug your app.
@@ -16,7 +16,7 @@ After integrating your app with Microsoft Teams, you must test your app before p
 
 ## Prepare your Microsoft 365 tenant
 
-Before you start testing your app, prepare your Microsoft 365 test tenant and enable custom Teams app allow you to upload your app. You must sign-up for Microsoft 365 developer program and manage the Teams settings for your organization. Set up your developer subscription and configure it through [prepare your Microsoft 365 Tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Before you start testing your app, prepare your :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 test tenant and enable custom Teams app allow you to upload your app. You must sign-up for :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 developer program and manage the Teams settings for your organization. Set up your developer subscription and configure it through [prepare your Microsoft 365 Tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ## Test and debug
 

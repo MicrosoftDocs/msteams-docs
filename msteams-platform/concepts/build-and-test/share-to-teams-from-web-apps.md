@@ -11,7 +11,7 @@ Third-party websites can use the launcher script to embed Share to Teams buttons
 
 > [!NOTE]
 >
-> * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
+> * Only the desktop versions of :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft&nbsp;Edge and Google Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.  
 
 The following image displays the Share to Teams pop-up experience:
@@ -35,7 +35,7 @@ The following image displays the Share to Teams pop-up experience:
     </div>
     ```
 
-    After completing this, the Microsoft Teams icon gets added to your website. The following image shows the Share to Teams icon:
+    After completing this, the :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams icon gets added to your website. The following image shows the Share to Teams icon:
 
     ![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
 

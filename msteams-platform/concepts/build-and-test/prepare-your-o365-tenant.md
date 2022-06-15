@@ -8,7 +8,7 @@ keywords: Configure Microsoft 365 tenant Teams uploading
 
 # Prepare your Microsoft 365 tenant
 
-Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the following plans:
+Microsoft 365 subscribers can develop apps for :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams with one of the following plans:
 
 * Basic
 * Standard
@@ -18,12 +18,12 @@ Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the f
 
 > [!NOTE]
 >
-> * For more information on Microsoft 365 subscriptions, see [plans](https://products.office.com/business/compare-more-office-365-for-business-plans).
+> * For more information on :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 subscriptions, see [plans](https://products.office.com/business/compare-more-office-365-for-business-plans).
 > * Teams is also available to customers who subscribed to E4 prior to its [retirement](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
 
 ## Create your development environment
 
-If you do not have a Microsoft 365 account, you must sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
+If you do not have a :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account, you must sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
 ## Enable Teams for your organization
 

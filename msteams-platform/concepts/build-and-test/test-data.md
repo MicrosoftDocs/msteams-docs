@@ -9,7 +9,7 @@ ms.date: 11/01/2019
 
 # Add test data to your Microsoft 365 test tenant
 
-You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.
+You can test your :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Teams app with sample data with a :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 developer subscription.
 
 ## Prerequisites
 
@@ -159,7 +159,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
         try {
 
-            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams
 
             $creds = Get-Credential
 

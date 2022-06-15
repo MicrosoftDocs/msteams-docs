@@ -24,7 +24,7 @@ Use multiple manifests and packages to maintain separation between production an
 ## Purely local
 
 > [!NOTE]
-> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
+> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams.
 
 Your bot can run within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Following are the steps:
 
@@ -32,7 +32,7 @@ Your bot can run within the Bot Emulator. This enables you to test some of the c
 2. Launch the Bot Emulator and set the URL:
    * Node.js: `http://localhost:3978/api/messages`
    * .NET/C#: `http://localhost:3979/api/messages`
-3. Leave the Microsoft app ID and Microsoft app password blank, to match the default environment variables.
+3. Leave the  :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft app ID and Microsoft app password blank, to match the default environment variables.
 
 ## Locally hosted
 
@@ -40,7 +40,7 @@ Microsoft Teams is an entirely cloud-based product, it requires all services it 
 
 Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 
-To set up ngrok in preparation to execute your Microsoft Teams app locally, follow these steps:
+To set up ngrok in preparation to execute your :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams app locally, follow these steps:
 
 1. Go to the directory where you have ngrok.exe installed in a terminal application. You may want to add it as a path variable to avoid this step.
 2. Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
@@ -51,24 +51,26 @@ To set up ngrok in preparation to execute your Microsoft Teams app locally, foll
 
 To use ngrok in your project based on the capabilities you're using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
 
-For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test doesn't permit you to access Teams-specific functionality.
+For bots registered in the :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test doesn't permit you to access Teams-specific functionality.
 
 > [!NOTE]
+>
 > * To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 > [!WARNING]
+>
 > * If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
 
 ## Load and run your experience
 
-To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams. For more information, see:
+To load and run your experience within :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams, you need to create a package and upload it into Teams. For more information, see:
 
 * [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 * [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).

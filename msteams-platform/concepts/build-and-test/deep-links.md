@@ -12,7 +12,7 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
-The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or even launching a chat dialog, the SDK provides strongly typed APIs that make for an improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
+The :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or even launching a chat dialog, the SDK provides strongly typed APIs that make for an improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -33,12 +33,12 @@ The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of na
 > ✔ Link pasted in general chat conversation: Directly navigates to deep link url.
 >
 >
->The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
+>The navigation behavior of a Teams app extended across :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 (Outlook/Office) is dependent on two factors:
 >
 > * The target that the deep link points to
 > * The host where the Teams app is running
 >
-> If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
+> If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
 
 ## Deep link to your tab
 
@@ -86,7 +86,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 
 ### Consume a deep link from a tab
 
-When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-page ID if it exists.
+When navigating to a deep link, :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams simply navigates to the tab and provides a mechanism through the :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams JavaScript library to retrieve the sub-page ID if it exists.
 
 The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -104,7 +104,7 @@ Use the following format for a deep link that you can use in a bot, connector, o
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
+> If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab isn't opened.
 
 <!--- TBD: Edit this article.
@@ -241,7 +241,7 @@ While it's recommended to use the strongly typed APIs of TeamsJS, it's possible 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
 
 > [!NOTE]
-> The search parameters don't support `+` signal in place of whitespace (` `). Ensure your uri encoding code returns `%20` for spaces for example, `?subject=test%20subject` is good, but `?subject=test+subject` is bad.
+> The search parameters don't support `+` signal in place of whitespace (``). Ensure your uri encoding code returns `%20` for spaces for example, `?subject=test%20subject` is good, but `?subject=test+subject` is bad.
 
 The query parameters are:
 
@@ -308,7 +308,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 The query parameters are:
 
-* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
+* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
 * `topicName`: An optional field for chat's display name, in the case of a chat with three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
