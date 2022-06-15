@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2022-05-31T12:04:01+05:30</updated>
+	<updated>2022-06-10T11:04:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://docs.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Feature update: welcome messages are now sent to user selected channel instead of general channel]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?referrer=whats.new.rssfeed"/>
+		<updated>2022-06-10T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Welcome messages are now sent to user selected channel instead of general channel. In team context, the activity's conversation.id is set to the id of the channel selected by the user during app installation or the channel where the bot was installed from (currently available in Public Developer Preview).</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%200a6d00a4-dd28-33c4-002e-2e8e7c653ce2%0A*%20Version%20Independent%20ID%3A%200856927a-25f4-b1e0-5f1b-d55dc61796f3%0A*%20Content%3A%20%5BConversation%20events%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events%3Ftabs%3Ddotnet)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40WashingtonKayaker%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us. ]]></summary>
+		<category label="updated" term="updated"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Doc update: Revamped documentation for enable single sign-on in a tab app]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview?referrer=whats.new.rssfeed"/>
+		<updated>2022-06-10T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We made sure that documentation now have, clarity of steps and procedures for authentication. We covered difference between SSO and non-SSO authentication methods. Improved discoverability by correcting ToC structure and page names. We also added Troubleshooting guide.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2090fe7a88-a703-1d13-f945-2a15f335721a%0A*%20Version%20Independent%20ID%3A%2090fe7a88-a703-1d13-f945-2a15f335721a%0A*%20Content%3A%20%5BOverview%20to%20authentication%20for%20tabs%20using%20SSO%20in%20Teams%20with%20Azure%20AD%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-overview)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-overview.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-overview.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
+		<category label="updated" term="updated"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Microsoft Build 2022]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/whats-new#microsoft-build-2022-</id>
@@ -109,22 +125,6 @@
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-teams-conversation-bot?referrer=whats.new.rssfeed"/>
 		<updated>2022-04-01T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Teams conversation bots allow users to interact with your web service through text, interactive cards, and task modules. Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. This step-by-step guide helps you to create basic conversation bot in the Teams application.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%201c9cc6be-8ff3-de89-fa46-6bc355249626%0A*%20Version%20Independent%20ID%3A%201c9cc6be-8ff3-de89-fa46-6bc355249626%0A*%20Content%3A%20%5BCreate%20Teams%20conversation%20bot%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fsbs-teams-conversation-bot.yml%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Build your first app using Blazor]]></title>
-		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-blazorupdate?tabs=vs</id>
-		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-blazorupdate?tabs=vs&amp;referrer=whats.new.rssfeed"/>
-		<updated>2022-03-30T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[YBlazor lets you build interactive web UIs using C#,instead of JavaScript. You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2039c2bbc5-632b-60ac-a4ea-7a22ce0b783c%0A*%20Version%20Independent%20ID%3A%2039c2bbc5-632b-60ac-a4ea-7a22ce0b783c%0A*%20Content%3A%20%5BHello%20World%20with%20Blazor%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fsbs-gs-blazorupdate.yml%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Device permissions for the browser]]></title>
-		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/browser-device-permissions</id>
-		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/browser-device-permissions?referrer=whats.new.rssfeed"/>
-		<updated>2022-03-30T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams app that require device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2077f59ab2-3b64-db1c-253e-d040e9095050%0A*%20Version%20Independent%20ID%3A%2077f59ab2-3b64-db1c-253e-d040e9095050%0A*%20Content%3A%20%5BDevice%20permissions%20for%20the%20browser%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fbrowser-device-permissions)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fbrowser-device-permissions.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fbrowser-device-permissions.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
