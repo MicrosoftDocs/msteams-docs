@@ -12,6 +12,10 @@ keywords: teams apps meetings user participant role api
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
+> [!Note]
+>
+> Apps for Instant meetings, one-on-one and group calls are currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+
 Teams supports access to apps during meeting for the following meeting types:
 
 * [**Scheduled meetings**](https://support.microsoft.com/en-us/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
