@@ -18,8 +18,9 @@ Power Virtual Agents lets you create powerful chatbots that can answer questions
 These bots can be created easily without the need for data scientists or developers.
 
 > [!NOTE]
-> * By adding your chatbot to Microsoft Teams, some of the data, such as bot content and user chat content, is shared with Microsoft Teams. It means that your data flows outside of your [organization’s compliance and geographic or regional boundaries](/power-virtual-agents/data-location). <br/>
-> * You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>
+> * By adding your chatbot to :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams, some of the data, such as bot content and user chat content, is shared with Microsoft Teams. It means that your data flows outside of your [organization’s compliance and geographic or regional boundaries](/power-virtual-agents/data-location). <br/>
+> * You must not use :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false"::: Microsoft Power Platform to create apps that are to be published to the Teams app store. :::image type="icon" source="../../assets/icons/microsoft-365.png" border="false"::: Microsoft Power Platform apps can be published to an organization’s app store only.
 
 ## Make your chatbot available in Teams through the Power Virtual Agents portal
 
@@ -38,7 +39,7 @@ After publishing your bot, add the Teams channel to make the bot available to Te
    ![channels in power virtual agents portal](../../assets/images/pva-channels.png)
 
 1. **Generate an App ID for your chatbot**  
-After adding the Teams channel to your chatbot, an **App ID** is generated in the dialog box. The App ID is a unique Microsoft generated identifier for your bot. Save the App ID to create an app package for Teams.
+After adding the Teams channel to your chatbot, an **App ID** is generated in the dialog box. The App ID is a unique :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false":::Microsoft generated identifier for your bot. Save the App ID to create an app package for Teams.
 
 ## Add your bot to Teams using App Studio
 

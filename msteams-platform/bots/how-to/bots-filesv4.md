@@ -13,7 +13,7 @@ ms.topic: how-to
 
 There are two ways to send files to and receive files from a bot:
 
-* [**Use the Microsoft Graph APIs:**](#use-the-graph-apis) This method works for bots in all Microsoft Teams scopes:
+* [**Use the Microsoft Graph APIs:**](#use-the-graph-apis) This method works for bots in all :::image type="icon" source="../../assets/icons/teams-icon.png" border="false"::: Microsoft Teams scopes:
   * `personal`
   * `channel`
   * `groupchat`
@@ -233,7 +233,7 @@ private static Attachment GetInlineAttachment()
 }​​​​​
 ```
 
-### Basic example in C#
+### Basic example in C #
 
 The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
 

@@ -57,7 +57,6 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio new commands menu button "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
 
-
 ### Create a command menu for your bot by editing Manifest.json
 
 Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
@@ -167,7 +166,7 @@ Bots in a group or channel respond only when they are mentioned `@botname` in a 
 
 # [C#](#tab/dotnet)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the :::image type="icon" source="../../assets/icons/microsoft-icon.png" border="false":::Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
 
 The C# code to parse out the **\@Mention** portion of the message text is as follows:
 

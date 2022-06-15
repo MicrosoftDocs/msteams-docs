@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Bots and SDKs
 
-You can create a bot that works in Microsoft Teams with one of the following tools or capabilities:
+You can create a bot that works in :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams with one of the following tools or capabilities:
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
@@ -42,7 +42,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](/power-virtual-agents).
 
 >[!NOTE]
->You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>You must not use :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft Power Platform to create apps that are to be published to the Teams app store. :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft Power Platform apps can be published to an organization’s app store only.
 
 ## Bots with webhooks and connectors
 
@@ -53,9 +53,10 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 The Azure bot service, along with the Bot Framework, provides tools to build, test, deploy, and manage intelligent bots, all in one place. You can also create your bot in Azure bot service.
 
 > [!IMPORTANT]
-> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
+> Bot applications within :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
 
 > [!NOTE]
+>
 > * Bots in GCCH only support  up to manifest version v1.10.
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 > * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
@@ -65,12 +66,12 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 >   * Go to the resource group and manually delete the unused resources. Such as the app service, app service plan (if you created during bot registration), and the application insights (if you choose to enable it during bot registration).
 >   * You can also use az-cli to do bot registration:
 >
->     1. Sign into azure and set the subscription <br> 
->           &nbsp; az cloud set –name  "AzureUSGovernment" <br> 
+>     1. Sign into azure and set the subscription <br>
+>           &nbsp; az cloud set –name  "AzureUSGovernment" <br>
 >           &nbsp; az account set –name "`subscriptionname/id`".<br>
 >     1. Create app registration  
->           &nbsp; az ad app create --display-name "`name`" <br> 
->           &nbsp; --password "`password`" --available-to-other-tenants.<br> 
+>           &nbsp; az ad app create --display-name "`name`" <br>
+>           &nbsp; --password "`password`" --available-to-other-tenants.<br>
 >           Your app id would be created here.<br>
 >     1. Create bot resource <br>
 >           &nbsp; az bot create –resource-group "`resource-group`"<br>
@@ -112,7 +113,7 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
     * Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
 
     * Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
-    
+
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) need to be encoded as `&amp;`.
 
     ```json
@@ -124,16 +125,17 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
       "ConnectionName": ""
     }
     ```
+
 2. **Update Startup.cs:**
 
     To use OAuth in *non-public Azure clouds*, like the government cloud, or in bots with data-residency, you must add the following code in the **Startup.cs** file.
-    
+
     ```csharp
     string uri = "<uri-to-use>";
     MicrosoftAppCredentials.TrustServiceUrl(uri);
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
-    
+
     Where \<uri-to-use\> is one of the following URIs:
 
     |**URI**|**Description**|
@@ -149,7 +151,7 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
 
 ## Advantages of bots
 
-Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
+Bots in :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
@@ -159,7 +161,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
