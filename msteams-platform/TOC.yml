@@ -562,11 +562,11 @@
     - name: Overview
       href: samples/collaboration-control.md
     - name: Install collaboration controls
-      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+      href: samples/install-collaboration-control.md
     - name: Create an app with collaboration controls
-      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+      href: samples/app-with-collaboration-controls.md
     - name: Deploy an app with collaboration control to Teams
-      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md  
+      href: samples/deploy-collaboration-control-in-teams.md  
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
