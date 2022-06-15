@@ -402,7 +402,7 @@ The JSON response body for Meeting Details API is as follows:
         "organizer": { 
                         "id": "<organizer user ID>", 
                         "aadObjectId": "<AAD object ID>",
-                        "objectId": "organizer object ID",
+                        "objectId": "<organizer object ID>",
                         "tenantId": "<Tenant ID>" 
                     }
     } 
@@ -424,7 +424,7 @@ The JSON response body for Meeting Details API is as follows:
         "organizer  ": {
                             "id": "<organizer user ID>",
                             "aadObjectId": "<AAD object ID>",
-                            "objectId": "organizer object ID",
+                            "objectId": "<organizer object ID>",
                             "tenantId": "<Tenant ID>" 
                         }
     }
@@ -447,7 +447,7 @@ The JSON response body for Meeting Details API is as follows:
                         },
         "organizer": {
                         "id": "<organizer user ID>",
-                        "objectId": "organizer object ID",
+                        "objectId": "<organizer object ID>",
                         "aadObjectId": "<AAD object ID>",
                         "tenantId": "<Tenant ID>" 
                      }
@@ -477,7 +477,7 @@ The JSON response body for Meeting Details API is as follows:
                         "id": "<organizer user ID>", 
                         "aadObjectId": "<AAD object ID>", 
                         "tenantId": "<Tenant ID>" ,
-                        "objectId": "organizer object ID"
+                        "objectId": "<organizer object ID>"
                      }
     }
     
