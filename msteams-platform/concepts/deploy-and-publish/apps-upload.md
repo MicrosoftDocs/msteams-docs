@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Upload your app in Microsoft Teams
+# Upload your app
 
 You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store in the following scenarios:
 
