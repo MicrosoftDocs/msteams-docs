@@ -24,7 +24,7 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 ## Terminologies
 
-The following core concepts, terminology, and conventions guide you through the use of calls and online meetings bots:
+The following core concepts, terminology, and conventions guide you by using calls and online meetings bots:
 
 * Audio or video calls
 * Call types
