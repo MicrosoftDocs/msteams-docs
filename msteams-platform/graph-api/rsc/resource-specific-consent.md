@@ -73,8 +73,8 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 1. [Configure consent settings](#configure-consent-settings).
     1. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team).
     1. [Configure RSC in a chat](#configure-rsc-in-a-chat).
-1. [Register your app with Microsoft identity platform using the AAD portal](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).
-1. [Review your application permissions in the AAD portal](#review-your-application-permissions-in-the-aad-portal).
+1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#sideload-your-app-in-teams).
