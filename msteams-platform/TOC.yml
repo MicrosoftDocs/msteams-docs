@@ -387,7 +387,7 @@
       items:
       - name: Overview
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Register tab app in Azure AD
+      - name: Register your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
