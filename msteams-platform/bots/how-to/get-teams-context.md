@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.author: lajanuar
 keywords: bot context roster user profile channel list
 ---
-# Get context for your bot
+# Get Teams specific context for your bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
