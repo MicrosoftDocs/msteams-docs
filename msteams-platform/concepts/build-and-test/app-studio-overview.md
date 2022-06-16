@@ -147,7 +147,7 @@ Controls include:
 
 ## App Studio to Developer Portal
 
-As the App Studio will be deprecated, you can use Developer Portal. The following table provides the detailed information of the features supported in the Developer Portal:
+App Studio will be deprecated, you can use Developer Portal. The following table provides the detailed information of the features supported in the Developer Portal:
 
 | Features | App Studio | Developer Portal |
 | --- | --- | --- |

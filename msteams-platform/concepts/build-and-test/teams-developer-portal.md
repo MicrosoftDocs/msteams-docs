@@ -19,7 +19,7 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 > * However, you can use a regular tenant to build an app in the Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
 
 > [!IMPORTANT]
-> If you are migrating from App Studio to Developer Portal, the following table provides the detailed information of the features supported in the Developer Portal:
+> If you are migrating from App Studio to Developer Portal, the following table provides the detailed information of the features that are supported in the Developer Portal:
 
 | Features | App Studio | Developer Portal |
 | --- | --- | --- |
