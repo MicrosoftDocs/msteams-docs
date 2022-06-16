@@ -42,7 +42,7 @@ The following permissions can be granted to your app:
 
 ### Use meeting-specific RSC application permissions
 
-If you want your app to fetch transcripts from only the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. The meeting organizer can install your app in the Teams meetings chat. After the meeting is closed, your app can make the API call to obtain the transcript for that meeting.
+If you want your app to fetch transcripts only for the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. The meeting organizer can install your app in the Teams meetings chat. After the meeting is closed, your app can make the API call to obtain the transcript for that meeting.
 
 The following meeting-specific RSC permissions can be granted to your app:
 
@@ -61,7 +61,7 @@ In both cases, your app can fetch the transcript when a transcript is generated 
 Next, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or org-wide application permissions.
+> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions.
 
 ## Obtain meeting ID and organizer ID
 
