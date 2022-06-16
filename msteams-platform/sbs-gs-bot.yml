@@ -239,7 +239,7 @@ items:
     1. Select **Bot** and deselect **Tab**.
     1. Select **JavaScript** as the programming language.
     1. Select **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `HelloBot`.  The name of the app must consist only of alphanumeric characters.
+    1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
 
     After you've answered all questions, your project is created.
 
