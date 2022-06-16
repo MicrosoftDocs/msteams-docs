@@ -24,11 +24,11 @@ To fetch the transcript for a particular meeting:
 
 ## Configure permissions to access transcript
 
-Your app must have the required permissions for fetching transcripts. Your app can access and fetch transcripts for a Teams meeting using classic permissions or RSC permissions.
+Your app must have the required permissions for fetching transcripts. Your app can access and fetch transcripts for a Teams meeting using organization-wide application permissions or meeting-specific RSC application permissions.
 
-### Use classic permissions
+### Use organization-wide application permissions
 
-You can configure your app to access meeting transcripts across the tenant where it's installed. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. Because of tenant-wide classic permissions authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
+You can configure your app to access meeting transcripts across the tenant where it's installed. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. As  organization-wide classic permissions are authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
 
 The following permissions can be granted to your app:
 
@@ -40,9 +40,9 @@ The following permissions can be granted to your app:
 / reference to article for configuring classic permissions. /
 / reference to article for admin page. /
 
-### Use RSC permissions
+### Use meeting-specific RSC application permissions
 
-If you want your app to fetch transcripts from only the Team meeting where it's installed, configure RSC permission for your app. The meeting organizer can install your app in the Teams meetings chat. After the meeting is closed, your app can make the API call to obtain the transcript for that meeting.
+If you want your app to fetch transcripts from only the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. The meeting organizer can install your app in the Teams meetings chat. After the meeting is closed, your app can make the API call to obtain the transcript for that meeting.
 
 The following RSC permissions can be granted to your app:
 
