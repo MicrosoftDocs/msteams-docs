@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ---
-# Create conversation bots for channel or group chat
+# Channel and group chat conversations with a bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create new Teams app 
+# Create a new Teams app using Teams Toolkit 
 
 To create a new Teams app using Teams Toolkit, you can select from one of the following options:
 
