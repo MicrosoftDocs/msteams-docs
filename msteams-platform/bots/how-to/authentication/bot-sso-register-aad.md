@@ -12,7 +12,7 @@ Azure AD provides access to your bot app based on the app user's Teams identity.
 In this section, you will:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
-1. [Configure app in Azure AD](#configure-app-in-azure-ad)
+1. [Configure bot app in Azure AD](#configure-app-in-azure-ad)
     1. [Add messaging endpoint](#add-messaging-endpoint)
     1. [Configure SSO](#configure-sso)
         1. [Create client secret](#create-client-secret)
@@ -49,7 +49,9 @@ To create and deploy bot resource
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-azure-bot.png" alt-text="Add an azure bot project details":::
 
-    1. Enter a bot handle. This is a unique identifier for your bot. It's not the display name, and you can choose a different display name later.
+    1. Enter a bot handle.
+
+        This is a unique identifier for your bot. It's not the display name, and you can choose a different display name later.
 
     1. Select a subscription plan.
 
@@ -57,15 +59,23 @@ To create and deploy bot resource
 
         You can also create a new resource group.
 
+        1. Select **Create new**.
+
+            :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-new-resource.png" alt-text="Create new resource for provisioning." border="false":::
+
+        1. Enter a name for the resource and select **OK**.
+
+1. The standard price tier is selected by default. You can change your pricing tier, if needed.
+
 1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
 
 1. Select the creation type.
 
+    The default selection is **Create new Microsoft App ID**.
+
 1. Select **Review + create**.
 
     Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
-
-/ Add details post-creation. /
 
 ## Configure app in Azure AD
 
