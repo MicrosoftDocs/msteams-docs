@@ -12,6 +12,7 @@ Azure AD provides access to your bot app based on the app user's Teams identity.
 In this section, you will:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
+1. [Enable bot for Teams](#enable-bot-for-teams)
 1. [Configure bot app in Azure AD](#configure-app-in-azure-ad)
     1. [Add messaging endpoint](#add-messaging-endpoint)
     1. [Configure SSO](#configure-sso)
@@ -84,6 +85,20 @@ To create and deploy bot resource
 1. Select **Next : Review + create >**.
 
     Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
+
+1. Select **Create** to create the bot after successful validation.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/review-create.png" alt-text="Create bot" border="false":::
+
+/ Add details for deployment /
+
+## Enable bot for Teams
+
+/ Add description /
+
+### To enable bot app for Teams
+
+/ Add steps /
 
 ## Configure app in Azure AD
 
