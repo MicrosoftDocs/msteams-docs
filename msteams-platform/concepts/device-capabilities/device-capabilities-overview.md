@@ -45,4 +45,8 @@ Also, you can integrate the Teams native [people picker control](people-picker-c
 
 | Sample Name           | Description | Node.js    | .NET   |
 |:---------------------|:--------------|:---------|:--------|
-|Device permissions | Describes how to demonstrates Microsoft Teams tab sample app for device permissions. |[View]<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>|NA |
+|Device permissions | Describes how to demonstrates Microsoft Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)| NA |
+
+| Sample Name           | Description | .NET    | Node.js   |
+|:---------------------|:--------------|:---------|:--------|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
