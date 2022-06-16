@@ -98,7 +98,7 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create new Teams app
+    - name: Create a new Teams app using Teams Toolkit
       href: toolkit/create-new-project.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
@@ -106,9 +106,9 @@
       href: toolkit/debug-local.md
     - name: Debug background process
       href: toolkit/debug-background-process.md
-    - name: Provision cloud resources
+    - name: Use Teams Toolkit to provision cloud resources
       href: toolkit/provision.md
-    - name: Deploy Teams app to cloud
+    - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
     - name: Edit Teams app manifest
       href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
@@ -174,7 +174,7 @@
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
-      - name: Send and receive file
+      - name: Send and receive files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
@@ -202,9 +202,9 @@
     href: tabs/how-to/tab-requirements.md
   - name: Create personal tab
     href: tabs/how-to/create-personal-tab.md
-  - name: Create channel tab
+  - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
-  - name: Create content page
+  - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
   - name: Create configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
@@ -239,9 +239,9 @@
       items:
       - name: Receive all channel messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
-    - name: Create command menu
+    - name: Create a command menu
       href: bots/how-to/create-a-bot-commands-menu.md
-    - name: Channel and group chat conversation bot
+    - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
@@ -249,13 +249,13 @@
       href: bots/how-to/conversations/send-proactive-messages.md
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
-    - name: Update and delete bot messages
+    - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md   
     - name: Request headers of bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
-  - name: Get context for your bot
+  - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
-  - name: Send and receive file
+  - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
@@ -269,11 +269,11 @@
       href: bots/calls-and-meetings/registering-calling-bot.md
     - name: Incoming call notifications
       href: bots/calls-and-meetings/call-notifications.md
-    - name: Requirements of application-hosted media
+    - name: Requirements and considerations for application-hosted media bots
       href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
     - name: Media formats for bots
       href: resources/media-formats.md
-  - name: Bot API changes for team and chat
+  - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
 - name: Build message extensions
   items:
@@ -283,9 +283,9 @@
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
-    - name: Create and send task module
+    - name: Create and send the task module
       href: messaging-extensions/how-to/action-commands/create-task-module.md
-    - name: Respond to submit action
+    - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
   - name: Search commands
     items:
