@@ -65,17 +65,17 @@ To create and deploy bot resource
 
         1. Enter a name for the resource and select **OK**.
 
-1. The standard price tier is selected by default. You can change your pricing tier, if needed.
+    1. The standard price tier is selected by default. You can change your pricing tier, if needed.
 
-1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
+    1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
 
-1. Select the creation type.
+    1. Select the creation type.
 
-    The default selection is **Create new Microsoft App ID**.
+        The default selection is **Create new Microsoft App ID**.
 
-1. Select **Review + create**.
+    1. Select **Review + create**.
 
-    Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
+        Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
 
 ## Configure app in Azure AD
 
