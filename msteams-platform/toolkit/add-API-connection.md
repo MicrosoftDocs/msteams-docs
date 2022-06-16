@@ -20,9 +20,9 @@ Teams Toolkit helps you bootstrap sample code to access the APIs if you don't ha
 
 When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
-* Generate sample code under `./bot` or `./api` folder
-* Add a reference to the `@microsoft/teamsfx` package to `package.json`
-* Add application settings for your API in  `.env.teamsfx.local` that configures local debugging
+* Generate sample code under `./bot` or `./api` folder.
+* Add a reference to the `@microsoft/teamsfx` package to `package.json`.
+* Add application settings for your API in  `.env.teamsfx.local` that configures local debugging.
 
 ### Connect to API in Visual Studio Code
 
@@ -55,7 +55,7 @@ When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
 
-    9. Enter an alias for the API. The alias  generates an application setting name for the API that is added to the project's local application setting.
+    9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
 
@@ -116,7 +116,7 @@ The following steps help to test the API connection in the Teams Toolkit local e
     The generated API client is an Axios API client. Use the Axios client to make requests to the API.
 
      > [!Note]
-     >[Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
+     > [Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
 
 ## Deploy your application to Azure
 
@@ -155,6 +155,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>Connect to APIs for Azure AD permissions</b></summary>
@@ -199,6 +200,7 @@ You can follow the steps to access these APIs while using:
 
         > [!NOTE]
         > For application permission use your client ID.
+        >
 </details>
 
 ## See also
