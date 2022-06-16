@@ -1,9 +1,8 @@
 ---
 title: Manifest schema reference
-description: Describes the manifest schema for Microsoft Teams
+description: In this article, you'll have the manifest schema for Microsoft Teams reference, schema and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-keywords: teams manifest schema
 ---
 
 # Reference: Manifest schema for Microsoft Teams
