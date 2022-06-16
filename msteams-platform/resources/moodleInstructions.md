@@ -169,7 +169,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration.
 
-    1. To enable **OpenID Connect**, select the **Manage Authentication** link, and select the eye icon on the **OpenId Connect** line if it is greyed out.
+    1. To enable **OpenID Connect**, select the **Manage Authentication** link, and select the eye icon on the **OpenId Connect** line if it is unavailable.
     1. To enable frame embedding, select the **HTTP Security** link, and then select the checkbox next to **Allow frame embedding**.
     1. To enable web services, which enables the Moodle API features, select the **Advanced Features** link, and then ensure the checkbox next to **Enable web services** is selected.
     1. To enable the external services for Microsoft 365, select the **External services** link, and then:  
@@ -282,7 +282,7 @@ To allow automatic creation of Moodle tabs:
 When a Moodle course is synced, Microsoft Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it is synced. You can now start working with your Moodle courses directly from Microsoft Teams.
 
 > [!NOTE]
-> To share any feature requests or feedback with us, visit our [User Voice page](https://microsoftteams.uservoice.com/forums/916759-moodle).
+> To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 ## See also
 
