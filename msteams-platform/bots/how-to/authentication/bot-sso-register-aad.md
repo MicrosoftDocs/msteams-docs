@@ -73,9 +73,17 @@ To create and deploy bot resource
 
         The default selection is **Create new Microsoft App ID**.
 
-    1. Select **Review + create**.
+    1. Select **Next : Tags >**.
 
-        Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
+        The **Tags** tab opens.
+
+1. Enter the name and value tags for categorizing resources you provisioned.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
+
+1. Select **Next : Review + create >**.
+
+    Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
 
 ## Configure app in Azure AD
 
