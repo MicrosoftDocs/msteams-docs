@@ -40,3 +40,9 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Share location using [location picker](location-capability.md).
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
+
+## Code sample
+
+| Sample Name           | Description | Node.js    | .NET   |
+|:---------------------|:--------------|:---------|:--------|
+|Device permissions | Describes how to demonstrates Microsoft Teams tab sample app for device permissions. |[View]<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>|NA |
