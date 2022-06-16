@@ -102,9 +102,9 @@ To create and deploy bot resource
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-deployed.png" alt-text="Bot resource is deployed" border="false":::
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="Bot app is created" border="false":::
+     You can view the subscription details for the bot resource.
 
-    You can view the subscription details for the bot resource.
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="Bot app is created" border="false":::
 
 ## Enable bot for Teams
 
