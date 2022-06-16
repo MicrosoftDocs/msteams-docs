@@ -28,7 +28,7 @@ Your app must have the required permissions for fetching transcripts. Your app c
 
 ### Use organization-wide application permissions
 
-You can configure your app to access meeting transcripts across the tenant where it's installed. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. As  organization-wide classic permissions are authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
+You can configure your app to access meeting transcripts across the tenant where it's installed. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. As  organization-wide application permissions are authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
 
 The following permissions can be granted to your app:
 
@@ -44,7 +44,7 @@ The following permissions can be granted to your app:
 
 If you want your app to fetch transcripts from only the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. The meeting organizer can install your app in the Teams meetings chat. After the meeting is closed, your app can make the API call to obtain the transcript for that meeting.
 
-The following RSC permissions can be granted to your app:
+The following meeting-specific RSC permissions can be granted to your app:
 
 | Permission | Display name | Description |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ In both cases, your app can fetch the transcript when a transcript is generated 
 Next, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both RSC or classic permissions.
+> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or org-wide application permissions.
 
 ## Obtain meeting ID and organizer ID
 
@@ -478,7 +478,7 @@ VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
 Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 
 > [!NOTE]
-> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for meeting-specific RSC application permissions.
 
 For more information, see [Meeting apps API references](/apps-in-teams-meetings/api-references.md).
 
