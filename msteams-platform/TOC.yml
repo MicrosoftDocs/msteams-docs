@@ -239,7 +239,7 @@
       items:
       - name: Receive all channel messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
-    - name: Create a command menu
+    - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
