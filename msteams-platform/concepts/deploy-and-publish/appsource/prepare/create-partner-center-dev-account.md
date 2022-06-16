@@ -202,17 +202,23 @@ The following resources can also assist:
 
 </details>
 
-## Update Apple Developer ID on Partner Center
+## Update Apple App Store Connect Team ID on Partner Center
 
-For enabling users to install your app on the Teams iOS platform, you must update your Apple Developer ID in the Microsoft Partner Center. To update your Apple Developer ID, follow these steps:
+For enabling users to install your app on the Teams iOS platform, you must update your Apple App Store Connect Team ID in the Microsoft Partner Center. To update your Apple App Store Connect Team ID, follow these steps:
 
 1. Login to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
 1. Select the settings icon from the upper right corner of the page.
 1. Go to the **Legal info** section under **Organization profile** from the left pane.
 1. Select the **Developer** tab.
-1. Type your Apple Developer ID.
+1. Type your Apple App Store Connect Team ID.
 1. Go to the offer page and republish your Teams app.
-   Your Apple Developer ID is now updated in Microsoft Partner Center.
+   Your Apple App Store Connect Team ID is now updated and users can install your app on the Teams iOS platform.
+
+To get Apple App Store Connect Team ID from Apple Developer portal, follow these steps:
+
+1. Login to [Apple Developer Center](https://developer.apple.com/).
+1. Select **Account** and go to **Membership**.
+1. You'll find the **Apple App Store Connect Team ID** under **Membership**.
 
 ## Next step
 
