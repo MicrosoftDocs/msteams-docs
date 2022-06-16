@@ -89,6 +89,29 @@ To create and deploy bot resource
 
 ### Add messaging endpoint
 
+/ Add details for messaging endpoint /
+
+#### To configure messaging endpoint
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your Azure AD app in **Search** box, and open your app.
+
+1. Select **Settings** > **Configurations**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
+
+    The **Configuration** page appears.
+
+1. Enter the URL where your bot app is available as the messaging endpoint.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/message-endpoint.png" alt-text="Define messaging endpoint where the bot interacts with the user." border="false":::
+
+1. Select **Apply**.
+
+    The messaging endpoint is created.
+
 ### Configure SSO
 
 You need to configure client secret, permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
