@@ -244,7 +244,7 @@ Messages received from or sent to your bot can include different types of messag
 
 ## Notifications to your message
 
-You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email.
+You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email. For more information on graph activity feed notifications, see [graph activity](/graph/teams-activity-feed-notifications-best-practices)
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
@@ -382,7 +382,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
      You can select **Close** or switch chat to dismiss the message.
 
      If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -401,7 +401,6 @@ Form completion message appears in Adaptive Cards while sending a response to th
             ]
         } 
      ```
-    
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
