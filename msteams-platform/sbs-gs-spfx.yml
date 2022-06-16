@@ -112,6 +112,7 @@ items:
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new.png" alt-text="bot home" border="true":::
+
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
 
@@ -155,7 +156,7 @@ items:
     1. Open Visual Studio code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Create a new Teams app**
+    1. Select **Create a new Teams app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -244,7 +245,7 @@ items:
 
     - `fx`: App's state in the `.fx` directory.  
     - templates/resources: contains the app icons, `color.png` and `outline.png`.
-    - `manifest.local.template.json`: contains the app manifest for local debug
+    - `manifest.local.template.json`: contains the app manifest for local debug.
     - `manifest.remote.template.json`: contains the app manifest for publishing to Developer Portal for Teams.
     - `.fx/configs/projectSettings.json`: the settings you chose when creating the project.
 
@@ -258,7 +259,7 @@ items:
   content: |
     After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
 
-    In this page, you'll learn to [build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code)
+    In this page, you'll learn to [build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code).
 
     ## Sign in to your Microsoft 365 account
 
