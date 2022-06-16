@@ -70,9 +70,9 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 ## Enable RSC in your application
 
-1. [Configure consent settings in the AAD portal](#configure-consent-settings-in-the-aad-portal).
+1. [Configure consent settings](#configure-consent-settings).
     1. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team).
-    1. [Configure user consent settings for RSC in a chat](#configure-user-consent-settings-for-rsc-in-a-chat).
+    1. [Configure RSC in a chat](#configure-rsc-in-a-chat).
 1. [Register your app with Microsoft identity platform using the AAD portal](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).
 1. [Review your application permissions in the AAD portal](#review-your-application-permissions-in-the-aad-portal).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
@@ -82,7 +82,7 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
     1. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
     1. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
 
-## Configure consent settings in the AAD portal
+## Configure consent settings
 
 ### Configure group owner consent settings for RSC in a team
 
@@ -96,17 +96,9 @@ You can enable or disable [group owner consent](/azure/active-directory/manage-a
 
 In addition, you can enable or disable group owner consent using PowerShell, follow the steps outlined in [configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
-### Configure user consent settings for RSC in a chat
+### Configure RSC in a chat
 
-You can enable or disable [user consent](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directly within the Azure portal:
-
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
-1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Enable, disable, or limit user consent with the control labeled **User consent for applications**. The default is **Allow user consent for apps**. For a chat member to install an app using RSC, user consent must be enabled for that user.
-
-    ![Azure RSC chat configuration](../../assets/images/azure-rsc-chat-configuration.png)
-
-In addition, you can enable or disable user consent using PowerShell, follow the steps outlined in [configure user consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
+You can enable or disable RSC for chats using Graph API. The property **isChatResourceSpecificConsentEnabled** in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-resource-specific-consent-for-chats) governs whether chat RSC is enabled in the tenant.
 
 ## Register your app with Microsoft identity platform using the AAD portal
 
