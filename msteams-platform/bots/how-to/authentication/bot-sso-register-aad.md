@@ -90,13 +90,34 @@ To create and deploy bot resource
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/review-create.png" alt-text="Create bot" border="false":::
 
-/ Add details for deployment /
+     A message pops up on the browser stating that the deployment is being initialized.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/initialize-deploment.png" alt-text="Message stating deployment is initialized" border="true":::
+
+    The **Overview** page appears that states the deployment is in progress. The deployment details are displayed on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/deploy-progress.png" alt-text="Deployment in progress" border="false":::
+
+1. Select **Go to resource** to view the bot details.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-deployed.png" alt-text="Bot resource is deployed" border="false":::
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="Bot app is created" border="false":::
+
+    You can view the subscription details for the bot resource.
 
 ## Enable bot for Teams
 
 / Add description /
 
 ### To enable bot app for Teams
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your Azure AD app in **Search** box, and open your app.
+
+1. Select **Settings** > **Channels**.
 
 / Add steps /
 
