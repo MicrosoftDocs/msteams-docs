@@ -11,11 +11,11 @@ keywords: moodle LMS mConnect deep links
 
  Moodle is one of the largest open-source learning managing system (LMS), which provides unique remote learning experience powered with secured privacy services. Moodle LMS integrates with Microsoft Teams to provide the following services:
 
-* Audio or video calls
-* Chat with students
-* Courses and activity management
-* Badges and rewards
-* Analytical insights
+* Audio or video calls.
+* Chat with students.
+* Courses and activity.
+* Badges and rewards.
+* Analytical insights.
 
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
 This content is modified as per the requirement.-->

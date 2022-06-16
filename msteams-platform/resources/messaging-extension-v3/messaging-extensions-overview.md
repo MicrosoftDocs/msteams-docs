@@ -17,11 +17,11 @@ Message extensions appear along the bottom of the compose box. A few are built i
 
 How would you use message extensions? Here are a few possibilities:
 
-* Work items and bugs
-* Customer support tickets
-* Usage charts and reports
-* Images and media content
-* Sales opportunities and leads
+* Work items and bugs.
+* Customer support tickets.
+* Usage charts and reports.
+* Images and media content.
+* Sales opportunities and leads.
 
 ## Types of message extensions
 
