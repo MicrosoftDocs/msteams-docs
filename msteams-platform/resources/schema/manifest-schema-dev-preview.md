@@ -787,4 +787,4 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
-* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
