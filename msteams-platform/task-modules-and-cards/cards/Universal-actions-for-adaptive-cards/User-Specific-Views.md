@@ -217,21 +217,23 @@ const cardRes = {
 
 Card design guidelines to keep in mind while designing User Specific Views:
 
-* **Refresh Behaviour:** You can create a maximum of 60 User Specific Views for a particular card sent to a chat or channel by specifying their `userIds` in the `refresh` section. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels.<br>
-The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.<br>
+* **Refresh Behaviour:** You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
-* If the `userIds` list property is specified as `userIds:[]` in the refresh section of the card, the card is not automatically refreshed.<br>
+* If the `userIds` is not specified in the `Refresh` property, Teams client can automatically trigger refresh for all with <=60 members in conversations.
 
-* A **Refresh Card** option displays to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile to manually refresh the card.
+* A refresh button is made available in the message options menu for users to manually trigger card refresh. This happens to all users when there are >60 members in a conversation, or to the set of users not specified in `userIds` list when there are <= 60 users in a conversation.
 
-* **Base Card:** The base version of the card that the bot developer sends to the chat. The base version is the version of the Adaptive Card sent to all the users. For users specified in the `userIds` section, the user-specific card is fetched subsequently.
-* **Refresh Timeout:** If a card is supposed to be refreshed, Teams client triggers a refresh only if the content from the last invoke is older than a minute. You can control this refresh behaviour by adding a timestamp to the data bag and checking it before sending the refreshed card.
+* **Base Card:** The base version of the card is the one that is embedded in the message sent by the bot, which is viewed by all the members of the conversation. The user-specific card is fetched subsequently through refresh for the users specified in the `userIds` section.
+
+* **Refresh Timeout:** Teams client triggers a refresh through a refresh or a `execute` button, only if the card from the last invoke is older than a minute. You can control this refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
+
 * A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with refresh enabled.
+
 * For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
 * Give a prompt to users to get a User Specific View, where they see only a particular view of the card or some actions.
 
 > [!NOTE]
-> Client cache behaviour: The user-specific card returned by the bot is locally cached on the user’s client. Hence, if a user switches from the Teams web client to mobile or desktop, then another invoke event is triggered to fetch the refreshed card.
+> The user-specific card returned by the bot is sent only to the specific client which requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card.
 
 ## Code sample
 
