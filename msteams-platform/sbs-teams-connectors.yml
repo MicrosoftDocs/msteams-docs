@@ -2,7 +2,7 @@
 title: Build Teams connectors
 metadata:
   title: Build Teams connectors
-  description: In this tutorial, you'll learn to set-up Connectors for Teams.
+  description: In this tutorial, you'll learn to set up Connectors for Teams.
   audience: Developer
   level: Beginner
   ms.date: 02/14/2022
@@ -18,7 +18,7 @@ items:
     
     **Types of connector codes**
 
-      * **ConnectorController.cs**: Set-up and save actions.
+      * **ConnectorController.cs**: Set up and save actions.
       * **TaskController.cs**: Create and update actions.
 
     **Key features of Microsoft Teams connector**
@@ -36,7 +36,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set-up your development environment: 
+    Ensure you install the following tools and set up your development environment: 
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
@@ -45,7 +45,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-- title: Set-up local environment
+- title: Set up local environment
   durationInMinutes: 1
   content: |  
 
@@ -82,7 +82,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On" border="true":::
    
-    1.   Select **Save**. 
+    1.   Select **Save**.
        
           Your test tenant can permit custom app sideloading.
 
