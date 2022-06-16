@@ -395,7 +395,7 @@
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-      - name: Troubleshooting
+      - name: Troubleshoot
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
     - name: Use third party OAuth IdP authentication
       items:
