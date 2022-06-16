@@ -391,7 +391,7 @@
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
-      - name: Update manifest for SSO and preview
+      - name: Update manifest for SSO and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
