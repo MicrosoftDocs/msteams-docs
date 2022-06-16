@@ -18,7 +18,7 @@ The following image shows the Sequential Workflow:
 
 A user can progress through their workflow without modifying the card for other users. The workflow is also useful for conducting quizzes using sequential Adaptive Cards. The following image shows different users can be at different stages of the workflow and states of the card:
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states" lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
 > [!NOTE]
 > In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.
@@ -125,9 +125,9 @@ var adaptiveCardResponse = JObject.FromObject(new
 | Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Not yet available |
 | Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
-
 ## See also
 
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

@@ -4,13 +4,14 @@ author: KirtiPereira
 description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: adaptive card personal app authentication data flow
 ---
 
 # Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
+>
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
 When developing a tab using the traditional method, you might run into these issues:
@@ -26,7 +27,7 @@ You can build your tabs with ready-made user interface (UI) building blocks nati
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
 ## Prerequisites
 
@@ -102,6 +103,7 @@ Following is a sample Adaptive Card tab manifest:
 Communication between your Adaptive Card tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding **name**. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section.
 
 > [!NOTE]
+>
 > * Bots need to send all the responses to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). Service URL is received as part of incoming `activity` payload.
 > * The invoke payload size has increased to 80kb.
 
@@ -230,6 +232,7 @@ With the introduction of Adaptive Card tab, there's a change in how the bot resp
 The following code provides examples of `task/fetch` request and response:
 
 **`task/fetch` request**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -328,7 +331,7 @@ The following code provides examples of `task/submit` request and response:
 
 ## Authentication
 
-In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
+In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for message extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
 `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign in page is shown to the user.
 
@@ -436,3 +439,4 @@ The following code shows a reissued request example:
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

@@ -1,76 +1,179 @@
 ---
-title: Understanding your app's use cases
+title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: Plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
+description: In this article learn about Microsoft Teams app capabilities, plan your Teams app, understand your app user and their needs, understand the user problems that your Teams app would solve, plan user authentication and their onboarding experience.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
 ---
 
 # Understand your use cases
 
-The Microsoft Teams platform offers a large variety of [entry points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges gap in achieving effective collaboration is a great fit.
+
+The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
+
+If you're going to meet user requirements with your app, you first need to understand them.
+
+- **Understand your user**:
+  - Recognize user issues and identify the solutions to some common problems the users face.
+  - Build your Teams app by finding the right combination of Teams features to meet your user's needs.
+  - Understand use cases to know how an end-user interacts with your app.
+
+- **Understand the problem**: Work out the core problem your app must solve.
+
+- **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
+
+## Microsoft Teams app features
+
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
+
+- [App capabilities](#app-capabilities)
+- [App scope](#app-scope)
+
+### App capabilities
+
+Capabilities are the core functionalities that you can build in your app. They're also called entry or extension points because they enable integration and interaction.
+
+Your Teams apps have one or all of the following core capabilities:
+
+:::row:::
+   :::column span="":::
+
+#### Personal apps
+
+A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view relevant activities.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### Tabs
+
+Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where people can discuss and work on it together.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### Bots
+
+Conversations often result in the need to do something (generate an order, review code, check ticket status, and so on). A [bot](../../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### Message extensions
+
+With [message extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### Meeting extensions
+
+There are a few options for [incorporating your app into the Teams calling experience](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### Webhooks and connectors
+
+[Incoming webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### Microsoft Graph for Teams
+
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
 > [!NOTE]
-> Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them.
+> Teams store has evolved:
+>
+> Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
-Each method of interacting with your users has its strengths and weaknesses. Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you're going to meet those needs, you first need to understand them.
+### App scope
 
-## Understand the problem
+Your app can have one of the following scopes:
 
-Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that bridge gaps in achieving effective collaboration are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you're trying to solve. Before you start building an app, ask relevant questions, such as:
+- **Personal app experience**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+- **Shared app experience**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
 
-* What are the pros and cons of the current state system used by your users?
-* What are the issues faced by your users that you want to address?
-* What features or capabilities your users like and love in their current way of doing the process?
+An app can exist across different scopes. For example:
 
-## Understand your user
+- Your app can display data in a central shared location, that is, a tab.
+- It can also present that same information through a personal conversational interface, that is, a bot.
 
-Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams. Ask relevant questions, such as:
-
-* Are the users primarily front-line workers on mobile clients?
-* Do you expect many guest users to need access to your app?
-* Do they use teams and channels or primarily group chats?
-* How technically sophisticated are your primary users?
-* Do you need a thorough onboarding experience or a few pointers might do?
-
-Sometimes the answer is, *We want to solve this problem for all Teams users everywhere.* If that is the case for you, spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
-
-## Understand the limitations of the app
-
-Knowing the limitations of the apps for data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture. Again, ask relevant questions, such as:
-
-* What are the challenges with back end integration of the current app?
-* Who owns the back end data? In-house or third-party.
-* Are there firewalls that impact the functioning of the app?
-* Are there APIs to access the data you need for functioning of your app? 
-
-## Provide authentication
-
-You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now. If you need a solution that requires you to provide guest access for users outside the tenant, access restrictions and permissions need to be placed to protect confidential information. You will need to design apps considering the limitations that come with guest user access. Therefore, ask questions, such as: 
-
-* Will the users access different views of data based on their roles?
-* Is there PII involved?
-* Will the interactions also be based on the user roles?
-* Will external users access the app?
-
-## Decide what goes in Teams
-
-Whether you are building something new or bringing an existing solution into Teams, it is important to decide if the entire app is going to be inside the Teams client. Check if it makes sense to only bring in a portion of the experience. With a combination of tabs, messaging extensions, task modules, Adaptive Cards, and conversational bots you can build complex apps completely in Teams.
-Remember who your users are and the problem you are trying to solve. Do they already have a system for solving most of the problem or you just need to extend a sub-set of the functionality into Teams? Typically, if you are going to bring in a portion of your solution, you must focus on sharing, collaborating, initiating, and monitoring workflows.
-
-## Plan the onboarding experience
-
-Your onboarding experience can be difference between success or failure for your app. For each capability of your app and each context that capability can be installed in, you must have a plan for how you are going to introduce yourself. How you introduce your conversational bot when it is installed in a channel with a thousand people, is different when it is installed in a one-to-one chat. What happens when a user first configures your tab in a channel? If you are sharing cards with a messaging extension, does it make sense to add a small link to a **learn more** page to help introduce users to what else your app can do?
-
-Knowing who your users are, helps you to craft the right experience. Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? Are they coming to your app with no prior knowledge? Craft your onboarding experience with your key users in mind.
-
-Remember, users can discover your app in a various ways. They might be the ones installing it or they might be introduced to your app when another user uses it to share content. If you want more users to use your app, you must look for ways to introduce yourself to everyone.
-
-Above all, remember nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
-
-## Plan for the future
-
-Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
+A user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
 ## Next step
 
@@ -79,4 +182,4 @@ Identify which new features the user will prefer to have in the current solution
 
 ## See also
 
-[Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+[Integrate device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)

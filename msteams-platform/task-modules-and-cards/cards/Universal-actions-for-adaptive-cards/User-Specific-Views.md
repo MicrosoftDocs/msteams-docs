@@ -10,15 +10,18 @@ ms.localizationpriority: medium
 
 Earlier if Adaptive Cards were sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. Maximum 60 different users can see a different version of the card with additional information or actions. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
 
+> [!NOTE]
+> User Specific View is supported for Adaptive Cards sent by a bot and is dependent on Universal Actions.
+
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. Megan also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views":::
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg":::
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views" lightbox="../../../assets/images/adaptive-cards/universal-bots-incident-management.png":::
 
 * * *
 
@@ -56,7 +59,7 @@ The following code provides an example of Adaptive Cards:
 }
 ```
 
-**To send Adaptive Cards, refresh User Specific Views, and invoke requests to the bot**
+To send Adaptive Cards, refresh User Specific Views, and invoke requests to the bot:
 
 1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
 2. Now this card automatically refreshes to User Specific View for Megan and Alex. Alex's and Megan's user MRIs are added in `userIds` property of `refresh` property of the Adaptive Card JSON. The card remains the same for other users in the conversation.
@@ -176,7 +179,9 @@ The following code provides an example of an adaptiveCard/action invoke response
 
 The following code provides an example of an invoke response to return Adaptive Cards:
 
-```C#
+### [C#](#tab/C)
+
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -187,6 +192,26 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+### [Node.js](#tab/nodejs)
+
+```javascript
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```
+
+***
 
 Card design guidelines to keep in mind while designing User Specific Views:
 
@@ -206,3 +231,4 @@ Card design guidelines to keep in mind while designing User Specific Views:
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [Up to date views](Up-To-Date-Views.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

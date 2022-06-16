@@ -1,0 +1,86 @@
+---
+title: Overview - User story for Microsoft Teams platform
+author: heath-hamilton
+description: Learn the overview user story of how app idea fits user requirements for Microsoft Teams platform.
+ms.topic: overview
+ms.localizationpriority: high
+ms.author: lajanuar
+ms.date: 11/02/2021
+---
+# From ideas to Teams app
+
+Learn how apps let you help your users in the Teams environment.
+
+Take a look at this scenario:
+
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="A developer at a travel agency builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates" border="false":::
+
+As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
+
+Let’s dig deeper into this story and find out.
+
+## Delve into app ideation
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="User story - As a developer at a travel agency, I build apps for travelers" border="false":::
+   :::column-end:::
+   :::column span="":::
+      #### Understand your user
+
+        Know about your user to identify how they use Teams. 
+        
+        Relevant questions:
+        - Do the users mostly use mobile clients?
+        - How technically sophisticated are your primary users?
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      #### Understand the problem
+
+        Identify the user problem that you want to resolve with your app. 
+
+        Relevant questions:
+        - What are the pros and cons of the current system of your users?
+        - What issues do you want to address?
+   :::column-end:::
+   :::column span="":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="I want to develop an app that sends weather forecast of the destination to customers..." border="false":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...so that customers can know weather conditions and plan ahead" border="false":::
+   :::column-end:::
+   :::column span="":::
+      #### List app requirements and benefits
+
+        Determine your app's features and how you expect it to answer the user's problem. 
+
+        Relevant questions:
+        - Do the users need current updates regularly without having to check?
+        - Do you need to authenticate users?
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      #### User-centric solution
+
+        Craft the right app experience for your users with an app that fits their requirement. 
+
+        Relevant questions:
+        - Should only registered users receive regular help?
+        - What features would be most convenient for user experience?
+   :::column-end:::
+   :::column span="":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Customers are well-prepared for traveling!" border="false":::
+   :::column-end:::
+:::row-end:::
+
+Next, explore some of Teams features that help you build an app solution.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Explore Teams features](overview-explore.md)

@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams authorization OAuth SSO AAD rsc Graph
+keywords: teams authorization OAuth SSO Azure AD rsc Graph
 ---
 
 # Resource-specific consent
@@ -13,7 +13,7 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 > [!NOTE]
 > Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. The RSC permissions model enables *team owners* and *chat owners* to grant consent for an application to access and modify a team's data and a chat's data, respectively. 
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. The RSC permissions model enables *team owners* and *chat owners* to grant consent for an application to access and modify a team's data and a chat's data, respectively.
 
 **Note:** If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
@@ -86,7 +86,7 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 ### Configure group owner consent settings for RSC in a team
 
-You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Azure portal:
+You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
@@ -100,49 +100,225 @@ In addition, you can enable or disable group owner consent using PowerShell, fol
 
 You can enable or disable RSC for chats using Graph API. The property **isChatResourceSpecificConsentEnabled** in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-resource-specific-consent-for-chats) governs whether chat RSC is enabled in the tenant.
 
-## Register your app with Microsoft identity platform using the AAD portal
+## Register your app with Microsoft identity platform using the Azure AD portal
 
-The AAD portal provides a central platform for you to register and configure your apps. Your app must be registered in the AAD portal to integrate with the identity platform and call Microsoft Graph APIs. For more information, see [register an application with the identity platform](/graph/auth-register-app-v2).
+The Azure AD portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the identity platform and call Microsoft Graph APIs. For more information, see [register an application with the identity platform](/graph/auth-register-app-v2).
 
 > [!WARNING]
-> An AAD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an AAD app. Attempts to install multiple Teams apps which are associated with the same AAD app ID will cause installation or runtime failures.
+> An Azure AD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
 
-## Review your application permissions in the AAD portal
+## Review your application permissions in the Azure AD portal
 
 1. Go to the **Home** > **App registrations** page and select your RSC app.
 1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
 
 > [!IMPORTANT]
-> The AAD portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
+> The Azure AD portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
 
 ## Obtain an access token from the Microsoft identity platform
 
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the AAD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
 
-You must have the following values from the AAD registration process to retrieve an access token from the identity platform:
+You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
 
-- The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
-- The **Client secret/password** or a public or private key pair that is **Certificate**. This is not required for native apps.
-- A **Redirect URI** or reply URL for your app to receive responses from AAD.
+* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
+* The **Client secret/password** or a public or private key pair that is **Certificate**. This is not required for native apps.
+* A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
 
 For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
 
 ## Update your Teams app manifest
 
-The RSC permissions are declared in your app manifest JSON file. Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+The RSC permissions are declared in your app manifest JSON file.
+
+> [!IMPORTANT]
+> Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
+
+### Manifest changes for resource-specific consent
+
+<br>
+
+<details>
+
+<summary><b>RSC permissions for app manifest version 1.12</b></summary>
+
+Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your AAD app ID. For more information, see [register your app in the AAD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
+
+Specify permissions needed by the app.
+
+|Name| Type | Description|
+|---|---|---|
+|`authorization`|Object|List of permissions that the app needs to function. For more information, see [placeholder for link- authorization in manifest]
+
+Example for RSC in a team
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamMember.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Group",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+
+Example for RSC in a chat
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "ChatSettings.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatSettings.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMessage.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMember.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Chat.Manage.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.AccessMedia.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.JoinGroupCalls.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+
+> [!NOTE]
+> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
+
+Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+
+|Name| Type | Description|
+|---|---|---|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
->
-> [!IMPORTANT]
-> Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
->
-
-### Example for RSC in a team
+Example for RSC in a team
 
 ```json
 "webApplicationInfo": {
@@ -167,7 +343,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
   }
 ```
 
-### Example for RSC in a chat
+Example for RSC in a chat
 
 ```json
 "webApplicationInfo": {
@@ -194,6 +370,10 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
+
+<br>
+
+</details>
 
 ## Sideload your app in Teams
 
@@ -244,6 +424,6 @@ For more information on how to get details of apps installed in a specific chat,
 | Resource-Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## See also
- 
+
 * [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
 * [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)

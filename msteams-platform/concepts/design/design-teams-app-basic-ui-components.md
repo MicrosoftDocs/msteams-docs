@@ -22,7 +22,7 @@ Based on <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">
 
 ## Alert
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="Example shows an alert UI component." border="false":::
+:::image type="content" source="../../assets/images/components/alert-button.png" alt-text="Example shows an alert UI component." border="false":::
 
 ## Button
 

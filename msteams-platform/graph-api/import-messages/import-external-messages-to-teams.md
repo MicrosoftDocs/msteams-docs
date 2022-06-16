@@ -1,7 +1,7 @@
 ---
 title: Use Microsoft Graph to import external platform messages to Teams 
 description: Describes how to use Microsoft Graph to import messages from an external platform to Teams
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: akjo 
 ms.author: lajanuar
 ms.topic: Overview
@@ -37,11 +37,11 @@ At a high level, the import process consists of the following:
 ### Set up your Office 365 tenant
 
 * Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Make sure that team members are in Azure Active Directory (AAD). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.
+* Make sure that team members are in Azure Active Directory. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure AD.
 
 ## Step 1: Create a team
 
-Since you are migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
+Since you're migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
@@ -141,6 +141,7 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
+
 You can receive the error message in the following scenarios:
 
 * If `createdDateTime` is set for future.
@@ -151,6 +152,7 @@ You can receive the error message in the following scenarios:
 After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
 > [!NOTE]
+>
 > * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has the value of `createdDateTime` set as *2020-09-16T05:50:31.0025302Z*, then it would be converted to *2020-09-16T05:50:31.002Z* when the message is ingested.
@@ -227,6 +229,7 @@ HTTP/1.1 200 OK
 #### Request (POST a message with inline image)
 
 > [!NOTE]
+>
 > * There are no special permission scopes in this scenario since the request is part of `chatMessage`.
 > * The scopes for `chatMessage` apply here.
 
@@ -316,7 +319,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Action called on a `team` or `channel` that is not in `migrationMode`.
+Action called on a `team` or `channel` that isn't in `migrationMode`.
 
 ## Step five: Add team members
 
@@ -346,7 +349,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* After the `completeMigration` request is made, you cannot import further messages into the team.
+* After the `completeMigration` request is made, you can't import further messages into the team.
 
 * You can only add team members to the new team after the `completeMigration` request has returned a successful response.
 
@@ -374,7 +377,7 @@ The following table provides the content scope:
 ||Emojis|
 ||Quotes|
 ||Cross posts between channels|
-
+||Shared channels|
 
 ## See also
 

@@ -1,47 +1,110 @@
 ---
-title: App development fundamentals overview
+title: Plan your app overview
 author: heath-hamilton
-description: Describe the foundational concepts of Teams platform development, such as app capabilities and entry points, understanding use cases and mapping them to app capabilities, and planning apps.
+description: Introduce the elements of planning an app, understanding use cases, app capabilities, and other Teams features.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 keywords: entry points extensibility use cases device capability
 ---
 
-# Microsoft Teams app development fundamentals
+# Plan your app with Teams features
 
-Microsoft Teams app fundamentals give the direction you need to create your custom Teams app. You can recognize the framework required to plan your Teams app. The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
+Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-## Capabilities and entry points
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
-You can extend your Teams app in multiple ways. To be able to extend your app, you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
+In this section, learn how to:
 
-## Understand your use cases
+* Identify and map use cases to Teams features
+* Use planning checklist
+* Plan beyond app deployment
 
-You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
+## Plan with Teams
 
-* Do you need authentication?
-* What problem is your app going to solve?
-* Who are the end-users of the app?
-* How should the onboarding experience be and what else the app can do?
+Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
 
-## Map your use cases to Teams app capabilities
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app" border="true":::
 
-[Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
+* [Before you build](#before-you-build)
+* [During build](#during-build)
+* [Post-build](#post-build)
+* [Planning checklist](../concepts/design/planning-checklist.md)
 
-## Plan responsive tabs for Teams mobile
-[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
+### Before you build
 
-## Integrate device capabilities
+Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
+* **Understand your use case and Teams App Features**: Understand your user's requirement and you can identify the right features.
+
+* **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
+
+* **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
+
+### During build
+
+* **Create and Build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
+
+* **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
+
+* **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
+
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
+
+    Your apps appear on Teams as Tabs, Bots, Message Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+
+    Together, these capabilities bring your app solution to life.
+
+* **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+
+### Post-build
+
+* Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
+* Use Developer Portal to configure, manage, and deploy your app.
+
+#### Government Community Cloud
+
+Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
+
+Endpoints for government cloud are:
+
+| Tenant | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+|Teams client|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
+|Teams admin |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
+|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
+
+The following table includes Teams features and availability for GCC, GCC-High, and DOD:
+
+| Features   | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
+| Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
+| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
+| Custom or Lob tab apps |  ✔️ | ✔️(****Compliance UI***) | ✔️(****Compliance UI***) |
+| Custom or Lob bots | ✔️ | ✔️(****Compliance UI***) | ❌ |
+| Custom message extensions | ✔️ | ✔️ | ❌ |
+| Sideloading apps | ✔️ | ❌ | ❌ |
+| Custom connectors | ❌ | ❌ | ❌ |
+
+****Compliance UI***: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft does not endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+
+The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
+
+* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
+* For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+* For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+
+</details>
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Understand Teams app capabilities](capabilities-overview.md)
+> [Use cases and Teams features](design/understand-use-cases.md)
 
 ## See also
 
+* [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
 * [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

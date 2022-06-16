@@ -2,21 +2,17 @@
 title: Device permissions for the browser
 keywords: teams apps capabilities permissions
 description: Securely bring back device permissions support for apps in our web client
-localization_priority: Normal
+localization_priority: medium
 ms.topic: how-to
 ---
 
 # Device permissions for the browser
 
-> [!NOTE]
-> The latest update on how device permissions are handled in the browser is currently available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only. 
-> This update will be generally available (GA) by February 01, 2022.
-
-
-Teams app that require device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams. This has implications on how you design your application and if they require these permissions in the browser.
+Teams app that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams. This has implications on how you design your application and if they require these permissions in the browser.
 
 ## Enable app's device permissions
-If your Teams app has declared in the [application manifest](native-device-permissions.md#specify-permissions) that it needs device permissions, then the **App permissions** option appears for the users to enable the app's device permissions. The **App permissions** option is available in the following capabilities: 
+
+If your Teams app has declared in the [application manifest](native-device-permissions.md#specify-permissions) that it needs device permissions, then the **App permissions** option appears for the users to enable the app's device permissions. The **App permissions** option is available in the following capabilities:
 
 * **Personal apps and task module dialogs**: The **App permissions** option is available in the upper-right corner of the page.
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
@@ -32,7 +28,8 @@ A user will need to enable these permissions in the browser for these permission
 > You must make users aware of where to go to enable these **App permissions** in Microsoft Teams.
 
 ## Recommendation
-Teams app that require device permissions in the browser must show instructions to users on where to find and enable these permissions in the Teams UI. Depending on the context in which your application is running, you need to ensure that your instructions are pointing the user to correct location to access these permissions, as they differ for personal apps, task module dialogs, tabs in chats, and channels or meetings.
+
+Teams app that requires device permissions in the browser must show instructions to users on where to find and enable these permissions in the Teams UI. Depending on the context in which your application is running, you need to ensure that your instructions are pointing the user to correct location to access these permissions. The permissions differ for personal apps, task module dialogs, tabs in chats, and channels or meetings.
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>

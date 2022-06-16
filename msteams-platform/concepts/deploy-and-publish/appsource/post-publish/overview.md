@@ -2,7 +2,7 @@
 title: Maintain and support your published app
 description: What to think about once your store is listed on the Teams store and AppSource.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 ---
@@ -10,14 +10,20 @@ ms.author: surbhigupta
 
 With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
 
+## Analyze app usage
+
+You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
+
+Data for newly published apps takes about a week to appear in the report.
+
 ## Publish updates to your app
 
 > [!NOTE]
 > Teams store has evolved:
-> 
+>
 > Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
 
-You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes requires a new review process.
+You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
 Ensure the following when publishing updates:
 
@@ -27,18 +33,18 @@ Ensure the following when publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new versions of your app install automatically.
+When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
 * Change the bot ID.
 * Modify a bot's one-way notification configuration.
 * Modify a bot's support for uploading and downloading files.
-* Add or remove a messaging extension.
+* Add or remove a message extension.
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## Fix issues with your published app
 

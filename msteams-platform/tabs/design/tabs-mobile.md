@@ -10,7 +10,7 @@ keywords: app mobile tab channel group authentication distribution
 
 When you are building a Microsoft Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Microsoft Teams clients. This article outlines some of the key scenarios you must consider.
 
-If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the guidance for tabs on mobile in this article when creating your tabs.
+If you choose to have your channel or group tab appear on Teams mobile clients, the [`setSettings()`](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-settings-setsettings&preserve-view=true) configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the guidance for tabs on mobile in this article when creating your tabs.
 
 Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
 
@@ -20,6 +20,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 > [!NOTE]
+>
 > * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.

@@ -7,9 +7,9 @@ ms.author: lajanuar
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
 
-An Adaptive Card contains a freeform body of card elements and optional set of actions. Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or messaging extension. Using text, graphics, and buttons, these cards provide rich communication to your audience.
+An Adaptive Card contains a freeform body of card elements and optional set of actions. Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or message extension. Using text, graphics, and buttons, these cards provide rich communication to your audience.
 
-The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or messaging extensions. Users can also take actions on cards when present.
+The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or message extensions. Users can also take actions on cards when present.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card." border="false":::
 
@@ -182,15 +182,15 @@ Cards designed for a narrow screen scale well on wider screens (the opposite isn
 Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
 
 * `"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
-   * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
-   * **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
-   * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with buttons and other content that must always be completely visible.
+  * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
+  * **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
+  * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with buttons and other content that must always be completely visible.
 * `"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
-   * **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that're all 50 pixels wide.
+  * **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that're all 50 pixels wide.
 * `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns will take up 10, 40, and 50 percent of the available width.
 * `"width": "<number>px"`: Sizes columns to a specific pixel width. This approach is useful when creating tables.
-   * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
-   * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
+  * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
+  * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
 
 #### Example: Knowing when to stretch columns
 
@@ -641,9 +641,9 @@ Follow these guidelines when including images in your cards.
 * **Do**: If you need to control the exact size of your images, use the `width` and `height` properties.
 * **Don't**: Include padding with your images. This typically introduces undesirable spacing and layout issues.
 * Regarding background color:
-   * **Do**: Use transparent backgrounds so that your images adapt to any Teams theme. 
-   * **Don't**: Include a fixed background color unless a specific color must be visible to your users.
-   * **Don't**: Add a background color to a `TextBlock` that hurts readability. For example, if your background is dark, use a lighter text color and vice versa.
+  * **Do**: Use transparent backgrounds so that your images adapt to any Teams theme.
+  * **Don't**: Include a fixed background color unless a specific color must be visible to your users.
+  * **Don't**: Add a background color to a `TextBlock` that hurts readability. For example, if your background is dark, use a lighter text color and vice versa.
 
 ### Actions
 

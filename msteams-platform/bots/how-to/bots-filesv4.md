@@ -1,6 +1,6 @@
 ---
 title: Send and receive files through the bot
-description: Learn how to send and receive files through the bot, use Graph APIs for all Teams scopes, use Teams bot APIs using code examples and samples.
+description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes. Use Teams bot APIs using code samples based on the v4 Bot Framework SDK.
 keywords: teams bots files send receive
 ms.date: 05/20/2019
 ms.localizationpriority: medium
@@ -82,7 +82,7 @@ As a best practice, acknowledge the file upload by sending a message back to the
 
 ### Upload files to personal chat
 
-**To upload a file to a user**
+To upload a file to a user:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, the bot receives an invoke activity with a location URL.
@@ -93,7 +93,7 @@ As a best practice, acknowledge the file upload by sending a message back to the
 
 The following desktop message contains a simple attachment object requesting user permission to upload the file:
 
-![Consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Consent card requesting user permission to upload file"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 The following mobile message contains an attachment object requesting user permission to upload the file:
 
@@ -194,7 +194,7 @@ The following table describes the content properties of the attachment:
 
 Fetch inline images that are part of the message using the Bot's access token.
 
-![Inline image](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Inline image"border="true":::
 
 The following code shows an example of fetching inline images from message:
 
@@ -318,6 +318,10 @@ The following code sample demonstrates how to obtain file consent and upload fil
 |**Sample name** | **Description** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | Demonstrates how to obtain file consent and upload files to Teams from a bot. Also, how to receive a file sent to a bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload file in Teams using bot.
 
 ## Next step
 

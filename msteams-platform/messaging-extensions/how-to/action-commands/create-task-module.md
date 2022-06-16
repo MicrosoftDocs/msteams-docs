@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 # Create and send the task module
- 
+
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers 
-the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box. 
+You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers
+the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
 > If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
 
@@ -65,7 +65,7 @@ The code for the initial invoke request is given in the following example:
   "name": "composeExtension/fetchTask"
 ```
 
-## Payload activity properties when a task module is invoked from 1:1 chat 
+## Payload activity properties when a task module is invoked from 1:1 chat
 
 The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:
 
@@ -116,7 +116,7 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 }
 ```
 
-## Payload activity properties when a task module is invoked from a group chat 
+## Payload activity properties when a task module is invoked from a group chat
 
 The payload activity properties when a task module is invoked from a group chat are listed as follows:
 
@@ -215,7 +215,7 @@ The payload activity properties when a task module is invoked from a meeting cha
 }
 ```
 
-## Payload activity properties when a task module is invoked from a channel (new post) 
+## Payload activity properties when a task module is invoked from a channel (new post)
 
 The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:
 
@@ -281,7 +281,7 @@ The payload activity properties when a task module is invoked from a channel (ne
 }
 ```
 
-## Payload activity properties when a task module is invoked from a channel (reply to thread) 
+## Payload activity properties when a task module is invoked from a channel (reply to thread)
 
 The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:
 
@@ -390,7 +390,7 @@ The payload activity properties when a task module is invoked from a channel (re
 }
 ```
 
-## Payload activity properties when a task module is invoked from a command box 
+## Payload activity properties when a task module is invoked from a command box
 
 The payload activity properties when a task module is invoked from a command box are listed as follows:
 
@@ -452,7 +452,7 @@ The payload activity properties when a task module is invoked from a command box
 }
 ```
 
-### Example 
+### Example
 
 The following code section is an example of `fetchTask` request:
 
@@ -538,7 +538,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message. 
+When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your message extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
 The following section is an example of the `value` object:
 
 # [C#/.NET](#tab/dotnet)
@@ -817,7 +817,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Create a task module with an embedded web view
 
-When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md). 
+When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).
 
 # [C#/.NET](#tab/dotnet)
 
@@ -895,9 +895,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
-When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
+When the message extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
-#### Example 
+#### Example
 
 The following code section is an example of the response:
 
@@ -927,7 +927,7 @@ The following code section is an example of the response:
 
 After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
-#### Example 
+#### Example
 
 The following code section is an example of the task response to the invoke:
 
@@ -955,9 +955,9 @@ The following code section is an example of the task response to the invoke:
 
 The task response to the invoke must be similar to that of the installed bot.
 
-#### Example 
+#### Example
 
-The following code section is an example of just-in time installation of app with Adaptive card: 
+The following code section is an example of just-in time installation of app with Adaptive card:
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -978,14 +978,14 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |   
+| Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## See also

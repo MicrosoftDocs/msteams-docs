@@ -1,27 +1,27 @@
 ---
-title: Initiate actions with messaging extensions
-description: Create Action-based messaging extensions to allow users to trigger external services
+title: Initiate actions with message extensions
+description: Create Action-based message extensions to allow users to trigger external services
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams messaging extensions messaging extensions search
+keywords: teams message extensions message extensions search
 ---
-# Initiate actions with messaging extensions
+# Initiate actions with message extensions
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Action-based messaging extensions allow your users to trigger actions in external services while in Teams.
+Action-based message extensions allow your users to trigger actions in external services while in Teams.
 
-![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
+![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
 
 The following sections describe how to do this:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### Action type message extensions
+## Action type message extensions
 
-To initiate actions from a messaging extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
+To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
 
-#### Complete app manifest example
+### Complete app manifest example
 
 ```json
 {
@@ -125,11 +125,11 @@ To initiate actions from a messaging extension, set the `type` parameter to `act
 
 ### Initiate actions from messages
 
-In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the message contents to your bot for processing and optionally reply to that message with a response using the method, which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access messaging extension from the overflow `...` menu and then selecting `Take action` as in the following image:
+In addition to initiating actions from the compose message area, you can also use your message extension to initiate an action from a message. This will allow you to send the message contents to your bot for processing and optionally reply to that message with a response using the method, which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access message extension from the overflow `...` menu and then selecting `Take action` as in the following image:
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-To enable your messaging extension to work from a message, add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
+To enable your message extension to work from a message, add the `context` parameter to your message extension's `commands` object in your app manifest as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
 
 ```json
 "composeExtensions": [
@@ -221,9 +221,9 @@ Below is an example of the `value` object containing the message details that wi
 
 ### Test via uploading
 
-You can test your messaging extension by uploading your app. For more information, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
+You can test your message extension by uploading your app. For more information, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
-To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
+To open your message extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
 
 ## Collecting input from users
 
@@ -307,7 +307,7 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
-To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
+To facilitate this flow, when your message extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
 Here's an example of the response:
 
@@ -431,7 +431,7 @@ This is used to insert a card into the compose box as a result of the command. I
 
 Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it, and potentially edit/interact with it as well. This can be useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
-1. The user selects the messaging extension to trigger the task module.
+1. The user selects the message extension to trigger the task module.
 1. The user uses the task module to configure the poll.
 1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` will add the bot.

@@ -16,10 +16,9 @@ Teams documentation is part of the **Microsoft Docs** technical documentation li
 > [!div class="checklist"]
 >
 > * Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Install [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Install [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 > * Install [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directly from the VS Code Marketplace.
 <br>&emsp;&emsp; or
-
 > [!div class="checklist"]
 >
 > * Install within VS Code:
@@ -30,13 +29,13 @@ Teams documentation is part of the **Microsoft Docs** technical documentation li
 
 ## Review the Microsoft Docs Contributors Guide
 
-The contributors guide provides direction to create, publish, and update technical content on the **Microsoft Docs** platform. 
+The contributors guide provides direction to create, publish, and update technical content on the **Microsoft Docs** platform.
 
 ## Microsoft Writing, Style, and Content Guides
 
 * **[Microsoft Writing Style Guide](/style-guide/welcome)**: Microsoft Writing Style Guide is a comprehensive resource for technical writing and reflects Microsoft's modern approach to voice and style. For easy reference, add this online guide to your browser's **Favorites** menu.
 
-* **[Writing developer content](/style-guide/developer-content/)**: Teams specific content is aimed at a developer audience with a fundamental understanding of programming concepts and processes. It is important that you must provide clear, technically accurate information in a compelling manner while maintaining Microsoft's tone and style.
+* **[Writing developer content](/style-guide/developer-content/)**: Teams specific content is aimed at a developer audience with a fundamental understanding of programming concepts and processes. It's important that you must provide clear, technically accurate information in a compelling manner while maintaining Microsoft's tone and style.
 
 * **[Writing step-by-step instructions](/style-guide/procedures-instructions/writing-step-by-step-instructions)**: Applied and interactive experiences are a great way for developers to learn about Microsoft products and technologies. Presenting complex or simple procedures in a progressive format is natural and user friendly.
 
@@ -46,8 +45,8 @@ The contributors guide provides direction to create, publish, and update technic
 
 ## File Paths
 
-When using relative paths and creating links to other docsets, it is important to set a valid file path for hyperlinks in your documentation. Your build succeeds on GitHub only if the file path is correct or valid.
- 
+When using relative paths and creating links to other docsets, it's important to set a valid file path for hyperlinks in your documentation. Your build succeeds on GitHub only if the file path is correct or valid.
+
 For more information on hyperlinks and file paths, see [use links in documentation](/contribute/how-to-write-links).
 
 > [!IMPORTANT]
@@ -57,7 +56,7 @@ For more information on hyperlinks and file paths, see [use links in documentati
 >Ex:  **parent directory/directory/path-to-article.md** —> [Building an app for Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > To reference a Microsoft Docs library article that **is not part of** the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
-> &emsp;&#x2714; Do not include the file extension. <br> 
+> &emsp;&#x2714; Do not include the file extension. <br>
 > Ex:  **/docset/address-to-file-location** —> [Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > To reference a page outside of the Microsoft Docs library, such as GitHub, use the full `https` file path.<br>
 
@@ -75,6 +74,6 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 * [Microsoft Docs](/)
 * [Contributors guide](/contribute)
 * [Docs style and voice quick start](/contribute/style-quick-start)
-* [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
+* [Cutting edge: source code readability tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)

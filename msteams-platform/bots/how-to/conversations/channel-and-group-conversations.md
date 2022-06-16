@@ -10,14 +10,16 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
+To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they are mentioned @botname. They do not receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
+Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
 > [!NOTE]
 > This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
 >
 > Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+>
+> Posting a message or Adaptive Card to a private channel is currently not supported.
 
 ## Design guidelines
 
@@ -27,7 +29,7 @@ Now, you can create new conversation threads and easily manage different convers
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it is difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it's difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
@@ -39,7 +41,7 @@ You must also strip out the @mentions from the content of the message your bot r
 
 ### Retrieve mentions
 
-Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message also includes the mention, such as `<at>@John Smith<at>`. However, do not rely on the text in the message to retrieve any information about the user. It is possible for the person sending the message to alter it. Therefore, use the `entities` object.
+Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message also includes the mention, such as `<at>@John Smith<at>`. However, don't rely on the text in the message to retrieve any information about the user. It's possible for the person sending the message to alter it. Therefore, use the `entities` object.
 
 You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.
 
@@ -188,7 +190,7 @@ this.onMessage(async (turnContext, next) => {
 
 # [JSON](#tab/json)
 
-The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it does not, the mention is ignored.
+The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it doesn't, the mention is ignored.
 
 ```json
 {
@@ -255,7 +257,7 @@ When your bot is first added to the group or team, an introduction message must 
 
 Send a personal message to each team member when the bot is added. To do this, get the team roster and send each user a direct message.
 
-Do not send a message in the following cases:
+Don't send a message in the following cases:
 
 * The team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
@@ -263,6 +265,10 @@ Do not send a message in the following cases:
 * A team member is added to a group or channel.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create a Teams conversational bot.
 
 ## Next step
 

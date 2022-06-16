@@ -8,7 +8,7 @@ keywords: teams bots rate limiting
 
 # Optimize your bot with rate limiting in Teams
 
-Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages do not appear as spam to your users.
+Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages don't appear as spam to your users.
 
 To protect Microsoft Teams and its users, the bot APIs provide a rate limit for incoming requests. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate limiting policy, including sending messages, channel enumerations, and roster fetches.
 
@@ -41,7 +41,7 @@ After you handle rate limits for bots, you can handle `HTTP 429` responses using
 
 In general, you must take simple precautions to avoid receiving `HTTP 429` responses. For example, avoid issuing multiple requests to the same personal or channel conversation. Instead, create a batch of the API requests.
 
-Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests do not introduce collisions on retries.
+Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries.
 
 After you handle `HTTP 429` responses, you can go through the example for detecting transient exceptions.
 
@@ -115,10 +115,11 @@ You can also handle rate limit using the per bot per thread limit.
 
 ## Per bot per thread limit
 
-The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, the thread limit does not throttle.
+The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, the thread limit doesn't throttle.
 
 >[!NOTE]
-> * The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user. 
+>
+> * The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user.
 > * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
 > * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
@@ -150,7 +151,7 @@ You can also handle rate limit using the per thread limit for all bots.
 
 ## Per thread limit for all bots
 
-The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is 1:1 between bot and user, a group chat, or a channel in a team.
+The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here's 1:1 between bot and user, a group chat, or a channel in a team.
 
 The following table provides the per thread limit for all bots:
 

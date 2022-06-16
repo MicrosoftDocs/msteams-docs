@@ -61,7 +61,7 @@ We recommend that your bot *not* send a welcome message in the following situati
 
 ## @ Mentions
 
-Because bots in a group or channel respond only when they are mentioned ("@_botname_") in a message, every message received by a bot in a group channel contains its own name, and you must ensure your message parsing handles that. In addition, bots can parse out other users mentioned and mention users as part of their messages.
+Because bots in a group or channel respond only when they are mentioned ("@*botname*") in a message, every message received by a bot in a group channel contains its own name, and you must ensure your message parsing handles that. In addition, bots can parse out other users mentioned and mention users as part of their messages.
 
 ### Retrieving mentions
 

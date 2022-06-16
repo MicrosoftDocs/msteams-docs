@@ -1,11 +1,12 @@
 ---
-title: Create low-code custom apps for Microsoft Teams 
-author: surbhigupta 
-description: Learn about the available Microsoft low and no code solutions with Teams an Microsoft Power Platform. Learn about solutions, such as Power Apps, Power Automate, Virtual Assistant, and more. 
+title: Create low-code custom apps for Microsoft Teams
+author: surbhigupta
+description: Learn about the available Microsoft low and no code solutions with Teams an Microsoft Power Platform. Learn about solutions, such as Power Apps, Power Automate, Virtual Assistant, and more.
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
 ---
+
 # Create low-code custom apps for Microsoft Teams
 
 Microsoft Teams is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the same demand as apps created from scratch. This document gives an overview of Microsoft Power Platform, Power Virtual Agents chatbot, and Virtual Assistant.
@@ -43,7 +44,7 @@ Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, 
 
 ### ✔ Virtual Assistant for Teams
 
-Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. You can configure your virtual assistant for [integration into the Teams environment](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro). 
+Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. You can configure your virtual assistant for [integration into the Teams environment](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro).
 
 ### ✔ Power Platform Learn modules
 

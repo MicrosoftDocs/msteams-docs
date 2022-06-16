@@ -38,9 +38,9 @@ Your bot can run within the Bot Emulator. This enables you to test some of the c
 
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software.
 
-Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. 
+Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 
-**To set up ngrok in preparation for running your Microsoft Teams app locally**
+To set up ngrok in preparation to execute your Microsoft Teams app locally, follow these steps:
 
 1. Go to the directory where you have ngrok.exe installed in a terminal application. You may want to add it as a path variable to avoid this step.
 2. Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
@@ -49,16 +49,19 @@ Although you can use any tool of your choice, we use and recommend [ngrok](https
 > [!NOTE]
 > If you stop and restart ngrok, the URL changes.
 
-To use ngrok in your project based on the capabilities you are using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
+To use ngrok in your project based on the capabilities you're using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
 
-For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test does not permit you to access Teams-specific functionality.
+For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test doesn't permit you to access Teams-specific functionality.
 
 > [!NOTE]
-> To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> * To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+> [!WARNING]
+> * If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
@@ -72,7 +75,7 @@ To load and run your experience within Microsoft Teams, you need to create a pac
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Add test data to your environment](~/concepts/build-and-test/test-data.md)
 
 ## See also

@@ -4,7 +4,7 @@ description: FAQs for creating a Partner Center developer account for publishing
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 # Create a Partner Center developer account
 
@@ -181,9 +181,9 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 
 * **Subject Line**: Partner Center Account Issue for *your app name*.
 * **Email body**:
-    * Support ticket number.
-    * Your seller ID.
-    * A screenshot of the issue (if possible).
+  * Support ticket number.
+  * Your seller ID.
+  * A screenshot of the issue (if possible).
 
 <br>
 
@@ -201,6 +201,24 @@ The following resources can also assist:
 <br>
 
 </details>
+
+## Update Apple App Store Connect Team ID on Partner Center
+
+For enabling users to install your app on the Teams iOS platform, you must update your Apple App Store Connect Team ID in the Microsoft Partner Center. To update your Apple App Store Connect Team ID, follow these steps:
+
+1. Login to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
+1. Select the settings icon from the upper right corner of the page.
+1. Go to the **Legal info** section under **Organization profile** from the left pane.
+1. Select the **Developer** tab.
+1. Type your Apple App Store Connect Team ID.
+1. Go to the offer page and republish your Teams app.
+   Your Apple App Store Connect Team ID is now updated and users can install your app on the Teams iOS platform.
+
+To get Apple App Store Connect Team ID from Apple Developer portal, follow these steps:
+
+1. Login to [Apple Developer Center](https://developer.apple.com/).
+1. Select **Account** and go to **Membership**.
+1. You'll find the **Apple App Store Connect Team ID** under **Membership**.
 
 ## Next step
 

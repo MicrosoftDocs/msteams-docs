@@ -2,15 +2,15 @@
 title: Custom Together Mode Scenes
 description: Work with custom Together Mode scenes
 ms.topic: conceptual
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 
 # Custom Together Mode scenes in Teams
 
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
-* Bring people together and encourage them to turn on their video. 
-* Combine participants digitally into a single virtual scene. 
+* Bring people together and encourage them to turn on their video.
+* Combine participants digitally into a single virtual scene.
 * Place the participants' video streams in pre-determined seats designed and fixed by the scene creator.
 
 In custom Together Mode scenes, the scene is an artifact. The scene is created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. Scene only apps are recommended as the experience for such apps is clear.
@@ -22,7 +22,7 @@ The following process gives an overview to create a scene only app:
 A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 > [!NOTE]
-> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop. 
+> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ Microsoft has a Scene studio that allows you to build scenes. It's available on 
 
 A scene in the context of the Scene studio is an artifact that contains the following elements:
 
-* Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Seat and image for each participant with an adjustable width and height. Only PNG format is supported for the image.
 
@@ -61,7 +61,7 @@ The following image shows each seat represented as an avatar for building the sc
 
 ![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**To build a scene using the Scene studio**
+To build a scene using the Scene studio, follow these steps:
 
 1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
@@ -81,7 +81,7 @@ The following image shows each seat represented as an avatar for building the sc
     ![Add images into environment](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
+    >You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
 
 1. Select the image that you've added.
 
@@ -120,7 +120,7 @@ Optionally, you can select **Share** from the **Save** drop-down menu. You can c
 
 After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A **.zip** file, that is the scene package, is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
+Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
 
 ![Export a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
@@ -207,7 +207,7 @@ Now that you've gone through the sample scene.json, you can activate the custom 
 
 Get more information of how a user engages with scenes in custom Together Mode scenes.
 
-**To select scenes and activate custom Together Mode scenes**
+To select scenes and activate custom Together Mode scenes, follow these steps:
 
 1. Create a new test meeting.
 
@@ -236,5 +236,5 @@ You can share the Scene Package that is a .zip file retrieved from the Scene stu
 ## See also
 
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Calls and meetings bots ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Real-time media calls and meetings with Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)

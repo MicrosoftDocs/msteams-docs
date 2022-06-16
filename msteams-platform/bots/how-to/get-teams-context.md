@@ -3,7 +3,7 @@ title: Get Teams specific context for your bot
 author: surbhigupta
 description: How to get Microsoft Team's specific context for your bot, including the conversation roster, single member or team's details, channel list, code samples.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 keywords: bot context roster user profile channel list
 ---
@@ -11,11 +11,11 @@ keywords: bot context roster user profile channel list
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A bot can access additional context data about a team or chat where it is installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
+A bot can access additional context data about a team or chat where it's installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Azure Active Directory (AAD) information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through AAD credentials, is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it is unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Azure AD credentials, is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
 The following sample code uses the paged endpoint for fetching the roster:
 
@@ -53,7 +53,7 @@ export class MyBot extends TeamsActivityHandler {
             var members = [];
 
             do {
-                var pagedMembers = await TeamsInfo.getPagedMembers(context, 100, continuationToken);
+                var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
                 continuationToken = pagedMembers.continuationToken;
                 members.push(...pagedMembers.members);
             }
@@ -122,7 +122,7 @@ After you fetch the roster or user profile, you can get details of a single memb
 
 ## Get single member details
 
-You can also retrieve the details of a particular user using their Teams user ID, UPN, or AAD Object ID.
+You can also retrieve the details of a particular user using their Teams user ID, UPN, or Azure AD Object ID.
 
 The following sample code is used to get single member details:
 
@@ -146,10 +146,11 @@ export class MyBot extends TeamsActivityHandler {
         super();
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
-        const member = await TeamsInfo.getMember(context, encodeURI('someone@somecompany.com'));
+        this.onMessage(async (turnContext, next) => {
+            const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
 
-        // By calling next() you ensure that the next BotHandler is run.
-        await next();
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
         });
     }
 }
@@ -206,7 +207,7 @@ After you get details of a single member, you can get details of the team. Curre
 
 ## Get team's details
 
-When installed in a team, your bot can query for metadata about that team including the AAD group ID.
+When installed in a team, your bot can query for metadata about that team including the Azure AD group ID.
 
 The following sample code is used to get team's details:
 
@@ -284,6 +285,7 @@ After you get details of the team, you can get the list of channels in a team. C
 Your bot can query the list of channels in a team.
 
 > [!NOTE]
+>
 > * The name of the default General channel is returned as `null` to allow for localization.
 > * The channel ID for the General channel always matches the team ID.
 
