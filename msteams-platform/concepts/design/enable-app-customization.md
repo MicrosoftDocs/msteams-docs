@@ -17,7 +17,7 @@ You can allow customers to customize some aspects of your Microsoft Teams app in
 Some possible examples of this feature include:
 
 * Changing the app's accent color to match an org's brand.
-* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. 
+* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see.
 (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
 You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). This configures `configurableProperties`, which isn't available in versions before 1.10 of the Teams app manifest.
@@ -36,12 +36,12 @@ To enhance Teams app experience, you can hide an app from users by default until
 
 > [!NOTE]
 > Teams store has evolved:
-> 
+>
 > Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
-![Manage apps blocked by publisher](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Manage apps blocked by publisher":::
 
 The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with **Blocked by publisher** status:
 
