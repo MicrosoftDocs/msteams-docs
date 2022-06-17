@@ -14,7 +14,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 >
 > * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](media-capabilities.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
-> * To integrate location capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
+> * To integrate location capabilities within your Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
 
 ## Native device permissions
 
@@ -32,7 +32,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 >
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * Currently, Microsoft Teams support for QR barcode scanner capability is only available for mobile clients.
+> * Currently, Teams support for QR barcode scanner capability is only available for mobile clients.
 
 ## Access device permissions
 
