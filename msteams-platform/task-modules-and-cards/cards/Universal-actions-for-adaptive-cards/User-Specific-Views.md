@@ -219,7 +219,7 @@ Card design guidelines to keep in mind while designing User Specific Views:
 
 * **Refresh Behaviour:** You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
-* If the `userIds` is not specified in the `Refresh` property, Teams client can automatically trigger refresh for all <=60 members in conversations.
+* If the `userIds` field is not specified in the `Refresh` property, Teams client can automatically trigger refresh for all <=60 members in conversations.
 
 * A refresh button is made available in the message options menu for users to manually trigger card refresh. This happens to all users when there are >60 members in a conversation, or to the set of users not specified in `userIds` list when there are <= 60 users in a conversation.
 
