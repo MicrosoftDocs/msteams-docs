@@ -1,7 +1,8 @@
 ---
 title: Types of cards
-description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards
+description: Describes all the cards and card actions available to bots in Teams
 ms.localizationpriority: high
+keywords: bots cards reference
 ms.topic: reference
 ---
 
@@ -57,13 +58,13 @@ You can identify and use different types of cards based on your application requ
 
 | Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Office 365 Connectors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Adaptive Card | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Thumbnail card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| List card | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| Receipt card | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Signin card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Office 365 Connector card | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Hero card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Thumbnail card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| List card | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| Receipt card | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| Signin card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -115,7 +116,7 @@ The following table provides the features that support Adaptive Cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -298,7 +299,7 @@ The following table provides the features that support hero cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### Properties of a hero card
 
@@ -365,7 +366,7 @@ The following table provides the features that support list cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### Properties of a list card
 
@@ -443,7 +444,7 @@ The following table provides the features that support Office 365 Connector card
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### Properties of the Office 365 Connector card
 
@@ -565,7 +566,7 @@ The following table provides the features that support receipt cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### Example of a receipt card
 
@@ -639,7 +640,7 @@ The following table provides the features that support signin cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### Additional information on signin cards
 
@@ -658,7 +659,7 @@ The following table provides the features that support thumbnail cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
 
@@ -741,7 +742,7 @@ The following table provides the features that support carousel collections:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > A carousel can display a maximum of ten cards per message.
@@ -935,7 +936,7 @@ The following table provides the features that support list collections:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### Example of a list collection
 
