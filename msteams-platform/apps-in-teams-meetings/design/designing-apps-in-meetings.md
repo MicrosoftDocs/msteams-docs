@@ -182,7 +182,7 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 You can allow users to share and interact with some or all of your app content on the meeting stage. Here are examples of how people might use this feature during a meeting:
 
 * Editing a document.
-* Whiteboarding.
+* Whiteboarding
 * Reviewing a dashboard.
 * Watching a video.
 * Playing a game.
