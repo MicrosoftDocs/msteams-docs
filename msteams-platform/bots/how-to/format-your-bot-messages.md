@@ -30,7 +30,7 @@ Currently, the following limitations apply to formatting:
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
 * Rich cards do not support markdown or table formatting.
 
-After you format text content, ensure that your formatting works across all platforms supported by Microsoft Teams.
+After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
 ## Cross-platform support
 
