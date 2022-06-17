@@ -15,6 +15,12 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Message extensions
 * Connectors
 
+<br>
+
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
+
+</br>
+
 ## Key features of an Incoming Webhook
 
 The following table provides the features and description of an Incoming Webhook:

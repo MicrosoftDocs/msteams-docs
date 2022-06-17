@@ -12,6 +12,12 @@ Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) sil
 >[!NOTE]
 > OAuth 2.0 is an open standard for authentication and authorization used by Azure AD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
+<br>
+
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+
+</br>
+
 ## Bot SSO at runtime
 
 The following image illustrates the flow of SSO in bots:
