@@ -17,7 +17,7 @@ You configure default install options. For example, if your app's primary capabi
 
 ## Create your app package
 
-To distribute your Microsoft Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
