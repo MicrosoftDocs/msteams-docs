@@ -135,9 +135,12 @@ To create and deploy bot resource
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/terms-service.png" alt-text="Terms of service for Teams channel" border="true":::
 
-    The **Microsoft Teams** page appears.
+    The **Microsoft Teams** page appears with the default messaging option selected **Microsoft Teams Commercial (most common)**.
 
-1. The default messaging option is **Microsoft Teams Commercial (most common)**. Select **Apply**.
+1. Select **Apply**.
+
+    > [!NOTE]
+    > If you want to change channel settings, you'd need to delete the channel and apply it again with new settings.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-messaging.png" alt-text="Teams messaging options for bot" border="false":::
 
