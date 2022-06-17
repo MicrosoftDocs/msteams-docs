@@ -32,7 +32,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 >
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * Currently, Teams support for QR barcode scanner capability is only available for mobile clients.
+> * Currently, Teams supports for QR barcode scanner capability is only available for mobile clients.
 
 ## Access device permissions
 
@@ -125,7 +125,7 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 
 For example:
 
-* To prompt the user to access their location you must call `getCurrentPosition()`:
+* To prompt the user to access their location, you must call `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
@@ -158,7 +158,7 @@ For example:
         } 
     ```
 
-* Notifications prompts the user when you call `requestPermission()`:
+* Notifications prompt the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
