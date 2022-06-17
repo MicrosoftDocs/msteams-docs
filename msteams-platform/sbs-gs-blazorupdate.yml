@@ -324,7 +324,7 @@ items:
 
     #### **To provision your tab app in the cloud**
     
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.?
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 

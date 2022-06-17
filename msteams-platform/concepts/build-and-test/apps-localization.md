@@ -1,6 +1,6 @@
 ---
 title: Localize your app
-description: In this module, learn how to localize your Microsoft Teams app.
+description: Learn considerations for localizing your Microsoft Teams app and localize strings in your app manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams store validation guidelines
-description: Describes the guidelines every app submitted to the Teams store (AppSource) must follow.
+description: In this article, you'll have the guidelines that every app submitted to the Teams store (AppSource) must follow.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference

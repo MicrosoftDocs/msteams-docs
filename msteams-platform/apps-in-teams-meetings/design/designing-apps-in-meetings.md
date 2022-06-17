@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab and use cases, responsive behavior and shared meeting stage, and theme and navigation.
+description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab, use cases, responsive behavior, shared meeting stage, theme, and navigation.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -113,7 +113,7 @@ Optimize your in-meeting tab to fit edge-to-edge within the 280 pixel-wide ifram
 Remember the following if you allow scrolling:
 
 * Content in the iframe contents should only scroll vertically.
-* Users should only see the content they've scrolled to (nothing above or below). 
+* Users should only see the content they've scrolled to (nothing above or below).
 * The scrollbar is part of the iframe content.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Example shows how the in-meeting tab scrolls." border="false":::
@@ -325,7 +325,7 @@ We recommend keeping your app’s experience scoped to just the meeting stage. Y
 
 #### Don't: Include competing surfaces
 
-Your app should only ask users to focus on a single surface a time, whether it's collaborating on the stage or responding to an in-meeting dialog. (Note: You can’t keep dialogs being triggered by other apps while your app is on the stage.) 
+Your app should only ask users to focus on a single surface a time, whether it's collaborating on the stage or responding to an in-meeting dialog. (Note: You can’t keep dialogs being triggered by other apps while your app is on the stage.)
 
    :::column-end:::
 :::row-end:::

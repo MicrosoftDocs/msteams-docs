@@ -1,6 +1,6 @@
 ---
 title: Public developer preview manifest schema reference
-description: Sample manifest file and description of all its components that are supported for Microsoft Teams
+description: Learn sample manifest file and description of all its components that are supported for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
@@ -748,9 +748,9 @@ Application permissions allow the app to access data without a signed-in user. F
 
 #### Resource-specific delegated permissions
 
-Delegated permissions allow the app to access data on behalf of the signed-in user. 
+Delegated permissions allow the app to access data on behalf of the signed-in user.
 
-* **Resource-specific delegated permissions for teams** 
+* **Resource-specific delegated permissions for teams**
 
     |**Name**|**Description**|
     |---|---|
@@ -787,4 +787,4 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
-* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)

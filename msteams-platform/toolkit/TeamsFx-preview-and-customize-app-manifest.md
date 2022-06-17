@@ -27,7 +27,7 @@ You can preview manifest file in  local and remote environments.
 
 * [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
 * [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
- 
+
 ### Preview manifest file in local environment
 
 To preview manifest file in local environment, you can press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under `build/appPackage` folder.
@@ -48,7 +48,7 @@ The preview local appears as shown in the image:
 
 * Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension or
 * Trigger **Teams: Provision in the cloud** from command palette.
- 
+
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
 You can also preview manifest file in remote environment by following steps:
@@ -122,7 +122,6 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 * `manifest.template.json`
 * `templates/appPackage`
 
-
 During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ## Supported placeholders in manifest.template.json
@@ -186,4 +185,4 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

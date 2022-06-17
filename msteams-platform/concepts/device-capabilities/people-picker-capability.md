@@ -1,6 +1,6 @@
 ---
 title: Integrate People Picker
-description: In this module, learn how to use Teams JavaScript client SDK to integrate People Picker control
+description: In this article, learn how to use Teams JavaScript client SDK to integrate People Picker control and advantages of using people picker.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -46,7 +46,7 @@ The following image displays the experience of People Picker on mobile and deskt
 The People Picker input control allows the user to search and add people using the following steps:
 
 1. Type the name of the required person. The list appears with name suggestions.
-1. Select the name of the required person from the list. 
+1. Select the name of the required person from the list.
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile" border="true":::
 
@@ -55,7 +55,7 @@ The People Picker input control allows the user to search and add people using t
 The People Picker control on web or desktop is launched in a modal window on top of your web app and to add people use the following steps:
 
 1. Type the name of the required person. The list appears with name suggestions.
-1. Select the name of the required person from the list. 
+1. Select the name of the required person from the list.
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop" border="true":::
 
@@ -100,6 +100,6 @@ The following table lists the error codes and their descriptions:
 
 ## See also
 
-* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

@@ -1,6 +1,6 @@
 ---
 title: Moodle Frequently asked questions
-description: In this module, you'll know answers to some common questions
+description: In this article, fetch answers to some frequently asked questions while using the Moodle LMS. 
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
@@ -60,7 +60,7 @@ The following image shows user creation restrictions options:
 
 <summary><b>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
 
-By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the configuration option to individuals with the appropriate owner permissions. 
+By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the configuration option to individuals with the appropriate owner permissions.
 
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
@@ -184,5 +184,3 @@ However, you can access the invite and manually add participant names to the **R
 <summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 
 For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback).
-
-

@@ -2,12 +2,12 @@
 title: AAD SSO for tabs and message extension
 metadata:
   title: AAD SSO for tabs and message extension
-  description: In this tutorial, you'll learn to set up AAD SSO for tabs.
+  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (AAD SSO) for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: tabs/how-to/authentication/auth-aad-sso.md
+  nextTutorialHref: tabs/how-to/authentication/tab-sso-overview.md
   nextTutorialTitle: Read more on SSO authentication for tabs.
   ms.custom: mvc
   ms.localizationpriority: high

@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 plugins
-description: In this module, learn about Microsoft 365 plugins details
+description: In this article, you'll have Microsoft 365 plugins, plugin list and labels, Microsoft 365, and One Note interaction and more.
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
@@ -144,7 +144,7 @@ The following image shows the Microsoft block user interface:
 
 ## oEmbed filter
 
-oEmbed filter plugin simplifies and enhances user experience by simplifying inclusion of the external HTML content within Moodle. The following are the advantages of oEmbed filter. 
+oEmbed filter plugin simplifies and enhances user experience by simplifying inclusion of the external HTML content within Moodle. The following are the advantages of oEmbed filter.
 
 * Reduces the time to embed videos to an HTML page.
 * Enables embedding of multiple video content providers.

@@ -32,7 +32,7 @@ Use the tools present in [Microsoft Teams JavaScript client SDK](/javascript/api
 
 ## Integrate device capabilities
 
-After getting access to device capabilities, use Teams media capability APIs to [integrate media capabilities](mobile-camera-image-permissions.md) with the Teams platform to enhance the user experience. These integrated capabilities allow your app to:
+After getting access to device capabilities, use Teams media capability APIs to [integrate media capabilities](media-capabilities.md) with the Teams platform to enhance the user experience. These integrated capabilities allow your app to:
 
 * Capture and share images.
 * Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md).
@@ -40,3 +40,9 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Share location using [location picker](location-capability.md).
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
+
+## Code sample
+
+| Sample Name           | Description | Node.js    |
+|:---------------------|:--------------|:---------|
+|Device permissions | Describes how to demonstrates Microsoft Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
