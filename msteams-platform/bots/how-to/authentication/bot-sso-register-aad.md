@@ -18,7 +18,7 @@ In this section, you will:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
 1. [Enable bot for Teams](#enable-bot-for-teams)
-1. [Configure bot app in Azure AD](#configure-app-in-azure-ad)
+1. [Configure bot app in Azure AD](#configure-bot-app-in-azure-ad)
     1. [Add messaging endpoint](#add-messaging-endpoint)
     1. [Configure SSO](#configure-sso)
         1. [Create client secret](#create-client-secret)
