@@ -26,6 +26,10 @@ In this section, you will:
         1. [Configure access token version](#configure-access-token-version)
     1. [Update OAuth connection](#update-oauth-connection)
 
+<br>
+<details>
+<summary>Learn to create a bot resource in Azure AD</summary>
+
 ## Create and deploy bot resource in Azure AD
 
 / Add details /
@@ -210,9 +214,11 @@ A client secret is a string that the application uses to prove its identity when
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
 
+</details>
+
 ## Configure bot resource in Azure AD
 
-/ Add details for bot messaging endpoint, SSO, and OAUth connection. /
+/ Add details for bot messaging endpoint, SSO, and OAuth connection. /
 
 ### Add messaging endpoint
 
