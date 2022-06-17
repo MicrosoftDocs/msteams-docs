@@ -18,10 +18,10 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 Teams supports access to apps during meeting for the following meeting types:
 
-* [**Scheduled meetings**](https://support.microsoft.com/en-us/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
-* [**One-on-one calls**](https://support.microsoft.com/en-us/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
-* [**Group calls**](https://support.microsoft.com/en-us/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
-* [**Instant meetings**](https://support.microsoft.com/en-us/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
+* [**Scheduled meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
+* [**One-on-one calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
+* [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
+* [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
 
 Users can add apps to the meeting using the **+** option from their Teams meeting window.
 
@@ -31,11 +31,11 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=
 
 > [!Note]
 >
-> * Add apps option is not available in Teams mobile client. But mobile client does support to view the app, [meeting SidePanel](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#meeting-sidepanel), and [share entire app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) when user attends a meeting through Teams mobile client.
+> * Currently, adding an app is not supported in mobile. However, a user can view the app and share the app to stage from mobile.
 >
-> * Currently when a user (third person) is added to one-on-one call, the call is migrated to a group call and a new session gets started. Apps added to the previous one-on-one call won't be available any more.
+> * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
-> * Currently apps aren't supported in scheduled and instant meetings in Teams channels.
+> * Currently app experiences are not supported in Teams channel meetings (both scheduled meetings and instant meetings).
 
 The following illustration gives you an idea of the meeting app extensibility features:
 

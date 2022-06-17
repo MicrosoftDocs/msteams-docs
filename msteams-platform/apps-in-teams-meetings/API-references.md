@@ -396,7 +396,7 @@ The JSON response body for Meeting Details API is as follows:
          },
         "conversation": { 
              "isGroup": true, 
-             "conversationType": "groupchat", 
+             "conversationType": "groupChat", 
              "id": "meeting chat ID" 
              }, 
         "organizer": { 
@@ -470,7 +470,7 @@ The JSON response body for Meeting Details API is as follows:
          }, 
         "conversation": { 
              "isGroup": true, 
-             "conversationType": "groupchat", 
+             "conversationType": "groupChat", 
              "id": "meeting chat ID" 
          },
         "organizer": { 
@@ -493,7 +493,7 @@ The JSON response body for Meeting Details API is as follows:
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type - e.g. Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | The meeting's type - e.g. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
