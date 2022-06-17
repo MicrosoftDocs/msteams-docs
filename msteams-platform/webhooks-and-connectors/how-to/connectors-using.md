@@ -1,10 +1,9 @@
 ---
 title: Create and send messages
 author: laujan
-description: Describes how to use Office 365 Connectors in Microsoft Teams
+description: In this module, learn how to use Office 365 Connectors and create and send actionable message in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams Office365 connector
 ---
 
 # Create and send messages
