@@ -78,7 +78,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Add images** to add the image into the environment:
 
-    ![Add images into environment](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="add images into environment":::
 
     >[!NOTE]
     >You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
@@ -99,7 +99,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-    ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="assignspot":::
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
 
