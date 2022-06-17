@@ -18,10 +18,10 @@ In this section, you will:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
 1. [Enable bot for Teams](#enable-bot-for-teams)
+1. [Create client secret](#create-client-secret)
 1. [Configure bot app in Azure AD](#configure-bot-app-in-azure-ad)
     1. [Add messaging endpoint](#add-messaging-endpoint)
     1. [Configure SSO](#configure-sso)
-        1. [Create client secret](#create-client-secret)
         1. [Configure scope for access token](#configure-scope-for-access-token)
         1. [Configure access token version](#configure-access-token-version)
     1. [Update OAuth connection](#update-oauth-connection)
@@ -113,6 +113,51 @@ To create and deploy bot resource
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="Bot app is created" border="false":::
 
+## Create client secret
+
+A client secret is a string that the application uses to prove its identity when requesting a token.
+
+### To create client secret for the bot
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your Azure AD app in **Search** box, and open your app.
+
+1. Select **Settings** > **Configurations**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
+
+    The **Configuration** page appears.
+
+1. Select the **Manage** link shown with **Microsoft App ID**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Manage link for bot app configuration":::
+
+     The **Certificates & secrets** page appears. The Manage  menu appears in left pane menu.
+
+2. Select **+ New client secret**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-client-secret.png" alt-text="Add new client secret" border="false":::
+
+   The **Add a client secret** page appears.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Add a client secret page" border="true":::
+
+3. Enter the description.
+4. Select the duration of validity for the secret.
+5. Select **Add**.
+
+   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
+
+6. Select the copy button next to the **Value** of client secret.
+7. Save the value that you copied for later use.
+
+   > [!NOTE]
+   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+
 ## Enable bot for Teams
 
 / Add description /
@@ -193,49 +238,6 @@ To create and deploy bot resource
 ### Configure SSO
 
 You need to configure client secret, permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
-
-#### Create client secret
-
-A client secret is a string that the application uses to prove its identity when requesting a token.
-
-1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
-   The Microsoft Azure Bot page opens.
-
-1. Enter the name of your Azure AD app in **Search** box, and open your app.
-
-1. Select **Settings** > **Configurations**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
-
-    The **Configuration** page appears.
-
-1. Select the **Manage** link shown with **Microsoft App ID**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Manage link for bot app configuration":::
-
-     The **Certificates & secrets** page appears. The Manage  menu appears in left pane menu.
-
-2. Select **+ New client secret**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-client-secret.png" alt-text="Add new client secret" border="false":::
-
-   The **Add a client secret** page appears.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Add a client secret page" border="true":::
-
-3. Enter the description.
-4. Select the duration of validity for the secret.
-5. Select **Add**.
-
-   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
-
-6. Select the copy button next to the **Value** of client secret.
-7. Save the value that you copied for later use.
-
-   > [!NOTE]
-   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
 #### Configure scope for access token
 
