@@ -1,6 +1,6 @@
 ---
 title: Get started with App Studio for Microsoft Teams
-description: In this module, learn how to build and manage your apps with app studio for Microsoft Teams and installing app studio.
+description: In this article, you'll learn how to build, and manage your apps with app studio for Microsoft Teams and installing app studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ---
@@ -47,9 +47,9 @@ This is where you can see what [cards you create in App Studio](#card-editor) lo
 
 ### Manifest Editor
 
-As mentioned earlier, the most significant part of a Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
+As mentioned earlier, the most significant part of a Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata, which allows Teams to correctly present your app to users.
 
-The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file, which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio doesn't produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
+The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file, which can easily be uploaded into Teams for testing or distributed for others to use. App Studio doesn't produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
 #### Details
 
@@ -68,13 +68,13 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
   For team tabs, you must provide a *Configuration URL* to present options and gather information so users can customize the content and experience of your tab. This iframed HTML page is displayed when a user first adds the tab to a channel.
 
-  You must also provide any additional domains that the tab expects to load from or link to.
+  You must also provide any another domains that the tab expects to load from or link to.
 
-* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the personal app experience (experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. With Teams tabs, provide any additional domains from which the tab expects to load from or link to.
+* **Personal Tabs.** You can define a set of tabs that are presented by default in the personal app experience (experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. With Teams tabs, provide any additional domains from which the tab expects to load from or link to.
 
 ##### Bots
 
-This section allows you to add a [conversational bot](~/bots/what-are-bots.md) to your app. If you already have a bot registered with Bot Framework, you can add that bot by clicking *Set Up* and supplying the bot's name, Bot Framework ID, and defining the scopes in which the bot will work.
+This section allows you to add a [conversational bot](~/bots/what-are-bots.md) to your app. If you already have a bot registered with Bot Framework, you can add that bot by clicking *Set Up* and supplying the bot's name, Bot Framework ID, and defining the scopes in which the bot works.
 
 If you haven't yet registered a bot with the Bot Framework, select **Register** to create a new one. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter its name and Bot Framework ID.
 
@@ -110,7 +110,7 @@ Once you have finished defining your application, the Test and Distribute sectio
 
 ##### Publish your app to Teams
 
-On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin will review these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
+On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin reviews these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
 
 ### Card Editor
 
