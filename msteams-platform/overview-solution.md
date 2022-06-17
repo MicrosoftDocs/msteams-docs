@@ -65,7 +65,7 @@ From designing to building and distributing a Teams app, you can use various too
 1. Plan your project and figure out the requirement.
 1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Build the app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities and M365 data with Microsoft Graph.
+1. Extend functionality by adding more Teams capabilities and Microsoft 365 data with Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
 1. Manage and publish the apps to Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.

@@ -2,7 +2,7 @@
 title: Build action based message extension
 metadata:
   title: Build action based message extension
-  description: In this tutorial, you'll learn to set up action message extension for Teams.
+  description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
   audience: Developer
   level: Beginner
   ms.date: 24/02/2022
