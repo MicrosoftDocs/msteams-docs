@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams store ranking parameters
-description: The Microsoft Teams store ranks app search results in the store using a set of ranking parameters to deliver relevant search results to users.
+description: Learn Microsoft Teams store ranks app search results in the store using a set of ranking parameters to deliver relevant search results to users.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
