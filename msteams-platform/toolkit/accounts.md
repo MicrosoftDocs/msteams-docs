@@ -51,7 +51,7 @@ You can sign-up for the developer program by using one of the following account 
 
 ## Azure account to host backend resources
 
-Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
+Azure account is optional, if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
 **Visual Studio ID**
 
