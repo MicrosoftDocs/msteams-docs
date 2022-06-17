@@ -18,8 +18,8 @@ items:
     
     A bot behaves differently depending on the conversation it's involved in:
 
-    * Bots in channel and group chat conversations require the users to @mention the bot
-    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot
+    * Bots in channel and group chat conversations require the users to @mention the bot.
+    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
     This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
@@ -89,11 +89,11 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal:
 
-    1. Create Azure Bot resource to register bot with Azure Bot Service
-    1. Create client secret to enable SSO authentication of the bot
-    1. Add Teams channel to deploy the bot
-    1. Use ngrok to create a tunnel to your web server's endpoints
-    1. Add messaging endpoint to the ngrok tunnel you created
+    1. Create Azure Bot resource to register bot with Azure Bot Service.
+    1. Create client secret to enable SSO authentication of the bot.
+    1. Add Teams channel to deploy the bot.
+    1. Use ngrok to create a tunnel to your web server's endpoints.
+    1. Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
@@ -250,8 +250,8 @@ items:
         :::image type="content" source="~/assets/images/bots/ngrokURL.png" alt-text="ngrok HTTPS URL" border="true":::
 
         > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it
+        > The HTTPS URL in your ngrok is your fully qualified domain name.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. Go back to the Azure portal.
 
@@ -343,13 +343,13 @@ items:
 
           1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
-              * Enter `Teams can access the user’s profile` as **Admin consent display name**
+              * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
-              * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+              * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
 
-              * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+              * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
 
-              * Enter `Enable Teams to call this app’s APIs with the same rights as you have` as **User consent description**
+              * Enter `Enable Teams to call this app’s APIs with the same rights as you have` as **User consent description**.
 
           1. Ensure that **State** is set to **Enabled**.
 

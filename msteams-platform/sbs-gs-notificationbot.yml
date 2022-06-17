@@ -18,9 +18,9 @@ items:
     
     In this tutorial, you'll learn:
 
-    - How to create a new notification bot with Teams Toolkit
-    - About the directory structure of your app
-    - How to send multiple notifications
+    - How to create a new notification bot with Teams Toolkit.
+    - About the directory structure of your app.
+    - How to send multiple notifications.
 
     This step-by-step guide helps you to build notification bot with Teams Toolkit. You'll see the following output:
 
@@ -187,7 +187,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true"::: 
 
-    1. Select **Add** 
+    1. Select **Add**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output1"border="true":::
 
@@ -394,7 +394,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to select to deploy to cloud." border="true":::
 
-    1. Select **Deploy**
+    1. Select **Deploy**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
