@@ -12,15 +12,15 @@ Message extensions are a powerful way for users to engage with your app from Mic
 
 ![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
 
-Message extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other message extensions, including those you add from the app gallery or upload yourself.
+Message extensions appear along the bottom of the compose box. A few are built in, such as Emoji, gif, and Sticker. Choose the **More Options** (**&#8943;**) button to see other message extensions, including those you add from the app gallery or upload yourself.
 
 How would you use message extensions? Here are a few possibilities:
 
-* Work items and bugs
-* Customer support tickets
-* Usage charts and reports
-* Images and media content
-* Sales opportunities and leads
+* Work items and bugs.
+* Customer support tickets.
+* Usage charts and reports.
+* Images and media content.
+* Sales opportunities and leads.
 
 ## Types of message extensions
 
