@@ -46,13 +46,13 @@ To create and deploy bot resource
 
     The **Create an Azure Bot** page appears.
 
-1. Enter the basic project details for the bot app.
+1. Enter project details for the bot app.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-azure-bot.png" alt-text="Add an azure bot project details":::
 
-    1. Enter a bot handle.
+    1. Enter a unique identifier as the bot handle.
 
-        This is a unique identifier for your bot. It's not the display name, and you can choose a different display name later.
+        It isn't the display name, and you can choose a different display name later.
 
     1. Select a subscription plan.
 
@@ -79,6 +79,8 @@ To create and deploy bot resource
         The **Tags** tab opens.
 
 1. Enter the name and value tags for categorizing resources you provisioned.
+
+    These are non-mandatory steps and you can skip them, if needed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
 
@@ -119,7 +121,39 @@ To create and deploy bot resource
 
 1. Select **Settings** > **Channels**.
 
-/ Add steps /
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/channel-menu.png" alt-text="Menu option for enabling bot for Teams " border="false":::
+
+    The **Channels** page appears.
+
+1. Move through the list of **Available Channels** to select **Microsoft Teams**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-channel.png" alt-text="Select Teams channel" border="false":::
+
+    The message with **Terms of Service** appears.
+
+1. Check to agree with the terms and select **Agree**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/terms-service.png" alt-text="Terms of service for Teams channel" border="true":::
+
+    The **Microsoft Teams** page appears.
+
+1. The default messaging option is **Microsoft Teams Commercial (most common)**. Select **Apply**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-messaging.png" alt-text="Teams messaging options for bot" border="false":::
+
+    A message pops up on the browser stating that the channel settings are being applied.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/msg-channel.png" alt-text="Message for Teams channel being applied" border="true":::
+
+    The channel settings are applied.
+
+1. Select **Close**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/channel-applied.png" alt-text="Channel setting applied to bot." border="false":::
+
+    The bot is now enabled to work with Teams.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
 
 ## Configure app in Azure AD
 
