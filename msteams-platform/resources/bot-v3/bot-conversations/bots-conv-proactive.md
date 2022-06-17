@@ -1,9 +1,8 @@
 ---
 title:  Proactive messaging for bots
-description: Learn how to use proactive messaging for bots in Microsoft Teams
+description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams scenarios proactive messaging conversation bot
 ---
 # Proactive messaging for bots
 
@@ -14,8 +13,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Welcome messages for personal bot conversations.
 * Poll responses.
 * External event notifications.
-
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation,' no pre-existing conversation to post the message to. To send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -65,7 +63,7 @@ Occasionally it may be necessary to proactively message users that haven't insta
 
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
-See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details.' also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details. There's also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## Examples
 

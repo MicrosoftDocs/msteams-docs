@@ -1,7 +1,6 @@
 ---
 title: Manage your apps with the Developer Portal
-description: Learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
-keywords: getting started developer portal teams
+description: In this module, learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta

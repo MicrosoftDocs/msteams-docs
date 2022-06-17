@@ -1,6 +1,6 @@
 ---
 title: Create deep links 
-description: Learn how to describe Teams deep links and how to use them in your apps.
+description: Learn how to create deep links and how to use and navigate them in your Microsoft Teams apps with tabs.
 ms.topic: how-to
 ms.localizationpriority: high
 ---

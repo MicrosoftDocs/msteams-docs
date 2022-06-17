@@ -13,11 +13,11 @@ ms.author: anclear
 
 At a high level, you'll need to complete the following steps to create a messaging extension.
 
-1. Prepare your development environment
-2. Create and deploy your web service (while developing use a tunneling service like ngrok to run it locally)
-3. Register your web service with the Bot Framework
-4. Create your app package
-5. Upload your package to Microsoft Teams
+1. Prepare your development environment.
+2. Create and deploy your web service (while developing use a tunneling service like ngrok to run it locally).
+3. Register your web service with the Bot Framework.
+4. Create your app package.
+5. Upload your package to Microsoft Teams.
 
 Creating your web service, creating your app package, and registering your web service with the Bot Framework can be done in any order. Because those three pieces are so intertwined, no matter which order you do them in you'll need return to update the others. Your registration needs the messaging endpoint from your deployed web service, and your web service needs the ID and password created from your registration. Your app manifest also needs that ID to connect Teams to your web service.
 

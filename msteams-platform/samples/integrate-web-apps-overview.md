@@ -1,11 +1,10 @@
 ---
 title: Integrate web apps
 author: Rajeshwari-v
-description: An overview of integrating web applications and device capabilities with Microsoft Teams app.
+description: In this article, you'll get started with integrating web applications and device capabilities with Microsoft Teams app. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
 ---
 
 # Integrate web apps
@@ -29,8 +28,8 @@ For effective integration, ensure to have a better understanding of the followin
 
 Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. You can create custom apps easily with low code platforms. These platforms consist of a visual interface, connectors to back end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:
 
-* Microsoft Power platform
-* Microsoft Teams app templates
+* Microsoft Power platform.
+* Microsoft Teams app templates.
 
 ## Microsoft Power platform
 

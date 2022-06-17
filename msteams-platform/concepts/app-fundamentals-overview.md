@@ -5,7 +5,6 @@ description: Introduce the elements of planning an app, understanding use cases,
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: entry points extensibility use cases device capability
 ---
 
 # Plan your app with Teams features
