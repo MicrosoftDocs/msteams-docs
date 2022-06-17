@@ -1,11 +1,10 @@
 ---
 title: Overview - Distribute your app
-description: Describes the options for publishing your Microsoft Teams app, uploading your app, and GCC.
+description: In this article, learn the options for publishing your Microsoft Teams app, uploading and deploying your app, and GCC.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: deploy publish app upload gcc 
 ---
 
 # Distribute your Microsoft Teams app
