@@ -11,10 +11,14 @@ Azure AD provides access to your bot app based on the app user's Teams identity.
 
 You can register your bot app in Azure AD in two ways:
 
-1. Create a bot resource and then create a new application ID.
-1. Create and register an app in Azure AD, and then create a bot resource. Use the application ID of the app you registered to associate the bot resource.
+1. Create a bot resource with a new application ID.
+    1. Enable SSO for the new app.
+1. Create and register an app in Azure AD.
+    1. Create a bot resource.
+    1. Use the application ID of the app you registered.
+    1. Enable SSO for the app
 
-In this section, you will:
+In this section, you'll enable SSO for bot app by creating a bot resource. It includes:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
     1. [Enable bot for Teams](#enable-bot-for-teams)
@@ -25,10 +29,6 @@ In this section, you will:
         1. [Configure scope for access token](#configure-scope-for-access-token)
         1. [Configure access token version](#configure-access-token-version)
     1. [Update OAuth connection](#update-oauth-connection)
-
-<br>
-<details>
-<summary>Learn to create a bot resource in Azure AD</summary>
 
 ## Create and deploy bot resource in Azure AD
 
@@ -213,8 +213,6 @@ A client secret is a string that the application uses to prove its identity when
     The bot is now enabled to work with Teams.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
-
-</details>
 
 ## Configure bot resource in Azure AD
 
