@@ -25,7 +25,6 @@ See the following video to learn how to create an Outgoing Webhooks:
 <br>
 
 > [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu>]
-
 <br>
 
 ## Key features of Outgoing Webhook
