@@ -71,8 +71,8 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 ## Enable RSC in your application
 
 1. [Configure consent settings](#configure-consent-settings).
-    1. [Configure group owner consent settings for RSC in a team (via Azure AD portal)](#configure-group-owner-consent-settings-for-RSC-in-a-team-via-Azure-AD-portal).
-    1. [Configure chat owner consent settings for RSC in a chat (via Microsoft Graph APIs)](#configure-chat-owner-consent-settings-for-RSC-in-a-chat-via-Microsoft-Graph-APIs).
+    1. [Configure group owner consent settings for RSC in a team (via Azure AD portal)](#configure-group-owner-consent-settings-for-rsc-in-a-team-via-azure-ad-portal).
+    1. [Configure chat owner consent settings for RSC in a chat (via Microsoft Graph APIs)](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-via-microsoft-graph-apis).
 1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
 1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
@@ -98,7 +98,7 @@ In addition, you can enable or disable group owner consent using PowerShell, fol
 
 ### Configure chat owner consent settings for RSC in a chat (via Microsoft Graph APIs)
 
-You can enable or disable RSC for chats using Graph API. The property **isChatResourceSpecificConsentEnabled** in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
+You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
 
    ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
