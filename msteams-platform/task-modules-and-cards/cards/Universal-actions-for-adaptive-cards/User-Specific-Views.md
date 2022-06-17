@@ -219,21 +219,22 @@ The following list provides card design guidelines for User Specific Views:
 
 * Refresh behavior: You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
-* If the `userIds` field is not specified in the `Refresh` property, Teams client can automatically trigger refresh for all or less than 60 members in the conversation.
+* If the `userIds` field is not specified in the `Refresh` property, Teams client can automatically trigger refresh for all users when there are less than or equal to 60 members in the conversation.
 
 * For users to manually trigger card refresh, they can select **Refresh** from the message options menu. This happens to all users when there are less than 60 members in a conversation, or to the set of users not specified in the `userIds` list when there are all or less than 60 users in a conversation.
 
-* Base card: The base version of the card is embedded in the message sent by the bot, which is viewed by all the members of the conversation. The user-specific card is fetched subsequently through refresh for the users specified in the `userIds` section.
+* Base card: The bot sends the message, which embeds with the base version of the card. All members of the conversation can view the same. The bot subsequently fetches the User Specific Card through refresh for the users specified in the `userIds` section.
 
-* Refresh timeout: Teams client triggers a refresh in two ways, either by selecting **Refresh** or **Execute**. It triggers only if the card from the last invoke is older than a minute. You can control the refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
+* Refresh timeout: Teams client triggers a refresh in two ways, either through **Refresh** or by selecting **Execute**. The refresh triggers only if the card from the last invoke is older than a minute. You can control the refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
 
 * A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with **Refresh** enabled.
 
-* For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders. You can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual **Refresh** or use the **Refresh** in the message options menu to get the latest result.
+* For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual **Refresh** to get the latest result.
+
 * Give prompt to the users to get a User Specific View, where they see only a particular view of the card or some actions.
 
 > [!NOTE]
-> The User Specific Card returned by the bot is sent only to the specific client, who requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card.
+> The User Specific Card returned by the bot is sent only to the specific client that requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card.
 
 ## Code sample
 
