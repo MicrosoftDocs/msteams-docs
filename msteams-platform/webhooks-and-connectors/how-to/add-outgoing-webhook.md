@@ -104,7 +104,7 @@ Your code must always validate the HMAC signature included in the request as fol
 
 **Create a method to send a success or failure response**
 
-Responses from your Outgoing Webhooks appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
+Responses from your Outgoing Webhooks appear in the same reply chain as the original message. When the user performs a query, Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
 
 ### Example response
 
@@ -227,7 +227,7 @@ var responseMsg = JSON.stringify({
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | Samples to create custom bots to be used in Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Outgoing Webhooks | Samples to create custom bots to be used in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## Step-by-step guide
 
