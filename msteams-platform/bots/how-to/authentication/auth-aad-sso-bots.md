@@ -17,7 +17,7 @@ See the following video to learn about SSO with Microsoft Teams bots :
 
 > [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 
-</br>
+<br>
 
 ## Bot SSO at runtime
 
