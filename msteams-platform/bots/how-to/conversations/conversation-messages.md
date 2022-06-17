@@ -237,10 +237,10 @@ Messages received from or sent to your bot can include different types of messag
 
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
-| Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
+| Pictures  | ✔️                | ✔️                | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
+| Cards     | ❌                | ✔️                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ## Notifications to your message
 
@@ -382,7 +382,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
      You can select **Close** or switch chat to dismiss the message.
 
      If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -401,7 +401,6 @@ Form completion message appears in Adaptive Cards while sending a response to th
             ]
         } 
      ```
-    
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 

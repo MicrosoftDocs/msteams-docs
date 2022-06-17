@@ -27,10 +27,10 @@ For authentication or configuration, after the user completes the process, the o
 
 |Response Type | Compose | Command bar | Message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Card response | ✔ | ✔ | ✔ |
-|Another task module | ✔ | ✔ | ✔ |
-|Bot with Adaptive Card | ✔ | x | ✔ |
-| No response | ✔ | ✔ | ✔ |
+|Card response | ✔️ | ✔️ | ✔️ |
+|Another task module | ✔️ | ✔️ | ✔️ |
+|Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
+| No response | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

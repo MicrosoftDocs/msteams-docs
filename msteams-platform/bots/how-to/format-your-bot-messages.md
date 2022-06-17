@@ -38,17 +38,17 @@ Some styles are currently not supported across all platforms. The following tabl
 
 | Style                     | Text-only messages | Rich cards - XML only |
 | ---                       | :---: | :---: |
-| Bold                      | ✔ | ✖ |
-| Italic                    | ✔ | ✔ |
-| Header (levels 1&ndash;3) | ✖ | ✔ |
-| Strikethrough             | ✖ | ✔ |
-| Horizontal rule           | ✖ | ✖ |
-| Unordered list            | ✖ | ✔ |
-| Ordered list              | ✖ | ✔ |
-| Preformatted text         | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
-| Image link                | ✔ | ✖ |
+| Bold                      | ✔️️ | ❌ |
+| Italic                    | ✔️ | ✔️ |
+| Header (levels 1&ndash;3) | ❌ | ✔️ |
+| Strikethrough             | ❌ | ✔️ |
+| Horizontal rule           | ❌ | ❌ |
+| Unordered list            | ❌ | ✔️ |
+| Ordered list              | ❌ | ✔️ |
+| Preformatted text         | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ |
+| Image link                | ✔️ | ❌ |
 
 After checking cross-platform support, ensure that support by individual platforms is also available.
 
@@ -62,17 +62,17 @@ The following table provides a list of styles, which are supported on desktop, i
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| Bold                      | ✔ | ✔ | ✔ |
-| Italic                    | ✔ | ✔ | ✔ |
-| Header (levels 1&ndash;3) | ✖ | ✖ | ✖ |
-| Strikethrough             | ✔ | ✔ | ✖ |
-| Horizontal rule           | ✖ | ✖ | ✖ |
-| Unordered list            | ✔ | ✖ | ✖ |
-| Ordered list              | ✔ | ✖ | ✖ |
-| Preformatted text         | ✔ | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
-| Image link                | ✔ | ✔ | ✔ |
+| Bold                      | ✔️ | ✔️ | ✔️ |
+| Italic                    | ✔️ | ✔️ | ✔️ |
+| Header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
+| Strikethrough             | ✔️ | ✔️ | ❌ |
+| Horizontal rule           | ❌ | ❌ | ❌ |
+| Unordered list            | ✔️ | ❌ | ❌ |
+| Ordered list              | ✔️ | ❌ | ❌ |
+| Preformatted text         | ✔️ | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ | ✔️ |
+| Image link                | ✔️ | ✔️ | ✔️ |
 
 ### Cards
 
