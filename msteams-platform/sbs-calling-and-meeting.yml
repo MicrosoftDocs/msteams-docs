@@ -2,7 +2,7 @@
 title: Teams calling and meeting bot
 metadata:
   title: Teams bot with calling and meeting
-  description: In this tutorial, you'll learn to set up calling and meeting in a bot for Teams.
+  description: With this learning module, learn how to set up calling and meeting functionality in a bot for Teams.
   audience: Developer
   level: Beginner
   ms.date: 02/08/2021
@@ -18,9 +18,9 @@ items:
     
     Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
-    * Interactive Voice Response (IVR)
-    * Call control
-    * Access to real time audio and video streams, including desktop and app sharing
+    * Interactive Voice Response (IVR).
+    * Call control.
+    * Access to real time audio and video streams, including desktop and app sharing.
 
     Create a bot and specify some additional information and permissions to use these Graph APIs in a Teams app.
  
