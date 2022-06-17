@@ -1,7 +1,7 @@
 ---
 title: Connect to existing APIs
 author: MuyangAmigo
-description: In this module, learn how to add API connection to Teams app, advantages, how to connect to the API and more
+description:  In this article, learn how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
@@ -20,9 +20,9 @@ Teams Toolkit helps you bootstrap sample code to access the APIs if you don't ha
 
 When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
-* Generate sample code under `./bot` or `./api` folder
-* Add a reference to the `@microsoft/teamsfx` package to `package.json`
-* Add application settings for your API in  `.env.teamsfx.local` that configures local debugging
+* Generate sample code under `./bot` or `./api` folder.
+* Add a reference to the `@microsoft/teamsfx` package to `package.json`.
+* Add application settings for your API in  `.env.teamsfx.local` that configures local debugging.
 
 ### Connect to API in Visual Studio Code
 
@@ -55,7 +55,7 @@ When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
 
-    9. Enter an alias for the API. The alias  generates an application setting name for the API that is added to the project's local application setting.
+    9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
 
@@ -75,7 +75,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot--alias example --user-name exampleuser --interactive false|
+   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
    |API Key|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
@@ -116,7 +116,7 @@ The following steps help to test the API connection in the Teams Toolkit local e
     The generated API client is an Axios API client. Use the Axios client to make requests to the API.
 
      > [!Note]
-     >[Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
+     > [Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
 
 ## Deploy your application to Azure
 
@@ -155,6 +155,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>Connect to APIs for Azure AD permissions</b></summary>
@@ -199,6 +200,7 @@ You can follow the steps to access these APIs while using:
 
         > [!NOTE]
         > For application permission use your client ID.
+        >
 </details>
 
 ## See also

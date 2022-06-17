@@ -122,7 +122,6 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 * `manifest.template.json`
 * `templates/appPackage`
 
-
 During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ## Supported placeholders in manifest.template.json
@@ -186,4 +185,4 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

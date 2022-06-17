@@ -48,7 +48,7 @@ When adding a tab, if you select **Save** but receive an error message indicatin
 Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
->We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
+> We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
 For more information about authentication, see [Authenticate a user](~/concepts/authentication/authentication.md).
 
@@ -64,7 +64,7 @@ Apps must be enabled by the Office 365 tenant admin for them to be loaded by end
 
 ### Can't add bot as a member of a team
 
-Bots must first be upload into a team before it's accessible within any channel of that team. For more information on this process, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
+Bots must first be uploaded in a team before it's accessible within any channel of that team. For more information on this process, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
 ### My bot doesn't get my message in a channel
 

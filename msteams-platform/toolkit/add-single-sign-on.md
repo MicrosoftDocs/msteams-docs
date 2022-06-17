@@ -41,7 +41,7 @@ The following steps help you to add SSO using Teams Toolkit in Visual Studio Cod
 
 ### Add SSO using TeamsFx CLI
 
-You can run `teamsfx add sso`  command in your **project root directory**
+You can run `teamsfx add sso` command in your **project root directory**
 
 > [!Note]
 > The feature enables SSO for all existing applicable capabilities. Follow the same steps to enable SSO if you add capability later to the project.
