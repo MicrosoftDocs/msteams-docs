@@ -1,11 +1,10 @@
 ---
 title: Create an Outgoing Webhook
 author: laujan
-description: describes how to create an Outgoing Webhook
+description: In this module, learn how to create an Outgoing Webhook in Microsoft Teams, its key features and code samples
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: Teams tabs outgoing webhook actionable message verify webhook
 ---
 
 # Create Outgoing Webhook

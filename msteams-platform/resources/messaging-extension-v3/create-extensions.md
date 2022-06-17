@@ -1,9 +1,8 @@
 ---
 title: Initiate actions with message extensions
-description: Create Action-based message extensions to allow users to trigger external services
+description: In this module, learn create Action-based message extensions to allow users to trigger external services
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams message extensions message extensions search
 ---
 # Initiate actions with message extensions
 

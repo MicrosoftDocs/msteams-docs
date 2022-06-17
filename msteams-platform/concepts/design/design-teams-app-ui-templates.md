@@ -1,7 +1,7 @@
 ---
 title: Designing your app with UI templates
 author: heath-hamilton
-description: Design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
+description: Learn to design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
@@ -191,9 +191,9 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 
 ### Top use cases
 
-* Project management. Assigning tasks and tracking status
-* Brainstorming. Adding ideas in different categories
-* Sorting exercises. Organizing any kind of information into buckets
+* Project management. Assigning tasks and tracking status.
+* Brainstorming. Adding ideas in different categories.
+* Sorting exercises. Organizing any kind of information into buckets.
 
 ### Mobile
 

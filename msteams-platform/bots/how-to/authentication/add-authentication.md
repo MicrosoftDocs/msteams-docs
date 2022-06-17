@@ -1,11 +1,10 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: How to add OAuth authentication to a bot in Microsoft Teams using Azure Active Directory. Learn how to create, deploy, and integrate authentication-enabled bots.
+description: Learn how to add OAuth authentication to a bot in Teams using Azure Active Directory. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: resource group bot registration Azure emulator bot manifest deploy
 ---
 
 # Add authentication to your Teams bot
@@ -337,7 +336,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 1. In the left panel, select **Settings**.
 1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
     > [!NOTE]
-    > Only one messaging endpoint is allowed for a bot
+    > Only one messaging endpoint is allowed for a bot.
 1. Select the **Save** button in the upper left.
 
 ## Test the bot using the Emulator
