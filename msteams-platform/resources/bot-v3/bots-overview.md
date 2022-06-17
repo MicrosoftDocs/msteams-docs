@@ -1,8 +1,7 @@
 ---
 title: Add bots to Microsoft Teams apps
-description: Describes how to get started developing bots in Microsoft Teams
+description: In this module, learn how to get started developing bots in Microsoft Teams and what are all the requirements to add a bot in Teams
 ms.topic: conceptual
-keywords: teams bots development
 ms.localizationpriority: medium
 ms.date: 05/20/2018
 ---
@@ -21,11 +20,11 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
-A bot behaves differently depending on what kind of conversation it is involved in. Bots in Teams support several kinds of conversations called scopes in the [app manifest](~/resources/schema/manifest-schema.md).
+A bot behaves differently depending on what kind of conversation it's involved in. Bots in Teams support several kinds of conversations called scopes in the [app manifest](~/resources/schema/manifest-schema.md).
 
 * `teams` Also called channel conversations.
 * `personal` Conversations between a bot and a single user.
-* `groupChat` A conversation between a bot and 2 or more users.
+* `groupChat` A conversation between a bot and two or more users.
 
 For more information, see [Have a conversation with a Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
@@ -54,7 +53,7 @@ Outgoing webhooks allow you to create a simple bot for basic interaction, like k
 
 ## Build a great Teams bot
 
-The following topics will guide you through the process of creating a great bot for Teams:
+The following articles will guide you through the process of creating a great bot for Teams:
 
 * [Create a bot](~/resources/bot-v3/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
 * [Talk to your bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our extensions for the Bot Builder SDK to simplify your work.

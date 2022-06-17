@@ -1,9 +1,8 @@
 ---
 title: Optimize your bot with rate limiting in Teams
-description: Learn about handling rate limit for bots with Per bot per thread limit and per limit for all bots using Code examples. Additionally, learn rate limiting best practices in Microsoft Teams.
+description: Learn about handling rate limit for bots with Per bot per thread limit and per limit for all bots using Code examples
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams bots rate limiting
 ---
 
 # Optimize your bot with rate limiting in Teams

@@ -1,9 +1,8 @@
 ---
 title: Add card actions in a bot
-description: Describes card actions in Microsoft Teams and how to use them in your bots
+description: In this module, learn what are card actions in Microsoft Teams, action types and how to use them in your bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: teams bots cards actions
 ---
 
 # Card actions

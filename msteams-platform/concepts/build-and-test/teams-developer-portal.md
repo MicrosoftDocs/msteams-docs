@@ -1,7 +1,6 @@
 ---
 title: Manage your apps with the Developer Portal
-description: Learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
-keywords: getting started developer portal teams
+description: In this module, learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -22,8 +21,8 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 The Developer Portal provides a couple ways to register a Teams app:
 
-* Register a brand new app
-* Import an existing app package
+* Register a brand new app.
+* Import an existing app package.
 
 > [!NOTE]
 > If you create an app using the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), you can manage that app in the Developer Portal.
