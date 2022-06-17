@@ -68,7 +68,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
   For team tabs, you must provide a *Configuration URL* to present options and gather information so users can customize the content and experience of your tab. This iframed HTML page is displayed when a user first adds the tab to a channel.
 
-  You must also provide any another domains that the tab expects to load from or link to.
+  You must also provide any additional domains that the tab expects to load from or link to.
 
 * **Personal Tabs.** You can define a set of tabs that are presented by default in the personal app experience (experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. With Teams tabs, provide any additional domains from which the tab expects to load from or link to.
 
