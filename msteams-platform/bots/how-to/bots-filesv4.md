@@ -6,7 +6,7 @@ ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
-# Send and receive files
+# Send and receive files through the bot
 
 > [!IMPORTANT]
 > The articles in this document are based on the v4 Bot Framework SDK.
