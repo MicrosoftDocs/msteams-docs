@@ -21,6 +21,7 @@ The Outgoing Webhook acts as a bot and search for messages in channels using **@
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
 
+See the following video to learn how to create an Outgoing Webhooks:
 <br>
 
 > [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu>]
