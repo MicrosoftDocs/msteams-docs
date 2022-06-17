@@ -255,7 +255,7 @@
       href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
-  - name: Send and receive files
+  - name: Send and receive files through the bot
     href: bots/how-to/bots-filesv4.md
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
