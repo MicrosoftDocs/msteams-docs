@@ -208,7 +208,7 @@
     href: tabs/how-to/create-tab-pages/content-page.md
   - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create a removal page
+  - name: Tab re-configuration and removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
