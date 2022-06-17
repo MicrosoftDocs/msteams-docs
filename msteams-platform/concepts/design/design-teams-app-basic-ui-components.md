@@ -5,7 +5,6 @@ description: Learn the UI components used to build Microsoft Teams apps and get 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-
 ---
 # Designing your Microsoft Teams app with basic Fluent UI components
 

@@ -1,7 +1,6 @@
 ---
 title: Combine bots with tabs
-description: This article describes how to use tabs and bots together. 
-keywords: teams bots tabs development
+description: In this article, you'll learn how to use tabs and bots together, constructing deep links to tabs in messages from your bot, and teams bots tabs development
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
@@ -26,7 +25,7 @@ This flow works best if your identity provider implements the OAuth 2.0 protocol
 
 You want to use tabs to show more content than can fit inside of a card, or provide a way to complete complex form-filling tasks using the tab canvas. For example, consider navigating the user to the tab when he or she clicks on the card from your bot. For this to happen, you’ll need to encode your bot’s message to include a [deep link](~/concepts/build-and-test/deep-links.md) URL, either through markup or as the target of the openUrl action.
 
-Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state, For example, flag on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
+Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state. For example, flag on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
 
 > [!NOTE]
 > in personal chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
@@ -37,7 +36,7 @@ Often you’ll want to notify the end user whenever an update or a user action o
 
 There are two ways of achieving this scenario:
 
-1. If you wish to notify an entire channel your bot can asynchronously post a message to the channel. There is no way for a bot to proactively create the tab conversation if it wasn't created with the tab.
+1. If you wish to notify an entire channel, your bot can asynchronously post a message to the channel. There's no way for a bot to proactively create the tab conversation if it wasn't created with the tab.
 
 2. If you wish to only notify the recipient or interested parties involved with the action, your bot can send a personal chat message to the user. You should first check to see if a personal conversation between your bot and the user exists. If not, you can call `CreateConversation` to initiate the personal chat.
 

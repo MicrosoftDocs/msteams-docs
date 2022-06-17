@@ -1,8 +1,7 @@
 ---
 title: Create Office 365 Connectors
 author: laujan
-description: Describes how to get started with Office 365 Connectors in Microsoft Teams
-keywords: teams Office365 connector
+description: In this module, learn how to get started with Office 365 Connectors and add connector to Teams app in Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021

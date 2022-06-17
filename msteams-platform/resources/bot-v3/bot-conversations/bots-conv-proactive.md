@@ -1,9 +1,8 @@
 ---
 title:  Proactive messaging for bots
-description: Learn how to use proactive messaging for bots in Microsoft Teams
+description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams scenarios proactive messaging conversation bot
 ---
 # Proactive messaging for bots
 
@@ -15,7 +14,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Poll responses
 * External event notifications
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. To send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -25,7 +24,7 @@ When creating proactive messages you **must** call `MicrosoftAppCredentials.Trus
 
 ## Best practices for proactive messaging
 
-Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there is a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
@@ -65,7 +64,7 @@ Occasionally it may be necessary to proactively message users that haven't insta
 
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
-See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details. There's also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## Examples
 
