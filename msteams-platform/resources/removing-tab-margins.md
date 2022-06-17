@@ -1,8 +1,7 @@
 ---
 title: Tab margin changes
 author: surbhigupta
-description: Describes how the removal of tab margins enhances app building experience.
-keywords: tab removing margins padding
+description: In this module, learn how the removal of tab margins enhances app building experience.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur

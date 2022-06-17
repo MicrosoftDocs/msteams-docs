@@ -1,7 +1,6 @@
 ---
 title: Test and debug your bot
-description: This article describes how to test bots in Microsoft Teams
-keywords: teams bots testing
+description: In this article, you'll know how to test and debug your bots in Microsoft Teams and Test your bot without uploading to Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
@@ -20,7 +19,7 @@ There are two methods for uploading your app. You can either use [App Studio](~/
 
 ## Debug your bot locally
 
-If you're hosting your bot locally during development you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service. You may need to add ngrok to your path.
+If you're hosting your bot locally during development, you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service. You may need to add ngrok to your path.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -34,7 +33,7 @@ Occasionally it's necessary to test your bot without installing it as an app in 
 
 ### Use the Bot Emulator
 
-The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator won't allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they are rendered in Teams. If you need to test either of those things isn't best to [upload your bot](#test-by-uploading-to-teams).
+The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator won't allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they're rendered in Teams. If you need to test either of those things isn't best to [upload your bot](#test-by-uploading-to-teams).
 
 Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
@@ -64,7 +63,7 @@ Your bot will receive the `conversationUpdate` event just like bots added to a t
 
 ## Blocking a bot in personal chat
 
-Note that users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user won't receive those messages.
+Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user won't receive those messages.
 
   :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blocking a bot"border="true":::
 
@@ -72,7 +71,7 @@ Note that users can choose to block your bot from sending personal chat messages
 
 Users can delete the bot by choosing the trash-can icon on the bots list in their teams view. Note this only removes the bot from that team's use, individual users can interact in personal context.
 
-Bots in personal context cannot be disabled or removed by a user, short of completely removing the bot from Teams.
+Bots in personal context can't be disabled or removed by a user, short of completely removing the bot from Teams.
 
 ## Disabling a bot in Teams
 
@@ -80,7 +79,7 @@ To stop your bot receiving messages, go to your Bot Dashboard and edit the Micro
 
 ## Deleting a bot from Teams
 
-To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. Note that this does not remove the bot from other users' Teams instances, although it will cease functioning for them as well.
+To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. This doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
 
 ## Removing your bot from AppSource
 

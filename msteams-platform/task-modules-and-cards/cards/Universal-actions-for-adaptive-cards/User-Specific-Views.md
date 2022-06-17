@@ -1,6 +1,6 @@
 ---
 title: User Specific Views
-description: Learn about User Specific Views using Universal Actions with Code Sample 
+description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium

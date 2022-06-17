@@ -1,7 +1,7 @@
 ---
 title: Channel and group conversations with a bot
 author: surbhigupta
-description: How to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines, creating conversation threads, using @mentions using Code samples
+description: Learn how to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
