@@ -15,15 +15,15 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 |:------------|:------------|
 | **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft 365, visit the Microsoft 365 Admin Center and use the Support menu to [open a service request](https://admin.microsoft.com/). |
 | **Azure help and support** | If you have a paid Azure subscription, visit the Azure Admin Center to [open a ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **General questions about Microsoft Teams** | If you have general questions on Microsoft Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
+| **General questions about Teams** | If you have general questions on Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
 
 ## Developer community help
 
-Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
+Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
 
 ### Developer community forums
 
-Post your questions and help other community members by sharing and responding to Microsoft Teams App Development questions.
+Post your questions and help other community members by sharing and responding to Teams App Development questions.
 
 | **Community channel**|   **Contact**  |
 |:---------------------|:---------------|
