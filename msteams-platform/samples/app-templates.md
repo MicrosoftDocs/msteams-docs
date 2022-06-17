@@ -2,6 +2,7 @@
 title: Microsoft Teams app templates
 description: Learn how to use app templates for Microsoft Teams platform with detailed instructions for deploying and installing an app.
 ms.topic: reference
+keywords: Microsoft Teams templates samples demo
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
@@ -52,7 +53,7 @@ Using the co-worker appreciation template in Microsoft Teams, users can recogniz
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
-![Overall](../assets/images/coworker-appreciation-1.png)
+:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="coworkers-appreciation-1":::
 
 ## FAQ Plus
 
@@ -107,6 +108,7 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 App template code samples are a collection of sample apps for Microsoft Teams platform capabilities.
 
 > [!NOTE]
+>
 > * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
 
