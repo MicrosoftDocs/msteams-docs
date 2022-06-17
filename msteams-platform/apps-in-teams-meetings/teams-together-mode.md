@@ -19,7 +19,7 @@ The following process gives an overview to create a scene only app:
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
-A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
+A scene only app is still an app in Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 > [!NOTE]
 > Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
@@ -29,7 +29,7 @@ A scene only app is still an app in Microsoft Teams. The Scene studio handles th
 You must have a basic understanding of the following to use custom Together Mode scenes:
 
 * Define scene and seats in a scene.
-* Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
+* Have a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
 * Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
 
@@ -45,7 +45,7 @@ Consider the following practices for a scene building experience:
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following elements:
 
@@ -101,9 +101,9 @@ To build a scene using the Scene studio, follow these steps:
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
+1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
-    * Selecting **View in Teams** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
+    * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
     * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the automatically created app package.
     * To delete a scene you created, select **Delete scene** on the top bar.
 
@@ -212,7 +212,7 @@ To select scenes and activate custom Together Mode scenes, follow these steps:
 1. Create a new test meeting.
 
     >[!NOTE]
-    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is shipped as an app, users see these scenes in the scene gallery.
+    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is shipped as an app, users see these scenes in the scene gallery.
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 
