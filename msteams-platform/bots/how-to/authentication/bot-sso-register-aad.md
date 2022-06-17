@@ -9,6 +9,11 @@ keywords: teams authentication bots Microsoft Azure Active Directory (Azure AD) 
 
 Azure AD provides access to your bot app based on the app user's Teams identity. You'll need to register your bot app with Azure AD so that the app user who has signed into Teams can be given access to your bot app.
 
+You can register your bot app in Azure AD in two ways:
+
+1. Create a bot resource and then create a new application ID.
+1. Create and register an app in Azure AD, and then create a bot resource. Use the application ID of the app you registered to associate the bot resource.
+
 In this section, you will:
 
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
@@ -158,7 +163,7 @@ To create and deploy bot resource
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
 
-## Configure app in Azure AD
+## Configure bot app in Azure AD
 
 ### Add messaging endpoint
 
