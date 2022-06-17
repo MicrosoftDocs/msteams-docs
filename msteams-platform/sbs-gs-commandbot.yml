@@ -18,8 +18,8 @@ items:
 
     In this tutorial, you'll learn:
 
-    - How to build command bot with Teams Toolkit
-    - About the directory structure of your app
+    - How to build command bot with Teams Toolkit.
+    - About the directory structure of your app.
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
 
@@ -188,7 +188,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
-    1. Select **Add**
+    1. Select **Add**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App" border="true":::     
 
