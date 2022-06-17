@@ -106,7 +106,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Navigate to **TeamsToDoAppconnector.sln** in cloned repository.
+    1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
 
        ![sln path](~/assets/images/sbs-connector/sln.png)
 
@@ -127,15 +127,15 @@ items:
       
     5. Enter the following details to register a new connector:
 
-       * **Connector name**
-       * **Logo**
-       * **Short description of your app (10 words or less)**
-       * **Detailed description of what your Connector does (3-5 sentences)**
-       * **Company website**
-       * **Configuration page for your Connector** as `https://[BASE_URI]/connector/setup`
-       * **Valid domains** as `https Base URL`
+       * Connector name
+       * Logo
+       * Short description of your app (10 words or less)
+       * Detailed description of what your Connector does (3-5 sentences)
+       * Company website
+       * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`
+       * Valid domain as `https Base URL`
        * Select **Yes** to enable the action on connector card
-       * **Actions URL** as `https://[BASE_URI]/Task/Update`
+       * Actions URL as `https://[BASE_URI]/Task/Update`
        * Select **I accept the terms and conditions of the App Developer Agreement**
        * Select **Save**
 
@@ -167,7 +167,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, navigate to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
+    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -221,9 +221,9 @@ items:
        
     14. Enter the new task details:
 
-        * **Title**
-        * **Description**
-        * **Assign To**
+        * Title
+        * Description
+        * Assign To
 
         ![Task details](~/assets/images/sbs-connector/details.png)
 
