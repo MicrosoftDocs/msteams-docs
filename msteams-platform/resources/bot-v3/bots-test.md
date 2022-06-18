@@ -29,7 +29,7 @@ Use the https endpoint provided by ngrok in your app manifest. If you close your
 
 ## Testing your bot without uploading to Teams
 
-Occasionally it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it won't allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to test your bot completely, follow the instructions for [testing by uploading](#test-by-uploading-to-teams).
+Occasionally it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it won't allow you to test the full breadth of Teams functionality you may have added to your bot. If you need to test your bot completely, follow the instructions for [testing by uploading](#test-by-uploading-to-teams).
 
 ### Use the Bot Emulator
 
@@ -42,22 +42,22 @@ Complete instructions on the Bot Framework Emulator can be found [here](/azure/b
 >[!Important]
 >Talking to your bot by ID is intended for testing purposes only.
 
-You can also initiate a conversation with your bot by using its ID. Two methods for doing so are given below. When a bot has been added through one of these methods it won't be addressable in channel conversations, and you can't take advantage of other Microsoft Teams app capabilities like tabs or message extensions.
+You can also initiate a conversation with your bot by using its ID. Two methods for doing so are given below. When a bot has been added through one of these methods it won't be addressable in channel conversations, and you can't take advantage of other Teams app capabilities like tabs or message extensions.
 
-1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams will launch with a personal chat with your bot.
-2. Directly reference your bot's app ID from within Microsoft Teams:
+1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Teams will launch with a personal chat with your bot.
+2. Directly reference your bot's app ID from within Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
   
       :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Bot Dashboard":::
   
-   * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
+   * From within Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
   
       :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Uploading the AppID for the bot"border="true":::
 
      The app ID should resolve to your bot name.
 
    * Select your bot and send a message to initiate a conversation.
-   * Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, navigate to the People tab to see your bot and to start chatting with it.
+   * Alternatively, you can paste your bot's app ID in the search box in the top left in Teams. In the search results page, navigate to the People tab to see your bot and to start chatting with it.
 
 Your bot will receive the `conversationUpdate` event just like bots added to a team, but without the team information in the `channelData` object.
 

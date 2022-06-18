@@ -54,7 +54,7 @@ Since you're migrating existing data, maintaining the original message timestamp
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a team in migration state)
 
@@ -100,7 +100,7 @@ Creating a channel for the imported messages is similar to the create team scena
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a channel in migration state)
 

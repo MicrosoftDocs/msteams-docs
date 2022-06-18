@@ -330,7 +330,7 @@ Some message extension activities do not include the command ID. For example, `c
 ## Example
 
 The following example shows how to convert the Book-a-room app template to a Virtual Assistant skill:
-Book-a-room is a Microsoft Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
+Book-a-room is a Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
 ![Virtual Assistant with a "book a room" skill](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -339,7 +339,7 @@ Followings are the delta changes introduced to convert it to a skill which is at
 
 ### Skill manifest
 
-A skill manifest is a JSON file that exposes a skill's messaging endpoint, ID, name, and other relevant metadata. This manifest is different than the manifest used for sideloading an app in Microsoft Teams. A Virtual Assistant requires a path to this file as an input to attach a skill. We have added the following manifest to the bot's wwwroot folder.
+A skill manifest is a JSON file that exposes a skill's messaging endpoint, ID, name, and other relevant metadata. This manifest is different than the manifest used for sideloading an app in Teams. A Virtual Assistant requires a path to this file as an input to attach a skill. We have added the following manifest to the bot's wwwroot folder.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

@@ -228,7 +228,7 @@ If your app returns multiple items only the first will be used.
 
 ### Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user performs a query, Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
 Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:
 
@@ -485,7 +485,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 
 Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
-As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
+As with other embedded experiences running inside Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
 
 ### Complete the sign-in flow
 

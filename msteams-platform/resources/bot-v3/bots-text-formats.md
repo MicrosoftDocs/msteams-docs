@@ -21,7 +21,7 @@ Microsoft Teams supports the following formatting options:
 
 ## Formatting text content
 
-Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
+Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
 Currently, the following limitations apply:
 * Text-only messages do not support table formatting.
@@ -30,7 +30,7 @@ For information on formatting in cards, see [Teams Card Reference](~/task-module
 
 ### Cross-platform support
 
-To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles aren't currently supported across all platforms.
+To ensure that your formatting works across all platforms supported by Teams, be aware that some styles aren't currently supported across all platforms.
 
 | Style                     | Text-only messages | Cards (XML only) |
 |---------------------------|--------------------|------------------|

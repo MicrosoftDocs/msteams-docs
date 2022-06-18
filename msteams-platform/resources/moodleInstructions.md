@@ -269,7 +269,7 @@ To allow automatic creation of Moodle tabs:
 
 1. Open Microsoft Teams.
 
-1. Select the Apps icon from the lower-left area of the navigation bar.
+1. Select the Apps icon from the lower-left pane.
 
 1. Locate the uploaded **Moodle app** > select the **options** icon > select **copy link**.
 
@@ -279,7 +279,7 @@ To allow automatic creation of Moodle tabs:
 
 1. Paste the ID of the Microsoft Teams app into the Moodle app ID field, and save changes.
 
-When a Moodle course is synced, Microsoft Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it is synced. You can now start working with your Moodle courses directly from Microsoft Teams.
+When a Moodle course is synced, Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it is synced. You can now start working with your Moodle courses directly from Teams.
 
 > [!NOTE]
 > To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
