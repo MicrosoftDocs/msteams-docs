@@ -15,7 +15,7 @@ See the following video to learn more about publishing your app to the Microsoft
 <br>
 
 > [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
+
 <br>
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), ensure you've done the following.
