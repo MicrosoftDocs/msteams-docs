@@ -75,6 +75,7 @@ Now that you've sent the proactive message, you must follow these best practices
 See the following video to learn how to send proactive message from bots:
 
 <br>
+
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
