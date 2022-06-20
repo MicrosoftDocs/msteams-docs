@@ -117,11 +117,11 @@ In this section, you'll enable SSO for bot app by creating a bot resource. It in
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="Bot app is created" border="false":::
 
-After you create your bot resource, you need to client secret and enable bot for working in Teams.
+After you create your bot resource, you need to add a client secret and enable bot for working in Teams.
 
 ### Create client secret
 
-A client secret is a string that the application uses to prove its identity when requesting a token.
+A client secret is a string that the bot app uses to prove its identity when requesting a token from Azure AD.
 
 #### To create client secret for the bot
 
@@ -213,6 +213,8 @@ A client secret is a string that the application uses to prove its identity when
     The bot is now enabled to work with Teams.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
+
+Next, you must configure bot app in Azure AD to enable SSO.
 
 ## Configure bot resource in Azure AD
 
