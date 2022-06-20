@@ -6,7 +6,7 @@ ms.author: anclear
 ms.localizationpriority: medium
 ---
 
-# Messages in bot conversations
+# Messages in bot conversation event
 
 Bots in Microsoft Teams act as a core channel for reaching out to users, in the form of applications such as company communicator to send company-wide announcements. Each message in a conversation is an Activity object of type messageType: message. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
@@ -196,7 +196,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Read receipts
 
-Teams provides **Read Receipt** feature for users in a personal chat and a group chat with upto 20 members. If the user has not read the message in 1:1 chat, then bot can send follow up message to the user to improve engagement. After the bot is enabled for this feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
+Teams provides **Read Receipt** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in 1:1 chat, then the bot sends follow up message to the user to improve engagement. After the bot is enabled for this feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
 
 The **Read Receipt** features enable a bot developer to do the following:
 
