@@ -1,9 +1,8 @@
 ---
 title: Localize your app
-description: Describes considerations for localizing your Microsoft Teams app.
+description: Learn considerations for localizing your Microsoft Teams app and localize strings in your app manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
 ---
 # Localize your app
@@ -151,7 +150,7 @@ If you provide localized versions of your application, the users respond with th
 
 | Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## See also
 

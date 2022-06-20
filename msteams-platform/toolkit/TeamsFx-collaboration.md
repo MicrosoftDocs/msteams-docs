@@ -1,7 +1,7 @@
 ---
 title: Collaborate on TeamsFx Project using Teams Toolkit
 author: yanjiang
-description: Collaborate on TeamsFx Project using Teams Toolkit
+description: In this article, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers.
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
@@ -67,15 +67,15 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
 
 * Using Developer Portal
 
-  * Go to [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select your Teams app by name or app ID
-  * Select **Owners** from left panel
-  * Select and remove the collaborator
+  * Go to [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select your Teams app by name or app ID.
+  * Select **Owners** from left panel.
+  * Select and remove the collaborator.
 
 * Using Azure Active Directory
 
-  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App
-  * Select **Owners** from left panel in Azure AD App management page
-  * Select and remove the collaborator
+  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
+  * Select **Owners** from left panel in Azure AD App management page.
+  * Select and remove the collaborator.
 
    > [!NOTE]
    >

@@ -1,6 +1,6 @@
 ---
 title: Teams bot samples
-description: describes Teams samples for Bot Framework
+description: With this learning module, learn about Teams samples for Bot Framework, which includes working samples demonstartaing the functionality.
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12

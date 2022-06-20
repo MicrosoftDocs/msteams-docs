@@ -1,7 +1,6 @@
 ---
 title: Search with message extensions
-description: Describes how to develop search based message extensions
-keywords: teams message extensions message extensions search
+description: In this module, learn how to develop search based message extensions
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019

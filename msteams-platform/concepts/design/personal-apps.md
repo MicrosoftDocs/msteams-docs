@@ -1,11 +1,10 @@
 ---
 title: Designing your personal app
-description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit, create components, such as, dashboard, form, task board for Mobile and Desktop experience. Learn the best practices for developing personal apps.
+description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit, create components, such as, dashboard, form, task board for Mobile and Desktop experience.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: ui kit personal app webview navigation bot tab iframe dashboard form template
 --- 
 # Designing your personal app for Microsoft Teams
 

@@ -3,7 +3,6 @@ title: Share to Teams from web apps
 description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Share Teams Share to Teams
 ---
 
 # Share to Teams from web apps
@@ -47,7 +46,7 @@ This article guides you on how to create and embed a Share to Teams button for y
     </div>
     ```
 
-    After completing this, the Microsoft Teams icon gets added to your website. The following image shows the Share to Teams icon:
+    After completing this, the Teams icon gets added to your website. The following image shows the Share to Teams icon:
 
     :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Share to Teams icon" border="true":::
 
