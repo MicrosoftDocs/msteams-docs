@@ -1,11 +1,10 @@
 ---
 title: Test preview for monetized apps 
 author: v-ypalikila
-description: Create and test SaaS Preview offers for Teams app before pushing the offer live.
+description: Learn how to create and test SaaS Preview offers for Teams app before pushing the offer live. You can test the end-to-end purchase experience for your monetized apps in Teams.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: teams apps SaaS offer preview offer test preview monetized saas
 ---
 
 # Test preview for monetized apps

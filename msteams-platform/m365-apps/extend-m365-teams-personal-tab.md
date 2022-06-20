@@ -14,11 +14,11 @@ Updating your personal app to run in Outlook and Office involves these steps:
 
 > [!div class="checklist"]
 >
-> * Update your app manifest
-> * Update your TeamsJS SDK references
-> * Amend your Content Security Policy headers
-> * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO)
-> * Sideload your updated app in Teams
+> * Update your app manifest.
+> * Update your TeamsJS SDK references.
+> * Amend your Content Security Policy headers.
+> * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO).
+> * Sideload your updated app in Teams.
 
 The rest of this guide walks you through these steps and show you how to preview your personal tab in other Microsoft 365 applications.
 

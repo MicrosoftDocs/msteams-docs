@@ -5,7 +5,6 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-keywords: layout grid avatars icons segoe ui typography  
 ---
 # Microsoft Teams app design system
 
