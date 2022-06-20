@@ -6,14 +6,14 @@ ms.author: anclear
 ms.localizationpriority: medium
 ---
 
-# Messages in bot conversations
+# Read receipts for bot messages
 
-Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
+Bots in Microsoft Teams at as a core channel for reaching out to users, in the form of applications such as company communicator. Microsoft Teams provides read receipt feature for users in a personal chat and a group chat with upto 20 members. If the user has not read the message in 1:1 chat, then bot can send follow up message to tthe user to improve engagement. This feature has helped customers to calibrate others’ engagement with them in a conversation and enable them to take more context-aware actions based on other users’ read status.
 
-Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
+Advantages
 
-* Easy access to the Bot Framework connector.
-* Additional functionality to manage conversation flow and state.
+* Calibrate users' engagement based on the read status
+* User settings for read receipts are respected
 * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
