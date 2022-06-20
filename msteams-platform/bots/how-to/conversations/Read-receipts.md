@@ -8,13 +8,13 @@ ms.localizationpriority: medium
 
 # Read receipts for bot messages
 
-Bots in Microsoft Teams at as a core channel for reaching out to users, in the form of applications such as company communicator. Microsoft Teams provides read receipt feature for users in a personal chat and a group chat with upto 20 members. If the user has not read the message in 1:1 chat, then bot can send follow up message to tthe user to improve engagement. This feature has helped customers to calibrate others’ engagement with them in a conversation and enable them to take more context-aware actions based on other users’ read status.
+Bots in Microsoft Teams act as a core channel for reaching out to users, in the form of applications such as company communicator to send company-wide announcements. Teams provides read receipt feature for users in a personal chat and a group chat with upto 20 members. If the user has not read the message in 1:1 chat, then bot can send follow up message to the user to improve engagement. This feature has helped customers to calibrate others’ engagement with them in a conversation and enable them to take more context-aware actions based on other users’ read status.
 
 Advantages
 
 * Calibrate users' engagement based on the read status
 * User settings for read receipts are respected
-* Simple ways to incorporate cognitive services, such as natural language processing (NLP).
+* Bot can send more context aware messages
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
