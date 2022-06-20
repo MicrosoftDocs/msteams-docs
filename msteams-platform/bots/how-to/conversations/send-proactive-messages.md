@@ -72,6 +72,12 @@ Now that you have the right address information, you can send your message. If y
 
 Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
+See the following video to learn how to send proactive message from bots:
+
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
+
 ## Best practices for proactive messaging
 
 Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
