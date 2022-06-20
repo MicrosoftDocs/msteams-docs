@@ -377,11 +377,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 
-### Deep linking to an app
+## Deep linking to an app
 
 Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
   
-### Deep linking for SharePoint Framework tabs
+## Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or message extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -400,7 +400,7 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### Navigate to an audio or audio-video call
+## Navigate to an audio or audio-video call
 
 You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
@@ -422,11 +422,11 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-#### Generate a deep link to a meeting
+## Generate a deep link to a meeting
 
-You can also create deep link to start or join a meeting when share to meeting button is selected in an app to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings#share-entire-app-to-stage).
+You can also create deep link to start or join a meeting when share to meeting button is selected in an app to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage).
 
-When share to meeting button is selected in an app when user is already in a meeting, the app is [shared to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings#share-entire-app-to-stage) and a permission dialog pops-up where users can give permissions for the participants such as co-editing a document or collaborating with an app.
+When share to meeting button is selected in an app when user is already in a meeting, the app is shared to stage and a permission dialog pops-up where users can give permissions for the participants such as co-editing a document or collaborating with an app.
 
 When user is not in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they interact with an app.
 
@@ -439,7 +439,7 @@ When user is not in a meeting then user will be redirected to the Teams calendar
 > [!NOTE]
 > Ensure to Enable Deeplink Sharing for extensible desktop app in Debug settings
 
-#### Generate a deep link to a call
+## Generate a deep link to a call
 
 While use of the strongly typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
 
