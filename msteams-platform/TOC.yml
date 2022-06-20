@@ -236,8 +236,6 @@
       href: bots/how-to/conversations/conversation-basics.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-    - name: Read receipts for bot messages
-      href: bots/how-to/conversations/Read-receipts.md
       items:
       - name: Receive all channel messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md

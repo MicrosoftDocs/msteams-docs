@@ -7,13 +7,16 @@ ms.localizationpriority: medium
 ---
 # Messages in bot conversations
 
-Each message in a conversation is an Activity object of type messageType: message. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
+Bots in Microsoft Teams act as a core channel for reaching out to users, in the form of applications such as company communicator to send company-wide announcements. Each message in a conversation is an Activity object of type messageType: message. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
 * Easy access to the Bot Framework connector.
 * Additional functionality to manage conversation flow and state.
 * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
+* Calibrate users' engagement based on the read status.
+* User settings for read receipts are respected.
+* Context aware messages for read receipts feature.
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
@@ -189,6 +192,21 @@ async def on_members_added_activity(
 > Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+
+## Read receipts
+
+Teams provides **Read Receipt** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in 1:1 chat, then the bot sends follow up message to the user to improve engagement. After the bot is enabled for this feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
+
+The **Read Receipt** features enable a bot developer to do the following:
+
+1. A bot is aware of an approximate number of users who have read the bot's message by counting number of events.
+
+1. A bot sends more context aware follow up messages.
+
+1. A bot leverages `IsMessageRead` bot SDK helper method to see whether the specific message has been read.
+
+> [!NOTE]
+> A bot doesn't receive the event if a tenant admin or user disables the **Read Receipt** setting.
 
 ## Teams channel data
 
