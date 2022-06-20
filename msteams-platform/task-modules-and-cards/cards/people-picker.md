@@ -1,8 +1,7 @@
 ---
 title: People Picker in Adaptive Cards
-description: Describes how to use the People Picker control in Adaptive Cards
+description: In this module, learn how to use the People Picker control in Adaptive Cards, its scenarios and implement people picker.
 localization_priority: Medium
-keywords: Adaptive Cards People Picker
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta

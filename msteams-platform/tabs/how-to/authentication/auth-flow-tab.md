@@ -1,9 +1,8 @@
 ---
 title: Enable authentication using third-party OAuth provider
-description: Describes authentication flow in tabs, OAuth by Azure AD, and provides code sample 
+description: In this article, learn Teams authentication flow in tabs, third party OAuth provider, OAuth by Azure AD, and auth code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: teams authentication flow tabs third party OAuth provider
 ---
 # Enable authentication using third-party OAuth provider
 

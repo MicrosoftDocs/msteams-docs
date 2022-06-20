@@ -1,7 +1,6 @@
 ---
 title: Microsoft Teams Authentication flow for bots
-description: Describes Microsoft Teams authentication flow in bots with Code sample.
-keywords: teams authentication flow bots
+description: In this module, learn how to do Authentication flow for bots in Microsoft Teams and its  Code sample.
 ms.localizationpriority: medium
 ms.topic: overview
 ---

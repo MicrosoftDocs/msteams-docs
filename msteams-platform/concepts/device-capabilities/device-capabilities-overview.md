@@ -11,7 +11,7 @@ ms.topic: overview
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location with their web apps. This integration reduces the barrier to app development, speeds up development cycle, and creates new scenarios or use-cases for the developer community.
 
-Device permissions are different in the browser. Previously, browser handled how to grant access permissions and now these permissions are handled in Microsoft Teams. For more information, see [browser device permissions](browser-device-permissions.md).
+Device permissions are different in the browser. Previously, browser handled how to grant access permissions and now these permissions are handled in Teams. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Native device capabilities
 
@@ -45,4 +45,4 @@ Also, you can integrate the Teams native [people picker control](people-picker-c
 
 | Sample Name           | Description | Node.js    |
 |:---------------------|:--------------|:---------|
-|Device permissions | Describes how to demonstrates Microsoft Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Device permissions | Describes how to demonstrates Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

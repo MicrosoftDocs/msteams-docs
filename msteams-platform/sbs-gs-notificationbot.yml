@@ -2,7 +2,7 @@
 title: Build notification bot with JavaScript
 metadata:
   title: Build notification bot with JavaScript
-  description: In this tutorial, you'll learn to send notification with JavaScript.
+  description: In this tutorial, you'll learn to send notification with JavaScript by creating a new notification bot with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 05/04/2021

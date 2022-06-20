@@ -5,7 +5,6 @@ description: Introduce the elements of planning an app, understanding use cases,
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: entry points extensibility use cases device capability
 ---
 
 # Plan your app with Teams features
@@ -16,9 +15,9 @@ At its heart, Teams is a collaboration platform. It's also a social platform, is
 
 In this section, learn how to:
 
-* Identify and map use cases to Teams features
-* Use planning checklist
-* Plan beyond app deployment
+* Identify and map use cases to Teams features.
+* Use planning checklist.
+* Plan beyond app deployment.
 
 ## Plan with Teams
 
@@ -87,7 +86,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Sideloading apps | ✔️ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-****Compliance UI***: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft does not endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+****Compliance UI***: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
