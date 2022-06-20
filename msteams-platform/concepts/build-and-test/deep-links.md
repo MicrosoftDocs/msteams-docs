@@ -422,6 +422,23 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
+#### Generate a deep link to a meeting
+
+You can also create deep link to start or join a meeting when share to meeting button is selected in an app to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings#share-entire-app-to-stage).
+
+When share to meeting button is selected in an app when user is already in a meeting, the app is [shared to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings#share-entire-app-to-stage) and a permission dialog pops-up where users can give permissions for the participants such as co-editing a document or collaborating with an app.
+
+When user is not in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they interact with an app.
+
+| Deep link | Format | Example |
+|-----------|--------|---------|
+|To share the app in an ongoing meeting| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}` ||
+|To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json, “useMeetNow”: false }`||
+|To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json, “useMeetNow”: true }`||
+
+> [!NOTE]
+> Ensure to Enable Deeplink Sharing for extensible desktop app in Debug settings
+
 #### Generate a deep link to a call
 
 While use of the strongly typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
