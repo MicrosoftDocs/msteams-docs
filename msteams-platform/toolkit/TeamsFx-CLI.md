@@ -430,6 +430,27 @@ The following list provides required permissions for `TeamsFx` projects:
     * Update Tab code, and deploy the project to remote.
     * Launch remote and the project should work fine.
 
+## Deploy to azure web app manually
+
+1. Create a SSO-enable tab.
+2. Provision your project:
+
+      ```bash
+      teamsfx provision
+      ```
+
+3. Run `npm install` and `npm run build:teamsfx:dev` in `tabs` or `api folder` to install added packages.
+
+4. Create a windows app service (same OS with your machine).
+
+5. Run `$ az webapp up --name --html --subscription` in `tabs` or `build` or `folder`.
+
+6. Modify `templates/azure/provision/frontendHosting.bicep`.
+
+7. Provision again. Teams Toolkit updates Azure Active Directory and manifest for you.
+
+8. Find your `appPackage.dev.zip` in build or AppPackage folder and add to Teams.
+
 ## See also
 
 * [TeamsFx SDK for TypeScript or JavaScript](TeamsFx-SDK.md)
