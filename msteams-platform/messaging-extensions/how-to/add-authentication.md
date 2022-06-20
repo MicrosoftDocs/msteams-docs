@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your message extension
 author: surbhigupta
-description: In this artilce, learn how to add authentication to a messaging extension using code examples and sample
+description: In this article, you'll learn how to add authentication to a messaging extension using code examples and sample
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -36,7 +36,7 @@ The sequence is as follows:
 1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
 1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
 
-Your service should verify the authentication code received in step 6 matches with step 5. These steps ensures that a malicious user doesn't try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify that the authentication code received in step 6 matches with step 5. The steps ensure that a malicious user doesn't try to spoof or compromise the sign in flow. The flow effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign in action
 
