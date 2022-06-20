@@ -5,6 +5,7 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 ---
+# Messages in bot conversations
 
 Each message in a conversation is an Activity object of type messageType: message. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
