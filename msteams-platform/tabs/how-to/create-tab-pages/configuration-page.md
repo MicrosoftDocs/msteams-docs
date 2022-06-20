@@ -15,7 +15,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Configure a channel or group chat tab
 
@@ -41,10 +41,10 @@ The following code is an example of corresponding code for the configuration pag
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
     <script>
-        app.initialize();
+        microsoftTeams.app.initialize();
         let saveGray = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
-                const configPromise = pages.config.setConfig({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = microsoftTeams.pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
                     entityId: "grayIconTab",
@@ -57,8 +57,8 @@ The following code is an example of corresponding code for the configuration pag
         }
 
         let saveRed = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
-                const configPromise = pages.config.setConfig({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = microsoftTeams.pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
                     entityId: "redIconTab",
@@ -209,7 +209,7 @@ After your page uploads, Teams updates the query string placeholders with releva
 
 ```html
 <script>
-   app.initialize();
+   microsoftTeams.app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -251,7 +251,7 @@ The following code provides an example of adding this function to the configurat
 <span id="user"></span>
 ...
 <script>
-    const contextPromise = app.getContext();
+    const contextPromise = microsoftTeams.app.getContext();
     contextPromise.
         then((context) => {
             let userId = document.getElementById('user');
@@ -293,7 +293,7 @@ Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for remov
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
-const configPromise = pages.config.setConfig({
+const configPromise = microsoftTeams.pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",

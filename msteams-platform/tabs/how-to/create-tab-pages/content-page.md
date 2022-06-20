@@ -46,7 +46,7 @@ The following code provides an example of how your page and the Teams client com
 <body>
 ...
     <script>
-    app.initialize();
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
