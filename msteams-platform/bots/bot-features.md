@@ -56,6 +56,7 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 > Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
 
 > [!NOTE]
+>
 > * Bots in GCCH only support  up to manifest version v1.10.
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 > * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
@@ -65,12 +66,12 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 >   * Go to the resource group and manually delete the unused resources. Such as the app service, app service plan (if you created during bot registration), and the application insights (if you choose to enable it during bot registration).
 >   * You can also use az-cli to do bot registration:
 >
->     1. Sign into azure and set the subscription <br> 
->           &nbsp; az cloud set –name  "AzureUSGovernment" <br> 
+>     1. Sign into azure and set the subscription <br>
+>           &nbsp; az cloud set –name  "AzureUSGovernment" <br>
 >           &nbsp; az account set –name "`subscriptionname/id`".<br>
 >     1. Create app registration  
->           &nbsp; az ad app create --display-name "`name`" <br> 
->           &nbsp; --password "`password`" --available-to-other-tenants.<br> 
+>           &nbsp; az ad app create --display-name "`name`" <br>
+>           &nbsp; --password "`password`" --available-to-other-tenants.<br>
 >           Your app id would be created here.<br>
 >     1. Create bot resource <br>
 >           &nbsp; az bot create –resource-group "`resource-group`"<br>
@@ -112,7 +113,7 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
     * Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
 
     * Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
-    
+
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) need to be encoded as `&amp;`.
 
     ```json
@@ -124,16 +125,17 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
       "ConnectionName": ""
     }
     ```
+
 2. **Update Startup.cs:**
 
     To use OAuth in *non-public Azure clouds*, like the government cloud, or in bots with data-residency, you must add the following code in the **Startup.cs** file.
-    
+
     ```csharp
     string uri = "<uri-to-use>";
     MicrosoftAppCredentials.TrustServiceUrl(uri);
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
-    
+
     Where \<uri-to-use\> is one of the following URIs:
 
     |**URI**|**Description**|
@@ -304,3 +306,4 @@ this.onMessage(async (context, next) => {
 * [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
