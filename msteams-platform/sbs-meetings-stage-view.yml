@@ -2,7 +2,7 @@
 title: Share meeting stage in Teams 
 metadata:
   title: Share meeting stage in Team
-  description: In this tutorial, you'll learn to set up a Meeting stage view for Teams.
+  description: With this learning module, learn how to set up a Meeting stage view for Teams to add status details for collaboration.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -18,8 +18,8 @@ items:
 
     **Key features of share meeting stage in Teams**
 
-    * Add status details in the side panel
-    * Add details for collaboration 
+    * Add status details in the side panel.
+    * Add details for collaboration.
     
     This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You'll see the following output:
 
@@ -80,9 +80,9 @@ items:
 
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
-         * Replace `<<App-ID>>` with your bot's **Microsoft App ID**
-         * Replace `<<BASE-URL>>` to the fully qualified your ngrok domain name
-         * Replace `<<VALID DOMAIN>>` with your fully qualified ngrok domain name
+         * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace `<<BASE-URL>>` to the fully qualified your ngrok domain name.
+         * Replace `<<VALID DOMAIN>>` with your fully qualified ngrok domain name.
          
          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="true":::   
 

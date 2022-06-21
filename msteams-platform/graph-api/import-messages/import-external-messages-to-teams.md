@@ -1,11 +1,10 @@
 ---
-title: Use Microsoft Graph to import external platform messages to Teams 
-description: Describes how to use Microsoft Graph to import messages from an external platform to Teams
+title: Use Microsoft Graph to import external platform messages to Teams
+description: Describes how to use Microsoft Graph to import messages from an external platform to Teams.
 ms.localizationpriority: high
-author: akjo 
-ms.author: lajanuar
+author: "akjo" 
+ms.author: "lajanuar"
 ms.topic: Overview
-keywords: teams import messages api graph microsoft migrate migration post
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -60,8 +59,8 @@ Since you're migrating existing data, maintaining the original message timestamp
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
@@ -106,8 +105,8 @@ Creating a channel for the imported messages is similar to the create team scena
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.channelCreationMode": "migration",
   "displayName": "Architecture Discussion",
@@ -298,7 +297,6 @@ After the message migration process has completed, both the team and channel are
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
-
 ```
 
 #### Response
@@ -331,10 +329,11 @@ You can add a member to a team [using the Teams UI](https://support.microsoft.co
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
+
 {
-"@odata.type": "#microsoft.graph.aadUserConversationMember",
-"roles": [],
-"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+   "@odata.type": "#microsoft.graph.aadUserConversationMember",
+   "roles": [],
+   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 

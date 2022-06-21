@@ -3,7 +3,6 @@ title: Localize JSON schema reference
 description: Describes the localization schema supported by the localization file for Microsoft Teams using an example schema
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams manifest schema localization
 ms.date: 05/20/2019
 ---
 

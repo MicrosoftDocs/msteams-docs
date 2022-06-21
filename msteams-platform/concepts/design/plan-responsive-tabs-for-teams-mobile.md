@@ -1,7 +1,7 @@
 ---
 title: Plan for Teams mobile
 author: surbhigupta
-description: Guide to plan for creating an app on Teams mobile 
+description: With this learning module, you'll learn how to plan for creating an app on Teams mobile and understand different stages to build app.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
@@ -55,9 +55,9 @@ In the first stage, you can implement the most basic consumption experience, to 
 
 You can show the following information:
 
-* Dashboards and summaries
-* Data visuals, maps, and infographics
-* Charts, graphs, and tables
+* Dashboards and summaries.
+* Data visuals, maps, and infographics.
+* Charts, graphs, and tables.
 
 ![Dashboarding and data visualization apps consumption](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -65,9 +65,9 @@ Quick actions:
 
 In the second stage, the users can work on the existing charts and visuals from desktop experience. You can introduce the following actions:
 
-* Search content
-* Filter data
-* Create bookmarks
+* Search content.
+* Filter data.
+* Create bookmarks.
 
 ![Dashboarding and data visualization apps quick actions](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
@@ -77,9 +77,9 @@ In the third stage, enable users to create content such as, charts and graphics 
 
 You can provide following access to users:
 
-* Modify title and description
-* Insert data items to create visualizations
-* Share visualizations in a channel or group chat
+* Modify title and description.
+* Insert data items to create visualizations.
+* Share visualizations in a channel or group chat.
 
 ![Dashboarding and data visualization apps enablement](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -105,12 +105,12 @@ Quick actions:
 
 In the second stage, you can provide the following app access to users:
 
-* Create tasks or items with the mandatory fields to reduce cognitive load of the users
-* Change the board type or view
-* Review tasks by expanding the view
-* Use task modules to see detailed view
-* Move the tasks into different categories
-* Share relevant tasks in chats and channels through emails and activity feed
+* Create tasks or items with the mandatory fields to reduce cognitive load of the users.
+* Change the board type or view.
+* Review tasks by expanding the view.
+* Use task modules to see detailed view.
+* Move the tasks into different categories.
+* Share relevant tasks in chats and channels through emails and activity feed.
 
 ![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -118,9 +118,9 @@ Enablement:
 
 In the third stage, you can enable users' experience with the following activities:
 
-* Add new projects and boards
-* Add and modify different categories, such as **Proposed**, **Active**, and **Closed**
-* Configure the tasks for comments, attachments, and other complex features
+* Add new projects and boards.
+* Add and modify different categories, such as **Proposed**, **Active**, and **Closed**.
+* Configure the tasks for comments, attachments, and other complex features.
 
 ![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -139,9 +139,9 @@ Consumption:
 
 In the first stage, you can consider desktop experience to show the content and assets in your app.  You can show the following functions:
 
-* Comments or feedback
-* Zoom in or out
-* Current stage or progress of a pending document
+* Comments or feedback.
+* Zoom in or out.
+* Current stage or progress of a pending document.
 
 ![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -149,9 +149,9 @@ Quick Actions:
 
 In the second stage, you can introduce the following actions:
 
-* Create new board for collaboration or new documents for signing
-* Share boards internally and also with guests
-* Configure admin permissions
+* Create new board for collaboration or new documents for signing.
+* Share boards internally and also with guests.
+* Configure admin permissions.
 
 > [!TIP]
 > You expose actions, which can be shown easily on the small screens.
@@ -162,10 +162,10 @@ Enablement:
 
 In the third stage, provide complete experience to your users. You can enable users' experience with the following activities:
 
-* Adding text, shapes, and quick notes
-* Navigate around content
-* Add layers and filters
-* Delete, undo, and redo operations
+* Adding text, shapes, and quick notes.
+* Navigate around content.
+* Add layers and filters.
+* Delete, undo, and redo operations.
 * Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
 ![Coauthoring and whiteboarding apps enablement](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)

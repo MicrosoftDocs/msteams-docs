@@ -1,6 +1,6 @@
 ---
 title: Extend a Teams message extension across Microsoft 365
-description: Here's how to update your search-based Teams message extension to run in Outlook
+description: Learn how to update search-based Teams message extension to run in Outlook by updating app manifest, adding an outlook channel, and sideloading updated app.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
@@ -14,9 +14,9 @@ The process to update your search-based Teams message extension to run Outlook i
 
 > [!div class="checklist"]
 >
-> * Update your app manifest
-> * Add an Outlook channel for your bot
-> * Sideload your updated app in Teams
+> * Update your app manifest.
+> * Add an Outlook channel for your bot.
+> * Sideload your updated app in Teams.
 
 The rest of this guide will walk you through these steps and show you how to preview your message extension in both Outlook for Windows desktop and outlook.com.
 
@@ -24,10 +24,10 @@ The rest of this guide will walk you through these steps and show you how to pre
 
 To complete this tutorial, you'll need:
 
-* A Microsoft 365 Developer Program sandbox tenant
-* Enrollment in *Office 365 Targeted Releases* for your sandbox tenant
-* A test environment with Office apps installed from the Microsoft 365 Apps *Beta Channel*
-* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension
+* A Microsoft 365 Developer Program sandbox tenant.
+* Enrollment in *Office 365 Targeted Releases* for your sandbox tenant.
+* A test environment with Office apps installed from the Microsoft 365 Apps *Beta Channel*.
+* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
 > [Publish Teams apps extended for Microsoft 365](publish.md)
