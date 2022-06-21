@@ -197,7 +197,7 @@ Messages sent between users and bots include internal channel data within the me
 
 Teams provides **Read Receipt** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in 1:1 chat, then the bot sends follow up message to the user to improve engagement. After the bot is enabled for this feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
 
-The **Read Receipt** features enable a bot developer to do the following:
+The **Read Receipt** feature enables a bot developer to do the following:
 
 1. A bot is aware of an approximate number of users who have read the bot's message by counting number of events.
 
