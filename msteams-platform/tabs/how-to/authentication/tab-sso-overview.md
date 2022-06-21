@@ -11,6 +11,10 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 
 With SSO in Teams, app users have the advantage of using Teams to access apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
 
+Watch this video to learn more about SSO:
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE50aic]
+
 Here's what you'll learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience. App users can use your app without signing in again.
