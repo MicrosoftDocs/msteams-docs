@@ -200,7 +200,7 @@ Teams provides **Read receipt** feature for users in a personal chat and a group
 > [!NOTE]
 > A bot doesn't receive the event if a tenant admin or user disables the **Read receipt** setting.
 
-The following image shows the **Read receipt** settings enabled in Teams app from **ellipses (...)** > **Settings** > **Privacy** > **Read receipts**.
+The following image shows the **Read receipt** settings enabled in Teams app from ellipses **(...)** > **Settings** > **Privacy** > **Read receipts**.
 
 :::image type="content" source="../../../assets/images/Cards/read-receipts.png" alt-text="Receipts"border="true":::
 
