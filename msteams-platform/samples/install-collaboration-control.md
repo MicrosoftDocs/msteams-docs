@@ -49,8 +49,8 @@ Before installation, you must be in a Power Platform environment or admin tenant
 
 To install the solutions, begin by browsing to [Microsoft AppSource] and then complete the following steps:
 
-1. Select the Get it now button.
-1. Sign in with your account, fill in the form and continue
+1. Select **Get it now** button.
+1. Sign in with your account, fill in the form and select **Continue**.
 
    :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Preview form "border="true":::
 
@@ -60,43 +60,26 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 
 1. You'll be directed to Power Platform Admin Center. Select an environment from the drop down and agree to the terms and policy statements.
 
-     > [!TIP]
-     > If you see a permissions error when you select the environment, try clicking outside the
-     environment drop down to see if that resolves the issue.
+   > [!TIP]
+   > If you see a permissions error when you select the environment, try clicking outside the environment drop down to see if that resolves the issue.
 
-     :::image type="content" source="../assets/images/collaboration-control/install-collaboration-control.png" alt-text="Install collaboration control" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-collaboration-control.png" alt-text="Install collaboration control" border="true":::
 
-1. Select Install to begin installation. Installation should take approximately 15 mins to complete.
+1. Select **Install**, installation may take approximately fifteen minutes to complete.
 
-1. Navigate to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home)
+   :::image type="content" source="../assets/images/collaboration-control/install-solution.png" alt-text="Collaboration control install" border="true":::
 
-1. Make sure' in the environment the controls were installed into. You can view the environment and change it if required on the top right of the screen.
+1. Navigate to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home), it is also supported if you are signed up to Power Apps preview.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps.png" alt-text="power apps" border="true":::
+1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if required on the upper right of the Power Apps portal.
 
-1. Once' in the right environment, select the Solutions tab to view all the solutions that you've just installed.
+   :::image type="content" source="../assets/images/collaboration-control/power-apps.png" alt-text="power apps" border="true":::
 
- The Collaboration controls are a preview, and any element may change over time with potential for breaking changes. The Collaboration controls aren't supported on production environments.
+1. Select the **Solutions** tab to view all the solutions that you've installed in the right environment.
 
    :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="solutions collaboration control" border= "true":::
 
-Congrats! You've successfully installed all the Collaboration solutions into your environment. In the next exercise, you'll build a new model-driven app that can take advantage of the Collaboration Control capabilities.
-
-### Prerequisites
-
- The following are required to build and deploy Collaboration Manager applications using the Collaboration Controls.
-
-* Power Apps - to build Model Driven Applications using the Collaboration Controls
-* Microsoft 365 E3 or higher - to deploy custom applications to Microsoft Teams
-
-### Role Requirements
-
-To install the components onto a Power Platform environment the following roles are required:
-
-* System Customizer
-* Environment Maker
-
 > [!NOTE]
-> If these roles are enabled but installation of the controls is showing ‘privilege errors’, elevate the account to the System Administrator role.
+> The Collaboration controls are preview and elements may change over time with potential for breaking changes. The Collaboration controls aren't supported in production environments.
 
-More information on role privileges: [Configure user security in an environment - Power Platform | Microsoft Docs](/power-platform/admin/database-security)
+After successfull installation of all the Collaboration solutions into your environment, you'll be able to build a new model-driven app that can take advantage of the Collaboration Control capabilities.
