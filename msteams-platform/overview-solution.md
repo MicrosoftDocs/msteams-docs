@@ -9,6 +9,7 @@ ms.date: 11/02/2021
 ---
 # The Teams solution
 
+
 The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
 
 ## The user story
@@ -25,7 +26,7 @@ Collate and map requirements to Teams features:
 | User app needs | Check forecast | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | Microsoft Graph, Weather API |
+| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, Weather API |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 
@@ -37,7 +38,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 1. Create a personal chat bot app.
 1. Integrate with an external weather forecast API to connect and request forecast for specific date and location.
-1. Integrate with Microsoft Graph for registered users.
+1. Integrate with :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph for registered users.
 1. Check and send forecast details based on user's travel date and travel location.
 
 ## Choose what suits you
@@ -65,7 +66,7 @@ From designing to building and distributing a Teams app, you can use various too
 1. Plan your project and figure out the requirement.
 1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Build the app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities and Microsoft 365 data with Microsoft Graph.
+1. Extend functionality by adding more Teams capabilities and M365 data with :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
 1. Manage and publish the apps to Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
@@ -127,7 +128,7 @@ From designing to building and distributing a Teams app, you can use various too
         **Extend your app across Microsoft 365**
     :::column-end:::
     :::column span="2":::
-        You can preview your Teams apps running in other high usage Microsoft 365 experiences with Teams JavaScript client SDK v2 Preview.
+You can preview your Teams apps running in other high usage Microsoft 365 experiences with Teams JavaScript client SDK v2 Preview.
 
         > [!div class="nextstepaction"]
         > [Extend your app](m365-apps/overview.md)
