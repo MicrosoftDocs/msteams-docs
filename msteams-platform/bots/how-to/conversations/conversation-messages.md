@@ -11,16 +11,14 @@ Bots in Microsoft Teams act as a core channel for reaching out to users, in the 
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
-* Easy access to the Bot Framework connector.
-* Additional functionality to manage conversation flow and state.
-* Simple ways to incorporate cognitive services, such as natural language processing (NLP).
-* Calibrate users' engagement based on the read status.
-* User settings for read receipts are respected.
-* Context aware messages for read receipts feature.
+* Access the Bot Framework connector easily
+* Manage conversation flow and state
+* Find simple ways to incorporate cognitive services, such as natural language processing (NLP)
+* Calibrate users' engagement based on the read status
 
-Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
+Your bot receives messages from Teams using `Text` property and it sends single or multiple message responses to the users.
 
-For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
+For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
 
 ## Receive a message
 
@@ -195,7 +193,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Read receipts
 
-Teams provides **Read receipts** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in the personal chat, then the bot sends a follow up message to enhance the user engagement. After the bot is enabled for the feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
+Teams provides **Read receipts** feature for users in a personal chat or a group chat with upto 20 members. If a user has not read the message in the personal chat, then the bot sends a follow up message to enhance the user engagement. After the bot is enabled for the feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
 
 > [!NOTE]
 > A bot doesn't receive the event if a tenant admin or user disables the **Read receipts** setting.
@@ -204,11 +202,11 @@ The following image shows the **Read receipts** settings enabled in Teams app fr
 
 :::image type="content" source="../../../assets/images/Cards/read-receipts.png" alt-text="Receipts"border="true":::
 
-The  **Read receipt** feature enables a bot developer to do the following:
+The  **Read receipt** feature helps bot developers with the following activities:
 
-1. The bot receives read receipt event after the user reads the message, the number of events show the user engagement with the bot.
+1. The bot receives **Read receipt** event after the user reads the message, the number of events show the user engagement with the bot.
 
-1. The bot sends more context aware follow up messages.
+1. The bot sends relevant context aware follow up messages.
 
 1. The bot leverages `IsMessageRead` bot SDK helper method to check whether the specific message has been read.
 
