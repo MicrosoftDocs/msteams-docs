@@ -163,7 +163,7 @@ To post a message in the webhook with cURL, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `curl`.
 
-1. Check the Microsoft Teams client for the new card posted.
+1. Check the Teams client for the new card posted.
 
 # [PowerShell](#tab/PowerShell)
 
@@ -180,7 +180,7 @@ To post a message to the webhook with PowerShell, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-1. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+1. Check the Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
     * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
     * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.

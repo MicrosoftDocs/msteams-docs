@@ -29,6 +29,12 @@ The following image displays the link unfurling experience through Share to Team
 
 This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
 
+See the following video to learn how to embed Share to Teams button:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
+<br>
+
+
 ## Embed a Share to Teams button
 
 1. Add the `launcher.js` script on your webpage.
