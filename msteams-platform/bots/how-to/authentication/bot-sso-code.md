@@ -19,6 +19,30 @@ This section covers:
 1. [Request a bot token](#request-a-bot-token)
 1. [Receive the bot token](#receive-the-bot-token)
 
+## Update development environment variables
+
+You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure your bot app code with these variables.
+
+To update the development environment variables:
+
+1. Open the bot app project.
+1. Open the `./env` file for your project.
+1. Find the variable `MICROSOFT_APP_PASSWORD` and update its value as shown below:
+
+    ```text
+    MICROSOFT_APP_PASSWORD=<client secret from Azure AD>
+    ```
+
+1. Add a new variable in the `./env` file for configuring OAuth connection setting as shown below:
+
+    ```text
+    SSO_CONNECTION_NAME={{OAUTH_CONNECTION_SETTING_NAME}}
+    ```
+
+1. Save the file.
+
+You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
+
 ## Request a bot token
 
 The request to get the token is a normal POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
