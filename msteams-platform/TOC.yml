@@ -236,7 +236,7 @@
     items:
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
-    - name: Messages in bot conversations
+    - name: Overview
       href: bots/how-to/conversations/conversation-messages.md
       items:
       - name: Receive all channel messages with RSC
@@ -253,7 +253,7 @@
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md   
-    - name: Request headers of bot
+    - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
@@ -273,7 +273,7 @@
       href: bots/calls-and-meetings/call-notifications.md
     - name: Requirements and considerations for application-hosted media bots
       href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-    - name: Media formats for bots
+    - name: Supported media formats for bots
       href: resources/media-formats.md
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
