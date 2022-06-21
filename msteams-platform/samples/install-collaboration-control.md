@@ -82,4 +82,4 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 > [!NOTE]
 > The Collaboration controls are preview and elements may change over time with potential for breaking changes. The Collaboration controls aren't supported in production environments.
 
-After successfull installation of all the Collaboration solutions into your environment, you'll be able to build a new model-driven app that can take advantage of the Collaboration Control capabilities.
+After successfull installation of all the Collaboration solutions into your environment, you'll be able to build a new model-driven app that can take advantage of the Collaboration control capabilities.
