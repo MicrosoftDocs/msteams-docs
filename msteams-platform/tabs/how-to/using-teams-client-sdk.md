@@ -229,7 +229,7 @@ The name of the host your app is running in is exposed as a *hostName* property 
 * **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
 * **Do** use *hostName* to differentiate the theme of your application based on the host it's running in. For example, you can use Microsoft Teams purple as the main accent color when running in Teams, and Outlook blue when running in Outlook.
-* **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Office* when running in Office on the web, and *Manage your tasks in Teams* when running in Microsoft Teams.
+* **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Office* when running in Office on the web, and *Manage your tasks in Teams* when running in Teams.
 
 #### Namespaces
 
@@ -237,7 +237,7 @@ Starting with TeamsJS v.2.0, APIs are organized into *capabilities* by way of na
 
 ##### *app* namespace
 
-The `app` namespace contains top-level APIs required for overall app usage, across Microsoft Teams, Office, and Outlook. All the APIs from various other TeamsJS namespaces have been moved to the `app` namespace as of TeamsJS v.2.0:
+The `app` namespace contains top-level APIs required for overall app usage, across Teams, Office, and Outlook. All the APIs from various other TeamsJS namespaces have been moved to the `app` namespace as of TeamsJS v.2.0:
 
 | Original namespace `global (window)` | New namespace `app` |
 | - | - |
