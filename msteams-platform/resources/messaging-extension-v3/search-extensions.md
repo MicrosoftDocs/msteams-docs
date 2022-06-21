@@ -1,6 +1,6 @@
 ---
 title: Search with message extensions
-description: In this module, learn how to develop search based message extensions
+description: In this article, you'll learn how to develop search based message extensions
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
@@ -88,7 +88,7 @@ To open your message extension, navigate to any of your chats or channels. Choos
 
 Most of your work involves the `onQuery` event, which handles all interactions in the message extension window.
 
-If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your message extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
+If you set `canUpdateConfiguration` to `true` in the manifest, you enable the Settings menu item for your message extension, and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
 ## Handle onQuery events
 
@@ -96,7 +96,7 @@ A message extension receives an `onQuery` event when anything happens in the mes
 
 If your message extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the message extension isn't configured, return a `config` response with a link to your configuration page. The response from the configuration page is also handled by `onQuery`. The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section:
 
-If your message extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
+If your message extension requires authentication, check the user state information. If the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
 
 Next, check whether `initialRun` is set; if so, take appropriate action, such as providing instructions or a list of responses.
 
@@ -228,7 +228,7 @@ If your app returns multiple items only the first will be used.
 
 ### Respond to user requests
 
-When the user performs a query, Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user performs a query, Teams issues a synchronous HTTP request to your service. During this time, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
 Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:
 
