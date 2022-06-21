@@ -28,7 +28,7 @@ The request to get the token is a normal POST message request using the existing
 
 If the user is using the application for the first time and user consent is required, the following dialog box appears to continue with the consent experience:
 
-![Consent dialog box](~/assets/images/authentication/SSO-bots-auth/bot-consent-box.png)
+:::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
 
 When the user selects **Continue**, the following events occur:
 
