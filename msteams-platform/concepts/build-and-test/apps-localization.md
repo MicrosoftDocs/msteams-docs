@@ -43,7 +43,7 @@ Use the Microsoft Teams app schema `v1.5` and later to localize your app. You ca
 Add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings don't match with any of your additional languages.
 
 > [!NOTE]
-> Manifest version should be the same for both manifest.json and localization.json files.
+> Manifest version must be same for both manifest.json and localization.json files.
 
 ### Example manifest.json change
 
