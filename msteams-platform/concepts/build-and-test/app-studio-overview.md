@@ -25,15 +25,15 @@ App Studio is a Teams app, which can be found in the Teams store. Follow this li
 
 In the store, search for App Studio.
 
-![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="Store entry for app studio":::
 
 Select the App Studio tile to open the app install page:
 
-![Configure app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="Configure app studio":::
 
 Select **install**.
 
-![app studio](~/assets/images/get-started/teamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="app studio":::
 
 Once you are in App Studio, select on the **Manifest editor** tab where you can either import an existing app or create a new app.
 
@@ -143,6 +143,32 @@ Controls include:
 * Tabs
 * Tables
 * Icons
+
+## App Studio to Developer Portal
+
+App Studio will be deprecated, you can use Developer Portal. The following table provides the detailed information of the features supported in the Developer Portal:
+
+| Features | App Studio | Developer Portal |
+| --- | --- | --- |
+| App analytics* | ❌ | ✔️ |
+| App capabilities-Bots | ✔️ | ✔️ |
+| App capabilities-Connectors | ✔️ | ✔️ |
+| App capabilities-Messaging extension | ✔️ | ✔️ |
+| App capabilities-Meeting extension | ❌ | ✔️ |
+| App capabilities-Personal apps | ✔️ | ✔️ |
+| App capabilities-Tabs | ✔️ | ✔️ |
+| App environments | ❌ | ✔️ |
+| App languages | ✔️ | ✔️ |
+| App manifest preview and download | ✔️ | ✔️ |
+| App plans and pricing | ❌ | ✔️ |
+| App publishing | ✔️ | ✔️ |
+| App permissions | ❌ | ✔️ |
+| App sharing-share with co-developers | ❌ | ✔️ |
+| App validation | ✔️ | ✔️ |
+| Create a new app | ✔️ | ✔️ |
+| Impart a zip package | ✔️ | ✔️ |
+
+\* *App analytics will be available for GA soon.*
 
 ## See also
 
