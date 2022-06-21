@@ -11,16 +11,14 @@ Bots in Microsoft Teams act as a core channel for reaching out to users, in the 
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
-* Easy access to the Bot Framework connector.
-* Additional functionality to manage conversation flow and state.
-* Simple ways to incorporate cognitive services, such as natural language processing (NLP).
-* Calibrate users' engagement based on the read status.
-* User settings for read receipts are respected.
-* Context aware messages for read receipts feature.
+* Access the Bot Framework connector easily
+* Manage conversation flow and state
+* Find simple ways to incorporate cognitive services, such as natural language processing (NLP)
+* Calibrate users' engagement based on the read status
 
-Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
+Your bot receives messages from Teams using `Text` property and it sends single or multiple message responses to the users.
 
-For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
+For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
 
 ## Receive a message
 
