@@ -23,7 +23,7 @@ You can create a [package](~/concepts/build-and-test/apps-package.md) and [publi
 
 To distribute your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
-For a connector to work only in Microsoft Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Office 365 products that support applications, including Outlook and Teams.
+For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Office 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
 > Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
@@ -41,7 +41,7 @@ Users can complete the entire connector configuration experience without having 
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
     > * The configuration experience is loaded inline within Teams.
 
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
+You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
 
 To integrate the configuration experience:
 
@@ -137,7 +137,7 @@ The following table provides the parameters and the details of `GetSetting` resp
 | `configName`  | The configuration name, as set by your code when calling `setSettings()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setSettings()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
-| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Microsoft Teams respectively. |
+| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Teams respectively. |
 | `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### Handle edits
@@ -215,11 +215,11 @@ After you upload the app, open the connectors list from any channel. Scroll to t
 ![Screenshot of an uploaded section in connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> The flow occurs entirely within Microsoft Teams as a hosted experience.
+> The flow occurs entirely within Teams as a hosted experience.
 
 To verify that `HttpPOST` action is working correctly, [send messages to your connector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and test the connectors in your Microsoft Teams.
+Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and test the connectors in your Teams.
 
 ## Distribute webhook and connector
 
