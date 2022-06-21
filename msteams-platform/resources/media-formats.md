@@ -4,7 +4,7 @@ description: In this module, learn bots on Microsoft Teams support only the foll
 ms.topic: reference
 ms.localizationpriority: medium
 ---
-# Media formats for bots
+# Supported media formats for bots
 
 Bots on Microsoft Teams support only the following media formats for audio and video content:
 
