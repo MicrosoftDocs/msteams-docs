@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: zyxiaoyuer
-description: Function of Visual studio code and Teams Toolkit during local debug
+description: In this module, learn function of Visual studio code and Teams Toolkit during local debug and register and configure your Teams app
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -46,8 +46,8 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
   | Platform  | Software|
   | --- | --- |
-  |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
-  |macOs (arm64) |6.0 |
+  |Windows, macOS (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
+  |macOS (arm64) |6.0 |
 
 * Development certificate, if the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams Toolkit prompts you to install it.
 * Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions isn't installed, the Teams Toolkit installs Azure Functions binding extensions.

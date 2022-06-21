@@ -1,8 +1,7 @@
 ---
 title: Create an Incoming Webhook
 author: laujan
-description: Add Incoming Webhook to Teams app and post any external requests to Teams using it
-keywords: teams tabs outgoing webhook
+description: In this module, learn how to add Incoming Webhook to Teams app and post any external requests to Teams using it
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
@@ -15,6 +14,10 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Bots
 * Message extensions
 * Connectors
+
+See the following video to learn how to create an Incoming Webhooks:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## Key features of an Incoming Webhook
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams tabs
 author: surbhigupta
-description: An overview of custom tabs on the Teams platform
+description: In this module, learn to build a custom tabs on the Teams platform, Tab features and Tabs user scenarios
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar

@@ -1,6 +1,6 @@
 ---
 title: Debug your Teams app 
-description: Debug your Teams app locally in Teams Toolkit
+description: In this module, learn how to debug your Teams app locally in Teams Toolkit and key features of Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -53,7 +53,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
-## Debug your Teams app locally
+## Debug your app locally
 
 The following steps help you to debug your Teams app locally:
 
