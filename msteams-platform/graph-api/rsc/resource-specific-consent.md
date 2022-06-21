@@ -1,6 +1,6 @@
 ---
 title: Enable resource-specific consent in Teams
-description: Learn resource-specific permissions for a team and chat in Teams and also learn how to make advantage of it.
+description: In this article, you'll learn resource-specific consent in Microsoft Teams and how to make advantage of it.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
