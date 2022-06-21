@@ -195,12 +195,12 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Read receipts
 
-Teams provides **Read receipt** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in the personal chat, then the bot sends a follow up message to enhance the user engagement. After the bot is enabled for the feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
+Teams provides **Read receipts** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in the personal chat, then the bot sends a follow up message to enhance the user engagement. After the bot is enabled for the feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
 
 > [!NOTE]
-> A bot doesn't receive the event if a tenant admin or user disables the **Read receipt** setting.
+> A bot doesn't receive the event if a tenant admin or user disables the **Read receipts** setting.
 
-The following image shows the **Read receipt** settings enabled in Teams app from ellipses **(...)** > **Settings** > **Privacy** > **Read receipts**.
+The following image shows the **Read receipts** settings enabled in Teams app from ellipses **(...)** > **Settings** > **Privacy** > **Read receipts**.
 
 :::image type="content" source="../../../assets/images/Cards/read-receipts.png" alt-text="Receipts"border="true":::
 
