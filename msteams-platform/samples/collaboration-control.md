@@ -15,17 +15,17 @@ These controls give you the power to simplify your user’s workflow collaborati
 
 Key capabilities of Collaboration Controls include the following:
 
-**Microsoft Planner tasks:** Create tasks that are assigned to members of a record so that they can view a consolidated list of tasks in a model driven app and within the tasks app in Microsoft Teams.
+* **Microsoft Planner tasks:** Create tasks that are assigned to members of a record so that they can view a consolidated list of tasks in a model driven app and within the tasks app in Microsoft Teams.
 
-**Dataverse Tasks:** Create tasks that can be assigned to users who are external to your organization.
+* **Dataverse Tasks:** Create tasks that can be assigned to users who are external to your organization.
 
-**Dataverse Notes:** Create notes that are assigned to a record in your app.
+* **Dataverse Notes:** Create notes that are assigned to a record in your app.
 
-**Outlook Meetings:** Schedule meetings with both customers and internal employees and seamlessly connect with others with Microsoft Teams with a click of a button.
+* **Outlook Meetings:** Schedule meetings with both customers and internal employees and seamlessly connect with others with Microsoft Teams with a click of a button.
 
-**SharePoint Files:** Share files with members of a record so that you can search, reference, and edit relevant artifacts in a centralized location backed by SharePoint.
+* **SharePoint Files:** Share files with members of a record so that you can search, reference, and edit relevant artifacts in a centralized location backed by SharePoint.
 
-**Approvals:** Streamline requests within your team.
+* **Approvals:** Streamline requests within your team.
 
 > [!NOTE]
 > By configuring and using the various Microsoft 365 capabilities of Collaboration controls mentioned above, you are granting permission for user data to pass through the Graph API and agreeing to [Microsoft API terms of Use](/legal/microsoft-apis/terms-of-use?context=graph%2Fcontext). To learn more about Graph APIs, see [Microsoft Graph](/graph/overview).
