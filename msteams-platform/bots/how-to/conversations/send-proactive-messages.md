@@ -59,9 +59,9 @@ After you have the user or channel information, you must create the conversation
 
 You must create the conversation if it doesn't exist or you don't know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
-You can get the conversation when the app is installed for the first time. After the conversation is created, you must get the conversation ID. The `conversationId` is available in the conversation update events.
+You'll get the conversation when the app is installed for the first time. After the conversation is created, you must get the `conversationId` available in the conversation update events.
 
-If you don't have the `conversationId` you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
+If you don't have the `conversationId,` you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
 ## Get the conversation ID
 
@@ -79,7 +79,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ## Best practices for proactive messaging
