@@ -25,11 +25,11 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 The following core concepts, terminology, and conventions guide you through the use of calls and online meetings bots:
 
-* Audio or video calls
-* Call types
+* Audio or video calls.
+* Call types.
 * Signals
-* Calls and online meetings
-* Real-time media
+* Calls and online meetings.
+* Real-time media.
 
 ### Audio or video calls
 

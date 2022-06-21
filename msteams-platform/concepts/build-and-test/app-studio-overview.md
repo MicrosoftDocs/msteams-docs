@@ -15,8 +15,8 @@ App Studio makes it easy to start creating or integrating your own Microsoft Tea
 > [!IMPORTANT]
 > App Studio is currently not available in the following types of Teams orgs:
 >
-> * Government Community Cloud (GCC)
-> * GCC High
+> * Government Community Cloud (GCC).
+> * GCC High.
 > * DoD
 
 ## Installing App Studio

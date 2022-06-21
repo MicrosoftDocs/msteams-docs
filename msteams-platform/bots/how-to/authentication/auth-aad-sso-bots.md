@@ -14,7 +14,7 @@ Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) sil
 
 See the following video to learn about single sign-on (SSO) support for bots:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## Bot SSO at runtime
@@ -358,7 +358,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
 
 ### Update the auth sample
 
-Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
+Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), and then complete the following steps to update it:
 
 1. Update the TeamsBot to handle the deduping of the incoming request by including the following code:
 
