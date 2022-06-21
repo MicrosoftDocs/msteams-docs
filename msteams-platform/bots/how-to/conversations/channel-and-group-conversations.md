@@ -21,6 +21,12 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 >
 > Posting a message or Adaptive Card to a private channel is currently not supported.
 
+See the following video to learn about channel and group chat conversations with a bot:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
+
 ## Design guidelines
 
 Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).

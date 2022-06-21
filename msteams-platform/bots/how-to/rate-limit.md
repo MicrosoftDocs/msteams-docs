@@ -171,3 +171,7 @@ The following table provides the per thread limit for all bots:
 
 > [!div class="nextstepaction"]
 > [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
+## See also
+
+[Manage a long-running operation](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)
