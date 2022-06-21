@@ -65,7 +65,7 @@ items:
     **Register an App in Azure:**
 
     1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
-    1. Select the **Azure Active Directory** service, and select **App registrations** from the left pane and then select **New registration**.
+    1. Select the **Azure Active Directory** service, and select **App registrations** from the left pane, and then select **New registration**.
     
         :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
     
@@ -128,7 +128,7 @@ items:
     1. In **Manage** pane of your bot, select **API permissions**.
     1. Select **Add a permission**. **Request API permissions** window appears.
     1. Select **Microsoft APIs** and select **Microsoft Graph**.
-    1. Select **Application permissions** and then select permissions.
+    1. Select **Application permissions**, and then select permissions.
     1. Add following Graph API Applications permissions to your Azure App and grant admin consent.
         * `Calls.AccessMedia.All`
         * `Calls.Initiate.All`
