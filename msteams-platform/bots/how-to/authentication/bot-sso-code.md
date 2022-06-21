@@ -16,6 +16,7 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 
 This section covers:
 
+1. [Update development environment variables](#update-development-environment-variables)
 1. [Request a bot token](#request-a-bot-token)
 1. [Receive the bot token](#receive-the-bot-token)
 
@@ -118,8 +119,6 @@ The response with the token is sent through an invoke activity with the same sch
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
 ## Token exchange failure
-
-/ move to Troubleshooting /
 
 If there's a token exchange failure, use the following code:
 
