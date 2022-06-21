@@ -236,7 +236,7 @@
     items:
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
-    - name: Overview
+    - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
       items:
       - name: Receive all channel messages with RSC
