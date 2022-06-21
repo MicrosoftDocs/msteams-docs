@@ -26,7 +26,7 @@ doc-feature-app-less-adaptive-card-preview-with-schema.org-templates-TFW
 
 User can add metadata tags to the website, and can copy the link and paste it into the compose box, the adaptive card takes the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
 
-There is one template registered for each app type product. Microsoft has incorporated its own templates and the following are the web categories:
+There is one template registered for each app type product. Microsoft has incorporated its own templates and following are the web categories:
 
 * Creative works
 * Embedded non-text objects
