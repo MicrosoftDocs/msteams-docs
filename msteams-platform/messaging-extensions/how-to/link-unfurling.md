@@ -39,11 +39,11 @@ There is one template registered for each app type product. Microsoft has incorp
 * Products
 * Reviews
 
-Following screenshot displays metadata of how an adaptive card unfurls on desktop.
+Following screenshot displays metadata of how an adaptive card unfurls on desktop:
 
 :::image type="content" source="../../assets/images/messaging-extension/meta.png" alt-text="Meta data"border="true"lightbox="../../assets/images/messaging-extension/meta-data.png":::
 
-Following screenshot displays metadata of how an adaptive card unfurls on mobile.
+Following screenshot displays metadata of how an adaptive card unfurls on mobile:
 
 (Mobile experience image to be added)
 
