@@ -419,6 +419,8 @@
           href: bots/how-to/authentication/bot-sso-code.md
         - name: Update app manifest for SSO and preview
           href: bots/how-to/authentication/bot-sso-manifest.md
+        - name: Grant Microsoft Graph permissions and scopes
+          href: bots/how-to/authentication/bot-sso-graph-api.md  
     - name: Use third party OAuth IdP authentication
       items:
         - name: Add authentication to your bot
