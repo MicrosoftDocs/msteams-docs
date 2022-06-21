@@ -9,13 +9,13 @@ ms.date: 03/20/2019
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-When testing your bot you need to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you chose to test your bot aligns with its functionality.
+When testing your bot you have to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you chose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams
 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
-There are two methods for uploading your app. You can either use [App Studio](~/concepts/build-and-test/app-studio-overview.md) or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest and reupload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
+There are two methods for uploading your app. You can either use [App Studio](~/concepts/build-and-test/app-studio-overview.md) or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest, and reupload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
 
 ## Debug your bot locally
 
@@ -25,7 +25,7 @@ If you're hosting your bot locally during development, you'll need to use a tunn
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart, you'll get a new URL and need to update your bot endpoint address to use that one as well.
+Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart, you'll get a new URL, and need to update your bot endpoint address to use that one as well.
 
 ## Testing your bot without uploading to Teams
 
@@ -42,7 +42,7 @@ Complete instructions on the Bot Framework Emulator can be found [here](/azure/b
 >[!Important]
 >Talking to your bot by ID is intended for testing purposes only.
 
-You can also initiate a conversation with your bot by using its ID. Two methods for doing so are given below. When a bot has been added through one of these methods it won't be addressable in channel conversations, and you can't take advantage of other Teams app capabilities like tabs or message extensions.
+You can also initiate a conversation with your bot by using its ID. Two methods for doing so are given below. When a bot is added through one of these methods it won't be addressable in channel conversations, and you can't take advantage of other Microsoft Teams app capabilities like tabs or message extensions.
 
 1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Teams will launch with a personal chat with your bot.
 2. Directly reference your bot's app ID from within Teams:
@@ -57,7 +57,8 @@ You can also initiate a conversation with your bot by using its ID. Two methods 
      The app ID should resolve to your bot name.
 
    * Select your bot and send a message to initiate a conversation.
-   * Alternatively, you can paste your bot's app ID in the search box in the top left in Teams. In the search results page, navigate to the People tab to see your bot and to start chatting with it.
+
+   * Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, go to the People tab to see your bot and to start chatting with it.
 
 Your bot will receive the `conversationUpdate` event just like bots added to a team, but without the team information in the `channelData` object.
 
