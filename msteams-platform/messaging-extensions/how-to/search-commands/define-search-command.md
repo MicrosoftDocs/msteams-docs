@@ -1,7 +1,7 @@
 ---
 title: Define message extension search commands
 author: surbhigupta
-description: Learn about message extension search commands for Microsoft Teams apps, to create a search command through app manifest and manually using code examples and sample.
+description: In this module, learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
@@ -14,6 +14,12 @@ Message extension search commands allow users to search external systems and ins
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
+
+See the following video to learn how to define message extension search commands:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+<br>
 
 ## Select search command invoke locations
 

@@ -1,6 +1,6 @@
 ---
 title: Overview - Publish your app to the Microsoft Teams store
-description: Describes the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
+description: Learn the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
@@ -14,7 +14,7 @@ Apps published to the Teams store also automatically list on [Microsoft AppSourc
 
 ## Understand the publishing process
 
-When you feel your app is production ready, you can begin the process of getting it listed on the Teams store.
+If your app is production ready, you can begin the process of getting it listed on the Teams store.
 
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
@@ -45,7 +45,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Deep functional and experience tests**
 
-  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies). 
+  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies).
   There will be a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**

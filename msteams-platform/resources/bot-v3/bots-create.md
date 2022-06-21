@@ -1,8 +1,7 @@
 ---
 title: Create a bot
-description: Describes how to create bots in Microsoft Teams
+description: In this module, learn how to create a bots using the Microsoft Bot Framework and ready to work in Microsoft Teams
 ms.topic: how-to
-keywords: teams bots creation
 ms.localizationpriority: medium
 ms.date: 12/07/2018
 ---

@@ -2,7 +2,7 @@
 title: Build your first app using C#
 metadata:
   title: Hello World with C#
-  description: In this tutorial, you'll learn to build Hello World app with C#.
+  description: In this tutorial, you'll learn to build Hello World app with C# by setting up a new project, build and deploy tab, bot and message extension apps.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -22,9 +22,9 @@ items:
 
     In this tutorial, you'll learn:
 
-    - How to set up a new project
-    - How to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019
-    - How to deploy your app from Developer Portal
+    - How to set up a new project.
+    - How to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019.
+    - How to deploy your app from Developer Portal.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -605,7 +605,7 @@ items:
         - Parameter description
 
     1. Select **Text** as the type of input.
-    1. Select **Save**
+    1. Select **Save**.
     1. The message extension command is saved, and shows on the list of commands in the **Message extension** pane.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-command-added.png" alt-text="Image showing new Command added" border="true":::

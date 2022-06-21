@@ -1,10 +1,9 @@
 ---
 title: Send proactive messages
-description: Learn how to send proactive messages with your Microsoft Teams bot, proactively install your app using Microsoft Graph and check the code samples based on Bot Framework SDK v4.
+description: Learn how to send proactive messages with your Teams bot, install your app using Microsoft Graph and check code samples based on Bot Framework SDK v4
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-Keywords: send a message get user ID channel ID conversation ID
 ---
 # Proactive messages
 
@@ -72,6 +71,13 @@ After you get the appropriate address information, you can send your message.
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
+
+See the following video to learn how to send proactive message from bots:
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## Best practices for proactive messaging
 

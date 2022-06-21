@@ -212,8 +212,8 @@ If you're running the app using ngrok, you'll need to set up local environment v
 Where:
 
 * The authorization credentials for your bot are as follows:
-  * MICROSOFT_APP_ID is ID
-  * MICROSOFT_APP_PASSWORD is password
+  * MICROSOFT_APP_ID is ID.
+  * MICROSOFT_APP_PASSWORD is password.
 * NODE_DEBUG show you what's happening in your bot in the Visual Studio Code debug console
 * NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for the root directory in the `src` folder).
 

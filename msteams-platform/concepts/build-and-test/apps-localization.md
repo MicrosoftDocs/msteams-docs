@@ -1,9 +1,8 @@
 ---
 title: Localize your app
-description: Describes considerations for localizing your Microsoft Teams app.
+description: Learn considerations for localizing your Microsoft Teams app and localize strings in your app manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
 ---
 # Localize your app
@@ -41,6 +40,9 @@ The images that you upload with the English language are used in AppSource.
 Use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case).
 
 Add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings don't match with any of your additional languages.
+
+> [!NOTE]
+> Manifest version must be same for both manifest.json and localization.json files.
 
 ### Example manifest.json change
 
@@ -151,7 +153,7 @@ If you provide localized versions of your application, the users respond with th
 
 | Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## See also
 

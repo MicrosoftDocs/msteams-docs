@@ -1,9 +1,8 @@
 ---
 title: Use external OAuth providers  
-description: Describes authentication using external OAuth providers  
+description: In this module, learn how to do authentication using external OAuth providers and how to add it to external browser 
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication using external OAuth provider
 ---
 
 # Use external OAuth providers
