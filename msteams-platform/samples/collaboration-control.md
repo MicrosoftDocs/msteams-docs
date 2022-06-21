@@ -7,24 +7,35 @@ ms.author: v-npaladugu
 ms.topic: conceptual
 ---
 
-# Collaboration controls overview
+# Collaboration controls
 
- The solutions that make up Collaboration Controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
+The Collaboration controls enable leveraging Microsoft 365 and Microsoft Teams for approvals, files, meetings, notes and tasks to enable contextual collaboration around business processes. These controls will allow you to build custom collaborative experiences that can be surfaced right in Teams. The solutions that make up Collaboration controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, Outlook, and SharePoint in a low code manner.
 
- Key capabilities of Collaboration Controls include the following:
+These controls give you the power to simplify your user’s workflow collaboration by building line of business apps with approvals, chat, files, meetings,notes, and tasks all in one surface reducing the productivity impact on users when context is switching from app to app.
 
- **Microsoft Planner tasks:** Create tasks that are assigned to members of a record so that they can view a consolidated list of remaining items within the Tasks app within Microsoft Teams.
+Key capabilities of Collaboration Controls include the following:
 
- **Dataverse Tasks:** Create tasks that can be assigned to users who are external to your organization.
+**Microsoft Planner tasks:** Create tasks that are assigned to members of a record so that they can view a consolidated list of tasks in a model driven app and within the tasks app in Microsoft Teams.
 
- **Dataverse Notes:** Create notes that are assigned to a record in your app.
+**Dataverse Tasks:** Create tasks that can be assigned to users who are external to your organization.
 
- **Outlook Meetings:** Schedule meetings with both customers and internal employees and seamlessly connect with others with Microsoft Teams with a select of a button.
+**Dataverse Notes:** Create notes that are assigned to a record in your app.
 
- **Microsoft Teams channel conversations:** Participate in channel conversations with your
- colleagues to get questions quickly answered and to notify others of important events.
+**Outlook Meetings:** Schedule meetings with both customers and internal employees and seamlessly connect with others with Microsoft Teams with a click of a button.
 
- **SharePoint Files:** Upload, view, pin/unpin, and share files with members of a record so that you can search, reference, and edit relevant artifacts in a centralized location backed by SharePoint.
+**SharePoint Files:** Share files with members of a record so that you can search, reference, and edit relevant artifacts in a centralized location backed by SharePoint.
 
- > [!NOTE]
- > By configuring and using the various Microsoft 365 capabilities of Collaboration Controls mentioned above,' granting permission for user data to pass through the Graph API and agreeing to [Microsoft API terms of Use](/legal/microsoft-apis/terms-of-use?context=graph%2Fcontext). To learn more about Graph APIs, go to [this link](/graph/overview)
+**Approvals:** Streamline requests within your team.
+
+> [!NOTE]
+> By configuring and using the various Microsoft 365 capabilities of Collaboration controls mentioned above, you are granting permission for user data to pass through the Graph API and agreeing to [Microsoft API terms of Use](/legal/microsoft-apis/terms-of-use?context=graph%2Fcontext). To learn more about Graph APIs, see [Microsoft Graph](/graph/overview).
+
+## How Collaboration controls works
+
+The controls run within a Power Apps Model Driven Application [MDA] that can be deployed to Microsoft Teams. MDA run on Microsoft Dataverse and can be integrated with a custom data model. The controls integrate with Microsoft Graph for Planner tasks, Outlook and Teams calendars, and SharePoint files. The Collaboration controls do not integrate directly with external sources, such as a system of record or a portal.
+
+* Data can be added to Dataverse from external sources via standard OData APIs.
+
+* Data can be read from Dataverse via standard OData APIs and submitted to external sources such as a system of record or a portal.
+
+:::image type="content" source="~/assets/images/collaboration-control/consumption-mda.png" alt-text="Collaboration lifecycle" border="true":::
