@@ -17,6 +17,31 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 > * Currently, Developer Portal is not available for Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 > * However, you can use a regular tenant to build an app in the Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
 
+> [!IMPORTANT]
+> If you are migrating from App Studio to Developer Portal, the following table provides the detailed information of the features that are supported in the Developer Portal:
+
+| Features | App Studio | Developer Portal |
+| --- | --- | --- |
+| App analytics* | ❌ | ✔️ |
+| App capabilities-Bots | ✔️ | ✔️ |
+| App capabilities-Connectors | ✔️ | ✔️ |
+| App capabilities-Messaging extension | ✔️ | ✔️ |
+| App capabilities-Meeting extension | ❌ | ✔️ |
+| App capabilities-Personal apps | ✔️ | ✔️ |
+| App capabilities-Tabs | ✔️ | ✔️ |
+| App environments | ❌ | ✔️ |
+| App languages | ✔️ | ✔️ |
+| App manifest preview and download | ✔️ | ✔️ |
+| App plans and pricing | ❌ | ✔️ |
+| App publishing | ✔️ | ✔️ |
+| App permissions | ❌ | ✔️ |
+| App sharing-share with co-developers | ❌ | ✔️ |
+| App validation | ✔️ | ✔️ |
+| Create a new app | ✔️ | ✔️ |
+| Impart a zip package | ✔️ | ✔️ |
+
+\* *App analytics will be available for GA soon.*
+
 ## Register an app
 
 The Developer Portal provides a couple ways to register a Teams app:
