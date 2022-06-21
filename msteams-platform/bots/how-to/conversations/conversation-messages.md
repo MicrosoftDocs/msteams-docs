@@ -195,18 +195,22 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Read receipts
 
-Teams provides **Read Receipt** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in 1:1 chat, then the bot sends follow up message to the user to improve engagement. After the bot is enabled for this feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
-
-The **Read Receipt** feature enables a bot developer to do the following:
-
-1. A bot is aware of an approximate number of users who have read the bot's message by counting number of events.
-
-1. A bot sends more context aware follow up messages.
-
-1. A bot leverages `IsMessageRead` bot SDK helper method to see whether the specific message has been read.
+Teams provides **Read receipt** feature for users in a personal chat and a group chat with upto 20 members. If a user has not read the message in the personal chat, then the bot sends a follow up message to enhance the user engagement. After the bot is enabled for the feature, the bot receives an event only in user:bot chat as soon as the user reads the bot's message.
 
 > [!NOTE]
-> A bot doesn't receive the event if a tenant admin or user disables the **Read Receipt** setting.
+> A bot doesn't receive the event if a tenant admin or user disables the **Read receipt** setting.
+
+The following image shows the **Read receipt** settings enabled in Teams app from **ellipses (...)** > **Settings** > **Privacy** > **Read receipts**.
+
+:::image type="content" source="../../../assets/images/Cards/read-receipts.png" alt-text="Receipts"border="true":::
+
+The  **Read receipt** feature enables a bot developer to do the following:
+
+1. The bot receives read receipt event after the user reads the message, the number of events show the user engagement with the bot.
+
+1. The bot sends more context aware follow up messages.
+
+1. The bot leverages `IsMessageRead` bot SDK helper method to check whether the specific message has been read.
 
 ## Teams channel data
 
