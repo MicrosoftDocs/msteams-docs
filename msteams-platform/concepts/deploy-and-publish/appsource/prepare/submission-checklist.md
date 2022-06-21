@@ -14,7 +14,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 See the following video to learn more about publishing your app to the Microsoft Teams app store:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), ensure you've done the following.
@@ -37,9 +37,9 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 Provide instructions and resources to help the reviewers test your app, including:
 
-* Test accounts
+* Test accounts.
 * Credentials
-* License keys
+* License keys.
 
 You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
 
@@ -53,11 +53,11 @@ Provide test accounts if your app requires a license or backend safe listing. Al
 
 Depending on your app's features, you may need to provide all the following accounts:
 
-* Admin account (required)
-* Non-admin account (required)
-* An account that isn't pre-configured to properly test the first-run sign-in experience (required)
-* An account with access to premium or upgraded features (if applicable)
-* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)
+* Admin account (required).
+* Non-admin account (required).
+* An account that isn't pre-configured to properly test the first-run sign-in experience (required).
+* An account with access to premium or upgraded features (if applicable).
+* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable).
 
 ### Tenant configurations
 
@@ -113,9 +113,9 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 The long description can provide a narrative that highlights your apps':
 
-* Main features
-* The problems it solves
-* Target audience
+* Main features.
+* The problems it solves.
+* Target audience.
 
 While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
 

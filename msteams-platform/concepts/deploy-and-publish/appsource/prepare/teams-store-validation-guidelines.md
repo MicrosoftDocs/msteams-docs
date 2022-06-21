@@ -311,7 +311,7 @@ The Teams app manifest defines your app's configuration.
 
 [*Mandatory Fix*]
 
-Icons are one of the main elements people see when browsing the Teams store. 
+Icons are one of the main elements people see when browsing the Teams store.
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -557,7 +557,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * For the best first run experience, authenticate your users during the tab setup and not after. Authentication can happen outside the tab configuration window. [*Suggested Fix*]
 
-* The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
+* The user must not leave the tab configuration experience inside Teams to create content outside of Teams, and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
@@ -616,8 +616,8 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
 * The secondary and third pages in a tab must be opened in a level two (L2) and level three (L3) view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation: [*Mandatory Fix*]
-  * Back buttons
-  * Page headers
+  * Back buttons.
+  * Page headers.
   * Hamburger menus
 * Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
