@@ -242,3 +242,4 @@ server.get('/api/notify', async (req, res) => {
 
 * [Manage app setup policies in Microsoft Teams](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
