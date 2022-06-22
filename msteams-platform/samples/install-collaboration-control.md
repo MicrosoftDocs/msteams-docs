@@ -23,20 +23,22 @@ To know more information on role privileges, see [Configure user security in an 
 
 ## Install the Collaboration controls solutions
 
-You'll install the Collaboration controls into your dataverse environment via a private link. This link must not be shared with any other person inside or outside your organization. You'll be able to configure and use the components within your own model-driven app only after receiving the link and installing Collaboration controls into your dataverse environment.
+You'll install the Collaboration controls into your dataverse environment via a private link. This link must not be shared with any other person inside or outside your organization.
+
+You'll be able to configure and use the components within your own model-driven app only after receiving the link and installing Collaboration controls into your dataverse environment.
 
 Collaboration Controls include the following solutions:
 
 |**Settings solutions** | **Purpose** |
 |---|---|
 | Collaboration controls Settings | Hold the settings infrastructure that powers Collaboration controls |
-| Collaboration controls Settings Objects | Provides pre-defined settings values that are leveraged by the Collaboration controls.|
+| Collaboration controls Settings Objects | Provides pre-defined settings values that are used by the Collaboration controls.|
 
 |**Collaboration solutions** | **Purpose** |
 |---|---|
 | Collaboration controls Tasks  | Includes the Tasks PCF (Power Apps component framework) control. |
 | Collaboration controls Events | Includes the Events PCF control for Outlook and Teams meetings and bookings appointments. |
-| Collaboration controls Notes | Includes the notes PCF control which stores notes in Dataverse. |
+| Collaboration controls Notes | Includes the notes PCF control, which stores notes in Dataverse. |
 | Collaboration controls Files | Includes the Files PCF control for accessing files on SharePoint. |
 | Collaboration controls Core |Includes custom Collaboration APIs, the Collaboration Data Model and Virtual Tables for Events, Files and Task controls. |
 | Collaboration controls Approvals | Includes the new Approvals PCF control. |
