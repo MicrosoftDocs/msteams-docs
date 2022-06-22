@@ -45,7 +45,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Social interactions**
 
-    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection and communication.
+    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture" border="false":::
 

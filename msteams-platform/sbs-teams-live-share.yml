@@ -121,7 +121,7 @@ items:
 
          :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Add manifest":::
          
-      1. Select **+ Apps** and then select **Agile Poker**.
+      1. Select **+ Apps**, and then select **Agile Poker**.
 
          :::image type="content" source="~/assets/images/teams-live-share/agile-poker-select-agile-poker.png" alt-text="select Agile Poker":::
 
@@ -136,7 +136,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-   Select a user story from **User Stories** in the meeting side panel and select **Plan together**.
+   Select a user story from **User Stories** in the meeting side panel, and then select **Plan together**.
 
    Teams starts a live sync with the users in the meeting.
 

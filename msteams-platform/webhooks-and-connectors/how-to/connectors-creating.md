@@ -41,7 +41,7 @@ Users can complete the entire connector configuration experience without having 
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
     > * The configuration experience is loaded inline within Teams.
 
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
+You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
 
 To integrate the configuration experience:
 
