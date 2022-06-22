@@ -19,7 +19,7 @@ Bots added to a team become another team member and can be @mentioned as part of
 
 A bot in a group or channel should provide information relevant and appropriate for all members. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone. Therefore, a great bot in a group or channel should add value to all users, and certainly not inadvertently share information more appropriate to a one-to-one conversation.
 
-Your bot, just as it is, may be entirely relevant in all scopes without requiring more work. In Microsoft Teams, there's no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Your bot, just as it is, may be entirely relevant in all scopes without requiring more work. In Teams, there's no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 Developing a bot that works in groups or channels uses much of the same functionality as personal conversations. Additional events and data in the payload provide Teams group and channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 

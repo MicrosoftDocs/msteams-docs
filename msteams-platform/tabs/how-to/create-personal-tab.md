@@ -244,7 +244,7 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
@@ -330,7 +330,7 @@ This folder contains the following required app package files:
 * A transparent outline icon measuring 32 x 32 pixels.
 * A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
 
 #### .csproj
 
@@ -479,7 +479,7 @@ This folder contains the following required app package files:
 * A **transparent outline icon** measuring 32 x 32 pixels.
 * A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
 #### .csproj
 
