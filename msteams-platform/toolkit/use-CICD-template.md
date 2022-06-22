@@ -90,7 +90,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 * Create workflow templates.
 
-  * Visual Studio Code
+  * Visual Studio Code.
   * TeamsFx CLI
 
 * Customize CI/CD workflow.
