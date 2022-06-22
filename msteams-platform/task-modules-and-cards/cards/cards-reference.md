@@ -956,9 +956,9 @@ A list can display a maximum of ten cards per message.
 
 The following cards are implemented by the Bot Framework, but aren't supported by Teams:
 
-* Animation cards.
-* Audio cards.
-* Video cards.
+* Animation cards
+* Audio cards
+* Video cards
 
 ## See also
 
