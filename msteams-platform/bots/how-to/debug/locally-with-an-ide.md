@@ -13,7 +13,7 @@ When testing your bot, you need to consider both the contexts you want your bot 
 
 ## Test by uploading to Teams
 
-The most comprehensive way to test your bot is by creating an app package and uploading it to Teams, which is the only method to test the full functionality available to your bot, across all scopes.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
 There are two methods for uploading your app:
 
