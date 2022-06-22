@@ -104,7 +104,7 @@ TeamsFx class instance access all TeamsFx settings from environment variables by
 When creating a TeamsFx instance, you also need to specify the identity type.
 There are two identity types:
 
-* User Identity.
+* User Identity
 * Application Identity
 
 #### User Identity
