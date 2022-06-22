@@ -15,10 +15,10 @@ ms.localizationpriority: high
 
 When developing a tab using the traditional method, you might run into these issues:
 
-* HTML and CSS considerations.
-* Slow load times.
-* iFrame constraints.
-* Server maintenance and costs.
+* HTML and CSS considerations
+* Slow load times
+* iFrame constraints
+* Server maintenance and costs
 
 Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
