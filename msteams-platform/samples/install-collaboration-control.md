@@ -71,9 +71,9 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 
    :::image type="content" source="../assets/images/collaboration-control/install-solution.png" alt-text="Collaboration control install" border="true":::
 
-1. Navigate to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home), it is also supported if you are signed up to Power Apps preview.
+1. Navigate to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home), it's also supported if you're signed up to Power Apps preview.
 
-1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if required on the upper right of the Power Apps portal.
+1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the upper right of the Power Apps portal.
 
    :::image type="content" source="../assets/images/collaboration-control/power-apps.png" alt-text="power apps" border="true":::
 
@@ -84,4 +84,4 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 > [!NOTE]
 > The Collaboration controls are preview and elements may change over time with potential for breaking changes. The Collaboration controls aren't supported in production environments.
 
-After successfull installation of all the Collaboration solutions into your environment, you'll be able to build a new model-driven app that can take advantage of the Collaboration control capabilities.
+After successful installation of all the Collaboration solutions into your environment, you'll be able to build a new model-driven app that can take advantage of the Collaboration control capabilities.

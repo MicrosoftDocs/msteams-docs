@@ -514,7 +514,7 @@ and in the “Apps” Section, find the MDA (Model Driven Application) app you c
 
  1. Select **Main form** and **Edit**
 
-     :::image type="content" source="../assets/images/collaboration-ontrol/select-main-form.png" alt-text="select main form" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-main-form.png" alt-text="select main form" border= "true":::
 
  1. Select + **New command** on Commands panel
 
