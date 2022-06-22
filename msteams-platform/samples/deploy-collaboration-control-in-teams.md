@@ -21,31 +21,31 @@ ms.topic: conceptual
 
  1. Search for and select **Setting definition** in the tree view.
 
-     :::image type="content" source="../assets/images/Collaboration control/settings-defnition.png" alt-text="Setting definition" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Setting definition" border="true":::
 
  1. Search for and select **Hide the navbar** from the list of settings definitions. This will hide the left navigation in your application. Don't enable this feature if your app has multiple navigation items you want the user to use.
 
-     :::image type="content" source="../assets/images/Collaboration control/hide-the-nav-bar.png" alt-text="Hide the nav bar" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Hide the nav bar" border="true":::
 
  1. In the edit pane that appears on the right, there should be a section at the bottom titled **Setting app values.** If you created your app using the modern app designer, your app should appear on the list. Select **New app value** underneath your app.
 
  1. Change the value from **No** to **Yes.**
 
-     :::image type="content" source="../assets/images/Collaboration control/value-to-yes.png" alt-text="Change value to yes" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Change value to yes" border="true":::
 
  1. Select **Save.**
 
  1. Repeat steps 4-7, but this time, search for and select App high density page header. Note, there's a known issue with the chats experience where the chat icon may not appear if the high density page header is enabled.
 
-     :::image type="content" source="../assets/images/Collaboration control/density-page-header.png" alt-text="Density page header" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Density page header" border="true":::
 
  1. Select **'Back to solutions'**
 
-     :::image type="content" source="../assets/images/Collaboration control/default-solution.png" alt-text="Default solution" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="Default solution" border="true":::
 
  1. . Finally, select **Publish all customizations** to publish all the work you've completed.
 
-     :::image type="content" source="../assets/images/Collaboration control/publish-cusomization.png" alt-text="Publish all customizations" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publish all customizations" border="true":::
 
  **Task 2: Adding the app to the Microsoft Teams app catalog**
 
@@ -55,17 +55,17 @@ ms.topic: conceptual
 
  1. To bring the app to Teams, select **Add to Teams**.
 
-     :::image type="content" source="../assets/images/Collaboration control/add-to-teams.png" alt-text="Add to Teams" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams" border="true":::
 
  1. This will open the **Add to Teams** panel. Review the details and select **Download app** [to save the Microsoft Teams app manifest to your device].
 
-     :::image type="content" source="../assets/images/Collaboration control/colab-manager-inspection.png" alt-text="Collaboration manager inspection" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Collaboration manager inspection" border="true":::
 
  1. To bring your newly downloaded app manifest to Microsoft Teams, open Teams and navigate to the app store by selecting Apps in the left app bar.
 
  1. Next, select **Upload a custom app** at the bottom of the left navigation. [Note: The steps to select 'Upload a custom app' may vary depending on your version of Teams for example, you may have to select **Manage your apps** > **Upload a custom app**]
 
-     :::image type="content" source="../assets/images/Collaboration control/upload-custom-app.png" alt-text="upload a custom app" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/upload-custom-app.png" alt-text="upload a custom app" border= "true":::
 
  1. Select **Upload for my org** and select the Teams app manifest you downloaded on step 4 above.
 
@@ -75,15 +75,15 @@ ms.topic: conceptual
 
  1. To add an app to a team, select the chevron next to the Open button and select Add to a team.
 
-     :::image type="content" source="../assets/images/Collaboration control/add-app-teams-tab.png" alt-text="Add the app as a Teams tab" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/add-app-teams-tab.png" alt-text="Add the app as a Teams tab" border="true":::
 
  1. Search for and select the team channel you want to add the app to.
 
-     :::image type="content" source="../assets/images/Collaboration control/select-team-channel.png" alt-text="Select Teams channel" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-team-channel.png" alt-text="Select Teams channel" border="true":::
 
  1. Finally, select **Save** to finish pinning the app to your Teams channel.
 
-     :::image type="content" source="../assets/images/Collaboration control/select-save.png" alt-text="Select save" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-save.png" alt-text="Select save" border="true":::
 
  1. Once' successful, the app will appear as a pinned tab.
 
@@ -91,7 +91,7 @@ ms.topic: conceptual
 
  1. Select '…' in the Teams left nav bar to find your app, select your app to open it. When your app appears on the Teams left nav bar, right click and select **Pin** to add the app as a personal app.
 
-     :::image type="content" source="../assets/images/Collaboration control/select-pin.png" alt-text="select pin" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-pin.png" alt-text="select pin" border="true":::
 
  1. Now the app is pinned as a personal app in the left app bar.
 
@@ -120,7 +120,7 @@ ms.topic: conceptual
      e. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters. <br/>
      f. **Team type:** Select the team type. The following task 2 assumes you've selected ‘Owner’ from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) will auto populate team members from Azure Active Directory.<br/>
 
-     :::image type="content" source="../assets/images/Collaboration control/new-team.png" alt-text="New team" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="New team" border="true":::
 
      1. Make a note of the team name. You'll need this later to assign this team as the owner of a record.
 
@@ -134,7 +134,7 @@ ms.topic: conceptual
 
  1. To add new team members, select + **Add team members** and choose users from your organization to add.
 
-     :::image type="content" source="../assets/images/Collaboration control/add-team-members.png" alt-text="Add Team members" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="Add Team members" border= "true":::
 
  1. To delete a team member, select the user and then choose Remove.
 
@@ -144,7 +144,7 @@ ms.topic: conceptual
 
  1. Select on Security roles
 
-     :::image type="content" source="../assets/images/Collaboration control/users-permission.png" alt-text="Users permission" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Users permission" border="true":::
 
  1. Select on **New role** at the top left of the page
 
@@ -157,7 +157,7 @@ ms.topic: conceptual
      a. Give organization permissions (full green circle) for each of the collaboration entities:
 **Collaboration Map**, **Collaboration Metadata**, **Collaboration Root**.
 
-     :::image type="content" source="../assets/images/Collaboration control/collab-map.png" alt-text="Collaboration map" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Collaboration map" border="true":::
 
  1. Select **Save** and **Close**
 
@@ -169,7 +169,7 @@ ms.topic: conceptual
 
  1. Choose **Manage security roles** from the header.
 
-     :::image type="content" source="../assets/images/Collaboration control/edit-team.png" alt-text="Edit team" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Edit team" border="true":::
 
  1. Select the roles created in Task 3.
 
@@ -192,11 +192,11 @@ ms.topic: conceptual
 * Components can't be used in Canvas Apps.
 * Components only support full tab views.
 
-     :::image type="content" source="../assets/images/Collaboration control/tasks-tab.png" alt-text="tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="tasks" border="true":::
 
 * The subgrid view selected isn't honored. All tasks, meetings or notes for the collaborative record will be displayed.
 
-     :::image type="content" source="../assets/images/Collaboration control/subgrid-view.png" alt-text="subgrid view" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="subgrid view" border= "true":::
 
 * Activities added to the timeline control don’t appear in the components (and tasks, meetings and notes created in the components aren't included in the timeline control).
 * New records must be saved before accessing the components, otherwise you'll see an empty screen.
@@ -209,18 +209,18 @@ ms.topic: conceptual
  When following the installation steps in exercise 1,' redirected to the Power Platform admin center. A banner is displayed when installation starts, but it is not updated when installation completes. The status is listed during installation, and when installation is complete it may disappear from the list. You can view the solutions list at <https://make.preview.powerapps.com/> to confirm that installation is complete.
 
  **View during installation:**
-     :::image type="content" source="../assets/images/Collaboration control/view-during-installation.png" alt-text="view during installation" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="view during installation" border="true":::
 
  **View after installation:**
-     :::image type="content" source="../assets/images/Collaboration control/view-after-installation.png" alt-text="view after installation" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="view after installation" border="true":::
 
  When upgrading the controls to a later version, the same installation started banner displays, but the controlstatus remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the Solutions list at [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes. You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
-     :::image type="content" source="../assets/images/Collaboration control/history.png" alt-text="History check" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="History check" border="true":::
 
  **Conversations button does not respond unless browser locale is English (United States)**
 
  If the Conversations button does not respond when you click it, and you observe the following error in the console logs:
-     :::image type="content" source="../assets/images/Collaboration control/console-log.png" alt-text="console log" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/console-log.png" alt-text="console log" border="true":::
 
  This is caused by a localization error for the Conversations component. You can resolve the issue by updating your browser locale to en-US.
 
@@ -262,7 +262,7 @@ ms.topic: conceptual
  **Cannot add app in Teams**
 
  Sometimes an app cannot be added to a Teams channel because the app details do not load correctly and the Save button is disabled:
-     :::image type="content" source="../assets/images/Collaboration control/collab-mgr-inspection.png" alt-text="Collab manager inspection" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-mgr-inspection.png" alt-text="Collab manager inspection" border="true":::
 
  This can be worked around by creating a new model driven app that uses the same table (repeating exercise 2, exercise 4 task 2 and exercise 6 task 2).
 
@@ -276,7 +276,7 @@ ms.topic: conceptual
  1. Either select the option to upload a new file, or delete the app and it can be uploaded to Teams
  following the process in exercise 6 task 2.
 
-     :::image type="content" source="../assets/images/Collaboration control/manage-apps.png" alt-text="manage apps" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/manage-apps.png" alt-text="manage apps" border="true":::
 
 * If you're updating the manifest, you've to unzip it and manually update the version number so that it is higher.
 
@@ -293,7 +293,7 @@ ms.topic: conceptual
  If Tasks, Meetings or Files controls fail to load or show an error, it may be a transient issue.
 
  Example:
-     :::image type="content" source="../assets/images/Collaboration control/control-fail.png" alt-text="control fail" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="control fail" border="true":::
 
  Solution: Refresh your browser or if in Teams, reload the tab.
 
