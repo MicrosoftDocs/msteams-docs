@@ -1,7 +1,6 @@
 ---
 title: Device permissions for the browser
-keywords: teams apps capabilities permissions
-description: Securely bring back device permissions support for apps in our web client
+description: Learn how to securely bring back device permissions, such as camera or microphone access for apps in web client.
 localization_priority: medium
 ms.topic: how-to
 ---

@@ -221,3 +221,4 @@ The following table provides the user types and lists the features that each use
 * [Bot](../bots/what-are-bots.md)
 * [Message extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Microsoft Teams meeting attendance report](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)
