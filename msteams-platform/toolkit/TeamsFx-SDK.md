@@ -12,9 +12,9 @@ ms.date: 11/29/2021
 
 TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
 
-* Teams tab application
-* Azure Function
-* Teams bot
+* Teams tab application.
+* Azure Function.
+* Teams bot.
 
 You can use the TeamsFx SDK to:
 
@@ -104,7 +104,7 @@ TeamsFx class instance access all TeamsFx settings from environment variables by
 When creating a TeamsFx instance, you also need to specify the identity type.
 There are two identity types:
 
-* User Identity
+* User Identity.
 * Application Identity
 
 #### User Identity
@@ -172,8 +172,8 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
 Required configuration:
 
-* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity
-* `sqlServerEndpoint`, `sqlIdentityId` if you want to use MSI identity
+* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity.
+* `sqlServerEndpoint`, `sqlIdentityId` if you want to use MSI identity.
 
 ### Error handling
 
