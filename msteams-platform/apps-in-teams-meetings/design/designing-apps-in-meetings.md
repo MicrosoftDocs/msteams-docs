@@ -131,10 +131,10 @@ In-meeting dialogs display on the Teams meeting stage. They require a user's att
 
 In-meeting dialogs are triggered by a user (such as the meeting organizer) who might want participants to:
 
-* Provide brief feedback
-* Take a short survey or poll
-* Submit approvals
-* Get reminders
+* Provide brief feedback.
+* Take a short survey or poll.
+* Submit approvals.
+* Get reminders.
 
 ### Mobile
 
