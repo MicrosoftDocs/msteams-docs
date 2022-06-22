@@ -37,9 +37,9 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 Provide instructions and resources to help the reviewers test your app, including:
 
-* Test accounts.
+* Test accounts
 * Credentials
-* License keys.
+* License keys
 
 You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
 
