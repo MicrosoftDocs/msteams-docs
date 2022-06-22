@@ -47,7 +47,7 @@ You can create the following workflow templates with GitHub:
 
 1. Create a new Teams app project using Teams Toolkit.
 
-1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left navigation bar.
+1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left pane.
 
 1. Select **Add features**
 
@@ -90,7 +90,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 * Create workflow templates.
 
-  * Visual Studio Code.
+  * Visual Studio Code
   * TeamsFx CLI
 
 * Customize CI/CD workflow.
@@ -102,13 +102,13 @@ You can create the following workflow templates with Azure DevOps:
 **Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
-2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
-3. Select **Add CI/CD Workflows**.
-4. Select an environment from the command prompt.
-5. Select **Azure DevOps** as CI/CD provider.
-6. Select at least one template from these options: CI, CD, Provision, and Publish to Teams.
-7. Open the template and customize the workflows that fit into your scenarios.
-8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
+2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left pane.
+1. Select **Add CI/CD Workflows**.
+1. Select an environment from the command prompt.
+1. Select **Azure DevOps** as CI/CD provider.
+1. Select at least one template from these options: CI, CD, Provision, and Publish to Teams.
+1. Open the template and customize the workflows that fit into your scenarios.
+1. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
 **TeamsFx CLI**
 
@@ -155,7 +155,7 @@ You can create the following workflow templates with Jenkins:
 **Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
-2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
+2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left pane.
 3. Select **Add CI/CD Workflows**.
 4. Select an environment from the command prompt.
 5. Select **Jenkins** as CI/CD provider.
