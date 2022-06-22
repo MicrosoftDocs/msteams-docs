@@ -1,11 +1,10 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab and use cases, responsive behavior and shared meeting stage, and theme and navigation.
+description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab, use cases, responsive behavior, shared meeting stage, theme, and navigation.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI kit template in-meeting responsive behavior shared meeting stage
 ---
 # Designing your Microsoft Teams meeting extension
 
@@ -91,7 +90,7 @@ People might use the in-meeting tab to:
 
 ### Anatomy: In-meeting tab
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -99,7 +98,7 @@ People might use the in-meeting tab to:
 |2|**App name**|
 |3|**Header**: Includes your app name.|
 |4|**Close button**: Dismisses the tab. Always use the upper-right close icon instead of an action in the footer.|
-|5|**Notification bar**: Error alerts display directly below the header and push the iframe content down by 20 pixels.|
+|5|**Notification bar**: Error alerts display directly below the header and push the rest of your iframe content down 20 pixels.|
 |6|**iframe**: Displays your app content.|
 
 ### Spacing
@@ -113,7 +112,7 @@ Optimize your in-meeting tab to fit edge-to-edge within the 280 pixel-wide ifram
 Remember the following if you allow scrolling:
 
 * Content in the iframe contents should only scroll vertically.
-* Users should only see the content they've scrolled to (nothing above or below). 
+* Users should only see the content they've scrolled to (nothing above or below).
 * The scrollbar is part of the iframe content.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Example shows how the in-meeting tab scrolls." border="false":::
@@ -147,7 +146,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 ### Anatomy: In-meeting dialog
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -175,19 +174,23 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 * **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
 * **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
-To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) key.
-
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants to interact and collaborate with app content in real time. For example, the users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+You can allow users to share and interact with some or all of your app content on the meeting stage. Here are examples of how people might use this feature during a meeting:
 
-Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
+* Editing a document.
+* Whiteboarding
+* Reviewing a dashboard.
+* Watching a video.
+* Playing a game.
+
+Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
 
 > [!NOTE]
-> All the users in meeting can see the app when shared from desktop. Currently, mobile users can't share app content to the meeting stage.
- 
+> Currently, mobile users can't share app content to the meeting stage. They can see content shared from desktop, though.
+
 ### Use cases
 
 The shared meeting stage is all about collaboration and participation. Here are some example scenarios to help you get started.
@@ -201,6 +204,8 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column span="3":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage." border="false":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Example shows a dashboard component being reviewed on the shared meeting stage." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -231,17 +236,29 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
 :::row-end:::
 
-### Anatomy: Shared meeting stage
+### Anatomy: Share all app content to a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage when all app content is shared." border="false":::
 
 |Counter|Description|
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
-|2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
-|3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|2|**Share to meeting button**: The entry point to share the app to the meeting. Displays if you configure your app to use the shared meeting stage.|
+|3|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|4|**iframe**: Displays your app content.|
+|5|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+
+### Anatomy: Share specific app content to a meeting
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
+|2|**Share to meeting button**: The entry point to share the app to the meeting. For a consistent experience, always use the standard Teams share icon. **Share to meeting** is the recommended default text, but you can also customize it for your use cases. For example, **Play together** for a gaming app or **Watch together** for a video app. Either way, make it clear that the action will create a shared, interactive experience with everyone in the meeting.|
+|3|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|4|**iframe**: Displays your app content.|
+|5|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
 
 ### Responsive behavior: Shared meeting stage
 
@@ -307,7 +324,7 @@ We recommend keeping your app’s experience scoped to just the meeting stage. Y
 
 #### Don't: Include competing surfaces
 
-Your app should only ask users to focus on a single surface a time, whether it's collaborating on the stage or responding to an in-meeting dialog. (Note: You can’t keep dialogs being triggered by other apps while your app is on the stage.) 
+Your app should only ask users to focus on a single surface a time, whether it's collaborating on the stage or responding to an in-meeting dialog. (Note: You can’t keep dialogs being triggered by other apps while your app is on the stage.)
 
    :::column-end:::
 :::row-end:::

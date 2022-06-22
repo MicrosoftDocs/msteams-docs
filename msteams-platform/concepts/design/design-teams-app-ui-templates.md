@@ -1,7 +1,7 @@
 ---
 title: Designing your app with UI templates
 author: heath-hamilton
-description: Design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
+description: Learn to design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
@@ -40,9 +40,23 @@ Install a sample app to see how UI templates look and behave within Teams contex
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
+## Calendar
+
+In Teams, a calendar is where a user views, schedules, and manages upcoming and past events for themselves or a group.
+
+### Top use cases
+
+* Schedule meetings and events
+* Get reminders of upcoming meetings and events
+* View schedules
+
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Example shows a calendar UI template on desktop." border="false":::
+
 ## Dashboard
 
-A dashboard displays different types of content in a central location (Teams personal app or tab). Users should be able to customize at least some of what they see on a dashboard.
+A dashboard displays different types of content in a central location (such as a Teams personal app or tab). Users should be able to customize at least some of what they see on a dashboard.
 
 ### Top use cases
 
@@ -126,7 +140,7 @@ Forms are used to collect, validate, and submit user input in a structured way. 
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Example shows a form UI template on desktop." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop." border="false":::
 
 ## List
 
@@ -177,9 +191,9 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 
 ### Top use cases
 
-* Project management. Assigning tasks and tracking status
-* Brainstorming. Adding ideas in different categories
-* Sorting exercises. Organizing any kind of information into buckets
+* Project management. Assigning tasks and tracking status.
+* Brainstorming. Adding ideas in different categories.
+* Sorting exercises. Organizing any kind of information into buckets.
 
 ### Mobile
 

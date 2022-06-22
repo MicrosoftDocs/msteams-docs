@@ -1,16 +1,44 @@
 {
     "cSpell.words": [
         "addpart",
+        "anclear",
+        "appsource",
+        "aspnet",
+        "botid",
+        "Chatbots",
+        "commandbot",
+        "Contoso",
+        "debugcheck",
+        "lajanuar",
+        "laujan",
+        "localizationpriority",
+        "microsoftteams",
+        "msteams",
+        "nextstepaction",
+        "officedev",
+        "Restify",
+        "preauthorizedapplications",
+        "requiredresourceaccess",
         "sideload",
         "sideloaded",
         "sideloading",
+        "surbhigupta",
+        "teamsfx",
         "Webpart",
-        "webparts"
+        "webparts",
+        "zyxiaoyuer"
     ],
+    "[markdown]": {
+          "editor.formatOnSave": "false",
+          "editor.wordWrap": "on",
+          "editor.renderWhitespace": "all",
+          "editor.acceptSuggestionOnEnter": "off"
+        },
     "markdownlint.config": {
         "MD028": false,
         "MD025": {
             "front_matter_title": ""
-        }
-    }
+        },
+    },
+    "docsImages.maxWidth": 0
 }

@@ -1,11 +1,10 @@
 ---
 title: Overview - Distribute your app
-description: Describes the options for publishing your Microsoft Teams app, uploading your app, and GCC.
+description: In this article, learn the options for publishing your Microsoft Teams app, uploading and deploying your app, and GCC.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
-ms.localizationpriority: none
-keywords: deploy publish app upload gcc 
+ms.localizationpriority: high
 ---
 
 # Distribute your Microsoft Teams app
@@ -18,7 +17,7 @@ You configure default install options. For example, if your app's primary capabi
 
 ## Create your app package
 
-To distribute your Microsoft Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
@@ -37,10 +36,10 @@ For more information, see [manage your apps in the Teams admin center](/Microsof
 
 ### Government Community Cloud (GCC) organizations
 
-In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements.
+In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../app-fundamentals-overview.md#government-community-cloud).
 
 > [!IMPORTANT]
->If your app includes a bot or messaging extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+>If your app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
 ## Publish your app to the Teams store
 

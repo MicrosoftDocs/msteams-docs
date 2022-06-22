@@ -4,7 +4,7 @@ You must have an understanding of the following prerequisites:
 
 - You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -36,7 +36,7 @@ In addition, this project requires that you have the following installed in your
     yo teams
     ```
 
-1. Next, provide a series of values that are used in your application's **manifest.json** file:
+1. Next, provide a series of values that are used in your application's `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -74,7 +74,7 @@ In addition, this project requires that you have the following installed in your
 
     **The URL where you will host this solution?**
 
-    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL isn't necessary to complete this quickstart.
 
     **Would you like show a loading indicator when your app/tab loads?**
 

@@ -1,7 +1,6 @@
 ---
 title: Get context for your Microsoft Teams bot
-description: Describes how to get context for bots in Microsoft Teams
-keywords: teams bots context
+description: In this module, learn how to get context for bots in Microsoft Teams, fetch the team roster and user profile or roster in personal or group chat
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
@@ -20,7 +19,7 @@ Your bot can access additional context about the team or chat, such as user prof
 
 ## Fetch the team roster
 
-Your bot can query for the list of team members and their basic profiles. The basic profiles include Teams user IDs and Azure Active Directory (AAD) information such as name and object ID. You can use this information to correlate user identities. For example, check if a user logged into a tab through AAD credentials is a team member.
+Your bot can query for the list of team members and their basic profiles. The basic profiles include Teams user IDs and Microsoft Azure Active Directory (Azure AD) information such as name and object ID. You can use this information to correlate user identities. For example, check if a user logged into a tab through Microsoft Azure Active Directory (Azure AD) credentials is a team member.
 
 ### REST API example
 

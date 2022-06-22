@@ -1,10 +1,9 @@
 ---
 title: Up to date views
-description: Learn about up to date views using Universal Bot with Code samples
+description: In this module, learn about up to date cards views using Universal Bot with Code samples in Microsoft Teams
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: approval base card reject adaptive 
 ---
 
 # Up to date cards
@@ -111,7 +110,7 @@ Following are the two roles that are shown to users depending on the approval re
 * Approval base card: Shown to users not part of approvers list and the request is not yet approved or rejected, and not part of `userIds` list in `refresh` property of the Adaptive Card JSON.
 * Approval card with **Approve** or **Reject** buttons: Shown to the users who are part of the approvers list and the `userIds` list in the `refresh` property of the Adaptive Card JSON.
 
-**To send the asset approval request**
+To send the asset approval request:
 
 1. Alex raises an asset approval request in a Teams conversation and assigns it to Megan and Nestor.
 2. Bot sends the approval base card in the conversation.
@@ -265,3 +264,4 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

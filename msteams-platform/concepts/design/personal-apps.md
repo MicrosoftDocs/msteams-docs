@@ -1,11 +1,10 @@
 ---
 title: Designing your personal app
-description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit, create components, such as, dashboard, form, task board for Mobile and Desktop experience. Learn the best practices for developing personal apps.
+description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit, create components, such as, dashboard, form, task board for Mobile and Desktop experience.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: ui kit personal app webview navigation bot tab iframe dashboard form template
 --- 
 # Designing your personal app for Microsoft Teams
 
@@ -30,7 +29,7 @@ Users can add a personal app from the Teams store or app flyout by selecting the
 
 With a private workspace, users can view app content that's meaningful to them in a central location without leaving Teams.
 
-(Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)
+(Implementation note: The private workspace is based on the [*personal tab*](../../tabs/how-to/create-personal-tab.md) capability.)
 
 ### Anatomy: Personal app (private workspace)
 

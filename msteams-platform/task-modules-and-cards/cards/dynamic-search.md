@@ -1,9 +1,9 @@
 ---
 title: Typeahead search in Adaptive Cards 
 author: Rajeshwari-v
-description: Describes typeahead search with Input.ChoiceSet control in Adaptive Cards 
+description: In this module, learn what is typeahead search in adaptive cards with Input.ChoiceSet control and implement typeahead search
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 
@@ -31,9 +31,9 @@ Dynamic typeahead search is useful to search and select data from large data set
 
 # [Desktop](#tab/desktop)
 
-![Dynamic typeahead search](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="Dynamic typeahead search":::
 
-![Dynamic typeahead search image 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="Dynamic typeahead search 2":::
 
 # [Mobile](#tab/mobile)
 
@@ -56,7 +56,7 @@ The following image illustrates mobile experience of typeahead search:
 ---
 
 > [!NOTE]
-> You can't get rich card experiences with dynamic search, such as query based messaging extensions.
+> You can't get rich card experiences with dynamic search, such as query based message extensions.
 
 ## Implement typeahead search
 
@@ -82,10 +82,10 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| type | Data.Query	| Yes |	Specifies that it's a Data.Query object.|
+| type | Data.Query | Yes | Specifies that it's a Data.Query object.|
 | dataset | String | Yes | Specifies the type of data that is fetched dynamically. |
-| value	| String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
-| count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
+| value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
+| count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. |
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
 ### Example
@@ -323,25 +323,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 {
     if (turnContext.Activity.Name == "application/search")
     {
-	var packages = new[] {
-			new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-			new { title = "Fluent UI Library", value = "FluentUI" }};
+ var packages = new[] {
+   new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+   new { title = "Fluent UI Library", value = "FluentUI" }};
 
-	var searchResponseData = new
-	{
-	    type = "application/vnd.microsoft.search.searchResponse",
-	    value = new
-	    {
-		results = packages
-	    }
-	};
-	var jsonString = JsonConvert.SerializeObject(searchResponseData);
-	JObject jsonData = JObject.Parse(jsonString);
-	return new InvokeResponse()
-	{
-	    Status = 200,
-	    Body = jsonData
-	};
+ var searchResponseData = new
+ {
+     type = "application/vnd.microsoft.search.searchResponse",
+     value = new
+     {
+  results = packages
+     }
+ };
+ var jsonString = JsonConvert.SerializeObject(searchResponseData);
+ JObject jsonData = JObject.Parse(jsonString);
+ return new InvokeResponse()
+ {
+     Status = 200,
+     Body = jsonData
+ };
     }
 
     return null;
@@ -349,7 +349,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 #### [Node.js](#tab/nodejs)
- 
+
 ```nodejs
   async onInvokeActivity(context) {
     if (context._activity.name == 'application/search') {
@@ -379,7 +379,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
   }
 ```
 
-####  [JSON](#tab/json)
+#### [JSON](#tab/json)
 
 ```json
 {
@@ -406,9 +406,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
+|**Sample name** | **Description** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Type ahead search control on Adaptive Cards | The sample shows the features of static and dynamic type ahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Typeahead search control on Adaptive Cards | The sample shows the features of static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## See also
 

@@ -1,6 +1,6 @@
 ---
 title: Designing your bot
-description: Learn how to design a Teams bot and get the Microsoft Teams UI Kit.
+description: In this module, learn how to design and add a Teams bot and its use cases, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -11,7 +11,7 @@ ms.author: lajanuar
 Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
-> Bots are available in Government Community Cloud (GCC) environments but not GCC High and Department of Defense (DoD) environments.
+> Bots are available in Government Community Cloud (GCC) and GCC High environments but not in Department of Defense (DoD) environments.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
@@ -86,7 +86,7 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 ### Tours
 
-You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your messaging extension.
+You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your message extension.
 
 > [!IMPORTANT]
 > Tours should be accessible without having to sign in.
