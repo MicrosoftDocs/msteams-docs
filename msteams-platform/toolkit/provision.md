@@ -14,7 +14,7 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 
 ## Prerequisites
 
-* Account prerequisites.
+* Account prerequisites
   To provision cloud resources, you must have the following accounts:
 
   * Microsoft 365 account with valid subscription.
