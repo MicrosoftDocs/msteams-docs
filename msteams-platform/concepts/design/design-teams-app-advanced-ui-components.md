@@ -60,8 +60,8 @@ You can implement a notification bar using the Fluent UI [alert](https://fluents
 ### Top use cases
 
 * Critical messages, errors, and warnings.
-* Success messages.
-* Informational or promotional messages.
+* Success messages
+* Informational or promotional messages
 
 ### Mobile
 
@@ -80,7 +80,7 @@ See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
 ### Top use cases
 
 * Display content in a large surface within Teams instead of another app or browser.
-* Spotlight media or other rich content.
+* Spotlight media or other rich content
 
 ### Mobile
 

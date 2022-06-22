@@ -46,9 +46,9 @@ In Teams, a calendar is where a user views, schedules, and manages upcoming and 
 
 ### Top use cases
 
-* Schedule meetings and events.
+* Schedule meetings and events
 * Get reminders of upcoming meetings and events.
-* View schedules.
+* View schedules
 
 ### Desktop
 
@@ -60,8 +60,8 @@ A dashboard displays different types of content in a central location (such as a
 
 ### Top use cases
 
-* Analyze data.
-* Report metrics.
+* Analyze data
+* Report metrics
 * Organize different information in one place.
 
 ### Mobile
@@ -95,10 +95,10 @@ The empty state template can be used for many scenarios, including sign in, firs
 
 ### Top use cases
 
-* Sign in.
+* Sign in
 * Welcome messages and first-run experiences.
-* Success messages.
-* Error messages.
+* Success messages
+* Error messages
 
 ### Mobile
 
@@ -148,8 +148,8 @@ You can use a list to display related items in a scannable format and allow user
 
 ### Top use cases
 
-* Display data.
-* Contextual actions on app content.
+* Display data
+* Contextual actions on app content
 
 ### Mobile
 
