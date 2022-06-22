@@ -177,13 +177,773 @@ ms.topic: conceptual
 
  More information on role privileges: [Configure user security in an environment - Power Platform | Microsoft Docs](/power-platform/admin/database-security)
 
- **[Optional] Power Automate**
+## Optional
+
+### Power Automate
 
  Power Automate can be used to automate workflows around your Collaboration Manager application. For example, automatically create tasks when a new record is created.
 
  This is an advanced scenario that requires Makers to build flows using [published Power Automate connectors](/connectors/connector-reference/connector-reference-powerautomate-connectors) (like the [Planner connector](/connectors/planner/)) to create flows and call Collaboration Toolkit APIs to associate the action with a record.
 
  To interact with the Collaboration Toolkit API in a Power Automate Flow, the recommended approach is to use the [Dataverse Connector](/connectors/commondataserviceforapps/) and [Perform an Unbound Action](/connectors/commondataserviceforapps/).
+
+### Configure Tasks for external clients
+
+Follow these steps if you would like to be able to create external tasks.  
+
+External (or guest) tasks are tasks that can be assigned to users who are not part of your organization or do not have access to your application e.g., when assigning a task to a customer.
+
+To enable you will need an additional step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. This XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
+
+1. Create a new custom entity (e.g., “Customer”) or reuse an existing customer entity like Contacts.
+
+1. Then create new fields that will hold the following information (the names can be different):
+    1. Name
+    1. Email
+    1. Parent (Lookup to the parent table e.g., Inspections)
+    > [!NOTE]
+    > The customer entity created above will be where the task control pulls the customer information from when assigning an external task. The “Parent” field ensures that the customer entity is linked to an Inspection record.
+
+1. You need to generate a Fetch XML file to allow the PCF control to pull the right customer information.
+
+    **Configuration XML schema**
+
+    Below is the schema definition for the tasks configuration Fetch XML. Any Fetch XML needs to be designed to meet the following requirements:
+
+    * Query result shall return the following properties for each user object: id, displayname, email (use ‘alias’ if needed)
+    * Query shall contain the “@top” parameter to allow caller to limit the number of results
+    * Query shall have “@rootEntityId” parameter to filter results by only related records (if needed)
+    * Query shall have “@useName” parameter to allow result filtering by name.
+    * Query shall have “@useIdentifier” parameter to allow fetching only selected users
+
+    **Configuration XML schema and example**
+
+    This pulls data from the customer table. You can adjust the `<fetch/>` node to specify your own query to display users from any other custom table.
+
+    > [!NOTE]
+    > The above entity & attribute name and order attribute in the XML are in this format “PublisherPrefix_TableColumn”.
+
+    ```html
+    <custom-tasks> 
+    <custom-task id="external" name="External" for="guest"> 
+    <fetch top="@top"> 
+    <entity name="[Name of table, e.g. Crb2891_customer]"> 
+    <attribute name="[Name of ID column, e.g. Crb2891_customerid]" alias="id" /> 
+    <attribute name="[Name of primary name column, e.g. Crb2891_name]" alias="displayname" /> 
+    <attribute name="[Name of email column, e.g. Crb2891_email]" alias="email" /> 
+    <order attribute ="[Name of primary name column, e.g. Crb2891_name]" descending="false" /> 
+    <filter type="and"> 
+    <condition attribute="[Name of parent lookup column, e.g. Crb2891_parent]" operator="eq" value="@rootEntityId" />
+    <condition attribute="[Name of primary name column, e.g. Crb2891_name]" operator="like" value="@userName" />
+    <condition attribute="[Name of email column, e.g. Crb2891_email]" operator="like" value="@userIdentifier" /> 
+    </filter> 
+    </link-entity> 
+    </entity> 
+    </fetch> 
+    </custom-task> 
+    </custom-tasks> 
+    ```
+
+1. We now need to bind the Task controls to the subgrid within the classic form designer. Select Save and then select Switch to classic.
+1. Scroll down in the classic form designer until you find the Tasks tab. Double-click on the subgrid to open its property dialog.
+1. While in the property dialog, Set the properties as shown in the images below
+1. Navigate to the Controls tab and click on pen symbol on Custom Tasks property to add the Fetch XML generated above.
+1. Paste the Fetch XML  
+1. Click Ok
+1. Click Ok on properties window
+1. Save and Publish
+
+### Virtual Tables for Tasks, Meetings, Files
+
+A new capability with this release is a set of Virtual Tables. These enable developers to interact with Graph via OData APIs.
+
+**Overview**
+
+The Collaboration Controls Core solution includes a set of virtual tables which can be used for programmatic access to the data created by the Collaboration controls.
+
+> [!TIP]
+> Virtual tables (also known as virtual entities) enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+
+The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans/tasks and SharePoint drives/folders/files.
+
+This guide provides samples which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
+
+> [!TIP]
+> For more information on the Dataverse REST API go to Use the Microsoft Dataverse Web API (Dataverse) - Power Apps | Microsoft Docs.
+
+**Why use Virtual Tables?**
+
+The virtual tables make the developers job easier.
+
+We use them to simplify the development of the Collaboration controls and we are making them available for customers to use.
+
+* Virtual tables use the standard Dataverse Web API which makes it easy to use the virtual tables to populate data in your application.
+* Our virtual tables implement complex workflows required to support our Collaboration controls and these execute within Microsoft data centers for optimum performance.  
+* The virtual tables use the standard Dataverse logging and monitoring capabilities.
+
+Once you install the Collaboration controls, the virtual tables can be treated as another service your applications can depend on.
+
+**Pre-requisites**
+
+To follow along with this guide you will need:
+
+1. A Dataverse environment where the Collaboration controls have been installed.
+1. A user account in the Dataverse environment which has the “Collaboration controls User” role assigned to it.
+1. A third-party tool e.g. Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
+
+> [!TIP]
+> Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See Use Postman with Microsoft Dataverse Web API (Developer Guide for Dataverse) - Power Apps | Microsoft Docs.
+
+**Virtual Tables Sample Scenario**
+
+The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
+
+The sequence diagram below shows the interaction between the client (which could be the Tasks collaboration control), the Collaboration API and the Planner Plan and Task virtual tables.
+
+**Virtual Tables Basic Operations**
+
+This section describes the HTTP requests and responses for each step in the sample scenario.
+
+**Task 1: Retrieve the Group ID used in Exercise 4**
+
+**Task 2: Begin a Collaboration Session**
+
+This step creates a collaboration session which will be used in the following steps. A collaboration session is a record in the collaboration root table which allows us to associate multiple collaborations e.g., tasks, events, appointments, etc. with a business record. This allows us to perform operations such as list of the calendar events associated with a business record e.g. an inspections application.
+
+**Request**
+
+```http
+HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
+```
+
+```json
+{ 
+
+"applicationName": "{{applicationName}}", 
+"collaborationRootEntityId": "{{collaborationRootEntityId}}", 
+"collaborationRootEntityName": "{{entityName}}" 
+
+} 
+```
+
+* `applicationName`: Unique name for the application
+* `collaborationRootEntityName`: Name of the business record entity  
+* `collaborationRootEntityId`:  Primary key (id) of the specific business record
+
+**Response**
+
+```http
+HTTP/1.1 200 OK 
+```
+
+```json
+{ 
+
+    "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.m365_begincollaborationsessionResponse", 
+
+    "collaborationRootId": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
+
+} 
+```
+
+Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
+
+**Task 3: Create a Planner Plan**
+
+This step creates a Planner Plan and associates it with the collaboration session created in the previous step.
+
+Prereq: Group ID, Collab Root ID
+
+**Request**
+
+```http
+
+HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannerplans  
+
+```
+
+Content-Type: application/json
+
+```json
+
+{ 
+
+    "m365_collaborationrootid": "{{collaborationRootId}}", 
+
+    "m365_owner": "{{groupId}}", 
+
+     "m365_title": "{{planTitle}}" 
+
+}   
+
+```
+
+**collaborationRootId**: Identifies the collaboration session we want to associate this plan with, use the value from step 2
+
+**groupId**: Identifies the group who will own this plan, use the value from step 1
+
+**planTitle**: Title for the plan
+
+**Response**
+
+```http
+
+HTTP/1.1 201 Created 
+
+```
+
+```json
+
+{ 
+
+    "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#m365_graphplannerplans/$entity", 
+
+    "@odata.etag": "W/\"JzEtUGxhbiAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
+
+    "m365_createdby": "{\"user\":{\"displayName\":null,\"email\":null,\"id\":\"be330617-0e2b-48e9-8bf7-429a09c78e65\"},\"group\":null}", 
+
+    "m365_createddatetime": "2022-05-16T16:58:33.1833561Z", 
+
+    "m365_owner": "03614cef-8f5b-4265-9944-080d013c55d6", 
+
+    "m365_title": "Multi-byte plan", 
+
+    "m365_id": "8I6fu1kNS0elsbTxd67bi2UADnJu", 
+
+    "m365_collaborationrootid": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f", 
+
+    "m365_graphplannerplanid": "5c9c3ecf-f157-0f67-dcd9-733a77ad593e", 
+
+    "m365_details": null 
+
+} 
+
+```
+
+Keep track of the`m365_id` as it will be needed in subsequent requests.
+
+**Task 4: Create a Planner Task**
+
+This step can be repeated to create several Planner Tasks and associate them with the collaboration session created earlier.
+
+Prereq: Plan ID, Collab Root ID  
+
+**Request**
+
+```http
+HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannertasks  
+```
+
+Content-Type: application/json
+
+```json
+{ 
+
+    "m365_collaborationrootid": "{{collaborationRootId}}", 
+
+    "m365_planid": "{{planId}}", 
+
+    "m365_title": "{{taskTitle}}", 
+
+    "m365_duedatetime": "2022-05-04T08:00:00Z", 
+
+    "m365_assignments": "{\"me\":{\"orderHint\":\" !\",\"@odata.type\":\"#microsoft.graph.plannerAssignment\"}}" 
+
+}   
+
+```
+
+**collaborationRootId**: Identifies the collaboration session we want to associate this plan with, us the value from step 2
+
+**planId**: Identifies the plan this task will be assigned to, use the value from the previous step
+
+**taskTitle**: Title for the task
+
+**Response**
+
+```http
+HTTP/1.1 201 Created 
+```
+
+```json
+
+{ 
+
+    "@odata.context": "https://mwtmarkwallaceunmanaged.crm10.dynamics.com/api/data/v9.0/$metadata#m365_graphplannertasks/$entity", 
+
+    "@odata.etag": "W/\"JzEtVGFzayAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
+
+    "m365_activechecklistitemcount": 0, 
+
+    "m365_appliedcategories": "{}", 
+
+    "m365_assigneepriority": "8585488865579062167", 
+
+    "m365_assignments": "{\"be330617-0e2b-48e9-8bf7-429a09c78e65\":{\"assignedBy\":{\"user\":{\"displayName\":null,\"email\":null,\"id\":\"be330617-0e2b-48e9-8bf7-429a09c78e65\"},\"group\":null},\"assignedDateTime\":\"2022-05-16T16:58:47.571364+00:00\",\"orderHint\":\"8585488866179218449P`\",\"@odata.type\":\"#microsoft.graph.plannerAssignment\"}}", 
+
+    "m365_checklistitemcount": 0, 
+
+    "m365_createdby": "{\"user\":{\"displayName\":null,\"email\":null,\"id\":\"be330617-0e2b-48e9-8bf7-429a09c78e65\"},\"group\":null}", 
+
+    "m365_createddatetime": "2022-05-16T16:58:47Z", 
+
+    "m365_duedatetime": "2022-05-04T08:00:00Z", 
+
+    "m365_hasdescription": false, 
+
+    "m365_orderhint": "8585488865579062167", 
+
+    "m365_percentcomplete": 0, 
+
+    "m365_priority": 5, 
+
+    "m365_planid": "8I6fu1kNS0elsbTxd67bi2UADnJu", 
+
+    "m365_previewtype": "automatic", 
+
+    "m365_referencecount": 0, 
+
+    "m365_title": "Team-oriented discrete time-frame", 
+
+    "m365_id": "8WSKWaEqAU-aZV4h9VUn0GUALXbH", 
+
+    "m365_collaborationrootid": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f", 
+
+    "m365_graphplannertaskid": "0a2115b9-8b03-90ee-b450-42005d906ce8", 
+
+    "m365_completedby": null, 
+
+    "m365_details": null, 
+
+    "m365_completeddatetime": null, 
+
+    "m365_conversationthreadid": null, 
+
+    "m365_bucketid": null, 
+
+    "m365_startdatetime": null 
+
+} 
+
+```
+
+Keep track of the m365_graphplannertaskid as it will be needed in subsequent requests.
+
+> [!NOTE]
+> The m365_graphplannertaskid is the primary key of the record in the Planner Task virtual table. All subsequent requests to the virtual table to interact with this record must use this primary key. This will be referred to as the plannerTaskId in subsequent steps in this document.
+
+You should repeat this step to create multiple tasks in the plan.
+
+**Task 5: Retrieve Associated Planner Tasks**
+
+This step retrieves all the planner tasks associated with the collaboration session created previously.
+
+Prereq: Collaboration Root ID  
+
+**Request**
+
+```http
+
+HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/ m365_graphplannertasks?$filter=m365_collaborationrootid eq '{{collaborationRootId}}'&$select=m365_graphplannertaskid,m365_title,m365_createddatetime  
+
+```
+
+**$filter**: Use the $filter system query to request records associated with the collaboration session (by specifying the id of the collaboration root record).
+**$select**: Use the $select system query option to request specific properties.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK 
+```
+
+```json
+
+{ 
+
+    "@odata.context": "https://mwtmarkwallaceunmanaged.crm10.dynamics.com/api/data/v9.0/$metadata#m365_graphplannertasks(m365_graphplannertaskid,m365_title,m365_createddatetime)", 
+
+    "value": [ 
+
+        { 
+
+            "@odata.etag": "W/\"JzEtVGFzayAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
+
+            "m365_graphplannertaskid": "8537731e-9414-1091-8d7d-ce5b74fc2477", 
+
+            "m365_title": "Diverse executive core", 
+
+            "m365_createddatetime": "2022-05-16T16:58:45Z", 
+
+            "m365_id": "N_A2qmo3j0uvZZY1yd6V_GUADDEg", 
+
+            "m365_collaborationrootid": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
+
+        }, 
+
+        { 
+
+            "@odata.etag": "W/\"JzEtVGFzayAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
+
+            "m365_graphplannertaskid": "4a89895a-050e-9165-a6e4-19c3850f22ec", 
+
+            "m365_title": "Cloned didactic open architecture", 
+
+            "m365_createddatetime": "2022-05-16T16:58:41Z", 
+
+            "m365_id": "--U0zbgsO0us084C0yCyEWUALbWw", 
+
+            "m365_collaborationrootid": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
+
+        }, 
+
+        { 
+
+            "@odata.etag": "W/\"JzEtVGFzayAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
+
+            "m365_graphplannertaskid": "20a08b8c-394b-b3fb-f9d1-47496df7a67b", 
+
+            "m365_title": "Synergized zero defect interface", 
+
+            "m365_createddatetime": "2022-05-16T16:58:43Z", 
+
+            "m365_id": "AMn3RtbmV0m6cvkp5HKDCWUAKI0_", 
+
+            "m365_collaborationrootid": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
+
+        } 
+
+    ] 
+
+} 
+
+```
+
+Keep track of the `m365_id‘s` as these will be needed in subsequent requests.
+
+**Task 6: Retrieve a Planner Task**
+
+This step performs a Read operation on one of the planner tasks created in a previous step.
+
+Prereq: Planner Task ID
+
+To read a planner task execute the following request:
+
+**Request**
+
+```http
+HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})  
+
+```
+
+**plannerTaskId**: The primary key for the planner task record i.e. the m365_graphplannertaskid property.
+
+**Response**
+
+```http
+
+HTTP/1.1 200 OK 
+
+```
+
+```json
+{ 
+
+    "@odata.context": "https://mwtmarkwallaceunmanaged.crm10.dynamics.com/api/data/v9.0/$metadata#m365_graphplannertasks/$entity", 
+
+    "@odata.etag": "W/\"JzEtVGFzayAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
+
+    "m365_activechecklistitemcount": 0, 
+
+    "m365_appliedcategories": "{}", 
+
+    "m365_assigneepriority": "8585488204334528131", 
+
+    "m365_assignments": "{\"be330617-0e2b-48e9-8bf7-429a09c78e65\":{\"assignedBy\":{\"user\":{\"displayName\":null,\"email\":null,\"id\":\"be330617-0e2b-48e9-8bf7-429a09c78e65\"},\"group\":null},\"assignedDateTime\":\"2022-05-17T11:20:52.0247676+00:00\",\"orderHint\":\"8585488204934840644P2\",\"@odata.type\":\"#microsoft.graph.plannerAssignment\"}}", 
+
+    "m365_checklistitemcount": 0, 
+
+    "m365_createdby": "{\"user\":{\"displayName\":null,\"email\":null,\"id\":\"be330617-0e2b-48e9-8bf7-429a09c78e65\"},\"group\":null}", 
+
+    "m365_createddatetime": "2022-05-17T11:20:52Z", 
+
+    "m365_duedatetime": "2022-05-04T08:00:00Z", 
+
+    "m365_orderhint": "8585488204334528131", 
+
+    "m365_percentcomplete": 0, 
+
+    "m365_priority": 5, 
+
+    "m365_planid": "8I6fu1kNS0elsbTxd67bi2UADnJu", 
+
+    "m365_previewtype": "automatic", 
+
+    "m365_referencecount": 0, 
+
+    "m365_title": "Secured content-based customer loyalty", 
+
+    "m365_id": "SXmz1hxiOk-E3MKJUyhj0mUABvix", 
+
+    "m365_details": "{\"@odata.context\":\"https://graph.microsoft.com/beta/$metadata#planner/tasks('SXmz1hxiOk-E3MKJUyhj0mUABvix')/details/$entity\",\"@odata.etag\":\"W/\\\"JzEtVGFza0RldGFpbHMgQEBAQEBAQEBAQEBAQEBARCc=\\\"\",\"description\":null,\"previewType\":\"automatic\",\"id\":\"SXmz1hxiOk-E3MKJUyhj0mUABvix\",\"references\":{},\"checklist\":{}}", 
+
+    "m365_graphplannertaskid": "1b326015-bb43-945c-85bc-9b2a4ed16c73", 
+
+    "m365_completedby": null, 
+
+    "m365_hasdescription": null, 
+
+    "m365_collaborationrootid": null, 
+
+    "m365_completeddatetime": null, 
+
+    "m365_conversationthreadid": null, 
+
+    "m365_bucketid": null, 
+
+    "m365_startdatetime": null 
+
+} 
+
+```
+
+Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` property as these will be needed to perform update or delete operations.
+
+**Task 7: Update a Planner Task**
+
+This step performs an Update operation on one of the planner tasks created in a previous step.
+
+Prereq: Planner Task ID
+
+To update a planner task, execute the following request:
+
+**Request**
+
+```http
+
+HTTP/1.1 PATCH https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})  
+
+```
+
+Content-Type: application/json
+
+Header: If-Match: {{@odata.etag}}
+
+```json
+
+{ 
+
+    "m365_title": "{{$planTitle}}" 
+
+}   
+
+```
+
+**@odata.etag**: Etag for the task, you must perform a read to retrieve the most up-to-date version.
+
+**planTitle**: Updated title for the task
+
+**Response**
+
+```http
+
+HTTP/1.1 204 No Content 
+
+```
+
+**Task 8: Delete a Planner Task**
+
+This step performs a Delete operation on one of the planner tasks created in a previous step.
+
+Prereq: Planner Task ID
+
+To delete a planner task, execute the following request:
+
+**Request**
+
+```http
+
+HTTP/1.1 DELETE https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})  
+
+```
+
+**@odata.etag**: Etag for the task, you must perform a read to retrieve the most up-to-date version.
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+```
+
+#### Virtual Tables Error Handling
+
+This section describes common error scenarios and how the virtual tables will respond.
+
+Attempt to create a virtual record without a collaboration session
+
+A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record which includes the virtual record primary key, entity name and the external id i.e., Graph resource id. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
+
+**Request**
+
+```http
+HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannertasks  
+```
+
+Content-Type: application/json
+
+```json
+
+{ 
+
+    "m365_planid": "{{planId}}", 
+
+    "m365_title": "{{taskTitle}}", 
+
+    "m365_duedatetime": "2022-05-04T08:00:00Z", 
+
+    "m365_assignments": "{\"me\":{\"orderHint\":\" !\",\"@odata.type\":\"#microsoft.graph.plannerAssignment\"}}" 
+
+}   
+
+```
+
+The collaborationRootId property is missing from the request.
+
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request 
+```
+
+```json
+
+{ 
+
+    "error": { 
+
+        "code": "0x80048d0b", 
+
+        "message": "Parameter 'm365_collaborationrootid' is null, empty, or white-space." 
+
+    } 
+
+} 
+
+```
+
+To resolve this issue, you must always provide a valid `collaborationRootId` property when creating a virtual record.
+
+#### Attempt to read a virtual record without a collaboration map
+
+Virtual tables allow you to execute requests which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It is also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq '{{planId}}'. One issue that will happen if you use such a query is that records will be returned for planner tasks which are not associated with a collaboration session i.e., planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table cannot find the associated collaboration map.  
+
+**Request**
+
+```http
+HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
+```
+
+The `plannerTaskId` property is associated with a planner task which was created using the Planner web interface and so does not have a collaboration map record.
+
+**Response**
+
+```http
+HTTP/1.1 404 Not Found 
+```
+
+```json
+{ 
+
+    "error": { 
+
+        "code": "0x80048d02", 
+
+        "message": "A record with the specified key values does not exist in m365_collaborationmap entity" 
+
+    } 
+
+} 
+```
+
+To resolve this issue, you must check the error message in the response and if it is set to the message shown above this means the virtual record is not associated. To create an association for this record you must call Collaboration - Custom APIs - Associate Collaboration Map - REST API (Collaboration Toolkit) | Microsoft Docs.
+
+#### Attempt to read a virtual record and the Graph resource has been deleted
+
+Related to the previous error, you need to handle the case where a Graph resource has been deleted but the client still have a reference to the deleted virtual record. This can happen if another user deleted the record. If you attempt to read, update, or delete such a record the request will fail because the virtual table cannot retrieve the resource from Graph.  
+
+**Request**
+
+```http
+HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
+```
+
+The plannerTaskId property is associated with a planner task which was deleted.
+
+**Response**
+
+```http
+HTTP/1.1 404 Not Found 
+```
+
+```json
+{ 
+
+    "error": { 
+
+        "code": "0x80048d02", 
+
+        "message": "REST call failed because: Reason - NotFound, Full error - {\"error\":{\"code\":\"\",\"message\":\"The requested item is not found.\",\"innerError\":{\"date\":\"2022-05-17T16:30:51\",\"request-id\":\"b692a31a-312d-490c-8dce-d258459a0211\",\"client-request-id\":\"b692a31a-312d-490c-8dce-d258459a0211\"}}}." 
+
+    } 
+
+} 
+```
+
+This case must be handled by any client code which retrieves virtual records as another user can delete the associated Graph resource at any time.
+
+#### Attempt to update a virtual record with an invalid @odata.etag
+
+The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When a record is read the current etag is returned and remains valid until the record is changed. The etag should be included in any update request and will be checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request will fail.
+
+If you perform two update requests using the same @odata.etag then the second request will fail:
+
+**Request**
+
+```http
+HTTP/1.1 PATCH https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
+```
+
+Content-Type: application/json
+
+Header: If-Match: {{@odata.etag}}
+
+```json
+{ 
+
+    "m365_title": "{{$planTitle}}" 
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 409 Conflict 
+```
+
+```json
+{ 
+
+    "error": { 
+
+        "code": "0x80048d08", 
+
+        "message": "REST call failed because: Reason - Conflict, Full error - {\"error\":{\"code\":\"\",\"message\":\"The attempted changes conflicted with already accepted changes. Read the latest state and resolve differences.\",\"innerError\":{\"date\":\"2022-05-18T06:54:55\",\"request-id\":\"dc6cd2b7-1509-4e81-91ff-22cf35b86e18\",\"client-request-id\":\"dc6cd2b7-1509-4e81-91ff-22cf35b86e18\"}}}." 
+
+    }
+
+} 
+```
 
 ## Limitations and known issues
 
