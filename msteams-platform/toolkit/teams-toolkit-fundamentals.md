@@ -16,7 +16,7 @@ Teams Toolkit lets you create, debug, and deploy your Teams app right from Visua
 * Integrated identity
 * Access to cloud storage
 * Data from Microsoft Graph
-* Azure and Microsoft 365 services with zero-configuration approach
+* Azure and Microsoft 365 services with zero-configuration approach.
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
@@ -88,7 +88,7 @@ It helps you to start with Teams app development by creating new Teams project u
 
 ### Add Features
 
-It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app. 
+It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app.
 
 ### Edit manifest file
 
