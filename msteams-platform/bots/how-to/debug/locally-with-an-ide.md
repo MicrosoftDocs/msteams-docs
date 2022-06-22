@@ -87,7 +87,7 @@ Users can delete the bot by choosing the trash-can icon on the bots list in thei
 
 ## Disable a bot in Teams
 
-To stop your bot from receiving messages, go to your **Bot Dashboard** and edit the Teams channel. Clear the **Enable on Microsoft Teams** option, which prevents users from interacting with the bot, however, it's still discoverable and users can add it to Teams.
+To stop your bot from receiving messages, go to your **Bot Dashboard** and edit the Teams channel. Clear the **Enable on Microsoft Teams** option. This prevents users from interacting with the bot, however, it's still discoverable and users can add it to Teams.
 
 ## Delete a bot from Teams
 
