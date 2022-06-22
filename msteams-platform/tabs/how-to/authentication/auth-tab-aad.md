@@ -41,7 +41,7 @@ Replace `<hostname>` with your actual host. This host can be a dedicated hosting
 
 Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
 
-Add a button to your configuration or content page to enable the user to sign in when needed, which can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
+Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
 Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when the button is selected.
 
