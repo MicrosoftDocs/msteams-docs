@@ -20,11 +20,11 @@ Outlook-enabled message extensions can be distributed to test and production ten
 
 ### Teams client
 
-From the **Apps** menu, select **Manage your apps** > **Publish an app** > **Submit an app to your org** that requires approval from your IT admin.
+From the **Apps** menu, select **Manage your apps** > **Publish an app** > **Submit an app to your org**. This requires approval from your IT admin.
 
 ### Teams Developer Portal
 
-Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app to your organization that requires approval from your IT admin. For more information, see [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
+Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app to your organization. This requires approval from your IT admin. For more information, see [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 ### Microsoft Teams Admin Center
 
