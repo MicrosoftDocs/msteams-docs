@@ -47,7 +47,6 @@ When planning how to monetize your Teams app, here are some things to consider:
 * Learn how [Azure Active Directory single sign-on (SSO)](/azure/marketplace/azure-ad-saas) helps your customers purchase and manage subscriptions. (Microsoft Azure Active Directory (Azure AD) SSO is required for Teams apps with SaaS offers.)
 * Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
 * Plan for mobile. To avoid violating third-party app store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related [commercial marketplace certification policies](/legal/marketplace/certification-policies#114048-mobile-experience).
-* Teams currently doesn't support flat rate pricing models. However, you can create a flat rate transactable offer in Partner Center. For more information, see [best practices for selling a flat rate transactable offer](#best-practices-for-selling-a-flat-rate-transactable-offer).
 
 ## Integrate with the SaaS Fulfillment APIs
 
@@ -92,9 +91,6 @@ Consider the following approaches when building a landing page for the Teams app
 ## Create your SaaS offer
 
 Once you’ve integrated the SaaS Fulfillment APIs and built your landing page where users can manage their subscriptions, it's time to officially create, test, and publish your transactable SaaS offer.
-
-> [!IMPORTANT]
-> Teams currently supports only **Per user** (user/month and user/year) pricing model for SaaS offers. For more information, see [SaaS pricing models](/azure/marketplace/plan-saas-offer#saas-pricing-models).
 
 ### Create the offer
 
@@ -199,23 +195,8 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
-## Best practices for selling a flat rate transactable offer
-
-1. Create your [flat rate transactable SaaS offer](/azure/marketplace/plan-saas-offer) and [publish to AppSource](/azure/marketplace/test-publish-saas-offer).
-
-1. Link your [SaaS offer to the Teams app](/azure/marketplace/create-new-saas-offer) in Partner Center.
-
-    > [!CAUTION]
-    > Don't add the Offer ID and Publisher ID to the app manifest. The app won't pass the Teams store submission process.
-
-1. Build an in-app message in your Teams app that a subscription is needed and provide a hyperlink  to your SaaS offer in AppSource to promote your flat rate offer.
-
-   > [!NOTE]
-   > Ensure any marketplace links don't appear on mobile and tablet devices to adhere to [third-party app store policies](/legal/marketplace/certification-policies).
-
-1. Submit your app for validation.
-
-1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID and resubmit your app for validation.
+> [!NOTE]
+> Teams now supports flat rate transactable offer. Users who earlier used a workaround to sell a flat rate transactable offer must update their app manifest with the Offer ID and Publisher ID and resubmit the app for validation.
 
 ## See also
 
