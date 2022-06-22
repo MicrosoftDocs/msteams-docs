@@ -180,7 +180,7 @@ In the cases where bots work better in a channel also work better in a group cha
 
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
-* Q&A bots.
+* Q&A bots
 * bots that initiate workflows in other systems.
 * bots that tell jokes.
 * bots that take notes.
