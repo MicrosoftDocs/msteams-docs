@@ -15,8 +15,8 @@ You can also decide the placement of the Share to Teams button on the app. Users
 
 You can enable this feature on the following:
 
-* Web apps.
-* Personal app or tab.
+* Web apps
+* Personal app or tab
 
 ## Share to Teams from web apps
 
