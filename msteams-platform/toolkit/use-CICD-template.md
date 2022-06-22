@@ -46,8 +46,17 @@ You can create the following workflow templates with GitHub:
 **Teams Toolkit in Visual Studio Code**
 
 1. Create a new Teams app project using Teams Toolkit.
-1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
+
+1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left navigation bar.
+
+1. Select **Add features**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="Adding feature":::
+
 1. Select **Add CI/CD Workflows**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="Select CI/CD workflow":::
+
 1. Select an environment from the command prompt.
 1. Select **GitHub** as the CI/CD provider.
 1. Select at least one template from these options: CI, CD, Provision, or Publish to Teams.
