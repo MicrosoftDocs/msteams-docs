@@ -9,75 +9,75 @@ ms.topic: conceptual
 
 # Create a new model-driven app with collaboration controls for Teams
 
- Collaboration controls are designed for best model-driven applications. The following section covers how to create a model-driven app.
+Collaboration controls are designed for best [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
 
- Create a model-driven application
+Create a model-driven application
 
- 1. Navigate back to [https://make.powerapps.com.](https://make.powerapps.com.)
+1. Navigate back to [https://make.powerapps.com.](https://make.powerapps.com.)
 
- 1. Select Solutions in the left navigation.
+1. Select Solutions in the left navigation.
 
- 1. Select New solution so that we can provide a home for all our future customizations.
+1. Select New solution so that we can provide a home for all our future customizations.
 
-     :::image type="content" source="../assets/images/Collaboration control/new-solution.png" alt-text="New solution" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="New solution" border="true":::
 
- 1. Provide the name and publisher of your new solution. Since this solution is going to hold our custom Collaboration Manager, let’s call it **My Collaboration Manager**.
+1. Provide the name and publisher of your new solution. Since this solution is going to hold our custom Collaboration Manager, let’s call it **My Collaboration Manager**.
 
-     :::image type="content" source="../assets/images/Collaboration control/collaboration-manager.png" alt-text="Collaboration manager" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Collaboration manager" border="true":::
 
- 1. Select **Create**
+1. Select **Create**
 
- 1. Once the solution has been created, it'll appear in your list of solutions. Select it to open it.
+1. Once the solution has been created, it'll appear in your list of solutions. Select it to open it.
 
- 1. Before creating our app, we must first create a home for our data; select **New** > **Table** to get started.
+1. Before creating our app, we must first create a home for our data; select **New** > **Table** to get started.
 
- 1. Give your table a name, we'll use **'Inspections'** for this document.
+1. Give your table a name, we'll use **'Inspections'** for this document.
 
- 1. Under **Advanced options** select **Creating a new activity**.
+1. Under **Advanced options** select **Creating a new activity**.
 
-     :::image type="content" source="../assets/images/Collaboration control/new-activity.png" alt-text="Create new activity" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Create new activity" border="true":::
 
-     > [!TIP]
-     > Take a note of the schema name in the side pane for the later settings exercise e.g.cr*****_inspections.
+    > [!TIP]
+    > Take a note of the schema name in the side pane for the later settings exercise e.g.cr*****_inspections.
 
- 1. Select **Save**
+1. Select **Save**
 
- 1. Once you're done creating your table, feel free to customize it by adding additional
+1. Once you're done creating your table, feel free to customize it by adding additional
 columns, relationships, and more (Optional).
 
- 1. Next, we'll create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
+1. Next, we'll create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
-     :::image type="content" source="../assets/images/Collaboration control/model-driven-app.png" alt-text="New model driven app" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="New model driven app" border="true":::
 
- 1. Choose to open the new app in the new **Modern app designer (preview)**
+1. Choose to open the new app in the new **Modern app designer (preview)**
 
-     :::image type="content" source="../assets/images/Collaboration control/model-driven-app-blank.png" alt-text="new model driven app blank" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="new model driven app blank" border="true":::
 
- 1. Select **Create.**
+1. Select **Create.**
 
- 1. Give your app a name, such as **‘Collaboration Manager for Inspections’** and select **Create.**
+1. Give your app a name, such as **‘Collaboration Manager for Inspections’** and select **Create.**
 
-     :::image type="content" source="../assets/images/Collaboration control/collaboration-manager-for-inspection.png" alt-text="Collaboration manager for inspection" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Collaboration manager for inspection" border="true":::
 
- 1. Select **Add page.**
+1. Select **Add page.**
 
- 1. Select **Table based view and form.**
+1. Select **Table based view and form.**
 
-     :::image type="content" source="../assets/images/Collaboration control/table-based.png" alt-text="Table based view and form" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="Table based view and form" border="true":::
 
- 1. Select **Next.**
+1. Select **Next.**
 
- 1. Search for and select the table you created on step 8.
+1. Search for and select the table you created on step 8.
 
-     :::image type="content" source="../assets/images/Collaboration control/table-view-form-pages.png" alt-text="Table view form pages" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Table view form pages" border="true":::
 
- 1. Select **Add.**
+1. Select **Add.**
 
- 1. Select **Publish** to save and publish your app.
+1. Select **Publish** to save and publish your app.
 
- 1. Select **Play** to test out your new app.
+1. Select **Play** to test out your new app.
 
- **Congrats!** You’ve built a model-driven app. In the next steps, we’ll show you how to add collaboration controls.
+**Congrats!** You’ve built a model-driven app. In the next steps, we’ll show you how to add collaboration controls.
 
 ## Configure Collaboration controls for your application
 
@@ -93,21 +93,21 @@ Create a new Microsoft Teams team
 
  1. Select Join or create a team so that we can create a new team that'll be leveraging the app you created. This team'll be the home for all conversations and more for this app.
 
-     :::image type="content" source="../assets/images/Collaboration control/join-create-team.png" alt-text="Join or create a Team" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/join-create-team.png" alt-text="Join or create a Team" border="true":::
 
  1. Select **Create team** to open the new team creation modal.
 
  1. Select **From scratch** to create a brand-new Teams team.
 
-     :::image type="content" source="../assets/images/Collaboration control/from-scratch.png" alt-text="Create a brand new Teams" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/from-scratch.png" alt-text="Create a brand new Teams" border="true":::
 
  1. Determine if you want to make the team Private, Public, or Org-wide. [Learn more.](/microsoft-365/community/changing-microsoft-teams-from-private-to-public-what-to-expect-in-sharepoint)
 
-     :::image type="content" source="../assets/images/Collaboration control/pvt-pub-org-wide.png" alt-text="Private public org-wide" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/pvt-pub-org-wide.png" alt-text="Private public org-wide" border="true":::
 
  1. Provide the name and description of your brand-new team before finally selecting **Create.**
 
-     :::image type="content" source="../assets/images/Collaboration control/quick-details.png" alt-text="Quick details about your private Team" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/quick-details.png" alt-text="Quick details about your private Team" border="true":::
 
  1. You can optionally add members to your new team or select **Skip** to do this later.
 
@@ -119,7 +119,7 @@ Create a new Microsoft Teams team
 
  1. Select Get link to team.
 
-     :::image type="content" source="../assets/images/Collaboration control/get-link.png" alt-text="get link to the Team" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="get link to the Team" border="true":::
 
  1. Now record the value of groupId from within the URL somewhere safe. You'll use this value in a future step while defining the settings of your solution.
 
@@ -178,19 +178,19 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. Select **Bookings** within the list of apps.
 
-     :::image type="content" source="../assets/images/Collaboration control/bookings.png" alt-text="bookings within the list" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/bookings.png" alt-text="bookings within the list" border="true":::
 
  1. If this is your first-time using Bookings, you may be prompted with a **Get it now** button, select that to continue.
 
-     :::image type="content" source="../assets/images/Collaboration control/online-scheduling.png" alt-text="Online scheduling your customers" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/online-scheduling.png" alt-text="Online scheduling your customers" border="true":::
 
  1. If you already have a Bookings business and need to create an additional one, select the chevron next to your currently active Bookings business and select **New**.
 
-     :::image type="content" source="../assets/images/Collaboration control/inspection.png" alt-text="Select new" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/inspection.png" alt-text="Select new" border="true":::
 
  1. Provide the name and type of your business before selecting **Continue.**
 
-     :::image type="content" source="../assets/images/Collaboration control/selecting-continue.png" alt-text="selecting continue" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/selecting-continue.png" alt-text="selecting continue" border="true":::
 
  1. You may now provide additional details for your Bookings business by configuring the Booking page, Staff, Services, and Business Information pages by selecting them in the left navigation.
 
@@ -200,15 +200,15 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  To get the alias of your new Bookings business, you may need to reopen the current Bookings business so that we can retrieve the value from the URL; begin by selecting the chevron and selecting **Open.**
 
-   :::image type="content" source="../assets/images/Collaboration control/selecting-open.png" alt-text="Selecting open" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/selecting-open.png" alt-text="Selecting open" border="true":::
 
  Once the dialog appears, re-select your new Bookings business.
 
-   :::image type="content" source="../assets/images/Collaboration control/bookings-business.png" alt-text="choose a calendar" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/bookings-business.png" alt-text="choose a calendar" border="true":::
 
  Navigate to the **Booking Page**, select **Save and publish** and copy the link from **Share your page.**
 
-   :::image type="content" source="../assets/images/Collaboration control/booking-page.png" alt-text="Booking page status" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/booking-page.png" alt-text="Booking page status" border="true":::
 
  **Provide the settings to Collaboration controls for your application**
 
@@ -222,7 +222,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. Settings for Collaboration controls are bound to specific entities. To get started, we need to create a settings group that is related to an existing table. To get started, select New > More > Other > Settings Group.
 
-     :::image type="content" source="../assets/images/Collaboration control/settings-group.png" alt-text="settings group" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-group.png" alt-text="settings group" border="true":::
 
  1. Provide a human readable **Display name** for your settings group.
 
@@ -232,7 +232,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  1. Provide the first settings value by selecting New > More > Other > Settings Value from within the solution explorer.
 
-     :::image type="content" source="../assets/images/Collaboration control/power-apps-settings-value.png" alt-text="Power apps setting value" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-settings-value.png" alt-text="Power apps setting value" border="true":::
 
  1. Group ID
 
@@ -242,7 +242,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 * Set **Settings Group ID** to the settings group you created previously
 * Set **Settings Definition ID** to **“Group ID”.**
 
-     :::image type="content" source="../assets/images/Collaboration control/new-settings-value.png" alt-text="new settings value" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/new-settings-value.png" alt-text="new settings value" border="true":::
 
  1. Select **Save & Close** once' complete
 
@@ -252,7 +252,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 * Set **Settings Group ID** to the one you created previously
 * Set Settings Definition ID to “Booking Business ID”
 
-     :::image type="content" source="../assets/images/Collaboration control/new-settings.png" alt-text="new settings" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/new-settings.png" alt-text="new settings" border="true":::
 
  1. Select **Save & Close** once' complete.
 
@@ -264,7 +264,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
 * Set **Settings Definition ID** to **"Channel ID"**.
 
-     :::image type="content" source="../assets/images/Collaboration control/settings-value.png" alt-text="Settings value" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-value.png" alt-text="Settings value" border="true":::
 
 1. Select Save & Close once' complete.
 
@@ -297,33 +297,33 @@ Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
 
  1. Navigate to the Forms tab for your table.
 
-     :::image type="content" source="../assets/images/Collaboration control/forms-tab.png" alt-text="forms tab for your table" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="forms tab for your table" border="true":::
 
  1. Select the Information form of form type “Main" to open it in the form designer.
 
  1. Once' in the form designer, drag in a **1-column tab** from the **Components** drawer.
 
-     :::image type="content" source="../assets/images/Collaboration control/components.png" alt-text="Components power apps" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Components power apps" border= "true":::
 
  1. After dragging in the tab, rename the tab to “Tasks” in the property pane.
 
  1. Now select the section within your new tab so that you can select Hide label within the property pane.
 
-     :::image type="content" source="../assets/images/Collaboration control/hide-label.png" alt-text="Hide label" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label.png" alt-text="Hide label" border="true":::
 
  1. Select the full section and select **Expand first component to full tab** in the property pane. This is required as the controls only support full tab views.
 
-     :::image type="content" source="../assets/images/Collaboration control/expand-first-component.png" alt-text=" Expand first component to full tab" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Expand first component to full tab" border="true":::
 
  1. Drag-and-drop a **Subgrid** control from the **Components** drawer into your section.
 
  1. In the pop up, check ‘Show related records’ and for tasks, set the values to **All Tasks** from the **Tasks (Regarding)** table.
 
-     :::image type="content" source="../assets/images/Collaboration control/all-tasks.png" alt-text="All tasks from the tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/all-tasks.png" alt-text="All tasks from the tasks" border="true":::
 
  1. Repeat steps 5 – 10 for the Meetings, Notes, and Files tabs to create additional tabs and add the controls.
 
-     :::image type="content" source="../assets/images/Collaboration control/new-inspection.png" alt-text="New inspections" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/new-inspection.png" alt-text="New inspections" border="true":::
 
      > [!NOTE]
      >
@@ -331,23 +331,23 @@ Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
      >
      > If' unable to find the control table in the “Select subgrid views” pop up, you may have missed step 9 of Task 1 in Exercise 2. Make sure you check the option for ‘Creating a new activity’.
 
-     :::image type="content" source="../assets/images/Collaboration control/create-new-activity.png" alt-text="Create a new activity" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/create-new-activity.png" alt-text="Create a new activity" border="true":::
 
  1. We now need to configure the custom controls for our subgrids within the classic form designer. Select **Save** and then select **Switch to classic.**
 
  1. Scroll down in the classic form designer until you find the **Tasks** tab. Double-click on the subgrid to open its property dialog.
 
-     :::image type="content" source="../assets/images/Collaboration control/property-dialog.png" alt-text="Tasks tab property dialog" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/property-dialog.png" alt-text="Tasks tab property dialog" border="true":::
 
  1. While in the property dialog, select the Controls tab to view all custom controls assigned to it.
 
-     :::image type="content" source="../assets/images/Collaboration control/select-controls.png" alt-text="Select the controls" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-controls.png" alt-text="Select the controls" border="true":::
 
  1. Select **Add Control**
 
  1. For the tasks tab, select **Tasks (Preview)** and then **Add.**
 
-     :::image type="content" source="../assets/images/Collaboration control/tasks-preview.png" alt-text="add tasks preview" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-preview.png" alt-text="add tasks preview" border="true":::
 
  1. Check the Web, Phone, and Tablet radio buttons for the Tasks control to ensure that it shows across all form factors.
 
@@ -454,16 +454,16 @@ query to display users from any other custom table.
 
 * Set the properties as shown in the images below
 
-   :::image type="content" source="../assets/images/Collaboration control/set-properties.png" alt-text="set properties" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/set-properties.png" alt-text="set properties" border="true":::
 
 * Navigate to the Controls tab and click on pen symbol on Custom Tasks property to add
 the Fetch XML generated above.
 
 * Paste the Fetch XML
 
-   :::image type="content" source="../assets/images/Collaboration control/set-properties-chart-properties.png" alt-text="Set chart properties" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/set-properties-chart-properties.png" alt-text="Set chart properties" border="true":::
 
-   :::image type="content" source="../assets/images/Collaboration control/custom-tasks.png" alt-text="Custom tasks" border= "true":::
+   :::image type="content" source="../assets/images/collaboration-control/custom-tasks.png" alt-text="Custom tasks" border= "true":::
 
 * Click Ok
 
@@ -476,7 +476,7 @@ the Fetch XML generated above.
      > [!NOTE]
      > When in Classic Designer adding the Files control, ensure that the Name field is populated with a unique name.
 
-     :::image type="content" source="../assets/images/Collaboration control/set-the-list-chart-properties.png" alt-text="Set the list or chart properties" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/set-the-list-chart-properties.png" alt-text="Set the list or chart properties" border="true":::
 
  1. Select Save.
 
@@ -484,15 +484,15 @@ the Fetch XML generated above.
 
  1. You can now close the Classic Form Designer and open your app in Power Apps by selecting it.  
 
-     :::image type="content" source="../assets/images/Collaboration control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections" border="true":::
 
  1. Create a new record via + New and then open the record.
 
-     :::image type="content" source="../assets/images/Collaboration control/power-apps-open-the-record.png" alt-text="Power apps open the record" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Power apps open the record" border="true":::
 
      You should see views for each tab that appear similar to the image below.
 
-     :::image type="content" source="../assets/images/Collaboration control/tabs.png" alt-text="Tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Tasks" border="true":::
 
      > [!TIP]
      > The controls are only visible after a record is initially saved in the application. If the control tabs don't appear in your record, try to refresh your browser and/or republish the app from within Power Apps.
@@ -506,24 +506,24 @@ and in the “Apps” Section, find the MDA (Model Driven Application) app you c
 
  1. Open [Command Designer](/power-apps/maker/model-driven-apps/command-designer-overview) (currently in Preview) by clicking ‘Edit in preview’ context menu item.
 
-     :::image type="content" source="../assets/images/Collaboration control/edit-in-preview.png" alt-text="edit in preview" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-in-preview.png" alt-text="edit in preview" border= "true":::
 
  1. On the next screen, select ‘…’ on the right of your application table and select **Edit command bar (preview)**
 
-     :::image type="content" source="../assets/images/Collaboration control/edit-command-bar.png" alt-text="Edit command bar" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-command-bar.png" alt-text="Edit command bar" border="true":::
 
  1. Select **Main form** and **Edit**
 
-     :::image type="content" source="../assets/images/Collaboration control/select-main-form.png" alt-text="select main form" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-ontrol/select-main-form.png" alt-text="select main form" border= "true":::
 
  1. Select + **New command** on Commands panel
 
-     :::image type="content" source="../assets/images/Collaboration control/select-new-command.png" alt-text="select new command" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-new-command.png" alt-text="select new command" border="true":::
 
      > [!NOTE]
      > If presented with this view below, select JavaScript
 
-     :::image type="content" source="../assets/images/Collaboration control/select-java-script.png" alt-text="select java script" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/select-java-script.png" alt-text="select java script" border="true":::
 
  1. Configure the command in the opened right-hand pane
 
@@ -531,19 +531,19 @@ and in the “Apps” Section, find the MDA (Model Driven Application) app you c
 
     1. Icon: **Use web resource**
 
-     :::image type="content" source="../assets/images/Collaboration control/use-web-resource.png" alt-text="Use web resource" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/use-web-resource.png" alt-text="Use web resource" border="true":::
 
      1. Library:
 
      Select + **Add web resource** and in opened dialog search and add **icrosoft _TeamsChatIcon.svg** web resource:
-     :::image type="content" source="../assets/images/Collaboration control/teams-chat-icon.png" alt-text="Teams chat icon" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/teams-chat-icon.png" alt-text="Teams chat icon" border="true":::
 
     1. **Action:** Set **Action** (if not set) to: **Run JavaScript**
 
     1. Select **Add library** and in opened dialog search and add **icrosoft _chatControl** web
      resource
 
-     :::image type="content" source="../assets/images/Collaboration control/add-java-script.png" alt-text="Add javascript" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/add-java-script.png" alt-text="Add javascript" border="true":::
 
      1. **Function Name:** **icrosoft _chatControl.chatControl.clickChatIcon**
 
@@ -559,13 +559,13 @@ and in the “Apps” Section, find the MDA (Model Driven Application) app you c
 
  1. In Parameter 3 select **String** and for the value enter in the Name (not the Display Name) of the Primary Name Column for your table e.g., cr*****_inspections from Exercise 2, Task 1 , step 10.
 
-     :::image type="content" source="../assets/images/Collaboration control/settings-inspection.png" alt-text="Settings for inspection" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-inspection.png" alt-text="Settings for inspection" border="true":::
 
      1. **Visibility: 'Show'**
 
      1. Once entered it should look like the image below
 
-     :::image type="content" source="../assets/images/Collaboration control/run-javascript.png" alt-text="Run javascript" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/run-javascript.png" alt-text="Run javascript" border="true":::
 
      1. Part IV
 
