@@ -13,7 +13,7 @@ ms.topic: conceptual
 
  **Task 1: [Optional] Configuring the app to look great in Microsoft Teams**
 
- To do so, we will leverage Power Apps ‘new app’ settings.
+ To do so, we'll use Power Apps ‘new app’ settings.
 
  1. Navigate to **Solutions** in the left navigation.
 
@@ -63,7 +63,7 @@ ms.topic: conceptual
 
  1. To bring your newly downloaded app manifest to Microsoft Teams, open Teams and navigate to the app store by selecting Apps in the left app bar.
 
- 1. Next, select **Upload a custom app** at the bottom of the left navigation. [Note: The steps to select 'Upload a custom app' may vary depending on your version of Teams for example, you may have to select **Manage your apps** > **Upload a custom app**]
+ 1. Next, select **Upload a custom app** at the bottom of the left navigation. [Note: The steps to select 'Upload a custom app' may vary depending on your version of Teams, for example, you may have to select **Manage your apps** > **Upload a custom app**]
 
      :::image type="content" source="../assets/images/collaboration-control/upload-custom-app.png" alt-text="upload a custom app" border= "true":::
 
@@ -89,7 +89,7 @@ ms.topic: conceptual
 
  **Task 4: [Optional] How to add the app as a personal app**
 
- 1. Select '…' in the Teams left nav bar to find your app, select your app to open it. When your app appears on the Teams left nav bar, right click and select **Pin** to add the app as a personal app.
+ 1. Select '…' in the Teams left nav bar to find your app, select your app to open it. When your app appears on the Teams left nav bar, right select and select **Pin** to add the app as a personal app.
 
      :::image type="content" source="../assets/images/collaboration-control/select-pin.png" alt-text="select pin" border="true":::
 
@@ -191,16 +191,16 @@ ms.topic: conceptual
 
 Follow these steps if you would like to be able to create external tasks.  
 
-External (or guest) tasks are tasks that can be assigned to users who are not part of your organization or do not have access to your application e.g., when assigning a task to a customer.
+External (or guest) tasks are tasks that can be assigned to users who aren't part of your organization or don't have access to your application,  e.g., when assigning a task to a customer.
 
-To enable you will need an additional step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. This XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
+To enable, you'll need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. This XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
 
-1. Create a new custom entity (e.g., “Customer”) or reuse an existing customer entity like Contacts.
+1. Create a new custom entity (for example, “Customer”) or reuse an existing customer entity like Contacts.
 
 1. Then create new fields that will hold the following information (the names can be different):
     1. Name
     1. Email
-    1. Parent (Lookup to the parent table e.g., Inspections)
+    1. Parent (Lookup to the parent table,  e.g., Inspections)
     > [!NOTE]
     > The customer entity created above will be where the task control pulls the customer information from when assigning an external task. The “Parent” field ensures that the customer entity is linked to an Inspection record.
 
@@ -247,10 +247,10 @@ To enable you will need an additional step of passing an XML string to each inst
 1. We now need to bind the Task controls to the subgrid within the classic form designer. Select Save and then select Switch to classic.
 1. Scroll down in the classic form designer until you find the Tasks tab. Double-click on the subgrid to open its property dialog.
 1. While in the property dialog, Set the properties as shown in the images below
-1. Navigate to the Controls tab and click on pen symbol on Custom Tasks property to add the Fetch XML generated above.
+1. Navigate to the Controls tab and select on pen symbol on Custom Tasks property to add the Fetch XML generated above.
 1. Paste the Fetch XML  
-1. Click Ok
-1. Click Ok on properties window
+1. Select Ok
+1. Select Ok on properties window
 1. Save and Publish
 
 ### Virtual Tables for Tasks, Meetings, Files
@@ -259,25 +259,25 @@ A new capability with this release is a set of Virtual Tables. These enable deve
 
 **Overview**
 
-The Collaboration Controls Core solution includes a set of virtual tables which can be used for programmatic access to the data created by the Collaboration controls.
+The Collaboration Controls Core solution includes a set of virtual tables, which can be used for programmatic access to the data created by the Collaboration controls.
 
 > [!TIP]
 > Virtual tables (also known as virtual entities) enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 
 The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans/tasks and SharePoint drives/folders/files.
 
-This guide provides samples which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
+This guide provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
 
 > [!TIP]
 > For more information on the Dataverse REST API go to Use the Microsoft Dataverse Web API (Dataverse) - Power Apps | Microsoft Docs.
 
 **Why use Virtual Tables?**
 
-The virtual tables make the developers job easier.
+The virtual tables make the developer's job easier.
 
-We use them to simplify the development of the Collaboration controls and we are making them available for customers to use.
+We use them to simplify the development of the Collaboration controls and we're making them available for customers to use.
 
-* Virtual tables use the standard Dataverse Web API which makes it easy to use the virtual tables to populate data in your application.
+* Virtual tables use the standard Dataverse Web API, which makes it easy to use the virtual tables to populate data in your application.
 * Our virtual tables implement complex workflows required to support our Collaboration controls and these execute within Microsoft data centers for optimum performance.  
 * The virtual tables use the standard Dataverse logging and monitoring capabilities.
 
@@ -285,11 +285,11 @@ Once you install the Collaboration controls, the virtual tables can be treated a
 
 **Pre-requisites**
 
-To follow along with this guide you will need:
+To follow along with this guide, you'll need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
-1. A user account in the Dataverse environment which has the “Collaboration controls User” role assigned to it.
-1. A third-party tool e.g. Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
+1. A user account in the Dataverse environment, which has the “Collaboration controls User” role assigned to it.
+1. A third-party tool, e.g.,  Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
 > Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See Use Postman with Microsoft Dataverse Web API (Developer Guide for Dataverse) - Power Apps | Microsoft Docs.
@@ -308,7 +308,7 @@ This section describes the HTTP requests and responses for each step in the samp
 
 **Task 2: Begin a Collaboration Session**
 
-This step creates a collaboration session which will be used in the following steps. A collaboration session is a record in the collaboration root table which allows us to associate multiple collaborations e.g., tasks, events, appointments, etc. with a business record. This allows us to perform operations such as list of the calendar events associated with a business record e.g. an inspections application.
+This step creates a collaboration session, which will be used in the following steps. A collaboration session is a record in the collaboration root table, which allows us to associate multiple collaborations,  e.g., tasks, events, appointments, etc. with a business record. This allows us to perform operations such as list of the calendar events associated with a business record for example, an inspections application.
 
 **Request**
 
@@ -627,7 +627,7 @@ This step performs a Read operation on one of the planner tasks created in a pre
 
 Prereq: Planner Task ID
 
-To read a planner task execute the following request:
+To read a planner task, execute the following request:
 
 **Request**
 
@@ -636,7 +636,7 @@ HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{p
 
 ```
 
-**plannerTaskId**: The primary key for the planner task record i.e. the m365_graphplannertaskid property.
+**plannerTaskId**: The primary key for the planner task record that is, the m365_graphplannertaskid property.
 
 **Response**
 
@@ -781,7 +781,7 @@ This section describes common error scenarios and how the virtual tables will re
 
 Attempt to create a virtual record without a collaboration session
 
-A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record which includes the virtual record primary key, entity name and the external id i.e., Graph resource id. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
+A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record, which includes the virtual record primary key, entity name and the external id i.e., Graph resource id. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
 
 **Request**
 
@@ -835,7 +835,7 @@ To resolve this issue, you must always provide a valid `collaborationRootId` pro
 
 #### Attempt to read a virtual record without a collaboration map
 
-Virtual tables allow you to execute requests which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It is also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq '{{planId}}'. One issue that will happen if you use such a query is that records will be returned for planner tasks which are not associated with a collaboration session i.e., planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table cannot find the associated collaboration map.  
+Virtual tables allow you to execute requests which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq '{{planId}}'. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
 
 **Request**
 
@@ -843,7 +843,7 @@ Virtual tables allow you to execute requests which return collections of virtual
 HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
 ```
 
-The `plannerTaskId` property is associated with a planner task which was created using the Planner web interface and so does not have a collaboration map record.
+The `plannerTaskId` property is associated with a planner task, which was created using the Planner web interface and so doesn't have a collaboration map record.
 
 **Response**
 
@@ -865,11 +865,11 @@ HTTP/1.1 404 Not Found
 } 
 ```
 
-To resolve this issue, you must check the error message in the response and if it is set to the message shown above this means the virtual record is not associated. To create an association for this record you must call Collaboration - Custom APIs - Associate Collaboration Map - REST API (Collaboration Toolkit) | Microsoft Docs.
+To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call Collaboration - Custom APIs - Associate Collaboration Map - REST API (Collaboration Toolkit) | Microsoft Docs.
 
 #### Attempt to read a virtual record and the Graph resource has been deleted
 
-Related to the previous error, you need to handle the case where a Graph resource has been deleted but the client still have a reference to the deleted virtual record. This can happen if another user deleted the record. If you attempt to read, update, or delete such a record the request will fail because the virtual table cannot retrieve the resource from Graph.  
+Related to the previous error, you need to handle the case where a Graph resource has been deleted but the client still has a reference to the deleted virtual record. This can happen if another user deleted the record. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't retrieve the resource from Graph.  
 
 **Request**
 
@@ -899,7 +899,7 @@ HTTP/1.1 404 Not Found
 } 
 ```
 
-This case must be handled by any client code which retrieves virtual records as another user can delete the associated Graph resource at any time.
+This case must be handled by any client code, which retrieves virtual records as another user can delete the associated Graph resource at any time.
 
 #### Attempt to update a virtual record with an invalid @odata.etag
 
@@ -966,7 +966,7 @@ HTTP/1.1 409 Conflict
 
  **Admin Center does not update when installation or upgrade is complete**
 
- When following the installation steps in exercise 1,' redirected to the Power Platform admin center. A banner is displayed when installation starts, but it is not updated when installation completes. The status is listed during installation, and when installation is complete it may disappear from the list. You can view the solutions list at <https://make.preview.powerapps.com/> to confirm that installation is complete.
+ When following the installation steps in exercise 1,' redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation, and when installation is complete it may disappear from the list. You can view the solutions list at <https://make.preview.powerapps.com/> to confirm that installation is complete.
 
  **View during installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="view during installation" border="true":::
@@ -979,29 +979,29 @@ HTTP/1.1 409 Conflict
 
  **Conversations button does not respond unless browser locale is English (United States)**
 
- If the Conversations button does not respond when you click it, and you observe the following error in the console logs:
+ If the Conversations button doesn't respond when you select it, and you observe the following error in the console logs:
      :::image type="content" source="../assets/images/collaboration-control/console-log.png" alt-text="console log" border="true":::
 
  This is caused by a localization error for the Conversations component. You can resolve the issue by updating your browser locale to en-US.
 
  **Conversations button disappears in Teams Web UI**
- There is an issue that causes the Conversations button to intermittently disappear when viewing a record in the Teams Web UI. You can follow this workaround to reload the button when the “App high density page header” setting is turned off:,
+ There's an issue that causes the Conversations button to intermittently disappear when viewing a record in the Teams Web UI. You can follow this workaround to reload the button when the “App high density page header” setting is turned off:,
 
  1. Go back to the list view that shows all the records for the entity.
 
  1. Refresh the browser.
 
- 1. Click on a record.
+ 1. Select on a record.
 
  1. The Conversations button is now visible.
 
  **Conversations are not refreshed when moving to another record**
 
- The conversations pane is not refreshed when you move between records. As a result, you will see all the conversations from the teams channel, and not just the ones linked to that specific record. Deleted conversations will also be displayed with "(no title)".
+ The conversations pane isn't refreshed when you move between records. As a result, you'll see all the conversations from the teams channel, and not just the ones linked to that specific record. Deleted conversations will also be displayed with "(no title)".
 
  **Multiple Conversations buttons are displayed in Teams channels**
 
- When an app is played in a Teams channel, there is an additional chat icon in the header bar that opens the Posts tab with channel conversations. This is not present when apps are played as a personal app or group chat app.
+ When an app is played in a Teams channel, there's an another chat icon in the header bar that opens the Posts tab with channel conversations. This isn't present when apps are played as a personal app or group chat app.
 
  **Meeting attendee status is incorrect**
 
@@ -1009,11 +1009,11 @@ HTTP/1.1 409 Conflict
 
  **Cannot join meetings from Power Apps runtime**
 
- The join button does not work for meetings when apps are played in Power Apps. This issue can be worked around by playing apps inside Teams.
+ The join button doesn't work for meetings when apps are played in Power Apps. This issue can be worked around by playing apps inside Teams.
 
  **Duplicate Archive Folders**
 
- When navigating into the Archive folder after archiving files, users may experience duplicate archive folders. Navigating from the archive folder(s) to the files main view will resolve the issue, and files that are archived will not be removed.
+ When navigating into the Archive folder after archiving files, users may experience duplicate archive folders. Navigating from the archive folder(s) to the files main view will resolve the issue, and files that are archived won't be removed.
 
  **System Error after Upgrade**
 
@@ -1021,16 +1021,16 @@ HTTP/1.1 409 Conflict
 
  **Cannot add app in Teams**
 
- Sometimes an app cannot be added to a Teams channel because the app details do not load correctly and the Save button is disabled:
+ Sometimes an app can't be added to a Teams channel because the app details don't load correctly and the Save button is disabled:
      :::image type="content" source="../assets/images/collaboration-control/collab-mgr-inspection.png" alt-text="Collab manager inspection" border="true":::
 
  This can be worked around by creating a new model driven app that uses the same table (repeating exercise 2, exercise 4 task 2 and exercise 6 task 2).
 
  It can also be helpful to:
 
- 1. Ensure the app has a different name or description, so you can identify the new app in the Teams app catalogue.
+ 1. Ensure the app has a different name or description, so you can identify the new app in the Teams app catalog.
  1. Test publishing the app to Teams before repeating exercise 4, task 2
- Cannot change app details after uploading to Teams
+ Can't change app details after uploading to Teams
  If you want to change the app name, icon, or description after uploading it to Teams, you can follow this process:
  1. Go to admin.teams.microsoft.com
  1. Either select the option to upload a new file, or delete the app and it can be uploaded to Teams
@@ -1038,9 +1038,9 @@ HTTP/1.1 409 Conflict
 
      :::image type="content" source="../assets/images/collaboration-control/manage-apps.png" alt-text="manage apps" border="true":::
 
-* If you're updating the manifest, you've to unzip it and manually update the version number so that it is higher.
+* If you're updating the manifest, you've to unzip it, and manually update the version number so that it's higher.
 
-* After changing the app catalogue in the tenant, you've to log out and log back in as the user to get the updated catalogue.
+* After changing the app catalog in the tenant, you've to log out and log back in as the user to get the updated catalogue.
 
  **Tasks, Meetings controls fail to save**
 
@@ -1068,7 +1068,7 @@ HTTP/1.1 409 Conflict
 * Power Apps Microsoft Docs:[https://docs.microsoft.com/en-us/powerapps/developer/dataplatform/logging-tracing?WT.mc_id=email](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email)
 
  1. **Browser logging** for UI controls. This is standard console logging.
- a. It is supported when using a browser to run the Collaboration Manager app via Power Platform
+ a. It's supported when using a browser to run the Collaboration Manager app via Power Platform
  and Teams web. <br/>
  b. Within the console tab, you can search for errors using the Collaboration Manager error
  message or searching for Collaboration Manager control names such as Tasks.<br/>
