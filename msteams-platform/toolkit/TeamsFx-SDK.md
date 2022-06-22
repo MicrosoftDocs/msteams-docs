@@ -12,9 +12,9 @@ ms.date: 11/29/2021
 
 TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
 
-* Teams tab application.
-* Azure Function.
-* Teams bot.
+* Teams tab application
+* Azure Function
+* Teams bot
 
 You can use the TeamsFx SDK to:
 
