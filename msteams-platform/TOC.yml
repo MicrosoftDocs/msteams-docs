@@ -138,10 +138,12 @@
     href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
-  - name: App Studio
-    href: concepts/build-and-test/app-studio-overview.md
-  - name: Developer Portal for Teams
-    href: concepts/build-and-test/teams-developer-portal.md
+  - name: Developer Portal
+    items:
+    - name: Developer Portal for Teams
+      href: concepts/build-and-test/teams-developer-portal.md
+    - name: App Studio
+      href: concepts/build-and-test/app-studio-overview.md     
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
@@ -428,7 +430,7 @@
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
   - name: Integrate media capabilities
-    href: concepts/device-capabilities/mobile-camera-image-permissions.md
+    href: concepts/device-capabilities/media-capabilities.md
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
   - name: Integrate location capabilities
