@@ -535,8 +535,6 @@
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-  - name: First party license management enabled in Teams
-    href: concepts/deploy-and-publish/appsource/prepare/first-party-license-management.md
 - name: App manifest
   items:
     - name: App manifest schema
