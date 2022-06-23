@@ -19,7 +19,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 
 1. Create the bot using [Bot Framework](https://dev.botframework.com/bots/new). **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to re-use any Microsoft App ID you generated if you've already created your app package/manifest.
 
-   ![Bot Framework registration page](~/assets/images/bots/bfregister.png)
+   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Bot Framework registration page":::
 
 > [!NOTE]
 > If you do not wish to create your bot in Azure, you **must** use this link to create a new bot: [Bot Framework](https://dev.botframework.com/bots/new). If you click on the **Create a bot** in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
