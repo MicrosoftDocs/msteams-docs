@@ -1,7 +1,7 @@
 ---
 title: Add cloud Resources to Teams apps
 author: MuyangAmigo
-description:  In this module, learn how to add Resources of Teams Toolkit, advantages, limitations and capabilities
+description:  In this module, learn how to add cloud Resources of Teams Toolkit, advantages, limitations and capabilities
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
