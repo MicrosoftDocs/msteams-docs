@@ -46,7 +46,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 
 > [!WARNING]
 >
->* If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022
+>* If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 ## See also
 
