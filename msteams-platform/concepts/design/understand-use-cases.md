@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: In this article learn about Microsoft Teams app capabilities, plan your Teams app, understand your app user and their needs, understand the user problems that your Teams app would solve, plan user authentication and their onboarding experience.
+description: In this article, you'll learn Microsoft Teams app capabilities, plan and understand Teams app and features, and also user problems that Teams app would solve.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear

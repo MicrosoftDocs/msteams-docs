@@ -1,10 +1,9 @@
 ---
 title: Messages in bot conversations
-description: Describes ways to have a conversation with a Microsoft Teams bot. Learn about Teams channel data, notification to your message, picture messages, adaptive cards using Code samples.
+description: Learn the ways to have a conversation with a Teams bot and Teams channel data, notification to your message, picture messages, adaptive cards using Code samples
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
 ---
 
 # Messages in bot conversations
@@ -237,10 +236,10 @@ Messages received from or sent to your bot can include different types of messag
 
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
-| Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
+| Pictures  | ✔️                | ✔️                | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
+| Cards     | ❌                | ✔️                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ## Notifications to your message
 

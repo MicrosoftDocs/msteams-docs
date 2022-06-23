@@ -1,7 +1,6 @@
 ---
 title: Handle bot events
-description: Describes how to handle events in bots for Microsoft Teams
-keywords: teams bots events
+description: In this module, learn how to handle events in bots for Microsoft Teams, Teams member or bot addition, Team member or bot removed and more
 ms.date: 05/20/2019
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -22,7 +21,7 @@ Microsoft Teams sends notifications to your bot for changes or events that happe
 
 Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
+Teams and group events, triggered off the `conversationUpdate` type, have more Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and more event-specific metadata.
 
 The following table lists the events that your bot can receive and take action on.
 
@@ -39,11 +38,11 @@ The following table lists the events that your bot can receive and take action o
 
 ## Team member or bot addition
 
-The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service, such as, sending a message to a specific user.
+The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. The user information (`Id`) is unique for your bot and can be cached for future use by your service, such as, sending a message to a specific user.
 
 ### Bot or user added to a team
 
-The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added. Microsoft Teams also adds `eventType.teamMemberAdded` in the `channelData` object.
+The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added. Teams also adds `eventType.teamMemberAdded` in the `channelData` object.
 
 Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself. For the latter, a best practice is to send a [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.
 
@@ -222,7 +221,7 @@ Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it
 
 ## Team member or bot removed
 
-The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
 
 ### Schema example: Team member removed
 
@@ -317,7 +316,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 > [!NOTE]
 > There is no functionality to query all team names, and team name is not returned in payloads from other events.
 
-Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.
+Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. Note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they've been added.
 
 ### Schema example: Team renamed
 
@@ -444,7 +443,7 @@ The channel events are as follows:
 
 ## Reactions
 
-The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message.
+The `messageReaction` event is sent when a user adds or removes his or her reaction to a message, which was originally sent by your bot. `replyToId` contains the ID of the specific message.
 
 ### Schema example: A user likes a message
 

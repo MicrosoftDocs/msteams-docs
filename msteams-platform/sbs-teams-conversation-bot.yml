@@ -2,7 +2,7 @@
 title: Create Teams conversation bot
 metadata:
   title: Create Teams conversation bot
-  description: In this tutorial, you'll learn to set up conversation bot in Teams.
+  description: With this learning module, you'll learn to create basic conversation bot in Microsoft Teams application.
   audience: Developer
   level: Beginner
   ms.date: 04/01/2022
@@ -121,7 +121,7 @@ items:
     1. In **Manage** pane of your bot, select **API permissions**.
     1. Select **Add a permission**. **Request API permissions** window appears.
     1. Select **Microsoft APIs** and select **Microsoft Graph**.
-    1. Select **Application permissions** and then select permissions.
+    1. Select **Application permissions**, and then select permissions.
     1. Add any user permissions that your app requires to downstream APIs, for example, `User.Read`.
     1. Select **Add permissions**.
 
@@ -242,7 +242,7 @@ items:
   content: |
     You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot responds to the following strings:
 
-    In the left pane of the Teams, select the ellipses ●●● and then select your app from the list. The bot shows **Suggestions** as follows:
+    In the left pane of the Teams, select the ellipses ●●●, and then select your app from the list. The bot shows **Suggestions** as follows:
 
     :::image type="content" source="./assets/images/conversation-bot/suggestions.png" alt-text="Suggestions card.":::
 

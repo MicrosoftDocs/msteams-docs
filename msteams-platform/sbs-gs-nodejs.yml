@@ -2,7 +2,7 @@
 title: Build your first app using Node.js
 metadata:
   title: Hello World with Node.js
-  description: In this tutorial, you'll learn to build Hello World app with Node.js.
+  description: In this tutorial, you'll learn to build Hello World app with Node.js by setting up a new project, build and deploy tab, bot and message extension apps.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -24,7 +24,7 @@ items:
 
     - How to set up a new project using command-line tools.
     - How to build three apps with a different capability each—tab, bot, and message extension.
-    - How to deploy your app from Developer Portal
+    - How to deploy your app from Developer Portal.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -277,6 +277,7 @@ items:
 
         > [!NOTE]
         > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
+        
         > [!TIP]
         > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
 
@@ -414,9 +415,9 @@ items:
     After you've imported your app into Developer Portal, the next step is to configure app capabilities. Developer Portal contains all the app information in different sections. It makes configuring the app capabilities easy.
 
     Using Developer Portal, you can:
-    1. [Configure personal tab app](#configure-personal-tab-app)
-    1. [Configure bot](#configure-bot)
-    1. [Configure message extension](#configure-message-extension)
+    1. [Configure personal tab app](#configure-personal-tab-app).
+    1. [Configure bot](#configure-bot).
+    1. [Configure message extension](#configure-message-extension).
 
     #### Configure personal tab app
 
@@ -461,9 +462,9 @@ items:
 
     Adding and configuring a bot involves:
 
-    1. [Adding a new bot](#to-add-a-new-bot)
-    1. [Adding bot to app](#to-add-bot-to-app)
-    1. [Configuring bot scope](#to-configure-bot-scope)
+    1. [Adding a new bot](#to-add-a-new-bot).
+    1. [Adding bot to app](#to-add-bot-to-app).
+    1. [Configuring bot scope](#to-configure-bot-scope).
 
     ##### To add a new bot
 
@@ -491,7 +492,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
 
-    1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
+    1. Select **Client secrets**, and then select **Add a client secret to your bot** to generate a password for the bot.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-bot-client-secrets.png" alt-text="Image showing Client secret section" border="false":::
 
@@ -612,7 +613,7 @@ items:
         - Parameter description
 
     1. Select **Text** as the type of input.
-    1. Select **Save**
+    1. Select **Save**.
     1. The message extension command is saved, and shows on the list of commands in the **Message extension** pane.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-command-added.png" alt-text="Image showing Command added" border="false":::
