@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Command Line Interface
 author: MuyangAmigo
-description:  Describes TeamsFx Command Line Interface
+description: In this module, learn TeamsFx library, TeamsFx Command Line Interface, supported commands and its scenarios
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -125,8 +125,8 @@ The following table lists the cloud service accounts, such as Azure and Microsof
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are M365 or Azure. |
-| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are M365 or Azure. |
+| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsfx account set --subscription` | Update account settings to set a subscription ID. |
 
 ## `teamsfx env`
@@ -373,7 +373,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * To login to Microsoft 365 account and Azure account:
+    * To log in to Microsoft 365 account and Azure account:
 
       ```bash
       teamsfx account login azure
@@ -407,13 +407,13 @@ The following list provides required permissions for `TeamsFx` projects:
   * As a Project Collaborator:
 
     * Clone the project from GitHub.
-    * Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
+    * Log in to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
 
       ```bash
       teamsfx account login Microsoft 365
       ```
 
-    * Login to Azure account with contributor permission for all Azure resources.
+    * Log in to Azure account with contributor permission for all Azure resources.
 
       ```bash
       teamsfx account login azure

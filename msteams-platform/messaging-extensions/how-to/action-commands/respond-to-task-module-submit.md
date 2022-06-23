@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Describes how to respond to the task module submit action from a messaging extension action command with Proactive message, another task module, Adaptive card bot, and more using Code samples.
+description: In this module, learn how to respond to the task module submit action from a messaging extension action command with Proactive message and more
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -27,10 +27,10 @@ For authentication or configuration, after the user completes the process, the o
 
 |Response Type | Compose | Command bar | Message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Card response | ✔ | ✔ | ✔ |
-|Another task module | ✔ | ✔ | ✔ |
-|Bot with Adaptive Card | ✔ | x | ✔ |
-| No response | ✔ | ✔ | ✔ |
+|Card response | ✔️ | ✔️ | ✔️ |
+|Another task module | ✔️ | ✔️ | ✔️ |
+|Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
+| No response | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

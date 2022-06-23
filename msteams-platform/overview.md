@@ -33,7 +33,7 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 ## Build apps with Microsoft Teams platform
 
-Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
+Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Teams platform for your particular business needs.
 
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 
@@ -45,7 +45,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Social interactions**
 
-    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection and communication.
+    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture" border="false":::
 
@@ -69,7 +69,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Personal apps with tabs and bots**
 
-    One-to-one conversational bots are one of the more open-ended features in Microsoft Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
+    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
 

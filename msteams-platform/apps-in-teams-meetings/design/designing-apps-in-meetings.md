@@ -5,7 +5,6 @@ description: Learn how to design apps in Teams meetings and get the Microsoft Te
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI kit template in-meeting responsive behavior shared meeting stage
 ---
 # Designing your Microsoft Teams meeting extension
 
@@ -132,10 +131,10 @@ In-meeting dialogs display on the Teams meeting stage. They require a user's att
 
 In-meeting dialogs are triggered by a user (such as the meeting organizer) who might want participants to:
 
-* Provide brief feedback
-* Take a short survey or poll
-* Submit approvals
-* Get reminders
+* Provide brief feedback.
+* Take a short survey or poll.
+* Submit approvals.
+* Get reminders.
 
 ### Mobile
 
@@ -181,11 +180,11 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 
 You can allow users to share and interact with some or all of your app content on the meeting stage. Here are examples of how people might use this feature during a meeting:
 
-* Editing a document
+* Editing a document.
 * Whiteboarding
-* Reviewing a dashboard
-* Watching a video
-* Playing a game
+* Reviewing a dashboard.
+* Watching a video.
+* Playing a game.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
 
