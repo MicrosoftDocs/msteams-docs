@@ -11,9 +11,9 @@ Azure AD provides access to your bot app based on the app user's Teams identity.
 
 You can register your bot app in Azure AD in two ways:
 
-1. Create a bot resource with a new application ID.
+- Create a bot resource with a new application ID.
     1. Enable SSO for the new app.
-1. Create and register an app in Azure AD.
+- Create and register an app in Azure AD.
     1. Create a bot resource.
     1. Use the application ID of the app you registered.
     1. Enable SSO for the app

@@ -123,20 +123,20 @@ The following code provides an example of using the access token obtained in the
 
 ```TypeScript
     public async displayMicrosoftGraphDataStep(stepContext: WaterfallStepContext): Promise<DialogTurnResult> {
-  // get token from prev step (or directly from the prompt itself)
-  const tokenResponse = stepContext.result;
-  if (!tokenResponse?.token) {
-    await stepContext.context.sendActivity("Login not successful, please try again.");
-  } else {
-    const msGraphClient = new MsGraphHelper(tokenResponse?.token);
-
-    const user = await msGraphClient.getCurrentUser();
-    await stepContext.context.sendActivity(`Thank you for signing in ${user.displayName as string} (${user.userPrincipalName as string})!`);
-    await stepContext.context.sendActivity(`I can retrieve your details from Microsoft Graph using my support for SSO! For example...`);
-
-    const email = await msGraphClient.getMostRecentEmail();
-    await stepContext.context.sendActivity(`Your most recent email about "${email.subject as string}" was received at ${new Date(email.receivedDateTime as string).toLocaleString()}.`);
-  }
+      // get token from prev step (or directly from the prompt itself)
+      const tokenResponse = stepContext.result;
+      if (!tokenResponse?.token) {
+        await stepContext.context.sendActivity("Login not successful, please try again.");
+      } else {
+        const msGraphClient = new MsGraphHelper(tokenResponse?.token);
+    
+        const user = await msGraphClient.getCurrentUser();
+        await stepContext.context.sendActivity(`Thank you for signing in ${user.displayName as string} (${user.userPrincipalName as string})!`);
+        await stepContext.context.sendActivity(`I can retrieve your details from Microsoft Graph using my support for SSO! For example...`);
+    
+        const email = await msGraphClient.getMostRecentEmail();
+        await stepContext.context.sendActivity(`Your most recent email about "${email.subject as string}" was received at ${new Date(email.receivedDateTime as string).toLocaleString()}.`);
+      }
 
       return await stepContext.endDialog();
     }
