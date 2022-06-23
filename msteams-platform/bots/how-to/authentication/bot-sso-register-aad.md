@@ -9,6 +9,12 @@ keywords: teams authentication bots Microsoft Azure Active Directory (Azure AD) 
 
 Azure AD provides access to your bot app based on the app user's Teams identity. You'll need to register your bot app with Azure AD so that the app user who has signed into Teams can be given access to your bot app.
 
+A bot resource registered with Azure AD apps used with Microsoft Teams SSO must have the following:
+
+- Client ID and client certificate/secret: These are used by your app to authenticate with Azure AD.
+- Permissions: This is a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
+- Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
+
 You can register your bot app in Azure AD in two ways:
 
 - Create a bot resource with a new application ID.
@@ -454,7 +460,7 @@ Next, you must configure bot app in Azure AD to enable SSO.
 
 ### Update OAuth connection
 
-/ Add details /
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bots with the authentication provider (Azure AD), the Azure AD application associated with the bot, the application's ID URI and the permissions the bot needs to obtain an access token for.
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
@@ -878,7 +884,7 @@ You must define the access token version that is acceptable for your app. This c
 
 ### Update OAuth connection
 
-/ Add details /
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bots with the authentication provider (Azure AD), the Azure AD application associated with the bot, the application's ID URI and the permissions the bot needs to obtain an access token for.
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
