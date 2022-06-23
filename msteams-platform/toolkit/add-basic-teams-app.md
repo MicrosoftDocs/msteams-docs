@@ -32,6 +32,18 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
+## Describe Tab features and Scenerios to add features
+
+## Describe Bot features and Scenerios to add features
+
+## Describe Message Extension features and Scenerios to add features
+
+## Describe Notification Bot features and Scenerios to add features
+
+## Describe Command Bot features and Scenerios to add features
+
+## Describe SSO enabled tab features and Scenerios to add features
+
 ## Add capabilities
 
 **You can add capabilities by the following methods:**
@@ -115,6 +127,8 @@ After adding tab, the changes in your project are as follows:
   * The scopes of the tabs
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
 * The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
+
+**After adding Notification bot, Command bot, SSO enabled tab, the changes in your project to be explained**.
 
 ## Step-by-step guide
 

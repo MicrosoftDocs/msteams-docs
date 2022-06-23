@@ -8,14 +8,14 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to Teams apps
+# Add basic Teams apps features
 
-Add capability in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
+Add basic Teams apps features in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
-|**Capability**|**Description**|
+|**Features**|**Description**|
 |--------|-------------|
-| Tabs |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
-| Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
+| Tab |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
+| Bot |  Bots help to interact with your web service through text, interactive cards, and task modules.|
 | Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 
 ## Advantages
@@ -32,17 +32,23 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-## Add capabilities
+## Describe Tab features and Scenerios to add features
 
-**You can add capabilities by the following methods:**
+## Describe Bot features and Scenerios to add features
 
-* To add capabilities by using Teams Toolkit in Visual Studio Code.
-* To add capabilities by using command palette.
+## Describe Message Extension features and Scenerios to add features
+
+## Add basic Teams app
+
+**You can add basic Teams app by the following methods:**
+
+* To add basic Teams app by using Teams Toolkit in Visual Studio Code.
+* To add basic Teams app by using command palette.
 
   > [!Note]
   > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-* **To add capabilities by using Teams Toolkit in Visual Studio Code:**
+* **To add basic Teams app by using Teams Toolkit in Visual Studio Code:**
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
@@ -50,7 +56,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one" border="true":::
 
-* **To add capabilities by using command palette:**
+* **To add basic Teams app by using command palette:**
 
    1. Open **command palette**.
    1. Enter **Teams:Add features**.
@@ -62,16 +68,13 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
 
-## Add capabilities using TeamsFx CLI
+## Add basic Teams app using TeamsFx CLI
 
 * Change directory to your **project directory**.
 * The following table lists the capabilities and required commands:
 
   |Capability and Scenario| Command|
   |-----------------------|----------|
-  |To add notification bot |`teamsfx add notification`|
-  |To add command bot |`teamsfx add command-and-response`|
-  |To add sso-enabled tab |`teamsfx add sso-tab`|
   |To add tab |`teamsfx add tab`|
   |To add bot |`teamsfx add bot`|
   |To add message extension |`teamsfx add message extension`|
@@ -85,10 +88,6 @@ The following table lists the available capabilities to add in your project:
 
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
-|SPFx tab |None|
-|SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
-|Notification bot |SSO-enabled tab, tab|
-|Command bot |SSO-enabled tab, tab|
 |Tab |Tab, notification bot, command bot, bot, message extension|
 |Bot |Message extension, SSO-enabled tab, tab|
 |Message extension |Bot, SSO-enabled tab, tab |
@@ -115,12 +114,6 @@ After adding tab, the changes in your project are as follows:
   * The scopes of the tabs
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
 * The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
-
-## Step-by-step guide
-
-* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
-
-* Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
 
 ## See also
 
