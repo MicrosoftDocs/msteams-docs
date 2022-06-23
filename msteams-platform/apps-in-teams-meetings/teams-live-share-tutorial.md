@@ -97,7 +97,7 @@ start().catch((error) => console.error(error));
 
 Not all of your apps views will need to be collaborative. The `stage` view *always* needs collaborative features, the `content` view *may* need collaborative features, and the `config` view should *never* need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) and then calling it's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
+Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient), and then calling it's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
 
 ```js
 async function joinContainer() {
