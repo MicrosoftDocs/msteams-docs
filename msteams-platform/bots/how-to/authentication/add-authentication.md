@@ -1,11 +1,10 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: How to add OAuth authentication to a bot in Microsoft Teams using Azure Active Directory. Learn how to create, deploy, and integrate authentication-enabled bots.
+description: Learn how to add OAuth authentication to a bot in Teams using Azure Active Directory. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: resource group bot registration Azure emulator bot manifest deploy
 ---
 
 # Add authentication to your Teams bot
@@ -186,7 +185,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here-Microsoft Azure Active Directory (Azure AD) V1 and Microsoft Azure Active Directory (Azure AD) V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
+Note-there are two options for Service Providers here- Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
 
 #### Microsoft Azure Active Directory (Azure AD) V1
 
@@ -208,7 +207,7 @@ The following image displays the corresponding selection in the resource page:
 
         - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active Directory (Azure AD) - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Azure Active Directory (Azure AD) app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Azure Active Directory (Azure AD) app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD (Azure AD) app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This isn't used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
@@ -228,15 +227,15 @@ The following image displays the corresponding selection in the resource page:
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv2*.
-    1. **Service Provider**. Select **Microsoft Azure Active Directory v2**. Once you select this, the Microsoft Azure Active Directory (Azure AD)-specific fields will be displayed.
+    1. **Service Provider**. Select **Microsoft Azure Active Directory v2**. Once you select this, the Azure AD specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active directory - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Azure Active Directory (Azure AD) app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active directory - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Azure AD app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Azure Active Directory (Azure AD) app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     1. For **Scopes**, enter a space-delimited list of graph permissions this application requires for example: User.Read User.ReadBasic.All Mail.Read
 
@@ -337,7 +336,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 1. In the left panel, select **Settings**.
 1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
     > [!NOTE]
-    > Only one messaging endpoint is allowed for a bot
+    > Only one messaging endpoint is allowed for a bot.
 1. Select the **Save** button in the upper left.
 
 ## Test the bot using the Emulator
@@ -452,8 +451,8 @@ that you can use to exchange messages with the bot.
 
 ### Testing the bot locally in Teams
 
-Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
-To set up ngrok in preparation for running your Microsoft Teams app locally, follow these steps:
+Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
+To set up ngrok in preparation for running your Teams app locally, follow these steps:
 
 1. In a terminal window, go the directory where you have `ngrok.exe` installed. We suggest setting the *environment variable* path to point to it.
 1. Run, for example, `ngrok http 3978 --host-header=localhost:3978`. Replace the port number as needed.
@@ -462,7 +461,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
     ![teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
-1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
+1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Teams.
 1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So let's perform these steps:
     1. In your browser, navigate to the [**Azure portal**][azure-portal].
     1. Select your **Bot Registration**.
@@ -481,7 +480,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 ### TeamsAppManifest/manifest.json
 
-This manifest contains information needed by Microsoft Teams to connect with the bot:  
+This manifest contains information needed by Teams to connect with the bot:  
 
 ```json
 {
@@ -635,7 +634,7 @@ This section provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
 
 ## See also

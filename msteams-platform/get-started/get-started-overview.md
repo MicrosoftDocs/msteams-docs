@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: With this learning path, get started for Microsoft Teams developer documentation which introduces you to common tools, fundamental concepts, and advanced features.
+description: In this module, learn how to get started with Microsoft Teams developer documentation that introduces you to common tools, fundamental concepts, and advanced features.
 ms.localizationpriority: high
 ms.topic: reference
 ---
@@ -18,7 +18,7 @@ Here's an idea of what you'll learn:
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app" border="true":::
 
 ## App capabilities and development tools
 

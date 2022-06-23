@@ -1,7 +1,7 @@
 ---
 title: Design your app with advanced UI components
 author: heath-hamilton
-description: Learn about the Teams UI components, such as Breadcrumbs, Notification bar, Stage view along with relevant use cases. 
+description: Learn about the Teams UI components, such as breadcrumbs, notification bar, stage view along with relevant use cases. 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
@@ -59,7 +59,7 @@ You can implement a notification bar using the Fluent UI [alert](https://fluents
 
 ### Top use cases
 
-* Critical messages, errors, and warnings
+* Critical messages, errors, and warnings.
 * Success messages
 * Informational or promotional messages
 
@@ -79,7 +79,7 @@ See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
 
 ### Top use cases
 
-* Display content in a large surface within Teams instead of another app or browser
+* Display content in a large surface within Teams instead of another app or browser.
 * Spotlight media or other rich content
 
 ### Mobile
@@ -98,9 +98,9 @@ A toolbar is a container for grouping a set of controls.
 
 ### Top use cases
 
-* Contextual actions on app content
-* Contextual filter and find
-* Navigation and breadcrumbs
+* Contextual actions on app content.
+* Contextual filter and find.
+* Navigation and breadcrumbs.
 
 ### Mobile
 

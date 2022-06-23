@@ -1,11 +1,10 @@
 ---
 title: Enable resource-specific consent in Teams
-description: Describes resource-specific consent in Teams and how to make advantage of it.
+description: In this article, you'll learn resource-specific consent in Microsoft Teams and how to make advantage of it.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams authorization OAuth SSO Azure AD rsc Graph
 ---
 
 # Resource-specific consent
@@ -40,7 +39,7 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |TeamMember.Read.Group|Get this team's members. |
 |TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. |
 
-For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+For more details, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### Resource-specific permissions for a chat
 

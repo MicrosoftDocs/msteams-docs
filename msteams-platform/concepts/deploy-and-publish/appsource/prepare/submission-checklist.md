@@ -1,11 +1,10 @@
 ---
 title: Prepare your store submission  
-description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
+description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package and more.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: submission store distribute validate app package guidelines localize
 ---
 
 # Prepare your Microsoft Teams store submission
@@ -56,9 +55,9 @@ Depending on your app's features, you may need to provide all the following acco
 
 * Admin account (required)
 * Non-admin account (required)
-* An account that isn't pre-configured to properly test the first-run sign-in experience (required)
-* An account with access to premium or upgraded features (if applicable)
-* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)
+* An account that isn't pre-configured to properly test the first-run sign-in experience (required).
+* An account with access to premium or upgraded features (if applicable).
+* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable).
 
 ### Tenant configurations
 
@@ -115,7 +114,7 @@ Make sure your short description adheres to the [store validation guidelines](~/
 The long description can provide a narrative that highlights your apps':
 
 * Main features
-* The problems it solves
+* The problems it solves.
 * Target audience
 
 While this description can be as long as 4,000 characters, most users will only read between 300-500 words.

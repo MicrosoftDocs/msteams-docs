@@ -2,7 +2,7 @@
 title: Build Teams connectors
 metadata:
   title: Build Teams connectors
-  description: In this tutorial, you'll learn to set up Connectors for Teams.
+  description: With this learning module, you'll learn how to configure and test a Connector for Microsoft Teams app.
   audience: Developer
   level: Beginner
   ms.date: 02/14/2022
@@ -14,13 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams connector is Model-View-Controller (MVC) sample task management application. The application is generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or task management system. You can add your existing Office 365 Connector or build a new one within Teams.
+    Microsoft Teams connector is Model-View-Controller (MVC) sample task management application and generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or task management system. You can add your existing Office 365 Connector or build a new one within Teams.
     
     **Types of connector codes**
 
-      * **ConnectorController.cs**: Set up and save actions
-      * **TaskController.cs**: Create and update actions
-
+      * **ConnectorController.cs**: Set up and save actions.
+      * **TaskController.cs**: Create and update actions.
+      
     **Key features of Microsoft Teams connector**
 
       * Simulates real task management system.
@@ -82,7 +82,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On" border="true":::
    
-    1.   Select **Save**. 
+    1.   Select **Save**.
        
           Your test tenant can permit custom app sideloading.
 
@@ -91,9 +91,9 @@ items:
 
     1.   Go to **Microsoft Teams**.
     
-    1.   From the upper right corner of your Teams interface, select `...` .
+    1.   From the upper right corner of your Teams interface, select `...`.
     
-    1.   Select **About**. 
+    1.   Select **About**.
     
     1.   Select **Developer preview**.
 
@@ -106,7 +106,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Navigate to **TeamsToDoAppconnector.sln** in cloned repository.
+    1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
 
        ![sln path](~/assets/images/sbs-connector/sln.png)
 
@@ -127,15 +127,15 @@ items:
       
     5. Enter the following details to register a new connector:
 
-       * **Connector name**
-       * **Logo**
-       * **Short description of your app (10 words or less)**
-       * **Detailed description of what your Connector does (3-5 sentences)**
-       * **Company website**
-       * **Configuration page for your Connector** as `https://[BASE_URI]/connector/setup`
-       * **Valid domains** as `https Base URL`
+       * Connector name
+       * Logo
+       * Short description of your app (10 words or less)
+       * Detailed description of what your Connector does (3-5 sentences)
+       * Company website
+       * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`
+       * Valid domain as `https Base URL`
        * Select **Yes** to enable the action on connector card
-       * **Actions URL** as `https://[BASE_URI]/Task/Update`
+       * Actions URL as `https://[BASE_URI]/Task/Update`
        * Select **I accept the terms and conditions of the App Developer Agreement**
        * Select **Save**
 
@@ -167,7 +167,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, navigate to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
+    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -221,15 +221,15 @@ items:
        
     14. Enter the new task details:
 
-        * **Title**
-        * **Description**
-        * **Assign To**
+        * Title
+        * Description
+        * Assign To
 
         ![Task details](~/assets/images/sbs-connector/details.png)
 
     15. Select **Save**. 
       
-        The message card appears in registered Teams channel
+        The message card appears in registered Teams channel.
        
         ![Message](~/assets/images/sbs-connector/messagecard.png)
 

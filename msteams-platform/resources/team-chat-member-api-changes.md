@@ -1,8 +1,7 @@
 ---
 title: Bot API changes for team and chat members
 author: ojasvichoudhary 
-description: Describes upcoming and in-progress changes to the Bot APIs used for retrieving members of teams and chats
-keywords: bot framework apis team members roster
+description: In this module, learn upcoming and in-progress changes to the Bot APIs used for retrieving members of teams and chats
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
@@ -69,5 +68,4 @@ Following are the upcoming API changes:
     > [!NOTE]
     > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Bot Framework message. The new API is available with version 4.8 or later of the Bot Framework SDK. It is also available in the Teams SDK extension Bot Framework 3.x. Meanwhile, you can use the [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.
 
-* `TeamsInfo.GetMembersAsync` in C# and `TeamsInfo.getMembers` in TypeScript or Node.js is formally deprecated. Once the new API is available, you must update your bots to use it. This also applies to the [underlying REST API that these APIs use](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
-* By late 2022, bots can't proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use the Graph APIs to retrieve the required information. The new `GetConversationPagedMembers` API can't return the `userPrincipalName` and `email` properties from late 2022. Bots must use Graph API with an access token to retrieve information.
+* `TeamsInfo.GetMembersAsync` in C# and `TeamsInfo.getMembers` in TypeScript or Node.js is formally deprecated. Once the new API is available, you must update your bots to use it. This also applies to the [underlying REST API that these APIs use](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json). 

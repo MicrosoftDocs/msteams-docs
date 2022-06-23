@@ -2,7 +2,7 @@
 title: Grant tab device permission
 metadata:
   title: Grant tab device permission
-  description: In this tutorial, you'll learn to give tab device permissions for Microsoft Teams apps.
+  description: Learn how to give tab device permissions such as location, camera and microphone access for Microsoft Teams apps.
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
@@ -226,8 +226,8 @@ items:
       
       To test the app on mobile, the following pop-up windows are displayed to select the course of action:
 
-      * Select **ALLOW** if you want to grant permission
-      * Select **DENY** if you don't want to grant permission
+      * Select **ALLOW** if you want to grant permission.
+      * Select **DENY** if you don't want to grant permission.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png" alt-text="mobile output" border="true":::                   
     --- 

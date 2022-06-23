@@ -1,7 +1,7 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: An overview of bots in Microsoft Teams.
+description: With this learning path, get started with conversational bots in Microsoft Teams and it's code samples.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
@@ -12,7 +12,7 @@ A bot is also referred to as a chatbot or conversational bot. It is an app that 
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
-> 
+>
 > Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
@@ -37,9 +37,9 @@ Your bot requires contextual information, such as user profile details to access
 
 You can send and receive files through the bot using Graph APIs or Teams bot APIs. See [send and receive files through the bot](~/bots/how-to/bots-filesv4.md).
 
-Rate limiting is used to optimize bots used for your Teams application. To protect Microsoft Teams and its users, the bot APIs provide a rate limit for incoming requests. See [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
+Rate limiting is used to optimize bots used for your Teams application. To protect Teams and its users, the bot APIs provide a rate limit for incoming requests. See [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
 
-With Microsoft Graph APIs for calls and online meetings, Microsoft Teams apps can now interact with users using voice and video. See [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video. See [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
