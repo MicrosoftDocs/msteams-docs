@@ -31,6 +31,8 @@ To create and configure your app in Azure AD for enabling SSO:
 - [Register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
 - [Configure scope for access token.](#configure-scope-for-access-token)
 - [Configure access token version.](#configure-access-token-version)
+- [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
+- [Configure bot resource in Azure AD](#configure-bot-resource-in-azure-ad)
 
 ## Create an app registration in Azure AD
 
@@ -510,7 +512,7 @@ In this section, you'll enable SSO for bot app by creating a bot resource. It in
 1. [Create and deploy bot resource in Azure AD](#create-and-deploy-bot-resource-in-azure-ad)
     1. [Enable bot for Teams](#enable-bot-for-teams)
     1. [Create client secret](#create-client-secret)
-1. [Configure bot resource in Azure AD](#configure-bot-resource-in-azure-ad)
+1. [Configure bot resource in Azure AD](#configure-bot-resource-in-azure-ad-1)
     1. [Add messaging endpoint](#add-messaging-endpoint)
     1. [Enable SSO for Azure AD app](#enable-sso-for-azure-ad-app)
         1. [Configure scope for access token](#configure-scope-for-access-token)
@@ -653,7 +655,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
 ### Enable bot for Teams
 
-/ Add description /
+You must enable the Teams channel to let the bot to interact with Microsoft Teams.
 
 #### To enable bot app for Teams
 
