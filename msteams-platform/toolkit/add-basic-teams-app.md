@@ -1,5 +1,5 @@
 ---
-title: Add Capabilities to Your Teams apps
+title: Add basic Teams app
 author: MuyangAmigo
 description:  In this module, learn how to add Capabilities of Teams Toolkit, advantages, limitations and capabilities
 ms.author: zhany
