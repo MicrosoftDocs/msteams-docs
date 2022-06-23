@@ -1,7 +1,6 @@
 ---
 title: Install Moodle LMS
-description: How to install and configure the Moodle integration app for Microsoft Teams
-keywords: Teams Moodle app integration plugins
+description: In this article, you'll learn how to install and configure the Moodle integration app for Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -10,7 +9,7 @@ author: surbhigupta
 
 # Install Moodle LMS
 
-In this article you'll learn how to install the Moodle LMS.
+In this article, you'll learn how to install the Moodle LMS.
 
 > [!NOTE]
 > To help IT admins to easily set-up Moodle and Teams integration, open-source Microsoft 365 Moodle Plugins is updated for the following:
@@ -126,7 +125,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. Next you must add the `AppID` and `Key` to the Microsoft 365 Moodle Plugins. Return to the plugins administration page, Site administration > Plugins > Microsoft 365 Integration.
 
-1. On the **Setup** tab add the `AppID` and `Key` you copied previously, and then select **Save changes**. After the page refreshes, you can see a new section **Choose connection method**.
+1. On the **Setup** tab, add the `AppID` and `Key` you copied previously, and then select **Save changes**. After the page refreshes, you can see a new section **Choose connection method**.
 
 1. In the **Choose connection method**, select the checkbox labeled **Default**, and then select **Save changes** again.
 
@@ -171,7 +170,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
     1. To enable **OpenID Connect**, select the **Manage Authentication** link, and select the eye icon on the **OpenId Connect** line if it is unavailable.
     1. To enable frame embedding, select the **HTTP Security** link, and then select the checkbox next to **Allow frame embedding**.
-    1. To enable web services, which enables the Moodle API features, select the **Advanced Features** link, and then ensure the checkbox next to **Enable web services** is selected.
+    1. To enable web services, which enable the Moodle API features, select the **Advanced Features** link, and then ensure the checkbox next to **Enable web services** is selected.
     1. To enable the external services for Microsoft 365, select the **External services** link, and then:  
 
         ✔ Select **Edit** on the **Moodle Microsoft 365 Webservices** row.
@@ -210,7 +209,7 @@ To register your bot:
 
 1. Copy the **Application ID** and paste it into the **Bot Application ID** field on the **Team Settings** page.
 
-1. Select the **Generate New Password** button. Copy the generated password and and paste it into the **Bot Application Password** field on the **Team Settings** page.
+1. Select the **Generate New Password** button. Copy the generated password and paste it into the **Bot Application Password** field on the **Team Settings** page.
 
 1. Scroll to the bottom of the form and select **Save Changes**.
 
@@ -234,7 +233,7 @@ After the resources have completed deploying to Azure, you must configure the Mi
 
 1. In Moodle, open the **Team Settings** page of your Microsoft 365 Moodle Plugins.
 
-1. In the **Bot Endpoint** field paste the URL you just copied and change the word *messages* to *webhook*. The URL must appear as follows: `https://botname.azurewebsites.net/api/webhook`
+1. In the **Bot Endpoint** field paste the URL you copied and change the word *messages* to *webhook*. The URL must appear as follows: `https://botname.azurewebsites.net/api/webhook`
 
 1. Select **Save Changes**.
 
@@ -244,7 +243,7 @@ After the resources have completed deploying to Azure, you must configure the Mi
 
 After your bot deployed to Azure and configured to talk to your Moodle server, you must deploy your Microsoft Teams app. To do this you must load the app manifest file that you downloaded from the Microsoft 365 Moodle Plugins Team Settings page in the previous step.
 
-Before you install the app you must ensure to enable external apps and uploading of apps. For more information, see [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md).
+Before you install the app, you must ensure to enable external apps and uploading of apps. For more information, see [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md).
 
 To deploy your app:
 
@@ -269,7 +268,7 @@ To allow automatic creation of Moodle tabs:
 
 1. Open Microsoft Teams.
 
-1. Select the Apps icon from the lower-left area of the navigation bar.
+1. Select the Apps icon from the lower-left pane.
 
 1. Locate the uploaded **Moodle app** > select the **options** icon > select **copy link**.
 
@@ -279,7 +278,7 @@ To allow automatic creation of Moodle tabs:
 
 1. Paste the ID of the Microsoft Teams app into the Moodle app ID field, and save changes.
 
-When a Moodle course is synced, Microsoft Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it is synced. You can now start working with your Moodle courses directly from Microsoft Teams.
+When a Moodle course is synced, Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it is synced. You can now start working with your Moodle courses directly from Teams.
 
 > [!NOTE]
 > To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).

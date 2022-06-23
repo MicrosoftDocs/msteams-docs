@@ -18,7 +18,7 @@ items:
 
     > This app will have all capabilities and each has its own UI and UX:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="true":::
 
     In this tutorial, you'll learn:
 
@@ -492,7 +492,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
 
-    1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
+    1. Select **Client secrets**, and then select **Add a client secret to your bot** to generate a password for the bot.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-bot-client-secrets.png" alt-text="Image showing Client secret section" border="false":::
 
