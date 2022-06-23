@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab and use cases, responsive behavior and shared meeting stage, and theme and navigation.
+description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab and use cases, responsive behavior and shared meeting stage, and navigation.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
