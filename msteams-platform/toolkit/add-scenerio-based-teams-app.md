@@ -1,5 +1,5 @@
 ---
-title: Add basic Teams app
+title: Add Scenerio based Teams app
 author: MuyangAmigo
 description:  In this module, learn how to add Capabilities of Teams Toolkit, advantages, limitations and capabilities
 ms.author: zhany
@@ -8,15 +8,15 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add basic Teams apps features
+# Add scenerio based Teams apps features
 
-Add basic Teams apps features in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
+Add scenerio based Teams apps features in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
 |**Features**|**Description**|
 |--------|-------------|
-| Tab |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
-| Bot |  Bots help to interact with your web service through text, interactive cards, and task modules.|
-| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
+| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request such as cards or texts.|
+| Command bot | Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards.|
+| SSO enabled tab | **Need to add details**.|
 
 ## Advantages
 
@@ -32,13 +32,13 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-## Describe Tab features and Scenerios to add features
+## Scenerios to add Notification bot features
 
-## Describe Bot features and Scenerios to add features
+## Scenerios to add Command bot features
 
-## Describe Message Extension features and Scenerios to add features
+## Scenerios to add SSO enabled tab features
 
-## Add basic Teams app
+## Add scenerio based Teams app
 
 **You can add basic Teams app by the following methods:**
 
@@ -48,7 +48,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
   > [!Note]
   > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-* **To add basic Teams app by using Teams Toolkit in Visual Studio Code:**
+* **To add scenerio based Teams app by using Teams Toolkit in Visual Studio Code:**
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
@@ -75,45 +75,29 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
   |Capability and Scenario| Command|
   |-----------------------|----------|
-  |To add tab |`teamsfx add tab`|
-  |To add bot |`teamsfx add bot`|
-  |To add message extension |`teamsfx add message extension`|
+  |To add notification bot |`teamsfx add notification`|
+  |To add command bot |`teamsfx add command-and-response`|
+  |To add sso-enabled tab |`teamsfx add sso-tab`|
 
 ## Available capabilities to add for different Teams project
 
 You can choose to add different capabilities based on project you have created in Teams app.
 The following table lists the available capabilities to add in your project:
 
-**We need to mention about other supported capabilities for SSO enabled personal tab and Search based message extension capability**.
-
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
-|Tab |Tab, notification bot, command bot, bot, message extension|
-|Bot |Message extension, SSO-enabled tab, tab|
-|Message extension |Bot, SSO-enabled tab, tab |
+|Notification bot |SSO-enabled tab, tab|
+|Command bot |SSO-enabled tab, tab|
+|SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
 
-## Add bot, tab and message extension
+## Add notification bot, command bot and SSO enabled tab
 
-After adding a bot and message extension, the changes in your project are as follows:
+After adding notification bot, command bot and SSO enabled tab, the changes in your project are as follows:
+**Details to be added**
 
-* A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
-* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* `manifest.template.json` file under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
-  * The ID of your bot
-  * The scopes of your bot
-  * The commands that hello world bot application can respond to
-* The files under `templates/azure/teamsfx` are be updated, and `templates/azure/provision/xxx`.bicep files are regenerated.
-* The files under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
+## Step-by-step guide
 
-After adding tab, the changes in your project are as follows:
-
-* A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
-* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
-  * The configurable and static tabs
-  * The scopes of the tabs
-* The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
-* The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
+* Step-by-step guide to add command bot, notification bot, SSO enabled tab as add features in Microsoft Teams to be added.
 
 ## See also
 

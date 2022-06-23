@@ -1,14 +1,14 @@
 ---
 title: Add basic Teams app
 author: MuyangAmigo
-description:  In this module, learn how to add Capabilities of Teams Toolkit, advantages, limitations and capabilities
+description:  In this module, learn how to add basic Teams app
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to Teams apps
+# Add basic teams app
 
 Add capability in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
@@ -37,12 +37,6 @@ The following list provides limitations to add more capabilities in TeamsFx:
 ## Describe Bot features and Scenerios to add features
 
 ## Describe Message Extension features and Scenerios to add features
-
-## Describe Notification Bot features and Scenerios to add features
-
-## Describe Command Bot features and Scenerios to add features
-
-## Describe SSO enabled tab features and Scenerios to add features
 
 ## Add capabilities
 
