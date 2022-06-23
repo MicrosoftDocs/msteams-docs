@@ -172,8 +172,8 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
 Required configuration:
 
-* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity
-* `sqlServerEndpoint`, `sqlIdentityId` if you want to use MSI identity
+* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity.
+* `sqlServerEndpoint`, `sqlIdentityId` if you want to use MSI identity.
 
 ### Error handling
 
