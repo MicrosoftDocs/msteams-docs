@@ -1,7 +1,7 @@
 ---
 title: Collaborate on TeamsFx Project using Teams Toolkit
 author: yanjiang
-description: Collaborate on TeamsFx Project using Teams Toolkit
+description: In this article, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers.
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
@@ -14,8 +14,8 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Prerequisites
 
-* Microsoft 365 subscription
-* Azure with valid subscription
+* Microsoft 365 subscription.
+* Azure with valid subscription.
   
   For more information on different accounts, see [prepare accounts to build Teams app](accounts.md).
 

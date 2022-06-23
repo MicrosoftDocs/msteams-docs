@@ -18,9 +18,9 @@ items:
     
     **Types of connector codes**
 
-      * ConnectorController.cs: Set up and save actions
-      * TaskController.cs: Create and update actions
-
+      * **ConnectorController.cs**: Set up and save actions.
+      * **TaskController.cs**: Create and update actions.
+      
     **Key features of Microsoft Teams connector**
 
       * Simulates real task management system.
@@ -82,7 +82,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On" border="true":::
    
-    1.   Select **Save**. 
+    1.   Select **Save**.
        
           Your test tenant can permit custom app sideloading.
 
@@ -91,9 +91,9 @@ items:
 
     1.   Go to **Microsoft Teams**.
     
-    1.   From the upper right corner of your Teams interface, select `...` .
+    1.   From the upper right corner of your Teams interface, select `...`.
     
-    1.   Select **About**. 
+    1.   Select **About**.
     
     1.   Select **Developer preview**.
 
@@ -129,15 +129,15 @@ items:
 
        * Connector name
        * Logo
-       * **Short description of your app (10 words or less)**
+       * Short description of your app (10 words or less)
        * Detailed description of what your Connector does (3-5 sentences)
        * Company website
        * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`
-       * Valid domains as `https Base URL`
+       * Valid domain as `https Base URL`
        * Select **Yes** to enable the action on connector card
        * Actions URL as `https://[BASE_URI]/Task/Update`
-       * Select I accept the terms and conditions of the App Developer Agreement
-       * Select Save
+       * Select **I accept the terms and conditions of the App Developer Agreement**
+       * Select **Save**
 
        ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
 
@@ -221,15 +221,15 @@ items:
        
     14. Enter the new task details:
 
-        * **Title**
-        * **Description**
-        * **Assign To**
+        * Title
+        * Description
+        * Assign To
 
         ![Task details](~/assets/images/sbs-connector/details.png)
 
     15. Select **Save**. 
       
-        The message card appears in registered Teams channel
+        The message card appears in registered Teams channel.
        
         ![Message](~/assets/images/sbs-connector/messagecard.png)
 

@@ -89,7 +89,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
-3. Add environment variables to `.env.teamsfx.local`. They are the configurations for the selected authentication type. The generated code reads values from the environment variables.
+3. Add environment variables to `.env.teamsfx.local`. They're the configurations for the selected authentication type. The generated code reads values from the environment variables.
 
 ## Test API connection in local environment
 

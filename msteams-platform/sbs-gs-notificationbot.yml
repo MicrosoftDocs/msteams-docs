@@ -2,7 +2,7 @@
 title: Build notification bot with JavaScript
 metadata:
   title: Build notification bot with JavaScript
-  description: In this tutorial, you'll learn to send notification with JavaScript.
+  description: In this tutorial, you'll learn to send notification with JavaScript by creating a new notification bot with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 05/04/2021
@@ -392,7 +392,7 @@ items:
 
     1. Select **Deploy to the Cloud** under **DEPLOYMENT** after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to select to deploy to cloud." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud." border="true":::
 
     1. Select **Deploy**.
 

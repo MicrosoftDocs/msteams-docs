@@ -41,6 +41,9 @@ Use the Microsoft Teams app schema `v1.5` and later to localize your app. You ca
 
 Add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings don't match with any of your additional languages.
 
+> [!NOTE]
+> Manifest version must be same for both manifest.json and localization.json files.
+
 ### Example manifest.json change
 
 The following `manifest.json` helps to add the `localizationInfo` property with the default language that your application supports along with `additionalLanguages`:
@@ -150,7 +153,7 @@ If you provide localized versions of your application, the users respond with th
 
 | Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## See also
 

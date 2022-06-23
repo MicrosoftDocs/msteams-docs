@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 
-Apps published to the Teams store also automatically list on [Microsoft AppSource](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
+Apps published to the Teams store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 
 ## Understand the publishing process
 
@@ -68,9 +68,9 @@ If your app is production ready, you can begin the process of getting it listed 
 
   * Recommendations to fix the reported issues with links to guidance docs.
 
-  After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for the validation team to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
+  After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for the validation team to revalidate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
-  If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few re-submissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
+  If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
 
   After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams store.
 
@@ -90,7 +90,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and so, the time taken to approve your app.
+  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. Review helps reduce the number of issues observed in your app and so, the time taken to approve your app.
 
   1. Test and re-test your app:
 
@@ -114,11 +114,11 @@ If your app is production ready, you can begin the process of getting it listed 
 
         1. Setup instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
-        1. Link to a demo video recording key user flow for your app. This is highly recommended.
+        1. Link to a demo video that demonstrates key user flow for your app. This is highly recommended.
 
 * **Post app submission**
 
-  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any extra support to resolve the reported issues.
+  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report,, or if you need any extra support to resolve the reported issues.
 
   * Ensure that you've adequate developer bandwidth to resolve any reported issues until the app is approved.
 
@@ -154,11 +154,11 @@ If your app is production ready, you can begin the process of getting it listed 
 
      1. Subscription cancellation is working as expected. Purchasers can cancel a subscription. Post cancellation, check if the correct subscription status is reflected in the Microsoft Admin Center and your SaaS application. Verify that the purchaser has lost access to the subscription after successful cancellation.
 
-     1. Re-purchasing a subscription is seamless. After cancellation of an active subscription, thoroughly test to ensure purchasers can repurchase the subscription.
+     1. Repurchasing a subscription is seamless. After cancellation of an active subscription, thoroughly test to ensure purchasers can repurchase the subscription.
 
      1. Purchasers can change their subscribed plan. After the plan is modified, users can access the upgraded or downgraded plan features.
 
-     1. Your SaaS application contains license management features. Purchasers must be able to assign, modify, and re-assign available licenses to users. Check if purchasers can add or remove users to manage the licenses.
+     1. Your SaaS application contains license management features. Purchasers must be able to assign, modify, and reassign available licenses to users. Check if purchasers can add or remove users to manage the licenses.
   
   1. You must test and ensure both minimum and bulk license purchase flows are working as expected.
   
