@@ -14,6 +14,10 @@ Microsoft Teams provides single sign-on function for application to obtain signe
 
 For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
+## Advantages
+
+## Limitation
+
 ## Enable SSO support
 
 Teams Toolkit helps you to add SSO to the following Teams capabilities:
