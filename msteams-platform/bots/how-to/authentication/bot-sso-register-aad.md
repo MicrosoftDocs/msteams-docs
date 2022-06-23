@@ -272,37 +272,46 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 
     The **Create an Azure Bot** page appears.
 
-1. Enter project details for the bot app.
+1. Enter details for the bot app.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-azure-bot.png" alt-text="Add an azure bot project details":::
 
-    1. Enter a unique identifier as the bot handle.
+    1. Select the **Project details**.
+        1. Enter a unique identifier as the bot handle.
 
-        It isn't the display name, and you can choose a different display name later.
+            It isn't the display name, and you can choose a different display name later.
 
-    1. Select a subscription plan.
+        1. Select a subscription plan.
 
-    1. Select the resource group that you want to provision for your bot app.
+        1. Select the resource group that you want to provision for your bot app.
 
-        You can also create a new resource group.
+            You can also create a new resource group.
 
-        1. Select **Create new**.
+            1. Select **Create new**.
 
-            :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-new-resource.png" alt-text="Create new resource for provisioning." border="false":::
+                :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-new-resource.png" alt-text="Create new resource for provisioning." border="false":::
 
-        1. Enter a name for the resource and select **OK**.
+            1. Enter a name for the resource and select **OK**.
 
-    1. The standard price tier is selected by default. You can change your pricing tier, if needed.
+    1. Select the **Pricing** details.
 
-    1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
+        The standard price tier is selected by default. You can change your pricing tier, if needed.
 
-    1. Select the creation type.
+    1. Select the **Microsoft App ID** details.
 
-        The default selection is **Create new Microsoft App ID**.
+        1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
 
-    1. Select **Next : Tags >**.
+        1. Select **Use existing app registration** as the creation type.
 
-        The **Tags** tab opens.
+            The fields for entering the app ID details appear.
+
+        1. Enter the app ID for the Azure AD app you registered.
+
+        1. Enter the app tenant ID for the Azure AD app you registered.
+
+1. Select **Next : Tags >**.
+
+    The **Tags** tab opens.
 
 1. Enter the name and value tags for categorizing resources you provisioned.
 
@@ -546,7 +555,7 @@ In this section, you'll enable SSO for bot app by creating a bot resource. It in
 
     The **Create an Azure Bot** page appears.
 
-1. Enter project details for the bot app.
+1. Enter **Project details** for the bot app.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-azure-bot.png" alt-text="Add an azure bot project details":::
 
@@ -566,17 +575,21 @@ In this section, you'll enable SSO for bot app by creating a bot resource. It in
 
         1. Enter a name for the resource and select **OK**.
 
-    1. The standard price tier is selected by default. You can change your pricing tier, if needed.
+    1. Select the **Pricing tier**.
 
-    1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
+        The standard price tier is selected by default. You can change it, if needed.
 
-    1. Select the creation type.
+    1. Select **Microsoft App ID** details: 
 
-        The default selection is **Create new Microsoft App ID**.
+        1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
 
-    1. Select **Next : Tags >**.
+        1. Select the creation type.
 
-        The **Tags** tab opens.
+            The default selection is **Create new Microsoft App ID**.
+
+1. Select **Next : Tags >**.
+
+    The **Tags** tab opens.
 
 1. Enter the name and value tags for categorizing resources you provisioned.
 
