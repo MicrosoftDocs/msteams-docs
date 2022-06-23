@@ -1,5 +1,5 @@
 ---
-title: Collaboration Controls for Microsoft Teams
+title: Collaboration controls for Microsoft Teams
 author: surbhigupta
 description: The solutions that make up Collaboration Controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
 ms.localizationpriority: medium

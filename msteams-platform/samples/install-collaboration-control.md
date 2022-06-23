@@ -1,5 +1,5 @@
 ---
-title: Install collaboration controls
+title: Install Collaboration controls
 author: surbhigupta
 description: In this article, learn about installation of collaboration controls.
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.author: v-npaladugu
 ms.topic: conceptual
 ---
 
-# Install collaboration controls
+# Install Collaboration controls
 
 In this article, you'll learn how to install Collaboration Controls.The following are required to build and deploy Collaboration Manager applications using the Collaboration controls:
 
