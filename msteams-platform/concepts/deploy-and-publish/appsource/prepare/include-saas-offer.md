@@ -69,14 +69,14 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 
 ## Enable first party license management in Teams for third-party SaaS offers
 
-Microsoft Teams third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This focus on the ability to authorize specific users to use a particular ISV application for the paid duration, where the license management happens post purchase of the said app (the associated SaaS offer) via Teams surface areas or via AppSource. Without licenses being assigned to given users, the app is unusable.
+Microsoft Teams third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This focus on the ability to authorize specific users to use a particular independent software vendors (ISVs) application for the paid duration, where the license management happens post purchase of the said app (the associated SaaS offer) via Teams surface areas or via AppSource. Without licenses being assigned to given users, the app is unusable.
 
-This enables you and independent software vendors (ISVs) to manage and enforce licenses for their solutions using systems provided by Microsoft. By adopting this, ISVs can:
+This enables you and ISVs to manage and enforce licenses for their solutions using systems provided by Microsoft. By adopting this, ISVs can:
 
 * Enable customers to assign and unassign licenses of ISV products using Teams and Teams Admin Center.
 * Lessen the effort of building and maintaining their own license management and enforcement system.
 
-To enable this, publish an offer in Partner Center with Microsoft license management:
+To enable license management in Teams, publish an offer in Partner Center with Microsoft license management:
 
 1. [Create an offer in Partner Center](#create-an-offer-in-partner-center)
 1. [Define the licensing options](#define-the-licensing-options)
@@ -142,7 +142,7 @@ To enable license management for your offer, select the checkbox **Yes, I would 
 
 Update your Teams app to map to the paid functionality and map your Teams app to your offer and publish.
 
-Refer to [Monetization guide](https://aka.ms/TMTG) on how to map your Teams app to your offer and publish.
+See [Monetization guide](https://aka.ms/TMTG) on how to map your Teams app to your offer and publish.
 
 ### Post purchase
 
@@ -156,7 +156,7 @@ Refer to [Monetization guide](https://aka.ms/TMTG) on how to map your Teams app 
 
 ### App Launch
 
-Integrate with Graph Usage Right API to manage user permissions at the time of app launch by a customer who has a purchase license. You are required to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
+Integrate with Graph Usage Right API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
 
 **For more information on how to call Graph UsageRight API to check user permissions, follow the links**:
 
@@ -166,12 +166,12 @@ Integrate with Graph Usage Right API to manage user permissions at the time of a
 
    * Get user OBO token: [Get access on behalf of a user - Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
 
-   * Call Graph to get user’s object id: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
+   * Call Graph to get user’s object ID: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
 
    * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
         > [!NOTE]
-        > You need to have minimum `User.Read` permissions to be able to call UsageRights.
+        > You need to have minimum `User.Read` permissions to call UsageRights.
 
 #### Check license usage in Partner Center Analytics
 
@@ -187,7 +187,7 @@ Select **No, I would prefer to manage customer licenses myself** in such cases.
 
 For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
-When someone finishes buying a subscription plan for your app and want to stay in the Teams, without directing them to your landing page, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+When someone finishes buying a subscription plan for your app and wants to stay in the Teams, without directing them to your landing page, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
 For more information, see [first party license management](/platform/concepts/deploy-and-publish/appsource/prepare/first-party-license-management).
 
