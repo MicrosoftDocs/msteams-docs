@@ -179,7 +179,7 @@ After you design your app based on participant roles in a meeting, you can ident
 
 ## User types in a meeting
 
-User types, such as organizer, presenter, or attendee in a meeting can do one of the [participant roles in a meeting](#participant-roles-in-a-meeting).
+User types, such as in-tenant, guest, federated or external user in a meeting can do one of the [participant roles in a meeting](#participant-roles-in-a-meeting).
 
 > [!NOTE]
 > The user type is not included in the **getParticipantRole** API.
