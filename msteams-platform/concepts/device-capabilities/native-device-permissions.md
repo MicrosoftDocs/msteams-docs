@@ -1,7 +1,6 @@
 ---
 title: Request device permissions for your Microsoft Teams app
-keywords: teams apps capabilities permissions device native scan qr barcode image audio video 
-description: How to update your app manifest in order to request access to native features that usually require user consent, such as scan qr, barcode, image, audio, video capabilities
+description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
@@ -14,7 +13,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 >
 > * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](media-capabilities.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
-> * To integrate location capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
+> * To integrate location capabilities within your Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
 
 ## Native device permissions
 
@@ -22,17 +21,17 @@ You must request the device permissions to access native device capabilities. Th
 You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
-* Capture and view images
-* Scan QR or barcode
-* Record and share short videos
-* Record audio memos and save them for later use
-* Use the location information of the user to display relevant information
+* Capture and view images.
+* Scan QR or barcode.
+* Record and share short videos.
+* Record audio memos and save them for later use.
+* Use the location information of the user to display relevant information.
 
 > [!NOTE]
 >
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * Currently, Microsoft Teams support for QR barcode scanner capability is only available for mobile clients.
+> * Currently, Teams supports for QR barcode scanner capability is only available for mobile clients.
 
 ## Access device permissions
 
@@ -125,13 +124,13 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 
 For example:
 
-* To prompt the user to access their location you must call `getCurrentPosition()`:
+* To prompt the user to access their location, you must call `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:
+* To prompt the user to access their camera on desktop or web, you must call `getUserMedia()`:
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -158,7 +157,7 @@ For example:
         } 
     ```
 
-* Notifications prompts the user when you call `requestPermission()`:
+* Notifications prompt the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });

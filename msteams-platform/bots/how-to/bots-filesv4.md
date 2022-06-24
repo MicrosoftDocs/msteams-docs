@@ -232,7 +232,7 @@ private static Attachment GetInlineAttachment()
 }​​​​​
 ```
 
-### Basic example in C#
+### Basic example in C #
 
 The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
 
@@ -326,3 +326,7 @@ Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload fi
 
 > [!div class="nextstepaction"]
 > [Optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md)
+
+## See also
+
+[Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

@@ -486,7 +486,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="true":::
 
-    1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
+    1. Select **Client secrets**, and then select **Add a client secret to your bot** to generate a password for the bot.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-client-secret-pane.png" alt-text="Image showing Client secret section" border="true":::
 
