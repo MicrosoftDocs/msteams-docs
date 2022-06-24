@@ -43,7 +43,7 @@ Occasionally, it's necessary to test your bot without installing it as an app in
 
 ### Use the Bot Emulator
 
-The Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives. This is useful to  verify that your bot is available and responding. However, the emulator doesn't permit you to test any Teams-specific functionality you've added to the bot, nor the responses from your bot are an accurate visual representation of how they're rendered in Teams. If you need to test either of these, it's best to [upload your bot](#test-by-uploading-to-teams).
+The Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives. This is useful to verify that your bot is available and responding. However, the emulator doesn't permit you to test any Teams-specific functionality you've added to the bot, nor the responses from your bot are an accurate visual representation of how they're rendered in Teams. If you need to test either of these, it's best to [upload your bot](#test-by-uploading-to-teams).
 
 For more information, see [complete instructions on the Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
