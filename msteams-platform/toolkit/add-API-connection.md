@@ -16,6 +16,8 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
 
+## Limitations
+
 ## Connect to the API
 
 When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
@@ -202,6 +204,15 @@ You can follow the steps to access these APIs while using:
         > For application permission use your client ID.
         >
 </details>
+
+## FAQ
+
+* What are all the limitations to add API commection
+* What is API connection and how it helps developers.
+* What is meant by bootstrap sample code.
+* What is meant by language appropriate SDK's.
+* Why we need to test API connection in local environment only.
+* What will happen if we test API connection in dev or prod environment.
 
 ## See also
 

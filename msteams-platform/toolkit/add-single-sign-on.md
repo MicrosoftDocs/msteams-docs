@@ -353,6 +353,15 @@ For more information about TeamsFx SDK, see:
 * [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
+## FAQ
+
+* How Teams Toolkit helps to add SSO in Teams app.
+* Explain advantages and limitation of using SSO.
+* Why it is not possible to add HTTP trigger Azure function and Timer Trigger Azure function.
+* What will happen if we trigger local debug after adding SSO.
+* Explain steps to enable SSO in notification bot restify server.
+* Explain SSO authentication in Notification bot restify server and command bot.
+
 ## See also
 
 * [Prepare accounts to build Teams apps](accounts.md)
