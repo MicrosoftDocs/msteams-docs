@@ -1,6 +1,6 @@
 ---
 title: Designing your bot
-description: Learn how to design a Teams bot and get the Microsoft Teams UI Kit.
+description: In this module, learn how to design and add a Teams bot and its use cases, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -184,7 +184,7 @@ Use a thesaurus and get people from as many different backgrounds as possible to
 
 ### Extract intent and data from messages
 
-Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action. 
+Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action.
 
 The following examples outline the user intent and data in messages sent to bots:
 

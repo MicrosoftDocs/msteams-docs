@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Command Line Interface
 author: MuyangAmigo
-description:  Describes TeamsFx Command Line Interface
+description: In this module, learn TeamsFx library, TeamsFx Command Line Interface, supported commands and its scenarios
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -25,6 +25,7 @@ Here's a list of main TeamsFx features:
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 For more information, see:
+
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
@@ -124,8 +125,8 @@ The following table lists the cloud service accounts, such as Azure and Microsof
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are M365 or Azure. |
-| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are M365 or Azure. |
+| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsfx account set --subscription` | Update account settings to set a subscription ID. |
 
 ## `teamsfx env`
@@ -177,7 +178,6 @@ This command is used to deploy the current application. By default it deploys en
 |`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
 |`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
 |`--include-aad-manifest`| No | Whether to deploy aad manifest. Options are `yes` and `not`. The default value is `no`. |
-
 
 ## `teamsfx validate`
 
@@ -272,11 +272,11 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 * Disable environment checker
 
-  There are three configurations to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the   configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
+  There are three configurations to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
 
   * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
   * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
-  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-   functions-core-tools).
+  * [Azure Functions Core Tools installation guide](<https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure>-   functions-core-tools).
 
   To disable .NET SDK validation, you can use the following command:
 
@@ -345,7 +345,7 @@ The following list provides required permissions for `TeamsFx` projects:
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have     all permission for Microsoft 365 account.
+  After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
 
 * Show Permission Status
 
@@ -373,7 +373,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * To login to Microsoft 365 account and Azure account:
+    * To log in to Microsoft 365 account and Azure account:
 
       ```bash
       teamsfx account login azure
@@ -407,13 +407,13 @@ The following list provides required permissions for `TeamsFx` projects:
   * As a Project Collaborator:
 
     * Clone the project from GitHub.
-    * Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
+    * Log in to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
 
       ```bash
       teamsfx account login Microsoft 365
       ```
 
-    * Login to Azure account with contributor permission for all Azure resources.
+    * Log in to Azure account with contributor permission for all Azure resources.
 
       ```bash
       teamsfx account login azure

@@ -2,7 +2,7 @@
 title: Build your first app using Blazor
 metadata:
   title: Hello World with Blazor
-  description: In this tutorial, you'll learn to build Hello World app with Blazor.
+  description: In this tutorial, you'll learn to build Hello World app with Blazor, build interactive web UIs using C#, and create tab app and bot app. 
   audience: Developer
   level: Beginner
   ms.date: 04/03/2022
@@ -19,7 +19,7 @@ items:
     
     You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, tab and Bot." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, tab and Bot." border="true":::
 
     > [!NOTE]
     > Currently, Teams Toolkit doesn't support the message extension capability.
@@ -324,7 +324,7 @@ items:
 
     #### **To provision your tab app in the cloud**
     
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.?
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 

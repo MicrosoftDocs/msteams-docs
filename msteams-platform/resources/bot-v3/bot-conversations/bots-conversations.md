@@ -1,9 +1,9 @@
 ---
 title: Send and receive messages with a bot
-description: Describes how to send and receive messages with bots in Microsoft Teams
+description: In this module, learn to have a conversation with a Microsoft Teams bot, Proactive messages, Conversation basics, Message content and formatting
+
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: teams bots messages
 ms.date: 05/20/2019
 ---
 # Have a conversation with a Microsoft Teams bot
@@ -68,7 +68,7 @@ For more information on formatting cards in messages, see [Card formatting](~/ta
 
 Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).
 
-Pictures can be at most 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
+Pictures can be at most 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format; animated GIF isn't supported.
 
 We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
 
@@ -213,7 +213,7 @@ The new message need not match the original in type. For instance, if the origin
 
 ### REST API
 
-To issue a message update, simply perform a PUT request against the `/v3/conversations/<conversationId>/activities/<activityId>/` endpoint using a given activity ID. To complete this scenario, you should cache the activity ID returned by the original POST call.
+To issue a message update, perform a PUT request against the `/v3/conversations/<conversationId>/activities/<activityId>/` endpoint using a given activity ID. To complete this scenario, you should cache the activity ID returned by the original POST call.
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128

@@ -1,5 +1,5 @@
 ---
-title: Add Power Virtual Agents chatbot to Teams
+title: Add Power Virtual Agents chatbot
 author: surbhigupta
 description: Learn to integrate a Power Virtual Agents chatbot in the Teams platform to create conversational chatbots and to integrate it with Teams
 ms.topic: how-to
@@ -18,7 +18,8 @@ Power Virtual Agents lets you create powerful chatbots that can answer questions
 These bots can be created easily without the need for data scientists or developers.
 
 > [!NOTE]
-> * By adding your chatbot to Microsoft Teams, some of the data, such as bot content and user chat content, is shared with Microsoft Teams. It means that your data flows outside of your [organization’s compliance and geographic or regional boundaries](/power-virtual-agents/data-location). <br/>
+>
+> * By adding your chatbot to Microsoft Teams, some of the data, such as bot content and user chat content, is shared with Teams. It means that your data flows outside of your [organization’s compliance and geographic or regional boundaries](/power-virtual-agents/data-location). <br/>
 > * You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
 
 ## Make your chatbot available in Teams through the Power Virtual Agents portal

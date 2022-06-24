@@ -1,6 +1,6 @@
 ---
 title: Overview of Universal Actions for Adaptive Cards
-description: A quick overview of Universal Actions for Adaptive Cards, such as user-specific views, sequential workflow support, and more for desktop and mobile environments
+description: Learn Universal Actions for Adaptive Cards, such as user-specific views, sequential workflow support, and more for desktop and mobile environments
 ms.topic: overview
 ms.localizationpriority: medium
 ---
@@ -104,7 +104,7 @@ Now, you can understand how Adaptive Cards can be transformed with the new Unive
 
 Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enable a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
 
-You can get started by updating scenarios using the [quick start guide](Work-with-universal-actions-for-adaptive-cards.md) and leverage Universal Actions.
+You can get started by updating scenarios using the [quick start guide].(Work-with-universal-actions-for-adaptive-cards.md) and leverage Universal Actions.
 
 ## Next step
 
@@ -116,4 +116,4 @@ You can get started by updating scenarios using the [quick start guide](Work-wit
 * [What are bots](~/bots/what-are-bots.md)
 * [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
