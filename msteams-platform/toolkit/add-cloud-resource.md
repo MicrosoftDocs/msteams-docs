@@ -30,13 +30,13 @@ The following list provides advantages to add more cloud resources in TeamsFx:
 
 If you have created SPFx based tab project, you can't add Azure cloud resources.
 
-## Scenerios to add Azure function feature
+## Scenarios to add Azure function feature
 
-## Scenerios to add SQL database feature
+## Scenarios to add SQL database feature
 
-## Scenerios to add API Management feature
+## Scenarios to add API Management feature
 
-## Scenerios to add Azure key vault feature
+## Scenarios to add Azure key vault feature
 
 ## Add cloud resources
 
@@ -82,7 +82,7 @@ If you have created SPFx based tab project, you can't add Azure cloud resources.
 
 ## Available capabilities to add for different Teams project
 
-You can choose to add different capabilities based on project you have created in Teams app.
+You can choose to add different capabilities based on project you've created in Teams app.
 
 The existing capabilities support all other supported capabilities except SPFx tab.
 
@@ -104,10 +104,10 @@ The following additional changes appear after adding resources in your project:
 
 ## FAQ
 
-* Describe Scenerios to add Azure function, SQL database, Azure key vault, API management.
-* Is azure function is creating only web API's to Teams application backend.
-* Is azure SQL database is used only for storing Teams application data.
-* How to publish API on other application using azure API management.
+* Describe Scenarios to add Azure function, SQL database, Azure key vault, API management.
+* Is Azure function creating only web APIs to Teams application backend.
+* Is azure SQL database used only for storing Teams application data.
+* How to publish API on other application using Azure API management.
 * What is meant by cryptographic keys in Azure key vault and is there any other functionality other than storing secrets.
 
 ## See also

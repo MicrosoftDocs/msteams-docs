@@ -1,20 +1,20 @@
 ---
-title: Add Scenerio based Teams app
+title: Add Scenarios based Teams app
 author: MuyangAmigo
-description:  In this module, learn how to add scenerio based Teams app
+description:  In this module, learn how to add scenarios based Teams app
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add scenerio based Teams apps features
+# Add scenarios based Teams apps features
 
-Add scenerio based Teams apps features in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
+Add scenarios based Teams apps features in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
 |**Features**|**Description**|
 |--------|-------------|
-| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request such as cards or texts.|
+| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with an HTTP request such as cards or texts.|
 | Command bot | Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards.|
 | SSO enabled tab | **Need to add details**.|
 
@@ -32,15 +32,15 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-## Scenerios to add Notification bot features
+## Scenarios to add Notification bot features
 
-## Scenerios to add Command bot features
+## Scenarios to add Command bot features
 
-## Scenerios to add SSO enabled tab features
+## Scenarios to add SSO enabled tab features
 
-## Add scenerio based Teams app
+## Add scenarios based Teams app
 
-**You can add scenerio based Teams app by the following methods:**
+**You can add scenarios based Teams app by the following methods:**
 
 * To add basic Teams app by using Teams Toolkit in Visual Studio Code.
 * To add basic Teams app by using command palette.
@@ -48,7 +48,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
   > [!Note]
   > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-* **To add scenerio based Teams app by using Teams Toolkit in Visual Studio Code:**
+* **To add scenarios based Teams app by using Teams Toolkit in Visual Studio Code:**
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
@@ -81,7 +81,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
 ## Available capabilities to add for different Teams project
 
-You can choose to add different capabilities based on project you have created in Teams app.
+You can choose to add different capabilities based on project you've created in Teams app.
 The following table lists the available capabilities to add in your project:
 
 |Existing capabilities|Other supported capabilities|
@@ -101,10 +101,10 @@ After adding notification bot, command bot and SSO enabled tab, the changes in y
 
 ## FAQ
 
-* Describe scenerios to add notification bot, command bot and SSO enabled tab in Teams app.
+* Describe scenarios to add notification bot, command bot and SSO enabled tab in Teams app.
 * Describe about SSO enabled tab feature
-* What is the difference between HTTP trigger restify server, HTTP trigger Azure function, Timer trigger azure function and explain scenerios to use trigger.
-* what is the difference between Typescript and javascript.
+* What is the difference between HTTP trigger restify server, HTTP trigger Azure function, Timer trigger Azure function and explain scenarios to use trigger.
+* what is the difference between Typescript and JavaScript.
 * Is there any specific output after adding tab, bot, or message extension in existing app.
 
 ## See also
