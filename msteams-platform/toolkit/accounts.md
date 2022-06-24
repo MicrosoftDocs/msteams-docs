@@ -1,7 +1,7 @@
 ---
 title: Prepare accounts to build Teams apps
 author: zyxiaoyuer
-description:  Prepare accounts to build Teams apps
+description: In this module, Learn how to prepare accounts to build Teams apps with Microsoft 365 account and developer program. Azure account to host backend resources
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -51,7 +51,7 @@ You can sign-up for the developer program by using one of the following account 
 
 ## Azure account to host backend resources
 
-Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
+Azure account is optional, if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
 **Visual Studio ID**
 

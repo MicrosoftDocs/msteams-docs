@@ -1,6 +1,6 @@
 ---
 title: What is new for developers in Teams
-description: Learn about the new developer features and enhancements to those features in Microsoft Teams.
+description: In this learning path, learn about the new developer features and enhancements to those features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
 ---
@@ -42,6 +42,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 06/16/2022 | Updated media capabilities to support desktop and mobile| Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | Optional card feedback for success message| Build bots > Bot conversations > [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 06/03/2022 | Updated Add authentication module for enabling SSO for tab app with new structure and procedures | Add authentication > Tabs > [Enable single sign-on in a tab app](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams store > Overview > [Additional tips for rapid approval to publish your app linked to a SaaS offer](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
@@ -146,9 +147,9 @@ Explore updates from the previous GA releases listed here.
 |03/05/2021|Default install scope and group capability | Distribute your app > [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Reorder personal app tabs | Build tabs > [Reorder the chat tab in personal apps](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
 |03/04/2021|Information masking in Adaptive cards | Build cards and task modules > Build cards > [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files | • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App fundamentals > Device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
-|02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions, and integrate media capabilities files | • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
-|02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files |• App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> App fundamentals > • Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+|02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files | • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App fundamentals > Device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
+|02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions, and integrate media capabilities files | • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files |• App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> App fundamentals > • Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)|
 
 <br>
 
@@ -201,7 +202,7 @@ Explore updates from the previous GA releases listed here.
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
 | 09/13/2019 | Request bot is installed from action-based message extension. | [Initiate actions with message extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | Support for private channels in tabs and Connectors. | [Get context for your tab](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 06/20/2019 | Share an external website, from an external website, into a Teams channel. | [Share to Teams](~/share-to-teams.md) |
+| 06/20/2019 | Share an external website, from an external website, into a Teams channel. | [Share to Teams](concepts/build-and-test/share-to-teams-overview.md). |
 | 05/25/2019 | Respond with bot message from task module. | [Respond with bot message from task module](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in group chats. | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | App manifest localization. | [App localization](~/publishing/apps-localization.md) |
@@ -260,6 +261,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+| 06/16/2022 | Link unfurling for share to teams from web apps| Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Update conversation and installation events in your Teams bot |  Build bots > Bot conversations > Conversation events in your Teams bot > [Conversation events in your Teams bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |05/24/2022| Enhanced collaboration with Live Share SDK |  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

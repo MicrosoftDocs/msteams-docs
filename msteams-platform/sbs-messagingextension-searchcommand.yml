@@ -2,7 +2,7 @@
 title: Build search based message extension
 metadata:
   title: Build search based message extension
-  description: In this tutorial, you'll learn to build a search-based message extension.
+  description: Learn how to build a search based message extension for Microsoft teams, which allows users to search external systems.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022

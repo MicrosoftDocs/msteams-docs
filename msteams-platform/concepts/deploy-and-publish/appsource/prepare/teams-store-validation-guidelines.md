@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams store validation guidelines
-description: Describes the guidelines every app submitted to the Teams store (AppSource) must follow.
+description: In this article, you'll have the guidelines that every app submitted to the Teams store (AppSource) must follow.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
@@ -311,7 +311,7 @@ The Teams app manifest defines your app's configuration.
 
 [*Mandatory Fix*]
 
-Icons are one of the main elements people see when browsing the Teams store. 
+Icons are one of the main elements people see when browsing the Teams store.
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -557,7 +557,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * For the best first run experience, authenticate your users during the tab setup and not after. Authentication can happen outside the tab configuration window. [*Suggested Fix*]
 
-* The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
+* The user must not leave the tab configuration experience inside Teams to create content outside of Teams, and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
