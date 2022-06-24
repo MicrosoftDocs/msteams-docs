@@ -212,7 +212,7 @@
     href: tabs/how-to/create-tab-pages/content-page.md
   - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create a removal page
+  - name: Tab re-configuration and removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
@@ -261,7 +261,7 @@
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
-  - name: Optimize your bot with rate limiting in Teams
+  - name: Rate limiting for bots
     href: bots/how-to/rate-limit.md
   - name: Calls and meetings bots
     items:
