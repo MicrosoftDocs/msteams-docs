@@ -207,11 +207,11 @@ You can follow the steps to access these APIs while using:
 
 ## FAQ
 
-* What are all the limitations to add API connection
+* What are all the limitations to add API connection?
 * What is API connection and how it helps developers?
 * What is meant by bootstrap sample code?
 * What is meant by language appropriate SDKs?
-* Why we need to test API connection in local environment only.
+* Why we need to test API connection in local environment only?
 * What will happen if we test API connection in dev or prod environment?
 
 ## See also

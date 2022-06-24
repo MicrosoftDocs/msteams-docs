@@ -56,7 +56,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one" border="true":::
 
-* **To add basic Teams app by using command palette:**
+* **To add scenarios based Teams app by using command palette:**
 
    1. Open **command palette**.
    1. Enter **Teams:Add features**.
@@ -68,7 +68,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
 
-## Add basic Teams app using TeamsFx CLI
+## Add scenarios based Teams app using TeamsFx CLI
 
 * Change directory to your **project directory**.
 * The following table lists the capabilities and required commands:
