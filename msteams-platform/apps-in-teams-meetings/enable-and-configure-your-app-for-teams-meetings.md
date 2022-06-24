@@ -146,20 +146,20 @@ You can also add the Teams display picture and people card of the user to in-mee
        "text": "John Phillips assigned you a weekly todo",
        "summary": "Don't forget to meet with Marketing next week",
        "channelData": {
-                         onBehalfOf: [
-                                        { 
-                                           itemId: 0, 
-                                           mentionType: 'person', 
-                                           mri: context.activity.from.id, 
-                                           displayname: context.activity.from.name 
-                                        }
-                                      ],
-            "notification": {
-            "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+           onBehalfOf: [
+             { 
+               itemId: 0, 
+               mentionType: 'person', 
+               mri: context.activity.from.id, 
+               displayname: context.activity.from.name 
+             }
+            ],
+           "notification": {
+           "alertInMeeting": true,
+           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
             }
         },
-        "replyToId": "1493070356924"
+       "replyToId": "1493070356924"
     }
 ```
 
