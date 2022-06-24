@@ -8,11 +8,11 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add scenarios based Teams apps features
+# Add scenarios based Teams apps
 
-Add scenarios based Teams apps features in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
+Add scenarios based Teams apps in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
 
-|**Features**|**Description**|
+|**Functions**|**Description**|
 |--------|-------------|
 | Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with an HTTP request such as cards or texts.|
 | Command bot | Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards.|
