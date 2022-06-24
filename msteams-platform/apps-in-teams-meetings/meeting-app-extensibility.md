@@ -203,17 +203,19 @@ The following list details the various user types along with their accessibility
 
 A guest or anonymous user can't add, remove, or uninstall apps but they can interact with the apps added by others.
 
-> [!NOTE]
->
-> * If federated users are added in a chat or call, then apps don't work for anyone.
-
 The following table provides the user types and lists the features that each user can access:
 
 | User type | Tabs | Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage only on Teams desktop client |
-| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage only on Teams desktop client. |
+| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed in scheduled meetings. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage only on Teams desktop client. |
+
+> [!NOTE]
+>
+> * Federated users can't interact with tab apps in calls or chat.
+> * If federated users are added to an existing call with in-tenant users, then all participants lose the ability to add, update, or remove apps. However, in-tenant users can still interact with apps that were added before inviting federated users to the call.
+> * Federated user behavior for apps in Teams meetings and calls is consistent with the behavior experienced by them while using apps in group chats.
 
 ## Next step
 
