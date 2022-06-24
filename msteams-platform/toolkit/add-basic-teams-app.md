@@ -32,11 +32,11 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-## Describe Tab features and Scenerios to add features
+**Describe Tab features and Scenerios to add features**.
 
-## Describe Bot features and Scenerios to add features
+**Describe Bot features and Scenerios to add features**.
 
-## Describe Message Extension features and Scenerios to add features
+**Describe Message Extension features and Scenerios to add features**.
 
 ## Add capabilities
 
@@ -75,9 +75,6 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
   |Capability and Scenario| Command|
   |-----------------------|----------|
-  |To add notification bot |`teamsfx add notification`|
-  |To add command bot |`teamsfx add command-and-response`|
-  |To add sso-enabled tab |`teamsfx add sso-tab`|
   |To add tab |`teamsfx add tab`|
   |To add bot |`teamsfx add bot`|
   |To add message extension |`teamsfx add message extension`|
@@ -87,14 +84,8 @@ The following list provides limitations to add more capabilities in TeamsFx:
 You can choose to add different capabilities based on project you have created in Teams app.
 The following table lists the available capabilities to add in your project:
 
-**We need to mention about other supported capabilities for SSO enabled personal tab and Search based message extension capability**.
-
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
-|SPFx tab |None|
-|SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
-|Notification bot |SSO-enabled tab, tab|
-|Command bot |SSO-enabled tab, tab|
 |Tab |Tab, notification bot, command bot, bot, message extension|
 |Bot |Message extension, SSO-enabled tab, tab|
 |Message extension |Bot, SSO-enabled tab, tab |
@@ -122,13 +113,16 @@ After adding tab, the changes in your project are as follows:
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
 * The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
-**After adding Notification bot, Command bot, SSO enabled tab, the changes in your project to be explained**.
-
 ## Step-by-step guide
 
-* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
+* **Step-by-step guide to add tab, bot, message extension as add features to be added**.
 
-* Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
+## FAQ
+
+* Describe Tab features and scenerios to add feature.
+* Describe Bot features and scenerios to add feature.
+* Describe Message extension features and scenerios to add feature.
+* Is there any specific output after adding tab, bot, or message extension in existing app.
 
 ## See also
 

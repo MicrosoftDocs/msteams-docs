@@ -81,8 +81,6 @@ The following list provides limitations to add more capabilities in TeamsFx:
 You can choose to add different capabilities based on project you have created in Teams app.
 The following table lists the available capabilities to add in your project:
 
-**We need to mention about other supported capabilities for SSO enabled personal tab and Search based message extension capability**.
-
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
 |SPFx tab |None|

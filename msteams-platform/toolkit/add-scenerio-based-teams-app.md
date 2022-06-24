@@ -40,7 +40,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
 ## Add scenerio based Teams app
 
-**You can add basic Teams app by the following methods:**
+**You can add scenerio based Teams app by the following methods:**
 
 * To add basic Teams app by using Teams Toolkit in Visual Studio Code.
 * To add basic Teams app by using command palette.
@@ -97,7 +97,15 @@ After adding notification bot, command bot and SSO enabled tab, the changes in y
 
 ## Step-by-step guide
 
-* Step-by-step guide to add command bot, notification bot, SSO enabled tab as add features in Microsoft Teams to be added.
+* **Step-by-step guide to add command bot, notification bot, SSO enabled tab as add features in Microsoft Teams to be added**.
+
+## FAQ
+
+* Describe scenerios to add notification bot, command bot and SSO enabled tab in Teams app.
+* Describe about SSO enabled tab feature
+* What is the difference between HTTP trigger restify server, HTTP trigger Azure function, Timer trigger azure function and explain scenerios to use trigger.
+* what is the difference between Typescript and javascript.
+* Is there any specific output after adding tab, bot, or message extension in existing app.
 
 ## See also
 

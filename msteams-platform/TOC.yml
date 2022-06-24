@@ -114,12 +114,18 @@
       href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
     - name: Customize Azure AD manifest
       href: toolkit/AAD-manifest-customization.md
+    - name: Add capabilities to Teams app
+      href: toolkit/add-capability.md
+    - name: Add cloud resources to Teams app
+      href: toolkit/add-resource.md
     - name: Add Features 
       items:
-      - name: Add capabilities to Teams app
-        href: toolkit/add-capability.md
-      - name: Add cloud resources to Teams app
-        href: toolkit/add-resource.md
+      - name: Add scenerio based Teams app
+        href: toolkit/add-scenerio-based-teams-app.md
+      - name: Add basic Teams app
+        href: toolkit/add-basic-teams-app.md
+      - name: Add resources to Teams app
+        href: toolkit/add-cloud-resource.md
       - name: Add single sign-on to Teams app
         href: toolkit/add-single-sign-on.md
       - name: Add API connection to Teams app
