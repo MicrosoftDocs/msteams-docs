@@ -1,8 +1,7 @@
 ---
 title: Integrate location capabilities
 author: Rajeshwari-v
-description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
-keywords:  location map capabilities native device permissions 
+description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -109,6 +108,6 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## See also
 
-* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate People Picker in Teams](people-picker-capability.md)
