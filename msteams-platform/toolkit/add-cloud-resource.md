@@ -30,13 +30,13 @@ The following list provides advantages to add more cloud resources in TeamsFx:
 
 If you have created SPFx based tab project, you can't add Azure cloud resources.
 
-## Scenarios to add Azure function feature
+**Scenarios to add Azure function feature**.
 
-## Scenarios to add SQL database feature
+**Scenarios to add SQL database feature**.
 
-## Scenarios to add API Management feature
+**Scenarios to add API Management feature**.
 
-## Scenarios to add Azure key vault feature
+**Scenarios to add Azure key vault feature**.
 
 ## Add cloud resources
 

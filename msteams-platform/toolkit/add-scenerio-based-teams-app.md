@@ -32,11 +32,11 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-## Scenarios to add Notification bot features
+**Scenarios to add Notification bot features**.
 
-## Scenarios to add Command bot features
+**Scenarios to add Command bot features**.
 
-## Scenarios to add SSO enabled tab features
+**Scenarios to add SSO enabled tab features**.
 
 ## Add scenarios based Teams app
 
