@@ -1,7 +1,6 @@
 ---
 title: Send and receive files through the bot
-description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes. Use Teams bot APIs using code samples based on the v4 Bot Framework SDK.
-keywords: teams bots files send receive
+description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -233,7 +232,7 @@ private static Attachment GetInlineAttachment()
 }​​​​​
 ```
 
-### Basic example in C#
+### Basic example in C #
 
 The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
 
@@ -327,3 +326,7 @@ Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload fi
 
 > [!div class="nextstepaction"]
 > [Optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md)
+
+## See also
+
+[Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

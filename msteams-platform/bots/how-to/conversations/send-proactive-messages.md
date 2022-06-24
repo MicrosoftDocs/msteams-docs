@@ -1,10 +1,9 @@
 ---
 title: Send proactive messages
-description: Learn how to send proactive messages with your Microsoft Teams bot, proactively install your app using Microsoft Graph and check the code samples based on Bot Framework SDK v4.
+description: Learn how to send proactive messages with your Teams bot, install your app using Microsoft Graph and check code samples based on Bot Framework SDK v4
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-Keywords: send a message get user ID channel ID conversation ID
 ---
 # Proactive messages
 
@@ -20,8 +19,9 @@ A proactive message is any message sent by a bot that isn't in response to a req
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
 >
 > For proactive messages the bots should use the following end points for government cloud environments:
->    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
->    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+>
+> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
+> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
@@ -59,7 +59,9 @@ After you have the user or channel information, you must create the conversation
 
 You must create the conversation if it doesn't exist or you don't know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
-After the conversation is created, you must get the conversation ID.
+You can get the conversation when the app is installed for the first time. After the conversation is created, you must get the conversation ID. The `conversationId` is available in the conversation update events.
+
+If you don't have the `conversationId` you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
 ## Get the conversation ID
 
@@ -72,6 +74,13 @@ After you get the appropriate address information, you can send your message.
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
+
+See the following video to learn how to send proactive message from bots:
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## Best practices for proactive messaging
 
