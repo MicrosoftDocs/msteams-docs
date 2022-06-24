@@ -112,8 +112,8 @@ Follow these steps to enable license management for an app in Teams:
 
 1. Select **Plan overview** from the left pane, and then select **Create new plan**.
 
-> [!NOTE]
-> You need to add at least one plan.
+   > [!NOTE]
+   > You need to add at least one plan.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Plan Overview":::
 
@@ -121,8 +121,8 @@ Follow these steps to enable license management for an app in Teams:
 
 1. Enter the Plan name and Plan description.
 
-> [!NOTE]
-> The plan information displays on Teams marketplace and [Appsource](https://appsource.microsoft.com/) under offer listing (plans section).
+   > [!NOTE]
+   > The plan information displays on Teams marketplace and [Appsource](https://appsource.microsoft.com/) under offer listing (plans section).
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Plan Listing":::
 
