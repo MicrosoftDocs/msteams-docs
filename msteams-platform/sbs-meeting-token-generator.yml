@@ -204,7 +204,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-ngrok-page.png" alt-text="ngrok" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
