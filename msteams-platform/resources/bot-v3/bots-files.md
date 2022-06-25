@@ -181,7 +181,7 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
-### Basic example in C #
+### Basic example in C#
 
 The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog:
 
