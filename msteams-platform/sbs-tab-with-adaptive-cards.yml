@@ -62,7 +62,7 @@ items:
     1. Search for **Azure bot** in the search box.
     1. Select **Azure Bot**.
 
-        ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
+       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
@@ -130,7 +130,7 @@ items:
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        ![Channel Teams](~/assets/images/adaptive-cards/channel-teams.png)
+        :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
 
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
