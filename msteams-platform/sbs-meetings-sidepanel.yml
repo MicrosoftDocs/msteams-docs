@@ -126,7 +126,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/config.png" alt-text="Microsoft App ID" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 

@@ -142,7 +142,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-microsoft-app-id.png" alt-text="microsoft app id" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 

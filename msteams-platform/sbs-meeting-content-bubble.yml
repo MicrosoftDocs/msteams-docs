@@ -128,7 +128,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-view-configuration.png" alt-text="Microsoft App ID" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
