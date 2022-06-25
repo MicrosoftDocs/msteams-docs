@@ -133,8 +133,8 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
         
-        :::image type="content" source="./assets/images/conversation-bot/ngrok.png" alt-text="Ngrok.":::
-
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       
     1. In **Messaging endpoint**, add the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
         
         :::image type="content" source="./assets/images/conversation-bot/messaging-endpoint.png" alt-text="Messaging endpoint.":::
