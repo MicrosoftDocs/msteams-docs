@@ -70,8 +70,8 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-new.png" alt-text="azure bot card" border="true":::
-       
+       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select your subscription.
