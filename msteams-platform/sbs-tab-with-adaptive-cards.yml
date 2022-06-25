@@ -107,7 +107,7 @@ items:
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
 
@@ -173,7 +173,7 @@ items:
 
     1. Select **Manage** next to **Microsoft App ID**.
 
-       :::image type="content" source="assets/images/manage-bot-label.png" alt-text="manage bot":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.
