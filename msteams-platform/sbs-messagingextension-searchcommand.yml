@@ -155,7 +155,7 @@ items:
 
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     

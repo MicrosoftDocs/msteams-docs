@@ -138,7 +138,7 @@ To add the Microsoft Teams channel:
 
 1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Channel Teams":::
+    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
 1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
