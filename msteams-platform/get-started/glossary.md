@@ -72,7 +72,7 @@ Common terms and definitions used in Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-|[E5 developer account](../toolkit/prerequisites-tools.md) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
+|[E5 developer account](../toolkit/accounts.md) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
 
@@ -117,8 +117,8 @@ Common terms and definitions used in Teams developer documentation.
 | [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It's a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
 | [Message extension](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
-| [Microsoft 365 account](../toolkit/prerequisites-tools.md#microsoft-365-developer-account-types)| Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
-| [Microsoft 365 developer program](../toolkit/prerequisites-tools.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
+| [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types)| Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
+| [Microsoft 365 developer program](../toolkit/accounts.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |

@@ -1,5 +1,5 @@
 ---
-title: Prerequisites
+title: Accounts
 author: zyxiaoyuer
 description: In this module, Learn how to prepare accounts to build Teams apps with Microsoft 365 account and developer program. Azure account to host backend resources
 ms.author: surbhigupta
@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Prerequisites
+# Prepare accounts to build Teams apps
 
 To create and upload a Teams app, you need to prepare the following accounts:
 

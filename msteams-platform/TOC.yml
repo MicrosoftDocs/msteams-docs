@@ -101,7 +101,7 @@
     - name: Prerequisites
       items:
       - name: Accounts
-        href: toolkit/prerequisites-tools.md
+        href: toolkit/accounts.md
       - name: Manage multiple environments
         href: toolkit/TeamsFx-multi-env.md
     - name: capabilities 

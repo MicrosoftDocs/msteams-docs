@@ -19,7 +19,7 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 
   * Microsoft 365 account with valid subscription.
   * Azure with valid subscription.
-  For more information, see [Prerequisites](prerequisites-tools.md).
+  For more information, see [Prepare accounts to build Teams apps](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
