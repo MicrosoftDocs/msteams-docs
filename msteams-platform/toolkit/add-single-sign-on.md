@@ -351,4 +351,4 @@ For more information about TeamsFx SDK, see:
 
 ## See also
 
-* [Prepare accounts to build Teams apps](accounts.md)
+* [Prerequisites](prerequisites-tools.md)

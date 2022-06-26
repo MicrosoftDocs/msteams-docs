@@ -101,7 +101,7 @@
     - name: Create a new Teams app
       href: toolkit/create-new-project.md
     - name: Prerequisites
-      href: 
+      href: toolkit/prerequisites-tools.md
     - name: Debug your Teams app locally
       href: toolkit/debug-local.md
     - name: Debug background processes
