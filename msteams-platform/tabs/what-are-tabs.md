@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams tabs
 author: surbhigupta
-description: An overview of custom tabs on the Teams platform
+description: In this module, learn to build a custom tabs on the Teams platform, Tab features and Tabs user scenarios
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
@@ -20,11 +20,11 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 The following image shows personal tabs:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Personal tab" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Personal tab" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 The following image shows Contoso channel tabs:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 There are few prerequisites that you must go through before working on tabs.
 
@@ -94,7 +94,7 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 
 * [Custom tabs in Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate media capabilities](../concepts/device-capabilities/media-capabilities.md)
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)

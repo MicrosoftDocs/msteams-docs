@@ -1,6 +1,6 @@
 ---
 title: Debug your Teams app 
-description: Debug your Teams app locally in Teams Toolkit
+description: In this module, learn how to debug your Teams app locally in Teams Toolkit and key features of Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -53,7 +53,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
-## Debug your Teams app locally
+## Debug your app locally
 
 The following steps help you to debug your Teams app locally:
 
@@ -172,7 +172,7 @@ The following table lists the debug configuration names and types for project wi
 <details>
 <summary><b>Sideloads the Teams app</b></summary>
 
-The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
