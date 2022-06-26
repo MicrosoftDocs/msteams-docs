@@ -98,10 +98,16 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create a new Teams app
-      href: toolkit/create-new-project.md
     - name: Prerequisites
       href: toolkit/prerequisites-tools.md
+    - name: Capabilities
+      href:
+    - name: Cloud resources
+      items:
+      - name: Add cloud resources to teams app
+        href: toolkit/add-resource.md
+      - name: Provision cloud resources
+        href: toolkit/provision.md
     - name: Debug your Teams app locally
       href: toolkit/debug-local.md
     - name: Debug background processes
@@ -116,8 +122,6 @@
       href: toolkit/AAD-manifest-customization.md
     - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
-    - name: Add cloud resources to Teams app
-      href: toolkit/add-resource.md
     - name: Add single sign-on to Teams app
       href: toolkit/add-single-sign-on.md
     - name: Add API connection to Teams app
