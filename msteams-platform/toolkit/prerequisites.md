@@ -1,5 +1,5 @@
 ---
-title: Prepare accounts to build Teams apps
+title: Prerequisites
 author: zyxiaoyuer
 description:  Prepare accounts to build Teams apps
 ms.author: surbhigupta
@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Prepare accounts to build Teams apps
+# Prerequisites
 
 To create and upload a Teams app, you need to prepare the following accounts:
 

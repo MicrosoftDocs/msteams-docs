@@ -100,8 +100,8 @@
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create a new Teams app
       href: toolkit/create-new-project.md
-    - name: Prepare accounts to build Teams app
-      href: toolkit/accounts.md
+    - name: Prerequisites
+      href: 
     - name: Debug your Teams app locally
       href: toolkit/debug-local.md
     - name: Debug background processes
