@@ -2,7 +2,7 @@
 title: Generate meeting side panel
 metadata:
   title: Meeting Side Panel
-  description: In this tutorial, you'll learn to set up meetings side panel for Teams.
+  description: With this learning module, learn how to generate meetings side panel to add and publish agenda for Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -18,9 +18,9 @@ items:
 
     Key features of meeting side panel
 
-    * Provisions to add new agenda point
-    * Adds the agenda as text input to the **Side Panel** list
-    * Publishes the agenda list to the meeting chat
+    * Provisions to add new agenda point.
+    * Adds the agenda as text input to the **Side Panel** list.
+    * Publishes the agenda list to the meeting chat.
     
     This step-by-step guide helps you to generate meeting side panel to add and publish agenda. You'll see the following output:
 
@@ -61,11 +61,11 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal.
 
-    * Create Azure Bot resource to register bot with Azure Bot Service
-    * Create client secret to enable SSO authentication of the bot
-    * Add Teams channel to deploy the bot
-    * Use ngrok to create a tunnel to your web server's endpoints
-    * Add messaging endpoint to the ngrok tunnel you created
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot.
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
@@ -241,13 +241,13 @@ items:
   
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**
+         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
+         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
     1. Ensure that **State** is set to **Enabled**.
   

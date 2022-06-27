@@ -1,6 +1,6 @@
 ---
 title: Designing Adaptive Cards for your app
-description: Learn how to design Adaptive Cards for Teams and get the Microsoft Teams UI Kit.
+description: In this module, learn how to design Adaptive Cards for your Teams app and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
@@ -392,7 +392,7 @@ Here's the code for implementing the design example you should follow.
 
 # [Design](#tab/design)
 
-When the the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card
+When the the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
 

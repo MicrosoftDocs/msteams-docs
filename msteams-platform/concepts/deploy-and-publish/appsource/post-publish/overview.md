@@ -1,6 +1,6 @@
 ---
 title: Maintain and support your published app
-description: What to think about once your store is listed on the Teams store and AppSource.
+description: Learn to maintain your published Microsoft Teams app and what to think about once your store is listed on the Teams store and AppSource.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
@@ -58,7 +58,18 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Complete Microsoft 365 Certification
 
-[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
+
+## Stop app distribution
+
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) to prevent its discovery and use.
+
+To stop distribution of an app after you've published, follow the steps:
+
+1. On the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
+1. To initiate de-listing of the app, on **Partner Center**, select the **Overview** page, and then select **Stop selling**.
+
+After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](../publish.md).
 
 ## See also
 

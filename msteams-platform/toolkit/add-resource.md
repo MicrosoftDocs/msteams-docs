@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description:  Describes Add Resources of Teams Toolkit
+description:  In this module, learn how to add Resources of Teams Toolkit, advantages, limitations and capabilities
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -16,8 +16,8 @@ TeamsFx helps to provision the cloud resources for your application hosting. You
 
 The following list provides advantages to add more cloud resources in TeamsFx:
 
-* Provides convenience
-* Autogenerates all configuration files and connect to Teams app by using Teams Toolkit
+* Provides convenience.
+* Autogenerates all configuration files and connect to Teams app by using Teams Toolkit.
 
 ## Limitation
 
@@ -27,8 +27,8 @@ If you have created SPFx based tab project, you can't add Azure cloud resources.
 
 **You can add cloud resources by the following methods:**
 
-* To add cloud resources by using Teams Toolkit in Visual Studio Code
-* To add cloud resources by using command palette
+* To add cloud resources by using Teams Toolkit in Visual Studio Code.
+* To add cloud resources by using command palette.
 
   > [!NOTE]
   > You need to provision for each environment, after you have successfully added the resource in your Teams app.
@@ -69,19 +69,19 @@ If you have created SPFx based tab project, you can't add Azure cloud resources.
 
 In the following scenarios, TeamsFx integrates with Azure services:
 
-- [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
-- [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
-- [Azure API management](deploy.md): An API gateway can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power apps.
-- [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
+* [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
+* [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
+* [Azure API management](deploy.md): An API gateway can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power apps.
+* [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
 
 ## Add Cloud resources
 
 The following changes appear after adding resources in your project:
 
-- New parameters added to azure.parameter.{env}.json to provide required information for provision.
-- New content is included to ARM template under `templates/azure`, except the files are in `templates/azure/teamsfx` folder for added the Azure resources.
-- The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
-- `.fx/projectSettings.json` is updated to track the available resources in your project.
+* New parameters added to azure.parameter.{env}.json to provide required information for provision.
+* New content is included to ARM template under `templates/azure`, except the files are in `templates/azure/teamsfx` folder for added the Azure resources.
+* The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
+* `.fx/projectSettings.json` is updated to track the available resources in your project.
 
 The following additional changes appear after adding resources in your project:
 

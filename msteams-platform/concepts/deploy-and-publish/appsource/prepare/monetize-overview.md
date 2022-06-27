@@ -1,6 +1,6 @@
 ---
 title: Monetize your app overview
-description: Learn how to monetize your Microsoft Teams app.
+description: Learn how to monetize your Microsoft Teams app that includes choose a pricing model with Saas offer.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 # Monetize your app
 
 Microsoft Teams app Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
- 
+
 ## Choose a pricing model
 
 :::row:::

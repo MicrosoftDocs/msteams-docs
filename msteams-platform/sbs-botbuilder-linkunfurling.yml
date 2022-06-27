@@ -2,7 +2,7 @@
 title: Unfurl links in Teams using bot
 metadata:
   title: Unfurl links in Teams using bot
-  description: In this tutorial, you'll learn to set up Teams link unfurling bot.
+  description: Learn how to set up Teams link unfurling bot that helps you to register your app and receive an invoke activity.
   audience: Developer
   level: Beginner
   ms.date: 01/20/2022
