@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab and use cases, responsive behavior and shared meeting stage, and navigation.
+description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit. Design with UI templates using an im meeting tab, in-meeting dailog and best practices to crate a quality app.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -31,7 +31,7 @@ In the meeting details, users can select **Add a tab +** to open the app flyout 
 
 #### Mobile
 
-Once app has been added (for example, on desktop), users can access the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
+Once app is added (for example, on desktop), users can access the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
 
