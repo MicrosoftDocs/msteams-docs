@@ -246,7 +246,7 @@ gulp ngrok-serve
 ### Upload your application to Teams
 
 1. Go to Microsoft Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps** and **Upload a custom app**.
+1. Select **Manage your apps**, **Upload an app**, and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
@@ -274,6 +274,8 @@ gulp ngrok-serve
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+  > [!NOTE]
+  > Run a 'git status' command in your terminal of choice to confirm the sample was cloned successfully. You may need to apply the git command 'git config --system core.  longpaths true' in your administrator terminal to prevent the cloning error "Filename too long."
 
 Following are the steps to create a personal tab:
 
@@ -427,6 +429,8 @@ ngrok http 3978 --host-header=localhost
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+  > [!NOTE]
+  > Run a 'git status' command in your terminal of choice to confirm the sample was cloned successfully. You may need to apply the git command 'git config --system core.longpaths true' in your administrator terminal to prevent the cloning error "Filename too long."
 
 Following are the steps to create a personal tab:
 
