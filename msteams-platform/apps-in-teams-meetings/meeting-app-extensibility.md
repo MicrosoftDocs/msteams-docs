@@ -203,7 +203,7 @@ The following list details the various user types along with their accessibility
 
 A guest or anonymous user can't add, remove, or uninstall apps but they can *partially interact with the apps added by others.
 
-The following table provides the user types and lists the features that each user can access:
+The following table provides the user types and lists the features that each user can access in scheduled meetings:
 
 | User type | Tabs | Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -213,9 +213,11 @@ The following table provides the user types and lists the features that each use
 
 > [!NOTE]
 >
+> The behavior of all of the various user types for apps in calls is identical to their behavior in scheduled meetings with the exception of the following:
+>
 > * Federated users can't interact with tab apps in calls or chat.
 > * If federated users are added to an existing call with in-tenant users, then all participants lose the ability to add, update, or remove apps. However, in-tenant users can still interact with apps that were added before inviting federated users to the call.
-> * Federated user behavior for apps in Teams meetings and calls is consistent with the behavior experienced by them while using apps in group chats.
+> * Federated user behavior for apps in calls is consistent with the behavior experienced by them while using apps in [group chats](/microsoftteams/non-standard-users#usage-behavior-and-policy-for-federated-users).
 
 ## Next step
 
