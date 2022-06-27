@@ -1,7 +1,7 @@
 ---
-title: Add capability to Teams app
+title: FAQ 
 author: MuyangAmigo
-description:  In this module, learn how to add Capabilities of Teams Toolkit, advantages, limitations and capabilities
+description:  In this module, learn FAQ
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
