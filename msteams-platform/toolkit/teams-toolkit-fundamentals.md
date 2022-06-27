@@ -67,7 +67,7 @@ Let's take a tour of the topics covered in this document.
 |Section|Contents|Details
 |---------|---------|--------|
 |Accounts|Microsoft 365 account| To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription.|
-|--------| Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
+| | Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
 |Environment|Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.|
 |Development| Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.|
 
