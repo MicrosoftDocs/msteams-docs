@@ -81,4 +81,4 @@ To load and run your experience within Teams, you need to create a package and u
 
 ## See also
 
-[Test and debug your bot locally](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+[Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
