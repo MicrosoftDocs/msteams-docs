@@ -17,6 +17,7 @@ Add scenarios based Teams apps in Teams Toolkit helps you to add additional capa
 | Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with an HTTP request such as cards or texts.|
 | Command bot | Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards.|
 | SSO enabled tab | **Need to add details**.|
+| SPFx tab | **Need to add details**.|
 
 ## Advantages
 
@@ -37,6 +38,8 @@ The following list provides limitations to add more capabilities in TeamsFx:
 **Scenarios to add Command bot**.
 
 **Scenarios to add SSO enabled tab**.
+
+**Scenarios to add SPFx tab**.
 
 ## Add scenarios based Teams app
 
