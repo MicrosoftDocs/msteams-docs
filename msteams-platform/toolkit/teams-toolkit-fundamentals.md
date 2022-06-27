@@ -10,14 +10,14 @@ ms.date: 05/24/2022
 
 # Teams Toolkit Overview
 
-Teams Toolkit for Microsoft Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
-Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with the toolkit has the advantages of:
+Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code.App development with the toolkit has the following advantages:
 
 * Integrated identity
 * Access to cloud storage
 * Data from Microsoft Graph
 * Azure and Microsoft 365 services with zero-configuration approach.
 
+For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 ## User journey of Teams Toolkit
@@ -63,6 +63,13 @@ You can select **Get Started** to explore the Teams Toolkit, or select **Create 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot ofteams toolkit":::
 
 Let's take a tour of the topics covered in this document.
+
+|Section|Contents|Details
+|---------|---------|--------|
+|Accounts|Microsoft 365 account| To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription.|
+|--------| Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
+|Environment|Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.|
+|Development| Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.|
 
 ## Accounts
 
