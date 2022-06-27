@@ -68,8 +68,12 @@ Let's take a tour of the topics covered in this document.
 |---------|---------|--------|
 |Accounts|Microsoft 365 account| To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription.|
 | | Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
-|Environment|Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.|
-|Development| Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.|
+|Environment|Local and Dev |Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.|
+|Development| Create a new Teams app | Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler. Create a new Teams app helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project**|
+|  | View Samples | It helps you to create sample apps to explore concepts and code samples|
+|  | Add Features | It helps you to add additional Teams capabilities such as **Tab** or **Bot** or **Message extension** or **Command bot** or **Notification bot**, or **SSO enabled tab** optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, or **Azure function** or **Azure API Management** which fits your development needs to your current Teams app. You can also add **API connection** or **Single Sign-on** or **CI/CD workflows** for your Teams app.
+|  | Edit Manifest file | It helps you customize manifest file based on the app requirements |
+|Deployment| Provision to the cloud | It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.|
 
 ## Accounts
 
