@@ -106,14 +106,6 @@ After adding notification bot, command bot and SSO enabled tab, the changes in y
 
 * Follow the [step-by-step](../sbs-gs-spfx.yml) guide to build your first app with SPFx.
 
-## FAQ
-
-* Describe scenarios to add notification bot, command bot and SSO enabled tab in Teams app.
-* Describe about SSO enabled tab feature
-* What is the difference between HTTP trigger restify server, HTTP trigger Azure function, Timer trigger Azure function and explain scenarios to use trigger.
-* what is the difference between Typescript and JavaScript.
-* Is there any specific output after adding tab, bot, or message extension in existing app.
-
 ## See also
 
 * [Provision cloud resources](provision.md)

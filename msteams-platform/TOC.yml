@@ -143,11 +143,15 @@
       - name: Debug background processes
         href: toolkit/debug-background-process.md
     - name: Deploy Teams app to the cloud
-      href: toolkit/deploy.md        
-    - name: Publish Teams apps using Teams Toolkit 
-      href: toolkit/publish.md
-    - name: Collaborating with other developers on Teams Toolkit
-      href: toolkit/TeamsFx-collaboration.md  
+      href: toolkit/deploy.md
+    - name: Publish Teams app
+      items:        
+      - name: Publish Teams apps using Teams Toolkit 
+        href: toolkit/publish.md
+      - name: Collaborating with other developers on Teams Toolkit
+        href: toolkit/TeamsFx-collaboration.md  
+    - name: FAQ
+      href: toolkit/faq.md
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
     - name: Add capabilities to Teams app

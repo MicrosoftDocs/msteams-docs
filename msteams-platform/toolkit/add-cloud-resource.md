@@ -96,14 +96,6 @@ The following additional changes appear after adding resources in your project:
 |Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.visual studio code` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
 |Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it's the API specification file.|
 
-## FAQ
-
-* Describe Scenarios to add Azure function, SQL database, Azure key vault, API management.
-* Is Azure function creating only web APIs to Teams application backend.
-* Is azure SQL database used only for storing Teams application data.
-* How to publish API on other application using Azure API management.
-* What is meant by cryptographic keys in Azure key vault and is there any other functionality other than storing secrets.
-
 ## See also
 
 * [Provision cloud resources](provision.md)

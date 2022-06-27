@@ -121,13 +121,6 @@ After adding tab, the changes in your project are as follows:
 
 * Follow the [step-by-step](../sbs-gs-msgext.yml) guide to build your first message extension app using Javascript in Microsoft Teams.
 
-## FAQ
-
-* Describe Tab features and scenarios to add feature?
-* Describe Bot features and scenarios to add feature?
-* Describe Message extension features and scenarios to add feature?
-* Is there any specific output after adding tab, bot, or message extension in existing app?
-
 ## See also
 
 * [Provision cloud resources](provision.md)
