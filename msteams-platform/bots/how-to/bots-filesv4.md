@@ -1,5 +1,5 @@
 ---
-title: Send and receive files through the bot
+title: Send and receive files using bot
 description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes.
 ms.date: 05/20/2019
 ms.localizationpriority: medium

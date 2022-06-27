@@ -4,7 +4,7 @@ description: In this article, know the features that are in the Public Developer
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
-# Public developer preview for Microsoft Teams
+# Public developer preview for Teams
 
 >[!NOTE]
 >Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
