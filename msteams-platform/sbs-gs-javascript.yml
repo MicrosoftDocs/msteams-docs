@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You'll create a tab app with Teams. 
+    You'll create a tab app with Teams 
 
     Your app will have a capability, which comes with its own UI and UX:
     
