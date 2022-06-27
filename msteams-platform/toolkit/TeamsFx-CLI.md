@@ -432,7 +432,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 ## Deploy to azure web app manually
 
-1. Create a SSO-enable tab.
+1. Create a SSO enable tab.
 2. Provision your project:
 
       ```bash
