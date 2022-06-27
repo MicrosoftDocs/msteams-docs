@@ -43,9 +43,9 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    Ensure you install the following tools and set up your development environment:
+    Ensure you have the following accounts and set up your development environment:
     
-    * [Microsoft Teams](https://teams.microsoft.com/) account
+    * [Microsoft](https://teams.microsoft.com/) account
     * The Teams app must be installed for the recipient, either personally, or in a team or chat
     * The Tenant ID for sending and receiving notifications must match
  
@@ -189,14 +189,14 @@ items:
 
      1. Enter the details for configuring scope.
      
-       1. Enter `access_as_user` as the **Scope name**.
+        1. Enter `access_as_user` as the **Scope name**.
 
           > [!NOTE]
           > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-       1. Set **Who can consent** to `Admins and users`.
-       1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+        1. Set **Who can consent** to `Admins and users`.
+        1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
             * Enter `Teams can access the user’s profile` as **Admin consent display name**
 
@@ -206,9 +206,9 @@ items:
 
             * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
   
-       1. Ensure that **State** is set to **Enabled**.
+        1. Ensure that **State** is set to **Enabled**.
 
-    1. Select **Add scope** to save.
+        1. Select **Add scope** to save.
 
        Your application ID URI is created with scope name.
 
