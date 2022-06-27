@@ -101,6 +101,8 @@ After adding notification bot, command bot and SSO enabled tab, the changes in y
 
 * Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
 
+* Follow the [step-by-step](../sbs-gs-spfx.yml) guide to build your first app with SPFx.
+
 ## FAQ
 
 * Describe scenarios to add notification bot, command bot and SSO enabled tab in Teams app.

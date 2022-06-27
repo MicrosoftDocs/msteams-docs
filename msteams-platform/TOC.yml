@@ -114,6 +114,8 @@
         href: toolkit/add-scenario-based-teams-app.md
       - name: Add basic Teams app
         href: toolkit/add-basic-teams-app.md
+      - name: Add extended Teams app across Microsoft 365
+        href: toolkit/add-extended-teams-app-across-microsoft-365.md  
       - name: Add cloud resources to Teams app
         href: toolkit/add-cloud-resource.md
       - name: Add single sign-on to Teams app
