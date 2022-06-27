@@ -187,7 +187,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Add scope" border="true":::
 
-     1. Enter the details for configuring scope.
+    1. Enter the details for configuring scope.
      
         1. Enter `access_as_user` as the **Scope name**.
 
