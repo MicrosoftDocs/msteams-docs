@@ -7,6 +7,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
+# FAQ
 
 ## Scenario based Teams app
 
