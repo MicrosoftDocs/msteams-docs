@@ -43,10 +43,49 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    Ensure you install the following tools and set up your development environment:
+    
+    * [Microsoft Teams](https://teams.microsoft.com/) account
     * The Teams app must be installed for the recipient, either personally, or in a team or chat
     * The Tenant ID for sending and receiving notifications must match
+ 
+    ## Set up your Teams development tenant
 
+    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+
+    ### Check for sideloading option
+
+    After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    To verify sideload apps in Teams:
+
+    1. In the Teams client, select **Store**.
+    1. Select **Manage your apps**.
+    1. Select **Publish an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+        > [!NOTE]
+        > Contact Teams administrator, if you don't have the option to upload a custom app.
+
+    ### Create a free Teams developer tenant (optional)
+
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. Select **Set up E5 subscription** from the welcome screen.
+    1. Set up administrator account. After you finish, the following screen displays.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+
+    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
 - title: Set up local environment
   durationInMinutes: 1 
@@ -93,8 +132,6 @@ items:
        1.  Set **Supported account types** to any account type
        1.  Leave the **Redirect URI** empty
        1.  Select **Register**
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
        App **Overview** page appears.
 
@@ -147,11 +184,11 @@ items:
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
 
        Add a scope page appears.
-   
-    1. Enter the details for configuring scope.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Add scope" border="true":::
 
+     1. Enter the details for configuring scope.
+     
        1. Enter `access_as_user` as the **Scope name**.
 
           > [!NOTE]
