@@ -110,7 +110,7 @@ See [create a SaaS offer](/azure/marketplace/create-new-saas-offer) for complete
 
 ### Test the offer
 
-We strongly recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can do this by creating a separate offer just for testing. For complete information, see [test offer overview](/azure/marketplace/plan-saas-offer#test-offer), [create a test offer](/azure/marketplace/create-saas-dev-test-offer), and [preview your offer](/azure/marketplace/test-publish-saas-offer).
+We strongly recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can verify by creating a separate offer just for testing. For complete information, see [test offer overview](/azure/marketplace/plan-saas-offer#test-offer), [create a test offer](/azure/marketplace/create-saas-dev-test-offer), and [preview your offer](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
 > You can test an end-to-end transaction in Teams using the [Test preview for monetized apps](Test-preview-for-monetized-apps.md) feature. For live offers you must complete the app store validation process.
@@ -196,7 +196,7 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
 > [!NOTE]
-> Teams now supports flat rate transactable offer. Users who earlier used a workaround to sell a flat rate transactable offer must update their app manifest with the Offer ID and Publisher ID and resubmit the app for validation.
+> Teams now supports Flat rate transactable offers, all flat rate offers created without the Offer ID and Publisher ID in the app manifest should update Offer ID and Publisher ID and resubmit the app for validation.
 
 ## See also
 
