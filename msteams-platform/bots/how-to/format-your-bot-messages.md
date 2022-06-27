@@ -26,9 +26,9 @@ Teams supports a subset of markdown and XML or HTML formatting tags.
 
 Currently, the following limitations apply to formatting:
 
-* Text-only messages do not support table formatting.
+* Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
-* Rich cards do not support markdown or table formatting.
+* Rich cards don't support markdown or table formatting.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
@@ -48,7 +48,7 @@ Some styles are currently not supported across all platforms. The following tabl
 | Preformatted text         | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ |
-| Image link                | ✔️ | ❌ |
+| Image link                | ❌ | ❌ |
 
 After checking cross-platform support, ensure that support by individual platforms is also available.
 
@@ -72,7 +72,7 @@ The following table provides a list of styles, which are supported on desktop, i
 | Preformatted text         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Image link                | ✔️ | ✔️ | ✔️ |
+| Image link                | ❌ | ✔️ | ✔️ |
 
 ### Cards
 
