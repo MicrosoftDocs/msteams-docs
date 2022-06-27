@@ -213,11 +213,11 @@ The following table provides the user types and lists the features that each use
 
 > [!NOTE]
 >
-> The behavior of all of the various user types for apps in calls is identical to their behavior in scheduled meetings with the exception of the following:
+> The behavior of the various user types for apps in calls is identical to their behavior in scheduled meetings with the exception of the following:
 >
 > * Federated users can't interact with tab apps in calls or chat.
 > * If federated users are added to an existing call with in-tenant users, then all participants lose the ability to add, update, or remove apps. However, in-tenant users can still interact with apps that were added before inviting federated users to the call.
-> * Federated user behavior for apps in calls is consistent with the behavior experienced by them while using apps in [group chats](/microsoftteams/non-standard-users#usage-behavior-and-policy-for-federated-users).
+> * Federated user behavior for apps in calls is consistent with the behavior experienced while using apps in [group chats](/microsoftteams/non-standard-users#usage-behavior-and-policy-for-federated-users).
 
 ## Next step
 
