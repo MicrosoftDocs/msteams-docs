@@ -32,11 +32,11 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-**Scenarios to add Notification bot features**.
+**Scenarios to add Notification bot**.
 
-**Scenarios to add Command bot features**.
+**Scenarios to add Command bot**.
 
-**Scenarios to add SSO enabled tab features**.
+**Scenarios to add SSO enabled tab**.
 
 ## Add scenarios based Teams app
 
@@ -97,7 +97,9 @@ After adding notification bot, command bot and SSO enabled tab, the changes in y
 
 ## Step-by-step guide
 
-* **Step-by-step guide to add command bot, notification bot, SSO enabled tab as add features in Microsoft Teams to be added**.
+* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
+
+* Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
 
 ## FAQ
 

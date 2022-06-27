@@ -32,11 +32,11 @@ The following list provides limitations to add more capabilities in TeamsFx:
 * You can add tabs up to 16 instances.
 * You can add a bot and message extension for one instance each.
 
-**Describe Tab features and Scenerios to add features**.
+**Describe Tab capability and Scenarios to add**.
 
-**Describe Bot features and Scenerios to add features**.
+**Describe Bot capability and Scenarios to add**.
 
-**Describe Message Extension features and Scenerios to add features**.
+**Describe Message Extension capability and Scenarios to add**.
 
 ## Add capabilities
 
@@ -115,13 +115,17 @@ After adding tab, the changes in your project are as follows:
 
 ## Step-by-step guide
 
-* **Step-by-step guide to add tab, bot, message extension as add features to be added**.
+* Follow the [step-by-step](../sbs-gs-javascript.yml) guide to build your first tab app using Javascript in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-bot.yml) guide to build your first bot app using Javascript in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-msgext.yml) guide to build your first message extension app using Javascript in Microsoft Teams.
 
 ## FAQ
 
-* Describe Tab features and scenerios to add feature?
-* Describe Bot features and scenerios to add feature?
-* Describe Message extension features and scenerios to add feature?
+* Describe Tab features and scenarios to add feature?
+* Describe Bot features and scenarios to add feature?
+* Describe Message extension features and scenarios to add feature?
 * Is there any specific output after adding tab, bot, or message extension in existing app?
 
 ## See also

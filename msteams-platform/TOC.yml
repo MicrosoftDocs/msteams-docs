@@ -96,50 +96,60 @@
   items:
   - name: Teams Toolkit for Visual Studio Code 
     items:
-    - name: Teams Toolkit overview
-      href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create a new Teams app
-      href: toolkit/create-new-project.md
-    - name: Prepare accounts to build Teams app
-      href: toolkit/accounts.md
-    - name: Debug your Teams app locally
-      href: toolkit/debug-local.md
-    - name: Debug background processes
-      href: toolkit/debug-background-process.md
-    - name: Provision cloud resources
-      href: toolkit/provision.md
-    - name: Deploy Teams app to the cloud
-      href: toolkit/deploy.md
-    - name: Preview and customize Teams app manifest
-      href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-    - name: Customize Azure AD manifest
-      href: toolkit/AAD-manifest-customization.md
-    - name: Add capabilities to Teams app
-      href: toolkit/add-capability.md
-    - name: Add cloud resources to Teams app
-      href: toolkit/add-resource.md
-    - name: Add Features 
+    - name: Overview 
       items:
-      - name: Add scenerio based Teams app
-        href: toolkit/add-scenerio-based-teams-app.md
+      - name: Teams Toolkit overview
+        href: toolkit/teams-toolkit-fundamentals.md
+      - name: Create a new Teams app
+        href: toolkit/create-new-project.md
+    - name: Prerequisites
+      items:
+      - name: Prepare accounts to build Teams app
+        href: toolkit/accounts.md
+      - name: Manage multiple environments
+        href: toolkit/TeamsFx-multi-env.md
+    - name: Capabilities 
+      items:
+      - name: Add scenario based Teams app
+        href: toolkit/add-scenario-based-teams-app.md
       - name: Add basic Teams app
         href: toolkit/add-basic-teams-app.md
-      - name: Add resources to Teams app
+      - name: Add cloud resources to Teams app
         href: toolkit/add-cloud-resource.md
       - name: Add single sign-on to Teams app
         href: toolkit/add-single-sign-on.md
       - name: Add API connection to Teams app
         href: toolkit/add-API-connection.md
       - name: Set up CI/CD pipelines
-        href: toolkit/use-CICD-template.md 
+        href: toolkit/use-CICD-template.md
+    - name: Cloud resources 
+      items:
+      - name: Add resources to Teams app
+        href: toolkit/add-resource.md  
+      - name: Provision cloud resources
+        href: toolkit/provision.md
+    - name: Edit Manifest
+      items:    
+      - name: Preview and customize Teams app manifest
+        href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+      - name: Customize Azure AD manifest
+        href: toolkit/AAD-manifest-customization.md
+    - name: Debug Teams app
+      items:   
+      - name: Debug your Teams app locally
+        href: toolkit/debug-local.md
+      - name: Debug background processes
+        href: toolkit/debug-background-process.md
+    - name: Deploy Teams app to the cloud
+      href: toolkit/deploy.md        
     - name: Publish Teams apps using Teams Toolkit 
       href: toolkit/publish.md
-    - name: Manage multiple environments
-      href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
+    - name: Add capabilities to Teams app
+      href: toolkit/add-capability.md
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
   - name: Teams Toolkit for Visual Studio
