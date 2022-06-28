@@ -76,8 +76,8 @@ For complete instructions, see [build the landing page for your SaaS offer](/azu
 
 Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
 
-* Users must be able to log in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
-* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions (for example, you may want to allow only subscription admins to search for users):
+* Users must be able to sign in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
+* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
   * Search for users in their org using email or another form of identity.
   * See users they can assign licenses to in a list.
   * Assign licenses to one or multiple users at the same time.
@@ -148,7 +148,9 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
 You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
 > [!IMPORTANT]
-> Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
+>
+> * Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
+> * Teams now supports Flat rate transactable offers. Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 
 Once published, users will see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
@@ -194,9 +196,6 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 1. Once the offer's unlinked, do the following to update your store listing:
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
-
-> [!NOTE]
-> Teams now supports Flat rate transactable offers. Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 
 ## See also
 
