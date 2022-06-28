@@ -1,7 +1,7 @@
 ---
 title: Respond to search command
 author: surbhigupta
-description: Learn how to respond to the search command from a message extension in a Microsoft Teams app using code examples and samples
+description: In this module, learn how to respond to the search command from a message extension in a Microsoft Teams app using code examples and samples
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium

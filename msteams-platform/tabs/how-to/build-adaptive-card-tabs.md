@@ -1,11 +1,10 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
+description: In this module, learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: adaptive card personal app authentication data flow
 ---
 
 # Build tabs with Adaptive Cards
@@ -351,7 +350,7 @@ In the previous sections, you've seen that most of the development paradigms can
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Example of Adaptive Card Tab auth flow." border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
 
 **`tab/fetch` auth response**
 

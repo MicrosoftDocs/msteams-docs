@@ -1,14 +1,14 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: An overview of messaging extensions on the Microsoft Teams platform
+description: In this module, learn messaging extensions and scenarios where message extensions are used on the Microsoft Teams platform
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
 ---
 # Message extensions
 
-Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card.
+Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 
 > [!IMPORTANT]
 > Message extensions are available in Government Community Cloud (GCC) and GCC-High environments but not in Department of Defense (DoD) environment.
@@ -32,12 +32,12 @@ The following image displays the locations from where message extensions are inv
 
 ## Understand how message extensions work
 
-A message extension consists of a web service that you host and an app manifest, which defines where your web service is invoked from in the Microsoft Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
+A message extension consists of a web service that you host and an app manifest, which defines where your web service is invoked from in the Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
 
 > [!NOTE]
 > Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
-In the app manifest for Microsoft Teams app, a single message extension is defined with up to ten different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
+In the app manifest for Teams app, a single message extension is defined with up to ten different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
 
 ## Types of message extension commands
 
@@ -65,7 +65,7 @@ The following image displays the message extension search command task module:
 
 ## Link unfurling
 
-A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Microsoft Teams client.
+A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
 The following images display link unfurling feature when a link is pasted in message extension:
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="unfurl link":::
