@@ -2,7 +2,7 @@
 title: Upload file in Teams using bot
 metadata:
   title: Upload file in Teams using bot 
-  description: With this learning module, learn how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment.
+  description: Learn how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment.
   audience: Developer
   level: Beginner
   ms.date: 28/12/2021
@@ -70,8 +70,8 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-new.png" alt-text="azure bot card" border="true":::
-       
+       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select your subscription.
@@ -121,8 +121,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manage.png" alt-text="select manage" border="true":::
-
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -185,9 +184,9 @@ items:
     **To add messaging endpoint**
 
        1. From ngrok, copy the HTTPS URL.
-
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/ngrok.png" alt-text="apply ngrok" border="true"::: 
-
+       
+          :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+          
           > [!NOTE]
           > The HTTPS URL in your ngrok is your fully qualified domain name.
           > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
