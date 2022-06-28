@@ -99,7 +99,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="assign the role to the participant":::
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="assign a spot to the participant":::
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
