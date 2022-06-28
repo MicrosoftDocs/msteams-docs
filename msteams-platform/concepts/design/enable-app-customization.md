@@ -40,7 +40,7 @@ To enhance Teams app experience, you can hide an app from users by default until
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
-:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Manage apps blocked by publisher":::
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Manage apps blocked by publisher.":::
 
 The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with **Blocked by publisher** status:
 

@@ -100,7 +100,7 @@ During or after the development, ensure to provision, deploy, and publish Teams 
 
 ### Provision in the cloud
 
-It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
+It integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
 
 ### Deploy to the cloud
 
