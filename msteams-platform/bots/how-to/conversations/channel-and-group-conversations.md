@@ -283,4 +283,5 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to cre
 
 ## See also
 
-[Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
