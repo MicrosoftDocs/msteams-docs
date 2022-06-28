@@ -1,7 +1,6 @@
 ---
 title: Sending and receiving files from a bot
-description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes. Use Teams bot APIs using code samples based on the v3 Bot Framework SDK.
-keywords: teams bots files send receive
+description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and group chat scopes.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
@@ -36,7 +35,7 @@ The following sections describe how to do this to send file content as a result 
 
 In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
 
-The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportsFiles`, the following features will not work.
+The definition will look like this: `"supportsFiles": true`. If your bot doesn't enable `supportsFiles`, the following features won't work.
 
 ### Receiving files in personal chat
 
@@ -77,7 +76,7 @@ Uploading a file to a user involves the following steps:
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, your bot will receive an *Invoke* activity with a location URL.
 3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
-4. Optionally, you can remove the original consent card if you do not want to allow the user to accept further uploads of the same file.
+4. Optionally, you can remove the original consent card if you don't want to allow the user to accept further uploads of the same file.
 
 #### Message requesting permission to upload
 
@@ -159,7 +158,7 @@ Similarly, if the user declines the file, your bot will receive the following ev
 
 ### Notifying the user about an uploaded file
 
-After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
+After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can select on, either to preview it, open it in OneDrive, or download locally.
 
 ```json
 {
@@ -261,3 +260,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## See also
+
+[Working with files in Microsoft Graph](/graph/api/resources/onedrive)

@@ -2,7 +2,7 @@
 title: Generate meeting token
 metadata:
   title: Generate meeting token
-  description: In this tutorial, you'll learn to set up a Meeting Token Generator for Teams.
+  description: With this learning module, learn how to generate a meeting token for all the participants to interact in the meeting for Teams.
   audience: Developer
   level: Beginner
   ms.date: 11/24/2021
@@ -21,17 +21,17 @@ items:
 
     **Key features of Meeting token generator**
 
-    * Displays the current token used in the meeting
-    * Displays the user list sorted based on the token number
-    * Generates a token for the user upon request
-    * Displays current user's token number
-    * Allows the organizer to skip the current meeting token
+    * Displays the current token used in the meeting.
+    * Displays the user list sorted based on the token number.
+    * Generates a token for the user upon request.
+    * Displays current user's token number.
+    * Allows the organizer to skip the current meeting token.
 
     **Different ways of user interactions**
 
-    * Token: Requests token for the user
-    * Done: Confirms token generation for the user
-    * Skip: Skips the current user and moves to the next person in line for a token
+    * Token: Requests token for the user.
+    * Done: Confirms token generation for the user.
+    * Skip: Skips the current user and moves to the next person in line for a token.
 
       > [!NOTE]
       > Skip is available only to the meeting organizers.
@@ -78,11 +78,11 @@ items:
   content: |
    The following steps help you to create and register your bot in Azure portal.
 
-    * Create Azure Bot resource to register bot with Azure Bot Service
-    * Create client secret to enable SSO authentication of the bot
-    * Add Teams channel to deploy the bot
-    * Use ngrok to create a tunnel to your web server's endpoints
-    * Add messaging endpoint to the ngrok tunnel you created
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot.
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
@@ -92,7 +92,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-azure-home-bot.png" alt-text="home bot" border="true":::
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -142,7 +142,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-microsoft-app-id.png" alt-text="microsoft app id" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -202,9 +202,9 @@ items:
 
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL  .
+    1. From ngrok, copy the HTTPS URL.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-ngrok-page.png" alt-text="ngrok" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -262,13 +262,13 @@ items:
   
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**
+         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
+         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
        The following image shows the fields and the values:
 
@@ -363,15 +363,15 @@ items:
 
     1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
 
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value
-         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used.
 
         > [!NOTE]
         > The sample works only in the current tenant.
 
-         * Set `"AzureAd"."ApplicationId"` to your bot's **Microsoft App ID**
-         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`
+         * Set `"AzureAd"."ApplicationId"` to your bot's **Microsoft App ID**.
+         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
 
         > [!NOTE]
         > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
@@ -386,10 +386,10 @@ items:
     
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
-         * Set `manifestVersion` to the latest version
-         * Set `$schema` to `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`
-         * Set `resource` to `api://[WebAppDomainName]/[MicrosoftAppId]`
-         * Replace `[companyName]` to `Contoso`
+         * Set `manifestVersion` to the latest version.
+         * Set `$schema` to `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`.
+         * Set `resource` to `api://[WebAppDomainName]/[MicrosoftAppId]`.
+         * Replace `[companyName]` to `Contoso`.
          * Replace the following sections to your fully qualified domain name:
            * `websiteUrl`
            * `privacyUrl`
@@ -398,8 +398,8 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1 latest new.png" alt-text="bot home" border="true":::
 
-         * Replace all occurrences of `WebAppDomainName` with your ngrok domain name
-         * Replace all occurrences of `MicrosoftAppId` with your bot's **Microsoft App ID**
+         * Replace all occurrences of `WebAppDomainName` with your ngrok domain name.
+         * Replace all occurrences of `MicrosoftAppId` with your bot's **Microsoft App ID**.
 
           :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2 Latest.png" alt-text="bot home" border="true":::
 
