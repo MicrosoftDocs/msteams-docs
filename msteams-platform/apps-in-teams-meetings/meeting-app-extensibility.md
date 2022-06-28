@@ -201,8 +201,6 @@ The following list details the various user types along with their accessibility
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-A guest or anonymous user can't add, remove, or uninstall apps but they can *partially interact with the apps added by others.
-
 The following table provides the user types and lists the features that each user can access in scheduled meetings:
 
 | User type | Tabs | Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
