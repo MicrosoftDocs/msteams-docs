@@ -115,7 +115,7 @@ items:
 
     1. Select **Create**.
 
-        :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
        Create an Azure Bot page appears.
 
@@ -184,7 +184,7 @@ items:
     
     1. Next to **Microsoft App ID**, select **Manage**.
 
-          :::image type="content" source="~/assets/images/bots/MicrosoftAppID.png" alt-text="Microsoft App ID" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**.
 
@@ -247,7 +247,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-        :::image type="content" source="~/assets/images/bots/ngrokURL.png" alt-text="ngrok HTTPS URL" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -274,7 +274,7 @@ items:
 
     1. Select **Manage**.
 
-         :::image type="content" source="~/assets/images/bots/MicrosoftAppID.png" alt-text="Manage app ID" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. From the left pane, select **Authentication**.
 
