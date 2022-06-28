@@ -64,4 +64,4 @@ For complete information on how these settings interact, see [manage custom app 
 ## See also
 
 * [Add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md)
-* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide)
+* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)
