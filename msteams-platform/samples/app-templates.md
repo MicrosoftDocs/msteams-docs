@@ -53,7 +53,7 @@ Using the co-worker appreciation template in Teams, users can recognize their co
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
-:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="coworkers-appreciation-1":::
+:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="coworkers appreciation":::
 
 ## FAQ Plus
 
