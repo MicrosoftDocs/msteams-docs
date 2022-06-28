@@ -389,7 +389,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 ## description
 
-**Required**—object
+**Required**—object.
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
