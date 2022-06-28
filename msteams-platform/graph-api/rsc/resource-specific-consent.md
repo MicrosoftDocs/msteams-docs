@@ -61,6 +61,7 @@ The following table provides resource-specific permissions for a chat:
 | Calls.AccessMedia.Chat         | Access media streams in calls associated with this chat or meeting.                                    |
 | Calls.JoinGroupCalls.Chat         | Join calls associated with this chat or meeting.                                    |
 | TeamsActivity.Send.Chat         | Create new notifications in the activity feeds of the users in this chat. |
+| OnlineMeetingTranscript.Read.Chat | Read the transcripts of the meeting associated with this chat. |
 
 For more details, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
