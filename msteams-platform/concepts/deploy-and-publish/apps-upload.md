@@ -98,7 +98,7 @@ If an update is available to your app, then the **Update available** option is e
 To remove app from Teams, follow the steps:
 
 1. Find the app in **Manage your app**.
-1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
+1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams":::&nbsp; at the scope of the installed app.
         
     :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
 

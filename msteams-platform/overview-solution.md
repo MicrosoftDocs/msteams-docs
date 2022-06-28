@@ -26,19 +26,19 @@ Collate and map requirements to Teams features:
 | User app needs | Check forecast | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, Weather API |
+| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph, Weather API |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 
 **Teams app solution**: A Teams *personal chat bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates":::
 
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. Create a personal chat bot app.
 1. Integrate with an external weather forecast API to connect and request forecast for specific date and location.
-1. Integrate with :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph for registered users.
+1. Integrate with :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph for registered users.
 1. Check and send forecast details based on user's travel date and travel location.
 
 ## Choose what suits you
@@ -47,7 +47,7 @@ You can build a Teams app as per your app's requirements. Based on factors, such
 
 A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Business need app" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Business need app":::
 
 Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
@@ -59,14 +59,14 @@ A Teams app brings your users the advantages of a collaborative workspace.
 
 As a platform for building apps, Teams offers the full range of apps and toolkits. Teams platform supports you at every stage from planning your app to distributing it.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below." border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below.":::
 
 From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. Plan your project and figure out the requirement.
 1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Build the app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities and M365 data with :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph.
+1. Extend functionality by adding more Teams capabilities and M365 data with :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
 1. Manage and publish the apps to Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.

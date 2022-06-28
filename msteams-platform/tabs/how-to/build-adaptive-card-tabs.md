@@ -26,7 +26,7 @@ You can build your tabs with ready-made user interface (UI) building blocks nati
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs.":::
 
 ## Prerequisites
 
@@ -350,7 +350,7 @@ In the previous sections, you've seen that most of the development paradigms can
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Example of Adaptive Card Tab auth flow." border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Example of Adaptive Card Tab auth flow." lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
 
 **`tab/fetch` auth response**
 
