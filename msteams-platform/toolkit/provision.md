@@ -5,7 +5,7 @@ description: In this module, learn how to do provision cloud resources using Tea
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2022
+ms.date: 11/29/2021
 ---
 
 # Provision cloud resources using Teams Toolkit
