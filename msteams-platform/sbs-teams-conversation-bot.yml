@@ -63,8 +63,8 @@ items:
     1. Select **Create a resource**.
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
-
-        :::image type="content" source="./assets/images/conversation-bot/azure-bot.png" alt-text="Azure bot.":::
+    
+        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.

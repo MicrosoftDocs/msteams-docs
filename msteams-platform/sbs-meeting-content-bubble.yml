@@ -77,7 +77,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.

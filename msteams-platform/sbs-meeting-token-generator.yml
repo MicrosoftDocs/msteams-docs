@@ -92,7 +92,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-azure-home-bot.png" alt-text="home bot" border="true":::
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
