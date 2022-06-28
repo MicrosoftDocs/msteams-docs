@@ -261,3 +261,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## See also
+
+[Working with files in Microsoft Graph](/graph/api/resources/onedrive)
