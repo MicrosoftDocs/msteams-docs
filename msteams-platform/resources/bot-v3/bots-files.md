@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
 ---
-# Send and receive files
+# Send and receive files using bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -182,7 +182,7 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
-### Basic example in C#
+### Basic example in C #
 
 The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog:
 
