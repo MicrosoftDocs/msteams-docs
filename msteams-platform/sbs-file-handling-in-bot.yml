@@ -121,8 +121,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manage.png" alt-text="select manage" border="true":::
-
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
