@@ -63,8 +63,8 @@ items:
     1. Select **Create a resource**.
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
-
-        :::image type="content" source="./assets/images/conversation-bot/azure-bot.png" alt-text="Azure bot.":::
+    
+        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
@@ -102,7 +102,7 @@ items:
 
     1. Select **Manage** adjacent to **Microsoft App ID**.
 
-        :::image type="content" source="./assets/images/conversation-bot/manage-bot-label.png" alt-text="Manage label.":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
@@ -133,8 +133,8 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
         
-        :::image type="content" source="./assets/images/conversation-bot/ngrok.png" alt-text="Ngrok.":::
-
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       
     1. In **Messaging endpoint**, add the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
         
         :::image type="content" source="./assets/images/conversation-bot/messaging-endpoint.png" alt-text="Messaging endpoint.":::
