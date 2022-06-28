@@ -28,7 +28,7 @@ Your app must have the required permissions for fetching transcripts. Your app c
 
 ### Use organization-wide application permissions
 
-You can configure your app to access meeting transcripts across the tenant where it's installed. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. As  organization-wide application permissions are authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
+You can configure your app to access meeting transcripts across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When organization-wide application permissions are authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
 
 The following permissions can be granted to your app:
 
@@ -42,26 +42,18 @@ The following permissions can be granted to your app:
 
 ### Use meeting-specific RSC application permissions
 
-If you want your app to fetch transcripts only for the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. The meeting organizer can install your app in the Teams meetings chat. After the meeting is closed, your app can make the API call to obtain the transcript for that meeting.
+If you want your app to fetch transcripts only for the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the Teams meetings chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
 
-The following meeting-specific RSC permissions can be granted to your app:
+For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
-| Permission | Display name | Description |
-| --- | --- | --- |
-| OnlineMeetingTranscript.Read.Chat | Read the transcript of the meeting. | It allows your app to read transcripts of a meeting. It doesn't require the app user to be signed in for reading transcripts, and requires no administrator consent. |
-
-<!--
-| OnlineMeetingTranscript.Read.Group | Read the transcript this team’s channel meeting. | It allows your app to read the transcripts of a channel meeting associated with a team. It doesn't require an app user to be signed in, and requires no administrator consent. |
--->
-
-/ reference to article for configuring RSC permissions. /
+To learn about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](https://docs.microsoft.com/en-us/microsoftteams/platform/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat)
 
 In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available as `.vtt` or `.doc` file.
 
 Next, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions.
+> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs for  currently supports scheduled meetings.
 
 ## Obtain meeting ID and organizer ID
 
