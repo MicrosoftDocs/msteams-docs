@@ -36,7 +36,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
 | appInstallDialog | Teams||
 | authentication | Teams, Outlook, Office | |
-| calendar | Teams, Outlook ||
+| calendar | Outlook ||
 | call | Teams||
 | chat |Teams||
 | dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
