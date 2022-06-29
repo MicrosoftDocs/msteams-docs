@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 ---
 
-# Include a SaaS offer with your Microsoft Teams app
+# Include a SaaS offer with your Teams app
 
 :::row:::
    :::column span="3":::

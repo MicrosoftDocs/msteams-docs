@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ---
 
-# Create a Microsoft Teams app package
+# Create Teams app package
 
 You need an app package however you plan to distribute your Microsoft Teams app. A valid package is a ZIP file that contains the following:
 
