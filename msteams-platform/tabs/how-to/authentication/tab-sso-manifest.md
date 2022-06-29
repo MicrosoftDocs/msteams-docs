@@ -148,8 +148,6 @@ To preview your tab app in Teams:
 
 1. Select **Upload a custom app** to sideload the tab app to Teams.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Sideload tab app into Teams":::
-
 1. Select your app package zip file, and then select **Add**.
 
     The tab app is sideloaded and the dialog appears to inform you of the additional permissions that may be required.
