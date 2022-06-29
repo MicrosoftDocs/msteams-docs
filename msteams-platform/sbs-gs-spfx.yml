@@ -183,11 +183,11 @@ items:
 
     1. Select your **Workspace folder** by choosing your required folder.  
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
 
     1. Enter a suitable **Application name** for your app, such as `HelloWorld`. Press **Enter**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder." border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder.":::
     
         After your app is created, the Teams Toolkit displays the following message:
         
@@ -237,7 +237,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
     The Toolkit creates scaffolding for you in the project directory for the tab capability. 
 
@@ -271,7 +271,7 @@ items:
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx.png" alt-text="Screenshot showing where to sign in to Microsoft 365." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx.png" alt-text="Screenshot showing where to sign in to Microsoft 365.":::
 
         Your default web browser opens to let you sign in to the account.
 

@@ -136,7 +136,7 @@ To add the Microsoft Teams channel:
 
 1. Open your bot, which is listed in the **Recent resources** section.
 
-1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Channel Teams":::
 
