@@ -77,7 +77,7 @@ Use the following example to subscribe to user-level notifications.
 
 ```http
     
-POST https://graph.microsoft.com/beta/subscriptions/
+POST https://graph.microsoft.com/v1.0/subscriptions/
 {
     "changeType": "created,updated,deleted",
     "notificationUrl": "https://webhook.azurewebsites.net/api/send/myNotifyClient",
@@ -117,7 +117,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     Use the following example to request the meeting URL:
 
     ```http
-    GET https://graph.microsoft.com/beta/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
+    GET https://graph.microsoft.com/v1.0/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
     ```
 
     The response payload contains `joinURL`.
@@ -127,7 +127,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     ```json
         {
-            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
+            "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
             "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
             "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
             "start": {
@@ -156,7 +156,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     Use the following example to request the thread ID:
 
     ``` http
-    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
+    GET https://graph.microsoft.com/v1.0/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
     ```
 
     The response payload contains the `threadID` member in the `chatInfo` property.
@@ -487,25 +487,25 @@ To obtain meeting ID and organizer ID from a bot app:
 
     ```json
     { 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
-    }
+       "details": { 
+            "id": "meeting ID", 
+            "msGraphResourceId": "", 
+            "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+            "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+            "joinUrl": "https://teams.microsoft.com/l/xx", 
+            "title": "All Hands", 
+            "type": "Scheduled" 
+        }, 
+        "conversation": { 
+                "isGroup": true, 
+                "conversationType": "groupchat", 
+                "id": "meeting chat ID" 
+        }, 
+        "organizer": { 
+            "id": "<organizer user ID>", 
+            "aadObjectId": "<AAD ID>", 
+            "tenantId": "<Tenant ID>" 
+        }
     }
     ```
 
@@ -519,7 +519,7 @@ To obtain meeting ID and organizer ID from a bot app:
     Use the following example to request the online meeting ID using the URL:
 
     ```http
-    GET https://graph.microsoft.com/beta/me/onlineMeetings?$filter=joinUrl%20eq%20'https%3A%2F%2Fteams.microsoft.com%2Fl%2Fmeetup-join%2F19%253ameeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2%2540thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522909c6581-5130-43e9-88f3-fcb3582cde37%2522%252c%2522Oid%2522%253a%2522dc17674c-81d9-4adb-bfb2-8f6a442e4622%2522%257d'
+    GET https://graph.microsoft.com/v1.0/me/onlineMeetings?$filter=joinUrl%20eq%20'https%3A%2F%2Fteams.microsoft.com%2Fl%2Fmeetup-join%2F19%253ameeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2%2540thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522909c6581-5130-43e9-88f3-fcb3582cde37%2522%252c%2522Oid%2522%253a%2522dc17674c-81d9-4adb-bfb2-8f6a442e4622%2522%257d'
     ```
 
     The response payload contains:
