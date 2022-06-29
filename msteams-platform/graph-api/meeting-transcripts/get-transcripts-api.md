@@ -45,7 +45,7 @@ In both cases, your app can fetch the transcript when a transcript is generated 
 Next, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs for  currently supports scheduled meetings.
+> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
 
 ## Obtain meeting ID and organizer ID
 
