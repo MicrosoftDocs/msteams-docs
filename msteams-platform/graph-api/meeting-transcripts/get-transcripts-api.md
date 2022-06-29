@@ -145,14 +145,15 @@ To obtain meeting ID and organizer ID from user-level notification:
                 "tollNumber": "+1 213-279-1007"
             }    
         }
-        ```
+    ```
 
-    </details>
+        </details>
     <br>
 
-    The meeting URL is now obtained in `joinUrl`.
+    The meeting URL is now contained in `joinUrl`.
 
-3. **Get chat thread ID**: Use meeting URL that is obtained to to get the chat's thread ID. Specify meeting URL in `joinUrl` as value for `joinWebUrl` parameter while fetching the related meeting.
+3. **Get chat thread ID**: Use meeting URL obtained in `joinUrl` to get the chat thread ID. Specify this meeting URL as value for the `joinWebUrl` parameter while fetching the related meeting.
+
     Use the following example to request the thread ID:
 
     ``` http
