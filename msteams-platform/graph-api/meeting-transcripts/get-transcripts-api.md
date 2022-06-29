@@ -166,7 +166,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     ```json
     {
-        "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
+        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
         "value": [
             {
                 "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
@@ -207,10 +207,10 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 1. **Get chat ID**: Your app gets the `chatId` property from the notification to make subsequent calls. Your app can get the chat ID from the payloads of:
 
-    - Transcription started event
+    - Transcription started event: `callTranscriptEventMessageDetail` event type
 
         <details>
-        <summary><b>Example</b>: Payload for `callTranscriptEventMessageDetail` event type</summary>
+        <summary><b>Example</b>: Payload for transcription started event</summary>
 
         ```json
         {
@@ -250,10 +250,10 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
         </details>
 
-    - Call ended event
+    - Call ended event:  `callEndedEventMessageDetail` event type
 
         <details>
-        <summary><b>Example</b>: Payload for `callEndedEventMessageDetail` event type</summary>
+        <summary><b>Example</b>: Payload for call ended event</summary>
 
         ```json
         {
@@ -294,12 +294,12 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     Use the following example to request chat entity based on the chat ID:
 
     ``` http
-    GET https://graph.microsoft.com/beta/chats/19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2
+    GET https://graph.microsoft.com/v1.0/chats/19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2
     ```
 
     The response payload contains the following elements:
 
-    - **Organizer ID**: It's contained in the `id` member of the `organizer` property of response payload.
+    - **Organizer ID**: It's contained in the `id` member of the `organizer` property in the response payload.
     - **URL for meeting call**: This URL is used to retrieve the meeting ID, and it's available in the response payload in one of the two scenarios:
         - If the meeting is an online Teams meeting, the `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL.
         - If the meeting wasn't created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Your app can use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
@@ -668,7 +668,7 @@ Content-Type: application/json
 
 ### Get callTranscript
 
-Your app parses through the list of transaction IDs, received as the response of the `List callTranscripts` API, to get the required transcript ID. This API is used to get a single transcript metadata based on the user ID, meeting ID, and transcript ID.
+Your app parses through the list of transcript IDs, received as the response of the `List callTranscripts` API, to get the required transcript ID. This API is used to get a single transcript metadata based on the user ID, meeting ID, and transcript ID.
 
 **HTTP request**
 
@@ -885,3 +885,4 @@ WEBVTT
 
 - [Resource-specific consent](/graph-api/rsc/resource-specific-consent)
 - [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions)
+
