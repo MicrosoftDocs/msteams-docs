@@ -137,44 +137,63 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-**Call `selectMedia` API** for capturing videos using camera:
+* Call `selectMedia` API for capturing videos using camera:
 
-```javascript
+  * Capturing videos with `fullscreen: true`:
 
-const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
-    maxDuration: 30,
-    isFullScreenMode: true,
-    isStopButtonVisible: false,
-    videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
-  }
+       `fullscreen: true` opens the camera in video recording mode. It provides an option to use both front and rear camera and also provides additional attributes as mentioned in the following example:
 
-  const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
-    mediaType: microsoftTeams.media.MediaType.Video,
-    maxMediaCount: 1,
-    videoProps: defaultNativeVideoProps
-  }
+       ```javascript
+        
+         const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+            maxDuration: 30,
+            isFullScreenMode: true,
+            isStopButtonVisible: false,
+            videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+          }
+        
+          const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+            mediaType: microsoftTeams.media.MediaType.Video,
+            maxMediaCount: 1,
+            videoProps: defaultNativeVideoProps
+          }
+        
+          const defaultLensVideoProps: microsoftTeams.media.VideoProps = {
+            sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+            startMode: microsoftTeams.media.CameraStartMode.Photo,
+            cameraSwitcher: true,
+            maxDuration: 30
+          }
+        
+          const defaultLensVideoMediaInput: microsoftTeams.media.MediaInputs = {
+            mediaType: microsoftTeams.media.MediaType.Video,
+            maxMediaCount: 6,
+            videoProps: defaultLensVideoProps
+          }
+        
+        ```
 
-  const defaultLensVideoProps: microsoftTeams.media.VideoProps = {
-    sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
-    startMode: microsoftTeams.media.CameraStartMode.Photo,
-    cameraSwitcher: true,
-    maxDuration: 30
-  }
+  * Capturing videos with `fullscreen: false`:
 
-  const defaultLensVideoMediaInput: microsoftTeams.media.MediaInputs = {
-    mediaType: microsoftTeams.media.MediaType.Video,
-    maxMediaCount: 6,
-    videoProps: defaultLensVideoProps
-  }
+       `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wishes to record while reading content on the device screen.
 
-```
+       This mode also supports `isStopButtonVisible: true`. This adds a stop button on the screen which allows user to stop the recording. If `isStopButtonVisible: false`, then it is expected that the recording is stopped by accepting an external selection to API.
 
-> [!NOTE]
->
-> * Video property is not supported in Android version 7 or below. `maxDuration` for video recording is currently limited to 300 seconds only.
-> * If `isFullScreenMode` is set to false a toggle appears on the screen, in which you can minimize the video recording and continue reading the content on the screen while your video gets recorded in the background.
+       ```javascript
+            const defaultNativeVideoProps: microsoftTeams.media.VideoProps = { 
+            maxDuration: 30, 
+            isFullScreenMode: false, 
+            isStopButtonVisible: false, 
+            videoController: new microsoftTeams.media.VideoController(videoControllerCallback) 
+            } 
+            const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = { 
+            mediaType: microsoftTeams.media.MediaType.Video, 
+            maxMediaCount: 1, 
+            videoProps: defaultNativeVideoProps 
+            } 
+       ```
 
-**Call `selectMedia` API** for capturing images and video using camera:
+* Call `selectMedia` API for capturing images and video using camera:
 
 ```javascript
 
