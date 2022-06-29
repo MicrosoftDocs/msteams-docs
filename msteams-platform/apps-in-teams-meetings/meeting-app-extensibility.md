@@ -214,7 +214,7 @@ The following table provides the user types and lists the features that each use
 > The behavior of the various user types for apps in calls is identical to their behavior in scheduled meetings with the exception of the following:
 >
 > * Federated users can't interact with tab apps in calls.
-> * If federated users are added to an existing call with in-tenant/guest users, then all participants lose the ability to add, update, or remove apps. However, only the existing in-tenant/guest users would be able to still interact with apps that were added before inviting federated users to the call.
+> * If federated users are added to an existing call with in-tenant or guest users, then all participants lose the ability to add, update, or remove apps. However, only the existing in-tenant or guest users would be able to still interact with the apps that were added before inviting federated users to the call.
 
 ## Next step
 
