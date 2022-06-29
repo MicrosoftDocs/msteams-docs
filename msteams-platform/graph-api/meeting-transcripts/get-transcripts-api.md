@@ -453,7 +453,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     To fetch transcripts, you'll need to:
 
-    1. Retrieve transcript ID based on organizer ID and meeting ID:
+    1. **Retrieve transcript ID based on organizer ID and meeting ID**:
 
        Use the following example to request the transcript ID:
 
@@ -492,7 +492,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         }
         ```
 
-    1. Access and get meeting transcript based on the transcript ID:
+    1. **Access and get meeting transcript based on the transcript ID**:
 
     Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
 
@@ -507,7 +507,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 
 > [!NOTE]
-> The bot can receive meeting start or end events automatically from all the meetings created in all the channels. Add `ChannelMeeting.ReadBasic.Group` to manifest for granting meeting-specific RSC application permissions.
+> The bot can receive meeting start or end events automatically from all the scheduled online meetings. Add / manifest configuration / to manifest for granting meeting-specific RSC application permissions.
 
 For more information about APIs for Teams meeting, see [Meeting apps API references](/apps-in-teams-meetings/api-references).
 
