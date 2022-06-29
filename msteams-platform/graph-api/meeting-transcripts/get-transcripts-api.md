@@ -120,7 +120,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     GET https://graph.microsoft.com/beta/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
     ```
 
-    The response payload contains the  `joinUrl`.
+    The response payload contains the `joinUrl`.
 
     <details>
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
@@ -148,9 +148,11 @@ To obtain meeting ID and organizer ID from user-level notification:
         ```
 
     </details>
+    <br>
 
-3. **Get chat thread ID**: Use `joinWebUrl` to get the chat's thread ID.
+    The meeting URL is now obtained in `joinUrl`.
 
+3. **Get chat thread ID**: Use meeting URL that is obtained to to get the chat's thread ID. Specify meeting URL in `joinUrl` as value for `joinWebUrl` parameter while fetching the related meeting.
     Use the following example to request the thread ID:
 
     ``` http
