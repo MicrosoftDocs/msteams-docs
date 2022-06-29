@@ -30,7 +30,7 @@ Your app must have the required permissions for fetching transcripts. Your app c
 
 You can configure your app to access meeting transcripts across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When organization-wide application permissions are authorized by tenant administrator, your app can read and access transcripts for all meetings in the tenant.
 
-To learn about the permissions can be granted to your app, see [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions).
+To learn about the organization-wide application permissions can be granted to your app, see [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions).
 
 ### Use meeting-specific RSC application permissions
 
@@ -40,7 +40,7 @@ For more information about how your app can know when the meetings ends, see [Su
 
 To learn about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat).
 
-In both cases, your app can fetch the transcript when a transcript is generated after a Teams meeting is over. The content of the transcript is available as `.vtt` or `.docx` file.
+In both cases, your app can fetch the transcript when it's generated after a Teams meeting is over. The content of the transcript is available as `.vtt` or `.docx` file.
 
 Next, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
@@ -187,7 +187,9 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     </details>
 
-4. **Subscribe to chat messages**: Use chat ID to subscribe your app to chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
+    The chat ID is contained in `threadId`.
+
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
 
     If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
