@@ -424,7 +424,9 @@ Adaptive Cards support four action types:
 You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
-> Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+>* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+> 
+>* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams. 
 
 ### Adaptive Cards with messageBack action
 
