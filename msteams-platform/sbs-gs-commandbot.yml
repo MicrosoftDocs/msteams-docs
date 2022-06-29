@@ -148,7 +148,7 @@ items:
 
     1. Select **Create a new Teams app** option to create an app using Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="true":::
 
     1. Ensure that **Command bot** is selected as the capability that you want to build in your app.
 

@@ -195,7 +195,7 @@ items:
 
     1. Select your **Workspace folder** by choosing your required folder.  
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-folder.png" alt-text="select-folder" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder" border="false":::
 
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
