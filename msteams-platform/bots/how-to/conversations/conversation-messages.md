@@ -417,6 +417,7 @@ Following are the status codes and their error code and message values:
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | The conversation wasn't found. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size on the incoming request was too large. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
+| 502 |
 
 ## Code sample
 
