@@ -374,7 +374,11 @@ To obtain meeting ID and organizer ID from tenant-level notification:
                 GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
               ```
 
-              The response payload of this request contains `joinUrl`  in the `onlineMeeting` property.
+              In this example:
+
+                - The organizer ID is 14b779ae-cb64-47e7-a512-52fd50a4154d.
+
+              The response payload of this request contains `joinUrl` in the `onlineMeeting` property.
 
                 > [!NOTE]
                 > `joinUrl` is the same as `joinWebUrl`.
@@ -447,17 +451,54 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
 
+    To fetch transcripts, you'll need to:
+
+    1. Retrieve transcript ID based on organizer ID and meeting ID:
+
+       Use the following example to request the transcript ID:
+
+        ```http
+        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings/('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
+        ```
+
+        In this example:
+
+        - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
+    VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
+    1pqWTJAdGhyZWFkLnYy*
+        - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
+
+        The response payload contains the transaction ID for the meeting ID and organizer ID.
+
+        ```json
+        {
+
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts",
+        
+            "@odata.count": 1,
+        
+            "value": [
+        
+                {
+        
+                    "id": "MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh",
+        
+                    "createdDateTime": "2022-04-14T11:34:39.5662792Z"
+        
+                }
+        
+            ]
+        
+        }
+        ```
+
+    1. Access and get meeting transcript based on the transcript ID:
+
     Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
 
     ```http
     GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
     ```
-
-    In this example:
-    - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
-VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
-1pqWTJAdGhyZWFkLnYy*
-    - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*
 
     The response payload will contain the transcripts in `.vtt` format.
 
