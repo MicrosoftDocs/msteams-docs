@@ -752,7 +752,7 @@ Don't supply a request body for this method.
 
 **Response**
 
-If successful, this method returns a `200 OK` response code and contains bytes for callTranscript object in the response body. `content-type` header specifies type of the transcript content.
+If successful, this method returns a `200 OK` response code and contains bytes for callTranscript object in the response body. The `content-type` header specifies type of the transcript content.
 
 **Examples**
 <br>
@@ -769,6 +769,7 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 <br>
 <b>Response</b>
 <br>
+
 Response contains bytes for the transcript in the body. The `content-type` header specifies type of the transcript content.
 
 > [!NOTE]
@@ -799,6 +800,7 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 <br>
 <b>Response</b>
 <br>
+
 Response contains bytes for the transcript in the body. The `content-type` header specifies type of the transcript content.
 
 > [!NOTE]
@@ -830,7 +832,8 @@ Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
 <br>
 <b>Response</b>
 <br>
-Response contains bytes for the transcript in the body. `Content-Type` header specifies type of the transcript content.
+
+Response contains bytes for the transcript in the body. The `content-Type` header specifies type of the transcript content.
 
 > [!NOTE]
 > The response object shown here might be shortened for readability.
@@ -860,7 +863,8 @@ Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
 <br>
 <b>Response</b>
 <br>
-Response contains bytes for the transcript in the body. `Content-Type` header specifies type of the transcript content.
+
+Response contains bytes for the transcript in the body. The `content-Type` header specifies type of the transcript content.
 
 > [!NOTE]
 > The response object shown here might be shortened for readability.
@@ -880,3 +884,4 @@ WEBVTT
 ## See also
 
 - [Resource-specific consent](/graph-api/rsc/resource-specific-consent)
+- [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions)
