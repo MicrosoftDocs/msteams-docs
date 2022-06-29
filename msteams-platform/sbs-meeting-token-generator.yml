@@ -314,7 +314,7 @@ items:
 
     1. Select **Add a permission**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/addpermission.png" alt-text="bot home" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addpermission.png" alt-text="bot home" border="true":::
 
     1. Select **Microsoft Graph**.
 
