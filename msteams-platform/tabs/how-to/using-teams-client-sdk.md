@@ -6,7 +6,7 @@ description: In this module, Learn Microsoft Teams JavaScript client SDK, which 
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
-# Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK
+# Teams JavaScript client SDK
 
 The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, Office, and Outlook, where your app content is hosted in an [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The SDK is helpful for developing apps with the following Teams capabilities:
 
