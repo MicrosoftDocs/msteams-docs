@@ -1,14 +1,14 @@
 ---
 title: Format your bot messages
 author: surbhigupta
-description: In this module, learn how to add rich formatting to your bot messages, such as strikethrough, ordered and unordered list, hyperlink, image link, and more.
+description: In this module, learn how to add rich formatting and styles to your bot messages such as strikethrough, ordered and unordered list, hyperlink, image link, and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Format your bot messages
 
-Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards that are attachments that contain interactive elements, such as buttons, text, images, audio, video, and so on.
+Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards as attachments that contain interactive elements, such as buttons, text, images, audio, video, and so on.
 
 ## Format text content
 
@@ -72,7 +72,7 @@ The following table provides a list of styles, which are supported on desktop, i
 | Preformatted text         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Image link                | ❌ | ✔️ | ✔️ |
+| Image link                | ❌ | ❌ | ❌ |
 
 ### Cards
 
