@@ -18,7 +18,7 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 
 To fetch the transcript for a particular meeting:
 
-- [Configure required permissions for your app on Azure AD portal](#configure-permissions-to-access-transcript)
+- [Configure required permissions for your app on Azure AD portal](#configure-permissions-on-azure-ad-to-access-transcript)
 - [Obtain meeting ID and the user ID of the meeting organizer](#obtain-meeting-id-and-organizer-id)
 - [Use Graph APIs to fetch transcript](#use-graph-apis-to-fetch-transcript)
 
@@ -58,14 +58,14 @@ To obtain meeting ID and organizer ID for fetching the transcript, choose one of
 
 ### Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required permissions.
+You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required Azure AD permissions.
 
 Your app receives notification for the type of meeting events for which it's subscribed:
 
 - [User-level notification](#obtain-meeting-details-using-user-level-notification)
 - [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
 
-When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details, your app can fetch the meeting transcripts after the meeting has ended.
+When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts after the meeting has ended.
 
 #### Obtain meeting details using user-level notification
 
@@ -109,10 +109,10 @@ To obtain meeting ID and organizer ID from user-level notification:
     }
     ```
 
-    In this example, the `eventID` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
+    In this example, the `eventID` contained within `resource` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*
     </details>
 
-2. **Get meeting URL**: Use the event ID to retrieve the `joinUrl`. For more information, see [Get event](/graph/api/event-get.md).
+2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL. For more information, see [Get event](/graph/api/event-get.md).
 
     Use the following example to request the meeting URL:
 
@@ -120,7 +120,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     GET https://graph.microsoft.com/beta/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
     ```
 
-    The response payload contains the `joinUrl`.
+    The response payload contains `joinURL`.
 
     <details>
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
@@ -151,7 +151,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     The meeting URL is contained in `joinUrl`.
 
-3. **Get chat thread ID**: Use meeting URL obtained in `joinUrl` to get the chat thread ID. Specify this meeting URL as value for the `joinWebUrl` parameter while fetching the related meeting.
+3. **Get chat thread ID**: Use the meeting URL obtained in `joinUrl` to get the chat thread ID. Specify this meeting URL as value for the `joinWebUrl` parameter while fetching the related meeting.
 
     Use the following example to request the thread ID:
 
