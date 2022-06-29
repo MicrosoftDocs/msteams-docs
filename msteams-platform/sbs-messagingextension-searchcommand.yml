@@ -71,7 +71,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -124,7 +124,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/Teams-Messaging-Extensions-Search/config1.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -182,7 +182,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Teams-Messaging-Extensions-Search/ngrok.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.

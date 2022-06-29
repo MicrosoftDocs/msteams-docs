@@ -114,7 +114,7 @@ To create client secret:
 
 1. Next to **Microsoft App ID**, select **Manage**.
 
-    ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
 1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
 

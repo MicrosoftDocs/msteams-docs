@@ -92,7 +92,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-azure-home-bot.png" alt-text="home bot" border="true":::
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -142,7 +142,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-microsoft-app-id.png" alt-text="microsoft app id" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -204,7 +204,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-ngrok-page.png" alt-text="ngrok" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
