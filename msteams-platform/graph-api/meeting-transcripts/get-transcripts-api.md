@@ -466,9 +466,9 @@ VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
 Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 
 > [!NOTE]
-> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for meeting-specific RSC application permissions.
+> The bot can receive meeting start or end events automatically from all the meetings created in all the channels. Add `ChannelMeeting.ReadBasic.Group` to manifest for granting meeting-specific RSC application permissions.
 
-For more information, see [Meeting apps API references](/apps-in-teams-meetings/api-references.md).
+For more information about APIs for Teams meeting, see [Meeting apps API references](/apps-in-teams-meetings/api-references).
 
 To obtain meeting ID and organizer ID from a bot app:
 
