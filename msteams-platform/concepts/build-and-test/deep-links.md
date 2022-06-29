@@ -202,8 +202,6 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### Open a scheduling dialog
 
-You can open a scheduling dialog from your Teams app, as shown in the following code. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
-
 > [!NOTE]
 > In order to open the scheduling dialog in Teams, developers need to continue using the original deep-link URL based method, since Teams does not yet support the calendar capability.
 
