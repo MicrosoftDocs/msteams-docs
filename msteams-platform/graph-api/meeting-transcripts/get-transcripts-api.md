@@ -147,10 +147,9 @@ To obtain meeting ID and organizer ID from user-level notification:
         }
     ```
 
-        </details>
-    <br>
+    </details>
 
-    The meeting URL is now contained in `joinUrl`.
+    The meeting URL is contained in `joinUrl`.
 
 3. **Get chat thread ID**: Use meeting URL obtained in `joinUrl` to get the chat thread ID. Specify this meeting URL as value for the `joinWebUrl` parameter while fetching the related meeting.
 
