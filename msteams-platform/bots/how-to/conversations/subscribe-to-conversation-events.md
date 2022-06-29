@@ -576,7 +576,6 @@ A member removed event is sent to your bot in the following scenarios:
 
 The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
@@ -668,7 +667,6 @@ The `channelData` object in the following payload example is based on adding a m
     }
 }
 ```
-
 
 # [Python](#tab/python)
 
@@ -1453,6 +1451,8 @@ When you use these install and uninstall events, there are some instances where 
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
+## Handling errors in conversation events
 
 ## Code sample
 
