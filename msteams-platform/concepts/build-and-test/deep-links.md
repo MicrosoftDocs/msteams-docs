@@ -209,7 +209,7 @@ You can open a scheduling dialog from your Teams app, as shown in the following 
 
 For more information about working with the calendar, see, the [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
-## tab/Teams JS v1
+### tab/Teams JS v1
 
 ```javascript
 // Open a scheduling dialog from your tab
