@@ -285,7 +285,7 @@
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
-    - name: Create and send the task module
+    - name: Create and send task module
       href: messaging-extensions/how-to/action-commands/create-task-module.md
     - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md

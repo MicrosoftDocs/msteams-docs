@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 
-# Define action commands
+# Define message extension action commands
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -22,7 +22,7 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## Select action command invoke locations

@@ -4,7 +4,7 @@ description: In this module, learn how to register a new audio/video calling bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
-# Register calls and meetings bot 
+# Register calls and meetings bot for Microsoft Teams
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
