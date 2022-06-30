@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
-## Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png"
 
 | Date | Feature | Find it here |
 | --- | --- | --- |
