@@ -86,18 +86,8 @@ Following these guidelines increases the chances of your app to pass the Microso
 An app's name plays a critical role in how users discover it in the store. Use the following guidelines to name an app:
 
 * The name must include terms relevant to your users.
-* Names of core Teams features must not be included in your app name, such as:  
-  * **Chat**
-  * **Contacts**
-  * **Calendar**
-  * **Calls**
-  * **Files**
-  * **Activity**
-  * **Apps**
-  * **Help**
 * Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**.
 * Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, Xbox, and so on that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
-* If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
 * Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
@@ -369,7 +359,6 @@ The long description can provide an engaging narrative that highlights your app'
 * Ensure the app description matches with the functionality available inside Teams app. Any reference to workflows outside the Teams app must be limited and distinctly called out from the Teams app functionality.
 * Include a help or support link.
 * Refer to **Microsoft 365** instead of **Office 365**.
-* If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Later references can be shortened to **Teams**.
 * Use the following language when describing how the app works with Teams (or Microsoft 365):
   * **... works with Microsoft Teams.**
   * **... working with Microsoft Teams.**
@@ -387,7 +376,6 @@ The long description can provide an engaging narrative that highlights your app'
 * Exceed 500 words.
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
-* Use copyrighted brand names that you don't own.
 * Use the following language unless you're a certified Microsoft partner:
   * **... certified for ...**
   * **... powered by ...**
@@ -555,8 +543,6 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="validation-tabs-set-up-new-user":::
 
-* For the best first run experience, authenticate your users during the tab setup and not after. Authentication can happen outside the tab configuration window. [*Suggested Fix*]
-
 * The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
@@ -566,8 +552,6 @@ If your app includes a tab, ensure it adheres to these guidelines.
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-screen.png" alt-text="validation-tabs-set-up-configuration-screen":::
-
-* Tab configuration screen must not ask users to embed a URL. Asking users to configure a URL during tab setup is a broken UX, user leaves tab configuration screen, acquires URL, returns to the configuration screen and inputs the URL. A preexisting Teams feature already allows users to pin a website link in the channel. If your app asks user to embed a website URL during tab configuration and the app is limited to display the entire website content in the channel tab, your app doesn't offer significant value to the user. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url.png" alt-text="validation-tabs-set-up-configured-url":::
 
@@ -663,9 +647,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
-* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
-
-* Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, message extensions, calling, meeting, and so on.
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md).
 
 * Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
 
