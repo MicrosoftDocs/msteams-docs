@@ -23,7 +23,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Conceptual image of Teams layout." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Conceptual image of Teams layout.":::
    :::column-end:::
 
 :::row-end:::
@@ -41,7 +41,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Conceptual image of Teams avatars." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Conceptual image of Teams avatars.":::
 
    :::column-end:::
 :::row-end:::
@@ -62,7 +62,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Conceptual image of Teams icons." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Conceptual image of Teams icons.":::
 
    :::column-end:::
 :::row-end:::
@@ -81,7 +81,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Conceptual image of Teams typography." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Conceptual image of Teams typography.":::
 
    :::column-end:::
 :::row-end:::
@@ -99,7 +99,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Concept image of Teams colors." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Concept image of Teams colors.":::
    :::column-end:::
 
 :::row-end:::
@@ -118,7 +118,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptual of shape and elevation." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptual of shape and elevation.":::
 
    :::column-end:::
 :::row-end:::
@@ -136,7 +136,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Conceptual image of copy and content." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Conceptual image of copy and content.":::
 
    :::column-end:::
 :::row-end:::

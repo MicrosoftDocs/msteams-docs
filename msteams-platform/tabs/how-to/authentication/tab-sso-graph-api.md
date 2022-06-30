@@ -55,7 +55,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     A message pops up on the browser stating that the permissions were updated.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message.":::
 
     The added permissions are displayed in the **API permissions** page.
 
@@ -223,3 +223,4 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
 - [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Get access for MS Graph](/graph/auth-v2-user)
 - [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
+- [Microsoft Teams MSAL2 provider](/graph/toolkit/providers/teams-msal2)

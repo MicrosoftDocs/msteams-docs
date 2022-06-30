@@ -171,13 +171,13 @@ After entering the details of your app, complete the following steps to register
 
 1. Use **Preview** of Developer Portal to install your app in Teams.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button":::
 
 1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension.
 
 1. Select **Publish to store**  under **Publish** in the left-hand pane of Developer Portal:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Publish option in left pane" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Publish option in left pane":::
 
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
@@ -192,16 +192,16 @@ The sample app requires the environment variables to be set to the values that y
 
 1. Open the Solution Explorer.
 
-    :::image type="content" source="../assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app" border="false":::
+    :::image type="content" source="../assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app":::
 
 1. Open the `appsettings.json` file.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/csharp-appsetting-json.png" alt-text="Image showing appsettings.json file" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/csharp-appsetting-json.png" alt-text="Image showing appsettings.json file":::
 
 1. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file.
 1. Update the **MicrosoftAppPassword** with the bot password that you saved.
 
-    :::image type="content" source="../assets/images/get-started/get-started-net-azure-add-keys.png" alt-text="Image showing adding Azure keys" border="false":::
+    :::image type="content" source="../assets/images/get-started/get-started-net-azure-add-keys.png" alt-text="Image showing adding Azure keys":::
 
     After making these changes, rebuild the app. If you're using ngrok, you can run the app locally, and if you've hosted it in Azure, redeploy the app.
 

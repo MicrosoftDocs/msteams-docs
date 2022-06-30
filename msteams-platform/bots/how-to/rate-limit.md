@@ -1,11 +1,11 @@
 ---
-title: Optimize your bot with rate limiting in Teams
-description: Learn about handling rate limit for bots with Per bot per thread limit and per limit for all bots using Code examples
+title: Rate limiting for bots
+description: Learn about handling rate limit for bots with per bot per thread limit and per limit for all bots with code examples
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Rate limiting for bots
+# Optimize your bot with rate limiting in Teams
 
 Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages don't appear as spam to your users.
 

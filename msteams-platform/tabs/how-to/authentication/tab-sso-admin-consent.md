@@ -13,13 +13,13 @@ You can define app scope for an exposed API and determine if users can consent t
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option.":::
 
     The **Expose an API** page appears.
 
 1. Select **Set** to generate app ID URI.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI":::
 
     The section for setting app ID URI appears.
 
@@ -29,11 +29,11 @@ You can define app scope for an exposed API and determine if users can consent t
 
     A message pops up on the browser stating that the app ID URI was updated.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message":::
 
     The app ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated":::
 
 ## To configure API scope
 
@@ -58,11 +58,11 @@ You can define app scope for an exposed API and determine if users can consent t
 
     A message pops up on the browser stating that the scope was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message":::
 
     The app ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed":::
 
 ## To configure authorized client application
 
@@ -82,7 +82,7 @@ You can define app scope for an exposed API and determine if users can consent t
 
     A message pops up on the browser stating that the client app was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
 
     The client app IDs display on the page.
 
@@ -94,7 +94,7 @@ You can define app scope for an exposed API and determine if users can consent t
 
     A message pops up on the browser stating that the client app was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message for web app" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message for web app":::
 
     The client app IDs display on the page.
 

@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO access token app manifest 
 ---
-# Enable single sign-on in a tab app
+# Enable SSO for tab app
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
@@ -21,7 +21,7 @@ Here's what you'll learn in this section:
 
 App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this, and use SSO to authenticate and authorize the app users.
 
-&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="SSO user experience in a Teams tab app" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="SSO user experience in a Teams tab app":::
 
 - Teams authenticates and stores the identity of its app user.
 - Your tab app uses the stored identity of the app user who is already validated by Teams.
@@ -54,7 +54,7 @@ Achieve SSO in a tab app by obtaining access token for the Teams app user who's 
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab single sign-on SSO diagram" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
@@ -93,7 +93,7 @@ This section describes the tasks involved in implementing SSO for a tab app. The
 
 To enable SSO for a tab app:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications.
 2. **Update code**: Add the code to handle access token, calling `getAuthToken()` when an app user accesses your tab app, sending this token to your app's server code in the Authorization header, and validating the access token when it's received.

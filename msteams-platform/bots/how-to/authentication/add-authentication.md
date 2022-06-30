@@ -114,7 +114,7 @@ To create client secret:
 
 1. Next to **Microsoft App ID**, select **Manage**.
 
-    ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
 1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
 
@@ -136,7 +136,7 @@ To add the Microsoft Teams channel:
 
 1. Open your bot, which is listed in the **Recent resources** section.
 
-1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Channel Teams":::
 

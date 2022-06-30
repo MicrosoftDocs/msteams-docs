@@ -65,11 +65,11 @@ Perform the following steps to debug your app after you create a new app using t
 
 1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser option" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser option":::
 
 1. Select **Start Debugging (F5)** or  **Run** to run your Teams app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debugging" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debugging":::
 
 3. Select **Sign in** to Microsoft 365 account.
 
@@ -95,11 +95,11 @@ Toolkit launches a new Edge or Chrome browser instance based on your selection a
 
 1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists":::
 
 1. Select **Start Debugging (F5)** or  **Run** to run your Teams app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debug your app" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debug your app":::
 
 3. Select **Sign in** to Microsoft 365 account.
 

@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Update app manifest for SSO and preview app
+# Update manifest for SSO and preview app
 
 Before you update Teams app manifest, ensure that you've configure code to enable SSO in your tab app.
 
@@ -18,7 +18,7 @@ You've registered your tab app in Azure AD, and obtained an app ID. You've also 
 
 Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration":::
 
 `webApplicationInfo` has two elements, `id` and `resource`.
 
@@ -132,7 +132,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 You've configured the tab app to enable SSO in Azure AD, in app code, and in Teams manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
 
 To preview your tab app in Teams:
 
@@ -147,8 +147,6 @@ To preview your tab app in Teams:
     The options to upload an app appear.
 
 1. Select **Upload a custom app** to sideload the tab app to Teams.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Sideload tab app into Teams":::
 
 1. Select your app package zip file, and then select **Add**.
 
@@ -166,7 +164,7 @@ To preview your tab app in Teams:
 
     Teams opens the tab app and you can use it.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Example of Teams tab app with SSO enabled" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Example of Teams tab app with SSO enabled":::
 
     Congratulations! You've enabled SSO for your tab app.
 
