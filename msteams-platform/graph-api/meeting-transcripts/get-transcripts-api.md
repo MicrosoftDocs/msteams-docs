@@ -633,7 +633,7 @@ This API is used to get a list of all `callTranscript` objects based on the user
 **HTTP request**
 
 ```http
-GET /users('{userId}')/onlineMeetings('{meetingId}')/transcripts
+GET /me/onlineMeetings('{meetingId}')/transcripts
 GET /users('{userId}')/onlineMeetings('{meetingId}')/transcripts
 ```
 
