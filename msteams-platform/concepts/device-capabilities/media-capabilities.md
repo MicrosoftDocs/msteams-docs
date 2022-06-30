@@ -70,7 +70,7 @@ The following table lists set of APIs to enable your device's media capabilities
 
 The following image depicts the web app experience of `selectMedia` API for the image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile.":::
 
 > [!NOTE]
 >
@@ -78,13 +78,13 @@ The following image depicts the web app experience of `selectMedia` API for the 
 
 The following image depicts the web app experience of `selectMedia` API for the microphone capability:
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile." border="true":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile.":::
 
 # [Desktop](#tab/desktop)
 
 The following image depicts the web app experience of `selectMedia` API for the image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop.":::
 
 ---
 
