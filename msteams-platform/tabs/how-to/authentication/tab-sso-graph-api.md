@@ -55,7 +55,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     A message pops up on the browser stating that the permissions were updated.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message.":::
 
     The added permissions are displayed in the **API permissions** page.
 
