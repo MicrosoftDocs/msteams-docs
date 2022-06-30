@@ -509,7 +509,9 @@ Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 > [!NOTE]
 > The bot can receive meeting start or end events automatically from all the scheduled online meetings. Add / manifest configuration / to manifest for granting meeting-specific RSC application permissions.
 
-For more information about APIs for Teams meeting, see [Meeting apps API references](/apps-in-teams-meetings/api-references).
+<!--OnlineMeeting.ReadBasic.Chat	Read basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this chat. OR OnlineMeetingTranscript.Read.Chat	Read the transcripts of the meeting associated with this chat. Source: /graph-api/rsc/resource-specific-consent#resource-specific-permissions-for-a-chat-->
+
+For more information about APIs for Teams meeting, see [Meeting apps API references](../../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 To obtain meeting ID and organizer ID from a bot app:
 
@@ -670,7 +672,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 <br>
 
 ```http
-GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts
+GET https://graph.microsoft.com/v1.0/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts
 ```
 
 <br>
