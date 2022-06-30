@@ -79,12 +79,41 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ## Best practices for proactive messaging
 
 Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+
+> [!NOTE]
+> You can send a proactive message to the bot to know if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, the bot returns a 403 response code.
+
+The following is an example of a 403 response code:
+
+```
+HTTP/1.1 403 Forbidden
+
+Cache-Control: no-store, must-revalidate, no-cache
+
+ Pragma: no-cache
+
+ Content-Length: 196
+
+ Content-Type: application/json; charset=utf-8
+
+ Server: Microsoft-HTTPAPI/2.0
+
+ Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+ MS-CV: NXZpLk030UGsuHjPdwyhLw.5.0
+
+ ContextId: tcid=0,server=msgapi-canary-eus2-0,cv=NXZpLk030UGsuHjPdwyhLw.5.0
+
+ Date: Tue, 29 Mar 2022 17:34:33 GMT
+
+{"errorCode":209,"message":"{\r\n  \"subCode\": \"MessageWritesBlocked\",\r\n  \"details\": \"Thread is blocked from message writes.\",\r\n  \"errorCode\": null,\r\n  \"errorSubCode\": null\r\n}"}
+```
 
 ### Welcome messages
 
