@@ -83,7 +83,7 @@ items:
 
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/newresource.png" alt-text="selection of new resource location" border="true":::
+        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="selection of new resource location" border="true":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -399,7 +399,7 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/solutionexplorer.png" alt-text="view" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/Teams-task-module/solutionexplorer.png" alt-text="view":::
 
        1. Right-click on **TeamsFileUpload**.
 
