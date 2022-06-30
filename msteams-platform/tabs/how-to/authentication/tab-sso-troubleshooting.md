@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions
 ---
-# Troubleshooting SSO authentication in Teams
+# Troubleshoot SSO authentication in Teams
 
 Here's a list of issues and questions about SSO, and how you can fix them.
 <br>
@@ -95,7 +95,7 @@ A generic error may show up when one or more of app configurations made in Azure
 
 The following image shows an example of the app details configured in Azure AD.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
 
 Check that the following values match between Azure AD, client-side code, and Teams app manifest:
 

@@ -161,37 +161,37 @@ items:
     
        In the app selection page, the app is displayed as **App In Meeting**.
   
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view":::
     
     1. Select the **App In Meeting**.
     
     1. Select **Save**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png" alt-text="welcome to app" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png" alt-text="welcome to app":::
    
     1. Start the meeting. 
     
        The icon is visible in the meeting control bar.
        
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png" alt-text="meeting app" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png" alt-text="meeting app":::
 
     1. To update the sprint status task, add:
 
        * **Assigned To**
        * **Description**
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png" alt-text="add status in meeting" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png" alt-text="add status in meeting":::
        
        App in side panel view:
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png" alt-text="panel view" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png" alt-text="panel view":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output":::
 
 - content: |
     You've completed the tutorial to get started with share meeting stage in Teams.
