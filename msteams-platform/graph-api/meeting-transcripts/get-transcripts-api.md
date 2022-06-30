@@ -560,7 +560,7 @@ To obtain meeting ID and organizer ID from a bot app:
     Use the following example to request the online meeting ID using the URL:
 
     ```http
-    GET https://graph.microsoft.com/v1.0/me/onlineMeetings?$filter=joinUrl%20eq%20'https%3A%2F%2Fteams.microsoft.com%2Fl%2Fmeetup-join%2F19%253ameeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2%2540thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522909c6581-5130-43e9-88f3-fcb3582cde37%2522%252c%2522Oid%2522%253a%2522dc17674c-81d9-4adb-bfb2-8f6a442e4622%2522%257d'
+    GET https://graph.microsoft.com/v1.0/users('14b779ae-cb64-47e7-a512-52fd50a4154d'/onlineMeetings?$filter=joinUrl%20eq%20'https%3A%2F%2Fteams.microsoft.com%2Fl%2Fmeetup-join%2F19%253ameeting_MGQ4MDQyNTEtNTQ2NS00YjQxLTlkM2EtZWVkODYxODYzMmY2%2540thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522909c6581-5130-43e9-88f3-fcb3582cde37%2522%252c%2522Oid%2522%253a%2522dc17674c-81d9-4adb-bfb2-8f6a442e4622%2522%257d'
     ```
 
     The response payload contains:
@@ -633,7 +633,7 @@ This API is used to get a list of all `callTranscript` objects based on the user
 **HTTP request**
 
 ```http
-GET /me/onlineMeetings('{meetingId}')/transcripts
+GET /users('{userId}')/onlineMeetings('{meetingId}')/transcripts
 GET /users('{userId}')/onlineMeetings('{meetingId}')/transcripts
 ```
 
