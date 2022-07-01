@@ -469,7 +469,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         The response payload contains the transaction ID for the meeting ID and organizer ID.
 
         <details>
-        <summary><b>Example</b>: Response payload for getting transaction ID</b></summary>
+        <summary><b>Example</b>: Response payload for getting transaction ID</summary>
 
         ```json
         {
