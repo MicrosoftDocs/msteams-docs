@@ -18,7 +18,7 @@ In the Dice Roller sample app, users are shown a die with a button to roll it. W
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 
-:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
+:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice roller sample.":::
 
 ## Set up the application
 
@@ -334,11 +334,11 @@ After you've started running your app locally with `npm run start`, you can then
 
 1. In the side panel, select the share to stage icon. Teams starts a live sync with the users on the meeting stage in the meeting.
 
-   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-to-stage.png" alt-text="share to stage icon":::
+   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-to-stage.png" alt-text="share to stage icon.":::
 
    You should now see dice-roller on the meeting stage.
 
-   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-meeting-stage.png" alt-text="meeting stage image":::
+   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-meeting-stage.png" alt-text="Dice roller on the meeting stage.":::
 
 Users invited to the meeting can see your app on stage when they join the meeting.
 
