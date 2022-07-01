@@ -1,25 +1,24 @@
 ---
 title: Use Microsoft Graph to fetch transcripts for a Teams meeting
-description: Describes the process, scenarios, and APIs to fetch transcripts in a post-meeting scenario 
+description: Describes the process, scenarios, and APIs to fetch transcripts in a post-meeting scenario.
 ms.localizationpriority: medium
 ms.topic: concept
-keywords: teams Graph transcripts meeting organizer Azure rsc
 ---
 # Get meeting transcripts using Graph APIs
 
-You can now configure your app to fetch Teams meeting transcripts in post-meeting scenario. Your app can use Graph REST APIs to access and fetch transcripts generated for a Teams meeting that has been scheduled beforehand.
+You can now configure your app to fetch Microsoft Teams meeting transcripts in a post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts generated for a Teams meeting that has been scheduled beforehand.
 
 Here are some use cases for fetching meeting transcripts using Graph API:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
-| You need to obtain transcripts for capturing meaningful insights from multiple meetings across the Sales vertical. It's time-consuming and inefficient to keep track of all meetings, and to retrieve meeting notes manually. After the meeting is over, you'd need to examine conversations in all those meetings to obtain useful information. | If you configure your app to fetch meeting transcripts automatically, it gets the transcripts from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting ends. This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
+| You need to obtain transcripts for capturing meaningful insights from multiple meetings across the Sales vertical. It's time-consuming and inefficient to keep track of all meetings, and to retrieve meeting notes manually. After the meeting is over, you'd need to examine conversations in all those meetings to obtain useful information. | Using your app to fetch meeting transcripts automatically retrieves the transcripts from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting ends. This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
 | As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. Having to continually take notes to provide post-meeting summary can impede the flow of thoughts, and you might not capture all valuable suggestions. After the session, you'd need to analyze the discussion to gather data points for planning improvements. | Using Graph APIs to fetch transcripts post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
 
 To fetch the transcript for a particular meeting:
 
-- [Configure required permissions for your app on Azure AD portal](#configure-permissions-on-azure-ad-to-access-transcript)
-- [Obtain meeting ID and the user ID of the meeting organizer](#obtain-meeting-id-and-organizer-id)
+- [Configure permissions on Azure AD to access transcript](#configure-permissions-on-azure-ad-to-access-transcript)
+- [Obtain meeting ID and organizer ID](#obtain-meeting-id-and-organizer-id)
 - [Use Graph APIs to fetch transcript](#use-graph-apis-to-fetch-transcript)
 
 ## Configure permissions on Azure AD to access transcript
@@ -30,19 +29,19 @@ Your app must have the required permissions for fetching transcripts. It can acc
 
 You can configure your app to access meeting transcripts across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When organization-wide application permissions are authorized by the tenant administrator, your app can read and access transcripts for all meetings in the tenant.
 
-To learn about the organization-wide application permissions that can be granted to your app, see [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions).
+For more information about the organization-wide application permissions that can be granted to your app, see [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions).
 
 ### Use meeting-specific RSC application permissions
 
-If you want your app to fetch transcripts only for the Team meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
+If you want your app to fetch transcripts only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
 
 For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
-To learn about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat).
+For more information about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat).
 
 In both cases, your app can fetch the transcript when it's generated after a Teams meeting is over. The content of the transcript is available as `.vtt` or `.docx` file.
 
-Next, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
+After you've selected the required permission, organization-wide application permissions or meeting-specific RSC application permissions, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
@@ -197,7 +196,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 #### Obtain meeting details using tenant-level notification
 
-Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. Post meeting, your app can access and retrieve the meeting transcript.
+Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
 
 For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
 
@@ -508,8 +507,6 @@ Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 
 > [!NOTE]
 > The bot can receive meeting start or end events automatically from all the scheduled online meetings.
-
-<!--OnlineMeeting.ReadBasic.Chat	Read basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this chat. OR OnlineMeetingTranscript.Read.Chat	Read the transcripts of the meeting associated with this chat. Source: /graph-api/rsc/resource-specific-consent#resource-specific-permissions-for-a-chat-->
 
 For more information about APIs for Teams meeting, see [Meeting apps API references](../../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
