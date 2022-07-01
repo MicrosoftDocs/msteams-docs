@@ -35,13 +35,13 @@ For more information about the organization-wide application permissions that ca
 
 If you want your app to fetch transcripts only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
 
-For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](#use-bot-framework-to-get-meeting-id-and-organizer-id).
-
 For more information about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat).
+
+For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
 In both cases, your app can fetch the transcript when it's generated after a Teams meeting is over. The content of the transcript is available as `.vtt` or `.docx` file.
 
-After you've selected the required permission, organization-wide application permissions or meeting-specific RSC application permissions, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
+After you've configured either organization-wide application permissions or meeting-specific RSC application permissions, you can configure your app to receive change notifications for all relevant meeting events. Your app uses notifications to get meeting ID and organizer ID that help in accessing transcript content.
 
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
