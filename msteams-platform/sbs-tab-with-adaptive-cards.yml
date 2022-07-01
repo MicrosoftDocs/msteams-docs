@@ -2,7 +2,7 @@
 title: Build Tab with Adaptive Cards
 metadata:
   title: Build Tab with Adaptive Cards
-  description: In this tutorial, you'll learn to set up Adaptive Cards in a tab for Teams.
+  description: With this learning module, learn how to set up Adaptive Cards in a tab on desktop and mobile for Microsoft Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/23/2021
@@ -31,9 +31,9 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure that you install the following tools and set up your development environment
+    Ensure that you install the following tools and set up your development environment:
 
-    * Microsoft Teams with an account (not a guest account).
+    * Microsoft Teams with an account (not a guest account)
     * [Visual Studio Code](https://code.visualstudio.com/)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
@@ -62,7 +62,7 @@ items:
     1. Search for **Azure bot** in the search box.
     1. Select **Azure Bot**.
 
-        ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
+       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
@@ -107,7 +107,7 @@ items:
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
 
@@ -146,7 +146,7 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
 
-        ![ngrok HTTPS URL](~/assets/images/adaptive-cards/ngrok-url.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
     1. In **Messaging endpoint**, add the HTTPS URL generated from ngrok and at the end of the URL add **/api/messages**.
 
@@ -161,19 +161,19 @@ items:
   content: |
     To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. To do so, perform the following:
     
-    1. Add Redirect URI to the Azure bot resource
-    1. Expose API endpoint
-    1. Authorize client applications
-    1. Add any necessary API permissions for downstream calls
-    1. Enable implicit grant
-    1. Update manifest
-    1. Set up Bot Service connection
+    1. Add Redirect URI to the Azure bot resource.
+    1. Expose API endpoint.
+    1. Authorize client applications.
+    1. Add any necessary API permissions for downstream calls.
+    1. Enable implicit grant.
+    1. Update manifest.
+    1. Set up Bot Service connection.
 
     **To add Redirect URI to the Azure bot resource**
 
     1. Select **Manage** next to **Microsoft App ID**.
 
-        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.

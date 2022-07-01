@@ -1,14 +1,13 @@
 ---
 title: Silent authentication
-description: Describes silent authentication, Single-sign-on, Azure AD for tabs
+description: In this module, learn how to do silent authentication, Single-sign-on, and Azure AD for tabs and how it works
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication SSO silent Azure AD tab
 ---
-# Silent authentication
+# Use silent authentication in Azure AD
 
 > [!IMPORTANT]
-> Microsoft support and development for Active Directory Authentication Library (ADAL) including the security fixes, ends on **June 30, 2022**. Update your applications to use Microsoft Authentication Library (MSAL) to continue receiving support. See [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration).
+> Microsoft support and development for Active Directory Authentication Library (ADAL) including the security fixes, ends on **June 30, 2022**. To continue receiving support, update your applications to use Microsoft Authentication Library (MSAL).See [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration).
 
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using Teams JavaScript SDK version 1.4.1 or later.

@@ -1,10 +1,9 @@
 ---
 title: Messages in bot conversations
-description: Describes ways to have a conversation with a Microsoft Teams bot. Learn about Teams channel data, notification to your message, picture messages, adaptive cards using Code samples.
+description: Learn the ways to have a conversation with a Teams bot and Teams channel data, notification to your message, picture messages, adaptive cards using Code samples
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
 ---
 
 # Messages in bot conversations
@@ -237,10 +236,10 @@ Messages received from or sent to your bot can include different types of messag
 
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
-| Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
+| Pictures  | ✔️                | ✔️                | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
+| Cards     | ❌                | ✔️                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ## Notifications to your message
 
@@ -377,13 +376,30 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
 
-You can select **Close** or switch chat to dismiss the message.
+     You can select **Close** or switch chat to dismiss the message.
 
-**Response on mobile**:
+     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
 
-The error message appears at the bottom of the Adaptive Card.
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 

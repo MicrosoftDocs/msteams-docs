@@ -1,17 +1,21 @@
 ---
 title: Single sign-on support for bots 
-description: Describes how to get a user token. Currently, a bot developer can use a sign-in card or the Azure bot service with the OAuth card support.
-keywords: token, user token, SSO support for bots, permission, Microsoft Graph, Azure AD
+description: Learn how to get a user token and a bot developer can use a sign-in card or the Azure bot service with the OAuth card support.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 
-# Single sign-on (SSO) support for bots
+# Use SSO authentication for bots
 
 Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
 
 >[!NOTE]
 > OAuth 2.0 is an open standard for authentication and authorization used by Azure AD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+
+See the following video to learn about single sign-on (SSO) support for bots:
+<br>
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+<br>
 
 ## Bot SSO at runtime
 
@@ -354,7 +358,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
 
 ### Update the auth sample
 
-Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
+Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), and then complete the following steps to update it:
 
 1. Update the TeamsBot to handle the deduping of the incoming request by including the following code:
 
@@ -375,10 +379,10 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 
 ## Code sample
 
-|**Sample name** | **Description** |**.NET** |
-|----------------|-----------------|--------------|
-|Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**Sample name** | **Description** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|Bot framework SDK | This sample code demonstrates how to get started with authentication in a bot for Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-bots-with-sso.yml), which helps you to create a bot with SSO authentication enabled.
+Follow the [step-by-step guide](../../../sbs-bots-with-sso.yml), to build a bot with SSO authentication.

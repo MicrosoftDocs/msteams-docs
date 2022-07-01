@@ -1,7 +1,7 @@
 ---
 title: Add single sign-on to your Teams apps
 author: zyxiaoyuer
-description:  Describes Add single sign on of Teams Toolkit
+description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.date: 05/20/2022
 
 Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application.
 
-For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card which the user can interact with to invoke the Azure AD consent flow.
+For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
 ## Enable SSO support
 
@@ -25,7 +25,7 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities:
 
 ### Add SSO using Visual Studio Code
 
-The following steps helps you to add SSO using Teams Toolkit in Visual Studio Code
+The following steps help you to add SSO using Teams Toolkit in Visual Studio Code
 
 1. Open **Microsoft Visual Studio Code**.
 2. Select Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
@@ -41,7 +41,7 @@ The following steps helps you to add SSO using Teams Toolkit in Visual Studio Co
 
 ### Add SSO using TeamsFx CLI
 
-You can run `teamsfx add sso`  command in your **project root directory**
+You can run `teamsfx add sso` command in your **project root directory**
 
 > [!Note]
 > The feature enables SSO for all existing applicable capabilities. Follow the same steps to enable SSO if you add capability later to the project.
@@ -62,7 +62,7 @@ The following table lists the changes Teams Toolkit makes to your project:
 
 ## Update your application to use SSO
 
-The following steps helps you to enable SSO in your application.
+The following steps help you to enable SSO in your application.
 
 > [!NOTE]
 > These changes are based on the templates we scaffold.
@@ -201,7 +201,7 @@ The following steps helps you to enable SSO in your application.
 > [!NOTE]
 > Currently, these instructions applies to `command bot`. If you start with a `bot`, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso).
 
-The following steps helps you to add a new command, after you add SSO in your project:
+The following steps help you to add a new command, after you add SSO in your project:
 
 1. Create a new file (`todo.ts` or `todo.js`) under `bot/src/` and add your own business logic to call Graph API:
 
@@ -323,7 +323,7 @@ To view your Azure AD application in Azure Portal, see [View Azure AD applicatio
 
 ## SSO authentication concepts
 
-The following concepts helps you for SSO authentication:
+The following concepts help you for SSO authentication:
 
 ### Working of SSO in Teams
 
@@ -341,7 +341,7 @@ TeamsFx helps to reduce the developer tasks by using SSO and accessing cloud res
 With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
 
 1. User identity in browser environment: `TeamsUserCredential` represents Teams current user's identity.
-2. User identity in Node.js environment: `OnBehalfOfUserCredentail` uses On-Behalf-Of flow and SSO token.
+2. User identity in Node.js environment: `OnBehalfOfUserCredential` uses On-Behalf-Of flow and SSO token.
 3. Application Identity in Node.js environment: `AppCredential` represents the application identity.
 
 For more information about TeamsFx SDK, see:

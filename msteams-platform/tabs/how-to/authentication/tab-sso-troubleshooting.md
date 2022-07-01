@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions
 ---
-# Troubleshooting SSO authentication in Teams
+# Troubleshoot SSO authentication in Teams
 
 Here's a list of issues and questions about SSO, and how you can fix them.
 <br>
@@ -41,7 +41,7 @@ When Azure AD receives a request for accessing a Microsoft Graph resource, it ch
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 
-- If the tab app needs Microsoft Graph scopes for which only an administrator can give consent, your code should throw an error.
+- If the tab app needs Microsoft Graph scopes for which only an administrator can give consent, your code should generate an error.
 - If the only scopes that are needed can be consented to by the user, then your code should fall back to an alternate system of user authentication.
 
 </details>
@@ -83,7 +83,8 @@ For more information, see [Provide optional claims to your app](/azure/active-di
 <br>
 To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 
-For more information on application ID URI, see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+For more information on application ID URI, see [To expose an API](tab-sso-register-aad.md#to-expose-an-api).
+
 </details>
 <br>
 
@@ -94,7 +95,7 @@ A generic error may show up when one or more of app configurations made in Azure
 
 The following image shows an example of the app details configured in Azure AD.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
 
 Check that the following values match between Azure AD, client-side code, and Teams app manifest:
 

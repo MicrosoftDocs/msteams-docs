@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: With this learning path, get started for Microsoft Teams developer documentation which introduces you to common tools, fundamental concepts, and advanced features.
+description: In this module, learn how to get started with Microsoft Teams developer documentation that introduces you to common tools, fundamental concepts, and advanced features.
 ms.localizationpriority: high
 ms.topic: reference
 ---
@@ -44,7 +44,7 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 > [!div class="nextstepaction"]
 > [Build a Teams tab app with JavaScript using React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Build a Teams bot app with JavaScript using React](../sbs-gs-bot.yml)
+> [Build a Teams bot app with JavaScript](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams message extension app with JavaScript using React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
