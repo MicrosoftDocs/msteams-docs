@@ -71,7 +71,7 @@ Choose to subscribe your app to user-level notifications for getting transcripts
 
 For subscribing your app to calendar events, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
 
-Use the following example to subscribe to user-level notifications.
+Use the following example to subscribe to user-level notifications:
 
 ```http
     
@@ -124,25 +124,25 @@ To obtain meeting ID and organizer ID from user-level notification:
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
 
     ```json
-        {
-            "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
-            "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
-            "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
-            "start": {
-                "dateTime": "2022-05-06T15:00:00.0000000",
-                "timeZone": "UTC"
-            },
-            "end": {
-                "dateTime": "2022-05-06T15:30:00.0000000",
-                "timeZone": "UTC"
-            },
+    {
+        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
+        "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
+        "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
+        "start": {
+            "dateTime": "2022-05-06T15:00:00.0000000",
+            "timeZone": "UTC"
+        },
+        "end": {
+            "dateTime": "2022-05-06T15:30:00.0000000",
+            "timeZone": "UTC"
+        },
             
-            "onlineMeeting": {
-                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjExYzJiMTItZDY1MS00ZGZkLWE5YzQtZTBmNWI1MDg2M2Uw%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%221273a016-201d-4f95-8083-1b7f99b3edeb%22%7d",
-                "conferenceId": "438824583",
-                "tollNumber": "+1 213-279-1007"
-            }    
-        }
+        "onlineMeeting": {
+            "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjExYzJiMTItZDY1MS00ZGZkLWE5YzQtZTBmNWI1MDg2M2Uw%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%221273a016-201d-4f95-8083-1b7f99b3edeb%22%7d",
+            "conferenceId": "438824583",
+            "tollNumber": "+1 213-279-1007"
+        }    
+    }
     ```
 
     </details>
