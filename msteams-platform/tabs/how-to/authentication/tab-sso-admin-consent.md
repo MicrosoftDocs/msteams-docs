@@ -25,7 +25,7 @@ You can define app scope for an exposed API and determine if users can consent t
 
 1. Enter the app ID URI, and then select **Save**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI":::
 
     A message pops up on the browser stating that the app ID URI was updated.
 
@@ -39,13 +39,13 @@ You can define app scope for an exposed API and determine if users can consent t
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Select scope" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Select scope":::
 
     The **Add a scope** page appears.
 
 1. Enter the app details for your app scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details":::
 
     1. Enter the scope name. This is a mandatory field.
     1. Select **Admins and users** to configure the users who can give consent to use user's login credentials. The default option is **Admins only**.
@@ -68,13 +68,13 @@ You can define app scope for an exposed API and determine if users can consent t
 
 1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application":::
 
     The **Add a client application** page appears.
 
 1. Enter the details for adding a client application. For this section, you'll add two client applications.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application":::
 
     1. Enter **1fec8e78-bce4-4aaf-ab1b-5451cc387264** as client ID for Teams mobile or desktop application.
     1. Select the app ID you created for your app for the **Authorized scopes**.
@@ -98,4 +98,4 @@ You can define app scope for an exposed API and determine if users can consent t
 
     The client app IDs display on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::

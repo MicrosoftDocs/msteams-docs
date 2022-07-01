@@ -140,7 +140,7 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -249,7 +249,7 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-folder-structure-bot-new.png" alt-text="hw new tab" border="true":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-folder-structure-bot-new.png" alt-text="hw new tab":::
 
     | Folder name | Contents |
     | --- | --- |
