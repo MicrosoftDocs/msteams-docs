@@ -27,7 +27,7 @@ Conversational bots are incredibly flexible. Bots can handle a few basic command
 
 Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot":::
 
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 

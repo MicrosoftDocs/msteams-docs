@@ -73,21 +73,21 @@ Perform the following steps to debug your app after you create a new app using t
 
 3. Select **Sign in** to Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign in" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign in":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
 5. Select **Yes** if the following dialog box appears:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority":::
 
 Toolkit launches a new Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
 
@@ -103,21 +103,21 @@ Toolkit launches a new Edge or Chrome browser instance based on your selection a
 
 3. Select **Sign in** to Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign into M365 account" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign into M365 account":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
 5. Enter your **User Name** and **Password**, then select **Update Settings** in the following dialog box:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in":::
 
 Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
@@ -174,7 +174,7 @@ The following table lists the debug configuration names and types for project wi
 
 The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug":::
 
    Your app is added to Teams!
 
