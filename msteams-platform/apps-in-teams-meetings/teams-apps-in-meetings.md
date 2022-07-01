@@ -24,7 +24,7 @@ Teams supports access to apps during meeting for the following meeting types:
 
 Users can add apps to the meeting using the **+** option from their Teams meeting window.
 
-:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Add an app in meeting" border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Add an app in meeting.":::
 
 Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and explore apps designed specifically for meetings.
 
