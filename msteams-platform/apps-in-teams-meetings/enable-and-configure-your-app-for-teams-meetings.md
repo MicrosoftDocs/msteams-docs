@@ -149,7 +149,7 @@ Shared meeting stage allows meeting participants to interact with and collaborat
 
 Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Image shows how to share the full app to the collaborative meeting stage.":::
 
 To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
