@@ -61,11 +61,11 @@ items:
    1. In the search box, enter **Teams Toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-    :::image type="content" source="~/assets/images/sbs-notification-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation." border="true":::
+    :::image type="content" source="~/assets/images/sbs-notification-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
     The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar." border="true":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -128,7 +128,7 @@ items:
    1. Select **Set up E5 subscription** from the welcome screen.
    1. Set up administrator account. After you finish, the following screen displays.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
 
    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
@@ -143,41 +143,41 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app** option to create an app using Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
 
     1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. 
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
 
     1. Select **HTTP Trigger Restify Server** as the trigger. 
     1. Select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="true":::  
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::    
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::    
 
     1. Select the location for project workspace.
     1. Select the **Select Folder**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
     
     1. Enter a suitable name for your app, such as mynotificationbot as the application name. 
     1. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
        > [!NOTE]
        > Ensure that you use only alphanumeric characters in the application name.
 
         The notification bot app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
@@ -205,7 +205,7 @@ items:
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure.png" alt-text="structure tab" border="true":::
+    :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure.png" alt-text="structure tab":::
 
     If you choose to use UI framework, following sample template code provides a scaffolding with React components.
 
@@ -235,11 +235,11 @@ items:
     
     1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> index.js**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path" border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
 
        You'll see the following page:
 
-         :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" border="true":::
+         :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program":::
 
     1. Use the following code after `for (const target of await bot.notification.installations()) { ` in Visual Studio Code.
 
@@ -254,17 +254,17 @@ items:
          /* 
          ```  
 
-          :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" border="true":::
+          :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add":::
 
         **To customize storage:**
 
         1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> internal> initialize.js**.
 
-            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize" border="true":::
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
         
            You'll see the following page:
 
-            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" border="true":::
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code":::
 
         1. Update the following code in **initialize.js** file to customize the storage.
 
@@ -297,24 +297,24 @@ items:
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging":::
 
         You'll get the following output in Teams.
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation":::
 
     1. Select **Add to a team** in the dropdown list.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation1.png" alt-text="My Notification Output1" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation1.png" alt-text="My Notification Output1":::
 
     1. In **Search box**, add any **channel**.
     1. Select **Set up a bot**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot":::
 
        The following screen appears:
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification":::
 
     1. Open **Windows PowerShell**.
 
@@ -324,11 +324,11 @@ items:
 
        You'll get the notification in the Teams channel:
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-output.png" alt-text="Channel Output" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-output.png" alt-text="Channel Output":::
 
        You'll get the notification in the personal chat:         
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/member-output.png" alt-text="member-output":::
     
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -371,58 +371,58 @@ items:
 
     1. Select **Provision in the Cloud** under **DEPLOYMENT**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands" border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
 
     1. Select an existing or create new resource group.
     
-        :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning":::
 
        > [!NOTE]
        > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog.":::
 
        The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
     1. Select **Deploy to the Cloud** under **DEPLOYMENT** after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
 
     1. Select **Deploy**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
 
        Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
         
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation.":::
 
     1. Select **Local Debug** under **ENVIRONMENT** from Visual Studio Code.
 
-         :::image type="content" source="~/assets/images/sbs-notification-bot/local-debug.png" alt-text="Local Debug." border="true":::
+         :::image type="content" source="~/assets/images/sbs-notification-bot/local-debug.png" alt-text="Local Debug.":::
 
     1. Select **Debug Edge** from the dropdown list.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/debug-cloud.png" alt-text="Local Debug." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/debug-cloud.png" alt-text="Local Debug.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output.png" alt-text="App cloud output.":::
     
     1. Open **Windows PowerShell**.
 
     1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/windows-powershell1.png" alt-text="Windows Powershell" border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/windows-powershell1.png" alt-text="Windows Powershell":::
 
         You'll get the notification in Teams:
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output" border="true":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output":::
 
     # [Command Line](#tab/cli)
 
