@@ -78,7 +78,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Add images** to add the image into the environment:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Add images into environment.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Add images into the environment.":::
 
     >[!NOTE]
     >You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
