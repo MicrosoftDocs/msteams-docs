@@ -15,7 +15,7 @@ The Live Share SDK can be added to your meeting extension's `sidePanel` and `mee
 > [!Note]
 > Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-dashboard.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-dashboard.png" alt-text="Teams live share features.":::
 
 ## Install the JavaScript SDK
 
