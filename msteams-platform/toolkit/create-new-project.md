@@ -86,6 +86,7 @@ Directory structure for scenario based Teams app
 <summary><b>Notification bot app</b></summary>
 
 The new project folder contains following content:
+
 | Folder name | Contents |
 | --- | --- |
 | `.fx` | Project level settings, configuration, and environment information |
@@ -94,6 +95,7 @@ The new project folder contains following content:
 | `templates` | Templates for Teams app manifest and corresponding Azure resources |
 
 The core notification implementation in **bot** folder and it contains:
+
 | File name | Contents |
 | --- | --- |
 | `src/adaptiveCards/` | Templates for Adaptive card  |
