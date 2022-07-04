@@ -37,10 +37,10 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
 * Select **Get Started** to explore the Teams Toolkit
 * Select **Create a new Teams App** to create one Teams project
 * Select **Open Folder** to open the existing Teams app
-* Select **New File** under Start section is used to create new file
+* Select **New File** under **Start** section to create new file
 * Select **Open File** to open the existing file
 * Select **Open Folder** to open the existing folder
-* Recent section helps you to view the recent files
+* **Recent** section helps you to view the recent files
 
 Watch the following gif for creating a new Teams app
 
@@ -79,8 +79,8 @@ Let's take a tour of the topics covered in this document.
 
 * Select **File Explorer** to view the directory structure of your app.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/file-explorer.png" alt-text="File Explorer view":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/file-explorer.png" alt-text="File Explorer view":::
 
 * Select **Run and Debug** to start the local or remote debug process.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/run-and-debug.png" alt-text="Run and Debug view":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/run-and-debug.png" alt-text="Run and Debug view":::
