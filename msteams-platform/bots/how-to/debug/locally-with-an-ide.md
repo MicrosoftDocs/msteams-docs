@@ -59,11 +59,11 @@ Initiate a conversation with your bot by using its ID. When a bot is added throu
 * Directly reference your bot's app ID from within Teams:
    1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
   
-      :::image type="content" source="../assets/images/bots_appid_botframework.png" alt-text="Getting the AppID for the bot.":::
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Getting the AppID for the bot.":::
   
    2. Open Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. In **To:**, paste your bot's Microsoft App ID.
   
-      :::image type="content" source="../assets/images/bots_uploading.png" alt-text="Uploading bots.":::
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Uploading bots.":::
 
       The app ID must resolve to your bot name.
 
@@ -79,7 +79,7 @@ Your bot receives the `conversationUpdate` event as you add the bots to a team, 
 
 Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
 
-:::image type="content" source="../assets/images/bots/botdisable.png" alt-text="Steps to block a bot.":::
+:::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Steps to block a bot.":::
 
 ## Remove a bot from a team
 
