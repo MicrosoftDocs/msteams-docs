@@ -190,6 +190,6 @@ To preview your bot app in Teams:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Bot consent message" border="false":::
 
-    Teams opens the bot app and you can use it.
+  Teams opens the bot app and you can use it.
 
-    Congratulations! You've enabled SSO for your bot app.
+  Congratulations! You've enabled SSO for your bot app.
