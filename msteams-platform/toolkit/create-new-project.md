@@ -56,7 +56,7 @@ There are two different types of app
   * SSO-enabled tab
   * SPFx tab
 
-Directory structure for basic Teams app
+Output directory structure for basic Teams app
 
 <details>
 <summary><b>Tab app</b></summary>
@@ -80,7 +80,7 @@ Directory structure for basic Teams app
 | `templates/azure` | BICEP template files |
 </details>
 
-Directory structure for scenario based Teams app
+Output directory structure for scenario based Teams app
 
 <details>
 <summary><b>Notification bot app</b></summary>
@@ -104,3 +104,15 @@ The core notification implementation in **bot** folder and it contains:
 | `.gitignore` | File to exclude local files from bot project |
 | `package.json` | The NPM package file for bot project |
 </details>
+
+## Output directory structure updated with app features
+
+You can add additional features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app. Bot folder is added with files and codes relevant to bot.
+
+The following image shows the directory structure of tab app
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/tabapp-directory.png" alt-text="Tab app directory structure":::
+
+The following image shows the directory structure of tab app with bot feature
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/tab-app-with-bot-app.png" alt-text="Tab app with bot app directory structure":::
