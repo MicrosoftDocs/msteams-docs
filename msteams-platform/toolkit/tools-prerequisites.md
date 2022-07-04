@@ -1,7 +1,7 @@
 ---
 title: Prerequisites for tools and SDK
 author: zyxiaoyuer
-description: In this module, Learn how to prepare accounts to build Teams apps with Microsoft 365 account and developer program. Azure account to host backend resources
+description: In this module, learn the prerequisites necessary for Tools and SDK
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
