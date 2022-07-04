@@ -75,6 +75,7 @@ To install the TeamsFx CLI, use the `npm` package manager:
 
    > [!CAUTION]
    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+---
 
 ### Set up your Teams development tenant
 
@@ -86,8 +87,8 @@ To create and upload a Teams app, you need to prepare the following accounts:
 
 | Accounts | For using|
 | --- | --- |
-|[Microsoft 365 account with valid subscription](accounts.md#microsoft-365-account)|To get a Teams developer account while developing an app.|
-|[Azure account](accounts.md#azure-account-to-host-backend-resources)|To host the backend resources on Azure.|
+|[Microsoft 365 account with valid subscription](accounts.md#microsoft-365-account)|Teams developer account while developing an app.|
+|[Azure account](accounts.md#azure-account-to-host-backend-resources)|Backend resources on Azure.|
 
 ### Microsoft 365 account
 
