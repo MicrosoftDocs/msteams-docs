@@ -38,63 +38,26 @@ You can select **Get Started** to explore the Teams Toolkit, or select **Create 
 
 Let's take a tour of the topics covered in this document.
 
-## Accounts
+|Section|Contents|Details
+|---------|---------|--------|
+|Accounts|Microsoft 365 account| To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription.|
+| | Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
+|Environment|Local and Dev |Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.|
+|Development| Create a new Teams app | Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler. Create a new Teams app helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project**|
+|  | View Samples | It helps you to create sample apps to explore concepts and code samples|
+|  | Add Features | It helps you to add additional Teams capabilities such as **Tab** or **Bot** or **Message extension** or **Command bot** or **Notification bot**, or **SSO enabled tab** optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, or **Azure function** or **Azure API Management** which fits your development needs to your current Teams app. You can also add **API connection** or **Single Sign-on** or **CI/CD workflows** for your Teams app.
+|  | Edit Manifest file | It helps you customize manifest file based on the app requirements |
+|Deployment| Provision to the cloud | It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.|
+|Deployment| Provision in the cloud| It integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.|
+|| Zip Teams metadata package| |
+|| Deploy to the cloud| During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.|
+|| Publish to Teams| After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.|
+|| Developer Portal for Teams| It is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. You can collaborate with colleagues on your app, set up runtime environments, and much more. |
+|Help and Feedback| Quick Start| It helps you to explore more on the fundamentals concepts of Creating Teams app  |
+|| Tutorials| It helps you to explore more on build notification bot, build command bot, add single sign-on, and connect to an API|
+|| Documentation| It helps you to explore more on the documentation of Teams Toolkit.|
+|| Report issues on GitHub| It helps to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.|
 
-To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
-
-## Environment
-
-Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.
-
-### TeamsFx Collaboration
-
-It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Teamsfx project":::
-
-## Development
-
-Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.
-
-### Create a new Teams app
-
-It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Start from a sample**.
-
-### Add Features
-
-It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app.
-
-### Edit manifest file
-
-It helps you to edit the Teams app integration with Teams client.
-
-## Deployment
-
-During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.
-
-### Provision in the cloud
-
-It integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
-
-### Deploy to the cloud
-
- It helps you to deploy the source code to Azure.
-
-### Publish to Teams
-
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
-
-#### TeamsFx CLI
-
-It is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.
-
-#### TeamsFx SDK
-
-It helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
-
-## Help and Feedback
-
-In this section, you can find the documentation and resources you need. You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 <!--  
 Let's explore Teams Toolkit features.
 
