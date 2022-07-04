@@ -115,4 +115,4 @@ The following image shows the directory structure of tab app
 
 The following image shows the directory structure of tab app with bot feature
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/tab-app-with-bot-app.png" alt-text="Tab app with bot app directory structure":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/tab-app-with-bot-app.png" alt-text="Tab app with bot app directory structure":::
