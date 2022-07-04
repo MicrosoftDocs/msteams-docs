@@ -33,11 +33,7 @@ To create Teams app, you'll need the following tools:
    > [!TIP]
    > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
 
-### Prepare development environment
-
-   After you've installed the required tools, set up the development environment.
-
-#### Install the Teams Toolkit
+### Install the Teams Toolkit
 
    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more.
 
@@ -80,45 +76,9 @@ To create Teams app, you'll need the following tools:
    > [!CAUTION]
    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
 
-   ---
-
 ### Set up your Teams development tenant
 
    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
-
-#### Check for sideloading option
-
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
-
-    > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
-
-   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
-
-   Verify if you can sideload apps in Teams:
-
-    1. In the Teams client, select the **Store** icon.
-    1. Select **Manage your apps**.
-    1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
-
-        > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator.
-
-#### Create a free Teams developer tenant (optional)
-
-   If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
-
-   1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-   1. Select **Join Now** and follow the onscreen instructions.
-   1. In the welcome screen, select **Set up E5 subscription**.
-   1. Set up your administrator account. After you finish, the following screen appears.
-
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
-
-   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
 ## Accounts
 
@@ -174,7 +134,7 @@ If you want to host your application related resources or access resources withi
 
 ## Sideloading
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
+After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**. Sign-in to your Microsoft 365 account to view this option.
 
 You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
 
