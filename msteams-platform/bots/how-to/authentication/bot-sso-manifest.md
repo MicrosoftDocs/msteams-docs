@@ -182,24 +182,16 @@ To preview your bot app in Teams:
 
 1. Select **Upload a custom app** to sideload the bot app to Teams.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Sideload tab app into Teams":::
-
 1. Select your app package zip file, and then select **Add**.
 
     The bot app is sideloaded and the dialog appears to inform you of the additional permissions that may be required.
 
 1. Select **Continue**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required" border="true":::
-
-    The Azure AD consent dialog appears.
-
 1. Select **Accept** to give consent for open-id scopes.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog" border="true":::
 
     Teams opens the bot app and you can use it.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Example of Teams tab app with SSO enabled" border="false":::
 
     Congratulations! You've enabled SSO for your bot app.
