@@ -32,7 +32,7 @@ The following steps help you to install Teams Toolkit in Visual Studio Code
 
 After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini functions":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview.png" alt-text="Overview":::
 
 You can select **Get Started** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project.
 
@@ -42,7 +42,9 @@ Watch the following gif for creating a new Teams app
 
 After creating a new Teams app, you will see Teams Toolkit UI with all functionalities as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot ofteams toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot of teams toolkit":::
 
 Let's take a tour of the topics covered in this document.
 
