@@ -28,8 +28,7 @@ The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user co
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
 
-![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
-
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Steps to update app manifest.":::
 
 The following is an example of the `webApplicationInfo` object:
 
@@ -57,29 +56,27 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear.
 
-   ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
-
-      :::image type="content" source="Media/managingteam.png" alt-text="managing team"border="true":::
+   :::image type="content" source="~/bots/how-to/conversations/Media/managingteam.png" alt-text="Steps to Manage apps in Teams.":::
 
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner.
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="uploading custom app":::
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="uploading custom app.":::
   
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Select the app package"lightbox="Media/selectapppackage.png"border="true":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="Select the app package."lightbox="Media/selectapppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Adding bot"lightbox="Media/addingbot.png"border="true":::
+      :::image type="content" source="Media/addingbot.png" alt-text="Adding bot."lightbox="Media/addingbot.png":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot receiving message"lightbox="Media/botreceivingmessage.png"border="true":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot receiving message."lightbox="Media/botreceivingmessage.png":::
 
 ## Code snippets
 
