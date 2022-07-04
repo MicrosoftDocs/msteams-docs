@@ -14,7 +14,7 @@ You can choose the following build environments that help you to build a Teams a
 
 * [JavaScript](#javascript)
 * [SPFx](#spfx)
-* [Blazor/C#](#blazorc-)
+* [Blazor/C#](#blazorc)
 
 ### Javascript
 
