@@ -372,11 +372,11 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 * **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
 
-     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message.:::
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message.":::
 
      You can select **Close** or switch chat to dismiss the message.
 
