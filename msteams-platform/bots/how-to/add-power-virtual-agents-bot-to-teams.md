@@ -31,12 +31,12 @@ To make the chatbot available in Teams:
 1. **Publish the latest bot content**  
 After creating a chatbot in the Power Virtual Agents portal, you must publish your bot before Teams users can interact with it. For more information, see [Publish the latest bot content](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
 
-   ![publish in power virtual agents portal](../../assets/images/pva-publish.png)
+   :::image type="content" source="../assets/images/pva-publish.png" alt-text="Publish the latest bot content in power virtual agents portal.":::
 
 1. **Configure the Teams channel**  
 After publishing your bot, add the Teams channel to make the bot available to Teams users.
 
-   ![channels in power virtual agents portal](../../assets/images/pva-channels.png)
+   :::image type="content" source="../assets/images/pva-channels.png" alt-text="Adding Teams channel in power virtual agents portal.":::
 
 1. **Generate an App ID for your chatbot**  
 After adding the Teams channel to your chatbot, an **App ID** is generated in the dialog box. The App ID is a unique Microsoft generated identifier for your bot. Save the App ID to create an app package for Teams.
@@ -50,39 +50,39 @@ App Studio is a Teams app. Install App Studio from the Teams store that simplifi
 
    1. Select the app store icon from Teams instance, and search for **App Studio**.
 
-      &emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png"/>
+      :::image type="content" source="../assets/images/get-started/app-studio-store.png" alt-text="Finding App Studio in the Store.":::
 
    1. Select the **App Studio** tile and select **Install** in the pop-up dialog box.
 
-      &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
+      :::image type="content" source="../assets/images/get-started/app-studio-install.png" alt-text="Installing App Studio.":::
 
 1. **Create the Teams app manifest in App Studio**  
 Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **App Studio**, select **Manifest editor**, and select **Create a new app**.
 
-    ![create a new app](../../assets/images/get-started/create-new-app.png)
+    :::image type="content" source="../assets/images/get-started/create-new-app.png" alt-text="Steps to create a new app.":::
 
 1. **Add your bot details**  
 Complete all the required fields. For a full description of each field see [manifest schema definition](../../resources/schema/manifest-schema.md).
 
-    ![add app details](../../assets/images/get-started/add-app-details.png)
+    :::image type="content" source="../assets/images/get-started/add-app-details.png" alt-text="Add app details.":::
 
 1. **Set up your bot**
 To set-up the bot, perform the following steps:
      1. Open the **Bots** tab.
      1. Select **Setup** > **Existing bot** and enter the name of your bot.
 
-   ![Bot set-up](../../assets/images/get-started/bot-set-up.png)
+   :::image type="content" source="../assets/images/get-started/bot-set-up.png" alt-text="Bot setup details.":::
 
    The following image depicts how to set-up an existing bot:
 
-   ![existing bot set-up](../../assets/images/get-started/existing-bot-set-up.png)
+   :::image type="content" source="../assets/images/get-started/existing-bot-set-up.png" alt-text="Example showing how to setup an existing bot.":::
 
 1. **Add your App ID**  
 To add your App ID, perform the following steps:  
     1. Select **Connect to a different bot id** and paste the **App Id** you copied earlier.
     1. Select **Scope** > **Personal** > **Save**.
 
-    ![add app id](../../assets/images/get-started/add-app-id.png)
+    :::image type="content" source="../assets/images/get-started/add-app-id.png" alt-text="Steps to add app id.":::
 
 1. **Add valid domains for your bot**  
 This step is only required if your bot requires the user to sign in. Select **Domains and permissions** and in the **Valid Domains** field, provide the following input:
