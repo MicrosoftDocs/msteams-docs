@@ -93,9 +93,7 @@ The new project folder contains following content:
 | `.vscode` | VS code files for local debug |
 | `bot` | The bot source code |
 | `templates` | Templates for Teams app manifest and corresponding Azure resources |
-
 The core notification implementation in **bot** folder and it contains:
-
 | File name | Contents |
 | --- | --- |
 | `src/adaptiveCards/` | Templates for Adaptive card  |
