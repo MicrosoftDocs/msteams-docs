@@ -25,7 +25,7 @@ These bots can be created easily without the need for data scientists or develop
 ## Make your chatbot available in Teams through the Power Virtual Agents portal
 
 To make your chatbot available in Teams through the Power Virtual Agents portal, you must perform the following process steps:
-:::image type="content" source="../../assets/images/pva-publish.PNG" alt-text="":::
+:::image type="content" source="../../assets/images/pva-publish.PNG" alt-text="Steps to make chatbot available.":::
 To make the chatbot available in Teams:
 
 1. **Publish the latest bot content**  
