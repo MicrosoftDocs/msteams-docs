@@ -341,7 +341,7 @@ TeamsFx helps to reduce the developer tasks by using SSO and accessing cloud res
 With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
 
 1. User identity in browser environment: `TeamsUserCredential` represents Teams current user's identity.
-2. User identity in Node.js environment: `OnBehalfOfUserCredentail` uses On-Behalf-Of flow and SSO token.
+2. User identity in Node.js environment: `OnBehalfOfUserCredential` uses On-Behalf-Of flow and SSO token.
 3. Application Identity in Node.js environment: `AppCredential` represents the application identity.
 
 For more information about TeamsFx SDK, see:
