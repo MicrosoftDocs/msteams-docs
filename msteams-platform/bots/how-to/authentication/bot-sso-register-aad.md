@@ -400,7 +400,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
 ### Enable bot for Teams
 
-/ Add description /
+You must enable the Teams channel to let the bot to interact with Microsoft Teams.
 
 #### To enable bot app for Teams
 
@@ -730,11 +730,11 @@ Next, you must configure bot app in Azure AD to enable SSO.
 
 ## Configure bot resource in Azure AD
 
-/ Add details for bot messaging endpoint, SSO, and OAuth connection. /
+In this section, you'll configure the bot resource for messaging endpoint and OAuth connection.
 
 ### Add messaging endpoint
 
-/ Add details for messaging endpoint /
+Messaging endpoint is where messages are sent to your bot. It enables communicate with your bot.
 
 #### To configure messaging endpoint
 
