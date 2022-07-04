@@ -10,7 +10,7 @@ ms.date: 05/24/2022
 
 # Install Teams Toolkit for Visual Studio Code
 
-The following steps help you to install Teams Toolkit in Visual Studio Code
+Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. Make sure you have installed the latest version.The following steps help you to install Teams Toolkit in Visual Studio Code:
 
 1. Open **Visual Studio Code.**
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
@@ -34,7 +34,13 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview.png" alt-text="Overview of Teams Toolkit":::
 
-You can select **Get Started** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project.
+* Select **Get Started** to explore the Teams Toolkit
+* Select **Create a new Teams App** to create one Teams project
+* Select **Open Folder** to open the existing Teams app
+* Select **New File** under Start section is used to create new file
+* Select **Open File** to open the existing file
+* Select **Open Folder** to open the existing folder
+* Recent section helps you to view the recent files
 
 Watch the following gif for creating a new Teams app
 
@@ -45,14 +51,6 @@ After creating a new Teams app, you will see Teams Toolkit UI with all functiona
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
 
 Let's take a tour of the topics covered in this document.
-
-Select **File Explorer** to view the directory structure of your app.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/file-explorer.png" alt-text="File Explorer view":::
-
-Select **Run and Debug** to start the local or remote debug process.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/run-and-debug.png" alt-text="Run and Debug view":::
 
 |Section|Features|Details
 |---------|---------|--------|
@@ -78,4 +76,11 @@ Select **Run and Debug** to start the local or remote debug process.
 | &nbsp; | Tutorials| Select to access different tutorials.|
 | &nbsp; | Documentation| Select to access the Microsoft Teams Developer Documentation.|
 | &nbsp; | Report issues on GitHub| It helps to get **Quick support** from product expert. Browse the existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.|
-  
+
+* Select **File Explorer** to view the directory structure of your app.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/file-explorer.png" alt-text="File Explorer view":::
+
+* Select **Run and Debug** to start the local or remote debug process.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/run-and-debug.png" alt-text="Run and Debug view":::
