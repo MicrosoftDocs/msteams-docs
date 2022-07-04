@@ -42,11 +42,10 @@ The following illustration gives you an idea of the meeting app extensibility fe
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
-
-To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
-
-The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
+- **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
+- **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
+- **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
+- **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more. 
 
 ## Next step
 

@@ -1,12 +1,12 @@
 ---
 title: Use Microsoft Graph to fetch transcripts for a Teams meeting
-description: Describes the process, scenarios, and APIs to fetch transcripts in a post-meeting scenario.
+description: Describes the process, scenarios, and APIs to fetch transcripts in the post-meeting scenario.
 ms.localizationpriority: medium
 ms.topic: concept
 ---
 # Get meeting transcripts using Graph APIs
 
-You can now configure your app to fetch Microsoft Teams meeting transcripts in a post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts generated for a Teams meeting that has been scheduled beforehand.
+You can now configure your app to fetch Microsoft Teams meeting transcripts in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts generated for a Teams meeting that has been scheduled beforehand.
 
 Here are some use cases for fetching meeting transcripts using Graph API:
 
