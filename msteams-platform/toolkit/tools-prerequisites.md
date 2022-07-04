@@ -61,25 +61,26 @@ To install the TeamsFx CLI, use the `npm` package manager:
    npm install -g @microsoft/teamsfx-cli
    ```
 
-   Depending on your configuration, you may need to use `sudo` to install the CLI:
+Depending on your configuration, you may need to use `sudo` to install the CLI:
 
    ``` bash
    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
    ```
 
-   This condition is more common on Linux and macOS systems.
+This condition is more common on Linux and macOS systems.
 
-   Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
 
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
-   > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+> [!CAUTION]
+> Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+
 ---
 
 ### Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
 ## Accounts
 
