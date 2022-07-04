@@ -41,23 +41,23 @@ To create Teams app, you'll need the following tools:
 
 # [Visual Studio Code](#tab/vscode)
 
-   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
-   1. Select **Install** next to the Teams Toolkit.
+1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. In the search box, enter **Teams Toolkit**.
+1. Select **Install** next to the Teams Toolkit.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
-   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 # [Command line](#tab/cli)
 
-   To install the TeamsFx CLI, use the `npm` package manager:
+To install the TeamsFx CLI, use the `npm` package manager:
 
-   ``` bash
+   ```Bash
    npm install -g @microsoft/teamsfx-cli
    ```
 
