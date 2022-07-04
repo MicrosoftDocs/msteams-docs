@@ -1,14 +1,14 @@
 ---
 title: Teams App Manifest in Teams Toolkit VS
 author: zyxiaoyuer
-description: In this module, learn how to edit, preview and customize Teams App Manifest in the different environment.
+description: In this module, learn how to edit, preview and customize Teams App Manifest in the different environment for Visual Studio.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 ---
 
-# Edit Teams app manifest
+# Edit Teams app manifest for Visual Studio
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
