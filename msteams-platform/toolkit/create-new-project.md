@@ -56,7 +56,7 @@ There are two different types of app
   * SSO-enabled tab
   * SPFx tab
 
-The following is the directory structure for Basic Teams app, Tab app:
+Directory structure for basic Teams app
 
 <details>
 <summary><b>Tab app</b></summary>
@@ -79,3 +79,26 @@ The following is the directory structure for Basic Teams app, Tab app:
 | - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
 | `templates/azure` | BICEP template files |
 </details>
+
+Directory structure for scenario based Teams app
+
+<details>
+<summary><b>Notification bot app</b></summary>
+
+The new project folder contains following content:
+| Folder name | Contents |
+| --- | --- |
+| `.fx` | Project level settings, configuration, and environment information |
+| `.vscode` | VS code files for local debug |
+| `bot` | The bot source code |
+| `templates` | Templates for Teams app manifest and corresponding Azure resources |
+
+The core notification implementation in **bot** folder and it contains:
+| File name | Contents |
+| --- | --- |
+| `src/adaptiveCards/` | Templates for Adaptive card  |
+| `src/internal/` | Generated initialize code for notification functionality |
+| `src/index.*s` | The entrypoint to handle bot messages and send notifications |
+| `.gitignore` | File to exclude local files from bot project |
+| `package.json` | The NPM package file for bot project |
+<details>
