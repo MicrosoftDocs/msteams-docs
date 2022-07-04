@@ -17,15 +17,11 @@ A client secret is a string that the application uses to prove its identity when
 
    The **Add a client secret** page appears.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Add a client secret page" border="true":::
-
 3. Enter the description.
 4. Select the duration of validity for the secret.
 5. Select **Add**.
 
    A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-secret-added.png" alt-text="Client secret added":::
 
 6. Select the copy button next to the **Value** of client secret.
 7. Save the value that you copied for later use.
