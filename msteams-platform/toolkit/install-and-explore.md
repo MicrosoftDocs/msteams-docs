@@ -44,32 +44,38 @@ After creating a new Teams app, you will see Teams Toolkit UI with all functiona
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot of teams toolkit":::
-
 Let's take a tour of the topics covered in this document.
 
-|Section|ContentsFeatures|Details
+Select **File Explorer** to view the directory structure of your app.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/file-explorer.png" alt-text="File Explorer view":::
+
+Select **Run and Debug** to start the local or remote debug process.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/run-and-debug.png" alt-text="Run and Debug view":::
+
+|Section|Features|Details
 |---------|---------|--------|
-| **Accounts** | &nbsp; | &nbsp; |
+| **ACCOUNTS** | &nbsp; | &nbsp; |
 | &nbsp; |Microsoft 365 account| To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription.|
 | &nbsp; | Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
-| **Environment** | &nbsp; | &nbsp; |
-| &nbsp; |Local |It helps you to deploy your app in local environment.|
-| &nbsp; | Dev |It helps you to deploy your app in remote or cloud environment.|
-| **Development** | &nbsp; | &nbsp; |
+| **ENVIRONMENT** | &nbsp; | &nbsp; |
+| &nbsp; |Local |Deploy your app in the default local environment with local machine environment configurations.|
+| &nbsp; | Dev |Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.|
+| **DEVELOPMENT** | &nbsp; | &nbsp; |
 | &nbsp; | Create a new Teams app | Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler. Create a new Teams app helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project**|
-| &nbsp; | View Samples | It helps you to create sample apps and explore code samples|
+| &nbsp; | View Samples | Select any of Teams Toolkit's 16 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.|
 | &nbsp; | Add Features | It helps you to add additional Teams capabilities such as **Tab** or **Bot** or **Message extension** or **Command bot** or **Notification bot**, or **SSO enabled tab** optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, or **Azure function** or **Azure API Management** which fits your development needs to your current Teams app. You can also add **API connection** or **Single Sign-on** or **CI/CD workflows** for your Teams app.
 | &nbsp; | Edit Manifest file | It helps you customize manifest file based on the app requirements |
-| **Deployment** | &nbsp; | &nbsp; |
+| **DEPLOYMENT** | &nbsp; | &nbsp; |
 | &nbsp;| Provision to the cloud | It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.|
-| &nbsp; | Zip Teams metadata package| |
+| &nbsp; | Zip Teams metadata package| Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons. |
 | &nbsp; | Deploy to the cloud| During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.|
 | &nbsp; | Publish to Teams| After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.|
 | &nbsp; | Developer Portal for Teams| It is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. You can collaborate with colleagues on your app, set up runtime environments, and much more. |
-| **Help and Feedback** | &nbsp; | &nbsp; |
-| &nbsp; | Quick Start| It helps you to explore more on the fundamentals concepts of Creating Teams app  |
-| &nbsp; | Tutorials| It helps you to access tutorials on build notification bot, build command bot, add single sign-on, and connect to an API|
-| &nbsp; | Documentation| It helps you to access on Microsoft Teams documentation.|
+| **HELP and FEEDBACK** | &nbsp; | &nbsp; |
+| &nbsp; | Quick Start|  View the Teams Toolkit Quick start help within Visual Studio Code.|
+| &nbsp; | Tutorials| Select to access different tutorials.|
+| &nbsp; | Documentation| Select to access the Microsoft Teams Developer Documentation.|
 | &nbsp; | Report issues on GitHub| It helps to get **Quick support** from product expert. Browse the existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.|
   
