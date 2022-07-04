@@ -47,7 +47,7 @@ To create Teams app, you'll need the following tools:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+   The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
