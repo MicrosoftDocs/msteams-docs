@@ -188,10 +188,13 @@ To preview your bot app in Teams:
 
 1. Select **Continue**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Bot consent message" border="false":::
+
+<!--
 1. Select **Accept** to give consent for open-id scopes.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog" border="true":::
-
+-->
     Teams opens the bot app and you can use it.
 
     Congratulations! You've enabled SSO for your bot app.
