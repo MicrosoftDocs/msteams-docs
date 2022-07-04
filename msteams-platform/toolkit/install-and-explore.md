@@ -36,11 +36,11 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
 
 You can select **Get Started** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project.
 
-Watch the following gif on creating a new Teams app
+Watch the following gif for creating a new Teams app
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
-If you have a Teams project created by Teams Toolkit opened in Visual Studio Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
+After creating a new Teams app, you will see Teams Toolkit UI with all functionalities as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot ofteams toolkit":::
 
