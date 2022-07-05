@@ -733,18 +733,6 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md).
 
-* Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
-
-* Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
-
-* If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
-
-* Configurable tabs must have focused functionality.
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
-
 * Tab experiences must be fully responsive on mobile (Android and iOS).
 
    > [!TIP]
@@ -761,7 +749,22 @@ Footer must not contain links that are unrelated to user functionality within th
 
 <details><summary>Scope selection</summary>
 
+* Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
+
 * Post configuration experience, the landing page must show a collaborative view for the entire team.
+
+* If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
+
+* Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
+
+* Configurable tabs must have focused functionality.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
+
+</details>
+<br/>
 
 ## Bots
 
@@ -1088,6 +1091,7 @@ To pass validation for a search-based message extension only app, the following 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
 </details>
+<br/>
 
 <details><summary>Messaging extensions design guidelines</summary>
 
@@ -1106,6 +1110,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 * You must include a way for the user to sign-in or sign-out from the messaging extension. [Mandatory Fix]
 
 </details>
+<br/>
 
 ## Task modules
 
