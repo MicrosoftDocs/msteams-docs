@@ -43,6 +43,9 @@ The following steps help you to build a new Teams app.
 
 1. Select at least one option to start creating the Teams app.
 
+> [!NOTE]
+> For create a Teams app with SPFx, you need to select Framework and Web Part Name. Refer [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
+
 ## Step-by-step guides using Teams Toolkit
 
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)

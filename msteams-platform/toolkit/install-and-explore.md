@@ -10,7 +10,11 @@ ms.date: 05/24/2022
 
 # Install and explore Teams Toolkit
 
-Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. Make sure you have installed the latest version.The following steps help you to install Teams Toolkit in Visual Studio Code:
+Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. In Teams Toolkit you can create new Teams app, add capabilities, add cloud resources, deploy and provision cloud resources, and publish Teams app.
+
+## Install Teams Toolkit
+
+Ensure you have installed the latest version. The following steps help you to install Teams Toolkit in Visual Studio Code:
 
 1. Open **Visual Studio Code.**
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
@@ -79,11 +83,11 @@ Let's take a tour of the topics covered in this document.
 | &nbsp; | Publish to Teams| After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.|
 | &nbsp; | Developer Portal for Teams| It is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. You can collaborate with colleagues on your app, set up runtime environments, and much more. |
 | **5. HELP and FEEDBACK** | &nbsp; | &nbsp; |
-| &nbsp; | Quick Start|  View the Teams Toolkit Quick start help within Visual Studio Code.|
+| &nbsp; | Get Started |  View the Teams Toolkit Quick start help within Visual Studio Code.|
 | &nbsp; | Tutorials| Select to access different tutorials.|
 | &nbsp; | Documentation| Select to access the Microsoft Teams Developer Documentation.|
 | &nbsp; | Report issues on GitHub| It helps to get **Quick support** from product expert. Browse the existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.|
 | **6. File Explorer** | &nbsp; | &nbsp; |
  &nbsp; | &nbsp; | It helps to view the directory structure of your app.|
-| **7. File Explorer** | &nbsp; | &nbsp; |
+| **7. Run and Debug** | &nbsp; | &nbsp; |
  &nbsp; | &nbsp; | To start the local or remote debug process.|
