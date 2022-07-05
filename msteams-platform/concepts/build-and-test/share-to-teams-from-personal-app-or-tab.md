@@ -13,7 +13,7 @@ Share to Teams allows users to share the content from personal app or tab to oth
 
 The following image shows the Share to Teams pop-up window:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
+:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Share to Teams pop-up window.":::
 
 ## Enable Share to Teams button
 
@@ -54,7 +54,7 @@ The payload contains the following parameters:
 
 The following image shows the Share to Teams option:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
+:::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="Share to Teams button.":::
 
 ## Response codes
 
@@ -90,22 +90,22 @@ After you enable share to teams button on personal app or tab, you can share the
 
 1. Open a personal app or tab and select **Share to Teams**.
 
-    :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="Share to Teams button.":::
 
 2. Add other user or group or channel to share the content.
 
-    :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
+    :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="Add recipient.":::
 
     > [!NOTE]
     > You can add a note in **say something about this**.
 
 3. Select **Share**.
 
-   :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::
+   :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="Add note.":::
 
 4. Select **View** to reach the conversation where the link was shared.
 
-   :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="share-to-teams-link-shared":::
+   :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="Selecting view button.":::
 
 ## See also
 
