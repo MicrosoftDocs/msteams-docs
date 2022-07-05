@@ -27,7 +27,7 @@ Your app must have the required permissions for fetching transcripts. It can acc
 
 ### Use organization-wide application permissions
 
-You can configure your app to access meeting transcripts across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When organization-wide application permissions are authorized by the tenant administrator, your app can read and access transcripts for all meetings in the tenant.
+You can configure your app to access meeting transcripts across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the tenant administrator authorizes the organization-wide application permissions, your app can read and access transcripts for all meetings in the tenant.
 
 For more information about the organization-wide application permissions that can be granted to your app, see [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions).
 
@@ -38,7 +38,7 @@ If you want your app to fetch transcripts only for the Teams meeting where it's 
 For more information about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat).
 
 <br>
-After you've configured either organization-wide application permissions or meeting-specific RSC application permissions, you can configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
+After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
 
 For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
