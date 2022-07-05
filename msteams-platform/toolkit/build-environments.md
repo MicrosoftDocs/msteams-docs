@@ -18,7 +18,7 @@ You can choose the following build environments that help you to build a Teams a
 
 ### Javascript
 
-JavaScript helps you to add capabilities such as tab, bot and message extension to your app. You can use the JavaScript in the following scenarios.
+JavaScript helps you to add capabilities such as tab, bot and message extension to your app. You can use the JavaScript in the following scenarios:
 
 * [Build hello world webpages embedded in Microsoft Teams](../sbs-gs-javascript.yml)
 * [Build hello world chatbot to run simple and repetitive tasks](../sbs-gs-bot.yml)
@@ -28,13 +28,13 @@ JavaScript helps you to add capabilities such as tab, bot and message extension 
 
 ### SPFx
 
-SPFx helps you to create tab app. You can use the SPFx in the following scenario.
+SPFx helps you to create tab app. You can use the SPFx in the following scenario:
 
 * [Build Teams aware webpages with SharePoint Framework embedded in Microsoft Teams](../sbs-gs-spfx.yml)
 
 ### Blazor/Csharp
 
-Blazor/C# helps you to create tab or bot app in Visual Studio. You can use the Blazor/C# in the following scenarios.
+Blazor/C# helps you to create tab or bot app in Visual Studio. You can use the Blazor/C# in the following scenarios:
 
 * [Build your first app using Blazor](../sbs-gs-blazorupdate.yml)
 * [Build your first app with C#](../sbs-gs-spfx.yml)
