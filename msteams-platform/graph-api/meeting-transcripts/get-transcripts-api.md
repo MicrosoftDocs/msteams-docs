@@ -548,7 +548,8 @@ The response payload contains:
 In this example:
 
 - The meeting ID is included as the value for `msGraphResourceId`: *MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl
-dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM1ltVXpAdGhyZWFkLnYy*.
+dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
+1ltVXpAdGhyZWFkLnYy*.
 - The organizer ID is contained as the value for `id` for `organizer`:  *29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w*.
 
 </details>
