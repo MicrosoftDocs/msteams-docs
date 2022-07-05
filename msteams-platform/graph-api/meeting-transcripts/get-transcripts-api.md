@@ -793,7 +793,7 @@ If successful, this method returns a `200 OK` response code and contains bytes f
 **Examples**
 <br>
 <details>
-<summary><b>Example 1: Get a callTranscript content</b></summary>
+<summary><b>Example: Get a callTranscript content</b></summary>
 <br>
 <b>Request</b>
 <br>
@@ -824,7 +824,7 @@ WEBVTT
 </details>
 <br>
 <details>
-<summary><b>Example 2: Get a callTranscript content specifying $format query param</b></summary>
+<summary><b>Example: Get a callTranscript content specifying $format query param</b></summary>
 <br>
 <b>Request</b>
 <br>
@@ -855,7 +855,7 @@ WEBVTT
 </details>
 <br>
 <details>
-<summary><b>Example 3: Get a callTranscript content specifying Accept header</b></summary>
+<summary><b>Example: Get a callTranscript content specifying Accept header</b></summary>
 <br>
 <b>Request</b>
 <br>
@@ -886,7 +886,7 @@ This is a transcript test.
 </details>
 <br>
 <details>
-<summary><b>Example 4: Get a callTranscript content with $format getting precedence over the accept header</b></summary>
+<summary><b>Example: Get a callTranscript content with $format getting precedence over the accept header</b></summary>
 <br>
 <b>Request</b>
 <br>
