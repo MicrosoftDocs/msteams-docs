@@ -95,31 +95,33 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 <details>
 <summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
 
-  1. Open **Visual Studio Code**.
-  2. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
-  3. Select **Accounts** and log in to your Microsoft 365 account.
-  4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
+1. Open **Visual Studio Code**.
+2. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
+3. Select **Accounts** and log in to your Microsoft 365 account.
+4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
+
 </details>
 
 <details>
 <summary><b>Verify sideloading permission using Teams client</b></summary>
 
-  1. Open **Microsoft Teams**.
-  2. Select **Apps** in left panel.
-  3. Select **Publish an app**.
+1. Open **Microsoft Teams**.
+2. Select **Apps** in left panel.
+3. Select **Publish an app**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publish an app":::
 
-  4. Check whether you can see the option **Upload a custom app** as shown in the following image:
+4. Check whether you can see the option **Upload a custom app** as shown in the following image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app":::
 
-    If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
+If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
 
-    * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
-    * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
+* For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
+* If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
+
 </details>
 
 <details>
