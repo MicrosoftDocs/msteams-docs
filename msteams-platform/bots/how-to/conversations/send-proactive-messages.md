@@ -79,7 +79,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ## Best practices for proactive messaging
@@ -89,7 +89,7 @@ Sending proactive messages to the users is an effective way to communicate with 
 > [!NOTE]
 > You can send a proactive message to the bot to know if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, the bot returns a 403 response code.
 
-The following is an example of a 403 response code:
+Example of a 403 response code.
 
 ```
 HTTP/1.1 403 Forbidden
@@ -117,9 +117,9 @@ Cache-Control: no-store, must-revalidate, no-cache
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time users interact with your app. It's an opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time, users interact with your app. It's an opportunity to create a good first impression. The best welcome messages must include:
 
-* Why a user is receiving the message? It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
+* Why is a user receiving the message? It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
 * What do you offer? Users must be able to identify what they can do with your app and what value can you bring to them.
 
@@ -134,7 +134,7 @@ To send notifications using proactive messaging, ensure your users have a clear 
 
 * What was the result? It must be clear, what item is updated to get the notification.
 
-* Who or what triggered it? Who or what took action, that caused the notification to be sent.
+* Who or what triggered it? Who or what took action, which caused the notification to be sent.
 
 * What can users do in response? Make it easy for your users to take actions based on your notifications.
 
