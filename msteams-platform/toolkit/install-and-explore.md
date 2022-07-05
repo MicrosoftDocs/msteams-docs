@@ -36,6 +36,7 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
 
 * Select **Get Started** to explore the Teams Toolkit
 * Select **Create a new Teams App** to create one Teams project
+* Select **View Samples** to build sample app
 * Select **Open Folder** to open the existing Teams app
 * Select **New File** under **Start** section to create new file
 * Select **Open File** to open the existing file

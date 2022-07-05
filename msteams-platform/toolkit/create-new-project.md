@@ -1,5 +1,5 @@
 ---
-title: Create a new Teams app using Teams Toolkit
+title: Create a new Teams app
 author: zyxiaoyuer
 description: In this module, learn how to create a new Teams app using Teams Toolkit
 ms.author: surbhigupta
@@ -8,11 +8,24 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app using Teams Toolkit
+# Create a new Teams app
 
-You can create a new Teams app by using **Create a new Teams app** in Teams Toolkit.
+You can build a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create basic Teams app and scenario based Teams app in Teams Toolkit.
 
-## Create a new Teams app
+In basic Teams app, we have following types of app
+
+* Tab
+* Bot
+* Message extension
+
+In scenario based Teams app, we have following types of app
+
+* Notification bot
+* Command bot
+* SSO-enabled tab
+* SPFx tab
+
+The following steps help you to build a new Teams app.
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code sidebar.
@@ -42,19 +55,6 @@ You can create a new Teams app by using **Create a new Teams app** in Teams Tool
 ## Output directory structure for different app types
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code.
-
-There are two different types of app
-
-* Basic Teams app
-  * Tab
-  * Bot
-  * Message extension
-
-* Scenario based Teams app
-  * Notification bot
-  * Command bot
-  * SSO-enabled tab
-  * SPFx tab
 
 Output directory structure for basic Teams app
 
