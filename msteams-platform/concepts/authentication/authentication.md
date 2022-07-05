@@ -33,7 +33,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md":::
+        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app." link="../../tabs/how-to/authentication/tab-sso-overview.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -47,7 +47,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app." link="../../bots/how-to/authentication/auth-aad-sso-bots.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -61,7 +61,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app." link="../../messaging-extensions/how-to/enable-SSO-auth-me.md":::
     :::column-end:::
     :::column span="1":::
         <br>
