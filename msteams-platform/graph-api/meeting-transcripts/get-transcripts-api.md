@@ -505,11 +505,7 @@ Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
 
 For more information about APIs for Teams meeting, see [Meeting apps API references](../../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-To obtain meeting ID and organizer ID from a bot app:
-
-1. **Meeting URL**: The bot app can get the URL for joining the meeting, which is used to get the meeting ID eventually.
-
-    Use the following example to request meeting URL:
+Use the following example to request meeting URL to obtain mee,ting ID and organizer ID from a bot app:
 
     ```json
     GET /v1/meetings/{meetingId}
