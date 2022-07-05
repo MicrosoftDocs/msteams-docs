@@ -521,28 +521,34 @@ The response payload contains:
 
 ```json
 {
-    "details":  { 
-            "id": "<meeting ID>", 
-            "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
-            "scheduledStartTime": "2022-04-24T22:00:00Z", 
-            "scheduledEndTime": "2022-04-24T23:00:00Z", 
-            "joinUrl": "https://teams.microsoft.com/l/xx", 
-            "title": "All Hands", 
-            "type": "Scheduled" 
-        },
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupChat", 
-            "id": "meeting chat ID" 
-            }, 
-    "organizer": { 
-            "id": "<organizer user ID>", 
-            "aadObjectId": "<AAD object ID>",
-            "objectId": "<organizer object ID>",
-            "tenantId": "<Tenant ID>" 
-        }
+  details: {
+    id: "MCMxOTptZWV0aW5nX05XTTFNVEk1TnpNdE5qZ3pNeTAwWVdRNExUaG1PV1F0WlRnM01UQm1PVGczWW1VekB0aHJlYWQudjIjMA==",
+    msGraphResourceId: "MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVldGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM1ltVXpAdGhyZWFkLnYy",
+    scheduledStartTime: {
+    },
+    scheduledEndTime: {
+    },
+    joinUrl: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz%40thread.v2/0?context=%7b%22Tid%22%3a%22b3cdf1c8-024a-49e2-a994-f67f830b02f3%22%2c%22Oid%22%3a%226702afb6-109b-4c32-a141-6e65469502b9%22%7d",
+    title: "Testing meeting bot 1 - Hun",
+    type: "Scheduled",
+  },
+  conversation: {
+    id: "19:meeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz@thread.v2",
+    isGroup: true,
+    conversationType: "groupChat",
+  },
+  organizer: {
+    id: "29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w",
+    tenantId: "b3cdf1c8-024a-49e2-a994-f67f830b02f3",
+    aadObjectId: "6702afb6-109b-4c32-a141-6e65469502b9",
+  },
 }
 ```
+
+In this example:
+
+- The meeting ID is included as the value for `msGraphResourceId`: *MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVldGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM1ltVXpAdGhyZWFkLnYy*.
+- The organizer ID is contained as the value for `id` for `organizer`:  *29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w*.
 
 </details>
 
