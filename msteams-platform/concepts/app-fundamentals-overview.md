@@ -23,7 +23,7 @@ In this section, learn how to:
 
 Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app":::
 
 * [Before you build](#before-you-build)
 * [During build](#during-build)
@@ -48,7 +48,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution.":::
 
     Your apps appear on Teams as Tabs, Bots, Message Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
