@@ -467,7 +467,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*.
 
         The response payload contains the transaction ID for the meeting ID and organizer ID in the `id` member of the `value` property.
-
+        <br>
         <details>
         <summary><b>Example</b>: Response payload for getting transaction ID</summary>
 
@@ -484,7 +484,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         }
         ```
 
-        In this examples, the transaction ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
+        In this example, the transaction ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
 
         </details>
 
