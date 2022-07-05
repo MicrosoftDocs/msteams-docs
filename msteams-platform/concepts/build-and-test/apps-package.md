@@ -16,7 +16,7 @@ You need an app package however you plan to distribute your Microsoft Teams app.
 
 When a user installs your app in Teams, they install an app package that contains a only configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app.":::
 
 ## App manifest
 
@@ -91,7 +91,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 
 #### Message extension
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="Example showing how an app icon looks in a message extension.":::
 
 ## Next step
 
