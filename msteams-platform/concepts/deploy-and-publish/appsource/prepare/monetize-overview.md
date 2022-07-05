@@ -15,7 +15,7 @@ Microsoft Teams app Store provides features that enable you to monetize your app
 
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app":::
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app.":::
     :::column-end:::
     :::column span="2":::
 
@@ -28,7 +28,7 @@ With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-p
 
 :::row:::
     :::column:::
-     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Free trials":::
+     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Free trials.":::
     :::column-end:::
     :::column span="2":::
 
@@ -40,7 +40,7 @@ You can offer a free trial version of your app to get more customers to try it. 
 :::row-end:::
 :::row:::
     :::column:::
-        ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+        :::image type="content" source="~/assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="In-app purchases.":::
     :::column-end:::
     :::column span="2":::
 
@@ -53,7 +53,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
 :::row-end:::
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test preview SaaS offer":::
+        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test preview SaaS offer.":::
     :::column-end:::
     :::column span="2":::
 
