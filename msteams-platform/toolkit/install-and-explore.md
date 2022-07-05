@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/24/2022
 ---
 
-# Install Teams Toolkit for Visual Studio Code
+# Install and explore Teams Toolkit
 
 Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. Make sure you have installed the latest version.The following steps help you to install Teams Toolkit in Visual Studio Code:
 
@@ -28,7 +28,7 @@ Teams Toolkit is an extension in Visual Studio Code and it primarily requires NP
 > [!TIP]
 > You can install Teams Toolkit from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Take a tour of Teams Toolkit
+## Explore Teams Toolkit
 
 After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
 

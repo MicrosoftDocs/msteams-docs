@@ -52,11 +52,11 @@ The following steps help you to build a new Teams app.
 * [Send notification to Teams](../sbs-gs-notificationbot.yml)
 * [Build command bot](../sbs-gs-commandbot.yml)
 
-## Output directory structure for different app types
+## Directory structure for different app types
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code.
 
-Output directory structure for basic Teams app
+Directory structure for basic Teams app
 
 <details>
 <summary><b>Tab app</b></summary>
@@ -80,7 +80,7 @@ Output directory structure for basic Teams app
 | `templates/azure` | BICEP template files |
 </details>
 
-Output directory structure for scenario based Teams app
+Directory structure for scenario based Teams app
 
 <details>
 <summary><b>Notification bot app</b></summary>
@@ -105,7 +105,7 @@ The core notification implementation in **bot** folder and it contains:
 | `package.json` | The NPM package file for bot project |
 </details>
 
-## Output directory structure updated with app features
+### Directory structure updated with app features
 
 You can add additional features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app. Bot folder is added with files and codes relevant to bot.
 
