@@ -517,11 +517,9 @@ To obtain meeting ID and organizer ID from a bot app:
 
     The response payload contains:
 
-    - The meeting ID in the `msGraphResourceId` member of the `details` property
-    - The organizer ID in the `id` member of the `organizer` property
-
-URL for meeting call in the `joinUrl` member of the `details` property.
-
+    - The meeting ID in the `msGraphResourceId` member of the `details` property.
+    - The organizer ID in the `id` member of the `organizer` property.
+    <br>
     <details>
     <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
 
