@@ -51,7 +51,7 @@ Watch the following gif for creating a new Teams app
 
 After creating a new Teams app, you see the directory structure of created app in the left side panel and readme file in the right side panel.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="Overview of Teams Toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="First page of Teams Toolkit":::
 
 Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code sidebar to view Teams Toolkit UI with all functionalities as shown in the following image:
 
