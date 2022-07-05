@@ -12,7 +12,7 @@ It’s common for an app to support multiple scenarios in Teams, but you may hav
 :::row:::
    :::column span="2":::
 
-![Add an app dropdown example](../../assets/images/compose-extensions/addanapp.png)
+:::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Add an app dropdown example." :::
 
    :::column-end:::
    :::column span="2":::
