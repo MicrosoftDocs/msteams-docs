@@ -24,7 +24,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
    :::column-end:::
    :::column span="3":::
-      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
+      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process." lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
 
@@ -96,7 +96,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in developer portal." lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
      1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
