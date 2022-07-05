@@ -491,7 +491,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     1. **Access and get meeting transcript based on the transcript ID**:
 
         Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
-    
+
         ```http
         GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
         ```
@@ -513,43 +513,43 @@ The response payload contains:
 - The meeting ID in the `msGraphResourceId` member of the `details` property.
 - The organizer ID in the `id` member of the `organizer` property.
 <br>
-<details>
-<summary><b>Example</b>: Response payload for getting meeting details</b></summary>
-
-```json
-{
-  details: {
-    id: "MCMxOTptZWV0aW5nX05XTTFNVEk1TnpNdE5qZ3pNeTAwWVdRNExUaG1PV1F0WlRnM01UQm1PVGczWW1VekB0aHJlYWQudjIjMA==",
-    msGraphResourceId: "MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVldGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM1ltVXpAdGhyZWFkLnYy",
-    scheduledStartTime: {
-    },
-    scheduledEndTime: {
-    },
-    joinUrl: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz%40thread.v2/0?context=%7b%22Tid%22%3a%22b3cdf1c8-024a-49e2-a994-f67f830b02f3%22%2c%22Oid%22%3a%226702afb6-109b-4c32-a141-6e65469502b9%22%7d",
-    title: "Testing meeting bot 1 - Hun",
-    type: "Scheduled",
-  },
-  conversation: {
-    id: "19:meeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz@thread.v2",
-    isGroup: true,
-    conversationType: "groupChat",
-  },
-  organizer: {
-    id: "29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w",
-    tenantId: "b3cdf1c8-024a-49e2-a994-f67f830b02f3",
-    aadObjectId: "6702afb6-109b-4c32-a141-6e65469502b9",
-  },
-}
-```
-
-In this example:
-
-- The meeting ID is included as the value for `msGraphResourceId`: *MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl
-dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
-1ltVXpAdGhyZWFkLnYy*.
-- The organizer ID is contained as the value for `id` for `organizer`:  *29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w*.
-
-</details>
+    <details>
+    <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
+    
+    ```json
+    {
+      details: {
+        id: "MCMxOTptZWV0aW5nX05XTTFNVEk1TnpNdE5qZ3pNeTAwWVdRNExUaG1PV1F0WlRnM01UQm1PVGczWW1VekB0aHJlYWQudjIjMA==",
+        msGraphResourceId: "MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVldGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM1ltVXpAdGhyZWFkLnYy",
+        scheduledStartTime: {
+        },
+        scheduledEndTime: {
+        },
+        joinUrl: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz%40thread.v2/0?context=%7b%22Tid%22%3a%22b3cdf1c8-024a-49e2-a994-f67f830b02f3%22%2c%22Oid%22%3a%226702afb6-109b-4c32-a141-6e65469502b9%22%7d",
+        title: "Testing meeting bot 1 - Hun",
+        type: "Scheduled",
+      },
+      conversation: {
+        id: "19:meeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz@thread.v2",
+        isGroup: true,
+        conversationType: "groupChat",
+      },
+      organizer: {
+        id: "29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w",
+        tenantId: "b3cdf1c8-024a-49e2-a994-f67f830b02f3",
+        aadObjectId: "6702afb6-109b-4c32-a141-6e65469502b9",
+      },
+    }
+    ```
+    
+    In this example:
+    
+    - The meeting ID is included as the value for `msGraphResourceId`: *MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl
+    dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
+    1ltVXpAdGhyZWFkLnYy*.
+    - The organizer ID is contained as the value for `id` for `organizer`:  *29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w*.
+    
+    </details>
 
 After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
 
