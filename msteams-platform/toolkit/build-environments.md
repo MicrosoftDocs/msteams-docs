@@ -6,7 +6,7 @@ ms.topic: reference
 ---
 # Build environments
 
-Options that help select the correct environment based that best suits your app requirement.
+Options that helps to select the correct environment that best suits your app requirement.
 
 ## Choose your build environments
 
