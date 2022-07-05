@@ -16,8 +16,8 @@ After scaffolding, there will be a manifest template file available under `templ
 
 You can open this manifest template file by click `Open Manifest File` under Project -> Teams Toolkit menu.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
 ![open manifest](../images/vs-open-manifest.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
 During `Provision in the Cloud` or `Prepare Teams App Dependencies`, Teams Toolkit will load manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`. Then create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with this manifest.
 
@@ -51,11 +51,13 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 ![preview placeholder values](../images/vs-hover.png)
 
 > [!NOTE]: If the environment has not been provisioned, or `Prepare Teams App Dependencies` has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
+
 ![preview placeholder values - undefined](../images/vs-hover-undefined.png)
 
 #### Preview manifest file
 
 > [!Prerequisite]: To preview manifest file, you need to trigger `Prepare Teams App Dependencies` or `Provision in the Cloud...` from Project -> Teams Toolkit menu, which will generate configuration for local or remote Teams app.
+
 ![prepare dependencies](../images/vs-prepare-dependencies.png)
 
 ![provision in the cloud](../images/vs-provision.png)
@@ -83,6 +85,7 @@ After previewing the manifest file, you can sync your local changes to Developer
 ![update](../images/vs-update-manifest.png)
 
 > [!NOTE]: The changes will be updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, it will be overwritten. There will be a warning window to let you proceed or cancel.
+
 ![update-warning](../images/vs-overwrite.png)
 
 ## See also
