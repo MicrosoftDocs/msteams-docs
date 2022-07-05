@@ -507,44 +507,44 @@ For more information about APIs for Teams meeting, see [Meeting apps API referen
 
 Use the following example to request meeting URL to obtain mee,ting ID and organizer ID from a bot app:
 
-    ```json
-    GET /v1/meetings/{meetingId}
-    ```
+```json
+GET /v1/meetings/{meetingId}
+```
 
-    The response payload contains:
+The response payload contains:
 
-    - The meeting ID in the `msGraphResourceId` member of the `details` property.
-    - The organizer ID in the `id` member of the `organizer` property.
-    <br>
-    <details>
-    <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
+- The meeting ID in the `msGraphResourceId` member of the `details` property.
+- The organizer ID in the `id` member of the `organizer` property.
+<br>
+<details>
+<summary><b>Example</b>: Response payload for getting meeting details</b></summary>
 
-    ```json
-    {
-       "details":  { 
-             "id": "<meeting ID>", 
-             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
-             "scheduledStartTime": "2022-04-24T22:00:00Z", 
-             "scheduledEndTime": "2022-04-24T23:00:00Z", 
-             "joinUrl": "https://teams.microsoft.com/l/xx", 
-             "title": "All Hands", 
-             "type": "Scheduled" 
-         },
-        "conversation": { 
-             "isGroup": true, 
-             "conversationType": "groupChat", 
-             "id": "meeting chat ID" 
-             }, 
-        "organizer": { 
-             "id": "<organizer user ID>", 
-             "aadObjectId": "<AAD object ID>",
-             "objectId": "<organizer object ID>",
-             "tenantId": "<Tenant ID>" 
-         }
-    }
-    ```
+```json
+{
+    "details":  { 
+            "id": "<meeting ID>", 
+            "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+            "scheduledStartTime": "2022-04-24T22:00:00Z", 
+            "scheduledEndTime": "2022-04-24T23:00:00Z", 
+            "joinUrl": "https://teams.microsoft.com/l/xx", 
+            "title": "All Hands", 
+            "type": "Scheduled" 
+        },
+    "conversation": { 
+            "isGroup": true, 
+            "conversationType": "groupChat", 
+            "id": "meeting chat ID" 
+            }, 
+    "organizer": { 
+            "id": "<organizer user ID>", 
+            "aadObjectId": "<AAD object ID>",
+            "objectId": "<organizer object ID>",
+            "tenantId": "<Tenant ID>" 
+        }
+}
+```
 
-    </details>
+</details>
 
 After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
 
