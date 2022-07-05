@@ -18,9 +18,10 @@ To create Teams app, you'll need the following tools:
 | &nbsp; | Tools | For using|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+   | &nbsp; |NPM | Install and manage packages for use in both Node.js and ASP.NET Core applications.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    | &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
@@ -32,55 +33,6 @@ To create Teams app, you'll need the following tools:
 
    > [!TIP]
    > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
-
-### Install the Teams Toolkit
-
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more.
-
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
-
-# [Visual Studio Code](#tab/vscode)
-
-1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-1. In the search box, enter **Teams Toolkit**.
-1. Select **Install** next to the Teams Toolkit.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
-
-   The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
-
-You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-# [Command line](#tab/cli)
-
-To install the TeamsFx CLI, use the `npm` package manager:
-
-   ```Bash
-   npm install -g @microsoft/teamsfx-cli
-   ```
-
-Depending on your configuration, you may need to use `sudo` to install the CLI:
-
-   ``` bash
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-   ```
-
-This condition is more common on Linux and macOS systems.
-
-Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
-
-You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
-
-> [!CAUTION]
-> Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
-
----
-
-### Set up your Teams development tenant
-
-A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
 ## Accounts
 
@@ -139,8 +91,9 @@ If you want to host your application related resources or access resources withi
 After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**. Sign-in to your Microsoft 365 account to view this option.
 
 You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
-
-* **Verify sideloading permission using Visual Studio Code**
+<br>
+<details>
+<summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
 
     1. Open **Visual Studio Code**.
     2. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
@@ -148,8 +101,10 @@ You can verify if the sideloading permission is enabled using either Visual Stud
     4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
+</details>
 
-* **Verify sideloading permission using Teams client**
+<details>
+<summary><b>Verify sideloading permission using Teams client</b></summary>
 
     1. Open **Microsoft Teams**.
     2. Select **Apps** in left panel.
@@ -165,8 +120,10 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 
         * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
+</details>
 
-* **Upload custom app using admin center**
+<details>
+<summary><b>Upload custom app using admin center</b></summary>
 
   > [!IMPORTANT]
   > To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
@@ -196,6 +153,7 @@ You can verify if the sideloading permission is enabled using either Visual Stud
      > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
 
 For more information, see [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
+</details>
 
 ## See also
 
