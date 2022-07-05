@@ -466,7 +466,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     1pqWTJAdGhyZWFkLnYy*.
         - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*.
 
-        The response payload contains the transaction ID for the meeting ID and organizer ID.
+        The response payload contains the transaction ID for the meeting ID and organizer ID in the `id` member of the `value` property.
 
         <details>
         <summary><b>Example</b>: Response payload for getting transaction ID</summary>
@@ -484,6 +484,8 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         }
         ```
 
+        In this examples, the transaction ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
+
         </details>
 
     1. **Access and get meeting transcript based on the transcript ID**:
@@ -498,14 +500,9 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
-Your app can use the Bot Framework for obtaining meeting ID and organizer ID.
+Your app can use the Bot Framework for obtaining meeting ID and organizer ID. The bot can receive meeting start or end events automatically from all the scheduled online meetings.
 
-> [!NOTE]
-> The bot can receive meeting start or end events automatically from all the scheduled online meetings.
-
-For more information about APIs for Teams meeting, see [Meeting apps API references](../../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
-
-Use the following example to request meeting URL to obtain mee,ting ID and organizer ID from a bot app:
+Use the following example to obtain meeting ID and organizer ID using a bot app:
 
 ```json
 GET /v1/meetings/{meetingId}
@@ -866,4 +863,4 @@ WEBVTT
 
 - [Resource-specific consent](/graph-api/rsc/resource-specific-consent)
 - [Online meeting permissions](/graph/permissions-reference.md#online-meetings-permissions)
-
+- [Meeting apps API references](../../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
