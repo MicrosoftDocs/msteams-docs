@@ -52,7 +52,8 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
-> [!NOTE]: If the environment has not been provisioned, or `Prepare Teams App Dependencies` has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
+> [!NOTE]
+> If the environment has not been provisioned, or `Prepare Teams App Dependencies` has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined.png" alt-text="Placeholder values undefined":::
 
@@ -76,7 +77,7 @@ The other ways are:
 
 - Right click on Solution Explorer, there will be a list of menus which are the same as menus under Project -> Teams Toolkit
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution.png" alt-text="Solution explorer":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer.png" alt-text="Solution explorer":::
 
 ### Sync local changes to Developer Portal
 
@@ -84,9 +85,10 @@ After previewing the manifest file, you can sync your local changes to Developer
 
 - Click `Update Manifest in Teams Developer Portal` under Project -> Teams Toolkit menu, or context menu from Solution Explorer.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update.png" alt-text="Update":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest.png" alt-text="Update manifest":::
 
-> [!NOTE]: The changes will be updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, it will be overwritten. There will be a warning window to let you proceed or cancel.
+> [!NOTE]
+> The changes will be updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, it will be overwritten. There will be a warning window to let you proceed or cancel.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning":::
 
