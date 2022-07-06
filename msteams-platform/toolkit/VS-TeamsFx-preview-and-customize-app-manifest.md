@@ -18,7 +18,7 @@ You can open this manifest template file by clicking `Open Manifest File` under 
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest":::
 
-During `Provision in the Cloud` or `Prepare Teams App Dependencies`, Teams Toolkit will load manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`. Then create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with this manifest.
+During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
 ## Customize app manifest in Teams Toolkit
 
