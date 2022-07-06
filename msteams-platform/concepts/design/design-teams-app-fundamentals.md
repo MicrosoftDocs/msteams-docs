@@ -99,7 +99,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Concept image of Teams colors.":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Conceptual image of Teams colors.":::
    :::column-end:::
 
 :::row-end:::
@@ -118,7 +118,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptual of shape and elevation.":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptual image of shape and elevation.":::
 
    :::column-end:::
 :::row-end:::
