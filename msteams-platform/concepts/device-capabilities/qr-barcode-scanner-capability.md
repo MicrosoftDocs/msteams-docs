@@ -64,7 +64,7 @@ The **scanBarCode()** API supports the following barcode types:
 
 The following image depicts web app experience of QR or barcode scanner capability:
 
-![web app experience for qr or barcode scanner capability](../../assets/images/tabs/qr-barcode-scanner-capability.png)
+:::image type="content" source="../../assets/images/tabs/qr-barcode-scanner-capability.png" alt-text="Web app experience for qr or barcode scanner capability.":::
 
 ## Error handling
 
