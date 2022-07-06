@@ -35,27 +35,33 @@ The following steps help you to build a new Teams app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams toolkit sidebar":::
 
-1. Select **Create a new Teams app**.
+1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-1. The following image displays different app templates from three categories: Scenario-based Teams app, Basic Teams app, and Extended Teams apps across Microsoft 365.
+1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Select App Capability":::
 
-1. Select at least one option to start creating the Teams app.
+1. Select **JavaScript** as the programming language.
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+
+1. Select the location for project workspace.
+1. Select the **Select Folder**.
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-folder.png" alt-text="select-folder":::
+
+1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name.":::
+
+   The Teams tab app is created in a few seconds.
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created.":::
 
    > [!NOTE]
    > For SPFx, follow the same steps to create a new Teams app and you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
-
-## Step-by-step guides using Teams Toolkit
-
-* [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
-* [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
-* [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
-* [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
-* [Send notification to Teams](../sbs-gs-notificationbot.yml)
-* [Build command bot](../sbs-gs-commandbot.yml)
 
 ## Directory structure for different app types
 
@@ -121,3 +127,12 @@ The following image shows the directory structure of tab app:
 The following image shows the directory structure of tab app with bot feature:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/tab-app-with-bot-app.png" alt-text="Tab app with bot app directory structure":::
+
+## See also
+
+* [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
+* [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
+* [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
+* [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+* [Send notification to Teams](../sbs-gs-notificationbot.yml)
+* [Build command bot](../sbs-gs-commandbot.yml)
