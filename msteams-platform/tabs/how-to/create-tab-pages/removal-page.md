@@ -31,7 +31,7 @@ When your tab is uploaded to a channel or group chat, Teams adds a right-click d
 
 ## Create a tab removal page for your application
 
-The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setConfig()` method (formerly `setSettings()`) within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab prerequisites](../../../tabs/how-to/tab-requirements.md).
+The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setConfig()` method (or `setSettings()` prior to TeamsJS v.2.0.0) within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab prerequisites](../../../tabs/how-to/tab-requirements.md).
 
 ### Register a remove handler
 
@@ -53,7 +53,7 @@ You can use `getContext()` to get the current context in which the frame is runn
 
 #### Include authentication
 
-Authentication is required before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+Authentication is required before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `validDomains` array of your app manifest.
 
 The following is a sample tab removal code block:
 
