@@ -34,7 +34,6 @@ Cards used by bots and message extensions in Teams support the following activit
 > [!NOTE]
 >
 > * Your bot doesn't receive any notice on which button was selected.
->
 > * Machine names with numbers aren't supported in URL.
 
 With `openUrl`, you can create an action with the following properties:
