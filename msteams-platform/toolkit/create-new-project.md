@@ -35,18 +35,18 @@ The following steps help you to build a new Teams app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams toolkit sidebar":::
 
-1. You can select **Create a new Teams app** or **Start from a sample**.
+1. Select **Create a new Teams app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-1. If you select **Create a new Teams app**, the following image displays with templates from three categories: Scenario-based Teams app, Basic Teams app, and Extended Teams apps across Microsoft 365:
+1. The following image displays different app templates from three categories: Scenario-based Teams app, Basic Teams app, and Extended Teams apps across Microsoft 365:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
 
 1. Select at least one option to start creating the Teams app.
 
    > [!NOTE]
-   > For SPFx, follow the same steps to create a new Teams app and you need to select Framework and Web Part Name as well. For more information, refer [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
+   > For SPFx, follow the same steps to create a new Teams app and you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
 
 ## Step-by-step guides using Teams Toolkit
 
@@ -110,7 +110,7 @@ The core notification implementation in **bot** folder and it contains:
 | `package.json` | The NPM package file for bot project |
 </details>
 
-### Directory structure updated with app features
+Directory structure updated with app features
 
 You can add additional features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app. Bot folder is added with files and codes relevant to bot.
 
