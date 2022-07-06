@@ -54,7 +54,7 @@ If you have a Visual Studio Enterprise or Professional subscription, both progra
 
 #### Microsoft 365 developer program
 
-You can sign-up for the developer program by using one of the following account types:
+You can sign up for the developer program by using one of the following account types:
 
 * **Microsoft account for personal use**
 
@@ -66,7 +66,7 @@ You can sign-up for the developer program by using one of the following account 
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon" alt-text="personal-accounts":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon" alt-text="personal-accounts":::
    :::column-end:::
 
 :::row-end:::
@@ -81,7 +81,7 @@ You can sign-up for the developer program by using one of the following account 
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work-account.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work-account.":::
    :::column-end:::
 
 :::row-end:::
@@ -113,7 +113,7 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 
 1. Open **Visual Studio Code**.
 2. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
-3. Select **Accounts** and log in to your Microsoft 365 account.
+3. Select **Accounts** and log-in to your Microsoft 365 account.
 4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
@@ -133,7 +133,7 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app":::
 
-If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
+If you're unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
 
 * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
 * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
@@ -142,7 +142,7 @@ If you are unable to view the option **Upload a custom app,** then it indicates 
 
 ### Enable sideloading using admin center
 
-If your developer tenant doesn't have permission to upload custom app or to sideload, then you need to have admin rights for your tenant to turn on custom app uploading or sideloading. In case, if you don't have admin rights, contact administrator to grant permission to upload custom app or to sideload for yor tenant.
+If your developer tenant doesn't have permission to upload custom app or to sideload, then you need to have admin rights for your tenant to turn on custom app uploading or sideloading. In case, if you don't have admin rights, contact administrator to grant permission to upload custom app or to sideload for your tenant.
 
   If you have admin rights, perform the following steps to upload the custom app using admin center:
 
