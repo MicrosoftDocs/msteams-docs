@@ -570,7 +570,17 @@
     - name: Deploy an app with collaboration control to Teams
       href: samples/deploy-collaboration-control-in-teams.md
     - name: Collaboration Toolkit and Settings API
-      href: samples/collaboration-api-reference.md    
+      items:
+      - name: Overview
+        href: samples/collaboration-api-reference.md
+      - name: Collaboration - Custom APIs
+        href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+      - name: Collaboration - Standard OData APIs
+        href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+      - name: Settings - Custom APIs
+        href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+      - name: Settings - Standard OData APIs
+        href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is    
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
