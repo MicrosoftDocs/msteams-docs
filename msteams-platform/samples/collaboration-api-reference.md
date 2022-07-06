@@ -16,7 +16,8 @@ This section provides reference content for the Collaboration Toolkit Solution R
 ## REST Operations: Collaboration - Custom API
 
 |Operation|Description|
-|[Associate Collaboration Map](rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map)|Associates a collaborative entity to a collaboration session.|
+|---------|-----------|
+|[Associate Collaboration Map](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map)|Associates a collaborative entity to a collaboration session.|
 |[Begin Collaboration Session](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/begin-collaboration-session)|Creates a collaboration session record linked to a business entity, application context, and optional metadata.|
 |[Disassociate Collaboration Map](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/disassociate-collaboration-map-custom-api)|Disassociates a mapped entity from the given collaboration session.|
 |[Retrieve Collaboration Maps](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/retrieve-collaboration-maps-custom-api)|Gets a list of collaboration maps for a session of a specific entity type.|
@@ -27,6 +28,7 @@ This section provides reference content for the Collaboration Toolkit Solution R
 ## REST Operations: Collaboration - Standard OData APIs
 
 |Operation|Description|
+|---------|-----------|
 |[Get Collaboration Map By Id](/rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is/get-collaboration-map-by-id)|Gets the details from a collaboration map record.|
 |[Get Collaboration Metadata](/rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is/get-collaboration-metadata)|Gets a list of the collaboration metadata records for a given collaboration map or a collaboration root entity name.|
 |[Get Collaboration Root](/rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is/get-collaboration-root)|Lists all the collaboration sessions created.|
@@ -34,6 +36,7 @@ This section provides reference content for the Collaboration Toolkit Solution R
 ## REST Operations: Settings - Custom APIs
 
 |Operation|Description|
+|---------|-----------|
 |[Create and Update Settings](/rest/api/industry/collaboration-toolkit/settings-custom-ap-is/create-update-setting-custom-api)|Creates or updates a setting that matches both the group path and the settings definition name.|
 |[Retrieve Null Settings](/rest/api/industry/collaboration-toolkit/settings-custom-ap-is/retrieve-null-settings-custom-api)|Returns a list of settings definitions that do not have a value.|
 |[Retrieve Settings](/rest/api/industry/collaboration-toolkit/settings-custom-ap-is/retrieve-settings-custom-api)|Returns a list of specific settings or settings in groups.|
@@ -41,6 +44,7 @@ This section provides reference content for the Collaboration Toolkit Solution R
 ## REST Operations: Settings - Standard OData APIs
 
 |Operation|Description|
+|---------|-----------|
 |[Delete Settings Definition](/rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is/delete-settings-definition)|Deletes a settings definition.|
 |[Delete Settings Group](/rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is/delete-settings-group)|Deletes a settings group.|
 |[Delete Settings Type](/rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is/delete-settings-type)|Delete a settings type.|
