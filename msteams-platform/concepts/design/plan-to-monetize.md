@@ -14,7 +14,7 @@ Consider publishing your app on Teams store to offer your app the best platform 
 :::row:::
     :::column span="":::
 
-        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetize apps":::
+        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetize apps.":::
     :::column-end:::
     :::column span="":::
         The most common ways to monetize your app are:
