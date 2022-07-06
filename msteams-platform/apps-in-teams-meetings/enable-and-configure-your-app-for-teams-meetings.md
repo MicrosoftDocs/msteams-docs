@@ -157,6 +157,8 @@ Participants can share the entire app to the collaborative meeting stage using t
 
 :::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="Share entire app to the collaborative meeting stage in mobile.":::
 
+---
+
 To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
 ```json
