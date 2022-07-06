@@ -74,7 +74,7 @@ Support the `groupchat` scope to enable your app in pre-meeting and post-meeting
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
@@ -149,7 +149,13 @@ Shared meeting stage allows meeting participants to interact with and collaborat
 
 Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+# [Desktop](#tab/Desktop)
+
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Share entire app to the collaborative meeting stage in desktop.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="Share entire app to the collaborative meeting stage in mobile.":::
 
 To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
@@ -182,7 +188,7 @@ To share specific parts of the app to stage, you must invoke the related APIs in
 > [!NOTE]
 >
 > * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
-> * Share specific parts of the app to stage is supported for Teams desktop clients only.
+> * Currently, share specific parts of the app to stage is supported for Teams desktop clients only.
 
 ### After a meeting
 
