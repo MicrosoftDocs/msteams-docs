@@ -12,7 +12,7 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
 
-The following sections describe how to do this:
+The following sections describe how to do initiate actions:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
@@ -370,15 +370,15 @@ These are the different expected responses to a `submitAction`.
 
 ### Task Module response
 
-This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
+Task module response is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
+Compose extension auth/config response is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
 
 ### Compose extension result response
 
-This is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+Compose extension result response is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {

@@ -53,7 +53,7 @@ Get answers to some common questions when resolving app submission issues.
 
 <summary><b>How long will it take to publish my app?</b></summary>
 
-If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you will be notified in 24 hours if your app is ready to publish or still needs more work.
+If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. After you make those fixes and resend an updated app to that team, you'll be notified in 24 hours if your app is ready to publish or still needs more work.
 
 <br>
 

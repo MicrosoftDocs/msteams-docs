@@ -1,6 +1,6 @@
 ---
 title: Moodle learning management system
-description: Learn Moodle LMS integration with Teams, Moodle learning management, mConnect and deep links, accessibility, and user requirement scenarios. This integration provides Audio, video calls, chat, coureses and activity management, analytical insigths, and more.
+description: Learn Moodle LMS integration with Teams, Moodle learning management, mConnect and deep links, accessibility, and user requirement scenarios. This integration provides Audio, video calls, chat, courses and activity management, analytical insight, and more.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -38,7 +38,7 @@ The following scenarios describe the accelerated learning potential combining Mi
 
 * **Facilitate hybrid remote meetings**: Teams meetings and extensibility services allow faculty to present in-person and remotely with students. For students it's mandatory to have access to shared views, apps, and polls for remote meetings. The follow-up tasks provide for multi-language transcription and audio or video course recordings. Teams and Moodle work together to share roosters, activities, and tasks.
 
-* **Personalize meeting panels**: Create unique collaborative learning experiences using Teams Graph API endpoints. For other additional plans or projects, users can interview all new recruits and categorize the results using custom polls. There's facility to share quizzes directly in Teams while pushing updates to the Moodle site asynchronously.
+* **Personalize meeting panels**: Create unique collaborative learning experiences using Teams Graph API endpoints. For other more plans or projects, users can interview all new recruits and categorize the results using custom polls. There's facility to share quizzes directly in Teams while pushing updates to the Moodle site asynchronously.
 
 * **Automate facility**: To set up automated facilities for institutions when a new student joins, the user can add Moodle course, send an Adaptive Card to the student with relevant links and suggest key reading course materials. Teams custom connector for Moodle helps to create Moodle calendar event each time a course meeting is scheduled.
 
