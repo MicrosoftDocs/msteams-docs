@@ -1,12 +1,12 @@
 ---
 title: Enable and configure your apps for Teams meetings
 author: surbhigupta
-description: Enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features, such as, in-meeting dialog, shared meeting stage, meeting sidepanel, and more  
+description: Learn how to enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features and more.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
 
-# Enable and configure your apps for Teams meetings
+# Enable and configure apps for meetings
 
 Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest.
 
@@ -136,7 +136,7 @@ The in-meeting notification is used to engage participants during the meeting an
 
 In-meeting notification must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog.":::
 
 #### Shared meeting stage
 

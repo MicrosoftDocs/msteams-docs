@@ -1,14 +1,13 @@
 ---
 title: Prepare your store submission  
-description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
+description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package and more.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: submission store distribute validate app package guidelines localize
 ---
 
-# Prepare your Microsoft Teams store submission
+# Prepare your Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 

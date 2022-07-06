@@ -1,9 +1,8 @@
 ---
 title: Get context for your tab
-description: Describes how to get user context to your tabs
+description: In this module, learn how to get user context to your tabs, user context and Access context information
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams tabs user context
 ---
 
 # Get context for your tab
@@ -65,7 +64,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 
 ### Get context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the Microsoft Teams JavaScript client SDK [context](/javascript/api/@microsoft/teams-js/app.context) object.
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 

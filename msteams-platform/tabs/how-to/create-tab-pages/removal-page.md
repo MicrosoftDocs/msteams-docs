@@ -1,8 +1,7 @@
 ---
 title: Create a tab removal page
 author: surbhigupta
-description: How to create a tab removal page
-keywords: teams tabs group channel configurable remove delete
+description: In this module, learn how to create a tab removal page and how to enable your tab to be reconfigured after installation
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
