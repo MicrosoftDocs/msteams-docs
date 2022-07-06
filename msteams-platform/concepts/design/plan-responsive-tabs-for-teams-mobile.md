@@ -59,7 +59,7 @@ You can show the following information:
 * Data visuals, maps, and infographics.
 * Charts, graphs, and tables.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Show the data in the form of visualization.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Image shows the data in the form of visualization.":::
 
 Quick actions:
 
@@ -81,7 +81,7 @@ You can provide following access to users:
 * Insert data items to create visualizations.
 * Share visualizations in a channel or group chat.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Enable users to create content such as charts graphics.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Enable users to create content such as, charts and graphics.":::
 
 <br>
 
@@ -99,7 +99,7 @@ Consumption:
 
 In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as **Proposed**, **Active**, and **Closed** then provide filters for showing grouped tasks or as headers to see the grouped tasks.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Shows the list of tasks in a vertical stack.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Image shows the list of tasks in a vertical stack.":::
 
 Quick actions:
 
@@ -169,7 +169,7 @@ In the third stage, provide complete experience to your users. You can enable us
 * Delete, undo, and redo operations.
 * Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes, quick notes, and other capabilities.":::
 
 <br>
 
