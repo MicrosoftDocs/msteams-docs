@@ -66,7 +66,7 @@ You can sign up for the developer program by using one of the following account 
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon" alt-text="personal-accounts":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="personal account.":::
    :::column-end:::
 
 :::row-end:::
@@ -81,7 +81,7 @@ You can sign up for the developer program by using one of the following account 
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work-account.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work account.":::
    :::column-end:::
 
 :::row-end:::
