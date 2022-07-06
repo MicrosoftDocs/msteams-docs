@@ -1,12 +1,12 @@
 ---
-title: Create and send the task module
+title: Create and send task module
 author: surbhigupta
 description: In this module, learn how to handle the initial invoke action and respond with a task module from an action messaging extension command
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create and send the task module
+# Create and send task module
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
