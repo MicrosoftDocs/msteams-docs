@@ -23,7 +23,7 @@ In this section, learn how to:
 
 Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app.":::
 
 * [Before you build](#before-you-build)
 * [During build](#during-build)
