@@ -570,7 +570,7 @@
     - name: Deploy an app with collaboration control to Teams
       href: samples/deploy-collaboration-control-in-teams.md
     - name: Collaboration Toolkit and Settings API
-      href: samples/deploy-collaboration-control-in-teams.md    
+      href: samples/collaboration-api-reference.md    
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
