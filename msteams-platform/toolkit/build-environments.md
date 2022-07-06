@@ -14,7 +14,7 @@ You can choose the following build environments that help you to build a Teams a
 
 * [JavaScript](#javascript)
 * [SharePoint Framework (SPFx)](#sharepoint-framework-spfx)
-* [Blazor or Csharp](#blazor-or-csharp)
+* [Blazor](#blazor)
 
 ### Javascript
 
@@ -52,7 +52,7 @@ Teams Toolkit's extension for Visual Studio makes it easy to create new projects
 
 If you've created a Teams app from required development environment using Teams Toolkit in Visual Studio Code, you can manage your app using Developer Portal. The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
+:::image type="content" source="../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
 ## See also
 
