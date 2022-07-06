@@ -41,7 +41,7 @@ The following steps help you to build a new Teams app.
 
 1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
 
-     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-capabilities-tabapp.png" alt-text="Select App Capability":::
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-tabapp.png" alt-text="Select App Capability":::
 
 1. Select **JavaScript** as the programming language.
 
