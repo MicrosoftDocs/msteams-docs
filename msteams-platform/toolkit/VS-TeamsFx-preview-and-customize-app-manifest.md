@@ -10,9 +10,9 @@ ms.date: 05/13/2022
 
 # Manage Teams app manifest
 
-After scaffolding, there will be a manifest template file available under `templates/appPackage` folder:
+After scaffolding, there is a manifest template file under `templates/appPackage` folder:
 
-- manifest.template.json - shared between local and remote environment
+`manifest.template.json` - shared between local and remote environment
 
 You can open this manifest template file by clicking `Open Manifest File` under Project -> Teams Toolkit menu.
 
