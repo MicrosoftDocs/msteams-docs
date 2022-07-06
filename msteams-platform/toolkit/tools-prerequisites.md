@@ -25,7 +25,7 @@ For creating different Teams app using Teams Toolkit in Visual Studio Code, you'
    | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. | JavaScript and SPFx|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.| JavaScript and SPFx|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript and SPFx|
-   | &nbsp; |NPM | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
+   | &nbsp; |[NPM](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. | JavaScript and SPFx|
    | **Optional** | &nbsp; | &nbsp; | &nbsp; |
@@ -54,6 +54,38 @@ If you have a Visual Studio Enterprise or Professional subscription, both progra
 
 #### Microsoft 365 developer program
 
+You can sign-up for the developer program by using one of the following account types:
+
+* **Microsoft account for personal use**
+
+:::row:::
+
+   :::column span="3":::
+
+      The account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
+
+   :::column-end:::
+   :::column span="1":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon" alt-text="personal-accounts":::
+   :::column-end:::
+
+:::row-end:::
+
+* **Microsoft work account for business**
+
+:::row:::
+
+   :::column span="3":::
+
+      The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
+
+   :::column-end:::
+   :::column span="1":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work-account.":::
+   :::column-end:::
+
+:::row-end:::
+
 To get a free Teams developer account, join the Microsoft 365 developer program and follow the steps:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
@@ -65,29 +97,9 @@ To get a free Teams developer account, join the Microsoft 365 developer program 
 
     :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
 
-#### Microsoft 365 developer account types
-
-You can sign-up for the developer program by using one of the following account types:
-
-* **Microsoft account for personal use**
-
-    The account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
-
-* **Microsoft work account for business**
-
-     The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
-
-* **Visual Studio user ID**
-
-    The user ID for Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
-
 ### Azure account
 
-Azure account is required to host backend resources, if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
-
-**Visual Studio ID**
-
-If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
+Teams Toolkit requires Azure account to host a Teams app to Azure or to host backend resources for your Teams app, if you already have an existing app on a different cloud provider other than Azure and you want to integrate the existing app on Teams platform, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select Azure subscription to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
 ## Sideloading permission
 
@@ -130,10 +142,9 @@ If you are unable to view the option **Upload a custom app,** then it indicates 
 
 ### Enable sideloading using admin center
 
-  > [!IMPORTANT]
-  > If developer tenant don't have permission for custom app uploading or sideloading, to turn on custom app uploading or sideloading, you must be the admin for your tenant.
+If your developer tenant doesn't have permission to upload custom app or to sideload, then you need to have admin rights for your tenant to turn on custom app uploading or sideloading. In case, if you don't have admin rights, contact administrator to grant permission to upload custom app or to sideload for yor tenant.
 
-  Perform the following steps to upload the custom app using admin center:
+  If you have admin rights, perform the following steps to upload the custom app using admin center:
 
   1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
