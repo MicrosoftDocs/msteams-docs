@@ -1,6 +1,6 @@
 ---
-title: What is new for developers in Teams
-description: In this learning path, learn about the new developer features and enhancements to those features in Microsoft Teams.
+title: What is new and updated for developers in Teams
+description: What are the new Microsoft Teams developer features introduced and updates to those features.
 ms.topic: reference
 ms.localizationpriority: high
 ---
