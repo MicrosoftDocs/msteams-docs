@@ -150,7 +150,7 @@ You’ve created your SaaS offer and linked it to your Teams app—now it's time
 > [!IMPORTANT]
 >
 > * Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
-> * Teams now supports Flat rate transactable offers. Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
+> * Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 
 Once published, users will see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
