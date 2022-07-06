@@ -1,13 +1,13 @@
 ---
 title: SSO support for your message extensions
 author: KirtiPereira
-description: In this module, learn how to enable Single sign-on (SSO) support for your messaging extensions with Code samples.
+description: In this article, you'll learn how to enable Single sign-on (SSO) support for your messaging extensions with Code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Single sign-on support for message extensions
+# Enable SSO for message extensions
 
 Single sign-on (SSO) support is now available for message extensions and link unfurling. Enabling Single sign-on for message extensions by default refreshes the authentication token, which minimizes the number of times you need to enter the sign in credentials for Microsoft Teams.
 
@@ -118,8 +118,9 @@ This section provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
+| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
+|Tab, Bot, and Message extension| This sample shows how to check authentication in Bot,Tab, and Messaging extention with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
 
 ## See also
 

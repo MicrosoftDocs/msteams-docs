@@ -5,7 +5,7 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
 ---
-# Reference: Public developer preview manifest schema for Microsoft Teams
+# Public developer preview manifest schema for Teams
 
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -471,7 +471,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ### composeExtensions.commands
 
-Your message extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There's a maximum of 10 commands.
+Your message extension should declare one or more commands. Each command appears in Teams as a potential interaction from the UI-based entry point. There's a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 

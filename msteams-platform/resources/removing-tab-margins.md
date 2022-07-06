@@ -9,10 +9,10 @@ ms.author: lomeybur
 
 # Tab margin changes
 
-This document describes how the removal of margins around all tabs in Microsoft Teams enhances your app building experience. This is an enhancement introduced in Microsoft Teams in 2021.
+This document describes how the removal of margins around all tabs in Microsoft Teams enhances your app building experience. This is an enhancement introduced in Teams in 2021.
 You can build apps that look more native to Teams by removing the margins around all tabs. Tabs with removed margins align with Microsoft Teams' [UI kit designs](~/tabs/design/tabs.md). Most apps experience enhanced look without margins.
 
-:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins" border="false":::
+:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins":::
 
 > [!NOTE]
 > This feature is not applicable to mobile clients, as the tabs viewed in the mobile clients don't have margins.
