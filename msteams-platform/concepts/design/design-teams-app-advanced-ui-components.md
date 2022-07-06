@@ -45,11 +45,11 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Example shows a left nav template on mobile.":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Example shows a left navigation template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left navigation template on desktop.":::
 
 ## Notification bar
 
