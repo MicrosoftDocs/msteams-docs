@@ -104,7 +104,7 @@ Teams Toolkit requires Azure account to host a Teams app to Azure or to host bac
 
 ### SharePoint collection site administrator account
 
-while creating Teams app in SPFx environment, you'll need sharepoint collection site administrator account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+while creating Teams app using SPFx environment, you'll need sharePoint collection site administrator account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
 ## Sideloading permission
 
