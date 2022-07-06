@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app
+# Create a new Teams app using Teams Toolkit
 
 You can build a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create basic Teams app and scenario based Teams app in Teams Toolkit.
 
@@ -25,13 +25,15 @@ In scenario based Teams app, we have following types of app
 * SSO-enabled tab
 * SPFx tab
 
+## Create a new Teams app
+
 The following steps help you to build a new Teams app.
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code sidebar.
 1. Select **Create a new Teams app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams toolkit sidebar":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams toolkit sidebar":::
 
 1. You can select **Create a new Teams app** or **Start from a sample**.
 
@@ -43,8 +45,8 @@ The following steps help you to build a new Teams app.
 
 1. Select at least one option to start creating the Teams app.
 
-> [!NOTE]
-> For create a Teams app with SPFx, you need to select Framework and Web Part Name. Refer [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
+   > [!NOTE]
+   > For SPFx, follow the same steps to create a new Teams app and you need to select Framework and Web Part Name as well. For more information, refer [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
 
 ## Step-by-step guides using Teams Toolkit
 
