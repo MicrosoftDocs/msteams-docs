@@ -1,7 +1,7 @@
 ---
 title: Collaboration controls for Microsoft Teams
 author: surbhigupta
-description: The solutions that make up Collaboration Controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
+description: The solutions that make up Collaboration controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
