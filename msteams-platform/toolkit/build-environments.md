@@ -17,12 +17,16 @@ Teams Toolkit in Visual Studio Code provides you set of environments options to 
 
 Teams Toolkit in Visual Studio Code provides JavaScript build environment to create your Teams app. JavaScript is a development model to build client-side solutions for Microsoft Teams. It provides full support for developing and hosting your client-side JavaScript solution, if your JavaScript Teams app is hosted on Microsoft 365. You can choose JavaScript to create tab, bot and message extension apps for Microsoft Teams.
 
+#### Advantages
+
 The following lists provide you advantages of using JavaScript to build your Teams app:
 
 * Client-side JavaScript is fast because it can be run immediately within the client-side browser
 * JavaScript is relatively simple to implement and more compatible with different platforms such as iOS
 * Provides the ability to create rich interfaces
 * JavaScript is more compatible while creating an app with existing APIs
+
+#### Scenarios
 
 JavaScript is best suitable in the following scenarios:
 
@@ -39,6 +43,8 @@ Teams Toolkit in Visual Studio Code provides SPFx build environment to create yo
 * SharePoint data and extend Microsoft Teams.
 * Your business APIs secured with Azure Active Directory.
 
+#### Advantages
+
 The following lists provide you advantages of using SPFx to build your Teams app:
 
 * Provides easy integration with data residing in SharePoint, and access to various open-source tools.
@@ -46,13 +52,19 @@ The following lists provide you advantages of using SPFx to build your Teams app
 * Easy integration with other Microsoft (Office) 365 workloads
 * Delivers flexibility to host applications wherever needed
 
+#### Scenario
+
 SPFx is best suitable in the following scenario:
 
 * You can host your app on SharePoint, while creating Todo List for individuals to manage his/her personal to-do items in Microsoft Teams using Teams Toolkit in Visual Studio Code.
 
 ### Blazor
 
-Blazor lets you build interactive web UIs using C# for tab or bot app in Visual Studio. Blazor is best suitable in the following scenarios:
+Blazor lets you build interactive web UIs using C# for tab or bot app in Visual Studio.
+
+#### Scenarios
+
+Blazor is best suitable in the following scenarios:
 
 * To build conversational bot app that allows users to have conversations in Microsoft Teams
 * To build tab app with additional capabilities
