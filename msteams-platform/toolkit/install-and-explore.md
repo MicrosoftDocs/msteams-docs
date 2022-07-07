@@ -14,7 +14,7 @@ Teams Toolkit is an extension in Visual Studio Code and it primarily requires NP
 
 ## Install Teams Toolkit
 
-Ensure you have installed the latest version. The following steps help you to install Teams Toolkit in Visual Studio Code:
+Ensure you have installed the latest version of Teams Toolkit. The following steps help you to install Teams Toolkit in Visual Studio Code:
 
 1. Open **Visual Studio Code.**
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).

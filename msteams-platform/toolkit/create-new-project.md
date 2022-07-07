@@ -27,10 +27,10 @@ Scenario based Teams app is build on following capabilities:
 
 ## Create a new Teams app
 
-The following steps help you to build a new Teams app.
+The following steps help you to build a new Teams app for all types of capabilities except SPFx, For SPFx, follow the same steps to create a new Teams app and you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit icon
+1. Select the Teams Toolkit icon.
 1. Select **Create a new Teams app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams toolkit sidebar":::
@@ -59,9 +59,6 @@ The following steps help you to build a new Teams app.
    The Teams tab app is created in a few seconds.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/tap-app-created1.png" alt-text="Screenshot showing the app created":::
-
-   > [!NOTE]
-   > For SPFx, follow the same steps to create a new Teams app and you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
 
 ## Directory structure for different app types
 
