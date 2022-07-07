@@ -347,7 +347,13 @@ dialogs.add(
 );
 ```
 
-### Integration with Microsoft Graph Toolkit
+</details>
+
+<br>
+
+<details>
+<summary><b>Integration with Microsoft Graph Toolkit</b></summary>
+
 The [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) library is a collection of authentication providers and UI components powered by Microsoft Graph. 
 
 The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class which uses `TeamsFx` class to sign in users and acquire tokens to use with Microsoft Graph.
@@ -400,6 +406,10 @@ return (
 ```
 
 For a sample that shows you how to initialize the TeamsFx provider, see the [Contacts Exporter sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
+
+</details>
+
+<br>
 
 ## Advanced Customization
 
