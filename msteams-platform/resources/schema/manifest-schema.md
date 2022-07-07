@@ -347,7 +347,7 @@ The version of the manifest schema that this manifest is using. Use `1.13` to en
 
 **Required**—string
 
-The version of a specific app. When you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new manifest must be resubmitted and revalidated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
+The version of a specific app. When you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app is submitted to the store, the new manifest must be resubmitted and revalidated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
 
 If the app requests for permissions change, the users are prompted to upgrade and reconsent to the app.
 
