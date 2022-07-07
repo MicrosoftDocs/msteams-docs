@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: What are the new Microsoft Teams developer features introduced and updates to those features.
+description: What are the new Microsoft Teams developer features introduced and updates to existing features.
 ms.topic: reference
 ms.localizationpriority: high
 ---
