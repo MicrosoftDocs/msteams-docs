@@ -1,7 +1,7 @@
 ---
 title: Use Microsoft Graph to fetch transcripts for a Teams meeting
 description: Describes the process, scenarios, and APIs to fetch transcripts in the post-meeting scenario.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: concept
 ---
 # Get meeting transcripts using Graph APIs
@@ -110,7 +110,9 @@ To obtain meeting ID and organizer ID from user-level notification:
     In this example, the `eventID` contained within `resource` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*.
     </details>
 
-2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL. For more information, see [Get event](/graph/api/event-get.md).
+2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL.
+
+    For more information, see [Get event](/graph/api/event-get.md).
 
     Use the following example to request the meeting URL:
 
