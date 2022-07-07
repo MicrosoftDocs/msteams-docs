@@ -1,5 +1,5 @@
 ---
-title: SSO in Teams
+title: SSO code in Teams
 description: Code updates for SSO
 ms.topic: conceptual
 ms.localizationpriority: high
