@@ -14,7 +14,7 @@ After scaffolding, in the manifest template file under `templates/appPackage` fo
 
 `manifest.template.json` - shared between local and remote environment
 
-In the manifest template, select the `Open Manifest File` under Project -> Teams Toolkit menu.
+In the manifest template, select the **Open Manifest File** under Project -> Teams Toolkit menu.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest":::
 
@@ -75,11 +75,11 @@ To preview manifest with real content, Teams Toolkit generates the preview manif
 
 The other ways are:
 
-1. Trigger `Zip App Package` from Project -> Teams Toolkit menu, select `For Local` or `For Azure`.
+1. Trigger **Zip App Package** from Project -> Teams Toolkit menu, select `For Local` or `For Azure`.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
 
-2. Right click on Solution Explorer, here it shows a list of menus that are same as menus under Project -> Teams Toolkit.
+2. Right click on Solution Explorer, here it shows a list of menus that are same as menus under Project ->  Teams Toolkit.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer.png" alt-text="Solution explorer":::
 
