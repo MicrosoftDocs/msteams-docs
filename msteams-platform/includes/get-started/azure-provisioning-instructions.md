@@ -16,11 +16,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision in the Cloud**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands.":::
 
 1. Select a subscription to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning.":::
 
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
@@ -29,17 +29,17 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot of the provisioning dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot of the provisioning dialog box.":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing the provisioning complete dialog box.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
     The provisioned resource appears in the **Environment** section.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the provisioned resource.":::
 
 1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
@@ -88,7 +88,7 @@ Once the provisioning and deployment steps are complete:
 
    The toolkit displays a message to indicate that the app is added to Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows message to try the app now or later":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows message to try the app now or later.":::
  
     - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
     - If you select **Try it**, Teams loads your app.
@@ -99,9 +99,4 @@ Once the provisioning and deployment steps are complete:
 
    The Message Extension app is loaded in a chat bot app.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot that shows app sideloaded in Teams":::
-
-
-
-
-
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot shows app sideloaded in Teams.":::
