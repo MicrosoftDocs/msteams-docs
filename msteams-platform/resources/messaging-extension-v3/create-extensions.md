@@ -12,7 +12,7 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
 
-The following sections describe how to do initiate actions:
+The following sections describe how to initiate actions:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
