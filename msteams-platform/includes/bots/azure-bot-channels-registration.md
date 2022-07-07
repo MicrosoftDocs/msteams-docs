@@ -12,16 +12,17 @@ ms.author: surbhigupta12
 1. In the **Bot Channel Registration** blade, provide the requested information about your bot.
 1. Leave the **Messaging endpoint** box empty for now, you'll enter the required URL after deploying the bot. The following picture shows an example of the registration settings:
 
-    ![bot app channels registration](../../assets/images/authentication/auth-bot-channels-registration.png)
+    :::image type="content" source="../../assets/images/authentication/auth-bot-channels-registration.png" alt-text="Image showing steps for bot app channels registration.":::
 
 1. Select **Microsoft App ID and password** and then **Create New**.
 
-    ![Create Microsoft App ID](../../assets/images/authentication/CreateMicrosoftAppID.png)
-    ![Create New Microsoft App ID](../../assets/images/authentication/CreateNewMicrosoftAppID.png)    
+    :::image type="content" source="../../assets/images/authentication/CreateMicrosoftAppID.png" alt-text="Image showing how to create Microsoft app id.":::
+    
+    :::image type="content" source="../../assets/images/authentication/CreateNewMicrosoftAppID.png" alt-text="Image showing the fields in create new Microsoft app id page.":::
 
 1. Select **Create App ID in the App Registration Portal** link.
 
-   ![App Registrations](../../assets/images/authentication/AppRegistration.png)
+   :::image type="content" source="../../assets/images/authentication/AppRegistration.png" alt-text="Selecting create app id.":::
    
 1. In the displayed **App registration** window, select the **New registration** tab in the upper left.
 1. Enter the name of the bot application you're registering, we used *BotTeamsAuth* (you need to select your own unique name).
@@ -40,7 +41,7 @@ ms.author: surbhigupta12
 
 After Azure has created the registration resource, it will be included in the resource group list.  
 
-![bot app channels registration group](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
+:::image type="content" source="~/assets/images/authentication/auth-bot-channels-registration-group.PNG" alt-text="Bot app channels registration group.":::
 
 Once your bot channels registration is created, you'll need to enable the Teams channel.
 
