@@ -93,9 +93,9 @@ Before a meeting, users can add tabs, bots, and message extensions. Users with o
 To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Plus button icon in the details tab.":::
+1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Plus button icon in the details tab.":::.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/PreMeeting.png" alt-text="Pre meeting tab experience in Teams meeting.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="Pre meeting tab experience in Teams meeting.":::
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
