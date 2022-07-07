@@ -70,7 +70,7 @@ In the **Domains and permissions** section, the **Domains from your tabs** field
 
 1. From the options in the tab, choose either **Select Gray** or **Select Red**. The tab is displayed according to the color you selected.
  
-    ![Personal tab ASPNETMVC uploaded](../../assets/images/tab-images/personaltabaspnetmvcuploaded.png)
+    :::image type="content" source="../../assets/images/tab-images/personaltabaspnetmvcuploaded.png" alt-text="The image shows the selected tab color.":::
 
 ## View your personal tab
 
