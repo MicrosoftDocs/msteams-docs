@@ -1,9 +1,8 @@
 ---
 title: Create Virtual Assistant 
-description: Learn how to create Virtual Assistant bot for Microsoft Teams using Code examples and snippets with features such as, Adaptive cards; handling interruptions, task module requests, collaborative app scopes, and message extensions; using skill manifest; Support for multiple languages, claim validation, LUIS integration, and mode.
+description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams virtual assistant bots
 ---
 
 # Create Virtual Assistant
@@ -259,7 +258,11 @@ The snippet from a skill's manifest file is shown in the following section:
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 The corresponding Virtual Assistant manifest file code snippet is shown in the following section:
@@ -273,7 +276,11 @@ The corresponding Virtual Assistant manifest file code snippet is shown in the f
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 Once the commands are invoked by a user, the Virtual Assistant can identify an associated skill by parsing the command ID, update the activity by removing the extra suffix `:<skill_id>` from the command ID,  and forward it to the corresponding skill. The code for a skill doesn't need to handle the extra suffix. Thus, conflicts between command IDs across skills are avoided. With this approach, all the search and action commands of a skill within all contexts, such as **compose**, **commandBox**, and **message** are powered by a Virtual Assistant.
@@ -331,7 +338,7 @@ Some message extension activities do not include the command ID. For example, `c
 ## Example
 
 The following example shows how to convert the Book-a-room app template to a Virtual Assistant skill:
-Book-a-room is a Microsoft Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
+Book-a-room is a Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
 ![Virtual Assistant with a "book a room" skill](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -340,7 +347,7 @@ Followings are the delta changes introduced to convert it to a skill which is at
 
 ### Skill manifest
 
-A skill manifest is a JSON file that exposes a skill's messaging endpoint, ID, name, and other relevant metadata. This manifest is different than the manifest used for sideloading an app in Microsoft Teams. A Virtual Assistant requires a path to this file as an input to attach a skill. We have added the following manifest to the bot's wwwroot folder.
+A skill manifest is a JSON file that exposes a skill's messaging endpoint, ID, name, and other relevant metadata. This manifest is different than the manifest used for sideloading an app in Teams. A Virtual Assistant requires a path to this file as an input to attach a skill. We have added the following manifest to the bot's wwwroot folder.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

@@ -1,9 +1,8 @@
 ---
 title: Add card actions in a bot
-description: Describes card actions in Microsoft Teams and how to use them in your bots
+description: In this module, learn what are card actions in Microsoft Teams, action types and how to use them in your bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: teams bots cards actions
 ---
 
 # Card actions
@@ -18,7 +17,7 @@ Cards used by bots and message extensions in Teams support the following activit
 | `openUrl` | Opens a URL in the default browser. |
 | `messageBack` | Sends a message and payload to the bot from the user who selected the button or tapped the card. Sends a separate message to the chat stream. |
 | `imBack`| Sends a message to the bot from the user who selected the button or tapped the card. This message from user to bot is visible to all conversation participants. |
-| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. This message is not visible. |
+| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. This message isn't visible. |
 | `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
 
 > [!NOTE]
@@ -89,11 +88,11 @@ With `messageBack`, you can create a fully customized action with the following 
 | Property | Description |
 | --- | --- |
 | `title` | Appears as the button label. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text is not sent to your bot. |
+| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text isn't sent to your bot. |
 | `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
 | `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
-The flexibility of `messageBack` means that your code cannot leave a visible user message in the history simply by not using `displayText`.
+The flexibility of `messageBack` means that your code can't leave a visible user message in the history simply by not using `displayText`.
 
 # [JSON](#tab/json)
 
@@ -422,10 +421,12 @@ Adaptive Cards support four action types:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provide details on how to use existing Bot Framework actions with Adaptive Cards.
+You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
-> Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+>* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+> 
+>* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams. 
 
 ### Adaptive Cards with messageBack action
 
@@ -437,7 +438,7 @@ To include a `messageBack` action with an Adaptive Card include the following de
 | Property | Description |
 | --- | --- |
 | `type` | Set to `messageBack`. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text is not sent to your bot. |
+| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text isn't sent to your bot. |
 | `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
 | `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
@@ -552,6 +553,16 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
   }
 }
 ```
+
+## Code samples
+
+|S.no|Card| description|.NET|Javascript|Python|Java|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
+|1|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+
+> [!NOTE]
+> Media elements are not supported for adaptive card in Teams
 
 ## Next step
 

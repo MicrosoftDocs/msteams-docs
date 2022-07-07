@@ -2,7 +2,7 @@
 title: Build action based message extension
 metadata:
   title: Build action based message extension
-  description: In this tutorial, you'll learn to set up action message extension for Teams.
+  description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
   audience: Developer
   level: Beginner
   ms.date: 24/02/2022
@@ -55,7 +55,7 @@ items:
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, add messaging endpoint, and then perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -71,7 +71,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/sbs-messagingextension-action/azure-bot.png)
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -111,7 +111,7 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you have created a new **Microsoft App ID**:
+      Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -120,7 +120,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/sbs-messagingextension-action/manage.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -178,11 +178,11 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/sbs-messagingextension-action/ngrok.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -308,7 +308,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
          1. Select **Web**.

@@ -1,11 +1,10 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: Identify the meeting apps API references with examples and Code samples
+description: Learn to identify the meeting apps API references with examples and Code samples, Teams apps meetings user role api user context notification signal query.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams apps meetings user participant role api user context notification signal query 
 ---
 
 # Meeting apps API references
@@ -23,15 +22,15 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 |Method| Description| Source|
 |---|---|----|
-|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| MSTC SDK|
-|[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. |MSBF SDK|
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. |MSBF SDK|
-|[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |MSBF SDK |
-|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. |MSTC SDK|
-|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |MSTC SDK|
-|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. |MSTC SDK|
-|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. |MSTC SDK|
-|[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| MSBF SDK|
+|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
+|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
+|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## Get user context API
 
@@ -49,7 +48,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 ### Query parameters
 
 > [!TIP]
-> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
 The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Teams Client SDK and bot activity.
 
@@ -121,12 +120,29 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    },
    "conversation":{
       "id":"<conversation id>",
+      "conversationType": "groupChat", 
       "isGroup":true
    }
 }
 ```
 
 ---
+
+| Property name | Purpose |
+|---|---|
+| **user.id** | ID of the user. |
+| **user.aadObjectId** | Azure Active Directory object ID of the user. |
+| **user.name** | Name of the user. |
+| **user.givenName** | First Name of the user.|
+| **user.surname** | Last Name of the user. |
+| **user.email** | Mail Id of the user. |
+| **user.userPrincipalName** | UPN of the user. |
+| **user.tenantId** | Azure Active Directory tenant ID. |
+| **user.userRole** | Role of the user e.g. 'admin' or 'user'. |
+| **meeting.role** | The participant's role in the meeting. e.g. 'Organizer' or 'Presenter' or 'Attendee'. |
+| **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
+| **conversation.id** | The meeting chat ID. |
+| **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 
 ### Response codes
 
@@ -137,7 +153,7 @@ The following table provides the response codes:
 | **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the tenant admin disables or blocks the app during live site migration, it triggers the error response 403. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
-| **404** | The meeting has either expired or participants are not available.|
+| **404** | The meeting has either expired or participants aren't available.|
 
 ## Send an in-meeting notification
 
@@ -213,6 +229,15 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
+| Property name | Purpose |
+|---|---|
+| **type** | Type of activity. |
+| **text** | The text content of the message. |
+| **summary** | The summary text of the message. |
+| **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
+| **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
+| **replyToId** | The ID of the parent or root message of the thread. |
+
 ### Response codes
 
 The following table includes the response codes:
@@ -238,7 +263,7 @@ To use the Meeting Details API, you must obtain different RSC permission based o
 
 <details>
 
-<summary><b>For app manifest version 1.12</b></summary>
+<summary><b>For app manifest version 1.12 and later</b></summary>
 
 Use the following example to configure your app manifest's `webApplicationInfo`  and `authorization` properties for any private meeting:
 
@@ -286,7 +311,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 <details>
 
-<summary><b>For app manifest version 1.11 or earlier</b></summary>
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
 
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
@@ -317,7 +342,10 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 </details>
 
 > [!NOTE]
-> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+>
+> * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+>
+> * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator.
 
 ### Query parameter
 
@@ -338,7 +366,11 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # [JavaScript](#tab/javascript)
 
+```javascript
+
 Not available
+
+```
 
 # [JSON](#tab/json)
 
@@ -348,39 +380,140 @@ GET /v1/meetings/{meetingId}
 
 The JSON response body for Meeting Details API is as follows:
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
+* **Scheduled meetings:**
+
+    ```json
+
+    {
+       "details":  { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "Scheduled" 
+         },
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+             }, 
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    } 
+    ```
+
+* **One-on-one calls:**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "OneToOneCall"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer  ": {
+             "id": "<organizer user ID>",
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
     }
-} 
-```
+    
+    ```
+
+* **Group calls:**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "GroupCall",
+             "joinUrl": "https://teams.microsoft.com/l/xx"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer": {
+             "id": "<organizer user ID>",
+             "objectId": "<organizer object ID>",
+             "aadObjectId": "<AAD object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    }
+    
+    ```
+
+* **Instant meetings:**
+
+    ```json
+    { 
+       "details": { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "MeetNow" 
+         }, 
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+         },
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>", 
+             "tenantId": "<Tenant ID>" ,
+             "objectId": "<organizer object ID>"
+         }
+    }
+    
+    ```
 
 ---
 
+| Property name | Purpose |
+|---|---|
+| **details.id** | The meeting's Id, encoded as a BASE64 string. |
+| **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
+| **details.scheduledStartTime** | The meeting's scheduled start time, in UTC. |
+| **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
+| **details.joinUrl** | The URL used to join the meeting. |
+| **details.title** | The title of the meeting. |
+| **details.type** | The meeting's type - e.g. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
+| **conversation.conversationType** | The conversation type. |
+| **conversation.id** | The meeting chat ID. |
+| **organizer.id** | The Organizer's user ID. |
+| **organizer.aadObjectId** | The Organizer's Azure Active Directory object ID. |
+| **organizer.tenantId** | The Organizer's Azure Active Directory tenant ID. |
+
+In case of Recurring meeting type,
+
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it does not fit the pattern.
+
+**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it does not fit the pattern.
+
 ## Send real-time captions API
 
-The send real-time captions API exposes a POST endpoint for Microsoft Teams communication access real-time translation (CART) captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
+The send real-time captions API exposes a POST endpoint for Teams communication access real-time translation (CART) captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Teams meeting when they have captions enabled.
 
 ### CART URL
 
-You can get the CART URL for the POST endpoint from the **Meeting options** page in a Microsoft Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). You don't need to modify the CART URL to use CART captions.
+You can get the CART URL for the POST endpoint from the **Meeting options** page in a Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). You don't need to modify the CART URL to use CART captions.
 
 #### Query Parameter
 
@@ -436,7 +569,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-*  To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
+* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
 
     ```json
     "authorization": {
@@ -450,7 +583,8 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
     }
     }
     ```
-*  `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
+
+* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
 
 ### Query parameter
 
@@ -483,8 +617,8 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
-| **501** | API is not supported in the current context.|
-| **1000** | App does not have proper permissions to allow share to stage.|
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Get app content stage sharing state API
 
@@ -523,8 +657,8 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
-| **501** | API is not supported in the current context.|
-| **1000** | App does not have proper permissions to allow share to stage.|
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Get app content stage sharing capabilities API
 
@@ -563,9 +697,12 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
-| **1000** | App does not have permissions to allow share to stage.|
+| **1000** | App doesn't have permissions to allow share to stage.|
 
 ## Get real-time Teams meeting events API
+
+> [!NOTE]
+> Real-time Teams meeting events are only supported for scheduled meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
@@ -579,7 +716,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 <details>
 
-<summary><b>For app manifest version 1.12</b></summary>
+<summary><b>For app manifest version 1.12 and later</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -606,7 +743,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 <details>
 
-<summary><b>For app manifest version 1.11 or earlier</b></summary>
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -756,14 +893,43 @@ The following code provides an example of meeting end event payload:
 }
 ```
 
+| Property name | Purpose |
+|---|---|
+| **name** | Name of the user.|
+| **type** | Activity type. |
+| **timestamp** | Local date and time of the message, expressed in ISO-8601 format. |
+| **id** | ID for the activity. |
+| **channelId** | Channel this activity is associated with. |
+| **serviceUrl** | Service URL where responses to this activity should be sent. |
+| **from.id** | ID of the user that sent the request. |
+| **from.aadObjectId** | Azure Active Directory object ID of the user that sent the request. |
+| **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
+| **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
+| **conversation.id** | The meeting chat ID. |
+| **recipient.id** | ID of the user that receive the request. |
+| **recipient.name** | Name of the user that receive the request. |
+| **entities.locale** | entity which contains metadata about locale. |
+| **entities.country** | entity which contains metadata about country. |
+| **entities.type** | entity which contains metadata about client. |
+| **channelData.tenant.id** | Azure Active Directory tenant ID. |
+| **channelData.source** | The source name from where event is fired or invoked. |
+| **channelData.meeting.id** | The default ID associated with the meeting. |
+| **value.MeetingType** | The type of meeting. |
+| **value.Title** | The subject of the meeting. |
+| **value.Id** | The default ID associated with the meeting. |
+| **value.JoinUrl** | The join URL of the meeting. |
+| **value.StartTime** | The meeting start time in UTC. |
+| **value.EndTime** | The meeting end time in UTC. |
+| **locale**| The locale of the message set by the client. |
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting meetingSidePanel | Microsoft Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Details Tab in Meeting | Microsoft Teams meeting extensibility sample for interacting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Meeting content bubble bot | Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting meetingSidePanel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Details Tab in Meeting | Teams meeting extensibility sample for interacting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Meeting Events Sample|Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Meeting Recruitment Sample|Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App installation using QR code|Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
@@ -772,6 +938,7 @@ The following code provides an example of meeting end event payload:
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
+* [Live Share SDK](teams-live-share-overview.md)
 
 ## Next steps
 

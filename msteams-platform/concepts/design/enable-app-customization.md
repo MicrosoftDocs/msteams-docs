@@ -1,11 +1,10 @@
 ---
 title: Customize your Teams app
 author: heath-hamilton
-description: Understand how Teams admins can customize your app for their org.
+description: In this module, understand how Teams admins can customize your Teams app for their org and hide Teams app until admin approves.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-keywords: accent color brand hide app approval
 ---
 
 # Customize your Teams app
@@ -41,7 +40,7 @@ To enhance Teams app experience, you can hide an app from users by default until
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
-![Manage apps blocked by publisher](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Manage apps blocked by publisher.":::
 
 The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with **Blocked by publisher** status:
 
