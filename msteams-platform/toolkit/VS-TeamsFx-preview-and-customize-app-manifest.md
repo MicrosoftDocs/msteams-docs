@@ -62,9 +62,9 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 
 ### Preview manifest file
 
-> Prerequisite:
->
->To preview manifest file, you need to trigger `Prepare Teams App Dependencies` or `Provision in the Cloud...` from Project -> Teams Toolkit menu, which will generate configuration for local or remote Teams app.
+Prerequisite:
+
+To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from Project -> Teams Toolkit menu, which will generate configuration for local or remote Teams app.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-prepare-dependencies.png" alt-text="Prepare dependencies":::
 
