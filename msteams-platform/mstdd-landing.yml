@@ -50,8 +50,6 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Common reasons for app validation failure
-        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
       - text: Upload your app in Microsoft Teams
         url: ~/concepts/deploy-and-publish/apps-upload.md
       - text: Share to Teams from personal app or tab
