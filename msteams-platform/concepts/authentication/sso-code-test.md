@@ -13,18 +13,18 @@ zone_pivot_groups: teams-app-types
 
 ::: zone pivot="tab-app"
 
-Add code fro tab
+Add code for tab
 
 ::: zone-end
 
 ::: zone pivot="bot-app"
 
-Add code fro bot
+Add code for bot
 
 ::: zone-end
 
 ::: zone pivot="mex-app"
 
-Add code fro mex
+Add code for message extension app
 
 ::: zone-end

@@ -27,6 +27,6 @@ Common content for bot and mex apps: Client secret and OAuth connection.
 
 ::: zone pivot="mex-app"
 
-Common content for bot and mex apps: Client secret and OAuth connection.
+Common content for bot and message extension apps: Client secret and OAuth connection.
 
 ::: zone-end
