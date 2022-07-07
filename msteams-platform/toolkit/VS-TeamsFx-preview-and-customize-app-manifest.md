@@ -14,7 +14,7 @@ After scaffolding, in the manifest template file under `templates/appPackage` fo
 
 `manifest.template.json` - shared between local and remote environment
 
-In the manifest template, select the **Open Manifest File** under Project -> Teams Toolkit menu.
+In the manifest template, select the **Open Manifest File** under **Project** -> **Teams Toolkit** menu.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest":::
 
@@ -29,15 +29,15 @@ There are two kinds of placeholders in `manifest.template.json`:
 
 You can add a customized parameter by doing the following:
 
-1. Add a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`
-2. Add a config value in config.{env}.json
+1. Add a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`.
+2. Add a config value in `config.{env}.json`.
 
     ```
         {
             "manifest": {
-                "KEY": "VALUE"
+            "KEY": "VALUE"
             }
-        }
+    }
     ```
 
 ## Preview app manifest
@@ -46,11 +46,11 @@ You can add a customized parameter by doing the following:
 
 ### Preview values with hovers
 
-When you hover over the placeholder in `manifest.template.json`, the values for `local` and `dev` environment can be seen.
+When you hover over the placeholder in `manifest.template.json`, the values for **local** and **dev** environment can be seen.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
-Or you can hover over the key besides each placeholder in `manifest.template.json`, which also shows the values for `local` and `dev` environment.
+Or you can hover over the key besides each placeholder in `manifest.template.json`, which also shows the values for **local** and **dev** environment.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
@@ -61,36 +61,36 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 
 ### Preview manifest file
 
-Prerequisite:
+### Prerequisite
 
-To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from Project -> Teams Toolkit menu, which generates configuration for local or remote Teams app.
-
+To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from **Project** -> **Teams Toolkit** menu, which generates configuration for local or remote Teams app.
+[One image instead of two for the above text/content]
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-prepare-dependencies.png" alt-text="Prepare dependencies":::
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-provision.png" alt-text="Provision in the cloud":::
 
-To preview manifest with real content, Teams Toolkit generates the preview manifest files under `build/appPackage` folder. You can right click on `manifest.template.json`, and from `Preview Manifest File` select `For Local` or `For Azure`. This opens the corresponding manifest file.
+To preview manifest with real content, Teams Toolkit generates the preview manifest files under **build/appPackage** folder. You can right click on **manifest.template.json**, and from **Preview Manifest File** select **For Local** or **For Azure**. This opens the corresponding manifest file.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview.png" alt-text="Preview context menu":::
 
 The other ways are:
 
-1. Trigger **Zip App Package** from Project -> Teams Toolkit menu, select `For Local` or `For Azure`.
+1. Trigger **Zip App Package** from **Project** -> **Teams Toolkit** menu, select **For Local** or **For Azure**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
 
-2. Right click on Solution Explorer, here it shows a list of menus that are same as menus under Project ->  Teams Toolkit.
+2. Right click on **Solution Explorer**, here it shows a list of menus that are same as under the menus **Project** -> **Teams Toolkit**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer.png" alt-text="Solution explorer":::
 
 ### Sync local changes to Developer Portal
 
-After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting `Update Manifest in Teams Developer Portal` under Project -> Teams Toolkit menu, or context menu from Solution Explorer.
+After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under **Project** -> **Teams Toolkit** menu, or context menu from Solution Explorer.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest.png" alt-text="Update manifest":::
 
 > [!NOTE]
-> The changes will be updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, it will be overwritten. There will be a warning window to let you proceed or cancel.
+> The changes are updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, that can be overwritten. In the **Warning** dialogue box you can **Overwrite and update** or **cancel**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning":::
 
