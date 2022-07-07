@@ -11,6 +11,8 @@ Azure AD provides access to your app based on the app user's Teams identity. You
 
 / Infographic /
 
+<br>
+
 ::: zone pivot="tab-app"
 
 Common content: Register your app in Azure AD.

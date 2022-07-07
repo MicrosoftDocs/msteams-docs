@@ -383,6 +383,20 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
+  - name: Enable Single sign-on
+    items:
+    - name: Overview
+      href: tabs/how-to/authentication/tab-sso-overview.md
+    - name: Register your app
+      href: concepts/authentication/sso-register-test.md
+    - name: Add code to enable SSO
+      href: concepts/authentication/sso-code-test.md
+    - name: Update app manifest for SSO and preview app
+      href: tabs/how-to/authentication/tab-sso-manifest.md
+    - name: Grant Microsoft Graph permissions and scopes
+      href: tabs/how-to/authentication/tab-sso-graph-api.md
+    - name: Troubleshoot SSO authentication
+      href: tabs/how-to/authentication/tab-sso-troubleshooting.md  
   - name: Tabs
     items:
     - name: Enable SSO for tab app
