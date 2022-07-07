@@ -2,7 +2,7 @@
 title: Update manifest for enabling SSO for tabs
 description: Describes updating manifest for enabling SSO for tabs
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
 # Update manifest for SSO and preview app
