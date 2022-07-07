@@ -248,7 +248,7 @@ You can open an app install dialog from your Teams app, as shown in the followin
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({ appID: <appId>});
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: <appId>});
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
