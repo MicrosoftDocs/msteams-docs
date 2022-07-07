@@ -13,7 +13,7 @@ The Collaboration controls enable leveraging Microsoft 365 and Microsoft Teams f
 
 These controls give you the power to simplify your user’s workflow collaboration by building line of business apps with approvals, chat, files, meetings,notes, and tasks all in one surface reducing the productivity impact on users when context is switching from app to app.
 
-Key capabilities of Collaboration Controls include the following:
+Key capabilities of Collaboration controls include the following:
 
 * **Microsoft Planner tasks:** Create tasks that are assigned to members of a record so that they can view a consolidated list of tasks in a model driven app and within the tasks app in Microsoft Teams.
 
