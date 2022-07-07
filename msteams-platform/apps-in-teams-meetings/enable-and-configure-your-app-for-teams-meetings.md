@@ -16,7 +16,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * Know how to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
 
-* Use your app that supports configurable tabs in the groupchat scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
+* Use your app that supports configurable tabs in the `groupchat` scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
 
 * Adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
@@ -93,9 +93,9 @@ Before a meeting, users can add tabs, bots, and message extensions. Users with o
 To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
+1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Plus button icon in the details tab.":::
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+   :::image type="content" source="../assets/images/apps-in-meetings/PreMeeting.png" alt-text="Pre meeting tab experience in Teams meeting.":::
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -183,14 +183,14 @@ For more information, see [app manifest](../resources/schema/manifest-schema-dev
 
 Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="Share specific part of the app to meeting stage in Teams meeting.":::
 
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 > [!NOTE]
 >
 > * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
-> * Currently, share specific parts of the app to stage is supported for Teams desktop clients only.
+> * Currently, you can share specific parts of the app to meeting stage only on Teams desktop clients.
 
 ### After a meeting
 
@@ -207,7 +207,7 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 ## Step-by-step guides
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting sidepanel in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting SidePanel in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting stage view in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate meeting content bubble in your Teams meeting.
 
