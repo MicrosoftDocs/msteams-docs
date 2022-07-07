@@ -25,7 +25,7 @@ For creating different Teams app using Teams Toolkit in Visual Studio Code, you'
    | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. | JavaScript and SPFx|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.| JavaScript and SPFx|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript and SPFx|
-   | &nbsp; |[NPM](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
+   | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. | JavaScript and SPFx|
    | **Optional** | &nbsp; | &nbsp; | &nbsp; |
@@ -43,17 +43,15 @@ To create and upload a Teams app, you need to create the following accounts:
 
 | Accounts | For using| For environment type|
 | --- | --- |
-|[Microsoft 365 account with valid subscription](accounts.md#microsoft-365-account)|Teams developer account while developing an app.| JavaScript and SPFx|
+|[Microsoft 365 account with valid subscription](#microsoft-365-developer-program)|Teams developer account while developing an app.| JavaScript and SPFx|
 |[Azure account](accounts.md#azure-account-to-host-backend-resources)|Backend resources on Azure.| JavaScript and SPFx|
 |[SharePoint Collection Site Administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx|
 
-### Microsoft 365 account
+### Microsoft 365 developer program
 
 To create a Microsoft 365 account, sign-up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
-
-#### Microsoft 365 developer program
 
 You can sign up for the developer program by using one of the following account types:
 
@@ -87,7 +85,9 @@ You can sign up for the developer program by using one of the following account 
 
 :::row-end:::
 
-To get a free Teams developer account, join the Microsoft 365 developer program and follow the steps:
+#### Get a free Microsoft 365 developer account
+
+To get a free Teams Microsoft 365 developer account, join the Microsoft 365 developer program and follow the steps:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
@@ -100,11 +100,16 @@ To get a free Teams developer account, join the Microsoft 365 developer program 
 
 ### Azure account
 
-Teams Toolkit requires Azure account to host a Teams app to Azure or to host backend resources for your Teams app, if you already have an existing app on a different cloud provider other than Azure and you want to integrate the existing app on Teams platform, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select Azure subscription to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
+You need an Azure account to host a Teams app or the backend resources for your Teams app using Teams Toolkit in Visual Studio Code. You must need Azure subscription in the following scenarios:
+
+* If you already have an existing app on a different cloud provider other than Azure and you want to integrate the existing app on Teams platform, you must have an Azure subscription.
+* You can select an Azure subscription to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
+
+[Create a free account](https://azure.microsoft.com/free/) before you begin
 
 ### SharePoint collection site administrator account
 
-while creating Teams app using SPFx environment, you'll need sharePoint collection site administrator account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+While creating Teams app using SPFx environment, you'll need sharePoint collection site administrator account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
 ## Sideloading permission
 
@@ -173,9 +178,9 @@ If your developer tenant doesn't have permission to upload custom app or to side
      > [!Note]
      > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-For more information, see [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 </details>
 
 ## See also
 
-TBA
+* [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
+* [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
