@@ -54,9 +54,8 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
->[!Note]
->
->If the environment has not been provisioned, or `Prepare Teams App Dependencies` has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
+> [!NOTE]
+> If the environment has not been provisioned, or **Prepare Teams App Dependencies** has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside, hover to generate corresponding values.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined.png" alt-text="Placeholder values undefined":::
 
@@ -64,13 +63,13 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 
 Prerequisite:
 
-To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from Project -> Teams Toolkit menu, which will generate configuration for local or remote Teams app.
+To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from Project -> Teams Toolkit menu, which generates configuration for local or remote Teams app.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-prepare-dependencies.png" alt-text="Prepare dependencies":::
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-provision.png" alt-text="Provision in the cloud":::
 
-To preview manifest with real content, Teams Toolkit will generate preview manifest files under `build/appPackage` folder. You can right click on `manifest.template.json`, and from `Preview Manifest File` select `For Local` or `For Azure`. The corresponding manifest file will be opened.
+To preview manifest with real content, Teams Toolkit generates the preview manifest files under `build/appPackage` folder. You can right click on `manifest.template.json`, and from `Preview Manifest File` select `For Local` or `For Azure`. This opens the corresponding manifest file.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview.png" alt-text="Preview context menu":::
 
@@ -80,20 +79,17 @@ The other ways are:
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
 
-2. Right click on Solution Explorer, there will be a list of menus which are the same as menus under Project -> Teams Toolkit
+2. Right click on Solution Explorer, here it shows a list of menus that are same as menus under Project -> Teams Toolkit.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer.png" alt-text="Solution explorer":::
 
 ### Sync local changes to Developer Portal
 
-After previewing the manifest file, you can sync your local changes to Developer Portal by the following way:
-
-Select `Update Manifest in Teams Developer Portal` under Project -> Teams Toolkit menu, or context menu from Solution Explorer.
+After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting `Update Manifest in Teams Developer Portal` under Project -> Teams Toolkit menu, or context menu from Solution Explorer.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest.png" alt-text="Update manifest":::
 
 > [!NOTE]
->
 > The changes will be updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, it will be overwritten. There will be a warning window to let you proceed or cancel.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning":::
