@@ -12,13 +12,13 @@ ms.date: 03/14/2022
 
 You can build a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create basic Teams app and scenario based Teams app in Teams Toolkit.
 
-In basic Teams app, we have following types of app
+Basic Teams app is build on following capabilities:
 
 * Tab
 * Bot
 * Message extension
 
-In scenario based Teams app, we have following types of app
+Scenario based Teams app is build on following capabilities:
 
 * Notification bot
 * Command bot
@@ -30,7 +30,7 @@ In scenario based Teams app, we have following types of app
 The following steps help you to build a new Teams app.
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code sidebar.
+1. Select the Teams Toolkit icon
 1. Select **Create a new Teams app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams toolkit sidebar":::
@@ -39,7 +39,7 @@ The following steps help you to build a new Teams app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
+1. Ensure that **Tab** is selected as the capability that you want to build in your app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp.png" alt-text="Select App Capability":::
 
@@ -65,7 +65,7 @@ The following steps help you to build a new Teams app.
 
 ## Directory structure for different app types
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer** area.
 
 Directory structure for basic Teams app:
 
@@ -116,7 +116,7 @@ The core notification implementation in **bot** folder and it contains:
 | `package.json` | The NPM package file for bot project |
 </details>
 
-Directory structure updated with app features:
+### Directory structure for multi-capability app
 
 You can add additional features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app. Bot folder is added with files and codes relevant to bot.
 

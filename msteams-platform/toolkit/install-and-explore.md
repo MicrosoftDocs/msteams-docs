@@ -10,7 +10,7 @@ ms.date: 05/24/2022
 
 # Install and explore Teams Toolkit
 
-Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. In Teams Toolkit you can create new Teams app, add capabilities, add cloud resources, deploy and provision cloud resources, and publish Teams app.
+Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. In Teams Toolkit you can create a new Teams app, debug your Teams app, provision cloud resources, deploy Teams app to the cloud and publish your Teams app.
 
 ## Install Teams Toolkit
 
@@ -38,28 +38,28 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview.png" alt-text="Overview of Teams Toolkit":::
 
-1. You can see the following UI elements
-   * **Get Started** helps to explore the Teams Toolkit
-   * **Tutorials** helps to access different tutorials
-   * **Documentation** helps to access the Microsoft Teams Developer Documentation
+1. You can see the following UI elements:
+   * **Get Started** helps to explore the Teams Toolkit.
+   * **Tutorials** helps to access different tutorials.
+   * **Documentation** helps to access the Microsoft Teams Developer Documentation.
 1. **Create a new Teams App** helps to create one Teams project.
-1. **View Samples** helps to build sample app.
+1. **View Samples** helps to build different types of app based on existing samples.
 1. **Open Folder** helps to open the existing Teams app.
-1. You can see the following UI elements under **Start** section.
+1. You can see the following UI elements under **Start**:
    * **New File** helps to create new file.
    * **Open File** helps to open the existing file.
    * **Open Folder** helps to open the existing folder.
-1. **Recent** section helps you to view the recent files.
+1. **Recent** helps you to view the recent files.
 
-Watch the following video for creating a new Teams app
+The following video guides you to create a new Teams app:
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
-After creating a new Teams app, you see the directory structure of created app in the left side panel and readme file in the right side panel.
+After creating a new Teams app, you can see the directory structure of the app in the left panel and the readme file in the right window.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="First page of Teams Toolkit":::
 
-Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code sidebar to view Teams Toolkit UI with all functionalities as shown in the following image:
+Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon1.PNG"::: icon in the left panel to view Teams Toolkit UI with all functionalities as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
 
@@ -89,7 +89,7 @@ Let's take a tour of the topics covered in this document.
 | &nbsp; | Tutorials| Select to access different tutorials.|
 | &nbsp; | Documentation| Select to access the Microsoft Teams Developer Documentation.|
 | &nbsp; | Report issues on GitHub| It helps to get **Quick support** from product expert. Browse the existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.|
-| **6.File Explorer** | &nbsp; | &nbsp; |
+| **6.Explorer** | &nbsp; | &nbsp; |
  &nbsp; | &nbsp; | It helps to view the directory structure of your app.|
 | **7.Run and Debug** | &nbsp; | &nbsp; |
  &nbsp; | &nbsp; | To start the local or remote debug process.|
