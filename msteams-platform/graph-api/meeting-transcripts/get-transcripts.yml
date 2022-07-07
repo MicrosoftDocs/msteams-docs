@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 01/20/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/teams-apps-in-meetings
+  nextTutorialHref: /apps-in-teams-meetings/teams-apps-in-meetings
   nextTutorialTitle: Back to Overview
   ms.custom: mvc
   ms.localizationpriority: high
@@ -26,9 +26,9 @@ items:
 
     To fetch the transcript for a particular meeting:
 
-    - [Configure permissions on Azure AD to access transcript](#configure-permissions-on-azure-ad-to-access-transcript)
-    - [Obtain meeting ID and organizer ID](#obtain-meeting-id-and-organizer-id)
-    - [Use Graph APIs to fetch transcript](#use-graph-apis-to-fetch-transcript)
+    - Configure permissions on Azure AD to access transcript
+    - Obtain meeting ID and organizer ID
+    - Use Graph APIs to fetch transcript
 
 - title: Configure permissions on Azure AD to access transcript
   durationInMinutes: 1
