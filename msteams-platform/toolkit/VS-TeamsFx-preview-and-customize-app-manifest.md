@@ -32,13 +32,13 @@ You can add a customized parameter by doing the following:
 1. Add a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`
 2. Add a config value in config.{env}.json
 
-        ```
+    ```
         {
             "manifest": {
                 "KEY": "VALUE"
             }
         }
-        ```
+    ```
 
 ## Preview app manifest
 
