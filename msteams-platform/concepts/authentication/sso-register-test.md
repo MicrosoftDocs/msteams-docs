@@ -1,6 +1,6 @@
 ---
 title: SSO in Teams
-description: SSO authentication in Teams and how to use it in tabs
+description: Register app in AAD
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: teams-app-types
@@ -18,6 +18,12 @@ Common content: Register your app in Azure AD.
 ::: zone-end
 
 ::: zone pivot="bot-app"
+
+Common content for bot and mex apps: Client secret and OAuth connection.
+
+::: zone-end
+
+::: zone pivot="mex-app"
 
 Common content for bot and mex apps: Client secret and OAuth connection.
 
