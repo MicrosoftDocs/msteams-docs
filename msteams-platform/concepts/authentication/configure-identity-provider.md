@@ -1,15 +1,14 @@
 ---
 title: Configure OAuth 2.0 identity providers
-description: Describes how to configure identity providers with a focus on Azure AD
+description: In this module, learn how to configure identity providers with a focus on Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication AAD oauth identity provider
 ---
 # Configure identity providers
 
-## Configuring an application to use Azure Active Directory as an identity provider
+## Configuring an application to use Azure AD as an identity provider
 
-Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
+Identity providers supporting OAuth 2.0 won't authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
@@ -26,3 +25,11 @@ Replace `<hostname>` with your actual host, which might be a dedicated hosting s
 * **LinkedIn:** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
 
 * **Google:** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
+
+* **External OAuth providers from tabs:** For more information, see [Use external OAuth providers](../../tabs/how-to/authentication/auth-oauth-provider.md)
+
+## See also
+
+* [Authenticate a user in a Microsoft Teams bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Single sign-on (SSO) support for tabs](../../tabs/how-to/authentication/tab-sso-overview.md)
+* [Authenticate a user in a Microsoft Teams tab](../../tabs/how-to/authentication/auth-tab-aad.md)

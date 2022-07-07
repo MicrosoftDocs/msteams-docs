@@ -1,0 +1,249 @@
+### YamlMime:Tutorial
+title: Build Teams connectors
+metadata:
+  title: Build Teams connectors
+  description: With this learning module, you'll learn how to configure and test a Connector for Microsoft Teams app.
+  audience: Developer
+  level: Beginner
+  ms.date: 02/14/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
+  nextTutorialTitle: Read more on Webhooks and Connectors
+  ms.custom: mvc
+  ms.localizationpriority: none
+items:
+- durationInMinutes: 1
+  content: |
+    Microsoft Teams connector is Model-View-Controller (MVC) sample task management application and generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or task management system. You can add your existing Office 365 Connector or build a new one within Teams.
+    
+    **Types of connector codes**
+
+      * **ConnectorController.cs**: Set up and save actions.
+      * **TaskController.cs**: Create and update actions.
+      
+    **Key features of Microsoft Teams connector**
+
+      * Simulates real task management system.
+      * Allows users to create and view tasks.
+      * Generates content randomly. 
+      * Simulates notification to be sent to Microsoft Teams channel. 
+    
+    This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
+       
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="introduction image":::
+       
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    Ensure you install the following tools and set up your development environment: 
+
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
+   
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
+- title: Set up local environment
+  durationInMinutes: 1
+  content: |  
+
+    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Select **Code**.
+    1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository":::
+
+    1. Select **Clone**. 
+
+- title: Enable developer preview
+  durationInMinutes: 1
+  content: |
+
+    1. Enable uploading of apps in the admin console of your tenant.
+        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+        1. In the left panel, select **Show All**.
+        1. Select **Teams**.
+ 
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu":::
+
+    1.  In the left panel, select **Teams apps**.
+       
+    1.  Select **Setup policies**.
+ 
+           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Setup policies":::
+   
+    1.  Select **Global**.
+
+          ![Global](~/assets/images/sbs-connector/Global.png)
+
+    1.   Toggle **Upload custom apps** to **On** position.
+
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On":::
+   
+    1.   Select **Save**.
+       
+          Your test tenant can permit custom app sideloading.
+
+          > [!TIP]
+          > The sideloading takes some time to become active.
+
+    1.   Go to **Microsoft Teams**.
+    
+    1.   From the upper right corner of your Teams interface, select `...`.
+    
+    1.   Select **About**.
+    
+    1.   Select **Developer preview**.
+
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Developer preview":::
+   
+    1.   Select **Switch to developer preview**.
+   
+
+- title: Configure your connector
+  durationInMinutes: 1
+  content: | 
+
+    1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
+
+       ![sln path](~/assets/images/sbs-connector/sln.png)
+
+    2. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+        ```bash
+        ngrok http -host-header=localhost 3978
+        ``` 
+       > [!TIP]
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+
+       ![ngrok path](~/assets/images/sbs-connector/ngrok1.png)
+
+    3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
+    4. Select **New Connector**.
+     
+       ![Add new connector](~/assets/images/sbs-connector/connector.png)
+      
+    5. Enter the following details to register a new connector:
+
+       * Connector name
+       * Logo
+       * Short description of your app (10 words or less)
+       * Detailed description of what your Connector does (3-5 sentences)
+       * Company website
+       * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`
+       * Valid domain as `https Base URL`
+       * Select **Yes** to enable the action on connector card
+       * Actions URL as `https://[BASE_URI]/Task/Update`
+       * Select **I accept the terms and conditions of the App Developer Agreement**
+       * Select **Save**
+
+       ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
+
+       You've successfully registered a new connector. The window appears with registered connector ID.
+
+       ![Output screen](~/assets/images/sbs-connector/output.png)
+      
+       > [!TIP]
+       > Save the Connector ID for future reference.
+
+    6. Select **TeamsToDoAppConnector.csproj** file from **TeamsToDoAppConnector folder**.
+
+       ![Navigation path](~/assets/images/sbs-connector/web.png) 
+
+    7. Open in Visual Studio. 
+
+    8. Replace the `configuration.appSettings.BaseUrl` variable with `ngrok https forwarding url`.
+       
+       ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
+
+    9. Press **F5** to run the project.
+       A web page opens. 
+
+       ![Local-host](~\assets\images/sbs-connector/local-host.png)    
+
+- title: Test connector in Microsoft Teams
+  durationInMinutes: 5
+  content: |
+
+    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
+
+    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       ![Manifest location](~/assets/images/sbs-connector/zip.png)
+
+    1. Go to **Microsoft Teams**.
+    1. In the left panel, select **Store** > **Manage your apps**.
+
+       ![Manage Apps](~/assets/images/sbs-connector/manageapp.png)
+
+    1. Select **Upload a custom app**.
+ 
+       ![Upload a custom app](~/assets/images/sbs-connector/upload.png)
+      
+    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+
+       ![manifest](~/assets/images/sbs-connector/open.png)
+
+    1. Select **Add to a team**.
+
+       ![Add the app](~/assets/images/sbs-connector/addtoteam.png)
+
+    1. Select the team or channel name from the list.
+
+       ![select channel](~/assets/images/sbs-connector/channel.png)
+
+    1. Select **Set up a connector**.
+
+    1. In the left panel, search **Teams ToDo Notification** connector in search bar and select **Configure**.
+
+       ![configure notification](~/assets/images/sbs-connector/configure.png)
+
+    1. Select either **Created** or **Updated** on the registration page and select **Save**.
+
+       ![select](~/assets/images/sbs-connector/create.png)
+
+       After configuration, you can see notification in channel with link to **Task Manager Portal**.
+
+       ![notification message](~/assets/images/sbs-connector/notification.png)
+
+    12. Go to **Task Manager Portal**.
+
+        ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
+
+    13. Select **Create New**.
+       
+        ![create new task](~/assets/images/sbs-connector/tasks.png)
+       
+    14. Enter the new task details:
+
+        * Title
+        * Description
+        * Assign To
+
+        ![Task details](~/assets/images/sbs-connector/details.png)
+
+    15. Select **Save**. 
+      
+        The message card appears in registered Teams channel.
+       
+        ![Message](~/assets/images/sbs-connector/messagecard.png)
+
+        > [!TIP]
+        > You can try the actionable buttons available on the message card.
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="final output":::
+
+- content: |
+    You've completed the tutorial to get started with **Microsoft Teams connectors**!
+
+

@@ -1,9 +1,8 @@
 ---
 title: Calls and online meetings bots
-description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
+description: In this module, learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: calling calls audio video IVR voice online meetings real-time media streams bot 
 ---
 
 # Calls and online meetings bots
@@ -40,14 +39,14 @@ Calls in Teams can be purely audio or audio and video. Instead of audio or video
 
 Calls are either peer-to-peer between a person and your bot, or multiparty between your bot and two or more people in a group call.
 
-![Calling types](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Calling types"border="true":::
 
 Following are the different call types and permissions required for the call:
 
 * A user can initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call. The multiparty call is not enabled yet in the Teams user interface.
 
     > [!NOTE]
-    > User initiated calls to a bot are currently not supported on Microsoft Teams mobile platform.
+    > User initiated calls to a bot are currently not supported on Teams mobile platform.
 
 * Graph permissions are not necessary for a user to initiate a peer-to-peer call with your bot. Additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
 * A call can start as peer-to-peer and eventually become a multiparty call. Your bot can initiate multiparty calls by inviting others, provided your bot has the proper permissions. If your bot does not have permissions to participate in group calls and if a participant adds another participant to the call, your bot is dropped from the call.
@@ -58,7 +57,7 @@ There are two types of signals, incoming call and in-call. Following are the dif
 
 * To receive an incoming call, you enter an endpoint in your bot settings. This endpoint receives a notification when an incoming call is initiated. You can answer the call, reject it, or redirect it to someone else.
 
-    ![Call handling](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Call handling"border="true":::
 
 * When a bot is in a call, there are APIs for muting and unmuting the bot and to start or stop sharing video or desktop content with other participants.
 * The bot can also access the list of participants, invite new participants, and mute them.
@@ -75,9 +74,9 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 * **Service-hosted media**: Bots focus on managing application workflow, such as routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use the following APIs:
 
-    * `PlayPrompt` for playing an audio clip.
-    * `Record` for recording audio clips.
-    * `SubscribeToTone` for subscribing to dual tone multiple frequency (DTMF) tones.
+  * `PlayPrompt` for playing an audio clip.
+  * `Record` for recording audio clips.
+  * `SubscribeToTone` for subscribing to dual tone multiple frequency (DTMF) tones.
 
     For example, knowing when a user has pressed **0** to reach the operator.
 
@@ -88,7 +87,6 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
 | Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Calling and meeting bot | The sample app demonstartes how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## Next step
 
@@ -97,10 +95,14 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 ## See also
 
-- [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-- [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-- [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
-- [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
-- [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-- [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-- [Technical information on handling incoming call notifications](./call-notifications.md)
+* [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
+* [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
+* [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
+* [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
+* [Technical information on handling incoming call notifications](./call-notifications.md)
+* [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
+* [Work with communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)

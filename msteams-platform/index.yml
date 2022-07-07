@@ -8,7 +8,7 @@ brand: teams
 metadata:
   title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: msteams #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: msteams
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: akjo #Required; your GitHub user alias, with correct capitalization.
@@ -19,7 +19,7 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What's new?
+    - title: Microsoft Build 2022
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
@@ -64,7 +64,7 @@ conceptualContent:
           text: Create conversational interactions with bots
         - url: /learn/modules/msteams-messaging-extensions/
           itemType: learn
-          text: Create task-oriented interactions with messaging extensions
+          text: Create task-oriented interactions with message extensions
         - url: /learn/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
@@ -86,7 +86,7 @@ conceptualContent:
           text: Bots
         - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
           itemType: overview
-          text: Messaging extensions
+          text: Message extensions
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: Apps for Teams meetings
@@ -101,6 +101,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-live-share-overview
+          itemType: concept
+          text: Enhanced collaboration with Live Share SDK
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
           text: Monetize your Teams app with a transactable SaaS offer
@@ -119,7 +122,7 @@ conceptualContent:
         - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
           itemType: reference
           text: Build scenarios for Teams apps
-        - url:  https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+        - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
           itemType: reference
           text: Best practices for Teams app scenarios
       
@@ -130,7 +133,7 @@ conceptualContent:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrate a Power Virtual Agents chatbot
-        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
+        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps
           itemType: reference
           text: Integrate Share-to-Teams button for your website
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
@@ -155,7 +158,7 @@ conceptualContent:
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
-        - url: https://docs.microsoft.com/en-us/teamblog/
+        - url: https://docs.microsoft.com/teamblog/
           itemType: whats-new
           text: Announcements
         - url: /microsoftteams/platform/feedback
@@ -174,7 +177,7 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: IT professionals
-        - url: https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics
+        - url: https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b
           itemType: concept
           text: End users
 
@@ -208,12 +211,12 @@ tools:
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
     # Card
-    - title: Node.js Bot Framework SDK for bots and messaging extensions
+    - title: Node.js Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_nodejs.png
       url: https://github.com/Microsoft/botbuilder-js
     # Card
-    - title: .NET Bot Framework SDK for bots and messaging extensions
+    - title: .NET Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_net.png
       url: https://github.com/Microsoft/botbuilder-dotnet/

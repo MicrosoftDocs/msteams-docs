@@ -1,8 +1,7 @@
 ---
 title: Publish Teams apps using Teams Toolkit
 author: zyxiaoyuer
-description:  publish Teams apps
-ms.author: yanjiang
+description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or sideload permission
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -38,7 +37,7 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** in left bar.
 2. Select **Manage your apps**.
-3. Select **publish an app**
+3. Select **publish an app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 
@@ -46,9 +45,9 @@ Perform the following steps to upload app package:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="upload":::
 
-## Publish to your organization 
+## Publish to your organization
 
-When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Graph API, an integrated development environment (IDE) such as Visual Studio Code installed with Teams toolkit. You can either select **Publish to Teams** from **DEPLOYMENT** in TreeView of Teams Toolkit, or trigger **Teams: Publish to Teams** from command palette. Then select **Install for your organization**:
+When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Graph API, an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Teams toolkit. You can either select **Publish to Teams** from **DEPLOYMENT** in TreeView of Teams Toolkit, or trigger **Teams: Publish to Teams** from command palette. Then select **Install for your organization**:
 
 ![Install for your organization](./images/installforyourorganization.png)
 
@@ -82,7 +81,7 @@ After you publish the app, the publishing status changes to published and the st
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers. The apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
-For more information, see [publish to microsoft Teams store]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
+For more information, see ([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
 
 ## See also
 

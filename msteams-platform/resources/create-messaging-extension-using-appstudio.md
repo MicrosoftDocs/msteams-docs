@@ -13,15 +13,15 @@ ms.author: anclear
 
 At a high level, you'll need to complete the following steps to create a messaging extension.
 
-1. Prepare your development environment
-2. Create and deploy your web service (while developing use a tunneling service like ngrok to run it locally)
-3. Register your web service with the Bot Framework
-4. Create your app package
-5. Upload your package to Microsoft Teams
+1. Prepare your development environment.
+2. Create and deploy your web service (while developing use a tunneling service like ngrok to run it locally).
+3. Register your web service with the Bot Framework.
+4. Create your app package.
+5. Upload your package to Teams.
 
-Creating your web service, creating your app package, and registering your web service with the Bot Framework can be done in any order. Because those three pieces are so intertwined, no matter which order you do them in you'll need return to update the others. Your registration needs the messaging endpoint from your deployed web service, and your web service needs the Id and password created from your registration. Your app manifest also needs that Id to connect Teams to your web service.
+Creating your web service, creating your app package, and registering your web service with the Bot Framework can be done in any order. Because those three pieces are so intertwined, no matter which order you do them in you'll need return to update the others. Your registration needs the messaging endpoint from your deployed web service, and your web service needs the ID and password created from your registration. Your app manifest also needs that ID to connect Teams to your web service.
 
-As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your web service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change to the manifest, but there's no need to do so when you deploy changes to your web service.
+As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your web service. When working with the app manifest, ensure that you can either manually modify the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change to the manifest, but there's no need to do so when you deploy changes to your web service.
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
@@ -36,13 +36,12 @@ The heart of your messaging extension is your web service. It will define a sing
 
 ## Register your web service with the Bot Framework
 
-Messaging extensions take advantage of the Bot Framework's messaging schema and secure communication protocol; if you don't already have one you'll need to register your web service on the Bot Framework. The Microsoft App Id (we'll refer to this as your Bot Id from inside of Teams, to identify it from other App Id's you might be working with) and the messaging endpoint your register with the Bot Framework will be used in your messaging extension to receive and respond to requests. If you're using an existing registration, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0).
+Messaging extensions take advantage of the Bot Framework's messaging schema and secure communication protocol; if you don't already have one you'll need to register your web service on the Bot Framework. The Microsoft App ID (we'll refer to this ID as your Bot ID from inside of Teams, to identify it from other App ID's you might be working with) and the messaging endpoint your register with the Bot Framework will be used in your messaging extension to receive and respond to requests. If you're using an existing registration, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0).
 
+If you follow one of the quickstarts or start from one of the available samples you'll be guided through registering your web service. If you want to manually register your service you have three options to do so. If you choose to register without using an Azure subscription you won't be able to take advantage of the simplified OAuth authentication flow provided by the Bot Framework. You'll be able to migrate your registration to Azure after creation.
 
-If you follow one of the quickstarts or start from one of the available samples you'll be guided through registering your web service. If you want to manually register your service you have three options to do so. If you choose to register without using an Azure subscription you will not be able to take advantage of the simplified OAuth authentication flow provided by the Bot Framework. You will be able to migrate your registration to Azure after creation.
-
-* If you have an Azure subscription (or want to create a new one), you can register your web service manually using the Azure Portal. Create a "Bot Channels Registration" resource. You can choose the free pricing tier, as messages from Microsoft Teams do not count towards your total allowable messages per month.
-* If you do not wish to use an Azure subscription, you can use the [legacy registration portal](https://dev.botframework.com/bots/new).
+* If you have an Azure subscription (or want to create a new one), you can register your web service manually using the Microsoft Azure portal. Create a "Bot Channels Registration" resource. You can choose the free pricing tier, as messages from Microsoft Teams don't count towards your total allowable messages per month.
+* If you don't wish to use an Azure subscription, you can use the [legacy registration portal](https://dev.botframework.com/bots/new).
 * App Studio can also help you register your web service (bot). Web services registered through App Studio are not registered in Azure. You can use the [legacy portal](https://dev.botframework.com/bots) to view, manage, and migrate your registrations.
 
 ## Create your app manifest
@@ -51,12 +50,12 @@ You can either use App Studio to help you create your app manifest, or create it
 
 ### Create your app manifest using App Studio
 
-You can use the App Studio app from within the Microsoft Teams client to help create your app manifest.
+You can use the App Studio app from within the Teams client to help create your app manifest.
 
 1. In the Teams client, open App Studio from the **...** overflow menu on the left navigation rail. If it isn't already installed, you can do so by searching for it.
 2. On the **Manifest editor** tab select **Create a new app** (or if you're adding a messaging extension to an existing app, you can import your app package)
 3. Add your app details (see [manifest schema definition](~/resources/schema/manifest-schema.md) for full descriptions of each field).
-4. On the **Messaging extensions** tab click the **Setup** button.
+4. On the **Messaging extensions** tab, select the **Setup** button.
 5. You can either create a new web service (bot) for your messaging extension to use, or if you've already registered one select/add it here.
 6. If necessary, update your bot endpoint address to point to your bot. It should look something like `https://someplace.com/api/messages`.
 7. The **Add** button in the **Command** section will guide you through adding commands to your messaging extension. See the [Learn more](#learn-more) section for links to more information on adding commands. Remember you can define up to 10 commands for your messaging extension.
@@ -66,7 +65,7 @@ From the **Finish => Test and distribute** tab you can **Download** your app pac
 
 ### Create your app manifest manually
 
-As with bots and tabs, you update the [app manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [app manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
 
 #### Declare your messaging extension
 
@@ -81,7 +80,7 @@ The extension definition is an object that has the following structure:
 |---|---|---|
 | `botId` | The unique Microsoft app ID for the bot as registered with the Bot Framework. This should typically be the same as the ID for your overall Teams app. | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
-| `commands` | Array of commands that this messaging extension supports. You are limited to 10 commands. | Yes |
+| `commands` | Array of commands that this messaging extension supports. You're limited to 10 commands. | Yes |
 
 #### Define your commands
 
@@ -233,7 +232,7 @@ Once a meeting begins, Teams participants can interact directly with your messag
 
 1. **Metadata**. When your messaging extension is invoked it can identify the user and tenant from `userId` and `tenantId`. The `meetingId` can be found as part of the `channelData` object. Your app can use the `userId` and `meetingId`  for the `GetParticipant` API request to retrieve user roles.
 
-1. **Command type**. If your message extension uses [action-based commands](../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [single sign-on](../tabs/how-to/authentication/auth-aad-sso.md) authentication.
+1. **Command type**. If your message extension uses [action-based commands](../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [single sign-on](../tabs/how-to/authentication/tab-sso-overview.md) authentication.
 
 1. **User experience**. You messaging extension should look and behave the same as it would outside a meeting.
 

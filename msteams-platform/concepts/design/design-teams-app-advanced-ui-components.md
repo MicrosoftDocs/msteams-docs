@@ -1,7 +1,7 @@
 ---
 title: Design your app with advanced UI components
 author: heath-hamilton
-description: Learn about the Teams UI components, such as Breadcrumbs, Notification bar, Stage view along with relevant use cases. 
+description: Learn about the Teams UI components, such as breadcrumbs, notification bar, stage view along with relevant use cases. 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
@@ -28,11 +28,11 @@ Breadcrumbs are a navigational aid that convey your app’s hierarchy. They help
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Example shows a breadcrumb template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Example shows a breadcrumb template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Example shows a breadcrumb template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Example shows a breadcrumb template on desktop.":::
 
 ## Left nav
 
@@ -45,15 +45,17 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Example shows a left nav template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Example shows a left nav template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop.":::
 
 ## Notification bar
 
 A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action. Specific background colors and icons are associated with specific types of messages (see below).
+
+You can implement a notification bar using the Fluent UI [alert](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) component.
 
 ### Top use cases
 
@@ -63,11 +65,11 @@ A notification bar is a dedicated area for displaying a brief, important message
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Example shows notification bar UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Example shows notification bar UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop.":::
 
 ## Stage view
 
@@ -84,11 +86,11 @@ See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
 
 Your app can launch a stage from an Adaptive Card, shared link, or visual components (such as a chart).
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Example shows a stage template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Example shows a stage template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop.":::
 
 ## Toolbar
 
@@ -96,14 +98,14 @@ A toolbar is a container for grouping a set of controls.
 
 ### Top use cases
 
-* Contextual actions on app content
-* Contextual filter and find
-* Navigation and breadcrumbs
+* Contextual actions on app content.
+* Contextual filter and find.
+* Navigation and breadcrumbs.
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Example shows a toolbar template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Example shows a toolbar template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Example shows a toolbar template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Example shows a toolbar template on desktop.":::

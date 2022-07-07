@@ -1,28 +1,29 @@
 ---
 title: Types of cards
-description: Describes all the cards and card actions available to bots in Teams
-ms.localizationpriority: medium
-keywords: bots cards reference
+description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards
+ms.localizationpriority: high
 ms.topic: reference
 ---
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
-**To create a hero card, thumbnail card, or Adaptive Card from App Studio**
+To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 
-1. Go to **App Studio** from Teams.
-1. Select **Card editor**.
-1. Select **Create a new card**.
-1. Select **Create** for one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**. The metadata details, buttons, and json, csharp, and node code examples are shown for that card.
+1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+1. Select **Design and build Adaptive cards**.
+1. Select **New card**.
+1. Enter card name and select **Save**.
+1. Select one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.
 
-    ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. Select **Save**.
 1. Select **Send me this card**. The card is sent to you as a chat message.
 
 ## Card examples
@@ -56,13 +57,13 @@ You can identify and use different types of cards based on your application requ
 
 | Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Office 365 Connectors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Adaptive Card | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Thumbnail card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| List card | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| Receipt card | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Signin card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Office 365 Connector card | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Hero card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Thumbnail card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| List card | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| Receipt card | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| Signin card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -76,11 +77,11 @@ You can go through some common properties that are applicable to all cards.
 
 ### Inline card images
 
-The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public Content Delivery Network (CDN).
+The card can contain an inline image by including a link to the publicly available image. For performance purposes, it's highly recommended you host the image on a public Content Delivery Network (CDN).
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF is not supported.
+Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
 The following table provides the properties of inline card images:
 
@@ -94,7 +95,7 @@ The following table provides the properties of inline card images:
 
 ### Buttons
 
-Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card are not shown.
+Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card aren't shown.
 
 For more information, see [card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -112,19 +113,20 @@ An Adaptive Card is a customizable card that can contain any combination of text
 
 The following table provides the features that support Adaptive Cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
-> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based messaging extensions.
-> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based messaging extensions and link unfurling), tabs, and task modules.
+>
+> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 
 ### Example of Adaptive Card
 
-![Example of an Adaptive Card](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card":::
 
 The following code shows an example of an Adaptive Card:
 
@@ -263,10 +265,26 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
+
+Example:
+
+```json
+{ 
+ "type": "TextBlock",
+ "text": "${titleText}",
+ "size": "default",
+ "weight": "bolder"
+}
+
+```
+
 Bot Framework reference:
 
 * [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
 You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
 
@@ -278,9 +296,9 @@ A card that typically contains a single large image, one or more buttons, and te
 
 The following table provides the features that support hero cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### Properties of a hero card
 
@@ -297,7 +315,7 @@ The following table provides the properties of a hero card:
 
 ### Example of a hero card
 
-![Example of a hero card](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
 
 The following code shows an example of a hero card:
 
@@ -345,9 +363,9 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 The following table provides the features that support list cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### Properties of a list card
 
@@ -423,9 +441,9 @@ You can work with an Office 365 Connector card that provides a flexible layout a
 
 The following table provides the features that support Office 365 Connector cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### Properties of the Office 365 Connector card
 
@@ -464,7 +482,7 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 | `avatar` | Default, `activityImage` is cropped as a circle. |
 | `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
 
-For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams does not currently support are as follows:
+For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams doesn't currently support are as follows:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -539,19 +557,19 @@ The following code shows an example of an Office 365 Connector card:
 
 ## Receipt card
 
-Teams supports receipt card. It is a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
+Teams supports receipt card, which enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
 
 ### Support for receipt cards
 
 The following table provides the features that support receipt cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### Example of a receipt card
 
-![Example of a receipt card](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="receipt card":::
 
 The following code shows an example of a receipt card:
 
@@ -619,9 +637,9 @@ The signin action can be used from any card in Teams, not just the signin card. 
 
 The following table provides the features that support signin cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### Additional information on signin cards
 
@@ -638,11 +656,11 @@ You can work with a thumbnail card that is used for sending a simple actionable 
 
 The following table provides the features that support thumbnail cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
-![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
 
 ### Properties of a thumbnail card
 
@@ -721,9 +739,9 @@ The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 The following table provides the features that support carousel collections:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > A carousel can display a maximum of ten cards per message.
@@ -734,7 +752,7 @@ Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
-![Example of a carousel of cards](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel collection":::
 
 The following code shows an example of a carousel collection:
 
@@ -915,13 +933,13 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 The following table provides the features that support list collections:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### Example of a list collection
 
-![Example of a list of cards](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list collection":::
 
 Properties of list collections are same as the hero or thumbnail cards.
 
@@ -936,7 +954,7 @@ A list can display a maximum of ten cards per message.
 
 ## Cards not supported in Teams
 
-The following cards are implemented by the Bot Framework, but are not supported by Teams:
+The following cards are implemented by the Bot Framework, but aren't supported by Teams:
 
 * Animation cards
 * Audio cards
@@ -948,3 +966,4 @@ The following cards are implemented by the Bot Framework, but are not supported 
 * [Format cards](~/task-modules-and-cards/cards/cards-format.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

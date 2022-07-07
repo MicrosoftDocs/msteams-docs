@@ -1,11 +1,10 @@
 ---
 title: Create conversational tabs
 author: surbhigupta
-description: Learn to create conversational subentity chat for your channel tabs, to manage conversations using code samples
-keywords: teams tabs channel configurable 
+description: In this module, learn to create conversational subentity chat for your channel tabs, to manage conversations using code samples
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: none
+ms.localizationpriority: medium
 ---
 
 # Create conversational tabs
@@ -43,7 +42,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 The following image shows the conversation panel:
 
-![Conversational sub-entities - start conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="start conversations":::
 
 If the user starts a conversation, it's important to listen for the callback of that event to retrieve and save the **conversationId**:
 
@@ -61,7 +60,7 @@ After a conversation starts, subsequent calls to `openConversation()` require, t
 
 The following image shows the conversation panel with the appropriate conversation:
 
-![Conversational sub-entities - continue conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="continue conversations":::
 
 ## Enhance a conversation
 
@@ -89,7 +88,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Sample name | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|Create Conversational tab|	Microsoft Teams tab sample app for demonstrating create conversation tab. |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp)	|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## Next step
 
