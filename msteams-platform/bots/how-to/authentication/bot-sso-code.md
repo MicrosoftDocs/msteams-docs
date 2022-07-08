@@ -175,4 +175,4 @@ To understand what the bot does when the token exchange fails to trigger a conse
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update Teams manifest and preview the app](bot-sso-manifest.md)
+> [Update Teams app manifest and preview the app](bot-sso-manifest.md)
