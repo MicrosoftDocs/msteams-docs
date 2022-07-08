@@ -10,8 +10,8 @@ Azure AD provides access to your bot app based on the app user's Teams identity.
  
 A bot resource registered with Azure AD apps used with Microsoft Teams SSO must have the following:
 
-- Client ID and client certificate/secret: These are used by your app to authenticate with Azure AD.
-- Permissions: This is a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
+- Client ID and client certificate/secret: They are used by your app to authenticate with Azure AD.
+- Permissions: It's a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
 - Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
 
 You can register your bot app in Azure AD in two ways:
@@ -68,7 +68,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
     | Option | Select this to... |
     | --- | --- |
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called LOB application, this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) | Let users in any Azure AD tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
+    | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) | Let users in any Azure AD tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
     | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can support app users who have personal Microsoft accounts also. |
     | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
 
@@ -92,7 +92,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
 
 ### Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client and authorize trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you'll need:
 
@@ -322,7 +322,7 @@ In this section, you will:
 
 1. Enter the name and value tags for categorizing resources you provisioned.
 
-    These are non-mandatory steps and you can skip them, if needed.
+    These steps are not mandatory and you can skip them, if needed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
 
@@ -399,7 +399,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
 ### Enable bot for Teams
 
-You must enable the Teams channel to let the bot to interact with Microsoft Teams.
+You must enable the Teams channel to let the bot interact with Microsoft Teams.
 
 #### To enable bot app for Teams
 
