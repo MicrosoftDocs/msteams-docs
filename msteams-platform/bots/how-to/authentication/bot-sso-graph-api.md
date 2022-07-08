@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Extend bot app with Microsoft Graph permissions and scope
 
-You can extend your bot app by using Microsoft Graph to allow users permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
+You can extend your bot app by using Microsoft Graph. These permissions can allow app users to view user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
 
 Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
 
@@ -64,7 +64,7 @@ You can configure more Graph scopes in Azure AD as required for your app. Delega
 
 ## Configure authentication for different platforms
 
-Depending on the platform or device where you want to target your app, you may require to configure redirect URIs, specific authentication settings, or details specific to the platform.
+Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, specific authentication settings, or details specific to the platform.
 
 > [!NOTE]
 >
@@ -105,7 +105,7 @@ You can configure authentication for multiple platforms as long as the URL is un
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
 
     1. Enter the redirect URI. The URI should be unique.
-    2. Enter the front-channel logout URL.
+    2. Enter the front-channel log-out URL.
     3. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.
