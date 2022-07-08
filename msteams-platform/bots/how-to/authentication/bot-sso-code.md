@@ -54,9 +54,9 @@ If the app user is using the application for the first time and user consent is 
 
 :::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
 
-When the user selects **Continue**, one of the following events occur:
+When the user selects **Continue**, one of the following events occurs:
 
-* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if you require additional Graph permissions.
+* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if your app requires Graph permissions other than `openid`.
 
 * If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
