@@ -45,7 +45,7 @@ You've now configured the required environment variables for your bot app and fo
 
 ## Request a bot token
 
-The request to get the token is a normal POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
+The request to get the token is a normal POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign-in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
@@ -56,11 +56,11 @@ If the app user is using the application for the first time and user consent is 
 
 When the user selects **Continue**, one of the following events occur:
 
-* If the bot UI has a sign-in button, the sign in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if you require additional permissions than `openId`.
+* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if you require additional Graph permissions.
 
 * If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
-### C# token request without a sign in button
+### C# token request without a sign-in button
 
 ```csharp
     var attachment = new Attachment
