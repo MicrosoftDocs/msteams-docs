@@ -76,11 +76,101 @@ Let's take a tour of the topics covered in this document.
         
         Microsoft 365 account:
         -  Use your Microsoft 365 account with a valid E5 subscription for building your app.
-        Azure Account
+
+        Azure Account:
         - Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
 :::row-end:::
 
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment.png" alt-text="Environment section":::
+   :::column-end:::
+   :::column span="":::
+      #### ENVIRONMENT
+
+        To deploy your Teams app, you need the following environments:
+        
+        Local:
+        -  Deploy your app in the default local environment with local machine environment configurations.
+
+        Dev:
+        - Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development.png" alt-text="Development section":::
+   :::column-end:::
+   :::column span="":::
+      #### DEVELOPMENT
+
+        It helps you to create and customize your Teams app and it contains following features:
+        
+        Create a new Teams app:
+        -  Use the toolkit wizard to prepare project scaffolding for app development.
+
+        View Samples:
+        - Select any of Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.
+        
+        Add Features:
+        - Add other required Teams capabilities to Teams app during development process and add optional cloud resources suitable for your app.
+       
+        Edit Manifest file:
+        - Edit the Teams app integration with Teams client.
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deployment.png" alt-text="Deployment section":::
+   :::column-end:::
+   :::column span="":::
+      #### DEPLOYMENT
+
+        It helps you to provision, deploy and publish your Teams app and it contains the following features:
+        
+        Provision in the cloud:
+        -  Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager.
+
+        Zip Teams metadata package:
+        - Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
+        
+        Deploy to the cloud:
+        - Deploy the source code to Azure.
+       
+        Publish to Teams:
+        - Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization.
+        
+        Developer Portal for Teams:
+        - Use Developer Portal to configure and manage your Teams app. 
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback.png" alt-text="Help and feedback section":::
+   :::column-end:::
+   :::column span="":::
+      #### HELP AND FEEDBACK
+
+        It helps you to find the required documentation and resources.
+        
+        Get Started:
+        - View the Teams Toolkit Get started help within Visual Studio Code.
+
+        Tutorials:
+        -  Select to access different tutorials.
+        
+        Documentation:
+        -  Select to access the Microsoft Teams Developer Documentation.
+       
+        Report issues on GitHub
+        - Select to access GitHub page and raise any issues
+   :::column-end:::
+:::row-end:::
+<!--  
 |Section|Features|Details
 |---------|---------|--------|
 | **1. ACCOUNTS** | &nbsp; | &nbsp; |
@@ -109,3 +199,4 @@ Let's take a tour of the topics covered in this document.
  &nbsp; | &nbsp; | It helps to view the directory structure of your app.|
 | **7.Run and Debug** | &nbsp; | &nbsp; |
  &nbsp; | &nbsp; | To start the local or remote debug process.|
+-->
