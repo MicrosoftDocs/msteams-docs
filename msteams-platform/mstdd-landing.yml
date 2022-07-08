@@ -25,8 +25,6 @@ landingContent:
 #  linkLists:
 #    - linkListType: whats-new
 #      links:
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
 #      - text: Common reasons for app validation failure
 #        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 #      - text: Upload your app in Microsoft Teams
@@ -41,6 +39,8 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
+#      - text: Adaptive Cards overflow menu
+#        url: ~/task-modules-and-cards/cards/cards-format.md
 #      - text: Glossary
 #        url: ~/get-started/glossary.md
 #      - text: Overview
@@ -50,27 +50,21 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Adaptive Cards overflow menu
-        url: ~/task-modules-and-cards/cards/cards-format.md
-      - text: Common reasons for app validation failure
-        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-      - text: Upload your app in Microsoft Teams
-        url: ~/concepts/deploy-and-publish/apps-upload.md
-      - text: Share to Teams from personal app or tab
-        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
-      - text: Create Teams conversation bot
-        url: ~/sbs-teams-conversation-bot.yml
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
-      - text: Device permissions for the browser
-        url: ~/concepts/device-capabilities/browser-device-permissions.md
-      - text: Integrate People Picker
-        url: ~/concepts/device-capabilities/people-picker-capability.md
-      - text: Glossary
-        url: ~/get-started/glossary.md
-      - text: Overview
-        url: ~/overview.md
-      
+      - text: Enhanced collaboration with Live Share SDK [Developer preview]
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Update conversation and installation events in your Teams bot [Developer preview]
+        url:  bots/how-to/conversations/subscribe-to-conversation-events.md
+      - text: Submit your Outlook- and Office-enabled apps to the Teams store
+        url: m365-apps/overview.md
+      - text: App guidance and what's new in TeamsJS version 2.0.0
+        url: tabs/how-to/using-teams-client-sdk.md
+      - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
+        url: toolkit/teams-toolkit-fundamentals.md
+      - text: Introduced app manifest version 1.13
+        url: resources/schema/manifest-schema.md  
+      - text: Bots and Message extensions in GCC and GCCH
+        url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
+
 - title: Get started
   linkLists:
     - linkListType: get-started
