@@ -2,8 +2,7 @@
 title: Extend bot app with Microsoft Graph permissions
 description: Describes configuring API permissions with Microsoft Graph for bot app
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: teams authentication bots Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
+ms.localizationpriority: high
 ---
 # Extend bot app with Microsoft Graph permissions and scope
 

@@ -2,8 +2,7 @@
 title: Register your bot app with Azure AD
 description: Describes registering your bot app with Azure AD
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: teams authentication bots Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
+ms.localizationpriority: high 
 ---
 # Register your bot app in Azure AD
 

@@ -2,8 +2,7 @@
 title: Update manifest for enabling SSO for bots
 description: Describes updating manifest for enabling SSO for bots
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: teams authentication bots Microsoft Azure Active Directory (Azure AD) Graph API
+ms.localizationpriority: high
 ---
 # Update app manifest for SSO and preview your bot app
 

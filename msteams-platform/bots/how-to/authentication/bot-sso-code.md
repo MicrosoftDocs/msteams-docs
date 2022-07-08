@@ -2,8 +2,7 @@
 title: Code configuration for enabling SSO for bots
 description: Describes code configuration for enabling SSO for bots
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
+ms.localizationpriority: high
 ---
 # Add code to enable SSO in your bot app
 
