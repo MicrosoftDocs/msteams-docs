@@ -238,8 +238,8 @@ App must warn users before downloading any files or executables (.exe) into the 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4](/legal/marketplace/certification-policies#11404-functionality).
 
 * Way forward guidance is mandatory for both admin and existing Users. You can add Way forward guidance as hyperlinks to Sign-up, Get Started, Contact Us, Help links, or mail ids.
-* Calling our account dependency or limitations under app functionality isn't required but is mandatory to be added under App Description in both Manifest and AppSource (Partner Centre??).
-* Any dependency on Tenant admins must be called out for New users. If there's no dependency on Tenant Admin, a sign-up, contact us, get started link, or mail id is mandatory.
+* Calling our account dependency or limitations under app functionality isn't required but is mandatory to be added under App Description in both Manifest and AppSource.
+* You must call out any dependency on Tenant admins for new users. If there is no dependency, it is mandatory to provide a sign-up, contact us, or get started link or a mail id.
 
 ### Launching external functionality
 
@@ -255,7 +255,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 * Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
 
-* Add **Pop-out** icon to let the users know that they're being navigated outside teams. You can use the pop-out icon **🡽** to the right of the link.
+* Add **Pop-out** icon to let the users know that they're being navigated outside teams. You can use the pop-out icon :::image type="icon" source="../../../../assets/icons/pop-out-icon.png" ::: to the right of the link.
 * If you're unable to add a Pop-out con, you can implement any of the following options to let the user know that they're navigated outside teams:
   * Add pop-out icon along with button text
   * Add a note in adaptive card, which states that clicking on *Get Help using this app* will take users outside of Teams.
@@ -376,17 +376,20 @@ Descriptions must not directly or through insinuation disparage another brand (M
 * App description must not contain comparative marketing information. For example, Don't use competitor logos or trademarks in the offer listing including tags or other metadata referencing competing offers or marketplaces. [Mandatory Fix]
 * Hyperlink contact details, Get Started, Help, or Sign-up in app description. [Suggested Fix]
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [Mandatory Fix]
-* If you update your App name, replace the old app name with new app name in the offer metadata, manifest, AppSource and wherever applicable. [Mandatory Fix]
-* Limitations and account dependencies must be called out in App Description in Manifest, AppSource and Partner Center. For example, Enterprise account, Paid subscription, another license or account. Examples of few are below:  
+* If you update your app name, replace the old app name with new app name in the offer metadata, manifest, AppSource and wherever applicable. [Mandatory Fix]
+* Limitations and account dependencies must be called out in the manifest App Description, AppSource, and Partner Center. For example:
+  * Enterprise account
+  * Paid subscription
+  * Another license or account
   * Language
-  * PSTN dialing
+  * Public switched Telephone Network (PSTN) dialing
   * Regional dependency
   * Lead time for booking translators or live agents
   * Role based functionality
-  * Dependency on native app etc.
+  * Dependency on native app
 
-* If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, partner center and AppSource for that particular offer.  
-If you need to reference Teams, write the first app listing reference as Microsoft Teams. Later references can be shortened to Teams.
+* If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, Partner Center, and AppSource for that particular offer.  
+* If you need to reference Teams, write the first app listing reference as Microsoft Teams. Later references can be shortened to Teams.
 
 #### Short description
 
@@ -624,10 +627,11 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Apps that require users to input a URL while configuring a tab must:
   * Provide an appropriate way forward guidance for the user to acquire or generate the URL. [Mandatory Fix]  
-  * Check for URL that is relevant or appropriate to the app’s functionality as per the app description.  [Mandatory Fix]  
-* To help users to contact you for support requirements, hyperlink **contact us** information instead of plain text in the configuration screen.  [Mandatory Fix]
+  * Check for URL that is relevant or appropriate to the app’s functionality as per the app description.  [Mandatory Fix]
 
-* For a seamless first run user experience, we recommend you to hyperlink your support URL or email IDs in the configuration screen. [Suggested Fix]
+* Hyperlink the contact us information in the configuration screen instead of plain text to help users to contact you for support requirements.  [Mandatory Fix]
+
+* For a seamless first run user experience, we recommend you to hyperlink your support URL or email ID in the configuration screen. [Suggested Fix]
 
 </details>
 </br>
@@ -687,15 +691,15 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
-* Horizontal scroll must not be present in an in-meeting tab.  [Mandatory Fix]
+* Horizontal scroll must not be present in an in-meeting tab. [Mandatory Fix]
 
 * Horizontal scrolling isn't an expected behavior in in-meeting dialogs. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [Mandatory Fix]
 
-* Horizontal scrolling in task modules isn't an expected behavior in Teams. Task modules allow you to select different sizes to make the content responsive without the need of horizontal scrolling. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without horizontal scrolling. [Mandatory Fix]
+* Horizontal scrolling isn't an expected behavior in task modules. Task modules allow you to select different sizes to make the content responsive without the need of horizontal scrolling. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without horizontal scrolling. [Mandatory Fix]
 
 * Horizontal scrolling present in a tab in a personal, groupChat, or channel scope or in meeting details tab and entire tab canvas isn't an expected behavior in Teams, unless your tab uses an infinite canvas with fixed UI elements. [Mandatory Fix]
 
-* Horizontal scrolling in adaptive cards must not be present in Teams [Mandatory Fix]
+* Horizontal scrolling in adaptive cards must not be present in Teams. [Mandatory Fix]
 
 * Bottom rail for navigation in Tabs must not conflict with Teams mobile app navigation. [Mandatory Fix]
 
@@ -742,7 +746,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tab must not contain elements that completely obstruct or impede workflows within the tab.  For example, Bot inside a tab that can't be minimized.
 * Tab must not have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features and deliverables as described in your listing and other related materials. [Mandatory Fix]
-Footer must not contain links that are unrelated to user functionality within the app. Links from Footer must be removed.
+* If your tabs contains a footer, ensure to remove all links unrelated to app functionality from the footer.
 
 </details>
 </br>
@@ -751,7 +755,7 @@ Footer must not contain links that are unrelated to user functionality within th
 
 * Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
 
-* Post configuration experience, the landing page must show a collaborative view for the entire team.
+* After the configuration experience, the landing page must show a collaborative view for the entire team.
 
 * If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
 
@@ -796,7 +800,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * You must list at least one valid bot command in the **items.commands.title** section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the **commandlist** section of the manifest surface as pre-populated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [Mandatory Fix]
 
-* Bot response must not contain official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA) or license terms that accompany the content or are provided in the following guidelines. [Mandatory Fix]
+* Bot response must not contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA) or license terms that accompany the content or are provided in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [Mandatory Fix]
 
 * Bot response must not contain errors and must not dead-end a user. [Mandatory Fix]
 
@@ -816,7 +820,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must not contain duplicate commands. [Mandatory Fix]
 
-* Bots must not display a typing indicator after responding to the user command. Bots can display a typing indicator while responding to the user command. [Mandatory Fix]
+* Bots can display a typing indicator while responding to the user command, but must not display a typing indicator after responding to the user command. [Mandatory Fix]
 
 * All the scopes supported by your app must be declared in the manifest. [Mandatory Fix]
 
@@ -826,9 +830,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot responses on mobile platforms must be responsive without any data truncation that hampers the bot to complete desired workflows. [Mandatory Fix]
 
-* All links in bot response must be responsive. Links that take user outside of the Teams platform must make the redirection clear for the user by using text such as *View in…* or *This way to…* in the bot response action button or use an open link icon in the bot response action button or make the redirection clear using suitable text in the bot response message body. [Mandatory Fix]
+* All the links must be responsive in a bot response. Any link that takes the user outside the Teams platform must have a clear redirect text  such as **View in..**, **This way to..** or  an open link icon  in the bot response action button or have a suitable redirect text in the bot response message body. [Mandatory Fix]
 
-* If your bot doesn't respond or support any user command by design and is a one way bot only intended to notify users, you must set *isnotificationonly* to true in the manifest. [Mandatory Fix]
+* By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users, you must set **isnotificationonly** to true in the manifest. [Mandatory Fix]
 
 * Bot user experience must not be broken on mobile platforms. Your bot must be fully responsive on mobile. [Mandatory Fix]
 
@@ -862,13 +866,13 @@ For best experience, the welcome message must include the value offered by the b
 
 * Notification only bot can send proactive welcome message in channel only if the message contains important information for any user to complete configuration for the bot or clarifies the scenarios when notifications are triggered. [Mandatory Fix]
 
-* Bot installed in channel or group chat scope must not send proactive messages (not just welcome message) that are irrelevant to all users in channel or group chat, instead send these proactive messages to the user over 1:1 chat.  [Mandatory Fix]
+* Bot installed in channel or group chat scope must not send proactive messages (not just welcome message) that are irrelevant to all users in channel or group chat, instead send these proactive messages to the user over 1:1 chat. [Mandatory Fix]
 
 * Bot installed in channel or group chat scope must not allow users to start individual workflows. Bots must complete individual workflows in 1:1 chat with the user. [Mandatory Fix]
 
 * Bot welcome message must clearly call out the limitations related to usage of the bot in the installed scope. [Mandatory Fix]
 
-* Welcome message must auto trigger on app install in personal scope. If the bot doesn't send a welcome message in personal scope, the user leads to a dead-end. A welcome message in channel or group chat scope is optional for the developer if the app doesn't include a complex configuration workflow and mandatory otherwise and must trigger automatically on app install. [Mandatory Fix]
+* Welcome message must auto trigger on app install in personal scope. If the bot doesn't send a welcome message in personal scope, the user leads to a dead-end. If the app does not include a complex configuration workflow, it's optional for the developer to trigger a welcome message in the channel or groupchat scope. If the app includes a complex configuration, it's mandatory to trigger a welcome message on app install. [Mandatory Fix]
 
 * Welcome messages must trigger only once upon bot installation. Welcome messages must not trigger every time the user invokes the Help command. Help command response must be focused to include a way for the user to access help related to the bot. [Mandatory Fix]
 
@@ -876,13 +880,13 @@ For best experience, the welcome message must include the value offered by the b
 
 * Welcome message content must be related to the bot workflow mentioned in the app’s long description and the installation scope. Welcome message must include the value offered by the bot to users who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. [Mandatory Fix]
 
-* Bot must not send multiple welcome messages triggered on app install.  [Mandatory Fix]
+* Bot must not send multiple welcome messages when triggered on app install. [Mandatory Fix]
 
 * App name in the welcome message must match the app name in the manifest. [Mandatory Fix]
 
 * Welcome message must not display competitor chat based collaborative platforms unless the app provides specific interoperability.
 
-* Welcome message must not redirect the user to another Teams app, instead nudge the user to complete their first task and briefly describe all supported bot commands in the app. [Mandatory Fix]
+* Welcome message must not redirect the user to another Teams app, instead the welcome message must nudge the user to complete their first task and briefly describe all supported bot commands in the app. [Mandatory Fix]
 
 * Welcome message must not contain links to any app marketplace including Microsoft AppSource. [Mandatory Fix]
 
@@ -1232,7 +1236,7 @@ Use the following guidelines for meeting extensions:
 
 * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not be taken outside of the Teams meeting to complete core user workflows of the app. [Mandatory Fix]
 
-* Your app must offer value beyond only providing custom Together Mode scenes in Teams. [Mandatory Fix]
+* Your app must offer value beyond providing only custom Together Mode scenes in Teams. [Mandatory Fix]
 
 * To enable your app for Teams meeting on mobile, you must declare group chat as a scope under configurableTabs and meetingDetailsTab,  meetingChatTab and meetingSidePanel as a context property in the manifest. [Mandatory Fix]
 
@@ -1265,7 +1269,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [Mandatory Fix]
 
 > [!TIP]
-> If notifications are triggered after long intervals. For example, once a day, month and so on. Please trigger the notifications from backend for us.
+> If your apps supports notification scenarios where the notifications are triggered after long intervals, for example, after one day or one month. Before you submit for review, ensure to trigger such notifications in the background for us to be able to test the notifications.
 
 <br></br>
 <details><summary>General</summary>
@@ -1304,7 +1308,7 @@ Notifications must be localized as per the supported languages for all the platf
 
 * Irrelevant, improper, unresponsive or broken workflow must not be present after users click a notification in Teams activity feed. Users must not be blocked from completing a workflow after they click  an activity feed notification. [Mandatory Fix]
 
-* Include your app’s name in the activity feed notification for end users to understand without confusion the source or trigger for the notification. [Mandatory Fix]
+* Include your app’s name in the activity feed notification for end users to understand the source or trigger for the notification without confusion. [Mandatory Fix]
 
 * App must trigger notifications for all the notification scenarios mentioned in the app long description, app first run experience, and/or in scenarios declared under **activityTypes** in the manifest. [Mandatory Fix]
 
