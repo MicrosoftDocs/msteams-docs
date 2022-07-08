@@ -86,7 +86,7 @@ The other ways are:
 
 ### Sync local changes to Developer Portal
 
-After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under Project** -> Teams Toolkit menu, or context menu from Solution Explorer.
+After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under Project -> Teams Toolkit menu, or context menu from Solution Explorer.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest.png" alt-text="Update manifest":::
 
