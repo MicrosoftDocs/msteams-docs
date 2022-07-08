@@ -755,7 +755,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    > * Include a personal bot alongside a personal tab.
    > * Allow users to share content from their personal tab.
 
-* Tab must not contain elements that completely obstruct or impede workflows within the tab.  For example, bot inside a tab that can't be minimized.
+* Tab must not contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized.
 
 * Tab must not have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features, and deliverables as described in your listing and other related materials. [*Mandatory Fix*]
 
