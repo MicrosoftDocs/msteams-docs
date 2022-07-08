@@ -29,7 +29,7 @@ You'll also need to enable sideloading for your tenant:
 1. Select: Teams apps > Manage apps > **Org-wide app settings**.
 1. Under **Custom apps**, toggle on the option *Interaction with custom apps*.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center.":::
 
 ## Enroll your developer tenant for Office 365 Targeted releases
 
@@ -45,7 +45,7 @@ To enroll your test tenant for Office 365 targeted releases:
     1. **Target release for everyone**
     1. **Target release for select users**
 
-    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
+    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with targeted release option selected.":::
 
 1. Select **Save**.
 
@@ -65,7 +65,7 @@ To install Office 365 Beta Channel applications in your test environment:
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you are running a Beta Channel build.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office account to verify you are running a beta channel build.":::
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
@@ -81,7 +81,7 @@ Ensure that you switch to the [Public Developer Preview](../resources/dev-previe
 1. From the ellipsis (**...**) menu next to your user profile, select **About** > **Developer preview**. A dialog appears, select **Switch to developer preview**.
 1. After the Teams app restarts, go to the ellipsis (**...**) menu next to your user profile and check if **Developer Preview** is selected.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Public developer preview option in Teams":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Public developer preview option in Teams.":::
 
 ## Install Visual Studio Code and Teams Toolkit extension
 
