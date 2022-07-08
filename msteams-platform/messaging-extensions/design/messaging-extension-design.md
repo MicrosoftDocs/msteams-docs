@@ -69,7 +69,7 @@ With search commands, people can use your message extension to quickly find exte
 
 You have some options for displaying message extension search results, including [list and grid views](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations showing layout options for message extension search results.":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustration showing layout options for message extension search results.":::
 
 ### Action commands
 
@@ -149,11 +149,11 @@ Message extensions also allow you to insert rich links from a recognized URL int
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box on mobile.":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Example shows a user pasting a link in the compose box on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box.":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Example shows a user pasting a link in the compose box.":::
 
 **2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
