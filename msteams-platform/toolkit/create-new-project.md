@@ -27,7 +27,11 @@ Scenario based Teams app is build on following capabilities:
 
 ## Create a new Teams app
 
-The following steps help you to build a new Tab app and it is similar for all types of other capabilities except SPFx, and notification bot. For SPFx, follow the same steps and additionally you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml). For notification bot, follow the same steps and additionally you need to select trigger. For more information, see [Build notification bot](../sbs-gs-notificationbot.yml)
+The following steps help you to build a new Tab app and it is similar for all types of other capabilities except SPFx, and notification bot.
+
+For SPFx, follow the same steps and additionally you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
+
+For notification bot, follow the same steps and additionally you need to select trigger. For more information, see [Build notification bot](../sbs-gs-notificationbot.yml)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit icon.
@@ -39,9 +43,9 @@ The following steps help you to build a new Tab app and it is similar for all ty
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-1. For this tutorial, select **Tab** as the capability.
+1. For this tutorial, select **Tab** as the capability that you want to build in your app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp.png" alt-text="Select App Capability":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="Select App Capability":::
 
    > [!NOTE]
    > You can select any type of capability based on your app requirement.
@@ -60,7 +64,7 @@ The following steps help you to build a new Tab app and it is similar for all ty
    :::image type="content" source="../assets/images/teams-toolkit-v2/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name":::
 
    > [!NOTE]
-   > You can enter your own application name and ensure that you use only alphanumeric characters.
+   > You can enter your own application name for other capabilities and ensure that you use only alphanumeric characters.
 
    The Teams tab app is created in a few seconds.
 
@@ -68,11 +72,11 @@ The following steps help you to build a new Tab app and it is similar for all ty
 
 ## Directory structure for different app types
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer** area.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer**.
 
 Directory structure for basic Teams app:
 
-You have three different types of basic Teams app and directory structure looks similar for all types of app. The following directory structure is an example:
+You have three different types of basic Teams app and directory structure looks similar for all types of app. The following example shows you the one basic Teams app directory structure:
 
 <details>
 <summary><b>Tab app</b></summary>
@@ -98,7 +102,7 @@ You have three different types of basic Teams app and directory structure looks 
 
 Directory structure for scenario based Teams app:
 
-You have four different types of scenario based Teams app and directory structure looks similar for all types of app. The following directory structure is an example:
+You have four different types of scenario based Teams app and directory structure looks similar for all types of app. The following example shows you the one scenario based Teams app directory structure:
 
 <details>
 <summary><b>Notification bot app</b></summary>

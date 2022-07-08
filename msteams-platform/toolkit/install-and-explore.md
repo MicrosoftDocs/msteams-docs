@@ -32,6 +32,10 @@ Ensure you have installed the latest version of Teams Toolkit. The following ste
    > [!TIP]
    > You can install Teams Toolkit from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
+   After your successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the left panel.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="After install":::
+
 ## Explore Teams Toolkit
 
 After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
@@ -51,7 +55,7 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
    * **Open Folder** helps to open the existing folder.
 1. **Recent** helps you to view the recent files.
 
-The following video guides you to create a new Teams app:
+You can able to explore on more UI elements after create a new Teams app. The following video helps you to know about the process of create a new Teams app
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
@@ -59,9 +63,9 @@ After creating a new Teams app, you can see the directory structure of the app i
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="First page of Teams Toolkit":::
 
-Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon1.PNG"::: icon in the left panel to view Teams Toolkit UI with all functionalities as shown in the following image:
-
 Let's take a tour of the topics covered in this document.
+
+ In Teams Toolkit side panel, You can primarily work on three icons such as **Explorer**, **Run and Debug**, and **Teams Toolkit**. **Explorer** icon helps you to view the directory structure of the app. **Run and Debug** icon helps to start the local or remote debug process. **Teams Toolkit** icon helps to view the following UI with all functionalities:
 
 :::row:::
    :::column span="":::
