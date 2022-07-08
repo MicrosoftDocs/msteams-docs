@@ -36,9 +36,9 @@ You can add API connection using Teams Toolkit in Visual Studio Code:
 2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
 3. Select **Add features** under **DEVELOPMENT**:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-    * You can also open the command palette and enter **Teams: Add cloud resources**.
+   * You can also open the command palette and enter **Teams: Add cloud resources**.
 
 4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
 
