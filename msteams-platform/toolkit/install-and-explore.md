@@ -65,11 +65,27 @@ Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-too
 
 Let's take a tour of the topics covered in this document.
 
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts.png" alt-text="accounts section":::
+   :::column-end:::
+   :::column span="":::
+      #### ACCOUNTS
+
+        To develop a Teams app, you need the following accounts:
+        
+        Microsoft 365 account:
+        -  Use your Microsoft 365 account with a valid E5 subscription for building your app.
+        Azure Account
+        - Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+   :::column-end:::
+:::row-end:::
+
 |Section|Features|Details
 |---------|---------|--------|
 | **1. ACCOUNTS** | &nbsp; | &nbsp; |
 | &nbsp; |Microsoft 365 account|  Use your Microsoft 365 account with a valid E5 subscription for building your app.|
-| &nbsp; | Azure Account |  If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign-in, provision, and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
+| &nbsp; | Azure Account |  Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.|
 |**2.ENVIRONMENT** |  &nbsp; | &nbsp;|
 | &nbsp; |Local |Deploy your app in the default local environment with local machine environment configurations.|
 | &nbsp; | Dev |Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.|
