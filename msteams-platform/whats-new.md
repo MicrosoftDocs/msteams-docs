@@ -15,7 +15,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
-|01/19/2022|Adaptive Cards overflow menu|Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)|
+|07/08/2022|Adaptive Cards overflow menu|Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)|
 |04/28/2022| Common reasons for app validation failure | Distribute your app > Publish to the Teams store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
 |04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
@@ -294,7 +294,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|11/22/2021| Adaptive Cards overflow menu |Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
+|07/08/2022| Adaptive Cards overflow menu |Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
 | 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |04/06/2022| Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |

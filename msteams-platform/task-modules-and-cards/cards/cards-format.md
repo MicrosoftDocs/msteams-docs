@@ -418,7 +418,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-### Adaptive Cards overflow menu 
+### Adaptive Cards overflow menu
 
 > [!NOTE]
 > Overflow menu on Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
@@ -439,7 +439,7 @@ To enable overflow menu you need to specify primary or secondary buttons, config
 
 **Actions**
 
-In the following example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu. 
+In the following example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu.
 
 ``` json
 {
@@ -463,8 +463,6 @@ In the following example, there are two primary actions (by default) and one sec
    
 }
 ```
-
-  
 
 **Action set**
 
@@ -498,15 +496,15 @@ In the following example, all the actions are marked as secondary therefore, a s
   
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that are set as secondary appears in Adaptive Card.
 
-  ![desktop-overflow-menu](~/assets/images/Cards/desktop-overflow-image-1.png)
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="desktop-overflow-menu"border="true":::
 
-  ![overflow-desktop](~/assets/images/Cards/desktop-overflow-image-2.png)
-
-  ![desktop3](~/assets/images/Cards/desktop-overflow-menu-image-3.png)
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="overflow-desktop"border="true":::
+  
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="desktop3"border="true":::
 
 **Overflow menu on mobile**: When a user selects overflow menu on mobile, Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
 
-  ![Overflow menu Mobile](~/assets/images/over-flow-menu-mob-1.png)
+  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Overflow menu Mobile":::
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
