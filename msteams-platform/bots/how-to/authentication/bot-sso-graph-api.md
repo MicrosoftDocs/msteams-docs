@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Extend bot app with Microsoft Graph permissions and scope
 
-You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
+You can extend your bot app by using Microsoft Graph to allow users permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
 
 Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
 
@@ -18,7 +18,7 @@ In this section, you'll learn to:
 
 ## Configure API permissions in Azure AD
 
-You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+You can configure more Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your bot app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 
@@ -64,18 +64,18 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 ## Configure authentication for different platforms
 
-Depending on the platform or device where you want to target your app, additional configuration may be required such as redirect URIs, specific authentication settings, or details specific to the platform.
+Depending on the platform or device where you want to target your app, you may require to configure redirect URIs, specific authentication settings, or details specific to the platform.
 
 > [!NOTE]
 >
-> - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required if SSO is enabled on a tab app.
+> - If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> - Implicit grant is not required if SSO is enabled on a bot app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
 ### To configure authentication for a platform
 
-1. Open the app you registered in the the [Azure portal](https://ms.portal.azure.com/).
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
 1. Select **Manage** > **Authentication** from the left pane.
 
@@ -89,7 +89,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your bot app. You can choose the platform type from web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
 
@@ -118,7 +118,7 @@ You'll need to acquire access token for Microsoft Graph.
 
 ### Configure code to fetch access token
 
-The following code provides an example of using the access token obtained in the OAuth process to submit a request for additional permissions to Microsoft Graph.
+The following code provides an example of using the access token obtained in the OAuth process to submit a request for permissions to Microsoft Graph.
 
 ```TypeScript
     public async displayMicrosoftGraphDataStep(stepContext: WaterfallStepContext): Promise<DialogTurnResult> {
@@ -141,4 +141,4 @@ The following code provides an example of using the access token obtained in the
     }
 ```
 
-When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for additional permissions. After the app user gives consent, the Graph permissions are granted.
+When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for Graph permissions. After the app user gives consent, the Graph permissions are granted.
