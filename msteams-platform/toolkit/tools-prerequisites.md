@@ -105,7 +105,7 @@ You need an Azure account to host a Teams app or the backend resources for your 
 * If you already have an existing app on a different cloud provider other than Azure and you want to integrate the existing app on Teams platform, you must have an Azure subscription.
 * You can select an Azure subscription to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
-[Create a free account](https://azure.microsoft.com/free/) before you begin
+[Create a free account](https://azure.microsoft.com/free/) before you begin.
 
 ### SharePoint collection site administrator account
 
@@ -177,6 +177,8 @@ If your developer tenant doesn't have permission to upload custom app or to side
 
      > [!Note]
      > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
+
+  6. After 24 hours, go to your tenant and ensure that you have permission to sideload your app.
 
 </details>
 
