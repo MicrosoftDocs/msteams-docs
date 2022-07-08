@@ -61,8 +61,6 @@ After creating a new Teams app, you can see the directory structure of the app i
 
 Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon1.PNG"::: icon in the left panel to view Teams Toolkit UI with all functionalities as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
-
 Let's take a tour of the topics covered in this document.
 
 :::row:::
@@ -74,10 +72,10 @@ Let's take a tour of the topics covered in this document.
 
         To develop a Teams app, you need the following accounts:
         
-        Microsoft 365 account:
+        **Sign in to M365**:
         -  Use your Microsoft 365 account with a valid E5 subscription for building your app.
 
-        Azure Account:
+        **Sign in to Azure**:
         - Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
 :::row-end:::
@@ -91,10 +89,10 @@ Let's take a tour of the topics covered in this document.
 
         To deploy your Teams app, you need the following environments:
         
-        Local:
+       **local**:
         -  Deploy your app in the default local environment with local machine environment configurations.
 
-        Dev:
+        **dev**:
         - Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.
    :::column-end:::
 :::row-end:::
@@ -108,17 +106,20 @@ Let's take a tour of the topics covered in this document.
 
         It helps you to create and customize your Teams app and it contains following features:
         
-        Create a new Teams app:
+       **Create a new Teams app**:
         -  Use the toolkit wizard to prepare project scaffolding for app development.
 
-        View Samples:
+        **View samples**:
         - Select any of Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.
         
-        Add Features:
+        **Add features**:
         - Add other required Teams capabilities to Teams app during development process and add optional cloud resources suitable for your app.
        
-        Edit Manifest file:
+        **Edit Manifest file**:
         - Edit the Teams app integration with Teams client.
+        
+        **Preview and Debug Adaptive Cards**:
+        - It helps to preview and debug adaptive card.
    :::column-end:::
 :::row-end:::
 
@@ -131,19 +132,19 @@ Let's take a tour of the topics covered in this document.
 
         It helps you to provision, deploy and publish your Teams app and it contains the following features:
         
-        Provision in the cloud:
+        **Provision in the cloud**:
         -  Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager.
 
-        Zip Teams metadata package:
+        **Zip Teams metadata package**:
         - Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         
-        Deploy to the cloud:
+        **Deploy to the cloud**:
         - Deploy the source code to Azure.
        
-        Publish to Teams:
+        **Publish to Teams**:
         - Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization.
         
-        Developer Portal for Teams:
+        **Developer Portal for Teams**:
         - Use Developer Portal to configure and manage your Teams app. 
    :::column-end:::
 :::row-end:::
@@ -157,20 +158,22 @@ Let's take a tour of the topics covered in this document.
 
         It helps you to find the required documentation and resources.
         
-        Get Started:
+        **Get started**:
         - View the Teams Toolkit Get started help within Visual Studio Code.
 
-        Tutorials:
+        **Tutorials**:
         -  Select to access different tutorials.
         
-        Documentation:
+        **Documentation**:
         -  Select to access the Microsoft Teams Developer Documentation.
        
-        Report issues on GitHub
+        **Report issues on GitHub**:
         - Select to access GitHub page and raise any issues
    :::column-end:::
 :::row-end:::
 <!--  
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
+
 |Section|Features|Details
 |---------|---------|--------|
 | **1. ACCOUNTS** | &nbsp; | &nbsp; |
