@@ -64,7 +64,8 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 ### Prerequisite
 
 To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from **Project** -> **Teams Toolkit** menu, which generates configuration for local or remote Teams app.
-[One image instead of two for the above text/content]
+
+[One image can be used instead of two for the above text/content]
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-prepare-dependencies.png" alt-text="Prepare dependencies":::
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-provision.png" alt-text="Provision in the cloud":::
@@ -79,18 +80,18 @@ The other ways are:
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
 
-2. Right click on **Solution Explorer**, here it shows a list of menus that are same as under the menus **Project** -> **Teams Toolkit**.
+2. Right click on **Solution Explorer**, here under **Teams Toolkit** it shows a list of menus that are same as under the menus **Project** -> **Teams Toolkit**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer.png" alt-text="Solution explorer":::
 
 ### Sync local changes to Developer Portal
 
-After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under **Project** -> **Teams Toolkit** menu, or context menu from Solution Explorer.
+After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under Project** -> Teams Toolkit menu, or context menu from Solution Explorer.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest.png" alt-text="Update manifest":::
 
 > [!NOTE]
-> The changes are updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, that can be overwritten. In the **Warning** dialogue box you can **Overwrite and update** or **cancel**.
+> The changes are updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, that can be overwritten. In the **Warning** dialogue box you can **Overwrite and update** or **Cancel**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning":::
 
