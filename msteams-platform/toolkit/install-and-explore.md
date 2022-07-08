@@ -68,7 +68,6 @@ Let's take a tour of the topics covered in this document.
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts.png" alt-text="accounts section":::
    :::column-end:::
    :::column span="":::
-      #### ACCOUNTS
 
         To develop a Teams app, you need the following accounts:
         
@@ -85,7 +84,6 @@ Let's take a tour of the topics covered in this document.
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment.png" alt-text="Environment section":::
    :::column-end:::
    :::column span="":::
-      #### ENVIRONMENT
 
         To deploy your Teams app, you need the following environments:
         
@@ -102,7 +100,6 @@ Let's take a tour of the topics covered in this document.
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development.png" alt-text="Development section":::
    :::column-end:::
    :::column span="":::
-      #### DEVELOPMENT
 
         It helps you to create and customize your Teams app and it contains following features:
         
@@ -115,7 +112,7 @@ Let's take a tour of the topics covered in this document.
         **Add features**:
         - Add other required Teams capabilities to Teams app during development process and add optional cloud resources suitable for your app.
        
-        **Edit Manifest file**:
+        **Edit manifest file**:
         - Edit the Teams app integration with Teams client.
         
         **Preview and Debug Adaptive Cards**:
@@ -128,7 +125,6 @@ Let's take a tour of the topics covered in this document.
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deployment.png" alt-text="Deployment section":::
    :::column-end:::
    :::column span="":::
-      #### DEPLOYMENT
 
         It helps you to provision, deploy and publish your Teams app and it contains the following features:
         
@@ -154,7 +150,6 @@ Let's take a tour of the topics covered in this document.
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback.png" alt-text="Help and feedback section":::
    :::column-end:::
    :::column span="":::
-      #### HELP AND FEEDBACK
 
         It helps you to find the required documentation and resources.
         
