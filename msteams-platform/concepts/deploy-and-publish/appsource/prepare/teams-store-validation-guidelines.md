@@ -94,6 +94,16 @@ An app's name plays a critical role in how users discover it in the store. Use t
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion.
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
+* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, Help ,and on install in the left nav. The app name can shorten can shorten to either of Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help. Please update your app name to ensure on install in the left nav, the app name shortens to either of Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps and Help.
+
+* The app name must not have any reference to Microsoft or Microsoft products. Don’t use “Teams”, “Microsoft” or “App” in the app name unless your app is an official partnership with Microsoft. In such an instance, the app name comes before any reference to Microsoft. For example, Contoso connector for Microsoft Teams.
+
+* Don’t use parenthesis in naming to include Microsoft products.
+
+* Developer name must be same in the manifest and AppSource.
+
+* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a pre-production app. App name must not contains words that indicate app is not a production app. For example, name contains standalone words such as Beta, Dev, Preview, UAT and so on.
+
  > [!TIP]  
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
@@ -237,8 +247,8 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4](/legal/marketplace/certification-policies#11404-functionality).
 
-* Way forward guidance is mandatory for both admin and existing Users. You can add Way forward guidance as hyperlinks to Sign-up, Get Started, Contact Us, Help links, or mail ids.
-* Calling our account dependency or limitations under app functionality isn't required but is mandatory to be added under App Description in both Manifest and AppSource.
+* Way forward guidance is mandatory for both admin and existing Users. You can add Way forward guidance as hyperlinks to sign-up, get started, contact us, help links, or mail ids.
+* Calling out account dependency or limitations under app functionality isn't required but is mandatory to add it in both Manifest and AppSource app description.
 * You must call out any dependency on Tenant admins for new users. If there is no dependency, it is mandatory to provide a sign-up, contact us, or get started link or a mail id.
 
 ### Launching external functionality
@@ -256,9 +266,10 @@ App must warn users before downloading any files or executables (.exe) into the 
 * Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
 
 * Add **Pop-out** icon to let the users know that they're being navigated outside teams. You can use the pop-out icon :::image type="icon" source="../../../../assets/icons/pop-out-icon.png" ::: to the right of the link.
-* If you're unable to add a Pop-out con, you can implement any of the following options to let the user know that they're navigated outside teams:
+
+* If you're unable to add a **Pop-out** icon, you can implement any of the following options to let the user know that they're navigated outside teams:
   * Add pop-out icon along with button text
-  * Add a note in adaptive card, which states that clicking on *Get Help using this app* will take users outside of Teams.
+  * Add a note in adaptive card which states that clicking on **Get Help using this app**takes the user outside Teams.
   * Add interstitials dialogs.
 
 </details>
@@ -303,7 +314,7 @@ App packages must be correctly formatted and include all required information an
 > * **Clearly describe Limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
 > * **Emphasis on any considerations** for testers while validating your app submission.  
 > * **Pre-populate the test accounts with dummy data** to aid testing.
-> * If you are providing your Test Accounts, make sure you enable third party integration. Also, disable two factor or multi factor authentication.
+> * If you are providing your Test Accounts, ensure to enable third party integration. Also, disable two factor or multi factor authentication.
 
 ### App manifest
 
@@ -315,29 +326,29 @@ The Teams app manifest defines your app's configuration.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
 * If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-### Latest manifest schema uses
+### Uses of Latest manifest schema
 
-* If your app uses SSO, you must declare AAD ID in the manifest for user authentication. [Mandatory Fix]
+* If your app uses Single sign-on (SSO), you must declare Microsoft Azure Active Directory (Azure AD) ID in the manifest for user authentication. [Mandatory Fix]
 
 * You must use a publicly released manifest schema. You can update your app package to use a public version of manifest schema 1.10 or later. [Mandatory Fix]
 
 * When you submit an app update, only increase the app version number. App ID of the updated app must match the App ID of the published app. [Mandatory Fix]
 
-* Currently, 3P app manifest containing Power Apps domain **apps.powerapps.com** (Third party apps built using the Microsoft Power Platform) aren't accepted for publishing on Teams App Store and Microsoft Power Platform apps can be published only to an organization’s app store. [Mandatory Fix]
+* Currently, third-party app manifest containing Power Apps domain **apps.powerapps.com** (Third party apps built using the Microsoft Power Platform) aren't accepted for publishing on Teams App Store. Microsoft Power Platform apps can only be published to an organization’s app store. [Mandatory Fix]
 
-* Presence of additional files within the app package isn't acceptable [Mandatory Fix]
+* Presence of additional files within the app package isn't acceptable. [Mandatory Fix]
 
-* The version number of the Manifest file schema and additional languages manifest schema must match. [Mandatory Fix]
+* The version number must be the same in the manifest file schema and additional languages manifest schema. [Mandatory Fix]
 
-* You must use the Microsoft Teams app schema v1.5 and later to localize your app. To use the app schema v1.5, in your manifest.json file, update the `$schema` attribute to 1.5 or higher. Update the manifestVersion property to $schema version (1.5 in this case). [Mandatory Fix]
+* You must use the Teams app schema version 1.5 or later to localize your app. To use the app schema version 1.5 or later in your manifest.json file, update the `$schema` attribute to 1.5 or higher. Update the `manifestVersion` property to `$schema` version (1.5 in this case). [Mandatory Fix]
 
 * When you add a new capability, update or remove an existing capability,  add or remove manifest metadata, or make changes to Partner Center metadata, you must increase the app version number and submit the app manifest.
 
- When a new manifest is installed, it overwrites the existing manifest, and the user receives the new functionality. When the app is submitted to the store, the new manifest must be resubmitted and revalidated. After the manifest is approved, the app user  automatically receives the updated manifest within few hours. If the app requests for permissions change, the users are prompted to upgrade and give consent to the app. The version string must follow the semver standard (MAJOR.MINOR.P ATCH). [Mandatory Fix]
+  When a new manifest is installed, it overwrites the existing manifest, and the user receives the new functionality. When the app is submitted to the store, the new manifest must be resubmitted and revalidated. After the manifest is approved, the app user  automatically receives the updated manifest within a few hours. If the app requests for permissions change, the users are prompted to upgrade and give consent to the app. The version string must follow the semver standard (MAJOR.MINOR.P ATCH). [Mandatory Fix]
 
-* If your app requires admins to review permissions and grant consent in Teams Admin Center, you must declare `webapplicationinfo` in the manifest. If `webapplicationinfo` isn't declared in the manifest, the **Permissions** page for your app in Teams Admin Center is shown as **...** [Mandatory Fix]
+* If your app requires admins to review permissions and grant consent in Teams admin center, you must declare `webapplicationinfo` in the manifest. If `webapplicationinfo` isn't declared in the manifest, the **Permissions** page for your app in Teams admin center is shown as **...** [Mandatory Fix]
 
-* As part of Teams app certification, we don't accept nonproduction version of app manifests. You must submit a production version of the app manifest. [Mandatory Fix]
+* As part of Teams app certification, you must submit a production version of the app manifest. We don't accept nonproduction version of app manifests. [Mandatory Fix]
 
 * We recommend you declare the Microsoft Partner Network (MPN) ID in the manifest. The MPN ID helps identify the partner organization building the app. [Suggested Fix]
 
@@ -376,7 +387,7 @@ Descriptions must not directly or through insinuation disparage another brand (M
 * App description must not contain comparative marketing information. For example, Don't use competitor logos or trademarks in the offer listing including tags or other metadata referencing competing offers or marketplaces. [Mandatory Fix]
 * Hyperlink contact details, Get Started, Help, or Sign-up in app description. [Suggested Fix]
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [Mandatory Fix]
-* If you update your app name, replace the old app name with new app name in the offer metadata, manifest, AppSource and wherever applicable. [Mandatory Fix]
+* If you update your app name, replace the old app name with new app name in the offer metadata in the manifest, AppSource and wherever applicable. [Mandatory Fix]
 * Limitations and account dependencies must be called out in the manifest App Description, AppSource, and Partner Center. For example:
   * Enterprise account
   * Paid subscription
@@ -530,7 +541,7 @@ Support URLs must include your contact details or a way forward for users to rai
 
 * If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
-* App metadata content must be the same in US English (en-us) and other localization languages [Mandatory Fix]
+* App metadata content must be the same in US English (en-us) and other localization languages. [Mandatory Fix]
 
 * Supported languages must be displayed in the AppSource app description. For example, This app is available in X (X= localized language). [Mandatory Fix]
 
@@ -820,19 +831,19 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must not contain duplicate commands. [Mandatory Fix]
 
-* Bots can display a typing indicator while responding to the user command, but must not display a typing indicator after responding to the user command. [Mandatory Fix]
+* Bots  must not display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [Mandatory Fix]
 
 * All the scopes supported by your app must be declared in the manifest. [Mandatory Fix]
 
 * Bots must provide a valid response to the **help** command typed in lowercase or uppercase. [Mandatory Fix]
 
-* Bots must provide an adequate and appropriate response to *help* command that provides the user with a way forward or lets the user access help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged into the app. [Mandatory Fix]
+* Bots must provide a valid response to **help** command that provides the user with a way forward or lets the user access help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged into the app. [Mandatory Fix]
 
 * Bot responses on mobile platforms must be responsive without any data truncation that hampers the bot to complete desired workflows. [Mandatory Fix]
 
 * All the links must be responsive in a bot response. Any link that takes the user outside the Teams platform must have a clear redirect text  such as **View in..**, **This way to..** or  an open link icon  in the bot response action button or have a suitable redirect text in the bot response message body. [Mandatory Fix]
 
-* By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users, you must set **isnotificationonly** to true in the manifest. [Mandatory Fix]
+* By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set **isnotificationonly** to true in the manifest. [Mandatory Fix]
 
 * Bot user experience must not be broken on mobile platforms. Your bot must be fully responsive on mobile. [Mandatory Fix]
 
@@ -858,7 +869,7 @@ For best experience, the welcome message must include the value offered by the b
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
-* Notification only bots must send a Welcome message clarifying that it's a notification only bot and users won't be able to interact with the bot. [Mandatory Fix]
+* Notification only bots must send a welcome message clarifying that it's a notification only bot and users won't be able to interact with the bot. [Mandatory Fix]
 
 * Welcome message must not dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [Mandatory Fix]
 
@@ -973,20 +984,22 @@ Apps that provide only notifications with content such as **You have a new notif
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
 
 </details>
+<br/>
 
 <details><summary>Bot metadata information</summary>
 
 * Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Bot Framework metadata. [Mandatory Fix]
 
-* Bot ID must match in App manifest and Bot Framework metadata [Mandatory Fix]
+* Bot ID must match in the app manifest and Bot Framework metadata [Mandatory Fix]
 
-* Ensure the Bot ID in the app manifest matches with Bot ID in the last store published version of your app. Changing Bot IDs in an app update will lead to permanent loss of all user interaction history with the bot for existing users of your app and a new conversation chain will start with the new Bot ID.  [Mandatory Fix]
+* Ensure the bot ID in the app manifest matches with bot ID in the last store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and a new conversation chain starts with the new Bot ID.  [Mandatory Fix]
 
-* Any change to App name, metadata, bot welcome message or bot responses must be updated with new name.  [Mandatory Fix]
+* Any change to app name, metadata, bot welcome message or bot responses must be updated with new name.  [Mandatory Fix]
 
 * App name in the bot welcome message or bot responses must match the app name in the manifest. [Mandatory Fix]
 
 </details>
+<br/>
 
 <details><summary>Bot design guidelines</summary>
 
@@ -997,6 +1010,7 @@ Apps that provide only notifications with content such as **You have a new notif
 * Any broken links, responses, or workflows in your app must be fixed. Your app must not have a broken functionality. [Mandatory Fix]
 
 </details>
+<br/>
 
 <details><summary>Bot collaborative scope</summary>
 
