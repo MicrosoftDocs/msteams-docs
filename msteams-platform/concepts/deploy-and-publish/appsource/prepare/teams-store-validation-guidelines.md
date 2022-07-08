@@ -1266,7 +1266,7 @@ Use the following guidelines for meeting extensions:
 
 * Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage must not embed the complete website experience. [*Mandatory Fix*]
 
-* App must not show continuous loading screen, error or broken functionality that dead-ends the user, or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
+* App must not show continuous loading screen, error, or broken functionality that dead-ends the user, or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
 
 * App must not open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
 
