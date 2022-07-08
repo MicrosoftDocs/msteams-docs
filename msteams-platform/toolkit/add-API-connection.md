@@ -26,47 +26,53 @@ When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs
 
 ### Connect to API in Visual Studio Code
 
-* You can add API connection using Teams Toolkit in Visual Studio Code:
+You can add API connection using UI and CLI command
 
-    1. Open Microsoft Visual Studio Code.
-    2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
-    3. Select **Add features** under **DEVELOPMENT**:
+# [UI](#tab/vscode)
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
+You can add API connection using Teams Toolkit in Visual Studio Code:
 
-       * You can also open the command palette and enter **Teams: Add cloud resources**.
+1. Open Microsoft Visual Studio Code.
+2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
+3. Select **Add features** under **DEVELOPMENT**:
 
-    4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
+    * You can also open the command palette and enter **Teams: Add cloud resources**.
 
-    5. Select **OK**.
+4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
 
-    6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+5. Select **OK**.
 
-         > [!NOTE]
-         > Ensure the endpoint is a valid http(s) URL.
+6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
 
-    7. Select the component that accesses the API.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
-    8. Select **OK**.
+    > [!NOTE]
+    > Ensure the endpoint is a valid http(s) URL.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
+7. Select the component that accesses the API.
 
-    9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
+8. Select **OK**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
 
-    10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
+9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
 
-         > [!NOTE]
-         > Based on the authentication type selected, additional configuration is needed.
+10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
 
-### API connection in TeamsFx CLI
+     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+
+    > [!NOTE]
+    > Based on the authentication type selected, additional configuration is needed.
+
+# [Command line](#tab/cli)
+
+API connection in TeamsFx CLI
 
 The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
 
@@ -80,6 +86,8 @@ The base command of this feature is `teamsfx add api-connection [authentication 
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
    |Custom|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
+
+ ---
 
 ## Understand Toolkit updates to your project
 

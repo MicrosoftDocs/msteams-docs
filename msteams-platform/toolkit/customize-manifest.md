@@ -23,6 +23,8 @@ The manifest template file `manifest.template.json` is available under `template
         └───manifest.local.json  - Previewed manifest of local Teams app
 ```
 
+You can preview manifest file in the following environments:
+
 <details>
 <summary><b>Preview manifest file in local environment</b></summary>
 
@@ -34,9 +36,9 @@ You can also preview local manifest file by following the steps:
 2. Select **Preview manifest file** on the menu bar of `manifest.template.json` file.
 3. Select **Zip Teams metadata package** in Treeview and select **local**.
 
-The preview local appears as shown in the image:
+   The preview local appears as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
 
 </details>
 
@@ -55,10 +57,10 @@ You can also preview manifest file in remote environment by following steps:
 3. Select **Zip Teams metadata package** in Treeview.
 4. Select your environment.
 
-> [!NOTE]
-> If there are more than one environment, you need to select the environment you want to preview as shown in the image:
+   > [!NOTE]
+   > If there are more than one environment, you need to select the environment you want to preview as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
 </details>
 
@@ -66,27 +68,33 @@ You can also preview manifest file in remote environment by following steps:
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-1. Deploy Teams app manifest.
+<details>
+<summary><b>Deploy Teams app manifest</b></summary>
 
    You can deploy Teams app manifest in any of the following ways:
 
-   * Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu.
+* Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
 
-   * Trigger `Teams: Deploy Teams app manifest` from command palette.
+* Trigger `Teams: Deploy Teams app manifest` from command palette.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
 
-2. Update to Teams platform.
+</details>
+
+<details>
+<summary><b>Update to Teams platform</b></summary>
 
    You can update to Teams platform in any of the following ways:
 
-   * Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`.
+* Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`.
 
-   * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
+* Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
+
+</details>
 
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
@@ -130,7 +138,7 @@ The following list provides supported placeholders in `manifest.template.json`:
 * `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
 * `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
 
-**To add customized parameter**
+**To add customized parameter**:
 
 1. Add customized parameter as follows:</br>
    a. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.</br>
@@ -180,7 +188,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
-## Customize manifest
+## Customize Azure AD manifest
 
 The [Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contains definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
