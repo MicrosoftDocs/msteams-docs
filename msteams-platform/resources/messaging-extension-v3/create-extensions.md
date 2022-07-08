@@ -368,6 +368,7 @@ Once a user completes entering their input, bot will receive a `composeExtension
 
 These are the different expected responses to a `submitAction`.
 
+
 ### Task Module response
 
 Task module response is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
@@ -379,6 +380,7 @@ Compose extension auth/config response is used when your extension needs to eith
 ### Compose extension result response
 
 Compose extension result response is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+
 
 ```json
 {
