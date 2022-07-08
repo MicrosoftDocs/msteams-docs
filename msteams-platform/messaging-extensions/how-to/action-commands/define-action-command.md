@@ -49,7 +49,7 @@ First, you must decide the location from where your action command must be invok
 
 The following image displays the locations from where action command is invoked:
 
-:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Screenshot of action command invoke locations.":::
 
 ## Select how to create your task module
 
@@ -93,47 +93,47 @@ You can create an action command using **App Studio** or **Developer Portal**.
 1. After importing an app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
 1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up window:
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Screenshot of messaging extension set up window.":::
 
 1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Screenshot of bot creation for messaging extension.":::
 
 1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Screenshot of using existing bot for messaging extension.":::
 
 1. Select **Add** in the **Command section** of the message extensions page to include the commands which decides the behaviour of message extension.
 The following image displays command addition for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Screenshot of Include command for message extension.":::
 
 1. Select **Allow users to trigger actions in external services while inside of Teams**. The following image displays the action command selection:
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Action command selection":::
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Screenshot of selecting action command.":::
 
 1. To use a static set of parameters to create your task module, select **Define a set of static parameters for the command**.
 
     The following image displays the action command static parameter selection:
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Action command static parameter selection":::
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Screenshot of selecting action command static parameter.":::
 
     The following image displays an example for static parameter set-up:
 
-    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Action command static parameter set-up":::
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Example showing action command static parameter set-up.":::
 
     The following image displays an example for static parameter testing:
 
-    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Action command static parameter testing":::
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Example showing action command static parameter testing.":::
 
 1. To use dynamic parameters, select to **Fetch a dynamic set of parameters from your bot**. The following image displays the action command parameter selection:
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Action command dynamic parameter selection":::
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Screenshot of selecting action command dynamic parameter.":::
 
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where you want to invoke the action command. The following image displays the action command invoke location:
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Action command invoke location":::
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Screenshot of action command invoke location.":::
 
 1. Select **Save**.
 1. To add more parameters, select the **Add** button in the **Parameters** section.
