@@ -31,7 +31,7 @@ The following steps help you to build a new Tab app and it is similar for all ty
 
 For SPFx, follow the same steps and additionally you need to select Framework and Web Part Name as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
 
-For notification bot, follow the same steps and additionally you need to select trigger. For more information, see [Build notification bot](../sbs-gs-notificationbot.yml)
+For notification bot, follow the same steps and additionally you need to select trigger. For more information, see [Build notification bot](../sbs-gs-notificationbot.yml).
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit icon.
