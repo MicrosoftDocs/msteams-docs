@@ -50,15 +50,15 @@ The request to get the token is a normal POST message request using the existing
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-If the user is using the application for the first time and user consent is required, the following dialog box appears to continue with the consent experience:
+If the app user is using the application for the first time and user consent is required, the following dialog box appears:
 
 :::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
 
-When the user selects **Continue**, the following events occur:
+When the user selects **Continue**, one of the following events occur:
 
-* If the bot defines a sign in button, the sign in flow for bots is activated that is similar to the sign in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
+* If the bot UI has a sign-in button, the sign in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if you require additional permissions than `openId`.
 
-* If the bot isn't providing a sign in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
+* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
 ### C# token request without a sign in button
 
