@@ -87,14 +87,14 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
 * The name must include terms relevant to your users.
 * Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**.
-* Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, Xbox, and so on, that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
+* Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, Xbox, that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
-* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource, and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
+* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion.
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
-* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, Help, and on install in the left nav. The app name can shorten to either of Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help. Update your app name to ensure on install in the left nav, the app name shortens to either of Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps and Help.
+* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, Help, and on install in the left nav. The app name can shorten to either of Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help. Update your app name to ensure on install in the left nav, the app name shortens to either of Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help.
 
 * The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, or **App** in the app name unless your app is in an official partnership with Microsoft. In such an instance, the app name comes before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**.
 
@@ -102,7 +102,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
 * Developer name must be same in the manifest and AppSource.
 
-* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a pre-production app. App name must not contain words that indicate app isn't a production app. For example, app name contains standalone words such as Beta, Dev, Preview, UAT and so on.
+* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a pre-production app. App name must not contain words that indicate app isn't a production app. For example, app name contains standalone words such as Beta, Dev, Preview, UAT.
 
  > [!TIP]  
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
@@ -247,9 +247,9 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4](/legal/marketplace/certification-policies#11404-functionality).
 
-* Way forward guidance is mandatory for both admin and existing users. You can add way forward guidance as hyperlinks to sign-up, get started, contact us, help links, or email.
+* Way forward guidance is mandatory for both admin and existing users. You can add way forward guidance as hyperlinks to sign up, get started, contact us, help links, or email.
 * Calling out account dependency or limitations under app functionality isn't required but is mandatory to add it in both manifest and AppSource app description.
-* You must call out any dependency on tenant admins for new users. If there's no dependency, it's mandatory to provide a sign-up, contact us, get started link, or email.
+* You must call out any dependency on tenant admins for new users. If there's no dependency, it's mandatory to provide a sign up, contact us, get started link, or email.
 
 ### Launching external functionality
 
@@ -269,7 +269,7 @@ Apps must not take users out of Teams for core user scenarios. App content and i
 
 * If you're unable to add a **Pop-out** icon, you can implement any of the following options to let the user know that they're being navigated outside Teams:
   * Add **Pop-out** icon along with button text.
-  * Add a note in adaptive card that states that when users select **Get Help using this app**, it takes the user outside Teams.
+  * Add a note in Adaptive Card that states that when users select **Get Help using this app**, it takes the user outside Teams.
   * Add interstitials dialogs.
 
 </details>
@@ -385,7 +385,7 @@ You must have a short and long description of your app. The descriptions in your
 Descriptions must not directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
 
 * App description must not contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
-* Hyperlink contact details, get started, help, or sign-up in app description. [*Suggested Fix*]
+* Hyperlink contact details, get started, help, or sign up in app description. [*Suggested Fix*]
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [*Mandatory Fix*]
 * If you update your app name, replace the old app name with new app name in the offer metadata in the manifest, AppSource, and wherever applicable. [*Mandatory Fix*]
 * Limitations and account dependencies must be called out in the manifest App Description, AppSource, and Partner Center. For example:
@@ -393,7 +393,7 @@ Descriptions must not directly or through insinuation disparage another brand (M
   * Paid subscription
   * Another license or account
   * Language
-  * Public switched Telephone Network (PSTN) dialing
+  * Public Switched Telephone Network (PSTN) dialing
   * Regional dependency
   * Lead time for booking translators or live agents
   * Role based functionality
@@ -741,12 +741,12 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
-* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
+* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
-* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md).
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md).
 
 * Tab experiences must be fully responsive on mobile (Android and iOS).
 
@@ -1050,7 +1050,7 @@ Action-based message extensions must do the following:
 
     :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png" alt-text="validation-messaging-extension-app-doesnot-pass-messages":::
 
-* Incorporate the host app name instead of a generic verb for action commands triggered from a chat message, channel post, or call to action within apps. For example, use **Start a Skype Meeting** for **Start Meeting**, **Upload file to DocuSign** for **Upload file**, and so on. [*Suggested Fix*]
+* Incorporate the host app name instead of a generic verb for action commands triggered from a chat message, channel post, or call to action within apps. For example, use **Start a Skype Meeting** for **Start Meeting**, **Upload file to DocuSign** for **Upload file**. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
 
