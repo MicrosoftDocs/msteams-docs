@@ -37,7 +37,7 @@ To create and configure your app in Azure AD for enabling SSO:
 
 ## Create an app registration in Azure AD
 
-Register a new app in Azure AD, and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
+You can register a new app in Azure AD, and configure the tenancy and app's platform. You'll generate a new app ID. You'll need to update it in your Teams app manifest file.
 
 ### To register a new app in Azure AD
 
