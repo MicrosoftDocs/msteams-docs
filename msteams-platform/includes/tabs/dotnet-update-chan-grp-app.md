@@ -131,5 +131,4 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 1. To view your tab, go to the team where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
 
-    ![Channel tab ASPNETMVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
-
+    :::image type="content" source="../../assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Selecting tab color.":::
