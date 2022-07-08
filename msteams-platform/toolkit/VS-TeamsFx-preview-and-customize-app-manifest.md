@@ -27,10 +27,10 @@ There are two kinds of placeholders in `manifest.template.json`:
 1. `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. You should not modify the values in `state.{env}.json`.
 2. `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
 
-You can add a customized parameter by doing the following:
+You can have a customized parameter by:
 
-1. Add a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`.
-2. Add a config value in `config.{env}.json`.
+1. Adding a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`.
+2. Adding a config value in `config.{env}.json`.
 
     ```
         {
@@ -70,7 +70,7 @@ To preview manifest file, you need to trigger **Prepare Teams App Dependencies**
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-provision.png" alt-text="Provision in the cloud":::
 
-To preview manifest with real content, Teams Toolkit generates the preview manifest files under **build/appPackage** folder. You can right click on **manifest.template.json**, and from **Preview Manifest File** select **For Local** or **For Azure**. This opens the corresponding manifest file.
+To preview manifest with real content, Teams Toolkit generates the preview manifest files under **build/appPackage** folder. Right click on **manifest.template.json**, and from **Preview Manifest File** select **For Local** or **For Azure**. This opens the corresponding manifest file.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview.png" alt-text="Preview context menu":::
 
@@ -86,7 +86,7 @@ The other ways are:
 
 ### Sync local changes to Developer Portal
 
-After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under Project -> Teams Toolkit menu, or context menu from Solution Explorer.
+After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Update Manifest in Teams Developer Portal** under **Project** -> **Teams Toolkit** menu, or context menu from Solution Explorer.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest.png" alt-text="Update manifest":::
 
