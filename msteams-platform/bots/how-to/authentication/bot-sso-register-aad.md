@@ -92,7 +92,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
 
 ### Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client and authorize trusted client applications to enable SSO.
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams client and authorize trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you'll need:
 
@@ -322,7 +322,7 @@ In this section, you will:
 
 1. Enter the name and value tags for categorizing resources you provisioned.
 
-    These steps are not mandatory and you can skip them, if needed.
+    These steps aren't mandatory and you can skip them, if needed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
 
@@ -387,7 +387,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 4. Select the duration of validity for the secret.
 5. Select **Add**.
 
-   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
+   A message pops up on the browser stating that the client secret was updated. The client secret displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
 
