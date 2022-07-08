@@ -163,7 +163,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ## Sideload and Preview in Teams
 
-You've configured the bot app to enable SSO in Azure AD, in app code, and in Teams manifest file. You can now sideload your bot app in Teams, and preview it in Teams environment.
+You've configured the bot app to enable SSO. You can now sideload your bot app in Teams, and preview it in Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app" border="false":::
 
