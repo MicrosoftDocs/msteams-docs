@@ -11,7 +11,6 @@ ms.date: 05/13/2022
 # Manage Teams app manifest
 
 After scaffolding, in the manifest template file under `templates/appPackage` folder,
-
 `manifest.template.json` is shared between local and remote environment.
 
 In the manifest template, select the **Open Manifest File** under **Project** -> **Teams Toolkit** menu.
