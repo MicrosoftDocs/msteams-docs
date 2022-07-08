@@ -8,9 +8,9 @@ ms.localizationpriority: high
 
 Azure AD provides access to your bot app based on the app user's Teams identity. You'll need to register your bot app with Azure AD so that the app user who has signed into Teams can be given access to your bot app.
  
-A bot resource registered with Azure AD apps used with Microsoft Teams SSO must have the following:
+To enable SSO for a bot resource, configure:
 
-- Client ID and client certificate/secret: They are used by your app to authenticate with Azure AD.
+- Client ID and client certificate/secret: They're used by your app to authenticate with Azure AD.
 - Permissions: It's a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
 - Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
 
@@ -65,7 +65,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
     <details>
     <summary><b>Options for supported account types</b></summary>
 
-    | Option | Select this to... |
+    | Option | Select this option to... |
     | --- | --- |
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called LOB application, this app is a single-tenant application in the Microsoft identity platform. |
     | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) | Let users in any Azure AD tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
@@ -92,7 +92,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
 
 ### Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams client and authorize trusted client applications to enable SSO.
+After you've created a new app registration, configure scope (permission) options. You need it for sending access token to Teams client and authorize trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you'll need:
 
@@ -167,10 +167,10 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
 
-    1. Enter the scope name. This is a mandatory field.
+    1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
-    3. Enter the **Admin consent display name**. This is a mandatory field.
-    4. Enter the description for admin consent. This is a mandatory field.
+    3. Enter the **Admin consent display name**.
+    4. Enter the description for admin consent.
     5. Enter the **User consent display name**.
     6. Enter the description for user consent description.
     7. Select the **Enabled** option for state.
@@ -480,7 +480,12 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 #### Update OAuth connection
 
-For a bot to support SSO, you must update its OAuth connection settings. This process associates the bots with the authentication provider (Azure AD), the Azure AD application associated with the bot, the application's ID URI and the permissions the bot needs to obtain an access token for.
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
+
+- Azure AD
+- The Azure AD application associated with the bot
+- The application's ID URI
+- The permissions that the bot needs to obtain an access token
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
@@ -600,7 +605,7 @@ In this section, you'll learn to create and deploy bot resource. After you creat
 
 1. Enter the name and value tags for categorizing resources you provisioned.
 
-    These are non-mandatory steps and you can skip them, if needed.
+    These steps are non-mandatory and you can skip them, if needed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
 
@@ -665,7 +670,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 4. Select the duration of validity for the secret.
 5. Select **Add**.
 
-   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
+   A message pops up on the browser stating that the client secret was updated. Client secret displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
 
@@ -677,7 +682,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
 ### Enable bot for Teams
 
-You must enable the Teams channel to let the bot to interact with Microsoft Teams.
+You must enable the Teams channel so that the bot can interact with Microsoft Teams.
 
 #### To enable bot app for Teams
 
@@ -828,10 +833,10 @@ You need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
 
-    1. Enter the scope name. This is a mandatory field.
+    1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
-    3. Enter the **Admin consent display name**. This is a mandatory field.
-    4. Enter the description for admin consent. This is a mandatory field.
+    3. Enter the **Admin consent display name**.
+    4. Enter the description for admin consent.
     5. Enter the **User consent display name**.
     6. Enter the description for user consent description.
     7. Select the **Enabled** option for state.
@@ -908,7 +913,12 @@ You must define the access token version that is acceptable for your app. This c
 
 ### Update OAuth connection
 
-For a bot to support SSO, you must update its OAuth connection settings. This process associates the bots with the authentication provider (Azure AD), the Azure AD application associated with the bot, the application's ID URI and the permissions the bot needs to obtain an access token for.
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
+
+- Azure AD
+- The Azure AD app associated with the bot
+- The app ID URI
+- The permissions required by the bot to obtain an access token
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
