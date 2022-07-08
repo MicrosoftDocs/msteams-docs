@@ -6,7 +6,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ---
-# Resolve issues if your Microsoft Teams store submission fails
+# Resolve issues if your Teams store submission fails
 
 Apps published to the Microsoft Teams store must meet the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [commercial marketplace policies](/legal/marketplace/certification-policies).
 

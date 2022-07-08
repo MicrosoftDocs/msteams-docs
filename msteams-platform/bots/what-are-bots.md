@@ -6,7 +6,7 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
 ---
-# Bots in Microsoft Teams
+# Build bots for Teams
 
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
@@ -27,7 +27,7 @@ Conversational bots are incredibly flexible. Bots can handle a few basic command
 
 Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot":::
 
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 

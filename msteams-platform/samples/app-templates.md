@@ -2,6 +2,7 @@
 title: App templates for Microsoft Teams
 description: Learn how to use app templates for Microsoft Teams platform with detailed instructions for deploying and installing an app.
 ms.topic: reference
+keywords: Microsoft Teams templates samples demo
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
@@ -52,7 +53,7 @@ Using the co-worker appreciation template in Teams, users can recognize their co
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
-![Overall](../assets/images/coworker-appreciation-1.png)
+:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="coworkers appreciation":::
 
 ## FAQ Plus
 

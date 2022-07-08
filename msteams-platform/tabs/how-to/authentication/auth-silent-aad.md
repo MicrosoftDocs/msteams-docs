@@ -4,7 +4,7 @@ description: In this module, learn how to do silent authentication, Single-sign-
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
-# Silent authentication
+# Use silent authentication in Azure AD
 
 > [!IMPORTANT]
 > Microsoft support and development for Active Directory Authentication Library (ADAL) including the security fixes, ends on **June 30, 2022**. To continue receiving support, update your applications to use Microsoft Authentication Library (MSAL).See [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration).

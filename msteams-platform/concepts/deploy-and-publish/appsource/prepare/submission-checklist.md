@@ -7,7 +7,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ---
 
-# Prepare your Microsoft Teams store submission
+# Prepare your Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
