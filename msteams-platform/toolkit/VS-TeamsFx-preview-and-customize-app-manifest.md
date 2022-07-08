@@ -80,7 +80,7 @@ The other ways are:
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
 
-2. Right click on **Solution Explorer**, here under **Teams Toolkit** it shows a list of menus that are same as under the menus **Project** -> **Teams Toolkit**.
+2. Right click on **Solution Explorer**, here under **Teams Toolkit** it shows a list of menus that are same as under the menus Project -> Teams Toolkit.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer.png" alt-text="Solution explorer":::
 
