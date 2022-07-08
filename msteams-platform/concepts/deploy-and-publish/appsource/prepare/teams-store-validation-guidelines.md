@@ -873,19 +873,19 @@ For best experience, the welcome message must include the value offered by the b
 
 * Welcome message must not dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [Mandatory Fix]
 
-* Bot installed in channel or group chat scope must not send proactive welcome message to all the team members in 1:1 chat. [Mandatory Fix]
+* Bot installed in a channel or group chat scope must not send proactive welcome message to all the team members in 1:1 chat. [Mandatory Fix]
 
-* Notification only bot can send proactive welcome message in channel only if the message contains important information for any user to complete configuration for the bot or clarifies the scenarios when notifications are triggered. [Mandatory Fix]
+* Notification only bot can send a proactive welcome message in a channel only if the message contains important information for any user to complete configuration for the bot or clarifies the scenarios when notifications are triggered. [Mandatory Fix]
 
-* Bot installed in channel or group chat scope must not send proactive messages (not just welcome message) that are irrelevant to all users in channel or group chat, instead send these proactive messages to the user over 1:1 chat. [Mandatory Fix]
+* Bot installed in a channel or group chat scope must not send proactive messages (not just welcome message) that are irrelevant to all users in channel or group chat, instead must send proactive messages to the user over 1:1 chat. [Mandatory Fix]
 
-* Bot installed in channel or group chat scope must not allow users to start individual workflows. Bots must complete individual workflows in 1:1 chat with the user. [Mandatory Fix]
+* Bot installed in a channel or group chat scope must not allow users to start individual workflows. Bots must complete individual workflows in 1:1 chat with the user. [Mandatory Fix]
 
-* Bot welcome message must clearly call out the limitations related to usage of the bot in the installed scope. [Mandatory Fix]
+* Bot welcome message must clearly call out the limitations related to bot usage in the installed scope. [Mandatory Fix]
 
 * Welcome message must auto trigger on app install in personal scope. If the bot doesn't send a welcome message in personal scope, the user leads to a dead-end. If the app does not include a complex configuration workflow, it's optional for the developer to trigger a welcome message in the channel or groupchat scope. If the app includes a complex configuration, it's mandatory to trigger a welcome message on app install. [Mandatory Fix]
 
-* Welcome messages must trigger only once upon bot installation. Welcome messages must not trigger every time the user invokes the Help command. Help command response must be focused to include a way for the user to access help related to the bot. [Mandatory Fix]
+* Welcome messages must trigger only once on bot install. Welcome messages must not trigger every time the user invokes the Help command. Help command response must be focused to include a way for the user to access help related to the bot. [Mandatory Fix]
 
 * Welcome messages must not trigger with every bot command. This is considered spam. [Mandatory Fix]
 
@@ -905,7 +905,7 @@ For best experience, the welcome message must include the value offered by the b
 
 * If your bot sends a welcome messages in the channel, it must not send it to users individually (this is considered spamming). The welcome message must also mention the person who added the bot. [Suggested Fix]
 
-If your app doesn't have a complex configuration workflow, you may decide if you want the bot to send a proactive welcome message in the channel or group chat scope after installation. [Suggested Fix]
+* If your app doesn't have a complex configuration workflow, you may decide if you want the bot to send a proactive welcome message in the channel or group chat scope after installation. [Suggested Fix]
 
 > [!TIP]
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features to encourage users to try bot commands. For example, **Create a task**.
@@ -1003,18 +1003,18 @@ Apps that provide only notifications with content such as **You have a new notif
 
 <details><summary>Bot design guidelines</summary>
 
-* Your Teams app must follow Teams Bot design guidelines available at Designing your bot - Teams.
+* Your Teams app must follow Teams bot design guidelines available at [Designing your bot](../../../../bots/design/bots.md).
 
-* Implement task module to avoid multi turn bot response when the workflow involves the user performing repetitive tasks. For example, use a task module to repetitively capture name, dob, place, and designation instead of using multi turn conversations. [Mandatory Fix]
+* Implement task module to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a task module to repetitively capture name, dob, place, and designation instead of using multi turn conversations. [Mandatory Fix]
 
 * Any broken links, responses, or workflows in your app must be fixed. Your app must not have a broken functionality. [Mandatory Fix]
 
 </details>
 <br/>
 
-<details><summary>Bot collaborative scope</summary>
+<details><summary>Bot in collaborative scope</summary>
 
-* Bot installation in channel or group chat to obtain the team roster for sending proactive notifications for users as 1:1 chats for team specific triggers isn't allowed. For example, app that pairs people for a meetup.  [Mandatory Fix]
+* Bot installation in a channel or group chat scope to obtain the team roster for sending proactive notifications for users as 1:1 chats for team specific triggers isn't allowed. For example, app that pairs people for a meetup.  [Mandatory Fix]
 
 * Bot in channel or group chat only used to obtain the Messages or posts in Channel or group chat for sending proactive notifications for users as 1:1 chats isn't allowed. [Mandatory Fix]
 
@@ -1280,8 +1280,6 @@ Use the following guidelines for meeting extensions:
 
 If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), ensure it adheres to the following guidelines.
 
-Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [Mandatory Fix]
-
 > [!TIP]
 > If your apps supports notification scenarios where the notifications are triggered after long intervals, for example, after one day or one month. Before you submit for review, ensure to trigger such notifications in the background for us to be able to test the notifications.
 
@@ -1291,6 +1289,7 @@ Notifications must be localized as per the supported languages for all the platf
 * All the notification triggers specified in your app configuration must work.
 * Notifications must be localized per the supported languages configured for your app.
 * Notifications must display within five seconds of user action.
+* Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [Mandatory Fix]
 
 </details>
 </br>
@@ -1326,7 +1325,7 @@ Notifications must be localized as per the supported languages for all the platf
 
 * App must trigger notifications for all the notification scenarios mentioned in the app long description, app first run experience, and/or in scenarios declared under **activityTypes** in the manifest. [Mandatory Fix]
 
-* Notifications must display within 5 seconds of user action. [Mandatory Fix]
+* Notifications must display within five seconds of user action. [Mandatory Fix]
 
 * You must call out notification limitations (if any) in your app long description or in the app’s first run experience. [Mandatory Fix]
 
