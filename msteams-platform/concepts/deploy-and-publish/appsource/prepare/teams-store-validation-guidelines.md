@@ -1262,7 +1262,7 @@ Use the following guidelines for meeting extensions:
 
 * You must include an option for the user to sign out or log out from the meeting extension. [*Mandatory Fix*]
 
-* Meeting tabs on mobile platforms must include relevant workflows.  Blank pages must not be present in a meeting tab. [*Mandatory Fix*]
+* Meeting tabs on mobile platforms must include relevant workflows. Blank pages must not be present in a meeting tab. [*Mandatory Fix*]
 
 * Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage must not embed the complete website experience. [*Mandatory Fix*]
 
