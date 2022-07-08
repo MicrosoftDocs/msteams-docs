@@ -30,14 +30,14 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 ![High-level diagram of a Virtual Assistant solution](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### Add Adaptive Cards to your Virtual Assistant
 
-To dispatch requests properly, your Virtual Assistant must identify the correct LUIS model and corresponding skill associated with it. However, the dispatching mechanism can't be used for card action activities, as the LUIS model associated with a skill, is trained for card action texts. The card action texts are fixed, pre-defined keywords, and not commented from a user.
+To dispatch requests properly, your Virtual Assistant must identify the correct LUIS model and corresponding skill associated with it. However, the dispatching mechanism cannot be used for card action activities, as the LUIS model associated with a skill, is trained for card action texts. The card action texts are fixed, pre-defined keywords, and not commented from a user.
 
 This drawback is resolved by embedding skill information in the card action payload. Every skill should embed `skillId` in the  `value` field of card actions. You must ensure that each card action activity carries the relevant skill information, and Virtual Assistant can utilize this information for dispatching.
 
