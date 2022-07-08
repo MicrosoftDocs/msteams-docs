@@ -21,8 +21,8 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
 
 | Element | Description |
 | --- | --- |
-| id | Enter the app ID (GUID) that you created in Azure AD. |
-| resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
+| `id` | Enter the app ID (GUID) that you created in Azure AD. |
+| `resource` | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
 
 > [!NOTE]
 > Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
@@ -183,7 +183,7 @@ To preview your bot app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The bot app is sideloaded and the dialog appears to inform you of the additional permissions that may be required.
+    The bot app is sideloaded. The dialog appears to inform you of the permissions that may be required.
 
 1. Select **Continue**.
 
