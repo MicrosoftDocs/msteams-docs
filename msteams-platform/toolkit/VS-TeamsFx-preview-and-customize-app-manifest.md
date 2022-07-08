@@ -46,16 +46,16 @@ You can have a customized parameter by:
 
 ### Preview values with hovers
 
-When you hover over the placeholder in `manifest.template.json`, the values for **local** and **dev** environment can be seen.
+When you hover over the placeholder in `manifest.template.json`, the values for **dev** and **local** environment can be seen.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
-Or you can hover over the key besides each placeholder in `manifest.template.json`, which also shows the values for **local** and **dev** environment.
+Or you can hover over the key besides each placeholder in `manifest.template.json`, which also shows the values for **dev** and **local** environment.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
 > [!NOTE]
-> If the environment has not been provisioned, or **Prepare Teams App Dependencies** has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside, hover to generate corresponding values.
+> If the environment has not been provisioned, or **Prepare Teams App Dependencies** has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside, and hover to generate corresponding values.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined.png" alt-text="Placeholder values undefined":::
 
@@ -65,10 +65,7 @@ Or you can hover over the key besides each placeholder in `manifest.template.jso
 
 To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from **Project** -> **Teams Toolkit** menu, which generates configuration for local or remote Teams app.
 
-[One image can be used instead of two for the above text/content]
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-prepare-dependencies.png" alt-text="Prepare dependencies":::
-
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-provision.png" alt-text="Provision in the cloud":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest.png" alt-text="Preview manifest file":::
 
 To preview manifest with real content, Teams Toolkit generates the preview manifest files under **build/appPackage** folder. Right click on **manifest.template.json**, and from **Preview Manifest File** select **For Local** or **For Azure**. This opens the corresponding manifest file.
 
