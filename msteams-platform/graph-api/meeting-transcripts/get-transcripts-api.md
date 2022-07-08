@@ -50,7 +50,7 @@ For more information about how your app can know when the meetings ends, see [Su
 Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID that are passed as parameters in the API.
 
 > [!NOTE]
-> The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [Meeting expiration](/microsoftteams/limits-specifications-teams.md#meeting-expiration).
+> The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [Meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
 To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
 
