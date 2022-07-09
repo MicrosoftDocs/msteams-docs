@@ -21,7 +21,7 @@ Teams Toolkit in Visual Studio Code supports the apps built with JavaScript. The
 
 Teams Toolkit in Visual Studio Code allows you to create apps using SharePoint Framework (SPFx). These apps provide easy integration with data residing in SharePoint to your Teams, accesses to various open-source tools, creates powerful applications that can deliver a great UX, integrates with other Microsoft (Office) 365 workloads easily, and delivers flexibility to host applications wherever needed.
 
-## Create your Teams app using Blazor or C #
+## Create your Teams app using Blazor or C sharp
 
 Teams Toolkit helps you to create Blazor and C# apps in Visual Studio.
 
