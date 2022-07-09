@@ -7,26 +7,25 @@ ms.topic: reference
 
 # Choose your build environments
 
-Teams Toolkit in Visual Studio Code provides set of environments options to build a Teams app that help to select the suitable environment that best suits your app requirement. You can choose the following build environments that help you to build a Teams app based on app requirements:
+Teams Toolkit provides set of environments options to build a Teams app, that help to select the suitable environment that best suits your app requirement. You can choose the following build environments to create a Teams app:
 
-* [JavaScript](#javascript)
-* [SharePoint Framework (SPFx)](#sharepoint-framework-spfx)
-* [Blazor](#blazor)
+* JavaScript
+* SharePoint Framework (SPFx)
+* Blazor or C#
 
-### Create your Teams app using JavaScript
+## Create your Teams app using JavaScript
 
-You can use JavaScript to create your Teams app using Teams Toolkit in Visual Studio Code.
-JavaScript is more compatible while creating an app with existing APIs, fast, relatively simple to implement, more compatible with different platforms and have the ability to create rich interfaces. If you want to create conversational tab app that allows users to have conversations in Microsoft Teams and notification bot app to send notification to Microsoft Teams through various triggers, you can choose JavaScript.
+Teams Toolkit in Visual Studio Code supports the apps built with JavaScript. These apps are fast, have rich interfaces, quick to create an upgrade, can distribute them on multiple platforms such as android and iOS, and compatible while creating an app with existing APIs.
 
-### Create your Teams app using SharePoint Framework (SPFx)
+## Create your Teams app using SharePoint Framework (SPFx)
 
-You can use SharePoint Framework (SPFx) to create your Teams app using Teams Toolkit in Visual Studio Code. SPFx Provides easy integration with data residing in SharePoint, and access to various open-source tools, creates powerful applications that can deliver a great UX, integrates with other Microsoft (Office) 365 workloads easily, and delivers flexibility to host applications wherever needed. If you want to create Todo List for individuals to manage his/her personal to-do items in Microsoft Teams, you can choose SPFx.
+Teams Toolkit in Visual Studio Code allows you to create apps using SharePoint Framework (SPFx). These apps provide easy integration with data residing in SharePoint to your Teams, accesses to various open-source tools, creates powerful applications that can deliver a great UX, integrates with other Microsoft (Office) 365 workloads easily, and delivers flexibility to host applications wherever needed.
 
-### Create your Teams app using Blazor
+## Create your Teams app using Blazor or C #
 
-Blazor lets you build interactive web UIs using C# for tab or bot app in Visual Studio.
+Teams Toolkit helps you to create Blazor and C# apps in Visual Studio.
 
-For more information on building a Teams app in Blazor environment using Teams Toolkit in Visual Studio, see [Teams Toolkit for Visual Studio](visual-studio-overview.md).
+For more information, see [Teams Toolkit for Visual Studio](visual-studio-overview.md).
 
 ## Manage your apps using Developer Portal
 
@@ -35,4 +34,5 @@ For more information, see [Manage your Teams apps using Developer Portal](../con
 
 ## See also
 
-TBA
+* [Teams Toolkit for Visual Studio](visual-studio-overview.md)
+* [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md)

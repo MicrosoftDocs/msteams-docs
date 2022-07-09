@@ -45,7 +45,7 @@ To create and upload a Teams app, you need to create the following accounts:
 | --- | --- |
 |[Microsoft 365 account with valid subscription](#microsoft-365-developer-program)|Teams developer account while developing an app.| JavaScript and SPFx|
 |[Azure account](accounts.md#azure-account-to-host-backend-resources)|Backend resources on Azure.| JavaScript and SPFx|
-|[SharePoint Collection Site Administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx|
+|[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx|
 
 ### Microsoft 365 developer program
 
@@ -85,9 +85,9 @@ You can sign up for the developer program by using one of the following account 
 
 :::row-end:::
 
-#### Get a free Microsoft 365 developer account
+#### Create a free Microsoft 365 developer account
 
-To get a free Teams Microsoft 365 developer account, join the Microsoft 365 developer program and follow the steps:
+To create a free Microsoft 365 developer account, join the Microsoft 365 developer program and perform the following account:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
@@ -102,14 +102,14 @@ To get a free Teams Microsoft 365 developer account, join the Microsoft 365 deve
 
 You need an Azure account to host a Teams app or the backend resources for your Teams app using Teams Toolkit in Visual Studio Code. You must need Azure subscription in the following scenarios:
 
-* If you already have an existing app on a different cloud provider other than Azure and you want to integrate the existing app on Teams platform, you must have an Azure subscription.
+* If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the existing app on Teams platform, you must have an Azure subscription.
 * You can select an Azure subscription to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
 [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
 ### SharePoint collection site administrator account
 
-While creating Teams app using SPFx environment, you'll need sharePoint collection site administrator account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+While creating Teams app using SPFx environment, you'll need SharePoint collection site administrator account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
 ## Sideloading permission
 
@@ -152,9 +152,9 @@ If you're unable to view the option **Upload a custom app,** then it indicates t
 
 ### Enable sideloading using admin center
 
-If your developer tenant doesn't have permission to upload custom app or to sideload, then you need to have admin rights for your tenant to turn on custom app uploading or sideloading. In case, if you don't have admin rights, contact administrator to grant permission to upload custom app or to sideload for your tenant.
+If you don't have the permission to upload custom app or to sideload your Teams app for your tenant, contact your administrator who has the right to grant permission to upload custom app or to sideload your Teams app for your tenant.
 
-  If you have admin rights, perform the following steps to upload the custom app using admin center:
+If you have admin rights, perform the following steps to upload the custom app using admin center:
 
   1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -178,7 +178,7 @@ If your developer tenant doesn't have permission to upload custom app or to side
      > [!Note]
      > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-  6. After 24 hours, go to your tenant and ensure that you have permission to sideload your app.
+  6. After 24 hours, you can go back to your tenant and ensure whether sideloading is enabled using one of the ways mentioned in the section above.
 
 </details>
 
@@ -186,3 +186,4 @@ If your developer tenant doesn't have permission to upload custom app or to side
 
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
+* [Upload custom apps](/microsoftteams/teams-app-setup-policies)
