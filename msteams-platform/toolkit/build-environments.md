@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Choose your build environments
 
-Teams Toolkit provides set of environments options to build a Teams app, that help to select the suitable environment that best suits your app requirement. You can choose the following build environments to create a Teams app:
+Teams Toolkit provides set of environments options to build a Teams app, that help to select the suitable environment that best suits your app requirement. You can create a Teams app using following environments with Teams Toolkit:
 
 * JavaScript
 * SharePoint Framework (SPFx)
