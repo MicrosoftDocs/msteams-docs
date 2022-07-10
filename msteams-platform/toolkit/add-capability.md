@@ -8,15 +8,26 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to Teams apps
+# Create a multi-capability Teams app
 
-Add capability in Teams Toolkit helps you to add additional capability to your existing Teams app.The following table lists the Teams app capabilities:
+Teams Toolkit helps you to add additional capability to your existing Teams app using `Add features` under `Development` from the left panel of the Visual Studio Code. The following table lists the Teams app capabilities:
 
-|**Capability**|**Description**|
-|--------|-------------|
-| Tabs |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
-| Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
-| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
+| &nbsp; | **Capability** | **Description** |
+| --- | --- | --- |
+| **Scenario-based Teams app capability** | &nbsp; | &nbsp; |
+| &nbsp; | Notification bot | Notification bots help to send notification to Microsoft Teams through various triggers.|
+| &nbsp; | Command bot | Command bots respond to simple commands in Microsoft Teams chat.|
+| &nbsp; | SSO-enabled tab | SSO-enabled tabs are Teams identity aware webpages embedded in Microsoft Teams.|
+| &nbsp; | SPFx tab | SPFx tabs are Teams aware webpages with SharePoint Framework embedded in Microsoft Teams.|
+| **Basic Teams app capability** | &nbsp; | &nbsp; |
+| &nbsp; | Tabs | Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
+| &nbsp; | Bots | Bots help to interact with your web service through text, interactive cards, and task modules.|
+| &nbsp; | Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
+| **Cloud resources capability** | &nbsp; | &nbsp; |
+| &nbsp; | Azure Functions | Azure Function is a serverless, event-driven compute solution that allows you to write less code.|
+| &nbsp; | Azure API Management | Azure API Management is a hybrid, multi-cloud management platform for APIs across all environments.|
+| &nbsp; | Azure SQL Database | Azure SQL Database is an always-up-to-date relational database service built for the cloud.|
+| &nbsp; | Azure Key Vault | Azure Key Vault is a cloud service for securely storing and accessing secrets.|
 
 ## Advantages
 
@@ -34,21 +45,25 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
 ## Add capabilities
 
-**You can add capabilities by the following methods:**
+**You can add capabilities for your Teams app by the following methods:**
 
-* To add capabilities by using Teams Toolkit in Visual Studio Code.
-* To add capabilities by using command palette.
+* To add capabilities using Teams Toolkit in Visual Studio Code.
+* To add capabilities using command palette.
 
   > [!Note]
   > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-* **To add capabilities by using Teams Toolkit in Visual Studio Code:**
+* **To add capabilities for your Teams app using Teams Toolkit in Visual Studio Code:**
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
    1. Select **Add features** under **DEVELOPMENT**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one":::
+
+   1. From the pop-up, select the capability to add in your project.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
 
 * **To add capabilities by using command palette:**
 
@@ -83,15 +98,15 @@ The following table lists the available capabilities to add in your project:
 
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
-|SPFx tab |None|
-|SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
 |Notification bot |SSO-enabled tab, tab|
 |Command bot |SSO-enabled tab, tab|
+|SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
+|SPFx tab |None|
 |Tab |Tab, notification bot, command bot, bot, message extension|
 |Bot |Message extension, SSO-enabled tab, tab|
 |Message extension |Bot, SSO-enabled tab, tab |
 
-## Add bot, tab and message extension
+## Project directory structure
 
 After adding a bot and message extension, the changes in your project are as follows:
 
@@ -116,9 +131,17 @@ After adding tab, the changes in your project are as follows:
 
 ## Step-by-step guide
 
+* Follow the [step-by-step](../sbs-gs-spfx.yml) guide to build SPFx app in Microsoft Teams
+
 * Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
 
 * Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-javascript.yml) guide to build tab app in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-bot.yml) guide to build bot app in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-msgext.yml) guide to build message extension app in Microsoft Teams.
 
 ## See also
 
