@@ -14,7 +14,7 @@ You can build a new Teams app by using **Create a new Teams app** in Teams Toolk
 
 ## Create a new Teams app
 
-The following steps help you to build a new Tab app and the steps are similar for all types of other capabilities except SPFx, and notification bot.
+The following steps help you to build a new tab app and the steps are similar for all types of other capabilities except SPFx, and notification bot.
 
 1. To create an app, open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon.
