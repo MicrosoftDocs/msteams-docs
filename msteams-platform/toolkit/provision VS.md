@@ -16,17 +16,18 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 * To provision the cloud resources you must have the following accounts as prerequisites:
   * Microsoft 365 account with a valid subscription.
-  * Azure account with a valid subscription.
-* Install Teams Toolkit for Visual Studio.
+  * Azure account with a valid subscription. For more information, see [how to prepare accounts for building Teams app](/microsoftteams/platform/toolkit/accounts?branch=pr-en-us-6427)
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)for Visual Studio.
 
-# Steps to provision
+# Steps to provision cloud resources
 
 ## Sign in to your M365 account
 
 1. Open Visual Studio.
 2. Open the Teams App project.
-3. Select Project> Teams Toolkit> Prepare Teams App dependencies
-![Visual Studio login to M365 account](../images/teams-toolkit-vs-prepare.png)
+3. Select **Project> Teams Toolkit> Prepare Teams App dependencies**.
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare.png" alt-text="Prepare Teams App dependencies":::
 
 1. Click "Sign in..." and sign in your M365 account.
     > **Note**
