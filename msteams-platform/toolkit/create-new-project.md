@@ -10,20 +10,7 @@ ms.date: 03/14/2022
 
 # Create a new Teams app using Teams Toolkit
 
-You can build a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create basic Teams app and scenario based Teams app in Teams Toolkit.
-
-Basic Teams app is build on following capabilities:
-
-* Tab
-* Bot
-* Message extension
-
-Scenario based Teams app is build on following capabilities:
-
-* Notification bot
-* Command bot
-* SSO-enabled tab
-* SPFx tab
+You can build a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create basic Teams app and scenario based Teams app in Teams Toolkit. Basic Teams app is build with capabilities such as tab, bot, message extension and scenario based Teams app is build with capabilities such as notification bot, command bot, SSO-enabled tab, and SPFx tab.
 
 ## Create a new Teams app
 

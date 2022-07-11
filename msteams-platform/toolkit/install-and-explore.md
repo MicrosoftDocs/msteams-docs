@@ -32,13 +32,13 @@ Ensure you have installed the latest version of Teams Toolkit. The following ste
    > [!TIP]
    > You can install Teams Toolkit from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-   After your successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the left panel.
+   After successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the left panel.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="After install":::
 
 ## Explore Teams Toolkit
 
-After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
+After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview.png" alt-text="Overview of Teams Toolkit":::
 
@@ -55,7 +55,7 @@ After Toolkit installation, you'll see the Teams Toolkit UI as shown in followin
    * **Open Folder** helps to open the existing folder.
 1. **Recent** helps you to view the recent files.
 
-You can able to explore on more UI elements after create a new Teams app. The following video helps you to know about the process of create a new Teams app:
+To explore more on UI elements after create a new Teams app. The following video helps you to know about the process of create a new Teams app:
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
