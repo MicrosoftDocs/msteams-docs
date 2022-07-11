@@ -2,7 +2,7 @@
 title: Update manifest for enabling SSO for tabs
 description: Describes updating manifest for enabling SSO for tabs
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
 # Update manifest for SSO and preview app
@@ -154,13 +154,13 @@ To preview your tab app in Teams:
 
 1. Select **Continue**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required":::
 
     The Azure AD consent dialog appears.
 
 1. Select **Accept** to give consent for open-id scopes.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
 
     Teams opens the tab app and you can use it.
 
