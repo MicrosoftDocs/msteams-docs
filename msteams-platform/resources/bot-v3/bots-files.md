@@ -83,11 +83,11 @@ Uploading a file to a user involves the following steps:
 
 This desktop message contains a simple attachment object requesting user permission to upload the file:
 
-:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Screenshot of consent card requesting user permission to upload file":::
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Screenshot of consent card requesting user permission to upload file.":::
 
 This mobile message contains an attachment object requesting user permission to upload the file:
 
-![Screenshot of consent card requesting user permission to upload file on mobile](../../assets/images/bots/mobile-bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/mobile-bot-file-consent-card.png" alt-text="Screenshot of consent card requesting user permission to upload file on mobile.":::
 
 ```json
 {
