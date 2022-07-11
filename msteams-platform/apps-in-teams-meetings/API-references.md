@@ -927,6 +927,19 @@ The following code provides an example of meeting end event payload:
 
 The `getIncomingClientAudioState` and `toggleIncomingClientAudioState` APIs enables you to mute and un-mute apps in the Teams meeting stage. The API is available through the Teams client SDK.
 
+### Query parameter
+
+### Example
+
+### Response code
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+|  |  |
+|  |  |
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
