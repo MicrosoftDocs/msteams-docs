@@ -110,6 +110,8 @@ Follow these steps to enable license management for an app in Teams:
    > * This is a one-time setting, and you cannot change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
    > * The App manifest supports only one offer for an app. Choose an appropriate license management solution for all the plans available in your offer and you cannot change this option after the offer is pushed to live.
 
+1. Select **Save draft**.
+
 1. Select **Plan overview** from the left pane, and then select **Create new plan**.
 
    > [!NOTE]
@@ -117,7 +119,7 @@ Follow these steps to enable license management for an app in Teams:
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Plan Overview":::
 
-1. Select **Create**. A Plan listing page appears.
+1. Enter Plan ID and Plan name, and then select **Create**. A Plan listing page appears.
 
 1. Enter the Plan name and Plan description.
 
@@ -126,11 +128,15 @@ Follow these steps to enable license management for an app in Teams:
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Plan Listing":::
 
+1. Select **Save draft**.
+
 1. Select **Pricing and availability** from the left pane.
 
 1. Add pricing and availability details.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="Pricing and Availability details":::
+
+1. Select **Save draft**.
 
 1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans you've created for this offer.
 
