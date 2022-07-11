@@ -215,7 +215,7 @@ You can use `contosoteamsappapi` for function app instance instead of using the 
 The following steps are:
 
 1. Open `.fx/configs/azure.parameters.{env}.json` for your current environment.
-2. Add a new property, for example, `functionAppName` under the section of `provisionParameters`.
+2. Add a new property, for example, `functionAppName` under the `provisionParameters section.
 3. Enter a value of `functionAppName`, for example `contosoteamsappapi`.
 4. Final parameter file is shown in the following snippet:
 
