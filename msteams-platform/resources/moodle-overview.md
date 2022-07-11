@@ -22,7 +22,7 @@ This content is modified as per the requirement.-->
  <!--The following image demonstrates Moodle LMS:
   Query on this image about what is meant by section
 
-:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::-->
+:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart":::-->
 
 ## Moodle LMS accessibility
 
