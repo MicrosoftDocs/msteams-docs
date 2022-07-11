@@ -8,23 +8,26 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
+# Provision cloud resources using Teams Toolkit
 
-# Prerequisites
+TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources.  For code approach your application needs these resources.
 
-* Account prerequisites to provision cloud resources, you must have the following accounts:
+## Prerequisites
+
+* To provision the cloud resources you must have the following accounts as prerequisites:
   * Microsoft 365 account with a valid subscription.
-  * Azure with a valid subscription.
+  * Azure account with a valid subscription.
 * Install Teams Toolkit for Visual Studio.
 
-# How to provision
+# Steps to provision
 
 ## Sign in to your M365 account
 
 1. Open Visual Studio.
-1. Open the Teams App project.
-1. Select Project > Teams Toolkit > Prepare Teams App dependencies
+2. Open the Teams App project.
+3. Select Project> Teams Toolkit> Prepare Teams App dependencies
 ![Visual Studio login to M365 account](../images/teams-toolkit-vs-prepare.png)
+
 1. Click "Sign in..." and sign in your M365 account.
     > **Note**
     > If you are already logged in, then this will show you the username here, you can click on it to switch your account
