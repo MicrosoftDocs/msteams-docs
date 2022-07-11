@@ -308,7 +308,13 @@
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
   - name: Get meeting transcripts using Graph APIs
-    href: graph-api/meeting-transcripts/get-transcripts-api.md
+    items:
+    - name: Overview
+      href: graph-api/meeting-transcripts/get-transcripts-api.md
+    - name: Fetch meeting ID and organizer ID
+      href: graph-api/meeting-transcripts/fetch-id.md
+    - name: Get transcripts
+      href: graph-api/meeting-transcripts/api-transcripts.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md    
   - name: Enhanced collaboration with Live Share
