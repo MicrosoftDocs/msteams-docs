@@ -755,7 +755,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    > * Include a personal bot alongside a personal tab.
    > * Allow users to share content from their personal tab.
 
-* Tab must not contain elements that completely obstruct or impede workflows within the tab.  For example, bot inside a tab that can't be minimized.
+* Tab must not contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized.
 
 * Tab must not have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features, and deliverables as described in your listing and other related materials. [*Mandatory Fix*]
 
@@ -1262,11 +1262,11 @@ Use the following guidelines for meeting extensions:
 
 * You must include an option for the user to sign out or log out from the meeting extension. [*Mandatory Fix*]
 
-* Meeting tabs on mobile platforms must include relevant workflows.  Blank pages must not be present in a meeting tab. [*Mandatory Fix*]
+* Meeting tabs on mobile platforms must include relevant workflows. Blank pages must not be present in a meeting tab. [*Mandatory Fix*]
 
 * Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage must not embed the complete website experience. [*Mandatory Fix*]
 
-* App must not show continuous loading screen, error or broken functionality that dead-ends the user, or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
+* App must not show continuous loading screen, error, or broken functionality that dead-ends the user, or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
 
 * App must not open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
 
