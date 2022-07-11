@@ -160,7 +160,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
   * Capturing videos with `fullscreen: false`:
 
-       `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wishes to record while reading content on the device screen.
+       `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wants to record video while reading content on the device screen.
 
        This mode also supports `isStopButtonVisible: true`. This adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, then it's expected that the recording is stopped by accepting an external selection to API.
 
