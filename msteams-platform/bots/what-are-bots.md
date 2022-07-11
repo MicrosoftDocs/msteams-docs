@@ -8,10 +8,10 @@ ms.author: anclear
 ---
 # Build bots for Teams
 
-A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks performed by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
+A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks performed by users such as customer service or support staff. Everyday use of bots include bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can range from quick questions and answers to complex conversations.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+> Currently, bots are available in Government Community Cloud (GCC) and GCC-High, but not in Department of Defense (DOD).
 >
 > Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
 
@@ -23,17 +23,17 @@ Conversational bots allow users to interact with your web service using text, in
 
 :::image type="content" source="../assets/images/task-module-example.png" alt-text="web service using task module"lightbox="../assets/images/task-module-example.png"border="true":::
 
-Conversational bots are incredibly flexible. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
+Conversational bots are incredibly flexible. Bots can be used to handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can used as standalone or as part of a larger application.
 
-Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
+You can use the right mix of cards, text, and task modules to create a bot for your specific needs. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot":::
 
-Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
+Each interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 
-Bots are apps that have a conversational interface. You can interact with a bot using text, interactive cards, and speech. A bot behaves differently in a channel or group chat conversation and in a one-to-one conversation. Conversations are handled through the Bot Framework connector. See [conversation basics](~/bots/how-to/conversations/conversation-basics.md).
+Bots are apps with a conversational interface. You can interact with a bot using text, interactive cards, or speech. A bot behaves differently in a channel, a group chat, or in a one-to-one conversation. Conversations are handled through the Bot Framework connector. See [conversation basics](~/bots/how-to/conversations/conversation-basics.md).
 
-Your bot requires contextual information, such as user profile details to access relevant content and enhance the bot experience. See [get Teams context](~/bots/how-to/get-teams-context.md).
+Bots requires contextual information such as user profile details to access relevant content and enhance the bot app experience. See [get Teams context](~/bots/how-to/get-teams-context.md).
 
 You can send and receive files through the bot using Graph APIs or Teams bot APIs. See [send and receive files through the bot](~/bots/how-to/bots-filesv4.md).
 
