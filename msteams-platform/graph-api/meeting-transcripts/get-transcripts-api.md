@@ -18,9 +18,10 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 To fetch the transcript for a particular meeting:
 
 - [Configure permissions on Azure AD to access transcript](#configure-permissions-on-azure-ad-to-access-transcript)
-- [Obtain meeting ID and organizer ID](#obtain-meeting-id-and-organizer-id)
-- [Use Graph APIs to fetch transcript](#use-graph-apis-to-fetch-transcript)
-
+<!--
+- [Obtain meeting ID and organizer ID](/graph-api/meeting-transcripts/fetch-id.md#obtain-meeting-id-and-organizer-id)
+- [Use Graph APIs to fetch transcript](/graph-api/meeting-transcripts/api-transcripts.md#use-graph-apis-to-fetch-transcript)
+-->
 ## Configure permissions on Azure AD to access transcript
 
 Your app must have the required permissions for fetching transcripts. It can access and fetch transcripts for a Teams meeting using organization-wide application permissions or Resource-specific consent (RSC) application permissions for a particular meeting.
@@ -40,7 +41,7 @@ For more information about the meeting-specific RSC permissions that can be gran
 <br>
 After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
 
-For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](#use-bot-framework-to-get-meeting-id-and-organizer-id).
+For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](/graph-api/meeting-transcripts/fetch-id.md#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](/graph-api/meeting-transcripts/fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
