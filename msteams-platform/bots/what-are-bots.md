@@ -41,7 +41,7 @@ Rate limiting is used to optimize bots used for your Teams application. To prote
 
 With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video. See [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
-You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+You can use the Teams bot APIs to get information for members of a chat or a team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
