@@ -19,7 +19,7 @@ In general, the recommended approach is to sign the user in with the bot using t
 
 This flow works best if your identity provider implements the OAuth 2.0 protocol. You can then associate the Teams user ID with the user’s credentials from your own identity service.
 
-   ![Associating identities](~/assets/images/bots/associating_contexts.png)
+   :::image type="content" source="~/assets/images/bots/associating_contexts.png" alt-text="Screenshot of associating identities.":::
 
 ## Constructing deep links to tabs in messages from your bot
 
