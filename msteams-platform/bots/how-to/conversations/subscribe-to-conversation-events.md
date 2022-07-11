@@ -404,7 +404,7 @@ A member added event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
-   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from (currently available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
+   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
 
 2. When a user is added to a conversation where the bot is installed
 
@@ -1330,7 +1330,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team (currently available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 # [C#](#tab/dotnet)
 
