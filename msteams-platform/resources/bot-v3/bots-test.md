@@ -48,11 +48,11 @@ You can also initiate a conversation with your bot by using its ID. Two methods 
 2. Directly reference your bot's app ID from within Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
   
-      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Bot Dashboard":::
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Screenshot of bot dashboard.":::
   
    * From within Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
   
-      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Uploading the AppID for the bot"border="true":::
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Uploading the AppID for the bot.":::
 
      The app ID should resolve to your bot name.
 
@@ -66,7 +66,7 @@ Your bot will receive the `conversationUpdate` event just like bots added to a t
 
 Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user won't receive those messages.
 
-  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blocking a bot"border="true":::
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Blocking a bot.":::
 
 ## Removing a bot from a team
 
