@@ -290,7 +290,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
         </details>
 
-2. **Get chat entity**: Using chat ID, your app can retrieve the chat entity to obtain the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload.
+2. **Get chat entity**: Your app can retrieve the chat entity using the chat ID obtained in Step 1. Use the chat entity to get the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload.
 
     For more information about chat entity, see [Get chat](/graph/api/chat-get).
 
