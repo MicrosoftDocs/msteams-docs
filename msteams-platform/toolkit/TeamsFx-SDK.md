@@ -389,12 +389,10 @@ The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` clas
 4. Now, you can add any component in your HTML page or in your `render()` method with React to use the `TeamsFx` context to access Microsoft Graph.
 
     ```html
-    <!-- Using HTML -->
     <mgt-person query="me" view="threeLines"></mgt-person>
     ```
 
     ```ts
-    // Using React
     public render(): void {
     return (
         <div>
