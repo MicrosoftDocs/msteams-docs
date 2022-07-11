@@ -11,7 +11,7 @@ ms.date: 05/20/2019
 
 To aid discovery and to help educate users about your bot’s functionality, you can now add menus that surface whenever the user interacts with your bot. The menu will show the command text and also provide help text, such as a usage example or description of the command’s purpose.
 
-![Screenshot of bot menu](~/assets/images/bots/bot-menus-bot-menu-sample.png)
+:::image type="content" source="~/assets/images/bots/bot-menus-bot-menu-sample.png" alt-text="Screenshot of bot menu.":::
 
 When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.
 
