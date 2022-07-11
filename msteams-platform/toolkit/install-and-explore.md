@@ -69,7 +69,7 @@ Let's take a tour of the topics covered in this document.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts.png" alt-text="accounts section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts1.png" alt-text="accounts section":::
    :::column-end:::
    :::column span="":::
 
@@ -83,7 +83,7 @@ Let's take a tour of the topics covered in this document.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment.png" alt-text="Environment section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment1.png" alt-text="Environment section":::
    :::column-end:::
    :::column span="":::
 
@@ -97,7 +97,7 @@ Let's take a tour of the topics covered in this document.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development.png" alt-text="Development section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development1.png" alt-text="Development section":::
    :::column-end:::
    :::column span="":::
 
@@ -117,7 +117,7 @@ Let's take a tour of the topics covered in this document.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deployment.png" alt-text="Deployment section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deployment1.png" alt-text="Deployment section":::
    :::column-end:::
    :::column span="":::
 
@@ -137,7 +137,7 @@ Let's take a tour of the topics covered in this document.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback.png" alt-text="Help and feedback section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback1.png" alt-text="Help and feedback section":::
    :::column-end:::
    :::column span="":::
 
