@@ -47,12 +47,12 @@ In Teams, a calendar is where a user views, schedules, and manages upcoming and 
 ### Top use cases
 
 * Schedule meetings and events
-* Get reminders of upcoming meetings and events.
+* Get reminders of upcoming meetings and events
 * View schedules
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Example shows a calendar UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Example shows a calendar UI template on desktop.":::
 
 ## Dashboard
 
@@ -62,15 +62,15 @@ A dashboard displays different types of content in a central location (such as a
 
 * Analyze data
 * Report metrics
-* Organize different information in one place.
+* Organize different information in one place
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Example shows a dashboard UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Example shows a dashboard UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop.":::
 
 ## Data visualization
 
@@ -78,16 +78,16 @@ You can use different card sizes (single, double, and full) to stack and organiz
 
 ### Top use cases
 
-* Display complex information.
-* Create a dashboard.
+* Display complex information
+* Create a dashboard
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Example shows a data visualization UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Example shows a data visualization UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Example shows a data visualization UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Example shows a data visualization UI template on desktop.":::
 
 ## Empty state
 
@@ -96,17 +96,17 @@ The empty state template can be used for many scenarios, including sign in, firs
 ### Top use cases
 
 * Sign in
-* Welcome messages and first-run experiences.
+* Welcome messages and first-run experiences
 * Success messages
 * Error messages
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Example shows an empty state UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Example shows an empty state UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop.":::
 
 ## Filter
 
@@ -121,7 +121,7 @@ Organizing content in:
 * Dashboards
 * Data visualization
 
-:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="Example shows a filter template." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="Example shows a filter template.":::
 
 ## Form
 
@@ -136,11 +136,11 @@ Forms are used to collect, validate, and submit user input in a structured way. 
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Example shows a form UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Example shows a form UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop.":::
 
 ## List
 
@@ -153,11 +153,11 @@ You can use a list to display related items in a scannable format and allow user
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Example shows a list UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Example shows a list UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop.":::
 
 ## Sign in
 
@@ -169,11 +169,11 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Example shows a sign in UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Example shows a sign in UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop.":::
 
 ## Settings
 
@@ -183,7 +183,7 @@ Settings screens are where users can configure their preferences with your app. 
 
 * Manage app features
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template.":::
 
 ## Task board
 
@@ -197,11 +197,11 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Example shows a task board UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Example shows a task board UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop.":::
 
 ## Wizard
 
@@ -215,11 +215,11 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Example shows a wizard UI template on mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Example shows a wizard UI template on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop.":::
 
 ## See also
 
