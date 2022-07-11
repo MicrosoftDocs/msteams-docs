@@ -12,10 +12,6 @@ ms.date: 05/20/2022
 
 Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.
 
-## Advantage
-
-Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
-
 ## Connect to the API
 
 When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
@@ -125,6 +121,10 @@ The following steps help to test the API connection in the Teams Toolkit local e
 
      > [!Note]
      > [Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
+
+## Advantage
+
+Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
 
 ## Deploy your application to Azure
 
