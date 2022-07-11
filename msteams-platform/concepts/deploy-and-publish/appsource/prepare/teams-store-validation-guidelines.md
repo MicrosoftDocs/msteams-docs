@@ -107,7 +107,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
 * App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a pre-production app. App name must not contain words that indicate app isn't a production app. For example, app name contains standalone words such as Beta, Dev, Preview, UAT.
 
  > [!TIP]
- > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+ > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 </details>
 
@@ -380,7 +380,7 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 ### App descriptions
 
-You must have a short and long description of your app. The descriptions in your app configurations and Partner Center must be the same.
+You must have a short and long description for your app. The descriptions in your app configuration and Partner Center must be the same.
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -684,7 +684,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. [*Mandatory Fix*]
+* Tabs with toolbar in left rail must leave 20 pixels spacing from Teams left navigation. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
@@ -861,7 +861,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
 
-For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
@@ -903,7 +903,7 @@ For best experience, the welcome message must include the value offered by the b
 
 * Welcome message must not redirect the user to another Teams app, instead the welcome message must nudge the user to complete their first task and briefly describe all supported bot commands in the app. [*Mandatory Fix*]
 
-* Welcome message must not contain links to any app marketplace including Microsoft AppSource. [*Mandatory Fix*]
+* Welcome message must not contain links to any app marketplace including AppSource. [*Mandatory Fix*]
 
 * If your app has a complex configuration workflow that requires admin led installation, doesn't have an intuitive and readily available sign up flow, or requires users to complete configuration steps outside the Teams experience and return then the bot in such an app must send a proactive welcome message in a team or group chat scope after installation. [*Mandatory Fix*]
 
@@ -1258,7 +1258,7 @@ Use the following guidelines for meeting extensions:
 
 * To enable your app for Teams meeting on mobile, you must declare `groupChat` as a scope under `configurableTabs`, `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest. [*Mandatory Fix*]
 
-* Meeting canvases must not dead-end a meeting attendee. Meeting canvases must show a graceful failure message in case of app limitations such as region specific dependency. [*Mandatory Fix*]
+* Meeting canvases must not dead-end a meeting attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Mandatory Fix*]
 
 * The meeting canvas’ header must display the correct app name to avoid confusing the meeting attendee. [*Mandatory Fix*]
 
@@ -1377,7 +1377,7 @@ You must demonstrate compliance with all laws where your app is distributed, if 
 
 * Rewards or incentivizes users with cryptocurrency tokens for completing a task.
 
-If satisfied, Microsoft proceeds with further certification of your app. If the compliance demonstration is deemed unsatisfactory after an internal Microsoft review, you'll be informed of the decision.
+After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft proceeds with further certification of your app. If the compliance demonstration is satisfactory, you'll be informed of the decision.
 
 ## App Functionality
 
