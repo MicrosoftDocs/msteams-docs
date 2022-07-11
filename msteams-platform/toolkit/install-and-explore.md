@@ -75,9 +75,9 @@ Let's take a tour of the topics covered in this document.
 
         To develop a Teams app, you need the following accounts:
         
-        **Sign in to M365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
+        * **Sign in to M365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
 
-        **Sign in to Azure**: Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+        * **Sign in to Azure**: Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
 :::row-end:::
 
@@ -89,9 +89,9 @@ Let's take a tour of the topics covered in this document.
 
         To deploy your Teams app, you need the following environments:
         
-       **local**: Deploy your app in the default local environment with local machine environment configurations.
+       * **local**: Deploy your app in the default local environment with local machine environment configurations.
 
-        **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.
+        * **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.
    :::column-end:::
 :::row-end:::
 
@@ -103,15 +103,15 @@ Let's take a tour of the topics covered in this document.
 
         It helps you to create and customize your Teams app and it contains following features:
         
-       **Create a new Teams app**: Use the toolkit wizard to prepare project scaffolding for app development.
+       * **Create a new Teams app**: Use the toolkit wizard to prepare project scaffolding for app development.
 
-        **View samples**: Select any of Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.
+        * **View samples**: Select any of Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.
         
-        **Add features**: Add other required Teams capabilities to Teams app during development process and add optional cloud resources suitable for your app.
+        * **Add features**: Add other required Teams capabilities to Teams app during development process and add optional cloud resources suitable for your app.
        
-        **Edit manifest file**: Edit the Teams app integration with Teams client.
+        * **Edit manifest file**: Edit the Teams app integration with Teams client.
         
-        **Preview and Debug Adaptive Cards**: It helps to preview and debug adaptive card.
+        * **Preview and Debug Adaptive Cards**: It helps to preview and debug adaptive card.
    :::column-end:::
 :::row-end:::
 
@@ -123,15 +123,15 @@ Let's take a tour of the topics covered in this document.
 
         It helps you to provision, deploy and publish your Teams app and it contains the following features:
         
-        **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager.
+        * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager.
 
-        **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
+        * **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         
-        **Deploy to the cloud**: Deploy the source code to Azure.
+        * **Deploy to the cloud**: Deploy the source code to Azure.
        
-        **Publish to Teams**: Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization.
+        * **Publish to Teams**: Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization.
         
-        **Developer Portal for Teams**: Use Developer Portal to configure and manage your Teams app. 
+        * **Developer Portal for Teams**: Use Developer Portal to configure and manage your Teams app. 
    :::column-end:::
 :::row-end:::
 
@@ -143,13 +143,13 @@ Let's take a tour of the topics covered in this document.
 
         It helps you to find the required documentation and resources.
         
-        **Get started**: View the Teams Toolkit Get started help within Visual Studio Code.
+        * **Get started**: View the Teams Toolkit Get started help within Visual Studio Code.
 
-        **Tutorials**: Select to access different tutorials.
+        * **Tutorials**: Select to access different tutorials.
         
-        **Documentation**: Select to access the Microsoft Teams Developer Documentation.
+        * **Documentation**: Select to access the Microsoft Teams Developer Documentation.
        
-        **Report issues on GitHub**: Select to access GitHub page and raise any issues.
+        * **Report issues on GitHub**: Select to access GitHub page and raise any issues.
    :::column-end:::
 :::row-end:::
 <!--  
