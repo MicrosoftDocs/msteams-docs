@@ -117,7 +117,7 @@ Provision with ARM involves changing the following sets of files, parameters and
 > [!NOTE]
 > When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you to not lose changes while adding resources or capabilities.
 
-The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure we can create new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure creation of new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
 ##### Azure AD application-related parameters
 
