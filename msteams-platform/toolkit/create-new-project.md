@@ -27,14 +27,10 @@ Scenario based Teams app is build on following capabilities:
 
 ## Create a new Teams app
 
-The following steps help you to build a new Tab app and it is similar for all types of other capabilities except SPFx, and notification bot.
+The following steps help you to build a new Tab app and the steps are similar for all types of other capabilities except SPFx, and notification bot.
 
-For SPFx, follow the same steps and you need to select **Framework** and **Web Part Name** as well. For more information, see [Build a Teams app with SPFx](../sbs-gs-spfx.yml).
-
-For notification bot, follow the same steps and you need to select **Trigger** as well. For more information, see [Build notification bot](../sbs-gs-notificationbot.yml).
-
-1. Open Visual Studio Code.
-1. Select the Teams Toolkit icon.
+1. To create an app, open Visual Studio Code.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon.
 1. Select **Create a new Teams app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams toolkit sidebar":::
