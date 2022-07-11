@@ -11,7 +11,7 @@ ms.date: 07/20/2019
 
 Search based message extensions allow you to query your service and post that information in the form of a card, right into your message.
 
-![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
+:::image type="content" source="~/assets/images/compose-extensions/ceexample.png" alt-text="Example of message extension card.":::
 
 The following sections describe how to do this:
 
@@ -106,7 +106,7 @@ The remainder of your handler for `onQuery` prompts the user for information, di
 
 The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.
 
-![Screenshots of locations of Settings menu item](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+:::image type="content" source="~/assets/images/compose-extensions/compose-extension-settings-menu-item.png" alt-text="Screenshot of locations of Settings menu item.":::
 
 Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
 
@@ -190,7 +190,7 @@ The request parameters are found in the value object, which includes the followi
 
 As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps, which the message extension has resolved into a card.
 
-![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling.":::
 
 To enable your message extension to interact with links this way, you'll first need to add the `messageHandlers` array to your app manifest as in the example below:
 
