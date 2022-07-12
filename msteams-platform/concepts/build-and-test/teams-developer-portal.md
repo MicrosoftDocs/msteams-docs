@@ -79,7 +79,9 @@ You can import and manage your existing app in the developer portal:
 > * The Developer Portal creates a unique App ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice. This prevents scenarios where multiple apps have duplicate app IDs.
 > * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in the Developer Portal. For more information, see [Build apps with teams toolkit and Visual studio code](~/toolkit/visual-studio-code-overview.md).
 
-##
+## Manage your apps in Developer Portal
+
+After you created or uploaded your app, you can manage your apps in Developer Portal with the following:
 
 * [Overview](#overview)
 * [Configure](#configure)
@@ -88,9 +90,11 @@ You can import and manage your existing app in the developer portal:
 
 ### Overview
 
-The app overview page in the developer Portal allows you to update various attributes related to your app such as:
+In the **Dashboard** page under **Overview** section, you can see **Teams store validation** report, **Announcement**, **Upgrade to 1.14**, **Active users (Preview)** and **Basic information** of your app.
 
 (image to be added)
+
+In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](#analyze-your-apps-usage).
 
 ### Configure
 
@@ -103,6 +107,24 @@ The app overview page in the developer Portal allows you to update various attri
 (image to be added)
 
 ### Advanced
+
+#### Identify app owners
+
+Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Administrator** role except the ability to delete an app. You can add **Administrator** and **Contributors** to manage who can make changes to your app.
+
+(image to be added)
+
+To add an owner:
+
+1. In the app **Overview** page, select **Owners**.
+1. In the title bar, select **Add an owner**.
+1. Enter a name and select a user ID from the drop-down list.
+1. Under Role, select **Contributor** or **Administrator**.
+1. Select **Add**.
+
+(image to be added)
+
+#### Environments
 
 You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
@@ -122,22 +144,6 @@ Use the variable names instead of hard-coded values to set your app configuratio
 
 1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
 1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
-
-#### Identify app owners
-
-Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Administrator** role except the ability to delete an app. You can add **Administrator** and **Contributors** to manage who can make changes to your app.
-
-(image to be added)
-
-To add an owner:
-
-1. In the app **Overview** page, select **Owners**.
-1. In the title bar, select **Add an owner**.
-1. Enter a name and select a user ID from the drop-down list.
-1. Under Role, select **Contributor** or **Administrator**.
-1. Select **Add**.
-
-(image to be added)
 
 ### Publish
 
