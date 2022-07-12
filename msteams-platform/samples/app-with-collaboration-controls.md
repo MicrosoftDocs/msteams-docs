@@ -9,53 +9,51 @@ ms.topic: conceptual
 
 # Create a new model-driven app with collaboration controls for Teams
 
-Collaboration controls are designed for best [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
+Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
 
-Create a model-driven application
+## Create a model-driven application
 
-1. Navigate back to [https://make.powerapps.com.](https://make.powerapps.com.)
+1. Open [https://make.preview.powerapps.com.](https://make.preview.powerapps.com/)
 
-1. Select Solutions in the left navigation.
+1. Select **Solutions** in the left pane.
 
-1. Select New solution so that we can provide a home for all our future customizations.
+1. Select **New solution**, so that you can provide a home for all your future customizations.
 
    :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="New solution" border="true":::
 
-1. Provide the name and publisher of your new solution. Since this solution is going to hold our custom Collaboration Manager, let’s call it **My Collaboration Manager**.
+1. Provide the name and publisher of your new solution, this solution is going to hold your custom Collaboration Manager.
 
    :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Collaboration manager" border="true":::
 
 1. Select **Create**
 
-1. Once the solution has been created, it'll appear in your list of solutions. Select it to open it.
+1. After the solution has been created, it'll appear in your list of solutions. Select your solution to open it.
 
-1. Before creating our app, we must first create a home for our data; select **New** > **Table** to get started.
+1. Before creating your app, create a home for your data. select **New** > **Table** to get started.
 
-1. Give your table a name, we'll use **'Inspections'** for this document.
-
-1. Under **Advanced options** select **Creating a new activity**.
+1. Give your table a name. Under **Advanced options** select **Creating a new activity**.
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Create new activity" border="true":::
 
     > [!TIP]
-    > Take a note of the schema name in the side pane for the later settings exercise e.g.cr*****_inspections.
+    > Take a note of the schema name in the side pane for the settings, it would be such as cr*****_inspections
 
-1. Select **Save**
+1. Select **Save**.
 
-1. Once you're done creating your table, feel free to customize it by adding additional
+1. After you're done creating your table, feel free to customize it by adding additional
 columns, relationships, and more (Optional).
 
-1. Next, we'll create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
+1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
    :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="New model driven app" border="true":::
 
-1. Choose to open the new app in the new **Modern app designer (preview)**
+1. Choose new **Modern app designer (preview)** to open the new app.
 
    :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="new model driven app blank" border="true":::
 
 1. Select **Create.**
 
-1. Give your app a name, such as **‘Collaboration Manager for Inspections’** and select **Create.**
+1. Give your app a name and select **Create.**
 
    :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Collaboration manager for inspection" border="true":::
 
@@ -67,7 +65,7 @@ columns, relationships, and more (Optional).
 
 1. Select **Next.**
 
-1. Search for and select the table you created on step 8.
+1. Search and select the table you have created earlier.
 
    :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Table view form pages" border="true":::
 
@@ -77,39 +75,68 @@ columns, relationships, and more (Optional).
 
 1. Select **Play** to test out your new app.
 
-**Congrats!** You’ve built a model-driven app. In the next steps, we’ll show you how to add collaboration controls.
+Now you’ve successfully built a model-driven app.
 
-## Configure Collaboration controls for your application
+## Add Collaboration controls to your application
 
- In this exercise, you'll define the settings for Collaboration controls for the business entity (for example, Inspections) you created in the previous exercise.
+To add Collaboration controls Tasks, Meetings, Files, and Notes experiences to the app created post app creation as follows:
 
- The settings you apply are **Group ID** which is needed for Tasks and internal Meetings, **Channel ID** for Conversations, and the **Booking business ID** to enable external meetings using Bookings functionality. You'll also apply settings for the **Site ID and Drive ID**, which are needed for Files to be linked to your SharePoint site.
+1. To include the Tasks, Meetings, and Notes tabs you need to edit the Main Information form. To begin, go back to the explorer and select your solution.
 
- You can do this by creating a new Team to host your application and create settings variables, **OR if using an existing Team, you can skip to Task 2.**
+1. Select the table you created in [Create a new model-driven app for Teams.](#create-a-new-model-driven-app-with-collaboration-controls-for-teams)
 
-Create a new Microsoft Teams team
+1. Go to the Forms tab for your table.
 
- 1. Open **Microsoft Teams** and navigate to **Teams** in the left app bar.
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="forms tab for your table" border="true":::
 
- 1. Select Join or create a team so that we can create a new team that'll be leveraging the app you created. This team'll be the home for all conversations and more for this app.
+1. Select the Information form of form type **Main** to open it in the form designer.
 
-     :::image type="content" source="../assets/images/collaboration-control/join-create-team.png" alt-text="Join or create a Team" border="true":::
+1. Once you are in the form designer, press and drag in a **1-column tab** from the **Components** section.
 
- 1. Select **Create team** to open the new team creation modal.
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Components power apps" border= "true":::
 
- 1. Select **From scratch** to create a brand-new Teams team.
+1. After selecting the tab, rename the tab to “Tasks” in the property pane.
 
-     :::image type="content" source="../assets/images/collaboration-control/from-scratch.png" alt-text="Create a brand new Teams" border="true":::
+1. Select the tab name to select the full section and select **Expand first component to full tab** in the Properties pane. This is required as the controls only support full tab views.
 
- 1. Determine if you want to make the team Private, Public, or Org-wide. [Learn more.](/microsoft-365/community/changing-microsoft-teams-from-private-to-public-what-to-expect-in-sharepoint)
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Expand first component to full tab" border="true":::
 
-     :::image type="content" source="../assets/images/collaboration-control/pvt-pub-org-wide.png" alt-text="Private public org-wide" border="true":::
+1. You can now run your power app in Power Apps by selecting it.
 
- 1. Provide the name and description of your brand-new team before finally selecting **Create.**
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections" border="true":::
 
-     :::image type="content" source="../assets/images/collaboration-control/quick-details.png" alt-text="Quick details about your private Team" border="true":::
+1. Create a new record by selecting **+ New** and then open the record.
 
- 1. You can optionally add members to your new team or select **Skip** to do this later.
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Power apps open the record" border="true":::
+
+1. Now you can see views for each tab that appear similar to the following image:
+
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Tasks" border="true":::
+
+     > [!TIP]
+     > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
+
+Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings have not yet been configured you'll not be able to create entities such as Tasks or Meetings until settings are configured.
+
+## Define Settings for your Collaboration
+
+You can define settings for Collaboration controls for the business entity such as the table created created in [new model-driven app](#create-a-new-model-driven-app-with-collaboration-controls-for-teams).
+
+The settings which you can apply are as follows
+
+|Settings|Used by|
+|---|---|
+|Group Id|Tasks, Internal Meetings, Approvals.|
+|Bookings business ID|External meetings using Bookings |
+|Site Id|SharePoint files |
+|Drive Id|SharePoint files|
+
+> [!NOTE]
+> Settings are crtical to launch your app, so ensure to follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
+
+You can get the Group Id by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables .
+
+To create a new team, see [Create a team from scratch](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b).
 
  **Retrieve the Group ID of your Teams team**
 
@@ -284,218 +311,6 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 > To use **Conversations** in the personal app, you must configure the channel ID as mentioned above and the app must **first** be added to the Channel associated with the Channel ID provided.
 
 **Congrats!** You've now configured the settings for your application.
-
-## Add Collaboration controls to your application
-
-Now that you've configured the Collaboration controls, you can now add collaborative capabilities to the app created.
-
-Adding Collaboration controls Tasks, Meetings, Files, and Notes experiences.
-
- 1. We now want to edit the Main Information form so that it includes the tasks, meetings, and notes tabs. To begin, we want to go back to the explorer & select your solution (for example: My Collaboration Manager).
-
- 1. Select the table (for example: Inspections) you created in [Create a new model-driven app for Teams.](#create-a-new-model-driven-app-with-collaboration-controls-for-teams)
-
- 1. Navigate to the Forms tab for your table.
-
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="forms tab for your table" border="true":::
-
- 1. Select the Information form of form type “Main" to open it in the form designer.
-
- 1. Once' in the form designer, drag in a **1-column tab** from the **Components** drawer.
-
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Components power apps" border= "true":::
-
- 1. After dragging in the tab, rename the tab to “Tasks” in the property pane.
-
- 1. Now select the section within your new tab so that you can select Hide label within the property pane.
-
-     :::image type="content" source="../assets/images/collaboration-control/hide-label.png" alt-text="Hide label" border="true":::
-
- 1. Select the full section and select **Expand first component to full tab** in the property pane. This is required as the controls only support full tab views.
-
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Expand first component to full tab" border="true":::
-
- 1. Drag-and-drop a **Subgrid** control from the **Components** drawer into your section.
-
- 1. In the pop up, check ‘Show related records’ and for tasks, set the values to **All Tasks** from the **Tasks (Regarding)** table.
-
-     :::image type="content" source="../assets/images/collaboration-control/all-tasks.png" alt-text="All tasks from the tasks" border="true":::
-
- 1. Repeat steps 5 – 10 for the Meetings, Notes, and Files tabs to create additional tabs and add the controls.
-
-     :::image type="content" source="../assets/images/collaboration-control/new-inspection.png" alt-text="New inspections" border="true":::
-
-     > [!NOTE]
-     >
-     > For Files, the Table and Default view settings aren't required so you can use same settings as Notes (image above) when you drag the subgrid.
-     >
-     > If' unable to find the control table in the “Select subgrid views” pop up, you may have missed step 9 of Task 1 in Exercise 2. Make sure you check the option for ‘Creating a new activity’.
-
-     :::image type="content" source="../assets/images/collaboration-control/create-new-activity.png" alt-text="Create a new activity" border="true":::
-
- 1. We now need to configure the custom controls for our subgrids within the classic form designer. Select **Save** and then select **Switch to classic.**
-
- 1. Scroll down in the classic form designer until you find the **Tasks** tab. Double-click on the subgrid to open its property dialog.
-
-     :::image type="content" source="../assets/images/collaboration-control/property-dialog.png" alt-text="Tasks tab property dialog" border="true":::
-
- 1. While in the property dialog, select the Controls tab to view all custom controls assigned to it.
-
-     :::image type="content" source="../assets/images/collaboration-control/select-controls.png" alt-text="Select the controls" border="true":::
-
- 1. Select **Add Control**
-
- 1. For the tasks tab, select **Tasks (Preview)** and then **Add.**
-
-     :::image type="content" source="../assets/images/collaboration-control/tasks-preview.png" alt-text="add tasks preview" border="true":::
-
- 1. Check the Web, Phone, and Tablet radio buttons for the Tasks control to ensure that it shows across all form factors.
-
- **For Pro Devs**
-
- Follow the following steps if you would like to be able to create external
- tasks:
-
- External (or guest) tasks are tasks that can be assigned to users who aren't part of your
- organization or  have access to your application e.g., when assigning a task to a customer.
-
- To enable you'll need an additional step of passing an XML string to each instance of Tasks
- PCF control attached to the sub grid component on desired MDA form. This XML string is a
- parametrized query that allows the control to extract the required data from a table that contains customer information.
-
-* Create a new custom entity (e.g., “Customer”) or reuse an existing customer entity like
-Contacts.
-
-* Then create new fields that'll hold the following information (the names can be
-different):
-
-* Name
-* Email
-* Parent (Lookup to the parent table e.g., Inspections)
-
-     > [!NOTE]
-     > The customer entity created above'll be where the task control pulls the customer
-information from when assigning an external task. The “Parent” field ensures that the customer
-entity is linked to an Inspection record.
-
-* You need to generate a Fetch XML file to allow the PCF control to pull the right customer
-information.
-
-Configuration XML Schema
-
-Below is the schema definition for the tasks configuration Fetch XML. Any Fetch XML needs to be
-designed to meet the following requirements:
-
-* Query result shall return the following properties for each user object: id, displayname,
-email (use ‘alias’ if needed),
-* Query shall contain the “@top” parameter to allow caller to limit the number of results,
-* Query shall have “@rootEntityId” parameter to filter results by only related records (if
-needed),
-* Query shall have “@useName” parameter to allow result filtering by name.
-* Query shall have “@useIdentifier” parameter to allow fetching only selected users
-
-Configuration XML Schema and example
-
-This pulls data from the customer table. You can adjust the `<fetch />` node to specify your own
-query to display users from any other custom table.
-
-> [!NOTE]
-> The above entity & attribute name and order attribute in the XML are in this format
-"PublisherPrefix_TableColumn"
-
-```html
-
- <custom-tasks>
-
- <custom-task id="external" name="External" for="guest">
-
- <fetch top="@top">
-
- <entity name="[Name of table, e.g. Crb2891_customer]">
-
- <attribute name="[Name of ID column, e.g. Crb2891_customerid]" alias="id" />
-
- <attribute name="[Name of primary name column, e.g. Crb2891_name]"
- alias="displayname" />
-
- <attribute name="[Name of email column, e.g. Crb2891_email]" alias="email" />
-
- <order attribute ="[Name of primary name column, e.g. Crb2891_name]"
- descending="false" />
-
- <filter type="and">
-
- <condition attribute="[Name of parent lookup column, e.g. Crb2891_parent]"
- operator="eq"
-
- value="@rootEntityId" />
-
- <condition attribute="[Name of primary name column, e.g. Crb2891_name]"
- operator="like" value="@userName" />
-
- <condition attribute="[Name of email column, e.g. Crb2891_email]" operator="like"
- value="@userIdentifier" />
-
- </filter>
-
- </link-entity>
-
- </entity>
-
- </fetch>
-
- </custom-task>
-
- </custom-tasks>
-
-```
-
-* Then repeat steps 12 – 15
-
-* Set the properties as shown in the images below
-
-   :::image type="content" source="../assets/images/collaboration-control/set-properties.png" alt-text="set properties" border="true":::
-
-* Navigate to the Controls tab and click on pen symbol on Custom Tasks property to add
-the Fetch XML generated above.
-
-* Paste the Fetch XML
-
-   :::image type="content" source="../assets/images/collaboration-control/set-properties-chart-properties.png" alt-text="Set chart properties" border="true":::
-
-   :::image type="content" source="../assets/images/collaboration-control/custom-tasks.png" alt-text="Custom tasks" border= "true":::
-
-* Click Ok
-
-* Click Ok on properties window
-
-* Save and Publish
-
- 1. Repeat steps 12-17 for the meetings, notes, and files tabs. For meetings, use Meeting (Preview), for notes use Notes (Preview) and for files use Files (Preview).
-
-     > [!NOTE]
-     > When in Classic Designer adding the Files control, ensure that the Name field is populated with a unique name.
-
-     :::image type="content" source="../assets/images/collaboration-control/set-the-list-chart-properties.png" alt-text="Set the list or chart properties" border="true":::
-
- 1. Select Save.
-
- 1. Select Publish (from within the Classic Form Designer).
-
- 1. You can now close the Classic Form Designer and open your app in Power Apps by selecting it.  
-
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections" border="true":::
-
- 1. Create a new record via + New and then open the record.
-
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Power apps open the record" border="true":::
-
-     You should see views for each tab that appear similar to the image below.
-
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Tasks" border="true":::
-
-     > [!TIP]
-     > The controls are only visible after a record is initially saved in the application. If the control tabs don't appear in your record, try to refresh your browser and/or republish the app from within Power Apps.
 
 ## Adding Collaboration controls Conversations experience
 
