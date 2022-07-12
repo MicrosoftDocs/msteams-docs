@@ -48,9 +48,9 @@ Use the **User Creation Restriction** option to specify the users by synchronizi
 
 The following image shows user creation restrictions options:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="Screenshot showing user creation restriction options.":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Screenshot showing user creation restriction options by selecting Azure AD.":::
 
 <br>
 
