@@ -18,7 +18,7 @@ You've registered your tab app in Azure AD, and obtained an app ID. You've also 
 
 Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration.":::
 
 `webApplicationInfo` has two elements, `id` and `resource`.
 
@@ -132,7 +132,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 You've configured the tab app to enable SSO in Azure AD, in app code, and in Teams manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Enable SSO app.":::
 
 To preview your tab app in Teams:
 
@@ -154,17 +154,17 @@ To preview your tab app in Teams:
 
 1. Select **Continue**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required.":::
 
     The Azure AD consent dialog appears.
 
 1. Select **Accept** to give consent for open-id scopes.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog box.":::
 
     Teams opens the tab app and you can use it.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Example of Teams tab app with SSO enabled":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Example of Teams tab app with SSO enabled.":::
 
     Congratulations! You've enabled SSO for your tab app.
 
