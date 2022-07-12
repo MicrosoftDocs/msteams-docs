@@ -99,6 +99,7 @@ await context.sendActivity({
     attachments: [attachment]
 });
 ```
+---
 
 ## Receive the bot token
 
