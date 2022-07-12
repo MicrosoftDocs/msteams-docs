@@ -2,7 +2,7 @@
 title: Build search based message extension
 metadata:
   title: Build search based message extension
-  description: In this tutorial, you'll learn to build a search-based messageextension.
+  description: Learn how to build a search based message extension for Microsoft teams, which allows users to search external systems.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022
@@ -71,7 +71,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -82,9 +82,9 @@ items:
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
+    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
+        ![New resource group location](~/assets/images/bots/newresource.png)
 
     1. Select **MultiTenant** under **Bot Type**.
 
@@ -115,7 +115,7 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you have created a new **Microsoft App ID**:
+      Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -124,7 +124,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/Teams-Messaging-Extensions-Search/config1.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -165,7 +165,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/Teams-Messaging-Extensions-Search/config-teams.png)   
+          ![Select Teams](~/assets/images/sbs-messagingextension-action/configure-msteams.png) 
     
     **To create tunnel for local web server**
 
@@ -182,11 +182,11 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Teams-Messaging-Extensions-Search/ngrok.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -312,7 +312,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
          1. Select **Web**.
@@ -376,7 +376,7 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-Messaging-Extensions-Search/solutionexplorer.png)
+          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer.png)
 
        1. Right-click to select **TeamsMessagingExtensionsSearch**.
 

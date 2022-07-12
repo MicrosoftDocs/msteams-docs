@@ -1,7 +1,7 @@
 ---
 title: Define message extension search commands
 author: surbhigupta
-description: Learn about message extension search commands for Microsoft Teams apps, to create a search command through app manifest and manually using code examples and sample.
+description: In this module, learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
@@ -15,6 +15,12 @@ Message extension search commands allow users to search external systems and ins
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
 
+See the following video to learn how to define message extension search commands:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+<br>
+
 ## Select search command invoke locations
 
 The search command is invoked from any one or both of the following locations:
@@ -22,7 +28,7 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning in the command box.
 
-  When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+  When search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
 The following image displays the invoke locations of the search command:
 
@@ -39,7 +45,7 @@ The prerequisite to create a search command is that you must already have create
 To create a search command:
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
+1. If you already created your app package in **App Studio**, select from the list. If you haven't created an app package, import an existing one.
 1. After importing app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
 1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up page:
 
@@ -53,7 +59,7 @@ To create a search command:
 
     :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
 
-1. Select **Add** in the **Command section** of the message extensions page to include the commands which decides the behaviour of message extension.
+1. Select **Add** in the **Command section** of the message extensions page to include the commands, which decide the behaviour of message extension.
 The following image displays command addition for message extension:
 
     :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::

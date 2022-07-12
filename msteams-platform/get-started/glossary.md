@@ -1,13 +1,12 @@
 ---
-title: Microsoft Teams Developer Documentation - Glossary
-description: Glossary for Microsoft Teams Developer Documentation
+title: Microsoft Teams developer documentation - Glossary
+description: Learn about the terms used in Microsoft Teams developer documentation
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams developer definition
 ---
 # Glossary
 
-Common terms and definitions used in Teams Developer Documentation.
+Common terms and definitions used in Teams developer documentation.
 
 ## A
 
@@ -21,12 +20,12 @@ Common terms and definitions used in Teams Developer Documentation.
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file, color icon, and outline icon. |
 | [App permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: Device permissions |
 | [App scope](../concepts/design/app-structure.md) | An area in Teams where people can use your app. Apps can have one or many scopes, including personal, channels, chats, and meetings. A Teams app can exist across scopes. |
-| [App Studio](../concepts/build-and-test/app-studio-overview.md) | An app to start creating or integrating your own Microsoft Teams apps. It has now evolved to Developer Portal. <br> > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022 <br> **See also**: [Developer Portal](#d) |
+| [App Studio](../concepts/build-and-test/app-studio-overview.md) | An app to start creating or integrating your own Microsoft Teams apps. It has now evolved to Developer Portal. <br> > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022 <br> **See also**: [Developer Portal](#d) |
 | App tray | An application tray located on the bottom bar of a Teams mobile app. It collects all apps that are open but not currently used or active. <br>**See also**: [Teams Mobile](#t) |
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external Azure resources. |
 | [Authentication](../concepts/authentication/authentication.md) | A process to validate user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
-| [Authentication flow](../concepts/authentication/authentication.md#web-based-authentication-flow) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
+| [Authentication flow](../concepts/authentication/authentication.md) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
 
 ## B
 
@@ -112,7 +111,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Media capability](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: [Capability](#c); [Device capability](#d) |
+| [Media capability](../concepts/device-capabilities/media-capabilities.md) | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: [Capability](#c); [Device capability](#d) |
 | [Meeting bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: [Call bot](#c); [Chat bot](#c) |
 | [Meeting lifecycle](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and message extensions in each stage of the meeting lifecycle. <br>**See also**: [In-meeting experience](#i) |
 | [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It's a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
@@ -182,7 +181,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
-| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. The functionalities in [latest version](~/m365-apps/using-teams-client-sdk-preview.md) extend Teams app to run in Outlook and Office. |
+| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. Starting with TeamsJS v.2.0.0, you can extend Teams apps to run in Outlook and Office. |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
