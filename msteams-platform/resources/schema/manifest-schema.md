@@ -656,7 +656,10 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only for apps published to your organization.
+>
+> * `isFullScreen` works only for apps published to your organization.
+>
+> * `isFullScreen=true` For LOB apps removes the title from task modules. Hence it's recommended that apps shouldn't use it. (it's only for internal apps).
 
 ## activities
 
