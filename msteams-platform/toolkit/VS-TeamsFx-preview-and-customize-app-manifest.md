@@ -10,7 +10,8 @@ ms.date: 05/13/2022
 
 # Manage Teams app manifest
 
-During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest. After scaffolding, in the manifest template file under `templates/appPackage` folder,
+During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+After scaffolding, in the manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
 
 In the manifest template, select the **Open Manifest File** under **Project**> **Teams Toolkit** menu.
@@ -43,16 +44,16 @@ You can Preview values in app manifest in two ways:
 
 - When you hover over the placeholder in `manifest.template.json`, the values for **dev** and **local** environment can be seen.
 
-  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
 - You can also hover over the key besides each placeholder in `manifest.template.json`, the same values for **dev** and **local** environment can be seen.
 
-  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
 > [!NOTE]
 > If the environment has not been provisioned, or **Prepare Teams App Dependencies** has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside, and hover to generate corresponding values.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined.png" alt-text="Placeholder values undefined":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined.png" alt-text="Placeholder values undefined":::
 
 ### Preview manifest file
 
