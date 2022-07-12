@@ -21,7 +21,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 ## Steps to provision cloud resources
 
-### Sign in to your M365 account
+## Sign in to your M365 account
 
 1. Open Visual Studio.
 2. Open the Teams App project.
@@ -36,7 +36,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 5. Sign in to your M365 account using your credentials. The browser will close automatically.
 6. Select **Continue** to close.
 
-### Sign in to your Azure account
+## Sign in to your Azure account
 
 1. Open Visual Studio.
 2. Open the Teams App project.
