@@ -1458,7 +1458,7 @@ When the bot encounters an error while handling different events or activities, 
 
 :::image type="content" source="../../../assets/images/error-msg.PNG" alt-text="Error message to the conversation with no meaningful context.":::
 
-Send the meaningful messages in conversations which is specific to the errors for better user experience.
+Send the meaningful messages in conversations which is specific to the errors for better user experience. For more information [handle unexpected errors](/azure/bot-service/bot-builder-howto-handle-user-interrupt?view=azure-bot-service-4.0&tabs=csharp).
 
 ## Code sample
 
