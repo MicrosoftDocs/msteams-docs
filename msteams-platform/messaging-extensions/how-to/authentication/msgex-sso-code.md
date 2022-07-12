@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
-> [Register with Azure AD](bot-msgex-register-aad.md)
+> [Register with Azure AD](msgex-register-aad.md)
 
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
@@ -219,4 +219,4 @@ To understand what the bot does when the token exchange fails to trigger a conse
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update Teams app manifest and preview the app](bot-sso-manifest.md)
+> [Update Teams app manifest and preview the app](msgex-sso-manifest.md)
