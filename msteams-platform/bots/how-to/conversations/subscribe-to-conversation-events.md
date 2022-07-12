@@ -1454,11 +1454,11 @@ It's important to know that new events can be added anytime in the future and yo
 
 ## Handling errors in conversation events
 
-When the bot encounters an error while handling different events or activities, you should not post random messages directly to the conversation which has no meaningful context like below:
+When the bot encounters an error while handling different events or activities, the bot should not post random messages directly to the conversation which has no meaningful context like below:
 
 :::image type="content" source="../../../assets/images/error-msg.PNG" alt-text="Error message to the conversation with no meaningful context.":::
 
-Send the meaningful messages in conversations which is specific to the errors for better user experience. For more information, see [handle unexpected errors](/azure/bot-service/bot-builder-howto-handle-user-interrupt).
+The bot should send meaningful messages in conversations which is specific to the errors for better user experience. For more information, see [handle unexpected errors](/azure/bot-service/bot-builder-howto-handle-user-interrupt).
 
 ## Code sample
 
