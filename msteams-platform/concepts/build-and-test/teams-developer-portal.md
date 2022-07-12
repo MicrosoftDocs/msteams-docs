@@ -46,21 +46,75 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 The Developer Portal provides a couple ways to register a Teams app:
 
-* Register a brand new app.
+* Create and register a brand new app.
 * Import an existing app package.
 
-> [!NOTE]
-> If you create an app using the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), you can manage that app in the Developer Portal.
+### Create and register a brand new app
 
-## Set up an environment
+The Developer portal allows you to create a brand new app:
+
+1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
+1. Select **+ New app** and enter app name.
+1. Select **Add**.
+
+(image to be added)
+
+Now you've successfully created a brand new app and you can see all basic information of the new app.
+
+### Import an existing app
+
+You can import and manage your existing app in the developer portal:
+
+1. In the Developer Portal, select **Apps** from the left pane.
+2. Select **Import App**.
+3. Select the app manifest file and then select **Open**.
+4. Select **Import**.
+   1. If your app package has errors, you can import the app and resolve the errors before you upload or publish the app to Teams.
+   1. If you see the following message while uploading the app, click **Import** to add the app package to the Developer Portal.
+
+(image to be added)
+
+> [!NOTE]
+>
+> * The Developer Portal creates a unique App ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice. This prevents scenarios where multiple apps have duplicate app IDs.
+> * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in the Developer Portal. For more information, see [Build apps with teams toolkit and Visual studio code](~/toolkit/visual-studio-code-overview.md).
+
+##
+
+* [Overview](#overview)
+* [Configure](#configure)
+* [Advanced](#advanced)
+* [Publish](#publish)
+
+### Overview
+
+The app overview page in the developer Portal allows you to update various attributes related to your app such as:
+
+(image to be added)
+
+### Configure
+
+A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted somewhere in the cloud (like Azure).
+
+To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
+
+The app overview page in the developer Portal allows you to update various attributes related to your app such as:
+
+(image to be added)
+
+### Advanced
 
 You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
+(image to be added)
+
 To set up an environment:
 
-1. In the Developer Portal, select the app you're working on.
-2. Go to the **Environments** page and select **+ Add an environment**.
-3. Select **+ Add a variable** to create configuration variables for your environment.
+1. In the Developer Portal, select the **Apps** you're working on.
+1. Go to the **Environments** page and select **+ Add an environment**.
+1. Select **+ Add a variable** to create configuration variables for your environment.
+
+(image to be added)
 
 To use variables:
 
@@ -69,24 +123,48 @@ Use the variable names instead of hard-coded values to set your app configuratio
 1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
 1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-## Identify app owners
+#### Identify app owners
 
-Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
+Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Administrator** role except the ability to delete an app. You can add **Administrator** and **Contributors** to manage who can make changes to your app.
 
-## Configure your app's capabilities and other important metadata
+(image to be added)
 
-A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted somewhere in the cloud (like Azure).
+To add an owner:
 
-To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
+1. In the app **Overview** page, select **Owners**.
+1. In the title bar, select **Add an owner**.
+1. Enter a name and select a user ID from the drop-down list.
+1. Under Role, select **Contributor** or **Administrator**.
+1. Select **Add**.
 
-## Test your app directly in Teams
+(image to be added)
+
+### Publish
+
+From the Developer portal, you can publish your app to your org, or to the Teams store.
+
+(image to be added)
+
+To Publish your app to org:
+
+1. In the app **Overview** page, under **Publish**, Select **Publish to Org**.
+1. Select **Publish your App**.
+
+To publish your app to store:
+
+1. In the app **Overview** page, under **Publish**, Select **Publish to Store**.
+1. Select **Publish**.
+
+You can download the app package using **Download app package** button from the publish to Teams Store page.
+
+#### Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
 
 * On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
-## Distribute your app
+#### Distribute your app
 
 From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
 
@@ -190,6 +268,17 @@ The Developer Portal also includes tools to help you build some key features of 
 * **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
 * **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
+* **Teams store app validation**: Check your app package against the test cases Microsoft uses when reviewing your app.
+* **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
+
+To add a bot:
+
+1. In the Developer Portal, select **Tools** in the left navigation bar.
+1. Select **Bot Management**.
+1. In the bot management page, select **+ New Bot**.
+1. Enter a name and select **Add**.
+
+From the Developer portal, you can navigate to Bot framework portal and configure your bot to update bot icon and other bot properties.
 
 ## See also
 
