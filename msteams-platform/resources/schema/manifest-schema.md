@@ -64,7 +64,7 @@ The following schema sample shows all extensibility options:
                 "privateChannels" 
             ] 
         }
-    }
+    },
     "configurableTabs": [
         {
             "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -454,6 +454,17 @@ Icons used within the Teams app. The icon files must be included as part of the 
 A color to use and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
+
+## supportedChannelTypes
+
+**Optional**—object
+
+Enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported.
+
+> [!NOTE]
+>
+> * If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
+> * Your app may need to account for the unique properties of each of these channel types in order to function properly. For more information on enabling your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context#retrieve-context-in-private-channels). For more information on enabling your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context#retrieve-context-in-microsoft-teams-connect-shared-channels).
 
 ## configurableTabs
 
