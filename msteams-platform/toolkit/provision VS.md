@@ -19,7 +19,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
   * Azure account with a valid subscription. For more information, see [how to prepare accounts for building Teams app](/microsoftteams/platform/toolkit/accounts?branch=pr-en-us-6427)
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)for Visual Studio.
 
-# Steps to provision cloud resources
+## Steps to provision cloud resources
 
 ## Sign in to your M365 account
 
@@ -59,8 +59,8 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select subscription":::
 
-4. Select Provision.
-5. A dialog warns you that costs may incur when running resources in Azure. Select **Provision**.
+1. Select Provision.
+1. A dialog warns you that costs may incur when running resources in Azure. Select **Provision**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
@@ -69,7 +69,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="Provision success":::
 
-# Resource creation
+## Resource creation
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you will create the following resources:
 
@@ -144,14 +144,14 @@ When you create a new project, you will need to create some Azure resources. The
 | App Service plan | Host the Function App of bot | Not applicable |
 | Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
 
-# Check your created resources
+## Check your created resources
 
 You can login to [Azure Portal](https://portal.azure.com/) manage all resources created by Teams Toolkit.
 
 * Select Resource groups and choose the Resource group you just chose or created
 * Click Overview - Resources, all resource will list below.
 
-# Customize resource provision
+## Customize resource provision
 
 Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
