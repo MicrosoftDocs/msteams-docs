@@ -62,6 +62,8 @@ When the user selects **Continue**, one of the following events occurs:
 
 ### C# token request without a sign-in button
 
+# [charp](#tab/cs)
+
 ```csharp
     var attachment = new Attachment
             {
@@ -82,6 +84,22 @@ When the user selects **Continue**, one of the following events occurs:
        await turnContext.SendActivityAsync(activity, cancellationToken);
 ```
 
+# [JavaScript](#tab/js)
+
+```JavaScript
+var attachment = {
+    content: {
+        tokenExchangeResource: {
+            id: requestId
+                }
+            },
+    contentType: "application/vnd.microsoft.card.oauth",
+};
+await context.sendActivity({
+    attachments: [attachment]
+});
+```
+
 ## Receive the bot token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
@@ -91,6 +109,8 @@ The response with the token is sent through an invoke activity with the same sch
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
 
 ### C# code to handle the invoke activity
+
+# [charp](#tab/csharp)
 
 ```csharp
     protected override async Task<InvokeResponse> OnInvokeActivityAsync
@@ -114,6 +134,24 @@ The response with the token is sent through an invoke activity with the same sch
                 }
             }
 ```
+
+# [JavaScript](#tab/javascript)
+
+```JavaScript
+async onSignInInvoke(context) {
+        if (context.activity && context.activity.name === tokenExchangeOperationName) {
+            await onTokenResponseEvent(context);
+            const response = {
+                        status: 200
+                    };
+                    return response;
+        }
+        else {
+            return await super.onInvokeActivity(context);
+        }
+    }
+```
+---
 
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
