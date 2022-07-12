@@ -23,7 +23,7 @@ This section uses Azure AD as an example of a third party OAuth provider for ena
 > [!NOTE]
 > Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
 
-![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
+:::image type="content" source="~/assets/images/authentication/tab_auth_sequence_diagram.png" alt-text="Tab authentication sequence diagram.":::
 
 1. The user interacts with the content on the tab configuration or content page, commonly a **Sign in** or **Log in** button.
 2. The tab constructs the URL for its auth start page. Optionally, it uses information from URL placeholders or calls `microsoftTeams.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with A Azure AD, if the `login_hint` parameter is set to the user's email address, the user doesn't have to sign in if they've done so recently. This is because Azure AD uses the user's cached credentials. The pop-up window is shown briefly and then disappears.
