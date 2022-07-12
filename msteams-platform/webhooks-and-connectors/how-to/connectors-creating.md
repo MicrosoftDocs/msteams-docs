@@ -131,7 +131,7 @@ To authenticate the user as part of loading your page, see [authentication flow 
 #### `getConfig` response properties
 
 >[!NOTE]
->The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-getconfig).
+>The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig).
 
 The following table provides the parameters and the details of `getConfig` response properties:
 
