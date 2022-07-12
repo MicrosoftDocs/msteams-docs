@@ -966,7 +966,7 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Configure code to enable SSO](bot-sso-code.md)
+> [Configure code to enable SSO](msgex-sso-code.md)
 
 <!-- 
     -    - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
