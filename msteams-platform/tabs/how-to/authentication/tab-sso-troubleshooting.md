@@ -95,7 +95,7 @@ A generic error may show up when one or more of app configurations made in Azure
 
 The following image shows an example of the app details configured in Azure AD.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD.":::
 
 Check that the following values match between Azure AD, client-side code, and Teams app manifest:
 
