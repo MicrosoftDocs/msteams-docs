@@ -39,33 +39,33 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 ## Sign in to your Azure account
 
 1. Open Visual Studio.
-1. Open the Teams App project.
-1. Select Project> Teams Toolkit> Provision in the cloud.
-1. Select "Sign in..." in right top and sign in your Azure.
+2. Open the Teams App project.
+3. Select Project> Teams Toolkit> Provision in the cloud.
+4. Select "Sign in..." in right top and sign in your Azure.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Provision cloud":::
 
 > [!NOTE]
 > If you are already logged in, your username would be would be displayed, you have an option to switch account.
 
-1. Sign in to your Azure account using your credentials. The browser will close automatically.
-1. Select **Continue** to close.
+5. Sign in to your Azure account using your credentials. The browser will close automatically.
+6. Select **Continue** to close.
 
 ## Provision cloud resources
 
 1. Select Project> Teams Toolkit> Provision in the cloud.
-1. The Provision tab will list all subscriptions in your Azure account.
-1. Select or create **resource group**.
+2. The Provision tab will list all subscriptions in your Azure account.
+3. Select or create **resource group**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select subscription":::
 
-1. Select Provision.
-1. A dialog warns you that costs may incur when running resources in Azure. Select **Provision**.
+4. Select Provision.
+5. A dialog warns you that costs may incur when running resources in Azure. Select **Provision**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
-1. The provisioning process of creating the resources in the Azure cloud could take some time. Meanwhile you can monitor the progress by checking Teams Toolkit output window.
-1. A window will prompt you after provisioning is complete. You can select **View Provisioned Resources** to check all the resources that were provisioned.
+6. The provisioning process of creating the resources in the Azure cloud could take some time. Meanwhile you can monitor the progress by checking Teams Toolkit output window.
+7. A window will prompt you after provisioning is complete. You can select **View Provisioned Resources** to check all the resources that were provisioned.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="Provision success":::
 
