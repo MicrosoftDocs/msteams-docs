@@ -14,7 +14,7 @@ Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) sil
 
 See the following video to learn about single sign-on (SSO) support for bots:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
 ## Bot SSO at runtime

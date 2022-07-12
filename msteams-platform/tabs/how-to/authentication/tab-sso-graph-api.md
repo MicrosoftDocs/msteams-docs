@@ -2,7 +2,7 @@
 title: Extend tab app with Microsoft Graph permissions
 description: Describes configuring API permissions with Microsoft Graph
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
 ---
 # Extend tab app with Microsoft Graph permissions and scope
@@ -27,29 +27,29 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 2. Select **Manage** > **API permission** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option.":::
 
     The **API permissions** page appears.
 
 3. Select **+ Add permissions** to add Microsoft Graph API permissions.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page.":::
 
     The **Request API permissions** page appears.
 
 4. Select **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Request API permissions page." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Request API permissions page.":::
 
     The options for Graph permissions display.
 
 5. Select **Delegated permissions** to view the list of permissions.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions.":::
 
 6. Select relevant permissions for your app, and then select **Add permissions**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions.":::
 
     You can also enter the permission name in the search box to find it.
 
@@ -59,7 +59,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     The added permissions are displayed in the **API permissions** page.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured.":::
 
     You've configured your app with Microsoft Graph permissions.
 
@@ -80,19 +80,19 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Select **Manage** > **Authentication** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms":::
 
     The **Platform configurations** page appears.
 
 1. Select **+ Add a platform**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms":::
 
     The **Configure platforms** page appears.
 
 1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform":::
 
     You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
 
@@ -103,7 +103,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Enter the configuration details for the platform.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform":::
 
     1. Enter the redirect URI. The URI should be unique.
     2. Enter the front-channel logout URL.
