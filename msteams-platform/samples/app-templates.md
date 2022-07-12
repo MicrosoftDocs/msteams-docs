@@ -45,7 +45,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
+:::image type="content" source="../assets/images/CompanyCommunicatorCompose.png" alt-text="Company Communicator compose box view.":::
 
 ## Co-worker Appreciation
 
@@ -53,7 +53,7 @@ Using the co-worker appreciation template in Teams, users can recognize their co
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
-:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="coworkers appreciation":::
+:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="Screenshot shows coworkers appreciation.":::
 
 ## FAQ Plus
 
@@ -82,7 +82,7 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker app](../assets/images/icebreaker.png)
+:::image type="content" source="../assets/images/icebreaker.png" alt-text="Screenshot shows Icebreaker app.":::
 
 ## New Employee Onboarding
 
@@ -93,14 +93,14 @@ New Employee Onboarding is an integrated Teams and [SharePoint New Employee Onbo
 :::row:::
   :::column span="2":::
     **New employee welcome card**
-    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
-:::column-end:::
+    :::image type="content" source="../assets/images/new-employee-welcome-card.png" alt-text="Screenshot shows new employee welcome card.":::
+    :::column-end:::
 :::row-end:::
 :::row:::
   :::column span="2":::
     **New employee checklist**
-    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
-:::column-end:::
+    :::image type="content" source="../assets/images/new-employee-checklist.png" alt-text="Screenshot shows new employee checklist.":::
+    :::column-end:::
 :::row-end:::
 
 ## App Template Code Samples
