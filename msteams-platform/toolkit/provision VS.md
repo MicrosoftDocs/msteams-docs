@@ -59,8 +59,8 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select subscription":::
 
-1. Select Provision.
-1. A dialog warns you that costs may incur when running resources in Azure. Select **Provision**.
+4. Select Provision.
+5. A dialog warns you that costs may incur when running resources in Azure. Select **Provision**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
