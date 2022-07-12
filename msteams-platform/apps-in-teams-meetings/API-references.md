@@ -237,6 +237,7 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
 | **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
 | **replyToId** | The ID of the parent or root message of the thread. |
+| **APP_ID** | Bot Id declared in manifest. |
 
 ### Response codes
 
