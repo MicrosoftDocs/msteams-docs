@@ -106,7 +106,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
-        :::image type="content" source="./assets/images/conversation-bot/new-client-secret.png" alt-text="New client secret.":::
+        :::image type="content" source="./assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret.":::
 
     1. Enter **Description** and select **Add**.
  
