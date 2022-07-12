@@ -54,6 +54,17 @@ The following schema sample shows all extensibility options:
         "color": "A relative path to a full color .png icon — 192px X 192px"
     },
     "accentColor": "A valid HTML color code.",
+    "supportedChannelTypes": { 
+        "type": "array", 
+        "description": "The set of supported channel type that an app belongs to.", 
+        "maxItems": 2, 
+        "items": { 
+            "enum": [ 
+                "sharedChannels", 
+                "privateChannels" 
+            ] 
+        }
+    }
     "configurableTabs": [
         {
             "configurationUrl": "https://contoso.com/teamstab/configure",
