@@ -42,7 +42,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 The following image shows the conversation panel:
 
-:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="start conversations":::
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="Screenshot showing start conversations.":::
 
 If the user starts a conversation, it's important to listen for the callback of that event to retrieve and save the **conversationId**:
 
@@ -60,7 +60,7 @@ After a conversation starts, subsequent calls to `openConversation()` require, t
 
 The following image shows the conversation panel with the appropriate conversation:
 
-:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="continue conversations":::
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="Screenshot showing continue conversations.":::
 
 ## Enhance a conversation
 
