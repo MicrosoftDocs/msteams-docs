@@ -127,7 +127,7 @@ The settings which you can apply are as follows
 |Settings|Used by|
 |---|---|
 |Group Id|Tasks, Internal Meetings, Approvals.|
-|Bookings business ID|External meetings using Bookings |
+|Bookings business Id|External meetings using Bookings |
 |Site Id|SharePoint files |
 |Drive Id|SharePoint files|
 
@@ -138,19 +138,17 @@ You can get the Group Id by creating a new team or use an existing team in Micro
 
 To create a new team, see [Create a team from scratch](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b).
 
- **Retrieve the Group ID of your Teams team**
+Use the following instructions to retrieve the Group ID of your Teams team :
 
- 1. Now that we have a Microsoft Teams team, we want to record its ID so that we can leverage it later. To get the ID, start by finding your new team in your list of teams.
+1. Find your team in your teams list.
 
- 1. Select the … button
-
- 1. Select Get link to team.
+1. Select the More options **...** and **Get link** to team.
 
      :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="get link to the Team" border="true":::
 
- 1. Now record the value of groupId from within the URL somewhere safe. You'll use this value in a future step while defining the settings of your solution.
+1. Copy the link and record the value of `groupId` from the URL. You'll use this value at a later stage while defining the settings of your solution.
 
-     `<https://teams.microsoft.com/l/team/19%3akk_TuKhjXu92yJvg4TZ10S6rouLSCgvHIb5NOOTfRjg1%40thr>ead.tacv2/conversations?groupId=4310f270-1aa5-4089-99f3-47eb3b4d69ad&tenantId=b699419be0df-47e3-9909-24076fdcf68b`
+     `https://teams.microsoft.com/l/team/19%3akk_TuKhjXu92yJvg4TZ10S6rouLSCgvHIb5NOOTfRjg1%40thread.tacv2/conversations?groupId=4310f270-1aa5-4089-99f3-47eb3b4d69ad&tenantId=b699419b-e0df-47e3-9909-24076fdcf68b`
 
  **Retrieve the internal ID of the Channel you want to install the app**
 
