@@ -2,7 +2,7 @@
 title: Extend tab app with Microsoft Graph permissions
 description: Describes configuring API permissions with Microsoft Graph
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
 ---
 # Extend tab app with Microsoft Graph permissions and scope
