@@ -11,7 +11,7 @@ Your tab requires contextual information to display relevant content:
 
 * Basic information about the user, team, or company.
 * Locale and theme information.
-* The `entityId` or `subEntityId` that identifies what is in this tab.
+* The `page.id` and `page.subPageId` that identify what is in this tab (known as `entityId` and `subEntityId` prior to TeamsJS v.2.0.0).
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
