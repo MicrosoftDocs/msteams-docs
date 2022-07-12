@@ -39,7 +39,7 @@ For more information on parameters, see [authenticate parameters interface](/jav
 
 The following image provides the flow to add authentication to external browsers:
 
- :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
+ :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="Screenshot shows process to add authentication to external browsers.":::
 
 **To add authentication to external browsers**
 
