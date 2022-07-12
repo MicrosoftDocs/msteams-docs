@@ -21,7 +21,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 ## Steps to provision cloud resources
 
-## Sign in to your M365 account
+### Sign in to your M365 account
 
 1. Open Visual Studio.
 2. Open the Teams App project.
@@ -36,7 +36,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 5. Sign in to your M365 account using your credentials. The browser will close automatically.
 6. Select **Continue** to close.
 
-## Sign in to your Azure account
+### Sign in to your Azure account
 
 1. Open Visual Studio.
 2. Open the Teams App project.
@@ -101,7 +101,7 @@ When you create a new project, you will need to create some Azure resources. The
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| App Service plan | Host the web app of bot | Not applicable |
+| App Service plan | Host the web bot app | Not applicable |
 | App Service | Host your bot app | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
@@ -110,7 +110,7 @@ When you create a new project, you will need to create some Azure resources. The
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| App Service plan | Host the web app of bot | Not applicable |
+| App Service plan | Host the web bot app | Not applicable |
 | App Service | Host your bot app | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
