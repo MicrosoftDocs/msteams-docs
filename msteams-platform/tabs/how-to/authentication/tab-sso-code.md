@@ -14,7 +14,7 @@ Before you add code to enable SSO, ensure that you've registered your app with A
 
 You need to configure your tab app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="Configuring code for handling access token.":::
 
 This section covers:
 
@@ -68,7 +68,7 @@ You can add calls of `getAuthToken()` to all functions and handlers that initiat
 <details>
 <summary>Here's an example of the client-side code:</summary>
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configuring client code." lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
 
 </details>
 
@@ -84,7 +84,7 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 
 When you call `getAuthToken()` and app user's consent is required for user-level permissions, an Azure AD dialog is shown to the app user who is currently signed in.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt.":::
 
 The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your tab app for the granted permissions and scopes.
 
