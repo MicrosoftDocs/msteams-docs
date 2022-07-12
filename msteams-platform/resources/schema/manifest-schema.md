@@ -464,7 +464,7 @@ Enables your app in non-standard channels. If your app supports the team scope a
 > [!NOTE]
 >
 > * If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
-> * Your app may need to account for the unique properties of each of these channel types in order to function properly. For more information on enabling your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context#retrieve-context-in-private-channels). For more information on enabling your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Your app may need to account for the unique properties of each of these channel types in order to function properly. For more information on enabling your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels). For more information on enabling your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
 
 ## configurableTabs
 
