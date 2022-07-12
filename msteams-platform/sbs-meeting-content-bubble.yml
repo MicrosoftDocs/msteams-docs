@@ -232,7 +232,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/selectscope.png" alt-text="Add Scope":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Add Scope":::
             
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
