@@ -46,7 +46,7 @@ To add tabs to an existing meeting:
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="To add tabs to an existing meeting.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="The screenshot describes on how to add tabs to an existing meeting.":::
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -84,7 +84,7 @@ To use tabs during a meeting:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="In-meeting view in desktop.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="The screenshot is an example that shows the In-meeting view in desktop.":::
 
 # [Mobile](#tab/mobile)
 
@@ -92,7 +92,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="In-meeting dialog box view in mobile.":::
+:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="The screenshot is an example that shows the In-meeting dialog box view in mobile.":::
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -110,11 +110,11 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../assets/images/in-meeting-dialog.png" alt-text="In-meeting side panel in desktop.":::
+:::image type="content" source="../assets/images/in-meeting-dialog.png" alt-text="The screenshot is an example that shows the In-meeting side panel in desktop.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="In-meeting side panel in mobile.":::
+:::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="The screenshot is an example that shows the In-meeting side panel in mobile.":::
 
 ---
 
@@ -134,11 +134,11 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Contoso tab with results in desktop.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="The screenshot is an example that shows the Contoso tab with results in desktop.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience in mobile.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="The screenshot is an example that shows the Post meeting app experience in mobile.":::
 
 ---
 
@@ -157,7 +157,7 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 ## Participant roles in a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Participant roles in a meeting.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="The screenshot is an example that shows the Participant roles in a meeting.":::
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
