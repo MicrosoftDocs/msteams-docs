@@ -7,25 +7,23 @@ ms.topic: overview
 ms.date: 03/21/2022
 ---
 
-# Debug your Teams app locally
+# Debug your Teams app
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully.
+
+During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The Teams app is available for preview in Teams web client locally after debugging. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+
+Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions.
+
+## Key features of Teams Toolkit
+
+Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
-* [Stop debugging](#stop-debugging)  
-
-During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The Teams app is available for preview in Teams web client locally after debugging. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
-
-## Prerequisite
-
-Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-## Key features of Teams Toolkit
-
-The following list provides the key features of Teams Toolkit:
+* [Stop debugging](#stop-debugging)
 
 ### Start debugging
 
@@ -52,6 +50,14 @@ You can update and save the source codes of tab, bot, message extension, and Azu
 When you complete local debug, you can select **Stop** or **Disconnect** from the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows the stop debug action:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
+
+## Prepare for debug
+
+Before you debug your app, ensure you can perform following steps:
+
+* Login to M365 for more information, see [Prerequisites]
+* [Toggle breakpoints](#toggle-breakpoints)
+* [Customize debug settings](#customize-debug-settings)
 
 ## Debug your app locally
 
@@ -293,10 +299,93 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 </details>
 
-## Next step
+## Debug background process
 
-> [!div class="nextstepaction"]
-> [Debug background process](debug-background-process.md).
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code (VS Code). The VS Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance as follows:
+
+1. The `launch.json` file configures the debugger in VS Code.
+
+2. VS Code runs the compound **preLaunchTask**, **Pre Debug Check & Start All** in `.vscode/tasks.json` file.
+
+3. VS Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
+
+4. Microsoft Edge or Google Chrome launches a new browser instance and opens a web page to load Teams client.
+
+## Register and configure Teams app
+
+In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
+
+1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
+
+1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or message extension app.
+
+1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
+
+### Registers and configures Azure AD application
+
+1. Registers an Azure AD application.
+
+1. Creates a Client Secret.
+
+1. Exposes an API.
+
+    a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or message extension,  `api://botid-{botid}`.
+
+    b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
+
+4. Configures API permissions. Adds Microsoft Graph permission to **User.Read**.
+
+    The following table lists the configuration of the authentication:
+
+      | Project type | Redirect URIs for web | Redirect URIs for single-page application |
+      | --- | --- | --- |
+      | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
+      | Bot or message extension | `https://ngrok.io/auth-end.html` | NA |
+
+    The following table lists the configurations of Microsoft 365 client application with the client IDs:
+
+      | Microsoft 365 client application | Client ID |
+      | --- | --- |
+      | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+      | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+      | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
+      | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
+      | Office desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+      | Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+      | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+
+### Registers and configures bot
+
+For tab app or message extension app:
+
+1. Registers an Azure AD application.
+
+1. Creates a Client Secret for the Azure AD application.
+
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
+
+1. Adds Teams channel.
+
+1. Configures messaging endpoint as `https://{ngrokTunnelId}.ngrok.io/api/messages`.
+
+### Registers and configures Teams app
+
+Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.template.json`.
+
+After registration and configuration of the app, local debug files generates.
+
+## Take a tour of your app source code
+
+You can view the project folders and files under **Explorer** in VS Code after the Teams Toolkit registers and configures your app. The following table lists the local debug files and the configuration types:
+
+| Folder name| Contents| Debug configuration type |
+| --- | --- | --- |
+|  `.fx/configs/config.local.json` | Local debug configuration file | The values of each configuration generate and saves during local debug. |
+|  `templates/appPackage/manifest.template.json` | Teams app manifest template file for local debug | The placeholders in the file during local debug. |
+|  `tabs/.env.teams.local`  | Environment variables file for tab | The values of each environment variable generate and saves during local debug. |
+|  `bot/.env.teamsfx.local` | Environment variables file for bot and message extension| The values of each environment variable generate and saves during local debug. |
+| `api/.env.teamsfx.local`  | Environment variables file for Azure Functions | The values of each environment variable generate and saves during local debug. |
 
 ## See also
 
@@ -304,3 +393,4 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
+* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)

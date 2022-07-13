@@ -18,7 +18,6 @@ Teams Toolkit helps you to add additional capability to your existing Teams app 
 | &nbsp; | Notification bot | Notification bots help to send notification to Microsoft Teams through various triggers.|
 | &nbsp; | Command bot | Command bots respond to simple commands in Microsoft Teams chat.|
 | &nbsp; | SSO-enabled tab | SSO-enabled tabs are Teams identity aware webpages embedded in Microsoft Teams.|
-| &nbsp; | SPFx tab | SPFx tabs are Teams aware webpages with SharePoint Framework embedded in Microsoft Teams.|
 | **Basic Teams app capability** | &nbsp; | &nbsp; |
 | &nbsp; | Tabs | Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
 | &nbsp; | Bots | Bots help to interact with your web service through text, interactive cards, and task modules.|
@@ -63,7 +62,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
    1. From the pop-up, select the capability to add in your project.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification1":::
 
 * **To add capabilities by using command palette:**
 
