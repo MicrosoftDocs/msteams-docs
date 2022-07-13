@@ -28,7 +28,7 @@ The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user co
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
 
-:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Steps to update app manifest.":::
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="The screenshot describes the steps to update app manifest.":::
 
 The following is an example of the `webApplicationInfo` object:
 
@@ -66,17 +66,17 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Select the app package."lightbox="Media/selectapppackage.png":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="The screenshot describes on how to select the app package."lightbox="Media/selectapppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Adding bot."lightbox="Media/addingbot.png":::
+      :::image type="content" source="Media/addingbot.png" alt-text="The screenshot describes on how to add bot."lightbox="Media/addingbot.png":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot receiving message."lightbox="Media/botreceivingmessage.png":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="The screenshot describes on how Bot receives  message."lightbox="Media/botreceivingmessage.png":::
 
 ## Code snippets
 
