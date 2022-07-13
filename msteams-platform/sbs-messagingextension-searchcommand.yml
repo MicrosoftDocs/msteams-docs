@@ -84,7 +84,7 @@ items:
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
+        ![New resource group location](~/assets/images/bots/newresource.png)
 
     1. Select **MultiTenant** under **Bot Type**.
 
@@ -165,7 +165,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/Teams-Messaging-Extensions-Search/config-teams.png)   
+          ![Select Teams](~/assets/images/sbs-messagingextension-action/configure-msteams.png) 
     
     **To create tunnel for local web server**
 
@@ -376,7 +376,7 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-Messaging-Extensions-Search/solutionexplorer.png)
+          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer.png)
 
        1. Right-click to select **TeamsMessagingExtensionsSearch**.
 
