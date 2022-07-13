@@ -19,7 +19,7 @@ To install the components into a Power Platform environment the following roles 
 * System customizer
 * Environment maker
 
-To know more information on role privileges, see [Configure user security in an environment](/power-platform/admin/database-security#predefined-security-roles)
+For more information on role privileges, see [Configure user security in an environment](/power-platform/admin/database-security#predefined-security-roles)
 
 ## Install the Collaboration controls solutions
 
@@ -45,7 +45,7 @@ Collaboration Controls include the following solutions:
 | Collaboration controls connector | Includes the new Collaboration Power Automate connector |
 
 > [!NOTE]
-> If you have an existing version of the controls installed in your environment, you may need to create a fresh environment and complete a new install to successfully upgrade to the latest version.
+> If you have an existing version of the controls installed in your environment, you might need to create a fresh environment and complete a new install to successfully upgrade to the latest version.
 
 Before installation, you must be in a Power Platform environment or admin tenant. You'll need a dataverse environment with a database. If you don't have one, you'll need to [create a new one](/power-platform/admin/create-environment) to continue with the installation.
 
@@ -60,20 +60,20 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 
    :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Collaboration control preview" border="true":::
 
-1. You'll be directed to Power Platform Admin Center. Select an environment from the drop down and agree to the terms and policy statements.
+1. You'll be directed to Power Platform Admin Center. Select an environment from the dropdown menu and agree to the terms and policy statements.
 
    > [!TIP]
-   > If you see a permissions error when you select the environment, try clicking outside the environment drop down to see if that resolves the issue.
+   > If you see a permissions error when you select the environment, try selecting outside the environment dropdown menu to see if that resolves the issue.
 
    :::image type="content" source="../assets/images/collaboration-control/install-collaboration-control.png" alt-text="Install collaboration control" border="true":::
 
-1. Select **Install**, installation may take approximately fifteen minutes to complete.
+1. Select **Install**, installation might take approximately fifteen minutes to complete.
 
    :::image type="content" source="../assets/images/collaboration-control/install-solution.png" alt-text="Collaboration control install" border="true":::
 
-1. Navigate to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home), it's also supported if you're signed up to Power Apps preview.
+1. Go to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home), it's also supported if you're signed up to Power Apps preview.
 
-1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the upper right of the Power Apps portal.
+1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the top right of the Power Apps portal.
 
    :::image type="content" source="../assets/images/collaboration-control/power-apps.png" alt-text="power apps" border="true":::
 
