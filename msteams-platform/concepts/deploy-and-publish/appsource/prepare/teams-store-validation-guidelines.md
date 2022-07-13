@@ -19,55 +19,60 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition":::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/function.png" alt-text="functionality" link="#general-functionality-and-performance":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="functionality" link="#general-functionality-and-performance" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer" border="false":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1":::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
    :::column-end:::
      :::column span="":::
-      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising":::
+      :::image type="content" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" alt-text="Select the icon to go to crypto currency based apps section." link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1":::
+      :::image type="content" source="../../../../assets/icons/app-functionality-icon.png" alt-text="Select the icon to go to app functionality section" link="#app-functionality" border="false":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/mobile-experience-icon.png" alt-text="Select the icon to go to mobile experience section" link="#mobile-experience" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -229,7 +234,7 @@ Don't include domains outside of your organization's control (including wildcard
 
 * Don't use **.onmicrosoft.com or** as a valid domain where **onmicrosoft** isn't under your control. However, you can use **yoursite.com** as a valid domain where **yoursite** is under your control even though the domain includes a wildcard. [*Mandatory Fix*]
 
-* The valid domains listed in the manifest must include only the domains that are under your control. [*Mandatory Fix*]
+* The parameter `validDomains` listed in the manifest must include only the domains that are under your control. [*Mandatory Fix*]
 
 #### Government Community Cloud listings
 
@@ -813,9 +818,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
-* You must list at least one valid bot command in the **items.commands.title** section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the **commandlist** section of the manifest surface as pre-populated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Mandatory Fix*]
+* You must list at least one valid bot command in the `items.commands.title` section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the manifest surface as pre-populated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Mandatory Fix*]
 
-* Bot response must not contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or are provided in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Mandatory Fix*]
+* Bot response must not contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Mandatory Fix*]
 
 * Bot response must not contain errors and must not dead-end a user. [*Mandatory Fix*]
 
@@ -825,7 +830,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must always provide a valid response to a user input even if the input is irrelevant or improper. [*Mandatory Fix*]
 
-* Special characters must not be prefixed to bot commands. For example, **/**. [*Mandatory Fix*]
+* Special characters such as slash (**/**), must not be prefixed to bot commands. [*Mandatory Fix*]
 
 * Bots must provide a valid response to invalid user commands. Bots must not dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
 
@@ -843,9 +848,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must provide a valid response to **help** command that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged into the app. [*Mandatory Fix*]
 
-* Bot responses on mobile platforms must be responsive without any data truncation that hampers the bot to complete desired workflows. [*Mandatory Fix*]
+* Bot responses on mobile platforms must be responsive without any data truncation that hampers the end-user's bot usage  to complete desired workflows. [*Mandatory Fix*]
 
-* All the links must be responsive in a bot response. Any link that takes the user outside the Teams platform must have a clear redirect text such as, **View in..**, **This way to..**, an open link icon in the bot response action button, or have a suitable redirect text in the bot response message body. [*Mandatory Fix*]
+* All the links must be responsive in a bot response. Any link that takes the user outside the Teams platform must have a clear redirect text such as, **View in..** or **This way to..**, an open link icon in the bot response action button, or have a suitable redirect text in the bot response message body. [*Mandatory Fix*]
 
 * By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set `isNotificationOnly` to true in the manifest. [*Mandatory Fix*]
 
@@ -861,19 +866,19 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
 
-For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+  For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
-* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#botmessagespamming). The message must also mention the person who added the bot.
+* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
-* Notification only bots must send a welcome message clarifying that it's a notification only bot and users won't be able to interact with the bot. [*Mandatory Fix*]
+* Notification only bots must send a welcome message that clarifies that the bot is a notification only bot and users won't be able to interact with the bot. [*Mandatory Fix*]
 
 * Welcome message must not dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Mandatory Fix*]
 
@@ -905,9 +910,9 @@ For best experience, the welcome message must include the value offered by the b
 
 * Welcome message must not contain links to any app marketplace including AppSource. [*Mandatory Fix*]
 
-* If your app has a complex configuration workflow that requires admin led installation, doesn't have an intuitive and readily available sign up flow, or requires users to complete configuration steps outside the Teams experience and return then the bot in such an app must send a proactive welcome message in a team or group chat scope after installation. [*Mandatory Fix*]
+* If your app has a complex configuration workflow that requires admin led installation, doesn't have an intuitive and readily available sign up flow, or requires users to complete configuration steps outside the Teams experience and return then the bot must send a proactive welcome message in a team or group chat scope after installation. [*Mandatory Fix*]
 
-* If your bot sends a welcome message in the channel, it must not send it to users individually (this is considered spamming). The welcome message must also mention the person who added the bot. [*Suggested Fix*]
+* If your bot sends a welcome message in the channel, it must not send it to users individually (It's is considered spamming). The welcome message must also mention the person who added the bot. [*Suggested Fix*]
 
 * If your app doesn't have a complex configuration workflow, you can decide if you want the bot to send a proactive welcome message in the channel or group chat scope after installation. [*Suggested Fix*]
 
@@ -996,7 +1001,7 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 * Bot ID must match in the app manifest and Bot Framework metadata. [*Mandatory Fix*]
 
-* Ensure that the bot ID in the app manifest matches with bot ID in the last store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and a new conversation chain starts with the new Bot ID. [*Mandatory Fix*]
+* Ensure that the bot ID in the app manifest matches with bot ID in the last store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and starts a new conversation chain with the new Bot ID. [*Mandatory Fix*]
 
 * Any change to app name, metadata, bot welcome message, or bot responses must be updated with new name. [*Mandatory Fix*]
 
@@ -1036,7 +1041,7 @@ If your app includes a message extension, ensure that it adheres to these guidel
 > For more information on creating a high-quality app experience, see the [Teams message extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 </br>
-<details><summary>Action commands</summary>
+<details><summary>Action commands for Action-based message extensions</summary>
 
 Action-based message extensions must do the following:
 
@@ -1066,7 +1071,7 @@ Action-based message extensions must do the following:
 
 * Apps with only action-based messaging extension must have the following end state:
 
-  * Post a relevant action as a notification either in the context where message extension is invoked or in 1:1 bot chat depending on user scenario. [*Mandatory Fix*]
+  * Post a relevant action as a notification either in the context where message extension is invoked or in 1:1 bot chat based on user scenario. [*Mandatory Fix*]
 
   * Allow users to share cards with other users based on the action taken. This is to ensure that apps don't take silent actions. For example, a ticket is created based on a message in a channel, but the app doesn't send a notification or doesn't provide a way to request the user to share ticket details after the ticket is created. [*Mandatory Fix*]
 
@@ -1095,7 +1100,7 @@ Message extensions must preview recognized links in the Teams compose box. Don't
 </details>
 </br>
 
-<details><summary>Action commands</summary>Search based message extension only apps
+<details><summary>Action commands for Search based message extension</summary>
 
 [*Mandatory Fix*]
 
@@ -1179,7 +1184,7 @@ Use the following guidelines for meeting extensions:
 * Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices.
 
 > [!TIP]
-> You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, or `meetingChatTab` and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
+> You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
 
 </details>
 
@@ -1241,6 +1246,7 @@ Use the following guidelines for meeting extensions:
   * Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as Transparent to indicate that they're overlapping images in the scene.
 
 </details>
+<br/>
 
 <details><summary>Meeting extension design guidelines</summary>
 
@@ -1256,7 +1262,7 @@ Use the following guidelines for meeting extensions:
 
 * Your app must offer value beyond providing only custom Together Mode scenes in Teams. [*Mandatory Fix*]
 
-* To enable your app for Teams meeting on mobile, you must declare `groupChat` as a scope under `configurableTabs`, `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest. [*Mandatory Fix*]
+* You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile. [*Mandatory Fix*]
 
 * Meeting canvases must not dead-end a meeting attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Mandatory Fix*]
 
@@ -1268,7 +1274,7 @@ Use the following guidelines for meeting extensions:
 
 * Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage must not embed the complete website experience. [*Mandatory Fix*]
 
-* App must not show continuous loading screen, error, or broken functionality that dead-ends the user, or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
+* App must not show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
 
 * App must not open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
 
@@ -1285,7 +1291,7 @@ Use the following guidelines for meeting extensions:
 If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), ensure that it adheres to the following guidelines.
 
 > [!TIP]
-> If your apps supports notification scenarios where the notifications are triggered after long intervals, for example, after one day or one month. Before you submit for review, ensure that you trigger such notifications in the background for us to be able to test the notifications.
+> If your apps supports notification scenarios where the notifications are triggered after long intervals, for example, after one day or one month. Before you submit for review, ensure that you trigger such notifications in the background for us to test the notifications.
 
 <br></br>
 <details><summary>General</summary>
@@ -1377,19 +1383,19 @@ You must demonstrate compliance with all laws where your app is distributed, if 
 
 * Rewards or incentivizes users with cryptocurrency tokens for completing a task.
 
-After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft proceeds with further certification of your app. If the compliance demonstration is satisfactory, you'll be informed of the decision.
+After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft proceeds with further certification of your app. If the compliance demonstration is unsatisfactory, you'll be informed of the decision.
 
 ## App Functionality
 
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
-* Apps must always intimate the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, is allowed in the app that makes it clear to the user that a file or executable is downloaded on user action. [*Mandatory Fix*]
+* Apps must always intimate the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
 
 ## Mobile Experience
 
 * Mobile add-ins must be free. There must not be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, must not include any content indicating a need to pay.
 
-* Use of the word **FREE** or **FREE TRIAL** or **TRY FREE** is allowed on desktop or web app experience without any limitation or consideration.
+* Use of the word **FREE**, **FREE TRIAL**, or **TRY FREE** is allowed on desktop or web app experience without any limitation or consideration.
 
 * Use of the word **FREE** as plain text in the context of a trial or app upgrade is allowed on mobile.
 
@@ -1403,7 +1409,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Payments for digital goods in app aren't allowed on mobile. [*Mandatory Fix*]
 
-* Teams apps must offer an appropriate cross device mobile experience. [*Mandatory Fix*]
+* Teams apps must offer an appropriate cross-device mobile experience. [*Mandatory Fix*]
 
 * Capabilities that aren't supported on mobile must not dead-end a user and must provide a graceful failure message where applicable. [*Mandatory Fix*]
 
