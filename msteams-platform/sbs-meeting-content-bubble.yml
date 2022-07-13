@@ -90,7 +90,7 @@ items:
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/newresource.png" alt-text="Create resource Azure bot":::
+         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Create resource Azure bot":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
