@@ -26,13 +26,13 @@ Your Teams bot consists of the following:
 * Your Teams app package, which connects the Teams client to your web service
 
 > [!TIP]
-> Use the Developer Portal to register your web service with the Bot Framework and specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+> Use the Developer Portal to register your web service with the Bot Framework and specify app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
-The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
+The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework then it is easy to modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
-* Use specialized card types like the Office 365 connector card.
-* Set Teams-specific channel data on activities.
-* Process message extension requests.
+* Use specialized card types like the Office 365 connector card
+* Set Teams-specific channel data on activities
+* Process message extension requests
 
 > [!IMPORTANT]
 > You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
@@ -57,13 +57,13 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 
 > [!NOTE]
 >
-> * Bots in GCCH only support  up to manifest version v1.10.
-> * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
-> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
+> * Bots in GCCH only support  up to manifest version v1.10
+> * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri
+> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service)
 >   <details>
 >   <summary><b>If you want to do bot registration only</b></summary>
 >
->   * Go to the resource group and manually delete the unused resources. Such as the app service, app service plan (if you created during bot registration), and the application insights (if you choose to enable it during bot registration).
+>   * Go to the resource group and manually delete the unused resources. Such as the app service, app service plan (if you created during bot registration), and the application insights (if you choose to enable it during bot registration)
 >   * You can also use az-cli to do bot registration:
 >
 >     1. Sign into azure and set the subscription <br>
@@ -92,7 +92,7 @@ The following changes are needed within the bot for GCC-High environment:
 <details>
 <summary><b>Configuration changes</b></summary>
 
-As the bot registration occurs in Azure Government portal, ensure to update the bot configurations to connect to Azure govermnet instances. Following are the configuration details:
+As the bot registration occurs in Azure Government portal, ensure to update the bot configurations to connect to Azure government instances. Following are the configuration details:
 
 | Configuration Name | Value |
 |----|----|
@@ -110,11 +110,11 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
 
 1. **Update appsettings.json:**
 
-    * Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
+    * Set `ConnectionName` to the name of the OAuth connection setting you added to your bot
 
-    * Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
+    * Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret
 
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) need to be encoded as `&amp;`.
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) need to be encoded as `&amp;`
 
     ```json
     {
@@ -161,30 +161,30 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people, even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect more information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
-* Notifications, where you provide an interactive card for users to take additional information.
-* Feedback scenarios, such as polls and surveys.
-* Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
-* Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
+* Notifications: where you provide an interactive card for users to take additional information
+* Feedback scenarios: such as polls and surveys
+* Single request or response cycle: resolves interactions and the results are useful for multiple members of the conversation
+* Social or fun bots: where you display an awesome cat image, randomly pick a winner, and so on
 
 ### In a group chat
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
 
-In the cases where bots work better in a channel also work better in a group chat.
+In cases where bots work better in a channel, they also work better in a group chat.
 
 ### In a one-to-one chat
 
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
 * Q&A bots
-* bots that initiate workflows in other systems.
-* bots that tell jokes.
-* bots that take notes.
-Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+* bots that initiate workflows in other systems
+* bots that tell jokes
+* bots that take notes
+Before creating one-to-one chatbots, consider whether a conversation-based interface is really the best way to present your functionality.
 
 ## Disadvantages of bots
 
@@ -212,7 +212,7 @@ As there are only six visible commands in the current bot menu, anything more is
 
 ### Maintain a large knowledge base
 
-One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not for sifting through long lists looking for an answer.
 
 ## Code snippets
 
