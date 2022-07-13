@@ -11,7 +11,7 @@ ms.author: stevenic
 
 Get started with Live Share SDK using the Dice Roller sample is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
-:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice roller sample.":::
+:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="The screenshot is an example that shows the Dice roller sample.":::
 
 > [!NOTE]
 > This guide walks through using Live Share locally in a browser. To learn more about using the SDK in a Teams meeting, try our [Agile Poker tutorial](../sbs-teams-live-share.yml).
