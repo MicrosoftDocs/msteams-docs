@@ -39,7 +39,7 @@ Calls in Teams can be purely audio or audio and video. Instead of audio or video
 
 Calls are either peer-to-peer between a person and your bot, or multiparty between your bot and two or more people in a group call.
 
-:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Different types of calls.":::
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="The screesnhot is an example that shows the different types of calls.":::
 
 Following are the different call types and permissions required for the call:
 
