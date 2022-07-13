@@ -53,7 +53,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## Prepare for debug
 
-Before you debug your app, ensure you can perform following steps:
+Before you debug your app, follow the steps to prepare for debug:
 
 * Login to M365 for more information, see [Prerequisites]
 * [Toggle breakpoints](#toggle-breakpoints)
@@ -95,7 +95,7 @@ Perform the following steps to debug your app after you create a new app using t
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority":::
 
-Toolkit launches a new Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
+Toolkit launches a new Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.
 
 # [macOS](#tab/macOS)
 
