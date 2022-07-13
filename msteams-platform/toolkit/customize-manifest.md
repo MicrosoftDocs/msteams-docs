@@ -296,9 +296,7 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
 
 </details>
 
-3. [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
-  
-4. [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
+3. [Deploy Azure AD application changes for both local and remote environment](#deploy-azure-ad-application-changes-to-different-environment)
 
 ## Azure AD manifest template placeholders
 
@@ -375,7 +373,7 @@ It's different from official [Azure AD manifest schema](/azure/active-directory/
 
 Code lens shows the application name for the per-authorized application ID for the `preAuthorizedApplications` property.
 
-## Deploy Azure AD application changes
+## Deploy Azure AD application changes to different environment
 
 You can deploy Azure AD application changes for both local and remote environment
 
@@ -472,7 +470,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
     * Deploy to the cloud command deploys your application to the provisioned resources. It doesn't include deploying Azure AD application changes you made.
 
-    * You can see, [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment) to deploy Azure AD application changes for remote environment.
+    * You can see, [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-to-different-environment) to deploy Azure AD application changes for remote environment.
 
     * Teams Toolkit updates the Azure AD application according to the Azure AD manifest template file.
 
