@@ -91,7 +91,7 @@ items:
 
     1. Select **MultiTenant** under **Bot Type**.
 
-        ![Type](~/assets/images/sbs-messagingextension-action/bot-type.png)
+        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
 
     1. Select **Review + create**.
 
@@ -288,7 +288,8 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/sbs-messagingextension-action/addpermission.png)
+        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+
 
     1. Select **Microsoft Graph**.
 

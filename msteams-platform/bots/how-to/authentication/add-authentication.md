@@ -118,8 +118,7 @@ To create client secret:
 
 1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
 
-    :::image type="content" source="~/assets/images/adaptive-cards/new-client-secret.png" alt-text="The screenshot describes on how to select new client secret.":::
-![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+    :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="The screenshot describes on how to select new client secret.":::
 
 1. Enter **Description** and select **Add**.
 

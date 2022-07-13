@@ -37,7 +37,7 @@ After creating a new project, Teams Toolkit by default creates:
 
 **To add another remote environment**:
 
-1. Select the **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
+1. Select the **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
 2. Select **+Teams: Create new environment** under the **Environment** section as shown in the following image:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
@@ -73,7 +73,7 @@ The following table lists the common scenarios for customized resource provision
 
 | Scenarios | Location| Description |
 | --- | --- | --- |
-| Customize Azure Resource | <ul> <li>Bicep files under `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Customize ARM parameters and templates](provision.md#customize-arm-parameters-and-templates) |
+| Customize Azure Resource | <ul> <li>Bicep files under `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Customize ARM parameters and templates](provision.md#customize-arm-template-files) |
 | Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
