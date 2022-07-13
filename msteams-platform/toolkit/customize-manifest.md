@@ -8,7 +8,11 @@ ms.topic: overview
 ms.date: 05/20/2022
 ---
 
-# Teams app manifest
+# Customize manifest file within Teams Toolkit
+
+It helps you to edit the Teams app integration with Teams client. You have two different types of manifest file such as Teams app manifest and Azure AD manifest. The Teams app manifest describes how your app integrates into the Microsoft Teams product. The [Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contains definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+
+## Preview Teams app manifest
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
@@ -94,14 +98,14 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
-</details>
-
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
 > [!NOTE]
 > Trigger from editor codelens or menu bar updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
+
+</details>
 
  CLI command:
 
@@ -131,7 +135,7 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 
 During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-## Supported placeholders in manifest.template.json
+### Supported placeholders in manifest.template.json
 
 The following list provides supported placeholders in `manifest.template.json`:
 
@@ -154,7 +158,7 @@ The following list provides supported placeholders in `manifest.template.json`:
 
 2. You can navigate to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
 
-### Validate manifest
+## Validate manifest
 
 During operations such as, **Zip Teams metadata package**, Teams Toolkit validates the manifest against its schema. The following list provides different ways to validate manifest:
 
@@ -171,7 +175,7 @@ During operations such as, **Zip Teams metadata package**, Teams Toolkit validat
 
 ---
 
-## Codelenses and hovers
+## Preview values of all environments
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 
@@ -203,16 +207,9 @@ You can customize Azure AD manifest template to update Azure AD application.
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add template.png" alt-text="template":::
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
-  
-   * [Add an application permission](#customize-requiredresourceaccess)
-   * [Preauthorize a client application](#customize-preauthorizedapplications)
-   * [Update redirect URL for authentication response](#customize-redirect-urls)
 
-3. [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
-  
-4. [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
-
-### Customize requiredResourceAccess
+<details>
+<summary><b>Add an application permission</b></summary>
 
 If the Teams application requires more permissions to call API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
 
@@ -250,7 +247,10 @@ If the Teams application requires more permissions to call API with additional p
 
 * `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-### Customize preAuthorizedApplications
+</details>
+
+<details>
+<summary><b>Preauthorize a client application</b></summary>
 
 You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application and users don't consent when the client calls it exposed API. You can see the following example for this property:
 
@@ -275,6 +275,11 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
 
 1. Select the application name and get the application ID from the overview page.
 
+</details>
+
+<details>
+<summary><b>Update redirect URL for authentication response</b></summary>
+
 ### Customize redirect URLs
 
   Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `replyUrlsWithType`, for example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
@@ -288,6 +293,12 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
     }
 ]
 ```
+
+</details>
+
+3. [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
+  
+4. [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
 
 ## Azure AD manifest template placeholders
 

@@ -8,7 +8,7 @@ ms.topic: Overview
 ms.date: 05/20/2022
 ---
 
-# Add API connection to Teams app
+# Integrate API to Teams app
 
 Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.
 
@@ -165,6 +165,7 @@ class CustomAuthProvider implements AuthProvider {
 ```
 
 </details>
+
 <details>
 <summary><b>Connect to APIs for Azure AD permissions</b></summary>
 Azure AD authenticates some services. The following list helps to access these services for configuring API permissions.
