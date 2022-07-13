@@ -31,12 +31,12 @@ To make the chatbot available in Teams:
 1. **Publish the latest bot content**  
 After creating a chatbot in the Power Virtual Agents portal, you must publish your bot before Teams users can interact with it. For more information, see [Publish the latest bot content](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
 
-   :::image type="content" source="../../assets/images/pva-publish.png" alt-text="Publish the latest bot content in power virtual agents portal.":::
+   :::image type="content" source="../../assets/images/pva-publish.png" alt-text="The screenshot describes on how to publish the latest bot content in power virtual agents portal.":::
 
 1. **Configure the Teams channel**  
 After publishing your bot, add the Teams channel to make the bot available to Teams users.
 
-   :::image type="content" source="../../assets/images/pva-channels.png" alt-text="Adding Teams channel in power virtual agents portal.":::
+   :::image type="content" source="../../assets/images/pva-channels.png" alt-text="The screenshot describes on how to add Teams channel in power virtual agents portal.":::
 
 1. **Generate an App ID for your chatbot**  
 After adding the Teams channel to your chatbot, an **App ID** is generated in the dialog box. The App ID is a unique Microsoft generated identifier for your bot. Save the App ID to create an app package for Teams.
@@ -50,7 +50,7 @@ App Studio is a Teams app. Install App Studio from the Teams store that simplifi
 
    1. Select the app store icon from Teams instance, and search for **App Studio**.
 
-      :::image type="content" source="../../assets/images/get-started/app-studio-store.png" alt-text="Finding App Studio in the Store.":::
+      :::image type="content" source="../../assets/images/get-started/app-studio-store.png" alt-text="The screenshot is an example that show how to find App Studio in the Store.":::
 
    1. Select the **App Studio** tile and select **Install** in the pop-up dialog box.
 
@@ -82,7 +82,7 @@ To add your App ID, perform the following steps:
     1. Select **Connect to a different bot id** and paste the **App Id** you copied earlier.
     1. Select **Scope** > **Personal** > **Save**.
 
-    :::image type="content" source="../../assets/images/get-started/add-app-id.png" alt-text="Steps to add app id.":::
+    :::image type="content" source="../../assets/images/get-started/add-app-id.png" alt-text="The screenshot describes the steps to add app id.":::
 
 1. **Add valid domains for your bot**  
 This step is only required if your bot requires the user to sign in. Select **Domains and permissions** and in the **Valid Domains** field, provide the following input:
