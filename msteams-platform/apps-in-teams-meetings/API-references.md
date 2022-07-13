@@ -938,9 +938,8 @@ The following table includes the query parameters:
 
 ### Example
 
-```javascript
-
-getIncomingClientAudioState(
+```typescript
+function getIncomingClientAudioState(
     callback: (error: SdkError | null, result: boolean | null) => void,
   ): void {
     if (!callback) {
@@ -949,6 +948,7 @@ getIncomingClientAudioState(
     ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
     sendMessageToParent('getIncomingClientAudioState', callback);
   }
+
 ```
 
 ### Response code
@@ -974,9 +974,8 @@ The following table includes the query parameters:
 
 ### Example
 
-```javascript
-
-toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+```typescript
+function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
     if (!callback) {
       throw new Error('[toggle incoming client audio] Callback cannot be null');
     }
