@@ -25,7 +25,7 @@ These bots can be created easily without the need for data scientists or develop
 ## Make your chatbot available in Teams through the Power Virtual Agents portal
 
 To make your chatbot available in Teams through the Power Virtual Agents portal, you must perform the following process steps:
-:::image type="content" source="../../assets/images/pva-publish.PNG" alt-text="Steps to make chatbot available.":::
+:::image type="content" source="../../assets/images/pva-publish.PNG" alt-text="The screenshot describes the steps to make chatbot available.":::
 To make the chatbot available in Teams:
 
 1. **Publish the latest bot content**  
@@ -54,28 +54,28 @@ App Studio is a Teams app. Install App Studio from the Teams store that simplifi
 
    1. Select the **App Studio** tile and select **Install** in the pop-up dialog box.
 
-      :::image type="content" source="../../assets/images/get-started/app-studio-install.png" alt-text="Installing App Studio.":::
+      :::image type="content" source="../../assets/images/get-started/app-studio-install.png" alt-text="The screenshot describes on how to install App Studio.":::
 
 1. **Create the Teams app manifest in App Studio**  
 Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **App Studio**, select **Manifest editor**, and select **Create a new app**.
 
-    :::image type="content" source="../../assets/images/get-started/create-new-app.png" alt-text="Steps to create a new app.":::
+    :::image type="content" source="../../assets/images/get-started/create-new-app.png" alt-text="The screenshot describes the steps to create a new app.":::
 
 1. **Add your bot details**  
 Complete all the required fields. For a full description of each field see [manifest schema definition](../../resources/schema/manifest-schema.md).
 
-    :::image type="content" source="../../assets/images/get-started/add-app-details.png" alt-text="Add app details.":::
+    :::image type="content" source="../../assets/images/get-started/add-app-details.png" alt-text="The screenshot describes on how to add app details.":::
 
 1. **Set up your bot**
 To set-up the bot, perform the following steps:
      1. Open the **Bots** tab.
      1. Select **Setup** > **Existing bot** and enter the name of your bot.
 
-   :::image type="content" source="../../assets/images/get-started/bot-set-up.png" alt-text="Bot setup details.":::
+   :::image type="content" source="../../assets/images/get-started/bot-set-up.png" alt-text="The screenshot is an example that shows the Bot setup details.":::
 
    The following image depicts how to set-up an existing bot:
 
-   :::image type="content" source="../../assets/images/get-started/existing-bot-set-up.png" alt-text="Example showing how to setup an existing bot.":::
+   :::image type="content" source="../../assets/images/get-started/existing-bot-set-up.png" alt-text="The screenshot is an example that shows on how to setup an existing bot.":::
 
 1. **Add your App ID**  
 To add your App ID, perform the following steps:  
