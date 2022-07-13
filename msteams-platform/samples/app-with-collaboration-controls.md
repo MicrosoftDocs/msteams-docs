@@ -203,7 +203,7 @@ You would need to add the Settings IDs that you have saved earlier for your appl
 
 1. Open Files tab to add Site ID and Drive ID.
 
-     ::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Add the Site ID and Drive ID in Files tab.":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Add the Site ID and Drive ID in Files tab.":::
 
 The Notes control don't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you are facing issues launching and saving the controls re-check the settings values.
 
@@ -213,7 +213,32 @@ Following sections will guide you on how to use the Task, Notes, Meetings, Files
 
 ### Creating Tasks
 
-Explore collaboration in the Tasks tab  Selecting it will reveal an empty page where users can add all the relevant tasks they need to complete.
+Explore collaboration in the Tasks tab by selecting the Tasks tab, this will open an empty page where users can add all the relevant tasks they need to complete.
+
+:::image type="content" source="../assets/images/collaboration-control/explore-tasks.png" alt-text="Explore Tasks tab.":::
+
+1. To create a new task for the team, select **Add a task**. This will open a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
+
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Add a task.":::
+
+1. The saved task will appear in the tasks list.
+
+     :::image type="content" source="../assets/images/collaboration-control/task-list.png" alt-text="List of tasks.":::
+
+1. As all the tasks are backed by Microsoft Planner, users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned to them. To get started, select More options‘…’ in Teams left pane. Search and select Tasks by Planner and To Do.
+
+     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="Tasks by Planner and To Do.":::
+
+1. After opening the Tasks by Planner and To Do app, users can see all the tasks that were created in your app within the **Assigned to me** section of the app. Users can also view the details of a task, add attachments, and mark them as complete.
+
+### Creating notes
+
+To create a note select **Notes** tab from your app, which would redirect to an empty screen where users can provide any relevant information. To add a new note, select **New note**.
+After adding relevant details in the notes, select **Save**.
+
+:::image type="content" source="../assets/images/collaboration-control/notes-tab.png" alt-text="Tasks by Planner and To Do.":::
+
+### Creating meetings
 
 ## Adding Collaboration controls Conversations experience
 
