@@ -61,7 +61,7 @@ The steps to register your app through the Azure AD portal are similar to the [t
 
 1. Select **New Registration**. The **Register an application** page appears.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/app-registration.png" alt-text="Image shows new registration.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/app-registration.png" alt-text="The screenshot is an example that shows the new registration.":::
 
 1. In the **Register an application**, do the following steps:
 
@@ -73,7 +73,7 @@ The steps to register your app through the Azure AD portal are similar to the [t
     * Select **Supported account types**, such as single tenant or multitenant.
     * Select **Register**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/register-application.png" alt-text="Steps to register an application.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/register-application.png" alt-text="The screenshot describes the steps to register an application.":::
 
 1. Go to overview page.
 1. Copy the value of **Application (client) ID**.
@@ -107,18 +107,18 @@ The steps to register your app through the Azure AD portal are similar to the [t
     * **User consent display name**: Teams can access your profile and make requests on your behalf.
     * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-a-scope.png" alt-text="Details of admin and user.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-a-scope.png" alt-text="The screenshot describes the details of admin and user.":::
 
 1. Ensure that the state is set to **Enabled**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/enabled-state.png" alt-text="Setting state to enabled.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/enabled-state.png" alt-text="The screenshot is an example that shows the setting state to enabled.":::
 
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
 1. In the **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-client-application.png" alt-text="Adding a client application.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-client-application.png" alt-text="The screenshot describes on how to add a client application.":::
 
 1. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
@@ -129,11 +129,11 @@ The steps to register your app through the Azure AD portal are similar to the [t
 1. Go to **Authentication**.
 1. In **Platform configurations**, select **Add a platform**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/platform-configuration.png" alt-text="Platform configurations.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/platform-configuration.png" alt-text="The screenshot is an example that shows platform configurations.":::
 
 1. Select **Web**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/configure-platform.png" alt-text="Selecting web.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/configure-platform.png" alt-text="The screenshot describes how to select web.":::
 
 1. Enter the **Redirect URIs** for your app.
 
@@ -146,7 +146,7 @@ The steps to register your app through the Azure AD portal are similar to the [t
     * Select **Authentication** from the left pane.
     * Select the **Access tokens** and **ID tokens** checkboxes.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/grant-flow.png" alt-text="Grant flow steps.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/grant-flow.png" alt-text="The screenshot is an example that shows the grant flow steps.":::
 
     * Select **Save** to save the changes.
 
@@ -161,7 +161,7 @@ The following steps will guide you to update the bot manifest in Azure portal:
 1. Select **Manifest** from the left pane.
 1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change it's value to **2**.
 
-    :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Steps to update manifest.":::
+    :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="The screenshot describes the steps to update manifest.":::
 
    >[!NOTE]
    > If you are already in testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
@@ -176,7 +176,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
 1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/auth-setting2.png" alt-text="Configuration settings.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/auth-setting2.png" alt-text="The screenshot is an example that shows the configuration settings.":::
 
 1. The following steps will guide you to complete the **New Connection Setting** form:
 
@@ -196,7 +196,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
     * Select **Save**.
     * Select **Apply**.
 
-    :::image type="content" source="~/assets/images/authentication/Bot-connection-setting.png" alt-text="Connection settings.":::
+    :::image type="content" source="~/assets/images/authentication/Bot-connection-setting.png" alt-text="The screenshot is an example that shows the connection settings.":::
 
 ### Update your Teams application manifest for your bot
 
@@ -236,7 +236,7 @@ The request to get the token is a normal POST message request using the existing
 
 If the user is using the application for the first time and user consent is required, the following dialog box appears to continue with the consent experience:
 
-:::image type="content" source="~/assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="User consent dialog box.":::
+:::image type="content" source="~/assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="The screenshot is an example that shows the user consent dialog box.":::
 
 When the user selects **Continue**, the following events occur:
 
