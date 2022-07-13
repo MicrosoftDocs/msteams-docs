@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Provision cloud resources using Teams Toolkit
+# Provision cloud resources using Teams Toolkit for Visual Studio
 
 TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources.  For code approach your application needs these resources.
 
