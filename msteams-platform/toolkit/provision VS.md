@@ -1,7 +1,7 @@
 ---
-title: Use Teams Toolkit to provision cloud resources
+title: Use Teams Toolkit to provision cloud resources for Visual Studio
 author: MuyangAmigo
-description: In this module, learn how to do provision cloud resources using Teams Toolkit, resource creation and customize resource provision
+description: In this module, learn how to do provision cloud resources using Teams Toolkit, resource creation and customize resource provision in Visual Studio
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -96,7 +96,7 @@ When you create a new project, you will need to create some Azure resources. The
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| App Service plan | Host the web app of bot | Not applicable |
+| App Service plan | Host the web bot app | Not applicable |
 | App Service | Host your bot app | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
@@ -125,7 +125,7 @@ When you create a new project, you will need to create some Azure resources. The
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Required to create function app | Not applicable |
-| App Service plan | Host the Function App of bot | Not applicable |
+| App Service plan | Host the Function bot App | Not applicable |
 | Function app | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
 
 ## Resource creation for Teams Notification bot with Timer Trigger(Azure Function) application
@@ -135,7 +135,7 @@ When you create a new project, you will need to create some Azure resources. The
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Required to create function app | Not applicable |
-| App Service plan | Host the Function App of bot | Not applicable |
+| App Service plan | Host the Function bot App | Not applicable |
 | Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
 
 ## Resource creation for Teams Notification bot with HTTP Trigger + Timer Trigger(Azure Function) application
@@ -145,19 +145,20 @@ When you create a new project, you will need to create some Azure resources. The
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Required to create function app | Not applicable |
-| App Service plan | Host the Function App of bot | Not applicable |
+| App Service plan | Host the Function bot App | Not applicable |
 | Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
 
 ## Check your created resources
 
-You can login to [Azure Portal](https://portal.azure.com/) manage all resources created by Teams Toolkit.
+[Manage your resources]
+You can login to [Azure Portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
 * Select Resource groups and choose the Resource group you just chose or created
 * Click Overview - Resources, all resource will list below.
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an infrastructure as a code approach to define the Azure resources that you'd want to provision, and the way you want to configure. The tool[Teams Toolkit?] uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -173,9 +174,9 @@ Provision with ARM involves changing the following sets of files, parameters and
 | teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
 
 > [!NOTE]
-> When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you to not lose changes while adding resources or capabilities.
+> When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you not to lose changes while adding resources or capabilities.
 
-The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure we can create new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
 ## Azure AD application-related parameters
 
@@ -190,7 +191,7 @@ The ARM template files use placeholders for parameters. The purpose of these pla
 
 ## Referencing environment variables in parameter files
 
-If you don't want to hardcode the values in parameter files, for example, when the value is a secret. The parameter files support referencing the values from environment variables. You can use syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve from current environment variable.
+When the value is secret, then you do not need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve from current environment variable.
 
 The following example reads the value of `mySelfHostedDbConnectionString` parameter from environment variable `DB_CONNECTION_STRING`:
 
@@ -204,11 +205,13 @@ The following example reads the value of `mySelfHostedDbConnectionString` parame
 
 If the predefined templates doesn't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
 
-To ensure the TeamsFx tool functions properly, ensure you customize ARM template, which satisfies the following requirement. If you use other tool for further development, you can ignore these requirements.
+To ensure the TeamsFx tool functions properly, customize ARM template, which satisfies the following requirement:
 
-* Keep the folder structure and file name unchanged. The tool may append new content to existing files when you add more resources or capabilities to your project.
-* Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
+* Ensure that the folder structure and file name remain unchanged. The tool may append new content to existing files when you add more resources or capabilities to your project.
+* Ensure that the name of auto-generated parameters as well as its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
+* Ensure that the output of auto-generated ARM template are unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
+
+If you use other tools for further development, you can ignore the above requirements.
 
 ### Customization scenarios
 
@@ -216,7 +219,7 @@ You can customize the following scenarios:
 
 #### Use an existing Azure AD app for your bot
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
+You can add the following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by you for your Teams app. To create an Azure AD app, follow the link <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -227,14 +230,14 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 }
 ```
 
-After adding the snippet, add your secret to related environment variable so the tool can resolve the actual secret during provision.
+After adding the snippet, add your secret value to the related environment variable so that the tool can resolve the actual secret value during provision.
 
 > [!NOTE]
-> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
+> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you will get a warning with instructions as to how you can manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
+You can add the following configuration snippet to `.fx/configs/config.{env}.json` file to use the Azure AD app created for your bot:
 
 ```json
 "bot": {
@@ -243,11 +246,11 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 }
 ```
 
-After adding the preceding snippet, add your secret to related environment variable for the tool to resolve the actual secret during provision.
+After adding the preceding snippet, add your secret value to the related environment variable for the tool to resolve the actual secret value during provision.
 
 #### Skip adding user for SQL database
 
-If you have insufficient permission error when the tool tries to add user to SQL database, you can add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
+If you get an insufficient permission error when the tool tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
