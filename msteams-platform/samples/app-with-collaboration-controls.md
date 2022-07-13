@@ -126,7 +126,7 @@ The settings that you can apply are as follows
 
 |Settings|Used by|
 |---|---|
-|Group Id|Tasks, Internal Meetings, Approvals.|
+|Group Id|Tasks, internal Meetings, Approvals.|
 |Bookings business Id|External meetings using Bookings |
 |Site Id|SharePoint files |
 |Drive Id|SharePoint files|
@@ -176,7 +176,44 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 
      1. A Json response is returned with a parameter value of type array or list of drive objects. Look through the Json for the Json object whose name parameter matches the name of your document library. Save the value of the Drive ID parameter.
 
-To create meetings with users outside of your organization such as customers and to use virtual visit features within your app you would need to provide a Bookings business. For more information, see [Microsoft Bookings](/microsoft-365/bookings/bookings-overview?view=o365-worldwide).
+To create meetings with users outside of your organization such as customers and to use virtual visit features within your app you would need to provide a Bookings business. For more information, see [Microsoft Bookings](/microsoft-365/bookings/bookings-overview?view=o365-worldwide&preserve-view=true).
+
+## Add Settings to your Collaboration Manager app
+
+To apply settings and explore the collaborative features of your app in Power Apps, open the application that you have created earlier. You would see a view page, where you can select tthe existing records or create new one. To begin with open or create a record.
+
+You would need to add the Settings IDs that you have saved earlier for your application
+
+|Settings|Used by|
+|---|---|
+|Group Id|Tasks, internal Meetings, Approvals.|
+|Bookings business Id|External meetings using Bookings |
+|Site Id|SharePoint files |
+|Drive Id|SharePoint files|
+
+### Add Settings for Tasks, Meetings, and Files
+
+1. Launch a control and you can see a window as following:
+
+     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Control window":::
+
+1. Select **Configure** and navigate to the General tab to add the Group ID.
+
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Add the Group ID in General tab":::
+
+1. Open Files tab to add Site ID and Drive ID.
+
+     ::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Add the Site ID and Drive ID in Files tab.":::
+
+The Notes control don't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you are facing issues launching and saving the controls re-check the settings values.
+
+## Navigate your new Collaboration Manager app
+
+Following sections will guide you on how to use the Task, Notes, Meetings, Files, Conversations, and Approvals controls.
+
+### Creating Tasks
+
+Explore collaboration in the Tasks tab  Selecting it will reveal an empty page where users can add all the relevant tasks they need to complete.
 
 ## Adding Collaboration controls Conversations experience
 
