@@ -12,7 +12,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 > [!NOTE]
-> Implemented message action to create tickets based on channel posts. A message with an attachment are posted to the channel. When message action is triggered, attachment details are not sent as part of the `turncontext` invoke activity.
+> Implemented message action to create tickets based on channel posts. A message with an attachment is posted to the channel. When message action is triggered, attachment details aren't sent as part of the `turncontext` invoke activity.
 
 Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
 
