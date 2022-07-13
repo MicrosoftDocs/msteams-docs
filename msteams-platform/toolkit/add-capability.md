@@ -48,7 +48,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
    1. Select **Teams Toolkit** from left panel.
    1. Select **Add features** under **DEVELOPMENT**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one":::
 
 * **To add capabilities by using command palette:**
 
@@ -56,11 +56,11 @@ The following list provides limitations to add more capabilities in TeamsFx:
    1. Enter **Teams:Add features**.
    1. Press **Enter**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature":::
 
    1. From the pop-up, select the capability to add in your project.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
 
 ## Add capabilities using TeamsFx CLI
 

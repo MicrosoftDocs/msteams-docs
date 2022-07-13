@@ -11,7 +11,7 @@ An Adaptive Card contains a freeform body of card elements and optional set of a
 
 The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or message extensions. Users can also take actions on cards when present.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card.":::
 
 ## Microsoft Teams UI Kit
 
@@ -35,11 +35,11 @@ Our largest card. Use for sharing articles or scenarios where an image tells mos
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Example shows an Adaptive Card hero card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Example shows an Adaptive Card hero card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card hero card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card hero card.":::
 
 ### Thumbnail
 
@@ -47,11 +47,11 @@ Use for sending a simple actionable message.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card.":::
 
 ### List
 
@@ -59,11 +59,11 @@ Use in scenarios where you want the user to pick an item from a list, but the it
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Example shows an Adaptive Card list card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Example shows an Adaptive Card list card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card.":::
 
 ### Digest
 
@@ -71,11 +71,11 @@ Use for news digests and round-up posts. Note: We recommend the thumbnail card f
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card.":::
 
 ### Media
 
@@ -83,11 +83,11 @@ Use when you want to combine text and media, like audio or video.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Example shows an Adaptive Card media card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Example shows an Adaptive Card media card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card.":::
 
 ### People
 
@@ -95,11 +95,11 @@ Best used when you to efficiently convey who's involved with a task.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Example shows an Adaptive Card people card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Example shows an Adaptive Card people card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card.":::
 
 ### Request ticket
 
@@ -107,11 +107,11 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card.":::
 
 ### ImageSet
 
@@ -119,11 +119,11 @@ Use to send multiple image thumbnails.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Example shows an Adaptive Card image set card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Example shows an Adaptive Card image set card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card.":::
 
 ### ActionSet
 
@@ -131,11 +131,11 @@ Use when you want to the user to select a button, then gather addition user inpu
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Example shows an Adaptive Card action set card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Example shows an Adaptive Card action set card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card.":::
 
 ### ChoiceSet
 
@@ -143,11 +143,11 @@ Use to gather multiple inputs from the user.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card.":::
 
 ## Anatomy
 
@@ -155,7 +155,7 @@ Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest in
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Example shows Adaptive Card anatomy on mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Example shows Adaptive Card anatomy on mobile.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -165,7 +165,7 @@ Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest in
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -649,7 +649,7 @@ Follow these guidelines when including images in your cards.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Best practice about how you should include only a small set of actions on an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Best practice about how you should include only a small set of actions on an Adaptive Card.":::
 
 #### Do: Use up to six primary actions
 
@@ -657,7 +657,7 @@ While Adaptive Cards can support six primary actions, most cards don’t need th
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Best practice about how not to overwhelm users with too many actions on an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Best practice about how not to overwhelm users with too many actions on an Adaptive Card.":::
 
 #### Don't: Use more than six primary actions
 
@@ -668,7 +668,7 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 
 ### Frequency
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Best practice about Adaptive Card frequency." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Best practice about Adaptive Card frequency.":::
 
 #### Do: Be concise
 

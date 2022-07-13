@@ -7,7 +7,7 @@ ms.topic: overview
 ms.author: lajanuar
 ---
 
-# Build Tabs for Microsoft Teams
+# Build tabs for Teams
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `<iframe\>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
@@ -20,11 +20,11 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 The following image shows personal tabs:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Personal tab" lightbox="../assets/images/tabs/personaltab.png" border="true":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Personal tab" lightbox="../assets/images/tabs/personaltab.png":::
 
 The following image shows Contoso channel tabs:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png" border="true":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png":::
 
 There are few prerequisites that you must go through before working on tabs.
 
