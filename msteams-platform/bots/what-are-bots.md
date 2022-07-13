@@ -46,6 +46,13 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
 
+## Global endpoint for bots API
+
+When you create a bot, to enable global routing endpoint fo region, always include cloud parameter as `teams` in the url. For example, If the url is `../{cloud}/v3/conversations/{conversationId}`, you should change this as `../teams/v3/conversations/12345`.
+
+> [!NOTE]
+> If a bot calls <https://smba.trafficmanager.net/teams/> for a GCC, GCCH, and DOD tenant, the requests will throw an error. For GCC, GCCH and DOD tenants, the url root can't be the public one, instead it needs to be specific to these environments.
+
 ## Next step
 
 > [!div class="nextstepaction"]
