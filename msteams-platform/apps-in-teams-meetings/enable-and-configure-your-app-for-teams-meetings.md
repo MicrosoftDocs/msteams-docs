@@ -93,9 +93,9 @@ Before a meeting, users can add tabs, bots, and message extensions. Users with o
 To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Plus button icon in the details tab.":::.
+1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Plus button icon in the details tab to install app as Tab.":::.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="Pre meeting tab experience in Teams meeting.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="Install the app as a tab in the pre meeting tab in Teams meeting.":::
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -151,11 +151,11 @@ Participants can share the entire app to the collaborative meeting stage using t
 
 # [Desktop](#tab/Desktop)
 
-:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Share entire app to the collaborative meeting stage in desktop.":::
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Share entire app to the collaborative meeting stage on desktop.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="Share entire app to the collaborative meeting stage in mobile.":::
+:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="Share entire app to the collaborative meeting stage on mobile.":::
 
 ---
 
