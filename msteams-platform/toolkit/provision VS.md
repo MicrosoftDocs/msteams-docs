@@ -25,7 +25,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 1. Open Visual Studio.
 2. Open the Teams App project.
-3. Select **Project> Teams Toolkit> Prepare Teams App dependencies**.
+3. Select **Project > Teams Toolkit > Prepare Teams App dependencies**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Teams app dependencies":::
 
@@ -41,7 +41,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 1. Open Visual Studio.
 2. Open the Teams App project.
-3. Select **Project> Teams Toolkit> Provision in the cloud**.
+3. Select **Project > Teams Toolkit > Provision in the cloud**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in the cloud":::
 
@@ -81,7 +81,7 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, you will cre
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you will need to create some Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision.
+When you create a new project, you will need to create some Azure resources. The ARM template defines all the Azure resources and helps you to create required Azure resources during provision.
 
 ## Resource creation for Teams Tab application
 
@@ -109,7 +109,7 @@ When you create a new project, you will need to create some Azure resources. The
 | App Service | Host your bot app | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-## Resource creation for Teams Notification bot with HTTP Trigger(Webapi Server) application
+## Resource creation for Teams Notification bot with HTTP Trigger(Web API Server) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
@@ -174,11 +174,11 @@ Provision with ARM involves changing the following sets of files, parameters and
 | teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
 
 > [!NOTE]
-> When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you not to lose changes while adding resources or capabilities.
+> When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated then you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This does not make you lose any changes while adding resources or capabilities to your project.
 
-The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure that new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
-## Azure AD application-related parameters
+## Azure AD application related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
@@ -207,7 +207,7 @@ If the predefined templates doesn't meet your application requirement, you can c
 
 To ensure the TeamsFx tool functions properly, customize ARM template, which satisfies the following requirement:
 
-* Ensure that the folder structure and file name remain unchanged. The tool may append new content to existing files when you add more resources or capabilities to your project.
+* Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the name of auto-generated parameters as well as its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
 * Ensure that the output of auto-generated ARM template are unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
 
