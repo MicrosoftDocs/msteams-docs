@@ -20,4 +20,4 @@ Two non-standard request header fields are added to all the requests sent to bot
 
 If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
 
-:::image type="content" source="/assets/images/bots/requestheaderfields.png" alt-text="Steps for request header fields.":::
+:::image type="content" source="/assets/images/bots/requestheaderfields.png" alt-text="The screenshot describes the steps for request header fields.":::
