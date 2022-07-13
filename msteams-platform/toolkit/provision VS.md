@@ -26,9 +26,14 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 1. Open Visual Studio.
 2. Open the Teams App project.
 3. Select **Project> Teams Toolkit> Prepare Teams App dependencies**.
-4. Click "Sign in..." and sign in your M365 account:
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Teams app dependencies":::
+
+4. Click "Sign in..." and sign in to your M365 account:
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare.png" alt-text="Prepare Teams App dependencies":::
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Sign in to microsoft 365 account":::
 
 > [!NOTE]
 > If you are already logged in, your username would be would be displayed, you have an option to switch account.
