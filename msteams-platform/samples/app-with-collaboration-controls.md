@@ -27,7 +27,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **Create**
 
-1. After the solution has been created, it'll appear in your list of solutions. Select your solution to open it.
+1. After the solution has been created, it will appear in your list of solutions. Select your solution to open it.
 
 1. Before creating your app, create a home for your data. select **New** > **Table** to get started.
 
@@ -40,7 +40,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **Save**.
 
-1. After you're done creating your table, feel free to customize it by adding additional
+1. After you're done creating your table, feel free to customize it by adding extra
 columns, relationships, and more (Optional).
 
 1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
@@ -65,7 +65,7 @@ columns, relationships, and more (Optional).
 
 1. Select **Next.**
 
-1. Search and select the table you have created earlier.
+1. Search and select the table you've created earlier.
 
    :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Table view form pages" border="true":::
 
@@ -116,13 +116,13 @@ To add Collaboration controls Tasks, Meetings, Files, and Notes experiences to t
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
 
-Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings have not yet been configured you'll not be able to create entities such as Tasks or Meetings until settings are configured.
+Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings have not yet been configured, you'll not be able to create entities such as Tasks, or Meetings until settings are configured.
 
 ## Define Settings for your Collaboration
 
-You can define settings for Collaboration controls for the business entity such as the table created created in [new model-driven app](#create-a-new-model-driven-app-with-collaboration-controls-for-teams).
+You can define settings for Collaboration controls for the business entity such as the table created in [new model-driven app](#create-a-new-model-driven-app-with-collaboration-controls-for-teams).
 
-The settings which you can apply are as follows
+The settings that you can apply are as follows
 
 |Settings|Used by|
 |---|---|
@@ -134,11 +134,11 @@ The settings which you can apply are as follows
 > [!NOTE]
 > Settings are crtical to launch your app, so ensure to follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
 
-You can get the Group Id by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables .
+You can get the Group Id by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables.
 
 To create a new team, see [Create a team from scratch](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b).
 
-Use the following instructions to retrieve the Group ID of your Teams team :
+Use the following instructions to retrieve the Group ID of your Teams team:
 
 1. Find your team in your teams list.
 
@@ -170,7 +170,7 @@ you'll want to record its Channel ID so that it can be leveraged. To get the ID,
 
  **Retrieve the SharePoint Site ID and Drive ID for Files**
 
- 1. To leverage the Files control, you'll need to configure to an existing SharePoint site or to create a new SharePoint site. To create a new one, you can follow the steps listed here:
+ 1. To apply the Files control, you'll need to configure to an existing SharePoint site, or to create a new SharePoint site. To create a new one, you can follow the steps listed here:
   [https://docs.microsoft.com/en-us/sharepoint/create-site-collection](/sharepoint/create-site-collection)
 
  1. Once you've your preferred SharePoint site identified, return to the PowerApps Maker Portal and create a new Settings Group by navigating to New and then to More and then to Other and then to Settings Group.
