@@ -18,7 +18,7 @@ In the Dice Roller sample app, users are shown a die with a button to roll it. W
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 
-:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice roller sample.":::
+:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="The screenshot is an example that shows the Dice roller sample.":::
 
 ## Set up the application
 
