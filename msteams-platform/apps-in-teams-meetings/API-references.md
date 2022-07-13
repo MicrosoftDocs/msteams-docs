@@ -31,7 +31,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Mute and un-mute apps in meeting stage**](#mute-and-un-mute-api) | Mute and un-mute apps in Teams meeting stage.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [Get incoming Audio speaker](#get-incoming-audio-speaker) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [Toggle incoming audio](#toggle-incoming-audio) | Allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -923,13 +924,67 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
-## Mute and un-mute API
+## Get incoming Audio speaker
 
-The `getIncomingClientAudioState` and `toggleIncomingClientAudioState` APIs enables you to mute and un-mute apps in the Teams meeting stage. The API is available through the Teams client SDK.
+The `getIncomingClientAudioState` API allows an app to get the incoming audio speaker setting for the meeting user. The API is available through the Teams client SDK.
 
 ### Query parameter
 
+The following table includes the query parameters:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, incase of an error, or null when share is successful. The result can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
+
 ### Example
+
+```javascript
+
+getIncomingClientAudioState(
+    callback: (error: SdkError | null, result: boolean | null) => void,
+  ): void {
+    if (!callback) {
+      throw new Error('[get incoming client audio state] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('getIncomingClientAudioState', callback);
+  }
+```
+
+### Response code
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+|  |  |
+|  |  |
+
+## Toggle incoming audio
+
+The `getIncomingClientAudioState` API allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+
+### Query parameter
+
+The following table includes the query parameters:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, incase of an error, or null when share is successful. The result can either contain an `true/false` value, incase of a successful toggle or null when the toggling fails. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
+
+### Example
+
+```javascript
+
+toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+    if (!callback) {
+      throw new Error('[toggle incoming client audio] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('toggleIncomingClientAudio', callback);
+  }
+
+```
 
 ### Response code
 
