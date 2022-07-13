@@ -1,14 +1,14 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: With this learning path, get started with conversational bots in Microsoft Teams and it's code samples.
+description: With this learning path, get started with conversational bots in Microsoft Teams and its code samples.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
 ---
 # Build bots for Teams
 
-A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
+A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
@@ -48,7 +48,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ## Global endpoint for bots API
 
-When you create a bot, to enable global routing endpoint fo region, always include cloud parameter as `teams` in the url. For example, If the url is `../{cloud}/v3/conversations/{conversationId}`, you should change this as `../teams/v3/conversations/12345`.
+When you create a bot, enable global routing endpoint  for region, always include cloud parameter as `teams` in the url. For example, If the url is `../{cloud}/v3/conversations/{conversationId}`, change this as `../teams/v3/conversations/12345`.
 
 > [!NOTE]
 > If a bot calls <https://smba.trafficmanager.net/teams/> for a GCC, GCCH, and DOD tenant, the requests will throw an error. For GCC, GCCH and DOD tenants, the url root can't be the public one, instead it needs to be specific to these environments.
