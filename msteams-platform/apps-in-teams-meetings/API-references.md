@@ -924,7 +924,7 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
-## Get incoming Audio speaker
+## Get incoming audio speaker
 
 The `getIncomingClientAudioState` API allows an app to get the incoming audio speaker setting for the meeting user. The API is available through the Teams client SDK.
 
@@ -992,8 +992,9 @@ The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
-|  |  |
-|  |  |
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Code sample
 
