@@ -140,7 +140,7 @@ During the local debug or provision, Teams Toolkit loads manifest from `manifest
 The following list provides supported placeholders in `manifest.template.json`:
 
 * `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
-* `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
+* `{{config.manifest.xx}}` is a customized placeholder and its value is resolved from `config.{env}.json`
 
 **To add customized parameter**:
 
@@ -267,7 +267,7 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
     ]
 ```
 
-`preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID but only knows the application name, you can go to Azure portal and follow the steps to search the application to find the ID :
+`preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID but only knows the application name, you can go to Azure portal, and follow the steps to search the application to find the ID :
 
 1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open application registrations.
 
@@ -403,11 +403,11 @@ Code lens shows the application name for the per-authorized application ID for t
 
 ## View Azure AD application on the Azure portal
 
-1. Copy the Azure AD application client ID from `state.xxx.json` (xxx is the environment name that you have deployed the Azure AD application) file in the `fx-resource-aad-app-for-teams` property.
+1. Copy the Azure AD application client ID from `state.xxx.json` (xxx is the environment name that you've deployed the Azure AD application) file in the `fx-resource-aad-app-for-teams` property.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
 
-2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and log-in to Microsoft 365 account.
+2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
    > Ensure that login credentials of Teams application and M365 account are same.
@@ -446,13 +446,13 @@ You need to interact with Azure AD application during various stages of your Tea
 
     Teams Toolkit performs the following functions during local development (known as F5):
 
-    * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application otherwise you need to create a new application using the `aad.template.json` file.
+    * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application otherwise you need to create a new application using the `aad.template.json` file.
 
     * Initially ignores some properties in the manifest file that requires additional context (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
 
-    * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that are not available during creation stage are updated accordingly.
+    * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that aren't available during creation stage are updated accordingly.
 
-    * The changes you have done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) to apply changes manually Azure AD application changes.
+    * The changes you've done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) to apply changes manually Azure AD application changes.
 
 4. **To provision for cloud resources**
 
