@@ -57,7 +57,7 @@ There are two types of signals, incoming call and in-call. Following are the dif
 
 * To receive an incoming call, you enter an endpoint in your bot settings. This endpoint receives a notification when an incoming call is initiated. You can answer the call, reject it, or redirect it to someone else.
 
-     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Call handling method.":::
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="The screenshot is an example that shows the call handling method.":::
 
 * When a bot is in a call, there are APIs for muting and unmuting the bot and to start or stop sharing video or desktop content with other participants.
 * The bot can also access the list of participants, invite new participants, and mute them.
