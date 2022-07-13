@@ -68,7 +68,7 @@ The following code snippet displays use of the `selectPeople` API people from a 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
-microsoftTeams.people.selectPeople({ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false}).then(people) => 
+people.selectPeople({ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false, title: true}).then(people) => 
  {
     output(" People length: " + people.length + " " + JSON.stringify(people));
  }).catch((error) => { /*Unsuccessful operation*/ });
@@ -77,7 +77,7 @@ microsoftTeams.people.selectPeople({ setSelected: ["aad id"], openOrgWideSearchI
 # [TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
-microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -94,7 +94,7 @@ microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: micr
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false, title: true});
 ```
 
 ***

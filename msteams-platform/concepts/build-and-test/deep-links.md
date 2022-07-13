@@ -215,8 +215,8 @@ if(calendar.isSupported()) {
    const calendarPromise = calendar.composeMeeting({
       attendees: ["joe@contoso.com", "bob@contoso.com"],
       content: "test content",
-      endTime: "2018-10-24T10:30:00-07:00"
-      startTime: "2018-10-24T10:00:00-07:00"
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
       subject: "test subject"});
    calendarPromise.
       then((result) => {/*Successful operation*/}).

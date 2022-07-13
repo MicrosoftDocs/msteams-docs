@@ -49,8 +49,8 @@ To integrate the configuration experience:
 > [!NOTE]
 > Starting with Teams JavaScript client SDK (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more info, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
 
-1. Initialize the SDK by calling `microsoftTeams.app.initialize()`.
-1. Call `microsoftTeams.pages.config.setValidityState(true)` to enable **Save**.
+1. Initialize the SDK by calling `app.initialize()`.
+1. Call `pages.config.setValidityState(true)` to enable **Save**.
 
     > [!NOTE]
     > You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
@@ -84,14 +84,15 @@ The following code provides a sample HTML to create a connector configuration pa
 <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="text/javascript">
-
+<script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        
         function onClick() {
-            microsoftTeams.pages.config.setValidityState(true);
+            pages.config.setValidityState(true);
         }
 
-        microsoftTeams.app.initialize();
-        microsoftTeams.pages.config.registerOnSaveHandler(function (saveEvent) {
+        await app.initialize();
+        pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
             var eventType = '';
@@ -101,14 +102,14 @@ The following code provides a sample HTML to create a connector configuration pa
                 eventType = radios[1].value;
             }
 
-            microsoftTeams.pages.config.setConfig({
-                 entityId: eventType,
+            await pages.config.setConfig({
+                entityId: eventType,
                 contentUrl: "https://YourSite/Connector/Setup",
                 removeUrl:"https://YourSite/Connector/Setup",
-                 configName: eventType
+                configName: eventType
                 });
 
-            microsoftTeams.pages.getConfig().then(async (config) {
+            pages.getConfig().then(async (config) {
                 // We get the Webhook URL from config.webhookUrl which needs to be saved. 
                 // This can be used later to send notification.
             });
@@ -116,7 +117,7 @@ The following code provides a sample HTML to create a connector configuration pa
             saveEvent.notifySuccess();
         });
 
-        microsoftTeams.pages.config.registerOnRemoveHandler(function (removeEvent) {
+        pages.config.registerOnRemoveHandler(function (removeEvent) {
             alert("Removed" + JSON.stringify(removeEvent));
         });
 

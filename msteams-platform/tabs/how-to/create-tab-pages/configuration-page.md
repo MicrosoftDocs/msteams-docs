@@ -31,19 +31,17 @@ The following code is an example of corresponding code for the configuration pag
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
-<head>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
-</head>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script>
-        microsoftTeams.app.initialize();
+    <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
         let saveGray = () => {
-            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
-                const configPromise = microsoftTeams.pages.config.setConfig({
+            pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
                     entityId: "grayIconTab",
@@ -56,8 +54,8 @@ The following code is an example of corresponding code for the configuration pag
         }
 
         let saveRed = () => {
-            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
-                const configPromise = microsoftTeams.pages.config.setConfig({
+            pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
                     entityId: "redIconTab",
@@ -208,7 +206,7 @@ After your page uploads, Teams updates the query string placeholders with releva
 
 ```html
 <script>
-   microsoftTeams.app.initialize();
+   await app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -249,8 +247,9 @@ The following code provides an example of adding this function to the configurat
 
 <span id="user"></span>
 ...
-<script>
-    const contextPromise = microsoftTeams.app.getContext();
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
             let userId = document.getElementById('user');

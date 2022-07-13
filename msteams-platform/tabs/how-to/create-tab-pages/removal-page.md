@@ -61,9 +61,10 @@ The following is a sample tab removal code block:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    microsoftTeams.app.initialize();
-    microsoftTeams.pages.config.registerOnRemoveHandler((removeEvent) => {
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
+    pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();
         configPromise.
@@ -74,7 +75,7 @@ The following is a sample tab removal code block:
     });
 
     const onClick() => {
-        microsoftTeams.pages.config.setValidityState(true);
+        pages.config.setValidityState(true);
     }
   </script>
 </body>

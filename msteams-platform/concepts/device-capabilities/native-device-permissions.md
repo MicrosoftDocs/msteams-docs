@@ -216,7 +216,7 @@ For example:
 
     ```JavaScript
      function getLocation() {
-        microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
             let currentLocation = JSON.stringify(location);
      }).catch((error) => { /*Error getting location*/ })} 
     ```
