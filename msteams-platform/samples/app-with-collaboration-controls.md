@@ -136,9 +136,9 @@ The settings that you can apply are as follows
 
 You can get the Group Id by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables.
 
-To create a new team, see [Create a team from scratch](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b).
+To create a new team, see [create a team from scratch](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b).
 
-Use the following instructions to retrieve the Group ID of your Teams team:
+Use the following instructions to retrieve the Group ID of your Teams team for Approvals, Tasks, and internal Meetings:
 
 1. Find your team in your teams list.
 
@@ -150,47 +150,29 @@ Use the following instructions to retrieve the Group ID of your Teams team:
 
      `https://teams.microsoft.com/l/team/19%3akk_TuKhjXu92yJvg4TZ10S6rouLSCgvHIb5NOOTfRjg1%40thread.tacv2/conversations?groupId=4310f270-1aa5-4089-99f3-47eb3b4d69ad&tenantId=b699419b-e0df-47e3-9909-24076fdcf68b`
 
- **Retrieve the internal ID of the Channel you want to install the app**
+Use the following instructions to retrieve the Retrieve the SharePoint Site ID and Drive ID for Files:
 
- 1. Whether you created a new Microsoft Teams team and Channel or have an existing Team and Channel,
-you'll want to record its Channel ID so that it can be leveraged. To get the ID, start by finding your Channel within the team in your list of teams.
+1. To use the Files control, you'll need to configure to an existing SharePoint site or create a new SharePoint site. To create a new site, see [create a site](/sharepoint/create-site-collection).
 
- 1. Select ‘…’
+1. Now retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
- 1. Select Get link to channel.
+     1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Graph Explorer":::
 
- 1. Record the value of channel id from within the URL somewhere safe. You'll use this value in a future step while defining the settings of your solution.
+     1. Ensure to replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`.Following is an example:
+         1. If your Site URL = <https://myhostname.sharepoint.com/sites/MySiteName>
+         1. Hostname = myhostname.sharepoint.com
+         1. Relative path to site = sites/MySiteName
 
-     The URL has this format: `"<https://teams.microsoft.com/l/channel/><Channel ID>/<"Channelname">?groupId=<"Group ID">&tenantId=<"Tenant ID">".`
+              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Graph call":::
 
-     `<https://teams.microsoft.com/l/channel/19%3aYFxdJQf61EK8oHrq1AUu4ESOsRldO_a9qKYt8dmIUBk1>%40thread.tacv2/General?groupId=a8bf3f63-ea7c-4eb3-ad2f-48dfc4899fc1&tenantId=1c137272-0581-487f-b195-aeeb93cc4d9d`
+            Graph call would be, `https://graph.microsoft.com/v1.0/sites/myhostname.sharepoint.com:/sites/MySiteName`.
 
- 1. Decode this URL-encoded channel ID. For example, you would change "19%3acbe3683f25094106b826c9cada3afbe0%40thread.tacv2" to
- 19:cbe3683f25094106b826c9cada3afbe0@thread.tacv2
+     1. The response received is a Json object representing the Site, for example Site ID would be `abcdef.sharepoint.com,0abe7394-6fce-4dcc-9884-7eaceb48cd41,8cb86762-16cd-495e-87cb-893cfdf94054`.
 
- **Retrieve the SharePoint Site ID and Drive ID for Files**
+     1. Save the Site ID value parameter.
 
- 1. To apply the Files control, you'll need to configure to an existing SharePoint site, or to create a new SharePoint site. To create a new one, you can follow the steps listed here:
-  [https://docs.microsoft.com/en-us/sharepoint/create-site-collection](/sharepoint/create-site-collection)
-
- 1. Once you've your preferred SharePoint site identified, return to the PowerApps Maker Portal and create a new Settings Group by navigating to New and then to More and then to Other and then to Settings Group.
-
- 1. You'll then need to retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
-
-     * Site ID: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) - Microsoft Graph, sign with the appropriate login and make the graph call: <https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site>}, making sure to replace hostname with the hostname and relative path to site with the site path.
-
-        i i.e., if your Site URL = <https://myhostname.sharepoint.com/sites/MySiteName>
-
-       ii. hostname = myhostname.sharepoint.com
-
-       iii. relative path to site = sites/MySiteName
-
-     * This implies the graph call would be:
-     <https://graph.microsoft.com/v1.0/sites/myhostname.sharepoint.com:/> sites/MySiteName
-
-     * The response received is a Json object representing the Site. Copy and save the value of the ID parameter.
-
-     * **Drive ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) - Microsoft Graph, sign with the appropriate login and make the graph call: <https://graph.microsoft.com/v1.0/sites/{site-id}/drives> with the Site ID being the value of the ID parameter you saved earlier.
+     1. **Drive ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) - Microsoft Graph, sign with the appropriate login and make the graph call: <https://graph.microsoft.com/v1.0/sites/{site-id}/drives> with the Site ID being the value of the ID parameter you saved earlier.
 
      * A Json response is returned with a parameter value of type array/list of drive objects. Look through the Json for the Json object whose name parameter matches the name of your
      document library. Copy and save the value of the Drive ID parameter.
