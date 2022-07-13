@@ -31,8 +31,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [Get incoming Audio speaker](#get-incoming-audio-speaker) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [Toggle incoming audio](#toggle-incoming-audio) | Allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Get incoming Audio speaker**](#get-incoming-audio-speaker) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -137,11 +137,11 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.name** | Name of the user. |
 | **user.givenName** | First Name of the user.|
 | **user.surname** | Last Name of the user. |
-| **user.email** | Mail Id of the user. |
+| **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
 | **user.tenantId** | Azure Active Directory tenant ID. |
-| **user.userRole** | Role of the user e.g. 'admin' or 'user'. |
-| **meeting.role** | The participant's role in the meeting. e.g. 'Organizer' or 'Presenter' or 'Attendee'. |
+| **user.userRole** | Role of the user. For example 'admin' or 'user'. |
+| **meeting.role** | The participant's role in the meeting. For example 'Organizer' or 'Presenter' or 'Attendee'. |
 | **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
 | **conversation.id** | The meeting chat ID. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
@@ -489,13 +489,13 @@ The JSON response body for Meeting Details API is as follows:
 
 | Property name | Purpose |
 |---|---|
-| **details.id** | The meeting's Id, encoded as a BASE64 string. |
+| **details.id** | The meeting's ID, encoded as a BASE64 string. |
 | **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
 | **details.scheduledStartTime** | The meeting's scheduled start time, in UTC. |
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type - e.g. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | The meeting's type - for example GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
@@ -505,9 +505,9 @@ The JSON response body for Meeting Details API is as follows:
 
 In case of Recurring meeting type,
 
-**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it does not fit the pattern.
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
 
-**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it does not fit the pattern.
+**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
 
 ## Send real-time captions API
 
@@ -934,7 +934,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, incase of an error, or null when share is successful. The result can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The result can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
 
 ### Example
 
@@ -970,7 +970,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, incase of an error, or null when share is successful. The result can either contain an `true/false` value, incase of a successful toggle or null when the toggling fails. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The result can either contain an `true/false` value, in case of a successful toggle or null when the toggling fails. If the result is true, the incoming audio is muted and if the is result false, the incoming audio is unmuted. |
 
 ### Example
 
