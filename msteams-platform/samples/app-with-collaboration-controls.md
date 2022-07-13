@@ -1,13 +1,13 @@
 ---
 title: Application with collaboration controls for Microsoft Teams
 author: surbhigupta
-description: In this article, learn how to build a model driven app and add collaboration controls to the app.
+description: In this article, learn how to build a model driven app and add Collaboration controls to the app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
 ---
 
-# Create a new model-driven app with collaboration controls for Teams
+# Create a new model-driven app with Collaboration controls for Teams
 
 Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
 
@@ -27,7 +27,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **Create**
 
-1. After the solution has been created, it will appear in your list of solutions. Select your solution to open it.
+1. After the solution is created, it appears in your list of solutions. Select your solution to open it.
 
 1. Before creating your app, create a home for your data. select **New** > **Table** to get started.
 
@@ -40,7 +40,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **Save**.
 
-1. After you're done creating your table, feel free to customize it by adding extra
+1. After you're done creating your table, you can customize it by adding extra
 columns, relationships, and more (Optional).
 
 1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
@@ -116,7 +116,7 @@ To add Collaboration controls Tasks, Meetings, Files, and Notes experiences to t
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
 
-Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings have not yet been configured, you'll not be able to create entities such as Tasks, or Meetings until settings are configured.
+Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings have not yet been configured, you'll not be able to create entities such as Tasks, or Meetings.
 
 ## Define Settings for your Collaboration
 
@@ -126,13 +126,13 @@ The settings that you can apply are as follows
 
 |Settings|Used by|
 |---|---|
-|Group Id|Tasks, internal Meetings, Approvals.|
+|Group Id|Tasks, Internal Meetings, Approvals.|
 |Bookings business Id|External meetings using Bookings |
 |Site Id|SharePoint files |
 |Drive Id|SharePoint files|
 
 > [!NOTE]
-> Settings are crtical to launch your app, so ensure to follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
+> Settings are crtical to launch your app, so ensure that you follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
 
 You can get the Group Id by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables.
 
@@ -159,7 +159,7 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
      1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Graph Explorer":::
 
-     1. Ensure to replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`.Following is an example:
+     1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`.Following is an example:
          1. If your Site URL = <https://myhostname.sharepoint.com/sites/MySiteName>
          1. Hostname = myhostname.sharepoint.com
          1. Relative path to site = sites/MySiteName
