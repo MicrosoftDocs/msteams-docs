@@ -951,14 +951,15 @@ function getIncomingClientAudioState(
 
 ```
 
-### Response code
+### Response codes
 
 The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
-|  |  |
-|  |  |
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Toggle incoming audio
 
