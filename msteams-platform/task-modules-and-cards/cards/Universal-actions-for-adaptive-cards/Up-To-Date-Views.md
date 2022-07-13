@@ -122,13 +122,13 @@ To send the asset approval request:
 5. The bot triggers a message edit with an updated card, which says Nestor has approved the request while Megan's approval is pending.
 6. Bot message edit triggers an automatic refresh for Megan and she sees the updated user specific card, which says Nestor has approved the request, but also sees the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
 
-    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Up to date User Specific Views":::
+    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Screenshot shows upto date user specific views.":::
 
 7. Now, Megan selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 8. The bot triggers a message edit with an updated card, which says Nestor and Megan have approved the request.
 9. Bot message edit does not trigger any automatic refresh. Megan's user MRI is also removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 7 and 8.
 
-    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png" alt-text="Up to date views":::
+    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png" alt-text="Screenshot shows upto date views.":::
 
 ## Adaptive Card sent as response of `adaptiveCard/action` and `message edit`
 
