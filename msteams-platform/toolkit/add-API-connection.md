@@ -10,21 +10,17 @@ ms.date: 05/20/2022
 
 # Integrate API to Teams app
 
-Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.
-
-## Connect to the API
-
-When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
+Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
 * Generate sample code under `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
 * Add application settings for your API in  `.env.teamsfx.local` that configures local debugging.
 
-### Connect to API in Visual Studio Code
+## Connect to API in Visual Studio Code
 
 You can add API connection using UI and CLI command
 
-# [UI](#tab/vscode)
+# [Visual Studio Code](#tab/vscode)
 
 You can add API connection using Teams Toolkit in Visual Studio Code:
 
@@ -34,7 +30,8 @@ You can add API connection using Teams Toolkit in Visual Studio Code:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-   * You can also open the command palette and enter **Teams: Add cloud resources**.
+   > [!NOTE]
+   > To add using command palette, open the command palette and enter **Teams: Add Features**.
 
 4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
 
@@ -85,7 +82,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
  ---
 
-## Understand Toolkit updates to your project
+## Updates to your project
 
  Teams Toolkit modifies `bot` or `api` folder based on your selections:
 

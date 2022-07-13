@@ -208,8 +208,8 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
 
-   <details>
-   <summary><b>Add an application permission</b></summary>
+<details>
+<summary><b>Add an application permission</b></summary>
 
 If the Teams application requires more permissions to call API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
 
@@ -247,10 +247,10 @@ If the Teams application requires more permissions to call API with additional p
 
 * `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-   </details>
+</details>
 
-   <details>
-   <summary><b>Preauthorize a client application</b></summary>
+<details>
+<summary><b>Preauthorize a client application</b></summary>
 
 You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application and users don't consent when the client calls it exposed API. You can see the following example for this property:
 
@@ -275,10 +275,10 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
 
 1. Select the application name and get the application ID from the overview page.
 
-   </details>
+</details>
 
-   <details>
-   <summary><b>Update redirect URL for authentication response</b></summary>
+<details>
+<summary><b>Update redirect URL for authentication response</b></summary>
 
 ### Customize redirect URLs
 
@@ -294,7 +294,7 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
 ]
 ```
 
-   </details>
+</details>
 
 3. [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
   
@@ -375,7 +375,11 @@ It's different from official [Azure AD manifest schema](/azure/active-directory/
 
 Code lens shows the application name for the per-authorized application ID for the `preAuthorizedApplications` property.
 
-## Deploy Azure AD application changes for local environment
+## Deploy Azure AD application changes
+
+You can deploy Azure AD application changes for both local and remote environment
+
+### Steps to deploy changes for local environment
 
 1. Select `Preview` code lens in `aad.template.json`.
   
@@ -391,7 +395,7 @@ Code lens shows the application name for the per-authorized application ID for t
 
 4. The changes for Azure AD application used in local environment are deployed.
   
-## Deploy Azure AD application changes for remote environment
+### Steps to deploy changes for remote environment
 
 1. Open the command palette and select: `Teams: Deploy Azure Active Directory application manifest`.
   
