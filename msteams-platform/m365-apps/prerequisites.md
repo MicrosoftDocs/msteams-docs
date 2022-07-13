@@ -26,7 +26,7 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 You'll also need to enable sideloading for your tenant:
 
 1. Sign in to Microsoft 365 admin center (<https://admin.microsoft.com>) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*.
-1. Select: Teams apps > Manage apps > **Org-wide app settings**.
+1. Select Teams apps > Manage apps > **Org-wide app settings**.
 1. Under **Custom apps**, toggle on the option *Interaction with custom apps*.
 1. The [app setup policy](/microsoftteams/app-policies) to allow Upload custom apps to enable sideloading.
 
