@@ -290,7 +290,7 @@ To check whether the RSC permissions are being honored by the API request payloa
     1. In the Teams web client, select **Chat** from the far left navigation bar.
     2. Select the chat where the app is installed from the dropdown menu.
     3. Copy the web URL and save the chat thread id from the string.
-:::image type="content" source="../../assets/images/chat-thread-id.png" alt-text="Chat thread id from web url.":::
+:::image type="content" source="../../assets/images/chat-thread-id.png" alt-text="The screenshot is an example that shows the chat thread id from web url.":::
 
 ### Use Postman
 
