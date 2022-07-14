@@ -23,7 +23,7 @@ For example, the authentication flow for tabs and bots using Node and the [OAuth
 This section uses Azure AD as an example of a third party OAuth provider for enabling authentication in a tab app.
 
 > [!NOTE]
-> Before showing a **Login** button to the user and calling the `authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can chain a handler (`.then()`) or `await` for the `app.initialize()` API to complete.
+> Before showing a **Login** button to the user and calling the `authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can chain a `.then()` handler or `await` for the `app.initialize()` function to complete.
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -38,7 +38,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
 
 5. On the provider's site, the user sign in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.
-7. The tab checks that the returned `state` value matches what was saved earlier, and calls `authentication.notifySuccess()`, which in turn calls the success handler (`.then()`) for the call to `authenticate()` from step 3.
+7. The tab checks that the returned `state` value matches what was saved earlier, and calls `authentication.notifySuccess()`, which in turn calls the success handler (`.then()`) for the promise-based `authenticate()` method from step 3.
 8. Teams closes the pop-up window.
 9. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
 
