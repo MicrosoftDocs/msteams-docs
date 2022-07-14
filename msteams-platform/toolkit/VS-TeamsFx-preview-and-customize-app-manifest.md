@@ -64,13 +64,13 @@ To preview manifest file, you need to trigger **Prepare Teams App Dependencies**
 
 To preview manifest with real content, Teams Toolkit generates the preview manifest files, right click on **manifest.template.json** under **build/appPackage** folder. Select **Preview Manifest File**> **For Local** or **For Azure**. This opens the corresponding manifest file.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview.png" alt-text="Preview context menu":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Preview context menu":::
 
 The other ways to preview manifest file are:
 
 - Trigger **Zip App Package** from **Project**> **Teams Toolkit** menu, select **For Local** or **For Azure**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package":::
 
 - You can also right click on **Solution Explorer** under **Teams Toolkit**, which shows a list of menus that are same as under the menus Project> Teams Toolkit.
 
