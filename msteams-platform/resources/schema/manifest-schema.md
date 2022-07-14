@@ -814,7 +814,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to an RTMP endpoint. Default is **false**.|
+|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to an real-time meeting protocol (RTMP) endpoint. Default is **false**.|
 
 ### meetingExtensionDefinition.scenes
 
