@@ -934,7 +934,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The result can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
 
 ### Example
 
@@ -971,7 +971,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The result can either contain an `true/false` value, in case of a successful toggle or null when the toggling fails. If the result is true, the incoming audio is muted and if the is result false, the incoming audio is unmuted. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `true/false` value, in case of a successful toggle or null when the toggling fails. If the result is true, the incoming audio is muted and if the is result false, the incoming audio is unmuted. |
 
 ### Example
 
