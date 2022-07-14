@@ -32,11 +32,11 @@ For guidance about the Teams app manifest and SDK versioning guidance, as well a
 
 Reach your users where they are, right in the context of their work by extending your web app as a Teams personal tab application that also runs in both Outlook and Office.
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in Outlook, Office, and Teams.":::
+:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows the Personal tab running in Outlook, Office, and Teams.":::
 
 You can also extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
-:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Message extension running in Outlook and Teams.":::
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows the message extension running in Outlook and Teams.":::
 
 Building your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) provides you with a consolidated development process. By enabling you to deliver a streamlined deployment, installation, and admin experience for your customers, you can expand the potential reach and usage of your app.
 
