@@ -184,8 +184,7 @@ To ensure the TeamsFx tool functions properly, ensure you customize ARM template
 
 You can customize the following scenarios:
 
-<details>
-<summary><b>Use an existing Azure AD app for your bot</b></summary>
+#### Use an existing Azure AD app for your bot
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -203,10 +202,7 @@ After adding the snippet, add your secret to related environment variable so the
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
-</details>
-
-<details>
-<summary><b>Use an existing Azure AD app for your Teams app</b></summary>
+#### Use an existing Azure AD app for your Teams app
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
 
@@ -219,18 +215,13 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 
 After adding the preceding snippet, add your secret to related environment variable for the tool to resolve the actual secret during provision.
 
-</details>
-
-<details>
-<summary><b>Skip adding user for SQL database</b></summary>
+#### Skip adding user for SQL database
 
 If you have insufficient permission error when the tool tries to add user to SQL database, you can add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
 ```
-
-</details>
 
 ### Specifying the name of Function App instance
 
