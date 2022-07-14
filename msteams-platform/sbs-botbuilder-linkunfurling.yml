@@ -86,8 +86,6 @@ items:
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location":::
-
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
