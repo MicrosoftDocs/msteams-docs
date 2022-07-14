@@ -46,7 +46,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 4. In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**. The **New Command** screen appears.
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="Select the app package." lightbox="media/AppStudio-CommandMenu-Add.png ":::
+   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="The screenshot describes about selecting the app package." lightbox="media/AppStudio-CommandMenu-Add.png ":::
 
 5. Enter the **Command text** that must appear as the command menu for your bot.
 
