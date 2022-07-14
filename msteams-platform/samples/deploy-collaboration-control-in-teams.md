@@ -58,11 +58,11 @@ As the settings are defined, you can now add the app to Microsoft Teams. To star
 
 To add the app to Teams, select **Add to Teams**.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams" border="true":::
 
 Selecting **Add to Teams** will open a dialog where you can review the details and select **Download app**. This will save the Microsoft Teams app manifest to your device.
 
-     :::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Collaboration manager inspection" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Collaboration manager inspection" border="true":::
 
 To upload your app to Teams, see [upload your app in Team](~/concepts/deploy-and-publish/apps-upload.md)
 
