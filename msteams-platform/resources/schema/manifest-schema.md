@@ -778,10 +778,8 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 > [!NOTE]
 >
-> * If your app supports a team scope, it'll always function in standard channels, regardless of what values are defined in this property.
-> * Your app can account for the unique properties of each of the channel types to function properly. For more information:
-  > * To enable your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
-  > * To enable your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
+> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
 
 ## defaultBlockUntilAdminAction
 
