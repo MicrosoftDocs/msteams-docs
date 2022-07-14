@@ -20,11 +20,11 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 The following image shows personal tabs:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Screenshot shows personal tab." lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Screenshot is an example that shows personal tab." lightbox="../assets/images/tabs/personaltab.png":::
 
 The following image shows Contoso channel tabs:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Screenshot shows channel or group tabs." lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Screenshot is an example that shows channel or group tabs." lightbox="../assets/images/tabs/tabs.png":::
 
 There are few prerequisites that you must go through before working on tabs.
 
