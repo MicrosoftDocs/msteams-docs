@@ -774,12 +774,12 @@ You can define any of the following properties:
 
 **Optional** - array
 
-Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, private and shared channels types are supported.
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
 
 > [!NOTE]
 >
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
-> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [retrieve context in shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
 
 ## defaultBlockUntilAdminAction
 
@@ -814,9 +814,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to real-time-messaging-protocol (RTMP) endpoint. The default value is **false**.|
+|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to an RTMP endpoint. Default is **false**.|
 
-### meetingExtensionDefinition.scene
+### meetingExtensionDefinition.scenes
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
