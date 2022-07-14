@@ -174,7 +174,7 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 ## Bot logic
 
-The bot logic processes incoming activities from one or more of your bot channels and generates outgoing activities in response. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+The bot logic processes incoming activities from one or more of your bot channels and generates outgoing activities in response. It's still true of bots derived from the Teams activity handler class, that first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
 
 # [C#](#tab/csharp)
 

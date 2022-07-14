@@ -23,7 +23,7 @@ Your Teams bot consists of the following:
 
 * A publicly accessible web service hosted by you
 * A Bot Framework registration for your web service
-* Your Teams app package, which connects the Teams client to your web service
+* Your Teams app package that connects the Teams client to your web service
 
 > [!TIP]
 > Use the Developer Portal to register your web service with the Bot Framework and specify app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
@@ -57,7 +57,7 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 
 > [!NOTE]
 >
-> * Bots in GCCH only support  up to manifest version v1.10
+> * Bots in GCCH only support up to manifest version v1.10
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri
 > * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service)
 >   <details>
