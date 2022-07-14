@@ -53,7 +53,7 @@ Following are the steps to create a personal tab:
 
 1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Screenshot shows Microsoft Teams generator page.":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Screenshot is an example that shows Microsoft Teams generator page.":::
 
     <details>
     <summary><b>Series of questions to update your manifest.json file</b></summary>
@@ -225,11 +225,11 @@ gulp build
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Screenshot shows default tab.":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Screenshot is an example that shows default tab.":::
 
 1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Screenshot shows default html tab.":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Screenshot is an example that shows default html tab.":::
 
 ### Establish a secure tunnel to your tab
 
@@ -248,11 +248,11 @@ gulp ngrok-serve
 1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Screenshot shows how to add your personal tab.":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Screenshot is an example that shows how to add your personal tab.":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Screenshot shows personal tab uploaded.":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Screenshot is an example that shows how the personal tab is uploaded.":::
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
@@ -407,7 +407,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Example shows default tab.":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Screenshot is an example that shows default tab.":::
 
    Now you have successfully created and added your personal tab in Teams.
   
@@ -576,7 +576,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Screenshot shows personal tab.":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Screenshot is an example that shows personal tab.":::
   
    Now you have successfully created and added your personal tab in Teams.
 
