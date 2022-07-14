@@ -38,7 +38,7 @@ In addition, this project requires that you have the following installed in your
 
 1. Next, provide a series of values that are used in your application's `manifest.json` file:
 
-    :::image type="content" source="/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Generator opening screenshot.":::
+    :::image type="content" source="/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="The screenshot is an example that shows the generator opening screen.":::
 
     **What is your solution name?**
 
