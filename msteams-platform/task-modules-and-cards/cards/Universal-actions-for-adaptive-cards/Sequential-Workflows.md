@@ -18,7 +18,7 @@ The following image shows the Sequential Workflow:
 
 A user can progress through their workflow without modifying the card for other users. The workflow is also useful for conducting quizzes using sequential Adaptive Cards. The following image shows different users can be at different stages of the workflow and states of the card:
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Screenshot shows catering bot states." lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Screenshot is an example that shows catering bot states." lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
 > [!NOTE]
 > In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.
