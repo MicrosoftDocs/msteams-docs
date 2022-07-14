@@ -29,7 +29,7 @@ The following table provides the list of `authenticate()` API parameters (`Authe
 |`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.| 
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
-For more information on parameters, see the [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication?view=msteams-client-js-latest#@microsoft-teams-js-authentication-authenticate) function.
+For more information on parameters, see the [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
 
 ## Add authentication to external browsers
 
