@@ -13,7 +13,7 @@ Share to Teams allows users to share the content from personal app or tab to oth
 
 The following image shows the Share to Teams pop-up window:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Share to Teams pop-up window.":::
+:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="The screenshot is an example that shows the Share to Teams pop-up window.":::
 
 ## Enable Share to Teams button
 
@@ -54,7 +54,7 @@ The payload contains the following parameters:
 
 The following image shows the Share to Teams option:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="Share to Teams button.":::
+:::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="The screenshot is an example that shows the Share to Teams button.":::
 
 ## Response codes
 
@@ -94,18 +94,18 @@ After you enable share to teams button on personal app or tab, you can share the
 
 2. Add other user or group or channel to share the content.
 
-    :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="Add recipient.":::
+    :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="The screenshot is an example that shows how to add recipient.":::
 
     > [!NOTE]
     > You can add a note in **say something about this**.
 
 3. Select **Share**.
 
-   :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="Add note.":::
+   :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="The screenshot is an example that shows how to add note.":::
 
 4. Select **View** to reach the conversation where the link was shared.
 
-   :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="Selecting view button.":::
+   :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="The screenshot describes about selecting the view button.":::
 
 ## See also
 
