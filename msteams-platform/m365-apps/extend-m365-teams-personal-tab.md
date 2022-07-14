@@ -49,7 +49,7 @@ To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
 1. Select **SSO enabled personal tab**.
 
-    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Todo list sample (Works in Teams, Outlook and Office) in Teams toolkit.":::
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="The screenshot is an example that shows the todo list sample (Works in Teams, Outlook and Office) in Teams toolkit.":::
 
 1. Select a location on your local machine for the workspace folder.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (App Service plan, Storage account, Function App, Managed Identity) in your Azure account.
@@ -125,7 +125,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 1. Select the name of your personal tab application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 
-    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the app registrations blade on azure portal.":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="The screenshot describes how to authorize client Ids from the app registrations blade on azure portal.":::
 
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
@@ -152,11 +152,11 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Publish an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Open the 'Manage your apps' pane and select 'Publish an app'.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot describes how to open the 'Manage your apps' pane and select 'Publish an app'.":::
 
 1. Choose **Upload a custom app** option and select your app package.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot describes how to upload a custom app option in Teams.":::
 
 After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
 
@@ -225,11 +225,11 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 From Teams Toolkit, you can Debug (`F5`) your tab application running in Office and Outlook, in addition to Teams.
 
-:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Choose from Teams, Outlook, and Office debug targets in Teams Toolkit":::
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="The screenshot describes how to choose from Teams, Outlook, and Office debug targets in Teams Toolkit":::
 
 Upon first run of local debug to Office or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then click on **Continue** to proceed to debug your app in Office/Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit dialog box to install Teams.":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="The screenshot is an example that shows the Toolkit dialog box to install Teams.":::
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
