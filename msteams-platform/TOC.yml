@@ -569,6 +569,14 @@
       href: samples/app-with-collaboration-controls.md
     - name: Deploy an app with Collaboration control to Teams
       href: samples/deploy-collaboration-control-in-teams.md
+    - name: Power Automate, Configure Tasks, and Virtual Tables (Optional)  
+      items:
+      - name: Power Automate
+        href: samples/collaboration-control-power-automate.md
+      - name: Configure Tasks for external clients 
+        href: samples/configure-tasks.md
+      - name: Virtual Tables for Tasks, Meetings, and Files
+        href: samples/virtual-tables-for-tasks.md     
     - name: Collaboration controls and Settings API
       items:
       - name: Overview
@@ -580,7 +588,9 @@
       - name: Settings - Custom APIs
         href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
       - name: Settings - Standard OData APIs
-        href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is    
+        href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+    - name: Limitations for Collaboration control   
+      href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
