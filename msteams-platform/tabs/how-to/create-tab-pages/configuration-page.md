@@ -24,7 +24,7 @@ The application must reference the [Microsoft Teams JavaScript client SDK](/java
 
 An example of a configuration page is shown in the following image:
 
-:::image type="content" source="~/assets/images/tab-images/configuration-page.png" alt-text="Example showing configuration page.":::
+:::image type="content" source="~/assets/images/tab-images/configuration-page.png" alt-text="Screenshot is an example showing configuration page.":::
 
 The following code is an example of corresponding code for the configuration page:
 
@@ -152,11 +152,11 @@ Choose either **Select Gray** or **Select Red** button in the configuration page
 
 The following image displays the tab content with **Gray** icon selected:
 
-:::image type="content" source="~/assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot shows selecting gray for configuration tab.":::
+:::image type="content" source="~/assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot is an example that shows how to select gray for configuration tab.":::
 
 The following image displays the tab content with **Red** icon selected:
 
-:::image type="content" source="~/assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows selecting red for configuration tab.":::
+:::image type="content" source="~/assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot is an example that shows how to select red for configuration tab.":::
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
