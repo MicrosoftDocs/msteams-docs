@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prerequisites for creating your Teams app
 
-While creating your Teams app using Teams Toolkit in Visual Studio Code, you must need the following prerequisites:
+Ensure that you have the following prerequisites to create your Teams app using Teams Toolkit in Visual Studio Code:
 
 * [Basic requirements to build your Teams app](#basic-requirements-to-build-your-teams-app)
 * [Accounts to build your Teams app](#accounts-to-build-your-teams-app)
@@ -113,7 +113,7 @@ While creating Teams app using SPFx environment, you'll need SharePoint collecti
 
 ## Sideloading permission
 
-After creating the app, you must load your app in Teams without distributing to test it in the Teams environment. This process is known as **sideloading**. Sign-in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing to test it in the Teams environment. This process is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
 You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
 
@@ -178,7 +178,7 @@ If you have admin rights, perform the following steps to upload the custom app u
      > [!Note]
      > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-  6. After 24 hours, you can go back to your tenant and ensure whether sideloading is enabled using one of the ways mentioned in the section above.
+    Ensure whether the sideloading is enabled after these steps using [Verify sideloading permission using Visual Studio Code or Teams client.](#sideloading-permission)
 
 </details>
 
