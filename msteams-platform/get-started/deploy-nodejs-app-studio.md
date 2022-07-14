@@ -27,7 +27,7 @@ Complete the following steps to update the app package:
 
 1. To create the app package for your Teams app, select the **Manifest editor** tab in **App Studio**:
 
-    :::image type="content" source="~/assets/images/get-started/AppStudio.png" alt-text="Selecting manifest editor to create app package.":::
+    :::image type="content" source="~/assets/images/get-started/AppStudio.png" alt-text="The screenshot describes on how to select manifest editor to create app package.":::
 
     The sample comes with its own manifest and is designed to build an app package when the project is built. On Node.js, this is done by typing `gulp` at the command line in the root directory of the project.
 
@@ -49,15 +49,15 @@ Complete the following steps to update the app package:
 
 1. Now to modify this app package, select **Import an existing app** in the **Manifest editor**:
 
-    :::image type="content" source="~/assets/images/get-started/Importinganapp.png" alt-text="Importing an existing app.":::
+    :::image type="content" source="~/assets/images/get-started/Importinganapp.png" alt-text="The screenshot describes on how to import an existing app.":::
 
 1. Select the **Hello World** tile for your newly imported app:
 
-    :::image type="content" source="~/assets/images/get-started/HelloWorldappdetails.png" alt-text="Newly imported app view.":::
+    :::image type="content" source="~/assets/images/get-started/HelloWorldappdetails.png" alt-text="The screenshot is an example that shows newly imported app view.":::
 
     The following image shows the imported app package in App Studio:
 
-    :::image type="content" source="~/assets/images/get-started/Importinganapp2.png" alt-text="Importing the app package.":::
+    :::image type="content" source="~/assets/images/get-started/Importinganapp2.png" alt-text="The screenshot describes on how to import the app package.":::
 
     On the left-hand side of the Manifest editor there is a list of steps. On the right-hand side there is a list of properties that need to be filled in for each step. As you started with a sample app, much of the information is already completed. The next steps enable you to update the properties of the Hello World app.
 
@@ -77,7 +77,7 @@ It is simple to add tabs to a Teams app. The sample app already supports several
 
 Your app can only have one Team tab:
 
-:::image type="content" source="~/assets/images/get-started/TeamTab.png" alt-text="Adding a Teams tab.":::
+:::image type="content" source="~/assets/images/get-started/TeamTab.png" alt-text="The screenshot describes on how to add a Teams tab.":::
 
 In this sample, the Team tab is where your configuration page is displayed. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.
 
@@ -87,7 +87,7 @@ Your app can have up to 16 tabs, including the Team tab.
 
 Personal tabs are different from the Team tab. **Hello Tab** is already listed in the personal tabs list with a placeholder value `com.contoso.helloworld.hellotab`. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. The following dialog box appears:
 
-:::image type="content" source="~/assets/images/get-started/PersonalTab.png" alt-text="Adding a personal tab dialog box.":::
+:::image type="content" source="~/assets/images/get-started/PersonalTab.png" alt-text="The screenshot describes on how to add a personal tab dialog box.":::
 
 Update the following boxes with your app URL:
 
@@ -100,7 +100,7 @@ Replace `yourteamsapp.ngrok.io` by the URL that you used when hosting your app.
 
 It is easy to add the bots functionality to your app. The **Hello World** sample app already has a bot as part of the sample, but you must register it with Microsoft:
 
-:::image type="content" source="~/assets/images/get-started/Bots.png" alt-text="Adding a bot.":::
+:::image type="content" source="~/assets/images/get-started/Bots.png" alt-text="The screenshot describes on how to add a bot.":::
 
 The bot that was imported from the sample does not have an associated App ID. You must create a new bot so that App Studio can create a new App ID and register it with Microsoft.
 
@@ -112,7 +112,7 @@ Complete the following steps to setup your bot:
 1. Select **Delete** next to the imported bot in the bot list. Now there are no bots left to show.
 1. Select **Setup** to display the **Set up a bot** dialog box.
 
-    :::image type="content" source="~/assets/images/get-started/Setupbot.png" alt-text="Adding a bot dialog box.":::
+    :::image type="content" source="~/assets/images/get-started/Setupbot.png" alt-text="The screenshot describes on how to add a bot dialog box.":::
 
 1. Add a bot name **Contoso bot** and select all three check boxes under **Scope**.
 1. Choose **Save** to exit the dialog box. App Studio registers your bot with Microsoft and displays your new bot in the bot list.
@@ -129,7 +129,7 @@ Complete the following steps to setup your messaging extension:
 
 1. Select **Messaging extensions** under **Capabilities** in the left-hand pane of App Studio to configure the messaging extension:
 
-    :::image type="content" source="~/assets/images/get-started/Messagingextensions.png" alt-text="Adding a messaging extension.":::
+    :::image type="content" source="~/assets/images/get-started/Messagingextensions.png" alt-text="The screenshot describes on how to add a messaging extension.":::
 
     The sample messaging extension is listed in the **Messaging Extensions** pane.
 
@@ -161,11 +161,11 @@ After entering the details of your app, complete the following steps to register
 1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension.
 1. Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:
 
-    :::image type="content" source="~/assets/images/get-started/Testanddistribute.png" alt-text="Testing your app.":::
+    :::image type="content" source="~/assets/images/get-started/Testanddistribute.png" alt-text="The screenshot describes how to test your app.":::
 
 1. To upload your app to Teams, select the **Install** button under **Test and Distribute**:
 
-    :::image type="content" source="~/assets/images/get-started/InstallingHelloWorld.png" alt-text="Adding a messaging extension dialog box.":::
+    :::image type="content" source="~/assets/images/get-started/InstallingHelloWorld.png" alt-text="The screenshot describes how to add a messaging extension dialog box.":::
 
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
@@ -175,7 +175,7 @@ After entering the details of your app, complete the following steps to register
 
     Your app is now available in Teams. However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.
 
-    :::image type="content" source="~/assets/images/get-started/Finishedhelloworld.png" alt-text="Image showing app available in Teams.":::
+    :::image type="content" source="~/assets/images/get-started/Finishedhelloworld.png" alt-text="The screenshot is an example thats shows the apps that are available in Teams.":::
 
 ## Update the credentials for your hosted app
 
@@ -234,7 +234,7 @@ After you install the app into Teams, you need to configure it to show content.
 
 You can see the `Hello World` tab loaded with the tab you chose:
 
-:::image type="content" source="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Image showing configured app.":::
+:::image type="content" source="~/assets/images/samples-hello-world-tab-configure.png" alt-text="The screenshot is an example that shows the configured app.":::
 
 ### Test your bot in Teams
 
@@ -251,13 +251,13 @@ To test your messaging extension:
 1. Select the three dots below the input box in your conversation view. A menu with the **'Hello World'** app is displayed.
 1. Select the menu. A set of random texts is displayed. You can select one of the random texts and that is inserted into your conversation.
 
-    :::image type="content" source="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" alt-text="Image showing messaging extension menu.":::
+    :::image type="content" source="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" alt-text="The screenshot is an example that shows the messaging extension menu.":::
 
-    :::image type="content" source="~/assets/images/samples-hello-world-messaging-extensions-result1.png" alt-text="Image showing messaging extension result.":::
+    :::image type="content" source="~/assets/images/samples-hello-world-messaging-extensions-result1.png" alt-text="The screenshot is an example that shows the messaging extension result.":::
 
 1. Select one of the random texts. The formatted card appears ready to send with your own message included at the bottom:
 
-    :::image type="content" source="~/assets/images/samples-hello-world-messaging-extensions-send.png" alt-text="Image showing messaging extension ready to send.":::
+    :::image type="content" source="~/assets/images/samples-hello-world-messaging-extensions-send.png" alt-text="The screenshot is an example that shows the  messaging extension ready to send.":::
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
