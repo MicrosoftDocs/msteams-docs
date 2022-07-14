@@ -48,7 +48,7 @@ Following are the steps to create a channel or group tab:
 
 1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file:
 
-    :::image type="content" source="/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Generator opening screenshot.":::
+    :::image type="content" source="/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Screenshot is an example that shows generator opening.":::
 
     <details>
     <summary><b>Series of questions to update your manifest.json file</b></summary>
@@ -172,7 +172,7 @@ gulp build
 
 1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Screenshot shows tab configuration page.":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Screenshot is an example that shows tab configuration page.":::
 
 ### Establish a secure tunnel to your tab
 
@@ -191,7 +191,7 @@ gulp ngrok-serve
 1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Screenshot shows uploaded channel tab.":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Screenshot is an example that shows uploaded channel tab.":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
@@ -208,7 +208,7 @@ gulp ngrok-serve
 1. Follow the directions for adding a tab. There is a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Screenshot shows channel tab uploaded.":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Screenshot is an example that shows how the channel tab is uploaded.":::
 
     Now you have succesfully created and added your channel or group tab in Teams.
 
@@ -428,7 +428,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Screenshot shows channel tab ASPNET uploaded.":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Screenshot is an example that shows how the channel tab ASPNET is uploaded.":::
 
     Now you have succesfully created and added your channel or group tab in Teams.
 
@@ -646,7 +646,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Screenshot shows channel tab ASPNET MVC uploaded.":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Screenshot is an example that shows how the channel tab ASPNET MVC is uploaded.":::
 
     Now you have succesfully created and added your channel or group tab in Teams.
 
