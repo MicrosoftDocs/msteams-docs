@@ -98,11 +98,11 @@ For users to interact with your message extension from Outlook, you'll need to a
 
 1. Under *Available channels*, select **Outlook**. Select the **Message extensions** tab, then **Apply**.
 
-    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Add an outlook 'Message Extensions' channel for your bot from the azure bot channels pane.":::
+    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="The screenshot describes how to add an outlook 'Message Extensions' channel for your bot from the azure bot channels pane.":::
 
 1. Confirm that your Outlook channel is listed along with Teams in your bot's **Channels** pane.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure bot channels pane listing both Teams and outlook channels.":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="The screenshot is an example that shows the Azure bot channels pane listing both Teams and outlook channels.":::
 
 ## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
 
@@ -131,7 +131,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
 1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit.
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' option in Teams toolkit extension for visual studio code.":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Zip Teams metadata package' option in Teams toolkit extension for visual studio code.":::
 
 1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: **About** > **Developer preview**.
 
@@ -139,11 +139,11 @@ The final step is to sideload your updated message extension ([app package](/mic
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Publish an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Open the 'Manage your apps' pane and select 'Publish an app'.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot describes how to open the 'Manage your apps' pane and select 'Publish an app'.":::
 
 1. Choose **Upload a custom app** option, select your app package, and install (*Add*) it to your Teams client.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot describes how to upload a custom app' option in Teams.":::
 
 After it's sideloaded through Teams, your message extension will be available in outlook.com and Outlook for Windows desktop.
 
