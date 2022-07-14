@@ -9,30 +9,30 @@ ms.topic: conceptual
 
 # Deploy Collaboration controls to Microsoft Teams
 
-Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside of Teams app as both, a personal app and a tab app.
+Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app.
 
 ## Configure the app to look great in Microsoft Teams
 
 The app that you have created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
 
 > [!NOTE]
-> Do not enable the following steps if you want to display the left navigation and high-density header to your users.
+> Don't enable the following steps if you want to display the left pane and high-density header to your users.
 
 To do so, we'll use Power Apps **new app** settings.
 
-1. Go to **Solutions** in the left navigation.
+1. Go to **Solutions** in the left pane.
 
-1. Move through to the bottom of your solutions list and select **Default solution**.
+1. Go to the bottom of your solutions list and select **Default solution**.
 
 1. Search for and select **Setting definition**.
 
      :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Setting definition" border="true":::
 
-1. Search and select **Hide the navbar** from the list of settings definitions. This will hide the left pane in your application.
+1. Search and select **Hide the navbar** from the list of settings definitions. This hides the left pane in your application.
 
      :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Hide the nav bar" border="true":::
 
-1. On the right side of your application in the edit pane, there should be a section at the bottom titled **Setting app values**. If you created your app using the modern app designer, your app should appear on the list. Select **New app value** under your app.
+1. On the lower right  of your application in the edit pane, there is a section titled **Setting app values**. If you created your app using the modern app designer, your app appears on the list. Select **New app value** under your app.
 
 1. Change the value from **No** to **Yes.**
 
@@ -60,15 +60,15 @@ To add the app to Teams, select **Add to Teams**.
 
 :::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams" border="true":::
 
-Selecting **Add to Teams** will open a dialog where you can review the details and select **Download app**. This will save the Microsoft Teams app manifest to your device.
+Selecting **Add to Teams** opens a dialog where you can review the details and select **Download app**, which saves the Microsoft Teams app manifest to your device.
 
-:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Collaboration manager inspection" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="The screenshot is an example that shows the collaboration manager inspection" border="true":::
 
 To upload your app to Teams, see [upload your app in Team](~/concepts/deploy-and-publish/apps-upload.md)
 
 ## Enable others to use your application
 
-Following are required to enable users to run the deployed Collaboration Manager applications built using the Collaboration controls.
+Following are required to enable users to run the deployed Collaboration Manager applications built using the Collaboration controls:
 
 * Create a Collaboration team
 * Add members to the team
@@ -83,18 +83,18 @@ Following are required to enable users to run the deployed Collaboration Manager
      1. Select **Settings** > **Users** + **permissions**.
      1. Select **Teams**.
 
-1. Select the **+ Create team** button on the top of the page
+1. Select the **+ Create team** button from the top of the page.
 
 1. Add all the required fields:
      1. **Team name:** Ensure the name is unique within the business unit.
      1. **Description:** Enter a description of the team.
      1. **Business unit:** Select a business unit from the dropdown list.
      1. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters.
-     1. **Team type:** Select the team type. The following steps assumes that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) will auto populate team members from Azure Active Directory.
+     1. **Team type:** Select the team type. The following steps assumes that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) auto populates team members from Azure Active Directory.
 
          :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="New team" border="true":::
 
-     1. Make sure to note the team name. You'll need this later to assign this team as the owner of a record.
+     1. Ensure that you note the team name. You'll need this later to assign this team as the owner of a record.
 
      1. Select **Next.**
 
@@ -107,7 +107,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 1. To add new team members, select **+ Add team members** and choose users from your organization to add.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="Add Team members" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="The screenshot describes how to add Team members" border= "true":::
 
 1. To delete a team member, select the user and then choose **Remove**.
 
@@ -119,13 +119,13 @@ Following are required to enable users to run the deployed Collaboration Manager
 
      :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Users permission" border="true":::
 
-1. Select on **New role** at the top left of the page, this will now open a new page.
+1. Select on **New role** at the upper left of the page, which now opens a new page.
 
 1. On the **Details tab**, provide a name for your security role.
 
 1. Go to **Custom Entities** tab
 
-     1. Give organization permissions (full green circle) for each of the collaboration entities,**Collaboration Map**, **Collaboration Metadata**, and **Collaboration Root**.
+     1. Give organization permissions (full green circle) for each of the collaboration entities, **Collaboration Map**, **Collaboration Metadata**, and **Collaboration Root**.
 
          :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Collaboration map" border="true":::
 
