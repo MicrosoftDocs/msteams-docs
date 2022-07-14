@@ -444,17 +444,6 @@ A color to use and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
-## supportedChannelTypes
-
-**Optional**—array
-
-Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, Private and shared channels are supported.
-
-> [!NOTE]
->
-> * If your app supports a team scope, it'll always function in standard channels, regardless of what values are defined in this property.
-> * Your app may need to account for the unique properties of each of these channel types in order to function properly. For more information on enabling your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels). For more information on enabling your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
-
 ## configurableTabs
 
 **Optional**—array
@@ -781,6 +770,19 @@ You can define any of the following properties:
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
 
+## supportedChannelTypes
+
+**Optional**—array
+
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, private and shared channels types are supported.
+
+> [!NOTE]
+>
+> * If your app supports a team scope, it'll always function in standard channels, regardless of what values are defined in this property.
+> * Your app can account for the unique properties of each of the channel types to function properly. For more information:
+  > * To enable your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
+  > * To enable your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## defaultBlockUntilAdminAction
 
 **Optional**—Boolean
@@ -814,7 +816,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|boolean|||A value that indicates whether an app can stream the meeting's audio video content to an RTMP endpoint. Default is **false**.|
+|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to an RTMP endpoint. Default is **false**.|
 
 ### meetingExtensionDefinition.scenes
 
