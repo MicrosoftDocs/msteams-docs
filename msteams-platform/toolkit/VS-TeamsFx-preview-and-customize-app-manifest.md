@@ -54,13 +54,13 @@ You can Preview values in app manifest in two ways:
 > [!NOTE]
 > If the environment has not been provisioned, or **Prepare Teams App Dependencies** has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside, and hover to generate corresponding values.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined.png" alt-text="Placeholder values undefined":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined1.png" alt-text="Placeholder values undefined":::
 
 ### Preview manifest file
 
 To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from **Project**> **Teams Toolkit** menu, that generates configuration for local or remote Teams app.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest.png" alt-text="Preview manifest file":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file":::
 
 To preview manifest with real content, Teams Toolkit generates the preview manifest files, right click on **manifest.template.json** under **build/appPackage** folder. Select **Preview Manifest File**> **For Local** or **For Azure**. This opens the corresponding manifest file.
 
