@@ -21,7 +21,7 @@ To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 1. Enter card name and select **Save**.
 1. Select one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.
 
-   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="Screenshot is an example that shows how to create a herocard.":::
 
 1. Select **Save**.
 1. Select **Send me this card**. The card is sent to you as a chat message.
@@ -126,7 +126,7 @@ The following table provides the features that support Adaptive Cards:
 
 ### Example of Adaptive Card
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Screenshot is an example that shows an adaptive card.":::
 
 The following code shows an example of an Adaptive Card:
 
@@ -315,7 +315,7 @@ The following table provides the properties of a hero card:
 
 ### Example of a hero card
 
-:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Screenshot is an example that shows a hero card.":::
 
 The following code shows an example of a hero card:
 
@@ -569,7 +569,7 @@ The following table provides the features that support receipt cards:
 
 ### Example of a receipt card
 
-:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="receipt card":::
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="Screenshot is an example that shows a receipt card.":::
 
 The following code shows an example of a receipt card:
 
@@ -660,7 +660,7 @@ The following table provides the features that support thumbnail cards:
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
-:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="Screenshot is an example that shows a thumbnail card.":::
 
 ### Properties of a thumbnail card
 
@@ -752,7 +752,7 @@ Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
-:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel collection":::
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Screenshot is an example that shows carousel collection.":::
 
 The following code shows an example of a carousel collection:
 
@@ -939,7 +939,7 @@ The following table provides the features that support list collections:
 
 #### Example of a list collection
 
-:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list collection":::
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="Screenshot is an example that shows a list collection.":::
 
 Properties of list collections are same as the hero or thumbnail cards.
 
