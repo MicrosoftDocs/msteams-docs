@@ -1,5 +1,5 @@
 ---
-title: Application with collaboration controls for Microsoft Teams
+title: Application with Collaboration controls for Microsoft Teams
 author: surbhigupta
 description: In this article, learn how to build a model-driven app and add Collaboration controls to the app.
 ms.localizationpriority: medium

@@ -1,5 +1,5 @@
 ---
-title: Deploy app with collaboration controls in Microsoft Teams
+title: Deploy app with Collaboration controls in Microsoft Teams
 author: surbhigupta
 description: In this article, learn about deploying your app with collaboration control in Microsoft Teams.
 ms.localizationpriority: medium
@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app.
 
-## Configure the app to look great in Microsoft Teams
+## Configure the app for Teams
 
 The app that you have created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
 

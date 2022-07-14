@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Collaboration controls
 
-The Collaboration controls enable leveraging Microsoft 365 and Microsoft Teams for approvals, files, meetings, notes, and tasks to enable contextual collaboration around business processes. These controls allows you to build custom collaborative experiences that can be surfaced right in Teams. The solutions that make up Collaboration controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, Outlook, and SharePoint in a low code manner.
+The Collaboration controls enable leveraging Microsoft 365 and Microsoft Teams for Approvals, Files, Meetings, Notes, and Tasks to enable contextual collaboration around business processes. These controls allows you to build custom collaborative experiences that can be surfaced right in Teams. The solutions that make up Collaboration controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, Outlook, and SharePoint in a low code manner.
 
-These controls give you the power to simplify your user’s workflow collaboration by building line of business apps with approvals, chat, files, meetings, notes, and tasks all in one surface reducing the productivity impact on users when context is switching from app to app.
+These controls give you the power to simplify your user’s workflow collaboration by building line of business apps with Approvals, Chat, Files, Meetings, Notes, and Tasks all in one surface reducing the productivity impact on users when context is switching from app to app.
 
 Key capabilities of Collaboration controls include the following:
 
