@@ -90,7 +90,7 @@ After you enable share to teams button on personal app or tab, you can share the
 
 1. Open a personal app or tab and select **Share to Teams**.
 
-    :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="Share to Teams button.":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="The screenshot is an example that shows Share to Teams button.":::
 
 2. Add other user or group or channel to share the content.
 
