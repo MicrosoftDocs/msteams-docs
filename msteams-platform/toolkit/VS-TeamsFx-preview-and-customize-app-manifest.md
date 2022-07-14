@@ -11,10 +11,11 @@ ms.date: 05/13/2022
 # Manage Teams app manifest
 
 During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+
 After scaffolding, in the manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
 
-In the manifest template, select the **Open Manifest File** under **Project**> **Teams Toolkit** menu.
+In the manifest template, select **Project** > **Teams Toolkit** > **Open Manifest File**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest":::
 
