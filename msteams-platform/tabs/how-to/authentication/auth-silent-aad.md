@@ -51,7 +51,7 @@ Include Active Directory Authentication Library in your tab pages and configure 
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
+In the tab's content page, call `getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -103,16 +103,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 Active Directory Authentication Library parses the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign-in callback page.
 
-Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.
+Check that you have a valid user and call `authentication.notifySuccess()` or `authentication.notifyFailure()` to report the status to your main tab content page.
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }

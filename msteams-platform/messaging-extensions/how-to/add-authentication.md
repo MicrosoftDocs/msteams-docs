@@ -70,14 +70,14 @@ To prompt an unauthenticated user, to sign in, respond with a suggested action o
 
 Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
-As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
+As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `app.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
 
 ### Complete the sign in flow
 
 When the sign in request completes and redirects back to your page, it must perform the following steps:
 
 1. Generate a security code, a random number. You must cache this code on your service, with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
-1. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
+1. Call `authentication.notifySuccess` and pass the security code.
 
 At this point, the window closes and the control is passed to the Teams client. The client now reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
 
