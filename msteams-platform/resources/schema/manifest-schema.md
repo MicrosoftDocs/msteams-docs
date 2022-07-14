@@ -54,17 +54,6 @@ The following schema sample shows all extensibility options:
         "color": "A relative path to a full color .png icon — 192px X 192px"
     },
     "accentColor": "A valid HTML color code.",
-    "supportedChannelTypes": { 
-        "type": "array", 
-        "description": "The set of supported channel type that an app belongs to.", 
-        "maxItems": 2, 
-        "items": { 
-            "enum": [ 
-                "sharedChannels", 
-                "privateChannels" 
-            ] 
-        }
-    },
     "configurableTabs": [
         {
             "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -457,13 +446,13 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 ## supportedChannelTypes
 
-**Optional**—object
+**Optional**—array
 
-Enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported.
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, Private and shared channels are supported.
 
 > [!NOTE]
 >
-> * If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
+> * If your app supports a team scope, it'll always function in standard channels, regardless of what values are defined in this property.
 > * Your app may need to account for the unique properties of each of these channel types in order to function properly. For more information on enabling your tab for private channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels). For more information on enabling your tab for shared channels, see [retrieve context in Microsoft Teams Connect shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
 
 ## configurableTabs
@@ -825,6 +814,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
+|`supportsStreaming`|boolean|||A value that indicates whether an app can stream the meeting's audio video content to an RTMP endpoint. Default is **false**.|
 
 ### meetingExtensionDefinition.scenes
 
