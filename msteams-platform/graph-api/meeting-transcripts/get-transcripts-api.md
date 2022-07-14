@@ -18,10 +18,9 @@ Here are some use cases for fetching meeting transcripts using Graph API:
 To fetch the transcript for a particular meeting:
 
 - [Configure permissions on Azure AD to access transcript](#configure-permissions-on-azure-ad-to-access-transcript)
-<!--
-- [Obtain meeting ID and organizer ID](/graph-api/meeting-transcripts/fetch-id.md#obtain-meeting-id-and-organizer-id)
-- [Use Graph APIs to fetch transcript](/graph-api/meeting-transcripts/api-transcripts.md#use-graph-apis-to-fetch-transcript)
--->
+- [Obtain meeting ID and organizer ID](fetch-id.md)
+- [Use Graph APIs to fetch transcript](api-transcripts.md)
+
 ## Configure permissions on Azure AD to access transcript
 
 Your app must have the required permissions for fetching transcripts. It can access and fetch transcripts for a Teams meeting using organization-wide application permissions or Resource-specific consent (RSC) application permissions for a particular meeting.
