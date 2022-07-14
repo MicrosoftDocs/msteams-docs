@@ -88,7 +88,7 @@ items:
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location":::
+          :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -155,9 +155,9 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+        :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -290,7 +290,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission.png" alt-text="Add permission"::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission.png" alt-text="Add permission"::: 
 
     1. Select **Microsoft Graph**.
 
