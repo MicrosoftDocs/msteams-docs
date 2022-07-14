@@ -209,25 +209,25 @@ The Notes control doesn't require a setting value. Now you can create entities s
 
 ## Navigate your new Collaboration Manager app
 
-Following sections will guide you on how to use the Task, Notes, Meetings, Files, Conversations, and Approvals controls.
+Following sections guides you on how to use the Task, Notes, Meetings, Files, Conversations, and Approvals controls.
 
 ### Creating Tasks
 
-Explore collaboration in the Tasks tab by selecting the Tasks tab, this will open an empty page where users can add all the relevant tasks they need to complete.
+Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens an empty page where users can add all the relevant tasks they need to complete.
 
 :::image type="content" source="../assets/images/collaboration-control/explore-tasks.png" alt-text="Explore Tasks tab.":::
 
 1. To create a new task for the team, select **Add a task**. This will open a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Add a task.":::
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="The screenshot describes on how to add a task.":::
 
 1. The saved task will appear in the tasks list.
 
-     :::image type="content" source="../assets/images/collaboration-control/task-list.png" alt-text="List of tasks.":::
+     :::image type="content" source="../assets/images/collaboration-control/task-list.png" alt-text="The screenshot is an example that shows the list of tasks.":::
 
-1. As all the tasks are backed by Microsoft Planner, users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned to them. To get started, select More options‘…’ in Teams left pane. Search and select Tasks by Planner and To Do.
+1. As all the tasks are backed by Microsoft Planner. Users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned. To get started, select **More** options‘…’ in Teams left pane. Search and select Tasks by Planner and To Do.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="Tasks by Planner and To Do.":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="The screenshot is an example of the Tasks by Planner and To Do.":::
 
 1. After opening the Tasks by Planner and To Do app, users can see all the tasks that were created in your app within the **Assigned to me** section of the app. Users can also view the details of a task, add attachments, and mark them as complete.
 
@@ -236,37 +236,37 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, this will ope
 To create a note select **Notes** tab from your app, which would redirect to an empty screen where users can provide any relevant information. To add a new note, select **New note**.
 After adding relevant details in the notes, select **Save**.
 
-:::image type="content" source="../assets/images/collaboration-control/notes-tab.png" alt-text="Create new Notes.":::
+:::image type="content" source="../assets/images/collaboration-control/notes-tab.png" alt-text="The screenshot describes how to create new Notes.":::
 
 ### Creating meetings
 
 Select **Meetings** tab in a record to schedule both internal and external meetings.
 
-:::image type="content" source="../assets/images/collaboration-control/meeting-tab.png" alt-text="Schedule meetings.":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-tab.png" alt-text="The screenshot descirbes how to schedule meetings.":::
 
 To schedule an internal meeting, select the dropdown next to the **New meeting** button and then select **Internal meeting**.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Schedule internal meetings.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="The screenshot describes how to schedule internal meetings.":::
 
 > [!NOTE]
 >
 > Customer Booking is enabled, if you have configured the Microsoft Booking with a valid setting for your app.
 
-Within the **New meeting** dialog, users can provide relevant information about the meeting and select **Save**. The meeting will appear in the meetings list.
+Within the **New meeting** dialog, users can provide relevant information about the meeting and select **Save**. The meeting appears in the meetings list.
 
-To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option isn't available in the **New Meeting** drop down, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). You can add additional booking types by adding additional services within your Bookings business.
+To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option isn't available in the **New Meeting** dropdown, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). You can add additional booking types by adding additional services within your Bookings business.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Schedule customer Bookings.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="The screenshot describes on how to schedule customer Bookings.":::
 
-Users can see both Internal meetings and Customer Bookings on their meeting list. Once the meeting has started users can join by selecting the **Join** button, this will open the meeting directly within Microsoft Teams.
+Users can see both Internal meetings and Customer Bookings on their meeting list. After the meeting is started, users can join by selecting the **Join** button, which opens the meeting directly in Microsoft Teams.
 
 As the meetings are backed by Outlook, users can navigate to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
 ### Adding files
 
-Open the Files tab in your application  and select **Upload**  to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view will automatically refresh to show the files in the files list.
+Open the **Files** tab in your application and select **Upload** to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view automatically refreshs to show the files in the list.
 
-:::image type="content" source="../assets/images/collaboration-control/upload-files.png" alt-text="Upload files.":::
+:::image type="content" source="../assets/images/collaboration-control/upload-files.png" alt-text="The screenshot describes how to upload files.":::
 
 ### Using Approvals
 
@@ -274,16 +274,16 @@ Approvals allow users to request sign off from others when working in a record. 
 
 1. Go to the **Approvals** tab of the application.
 
-1. When there are no approval requests, users will see the following screen
+1. When there are no approval requests, users see the following screen.
 
-      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="no approval requests.":::
+      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="The screenshot is an example that shows no approval requests.":::
 
-1. Select the **New approval request** to open the approval request form
+1. Select the **New approval request** to open the approval request form.
 
-      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="New approval request form.":::
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="The screenshot is an example that show the new approval request form.":::
 
-1. In the Approval request form fill the required fields and select **Send**. This will create a request and will be added to the list.
+1. In the Approval request form, fill the required fields and select **Send**,which creates a request and added to the list.
 
-      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="List of approvals.":::
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="The screenshot is an example that show the list of approvals.":::
 
 1. Select the approval to view the details.
