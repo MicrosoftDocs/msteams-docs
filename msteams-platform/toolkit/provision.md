@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Provision cloud resources using Teams Toolkit
+# Provision resources in the cloud
 
 TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
 
@@ -91,8 +91,6 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
 </details>
-
-### Resource creation for Azure API Management in the project
 
 <details>
 <summary><b>Resource creation for Azure API Management in the project</b></summary>
@@ -186,7 +184,8 @@ To ensure the TeamsFx tool functions properly, ensure you customize ARM template
 
 You can customize the following scenarios:
 
-#### Use an existing Azure AD app for your bot
+<details>
+<summary><b>Use an existing Azure AD app for your bot</b></summary>
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -204,7 +203,10 @@ After adding the snippet, add your secret to related environment variable so the
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
-#### Use an existing Azure AD app for your Teams app
+</details>
+
+<details>
+<summary><b>Use an existing Azure AD app for your Teams app</b></summary>
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
 
@@ -217,13 +219,18 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 
 After adding the preceding snippet, add your secret to related environment variable for the tool to resolve the actual secret during provision.
 
-#### Skip adding user for SQL database
+</details>
+
+<details>
+<summary><b>Skip adding user for SQL database</b></summary>
 
 If you have insufficient permission error when the tool tries to add user to SQL database, you can add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
 ```
+
+</details>
 
 ### Specifying the name of Function App instance
 
