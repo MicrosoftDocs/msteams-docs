@@ -92,7 +92,7 @@ You can enable or disable [group owner consent](/azure/active-directory/manage-a
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
 
-    :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="Steps for azure RSC team configuration.":::
+    :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="The screenshot describes the steps for azure RSC team configuration.":::
 
 In addition, you can enable or disable group owner consent using PowerShell, follow the steps outlined in [configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
