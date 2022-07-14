@@ -563,13 +563,13 @@
     items:
     - name: Overview
       href: samples/collaboration-control.md
-    - name: Install collaboration controls
+    - name: Install Collaboration controls
       href: samples/install-collaboration-control.md
-    - name: Create an app with collaboration controls
+    - name: Create an app with Collaboration controls
       href: samples/app-with-collaboration-controls.md
-    - name: Deploy an app with collaboration control to Teams
+    - name: Deploy an app with Collaboration control to Teams
       href: samples/deploy-collaboration-control-in-teams.md
-    - name: Collaboration Toolkit and Settings API
+    - name: Collaboration controls and Settings API
       items:
       - name: Overview
         href: samples/collaboration-api-reference.md

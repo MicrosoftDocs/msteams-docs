@@ -7,104 +7,75 @@ ms.author: v-npaladugu
 ms.topic: conceptual
 ---
 
-# Deploy collaboration controls app in Teams
+# Deploy Collaboration controls to Microsoft Teams
 
- Collaboration controls currently works best within Microsoft Teams, so the following steps highlight how you can create a new app that can be embedded inside of Microsoft Teams as both a personal app and tab app.
+Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside of Teams app as both, a personal app and a tab app.
 
- **Task 1: [Optional] Configuring the app to look great in Microsoft Teams**
+## Configure the app to look great in Microsoft Teams**
 
- To do so, we'll use Power Apps ‘new app’ settings.
+The app that you have created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
 
- 1. Navigate to **Solutions** in the left navigation.
+> [!NOTE]
+> Do not enable the following steps if you want to display the left navigation and high-density header to your users.
 
- 1. Navigate to the bottom of your solutions list and select **Default solution.**
+To do so, we'll use Power Apps **new app** settings.
 
- 1. Search for and select **Setting definition** in the tree view.
+1. Go to **Solutions** in the left navigation.
+
+1. Move through to the bottom of your solutions list and select **Default solution**.
+
+1. Search for and select **Setting definition**.
 
      :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Setting definition" border="true":::
 
- 1. Search for and select **Hide the navbar** from the list of settings definitions. This will hide the left navigation in your application. Don't enable this feature if your app has multiple navigation items you want the user to use.
+1. Search and select **Hide the navbar** from the list of settings definitions. This will hide the left pane in your application.
 
      :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Hide the nav bar" border="true":::
 
- 1. In the edit pane that appears on the right, there should be a section at the bottom titled **Setting app values.** If you created your app using the modern app designer, your app should appear on the list. Select **New app value** underneath your app.
+1. On the right side of your application in the edit pane, there should be a section at the bottom titled **Setting app values**. If you created your app using the modern app designer, your app should appear on the list. Select **New app value** under your app.
 
- 1. Change the value from **No** to **Yes.**
+1. Change the value from **No** to **Yes.**
 
      :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Change value to yes" border="true":::
 
- 1. Select **Save.**
+1. Select **Save.**
 
- 1. Repeat steps 4-7, but this time, search for and select App high density page header. Note, there's a known issue with the chats experience where the chat icon may not appear if the high density page header is enabled.
+1. Search and select **App high density page header** from the list of settings definitions and repeat the process.
 
      :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Density page header" border="true":::
 
- 1. Select **'Back to solutions'**
+1. Select **Back to solutions**.
 
      :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="Default solution" border="true":::
 
- 1. . Finally, select **Publish all customizations** to publish all the work you've completed.
+1. Select **Publish all customizations** to publish all the work you've completed.
 
      :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publish all customizations" border="true":::
 
- **Task 2: Adding the app to the Microsoft Teams app catalog**
+## Add the app to Microsoft Teams app catalog
 
- 1. Now that the settings are defined, we can now add the app to Microsoft Teams. To begin, navigate to the **Apps** page in the Power Apps maker portal.
+As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you have created and select More options **…**.
 
- 1. Once' there, find the app you previously created and select the '…'
-
- 1. To bring the app to Teams, select **Add to Teams**.
+To add the app to Teams, select **Add to Teams**.
 
      :::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams" border="true":::
 
- 1. This will open the **Add to Teams** panel. Review the details and select **Download app** [to save the Microsoft Teams app manifest to your device].
+Selecting **Add to Teams** will open a dialog where you can review the details and select **Download app**. This will save the Microsoft Teams app manifest to your device.
 
      :::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Collaboration manager inspection" border="true":::
 
- 1. To bring your newly downloaded app manifest to Microsoft Teams, open Teams and navigate to the app store by selecting Apps in the left app bar.
-
- 1. Next, select **Upload a custom app** at the bottom of the left navigation. [Note: The steps to select 'Upload a custom app' may vary depending on your version of Teams, for example, you may have to select **Manage your apps** > **Upload a custom app**]
-
-     :::image type="content" source="../assets/images/collaboration-control/upload-custom-app.png" alt-text="upload a custom app" border= "true":::
-
- 1. Select **Upload for my org** and select the Teams app manifest you downloaded on step 4 above.
-
- 1. Once the upload is complete, the app may appear **Manage your apps** or in the **Built by your org** section of the Teams app catalog.
-
- **Task 3: [Optional] How to add the app as a Teams tab**
-
- 1. To add an app to a team, select the chevron next to the Open button and select Add to a team.
-
-     :::image type="content" source="../assets/images/collaboration-control/add-app-teams-tab.png" alt-text="Add the app as a Teams tab" border="true":::
-
- 1. Search for and select the team channel you want to add the app to.
-
-     :::image type="content" source="../assets/images/collaboration-control/select-team-channel.png" alt-text="Select Teams channel" border="true":::
-
- 1. Finally, select **Save** to finish pinning the app to your Teams channel.
-
-     :::image type="content" source="../assets/images/collaboration-control/select-save.png" alt-text="Select save" border="true":::
-
- 1. Once' successful, the app will appear as a pinned tab.
-
- **Task 4: [Optional] How to add the app as a personal app**
-
- 1. Select '…' in the Teams left nav bar to find your app, select your app to open it. When your app appears on the Teams left nav bar, right select and select **Pin** to add the app as a personal app.
-
-     :::image type="content" source="../assets/images/collaboration-control/select-pin.png" alt-text="select pin" border="true":::
-
- 1. Now the app is pinned as a personal app in the left app bar.
+To upload your app to Teams, see [upload your app in Team](~/concepts/deploy-and-publish/apps-upload.md)
 
 ## Enable others to use your application
 
- The following role is required to enable users to run deployed Collaboration Manager applications built using the Collaboration controls.
+The following role is required to enable users to run deployed Collaboration Manager applications built using the Collaboration controls.
 
 * Create a Collaboration team
 * Add members to the team
 * Create a security role
 * Assign security roles to team members
 
- **Task 1: Create a Collaboration team**
+### Create a Collaboration team
 
 1. Sign into Power Platform Admin Center
      a. Select the environment where the app is deployed <br/>
