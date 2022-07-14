@@ -25,15 +25,15 @@ While the web version and the desktop version of Teams are almost the same, ther
 1. Open the DevTools one of the following ways:
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.
 
-      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows developer tool windows.":::
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot is an example that shows developer tool windows.":::
 
     * On MacOS, select the Microsoft Teams icon in the Dock.
 
-      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot shows mac os dev tools.":::
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot is an example that shows mac os dev tools.":::
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 
-   :::image type="content" source="~/assets/images/dev-preview/tab-and-devtools.png" lightbox="~/assets/images/dev-preview/tab-and-devtools.png" alt-text="Example shows tab and dev tools.":::
+   :::image type="content" source="~/assets/images/dev-preview/tab-and-devtools.png" lightbox="~/assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot is an example that shows tab and dev tools.":::
 
 
 ## Access DevTools from an Android device
@@ -45,4 +45,4 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Select **inspect** under the tab you wish to debug, as in the following image:
 
-   :::image type="content" source="~/assets/images/android-devtools.png" alt-text="Screenshot shows android dev tools.":::
+   :::image type="content" source="~/assets/images/android-devtools.png" alt-text="Screenshot is an example that shows android dev tools.":::
