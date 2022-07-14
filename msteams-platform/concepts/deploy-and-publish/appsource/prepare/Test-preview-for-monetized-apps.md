@@ -21,11 +21,11 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 1. Add a [preview audience](/azure/marketplace/create-new-saas-offer-preview) for your SaaS offer.
 1. Select **AppSource preview** link under **Go Live** to find the Preview offer ID in the browser address bar with *publisherId.offerId-preview* format.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="Steps to find the preview offer id." :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="The screenshot describes the steps to find the preview offer id." :::
 
 1. Copy the Preview offer ID from the browser address bar.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Preview offer id." :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="The screenshot describes the preview offer id." :::
 
     > [!NOTE]
     > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
@@ -44,7 +44,7 @@ After you've generated your Preview offer ID, link the offer ID to your Teams ap
 1. Select **View** to preview your subscription plans.
 1. Review the plans listed under **Apps Subscription** and select **Save**.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="Adding offer id." :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="The screenshot describes on how to add offer id." :::
 
 The subscriptionOffer property is added to your app manifest.
 
@@ -63,7 +63,7 @@ After you configure your app with the Preview Offer ID, create an updated app pa
 
 If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner center for the offer, the user can see the **Buy a subscription** button.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Buy a subscription button.":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="The screenshot describes on how to buy a subscription.":::
 
 ### Error scenarios
 
@@ -71,13 +71,13 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
   No plans found with **-preview**. Make sure you're in the preview audience.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no preivew audience" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="The screenshot is an example that shows the no preivew audience" :::
 
 * If the offer ID specified in the app manifest isn't a Preview offer, the app shows the following warning message to the user and sideloading is disabled:
   
   This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="No preview." :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="The screenshot is an example that shows no preview." :::
 
 ## See also
 
