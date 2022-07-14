@@ -25,15 +25,15 @@ App Studio is a Teams app, which can be found in the Teams store. Follow this li
 
 In the store, search for App Studio.
 
-:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="Store entry for app studio.":::
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="The screenshot is an example that shows the store entry for app studio.":::
 
 Select the App Studio tile to open the app install page:
 
-:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="Selecting app studio.":::
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="The screenshot describes about selecting app studio.":::
 
 Select **install**.
 
-:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="Installing app studio.":::
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="The screenshot describes on how to install app studio.":::
 
 Once you are in App Studio, select on the **Manifest editor** tab where you can either import an existing app or create a new app.
 
