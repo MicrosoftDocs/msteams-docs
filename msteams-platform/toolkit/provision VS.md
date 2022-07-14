@@ -230,7 +230,7 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the snippet, add your client secret to the related environment variable so that the tool can resolve the actual client secret value during provision.
+After adding the snippet, add your client secret to the related environment variable so that the tool can resolve the actual client secret during provision.
 
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you will get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
@@ -246,7 +246,7 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the preceding snippet, add your secret value to the related environment variable for the tool to resolve the actual Client secret during provision.
+After adding the preceding snippet, add your client secret to the related environment variable for the tool to resolve the actual client secret during provision.
 
 #### Skip adding user for SQL database
 
