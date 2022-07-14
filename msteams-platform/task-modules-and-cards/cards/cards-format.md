@@ -60,15 +60,15 @@ You can use the `\r` or `\n` escape sequences for newlines in lists. Using `\n\n
 
 On the desktop, Adaptive Card Markdown formatting appears as shown in the following image in both web browsers and in the Teams client application:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="Screenshot shows adaptive card markdown format on desktop.":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="Screenshot is an example that shows adaptive card markdown format on desktop.":::
 
 On iOS, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot shows adaptive card markdown format in iOS.":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot is an example that shows adaptive card markdown format on iOS.":::
 
 On Android, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows adaptive card markdown format on Android.":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot is an example that shows adaptive card markdown format on Android.":::
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
@@ -117,7 +117,7 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Example shows adaptive card emoji.":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot is an example that shows adaptive card emoji.":::
 
 ### Mention support within Adaptive Cards
 
@@ -227,7 +227,7 @@ Example for user mention in bots with Adaptive Cards as follows:
 
 Following image illustrates the user mention with Adaptive Card in Bot:
 
-:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Screenshot shows user mention in bot with adaptive card.":::
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Screenshot is an example that shows user mention in bot with adaptive card.":::
 
 #### User mention in Incoming Webhook with Adaptive Cards
 
@@ -291,7 +291,7 @@ Example for user mention in Incoming Webhook as follows:
 
 Following image illustrates user mention in Incoming Webhook:
 
-:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Screenshot shows user mention in incoming webhook.":::
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Screenshot is an example that shows user mention in incoming webhook.":::
 
 ### Information masking in Adaptive Cards
 
@@ -316,7 +316,7 @@ The following code shows an example of Adaptive Card with masking property:
 
 The following image is an example of masking information in Adaptive Cards:
 
-:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Screenshot shows masking information in adaptive cards.":::
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Screenshot is an example that shows masking information in adaptive cards.":::
 
 ### Full width Adaptive Card
 
@@ -353,11 +353,11 @@ To make a full width Adaptive Card, your app must include the elements from the 
 
 The following image shows a full width Adaptive Card:
 
-:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Screenshot shows full width adaptive card view.":::
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Screenshot is an example that shows full width adaptive card view.":::
 
 The following image shows the default view of the Adaptive Card when you have not set the `width` property to **Full**:
 
-:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Screenshot shows small width adaptive card view.":::
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Screenshot is an example that shows small width adaptive card view.":::
 
 ### Typeahead support
 
@@ -405,11 +405,11 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
 
 When users hover over the image, an expand icon appears at the top right corner as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Screenshot shows adaptive card with expandable image.":::
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Screenshot is an example that shows adaptive card with expandable image.":::
 
 The image appears in stage view when the user selects the expand icon as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Screenshot shows image expanded to stage view.":::
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Screenshot is an example that shows how the image is expanded to stage view.":::
 
 In the stage view, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
 
@@ -441,11 +441,11 @@ In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
 On the desktop, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Screenshot shows markdown formatting for connector cards.":::
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Screenshot is an example that shows markdown formatting for connector cards.":::
 
 On iOS, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows markdown formatting for connector cards in the iOS client.":::
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot is an example that shows markdown formatting for connector cards in the iOS client.":::
 
 Connector cards using Markdown for iOS include the following issues:
 
@@ -454,7 +454,7 @@ Connector cards using Markdown for iOS include the following issues:
 
 On Android, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Screenshot shows markdown formatting for connector cards in the Android client.":::
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Screenshot is an example that shows markdown formatting for connector cards in the Android client.":::
 
 ### Format example for Markdown connector cards
 
@@ -539,11 +539,11 @@ In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
 On the desktop, HTML formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Screenshot shows HTML formatting for connector cards in the desktop client.":::
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Screenshot is an example that shows HTML formatting for connector cards in the desktop client.":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows HTML formatting for connector cards in the iOS client.":::
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot is an example that shows HTML formatting for connector cards in the iOS client.":::
 
 Connector cards using HTML for iOS include the following issues:
 
@@ -552,7 +552,7 @@ Connector cards using HTML for iOS include the following issues:
 
 On Android, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Screenshot shows HTML formatting for connector cards in the Android client.":::
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Screenshot is an example that shows HTML formatting for connector cards in the Android client.":::
 
 ### Format sample for HTML connector cards
 
@@ -629,17 +629,17 @@ As there are resolution differences between the desktop and mobile platform, for
 
 On the desktop, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Screenshot shows HTML formatting in the desktop client.":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Screenshot is an example that shows HTML formatting in the desktop client.":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Screenshot shows HTML formatting in the iOS client.":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Screenshot is an example that shows HTML formatting in the iOS client.":::
 
 Character formatting, such as bold and italic are not rendered on iOS.
 
 On Android, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Screenshot shows HTML formatting in the Android client.":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Screenshot is an example that shows HTML formatting in the Android client.":::
 
 Character formatting, such as bold and italic display correctly on Android.
 
