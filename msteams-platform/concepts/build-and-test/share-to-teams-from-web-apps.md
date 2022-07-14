@@ -112,7 +112,7 @@ You can use either the HTML default versions or the Open Graph version.
 
 For teachers using the Share to Teams button, there's an additional option to `Create an Assignment` that enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share to Teams for education:
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams popup education.":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="The screenshot is an example that shows the Share to Teams popup education.":::
 
 ## Full launcher.js definition
 
