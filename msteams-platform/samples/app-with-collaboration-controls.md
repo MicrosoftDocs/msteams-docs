@@ -1,7 +1,7 @@
 ---
 title: Application with collaboration controls for Microsoft Teams
 author: surbhigupta
-description: In this article, learn how to build a model driven app and add Collaboration controls to the app.
+description: In this article, learn how to build a model-driven app and add Collaboration controls to the app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -19,7 +19,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **New solution**, so that you can provide a home for all your future customizations.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="New solution" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="The screenshot is an example that shows the new solution." border="true":::
 
 1. Provide the name and publisher of your new solution, this solution is going to hold your custom Collaboration Manager.
 
