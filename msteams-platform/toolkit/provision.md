@@ -45,7 +45,8 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 > [!NOTE]
 > Azure services incur costs in your subscription, for more information on cost estimation, see [the pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-### Resource creation for Teams Tab application
+<details>
+<summary><b>Resource creation for Teams Tab application</b></summary>
 
 |Resource|Purpose|Description |
 |----------|--------------------------------|-----|
@@ -54,7 +55,10 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for simple auth | Host simple auth server to gain access to other services in your single page application | Adds user assigned identity to access other Azure resources |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Teams bot or message extension application
+</details>
+
+<details>
+<summary><b>Resource creation for Teams bot or message extension application</b></summary>
 
 |Resource|Purpose| Description |
 |----------|--------------------------------|-----|
@@ -63,7 +67,10 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for bot | Host your bot app | Adds user assigned identity to access other Azure resources. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure Functions in the project
+</details>
+
+<details>
+<summary><b>Resource creation for Azure Functions in the project</b></summary>
 
 |Resource|Purpose| Description|
 |----------|--------------------------------|-----|
@@ -72,7 +79,10 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Azure storage for function app | Required to create function app |Not applicable|
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure SQL in the project
+</details>
+
+<details>
+<summary><b>Resource creation for Azure SQL in the project</b></summary>
 
 |Resource|Purpose | Description |
 |----------|--------------------------------|-----|
@@ -80,7 +90,12 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Azure SQL database | Store data for your app | Grants user assigned identity, read or write permission to the database |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
+</details>
+
 ### Resource creation for Azure API Management in the project
+
+<details>
+<summary><b>Resource creation for Azure API Management in the project</b></summary>
 
 |Resource|Purpose|
 |----------|--------------------------------|
@@ -90,12 +105,17 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
 | User assigned identity | Authenticate Azure service-to-service requests |
 
-### Resources created when including Azure Key Vault in the project
+</details>
+
+<details>
+<summary><b>Resources created when including Azure Key Vault in the project</b></summary>
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
 | Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
+
+</details>
 
 ## Customize resource provision
 
