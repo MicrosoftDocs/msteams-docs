@@ -236,118 +236,54 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, this will ope
 To create a note select **Notes** tab from your app, which would redirect to an empty screen where users can provide any relevant information. To add a new note, select **New note**.
 After adding relevant details in the notes, select **Save**.
 
-:::image type="content" source="../assets/images/collaboration-control/notes-tab.png" alt-text="Tasks by Planner and To Do.":::
+:::image type="content" source="../assets/images/collaboration-control/notes-tab.png" alt-text="Create new Notes.":::
 
 ### Creating meetings
 
-## Adding Collaboration controls Conversations experience
+Select **Meetings** tab in a record to schedule both internal and external meetings.
 
- 1. Now, we want to edit the header of the Form associated with your business entities to add
-Conversations experience to them. To begin, we want to go back to the explorer for your solution
-and in the “Apps” Section, find the MDA (Model Driven Application) app you created previously
-(e.g., Collaboration Manager for Inspections).
+:::image type="content" source="../assets/images/collaboration-control/meeting-tab.png" alt-text="Schedule meetings.":::
 
- 1. Open [Command Designer](/power-apps/maker/model-driven-apps/command-designer-overview) (currently in Preview) by clicking ‘Edit in preview’ context menu item.
+To schedule an internal meeting, select the dropdown next to the **New meeting** button and then select **Internal meeting**.
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-in-preview.png" alt-text="edit in preview" border= "true":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Schedule internal meetings.":::
 
- 1. On the next screen, select ‘…’ on the right of your application table and select **Edit command bar (preview)**
+> [!NOTE]
+>
+> Customer Booking is enabled, if you have configured the Microsoft Booking with a valid setting for your app.
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-command-bar.png" alt-text="Edit command bar" border="true":::
+Within the **New meeting** dialog, users can provide relevant information about the meeting and select **Save**. The meeting will appear in the meetings list.
 
- 1. Select **Main form** and **Edit**
+To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option is not available in the **New Meeting** drop down, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide). You can add additional booking types by adding additional services within your Bookings business.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-main-form.png" alt-text="select main form" border= "true":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Schedule customer Bookings.":::
 
- 1. Select + **New command** on Commands panel
+Users can see both Internal meetings and Customer Bookings on their meeting list. Once the meeting has started users can join by selecting the **Join** button, this will open the meeting directly within Microsoft Teams.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-new-command.png" alt-text="select new command" border="true":::
+As the meetings are backed by Outlook, users can navigate to either Bookings or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
-     > [!NOTE]
-     > If presented with this view below, select JavaScript
+### Adding files
 
-     :::image type="content" source="../assets/images/collaboration-control/select-java-script.png" alt-text="select java script" border="true":::
+Open the Files tab in your application  and select **Upload**  to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view will automatically refresh to show the files in the files list.
 
- 1. Configure the command in the opened right-hand pane
+:::image type="content" source="../assets/images/collaboration-control/upload-files.png" alt-text="Upload files.":::
 
-    1. Label: **Conversations**
+### Using Approvals
 
-    1. Icon: **Use web resource**
+Approvals allow users to request sign off from others when working in a record. For example, request an approval to complete a task or close a record.
 
-     :::image type="content" source="../assets/images/collaboration-control/use-web-resource.png" alt-text="Use web resource" border="true":::
+1. Go to the **Approvals** tab of the application.
 
-     1. Library:
+1. When there are no approval requests, users will see the following screen
 
-     Select + **Add web resource** and in opened dialog search and add **icrosoft _TeamsChatIcon.svg** web resource:
-     :::image type="content" source="../assets/images/collaboration-control/teams-chat-icon.png" alt-text="Teams chat icon" border="true":::
+      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="no approval requests.":::
 
-    1. **Action:** Set **Action** (if not set) to: **Run JavaScript**
+1. Select the **New approval request** to open the approval request form
 
-    1. Select **Add library** and in opened dialog search and add **icrosoft _chatControl** web
-     resource
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="New approval request form.":::
 
-     :::image type="content" source="../assets/images/collaboration-control/add-java-script.png" alt-text="Add javascript" border="true":::
+1. In the Approval request form fill the required fields and select **Send**. This will create a request and will be added to the list.
 
-     1. **Function Name:** **icrosoft _chatControl.chatControl.clickChatIcon**
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="List of approvals.":::
 
-     1. Click + **Add Parameter**
-
-     1. In **Parameter 1** select **FirstPrimaryItemId**
-
-     1. Click + **Add Parameter**
-
-     1. In **Parameter 2** select **PrimaryEntityTypeName**
-
-     1. Click + **Add Parameter**
-
- 1. In Parameter 3 select **String** and for the value enter in the Name (not the Display Name) of the Primary Name Column for your table e.g., cr*****_inspections from Exercise 2, Task 1 , step 10.
-
-     :::image type="content" source="../assets/images/collaboration-control/settings-inspection.png" alt-text="Settings for inspection" border="true":::
-
-     1. **Visibility: 'Show'**
-
-     1. Once entered it should look like the image below
-
-     :::image type="content" source="../assets/images/collaboration-control/run-javascript.png" alt-text="Run javascript" border="true":::
-
-     1. Part IV
-
-     1. Tooltip title: **Inspections conversations**
-     1. Tooltip description: **Contextual conversations on an inspection**
-     1. Accessibility text: [optional]
-     1. Order number: [optional]
-
- 1. Customize the order of the commands by typing in numbers here
-
-     1. Hide: [leave unchecked]
-
- 1. When selected, command is hidden in app and designer experiences. This
-overrides the visibility attribute
-
- 1. Select Save and Publish to have the command created
-
- 1. Now, when you complete Exercise 6 (Deploy to Teams) the new Conversations button will be shown.
-
-     > [!TIP]
-     >  If you experience issues setting the library value, close the browser window and restart from step 1.
-
-     > [!NOTE]
-     > Currently, custom visibility rules are not supported by the command designer (limitations), and as a result the Conversations icon button will be visible on all canvases – portal, mobile, Teams app, though it will only work in Teams and will not respond on the other canvases.
-
- 1. **[Optional]** Now, you can replace the default badge icon :::image type="icon" source="../assets/icons/badge-icon.png" border="false":::by a custom one:
-
-* Navigate to your solution (e.g., My Collaboration Manager) and select **New** > **More** > **Web resource**
-* b. Specify a distinctive name. E.g., chatPaneBadgeItem
-* Select any image resource type – ICO, PNG, …
-* Upload the icon file.
-* Select **Save**
-* Take note of the web resource name together with automatically added prefix.
-* Return to the step #6 an modify the command by adding one more **String** parameter
-  pointing to just created web resource. The parameter value should follow the convention -
-  **$webresource**:resourceName. So, if the resource name is icrosoft _chatPaneBadgeItem then
-the parameter value will be $webresource:icrosoft_chatPaneBadgeItem
-
-     > [!NOTE]
-     > To use **Conversations** in the personal app, you must configure the channel ID (in Task 3, Step 5) and the app must **first** be added to the Channel associated with the Channel ID provided.
-
- **Congrats!** You've now added the Collaboration controls to your application!
+1. Select the approval to view the details.
