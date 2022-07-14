@@ -53,16 +53,16 @@ When you create a bot to enable the global routing endpoint for a region, ensure
 > [!NOTE]
 > If a bot calls <https://smba.trafficmanager.net/teams/> for a GCC, GCCH, and DOD tenant, the requests sends an error. For GCC, GCCH, and DOD tenants, the URL root can't be public, instead it needs to be specific to these environments.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Bots and SDKs](~/bots/bot-features.md)
-
 ## Code samples
 
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Bots and SDKs](~/bots/bot-features.md)
 
 ## See also
 
