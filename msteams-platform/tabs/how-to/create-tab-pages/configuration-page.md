@@ -291,7 +291,8 @@ Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for remov
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
-const configPromise = microsoftTeams.pages.config.setConfig({
+import { pages } from "@microsoft/teams-js";
+const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",
