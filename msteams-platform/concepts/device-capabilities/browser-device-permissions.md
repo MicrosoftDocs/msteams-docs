@@ -14,10 +14,10 @@ Teams app that requires device permissions, such as camera or microphone access,
 If your Teams app has declared in the [application manifest](native-device-permissions.md#specify-permissions) that it needs device permissions, then the **App permissions** option appears for the users to enable the app's device permissions. The **App permissions** option is available in the following capabilities:
 
 * **Personal apps and task module dialogs**: The **App permissions** option is available in the upper-right corner of the page.
-:::image type="content" source="../../assets/images/tabs/apppermissions.png" alt-text="Selecting app permissions button.":::
+:::image type="content" source="../../assets/images/tabs/apppermissions.png" alt-text="The screenshot describes on how to select app permissions button.":::
 
 * **Chats, channel, or meeting tabs**: The **App permissions** option is available in the dropdown of the tab.
-:::image type="content" source="../../assets/images/tabs/drop-downapppermissions.png" alt-text="App permissions dropdown box.":::
+:::image type="content" source="../../assets/images/tabs/drop-downapppermissions.png" alt-text="The screenshot is an example that shows app permissions dropdown box.":::
 
 After the **App permissions** option is selected, a popup appears where the user can enable the permissions button.
 
@@ -31,7 +31,7 @@ A user will need to enable these permissions in the browser for these permission
 Teams app that requires device permissions in the browser must show instructions to users on where to find and enable these permissions in the Teams UI. Depending on the context in which your application is running, you need to ensure that your instructions are pointing the user to correct location to access these permissions. The permissions differ for personal apps, task module dialogs, tabs in chats, and channels or meetings.
 
 </br>
-:::image type="content" source="../../assets/images/tabs/enable-access.png" alt-text="Enable camera access.":::
+:::image type="content" source="../../assets/images/tabs/enable-access.png" alt-text="The screenshot describes on how to enable camera.":::
 
 ## Code sample
 
