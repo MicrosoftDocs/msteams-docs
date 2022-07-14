@@ -79,7 +79,7 @@ Now you’ve successfully built a model-driven app.
 
 ## Add Collaboration controls to your application
 
-To add Collaboration controls Tasks, Meetings, Files, and Notes experiences to the app created post app creation as follows:
+Following are the steps to add Collaboration control capabilities such as Tasks, Meetings, Files, and Notes experiences to the app created:
 
 1. To include the Tasks, Meetings, and Notes tabs you need to edit the Main Information form. To begin, go back to the explorer and select your solution.
 
@@ -116,7 +116,7 @@ To add Collaboration controls Tasks, Meetings, Files, and Notes experiences to t
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
 
-Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings have not yet been configured, you'll not be able to create entities such as Tasks, or Meetings.
+Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings haven't yet been configured, you'll not be able to create entities such as Tasks, or Meetings.
 
 ## Define Settings for your Collaboration
 
@@ -126,15 +126,15 @@ The settings that you can apply are as follows
 
 |Settings|Used by|
 |---|---|
-|Group Id|Tasks, Internal Meetings, Approvals.|
-|Bookings business Id|External meetings using Bookings |
-|Site Id|SharePoint files |
-|Drive Id|SharePoint files|
+|Group ID|Tasks, Internal Meetings, Approvals.|
+|Bookings business ID|External meetings using Bookings |
+|Site ID|SharePoint files |
+|Drive ID|SharePoint files|
 
 > [!NOTE]
 > Settings are crtical to launch your app, so ensure that you follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
 
-You can get the Group Id by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables.
+You can get the Group ID by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables.
 
 To create a new team, see [create a team from scratch](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b).
 
@@ -159,7 +159,7 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
      1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Graph Explorer":::
 
-     1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`.Following is an example:
+     1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Following is an example:
          1. If your Site URL = <https://myhostname.sharepoint.com/sites/MySiteName>
          1. Hostname = myhostname.sharepoint.com
          1. Relative path to site = sites/MySiteName
@@ -180,16 +180,16 @@ To create meetings with users outside of your organization such as customers and
 
 ## Add Settings to your Collaboration Manager app
 
-To apply settings and explore the collaborative features of your app in Power Apps, open the application that you have created earlier. You would see a view page, where you can select tthe existing records or create new one. To begin with open or create a record.
+To apply settings and explore the collaborative features of your app in Power Apps, open the application that you've created earlier. You would see a view page, where you can select the existing records or create new one. To begin with open or create a record.
 
-You would need to add the Settings IDs that you have saved earlier for your application
+You would need to add the Settings IDs that you've saved earlier for your application
 
 |Settings|Used by|
 |---|---|
-|Group Id|Tasks, internal Meetings, Approvals.|
-|Bookings business Id|External meetings using Bookings |
-|Site Id|SharePoint files |
-|Drive Id|SharePoint files|
+|Group ID|Tasks, internal Meetings, Approvals.|
+|Bookings business ID|External meetings using Bookings |
+|Site ID|SharePoint files |
+|Drive ID|SharePoint files|
 
 ### Add Settings for Tasks, Meetings, and Files
 
@@ -205,7 +205,7 @@ You would need to add the Settings IDs that you have saved earlier for your appl
 
      :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Add the Site ID and Drive ID in Files tab.":::
 
-The Notes control don't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you are facing issues launching and saving the controls re-check the settings values.
+The Notes control doesn't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you're facing issues launching and saving the controls recheck the settings values.
 
 ## Navigate your new Collaboration Manager app
 
@@ -254,13 +254,13 @@ To schedule an internal meeting, select the dropdown next to the **New meeting**
 
 Within the **New meeting** dialog, users can provide relevant information about the meeting and select **Save**. The meeting will appear in the meetings list.
 
-To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option is not available in the **New Meeting** drop down, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide). You can add additional booking types by adding additional services within your Bookings business.
+To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option isn't available in the **New Meeting** drop down, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). You can add additional booking types by adding additional services within your Bookings business.
 
 :::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Schedule customer Bookings.":::
 
 Users can see both Internal meetings and Customer Bookings on their meeting list. Once the meeting has started users can join by selecting the **Join** button, this will open the meeting directly within Microsoft Teams.
 
-As the meetings are backed by Outlook, users can navigate to either Bookings or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
+As the meetings are backed by Outlook, users can navigate to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
 ### Adding files
 
