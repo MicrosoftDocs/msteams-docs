@@ -45,7 +45,7 @@ Authentication flow should be triggered by a user action. You shouldn't open the
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authenticate()` function of the Microsoft Teams client SDK to launch this page when the button is selected.
+Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the Microsoft Teams client SDK to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -96,7 +96,7 @@ microsoftTeams.authentication.authenticate({
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign-in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`. This also allows `getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign-in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -168,7 +168,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 In the last section, you called the Azure AD authorization service and passed in user and app information so that Azure AD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Azure AD calls the  callback page that you provided (`/tab-auth/simple-end`).
 
-In this page, you need to determine success or failure based on the information returned by Azure AD. If the login was successful, you'll have access to service resources.
+In this page, you need to determine success or failure based on the information returned by Azure AD and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you'll have access to service resources.
 
 ```javascript
 // Split the key-value pairs passed from Azure AD
@@ -178,7 +178,6 @@ let hashParams = getHashParameters();
 if (hashParams["error"]) {
     // Authentication/authorization failed
     localStorage.setItem("simple.error", JSON.stringify(hashParams));
-    authentication.notifyFailure(hashParams["error"]);
 } else if (hashParams["access_token"]) {
     // Get the stored state parameter and compare with incoming state
     let expectedState = localStorage.getItem("simple.state");

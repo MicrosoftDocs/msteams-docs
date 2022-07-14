@@ -51,7 +51,7 @@ Include Active Directory Authentication Library in your tab pages and configure 
 
 ### Get the user context
 
-In the tab's content page, call `getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
+In the tab's content page, call `app.getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
