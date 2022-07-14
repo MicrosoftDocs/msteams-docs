@@ -45,6 +45,8 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 > [!NOTE]
 > Azure services incur costs in your subscription, for more information on cost estimation, see [the pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
+The following are the resource creation for different types of app capabilities:
+
 <details>
 <summary><b>Resource creation for Teams Tab application</b></summary>
 
