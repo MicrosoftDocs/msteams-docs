@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot shows the home page of the Developer Portal for Teams.":::
 
 > [!NOTE]
 >
@@ -113,7 +113,7 @@ You can view your app's usage and other insights from the **Analytics** page. To
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** or select **View details** under the **Active Users (Preview)** card.
 
- :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Steps to choose analytics page from developer portal."lightbox="../../assets/images/tdp/dev-app-portal.PNG":::
+ :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="The screenshot describes the steps to choose analytics page from developer portal."lightbox="../../assets/images/tdp/dev-app-portal.PNG":::
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
@@ -122,7 +122,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 * Operating system
 * Area
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter button to analyze app's usage.":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="The screenshot is an example that shows the Filter button to analyze app's usage.":::
 
 After you have selected your desired filters, you can explore the following individual widgets:
 
@@ -148,13 +148,13 @@ The **Usage by time period** chart shows you the number of active users or tenan
 
 The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 day) period.
 
- :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Usage by platform and OS chart.":::
+ :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="The screenshot is an example that shows the usage by platform and OS chart.":::
 
 ### Usage by retention state
 
 The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
-:::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Usage by retention state chart.":::
+:::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="The screenshot is an example that shows the usage by retention state chart.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -167,7 +167,7 @@ The **Usage by retention state** chart lets you track four key retention or chur
 
 The **Usage intensity** chart shows you key usage intensity metrics for your app.
 
- :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Usage intensity chart.":::
+ :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="The screenshot is an example that shows the usage intensity chart.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -181,7 +181,7 @@ The **My App dashboard** table shows you the latest R30 (Rolling 30 day) data fo
 
 You can select each of these **Metric name** to see trends over time.
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="My app dashboard table.":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="The screenshot is an example that shows my app dashboard table.":::
 
 ## Use tools to create app features
 
