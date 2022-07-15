@@ -29,7 +29,7 @@ The users can add custom app to Teams by uploading an app package in a *.zip fil
 
 You can build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store.
 
-**To build your app to *.zip app package file**
+### To build your app to *.zip app package file
 
 You can build the app package by selecting `Zip Teams metadata package` from **DEPLOYMENT** in Treeview of Teams Toolkit. You need to run `Provision in the cloud` first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip`.
 
@@ -37,13 +37,13 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** in left bar.
 2. Select **Manage your apps**.
-3. Select **publish an app**.
+3. Select **upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish.png" alt-text="publish":::
 
 4. Select **Upload a custom app**:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="upload":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload":::
 
 ## Publish to your organization
 
@@ -84,6 +84,3 @@ You can distribute your app directly to the store inside Microsoft Teams and rea
 For more information, see ([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
 
 ## See also
-
-* [Manage multiple environments](TeamsFx-multi-env.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
