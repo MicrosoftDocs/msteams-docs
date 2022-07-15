@@ -49,7 +49,7 @@ If the user starts a conversation, it's important to listen for the callback of 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
     ...,
-    onCloseConversation: (_) => {
+    onStartConversation: (conversationResponse) => {
         ⁠// console.log(conversationResponse)
     },
 });
@@ -79,12 +79,12 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the conversation view is closed by a user.
+You can also listen for an event when the users selects **Close (X)** in the conversation view.
 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
     ...,
-    onCloseConversation: (_) => {
+    onCloseConversation: (conversationResponse) => {
         ⁠// console.log(conversationResponse)
     },
 });
