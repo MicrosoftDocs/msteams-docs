@@ -63,7 +63,8 @@ To add tabs to an existing meeting:
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Mobile pre-meeting experience."
+:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Mobile pre-meeting experience.":::
+
 ---
 
 #### In-meeting app experience
