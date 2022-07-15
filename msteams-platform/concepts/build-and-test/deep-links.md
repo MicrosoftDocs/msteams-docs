@@ -405,22 +405,25 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-## Generate a deep link to a meeting
+## Generate a deep link to share content in meetings
 
-You can also create deep link to start or join a meeting when share to meeting button is selected in an app to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage).
+You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
 
-When share to meeting button is selected in an app when user is already in a meeting, the app is shared to stage and a permission dialog pops-up where users can give permissions for the participants such as co-editing a document or collaborating with an app.
+When deeplink is selected in an app and user is already in a meeting, the app is shared to stage and a permission pop-up window appears. Users can grant permissions for the participants such as co-editing a document or collaborating with an app.
 
-When user is not in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they interact with an app.
+> [!NOTE]
+> Permission pop-up window appears only for Microsoft 365 apps.
+
+When user is not in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they can interact with an app.
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
-|To share the app in an ongoing meeting| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}` ||
-|To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json, “useMeetNow”: false }`||
-|To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json, “useMeetNow”: true }`||
+|To share the app in an ongoing meeting| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": ""}` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb"` |
+|To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: false }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”: false` |
+|To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: true }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”: true` |
 
 > [!NOTE]
-> Ensure to Enable Deeplink Sharing for extensible desktop app in Debug settings
+> Ensure that all query parameters are properly URI encoded.
 
 ## Generate a deep link to a call
 
