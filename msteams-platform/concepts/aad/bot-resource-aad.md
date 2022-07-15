@@ -23,7 +23,7 @@ In this section, you will:
 
 1. Select the **Create a resource** icon.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-resource.png" alt-text="Create a bot resource" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/create-resource.png" alt-text="Create a bot resource" border="false":::
 
     The **Create a resource** page appears.
 
@@ -33,13 +33,13 @@ In this section, you will:
 
 1. Select **Create**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-bot.png" alt-text="Create azure bot plan" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/azure-bot.png" alt-text="Create azure bot plan" border="false":::
 
     The **Create an Azure Bot** page appears.
 
 1. Enter details for the bot app.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-azure-bot.png" alt-text="Add an azure bot project details":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/create-azure-bot.png" alt-text="Add an azure bot project details":::
 
     1. Select the **Project details**.
         1. Enter a unique identifier as the bot handle.
@@ -54,7 +54,7 @@ In this section, you will:
 
             1. Select **Create new**.
 
-                :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-new-resource.png" alt-text="Create new resource for provisioning." border="false":::
+                :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/create-new-resource.png" alt-text="Create new resource for provisioning." border="false":::
 
             1. Enter a name for the resource and select **OK**.
 
@@ -82,7 +82,7 @@ In this section, you will:
 
     These steps aren't mandatory and you can skip them, if needed.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
 
 1. Select **Next : Review + create >**.
 
@@ -90,23 +90,23 @@ In this section, you will:
 
 1. Select **Create** to create the bot after successful validation.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/review-create.png" alt-text="Create bot" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/review-create.png" alt-text="Create bot" border="false":::
 
      A message pops up on the browser stating that the deployment is being initialized.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/initialize-deploment.png" alt-text="Message stating deployment is initialized" border="true":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/initialize-deploment.png" alt-text="Message stating deployment is initialized" border="true":::
 
     The **Overview** page appears that states the deployment is in progress. The deployment details are displayed on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/deploy-progress.png" alt-text="Deployment in progress" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/deploy-progress.png" alt-text="Deployment in progress" border="false":::
 
 1. Select **Go to resource** to view the bot details.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-deployed.png" alt-text="Bot resource is deployed" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/bot-deployed.png" alt-text="Bot resource is deployed" border="false":::
 
      You can view the subscription details for the bot resource.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="Bot app is created" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/bot-app-created.png" alt-text="Bot app is created" border="false":::
 
 After you create your bot resource, you need to add a client secret and enable bot for working in Teams.
 
@@ -123,23 +123,23 @@ A client secret is a string that the bot app uses to prove its identity when req
 
 1. Select **Settings** > **Configurations**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/bot-app-menu.png" alt-text="bot-config-menu.png":::
 
     The **Configuration** page appears.
 
 1. Select the **Manage** link shown with **Microsoft App ID**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Manage link for bot app configuration":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/bot-config-manage.png" alt-text="Manage link for bot app configuration":::
 
      The **Certificates & secrets** page appears. The Manage  menu appears in left pane menu.
 
 2. Select **+ New client secret**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-client-secret.png" alt-text="Add new client secret" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/new-client-secret.png" alt-text="Add new client secret" border="false":::
 
    The **Add a client secret** page appears.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Add a client secret page" border="true":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/add-client-secret.png" alt-text="Add a client secret page" border="true":::
 
 3. Enter the description.
 4. Select the duration of validity for the secret.
@@ -147,7 +147,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
    A message pops up on the browser stating that the client secret was updated. The client secret displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/client-secret-added.png" alt-text="Client secret added":::
 
 6. Select the copy button next to the **Value** of client secret.
 7. Save the value that you copied for later use.
@@ -168,19 +168,19 @@ You must enable the Teams channel to let the bot interact with Microsoft Teams.
 
 1. Select **Settings** > **Channels**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/channel-menu.png" alt-text="Menu option for enabling bot for Teams " border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/channel-menu.png" alt-text="Menu option for enabling bot for Teams " border="false":::
 
     The **Channels** page appears.
 
 1. Move through the list of **Available Channels** to select **Microsoft Teams**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-channel.png" alt-text="Select Teams channel" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/teams-channel.png" alt-text="Select Teams channel" border="false":::
 
     The message with **Terms of Service** appears.
 
 1. Check to agree with the terms and select **Agree**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/terms-service.png" alt-text="Terms of service for Teams channel" border="true":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/terms-service.png" alt-text="Terms of service for Teams channel" border="true":::
 
     The **Microsoft Teams** page appears with the default messaging option selected **Microsoft Teams Commercial (most common)**.
 
@@ -189,18 +189,18 @@ You must enable the Teams channel to let the bot interact with Microsoft Teams.
     > [!NOTE]
     > If you want to change channel settings, you'd need to delete the channel and apply it again with new settings.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-messaging.png" alt-text="Teams messaging options for bot" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/teams-messaging.png" alt-text="Teams messaging options for bot" border="false":::
 
     A message pops up on the browser stating that the channel settings are being applied.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/msg-channel.png" alt-text="Message for Teams channel being applied" border="true":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/msg-channel.png" alt-text="Message for Teams channel being applied" border="true":::
 
     The channel settings are applied.
 
 1. Select **Close**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/channel-applied.png" alt-text="Channel setting applied to bot." border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/channel-applied.png" alt-text="Channel setting applied to bot." border="false":::
 
     The bot is now enabled to work with Teams.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
+    :::image type="content" source="../../../assets/images/aad-configuration/bot-resource-aad/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
