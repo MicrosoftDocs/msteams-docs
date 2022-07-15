@@ -34,7 +34,7 @@ Open shifts view in Teams:
 
 The shifts view in Teams is shown in the following image:
 
-:::image type="content" source="../assets/images/teams-open-shifts-view.png" alt-text="Screenshot shows open shifts in Teams.":::
+:::image type="content" source="../assets/images/teams-open-shifts-view.png" alt-text="The screenshot describes how to open shifts in Teams.":::
 
 ## See also
 
