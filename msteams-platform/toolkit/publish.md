@@ -39,11 +39,11 @@ Perform the following steps to upload app package:
 2. Select **Manage your apps**.
 3. Select **upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish.png" alt-text="publish":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish.png" alt-text="Upload an app":::
 
 4. Select **Upload a custom app**:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload an custom app":::
 
 ## Publish to your organization
 
