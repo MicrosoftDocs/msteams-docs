@@ -35,7 +35,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
     > [!NOTE]
-    > If you are already logged in, your username will be displayed, you have an option to switch account.
+    > If you're already logged in, your username is displayed, you have an option to switch account.
 
 ### Sign in to your Azure account
 
@@ -50,7 +50,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
     > [!NOTE]
-    > If you are already logged in, your username will be displayed, you have an option to switch account.
+    > If you're already logged in, your username is displayed, you have an option to switch account.
 
 5. Sign in to Azure account using your credentials.
 6. Select Continue to add provision cloud resources.
@@ -148,9 +148,8 @@ When you create a new project, you will need to create some Azure resources. The
 | App Service plan | Host the Function bot App | Not applicable |
 | Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
 
-### Check your created resources
+### Manage your resources
 
-[Manage your resources]
 You can login to [Azure Portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
 * Select Resource groups and choose the Resource group you just chose or created
