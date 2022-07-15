@@ -18,10 +18,6 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 ## Connect to API in Visual Studio Code
 
-You can add API connection using UI and CLI command
-
-# [Visual Studio Code](#tab/vscode)
-
 You can add API connection using Teams Toolkit in Visual Studio Code:
 
 1. Open Microsoft Visual Studio Code.
@@ -63,25 +59,6 @@ You can add API connection using Teams Toolkit in Visual Studio Code:
     > [!NOTE]
     > Based on the authentication type selected, additional configuration is needed.
 
-# [Command line](#tab/cli)
-
-API connection in TeamsFx CLI
-
-The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
-
- > [!Tip]
- > You can use `teamsfx add api-connection [authentication type] -h` to get help document.
-
-   |**Authentication type**|**Sample command**|
-   |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
-   |API Key|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
-   |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
-   |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
-   |Custom|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
-
- ---
-
 ## Updates to your project
 
  Teams Toolkit modifies `bot` or `api` folder based on your selections:
@@ -91,37 +68,6 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
 3. Add environment variables to `.env.teamsfx.local`. They're the configurations for the selected authentication type. The generated code reads values from the environment variables.
-
-## Test API connection in local environment
-
-The following steps help to test the API connection in the Teams Toolkit local environment:
-
- 1. **Run npm install**
-
-    Run `npm install` under `bot` or `api` folder to install added packages.
-
- 2. **Add API credentials to the local application settings**
-
-    Teams Toolkit does't ask for credentials but it leaves placeholders in the local application settings file. Replace the placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
-
- 3. **Use the API client to make API requests**
-
-    Import the API client from the source code that needs access to the API:
-
-    ```BASH
-    import { yourApiClient } from '{relative path to the generated file}'
-    ```
-
- 4. **Generate http(s) requests to target API (with Axios)**
-
-    The generated API client is an Axios API client. Use the Axios client to make requests to the API.
-
-     > [!Note]
-     > [Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
-
-## Advantage
-
-Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
 
 ## Deploy your application to Azure
 
@@ -209,6 +155,10 @@ You can follow the steps to access these APIs while using:
         >
 </details>
 
-## See also
+## Advantages
 
-* [Publish Teams apps using Teams Toolkit](publish.md)
+Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
+
+## Limitations
+
+## See also
