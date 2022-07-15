@@ -12,9 +12,9 @@ Your Teams bot app can access resources available on Azure AD. You'll need to cr
 
 In this section, you will:
 
-- Create bot resource
-- Configure the client secret
-- Enable the bot resource for Teams
+- [Create bot resource](#to-create-and-deploy-bot-resource)
+- [Configure the client secret](#create-client-secret)
+- [Enable the bot resource for Teams](#enable-bot-for-teams)
 
 ### To create and deploy bot resource
 

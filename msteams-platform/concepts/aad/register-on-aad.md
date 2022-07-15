@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 Your Teams app can access resources available on Azure AD. You'll need to register your app with Azure AD.
 
-### Before you register with Azure AD
+## Before you register with Azure AD
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
