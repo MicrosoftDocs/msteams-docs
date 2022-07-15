@@ -31,11 +31,11 @@ You'll also need to enable sideloading for your tenant:
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
 
-A user who has been marked by custom app policy with the upload custom apps:
+A user who has been assigned a custom setup policy with the upload custom apps:
 
 1. Sign into [Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps)
 1. Select Teams apps > Manage apps > **Org-wide app settings**.
-1. Under **Custom apps**, enable custom apps
+1. Under **Custom apps**, enable **custom apps**
 
 ## Enroll your developer tenant for Office 365 Targeted releases
 
