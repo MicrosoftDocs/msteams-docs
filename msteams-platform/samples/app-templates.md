@@ -45,7 +45,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-:::image type="content" source="../assets/images/CompanyCommunicatorCompose.png" alt-text="Company Communicator compose box view.":::
+:::image type="content" source="../assets/images/CompanyCommunicatorCompose.png" alt-text="The screenshot is an examples that shows the Company Communicator compose box view.":::
 
 ## Co-worker Appreciation
 
@@ -53,7 +53,7 @@ Using the co-worker appreciation template in Teams, users can recognize their co
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
-:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="Screenshot shows coworkers appreciation.":::
+:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="The screenshot is an examples that shows the coworkers appreciation.":::
 
 ## FAQ Plus
 
@@ -82,7 +82,7 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-:::image type="content" source="../assets/images/icebreaker.png" alt-text="Screenshot shows Icebreaker app.":::
+:::image type="content" source="../assets/images/icebreaker.png" alt-text="The screenshot is an examples that shows an Icebreaker app.":::
 
 ## New Employee Onboarding
 
@@ -93,13 +93,13 @@ New Employee Onboarding is an integrated Teams and [SharePoint New Employee Onbo
 :::row:::
   :::column span="2":::
     **New employee welcome card**
-    :::image type="content" source="../assets/images/new-employee-welcome-card.png" alt-text="Screenshot shows new employee welcome card.":::
+    :::image type="content" source="../assets/images/new-employee-welcome-card.png" alt-text="The screenshot is an examples that shows a new employee welcome card.":::
     :::column-end:::
 :::row-end:::
 :::row:::
   :::column span="2":::
     **New employee checklist**
-    :::image type="content" source="../assets/images/new-employee-checklist.png" alt-text="Screenshot shows new employee checklist.":::
+    :::image type="content" source="../assets/images/new-employee-checklist.png" alt-text="The screenshot is an examples that shows a new employee checklist.":::
     :::column-end:::
 :::row-end:::
 
