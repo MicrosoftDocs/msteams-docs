@@ -22,13 +22,13 @@ This content is modified as per the requirement.-->
  <!--The following image demonstrates Moodle LMS:
   Query on this image about what is meant by section
 
-:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::-->
+:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart":::-->
 
 ## Moodle LMS accessibility
 
 Moodle LMS helps users access the following apps:
 
-* **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. These plugins can be used independently, or in partnership to achieve distinct user requirements. For more information, see [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md).
+* **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Teams. These plugins can be used independently, or in partnership to achieve distinct user requirements. For more information, see [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md).
 
 * **Partner apps for Moodle**: All the partner set of apps for Moodle and Teams are available in Microsoft Store. For more information, see [Partner apps for Moodle](partner-apps-for-moodle.md).
 

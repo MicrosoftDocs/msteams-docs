@@ -10,7 +10,7 @@ ms.topic: overview
 
 There are multiple tools and resources for designing your Microsoft Teams app. The following steps describe when and how you might use these during the design process. (Some of steps might be technically outside the design process but are included for additional context.)
 
-:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagram showing an example of the Teams app design process." border="false":::
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagram showing an example of the Teams app design process.":::
 
 ## Plan your app
 

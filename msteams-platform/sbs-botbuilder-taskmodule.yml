@@ -73,7 +73,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -86,7 +86,7 @@ items:
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
+        ![New resource group location](~/assets/images/bots/newresource.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -153,10 +153,10 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
+         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+         
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
@@ -182,7 +182,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Teams-task-module/ngrok.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -389,7 +389,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/Teams-task-module/certificate.png)
+          ![Trust Certificate](~/assets/images/sbs-messagingextension-action/certificate.png)
 
           A webpage opens with a message **Your bot is ready!**.
 
@@ -422,7 +422,7 @@ items:
 
     1. Select **Apps**.
 
-       ![Zip file](~/assets/images/Teams-task-module/AppStore.png)
+       ![Zip file](~/assets/images/Teams-Messaging-Extensions-Search/AppStore.png)
    
     1. In the lower left corner, select **Manage your apps**.
 

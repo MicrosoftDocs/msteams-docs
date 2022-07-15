@@ -23,9 +23,9 @@ This flow works best if your identity provider implements the OAuth 2.0 protocol
 
 ## Constructing deep links to tabs in messages from your bot
 
-You want to use tabs to show more content than can fit inside of a card, or provide a way to complete complex form-filling tasks using the tab canvas. For example, consider navigating the user to the tab when he or she clicks on the card from your bot. For this to happen, you’ll need to encode your bot’s message to include a [deep link](~/concepts/build-and-test/deep-links.md) URL, either through markup or as the target of the openUrl action.
+You want to use tabs to show more content that can fit inside of a card, or provide a way to complete complex form-filling tasks using the tab canvas. For example, consider navigating the user to the tab when the user selects the card from your bot. For this to happen, you’ll need to encode your bot’s message to include a [deep link](~/concepts/build-and-test/deep-links.md) URL, either through markup or as the target of the openUrl action.
 
-Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state. For example, flag on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
+Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you store some simple state. For example, flag on your backend indicating the tab is created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
 
 > [!NOTE]
 > in personal chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.

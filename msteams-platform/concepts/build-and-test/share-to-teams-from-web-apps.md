@@ -11,7 +11,7 @@ Third-party websites can use the launcher script to embed Share to Teams buttons
 
 The following image displays the pop-up window for Share to Teams preview experience:
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams popup" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams popup":::
 
 > [!NOTE]
 >
@@ -22,12 +22,18 @@ You can also add link unfurling for the links shared through Share to Teams butt
 
 The following image displays the link unfurling experience through Share to Teams button:
 
-:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams link unfurling" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams link unfurling":::
 
 > [!NOTE]
 > Link unfurling in share to Teams is currently available only in public developer preview.
 
 This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
+
+See the following video to learn how to embed Share to Teams button:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
+<br>
+
 
 ## Embed a Share to Teams button
 
@@ -48,7 +54,7 @@ This article guides you on how to create and embed a Share to Teams button for y
 
     After completing this, the Teams icon gets added to your website. The following image shows the Share to Teams icon:
 
-    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Share to Teams icon" border="true":::
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Share to Teams icon":::
 
 1. Alternatively, if you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
 

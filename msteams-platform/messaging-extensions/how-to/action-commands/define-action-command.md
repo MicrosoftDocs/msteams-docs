@@ -19,6 +19,12 @@ Before creating the action command, you must decide the following factors:
 1. [How will the task module be created?](#select-how-to-create-your-task-module)
 1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
 
+See the following video to learn how to define message extension action commands:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
+
 ## Select action command invoke locations
 
 First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
@@ -73,7 +79,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 You can create an action command using **App Studio** or **Developer Portal**.
 
 > [!WARNING]
- > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
+ > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 # [App Studio](#tab/AS)
 
@@ -181,7 +187,7 @@ The following section is an example of a `composeExtensions` object defining two
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -208,7 +214,7 @@ The following section is an example of a `composeExtensions` object defining two
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

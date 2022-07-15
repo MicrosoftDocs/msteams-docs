@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab, use cases, responsive behavior, shared meeting stage, theme, and navigation.
+description: Learn how to design meeting extensions for your apps in Teams meetings. Use the UI templates in the Microsoft Teams UI Kit to help you design your meeting tab.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -25,31 +25,31 @@ Users can add a meeting extension before and during meetings. They also can add 
 
 In the meeting details, users can select **Add a tab +** to open the app flyout and find apps optimized for meetings.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting.":::
 
 ### Add during a meeting
 
 #### Mobile
 
-Once app has been added (for example, on desktop), users can access the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
+Once app is added (for example, on desktop), users can access the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile.":::
 
 #### Desktop
 
 In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and select the app they want.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting.":::
 
 ## Before a meeting
 
 Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people will answer during the meeting.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call.":::
 
 ### Anatomy: Meeting tab (before and after meetings)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Example shows the structural anatomy of a meeting tab before and after a meeting." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Example shows the structural anatomy of a meeting tab before and after a meeting.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -82,15 +82,15 @@ People might use the in-meeting tab to:
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab on mobile." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab.":::
 
 ### Anatomy: In-meeting tab
 
-:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -105,7 +105,7 @@ People might use the in-meeting tab to:
 
 Optimize your in-meeting tab to fit edge-to-edge within the 280 pixel-wide iframe area. There are 20 pixels of padding on the left and right sides of the iframe and between the tab header. The iframe is full bleed to the bottom of the tab.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="Example shows in-meeting tab spacing dimensions." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="Example shows in-meeting tab spacing dimensions.":::
 
 ### Scrolling
 
@@ -115,13 +115,13 @@ Remember the following if you allow scrolling:
 * Users should only see the content they've scrolled to (nothing above or below).
 * The scrollbar is part of the iframe content.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Example shows how the in-meeting tab scrolls." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Example shows how the in-meeting tab scrolls.":::
 
 ### Navigation
 
 For scenarios with navigation layers or heavy content, we recommend allowing users to navigate to a secondary layer. Users must be able to go back to the previous layer.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Example shows in-meeting navigation." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Example shows in-meeting navigation.":::
 
 ## Use an in-meeting dialog
 
@@ -131,22 +131,22 @@ In-meeting dialogs display on the Teams meeting stage. They require a user's att
 
 In-meeting dialogs are triggered by a user (such as the meeting organizer) who might want participants to:
 
-* Provide brief feedback
-* Take a short survey or poll
-* Submit approvals
-* Get reminders
+* Provide brief feedback.
+* Take a short survey or poll.
+* Submit approvals.
+* Get reminders.
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog on mobile." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog.":::
 
 ### Anatomy: In-meeting dialog
 
-:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -155,7 +155,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 ### Anatomy: In-meeting dialog header
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog header." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog header.":::
 
 There are two header variants. When possible, use the variant with the avatar to reinforce that the dialog is coming from a person.
 
@@ -174,7 +174,7 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 * **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
 * **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe).":::
 
 ## Use the shared meeting stage
 
@@ -203,9 +203,9 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage.":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Example shows a dashboard component being reviewed on the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Example shows a dashboard component being reviewed on the shared meeting stage.":::
 
    :::column-end:::
 :::row-end:::
@@ -218,7 +218,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Example shows a whiteboard on the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Example shows a whiteboard on the shared meeting stage.":::
 
    :::column-end:::
 :::row-end:::
@@ -231,14 +231,14 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Example shows a quiz on the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Example shows a quiz on the shared meeting stage.":::
 
    :::column-end:::
 :::row-end:::
 
 ### Anatomy: Share all app content to a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage when all app content is shared." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage when all app content is shared.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -250,7 +250,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
 
 ### Anatomy: Share specific app content to a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -271,19 +271,19 @@ Apps shared to the meeting stage vary in size based on the state of the meeting 
 
 When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixels.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed.":::
 
 #### Meeting stage (with side panel)
 
 When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixels.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open.":::
 
 ## After a meeting
 
 You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between the pre- and post-meeting tab experience.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab.":::
 
 ## Best practices
 
@@ -293,7 +293,7 @@ Use these recommendations to create a quality app experience.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Example showing how to limit the number of interactions." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Example showing how to limit the number of interactions.":::
 
 #### Do: Limit the number of interactions
 
@@ -301,7 +301,7 @@ For in-meeting dialogs, remove unnecessary content that doesn't help users accom
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Example showing how not to introduce unnecessary elements." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Example showing how not to introduce unnecessary elements.":::
 
 #### Don't: Introduce unnecessary elements
 
@@ -312,7 +312,7 @@ A single in-meeting dialog with multiple interactions can distract from the meet
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Example showing how to create a focused environment." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Example showing how to create a focused environment.":::
 
 #### Do: Create a focused environment
 
@@ -320,7 +320,7 @@ We recommend keeping your app’s experience scoped to just the meeting stage. Y
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Example showing how not to include competing surfaces during meetings." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Example showing how not to include competing surfaces during meetings.":::
 
 #### Don't: Include competing surfaces
 
@@ -333,7 +333,7 @@ Your app should only ask users to focus on a single surface a time, whether it's
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing how you should use a single-column dialog layout." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing how you should use a single-column dialog layout.":::
 
 #### Do: Use a one-column dialog
 
@@ -341,7 +341,7 @@ Since the dialogs are at the center of the meeting stage, task completion should
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Example showing you shouldn't clutter the space of a meeting extension." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Example showing you shouldn't clutter the space of a meeting extension.":::
 
 #### Don't: Clutter the space
 
@@ -352,7 +352,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a single-column tab layout." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a single-column tab layout.":::
 
 #### Do: Use a one-column tab
 
@@ -360,7 +360,7 @@ Given the in-meeting tab's narrow nature, we strongly recommend displaying the c
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Example showing a tab with multiple columns." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Example showing a tab with multiple columns.":::
 
 #### Don't: Use multiple columns
 
@@ -373,7 +373,7 @@ Due to the limited space of the in-meeting tab, layouts with more than one colum
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Example showing how to right align primary controls." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Example showing how to right align primary controls.":::
 
 #### Do: Right align the primary action
 
@@ -381,7 +381,7 @@ We recommend positioning the most visually heavy action to the right-most locati
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Example showing how you shouldn't left align primary controls." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Example showing how you shouldn't left align primary controls.":::
 
 #### Don't: Left or center align actions
 
@@ -395,9 +395,9 @@ This deviates from the standard Teams pattern for control placement in a dialog 
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Example showing vertical scrolling in an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Example showing vertical scrolling in an in-meeting tab.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Example showing vertical scrolling in the shared meeting stage." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Example showing vertical scrolling in the shared meeting stage.":::
 
 #### Do: Scroll vertically
 
@@ -406,9 +406,9 @@ Users expect vertical scrolling in Teams (and elsewhere). This may not apply if 
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Example showing horizontal scrolling in an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Example showing horizontal scrolling in an in-meeting tab.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Example showing horizontal scrolling in the shared meeting stage." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Example showing horizontal scrolling in the shared meeting stage.":::
 
 #### Don't: Scroll horizontally
 
@@ -421,7 +421,7 @@ Horizontal scrolling isn’t an expected behavior in Teams (including the meetin
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Example showing complex scenario in an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Example showing complex scenario in an in-meeting tab.":::
 
 #### Do: Surface complex scenarios in the in-meeting tab
 
@@ -429,7 +429,7 @@ If your app includes multiple tasks, we strongly recommend using an in-meeting t
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Example showing complex scenarios in an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Example showing complex scenarios in an in-meeting dialog.":::
 
 #### Don't: Make in-meeting dialogs complex
 
@@ -443,9 +443,9 @@ In-meeting dialogs are intended for brief interactions.
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension with the dark theme.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Another example showing meeting extension with the dark theme." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Another example showing meeting extension with the dark theme.":::
 
 #### Do: Focus on dark theme
 
@@ -454,9 +454,9 @@ Teams meetings are optimized for dark theme to help reduce visual and cognitive 
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with colors that don't match the meeting theme." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with colors that don't match the meeting theme.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Another example showing a meeting extension with colors that don't match the meeting theme." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Another example showing a meeting extension with colors that don't match the meeting theme.":::
 
 #### Don't: Use unfamiliar colors
 
@@ -469,7 +469,7 @@ Colors that clash with the meeting environment may be distracting and appear les
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Example showing a meeting extension with a back button." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Example showing a meeting extension with a back button.":::
 
 #### Do: Have a back button
 
@@ -477,7 +477,7 @@ If you have more than one layer of navigation in an in-meeting tab, users must b
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Example showing a meeting extension with two dismiss buttons." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Example showing a meeting extension with two dismiss buttons.":::
 
 #### Don't: Include another dismiss button
 
@@ -490,7 +490,7 @@ Providing an option to close in-meeting tab content may cause issues since there
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Example showing modals (or task modules) within an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Example showing modals (or task modules) within an in-meeting tab.":::
 
 #### Caution: Avoid modals within the in-meeting tab
 
@@ -503,7 +503,7 @@ Modals (also known as task modules) in the already narrow in-meeting tab might w
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Example showing how to properly resize a meeting extension." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Example showing how to properly resize a meeting extension.":::
 
 #### Do: Resize and scale your app responsively
 
@@ -511,7 +511,7 @@ App content should dynamically resize and condense in smaller windows. Keep your
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Example showing how not to properly resize a meeting extension." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Example showing how not to properly resize a meeting extension.":::
 
 #### Don't: Crop or clip primary UI components
 
