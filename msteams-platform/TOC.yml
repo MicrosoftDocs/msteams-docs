@@ -147,9 +147,9 @@
   - name: Teams configuration on Azure AD
     items:
     - name: Register Teams app on Azure AD
-      href: /concepts/aad/register-on-aad.md
+      href: /aad/register-on-aad.md
     - name: Create bot resource on Azure AD
-      href: /concepts/aad/bot-resource-aad.md
+      href: /aad/bot-resource-aad.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
