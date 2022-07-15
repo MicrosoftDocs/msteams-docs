@@ -49,8 +49,8 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
-> [!NOTE]
-> If you are already logged in, your username will be displayed, you have an option to switch account.
+    > [!NOTE]
+    > If you are already logged in, your username will be displayed, you have an option to switch account.
 
 5. Sign in to Azure account using your credentials.
 6. Select Continue to add provision cloud resources.
