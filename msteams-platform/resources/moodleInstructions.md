@@ -90,7 +90,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 ### The Moodle tab for Microsoft Teams information flow
 
-:::image type="content" source="../assets/images/MoodleTabInformationFlow.png" alt-text="Screenshot shows Moodle tab for Microsoft Teams information flow.":::
+:::image type="content" source="../assets/images/MoodleTabInformationFlow.png" alt-text="The screenshot is an examples that shows the Moodle tab for Microsoft Teams information flow.":::
 
 1. From the Microsoft 365 Integration plugins page, select the **Setup** tab.
 
@@ -109,7 +109,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
     1. Select Start.
     1. Type PowerShell.
-    1. Right-click on **Windows PowerShell**.
+    1. Right-click the **Windows PowerShell**.
     1. Select **Run as Administrator**.
 
 1. Navigate to the unzipped directory by typing `cd .../.../Moodle-AzureAD-Powershell` where `.../...` is the path to the directory.
@@ -195,7 +195,7 @@ The free Moodle assistant bot for Microsoft Teams helps teachers and students an
 
 ### Moodle bot information flow
 
-:::image type="content" source="../assets/images/MoodleBotInformationFlow.png" alt-text="Screenshot shows Moodle bot for Microsoft Teams information flow.":::
+:::image type="content" source="../assets/images/MoodleBotInformationFlow.png" alt-text="The screenshot is an examples that shows the Moodle bot for Microsoft Teams information flow.":::
 
 To install the bot, you must register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your bot to authenticate against your Microsoft endpoints.
 
