@@ -8,7 +8,9 @@ ms.topic: Overview
 ms.date: 05/20/2022
 ---
 
-# Test API connection in local environment
+# Sideload and test app in Teams environment
+
+## Test API connection in local environment
 
 The following steps help to test the API connection in the Teams Toolkit local environment:
 

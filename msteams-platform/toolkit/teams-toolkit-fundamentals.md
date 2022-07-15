@@ -41,17 +41,17 @@ The following list of provides the list of features available in Teams Toolkit:
  |Features|Functionalities|
  |---------------|----------|
  | Javascript app | You can build Tab, Bot, and message extension app |
- | Multiple build environments | By default you have dev and local environment and you can create your own environment to develop Teams app |
- | SPFx tab | Webpages with sharepoint framework embeded in MS Teams |
- | SSO-enabled tab | Identity aware webpages |
- | Azure functions | Event driven compute solution |
- | Azure API management | Hybrid, multicloud management platform for APIs across all environments |
- | Azure SQL Database | Up to date relational database service for cloud |
- | Azure Key Vault | Cloud service for securely storing and accession secrets |
- | Single sign-on | |
- | API connection | Connect to an API with authentication support using TeamsFx SDK |
- | CI/CD workflow | Add CI/CD workflows for Github, ADO or Jenkins |
- | Provision in the cloud | Using multiple environments and subscriptions |
- | Edit manifest | Updating manifest based on the requirements |
- | Preview and debug adaptive cards | Preview and debug our own adaptive card |
- | Developer Portal for Teams | Create a new app and import an existing app |
+ | Multiple build environments | By default you have dev and local environment and you can create your own environment to develop Teams app. |
+ | SPFx tab | Webpages with sharepoint framework embeded in MS Teams. |
+ | SSO-enabled tab | Identity aware webpages. |
+ | Azure functions | Event driven compute solution. |
+ | Azure API management | Hybrid, multicloud management platform for APIs across all environments. |
+ | Azure SQL Database | Up to date relational database service for cloud. |
+ | Azure Key Vault | Cloud service for securely storing and accession secrets. |
+ | Single sign-on | It avoids users to sign-in to the bot multiple times.  |
+ | API connection | Connect to an API with authentication support using TeamsFx SDK. |
+ | CI/CD workflow | Add CI/CD workflows for Github, ADO or Jenkins. |
+ | Provision in the cloud | Using multiple environments and subscriptions. |
+ | Edit manifest | Updating manifest based on the requirements. |
+ | Preview and debug adaptive cards | Preview and debug our own adaptive card. |
+ | Developer Portal for Teams | Create a new app and import an existing app. |
