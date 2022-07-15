@@ -27,12 +27,12 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 2. Open the Teams App project.
 3. Select **Project > Teams Toolkit > Prepare Teams App dependencies**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Teams app dependencies":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Teams app dependencies":::
 
 4. Sign in to your M365 account using your credentials. If you do not have an account then create a free account by [clicking here](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 5. Select **Continue**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
 > [!NOTE]
 > If you are already logged in, your username will be displayed, you have an option to switch account.
@@ -43,11 +43,11 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 2. Open the Teams App project.
 3. Select **Project > Teams Toolkit > Provision in the cloud**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in the cloud":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in the cloud":::
 
 4. Select **Sign in...** to sign in to your Azure account.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
 > [!NOTE]
 > If you are already logged in, your username will be displayed, you have an option to switch account.
@@ -62,16 +62,16 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 3. Select or create **resource group**.
 4. Select Provision.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
 
 5. A dialog box warns you that costs may incur when running resources in Azure. Select **Provision**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
 6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking Teams Toolkit output window.
 7. A window will prompt you after provisioning is complete. You can select **View Provisioned Resources** to check all the resources that were provisioned.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="Provision success":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="Provision success":::
 
 ### Resource creation
 
