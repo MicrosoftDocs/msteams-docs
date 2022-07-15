@@ -10,7 +10,7 @@ ms.topic: how-to
 
 Action-based message extensions allow your users to trigger actions in external services while in Teams.
 
-:::image type="content" source="~/assets/images/compose-extensions/ceexample.png" alt-text="Example of message extension card.":::
+:::image type="content" source="~/assets/images/compose-extensions/ceexample.png" alt-text="The screenshot is an examples that shows the message extension card.":::
 
 The following sections describe how to do this:
 
@@ -126,7 +126,7 @@ To initiate actions from a message extension, set the `type` parameter to `actio
 
 In addition to initiating actions from the compose message area, you can also use your message extension to initiate an action from a message. This will allow you to send the message contents to your bot for processing and optionally reply to that message with a response using the method, which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access message extension from the overflow `...` menu and then selecting `Take action` as in the following image:
 
-:::image type="content" source="~/assets/images/compose-extensions/messageextensions_messageaction.png" alt-text="Example of initiating an action from a message.":::
+:::image type="content" source="~/assets/images/compose-extensions/messageextensions_messageaction.png" alt-text="The screenshot describes how to initiate an action from a message.":::
 
 To enable your message extension to work from a message, add the `context` parameter to your message extension's `commands` object in your app manifest as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
 
