@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 Message extensions are a powerful way for users to engage with your app from Microsoft Teams. With this capability, users can query or post information to and from your service and post that information, in the form of cards, right into a message.
 
-:::image type="content" source="~/assets/images/compose-extensions/ceexample.png" alt-text="Example of message extension card.":::
+:::image type="content" source="~/assets/images/compose-extensions/ceexample.png" alt-text="The screenshot is an examples that shows the message extension card.":::
 
 Message extensions appear along the bottom of the compose box. A few are built in, such as Emoji, gif, and Sticker. Choose the **More Options** (**&#8943;**) button to see other message extensions, including those you add from the app gallery or upload yourself.
 
