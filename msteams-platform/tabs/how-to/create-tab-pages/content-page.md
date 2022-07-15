@@ -1,14 +1,13 @@
 ---
 title: Create a content page
 author: surbhigupta
-description: how to create a content page
-keywords: teams tabs group channel configurable static
+description: In this module, learn how to create a content page for your tab and tab content and design guidelines
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Create a content page for your tab
+# Create a content page
 
 A content page is a webpage that is rendered within the Teams client, which is a part of:
 

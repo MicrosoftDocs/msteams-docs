@@ -1,13 +1,13 @@
 ---
 title: Microsoft Teams tabs
 author: surbhigupta
-description: An overview of custom tabs on the Teams platform
+description: In this module, learn to build a custom tabs on the Teams platform, Tab features and Tabs user scenarios
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
 ---
 
-# Build Tabs for Microsoft Teams
+# Build tabs for Teams
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `<iframe\>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
@@ -94,7 +94,7 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 
 * [Custom tabs in Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate media capabilities](../concepts/device-capabilities/media-capabilities.md)
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)

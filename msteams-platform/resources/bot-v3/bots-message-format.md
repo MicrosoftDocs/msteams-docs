@@ -1,7 +1,6 @@
 ---
 title: Bot message format
-description: Describes the details of formatting for bot messages
-keywords: teams scenarios channels conversation bot message
+description: In this module, learn details of formatting for bot messages
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 05/20/2019
@@ -22,31 +21,31 @@ Microsoft Teams supports the following formatting options:
 
 ## Formatting text content
 
-Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
+Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
 Currently, the following limitations apply:
 
-* Text-only messages do not support table formatting.
+* Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
-* Rich cards do not support Markdown or table formatting.
+* Rich cards don't support Markdown or table formatting.
 
 ## Cross-platform support
 
-To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles are not currently supported across all platforms.
+To ensure that your formatting works across all platforms supported by Teams, be aware that some styles aren't currently supported across all platforms.
 
 | Style                     | Text-only messages | Rich cards (XML only) |
 | ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✔ |
-| strikethrough             | ✖ | ✔ |
-| horizontal rule           | ✖ | ✖ |
-| unordered list            | ✖ | ✔ |
-| ordered list              | ✖ | ✔ |
-| preformatted text         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ |
-| image link                | ✔ | ✖ |
+| bold                      | ✔️️ | ❌ |
+| italic                    | ✔️ | ✔️ |
+| header (levels 1&ndash;3) | ❌ | ✔️ |
+| strikethrough             | ❌ | ✔️ |
+| horizontal rule           | ❌ | ❌ |
+| unordered list            | ❌ | ✔️ |
+| ordered list              | ❌ | ✔️ |
+| preformatted text         | ✔️ | ✔️ |
+| blockquote                | ✔️ | ✔️ |
+| hyperlink                 | ✔️ | ✔️ |
+| image link                | ✔️ | ❌ |
 
 ## Support by individual platform
 
@@ -56,17 +55,17 @@ Support for text formatting varies by type of message and by platform.
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✖ | ✖ |
-| strikethrough             | ✔ | ✔ | ✖ |
-| horizontal rule           | ✖ | ✖ | ✖ |
-| unordered list            | ✔ | ✖ | ✖ |
-| ordered list              | ✔ | ✖ | ✖ |
-| preformatted text         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ | ✔ |
-| image link                | ✔ | ✔ | ✔ |
+| bold                      | ✔️ | ✔️ | ✔️ |
+| italic                    | ✔️ | ✔️ | ✔️ |
+| header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
+| strikethrough             | ✔️ | ✔️ | ❌ |
+| horizontal rule           | ❌ | ❌ | ❌ |
+| unordered list            | ✔️ | ❌ | ❌ |
+| ordered list              | ✔️ | ❌ | ❌ |
+| preformatted text         | ✔️ | ✔️ | ✔️ |
+| blockquote                | ✔️ | ✔️ | ✔️ |
+| hyperlink                 | ✔️ | ✔️ | ✔️ |
+| image link                | ✔️ | ✔️ | ✔️ |
 
 ### Cards
 
