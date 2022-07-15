@@ -47,7 +47,7 @@ The Open ID Connect plugin allows users to authenticate any website or tool that
 
 The following image displays the OpenID connect login page:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Screenshot of Login to open-id connect.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="The screenshot describes how to Login to open-id connect.":::
 
 ## Microsoft 365 integration
 
@@ -60,7 +60,7 @@ Microsoft 365 integration consists of several apps with multiple functionalities
 
 The following image displays the Microsoft 365 integration setup page:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Screenshot of Microsoft 365 integration setup page.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="The screenshot is an examples that shows the Microsoft 365 integration setup page.":::
 
 ### User functions
 
@@ -82,7 +82,7 @@ Microsoft 365 repository allows the user to use it as a file repository for an i
 
 The following image displays the Microsoft 365 file repository:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="Screenshot of M365 repository file." :::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="The screenshot is an examples that shows the M365 repository file." :::
 
 ## Teams meetings
 
@@ -95,7 +95,7 @@ After the plugin is installed, faculty and students can create an audio or video
 
 The following image displays the Teams meeting sign in page:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="Screenshot of Teams meeting sign in page.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="The screenshot is an examples that shows the Teams meeting sign in page.":::
 
 ## Microsoft 365 Teams theme
 
@@ -110,7 +110,7 @@ The theme plugin gives users a unified enhanced experience with the following fe
 
 The following image displays the Teams theme set up by the user:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Screenshot of Microsoft Teams theme.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="The screenshot is an examples that shows the Microsoft Teams theme.":::
 
 ## OneNote integration
 
@@ -140,7 +140,7 @@ Microsoft block enhances user experience by providing a user interface to modify
 
 The following image shows the Microsoft block user interface:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="Screenshot of Microsoft block user interface.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="The screenshot is an examples that shows the Microsoft block user interface.":::
 
 ## oEmbed filter
 
@@ -152,8 +152,8 @@ oEmbed filter plugin simplifies and enhances user experience by simplifying incl
 * Permits video embedding without an API key.
 
 The following image shows inclusion of external HTML content within Moodle:
-
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="Screenshot of oEmbed filter page.":::
+the sc
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text=" The screenshot is an examples that shows the oEmbed filter page.":::
 
 ## See also
 
