@@ -82,11 +82,11 @@ To use tabs during a meeting:
     An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
 1. In the in-meeting dialog box, enter your response as feedback.
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop1)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="The screenshot is an example that shows the In-meeting view in desktop.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile1)
 
 After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
 
@@ -108,11 +108,11 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 The following image illustrates the in-meeting side panel:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop2)
 
 :::image type="content" source="../assets/images/in-meeting-dialog.png" alt-text="The screenshot is an example that shows the In-meeting side panel in desktop.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile2)
 
 :::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="The screenshot is an example that shows the In-meeting side panel in mobile.":::
 
@@ -132,11 +132,11 @@ With post-meeting app experience, you can view the results of the meeting, such 
 
 The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop3)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="The screenshot is an example that shows the Contoso tab with results in desktop.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile3)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="The screenshot is an example that shows the Post meeting app experience in mobile.":::
 
