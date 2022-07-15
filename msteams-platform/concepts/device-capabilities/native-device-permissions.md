@@ -1,6 +1,5 @@
 ---
 title: Request device permissions for your Microsoft Teams app
-keywords: teams apps capabilities permissions device native scan qr barcode image audio video 
 description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -53,7 +52,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
     <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions.":::
 
 # [Desktop](#tab/desktop)
 
@@ -64,7 +63,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
    <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission.":::
 
 ---
 
@@ -225,13 +224,13 @@ For example:
 
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission.":::
 
 # [Desktop](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop.":::
 
 ---
 

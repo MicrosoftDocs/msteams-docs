@@ -15,6 +15,12 @@ Message extension search commands allow users to search external systems and ins
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
 
+See the following video to learn how to define message extension search commands:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+<br>
+
 ## Select search command invoke locations
 
 The search command is invoked from any one or both of the following locations:

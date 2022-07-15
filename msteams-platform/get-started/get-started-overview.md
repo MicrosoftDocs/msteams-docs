@@ -35,7 +35,7 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
 > [!WARNING]
-> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. <br> App studio will be deprecated by June 30, 2022.
+> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. <br> App studio will be deprecated by August 01, 2022.
 
 ## Build your first Teams app
 
@@ -44,7 +44,7 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 > [!div class="nextstepaction"]
 > [Build a Teams tab app with JavaScript using React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Build a Teams bot app with JavaScript using React](../sbs-gs-bot.yml)
+> [Build a Teams bot app with JavaScript](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams message extension app with JavaScript using React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]

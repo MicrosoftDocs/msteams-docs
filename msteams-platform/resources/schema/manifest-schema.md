@@ -5,7 +5,7 @@ ms.topic: reference
 ms.localizationpriority: high
 ---
 
-# Reference: Manifest schema for Microsoft Teams
+# App manifest schema for Teams
 
 The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
@@ -192,7 +192,7 @@ The following schema sample shows all extensibility options:
                     ],
                     "description": "Command Description; e.g., Add a customer",
                     "initialRun": true,
-                    "fetchTask": true,
+                    "fetchTask": false ,
                     "parameters": [
                         {
                             "name": "custinfo",
@@ -574,7 +574,7 @@ Each command item is an object with the following structure:
 |`parameters.title`|string|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value is not supported|
-|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: true` . One of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
