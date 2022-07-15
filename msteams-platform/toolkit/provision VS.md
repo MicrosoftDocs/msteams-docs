@@ -34,8 +34,8 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
-> [!NOTE]
-> If you are already logged in, your username will be displayed, you have an option to switch account.
+    > [!NOTE]
+    > If you are already logged in, your username will be displayed, you have an option to switch account.
 
 ### Sign in to your Azure account
 
