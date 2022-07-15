@@ -54,12 +54,18 @@ The Developer Portal provides a couple ways to register a Teams app:
 The Developer portal allows you to create a brand new app:
 
 1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
+
+   :::image type="content" source="../../assets/images/tdp/home-page.PNG" alt-text="Teams Developer Portal home page.":::
+
 1. Select **+ New app** and enter app name.
+
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.PNG" alt-text="Create a brand new app in Teams Developer Portal." lightbox="../../assets/images/tdp/create-new-app-in-tdp.PNG":::
+
 1. Select **Add**.
 
-(image to be added)
-
 Now you've successfully created a brand new app and you can see all basic information of the new app.
+
+:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.PNG" alt-text="Basic information of the app you created in the Teams Developer Portal.":::
 
 ### Import an existing app
 
@@ -90,11 +96,17 @@ After you created or uploaded your app, you can manage your apps in Developer Po
 
 ### Overview
 
-In the **Dashboard** page under **Overview** section, you can see **Teams store validation** report, **Announcement**, **Upgrade to 1.14**, **Active users (Preview)** and **Basic information** of your app.
+In the Overview section, you can see the following features to manage your app:
 
-(image to be added)
+* Dashboard
 
-In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](#analyze-your-apps-usage).
+    In the **Dashboard** under **Overview** section, you can see **Teams store validation** report, **Announcement**, **Upgrade to 1.14**, **Active users (Preview)** and **Basic information** of your app.
+
+    :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="Overview page of the app you created in Teams Developer Portal.":::
+
+* Analytics
+
+    In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](#analyze-your-apps-usage).
 
 ### Configure
 
@@ -102,54 +114,65 @@ A Teams app is a web app. Like all web apps, its source code is typically develo
 
 To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
 
-The app overview page in the developer Portal allows you to update various attributes related to your app such as:
+In the Configure section, you can see the following features to manage and access your app:
 
-(image to be added)
+* **Basic information** - This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
+* **Branding** - This page shows you the app icon details.
+* **App features** - This section allows you to add the following features to your app:
+  * Personal app
+  * Bot
+  * Connector
+  * Scene
+  * Group and channel app
+  * Messaging extension
+  * Meeting extension
+  * Activity feed notification
+* **Permissions** - This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
+* **Single sign-on** - This section allows you to configure your app to authenticate users with single sign-on (SSO).
+* **Languages** - This section allows you to set up or change the language for your app.
+* **Domain** -
 
 ### Advanced
 
-#### Identify app owners
+In the Advanced section, you can see the following features to manage and access your app:
 
-Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Administrator** role except the ability to delete an app. You can add **Administrator** and **Contributors** to manage who can make changes to your app.
+* **Owners**
 
-(image to be added)
+    Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Operative** role has the same permissions as the **Administrator** role except the ability to delete an app. You can add **Administrator** and **Operative** to manage who can make changes to your app.
 
-To add an owner:
+    To add an owner:
 
-1. In the app **Overview** page, select **Owners**.
-1. In the title bar, select **Add an owner**.
-1. Enter a name and select a user ID from the drop-down list.
-1. Under Role, select **Contributor** or **Administrator**.
-1. Select **Add**.
+    1. In the app **Advanced** section, select **Owners**.
+    1. Select **Add an owner**.
+    1. Enter a name and select a user ID from the drop-down list.
+    1. Under **Role**, select **Operative** or **Administrator**.
+    1. Select **Add**.
 
-(image to be added)
+* **App content**
 
-#### Environments
+* **Environments**
 
-You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
+    You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
-(image to be added)
+    To set up an environment:
 
-To set up an environment:
+    1. In the Developer Portal, select the **Apps** you're working on.
+    1. Go to the **Environments** page and select **+ Add an environment**.
+    1. Select **+ Add a variable** to create configuration variables for your environment.
 
-1. In the Developer Portal, select the **Apps** you're working on.
-1. Go to the **Environments** page and select **+ Add an environment**.
-1. Select **+ Add a variable** to create configuration variables for your environment.
+    To use variables:
 
-(image to be added)
+    Use the variable names instead of hard-coded values to set your app configurations.
 
-To use variables:
+    1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
+    1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-Use the variable names instead of hard-coded values to set your app configurations.
-
-1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
+* **Plan and pricing** - This section allows you to link a SaaS offer to your app.
+* **Admin settings** - This section allows you to do app customization and to block your app by default.
 
 ### Publish
 
-From the Developer portal, you can publish your app to your org, or to the Teams store.
-
-(image to be added)
+This section allows you to publish your app to your org, or to the Teams store.
 
 To Publish your app to org:
 
