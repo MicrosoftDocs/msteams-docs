@@ -144,6 +144,12 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md     
+  - name: Teams configuration on Azure AD
+    items:
+    - name: Register Teams app on Azure AD
+      href: /includes/aad/register-on-aad.md
+    - name: Create bot resource on Azure AD
+      href: /includes/aad/bot-resource-aad.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
