@@ -160,7 +160,7 @@ items:
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::    
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::    
 
     1. Select the location for project workspace.
     1. Select the **Select Folder**.

@@ -1,7 +1,7 @@
 ## Deploy your app to Azure
 
 Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
-<br> 
+<br>
 <br>
 <details>
 <summary>What's the difference between Provision and Deploy?</summary>
