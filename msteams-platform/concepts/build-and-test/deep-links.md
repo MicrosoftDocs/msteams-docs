@@ -86,7 +86,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 
 ### Consume a deep link from a tab
 
-When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Teams JavaScript library to retrieve the sub-page ID if it exists.
+When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Teams JavaScript library to retrieve the subpage ID if it exists.
 
 The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -310,7 +310,7 @@ The query parameters are:
 * `channelId`: Channel ID of the conversation. For example, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
 * `tenantId`: Tenant ID such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `groupId`: Group ID of the file. For example, `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
-* `parentMessageId`: Parent message Id of the conversation.
+* `parentMessageId`: Parent message ID of the conversation.
 * `teamName`: Name of the team.
 * `channelName`: Name of the team's channel.
 
@@ -385,7 +385,7 @@ Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 ## Navigate to an audio or audio-video call
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there is group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
@@ -405,16 +405,16 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-## Generate a deep link to share content in meetings
+## Generate a deep link to share content to stage in meetings
 
 You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
 
-When deeplink is selected in an app and user is already in a meeting, the app is shared to stage and a permission pop-up window appears. Users can grant permissions for the participants such as co-editing a document or collaborating with an app.
+When deep link is selected in an app and user is already in a meeting, the app is shared to stage, and a permission pop-up window appears. Users can grant permissions for the participants such as co-editing a document or collaborating with an app.
 
 > [!NOTE]
 > Permission pop-up window appears only for Microsoft 365 apps.
 
-When user is not in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they can interact with an app.
+When user isn't in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they can interact with an app.
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
