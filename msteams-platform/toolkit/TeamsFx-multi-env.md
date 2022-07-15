@@ -74,9 +74,9 @@ The following table lists the common scenarios for customized resource provision
 | Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
 | Customize app manifest | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` section in `.fx/config.<envName>.json`</li>  </ul> | [Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)|
 
-## Scenarios
+## Customize your Teams app in different environments
 
-You can see the following scenarios to customize the resources provision in different environments.
+The following Scenarios helps you to customize your Teams app in different environments.
 <br>
 
 <br><details>
@@ -200,14 +200,12 @@ As the Teams app manifest template is shared across all environments, we can upd
 
 </details>
 
-<details>
-<br><summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
+## Customize Azure resources for different environment
+
 You can customize Azure resources for each environment, for example edit the environment corresponding to
 fx/configs/azure.parameters.{env}.json file to specify Azure Function name.
 
 For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
-</details>
-</br>
 
 ## See also
 
