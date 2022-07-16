@@ -1,7 +1,7 @@
 ---
 title: Test app behavior in different environment
 author: zyxiaoyuer
-description: In this module, learn how to sideload and test app in different environment
+description: In this module, learn how to test app behavior in different environment
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
