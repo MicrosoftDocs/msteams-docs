@@ -47,4 +47,4 @@ For more information, see [Manage your Teams apps using Developer Portal](../con
 
 * [Teams Toolkit for Visual Studio](visual-studio-overview.md)
 * [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
-* Create your Teams app (link here)
+* [Create a new Teams app using Teams Toolkit](create-new-project.md)

@@ -152,6 +152,12 @@ Let's take a tour of the topics covered in this document.
         * **Report issues on GitHub**: Select to access GitHub page and raise any issues.
    :::column-end:::
 :::row-end:::
+
+## See also
+
+* [Choose your build environments](build-environments.md)
+* [Support for app types and Azure function](app-types-and-azure-function.md)
+
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
 
