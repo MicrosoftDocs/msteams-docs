@@ -1,5 +1,5 @@
 ---
-title: Manage Azure Active Directory application in Teams Toolkit
+title: Customize Azure Active Directory manifest in Teams Toolkit
 author: zyxiaoyuer
 description:  Describes Managing Azure Active Directory application in Teams Toolkit
 ms.author: surbhigupta
@@ -280,6 +280,8 @@ You need to interact with Azure AD application during various stages of your Tea
     * You can see, [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment) to deploy Azure AD application changes for remote environment.
 
     * Teams Toolkit updates the Azure AD application according to the Azure AD manifest template file.
+
+## Advantages
 
 ## Limitations
 

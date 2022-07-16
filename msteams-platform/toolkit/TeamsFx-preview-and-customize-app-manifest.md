@@ -1,5 +1,5 @@
 ---
-title: Teams App Manifest in Teams Toolkit
+title: Customize Teams App Manifest in Teams Toolkit
 author: zyxiaoyuer
 description: In this module, learn how to edit, preview and customize Teams App Manifest in the different environment.
 ms.author: nliu
@@ -8,11 +8,11 @@ ms.topic: overview
 ms.date: 05/13/2022
 ---
 
-# Edit Teams app manifest
+# Customize Teams app manifest
 
-The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
+he Teams app manifest describes how your app integrates into the Microsoft Teams product. The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
-**To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder**:
+To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
 
 ```text
 └───build
@@ -44,10 +44,17 @@ The preview local appears as shown in the image:
 
 ## Preview manifest file in remote environment
 
-**To preview manifest file in remote environment**
+To preview manifest file using Visual Studio Code:
 
-* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension or
+* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension
+  
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Provision cloud resource":::
+
+To preview manifest file using command palatte:
+
 * Trigger **Teams: Provision in the cloud** from command palette.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Provision cloud resource":::
 
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
@@ -124,7 +131,7 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 
 During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-## Supported placeholders in manifest.template.json
+### Supported placeholders in manifest.template.json
 
 The following list provides supported placeholders in `manifest.template.json`:
 
@@ -164,7 +171,7 @@ During operations such as, **Zip Teams metadata package**, Teams Toolkit validat
 
 ---
 
-## Codelenses and hovers
+## To preview values for local and dev environment
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 
