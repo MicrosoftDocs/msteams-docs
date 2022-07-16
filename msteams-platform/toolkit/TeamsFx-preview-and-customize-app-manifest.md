@@ -54,7 +54,7 @@ To preview manifest file using command palatte:
 
 * Trigger **Teams: Provision in the cloud** from command palette.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Provision cloud resource":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Provision cloud resource using command palatte":::
 
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
