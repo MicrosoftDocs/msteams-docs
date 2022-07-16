@@ -18,7 +18,9 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 ## Connect to API in Visual Studio Code
 
-You can add API connection using Teams Toolkit in Visual Studio Code:
+You can add API connection using Visual Studio Code and CLI command:
+
+# [Visual Studio Code](#tab/vscode)
 
 1. Open Microsoft Visual Studio Code.
 2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
@@ -58,6 +60,21 @@ You can add API connection using Teams Toolkit in Visual Studio Code:
 
     > [!NOTE]
     > Based on the authentication type selected, additional configuration is needed.
+
+# [Command line](#tab/cli)
+
+The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
+
+ > [!Tip]
+ > You can use `teamsfx add api-connection [authentication type] -h` to get help document.
+
+   |**Authentication type**|**Sample command**|
+   |-----------------------|------------------|
+   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
+   |API Key|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
+   |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
+   |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
+   |Custom|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
 
 ## Updates to your project
 
