@@ -157,7 +157,7 @@ You can login to [Azure Portal](https://portal.azure.com/) and manage all resour
 
 ### Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as a code approach to define the Azure resources that you'd want to provision, and the way you want to configure. The tool[Teams Toolkit?] uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an infrastructure as a code approach to define the Azure resources that you'd want to provision, and the way you want to configure. TTK uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -190,7 +190,7 @@ The ARM template files use placeholders for parameters. The purpose of these pla
 
 ### Referencing environment variables in parameter files
 
-When the value is secret, then you do not need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve from current environment variable.
+When the value is secret, then you do not need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for TTK to resolve from current environment variable.
 
 The following example reads the value of `mySelfHostedDbConnectionString` parameter from environment variable `DB_CONNECTION_STRING`:
 
@@ -227,7 +227,7 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the snippet, add your client secret to the related environment variable so that the tool can resolve the actual client secret during provision.
+After adding the snippet, add your client secret to the related environment variable so that TTK can resolve the actual client secret during provision.
 
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you will get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
@@ -243,11 +243,11 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the preceding snippet, add your client secret to the related environment variable for the tool to resolve the actual client secret during provision.
+After adding the preceding snippet, add your client secret to the related environment variable for TTK to resolve the actual client secret during provision.
 
 #### Skip adding user for SQL database
 
-If you get an insufficient permission error when the tool tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
+If you get an insufficient permission error when TTK tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
