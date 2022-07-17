@@ -212,7 +212,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template, which sat
 
 ### Customization scenarios
 
-You can customize the following scenarios:
+You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. This can be done in the following ways:
 
 #### Use an existing Azure AD app for your bot
 
