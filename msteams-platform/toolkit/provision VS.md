@@ -8,18 +8,21 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Provision cloud resources for Visual Studio
+# Provision cloud resources using Visual Studio
 
-TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach your application needs these resources.
+TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach your application needs the cloud resources.
 
 ## Prerequisites
 
-* To provision the cloud resources you must have the following accounts as prerequisites:
-  * Microsoft 365 account with a valid subscription.
-  * Azure account with a valid subscription. For more information, see [how to prepare accounts for building Teams app](/microsoftteams/platform/toolkit/accounts?branch=pr-en-us-6427)
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)for Visual Studio.
+Here's a list of tools you'll need for provisioning your cloud resources:
+
+* Microsoft 365 account with a valid subscription
+* Azure account with a valid subscription
+* Install Teams Toolkit for Visual Studio.
 
 ## Steps to provision cloud resources
+
+The following steps helps you to provision cloud resources using Visual Studio:
 
 ### Sign in to your M365 account
 
@@ -33,13 +36,14 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
-5. Sign in to your M365 account using your credentials. If you do not have an account then create a free account by [clicking here](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+    > [!NOTE]
+    > If you are already logged in, your username will be displayed, you can select the same to switch your account.
+
+Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
+    
 6. Select **Continue**.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
-
-    > [!NOTE]
-    > If you're already logged in, your username is displayed, you have an option to switch account.
 
 ### Sign in to your Azure account
 
@@ -56,8 +60,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
     > [!NOTE]
     > If you're already logged in, your username is displayed, you have an option to switch account.
 
-5. Sign in to Azure account using your credentials.
-6. Select Continue to add provision cloud resources.
+5. Sign in to Azure account using your credentials. The browser closes automatically.
 
 ### Adding Provision cloud resources
 
