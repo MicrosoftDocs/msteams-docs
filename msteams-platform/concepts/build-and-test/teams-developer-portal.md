@@ -55,17 +55,17 @@ The Developer portal allows you to create a brand new app:
 
 1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
 
-   :::image type="content" source="../../assets/images/tdp/home-page.PNG" alt-text="Teams Developer Portal home page.":::
+   :::image type="content" source="../../assets/images/tdp/home-page.PNG" alt-text="Developer Portal for Teams home page.":::
 
 1. Select **+ New app** and enter app name.
 
-   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.PNG" alt-text="Create a brand new app in Teams Developer Portal." lightbox="../../assets/images/tdp/create-new-app-in-tdp.PNG":::
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.PNG" alt-text="Create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.PNG":::
 
 1. Select **Add**.
 
 Now you've successfully created a brand new app and you can see all basic information of the new app.
 
-:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.PNG" alt-text="Basic information of the app you created in the Teams Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.PNG" alt-text="Basic information of the app you created in the Developer Portal for Teams.":::
 
 ### Import an existing app
 
@@ -100,9 +100,14 @@ In the Overview section, you can see the following features to manage your app:
 
 * Dashboard
 
-    In the **Dashboard** under **Overview** section, you can see **Teams store validation** report, **Announcement**, **Upgrade to 1.14**, **Active users (Preview)** and **Basic information** of your app.
+  * In the **Dashboard** under **Overview** section, you can see the following features for your app:
+    * **Teams store validation** - App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
+    * **Announcement** - Latest updates of your apps on Developer Portal for Teams
+    * **Upgrade to 1.14** -
+    * **Active users (Preview)** - Shows you the active user count
+    * **Basic information** of your app -
 
-    :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="Overview page of the app you created in Teams Developer Portal.":::
+    :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="Overview page of the app you created in Developer Portal for Teams.":::
 
 * Analytics
 
@@ -174,30 +179,37 @@ In the Advanced section, you can see the following features to manage and access
 
 This section allows you to publish your app to your org, or to the Teams store.
 
-To Publish your app to org:
+* Publish your app to org:
 
-1. In the app **Overview** page, under **Publish**, Select **Publish to Org**.
-1. Select **Publish your App**.
+   1. In the app **Overview** page, under **Publish**, Select **Publish to Org**.
+   1. Select **Publish your App**.
 
-To publish your app to store:
+* Publish your app to store:
 
-1. In the app **Overview** page, under **Publish**, Select **Publish to Store**.
-1. Select **Publish**.
+   1. In the app **Overview** page, under **Publish**, Select **Publish to Store**.
+   1. Select **Publish**.
 
-You can download the app package using **Download app package** button from the publish to Teams Store page.
+   > [!NOTE]
+   l> The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app. You must resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
-#### Test your app directly in Teams
+   You can download the app package using **Download app package** button from the publish to Teams Store page.
+
+* Flights - Controls who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
+
+### Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
 
 * On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
-#### Distribute your app
+### Distribute your app
 
 From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
 
 For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
+
+## Tools
 
 ## Analyze your app's usage
 
