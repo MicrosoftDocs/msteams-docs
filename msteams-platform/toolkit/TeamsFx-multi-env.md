@@ -40,7 +40,7 @@ After creating a new project, Teams Toolkit by default creates:
 1. Select the **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
 2. Select **+Teams: Create new environment** under the **Environment** section as shown in the following image:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="Screenshot describes how to create new environment.":::
 
    If you have more than one environments, you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment created.
 
@@ -48,7 +48,7 @@ After creating a new project, Teams Toolkit by default creates:
 
 You can select the target environment for all environment-related operations. The Toolkit prompts and ask for a target environment when you have multiple remote environments as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add env":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot describes how to add environment.":::
 
 ## Project folder structure
 
