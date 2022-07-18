@@ -61,19 +61,19 @@ The Teams Toolkit can create React apps that are hosted in Azure or SPFx web par
 
 1. On the **Select capabilities** step, the **Tab** capability is already selected. You can also optionally select **Bot** and **Messaging Extension**.  Press **OK**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot is an example that shows how to add capabilities to your new app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot describes how to add capabilities to your new app.":::
 
 1. On the **Frontend hosting type** step, select **Azure**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot is an example that shows how to select hosting for your new app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot describes how to select hosting for your new app.":::
 
 1. Optionally, on the **Cloud resources** step, select cloud resources that your application uses. You can select CRUD (create, read, update, and delete) access to a SQL table or an API:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot is an example that shows how to add cloud resources for your new app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot describes how to add cloud resources for your new app.":::
 
 1. On the **Programming Language** step, you can choose **JavaScript** or **TypeScript**:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot is an example that shows how to select the programming language.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot describes how to select the programming language.":::
 
 1. Select a workspace folder. A folder is created within your workspace folder for the project you're creating.
 
@@ -114,11 +114,11 @@ To build and run your app locally:
 
    The toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot is an example that shows how to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot describes how to install a SSL certificate to enable Teams to load your application from localhost.":::
 
 1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. You may also be prompted to switch to the Teams application at other times. Select the web app when this happens.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot is an example that shows how to pick the web version of teams when launched.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot describes how to pick the web version of teams when launched.":::
 
 1. You may be prompted to sign in. If so, sign in with your Microsoft 365 account.
 1. When prompted to install the app onto Teams, press **Add**.
