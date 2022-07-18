@@ -51,11 +51,11 @@ You can create the following workflow templates with GitHub:
 
 1. Select **Add features**
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="Adding feature":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="Screenshot describes how to add features.":::
 
 1. Select **Add CI/CD Workflows**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="Select CI/CD workflow":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="Screenshot describes how to select CI/CD workflow.":::
 
 1. Select an environment from the command prompt.
 1. Select **GitHub** as the CI/CD provider.
