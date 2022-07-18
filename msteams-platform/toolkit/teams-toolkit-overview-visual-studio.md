@@ -23,7 +23,7 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey":::
 
 The main milestones of this journey are:
 
@@ -42,28 +42,28 @@ The main milestones of this journey are:
 
 1. Open the VS installer, the Workloads tab will prompt up, make sure you checked the “ASP.NET and web development” workloads and select the “Microsoft Teams development tools” in the installation details panel. Then click install.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install.png" alt-text="Visual studio-installation":::
 
 1. After installed, click “Launch” to open Visual Studio.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
 ## Take a tour of Teams Toolkit
 
 With Teams Toolkit installed, open a Teams project. Then Teams Toolkit operations are available for you through Project menu:
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams tookit operations menu":::
 
 Teams Toolkit operations are also available in the menu by right click on your project:
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
 Available operations on Teams Toolkit for Visual Studio:
 
 |Operation  |Description  |
 |---------|---------|
 |Create Teams Project     |Create Teams project using Teams template in VS         |
-|Prepare Teams App Dependencies     |This step is a required step before local debg, it helps to set up the local debug dependencies and register Teams app in Teams platform, hence it requires M365 account to in this step. For more information, refer to [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Prepare Teams App Dependencies     |This step is a required step before local debug, it helps to set up the local debug dependencies and register Teams app in Teams platform, hence it requires M365 account to in this step. For more information, refer to [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Open Manifest File     |To open Teams manifest file, and user can hover by the parameters to preview value. For more information, refer to [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Update Manifest in Teams Developer Portal     |When there are updates to manifest file, user would like to only redeploy the manifest file to Azure without deploy the whole project again, use this command to update your changes to remote. For more information, refer to [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Provision to the Cloud     |This option helps users to create Azure resources which host your Teams app. For more information, refer to [Provision cloud resources] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
