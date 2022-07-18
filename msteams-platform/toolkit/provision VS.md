@@ -130,7 +130,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Required to create function app | Not applicable |
 | App Service plan | Host the Function bot App | Not applicable |
-| Function app | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
+| Function app | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
 ### Resource creation for Teams Notification bot with Timer Trigger(Azure Function) application
 
