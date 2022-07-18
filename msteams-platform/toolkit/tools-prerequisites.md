@@ -57,33 +57,33 @@ You can sign up for the developer program by using one of the following account 
 
 * **Microsoft account for personal use**
 
-:::row:::
+  :::row:::
 
-   :::column span="3":::
+    :::column span="3":::
 
-                The account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
+       The account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
+    :::column-end:::
+    :::column span="1":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="personal account.":::
    :::column-end:::
-   :::column span="1":::
-                :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="personal account.":::
-   :::column-end:::
 
-:::row-end:::
+  :::row-end:::
 
 * **Microsoft work account for business**
 
-:::row:::
+  :::row:::
 
-   :::column span="3":::
+    :::column span="3":::
 
-                The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
+       The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
 
-   :::column-end:::
-   :::column span="1":::
-                :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work account.":::
-   :::column-end:::
+    :::column-end:::
+    :::column span="1":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work account.":::
+    :::column-end:::
 
-:::row-end:::
+  :::row-end:::
 
 #### Create a free Microsoft 365 developer account
 
