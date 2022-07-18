@@ -63,7 +63,7 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 1. Select Project > Teams Toolkit > Provision in the cloud.
 2. The Provision tab will list all subscriptions in your Azure account.
-3. Select or create **resource group**.
+3. Select or create a new **resource group**.
 4. Select Provision.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
