@@ -392,7 +392,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission status --env dev --list-all-collaborators
       ```
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="Screenshot is an example that shows the permission status.":::
 
     * To add another account as collaborator. Ensure the added account is under the same tenant:
 
@@ -400,7 +400,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission grant --env dev --email user-email@user-tenant.com
       ```
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="Screenshot is an example that shows the granted permission.":::
 
     * To push your project to GitHub
 
@@ -425,8 +425,8 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission status --env dev
       ```
 
-      ![permission status](./images/permission-status.png)
-
+      :::image type="content" source="./images/permission-status.png" alt-text="Screenshot is an example that shows the status of the permission.":::
+      
     * Update Tab code, and deploy the project to remote.
     * Launch remote and the project should work fine.
 
