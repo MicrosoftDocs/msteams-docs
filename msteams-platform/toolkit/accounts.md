@@ -31,7 +31,7 @@ To get a free Teams developer account, join the Microsoft 365 developer program 
 
    You can see the following image after the completion of the subscription:
 
-    :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
+    :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program.":::
 
 ### Microsoft 365 developer account types
 
@@ -79,11 +79,11 @@ If you want to host your application related resources or access resources withi
     2. Select **Apps** in left panel.
     3. Select **Publish an app**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publish an app":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Screenshot describes how to publish an app.":::
 
     4. Check whether you can see the option **Upload a custom app** as shown in the following image:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Screenshot describes how to upload a custom app.":::
 
         If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
 
@@ -101,18 +101,18 @@ If you want to host your application related resources or access resources withi
 
   2. Select **Show All** > **Teams**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="Screenshot describes how to select show all.":::
 
      > [!Note]
      > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
   3. Go to **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="Screenshot describes how to set policies.":::
 
   4. Set toggle **Upload custom apps** to **On** position.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="toggle":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="Screenshot describes how to set toggle.":::
 
   5. Select **Save**.
 
