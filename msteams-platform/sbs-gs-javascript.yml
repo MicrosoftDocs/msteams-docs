@@ -195,7 +195,7 @@ items:
 
     1. Select your **Workspace folder** by choosing your required folder.  
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-folder.png" alt-text="select-folder":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
 
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
@@ -207,7 +207,7 @@ items:
 
         After your app is created, Teams Toolkit displays the following message:.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/preview-project.png" alt-text="Preview Project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Preview Project.":::
         
         You can select **Local debug** to preview your project. 
         
