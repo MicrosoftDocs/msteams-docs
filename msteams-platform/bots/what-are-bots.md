@@ -1,7 +1,7 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: In this article, you'll learn how to get started with conversational bots in Microsoft Teams and understand the code samples.
+description: In this article, you'll learn how to get started with conversational bots in Microsoft Teams and understand its code samples.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
