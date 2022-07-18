@@ -21,15 +21,15 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code sidebar.
 1. Select **Create a new Teams app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams toolkit sidebar":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Screenshot is an example that shows Teams toolkit sidebar.":::
 
 1. You can select **Create a new Teams app** or **Start from a sample**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Screenshot describes how to create an app.":::
 
 1. If you select **Create a new Teams app**, the following image displays with templates from three categories: Scenario-based Teams app, Basic Teams app, and Extended Teams apps across Microsoft 365:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Screenshot is an example that shows capabilties for Teams app.":::
 
 1. Select at least one option to start creating the Teams app.
 
@@ -41,11 +41,11 @@ You can create a new app by exploring **View samples** and selecting an existing
  1. Select **DEVELOPMENT** section in Treeview.
  1. Select **View samples**. 
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Screenshot describes how to view samples.":::
 
     The sample gallery appears as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Sample gallery":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Screenshot is an example that shows a sample gallery.":::
 
   You can explore the sample gallery as follows:
 
