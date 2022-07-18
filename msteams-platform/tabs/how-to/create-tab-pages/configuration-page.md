@@ -31,6 +31,8 @@ The following code is an example of corresponding code for the configuration pag
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
+<head>
+    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
