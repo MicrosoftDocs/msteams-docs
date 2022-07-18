@@ -1,9 +1,8 @@
 ---
 title: Use Task Modules in Microsoft Teams tabs
-description: Explains how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client SDK. It includes code samples.
+description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client SDK. It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: task modules teams tabs client sdk
 ---
 
 # Use task modules in tabs
@@ -30,8 +29,8 @@ You can see how invoking a task module from a tab and submitting the result of a
 
 To invoke a task module from a tab use `microsoftTeams.tasks.startTask()` passing a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) and an optional `submitHandler` callback function. There are two cases to consider:
 
-* The value of `TaskInfo.url` is set to a URL. The task module window appears and `TaskModule.url` is loaded as an `<iframe>` inside it. JavaScript on that page calls `microsoftTeams.initialize()`. If there is a `submitHandler` function on the page and there is an error when invoking `microsoftTeams.tasks.startTask()`, then `submitHandler` is invoked with `err` set to the error string indicating the same. For more information, see [task module invocation errors](#task-module-invocation-errors).
-* The value of `taskInfo.card` is the [JSON for an Adaptive Card](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). There is no JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive Card. The only way to receive what the user entered is by passing the result to a bot. To use an Adaptive Card task module from a tab, your app must include a bot to get any response from the user.
+* The value of `TaskInfo.url` is set to a URL. The task module window appears and `TaskModule.url` is loaded as an `<iframe>` inside it. JavaScript on that page calls `microsoftTeams.initialize()`. If there's a `submitHandler` function on the page and there's an error when invoking `microsoftTeams.tasks.startTask()`, then `submitHandler` is invoked with `err` set to the error string indicating the same. For more information, see [task module invocation errors](#task-module-invocation-errors).
+* The value of `taskInfo.card` is the [JSON for an Adaptive Card](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). There's no JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive Card. The only way to receive what the user entered is by passing the result to a bot. To use an Adaptive Card task module from a tab, your app must include a bot to get any response from the user.
 
 The next section gives an example of invoking a task module.
 
@@ -65,13 +64,13 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-The `submitHandler` is very simple and it echoes the value of `err` or `result` to the console.
+The `submitHandler` is simple and it echoes the value of `err` or `result` to the console.
 
 ## Submit the result of a task module
 
-The `submitHandler` function resides in the `TaskInfo.url` web page and is used with `TaskInfo.url`. If there is an error when invoking the task module, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects X at the upper right of the task module to close it.
+The `submitHandler` function resides in the `TaskInfo.url` web page and is used with `TaskInfo.url`. If there's an error when invoking the task module, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects X at the upper right of the task module to close it.
 
-If there is no invocation error and the user does not select X to dismiss it, the user chooses a button when finished. Depending on whether it is a URL or an Adaptive Card in the task module, the next sections provide details on what occurs.
+If there's no invocation error and the user doesn't select X to dismiss it, the user chooses a button when finished. Depending on whether it's a URL or an Adaptive Card in the task module, the next sections provide details on what occurs.
 
 ### HTML or JavaScript `TaskInfo.url`
 
@@ -81,7 +80,7 @@ Pass your result as the first parameter. Teams invokes `submitHandler` where `er
 
 ### Adaptive Card `TaskInfo.card`
 
-When you invoke the task module with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as the value of `result`. If the user selects the Esc key or X at the top right, `err` is returned instead. If your app contains a bot in addition to a tab, you can simply include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is very similar to [the schema you receive for task/fetch and task/submit messages](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+When you invoke the task module with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as the value of `result`. If the user selects the Esc key or X at the top right, `err` is returned instead. If your app contains a bot in addition to a tab, you can include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
 The next section gives an example of submitting the result of a task module.
 

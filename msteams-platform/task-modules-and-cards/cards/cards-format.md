@@ -1,7 +1,6 @@
 ---
 title: Text formatting in cards
-description: Describes card text formatting in Microsoft Teams
-keywords: teams bots cards format
+description: In this module, learn what is card text formatting in Microsoft Teams and format cards with markdown.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021

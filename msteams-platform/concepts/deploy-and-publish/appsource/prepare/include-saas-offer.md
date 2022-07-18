@@ -1,13 +1,13 @@
 ---
 title: Include a SaaS offer with your app
-description: Learn how to monetize your Microsoft Teams app with subscription plans.
+description: Learn how to monetize your Microsoft Teams app with subscription plans and include a SaaS offer with your Microsoft Teams app.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
 ---
 
-# Include a SaaS offer with your Microsoft Teams app
+# Include a SaaS offer with your Teams app
 
 :::row:::
    :::column span="3":::
@@ -31,7 +31,7 @@ Here's a general idea of how to monetize your app:
    :::column-end:::
    :::column span="1":::
 
-:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagram showing process for how to include a SaaS offer with your Teams app." border="false":::
+:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagram showing process for how to include a SaaS offer with your Teams app.":::
 
    :::column-end:::
 :::row-end:::
@@ -42,7 +42,7 @@ For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft comm
 
 When planning how to monetize your Teams app, here are some things to consider:
 
-* Decide on your subscription model. A transactable SaaS offer can include multiple subscription plans. Public subscription plans available to anyone are most common, but you may also want to target specific customers with deals only for them. For more information, see [private offers in the Microsoft commercial marketplace](/azure/marketplace/private-offers).
+* Decide on your subscription model. A transactable SaaS offer can include multiple subscription plans. Public subscription plans available to anyone are most common, but you may also want to target specific customers with deals only for them. For more information, see [private plans in the Microsoft commercial marketplace](/azure/marketplace/private-plans).
 * Read about the [*Sell through Microsoft* listing option](/azure/marketplace/plan-saas-offer#listing-options) for your SaaS offer, which is required if you want users to purchase subscription plans for your app directly through the Teams store.
 * Learn how [Azure Active Directory single sign-on (SSO)](/azure/marketplace/azure-ad-saas) helps your customers purchase and manage subscriptions. (Microsoft Azure Active Directory (Azure AD) SSO is required for Teams apps with SaaS offers.)
 * Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
@@ -117,7 +117,7 @@ See [create a SaaS offer](/azure/marketplace/create-new-saas-offer) for complete
 We strongly recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can do this by creating a separate offer just for testing. For complete information, see [test offer overview](/azure/marketplace/plan-saas-offer#test-offer), [create a test offer](/azure/marketplace/create-saas-dev-test-offer), and [preview your offer](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> You can test an end-to-end transaction in Teams until your app completes store validation. For more information, see [Test preview for monetized apps](Test-preview-for-monetized-apps.md).
+> You can test an end-to-end transaction in Teams using the [Test preview for monetized apps](Test-preview-for-monetized-apps.md) feature. For live offers you must complete the app store validation process.
 
 From a Teams standpoint, these tests must verify that the number of licenses and assignments match what’s in the Teams admin center when users:
 
@@ -219,4 +219,5 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 ## See also
 
-[Maintaining and supporting your published app](../post-publish/overview.md)
+* [Maintaining and supporting your published app](../post-publish/overview.md)
+* [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)

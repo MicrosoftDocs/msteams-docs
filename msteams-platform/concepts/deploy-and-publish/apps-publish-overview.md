@@ -1,11 +1,10 @@
 ---
 title: Overview - Distribute your app
-description: Describes the options for publishing your Microsoft Teams app, uploading your app, and GCC.
+description: In this article, learn the options for publishing your Microsoft Teams app, uploading and deploying your app, and GCC.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: deploy publish app upload gcc 
 ---
 
 # Distribute your Microsoft Teams app
@@ -18,7 +17,7 @@ You configure default install options. For example, if your app's primary capabi
 
 ## Create your app package
 
-To distribute your Microsoft Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
