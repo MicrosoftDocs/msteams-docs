@@ -21,18 +21,18 @@ You can create a bot that works in Microsoft Teams with one of the following too
 
 Your Teams bot consists of the following:
 
-* A publicly accessible web service hosted by you
-* A Bot Framework registration for your web service
-* Your Teams app package that connects the Teams client to your web service
+* A publicly accessible web service hosted by you.
+* A Bot Framework registration for your web service.
+* Your Teams app package that connects the Teams client to your web service.
 
 > [!TIP]
 > Use the Developer Portal to register your web service with the Bot Framework and specify app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework then it is easy to modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
-* Use specialized card types like the Office 365 connector card
-* Set Teams-specific channel data on activities
-* Process message extension requests
+* Use specialized card types like the Office 365 connector card.
+* Set Teams-specific channel data on activities.
+* Process message extension requests.
 
 > [!IMPORTANT]
 > You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
@@ -57,13 +57,13 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 
 > [!NOTE]
 >
-> * Bots in GCCH only support up to manifest version v1.10
-> * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri
-> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service)
+> * Bots in GCCH only support up to manifest version v1.10.
+> * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
+> * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
 >   <details>
 >   <summary><b>If you want to do bot registration only</b></summary>
 >
->   * Go to the resource group and manually delete the unused resources. Such as the app service, app service plan (if you created during bot registration), and the application insights (if you choose to enable it during bot registration)
+>   * Go to the resource group and manually delete the unused resources. Such as the app service, app service plan (if you created during bot registration), and the application insights (if you choose to enable it during bot registration).
 >   * You can also use az-cli to do bot registration:
 >
 >     1. Sign into azure and set the subscription <br>
@@ -165,10 +165,10 @@ Channels contain threaded conversations between multiple people, even up to two 
 
 Bots work better in a channel in the following cases:
 
-* Notifications: where you provide an interactive card for users to take additional information
-* Feedback scenarios: such as polls and surveys
-* Single request or response cycle: resolves interactions and the results are useful for multiple members of the conversation
-* Social or fun bots: where you display an awesome cat image, randomly pick a winner, and so on
+* Notifications: where you provide an interactive card for users to take additional information.
+* Feedback scenarios: such as polls and surveys.
+* Single request or response cycle: resolves interactions and the results are useful for multiple members of the conversation.
+* Social or fun bots: where you display an awesome cat image, randomly pick a winner, and so on.
 
 ### In a group chat
 
@@ -180,10 +180,10 @@ In cases where bots work better in a channel, they also work better in a group c
 
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
-* Q&A bots
-* bots that initiate workflows in other systems
-* bots that tell jokes
-* bots that take notes
+* Q&A bots.
+* bots that initiate workflows in other systems.
+* bots that tell jokes.
+* bots that take notes.
 Before creating one-to-one chatbots, consider whether a conversation-based interface is really the best way to present your functionality.
 
 ## Disadvantages of bots
