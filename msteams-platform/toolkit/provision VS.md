@@ -92,7 +92,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | App Service plan | Host the web app of tab | Not applicable |
-| App Service | Host your Blazor tab app and simple auth server that helps you gain access to other services | Adds user assigned identity to access other Azure resources. |
+| App Service | Host your Blazor tab app and simple auth server that helps you gain access to other services | Adds user assigned identity to access other Azure resources |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
 ### Resource creation for Teams Message Extension application
@@ -101,7 +101,7 @@ When you create a new project, you also need to create some Azure resources. The
 | --- | --- | --- |
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | App Service plan | Host the web bot app | Not applicable |
-| App Service | Host your bot app | Adds user assigned identity to access other Azure resources. |
+| App Service | Host your bot app | Adds user assigned identity to access other Azure resources |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
 ### Resource creation for Teams Command bot application
@@ -140,7 +140,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Required to create function app | Not applicable |
 | App Service plan | Host the Function bot App | Not applicable |
-| Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
+| Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
 ### Resource creation for Teams Notification bot with HTTP Trigger + Timer Trigger(Azure Function) application
 
@@ -150,7 +150,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Required to create function app | Not applicable |
 | App Service plan | Host the Function bot App | Not applicable |
-| Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK |
+| Function App | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
 ### Manage your resources
 
@@ -212,7 +212,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template, which sat
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the name of auto-generated parameters as well as its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of auto-generated ARM template are unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
+* Ensure that the output of auto-generated ARM template are unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy and validate manifest file.
 
 ### Customization scenarios
 
