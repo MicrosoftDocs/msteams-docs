@@ -352,7 +352,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a single-column tab layout.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a single-column tab layout.":::
 
 #### Do: Use a one-column tab
 

@@ -117,7 +117,7 @@ The following image provides the flow to add authentication to external browsers
    The 3P app generates a deeplink for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
 
    ```JavaScript
-   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
  8. Teams calls success callback and sends result.
