@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Edit Teams app manifest
 
-During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
 After scaffolding, in the manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
@@ -21,10 +21,10 @@ In the manifest template, select **Project** > **Teams Toolkit** > **Open Manife
 
 ## Customize app manifest in Teams Toolkit
 
-There are two kinds of placeholders in `manifest.template.json`:
+There are two types of placeholders in `manifest.template.json`:
 
-- `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. You should not modify the values in `state.{env}.json`.
-- `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
+- `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. You can't modify the values in `state.{env}.json`.
+- `{{config.manifest.xx}}` is customized placeholde,r whose value is resolved from `config.{env}.json`.
 
 You can have a customized parameter by:
 
@@ -39,7 +39,7 @@ You can have a customized parameter by:
     }
     ```
 
-## Preview app manifest
+## Preview app manifest in Teams Toolkit
 
 You can Preview values in app manifest in two ways:
 
@@ -52,7 +52,7 @@ You can Preview values in app manifest in two ways:
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder.png" alt-text="Placeholder values":::
 
 > [!NOTE]
-> If the environment has not been provisioned, or **Prepare Teams App Dependencies** has not been executed, it means the values for placeholder have not been generated. Please follow the guidance inside, and hover to generate corresponding values.
+> If the environment has not been provisioned, or the Teams app dependencies has not been prepared, it indicates that the values for placeholder have not been generated. 
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-undefined1.png" alt-text="Placeholder values undefined":::
 
@@ -83,7 +83,7 @@ After previewing the manifest file, your local changes can be synced to the Deve
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Update manifest in teams developer portal":::
 
 > [!NOTE]
-> The changes are updated to Teams Developer Portal. If you have some manual updates in Teams Developer Portal, that can be overwritten. In the **Warning** dialogue box you can **Overwrite and update** or **Cancel**.
+> The changes are updated to Teams Developer Portal. If you have some manual updates in Developer Portal, that can be overwritten. In the **Warning** dialogue box you can **Overwrite and update** or **Cancel**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning":::
 
