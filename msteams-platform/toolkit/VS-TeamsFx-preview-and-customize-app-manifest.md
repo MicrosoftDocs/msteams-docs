@@ -72,7 +72,7 @@ There are other ways to preview manifest file:
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
 
-- You can also see the same list of menus that are under Project > Teams Toolkit if you right click on your *Project name* and then select **Teams Toolkit** under **Solution Explorer**.
+- You can also see the same list of menus that are under Project > Teams Toolkit, if you right click on your *Project name* and then select **Teams Toolkit** under **Solution Explorer**.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer":::
 
