@@ -40,11 +40,11 @@ The main milestones of this journey are:
 > [!IMPORTANT]
 > We recommend downloading VS 2022 17.3.0version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*.
 
-1. Open the VS installer, the Workloads tab will prompt up, make sure you checked the “ASP.NET and web development” workloads and select the “Microsoft Teams development tools” in the installation details panel. Then click install.
+1. Open the VS installer, the Workloads tab will prompt up, make sure you checked the “ASP.NET and web development” workloads and select the “Microsoft Teams development tools” in the installation details panel. Then select install.
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install.png" alt-text="Visual studio-installation":::
 
-1. After installed, click “Launch” to open Visual Studio.
+1. After installed, select “Launch” to open Visual Studio.
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
@@ -54,7 +54,7 @@ With Teams Toolkit installed, open a Teams project. Then Teams Toolkit operation
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams tookit operations menu":::
 
-Teams Toolkit operations are also available in the menu by right click on your project:
+Teams Toolkit operations are also available in the menu by right select on your project:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
@@ -63,24 +63,24 @@ Available operations on Teams Toolkit for Visual Studio:
 |Operation  |Description  |
 |---------|---------|
 |Create Teams Project     |Create Teams project using Teams template in VS         |
-|Prepare Teams App Dependencies     |This step is a required step before local debug, it helps to set up the local debug dependencies and register Teams app in Teams platform, hence it requires M365 account to in this step. For more information, refer to [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
-|Open Manifest File     |To open Teams manifest file, and user can hover by the parameters to preview value. For more information, refer to [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Prepare Teams App Dependencies     |This step is a required step before local debug, it helps to set up the local debug dependencies and register Teams app in Teams platform, hence it requires Microsoft 365 account to in this step. For more information, see [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Open Manifest File     |To open Teams manifest file, and user can hover by the parameters to preview value. For more information, see [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Update Manifest in Teams Developer Portal     |When there are updates to manifest file, user would like to only redeploy the manifest file to Azure without deploy the whole project again, use this command to update your changes to remote. For more information, refer to [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
-|Provision to the Cloud     |This option helps users to create Azure resources which host your Teams app. For more information, refer to [Provision cloud resources] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
-|Deploy to the Cloud     |This option helps users to copy their code to the Azure resources created when “Provision to the Cloud”. For more information, refer to [Deploy Teams app to the cloud](http://{placeholder_url_to_doc_page_?zone=vs})         |
+|Provision to the Cloud     |This option helps users to create Azure resources which host your Teams app. For more information, see [Provision cloud resources] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Deploy to the Cloud     |This option helps users to copy their code to the Azure resources created when “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud](http://{placeholder_url_to_doc_page_?zone=vs})         |
 |Preview in Teams     |This option will launch the Teams web client and let user preview Teams app in their browser.         |
 |Zip App Package     |This option will generate a Teams app package in the `Build` folder under the project. User can upload the package to Teams client in order to run the Teams app.         |
 
-The following operations are not supported yet in Teams Toolkit for Visual Studio (compared to Teams Toolkit for VS Code), however they are planned in our product road map, which will coming in short future.
+The following operations aren't supported yet in Teams Toolkit for Visual Studio (compared to Teams Toolkit for VS Code), however they're planned in our product road map, which comes in short future.
 
 |Operation  |Description  |
 |---------|---------|
-|Add additional Teams capabilities to your Teams app     |NA         |
-|Add more Azure resources to your Teams app     |NA         |
-|Add single sign on to your Teams app     |NA         |
-|Add API connection to your Teams app     |NA         |
-|Customize Azure AD manifest     |NA         |
-|Add CICD pipelines     |NA         |
+|Add another Teams capabilities to your Teams app            |
+|Add more Azure resources to your Teams app             |
+|Add single sign-on to your Teams app    |      |
+|Add API connection to your Teams app     |        |
+|Customize Azure AD manifest     |         |
+|Add CICD pipelines     |       |
 |Manage multiple cloud environments     |NA         |
 |Collaborate on Teams projects     |NA         |
 |Publish Teams app     |NA         |
