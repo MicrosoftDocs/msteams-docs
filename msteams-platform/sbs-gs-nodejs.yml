@@ -49,14 +49,14 @@ items:
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
     | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
-    | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+    | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
 
     ## Verify version numbers for installed tools
 
     Use the following commands to verify that the installed versions for the tools are as needed.
 
     > [!NOTE]
-    > Use the terminal window that you are most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts will run on most platforms.
+    > Use the terminal window that you're most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts will run on most platforms.
 
     To verify the version numbers of tools installed:
 
@@ -122,7 +122,7 @@ items:
     After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -180,7 +180,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you have cloned the repo for Node.js sample app, you can build and test the app in your local environment.
+    After you've cloned the repo for Node.js sample app, you can build and test the app in your local environment.
 
     In this page, you'll learn to:
     1. [Build and run your first app](#build-and-run-the-sample)
@@ -252,7 +252,7 @@ items:
         ```bash
         ngrok http 3333 -host-header=localhost:3333
         ```
-        The ngrok tunnel is created. Here's an example of ngrok tunnel.
+        An ngrok tunnel is created. Here's an example of ngrok tunnel.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel":::
 
@@ -318,7 +318,7 @@ items:
         `<path to the cloned repo>/Microsoft-Teams-Samples/samples/app-hello-world/nodejs/manifest`
 
         > [!NOTE]
-        > Search for the app package file, helloworldapp.zip, if the location is not clear in the tool you are using.
+        > Search for the app package file, helloworldapp.zip, if the location isn't clear in the tool you're using.
 
 - title: Configure your first Node.js app using Developer Portal
   durationInMinutes: 1
@@ -388,7 +388,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-branding.png" alt-text="Image showing branding information of the app":::
 
-        These details are important if you are writing a new app for distribution.
+        These details are important if you're writing a new app for distribution.
 
     #### View app features
 
