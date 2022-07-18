@@ -205,7 +205,7 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 > [!NOTE]
 > In order to open the scheduling dialog in Teams, developers need to continue using the original deep-link URL based method, since Teams does not yet support the calendar capability.
 
-For more information about working with the calendar, see the [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
+For more information about working with the calendar, see [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 

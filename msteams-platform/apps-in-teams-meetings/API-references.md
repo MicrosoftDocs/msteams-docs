@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Meeting apps API references
 
-The meeting extensibility provide APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
+The meeting extensibility provides APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
 
 * Build apps or integrate existing apps within meeting lifecycle.
 * Use APIs to make your app aware of meeting.
@@ -136,7 +136,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.name** | Name of the user. |
 | **user.givenName** | First Name of the user.|
 | **user.surname** | Last Name of the user. |
-| **user.email** | Mail Id of the user. |
+| **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
 | **user.tenantId** | Azure Active Directory tenant ID. |
 | **user.userRole** | Role of the user e.g. 'admin' or 'user'. |
@@ -488,7 +488,7 @@ The JSON response body for Meeting Details API is as follows:
 
 | Property name | Purpose |
 |---|---|
-| **details.id** | The meeting's Id, encoded as a BASE64 string. |
+| **details.id** | The meeting's ID, encoded as a BASE64 string. |
 | **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
 | **details.scheduledStartTime** | The meeting's scheduled start time, in UTC. |
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
@@ -504,9 +504,9 @@ The JSON response body for Meeting Details API is as follows:
 
 In case of Recurring meeting type,
 
-**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it does not fit the pattern.
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
 
-**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it does not fit the pattern.
+**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
 
 ## Send real-time captions API
 
