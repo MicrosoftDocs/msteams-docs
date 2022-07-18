@@ -23,6 +23,8 @@ The main advantage of integrating device capabilities in your Teams apps is it u
 
 * Allow the user to scan the physical documents from the smartphone to file a car insurance claim.
 
+* Allow the user to record a video at a worksite and upload for attendance.
+
 > [!NOTE]
 >
 > * Currently, Teams doesn't support device permissions in pop out chat window, tabs, and the meeting side panel.</br>
@@ -44,7 +46,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true), and [viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) APIs enable you to use native media capabilities as follows:
 
 * Use the native **microphone** to allow users to **record audio** (record 10 minutes of conversation) from the device.
-* Use native **camera control** to allow users to **capture and attach images** and **capture videos** on the go.
+* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record upto 5 minutes of video) on the go.
 * Use native **gallery support** to allow users to **select device images** as attachments.
 * Use native **image viewer control** to **preview multiple images** at one time.
 * Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
@@ -147,7 +149,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
         
          const defaultLensVideoProps: microsoftTeams.media.VideoProps = {
              sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
-             startMode: microsoftTeams.media.CameraStartMode.Photo,
+             startMode: microsoftTeams.media.CameraStartMode.Video,
              cameraSwitcher: true,
              maxDuration: 30
         }
@@ -162,11 +164,29 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
        `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wants to record video while reading content on the device screen.
 
-       This mode also supports `isStopButtonVisible: true`. This adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, then it's expected that the recording is stopped by accepting an external selection to API.
+       This mode also supports `isStopButtonVisible: true`. This adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
+
+       Following is an example to stop the recording with `maxDuration` time specified:
 
        ```javascript
           const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
              maxDuration: 30,
+             isFullScreenMode: false,
+             isStopButtonVisible: false,
+             videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+         }
+          const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 1,
+             videoProps: defaultNativeVideoProps
+         }
+       ```
+
+       Following is an example to stop the recording by calling mediaController API:
+
+       ```javascript
+          const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+             videoController.stop(),
              isFullScreenMode: false,
              isStopButtonVisible: false,
              videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
