@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Messages in bot conversations
 
-Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
@@ -18,7 +18,7 @@ Basic conversations are handled through the Bot Framework connector, a single RE
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
-For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
+For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
 
 ## Receive a message
 
@@ -187,9 +187,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response that is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 
-Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate efficiently on that channel. The Bot Builder SDK allows you to modify the message structure.
 
 ## Teams channel data
 
@@ -197,7 +197,7 @@ The `channelData` object contains Teams-specific information and is a definitive
 
 The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
-A typical `channelData` object in an activity sent to your bot contains the following information:
+A typical `channelData` object in an activity sent to your bot, it contains the following information:
 
 * `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
@@ -368,13 +368,13 @@ The following code shows an example of sending a simple Adaptive Card:
 
 ### Form completion feedback
 
-Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+Form completion message is displayed in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
 
-* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message is displayed.
 
      :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
 
-* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message is displayed.
 
      :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
 
