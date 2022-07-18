@@ -1,7 +1,7 @@
 ---
 title: Moodle Frequently asked questions
 description: In this article, fetch answers to some frequently asked questions while using the Moodle LMS. 
-ms.topic: Frequently asked questions on Moodle LMS
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
 ---
@@ -48,9 +48,9 @@ Use the **User Creation Restriction** option to specify the users by synchronizi
 
 The following image shows user creation restrictions options:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
 
 <br>
 
@@ -66,11 +66,11 @@ By default only Moodle administrators can configure synchronization. The team ow
 
 The following image shows the option **Allow configure course sync in course**:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin":::
 
 The following image shows synchronization of courses:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
 
 <br>
 
@@ -118,11 +118,11 @@ Users who were unable to sign in at the start need to report the issue and verif
 
 The following image shows the error message received when user sign using their Microsoft 365 credentials:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue":::
 
 The following image shows the error in Azure portal:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
 
 If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
 
@@ -138,7 +138,7 @@ Administrators can change the teams instance associated with a course through th
 
 The following image shows the teams instance:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 
 <br>
 
@@ -155,7 +155,7 @@ The user can face Atto Teams meeting issue if the icon reference is missing in t
 
 The following images show Toolbar icon after Toolbar configuration adjustment:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="links icon":::
 

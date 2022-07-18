@@ -24,7 +24,7 @@ items:
  
     This step-by-step guide helps you to create basic conversation bot in the Teams application. You'll see the following output:
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output." border="true"lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -106,7 +106,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
-        :::image type="content" source="./assets/images/conversation-bot/new-client-secret.png" alt-text="New client secret.":::
+        :::image type="content" source="./assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret.":::
 
     1. Enter **Description** and select **Add**.
  
@@ -125,7 +125,7 @@ items:
     1. Add any user permissions that your app requires to downstream APIs, for example, `User.Read`.
     1. Select **Add permissions**.
 
-        :::image type="content" source="./assets/images/conversation-bot/api-permissions.png" alt-text="Add API permissions." border="true"lightbox="assets/images/conversation-bot/api-permissions.png":::
+        :::image type="content" source="./assets/images/conversation-bot/api-permissions.png" alt-text="Add API permissions."lightbox="assets/images/conversation-bot/api-permissions.png":::
 
     **To add messaging endpoint**
 
@@ -145,10 +145,10 @@ items:
 
     1. Go to **Home**.
     1. From the **Recent resources** section, open your bot.
-    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/conversation-bot/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
         
-        :::image type="content" source="./assets/images/conversation-bot/channels-teams.png" alt-text="Select Teams.":::
-    
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+
     1. Select the checkbox to accept the terms of service and select **Agree**.
 
         :::image type="content" source="./assets/images/conversation-bot/terms-of-service.png" alt-text="Terms of Service.":::
@@ -248,7 +248,7 @@ items:
 
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
-    | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card" border="true"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card" border="true"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card" border="true"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
+    | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
@@ -259,7 +259,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output." border="true"lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
     
 - content: |
     You've completed the tutorial to get started with conversation bot for Microsoft Teams.

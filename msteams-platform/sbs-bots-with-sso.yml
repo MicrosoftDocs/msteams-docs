@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
-     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot" border="true":::
+     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -80,7 +80,7 @@ items:
     1. Select **Set up E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
 
     1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
@@ -101,17 +101,17 @@ items:
 
     1. Select **Create a resource**.
 
-       :::image type="content" source="~/assets/images/bots/Createaresource.png" alt-text="Create Resource" border="true":::
+       :::image type="content" source="~/assets/images/bots/Createaresource.png" alt-text="Create Resource":::
 
     1. In the search box, enter **Azure bot**.
 
-       :::image type="content" source="~/assets/images/bots/searchazurebot.png" alt-text="Create Resource" border="true":::
+       :::image type="content" source="~/assets/images/bots/searchazurebot.png" alt-text="Create Resource":::
 
     1. Select **Enter**.
 
     1. Select **Azure Bot**.
 
-        :::image type="content" source="~/assets/images/bots/selectazurebot.png" alt-text="Select Azure Bot" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectazurebot.png" alt-text="Select Azure Bot":::
 
     1. Select **Create**.
 
@@ -119,11 +119,11 @@ items:
 
        Create an Azure Bot page appears.
 
-        :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Azure bot page" border="true":::
+        :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Azure bot page":::
 
     1. Enter the following details to create Azure bot.
 
-        :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Create resource Azure bot" border="true":::
+        :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Create resource Azure bot":::
 
         1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
 
@@ -136,15 +136,15 @@ items:
 
               1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-                   :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="New resource creation" border="true":::
+                   :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="New resource creation":::
 
               1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
         
-                   :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource" border="true":::
+                   :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource":::
 
         1. Select **Type of App** as **Multi Tenant**.
 
-            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Review Create" border="true":::
+            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Review Create":::
 
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
@@ -157,19 +157,19 @@ items:
     
     1. After the validation passed, select **Create**.
 
-         :::image type="content" source="~/assets/images/bots/validationpass.png" alt-text="Validation Pass" border="true":::
+         :::image type="content" source="~/assets/images/bots/validationpass.png" alt-text="Validation Pass":::
   
        It takes a few moments for your bot service to be provisioned and the following page appears:
 
-         :::image type="content" source="~/assets/images/bots/provisionpage.png" alt-text="Provision Page" border="true":::
+         :::image type="content" source="~/assets/images/bots/provisionpage.png" alt-text="Provision Page":::
 
     1. Select **Go to resource**.
 
-        :::image type="content" source="~/assets/images/bots/gotoresource.png" alt-text="Resource" border="true":::
+        :::image type="content" source="~/assets/images/bots/gotoresource.png" alt-text="Resource":::
 
        Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
-         :::image type="content" source="~/assets/images/bots/Azurebotresource.png" alt-text="Azure bot resource created" border="true":::
+         :::image type="content" source="~/assets/images/bots/Azurebotresource.png" alt-text="Azure bot resource created":::
 
     **To create client secret**
 
@@ -177,7 +177,7 @@ items:
 
     1. In the left panel, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfigure.png" alt-text="Select Configure" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectconfigure.png" alt-text="Select Configure":::
 
        > [!Important]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -188,7 +188,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**.
 
-          :::image type="content" source="~/assets/images/bots/newclientsecret.png" alt-text="New Client Secret" border="true":::
+          :::image type="content" source="~/assets/images/bots/newclientsecret.png" alt-text="New Client Secret":::
 
        The **Add a client secret** window appears.
 
@@ -196,11 +196,11 @@ items:
     
     1. Select **Add**.
  
-        :::image type="content" source="~/assets/images/bots/addclientsecret.png" alt-text="Add client secret to app" border="true":::
+        :::image type="content" source="~/assets/images/bots/addclientsecret.png" alt-text="Add client secret to app":::
 
     1. In the **Value** column, select **Copy to clipboard**. 
 
-        :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Value of client secret" border="true":::
+        :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Value of client secret":::
 
        > [!Important]
        > Save the **Client secrets** value or app password for future reference.
@@ -209,29 +209,31 @@ items:
 
     1. Select **Home**.
 
-        :::image type="content" source="~/assets/images/bots/selecthome.png" alt-text="Home page" border="true":::
+        :::image type="content" source="~/assets/images/bots/selecthome.png" alt-text="Home page":::
 
     1. Select your bot from **Recent resources**.
 
-        :::image type="content" source="~/assets/images/bots/selectrecentresources.png" alt-text="Select recent resources" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectrecentresources.png" alt-text="Select recent resources":::
 
-    1. Select **Channels** in the left pane.
+    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
 
-        :::image type="content" source="~/assets/images/bots/selectchannel.png" alt-text="Select recent" border="true":::
+        :::image type="content" source="/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+    
+        :::image type="content" source="~/assets/images/bots/selectchannel.png" alt-text="Select recent":::
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
     
-        :::image type="content" source="~/assets/images/bots/selectmicrosoftteams.png" alt-text="Select Microsoft Teams" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectmicrosoftteams.png" alt-text="Select Microsoft Teams":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/bots/Terms-of-service.png" alt-text="Terms" border="true":::
+        :::image type="content" source="~/assets/images/bots/Terms-of-service.png" alt-text="Terms":::
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/bots/apply.png" alt-text="Apply" border="true":::
+        :::image type="content" source="~/assets/images/bots/apply.png" alt-text="Apply":::
     
     **To create tunnel for local web server**
 
@@ -257,11 +259,11 @@ items:
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfiguration.png" alt-text="Select Configuration" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectconfiguration.png" alt-text="Select Configuration":::
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="~/assets/images/bots/messagingURL.png" alt-text="Messaging endpoint" border="true":::
+        :::image type="content" source="~/assets/images/bots/messagingURL.png" alt-text="Messaging endpoint":::
 
     1. Select **Apply**.
 
@@ -278,19 +280,19 @@ items:
 
     1. From the left pane, select **Authentication**.
 
-         :::image type="content" source="~/assets/images/bots/selectauthentication.png" alt-text="Select Authentication" border="true":::
+         :::image type="content" source="~/assets/images/bots/selectauthentication.png" alt-text="Select Authentication":::
 
     1. In **Platform configurations**, select **Add a platform** to choose the platform on which you want to host the bot app. 
 
-        :::image type="content" source="~/assets/images/bots/addaplatform.png" alt-text="Add a Platform" border="true":::
+        :::image type="content" source="~/assets/images/bots/addaplatform.png" alt-text="Add a Platform":::
 
     1. For this tutorial, Select **Web**.
 
-        :::image type="content" source="~/assets/images/bots/selectweb.png" alt-text="Select Web" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectweb.png" alt-text="Select Web":::
         
     1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect` and this is the URI on which Azure AD will send response for user authentication.
 
-        :::image type="content" source="~/assets/images/bots/redirectURI1.png" alt-text="Redirect URI 1" border="true":::
+        :::image type="content" source="~/assets/images/bots/redirectURI1.png" alt-text="Redirect URI 1":::
 
     1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
 
@@ -299,40 +301,40 @@ items:
     
     1. Select **Configure**.
 
-        :::image type="content" source="~/assets/images/bots/selectimplictgrant.png" alt-text="Select Implict Grant" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectimplictgrant.png" alt-text="Select Implict Grant":::
  
         The Redirect URI is added to the Azure bot resource.
 
-        :::image type="content" source="~/assets/images/bots/redirectURIadded.png" alt-text="Redirect URI added to bot resource" border="true":::
+        :::image type="content" source="~/assets/images/bots/redirectURIadded.png" alt-text="Redirect URI added to bot resource":::
 
     **To expose API endpoint**
 
     1. From the left pane, select **Expose an API**.
 
-        :::image type="content" source="~/assets/images/bots/exposeanapi.png" alt-text="Expose an API" border="true":::
+        :::image type="content" source="~/assets/images/bots/exposeanapi.png" alt-text="Expose an API":::
 
     1. Select **Set**.
 
-        :::image type="content" source="~/assets/images/bots/appidURI.png" alt-text="Application ID URI" border="true":::
+        :::image type="content" source="~/assets/images/bots/appidURI.png" alt-text="Application ID URI":::
 
     1. Use the Application ID URI shown and append **api://botid-** at the beginning of the URI.
 
     1. Select **Save**.
 
-        :::image type="content" source="~/assets/images/bots/exposeAPI.png" alt-text="Expose an API" border="true":::
+        :::image type="content" source="~/assets/images/bots/exposeAPI.png" alt-text="Expose an API":::
     
        > [!Important]
        > Save the **Application ID URI** for future reference.
 
     1. Select **Add a scope**.
 
-        :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Expose an API" border="true":::
+        :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Expose an API":::
 
        Add a scope panel appears.
 
     1. Enter the details for configuring scope.    
 
-         :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Add a scope to app" border="true":::
+         :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Add a scope to app":::
 
           1. Enter `access_as_user` as the **Scope Name**.
 
@@ -357,13 +359,13 @@ items:
 
        Your Application ID URI is created with **Scope name**.
 
-          :::image type="content" source="~/assets/images/bots/ExposeAPIandaddscope.png" alt-text="API exposed and scope added" border="true":::
+          :::image type="content" source="~/assets/images/bots/ExposeAPIandaddscope.png" alt-text="API exposed and scope added":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application.
     
     1. Select **Add a client application**.
 
-        :::image type="content" source="~/assets/images/bots/addaclientapplication.png" alt-text="Add a Client Application" border="true":::
+        :::image type="content" source="~/assets/images/bots/addaclientapplication.png" alt-text="Add a Client Application":::
 
        Add a client application panel appears.
 
@@ -376,63 +378,63 @@ items:
 
     1. Select **Authorized scopes** to determine which type of token will be returned by the service.
 
-        :::image type="content" source="~/assets/images/bots/add-desktop-app.png" alt-text="Add client application to app" border="true":::
+        :::image type="content" source="~/assets/images/bots/add-desktop-app.png" alt-text="Add client application to app":::
        
     1. Select **Add application**.
 
         The following image displays the Client Id:
 
-          :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Client Apps" border="true":::
+          :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Client Apps":::
 
     **Configure Graph permissions**
 
     1. In the left panel, select **API Permissions**.
 
-          :::image type="content" source="~/assets/images/bots/selectapipermissions.png" alt-text="Select API Permissions" border="true":::
+          :::image type="content" source="~/assets/images/bots/selectapipermissions.png" alt-text="Select API Permissions":::
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the bot app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/bots/configure-permission.png" alt-text="API user permissions" border="true":::
+        :::image type="content" source="~/assets/images/bots/configure-permission.png" alt-text="API user permissions":::
 
        Request API permission page appears:
 
     1. Select **Microsoft Graph**.
         
-        :::image type="content" source="~/assets/images/bots/selectmicrosoftgraph.png" alt-text="Select Microsoft Graph" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectmicrosoftgraph.png" alt-text="Select Microsoft Graph":::
 
     1. Select **Delegated permissions**.
 
-        :::image type="content" source="~/assets/images/bots/select-graph-permissions.png" alt-text="Select Graph Permissions" border="true":::
+        :::image type="content" source="~/assets/images/bots/select-graph-permissions.png" alt-text="Select Graph Permissions":::
 
     1. Select **User.Read** permission from the **User** dropdown.
 
     1. Select **Add permissions**.
 
-        :::image type="content" source="~/assets/images/bots/userread.png" alt-text="User Read" border="true":::
+        :::image type="content" source="~/assets/images/bots/userread.png" alt-text="User Read":::
 
     **To update manifest**
 
     1. From the left pane, select **Manifest**.
 
-         :::image type="content" source="~/assets/images/bots/selectmanifest.png" alt-text="Select Manifest" border="true":::
+         :::image type="content" source="~/assets/images/bots/selectmanifest.png" alt-text="Select Manifest":::
 
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
     
        > [!NOTE]
        > If you're already in testing your bot in Teams, you must sign out from this app and Teams. Then sign in again to see this change.</br>
         
-          :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Update manifest" border="true":::
+          :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Update manifest":::
 
     **To set up Bot service connection**
 
     1. In **Configuration page**, select **Add OAuth Connection Settings**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfiguration1.png" alt-text="Select configuration1" border="true":::
+        :::image type="content" source="~/assets/images/bots/selectconfiguration1.png" alt-text="Select configuration1":::
 
-        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Bot Service connection" border="true":::
+        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Bot Service connection":::
 
     1. In **New Connection Setting** page, enter the following details:
 
@@ -463,11 +465,11 @@ items:
     
     1. Navigate to **File** > **Open** > **Project/Solution**.
 
-        :::image type="content" source="~/assets/images/bots/project-solution.png" alt-text="Bot Service connection" border="true":::
+        :::image type="content" source="~/assets/images/bots/project-solution.png" alt-text="Bot Service connection":::
 
     1. Select **BotSSOCSharp.csproj** file from **csharp_dotnetcore** folder.
 
-        :::image type="content" source="~/assets/images/bots/filepath.png" alt-text="File Path" border="true":::
+        :::image type="content" source="~/assets/images/bots/filepath.png" alt-text="File Path":::
 
     1. Open the **appsettings.json** file.
 
@@ -476,17 +478,17 @@ items:
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously in the Azure.
 
-         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Appsettings json" border="true":::
+         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Appsettings json":::
 
     1. Select **F5**  to run the project.
 
     1. Select **Yes** if the following dialog appears:
 
-        :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Ca" border="true":::
+        :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Ca":::
 
        A webpage opens with a message **Bot is Ready**.
 
-        :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Ca" border="true":::
+        :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Ca":::
         
         <br>
 
@@ -523,25 +525,25 @@ items:
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/bots/manifest.png" alt-text="Manifest" border="true":::
+        :::image type="content" source="~/assets/images/bots/manifest.png" alt-text="Manifest":::
 
     1. Go to Teams client.
     1. Select **Store**.
     1. Select **Manage your apps**.
 
-        :::image type="content" source="~/assets/images/bots/manage-your-app.png" alt-text="Manage your app" border="true":::
+        :::image type="content" source="~/assets/images/bots/manage-your-app.png" alt-text="Manage your app":::
 
     1. Select **Upload a custom app**.
     
-        :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Upload custom app" border="true":::
+        :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Upload custom app":::
 
     1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
-        :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Open app" border="true":::
+        :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Open app":::
 
     1. Select **Add** to add the conversation bot to your chat.
 
-        :::image type="content" source="~/assets/images/bots/add-conversation-bot.png" alt-text="Add conversation Bot" border="true":::
+        :::image type="content" source="~/assets/images/bots/add-conversation-bot.png" alt-text="Add conversation Bot":::
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to **sign-out**.
 
@@ -549,7 +551,7 @@ items:
 
     1. Select **Continue** to give permissions to Teams client for accessing the bot.
 
-         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Permissions to bot" border="true":::
+         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Permissions to bot":::
         
         > [!NOTE]
         > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
@@ -559,14 +561,14 @@ items:
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile and it's the only time you'll have to give consent.
 
-        :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Mobile signed in to bot" border="true":::
+        :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Mobile signed in to bot":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot" border="true":::
+     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot":::
     
 - content: |
     You've completed the tutorial to get started with build a bot with SSO authentication.

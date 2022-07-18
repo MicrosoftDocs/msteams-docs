@@ -10,7 +10,7 @@ ms.author: surbhigupta
 # People Picker in Adaptive Cards
 
 >[!NOTE]
-> Currently, People Picker in Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) only for mobile and generally available (GA) for desktop.
+> Currently, People Picker in Adaptive Cards is available in [Public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) only for mobile and generally available (GA) for desktop.
 
 People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:
 
@@ -53,7 +53,7 @@ The following image shows the reassignment scenario:
 # [Mobile](#tab/mobile)
 
 > [!NOTE]
-> Currently, this feature is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) only.
+> Currently, this feature is available in  [Public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) only.
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other user selection experience in mobile.
 
