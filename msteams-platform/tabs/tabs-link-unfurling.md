@@ -25,7 +25,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 |Stage View|Task module|
 |:-----------|:-----------|
-|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides rich features that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
   
 ## Invoke Stage View
 
@@ -93,7 +93,7 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 ### Syntax
 
-Following is the deeplink syntax:
+Following is the deep link syntax:
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
@@ -124,7 +124,7 @@ Encoded
 `<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>`
 
 > [!NOTE]
-> All deeplinks must be encoded before pasting the URL. We don't support unencoded URLs.
+> All deep links must be encoded before pasting the URL. We don't support unencoded URLs.
 >
 > * The `name` is optional in deep link. If not included, the app name replaces it.
 > * The deep link can also be passed through an `OpenURL` action.
