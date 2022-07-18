@@ -128,7 +128,7 @@ The following image displays the tab in Sharepoint:
 After your page is published, you can explore [turning your Teams app into a more complete experience inside SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This converts the current page into an App Page, showing the normal SharePoint page layout with a full page experience for the Teams tab.
 
 The following image displays the complete experience of Teams app in SharePoint:
-:::image type="content" source="~/assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot is an example that shows tabs in sharepoint view.":::
+:::image type="content" source="~/assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot is an example that shows Teams app in sharepoint view.":::
 
 ## Code sample
 
