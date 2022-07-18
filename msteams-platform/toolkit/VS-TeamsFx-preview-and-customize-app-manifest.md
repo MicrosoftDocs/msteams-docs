@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/13/2022
 ---
 
-# Edit Teams app manifest
+# Edit Teams app manifest using Visual Studio
 
 During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
