@@ -39,7 +39,7 @@ If you have created SPFx based tab project, you can't add Azure cloud resources.
    1. Select **Teams Toolkit** from left panel.
    1. Select **Add features** under **DEVELOPMENT**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Screenshot describes how to add cloud resources using Teams Toolkit.":::
 
 * **To add cloud resources by using command palette:**
 
@@ -47,11 +47,11 @@ If you have created SPFx based tab project, you can't add Azure cloud resources.
    1. Enter **Teams:Add features**.
    1. Press **Enter**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="cloud":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Screenshot describes how to add cloud resources using command palette.":::
 
    1. From the pop-up, select the cloud resources to add in your project.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="Screenshot describes how to select cloud resources from the pop-up window.":::
 
 ## Add cloud resources using TeamsFx CLI
 
