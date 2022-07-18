@@ -1,15 +1,14 @@
 ---
 title: Live Share quick start
 description:  In this module, learn how to quickly try the Dice Roller sample
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
----
 ---
 
 # Quick start guide
 
-Get started with Live Share SDK using the Dice Roller sample. This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
+Get started with Live Share SDK using the Dice Roller sample is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 

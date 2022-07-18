@@ -1,14 +1,11 @@
 ---
 title: Live Share getting started
 description: In this module, learn more about live share SDK capabilities, RSC permissions and ephermal data structures.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
-
----
-
-# Live Share capabilities
+# Live Share core capabilities
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
@@ -24,13 +21,13 @@ The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScrip
 **npm**
 
 ```bash
-$ npm install @microsoft/live-share --save
+npm install @microsoft/live-share --save
 ```
 
 **Yarn**
 
 ```bash
-$ yarn add @microsoft/live-share
+yarn add @microsoft/live-share
 ```
 
 ## Register RSC permissions
@@ -86,10 +83,10 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 Follow the steps to join a session that is associated with a user's meeting:
 
-1. Initialize the Teams Client SDK
-2. Initialize the [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)
-3. Define the data structures you want to synchronize. For example, `SharedMap`
-4. Join the container
+1. Initialize the Teams Client SDK.
+2. Initialize the [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient).
+3. Define the data structures you want to synchronize. For example, `SharedMap`.
+4. Join the container.
 
 Example:
 

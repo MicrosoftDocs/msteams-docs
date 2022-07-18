@@ -1,7 +1,7 @@
 ---
 title: Bots and SDKs
 author: surbhigupta
-description: Overview of the tools and SDKs for building Microsoft Teams bots.
+description: In this article, learn tools and SDKs for building Microsoft Teams bots and Bots with the Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -79,9 +79,9 @@ In the cases where bots work better in a channel also work better in a group cha
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
 * Q&A bots
-* bots that initiate workflows in other systems
-* bots that tell jokes
-* bots that take notes
+* bots that initiate workflows in other systems.
+* bots that tell jokes.
+* bots that take notes.
 Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
 
 ## Disadvantages of bots
@@ -204,3 +204,4 @@ this.onMessage(async (context, next) => {
 * [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)

@@ -1,11 +1,9 @@
 ---
 title: Live Share media capabilities
 description: In this module, learn more about Live Share media capabilities, suspensions and wait points, audio ducking, and synchronizing video and audio.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
----
-
 ---
 
 # Live Share media capabilities
@@ -116,8 +114,8 @@ document.getElementById("change-track-button").onclick = () => {
 };
 ```
 
-> [!Note]
-> While you can use the `EphemeralMediaSession` object to synchronize media directly, using the `MediaPlayerSynchronizer` unless you want more fine tuned control of the synchronization logic. Depending on the player you use in your app, you might want to create a delegate shim to make your web player's interface match the HTML media interface.
+ > [!Note]
+ > While you can use the `EphemeralMediaSession` object to synchronize media directly, using the `MediaPlayerSynchronizer` unless you want more fine tuned control of the synchronization logic. Depending on the player you use in your app, you might want to create a delegate shim to make your web player's interface match the HTML media interface.
 
 ## Suspensions and wait points
 
