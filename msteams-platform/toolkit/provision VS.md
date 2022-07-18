@@ -79,13 +79,13 @@ TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to
 
 ### Resource creation
 
-When you trigger provision command in Teams Toolkit or TeamsFx CLI, you will create the following resources:
+When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can create the following resources:
 
 * Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you will need to create some Azure resources. The ARM template defines all the Azure resources and helps you to create required Azure resources during provision.
+When you create a new project, you also need to create some Azure resources. The ARM template defines all the Azure resources and helps you to create required Azure resources during provision.
 
 ### Resource creation for Teams Tab application
 
@@ -156,8 +156,8 @@ When you create a new project, you will need to create some Azure resources. The
 
 You can login to [Azure Portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
-* Select Resource groups and choose the Resource group you just chose or created
-* Click Overview - Resources, all resource will list below.
+* Select Resource group from the existing ones or the Resource group that you've just created.
+* Select overview, and on the right you can see a list of details of that resource group you chose.
 
 ### Customize resource provision
 
@@ -177,7 +177,7 @@ Provision with ARM involves changing the following sets of files, parameters and
 | teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
 
 > [!NOTE]
-> Once you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, then you can't customize them. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This does not make you lose any changes while adding resources or capabilities to your project.
+> Once you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated, then you can't customize them. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This does not make you lose any changes while adding resources or capabilities to your project.
 
 The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure that new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
@@ -194,7 +194,7 @@ The ARM template files use placeholders for parameters. The purpose of these pla
 
 ### Referencing environment variables in parameter files
 
-When the value is secret, then you do not need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for TTK to resolve from current environment variable.
+When the value is secret, then you do not need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for TTK to resolve from current environment variable.
 
 The following example reads the value of `mySelfHostedDbConnectionString` parameter from environment variable `DB_CONNECTION_STRING`:
 
