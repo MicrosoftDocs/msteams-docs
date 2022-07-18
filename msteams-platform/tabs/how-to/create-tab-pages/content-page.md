@@ -40,12 +40,11 @@ The following code provides an example of how your page and the Teams client com
 ...
     <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 ...
-</head>
-
 <body>
 ...
-    <script>
-    app.initialize();
+    <script type="module">
+        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
     </script>
 ...
 </body>
