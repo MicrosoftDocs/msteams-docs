@@ -32,19 +32,19 @@ When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs
     2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
     3. Select **Add features** under **DEVELOPMENT**:
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="Screenshot describes how to add API features.":::
 
        * You can also open the command palette and enter **Teams: Add cloud resources**.
 
     4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="Screenshot describes how to select API connection.":::
 
     5. Select **OK**.
 
     6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="Screenshot describes how to add endpoint for the API.":::
 
          > [!NOTE]
          > Ensure the endpoint is a valid http(s) URL.
@@ -53,15 +53,15 @@ When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs
 
     8. Select **OK**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="Screenshot describes how to invoke the API.":::
 
     9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="Screenshot describes how to add alias to the API.":::
 
     10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="Screenshot describes how to select authentication for the API.":::
 
          > [!NOTE]
          > Based on the authentication type selected, additional configuration is needed.
