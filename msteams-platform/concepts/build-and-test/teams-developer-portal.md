@@ -190,7 +190,7 @@ This section allows you to publish your app to your org, or to the Teams store.
    1. Select **Publish**.
 
    > [!NOTE]
-   l> The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app. You must resolve errors or warnings and read the **App submission checklist** before submitting your app.
+   > The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app. You must resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
    You can download the app package using **Download app package** button from the publish to Teams Store page.
 
