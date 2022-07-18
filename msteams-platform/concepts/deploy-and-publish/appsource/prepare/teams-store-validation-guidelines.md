@@ -1405,7 +1405,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Use of the word **FREE** in the context of a trial or app upgrade and associated with a link that leads to a landing page with pricing information or payment details on mobile isn't allowed.
 
-* Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing information but with a contact link or email ID on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, app allows payment to book a taxi.
+* Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, app allows payment to book a taxi.
 
 * Payments for digital goods in app aren't allowed on mobile. [*Mandatory Fix*]
 
