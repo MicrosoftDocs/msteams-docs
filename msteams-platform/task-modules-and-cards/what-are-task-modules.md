@@ -29,7 +29,7 @@ Task modules can be invoked in three ways:
 
 Here's what a task module looks like when invoked from a bot:
 
-:::image type="content" source="../assets/images/task-module/task-module-example.png" alt-text="task module example":::
+:::image type="content" source="../assets/images/task-module/task-module-example.png" alt-text="Screenshot is an example that shows task module.":::
 
 A task module includes the following as shown in the previous image:
 
