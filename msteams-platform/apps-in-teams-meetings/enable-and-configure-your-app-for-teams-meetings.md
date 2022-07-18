@@ -3,7 +3,9 @@ title: Enable and configure your apps for Teams meetings
 author: surbhigupta
 description: Learn how to enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features and more.
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 04/07/2022
 ---
 
 # Enable and configure apps for meetings

@@ -5,6 +5,7 @@ description: Learn to identify the meeting apps API references with examples and
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
+ms.date: 04/07/2022
 ---
 
 # Meeting apps API references
