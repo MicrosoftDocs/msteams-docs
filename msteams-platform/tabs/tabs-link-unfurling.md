@@ -89,7 +89,7 @@ Following is the process to invoke Stage View:
 
 ## Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `microsoftTeams.app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
 
 ### Syntax
 
