@@ -43,7 +43,7 @@ Using integers for `TaskInfo.width` and `TaskInfo.height`, sets the height and w
 
 If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
 
-:::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="task module example":::
+:::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="Screenshot is an example that shows task module.":::
 
 Task modules invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo specification, for example `{ height: 'medium', width: 'medium' }`.
 
@@ -57,7 +57,7 @@ HTML or JavaScript-based task modules have access to the entire area of the task
 
 YouTube offers the ability to embed videos on web pages. It's easy to embed videos on web pages in a task module using a simple stub web page.
 
-:::image type="content" source="../../assets/images/task-module/youtube-example.png" alt-text="Youtube example":::
+:::image type="content" source="../../assets/images/task-module/youtube-example.png" alt-text="Screenshot is an example that shows Youtube.":::
 
 The following code provides an example of the HTML for the web page without the CSS:
 
@@ -96,7 +96,7 @@ The following code provides an example of the CSS:
 
 The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height and width to achieve the desired presentation.
 
-:::image type="content" source="../../assets/images/task-module/powerapp-example.png" alt-text="powerapp":::
+:::image type="content" source="../../assets/images/task-module/powerapp-example.png" alt-text="Screenshot is an example that shows powerapp.":::
 
 The following code provides an example of the HTML for PowerApp:
 
