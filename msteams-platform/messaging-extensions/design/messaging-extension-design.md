@@ -51,7 +51,7 @@ For consistency across Teams apps, you can't customize the sign-in screen. If yo
 
 ## Types of message extensions
 
-Message extensions can have search commands, action commands, or both. Your commands depend on your app's features and how those fit within Teams use cases.
+Message extensions can have search commands, action commands, or both. Your commands depend on your app's features and how those fits within Teams use cases.
 
 ### Search commands
 
@@ -220,7 +220,7 @@ Use these recommendations to create a quality app experience.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Example on setup and general usage.":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Example of setup and general usage.":::
 
 #### Do: Integrate with single-sign on
 
@@ -228,7 +228,7 @@ SSO makes the sign-in process easier, faster, and secure. Also, if a user has al
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Example on integrating with single-sign on.":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Example of integrating with single-sign on.":::
 
 #### Don't: Take users away from the conversation
 
@@ -245,7 +245,7 @@ Message extensions aren't always easy to find. Include screenshots of how to use
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Example on templating.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Example of templating.":::
 
 #### Do: Let Teams handle some of the design work if possible
 
@@ -253,7 +253,7 @@ If it makes sense for your use cases, consider creating a search-based message e
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Example on handling design work.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Example of handling design work.":::
 
 #### Don't: Embed your entire app in a task module
 
