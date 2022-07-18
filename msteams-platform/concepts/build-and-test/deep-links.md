@@ -432,7 +432,7 @@ When user isn't in a meeting then user will be redirected to the Teams calendar 
 >      var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 >      ```
 >
-> * To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For more information, see [app manifest](~/resources/schema/manifest-schema-dev-preview#configurabletabs).
+> * To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For more information, see [app manifest](~/resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ## Generate a deep link to a call
 
