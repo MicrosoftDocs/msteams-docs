@@ -18,7 +18,7 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## Select search command invoke locations
@@ -88,7 +88,7 @@ To manually add your message extension search command to your app manifest, you 
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
-You must add the details of the search parameter, that defines the text visible to your user in the Teams client. The default value of the parameters specified for messaging extension is ignored as you can't specify default search value in search bar.
+You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
@@ -97,6 +97,7 @@ You must add the details of the search parameter, that defines the text visible 
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
+| `parameters.value` | Initial value for the parameter. Currently the value is not supported | No | 1.5 |
 
 #### Example
 
