@@ -31,13 +31,13 @@ The following steps help you to add SSO using Teams Toolkit in Visual Studio Cod
 2. Select Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
 3. Select **Add features** under **DEVELOPMENT**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="Screenshot describes how to add SSO features.":::
 
     * You can also open command palette and select **Teams: Add features**
 
 4. Select **Single Sign-On**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="sso select":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="Screenshot describes how to select SSO.":::
 
 ### Add SSO using TeamsFx CLI
 
