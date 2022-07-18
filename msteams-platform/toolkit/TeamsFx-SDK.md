@@ -234,7 +234,7 @@ const profile = await graphClient.api("/me").get();
 <details>
 <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Create api client":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Screenshot describes how to create API client.":::
 
 </details>
 
