@@ -24,7 +24,7 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Screenshot is an example that shows user Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 The main milestones of this journey are:
 
@@ -39,15 +39,15 @@ The main milestones of this journey are:
 1. Open **Visual Studio Code.**
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="install":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="Screenshot describes how to install Teams Toolkit.":::
 
 1. Enter **Teams Toolkit** in the search box.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Toolkit":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Screenshot describes how to search Teams Toolkit.":::
 
 1. Select **Install**.
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="install toolkit 4.0.0":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="Screenshot describes how to install toolkit 4.0.0.":::
 
 > [!TIP]
 > You can install Teams Toolkit from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
@@ -56,11 +56,11 @@ The main milestones of this journey are:
 
 After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini functions":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="Screenshot is an example that shows mini functions.":::
 
 You can select **Get Started** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you have a Teams project created by Teams Toolkit opened in Visual Studio Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screen shot ofteams toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screenshot is an example that shows teams toolkit.":::
 
 Let's take a tour of the topics covered in this document.
 
@@ -76,7 +76,7 @@ Teams Toolkit helps you to create and manage multiple environments, provision, a
 
 It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Teamsfx project":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Screenshot is an example that shows Teamsfx project.":::
 
 ## Development
 
