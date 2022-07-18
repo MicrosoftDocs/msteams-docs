@@ -632,7 +632,7 @@ items:
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
     
     > [!NOTE]
-    > Currently the Teams Developer App supports only first party apps. Use the [Developer Portal](https://dev.teams.microsoft.com/home) for third party apps.
+    > Currently, the Developer Portal App toolbar in Teams is limited to first party apps. For third party apps, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
 
     ## Preview your app in Teams
 
