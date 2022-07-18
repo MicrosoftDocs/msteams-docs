@@ -1,5 +1,5 @@
 ---
-title: Use Teams Toolkit to provision cloud resources for Visual Studio
+title: Use Teams Toolkit to provision cloud resources using Teams Toolki for Visual Studio
 author: MuyangAmigo
 description: In this module, learn how to do provision cloud resources using Teams Toolkit, resource creation and customize resource provision in Visual Studio
 ms.author: shenwe
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Provision cloud resources using Teams Toolkit for Visual Studio
+# Provision cloud resources for Visual Studio
 
 TeamsFx can be integrated with Azure and Microsoft 365 cloud, this allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach your application needs these resources.
 
