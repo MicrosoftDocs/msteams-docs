@@ -75,12 +75,12 @@ The following operations aren't supported yet in Teams Toolkit for Visual Studio
 
 |Operation  |Description  |
 |---------|---------|
-|Add another Teams capabilities to your Teams app            |
-|Add more Azure resources to your Teams app             |
-|Add single sign-on to your Teams app    |      |
+|Add another Teams capabilities to your Teams app     |        |
+|Add more Azure resources to your Teams app     |         |
+|Add single sign-on to your Teams app     |      |
 |Add API connection to your Teams app     |        |
 |Customize Azure AD manifest     |         |
 |Add CICD pipelines     |       |
-|Manage multiple cloud environments     |NA         |
-|Collaborate on Teams projects     |NA         |
-|Publish Teams app     |NA         |
+|Manage multiple cloud environments     |         |
+|Collaborate on Teams projects     |         |
+|Publish Teams app     |         |
