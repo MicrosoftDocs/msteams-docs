@@ -104,20 +104,22 @@
       href: toolkit/build-environments.md
     - name: Support for app types and azure function
       href: toolkit/app-types-and-azure-function.md 
-    - name: Prerequisites
-      href: toolkit/tools-prerequisites.md   
-    - name: Create a new Teams app
-      href: toolkit/create-new-project.md
-    - name: Develop your Teams app
-      items: 
-      - name: Add and manage environment
-        href: toolkit/TeamsFx-multi-env.md
-      - name: Create multi capability app
-        href: toolkit/add-capability.md 
-      - name: Create capability based cloud resources
-        href: toolkit/add-resource.md  
-      - name: Integrate existing third party APIs
-        href: toolkit/add-API-connection.md 
+    - name: Use Teams Toolkit to create your app 
+      items:
+      - name: Prerequisites
+        href: toolkit/tools-prerequisites.md   
+      - name: Create a new Teams app project
+        href: toolkit/create-new-project.md
+      - name: Develop your Teams app
+        items: 
+        - name: Add and manage environment
+          href: toolkit/TeamsFx-multi-env.md
+        - name: Create multi capability app
+          href: toolkit/add-capability.md 
+        - name: Create capability based cloud resources
+          href: toolkit/add-resource.md  
+        - name: Integrate existing third party APIs
+          href: toolkit/add-API-connection.md 
       - name: Customize Manifest
         items:
         - name: Customize Teams app Manifest
@@ -126,26 +128,26 @@
           href: toolkit/AAD-manifest-customization.md
       - name: TeamsFx SDK
         href: toolkit/TeamsFx-SDK.md
-    - name: Debug your Teams app
-      items: 
-      - name: Debug your Teams app locally
-        href: toolkit/debug-local.md
-      - name: Debug background process
-        href: toolkit/debug-background-process.md
-    - name: Host your app on Azure
-      items:    
-      - name: Provision cloud resources
-        href: toolkit/provision.md
-      - name: Deploy Teams app to the cloud
-        href: toolkit/deploy.md
-    - name: Test your Teams app
-      items: 
-      - name: Integrate and collaborate
-        href: toolkit/TeamsFx-collaboration.md 
-      - name: Sideload and test app in Teams environment
-        href: toolkit/sideload-and-test-app.md 
-      - name: Test app behavior in different environment
-        href: toolkit/test-app-behavior.md
+      - name: Debug your Teams app
+        items: 
+        - name: Debug your Teams app locally
+          href: toolkit/debug-local.md
+        - name: Debug background process
+          href: toolkit/debug-background-process.md
+      - name: Host your app on Azure
+        items:    
+        - name: Provision cloud resources
+          href: toolkit/provision.md
+        - name: Deploy Teams app to the cloud
+          href: toolkit/deploy.md
+      - name: Test your Teams app
+        items: 
+        - name: Integrate and collaborate
+          href: toolkit/TeamsFx-collaboration.md 
+        - name: Sideload and test app in Teams environment
+          href: toolkit/sideload-and-test-app.md 
+        - name: Test app behavior in different environment
+          href: toolkit/test-app-behavior.md
     - name: Publish your Teams app
       items:
       - name: Publish Teams apps using Teams Toolkit 

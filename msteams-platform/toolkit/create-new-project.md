@@ -10,13 +10,19 @@ ms.date: 03/14/2022
 
 # Create a new Teams app using Teams Toolkit
 
-You can build a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create basic Teams app and scenario based Teams app in Teams Toolkit. Basic Teams app is build with capabilities such as tab, bot, message extension and scenario based Teams app is build with capabilities such as notification bot, command bot, SSO-enabled tab, and SPFx tab.
+You can built a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
+| App Type | Definition |
+| --- | --- |
+| Basic Teams app | Basic Teams app are tab, bot, or message extension app that you can create and customize based on your needs. |
+| Scenario based Teams app | Scenario based Teams app are notification bot, command bot, SSO-enabled tab, or SPFx tab app and it is suitable for one particular scenario. For example, notification bot is suitable only to send notification and not for chat. |
 
 ## Create a new Teams app
 
-The following steps help you to build a new tab app and the steps are similar for all types of other capabilities except SPFx, and notification bot.
+The steps to create a new Teams app is similar for all types of app except SPFx, and notification bot. The following steps help you to built a new tab app:
 
-1. To create an app, open Visual Studio Code.
+To create an app,
+
+1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon.
 1. Select **Create a new Teams app**.
 
@@ -37,8 +43,7 @@ The following steps help you to build a new tab app and the steps are similar fo
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="Screenshot showing how to select the programming language":::
 
-1. Select the location for project workspace.
-1. Select the **Select Folder**.
+1. Select the location for project workspace and select the **Select Folder**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder1.png" alt-text="select-folder":::
 
