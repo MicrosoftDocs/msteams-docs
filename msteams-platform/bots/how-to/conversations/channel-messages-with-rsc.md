@@ -61,22 +61,22 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner.
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="The screenshot describes on how to upload custom app.":::
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="The screenshot describes how to upload custom app.":::
   
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="The screenshot describes on how to select the app package."lightbox="Media/selectapppackage.png":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="The screenshot describes how to select the app package."lightbox="Media/selectapppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="The screenshot describes on how to add bot."lightbox="Media/addingbot.png":::
+      :::image type="content" source="Media/addingbot.png" alt-text="The screenshot describes how to add bot."lightbox="Media/addingbot.png":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="The screenshot describes on how Bot receives  message."lightbox="Media/botreceivingmessage.png":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="The screenshot describes how Bot receives  message."lightbox="Media/botreceivingmessage.png":::
 
 ## Code snippets
 
