@@ -1,9 +1,11 @@
 ---
 title: Live Share FAQ
+author: surbhigupta
 description: In this module, learn more about Live Share Frequently Asked Questions.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
 
 ---
