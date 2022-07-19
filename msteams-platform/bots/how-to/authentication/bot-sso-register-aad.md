@@ -23,6 +23,7 @@ You can register your bot app in Azure AD in two ways:
     1. Use the application ID of the app you registered.
     1. Enable SSO for the app
 
+<!-->
 # [Azure AD app](#tab/aad)
 
 To create and configure your app in Azure AD for enabling SSO:
@@ -34,7 +35,7 @@ To create and configure your app in Azure AD for enabling SSO:
 - Configure bot resource in Azure AD
   - Add messaging endpoint
   - Update OAuth connection
-
+-->
 ## Create an app registration in Azure AD
 
 You can register a new app in Azure AD, and configure the tenancy and app's platform. Azure AD  generates a new app ID. You'll need to update it later in the Teams app manifest file.
@@ -528,6 +529,7 @@ With the Client ID and Client secret provided, the token store exchanges the tok
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
 
+<!--
 # [Bot resource](#tab/bot-res)
 
 You can enable SSO for your bot app by creating a bot resource in Azure AD and configure OAuth connection. It includes:
@@ -866,7 +868,7 @@ You need:
     > - The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
     > - For a Teams bot app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 -->
-
+<!--
 1. Choose one of the following client IDs:
 
    | Use client ID | For authorizing... |
