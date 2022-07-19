@@ -21,8 +21,8 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 
 ## Prerequisite
 
-1. Install Install Teams Toolkit for Visual Studio.
-2. To run / debug a Bot or Message Extension app, you'll need to setup [Ngrok](https://ngrok.com/) first.
+1. Install Teams Toolkit for Visual Studio.
+2. To run / debug a Bot or Message Extension app, you'll need to set up [Ngrok](https://ngrok.com/) first.
 Ngrok is used to forward external messages from Azure Bot Framework to your local machine.
 
 ## Debug your app locally
@@ -39,16 +39,16 @@ ngrok http 5130.
 
 Perform the following steps to debug your app after you create a new app using the Teams Toolkit:
 
-1. In Visual Studio Solution Explorer, right click on your project file and select "Teams Toolkit"
+1. In Visual Studio Solution Explorer, right select on your project file and select "Teams Toolkit"
 
 1. Then select "Prepare Teams app dependencies".
 
-1. You will be asked to login to your M365 account.
+1. You'll be asked to sign in to your Microsoft 365 account.
 
    > [!NOTE]
    > Your M365 account need to have the sideloading permission to ensure Teams app can be uploaded to your tenant, otherwise you will end up with failure to see your Teams app running in Teams client. Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
 
-2. Go to the "Debug" menu > click on "Start Debugging" or directly press **F5**. Visual Studio will launch the Teams app inside Microsoft Teams client in a browser.
+2. Go to the "Debug" menu > select on "Start Debugging" or directly press **F5**. Visual Studio will launch the Teams app inside Microsoft Teams client in a browser.
    Learn more by visiting <https://aka.ms/teamsfx-vs-debug>.
 
 3. Once Microsoft Teams is loaded, select the "Add" button to install your app in Teams.
@@ -56,7 +56,7 @@ Perform the following steps to debug your app after you create a new app using t
 > [!TIP]
 > You can use hotreload function of VS during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
 
-4. If you are debugging Notification Bot app, and if you selected http trigger when create the project. You need to post HTTP request to <http://localhost:5130/api/notification> to trigger notification. You can use any API tool: curl (Windows Command Prompt), Postman, etc.
+4. If you're debugging Notification Bot app, and if you selected http trigger when create the project. You need to post HTTP request to <http://localhost:5130/api/notification> to trigger notification. You can use any API tool: curl (Windows Command Prompt), Postman, etc.
 
 > [!TIP]
 > If you made changes to Teams app manifest file (/templates/appPackage/manifest.template.json), please right click on your project and select "Teams Toolkit" -> "Prepare Teams app dependencies" command before you try to locally run the Teams app again.
@@ -65,7 +65,7 @@ Perform the following steps to debug your app after you create a new app using t
 
 ### Prepare Teams app dependencies
 
-Teams Toolkit will prepare local debug dependencies and register a Teams app in the tenant which your account belongs to.
+Teams Toolkit will prepare local debug dependencies and register a Teams app in the tenant that your account belongs to.
 For Bot and Message Extension apps, Teams Toolkit will register and configure a bot.
 
 ### Start debugging
@@ -79,8 +79,8 @@ The following image shows the toggle breakpoints:
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you are debugging the Teams app.
-And then click the hot reload button as follow to apply your edits:
+You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app.
+And then select the hot reload button as follow to apply your edits:
 
 Or you can enable "Hot Reload on File Save" for auto hot reload:
 
@@ -89,7 +89,7 @@ Or you can enable "Hot Reload on File Save" for auto hot reload:
 
 ### Stop debugging
 
-When you complete local debug, you can stop debugging.The following image shows the stop debug action:
+When you complete local debug, you can stop debugging. The following image shows the stop debug action:
 
 ## Customize debug settings
 
@@ -111,4 +111,4 @@ You can add environment variables to **Properties/launchSettings.json** file.
 
 if you want to launch the Teams app as a web app instead of running in Teams client, first remove the **'launchUrl'** in Properties/launchSettings.json__.
 
-Then right click on the solution, in Properties > Configuration Properties > Configuration, uncheck the 'Deploy' process and select 'OK'.
+Then right select on the solution, in Properties > Configuration Properties > Configuration, uncheck the 'Deploy' process and select 'OK'.
