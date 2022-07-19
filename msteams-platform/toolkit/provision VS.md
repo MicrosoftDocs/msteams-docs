@@ -1,7 +1,7 @@
 ---
-title: Use Teams Toolkit to provision cloud resources using Teams Toolki for Visual Studio
+title: Use Teams Toolkit to provision cloud resources using Teams Toolkit for Visual Studio
 author: MuyangAmigo
-description: In this module, learn how to do provision cloud resources using Teams Toolkit, resource creation and customize resource provision in Visual Studio
+description: In this module, learn how to provision cloud resources using Teams Toolkit. Also to create resources and customize resource provision in Visual Studio
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Provision cloud resources using Visual Studio
 
-TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach your application needs the cloud resources.
+TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Here's a list of tools you'll need for provisioning your cloud resources:
 
 The following steps helps you to provision cloud resources using Visual Studio:
 
-### Sign in to your M365 account
+### Sign in to your Microsoft 365 account
 
 1. Open Visual Studio.
 2. Open the Teams App project.
@@ -61,7 +61,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
 5. Sign in to Azure account using your credentials. The browser closes automatically.
 
-### Adding Provision cloud resources
+### Adding provision cloud resources
 
 1. Select Project > Teams Toolkit > Provision in the cloud.
 2. In the Provision dialogue box you can see the list of all subscriptions in your Azure account.
@@ -156,14 +156,16 @@ When you create a new project, you also need to create some Azure resources. The
 
 ### Manage your resources
 
-You can login to [Azure Portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
+You can sign in to [Azure Portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
-* Select Resource group from the existing ones or the Resource group that you've just created.
-* Select overview, and on the right you can see a list of details of that resource group you chose.
+* You can select Resource group from the existing ones or the Resource group that you've just created.
+* You can see the details of the resource group you've chosen in the overview section of the table of content.
 
 ### Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as a code approach to define the Azure resources that you'd want to provision, and the way you want to configure. TTK uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you'd want to provision. TTK also helps you to configure it the way you want to.
+
+TTK uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -181,7 +183,7 @@ Provision with ARM involves changing the following sets of files, parameters and
 > [!NOTE]
 > Once you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated, then you can't customize them. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This does not make you lose any changes while adding resources or capabilities to your project.
 
-The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure that new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json` file.
 
 ### Azure AD application related parameters
 
@@ -208,17 +210,17 @@ The following example reads the value of `mySelfHostedDbConnectionString` parame
 
 ### Customize ARM template files
 
-If the predefined templates doesn't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
+If the predefined templates don't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some extra Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
 
 To ensure the TeamsFx tool functions properly, customize ARM template, which satisfies the following requirement:
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
-* Ensure that the name of auto-generated parameters as well as its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of auto-generated ARM template are unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy and validate manifest file.
+* Ensure that the name of auto-generated parameters and its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
+* Ensure that the output of auto-generated ARM template is unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy and validate manifest file.
 
 ### Customization scenarios
 
-You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. This can be done in the following ways:
+You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. You can perform this in the following ways:
 
 #### Use an existing Azure AD app for your bot
 
