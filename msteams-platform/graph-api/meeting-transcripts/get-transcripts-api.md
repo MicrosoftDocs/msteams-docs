@@ -37,7 +37,6 @@ If you want your app to fetch transcripts only for the Teams meeting where it's 
 
 For more information about the meeting-specific RSC permissions that can be granted to your app, see [Resource-specific permissions for a chat](/graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat).
 
-<br>
 After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
 
 For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](/graph-api/meeting-transcripts/fetch-id.md#subscribe-to-change-notifications) and [Use Bot Framework to get meeting ID and organizer ID](/graph-api/meeting-transcripts/fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
@@ -496,7 +495,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     1. **Access and get meeting transcript based on the transcript ID**:
 
-        Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
+        Use the following example to request the transcript for a specific meeting in the `.vtt` format:
 
         ```http
         GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
