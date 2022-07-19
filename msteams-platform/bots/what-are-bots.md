@@ -65,3 +65,4 @@ You can use the Teams bot APIs to get information for members of a chat or a tea
 * [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)
 * [Bot activity handlers](~/bots/bot-basics.md)
 * [Conversation events in your Teams bot](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Proactive messages](how-to/conversations/send-proactive-messages.md)
