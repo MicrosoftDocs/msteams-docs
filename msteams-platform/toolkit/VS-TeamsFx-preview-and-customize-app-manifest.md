@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Edit Teams app manifest using Visual Studio
 
-During **Provision in the Cloud** or **Prepare Teams App Dependencies**, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json` to create a Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+Teams Toolkit in Visual Studio (VS) loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. This allows to create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
 After scaffolding, in the manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
@@ -19,7 +19,7 @@ In the manifest template, select **Project** > **Teams Toolkit** > **Open Manife
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest file":::
 
-## Customize app manifest in Teams Toolkit
+### Customize app manifest in Teams Toolkit
 
 There are two types of placeholders in `manifest.template.json`:
 
@@ -39,24 +39,25 @@ You can have a customized parameter by:
     }
     ```
 
-## Preview app manifest in Teams Toolkit
+### Preview app manifest in Teams Toolkit
 
-You can Preview values in app manifest in two ways:
+You can preview values in app manifest in two ways:
 
 - When you hover over the placeholder in `manifest.template.json`, the values for **dev** and **local** environment can be seen.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Hover over placeholder":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Hover over placeholder":::
 
 - You can also hover over the key besides each placeholder in `manifest.template.json`, the same values for **dev** and **local** environment can be seen.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder":::
 
 > [!NOTE]
 > If the environment has not been provisioned, or the Teams app dependencies has not been prepared, it indicates that the values for placeholder have not been generated.
 
 ### Preview manifest file
 
-To preview manifest file, you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from **Project** > **Teams Toolkit** menu, that generates configuration for local or remote Teams app.
+To preview manifest file perform the following steps:
+you need to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** from **Project** > **Teams Toolkit** menu, that generates configuration for local or remote Teams app.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file":::
 
