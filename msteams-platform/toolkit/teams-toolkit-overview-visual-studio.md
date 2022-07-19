@@ -40,17 +40,17 @@ The main milestones of this journey are:
     > [!IMPORTANT]
     > We recommend you to download VS 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*.
 
-2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select install.
+2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install.png" alt-text="Visual studio-installation":::
 
-3. Select “Launch” to open Visual Studio.
+3. Select **Launch** to open Visual Studio.
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
 ## Take a tour of Teams Toolkit
 
-With Teams Toolkit installed, open a Teams project. Then Teams Toolkit operations are available for you through Project menu:
+You need to install Teams Toolkit, and then you can access the **Teams Toolkit menu** when you select **Project > Teams Toolkit**:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
