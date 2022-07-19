@@ -74,8 +74,8 @@ There are other ways to preview manifest file:
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer":::
 
-> [!NOTE]
->In this case the project name is MyTeamsApp1.
+    > [!NOTE]
+    >In this case the project name is MyTeamsApp1.
 
 ### Sync local changes to Developer Portal
 
