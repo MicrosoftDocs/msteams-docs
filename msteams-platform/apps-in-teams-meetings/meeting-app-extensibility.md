@@ -48,7 +48,7 @@ To add tabs to an existing meeting:
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="The screenshot describes on how to add tabs to an existing meeting.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="The screenshot describes how to add tabs to an existing meeting.":::
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -59,7 +59,7 @@ To add tabs to an existing meeting:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="To add tabs during a meeting in desktop.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="The screenshot describes how to add tabs during a meeting in desktop.":::
 
 # [Mobile](#tab/mobile)
 
