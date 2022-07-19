@@ -61,7 +61,7 @@ The steps to register your app through the Azure AD portal are similar to the [t
 
 1. Select **New Registration**. The **Register an application** page appears.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/app-registration.png" alt-text="The screenshot is an example that shows the new registration.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/app-registration.png" alt-text="The screenshot displays the new app registration.":::
 
 1. In the **Register an application**, do the following steps:
 
@@ -111,25 +111,25 @@ The steps to register your app through the Azure AD portal are similar to the [t
 
 1. Ensure that the state is set to **Enabled**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/enabled-state.png" alt-text="The screenshot is an example that shows the setting state to enabled.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/enabled-state.png" alt-text="The screenshot displays the setting state to enabled.":::
 
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
 1. In the **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-client-application.png" alt-text="The screenshot describes on how to add a client application.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-client-application.png" alt-text="The screenshot describes how to add a client application.":::
 
 1. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-client-id.png" alt-text="Adding client id.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/add-client-id.png" alt-text="The screenshot describes how to add client id.":::
 
 1. Go to **Authentication**.
 1. In **Platform configurations**, select **Add a platform**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/platform-configuration.png" alt-text="The screenshot is an example that shows platform configurations.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/platform-configuration.png" alt-text="The screenshot displays platform configurations.":::
 
 1. Select **Web**.
 
@@ -140,13 +140,13 @@ The steps to register your app through the Azure AD portal are similar to the [t
    >[!NOTE]
    > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://token.botframework.com/.auth/web/redirect`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/configure-web.png" alt-text="Entering redirect URIs.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/configure-web.png" alt-text="The screenshot describes how to enter redirect URIs.":::
 
 1. The following steps will help you to enable implicit grant:
     * Select **Authentication** from the left pane.
     * Select the **Access tokens** and **ID tokens** checkboxes.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/grant-flow.png" alt-text="The screenshot is an example that shows the grant flow steps.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/grant-flow.png" alt-text="The screenshot displays the grant flow steps.":::
 
     * Select **Save** to save the changes.
 
@@ -176,7 +176,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
 1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
 
-    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/auth-setting2.png" alt-text="The screenshot is an example that shows the configuration settings.":::
+    :::image type="content" source="~/assets/images/authentication/SSO-bots-auth/auth-setting2.png" alt-text="The screenshot displays the configuration settings.":::
 
 1. The following steps will guide you to complete the **New Connection Setting** form:
 
@@ -196,7 +196,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
     * Select **Save**.
     * Select **Apply**.
 
-    :::image type="content" source="~/assets/images/authentication/Bot-connection-setting.png" alt-text="The screenshot is an example that shows the connection settings.":::
+    :::image type="content" source="~/assets/images/authentication/Bot-connection-setting.png" alt-text="The screenshot displays the connection settings.":::
 
 ### Update your Teams application manifest for your bot
 
