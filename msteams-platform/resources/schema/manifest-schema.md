@@ -501,7 +501,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+A list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
