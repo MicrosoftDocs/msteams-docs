@@ -72,9 +72,12 @@ Now you've successfully created a brand new app and you can see all basic inform
 You can import and manage your existing app in the developer portal:
 
 1. In the Developer Portal, select **Apps** from the left pane.
-2. Select **Import App**.
-3. Select the app manifest file and then select **Open**.
-4. Select **Import**.
+1. Select **Import App**.
+
+   :::image type="content" source="../../assets/images/tdp/import-app.PNG" alt-text="Import your existing app in Developer Portal for Teams to manage your apps.":::
+
+1. Select the app manifest file and then select **Open**.
+1. Select **Import**.
    1. If your app package has errors, you can import the app and resolve the errors before you upload or publish the app to Teams.
    1. If you see the following message while uploading the app, click **Import** to add the app package to the Developer Portal.
 
@@ -82,7 +85,7 @@ You can import and manage your existing app in the developer portal:
 
 > [!NOTE]
 >
-> * The Developer Portal creates a unique App ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice. This prevents scenarios where multiple apps have duplicate app IDs.
+> * The Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice. This prevents scenarios where multiple apps have duplicate app IDs.
 > * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in the Developer Portal. For more information, see [Build apps with teams toolkit and Visual studio code](~/toolkit/visual-studio-code-overview.md).
 
 ## Manage your apps in Developer Portal
@@ -103,9 +106,9 @@ In the Overview section, you can see the following features to manage your app:
   * In the **Dashboard** under **Overview** section, you can see the following features for your app:
     * **Teams store validation** - App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
     * **Announcement** - Latest updates of your apps on Developer Portal for Teams
-    * **Upgrade to 1.14** -
+    * **Upgrade to 1.14** - (content to be added)
     * **Active users (Preview)** - Shows you the active user count
-    * **Basic information** of your app -
+    * **Basic information** - Shows you the App ID, Version, Manifest version and more.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="Overview page of the app you created in Developer Portal for Teams.":::
 
@@ -134,12 +137,12 @@ In the Configure section, you can see the following features to manage and acces
   * Activity feed notification
 * **Permissions** - This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
 * **Single sign-on** - This section allows you to configure your app to authenticate users with single sign-on (SSO).
-* **Languages** - This section allows you to set up or change the language for your app.
+* **Languages** - This section allows you to set up or change the language of your app.
 * **Domain** -
 
 ### Advanced
 
-In the Advanced section, you can see the following features to manage and access your app:
+In the Advanced section, you can see the following features to manage your app in Developer Portal:
 
 * **Owners**
 
@@ -154,6 +157,8 @@ In the Advanced section, you can see the following features to manage and access
     1. Select **Add**.
 
 * **App content**
+
+(content to be added)
 
 * **Environments**
 
@@ -172,19 +177,19 @@ In the Advanced section, you can see the following features to manage and access
     1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
     1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-* **Plan and pricing** - This section allows you to link a SaaS offer to your app.
+* **Plan and pricing** - This section allows you to link a SaaS offer which you created in the Partner center to your app.
 * **Admin settings** - This section allows you to do app customization and to block your app by default.
 
 ### Publish
 
 This section allows you to publish your app to your org, or to the Teams store.
 
-* Publish your app to org:
+* **Publish your app to org**:
 
    1. In the app **Overview** page, under **Publish**, Select **Publish to Org**.
    1. Select **Publish your App**.
 
-* Publish your app to store:
+* **Publish your app to store**:
 
    1. In the app **Overview** page, under **Publish**, Select **Publish to Store**.
    1. Select **Publish**.
@@ -194,7 +199,9 @@ This section allows you to publish your app to your org, or to the Teams store.
 
    You can download the app package using **Download app package** button from the publish to Teams Store page.
 
-* Flights - Controls who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
+* **Flights** - Controls who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
+
+* **App package** -
 
 ### Test your app directly in Teams
 
@@ -219,6 +226,8 @@ To add a bot:
 1. Select **Bot Management**.
 1. In the bot management page, select **+ New Bot**.
 1. Enter a name and select **Add**.
+
+:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.PNG" alt-text="This screenshot shows you the tools in developer portal which helps you to build some key features.":::
 
 From the Developer portal, you can navigate to Bot framework portal and configure your bot to update bot icon and other bot properties.
 
