@@ -140,8 +140,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
 | **user.tenantId** | Azure Active Directory tenant ID. |
-| **user.userRole** | Role of the user. For example 'admin' or 'user'. |
-| **meeting.role** | The participant's role in the meeting. For example 'Organizer' or 'Presenter' or 'Attendee'. |
+| **user.userRole** | Role of the user. For example, 'admin' or 'user'. |
+| **meeting.role** | The participant's role in the meeting. For example, 'Organizer' or 'Presenter' or 'Attendee'. |
 | **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
 | **conversation.id** | The meeting chat ID. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
@@ -495,7 +495,7 @@ The JSON response body for Meeting Details API is as follows:
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type - for example GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | The meeting's type. For example, GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
@@ -934,7 +934,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The *result* can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. If the result true, the incoming audio is muted and if the result false, incoming audio is unmuted. |
 
 ### Example
 
@@ -971,7 +971,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `true/false` value, in case of a successful toggle or null when the toggling fails. If the result is true, the incoming audio is muted and if the is result false, the incoming audio is unmuted. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The *result* can either contain an `true/false` value, in case of a successful toggle or null when the toggling fails. If the result is true, the incoming audio is muted and if the is result false, the incoming audio is unmuted. |
 
 ### Example
 
