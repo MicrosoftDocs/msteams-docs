@@ -12,7 +12,7 @@ OAuth 2.0 is an open standard for authentication and authorization used by Azure
 See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)
 for an example that demonstrates authentication flow for bots using Node.js and the [OAuth 2.0 authorization code grant type](https://oauth.net/2/grant-types/authorization-code/).
 
-:::image type="content" source="~/assets/images/authentication/bot_auth_sequence_diagram.png" alt-text="Diagram that shows bot authentication sequence.":::
+:::image type="content" source="~/assets/images/authentication/bot_auth_sequence_diagram.png" alt-text="Diagram that displays bot authentication sequence.":::
 
 1. The user sends a message to the bot.
 2. The bot determines if the user needs to sign in.
