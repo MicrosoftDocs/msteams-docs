@@ -153,9 +153,9 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -388,7 +388,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/Teams-Messaging-Extensions-Search/certificate.png)
+          ![Trust Certificate](~/assets/images/sbs-messagingextension-action/certificate.png)
 
           A webpage opens with a message **Your bot is ready!**.
 
@@ -425,11 +425,11 @@ items:
    
     1. In the lower left corner, select **Manage your apps**.
 
-       ![Manage apps](~/assets/images/Teams-Messaging-Extensions-Search/manageapps.png)
+       ![Manage apps](~/assets/images/Teams-task-module/manage-apps.png)
    
     1. Select **Upload an app to your org's app catalog**. 
 
-       ![Upload custom app](~/assets/images/Teams-Messaging-Extensions-Search/uploadapp.png)
+       ![Upload custom app](~/assets/images/Teams-task-module/upload-app.png)
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
