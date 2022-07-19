@@ -92,7 +92,7 @@ To upload a file to a user:
 
 The following desktop message contains a simple attachment object requesting user permission to upload the file:
 
-:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="The screenshot is an example that shows the consent card requesting user permission to upload file."lightbox="../../assets/images/bots/bot-file-consent-card.png":::
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="The screenshot displays the consent card requesting user permission to upload file."lightbox="../../assets/images/bots/bot-file-consent-card.png":::
 
 The following mobile message contains an attachment object requesting user permission to upload the file:
 
@@ -193,7 +193,7 @@ The following table describes the content properties of the attachment:
 
 Fetch inline images that are part of the message using the Bot's access token.
 
-:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="The screenshot is an example that shows of fetching inline images from messages.":::
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="The screenshot describes how to fetch inline images from messages.":::
 
 The following code shows an example of fetching inline images from message:
 
