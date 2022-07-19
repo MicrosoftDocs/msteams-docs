@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can leverage by using the activity feed notification APIs in Microsoft Graph to extend the functionality to your app.
+    The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can apply by using the activity feed notification APIs in Microsoft Graph to extend the functionality to your app.
     
 
     **Key features of activity feed broadcast**
@@ -55,7 +55,7 @@ items:
 
     ### Check for sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. The function is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
     > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -75,7 +75,7 @@ items:
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > Contact Teams administrator, if you don't have the option to upload a custom app.
+        > Contact Teams administrator, if you can't upload a custom app.
 
     ### Create a free Teams developer tenant (optional)
 
@@ -83,12 +83,12 @@ items:
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
-    1. Select **Set up E5 subscription** from the welcome screen.
+    1. Select Set-up E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
 
-    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
+    1. Sign-in to Teams using the new administrator account. Now you can select **Upload a custom app**.
 
 - title: Set up local environment
   durationInMinutes: 1 
@@ -227,7 +227,7 @@ items:
 
     1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
        
-       |**Client ID**|**For authorizing**|
+       | **Client ID** | **For authorizing** |
        |--------|-------------|
        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
@@ -236,7 +236,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
 
-       The following image displays the Client Id:
+       The following image displays the Client ID:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
 
@@ -270,7 +270,7 @@ items:
          * **User.Read**
           
        > [!NOTE]
-       > User.Read is enabled by default.
+       > User. Read is enabled by default.
 
     1. Select **Add permissions**.
 
@@ -407,7 +407,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Select certificate" border="true":::
 
-          A webpage opens with a message **Your bot is ready!**
+          A webpage opens with a message **. Your bot is ready!**
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="App is ready" border="true":::
 
