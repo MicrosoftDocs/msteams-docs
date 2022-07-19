@@ -935,7 +935,8 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The *result* can either contain an `true/false` value, indicating successful retrieval, or null, indicating failed retrieval. The incoming audio is muted if the result is `true` and unmuted if the result is `false`. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error type *SdkError* or null when share is successful. The *result* can either contain `true` or `false` value, indicating successful retrieval, or null, indicating failed retrieval. The incoming audio is muted if the result is `true` and unmuted if the result is `false`. |
+
 
 ### Example
 
