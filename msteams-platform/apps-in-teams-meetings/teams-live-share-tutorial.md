@@ -339,7 +339,7 @@ After you've started running your app locally with `npm run start`, you can then
 
    You should now see dice-roller on the meeting stage.
 
-   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-meeting-stage.png" alt-text="The screenshot is an example that shows the Dice roller on the meeting stage.":::
+   :::image type="content" source="../assets/images/teams-live-share/teams-live-share-meeting-stage.png" alt-text="The screenshot displays the Dice roller on the meeting stage.":::
 
 Users invited to the meeting can see your app on stage when they join the meeting.
 
