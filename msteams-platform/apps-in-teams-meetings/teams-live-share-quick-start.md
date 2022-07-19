@@ -1,10 +1,11 @@
 ---
 title: Live Share quick start
+author: surbhigupta
 description:  In this module, learn how to quickly try the Dice Roller sample
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
----
+ms.date: 04/07/2022
 ---
 
 # Quick start guide

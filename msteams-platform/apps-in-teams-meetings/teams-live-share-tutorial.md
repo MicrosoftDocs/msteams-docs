@@ -1,10 +1,11 @@
 ---
 title: Live Share code tutorial
+author: surbhigupta
 description:  In this module, learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
----
+ms.date: 04/07/2022
 ---
 
 # Dice Roller code tutorial

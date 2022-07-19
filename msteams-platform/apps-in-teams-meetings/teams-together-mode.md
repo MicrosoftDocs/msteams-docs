@@ -1,8 +1,11 @@
 ---
 title: Custom Together Mode Scenes
+author: surbhigupta
 description: Work with custom Together Mode scenes
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
 
 # Custom Together Mode scenes in Teams

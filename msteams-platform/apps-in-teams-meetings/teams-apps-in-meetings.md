@@ -5,6 +5,7 @@ description: In this article, learn how apps works in Microsoft Teams meetings b
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
+ms.date: 04/07/2022
 ---
 
 # Apps for Teams meetings and calls

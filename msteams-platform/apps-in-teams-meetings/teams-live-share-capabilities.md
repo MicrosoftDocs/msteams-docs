@@ -1,13 +1,12 @@
 ---
 title: Live Share getting started
+author: surbhigupta
 description: In this module, learn more about live share SDK capabilities, RSC permissions and ephermal data structures.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
-
----
-
 # Live Share core capabilities
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
