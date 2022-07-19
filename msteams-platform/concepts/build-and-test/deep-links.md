@@ -414,7 +414,7 @@ When deep link is selected in an app and user is already in a meeting, the app i
 > [!NOTE]
 > Permission pop-up window appears only for Microsoft 365 apps.
 
-When user isn't in a meeting then user will be redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they can interact with an app.
+When user isn't in a meeting then user is redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they can interact with an app.
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
@@ -424,7 +424,7 @@ When user isn't in a meeting then user will be redirected to the Teams calendar 
 
 > [!IMPORTANT]
 >
-> * Ensure that all query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+> * Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
 >
 >      ```javascript
 >      var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
@@ -432,7 +432,7 @@ When user isn't in a meeting then user will be redirected to the Teams calendar 
 >      var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 >      ```
 >
-> * To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For more information, see [app manifest](~/resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+> * To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For more information, see [app manifest](~/resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ## Generate a deep link to a call
 
