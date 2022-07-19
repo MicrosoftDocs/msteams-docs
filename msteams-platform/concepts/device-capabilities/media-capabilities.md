@@ -11,7 +11,7 @@ ms.author: lajanuar
 
 You can integrate native device capabilities, such as camera and microphone with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) that provides the necessary tools for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as camera and microphone with the Teams platform within your Microsoft Teams app, and build a richer experience. The media capability is available for Teams web client, desktop, and mobile. To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
 
-For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities. It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allows you to use native media capabilities. It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 ## Advantages
 
