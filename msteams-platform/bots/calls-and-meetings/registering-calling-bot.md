@@ -37,7 +37,7 @@ To create a new bot for Teams:
 1. Add the Teams channel.
 1. Select the **Calling** tab on the Teams channel page. Select **Enable calling**, and then update **Webhook (for calling)** with your HTTPS URL where you receive incoming notifications, for example `https://contoso.com/teamsapp/api/calling`. For more information, see [configuring channels](/bot-framework/portal-configure-channels).
 
-:::image type="content" source="/assets/images/calls-and-meetings/configure-msteams-channel.png" alt-text="The screenshot is an example that shows the configure Teams channel information.":::
+:::image type="content" source="/assets/images/calls-and-meetings/configure-msteams-channel.png" alt-text="The screenshot displays the configure Teams channel information.":::
 
 The next section provides a list of application permissions supported for calls and online meetings.
 
