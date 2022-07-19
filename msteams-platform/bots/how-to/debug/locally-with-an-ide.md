@@ -59,11 +59,11 @@ Initiate a conversation with your bot by using its ID. When a bot is added throu
 * Directly reference your bot's app ID from within Teams:
    1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
   
-      :::image type="content" source="../../../assets/images/bots_appid_botframework.png" alt-text="The screenshot describes on how to get the AppID for the bot.":::
+      :::image type="content" source="../../../assets/images/bots_appid_botframework.png" alt-text="The screenshot describes how to get the AppID for the bot.":::
 
    2. Open Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. In **To:**, paste your bot's Microsoft App ID.
   
-      :::image type="content" source="../../../assets/images/bots_uploading.png" alt-text="The screenshot descibes on how to upload bots.":::
+      :::image type="content" source="../../../assets/images/bots_uploading.png" alt-text="The screenshot descibes how to upload bots.":::
 
       The app ID must resolve to your bot name.
 
