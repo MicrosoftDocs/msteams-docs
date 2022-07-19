@@ -97,7 +97,7 @@ To add a tab to a meeting:
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Plus button icon in the details tab to install app as Tab.":::.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="Install the app as a tab in the pre meeting tab in Teams meeting.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="The screenshot describes how to install the app as a tab in the pre meeting tab in Teams meeting.":::
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -138,7 +138,7 @@ The in-meeting notification is used to engage participants during the meeting an
 
 In-meeting notification must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog.":::
 
 #### Shared meeting stage
 
@@ -153,11 +153,11 @@ Participants can share the entire app to the collaborative meeting stage using t
 
 # [Desktop](#tab/Desktop)
 
-:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Share entire app to the collaborative meeting stage on desktop.":::
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="The screenshot describes how to share entire app to the collaborative meeting stage on desktop.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="Share entire app to the collaborative meeting stage on mobile.":::
+:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="The screenshot describes how to share entire app to the collaborative meeting stage on mobile.":::
 
 ---
 
@@ -185,7 +185,7 @@ For more information, see [app manifest](../resources/schema/manifest-schema-dev
 
 Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
 
-:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="Share specific part of the app to meeting stage in Teams meeting.":::
+:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="The screenshot describes how to share specific part of the app to meeting stage in Teams meeting.":::
 
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
