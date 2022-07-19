@@ -1,9 +1,8 @@
 ---
 title: Configure OAuth 2.0 identity providers
-description: Describes how to configure identity providers with a focus on Microsoft Azure Active Directory (Azure AD)
+description: In this module, learn how to configure identity providers with a focus on Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication Azure AD oauth identity provider
 ---
 # Configure identity providers
 
@@ -32,5 +31,5 @@ Replace `<hostname>` with your actual host, which might be a dedicated hosting s
 ## See also
 
 * [Authenticate a user in a Microsoft Teams bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
-* [Single sign-on (SSO) support for tabs](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [Single sign-on (SSO) support for tabs](../../tabs/how-to/authentication/tab-sso-overview.md)
 * [Authenticate a user in a Microsoft Teams tab](../../tabs/how-to/authentication/auth-tab-aad.md)
