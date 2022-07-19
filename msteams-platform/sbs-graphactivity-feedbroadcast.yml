@@ -14,16 +14,16 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your app.
+    The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can leverage by using the activity feed notification APIs in Microsoft Graph to extend the functionality to your app.
     
 
     **Key features of activity feed broadcast**
 
-    * Provides enhanced experience
-    * Keeps users up to date
-    * Broadcasts message for all the members
-    * Displays activity feed notification
-    * Broadcasts details available for members
+    * Provides enhanced experience.
+    * Keeps users up to date.
+    * Broadcasts message for all the members.
+    * Displays activity feed notification.
+    * Broadcasts details available for members.
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
@@ -36,18 +36,18 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download) 
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
+    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download).
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
+    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution.
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
     Ensure you have the following accounts and set up your development environment:
     
-    * [Microsoft](https://teams.microsoft.com/) account
-    * The Teams app must be installed for the recipient, either personally, or in a team or chat
-    * The Tenant ID for sending and receiving notifications must match
+    * [Microsoft](https://teams.microsoft.com/) account.
+    * The Teams app must be installed for the recipient, either personally, or in a team or chat.
+    * The Tenant ID for sending and receiving notifications must match.
  
     ## Set up your Teams development tenant
 
@@ -67,9 +67,12 @@ items:
     1. In the Teams client, select **Store**.
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
+
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact Teams administrator, if you don't have the option to upload a custom app.
@@ -109,7 +112,7 @@ items:
       
     **To create and register new application**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to sign in with your Microsoft account credentials
+    1. Go to the [Azure portal](https://portal.azure.com/). The system prompt you to sign in with your Microsoft account credentials
     1. Select **Azure Active Directory**.
      
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
@@ -229,7 +232,7 @@ items:
        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
 
-    1. Select **Authorized scopes** to determine which type of token will be returned by the service.
+    1. Select **Authorized scopes** to determine, which type of token will be returned by the service.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
 
@@ -259,13 +262,16 @@ items:
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions.png" alt-text="Select graph permission" border="true":::
 
     1. Add the following permissions:</br>
-         * **User.Read** (enabled by default)
          * **Directory.Read.All**
          * **Directory.ReadWrite.All**
          * **TeamsActivity.Send**
          * **TeamsAppInstallation.ReadForUser**
          * **TeamsAppInstallation.ReadWriteForUser**
+         * **User.Read**
           
+       > [!NOTE]
+       > User.Read is enabled by default.
+
     1. Select **Add permissions**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
@@ -362,10 +368,10 @@ items:
 
     1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**
-         * Set `"TenantID"` to **Directory (tenant) ID**
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value
-         * Set `"BaseUrl"` to the `[WebAppDomainName]`
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"TenantID"` to **Directory (tenant) ID**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"BaseUrl"` to the `[WebAppDomainName]`.
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
 
@@ -375,9 +381,9 @@ items:
 
     1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**
-         * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name
-         * Set `validDomains` to `[WebAppDomainName]`
+         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
+         * Set `validDomains` to `[WebAppDomainName]`.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-file.png" alt-text="Manifest file" border="true":::
 
