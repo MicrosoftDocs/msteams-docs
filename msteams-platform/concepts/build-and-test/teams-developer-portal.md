@@ -203,13 +203,24 @@ The Developer Portal provides options for testing and debugging your app:
 * On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
-### Distribute your app
+## Use tools to create app features
 
-From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
+The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
 
-For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
+* **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
+* **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
+* **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
+* **Teams store app validation**: Check your app package against the test cases Microsoft uses when reviewing your app.
+* **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
-## Tools
+To add a bot:
+
+1. In the Developer Portal, select **Tools** in the left navigation bar.
+1. Select **Bot Management**.
+1. In the bot management page, select **+ New Bot**.
+1. Enter a name and select **Add**.
+
+From the Developer portal, you can navigate to Bot framework portal and configure your bot to update bot icon and other bot properties.
 
 ## Analyze your app's usage
 
@@ -301,25 +312,6 @@ The **My App dashboard** table shows you the latest R30 (Rolling 30 day) data fo
 You can select each of these **Metric name** to see trends over time.
 
  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="app":::
-
-## Use tools to create app features
-
-The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
-
-* **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
-* **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
-* **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
-* **Teams store app validation**: Check your app package against the test cases Microsoft uses when reviewing your app.
-* **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
-
-To add a bot:
-
-1. In the Developer Portal, select **Tools** in the left navigation bar.
-1. Select **Bot Management**.
-1. In the bot management page, select **+ New Bot**.
-1. Enter a name and select **Add**.
-
-From the Developer portal, you can navigate to Bot framework portal and configure your bot to update bot icon and other bot properties.
 
 ## See also
 
