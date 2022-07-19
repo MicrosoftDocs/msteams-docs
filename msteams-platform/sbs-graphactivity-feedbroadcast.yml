@@ -112,7 +112,7 @@ items:
       
     **To create and register new application**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). The system prompt you to sign in with your Microsoft account credentials
+    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials
     1. Select **Azure Active Directory**.
      
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
@@ -457,7 +457,7 @@ items:
 
        The Message broadcasted successfully appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Final output" border="true":::
 
     1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
 
@@ -472,9 +472,9 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Final output" border="true"::: 
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
 
 - content: |
     You've completed the tutorial to get started with the **activity feed broadcast** app!
