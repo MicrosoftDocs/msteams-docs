@@ -656,7 +656,10 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only for apps published to your organization.
+>
+> * `isFullScreen` only works for apps published to your organization. Sideloaded and published third-party apps cannot use this property (it is ignored).
+>
+> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
 
 ## activities
 
