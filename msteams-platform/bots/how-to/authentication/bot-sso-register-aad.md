@@ -34,7 +34,7 @@ For this tutorial, you'll configure your app with Azure AD, and then create and 
 You can register a new app in Azure AD, and configure the tenancy and app's platform. Azure AD  generates a new app ID. You'll need to update it later in the Teams app manifest file.
 
 <details>
-<summary>Learn how to register your app in Azure AD</summary>
+<summary><b>Learn how to register your app in Azure AD</b></summary>
 
 ### To register a new app in Azure AD
 
@@ -258,6 +258,9 @@ In this section, you will:
 - Add messaging endpoint
 - Update OAuth connection
 
+<details>
+<summary><b>Learn how to create and configure bot resource in Azure AD</b></summary>
+
 ### To create and deploy bot resource
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
@@ -449,7 +452,10 @@ You must enable the Teams channel to let the bot interact with Microsoft Teams.
 
 Next, you must configure bot app in Azure AD to enable SSO.
 
-### Configure bot resource in Azure AD
+</details>
+<br>
+
+### Configure SSO for bot resource in Azure AD
 
 In this section, you'll configure the bot resource for messaging endpoint and OAuth connection.
 
