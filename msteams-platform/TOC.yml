@@ -138,10 +138,14 @@
     href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
-  - name: Developer Portal
+  - name: Developer Portal for Teams
     items:
-    - name: Developer Portal for Teams
+    - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
+    - name: Manage your apps in Developer Portal
+      href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
+    - name: Analyze your apps usage in Developer Portal
+      href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md     
   - name: Teams JavaScript client SDK
