@@ -50,13 +50,16 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+   1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+   1. Select **Code**.
+   1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
+     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
 
-    1. Select **Clone**. 
+   1. Select **Clone**. 
+
+       > [!NOTE]
+       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
 
 - title: Create and register your bot 
   durationInMinutes: 5

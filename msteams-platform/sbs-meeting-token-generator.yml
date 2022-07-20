@@ -73,6 +73,10 @@ items:
 
     1. Select **Clone**. 
 
+       > [!NOTE]
+       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
+
+
 - title: Create and register your bot 
   durationInMinutes: 5
   content: |
