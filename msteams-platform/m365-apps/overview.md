@@ -1,6 +1,6 @@
 ---
 title: Extend Teams apps across Microsoft 365 (preview)
-description: In this article, you'll know how to build and update your Teams app experiences to other high-usage areas of Microsoft 365. 
+description: In this module, know how to build and update your Teams app experiences across other high-usage areas of Microsoft 365. 
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
@@ -32,11 +32,11 @@ For guidance about the Teams app manifest and SDK versioning guidance, and furth
 
 Reach your users where they are, right in the context of their work by extending your web app as a Teams personal tab application that also runs in both Outlook and Office.
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in Outlook, Office, and Teams":::
+:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Office, and Teams.":::
 
 You can also extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
-:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Message extension running in Outlook and Teams":::
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
 Building your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) provides you with a consolidated development process. By enabling you to deliver a streamlined deployment, installation, and admin experience for your customers, you can expand the potential reach and usage of your app.
 
