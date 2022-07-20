@@ -70,7 +70,7 @@ There are two other ways to preview manifest file:
 
 - Select **Project** > **Teams Toolkit** > **Zip App Package** then select **For Local** or **For Azure**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip.png" alt-text="Zip app package":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package":::
 
 - You can also see the same list of menus that are under Project > Teams Toolkit, if you right click on your project name and then select **Teams Toolkit** under **Solution Explorer**.
 
