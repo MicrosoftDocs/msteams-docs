@@ -18,7 +18,7 @@ Here's a list of tools you'll need for provisioning your cloud resources:
 
 * Microsoft 365 account with a valid subscription
 * Azure account with a valid subscription
-* Install Teams Toolkit for Visual Studio.
+* Install Teams Toolkit (TTK) for Visual Studio.
 
 ## Steps to provision cloud resources
 
@@ -77,16 +77,16 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
-6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking Teams Toolkit output window.
-7. A window will prompt you after provisioning is complete. You can select **View Provisioned Resources** to check all the resources that were provisioned.
+6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking TTK output window.
+7. You can see a message prompt after provisioning is complete. Select **View Provisioned Resources** to check all the resources that were provisioned.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
 ### Resource creation
 
-When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can create the following resources:
+When you trigger provision command in TTK or TeamsFx CLI, you can create the following resources:
 
-* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
+* Microsoft Azure Active Directory (AAD) application under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
@@ -159,14 +159,14 @@ When you create a new project, you also need to create some Azure resources. The
 
 ### Manage your resources
 
-You can sign in to [Azure Portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
+You can sign in to [Azure Portal](https://portal.azure.com/) and manage all resources created by TTK.
 
 * You can select Resource group from the existing ones or the Resource group that you've just created.
 * You can see the details of the resource group you've chosen in the overview section of the table of content.
 
 ### Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you'd want to provision. TTK also helps you to configure it the way you want to.
+TTK enables you to use an infrastructure for the code approach to define the Azure resources that you'd want to provision. TTK also helps you to configure it the way you want to.
 
 TTK uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
