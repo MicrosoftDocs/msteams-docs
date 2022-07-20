@@ -945,6 +945,7 @@ The following code provides an example of meeting end event payload:
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
 * [Live Share SDK](teams-live-share-overview.md)
 
 ## Next steps
