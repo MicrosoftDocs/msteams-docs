@@ -30,7 +30,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
 2. Open the Teams App project.
 3. Select **Project > Teams Toolkit > Prepare Teams App dependencies**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Prepare teams app dependencies":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Prepare teams app dependencies":::
 
 4. Select **Sign in...** to sign in to your Azure account.
 
@@ -50,7 +50,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
 2. Open the Teams App project.
 3. Select **Project > Teams Toolkit > Provision in the cloud**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in the cloud":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in the cloud":::
 
 4. Select **Sign in...** to sign in to your Azure account.
 
