@@ -9,9 +9,6 @@ ms.topic: conceptual
 
 # Shared channels
 
-> [!NOTE]
-> Shared channels are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
-
 Shared channels in Teams allow members of a channel to collaborate with users across other Teams and organizations. You can create and share a shared channel with:
 
 * Members of another Team within the same organization
@@ -47,8 +44,9 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 > Your app may need to account for the unique properties of each of these channel types in order to function properly.
 
 For more information on enabling your tab, see:
-[Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
-[Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
+
+* [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
+* [Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
 
 For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
 
