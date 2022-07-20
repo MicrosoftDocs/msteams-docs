@@ -15,15 +15,15 @@ Shared channels in Teams allow members of a channel to collaborate with users ac
 * Individuals within the same organization
 * Individuals and other Teams of other organizations
 
-This allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. This is advantageous because, unlike when using guest accounts, where members must sign out of Teams and sign in again using a guest account, shared channels facilitates this collaboration seamlessly. Teams applications can now extend this powerful collaboration space.
+Shared channels facilitate collaboration seamlessly. Allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhances user experience, unlike using guest accounts. The members must sign out of Teams and sign in again using a guest account. Teams applications can now extend the powerful collaboration space.
 
-[Place holder for image]
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/shared-channels.png" alt-text="Shared Channel image":::
 
 ## Manifest update in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` refers to the Team that created the shared channel.
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information see [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [app manifest schema for Teams](../../resources/schema/manifest-schema.md)
 
 ```JSON
 "supportedChannelTypes": {
@@ -39,7 +39,7 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
     }
 ```
 
->[!Note]
+> [!NOTE]
 > If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
 > Your app may need to account for the unique properties of each of these channel types in order to function properly.
 
@@ -97,5 +97,5 @@ Apps must function cross-tenant in installation and usage. The following table l
 
 |Channel type| groupId | hostTeamGroupId |
 |----------|---------|-----------------|
-|Regular | Team AAD group ID | Team AAD group ID |
-|Shared | Empty | Host Team AAD group ID |
+|Regular | Team Azure AD group ID | Team Azure AD group ID |
+|Shared | Empty | Host Team Azure AD group ID |
