@@ -22,9 +22,35 @@ This allows external users outside of your organization to collaborate with inte
 
 [Place holder for image]
 
-## Get context in shared channels
+## Manifest update in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` refers to the Team that created the shared channel. For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` refers to the Team that created the shared channel.
+
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information see [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+
+```JSON
+"supportedChannelTypes": {
+      "type": "array",
+      "description": "List of ‘non-standard’ channel types that the app supports. Note: Channels of standard type are supported by default if the app supports team scope. ",
+      "maxItems": 2,
+      "items": { 
+        "enum": [
+          "sharedChannels",
+          "privateChannels"
+        ]
+      }
+    }
+```
+
+>[!Note]
+> If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
+> Your app may need to account for the unique properties of each of these channel types in order to function properly.
+
+For more information on enabling your tab, see:
+[Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
+[Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
+
+For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
 
 ## Apps and permissions in shared channels
 
