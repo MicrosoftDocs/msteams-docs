@@ -29,11 +29,11 @@ You can enable SSO for a bot app in one of the two ways:
 
 | # | Method 1 | Method 2 |
 | --- | --- | --- | --- |
-| 1. | App SSO configuration | 1. | Bot resource configuration |
+| 1. | **App SSO configuration** | 1. | **Bot resource configuration** |
 | 1a. | Configure app ID URI | 1a. | Configure messaging endpoint |
-| 1b. | Configure scopes and permissions | 1b. Update OAuth connection |
-| 1c. | Configure trusted client apps | 2. | App SSO configuration |
-| 2. | Bot resource configuration | 2a. | Configure app ID URI |
+| 1b. | Configure scopes and permissions | 1b. | Update OAuth connection |
+| 1c. | Configure trusted client apps | 2. | **App SSO configuration** |
+| 2. | **Bot resource configuration** | 2a. | Configure app ID URI |
 | 2a. | Configure messaging endpoint | 2b. | Configure scopes and permissions |
 | 2b. | Update OAuth connection | 2c. | Configure trusted client apps |
 
