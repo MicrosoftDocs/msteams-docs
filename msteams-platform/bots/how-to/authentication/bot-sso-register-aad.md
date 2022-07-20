@@ -258,15 +258,14 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 
 Next, you must create and configure a bot resource in Azure AD.
 
-## Create and deploy bot resource in Azure AD
+## Configure bot resource in Azure AD
 
-In this section, you will:
+You must configure OAuth connection for the bot app in Azure AD for enabling SSO. This includes:
 
-- Create bot resource
-- Configure the client secret
-- Enable the bot resource for Teams
 - Add messaging endpoint
 - Update OAuth connection
+
+If you haven't created and configured a bot resource in Azure AD, follow these steps:
 
 <details>
 <summary><b>Learn how to create and configure bot resource in Azure AD</b></summary>
@@ -365,6 +364,12 @@ In this section, you will:
 
 After you create your bot resource, you need to add a client secret and enable bot for working in Teams.
 
+</details>
+<br>
+<details>
+<summary><b>Learn how to create client secret for your bot resource</b></summary>
+<br>
+
 ### Create client secret
 
 A client secret is a string that the bot app uses to prove its identity when requesting a token from Azure AD.
@@ -409,6 +414,12 @@ A client secret is a string that the bot app uses to prove its identity when req
 
    > [!NOTE]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+
+</details>
+<br>
+<details>
+<summary><b>Learn how to enable your bot resource for Teams</b></summary>
+<br>
 
 ### Enable bot for Teams
 
