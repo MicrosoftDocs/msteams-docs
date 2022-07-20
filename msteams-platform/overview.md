@@ -21,7 +21,7 @@ Organizations use it to connect with their customers, provide services, and shar
 
 Let's look at some areas where an app helps to meet a business need.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?":::
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot describes the need to build Teams app.":::
 
 | **Development Options** | **Business Opportunities** |
 | --- | --- |
@@ -47,7 +47,7 @@ Here's why Teams is best-suited for your app needs:
 
     Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Screenshot displays the Teams app for building team culture.":::
 
 - **Common business processes**
 
@@ -55,7 +55,7 @@ Here's why Teams is best-suited for your app needs:
 
     In addition to automating repetitive workflows, you can use apps to help with communication issues. A chat bot is an easy replacement for emails and phone calls to IT or HR departments.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Screenshot displays the Teams app for internal use.":::
 
 - **Teams Store advantage**
 
@@ -65,7 +65,7 @@ Here's why Teams is best-suited for your app needs:
 
     If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint site ported as a Teams tab":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="Screenshot displays the SharePoint site ported as a Teams tab.":::
 
 - **Personal apps with tabs and bots**
 
