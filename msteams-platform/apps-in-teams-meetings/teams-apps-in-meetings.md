@@ -47,7 +47,7 @@ Enhance your meeting experience by using the meeting extensibility feature. This
 
 To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
 
-Customize the app permission for external members in shared channel, if your app shares important information. App permissions in [Shared channels](build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
+Customize the app permission for external members in shared channel, if your app shares important information. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md)follow host team's app roster and host tenant's app policy.
 
 The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
 
