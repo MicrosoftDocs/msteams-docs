@@ -42,7 +42,7 @@ You can toggle breakpoints on the source codes of tabs, bots, message extension
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you are debugging the Teams app. The app reloads and the debugger reattaches to the programming languages.
+You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
@@ -54,11 +54,11 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## Prepare for debug
 
-The following steps helps you to prepare for debug.
+The following steps help you to prepare for debug.
 
-### Login to M365
+### Log in to Microsoft 365
 
-If you've signed up for M365 already, log-in to M365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program)
+If you've signed up for Microsoft 365 already, log in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program)
 
 ### Toggle breakpoints
 
