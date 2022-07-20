@@ -61,7 +61,7 @@ columns, relationships, and more (Optional).
 
 1. Select **Table based view and form.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="The screenshot is an example that shows the table based view and form." border.="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="The screenshot is an example that shows the table based view and form." border="true":::
 
 1. Select **Next.**
 
