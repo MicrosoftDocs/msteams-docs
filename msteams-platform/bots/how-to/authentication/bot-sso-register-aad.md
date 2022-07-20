@@ -29,9 +29,12 @@ You can configure your app in Azure AD first and then associate a bot resource w
 
 For this tutorial, you'll configure your app with Azure AD, and then create and configure a bot resource for enabling SSO.
 
-## Create an app registration in Azure AD
+## Configure your app for SSO
 
 You can register a new app in Azure AD, and configure the tenancy and app's platform. Azure AD  generates a new app ID. You'll need to update it later in the Teams app manifest file.
+
+<details>
+<summary>Learn how to register your app in Azure AD</summary>
 
 ### To register a new app in Azure AD
 
@@ -83,6 +86,9 @@ You can register a new app in Azure AD, and configure the tenancy and app's plat
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Azure AD. You should now have app ID for your bot app.
+
+</details>
+<br>
 
 ### Configure scope for access token
 
