@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Meeting apps API references
 
-The meeting extensibility provides APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
+The meeting extensibility provides APIs to enhance meeting experience. You can perform the following functions with help of the listed APIs:
 
 * Build apps or integrate existing apps within meeting lifecycle
 * Use APIs to make your app aware of meeting
@@ -139,8 +139,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
 | **user.tenantId** | Azure Active Directory tenant ID. |
-| **user.userRole** | Role of the user e.g. 'admin' or 'user'. |
-| **meeting.role** | The participant's role in the meeting. e.g. 'Organizer' or 'Presenter' or 'Attendee'. |
+| **user.userRole** | Role of the user, for example, 'admin' or 'user'. |
+| **meeting.role** | The participant's role in the meeting. for example, 'Organizer' or 'Presenter' or 'Attendee'. |
 | **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
 | **conversation.id** | The meeting chat ID. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
@@ -494,7 +494,7 @@ The JSON response body for Meeting Details API is as follows:
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type - e.g. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | The meeting's type - for example, GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
@@ -502,11 +502,11 @@ The JSON response body for Meeting Details API is as follows:
 | **organizer.aadObjectId** | The Organizer's Azure Active Directory object ID. |
 | **organizer.tenantId** | The Organizer's Azure Active Directory tenant ID. |
 
-In case of Recurring meeting type,
+If there's recurring meeting type, find the following details:
 
-**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
 
-**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**endDate**: Specifies the date to stop applying the pattern. The last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
 
 ## Send real-time captions API
 
@@ -593,7 +593,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, if there's a successful share, or null when the share fails.|
 |**appContentURL**| String | Yes | The URL that will be shared on to the stage.|
 
 ### Example
@@ -631,7 +631,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, if there's an error, or null when share is successful. The *result* can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
 
 ### Example
 
@@ -913,11 +913,11 @@ The following code provides an example of meeting end event payload:
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
 | **conversation.id** | The meeting chat ID. |
-| **recipient.id** | ID of the user that receive the request. |
-| **recipient.name** | Name of the user that receive the request. |
-| **entities.locale** | entity which contains metadata about locale. |
-| **entities.country** | entity which contains metadata about country. |
-| **entities.type** | entity which contains metadata about client. |
+| **recipient.id** | ID of the user that receives the request. |
+| **recipient.name** | Name of the user that receives the request. |
+| **entities.locale** | entity that contains metadata about locale. |
+| **entities.country** | entity that contains metadata about country. |
+| **entities.type** | entity that contains metadata about client. |
 | **channelData.tenant.id** | Azure Active Directory tenant ID. |
 | **channelData.source** | The source name from where event is fired or invoked. |
 | **channelData.meeting.id** | The default ID associated with the meeting. |
