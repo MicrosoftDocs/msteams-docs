@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Edit Teams app manifest using Visual Studio
 
-Teams Toolkit in Visual Studio (VS) loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. This allows to create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+Teams Toolkit in Visual Studio (VS) loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. This allows you to create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
 After scaffolding, in the manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
@@ -56,13 +56,13 @@ You can preview values in app manifest in two ways:
 
 ### Preview manifest file
 
-To preview manifest file perform the following steps:
+You can preview the manifest file by performing the following steps:
 
 - Select **Project** > **Teams Toolkit** menu and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud**, that generates configuration for local or remote Teams app.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file":::
 
-- To preview manifest with real content, Teams Toolkit generates the preview manifest files, right click on **manifest.template.json** under **appPackage** folder. Select **Preview Manifest File** > **For Local** or **For Azure**. This opens the corresponding manifest file.
+- To preview manifest with real content, Teams Toolkit generates the preview manifest files, right click on **manifest.template.json** under **appPackage** folder. Select **Preview Manifest File** > **For Local** or **For Azure**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Preview context menu":::
 
@@ -81,7 +81,7 @@ There are two other ways to preview manifest file:
 
 ### Sync local changes to Developer Portal
 
-After previewing the manifest file, your local changes can be synced to the Developer Portal by selecting **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Portal**, or context menu from Solution Explorer.
+Your local changes can be synced to the Developer Portal, after you have previewed the manifest file. Select **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Portal**, or context menu from Solution Explorer.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Update manifest in teams developer portal":::
 
