@@ -27,7 +27,7 @@ To enable SSO for your bot app in Azure AD:
 
 You can enable SSO for a bot app in one of the two ways:
 
-| Method 1 | &nbsp; | Method 2 | &nbsp; |
+| &nbsp; | Method 1 | &nbsp; | Method 2 |
 | --- | --- | --- | --- |
 | 1. | **App SSO configuration** | 1. | **Bot resource configuration** |
 | &nbsp; | a. Configure app ID URI | &nbsp; | a. Configure messaging endpoint |
