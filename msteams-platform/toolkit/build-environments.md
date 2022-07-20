@@ -18,7 +18,7 @@ Teams Toolkit in Visual Studio Code allows you to create apps using JavaScript/T
 
 * Supports rich interfaces
 * Provides quick upgrades to existing apps
-* Distributes apps on multiple platforms such as, Android and iOS
+* Distributes apps on multiple platforms, such as Android and iOS
 * Compatible for creating an app with existing APIs
 
 ## Create your Teams app using SPFx
@@ -38,11 +38,9 @@ For more information, see [Teams Toolkit for Visual Studio](visual-studio-overvi
 
 ## Manage your apps using Developer Portal
 
-As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> in Visual Studio Code.
+As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **Deployment** after creating an app. For more information, see [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal.png" alt-text="build environment developer portal":::
-
-For more information, see [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
 
 ## See also
 
