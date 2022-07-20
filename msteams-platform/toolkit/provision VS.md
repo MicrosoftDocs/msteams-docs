@@ -65,7 +65,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
 1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in cloud":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in cloud":::
 
 2. In the Provision dialogue box you can see the list of all subscriptions in your Azure account.
 3. You can either select or create a new **resource group**.
