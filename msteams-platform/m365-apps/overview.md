@@ -1,6 +1,6 @@
 ---
 title: Extend Teams apps across Microsoft 365 (preview)
-description: In this article you'll know how to build and update your Teams app experiences to other high-usage areas of Microsoft 365. 
+description: In this article, you'll know how to build and update your Teams app experiences to other high-usage areas of Microsoft 365. 
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
@@ -23,7 +23,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 \* The [Microsoft 365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) enrollment require admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Office running on Windows.
 
-For guidance about the Teams app manifest and SDK versioning guidance, as well as further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
+For guidance about the Teams app manifest and SDK versioning guidance, and further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
 
 > [!NOTE]
 > We welcome your feedback and issue reporting as you expand Teams apps to run across the Microsoft 365 ecosystem! Please use the regular [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to send feedback.
