@@ -30,10 +30,6 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 * [Post-build](#post-build)
 * [Planning checklist](../concepts/design/planning-checklist.md)
 
-## Apps in Shared channel
-
-You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [Shared channels](build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
-
 ### Before you build
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
