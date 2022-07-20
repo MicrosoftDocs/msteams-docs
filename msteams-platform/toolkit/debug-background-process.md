@@ -176,7 +176,7 @@ You can view the project folders and files under **Explorer** in VS Code after t
 
 ## See also
 
-* [Debug your Teams app using Teams Toolkit](debug-local.md)
+* [Debug your Teams app locally](debug-local.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)

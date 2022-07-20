@@ -130,6 +130,8 @@
         href: toolkit/TeamsFx-SDK.md
       - name: Debug your Teams app
         items: 
+        - name: Overview
+          href: toolkit/debug-overview.md
         - name: Debug your Teams app locally
           href: toolkit/debug-local.md
         - name: Debug background process
