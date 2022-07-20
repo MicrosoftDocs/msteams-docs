@@ -48,9 +48,9 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
 1. Open Visual Studio.
 2. Open the Teams App project.
-3. Select **Project > Teams Toolkit > Provision in the cloud**.
+3. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in the cloud":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Sign in to Azure account":::
 
 4. Select **Sign in...** to sign in to your Azure account.
 
@@ -63,7 +63,10 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
 ### Adding provision cloud resources
 
-1. Select Project > Teams Toolkit > Provision in the cloud.
+1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in cloud":::
+
 2. In the Provision dialogue box you can see the list of all subscriptions in your Azure account.
 3. You can either select or create a new **resource group**.
 4. Select Provision.
