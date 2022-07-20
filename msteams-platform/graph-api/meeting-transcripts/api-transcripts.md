@@ -65,7 +65,7 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 <b>Response</b>
 <br>
 
-> [!Note]
+> [!NOTE]
 > The response object shown here might be shortened for readability.
 
 ```http

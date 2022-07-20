@@ -155,7 +155,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
-5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting and ID and organizer ID.
+5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
 #### Obtain meeting details using tenant-level notification
 
@@ -407,9 +407,6 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     ```
 
     </details>
-
-    > [!NOTE]
-    > The response payload also contains the `threadID` member in the `chatInfo` property. Your app can use it for obtaining meeting ID if it's subscribed to receive user-level notifications.
 
 4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
 
