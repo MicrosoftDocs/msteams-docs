@@ -151,6 +151,9 @@ Shared meeting stage allows meeting participants to interact with and collaborat
 
 Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
 
+> [!NOTE]
+> Share entire app to meeting stage in mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+
 # [Desktop](#tab/Desktop)
 
 :::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="The screenshot describes how to share entire app to the collaborative meeting stage on desktop.":::
