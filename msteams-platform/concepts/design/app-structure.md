@@ -1,11 +1,10 @@
 ---
 title: Design your app - Understand the app structure
-description: Understand what you can and can't customize in Microsoft Teams when designing your app.
+description: In this module, learn what you can and can't customize in Microsoft Teams when designing your app structure.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: wireframe channel chat meeting message extensions mobile desktop
 --- 
 # Understand the Microsoft Teams app structure
 
@@ -29,13 +28,13 @@ Personal apps provide a large canvas to host your app content for individual use
 
 The canvas is a webview so you can completely customize the experience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on mobile.":::
 
 ### Desktop
 
 The canvas is an iframe so you can completely customize the experience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on desktop.":::
 
 ## Tabs
 
@@ -47,13 +46,13 @@ Tabs provide a large canvas to host your app content for a group of users. You c
 
 The canvas is a webview so you can completely customize the experience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for tabs on mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for tabs on mobile.":::
 
 ### Desktop
 
 The canvas is an iframe so you can completely customize the experience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for tabs on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for tabs on desktop.":::
 
 ## Bots
 
@@ -63,11 +62,11 @@ Bots are conversational apps that integrate with Teams native messaging features
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for bots on mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for bots on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for bots on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for bots on desktop.":::
 
 ## Message extensions
 
@@ -77,11 +76,11 @@ Message extensions are shortcuts for inserting app content or acting on a messag
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for message extensions on mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for message extensions on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for message extensions on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for message extensions on desktop.":::
 
 ## Meeting extensions
 
@@ -93,10 +92,10 @@ Meeting extensions are apps to enhance live meetings. You can host your app cont
 
 The surface is a webview, allowing you to customize the experience, but keep in mind that during meetings these apps use dark theme.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for meeting extensions on mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for meeting extensions on mobile.":::
 
 ### Desktop
 
 The surface is an iframe, allowing you to customize the experience, but keep in mind that during meetings these apps use dark theme and are narrow.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for meeting extensions on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for meeting extensions on desktop.":::

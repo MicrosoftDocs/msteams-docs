@@ -1,7 +1,6 @@
 ---
 title: Device permissions for the browser
-keywords: teams apps capabilities permissions
-description: Securely bring back device permissions support for apps in our web client
+description: Learn how to securely bring back device permissions, such as camera or microphone access for apps in web client.
 localization_priority: medium
 ms.topic: how-to
 ---
@@ -25,7 +24,7 @@ After the **App permissions** option is selected, a popup appears where the user
 A user will need to enable these permissions in the browser for these permissions to take effect. After user changes the app’s device permissions in the browser, they're prompted to reload the application in Teams.
 
 > [!IMPORTANT]
-> You must make users aware of where to go to enable these **App permissions** in Microsoft Teams.
+> You must make users aware of where to go to enable these **App permissions** in Teams.
 
 ## Recommendation
 
@@ -42,7 +41,7 @@ Teams app that requires device permissions in the browser must show instructions
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant tab device permission in Microsoft Teams.
+Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant tab device permission in Teams.
 
 ## See also
 

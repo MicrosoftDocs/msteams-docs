@@ -1,19 +1,22 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: An overview of bots in Microsoft Teams.
+description: With this learning path, get started with conversational bots in Microsoft Teams and it's code samples.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
 ---
-# Bots in Microsoft Teams
+# Build bots for Teams
 
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
-> 
-> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
+>
+> * Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+>
+> * Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
+>
+> * Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
@@ -27,7 +30,7 @@ Conversational bots are incredibly flexible. Bots can handle a few basic command
 
 Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot":::
 
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 
@@ -37,9 +40,9 @@ Your bot requires contextual information, such as user profile details to access
 
 You can send and receive files through the bot using Graph APIs or Teams bot APIs. See [send and receive files through the bot](~/bots/how-to/bots-filesv4.md).
 
-Rate limiting is used to optimize bots used for your Teams application. To protect Microsoft Teams and its users, the bot APIs provide a rate limit for incoming requests. See [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
+Rate limiting is used to optimize bots used for your Teams application. To protect Teams and its users, the bot APIs provide a rate limit for incoming requests. See [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
 
-With Microsoft Graph APIs for calls and online meetings, Microsoft Teams apps can now interact with users using voice and video. See [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video. See [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 

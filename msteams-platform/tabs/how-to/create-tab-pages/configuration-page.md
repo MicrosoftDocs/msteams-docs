@@ -1,8 +1,7 @@
 ---
 title: Create a configuration page
 author: surbhigupta
-description: Learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, inserting placeholders, and authentication using code examples.
-keywords: teams tabs group channel configurable
+description: In this module, learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, and more
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
@@ -33,15 +32,15 @@ The following code is an example of corresponding code for the configuration pag
 
 ```html
 <head>
-    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
-</head>
+    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script>
-        app.initialize();
+    <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
         let saveGray = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
@@ -165,7 +164,7 @@ Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and
 * The `pages.config.registerOnSaveHandler()` event handler is triggered.
 * **Save** on the app's configuration page, is enabled.
 
-The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.setConfig()` are set, as defined by the `Config` interface. For more information, see [config interface](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.setConfig()` are set, as defined by the `Config` interface. For more information, see [config interface](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
@@ -209,7 +208,7 @@ After your page uploads, Teams updates the query string placeholders with releva
 
 ```html
 <script>
-   app.initialize();
+   await app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -239,7 +238,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) object.
+The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) object.
 
 The following code provides an example of adding this function to the configuration page to retrieve context values:
 
@@ -250,7 +249,8 @@ The following code provides an example of adding this function to the configurat
 
 <span id="user"></span>
 ...
-<script>
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
     const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
@@ -293,6 +293,7 @@ Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for remov
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
+import { pages } from "@microsoft/teams-js";
 const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",

@@ -1,9 +1,8 @@
 ---
 title: Use external OAuth providers  
-description: Describes authentication using external OAuth providers  
+description: In this module, learn how to do authentication using external OAuth providers and how to add it to external browser 
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication using external OAuth provider
 ---
 
 # Use external OAuth providers
@@ -40,7 +39,7 @@ For more information on parameters, see [authenticate parameters interface](/jav
 
 The following image provides the flow to add authentication to external browsers:
 
- :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth" border="true":::
+ :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
 
 **To add authentication to external browsers**
 
@@ -118,7 +117,7 @@ The following image provides the flow to add authentication to external browsers
    The 3P app generates a deeplink for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
 
    ```JavaScript
-   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
  8. Teams calls success callback and sends result.

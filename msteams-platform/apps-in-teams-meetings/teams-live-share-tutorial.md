@@ -1,10 +1,11 @@
 ---
 title: Live Share code tutorial
+author: surbhigupta
 description:  In this module, learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
----
+ms.date: 04/07/2022
 ---
 
 # Dice Roller code tutorial
@@ -95,9 +96,9 @@ start().catch((error) => console.error(error));
 
 ## Join a Fluid container
 
-Not all of your apps views will need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
+Not all of your apps views will need to be collaborative. The `stage` view *always* needs collaborative features, the `content` view *may* need collaborative features, and the `config` view should *never* need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) and then calling it's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
+Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient), and then calling it's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
 
 ```js
 async function joinContainer() {
@@ -186,15 +187,15 @@ The next change that needs to be made is to change the `updateDice` function so 
 
 ### Handle remote changes
 
-The values returned from `diceMap` are only a snapshot in time. To keep the data up to date as it changes an event handler must be set on the `diceMap` to call `updateDice` each time that the `valueChanged` event is sent. To get a list of events fired and the values passed to those events, see [SharedMap](https://fluidframework.com/docs/data-structures/map/). 
+The values returned from `diceMap` are only a snapshot in time. To keep the data up to date as it changes an event handler must be set on the `diceMap` to call `updateDice` each time that the `valueChanged` event is sent. To get a list of events fired and the values passed to those events, see [SharedMap](https://fluidframework.com/docs/data-structures/map/).
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view *and* side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
