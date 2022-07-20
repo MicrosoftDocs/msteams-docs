@@ -1,8 +1,11 @@
 ---
 title: Custom Together Mode Scenes
+author: surbhigupta
 description: Work with custom Together Mode scenes
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
 
 # Custom Together Mode scenes in Teams
@@ -17,7 +20,7 @@ In custom Together Mode scenes, the scene is an artifact. The scene is created b
 
 The following process gives an overview to create a scene only app:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app.":::
 
 A scene only app is still an app in Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
@@ -78,7 +81,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Add images** to add the image into the environment:
 
-    ![Add images into environment](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Add images into environment.":::
 
     >[!NOTE]
     >You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
@@ -99,7 +102,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-    ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Assign a spot to the participant.":::
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 

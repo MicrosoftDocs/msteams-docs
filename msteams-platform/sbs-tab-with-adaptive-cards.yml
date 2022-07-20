@@ -62,7 +62,10 @@ items:
     1. Search for **Azure bot** in the search box.
     1. Select **Azure Bot**.
 
-        ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
+        :::image type="content" source="/assets/images/azure-bot.png" alt-text="Azure bot.":::
+
+       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
@@ -107,11 +110,12 @@ items:
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
 
-        ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+        ![New Client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+        
 
     1. Enter **Description** and select **Add**.
  
@@ -130,7 +134,7 @@ items:
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        ![Channel Teams](~/assets/images/adaptive-cards/channel-teams.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
@@ -146,7 +150,7 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
 
-        ![ngrok HTTPS URL](~/assets/images/adaptive-cards/ngrok-url.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
     1. In **Messaging endpoint**, add the HTTPS URL generated from ngrok and at the end of the URL add **/api/messages**.
 
@@ -173,7 +177,7 @@ items:
 
     1. Select **Manage** next to **Microsoft App ID**.
 
-        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
     1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.

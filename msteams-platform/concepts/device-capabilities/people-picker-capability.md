@@ -48,7 +48,7 @@ The People Picker input control allows the user to search and add people using t
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile":::
 
 # [Desktop](#tab/Sampledesktop)
 
@@ -57,7 +57,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop":::
 
 ---
 
@@ -65,8 +65,19 @@ The People Picker control on web or desktop is launched in a modal window on top
 
 The following code snippet displays use of the `selectPeople` API people from a list:
 
+# [TeamsJS v2](#tab/teamsjs-v2)
+
 ```javascript
-microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+people.selectPeople({ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false, title: true}).then(people) => 
+ {
+    output(" People length: " + people.length + " " + JSON.stringify(people));
+ }).catch((error) => { /*Unsuccessful operation*/ });
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
+```javascript
+people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -83,8 +94,10 @@ microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: micr
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false, title: true});
 ```
+
+***
 
 ## Error handling
 

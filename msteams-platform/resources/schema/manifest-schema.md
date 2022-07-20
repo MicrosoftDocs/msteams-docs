@@ -5,7 +5,7 @@ ms.topic: reference
 ms.localizationpriority: high
 ---
 
-# Reference: Manifest schema for Microsoft Teams
+# App manifest schema for Teams
 
 The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
@@ -501,7 +501,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+A list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -656,7 +656,10 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only for apps published to your organization.
+>
+> * `isFullScreen` only works for apps published to your organization. Sideloaded and published third-party apps cannot use this property (it is ignored).
+>
+> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
 
 ## activities
 

@@ -202,7 +202,10 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### Open a scheduling dialog
 
-You can open a scheduling dialog from your Teams app, as shown in the following code. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
+> [!NOTE]
+> In order to open the scheduling dialog in Teams, developers need to continue using the original deep-link URL based method, since Teams does not yet support the calendar capability.
+
+For more information about working with the calendar, see [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -212,8 +215,8 @@ if(calendar.isSupported()) {
    const calendarPromise = calendar.composeMeeting({
       attendees: ["joe@contoso.com", "bob@contoso.com"],
       content: "test content",
-      endTime: "2018-10-24T10:30:00-07:00"
-      startTime: "2018-10-24T10:00:00-07:00"
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
       subject: "test subject"});
    calendarPromise.
       then((result) => {/*Successful operation*/}).
@@ -221,8 +224,6 @@ if(calendar.isSupported()) {
 }
 else { /* handle case where capability isn't supported */ }
 ```
-
-For more information about working with the calendar, see, the [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
@@ -232,6 +233,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 ```
 
 ---
+
+Alternatively, you can manually create deep links to the Teams built-in scheduling dialog.
 
 #### Generate a deep link to the scheduling dialog
 
@@ -265,7 +268,7 @@ You can open an app install dialog from your Teams app, as shown in the followin
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({ appID: <appId>});
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: <appId>});
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
