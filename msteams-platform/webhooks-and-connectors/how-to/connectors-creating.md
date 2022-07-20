@@ -217,7 +217,7 @@ To test your connector, upload it to a team with any other app. You can create a
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
 
-![Screenshot of an uploaded section in connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+:::image type="content" source="~/assets/images/connectors/connector_dialog_uploaded.png" alt-text="Screenshot displays the uploaded section in connector dialog box.":::
 
 > [!NOTE]
 > The flow occurs entirely within Teams as a hosted experience.
