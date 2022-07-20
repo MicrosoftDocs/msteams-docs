@@ -13,30 +13,21 @@ To enable SSO for a bot resource, learn about:
 - Client ID and client certificate/secret: They're used by your app to authenticate with Azure AD.
 - Permissions: It's a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
 - Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
-<!--
-You can register your bot app in Azure AD in two ways:
 
-- Create a bot resource with a new application ID.
-    1. Enable SSO for the new app.
-- Create and register an app in Azure AD.
-    1. Create a bot resource.
-    1. Use the application ID of the app you registered.
-    1. Enable SSO for the app
--->
+## Enable bot for SSO
 
 To enable SSO for your bot app in Azure AD:
 
-- Create an app registration in Azure AD
+- **Configure app for SSO**: You'll need to register your app with Azure AD before you configure it. Then, to enable it for SSO:
   - Configure scope for access token
   - Configure access token version
-- Create and deploy bot resource in Azure AD
-- Configure bot resource in Azure AD
+- **Configure bot resource in Azure AD**: You'll need to create and configure a bot resource in Azure AD. To enable SSO for the bot resource:
   - Add messaging endpoint
   - Update OAuth connection
 
 You can register your app with Azure AD first and then create a bot resource to associate with it for enabling SSO. Alternatively, you can create a bot resource first with a new app ID and then enable SSO for it.
 
-For this tutorial, you'll register your app with Azure AD, and then create and configure a bot resource for enabling SSO.
+For this tutorial, you'll configure your app with Azure AD, and then create and configure a bot resource for enabling SSO.
 
 ## Create an app registration in Azure AD
 
