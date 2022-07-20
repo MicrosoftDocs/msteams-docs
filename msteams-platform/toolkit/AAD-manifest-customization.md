@@ -98,7 +98,7 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
     ]
 ```
 
-`preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and knows only the application name, use the following steps to search application ID:
+`preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
 
 1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open application registrations.
 
@@ -230,7 +230,7 @@ Code lens shows the application name for the pre-authorized application ID for t
    > [!NOTE]
    > xxx in the client ID indicates the environment name that you have deployed the Azure AD application
 
-2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and log-in to Microsoft 365 account.
+2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
    > Ensure that login credentials of Teams application and M365 account are same.
@@ -267,15 +267,15 @@ You need to interact with Azure AD application during various stages of your Tea
 
 3. **To build Locally**
 
-    Teams Toolkit performs the following functions during local development or it is known as F5:
+    Teams Toolkit performs the following functions during local development or it's known as F5:
 
-    * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+    * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
-    * Initially ignores some properties in the manifest file that requires additional context (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
+    * Initially ignores some properties in the manifest file that requires more context (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
 
-    * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that are not available during creation stage are updated accordingly.
+    * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that aren't available during creation stage are updated accordingly.
 
-    * The changes you have done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) to apply changes manually Azure AD application changes.
+    * The changes you've done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) to apply changes manually Azure AD application changes.
 
 4. **To provision for cloud resources**
 
@@ -283,7 +283,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
       * Read the `state.{env}.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
-      * Initially ignores some properties in the manifest file that requires additional context (such as replyUrls property requires frontend or bot endpoint) during the creation of a new Azure AD application with the manifest file.
+      * Initially ignores some properties in the manifest file that requires more context (such as replyUrls property requires frontend or bot endpoint) during the creation of a new Azure AD application with the manifest file.
 
       * After other resources provision completes, the Azure AD application's identifierUris and replyUrls are updated accordingly to the correct endpoints.
 
