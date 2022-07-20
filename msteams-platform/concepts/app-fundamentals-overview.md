@@ -30,6 +30,10 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 * [Post-build](#post-build)
 * [Planning checklist](../concepts/design/planning-checklist.md)
 
+## Apps in Shared channel
+
+You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [Shared channels](build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
+
 ### Before you build
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
@@ -50,7 +54,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution.":::
 
-    Your apps appear on Teams as Tabs, Bots, Message Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
     Together, these capabilities bring your app solution to life.
 
@@ -61,17 +65,9 @@ Understanding the user and their concern are the first indicators of how a Teams
 * Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
-#### Government Community Cloud
+### Government Community Cloud
 
 Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
-
-Endpoints for government cloud are:
-
-| Tenant | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-|Teams client|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Teams admin |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
@@ -80,13 +76,14 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-| Custom or Lob tab apps |  ✔️ | ✔️(****Compliance UI***) | ✔️(****Compliance UI***) |
-| Custom or Lob bots | ✔️ | ✔️(****Compliance UI***) | ❌ |
-| Custom message extensions | ✔️ | ✔️ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
+| Custom or Lob bots | ✔️ | ❌ | ❌ |
+| Custom messaging extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-****Compliance UI***: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+**Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
