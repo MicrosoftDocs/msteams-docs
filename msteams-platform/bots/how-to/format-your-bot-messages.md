@@ -11,7 +11,7 @@ ms.author: anclear
 Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards as attachments that contain interactive elements, such as buttons, text, images, audio, video, and so on.
 
 > [!NOTE]
-> The bot message size limit is 40 KB. If bot message size limit exceeds 40 KB, bot receives a  `413` status code (RequestEntityTooLarge) which contains the error code `MessageSizeTooBig`. The bot message size limit includes the entire message payload encoded as UTF-16 and doesn't include base 64 encoded images.
+> The bot message size limit is 40 KB. If the bot message size limit exceeds 40 KB, bot receives a  `413` status code (RequestEntityTooLarge), which contains the error code `MessageSizeTooBig`. The bot message size limit includes the entire message payload encoded as UTF-16 and doesn't include base 64 encoded images.
 
 ## Format text content
 
