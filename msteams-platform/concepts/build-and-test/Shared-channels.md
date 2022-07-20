@@ -15,13 +15,13 @@ Shared channels in Teams allow members of a channel to collaborate with users ac
 * Individuals within the same organization.
 * Individuals and other Teams of other organizations.
 
-Shared channels facilitate collaboration seamlessly. Allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhances user experience, unlike using guest accounts. The members must sign out of Teams and sign in again using a guest account. Teams applications can now extend the powerful collaboration space.
+Shared channels facilitate collaboration seamlessly. Allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhances user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications can now extend the powerful collaboration space.
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Shared Channel image"border="true" :::
 
 ## Manifest update in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` refers to the Team that created the shared channel.
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` is the team that created the shared channel.
 
 SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [app manifest schema for Teams](../../resources/schema/manifest-schema.md)
 
@@ -40,22 +40,21 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 ```
 
 > [!NOTE]
-> If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
-> Your app may need to account for the unique properties of each of these channel types in order to function properly.
+>
+> * If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
+> * Your app may need to account for the unique properties of each of these channel types in order to function properly.
 
 For more information on enabling your tab, see:
 
 * [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
 * [Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
 
-For more information on get context in shared channel, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
-
 ## Apps and permissions in shared channels
 
 You can collaborate with external members outside of your organization using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy.
 
 > [!NOTE]
-> The [Activity Feed Notification Graph API](/graph/teams-send-activityfeednotifications) does not support cross-tenant notifications for apps in a shared channel.
+> The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
 
 ## Get shared channel membership
 
@@ -99,3 +98,8 @@ Apps must function cross-tenant in installation and usage. The following table l
 |----------|---------|-----------------|
 |Regular | Team Azure AD group ID | Team Azure AD group ID |
 |Shared | Empty | Host Team Azure AD group ID |
+
+## See also
+
+* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
