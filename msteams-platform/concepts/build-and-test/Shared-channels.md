@@ -48,7 +48,7 @@ For more information on enabling your tab, see:
 * [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
 * [Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
 
-For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
+For more information on get context in shared channel, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
 
 ## Apps and permissions in shared channels
 
