@@ -78,7 +78,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
 6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking TTK output window.
-7. You can see a message prompt after provisioning is complete. Select **View Provisioned Resources** to check all the resources that were provisioned.
+7. You are prompted after provisioning is complete. Select **View Provisioned Resources** to check all the resources that were provisioned.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
