@@ -48,7 +48,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ## Global endpoint for bots API
 
-When creating a bot, the global routing endpoint can be enabled by setting the `could` parameter as `teams` in the URL. For example, if the URL is `https://smba.trafficmanager.net/{cloud}/v3/conversations/{conversationId}`, set the cloud parameter as `https://smba.trafficmanager.net/teams/v3/conversations/12345`.
+When creating a bot, the global routing endpoint can be enabled by setting the `could` parameter as `teams` in the URL. For example, the URL should be `https://smba.trafficmanager.net/teams/v3/conversations/12345`.
 
 > [!NOTE]
 > For GCC (GCCH and DOD) tenants the bot needs to call the endpoint specific for the environment (For example, `https://smba.infra.gcc.teams.microsoft.com`). If the public endpoint is called instead, the requests won't succeed and a 404 status code is returned to the bot.
