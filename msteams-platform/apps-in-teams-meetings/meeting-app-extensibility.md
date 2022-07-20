@@ -4,6 +4,8 @@ author: surbhigupta
 description: Learn about Teams meeting lifecycle and users meeting experience in desktop and mobile, User types, integrate bots and message extension in meeting lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.author: surbhigupta
+ms.date: 04/07/2022
 ---
 
 # Unified meetings apps
