@@ -60,7 +60,7 @@ To preview manifest file perform the following steps:
 
 - Select **Project** > **Teams Toolkit** menu and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud**, that generates configuration for local or remote Teams app.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file":::
 
 - To preview manifest with real content, Teams Toolkit generates the preview manifest files, right click on **manifest.template.json** under **appPackage** folder. Select **Preview Manifest File** > **For Local** or **For Azure**. This opens the corresponding manifest file.
 
