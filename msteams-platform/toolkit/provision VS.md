@@ -56,8 +56,8 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
-> [!NOTE]
-> If you're already logged in, your username is displayed, you have an option to switch account.
+   > [!NOTE]
+   > If you're already logged in, your username is displayed, you have an option to switch account.
 
 5. Sign in to Azure account using your credentials. The browser closes automatically.
 
