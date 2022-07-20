@@ -964,7 +964,7 @@ The following table provides the response codes:
 
 ## Toggle incoming audio
 
-The `getIncomingClientAudioState` API allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
 
 ### Query parameter
 
