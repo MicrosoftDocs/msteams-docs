@@ -30,12 +30,12 @@ You can enable SSO for a bot app in one of the two ways:
 | # | Method 1 | Method 2 |
 | --- | --- | --- | --- |
 | 1. | **App SSO configuration** | 1. | **Bot resource configuration** |
-| 1a. | Configure app ID URI | 1a. | Configure messaging endpoint |
-| 1b. | Configure scopes and permissions | 1b. | Update OAuth connection |
-| 1c. | Configure trusted client apps | 2. | **App SSO configuration** |
-| 2. | **Bot resource configuration** | 2a. | Configure app ID URI |
-| 2a. | Configure messaging endpoint | 2b. | Configure scopes and permissions |
-| 2b. | Update OAuth connection | 2c. | Configure trusted client apps |
+| &nbsp; | a. Configure app ID URI | &nbsp; | a. Configure messaging endpoint |
+| &nbsp; | b. Configure scopes and permissions | &nbsp; | b. Update OAuth connection |
+| &nbsp; | c. Configure trusted client apps | 2. | **App SSO configuration** |
+| 2. | **Bot resource configuration** | &nbsp; | a. Configure app ID URI |
+| &nbsp; | a. Configure messaging endpoint | &nbsp; | b. Configure scopes and permissions |
+| &nbsp; | b. Update OAuth connection | &nbsp; | c. Configure trusted client apps |
 
 For this tutorial, you'll configure your app with Azure AD, and then create and configure a bot resource for enabling SSO.
 
