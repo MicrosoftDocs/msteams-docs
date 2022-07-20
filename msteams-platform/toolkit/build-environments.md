@@ -40,7 +40,7 @@ For more information, see [Teams Toolkit for Visual Studio](visual-studio-overvi
 
 As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> in Visual Studio Code.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal.png" alt-text="build environment developer portal":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal.png" alt-text="build environment developer portal":::
 
 For more information, see [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
 
