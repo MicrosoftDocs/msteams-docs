@@ -929,6 +929,9 @@ The following code provides an example of meeting end event payload:
 
 The `getIncomingClientAudioState` API allows an app to get the incoming audio speaker setting for the meeting user. The API is available through the Teams client SDK.
 
+> [!NOTE]
+> The `getIncomingClientAudioState` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+
 ### Query parameter
 
 The following table includes the query parameters:
@@ -965,6 +968,9 @@ The following table provides the response codes:
 ## Toggle incoming audio
 
 The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+
+> [!NOTE]
+> The `toggleIncomingClientAudio` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 
 ### Query parameter
 
