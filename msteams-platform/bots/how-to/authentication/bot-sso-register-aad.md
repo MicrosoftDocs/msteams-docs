@@ -98,7 +98,6 @@ You can register a new app in Azure AD, and configure the tenancy and app's plat
     Your app is registered in Azure AD. You should now have app ID for your bot app.
 
 </details>
-<br>
 
 ### Configure scope for access token
 
@@ -365,10 +364,9 @@ If you haven't created and configured a bot resource in Azure AD, follow these s
 After you create your bot resource, you need to add a client secret and enable bot for working in Teams.
 
 </details>
-<br>
+
 <details>
 <summary><b>Learn how to create client secret for your bot resource</b></summary>
-<br>
 
 ### Create client secret
 
@@ -416,10 +414,9 @@ A client secret is a string that the bot app uses to prove its identity when req
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
 </details>
-<br>
+
 <details>
 <summary><b>Learn how to enable your bot resource for Teams</b></summary>
-<br>
 
 ### Enable bot for Teams
 
