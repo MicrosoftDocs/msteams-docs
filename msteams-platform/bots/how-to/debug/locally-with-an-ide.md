@@ -17,7 +17,7 @@ The most comprehensive way to test your bot is by creating an app package and up
 
 There are two methods for uploading your app:
 
-* Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+* Use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 * [Create an app package](~/concepts/build-and-test/apps-package.md) manually, and then [upload your app](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
