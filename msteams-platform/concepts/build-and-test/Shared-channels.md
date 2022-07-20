@@ -17,7 +17,7 @@ Shared channels in Teams allow members of a channel to collaborate with users ac
 
 Shared channels facilitate collaboration seamlessly. Allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhances user experience, unlike using guest accounts. The members must sign out of Teams and sign in again using a guest account. Teams applications can now extend the powerful collaboration space.
 
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels.png" alt-text="Shared Channel image"border="true" :::
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Shared Channel image"border="true" :::
 
 ## Manifest update in shared channels
 
