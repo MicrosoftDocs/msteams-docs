@@ -23,7 +23,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Provide the name and publisher of your new solution, this solution is going to hold your custom Collaboration Manager.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Collaboration manager" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration manager." border="true":::
 
 1. Select **Create**
 
@@ -33,7 +33,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Give your table a name. Under **Advanced options** select **Creating a new activity**.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Create new activity" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot descirbes how to create new activity." border="true":::
 
     > [!TIP]
     > Take a note of the schema name in the side pane for the settings, it would be such as cr*****_inspections
@@ -45,29 +45,29 @@ columns, relationships, and more (Optional).
 
 1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="New model driven app" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="The screenshot is an example that shows ths new model driven app." border="true":::
 
 1. Choose new **Modern app designer (preview)** to open the new app.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="new model driven app blank" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="The screenshot is an example that shows the new model driven app blank." border="true":::
 
 1. Select **Create.**
 
 1. Give your app a name and select **Create.**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Collaboration manager for inspection" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="The screenshot is an example that shows the Collaboration manager for inspection." border="true":::
 
 1. Select **Add page.**
 
 1. Select **Table based view and form.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="Table based view and form" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="The screenshot is an example that shows the table based view and form." border.="true":::
 
 1. Select **Next.**
 
 1. Search and select the table you've created earlier.
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Table view form pages" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="The screenshot is an example that shows the table view form pages." border="true":::
 
 1. Select **Add.**
 
@@ -87,19 +87,19 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Go to the Forms tab for your table.
 
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="forms tab for your table" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="The screenshot is an example that shows the forms tab for your table." border="true":::
 
 1. Select the Information form of form type **Main** to open it in the form designer.
 
 1. Once you are in the form designer, press and drag in a **1-column tab** from the **Components** section.
 
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Components power apps" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="The screenshot is an example that shows the components of power apps." border= "true":::
 
 1. After selecting the tab, rename the tab to “Tasks” in the property pane.
 
 1. Select the tab name to select the full section and select **Expand first component to full tab** in the Properties pane. This is required as the controls only support full tab views.
 
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Expand first component to full tab" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab." border="true":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
@@ -107,11 +107,11 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Create a new record by selecting **+ New** and then open the record.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Power apps open the record" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="The screenshot is an example that shows the power apps that opens the record." border="true":::
 
 1. Now you can see views for each tab that appear similar to the following image:
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="The screenshot is an example that shows the tasks." border="true":::
 
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
@@ -144,7 +144,7 @@ Use the following instructions to retrieve the Group ID of your Teams team for A
 
 1. Select the More options **...** and **Get link** to team.
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="get link to the Team" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="The screenshot describes how to get the linked to the team." border="true":::
 
 1. Copy the link and record the value of `groupId` from the URL. You'll use this value at a later stage while defining the settings of your solution.
 
@@ -157,14 +157,14 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 1. Now retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
      1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Graph Explorer":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="The screenshot is an example that shows the Graph Explorer.":::
 
      1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Following is an example:
          1. If your Site URL = <https://myhostname.sharepoint.com/sites/MySiteName>
          1. Hostname = myhostname.sharepoint.com
          1. Relative path to site = sites/MySiteName
 
-              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Graph call":::
+              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="The screenshot is an example that shows the Graph call.":::
 
             Graph call would be, `https://graph.microsoft.com/v1.0/sites/myhostname.sharepoint.com:/sites/MySiteName`.
 
@@ -195,15 +195,15 @@ You would need to add the Settings IDs that you've saved earlier for your applic
 
 1. Launch a control and you can see a window as following:
 
-     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Control window":::
+     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="The screenshot is an example that shows the control window.":::
 
 1. Select **Configure** and navigate to the General tab to add the Group ID.
 
-     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Add the Group ID in General tab":::
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="The screenshot describes how to add the Group ID in General tab.":::
 
 1. Open Files tab to add Site ID and Drive ID.
 
-     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Add the Site ID and Drive ID in Files tab.":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="The screenshot describes how to add the site ID and drive ID in files tab.":::
 
 The Notes control doesn't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you're facing issues launching and saving the controls recheck the settings values.
 
@@ -215,7 +215,7 @@ Following sections guides you on how to use the Task, Notes, Meetings, Files, Co
 
 Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens an empty page where users can add all the relevant tasks they need to complete.
 
-:::image type="content" source="../assets/images/collaboration-control/explore-tasks.png" alt-text="Explore Tasks tab.":::
+:::image type="content" source="../assets/images/collaboration-control/explore-tasks.png" alt-text="The screenshot is an example that shows the explore tasks tab.":::
 
 1. To create a new task for the team, select **Add a task**. This will open a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
 
