@@ -287,7 +287,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png" alt-text="Add client application":::
 
-       The following image displays the Client Id:
+       The following image displays the Client ID:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png" alt-text="Client applications":::
 
@@ -358,8 +358,8 @@ items:
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
-         * Set `id` to **Microsoft App Id**.
-         * Set `botId` to **Microsoft App Id**.
+         * Set `id` to **Microsoft App ID**.
+         * Set `botId` to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
