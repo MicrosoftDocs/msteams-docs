@@ -11,7 +11,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-You can add a command menu with a drop-down list of commands to define a set of core commands your bot can respond to. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select any command from the list to insert the command string into the compose message box and select **Send**.
+You can add a command menu with a drop-down list of commands to define a set of core commands your bot can respond to. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
 # [Desktop](#tab/desktop)
 
@@ -29,14 +29,14 @@ Command menus are defined in your app manifest. You can either use **App Studio*
 
 ### Create a command menu for your bot using App Studio
 
-A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
+A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same to create a new manifest or to edit an existing one.
 
 **To create a command menu for your bot using App Studio**
 
 1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**.
 
    > [!WARNING]
-   > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
+   > If you have been using App Studio, we recommend that you try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
@@ -58,7 +58,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 ### Create a command menu for your bot by editing Manifest.json
 
-Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
+Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, note the following points:
 
 * Each menu supports up to ten commands.
 * Create a single command menu that works in all scopes.
@@ -167,7 +167,7 @@ Bots in a group or channel respond only when they are mentioned `@botname` in a 
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
 
-The C# code to parse out the **\@Mention** portion of the message text is as follows:
+The C# code to parse out the **\@Mention** portion of the message text:
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
