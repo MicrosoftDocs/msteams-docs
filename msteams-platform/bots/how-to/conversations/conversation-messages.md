@@ -291,7 +291,7 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
-#### Scenario to use Adaptive card
+#### Form completion feedback
 
 You can build form completion feedback using adaptive card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
 
