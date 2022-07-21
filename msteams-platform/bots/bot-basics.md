@@ -11,7 +11,15 @@ ms.author: anclear
 
 This document builds on the article on [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
-To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways–using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler. This method accepts incoming activities from the bot adapter.
+To organize the conversational logic for your bot, an activity handler is used.
+
+Activities are handled in two ways:
+
+* using Teams activity handlers.
+
+* using bot logic.
+
+The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler. This method accepts incoming activities from the bot adapter.
 
 ## Teams activity handlers
 
