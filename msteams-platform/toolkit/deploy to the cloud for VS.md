@@ -1,5 +1,5 @@
 ---
-title: Deploy Teams app to the cloud for VS
+title: Deploy Teams app to the cloud in VS
 author: MuyangAmigo
 description:  In this module, learn how to deploy app to the cloud, Azure, or SharePoint and deploy Teams apps using Teams Toolkit in Visual Studio
 ms.author: zhany
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Deploy Teams app to the cloud for VS
+# Deploy Teams app to the cloud in VS
 
 Teams Toolkit helps users to deploy or upload your application frontend and backend code to the provisioned cloud resources in your Azure subscription.
 
