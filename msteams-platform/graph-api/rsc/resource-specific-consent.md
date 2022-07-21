@@ -71,9 +71,9 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 ## Enable RSC in your application
 
-1. [Configure consent settings in the Azure AD portal](#configure-consent-settings-in-the-azure-ad-portal).
-1. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team).
-1. [Configure user consent settings for RSC in a chat](#configure-user-consent-settings-for-rsc-in-a-chat).
+1. [Configure consent settings in the Azure AD portal](#configure-consent-settings)
+1. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal)
+1. [Configure user consent settings for RSC in a chat](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis)
 1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
 1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
@@ -103,7 +103,7 @@ You can enable or disable RSC for chats using Graph API. The property `isChatRes
 
    ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
+> The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
 
 ## Register your app with Microsoft identity platform using the Azure AD portal
 

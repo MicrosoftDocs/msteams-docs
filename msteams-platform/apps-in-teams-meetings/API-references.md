@@ -330,7 +330,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 > Previously, `ChannelMeeting.ReadBasic.Group` API was in a private scheduled/recurring meeting. Now it is supported in a standard channel meeting in both scheduled and recurring.
- 
+
 Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
 
 ```json
@@ -368,7 +368,7 @@ The Meeting Details API includes the following examples:
 > [!NOTE]
 > You need to use different RSC permission string in the bot manifest, depending on the type of the meeting.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/C#)
 
 ```csharp
 MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
@@ -394,7 +394,6 @@ this.onMessage(async(context, next) =>{
 ```
 
 Not available
-
 
 ```
 
