@@ -32,7 +32,7 @@ In the Overview section, you can see the following features to manage your app:
 
 * Analytics
 
-    In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](#analyze-your-apps-usage).
+    In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
 
 ## Configure
 
