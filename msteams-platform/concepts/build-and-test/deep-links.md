@@ -205,9 +205,27 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 > [!NOTE]
 > In order to open the scheduling dialog in Teams, developers need to continue using the original deep-link URL based method, since Teams does not yet support the calendar capability.
 
-For more information about working with the calendar, see, the [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
+For more information about working with the calendar, see [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
-### tab/Teams JS v1
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+// Open a scheduling dialog from your tab
+if(calendar.isSupported()) {
+   const calendarPromise = calendar.composeMeeting({
+      attendees: ["joe@contoso.com", "bob@contoso.com"],
+      content: "test content",
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
+      subject: "test subject"});
+   calendarPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -215,6 +233,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 ```
 
 ---
+
+Alternatively, you can manually create deep links to the Teams built-in scheduling dialog.
 
 #### Generate a deep link to the scheduling dialog
 

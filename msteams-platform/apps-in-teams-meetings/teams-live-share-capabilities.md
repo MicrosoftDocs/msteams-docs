@@ -1,9 +1,11 @@
 ---
 title: Live Share getting started
+author: surbhigupta
 description: In this module, learn more about live share SDK capabilities, RSC permissions and ephermal data structures.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
 # Live Share core capabilities
 
