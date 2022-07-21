@@ -442,6 +442,16 @@ When user isn't in a meeting then user is redirected to the Teams calendar where
 |To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: false }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”: false}` |
 |To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: true }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”: true}` |
 
+The query parameters are:
+
+* `deepLinkId`: GUID or UUID used for telemetry correlation.
+* `fqdn`: Teams supports multi-tenant multi-account, and Teams can run AAD and MSA accounts at the same time. `fqdn`( teams.microsoft.com or teams.live.com ) is needed in Teams deeplink service for tenant or account authentication.
+* `appContext`: This consists the following
+
+  * `appID`: To fetch the app manifest and check if the sharing on stage is possible.
+  * `appSharingUrl`: The URL which needs to be shared on stage.
+  * `useMeetNow`: Boolean parameter either to be true or false.
+
 > [!IMPORTANT]
 >
 > * Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
