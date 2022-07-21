@@ -227,7 +227,7 @@ async def on_teams_channel_renamed(
 
 ### Channel deleted
 
-The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
+The `channelDeleted` event is sent to your bot whenever a channel is deleted in a team where your bot is installed.
 
 The following code shows an example of channel deleted event:
 
@@ -311,7 +311,7 @@ async def on_teams_channel_deleted(
 
 ### Channel restored
 
-The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+The `channelRestored` event is sent to your bot whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
 The following code shows an example of channel restored event:
 
@@ -402,11 +402,11 @@ async def on_teams_channel_restored(
 
 A member added event is sent to your bot in the following scenarios:
 
-1. When the bot, itself, is installed and added to a conversation
+1. When the bot, itself, is installed and added to a conversation.
 
    > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
 
-2. When a user is added to a conversation where the bot is installed
+2. When a user is added to a conversation where the bot is installed.
 
    > User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
@@ -576,7 +576,6 @@ A member removed event is sent to your bot in the following scenarios:
 
 The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
@@ -668,7 +667,6 @@ The `channelData` object in the following payload example is based on adding a m
     }
 }
 ```
-
 
 # [Python](#tab/python)
 
