@@ -29,9 +29,9 @@ You'll also need to enable sideloading for your tenant:
 
  1. From the left pane, select **Show all**.
 
- 1. Under Admin centers, select **Teams**. A new tab opens the Microsoft Teams Admin Center.
+ 1. Under admin centers, select **Teams**. A new tab opens the Microsoft Teams admin center.
 
- 1. Go to **Teams apps** > **Manage apps**. 
+ 1. Go to **Teams apps** > **Manage apps**.
 
  1. At the top right, select **Org-wide app settings**.
 
