@@ -368,14 +368,14 @@ The Meeting Details API includes the following examples:
 > [!NOTE]
 > You need to use different RSC permission string in the bot manifest, depending on the type of the meeting.
 
-# [C sharp](#tab/C sharp)
+# [Csharp](#tab/Csharp)
 
 ```csharp
 MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
 await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/Javascript)
 
 ```javascript
 
