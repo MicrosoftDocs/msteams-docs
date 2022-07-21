@@ -19,7 +19,7 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 ## Register an app
 
-The Developer Portal provides a couple ways to register a Teams app:
+The Developer Portal provides following ways to register a Teams app:
 
 * Create and register a brand new app.
 * Import an existing app package.
@@ -30,31 +30,31 @@ The Developer portal allows you to create a brand new app:
 
 1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
 
-   :::image type="content" source="../../assets/images/tdp/home-page.PNG" alt-text="Developer Portal for Teams home page.":::
+   :::image type="content" source="../../assets/images/tdp/home-page.PNG" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page.":::
 
 1. Select **+ New app** and enter app name.
 
-   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.PNG" alt-text="Create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.PNG":::
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.PNG" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.PNG":::
 
 1. Select **Add**.
 
-Now you've successfully created a brand new app and you can see all basic information of the new app.
+Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
-:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.PNG" alt-text="Basic information of the app you created in the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.PNG" alt-text="The screenshot is an example that shows the basic information of the app you created in the Developer Portal for Teams.":::
 
 ### Import an existing app
 
-You can import and manage your existing app in the developer portal:
+Follow the steps to import and manage your existing app in the Developer Portal.
 
 1. In the Developer Portal, select **Apps** from the left pane.
 1. Select **Import App**.
 
-   :::image type="content" source="../../assets/images/tdp/import-app.PNG" alt-text="Import your existing app in Developer Portal for Teams to manage your apps.":::
+   :::image type="content" source="../../assets/images/tdp/import-app.PNG" alt-text="The screenshot show how to import your existing app in Developer Portal for Teams to manage your apps.":::
 
-1. Select the app manifest file and then select **Open**.
+1. Select the app manifest file, and then select **Open**.
 1. Select **Import**.
    1. If your app package has errors, you can import the app and resolve the errors before you upload or publish the app to Teams.
-   1. If you see the following message while uploading the app, click **Import** to add the app package to the Developer Portal.
+   1. If you see the following message while uploading the app, select **Import** to add the app package to the Developer Portal.
 
 (image to be added)
 
