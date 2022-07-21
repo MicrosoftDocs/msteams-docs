@@ -162,7 +162,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
 
-1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
+1. Note and save the application ID URI. You'll need it for updating the Teams app manifest later.
 
 #### To configure API scope
 
@@ -471,7 +471,6 @@ You must enable the Teams channel to let the bot interact with Microsoft Teams.
 Next, you must configure bot app in Azure AD to enable SSO.
 
 </details>
-<br>
 
 ### Configure SSO for bot resource in Azure AD
 
