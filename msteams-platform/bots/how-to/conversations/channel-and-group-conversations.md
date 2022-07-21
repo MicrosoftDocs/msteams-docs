@@ -24,12 +24,12 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## Design guidelines
 
-Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
+Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and the bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
 Now, you can create new conversation threads and easily manage different conversations in channels.
 
@@ -265,7 +265,7 @@ Send a personal message to each team member when the bot is added. To do this, g
 
 Don't send a message in the following cases:
 
-* The team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* The team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it may get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
@@ -286,4 +286,3 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to cre
 * [Get Teams context](~/bots/how-to/get-teams-context.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
-
