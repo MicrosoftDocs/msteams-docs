@@ -46,10 +46,12 @@ landingContent:
 #      - text: Overview
 #        url: ~/overview.md
 
-- title: Microsoft Build 2022
+- title: Explore the latest
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Get static meeting metadata in standard channel meeting
+        url: apps-in-teams-meetings/API-references.md
       - text: Enhanced collaboration with Live Share SDK [Developer preview]
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Update conversation and installation events in your Teams bot [Developer preview]
