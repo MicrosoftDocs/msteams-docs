@@ -1,7 +1,7 @@
 ---
 title: Webhooks and connectors
 author: clearab
-description: Understand how webhooks and connectors can connect your web services to the Teams client.
+description: In this module, understand how webhooks and connectors can connect your web services to the Teams client.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Webhooks and connectors
 
-Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Microsoft Teams channel. It is a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
+Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It is a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
 ## Outgoing Webhooks
 

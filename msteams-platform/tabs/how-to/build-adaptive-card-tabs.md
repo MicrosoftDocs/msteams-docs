@@ -1,11 +1,10 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
+description: In this module, learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
-keywords: adaptive card personal app authentication data flow
+ms.localizationpriority: high
 ---
 
 # Build tabs with Adaptive Cards
@@ -27,7 +26,7 @@ You can build your tabs with ready-made user interface (UI) building blocks nati
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs.":::
 
 ## Prerequisites
 
@@ -331,7 +330,7 @@ The following code provides examples of `task/submit` request and response:
 
 ## Authentication
 
-In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
+In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for message extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
 `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign in page is shown to the user.
 
@@ -351,7 +350,7 @@ In the previous sections, you've seen that most of the development paradigms can
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow.":::
 
 **`tab/fetch` auth response**
 

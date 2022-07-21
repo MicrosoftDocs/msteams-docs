@@ -1,12 +1,11 @@
 ---
-title: Send and receive files through the bot
-description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes. Use Teams bot APIs using code samples based on the v4 Bot Framework SDK.
-keywords: teams bots files send receive
+title: Send and receive files using bot
+description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
-# Send and receive files through the bot
+# Send and receive files using bot
 
 > [!IMPORTANT]
 > The articles in this document are based on the v4 Bot Framework SDK.
@@ -93,7 +92,7 @@ To upload a file to a user:
 
 The following desktop message contains a simple attachment object requesting user permission to upload the file:
 
-![Consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Consent card requesting user permission to upload file"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 The following mobile message contains an attachment object requesting user permission to upload the file:
 
@@ -194,7 +193,7 @@ The following table describes the content properties of the attachment:
 
 Fetch inline images that are part of the message using the Bot's access token.
 
-![Inline image](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Inline image"border="true":::
 
 The following code shows an example of fetching inline images from message:
 
@@ -233,7 +232,7 @@ private static Attachment GetInlineAttachment()
 }​​​​​
 ```
 
-### Basic example in C#
+### Basic example in C #
 
 The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
 
@@ -321,9 +320,13 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload files to Teams from a bot.
+Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload file in Teams using bot.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md)
+
+## See also
+
+[Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

@@ -1,19 +1,20 @@
 ---
 title: Create a personal tab
 author: laujan
-description: A quickstart guide to creating a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
-ms.localizationpriority: medium
+description: In this module, learn how to create a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
 zone_pivot_groups: teams-app-environment
 ---
 
 # Create a personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for personal tabs.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
-Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
+Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -50,9 +51,9 @@ Following are the steps to create a personal tab:
     yo teams
     ```
 
-1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file.
+1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator":::
 
     <details>
     <summary><b>Series of questions to update your manifest.json file</b></summary>
@@ -159,7 +160,7 @@ Create a content page and update the existing files of the personal tab applicat
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Open **manifest.json** from the following location in your Visual Studio Code:
+1. Open `manifest.json` from the following location in your Visual Studio Code:
 
     ```
      ./src/manifest/manifest.json
@@ -184,7 +185,7 @@ Create a content page and update the existing files of the personal tab applicat
 
 1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
-1. Save the updated **manifest.json** file.
+1. Save the updated `manifest.json` file.
 
 1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
 
@@ -202,11 +203,7 @@ Create a content page and update the existing files of the personal tab applicat
 
 ### Create your app package
 
-You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
-
-```cmd
-gulp manifest
-```
+You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the `manifest.json` file and generates the zip folder in the `./package` directory. At the command prompt, use the command `gulp manifest`.
 
 ### Build and run your application
 
@@ -228,11 +225,11 @@ gulp build
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
 1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab":::
 
 ### Establish a secure tunnel to your tab
 
@@ -247,25 +244,21 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps**
-1. Select **Publish an app** and **Upload a custom app**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
-
+1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded":::
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
-   Now you have succesfully created and added your personal tab in Teams.
+   Now you have successfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -297,10 +290,10 @@ Following are the steps to create a personal tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -333,11 +326,11 @@ ASP.NET Core treats files called **Index** as the default or home page for the s
 
 This folder contains the following required app package files:
 
-* A **full color icon** measuring 192 x 192 pixels.
-* A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A full color icon measuring 192 x 192 pixels.
+* A transparent outline icon measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
 
 #### .csproj
 
@@ -369,10 +362,10 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `app.initialize()` in the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -390,13 +383,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The name of your app package is **tab.zip**. It's available in the following path:
+1. The app package file name is `tab.zip` and it is available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Select **tab.zip** and open it in the Developer Portal.
+1. Select `tab.zip` and open it in the Developer Portal.
 
 1. A default **App ID** is created and populated in **Basic information** section.
 
@@ -418,11 +407,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Now you have succesfully created and added your personal tab in Teams.
+   Now you have successfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -454,10 +443,10 @@ Following are the steps to create a personal tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -488,9 +477,9 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
 #### .csproj
 
@@ -538,10 +527,10 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `app.initialize()` inside the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -587,11 +576,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-   Now you have succesfully created and added your personal tab in Teams.
+   Now you have successfully created and added your personal tab in Teams.
 
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -619,75 +608,6 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
-## Add `registerOnFocused` API for tabs or personal apps
-
-The `registerOnFocused` SDK API allows you to use a keyboard on Teams. You can return to a personal app and maintain focus on a tab or personal app with the help of Ctrl, Shift, and F6 keys. For example, you can move away from the personal app to search for something, and then return to the personal app or use Ctrl+F6 to go around the required places.
-
-The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events. The `focusEnterHandler` is invoked only by Ctrl+F6 and not by the tab key.
-The keys useful for move events within Teams are as follows:
-
-* Forward event: Ctrl+F6 keys
-* Backward event: Ctrl+Shift+F6 keys
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### Personal app
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="true":::
-
-#### Personal app: Forward event
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="true":::
-
-#### Personal app: Backward event
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="true":::
-
-### Tab
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="true":::
-
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -699,3 +619,4 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)

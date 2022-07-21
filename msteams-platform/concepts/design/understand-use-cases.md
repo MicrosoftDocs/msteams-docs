@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: In this article learn about Microsoft Teams app capabilities, plan your Teams app, understand your app user and their needs, understand the user problems that your Teams app would solve, plan user authentication and their onboarding experience.
+description: In this article, you'll learn Microsoft Teams app capabilities, plan and understand Teams app and features, and also user problems that Teams app would solve.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -48,7 +48,7 @@ A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client.":::
 
    :::column-end:::
 
@@ -65,7 +65,7 @@ Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where peo
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client.":::
 
    :::column-end:::
 
@@ -82,7 +82,7 @@ Conversations often result in the need to do something (generate an order, revie
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client.":::
 
    :::column-end:::
 
@@ -92,15 +92,15 @@ Conversations often result in the need to do something (generate an order, revie
 
    :::column span="":::
 
-#### Messaging extensions
+#### Message extensions
 
-With [messaging extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+With [message extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -134,7 +134,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -151,7 +151,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams.":::
 
    :::column-end:::
 :::row-end:::

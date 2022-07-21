@@ -1,10 +1,9 @@
 ---
 title: Messages in bot conversations
-description: Describes ways to have a conversation with a Microsoft Teams bot. Learn about Teams channel data, notification to your message, picture messages, adaptive cards using Code samples.
+description: Learn the ways to have a conversation with a Teams bot and Teams channel data, notification to your message, picture messages, adaptive cards using Code samples
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
 ---
 
 # Messages in bot conversations
@@ -18,6 +17,8 @@ Basic conversations are handled through the Bot Framework connector, a single RE
 * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
+
+For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
 ## Receive a message
 
@@ -194,7 +195,7 @@ Messages sent between users and bots include internal channel data within the me
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
-The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
+The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
@@ -202,7 +203,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
 * `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
-  * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
 * `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot has been added.
   * `id`: GUID for the channel.
   * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -235,14 +236,14 @@ Messages received from or sent to your bot can include different types of messag
 
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.  |
-| Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
+| Pictures  | ✔️                | ✔️                | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.  |
+| Cards     | ❌                | ✔️                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ## Notifications to your message
 
-You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner, or both a banner and an email.
+You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email.
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
@@ -324,14 +325,14 @@ To enhance your message, you can include pictures as attachments to that message
 
 ## Picture messages
 
-Pictures are sent by adding attachments to a message. For more information on attachments, see [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+Pictures are sent by adding attachments to a message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.
+Pictures can be at most 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
 Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
 
 * Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-* Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.
+* Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
 A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
 
@@ -371,17 +372,34 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 * **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
 
-    ![Error message](~/assets/images/Cards/error-message.png)
+     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-    ![Success message](~/assets/images/Cards/success.PNG)
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
 
-You can select **Close** or switch chat to dismiss the message.
+     You can select **Close** or switch chat to dismiss the message.
 
-**Response on mobile**:
+     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
 
-The error message appears at the bottom of the Adaptive Card.
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
@@ -392,11 +410,11 @@ Following are the status codes and their error code and message values:
 | Status code | Error code and message values | Description |
 |----------------|-----------------|-----------------|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in 1:1 chat or a channel through moderation settings. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot is not part of the conversation roster. | The bot is not part of the conversation. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. |
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot. | Tenant blocked the bot. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot was not found. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. |
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
-| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | The conversation was not found. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | The conversation wasn't found. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size on the incoming request was too large. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
 

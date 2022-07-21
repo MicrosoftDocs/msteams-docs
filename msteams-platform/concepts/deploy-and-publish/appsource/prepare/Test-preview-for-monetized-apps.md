@@ -1,17 +1,13 @@
 ---
 title: Test preview for monetized apps 
 author: v-ypalikila
-description: Create and test SaaS Preview offers for Teams app before pushing the offer live.
+description: Learn how to create and test SaaS Preview offers for Teams app before pushing the offer live. You can test the end-to-end purchase experience for your monetized apps in Teams.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: teams apps SaaS offer preview offer test preview monetized saas
 ---
 
 # Test preview for monetized apps
-
-> [!NOTE]
-> Test preview for monetized apps is currently available only in [**Developer preview**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 You can  create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps  in Teams. Users who are added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
@@ -25,11 +21,11 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 1. Add a [preview audience](/azure/marketplace/create-new-saas-offer-preview) for your SaaS offer.
 1. Select **AppSource preview** link under **Go Live** to find the Preview offer ID in the browser address bar with *publisherId.offerId-preview* format.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" :::
 
 1. Copy the Preview offer ID from the browser address bar.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Preview offer ID" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Preview offer ID" :::
 
     > [!NOTE]
     > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
@@ -67,7 +63,7 @@ After you configure your app with the Preview Offer ID, create an updated app pa
 
 If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner center for the offer, the user can see the **Buy a subscription** button.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="buy a subscription" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="buy a subscription":::
 
 ### Error scenarios
 
@@ -75,13 +71,13 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
   No plans found with **-preview**. Make sure you're in the preview audience.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no preivew audience" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no preivew audience" :::
 
 * If the offer ID specified in the app manifest isn't a Preview offer, the app shows the following warning message to the user and sideloading is disabled:
   
   This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" :::
 
 ## See also
 

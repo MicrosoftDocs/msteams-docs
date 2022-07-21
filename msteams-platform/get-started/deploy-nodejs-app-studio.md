@@ -45,7 +45,7 @@ Complete the following steps to update the app package:
     [13:39:27] Finished 'default' after 62 μs
     ```
 
-    The name of the generated app package is **helloworldapp.zip**. You can search for this file if the location is not clear in the tool you are using.
+    The name of the generated app package is `helloworldapp.zip`. You can search for this file if the location is not clear in the tool you are using.
 
 1. Now to modify this app package, select **Import an existing app** in the **Manifest editor**:
 
@@ -212,8 +212,8 @@ If you're running the app using ngrok, you'll need to set up local environment v
 Where:
 
 * The authorization credentials for your bot are as follows:
-  * MICROSOFT_APP_ID is ID
-  * MICROSOFT_APP_PASSWORD is password
+  * MICROSOFT_APP_ID is ID.
+  * MICROSOFT_APP_PASSWORD is password.
 * NODE_DEBUG show you what's happening in your bot in the Visual Studio Code debug console
 * NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for the root directory in the `src` folder).
 

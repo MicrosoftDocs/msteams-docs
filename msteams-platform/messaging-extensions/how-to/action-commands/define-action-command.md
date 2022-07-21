@@ -1,15 +1,18 @@
 ---
-title: Define messaging extension action commands
+title: Define message extension action commands
 author: surbhigupta
-description: An overview of messaging extension action commands with app manifest example
+description: In this module, learn to define messaging extension action commands with app manifest example in Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
 
-# Define messaging extension action commands
+# Define message extension action commands
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
 Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
 
@@ -18,6 +21,12 @@ Before creating the action command, you must decide the following factors:
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
 1. [How will the task module be created?](#select-how-to-create-your-task-module)
 1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
+
+See the following video to learn how to define message extension action commands:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## Select action command invoke locations
 
@@ -32,7 +41,7 @@ First, you must decide the location from where your action command must be invok
     Commands context = commandBox
 
    > [!NOTE]
-   > If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+   > If message extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
@@ -43,23 +52,23 @@ First, you must decide the location from where your action command must be invok
 
 The following image displays the locations from where action command is invoked:
 
-![action command invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
 
 ## Select how to create your task module
 
 In addition to selecting where your command can be invoked from, you must also select how to populate the form in the task module for your users. You have the following three options for creating the form that is rendered inside the task module:
 
-* **Static list of parameters**: This is the simplest method. You can define a list of parameters in your app manifest the Teams client renders, but cannot control the formatting in this case.
+* **Static list of parameters**: This is the simplest method. You can define a list of parameters in your app manifest the Teams client renders, but can't control the formatting in this case.
 * **Adaptive Card**:  You can select to use an Adaptive Card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
 * **Embedded web view**: You can select to embed a custom web view in the task module to have a complete control over the UI and controls.
 
-If you select to create the task module with a static list of parameters and when the user submits the task module, the messaging extension is called. When using an embedded web view or an Adaptive Card, your messaging extension must handle an initial invoke event from the user, create the task module, and return it back to the client.
+If you select to create the task module with a static list of parameters and when the user submits the task module, the message extension is called. When using an embedded web view or an Adaptive Card, your message extension must handle an initial invoke event from the user, create the task module, and return it back to the client.
 
 ## Select how the final message is sent
 
-In most cases, the action command results in a card inserted into the compose message box. The user can send it into the channel or chat. In this case, the message comes from the user, and the bot cannot edit or update the card further.
+In most cases, the action command results in a card inserted into the compose message box. The user can send it into the channel or chat. In this case, the message comes from the user, and the bot can't edit or update the card further.
 
-If the messaging extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You must add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
+If the message extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You must add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
 
 ## Add the action command to your app manifest
 
@@ -72,65 +81,69 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 You can create an action command using **App Studio** or **Developer Portal**.
 
-> [!NOTE]
-> App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+> [!WARNING]
+ > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 # [App Studio](#tab/AS)
 
 > [!NOTE]
-> The prerequisite to create an action command is that you have already created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+> The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **To create an action command**
 
 1. Open **App Studio** from the Microsoft Teams client and select the **Manifest editor** tab.
-1. If you already created your app package in **App Studio**, select it from the list. If you have not created an app package, import an existing one.
-1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up window:
+1. If you already created your app package in **App Studio**, select it from the list. If you haven't created an app package, import an existing one.
+1. After importing an app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
+1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up window:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
 
-1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for messaging extension:
+1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
 
-1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.
-The following image displays command addition for messaging extension:
+1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
+
+1. Select **Add** in the **Command section** of the message extensions page to include the commands which decides the behaviour of message extension.
+The following image displays command addition for message extension:
+
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
 
 1. Select **Allow users to trigger actions in external services while inside of Teams**. The following image displays the action command selection:
 
-    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Action command selection":::
 
 1. To use a static set of parameters to create your task module, select **Define a set of static parameters for the command**.
 
     The following image displays the action command static parameter selection:
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Action command static parameter selection":::
 
-    The following image displays an example static parameter set-up:
+    The following image displays an example for static parameter set-up:
 
-   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Action command static parameter set-up":::
 
-    The following image displays an example static parameter testing:
+    The following image displays an example for static parameter testing:
 
-   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Action command static parameter testing":::
 
 1. To use dynamic parameters, select to **Fetch a dynamic set of parameters from your bot**. The following image displays the action command parameter selection:
 
-    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Action command dynamic parameter selection":::
 
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where you want to invoke the action command. The following image displays the action command invoke location:
 
-    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Action command invoke location":::
 
 1. Select **Save**.
 1. To add more parameters, select the **Add** button in the **Parameters** section.
 
 ### Create an action command manually
 
-To manually add your action-based messaging extension command to your app manifest, you must add the following parameters to the `composeExtension.commands` array of objects:
+To manually add your action-based message extension command to your app manifest, you must add the following parameters to the `composeExtension.commands` array of objects:
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -138,9 +151,9 @@ To manually add your action-based messaging extension command to your app manife
 | `title` | This property is a command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | This property must be an `action`. | No | 1.4 |
 | `fetchTask` | This property is set to `true` for an adaptive card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
-| `context` | This property is an optional array of values that defines where the messaging extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. The default value is `["compose", "commandBox"]`. | No | 1.5 |
+| `context` | This property is an optional array of values that defines where the message extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. The default value is `["compose", "commandBox"]`. | No | 1.5 |
 
-If you are using a static list of parameters, you must also add the following parameters:
+If you're using a static list of parameters, you must also add the following parameters:
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
@@ -150,11 +163,11 @@ If you are using a static list of parameters, you must also add the following pa
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of input required. The possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. The default value is set to `text`. | No | 1.4 |
 
-If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you are using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
+If you're using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you're using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
-|`taskInfo`|Specify the task module to preload when using a messaging extension command. | No | 1.4 |
+|`taskInfo`|Specify the task module to preload when using a message extension command. | No | 1.4 |
 |`taskInfo.title`|Initial task module title. |No | 1.4 |
 |`taskInfo.width`|Task module width, either a number in pixels or default layout such as `large`, `medium`, or `small`. |No | 1.4 |
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
@@ -162,7 +175,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 #### App manifest example
 
-The following section is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md):
+The following section is an example of a `composeExtensions` object defining two action commands. It isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md):
 
 ```json
 ...
@@ -177,7 +190,7 @@ The following section is an example of a `composeExtensions` object defining two
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -204,7 +217,7 @@ The following section is an example of a `composeExtensions` object defining two
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }
@@ -216,20 +229,20 @@ The following section is an example of a `composeExtensions` object defining two
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based messaging extension.
+Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based message extension.
 
 ## Next step
 
-If you are using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
+If you're using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-If you are using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
+If you're using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

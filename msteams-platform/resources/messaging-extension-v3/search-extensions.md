@@ -1,18 +1,17 @@
 ---
-title: Search with messaging extensions
-description: Describes how to develop search based messaging extensions
-keywords: teams messaging extensions messaging extensions search
+title: Search with message extensions
+description: In this article, you'll learn how to develop search based message extensions
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
 ---
-# Search with messaging extensions
+# Search with message extensions
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Search based messaging extensions allow you to query your service and post that information in the form of a card, right into your message.
+Search based message extensions allow you to query your service and post that information in the form of a card, right into your message.
 
-![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
+![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
 
 The following sections describe how to do this:
 
@@ -20,7 +19,7 @@ The following sections describe how to do this:
 
 ## Search type message extensions
 
-For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple Action-based commands.
+For search based message extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single message extension can have up to 10 different commands associated with it. This can include both multiple search and multiple Action-based commands.
 
 ### Complete app manifest example
 
@@ -81,23 +80,23 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 
 ## Test via uploading
 
-You can test your messaging extension by uploading your app.
+You can test your message extension by uploading your app.
 
-To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
+To open your message extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
 
 ## Add event handlers
 
-Most of your work involves the `onQuery` event, which handles all interactions in the messaging extension window.
+Most of your work involves the `onQuery` event, which handles all interactions in the message extension window.
 
-If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
+If you set `canUpdateConfiguration` to `true` in the manifest, you enable the Settings menu item for your message extension, and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
 ## Handle onQuery events
 
-A messaging extension receives an `onQuery` event when anything happens in the messaging extension window or is sent to the window.
+A message extension receives an `onQuery` event when anything happens in the message extension window or is sent to the window.
 
-If your messaging extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the messaging extension isn't configured, return a `config` response with a link to your configuration page. Be aware that the response from the configuration page is also handled by `onQuery`. The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section:
+If your message extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the message extension isn't configured, return a `config` response with a link to your configuration page. The response from the configuration page is also handled by `onQuery`. The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section:
 
-If your messaging extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
+If your message extension requires authentication, check the user state information. If the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
 
 Next, check whether `initialRun` is set; if so, take appropriate action, such as providing instructions or a list of responses.
 
@@ -113,7 +112,7 @@ Your handler for `onQuerySettingsUrl` returns the URL for the configuration page
 
 ## Receive and respond to queries
 
-Every request to your messaging extension is done via an `Activity` object that is posted to your callback URL. The request contains information about the user command, such as ID and parameter values. The request also supplies metadata about the context in which your extension was invoked, including user and tenant ID, along with chat ID or channel and team IDs.
+Every request to your message extension is done via an `Activity` object that is posted to your callback URL. The request contains information about the user command, such as ID and parameter values. The request also supplies metadata about the context in which your extension was invoked, including user and tenant ID, along with chat ID or channel and team IDs.
 
 ### Receive user requests
 
@@ -131,9 +130,9 @@ In addition to the standard bot activity properties, the payload contains the fo
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For additional information, please *see* [Non-IRI entity types — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For more information, *see* [Non-IRI entity types — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
-The request parameters itself are found in the value object, which includes the following properties:
+The request parameters are found in the value object, which includes the following properties:
 
 | Property name | Purpose |
 |---|---|
@@ -189,11 +188,11 @@ The request parameters itself are found in the value object, which includes the 
 
 ### Receive requests from links inserted into the compose message box
 
-As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
+As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps, which the message extension has resolved into a card.
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below:
+To enable your message extension to interact with links this way, you'll first need to add the `messageHandlers` array to your app manifest as in the example below:
 
 ```json
 "composeExtensions": [
@@ -229,14 +228,14 @@ If your app returns multiple items only the first will be used.
 
 ### Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user performs a query, Teams issues a synchronous HTTP request to your service. During this time, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
 Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:
 
 |Property name|Purpose|
 |---|---|
 |`composeExtension`|Top-level response envelope.|
-|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message |
+|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: Prompts the user to authenticate <br>`config`: Prompts the user to set up the message extension <br>`message`: displays a plain text message |
 |`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
 |`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
@@ -260,9 +259,9 @@ For additional documentation regarding the Office 365 Connector card, see [Using
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
-* Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
+* Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property isn't set and these properties are available.
 
-You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property; this is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
 
 #### Response example
 
@@ -400,7 +399,7 @@ This example shows a response with two results, mixing different card formats: O
 
 ### Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of prepopulated results. This can be useful for displaying, for instance, recently viewed items, favorites, or any other information that is not dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the message extension. Your service can respond to this query with a set of prepopulated results. This can be useful for displaying, for instance, recently viewed items, favorites, or any other information that isn't dependent on user input.
 
 The default query has the same structure as any regular user query, except with a parameter `initialRun` whose string value is `true`.
 
@@ -429,7 +428,7 @@ The default query has the same structure as any regular user query, except with 
 
 ## Identify the user
 
-Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Microsoft Azure Active Directory (Azure AD) object ID.
+Every request to your services includes the obfuscated ID of the user that performed the request, and the user's display name and Microsoft Azure Active Directory (Azure AD) object ID.
 
 ```json
 "from": {
@@ -443,18 +442,18 @@ The `id` and `aadObjectId` values are guaranteed to be that of the authenticated
 
 ## Authentication
 
-If your service requires user authentication, you need to sign in the user before he or she can use the messaging extension. If you have written a bot or a tab that signs in the user, this section should be familiar.
+If your service requires user authentication, you need to sign in the user before the user can use the message extension. If you've written a bot or a tab that signs in the user, this section should be familiar.
 
 The sequence is as follows:
 
 1. User issues a query, or the default query is automatically sent to your service.
 2. Your service checks whether the user has first authenticated by inspecting the Teams user ID.
-3. If the user has not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
+3. If the user hasn't authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
 4. The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
 5. After the user signs in, you should close your window and send an "authentication code" to the Teams client.
 6. The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
 
-Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user does not try to spoof or compromise the sign-in flow. This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify that the authentication code received in step 6 matches the one from step 5, which ensures that a malicious user doesn't try to spoof or compromise the sign-in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign-in action
 
@@ -486,7 +485,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 
 Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
-As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
+As with other embedded experiences running inside Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
 
 ### Complete the sign-in flow
 
@@ -550,7 +549,7 @@ At this point, the window closes and control is passed to the Teams client. The 
 
 ### .NET
 
-To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a messaging extension activity.
+To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a message extension activity.
 
 #### Example code in .NET
 
