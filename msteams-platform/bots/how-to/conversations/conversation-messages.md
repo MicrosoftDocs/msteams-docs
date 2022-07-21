@@ -20,6 +20,45 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
+## Teams channel data
+
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+
+The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
+
+A typical `channelData` object in an activity sent to your bot contains the following information:
+
+* `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
+* `team`: Passed only in channel contexts, not in personal chat.
+  * `id`: GUID for the channel.
+  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
+* `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot has been added.
+  * `id`: GUID for the channel.
+  * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
+* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+
+### Example channelData object (channelCreated event)
+
+The following code shows an example of channelData object:
+
+```json
+"channelData": {
+    "eventType": "channelCreated",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    },
+    "channel": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
+        "name": "My New Channel"
+    },
+    "team": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
+    }
+}
+```
+
 ## Receive a message
 
 To receive a text message, use the `Text` property of the `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
@@ -191,45 +230,6 @@ async def on_members_added_activity(
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
-## Teams channel data
-
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
-
-A typical `channelData` object in an activity sent to your bot contains the following information:
-
-* `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
-* `team`: Passed only in channel contexts, not in personal chat.
-  * `id`: GUID for the channel.
-  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
-* `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot has been added.
-  * `id`: GUID for the channel.
-  * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
-* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
-
-### Example channelData object (channelCreated event)
-
-The following code shows an example of channelData object:
-
-```json
-"channelData": {
-    "eventType": "channelCreated",
-    "tenant": {
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-    },
-    "channel": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
-        "name": "My New Channel"
-    },
-    "team": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
-    }
-}
-```
-
 ## Message content
 
 Messages received from or sent to your bot can include different types of message content.
@@ -241,9 +241,97 @@ Messages received from or sent to your bot can include different types of messag
 | Cards     | ❌                | ✔️                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
 | Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
-## Notifications to your message
+## Types of messages
 
-You can add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. You can use the activity feed notification APIs in Microsoft Graph to extend the functions to your apps. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
+There are two different types of messages in bot conversation.
+
+* [Picture messages](#picture-messages)
+* [Adaptive Cards](#adaptive-cards)
+
+### Picture messages
+
+To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+
+Pictures can be at most 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+
+Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
+
+* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
+
+### Adaptive Cards
+
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+
+The following code shows an example of sending a simple Adaptive Card:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+#### Scenario to use Adaptive card
+
+You can build form completion feedback using adaptive card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
+
+     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
+
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
+
+     You can select **Close** or switch chat to dismiss the message.
+
+     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
+
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+
+For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
+
+## Add Notifications to your message
+
+You can add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email.
+If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
@@ -320,88 +408,6 @@ async def on_message_activity(self, turn_context: TurnContext):
 ```
 
 ---
-
-To enhance your message, you can include pictures as attachments to that message.
-
-## Picture messages
-
-Pictures are sent by adding attachments to a message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
-
-Pictures can be at most 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
-
-Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
-
-* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-* Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
-
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
-
-## Adaptive Cards
-
-Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
-
-The following code shows an example of sending a simple Adaptive Card:
-
-```json
-{
-    "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-    {
-        "items": [
-        {
-            "size": "large",
-            "text": " Simple Adaptivecard Example with a Textbox",
-            "type": "TextBlock",
-            "weight": "bolder",
-            "wrap": true
-        },
-        ],
-        "spacing": "extraLarge",
-        "type": "Container",
-        "verticalContentAlignment": "center"
-    }
-    ]
-}
-```
-
-### Form completion feedback
-
-Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
-
-* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
-
-     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
-
-* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
-
-     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
-
-     You can select **Close** or switch chat to dismiss the message.
-
-     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
-
-     ```json
-        "content": {
-            "type": "AdaptiveCard",
-            "title": "Card with hidden footer messages",
-            "version": "1.0",
-            "actions": [
-            {
-                "type": "Action.Submit",
-                "title": "Submit",
-                "msTeams": {
-                    "feedback": {
-                    "hide": true
-                    }
-                }
-            }
-            ]
-        } 
-     ```
-
-For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
 ## Status code responses
 
