@@ -11,7 +11,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+You can add a command menu with a drop-down list of commands to define a set of core commands your bot can respond to. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select any command from the list to insert the command string into the compose message box and select **Send**.
 
 # [Desktop](#tab/desktop)
 
