@@ -19,11 +19,11 @@ Activities are handled in two ways:
 
 * using bot logic.
 
-The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler. This method accepts incoming activities from the bot adapter.
+The Teams activity handler supports Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler. The method accepts incoming activities from the bot adapter.
 
 ## Teams activity handlers
 
-Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
+Teams activity handler is developed from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
 When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
 
@@ -34,13 +34,17 @@ When a bot for Teams receives an activity, it's routed to the activity handlers.
 
 Bots are created using the Bot Framework. If the bot receives a message activity, then the turn handler receives a notification for that incoming activity. The turn handler then sends the incoming activity to the `OnMessageActivityAsync` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `OnConversationUpdateActivityAsync`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
 
-In the Teams activity handler class, there are two primary Teams activity handlers: `OnConversationUpdateActivityAsync` and `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` routes all conversation update activities and `OnInvokeActivityAsync` routes all Teams invoke activities.
+In the Teams activity handler class, there are two primary Teams activity handlers:
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+* `OnConversationUpdateActivityAsync` routes all conversation update activities.
 
-The code snippets for Teams activity handlers:
+* `OnInvokeActivityAsync` routes all Teams invoke activities.
 
-`OnTeamsChannelCreatedAsync`
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. So add the logic that you want in your override.
+
+Refer the following code snippets for Teams activity handlers:
+
+* `OnTeamsChannelCreatedAsync`
 
 ```csharp
 
@@ -50,7 +54,7 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-`OnTeamsChannelDeletedAsync`
+* `OnTeamsChannelDeletedAsync`
 
 ```csharp
 
@@ -60,7 +64,7 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-`OnTeamsChannelRenamedAsync`
+* `OnTeamsChannelRenamedAsync`
 
 ```csharp
 
@@ -70,7 +74,7 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
   }
 ```
 
-`OnTeamsTeamRenamedAsync`
+* `OnTeamsTeamRenamedAsync`
 
 ```csharp
 
@@ -80,7 +84,7 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
   }
 ```
 
-`OnTeamsMembersAddedAsync`
+* `OnTeamsMembersAddedAsync`
 
 ```csharp
 
@@ -90,7 +94,7 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
   }
 ```
 
-`OnTeamsMembersRemovedAsync`
+* `OnTeamsMembersRemovedAsync`
 
 ```csharp
 
