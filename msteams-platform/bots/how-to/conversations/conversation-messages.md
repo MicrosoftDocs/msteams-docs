@@ -380,7 +380,7 @@ Form completion message is displayed in Adaptive Cards while sending a response 
 
      You can select **Close** or switch chat to dismiss the message.
 
-     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
+     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Here is an example:
 
      ```json
         "content": {
