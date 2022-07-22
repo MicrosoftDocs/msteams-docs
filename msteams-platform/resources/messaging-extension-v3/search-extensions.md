@@ -126,11 +126,11 @@ In addition to the standard bot activity properties, the payload contains the fo
 |`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) object id of the user that sent the request. |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) object ID of the user that sent the request. |
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For more information, *see* [Non-IRI entity types — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For more information, *see* [Non-IRI entity types—clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 The request parameters are found in the value object, which includes the following properties:
 
@@ -549,7 +549,7 @@ At this point, the window closes and control is passed to the Teams client. The 
 
 ### .NET
 
-To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a message extension activity.
+To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity, and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a message extension activity.
 
 #### Example code in .NET
 
