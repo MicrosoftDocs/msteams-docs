@@ -10,11 +10,11 @@ ms.date: 04/07/2022
 
 # Live Share media capabilities
 
+:::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature-1.png" alt-text="Teams Live Share media synchronization":::
+
 Video and audio are instrumental parts of the modern world and workplace. We've heard wide ranging feedback that there is more we can do to increase the quality, accessibility, and license protections of watching videos together in meetings.
 
-The Live Share SDK enables **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, you can individually attribute views and license, while providing the highest possible quality available through your app.
-
-:::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature.png" alt-text="Teams Live Share media synchronization":::
+The Live Share SDK enables robust **media synchronization** for any HTML `<video>` and `<audio>` element with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views and license, while providing the highest possible quality available through your app.
 
 ## Install
 
@@ -78,7 +78,7 @@ const allowedRoles = ["Organizer", "Presenter"];
 await mediaSession.start(allowedRoles);
 ```
 
-The `EphemeralMediaSession` automatically listens for changes to the group's playback state and applies changes through the `MediaPlayerSynchronizer`. To avoid playback state changes that a user didn't intentionally initiate, such as a buffer event, we must call transport controls through the synchronizer, rather than directly through the player.
+The `EphemeralMediaSession` automatically listens for changes to the group's playback state. `MediaPlayerSynchronizer` listens to state changes emitted by `EphemeralMediaSession` and applies them to the provided `IMediaPlayer` object, such as an HTML5 `<video>` or `<audio>` element. To avoid playback state changes that a user didn't intentionally initiate, such as a buffer event, we must call transport controls through the synchronizer, rather than directly through the player.
 
 Example:
 
@@ -119,7 +119,7 @@ document.getElementById("change-track-button").onclick = () => {
 ```
 
 > [!NOTE]
-> While you can use the `EphemeralMediaSession` object to synchronize media directly, we generally recommend using the `MediaPlayerSynchronizer`. Depending on the player you use in your app, you might want to create a delegate shim to make your web player's interface match the HTML media interface.
+> While you can use the `EphemeralMediaSession` object to synchronize media manually, we generally recommend using the `MediaPlayerSynchronizer`. Depending on the player you use in your app, you might need to create a delegate shim to make your web player's interface match the [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) interface.
 
 ## Suspensions and wait points
 
