@@ -1,6 +1,6 @@
 ---
-title: Register your bot app with Azure AD
-description: Describes registering your bot app with Azure AD
+title: Configure bot app in Azure AD
+description: Describes configuring your bot app with Azure AD for enabling SSO
 ms.topic: how-to
 ms.localizationpriority: high 
 ---
