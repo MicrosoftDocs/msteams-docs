@@ -42,7 +42,7 @@ The main milestones of this journey are:
 
 2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
 
 3. Select **Launch** to open Visual Studio.
 
@@ -50,15 +50,15 @@ The main milestones of this journey are:
 
 ## Take a tour of Teams Toolkit
 
-You need to install Teams Toolkit, and then you can access the **Teams Toolkit menu** when you select **Project > Teams Toolkit**:
+You have to first install Teams Toolkit, then select **Project > Teams Toolkit** to access the **Teams Toolkit menu** menu:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
-Teams Toolkit operations are also available in the menu by right select on your project:
+You can also access Teams Toolkit menu from project solution by right clicking on your project then select **Teams Toolkit**:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
-Available operations on Teams Toolkit for Visual Studio:
+You can do the following operations on Teams Toolkit for Visual Studio:
 
 |Operation  |Description  |
 |---------|---------|
