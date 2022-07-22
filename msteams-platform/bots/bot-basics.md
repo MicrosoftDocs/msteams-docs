@@ -16,7 +16,6 @@ To organize the conversational logic for your bot, an activity handler is used.
 Activities are handled in two ways:
 
 * using Teams activity handlers.
-
 * using bot logic.
 
 The Teams activity handler supports Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler. The method accepts incoming activities from the bot adapter.
@@ -183,7 +182,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 In the Teams activity handler class, there are two primary Teams activity handlers:
 
 * `on_conversation_update_activity` routes all conversation update activities.
-* `on_conversation_update_activity` routes all Teams invoke activities.
+* `on_invoke_activity` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
@@ -357,7 +356,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 ---
 
-Now that you've familiarized yourself with bot activity handlers, let us see how bots behave depending on the conversation and the messages it receives or sends.
+Now that you've familiarized yourself with bot activity handlers, let's see how bots behave depending on the conversation and the messages it receives or sends.
 
 ## Next step
 
