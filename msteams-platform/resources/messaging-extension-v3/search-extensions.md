@@ -261,7 +261,7 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property isn't set and these properties are available.
 
-You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail, and nothing will be displayed.
 
 #### Response example
 
