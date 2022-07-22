@@ -14,6 +14,8 @@ Video and audio are instrumental parts of the modern world and workplace. We've 
 
 The Live Share SDK enables **media synchronization** into any HTML `<video>` and `<audio>` element simpler than ever before. By synchronizing media at the player state and transport controls layer, you can individually attribute views and license, while providing the highest possible quality available through your app.
 
+:::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature.png" alt-text="Teams Live Share media synchronization":::
+
 ## Install
 
 To add the latest version of the SDK to your application using npm:
@@ -116,10 +118,12 @@ document.getElementById("change-track-button").onclick = () => {
 };
 ```
 
-> [!Note]
-> While you can use the `EphemeralMediaSession` object to synchronize media directly, using the `MediaPlayerSynchronizer` unless you want more fine tuned control of the synchronization logic. Depending on the player you use in your app, you might want to create a delegate shim to make your web player's interface match the HTML media interface.
+> [!NOTE]
+> While you can use the `EphemeralMediaSession` object to synchronize media directly, we generally recommend using the `MediaPlayerSynchronizer`. Depending on the player you use in your app, you might want to create a delegate shim to make your web player's interface match the HTML media interface.
 
 ## Suspensions and wait points
+
+:::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Suspension sync to presenter":::
 
 If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
@@ -131,7 +135,13 @@ const suspension = mediaSession.coordinator.beginSuspension();
 suspension.end();
 ```
 
-When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point.
+
+Here are a few scenarios where wait points are especially useful:
+
+- Adding a quiz or survey at certain points in the video.
+- Waiting for everyone to suitably load a video before it starts or while buffering.
+- Allow a presenter to choose points in the video for group discussion.
 
 ```javascript
 // Suspend the media session coordinator
@@ -139,7 +149,7 @@ const waitPoint = {
   position: 0,
   reason: "ReadyUp", // Optional.
 };
-const suspension = mediaSession.coordinator.beginSuspension();
+const suspension = mediaSession.coordinator.beginSuspension(waitPoint);
 // End the suspension when the user readies up
 document.getElementById("ready-up-button").onclick = () => {
   // Sync will resume when everyone has ended suspension
@@ -156,13 +166,20 @@ import * as microsoftTeams from "@microsoft/teams-js";
 
 // ...
 
+// Register speaking state change handler through Teams Client SDK
 let volumeTimer;
 microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
+    // If someone in the meeting starts speaking, periodically
+    // lower the volume using your MediaPlayerSynchronizer's
+    // VolumeLimiter.
+    synchronizer.volumeLimiter?.lowerVolume();
     volumeTimer = setInterval(() => {
       synchronizer.volumeLimiter?.lowerVolume();
     }, 250);
   } else if (volumeTimer) {
+    // If everyone in the meeting stops speaking and the
+    // interval timer is active, clear the interval.
     clearInterval(volumeTimer);
     volumeTimer = undefined;
   }
@@ -192,7 +209,7 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > The `registerSpeakingStateChangeHandler` API used for audio ducking currently works only for non-local users who are speaking.
 
 ## Code samples
