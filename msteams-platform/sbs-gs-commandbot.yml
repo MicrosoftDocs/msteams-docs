@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output":::
+      :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -129,7 +129,7 @@ items:
    1. Select **Set up E5 subscription** from the welcome screen.
    1. Set up administrator account. After you finish, the following screen displays.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft Teams.":::
 
    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
@@ -144,41 +144,41 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app** option to create an app using Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Screenshot shows the Wizard starts for creating a new project.":::
 
     1. Ensure that **Command bot** is selected as the capability that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Select App Capability":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Screenshot shows the steps to select App Capability.":::
 
     1. Select **HTTP Trigger Restify Server** as the trigger.
     1. Select **OK**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Select Trigger":::
+         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Screenshot shows the steps to select Trigger.":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot shows the steps to select the programming language.":::
     
     1. Select the location for project workspace.
     1. Select **Select Folder**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Select Folder.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Screenshot shows the steps to select Folder.":::
     
     1. Enter a suitable name for your app, such as commandbot as the application name. 
     1. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Screenshot shows the Application name.":::
 
         > [!NOTE]
         > Ensure that you use only alphanumeric characters in the application name.
 
         The command bot app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot showing the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot shows the created app.":::
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
@@ -186,27 +186,27 @@ items:
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App":::     
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Screenshot shows the steps to add an app.":::     
 
     1. Select the command bot.
     
     1. Select **Enter**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App dropdown":::  
+         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Screenshot shows the steps to add an app dropdown.":::  
 
        You'll receive the following command response in adaptive card:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output":::      
+        :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output in adaptive card.":::      
 
     ## Take tour of source code
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-      :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="structure tab":::
+      :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="Screenshot shows the structure tab.":::
 
     If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
 
@@ -258,56 +258,56 @@ items:
 
     1. Select **Provision in the Cloud** under **DEPLOYMENT**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot shows the provisioning commands.":::
 
     1. Select an existing or create new resource group.
     
-        :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot shows the resources for provisioning.":::
 
         > [!NOTE]
         > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provision-confirm.png" alt-text="Screenshot shows the provisioning dialog.":::
 
        The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success.png" alt-text="Screenshot shows the provisioning complete dialog.":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
     1. Select **Deploy to the cloud** under **DEPLOYMENT** after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot shows the location to click to deploy to cloud.":::
 
     1. Select **Deploy**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Screenshot shows the steps to deploy.":::
 
        Deployment takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Deploy confirm.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Screenshot shows the deploy confirmirmation message.":::
     
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select **Start Debugging** button.
 
-         :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug.":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="App cloud output.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
 
     1. Select the command bot.
     1. Select **Enter**.  
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Screenshot shows the Hello World Command.":::
 
         You'll receive the following command response in adaptive card:
 
-         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Screenshot shows the cloud final output.":::
 
     # [Command Line](#tab/cli)
 
@@ -344,7 +344,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Cloud final output":::
+    :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the Cloud final output.":::
   
 - content: |
     You've completed the tutorial to build command response app.   
