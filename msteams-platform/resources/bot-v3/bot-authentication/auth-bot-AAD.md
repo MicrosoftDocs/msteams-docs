@@ -58,7 +58,7 @@ Because of the validation that must be performed for security reasons and the su
 
 The validation and mobile support are explained in the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
-Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. If you don't sign in, the popup won't appear.
+Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. If you don't sign in, the pop-up won't appear.
 
 ## Showing user profile information
 
