@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
+Before you add code to enable SSO, ensure that you've configured your app with Azure AD.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Azure AD](bot-sso-register-aad.md)
