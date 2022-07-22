@@ -36,7 +36,7 @@ You can install Teams Toolkit from an extension in Visual Studio Code and from V
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="install toolkit 4.0.0":::
 
-   After successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the Teams Toolkit toolbar.
+   After successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the Visual Studio Code toolbar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="After install":::
 
@@ -44,29 +44,31 @@ You can install Teams Toolkit from an extension in Visual Studio Code and from V
 
 1. Open [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following page appears.
+   The following page appears.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-ttk-marketplace.png" alt-text="install TTK Marketplace":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-ttk-marketplace.png" alt-text="install TTK Marketplace":::
 
 1. Select **Install**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="install TTK":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="install TTK":::
 
 1. From the pop-up window, select **Open**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open.png" alt-text="Select the open":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open.png" alt-text="Select the open":::
 
-The following Visual Studio Code page appears.
+   The following Visual Studio Code page appears.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Select TTK in VSC":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Select TTK in VSC":::
 
 1. Select **Install**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Select Install TTK in VSC":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Select Install TTK in VSC":::
 
-After successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the Teams Toolkit toolbar.
+   After successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the Visual Studio Code toolbar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="After install":::
+
+---
 
 ## Explore Teams Toolkit
 
@@ -74,30 +76,38 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview.png" alt-text="Overview of Teams Toolkit":::
 
-1. You can see the following UI elements:
-   * **Get Started** helps to explore the Teams Toolkit.
-   * **Tutorials** helps to access different tutorials.
-   * **Documentation** helps to access the Microsoft Teams Developer Documentation.
-1. **Create a new Teams App** helps to create one Teams project.
-1. **View Samples** helps to build different types of app based on existing samples.
-1. **Open Folder** helps to open the existing Teams app.
-1. You can see the following UI elements under **Start**:
-   * **New File** helps to create new file.
-   * **Open File** helps to open the existing file.
-   * **Open Folder** helps to open the existing folder.
-1. **Recent** helps you to view the recent files.
+| Serial No | UI Elements | Definition |
+| --- | --- |
+| 1 | **Get Started** | To explore the Teams Toolkit. |
+| &nbsp; | **Tutorials** | To access different tutorials. |
+| &nbsp; | **Documentation** | To access the Microsoft Teams Developer Documentation. |
+| 2 | **Create a new Teams App** | To create one Teams project. |
+| 3 | **View Samples** | To build different types of app based on existing samples. |
+| 4 | **Open Folder** | To open the existing Teams app |
+| 5 | **New File** | To create new file. |
+| &nbsp; | **Open File** | To open the existing file. |
+| &nbsp; | **Open File** | To open the existing folder |
+| 6 | **Recent** | To view the recent files |
 
-To explore more on UI elements after create a new Teams app. The following video helps you to know about the process of create a new Teams app:
+You can explore more UI elements from task pane in Teams Toolkit but you can't see the task pane before creating an app. Task pane is visible only after creating an app using Teams Toolkit. The following video helps you to know about the process of creating new Teams app and after this process you can view the task pane in Teams Toolkit
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
-After creating a new Teams app, you can see the directory structure of the app in the left panel and the readme file in the right window.
+After creating a new Teams app, you can see the directory structure of the app in the left panel and the readme file in the right panel.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="First page of Teams Toolkit":::
 
-Let's take a tour of the topics covered in this document.
+Let's take a tour of the Teams Toolkit UI.
 
- In Teams Toolkit side panel, You can primarily work on three icons such as **Explorer**, **Run and Debug**, and **Teams Toolkit**. **Explorer** icon helps you to view the directory structure of the app. **Run and Debug** icon helps to start the local or remote debug process. **Teams Toolkit** icon helps to view the following UI with all functionalities:
+ In Visual Studio Code toolbar, The following icons are relevant to the Teams Toolkit
+
+| Icon | Description |
+| --- | --- |
+| **Explorer** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG"::: icon | To view the directory structure of the app. |
+| **Run and Debug** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG"::: icon | To start the local or remote debug process. |
+| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in Teams Toolkit|
+
+In the task pane you can see the following sections:
 
 :::row:::
    :::column span="":::
@@ -133,7 +143,7 @@ Let's take a tour of the topics covered in this document.
    :::column-end:::
    :::column span="":::
 
-        It helps you to create and customize your Teams app and it contains following features:
+        To create and customize your Teams app, use the following features:
         
        * **Create a new Teams app**: Use the toolkit wizard to prepare project scaffolding for app development.
 
@@ -153,7 +163,7 @@ Let's take a tour of the topics covered in this document.
    :::column-end:::
    :::column span="":::
 
-        It helps you to provision, deploy and publish your Teams app and it contains the following features:
+        To provision, deploy and publish your Teams app, use the following features:
         
         * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager.
 
@@ -173,7 +183,7 @@ Let's take a tour of the topics covered in this document.
    :::column-end:::
    :::column span="":::
 
-        It helps you to find the required documentation and resources.
+        To access more information on Teams Toolkit. see the following documentation and resources.
         
         * **Get started**: View the Teams Toolkit Get started help within Visual Studio Code.
 
