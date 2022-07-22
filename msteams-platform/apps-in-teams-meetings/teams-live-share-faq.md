@@ -20,7 +20,15 @@ Get answers to common questions when using Live Share.<br>
 
 <summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
 
-Yes. When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to create your own Azure `ITokenProvider` to sign tokens for your containers and regional requirements. For more information, see Azure [Fluid Relay documentation](/azure/azure-fluid-relay/).
+Yes! When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+
+While most developers will find it beneficial to use our free hosted service, there may still be times where it is beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
+
+- Require storage of data in Fluid containers beyond the lifetime of a meeting.
+- Transmit sensitive data through the service that requires a custom security policy.
+- Develop features through Fluid Framework (e.g., `SharedMap`) for your application outside of Teams.
+
+For more information, read our [how to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 
 <br>
 
@@ -40,7 +48,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-Currently, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now aren't supported.
+During Preview, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now aren't supported. Other meeting types will be supported in the future.
 
 <br>
 
@@ -50,7 +58,7 @@ Currently, only scheduled meetings are supported and all participants must be on
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. Teams currently doesn't support encrypted media for tab applications.
+No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, [track the issue](https://github.com/microsoft/live-share-sdk/issues/14)!
 
 <br>
 
@@ -59,7 +67,16 @@ No. Teams currently doesn't support encrypted media for tab applications.
 <details>
 <summary><b>How many people can attend a Live Share session?</b></summary>
 
-Currently, Live Share supports a maximum of 100 attendees per session.
+Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, [start a discussion](https://github.com/microsoft/live-share-sdk/discussions)!
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Can I use Live Share's ephemeral data structures outside of Teams?</b></summary>
+
+Currently, Live Share packages require the Teams Client SDK to function properly. No features in `@microsoft/live-share` or `@microsoft/live-share-media` will work outside of a Microsoft Teams. If this is something you're interested in, [start a discussion](https://github.com/microsoft/live-share-sdk/discussions)!
 
 <br>
 
