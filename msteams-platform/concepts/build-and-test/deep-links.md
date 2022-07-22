@@ -438,9 +438,9 @@ When user isn't in a meeting then user is redirected to the Teams calendar where
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
-|To share the app in an ongoing meeting| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": ""}` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb"}` |
-|To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: false }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”: false}` |
-|To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: true }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”: true}` |
+|To share the app in an ongoing meeting| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": ""}` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb"}` |
+|To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: false }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false}` |
+|To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: true }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: true}` |
 
 The query parameters are:
 
@@ -457,9 +457,9 @@ The query parameters are:
 > * Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
 >
 >      ```javascript
->      var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
->      var encodedContext = encodeURI('{"subEntityId": "task456"}');
->      var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
+>        var encodedcontext = encodeURI({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”:false });
+>        encodedcontext = encodeURI(encodedcontext);
+>        var deeplinkurl= msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext=+encodedContext ;
 >      ```
 >
 > * To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For more information, see [app manifest](~/resources/schema/manifest-schema-dev-preview.md#configurabletabs).
