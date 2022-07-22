@@ -505,8 +505,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
 
-- Azure AD
-- The Azure AD application associated with the bot
+- Azure AD application associated with the bot
 - The application's ID URI
 - The permissions that the bot needs to obtain an access token
 
