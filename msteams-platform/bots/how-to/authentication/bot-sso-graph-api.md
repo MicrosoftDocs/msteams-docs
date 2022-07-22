@@ -26,39 +26,39 @@ You can configure more Graph scopes in Azure AD as required for your app. Delega
 
 2. Select **Manage** > **API permission** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/api-permission-menu.png" alt-text="App permissions menu option." border="true":::
 
     The **API permissions** page appears.
 
 3. Select **+ Add permissions** to add Microsoft Graph API permissions.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-permission.png" alt-text="App permissions page." border="true":::
 
     The **Request API permissions** page appears.
 
 4. Select **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Request API permissions page." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-api-permission.png" alt-text="Request API permissions page." border="true":::
 
     The options for Graph permissions display.
 
 5. Select **Delegated permissions** to view the list of permissions.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/delegated-permission.png" alt-text="Delegated permissions." border="true":::
 
 6. Select relevant permissions for your app, and then select **Add permissions**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/select-permission.png" alt-text="Select permissions." border="true":::
 
     You can also enter the permission name in the search box to find it.
 
     A message pops up on the browser stating that the permissions were updated.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/updated-permission-msg.png" alt-text="Permissions updated message." border="false":::
 
     The added permissions are displayed in the **API permissions** page.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
     You've configured your app with Microsoft Graph permissions.
 
