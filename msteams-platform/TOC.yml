@@ -413,7 +413,7 @@
       href: bots/how-to/authentication/auth-flow-bot.md
     - name: Enable SSO for bot app
       items:
-        - name: Register bot app in Azure AD
+        - name: Configure bot app in Azure AD
           href: bots/how-to/authentication/bot-sso-register-aad.md
         - name: Add code to enable SSO
           href: bots/how-to/authentication/bot-sso-code.md
