@@ -10,7 +10,7 @@ ms.date: 05/24/2022
 
 # Teams Toolkit overview for Visual Studio
 
-Teams Toolkit (TTK) for Microsoft Visual Studio Code helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use CLI tool, similar to TTK for Visual Studio which includes Toolkit teamsfx. TTK lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with TTK has the advantages of:
+Teams Toolkit (TTK) for Microsoft Visual Studio Code helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar to TTK for Visual Studio which includes Toolkit `teamsfx`. TTK lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with TTK has the advantages of:
 
 * Integrated identity.
 * Access to cloud storage.
