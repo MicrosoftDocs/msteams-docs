@@ -40,7 +40,7 @@ You can install Teams Toolkit from an extension in Visual Studio Code and from V
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="After install":::
 
-# [Market place](#tab/marketplace)
+# [Marketplace](#tab/marketplace)
 
 1. Open [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -89,7 +89,7 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 | &nbsp; | **Open Folder** | To open the existing folder |
 | 6 | **Recent** | To view the recent files |
 
-You can explore more UI elements from task pane in Teams Toolkit. Task pane is visible only after creating an app using Teams Toolkit. The following video helps you to know about the process of creating new Teams app and after this process you can view the task pane in Teams Toolkit
+You can explore more UI elements from task pane in Teams Toolkit. Task pane is visible only after creating an app using Teams Toolkit. The following video helps you to know about the process of creating new Teams app and after this process you can view the task pane in Teams Toolkit.
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
@@ -139,7 +139,7 @@ From the task pane you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development1.png" alt-text="Development section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development.png" alt-text="Development section":::
    :::column-end:::
    :::column span="":::
 
