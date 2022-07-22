@@ -42,7 +42,7 @@ The main milestones of this journey are:
 
 2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
 
 3. Select **Launch** to open Visual Studio.
 
