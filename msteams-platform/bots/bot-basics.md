@@ -37,7 +37,6 @@ Bots are created using the Bot Framework. If the bot receives a message activity
 In the Teams activity handler class, there are two primary Teams activity handlers:
 
 * `OnConversationUpdateActivityAsync` routes all conversation update activities.
-
 * `OnInvokeActivityAsync` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. So add the logic that you want in your override.
@@ -108,7 +107,10 @@ protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> te
 
 Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
 
-In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
+In the Teams activity handler class, there are two primary Teams activity handlers:
+
+* `dispatchConversationUpdateActivity` routes all conversation update activities.
+* `onInvokeActivity` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
 
@@ -178,7 +180,10 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
 
-In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
+In the Teams activity handler class, there are two primary Teams activity handlers:
+
+* `on_conversation_update_activity` routes all conversation update activities.
+* `on_conversation_update_activity` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
@@ -336,7 +341,7 @@ The `TeamsActivityHandler` extends the list of handlers from the core Bot Framew
 The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following:
 
 | Invoke types                    | Handler                              | Description                                                  |
-| :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
+| :-------------------  | :------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
