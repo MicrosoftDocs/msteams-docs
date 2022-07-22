@@ -50,7 +50,7 @@ The following page appears.
 
 1. Select **Install**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="install TTK Marketplace":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="install TTK":::
 
 1. From the pop-up window, select **Open**.
 
