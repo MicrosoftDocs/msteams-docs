@@ -339,7 +339,7 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID** .
+         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 

@@ -37,7 +37,7 @@ A message extension consists of a web service that you host and an app manifest,
 > [!NOTE]
 > Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
-In the app manifest for Teams app, a single message extension is defined with up to ten different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
+In the app manifest for Teams app, a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
 
 ## Types of message extension commands
 
@@ -45,7 +45,7 @@ There are two types of message extension commands, action command and search com
 
 ### Action commands
 
-Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or by inserting a message into the compose message area. After that the user can submit the message. You can chain multiple forms together for more complex workflows.
+Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or by inserting a message into the compose message area. After that, the user can submit the message. You can chain multiple forms together for more complex workflows.
 
 The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the message extension action command task module:
 
@@ -55,7 +55,7 @@ The action commands are triggered from the compose message area, the command box
 
 Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-The cards are triggered from the compose message area or the command box and not triggered from a message. They cannot be triggered from a message.
+The cards are triggered from the compose message area or the command box and not triggered from a message. They can't be triggered from a message.
 The following image displays the message extension search command task module:
 
 :::image type="content" source="~/assets/images/search-extension.png" alt-text="Message extension search command":::
