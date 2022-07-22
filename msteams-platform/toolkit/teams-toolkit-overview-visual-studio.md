@@ -10,18 +10,18 @@ ms.date: 05/24/2022
 
 # Teams Toolkit overview for Visual Studio
 
-Teams Toolkit for Microsoft Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use CLI tool, similar to Teams Toolkit for Visual Studio which includes Toolkit teamsfx. Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with the toolkit has the advantages of:
+Teams Toolkit (TTK) for Microsoft Visual Studio Code helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use CLI tool, similar to TTK for Visual Studio which includes Toolkit teamsfx. TTK lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with TTK has the advantages of:
 
 * Integrated identity.
 * Access to cloud storage.
 * Data from Microsoft Graph.
 * Azure and Microsoft 365 services with zero-configuration approach.
 
-Teams Toolkit brings all tools needed for building a Teams app in one place.
+TTK brings all the tools needed to build a Teams app in one place.
 
 ## User Journey of Teams Toolkit
 
-Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
+TTK automates manual work and provides you with great integration of Teams and Azure resources. The following image shows TTK user journey:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey":::
 
@@ -38,11 +38,11 @@ The main milestones of this journey are:
 1. You can download the latest VS installer from the [VS download page](https://visualstudio.microsoft.com/vs/preview/). You need to first install the VS installer before installing VS.
 
     > [!IMPORTANT]
-    > We recommend you to download VS 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*.
+    > You are recommended to download VS 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*.
 
 2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install.png" alt-text="Visual studio-installation":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
 
 3. Select **Launch** to open Visual Studio.
 
