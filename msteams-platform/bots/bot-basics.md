@@ -25,7 +25,7 @@ The Teams activity handler supports Teams-specific events and interactions. The 
 
 Teams activity handler is developed from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is developed from `TeamsActivityHandler` class that is developed from the Bot Framework's `ActivityHandler` class.
 
 > [!NOTE]
 > If the bot activity takes more than 15 seconds to process, send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
@@ -186,7 +186,7 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 ## Bot logic
 
-The bot logic processes incoming activities from one or more of your bot channels and generates outgoing activities in response. It's still true of bots derived from the Teams activity handler class, that first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+The bot logic processes incoming activities from one or more of your bot channels and generates outgoing activities in response. It's still true of bots derived from the Teams activity handler class that first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
 
 # [C#](#tab/csharp)
 
