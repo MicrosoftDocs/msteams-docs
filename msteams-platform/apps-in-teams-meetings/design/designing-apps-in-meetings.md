@@ -5,6 +5,7 @@ description: Learn how to design meeting extensions for your apps in Teams meeti
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 04/07/2022
 ---
 # Designing your Microsoft Teams meeting extension
 

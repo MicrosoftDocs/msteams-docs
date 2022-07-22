@@ -611,7 +611,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. [*Mandatory Fix*]
+* Tabs with toolbar in left rail must leave 20 pixels spacing from Teams left navigation. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
