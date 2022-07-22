@@ -341,7 +341,7 @@ The `TeamsActivityHandler` extends the list of handlers from the core Bot Framew
 The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following:
 
 | Invoke types                    | Handler                              | Description                                                  |
-| :-------------------  | :------------------------------- | :----------------------------------------------------------- |
+| :----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
