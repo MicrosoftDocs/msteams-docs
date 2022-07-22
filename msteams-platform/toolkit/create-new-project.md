@@ -67,9 +67,6 @@ Directory structure for basic Teams app:
 
 You have three different types of basic Teams app and directory structure looks similar for all types of apps. The following example shows you one basic Teams app directory structure:
 
-> [!NOTE]
-> If you have a bot or message extension app, relevant folders is added to the directory structure.
-
 <details>
 <summary><b>Tab app</b></summary>
 
@@ -89,6 +86,9 @@ You have three different types of basic Teams app and directory structure looks 
 | `templates/azure` | BICEP template files |
 </details>
 
+> [!NOTE]
+> If you have a bot or message extension app, relevant folders is added to the directory structure.
+
 To learn more about the directory structure of different types of basic Teams app, see the following table:
 
 | App Type | Links |
@@ -100,9 +100,6 @@ To learn more about the directory structure of different types of basic Teams ap
 Directory structure for scenario based Teams app:
 
 You have four different types of scenario based Teams app and directory structure looks similar for all types of apps. The following example shows you one scenario based Teams app directory structure:
-
-> [!NOTE]
-> If you have a command bot, SSO-enabled tab, or SPFx tab app, relevant folders is added to the directory structure.
 
 <details>
 <summary><b>Notification bot app</b></summary>
@@ -126,6 +123,9 @@ The core notification implementation in **bot** folder and it contains:
 | `.gitignore` | File to exclude local files from bot project |
 | `package.json` | The NPM package file for bot project |
 </details>
+
+> [!NOTE]
+> If you have a command bot, SSO-enabled tab, or SPFx tab app, relevant folders is added to the directory structure.
 
 To learn more about the directory structure of different types of basic Teams app, see the following table:
 
