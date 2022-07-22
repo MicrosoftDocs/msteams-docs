@@ -24,6 +24,8 @@ While most developers will find it preferable to use our free hosted service, th
 
 When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. In this example, we use Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
+# [JavaScript](#tab/javascript)
+
 ```javascript
 import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
@@ -53,6 +55,40 @@ const { container } = await client.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { TeamsFluidClient, EphemeralPresence, ITeamsFluidClientOptions } from "@microsoft/live-share";
+import { SharedMap } from "fluid-framework";
+import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
+
+// Define a custom connection for your app
+const clientProps: ITeamsFluidClientOptions = {
+  connection: {
+    tenantId: "MY_TENANT_ID",
+    tokenProvider: new AzureFunctionTokenProvider(
+      "MY_SERVICE_ENDPOINT_URL" + "/api/GetAzureToken",
+      { userId: "userId", userName: "Test User" }
+    ),
+    endpoint: "MY_SERVICE_ENDPOINT_URL",
+    type: "remote",
+  },
+};
+// Join the Fluid container
+const client = new TeamsFluidClient(clientProps);
+const schema = {
+  initialObjects: {
+    presence: EphemeralPresence,
+    ticTacToePositions: SharedMap,
+  },
+};
+const { container } = await client.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+---
 
 ## Why use a custom Azure Fluid Relay service?
 

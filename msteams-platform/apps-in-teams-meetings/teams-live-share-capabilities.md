@@ -7,6 +7,7 @@ ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
 ---
+
 # Live Share core capabilities
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
@@ -92,6 +93,8 @@ Follow the steps to join a session that is associated with a user's meeting:
 
 Example:
 
+# [JavaScript](#tab/javascript)
+
 ```javascript
 import * as microsoftTeams from "@microsoft/teams-js";
 import { TeamsFluidClient } from "@microsoft/live-share";
@@ -100,7 +103,7 @@ import { SharedMap } from "fluid-framework";
 // Initialize the Teams Client SDK
 await microsoftTeams.app.initialize();
 
-// Setup the Fluid container
+// Join the Fluid container
 const client = new TeamsFluidClient();
 const schema = {
   initialObjects: { exampleMap: SharedMap },
@@ -110,30 +113,57 @@ const { container } = await client.joinContainer(schema);
 // ... ready to start app sync logic
 ```
 
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import * as microsoftTeams from "@microsoft/teams-js";
+import { TeamsFluidClient } from "@microsoft/live-share";
+import { ContainerSchema, SharedMap } from "fluid-framework";
+
+// Initialize the Teams Client SDK
+await microsoftTeams.app.initialize();
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema: ContainerSchema = {
+  initialObjects: { exampleMap: SharedMap },
+};
+const { container } = await client.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+---
+
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 ## Fluid distributed data structures
 
 The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available:
 
-| Shared Object                                                                       | Description                                                                                                                                  |
-| ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Shared Object                                                                       | Description                                                                                                                             |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
-| [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                                    |
-| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing document text editing.                                                                     |
+| [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                               |
+| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing document text editing.                                                                |
 
 Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a playlist feature.
 
+# [JavaScript](#tab/javascript)
+
 ```javascript
+import { TeamsFluidClient } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
-// ...
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
 const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
 const { container } = await client.joinContainer(schema);
-const { playlistMap } = container.initialObjects;
+const playlistMap = container.initialObjects.playlistMap as SharedMap;
 
-// Listen for changes to values in the map
+// Register listener for changes to values in the map
 playlistMap.on("valueChanged", (changed, local) => {
   const video = playlistMap.get(changed.key);
   // Update UI with added video
@@ -143,21 +173,54 @@ function onClickAddToPlaylist(video) {
   // Add video to map
   playlistMap.set(video.id, video);
 }
-// ...
 ```
 
-> [!Note]
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { TeamsFluidClient } from "@microsoft/live-share";
+import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema: ContainerSchema = {
+  initialObjects: { exampleMap: SharedMap },
+};
+const { container } = await client.joinContainer(schema);
+const playlistMap = container.initialObjects.playlistMap as SharedMap;
+
+// Declare interface for object being stored in map
+interface IVideo {
+  id: string;
+  url: string;
+}
+
+// Register listener for changes to values in the map
+playlistMap.on("valueChanged", (changed: IValueChanged, local: boolean) => {
+  const video: IVideo | undefined = playlistMap.get(changed.key);
+  // Update UI with added video
+});
+
+function onClickAddToPlaylist(video: IVideo) {
+  // Add video to map
+  playlistMap.set(video.id, video);
+}
+```
+
+---
+
+> [!NOTE]
 > Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change data stored through these objects.
 
 ## Live Share ephemeral data structures
 
 The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app, such as the popular PowerPoint Live integration, you can use our `EphemeralEvent` or `EphemeralState` objects.
 
-| Ephemeral Object                                                                                                       | Description                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralPresence](/javascript/api/@microsoft/live-share/ephemeralpresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
-| [EphemeralEvent](/javascript/api/@microsoft/live-share/ephemeralevent)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| [EphemeralState](/javascript/api/@microsoft/live-share/ephemeralstate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter.|
+| Ephemeral Object                                                             | Description                                                                                                                             |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [EphemeralPresence](/javascript/api/@microsoft/live-share/ephemeralpresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
+| [EphemeralEvent](/javascript/api/@microsoft/live-share/ephemeralevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| [EphemeralState](/javascript/api/@microsoft/live-share/ephemeralstate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
 
 ### EphemeralPresence example
 
@@ -165,16 +228,26 @@ The `EphemeralPresence` class makes tracking who is attending a meeting easier t
 
 Example:
 
+# [JavaScript](#tab/javascript)
+
 ```javascript
-import { EphemeralPresence, PresenceState } from "@microsoft/live-share";
-// ...
+import {
+  TeamsFluidClient,
+  EphemeralPresence,
+  PresenceState,
+} from "@microsoft/live-share";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
 const schema = {
-  initialObjects: { presence: EphemeralPresence },
+  initialObjects: {
+    presence: EphemeralPresence,
+  },
 };
 const { container } = await client.joinContainer(schema);
-const { presence } = container.initialObjects;
+const presence = container.initialObjects.presence;
 
-// Listen for changes to presence
+// Register listener for changes to presence
 presence.on("presenceChanged", (userPresence, local) => {
   // Update UI with presence
 });
@@ -193,20 +266,66 @@ function onUserDidLogIn(userName, profilePicture) {
 }
 ```
 
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { TeamsFluidClient, EphemeralPresence, PresenceState, EphemeralPresenceUser } from "@microsoft/live-share";
+
+// Declare interface for type of custom data for user
+interface ICustomUserData {
+  name: string;
+  picture: string;
+}
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema = {
+  initialObjects: {
+    presence: EphemeralPresence<ICustomUserData>,
+  },
+};
+const { container } = await client.joinContainer(schema);
+const presence = container.initialObjects.presence as EphemeralPresence<ICustomUserData>;
+
+// Register listener for changes to presence
+presence.on("presenceChanged", (userPresence: EphemeralPresenceUser<ICustomUserData>, local: boolean) => {
+  // Update UI with presence
+});
+
+// Start tracking presence
+presence.start("YOUR_CUSTOM_USER_ID", {
+  name: "Anonymous",
+  picture: "DEFAULT_PROFILE_PICTURE_URL",
+});
+
+function onUserDidLogIn(userName: string, profilePicture: string) {
+  presence.updatePresence(PresenceState.online, {
+    name: userName,
+    picture: profilePicture,
+  });
+}
+```
+
+---
+
 ### EphemeralEvent example
 
 `EphemeralEvent` is a great way to send simple events to other clients in a meeting. It's useful for scenarios like sending session notifications.
 
+# [JavaScript](#tab/javascript)
+
 ```javascript
-import { EphemeralEvent } from "@microsoft/live-share";
-// ...
+import { TeamsFluidClient, EphemeralEvent } from "@microsoft/live-share";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
 const schema = {
   initialObjects: { notifications: EphemeralEvent },
 };
 const { container } = await client.joinContainer(schema);
 const { notifications } = container.initialObjects;
 
-// Listen for incoming notifications
+// Register listener for incoming notifications
 notifications.on("received", (event, local) => {
   let notificationToDisplay;
   if (local) {
@@ -217,7 +336,7 @@ notifications.on("received", (event, local) => {
   // Display notification in your UI
 });
 
-// Start tracking notifications
+// Start listening for incoming notifications
 await notifications.start();
 
 notifications.sendEvent({
@@ -226,27 +345,78 @@ notifications.sendEvent({
 });
 ```
 
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { TeamsFluidClient, EphemeralEvent, IEphemeralEvent } from "@microsoft/live-share";
+
+// Declare interface for type of custom data for user
+interface ICustomEvent extends IEphemeralEvent {
+  senderName: string;
+  text: string;
+}
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema = {
+  initialObjects: {
+    notifications: EphemeralEvent<ICustomEvent>,
+  },
+};
+const { container } = await client.joinContainer(schema);
+const notifications = container.initialObjects.notifications as EphemeralEvent<ICustomEvent>;
+
+// Register listener for incoming notifications
+notifications.on("received", (event: ICustomEvent, local: boolean) => {
+  let notificationToDisplay: string;
+  if (local) {
+    notificationToDisplay = `You ${event.text}`;
+  } else {
+    notificationToDisplay = `${event.senderName} ${event.text}`;
+  }
+  // Display notification in your UI
+});
+
+// Start listening for incoming notifications
+await notifications.start();
+
+notifications.sendEvent({
+  senderName: "LOCAL_USER_NAME",
+  text: "joined the session",
+});
+```
+
+---
+
 ## Role verification for ephemeral data structures
 
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Ephemeral objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual ephemeral object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
-Example:
+Example using `EphemeralState`:
+
+# [JavaScript](#tab/javascript)
 
 ```javascript
-import { EphemeralState, UserMeetingRole } from "@microsoft/live-share";
-// ...
+import {
+  TeamsFluidClient,
+  EphemeralState,
+  UserMeetingRole,
+} from "@microsoft/live-share";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
 const schema = {
   initialObjects: { appState: EphemeralState },
 };
 const { container } = await client.joinContainer(schema);
 const { appState } = container.initialObjects;
 
-// Listen for changes to values in the map
-appState.on("stateChanged", (state, value, local) => {
+// Register listener for changes to state and corresponding custom data
+appState.on("stateChanged", (state, data, local) => {
   // Update local app state
 });
 
-// Set roles who can change state and start
+// Set roles who can change state and start listening for changes
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 appState.start(allowedRoles);
 
@@ -264,24 +434,69 @@ function onSelectPresentMode(documentId) {
 }
 ```
 
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { TeamsFluidClient, EphemeralState, UserMeetingRole } from "@microsoft/live-share";
+
+// Declare interface for type of custom data for user
+interface ICustomState {
+  documentId: string;
+  presentingUserId?: string;
+}
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema = {
+  initialObjects: {
+    appState: EphemeralState<ICustomState>,
+  },
+};
+const { container } = await client.joinContainer(schema);
+const appState = container.initialObjects.appState as EphemeralState<ICustomState>;
+
+// Register listener for changes to state and corresponding custom data
+appState.on("stateChanged", (state: string, data: ICustomState | undefined, local: boolean) => {
+  // Update local app state
+});
+
+// Set roles who can change state and start listening for changes
+const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+appState.start(allowedRoles);
+
+function onSelectEditMode(documentId: string) {
+  appState.changeState("editing", {
+    documentId,
+  });
+}
+
+function onSelectPresentMode(documentId: string) {
+  appState.changeState("presenting", {
+    documentId,
+    presentingUserId: "LOCAL_USER_ID",
+  });
+}
+```
+
+---
+
 Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
 ## Code samples
 
-| Sample name | Description  | JavaScript  |
-| ----------- | ---------------------------------------------- | -------------- |
+| Sample name | Description                                                     | JavaScript                                  |
+| ----------- | --------------------------------------------------------------- | ------------------------------------------- |
 | Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) |
-| Agile Poker | Enable all connected clients to play Agile Poker.| [View](https://aka.ms/liveshare-agilepoker) |
+| Agile Poker | Enable all connected clients to play Agile Poker.               | [View](https://aka.ms/liveshare-agilepoker) |
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Live Share media capabilities](teams-live-share-media-capabilities.md)
+> [!div class="nextstepaction"] > [Live Share media capabilities](teams-live-share-media-capabilities.md)
 
 ## See also
 
-* [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
-* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-* [Live Share FAQ](teams-live-share-faq.md)
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+- [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+- [Live Share FAQ](teams-live-share-faq.md)
+- [Teams apps in meetings](teams-apps-in-meetings.md)

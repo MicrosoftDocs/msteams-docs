@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 # Live Share SDK
 
-> [!Note]
+> [!NOTE]
 > The Live Share SDK is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use Live Share.
 
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. Live Share seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Live Share provides a free, fully managed, and ready to use [Azure Fluid Relay](/azure/azure-fluid-relay/) backed by the security and global scale of Teams.
@@ -60,6 +60,8 @@ Like other Azure services, Azure Fluid Relay is designed to tailor to your indiv
 
 Live Share provides a turn-key Azure Fluid Relay service backed by the security of Microsoft Teams meetings. Live Share containers are restricted to meeting participants, maintain tenant residency requirements, and can be accessed in a few lines of client code.
 
+# [JavaScript](#tab/javascript)
+
 ```javascript
 import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
 
@@ -72,6 +74,24 @@ const { container } = await client.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
+import { ContainerSchema } from "fluid-framework";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema: ContainerSchema = {
+  initialObjects: { presence: EphemeralPresence },
+};
+const { container } = await client.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+---
 
 > [!IMPORTANT]
 > Any data sent or stored through the Live Share SDK's hosted Azure Fluid Relay service is accessible up to 24 hours. For more information, see [Live Share FAQ](teams-live-share-faq.md).
