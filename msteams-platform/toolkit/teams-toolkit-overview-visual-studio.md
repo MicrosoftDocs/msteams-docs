@@ -50,7 +50,7 @@ The main milestones of this journey are:
 
 ## Take a tour of Teams Toolkit
 
-You have to first install Teams Toolkit, then select **Project > Teams Toolkit** to access the **Teams Toolkit menu** menu:
+You have to first install Teams Toolkit, then select **Project > Teams Toolkit** to access the **Teams Toolkit** menu:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
