@@ -250,7 +250,7 @@ items:
     1. Run the following command to create a tunnel. The sample app uses port 3333:
 
         ```bash
-        ngrok http 3333 -host-header=localhost:3333
+        ngrok http 3333 --host-header=localhost:3333
         ```
         The ngrok tunnel is created. Here's an example of ngrok tunnel.
 
