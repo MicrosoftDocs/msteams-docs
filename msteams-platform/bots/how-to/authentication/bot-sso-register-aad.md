@@ -55,19 +55,19 @@ You'll need to register your app in Azure AD before you can configure it. Azure 
 
 2. Select the **App registrations** icon.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal.png" alt-text="Azure AD Portal page." border="true":::
 
    The **App registrations** page appears.
 
 3. Select **+ New registration** icon.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="true":::
 
     The **Register an application** page appears.
 
 4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage, if you want to.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/register-app.png" alt-text="App registration page on Azure AD Portal." border="true":::
 
 5. Select the type of user account that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
 
@@ -89,11 +89,11 @@ You'll need to register your app in Azure AD before you can configure it. Azure 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
 
     The page with app ID and other configurations is displayed.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/tab-app-created.png" alt-text="App registration is successful." border="true":::
 
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
@@ -115,19 +115,19 @@ To configure scope and authorize trusted client applications, you'll need:
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-api-menu.png" alt-text="Expose an API menu option." border="true":::
 
     The **Expose an API** page appears.
 
 1. Select **Set** to generate application ID URI in the form of `api://{AppID}`.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-an-api.png" alt-text="Set app ID URI" border="true":::
 
     The section for setting application ID URI appears.
 
 1. Enter the application ID URI in the format explained here.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/set-app-id-uri.png" alt-text="Application ID URI" border="true":::
 
     - The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
     - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
@@ -158,11 +158,11 @@ To configure scope and authorize trusted client applications, you'll need:
 
     A message pops up on the browser stating that the application ID URI was updated.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-msg.png" alt-text="Application ID URI message" border="true":::
 
     The application ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
 
 1. Note and save the application ID URI. You'll need it for updating the Teams app manifest later.
 
@@ -170,13 +170,13 @@ To configure scope and authorize trusted client applications, you'll need:
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Select scope" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/select-scope.png" alt-text="Select scope" border="true":::
 
     The **Add a scope** page appears.
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-scope.png" alt-text="Add scope details" border="true":::
 
     1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
@@ -189,23 +189,23 @@ To configure scope and authorize trusted client applications, you'll need:
 
     A message pops up on the browser stating that the scope was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/scope-added-msg.png" alt-text="Scope added message" border="true":::
 
     The new scope you defined displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/scope-added.png" alt-text="Scope added and displayed" border="true":::
 
 #### To configure authorized client application
 
 1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/auth-client-apps.png" alt-text="Authorized client application" border="true":::
 
     The **Add a client application** page appears.
 
 1. Enter the appropriate client ID for the Teams Client for the applications that you want to authorize for your app’s web application.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-app.png" alt-text="Add a client application" border="true":::
 
     > [!NOTE]
     >
@@ -224,11 +224,11 @@ To configure scope and authorize trusted client applications, you'll need:
 
     A message pops up on the browser stating that the authorized client app was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/update-app-auth-msg.png" alt-text="Client application added message" border="true":::
 
     The client ID displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-app-added.png" alt-text="Client app added and displayed" border="true":::
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
@@ -241,19 +241,19 @@ You must define the access token version that is acceptable for your app. This c
 
 1. Select **Manage** > **Manifest** from the left pane.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal Manifest" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Azure AD portal Manifest" border="true":::
 
     The Azure AD application manifest appears.
 
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Value for accepted access token version" border="true":::
 
 1. Select **Save**
 
     A message pops up on the browser stating that the manifest was updated successfully.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
 
