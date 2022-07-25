@@ -356,13 +356,13 @@ items:
         
         The **SharePoint Web Part Workbench** opens in the browser to let you add, edit, and remove web parts.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part showing.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part showing.":::
 
     1. Select **Add Web Part in column one +** icon to add your web part.
 
     1. Select your web part from the menu.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part selection.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part selection.":::
     
     1. Select **Add a new section +** icon to choose column layout for your web parts.
 
