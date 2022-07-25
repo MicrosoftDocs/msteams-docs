@@ -14,7 +14,7 @@ ms.author: anclear
 > [!NOTE]
 > When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
 
 Before creating the action command, you must decide the following factors:
 
