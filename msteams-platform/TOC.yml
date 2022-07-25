@@ -310,7 +310,7 @@
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
-      href: graph-api/meeting-transcripts/get-transcripts-api.md
+      href: graph-api/meeting-transcripts/overview-transcripts.md
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
     - name: Get transcripts
