@@ -72,16 +72,21 @@ Following are the steps to create external tasks:
 1. Bind the Task controls to the subgrid within the classic form designer. Select **Save** and then select **Switch to classic**.
 
 1. Move through in the classic form designer, till you find the **Tasks** tab. Double-click the subgrid to open its property dialog.
+
     :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Tasks property dialog":::
 
 1. In the property dialog, set the properties as shown in the following image:
+
     :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Tasks property settings":::
 
 1. Go to the Controls tab and select :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="edit tasks"::: on Custom Tasks property to add the Fetch XML generated above.
 
 1. Paste the Fetch XML
+
     :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Fetch XML property settings":::
+
     :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Fetch XML Custom property settings":::
 
 1. Select **Ok** in Configure Property "Custom Tasks" and Set Properties windows.
+
 1. Save and Publish
