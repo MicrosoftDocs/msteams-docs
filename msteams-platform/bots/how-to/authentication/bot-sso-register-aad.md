@@ -55,19 +55,19 @@ You'll need to register your app in Azure AD before you can configure it. Azure 
 
 2. Select the **App registrations** icon.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal.png" alt-text="Azure AD Portal page." border="true":::
 
    The **App registrations** page appears.
 
 3. Select **+ New registration** icon.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="true":::
 
     The **Register an application** page appears.
 
 4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage, if you want to.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/register-app.png" alt-text="App registration page on Azure AD Portal." border="true":::
 
 5. Select the type of user account that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
 
@@ -93,7 +93,7 @@ You'll need to register your app in Azure AD before you can configure it. Azure 
 
     The page with app ID and other configurations is displayed.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="App registration is successful." border="true":::
 
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
