@@ -14,7 +14,7 @@ ms.author: anclear
 > [!NOTE]
 > When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using Developer Portal, or create it manually.
 
 Before creating the action command, you must decide the following factors:
 
@@ -25,7 +25,7 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## Select action command invoke locations
@@ -74,72 +74,65 @@ If the message extension is invoked from the compose box or directly from a mess
 
 To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
-* [Create an action command using App Studio](#create-an-action-command-using-app-studio)
+* [Create an action command using Developer Portal](#create-an-action-command-using-developer-portal)
 * [Create an action command manually](#create-an-action-command-manually)
 
-### Create an action command using App Studio
+### Create an action command using Developer Portal
 
-You can create an action command using **App Studio** or **Developer Portal**.
-
-> [!WARNING]
- > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
-
-# [App Studio](#tab/AS)
+You can create an action command using **Developer Portal**.
 
 > [!NOTE]
 > The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **To create an action command**
 
-1. Open **App Studio** from the Microsoft Teams client and select the **Manifest editor** tab.
-1. If you already created your app package in **App Studio**, select it from the list. If you haven't created an app package, import an existing one.
-1. After importing an app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
-1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up window:
-
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
-
+1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
+1. If you already created your app package in **Developer Portal**, select it from the list. If you haven't created an app package, import an existing one.
+1. After importing an app package, select **Message extensions** under **App features**.
 1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
+(image to be added)
 
-1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
+1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown or select **Enter bot id** if you have a bot id created already.
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
+(image to be added)
 
-1. Select **Add** in the **Command section** of the message extensions page to include the commands which decides the behaviour of message extension.
+1. Select the scope of the messaging extension.
+
+1. Select checkbox if you need to reconfigure the app.
+
+1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Add a command to define the behavior of the message extension.":::
 
-1. Select **Allow users to trigger actions in external services while inside of Teams**. The following image displays the action command selection:
+1. Select **Action** and then select parameter type.
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Action command selection":::
+1. Enter **Command ID**, **Command title**,**Command description**.
 
-1. To use a static set of parameters to create your task module, select **Define a set of static parameters for the command**.
+1. Enter all the parameters to add a command.
 
-    The following image displays the action command static parameter selection:
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Add a parameters to define your command for message extension.":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Action command static parameter selection":::
+1. Select **Add a domain** under **Preview links**.
 
-    The following image displays an example for static parameter set-up:
+1. Enter valid domain and then select **Add**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Action command static parameter set-up":::
-
-    The following image displays an example for static parameter testing:
-
-    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Action command static parameter testing":::
-
-1. To use dynamic parameters, select to **Fetch a dynamic set of parameters from your bot**. The following image displays the action command parameter selection:
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Action command dynamic parameter selection":::
-
-1. Add a **Command Id** and a **Title**.
-1. Select the location from where you want to invoke the action command. The following image displays the action command invoke location:
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Action command invoke location":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Add a valid domain to your messaging extension for link unfurlings.":::
 
 1. Select **Save**.
-1. To add more parameters, select the **Add** button in the **Parameters** section.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Save all your setting and parameters for your message extension.":::
+
+**To add additional parameters**
+
+1. Select ellipse under command section and then select **Edit parameter**.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Add additional parameters for your message extension.":::
+
+1. Select **+ Add a Parameters** and enter all the parameters.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameter.PNG":::
 
 ### Create an action command manually
 
@@ -181,43 +174,54 @@ The following section is an example of a `composeExtensions` object defining two
 ...
 "composeExtensions": [
   {
-    "botId": "12a3c29f-1fc5-4d97-a142-12bb662b7b23",
-    "canUpdateConfiguration": true,
+    "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
+    "scopes": [
+      "personal",
+      "groupchat"
+    ],
     "commands": [
       {
-        "id": "addTodo",
-        "description": "Create a To Do item",
-        "title": "Create To Do",
+        "id": "To do",
         "type": "action",
-        "context": ["commandBox", "message", "compose"],
+        "title": "Create To do",
+        "description": "Create a To do",
+        "initialRun": true,
         "fetchTask": false,
+        "context": [
+          "commandBox",
+          "compose"
+        ],
         "parameters": [
           {
             "name": "Name",
-            "description": "To Do Title",
             "title": "Title",
+            "description": "To do Title",
             "inputType": "text"
           },
           {
             "name": "Description",
-            "description": "Description of the task",
             "title": "Description",
+            "description": "Description of the task",
             "inputType": "textarea"
           },
           {
             "name": "Date",
-            "description": "Due date for the task",
             "title": "Date",
+            "description": "Due date for the task",
             "inputType": "date"
           }
         ]
-      },
+      }
+    ],
+    "canUpdateConfiguration": true,
+    "messageHandlers": [
       {
-        "id": "reassignTodo",
-        "description": "Reassign a todo item",
-        "title": "Reassign a todo item",
-        "type": "action",
-        "fetchTask": false,
+        "type": "link",
+        "value": {
+          "domains": [
+            "yourapp.onmicrosoft.com"
+          ]
+        }
       }
     ]
   }
