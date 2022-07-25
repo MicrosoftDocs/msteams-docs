@@ -128,11 +128,11 @@ The following image displays command addition for message extension:
 
 1. Select ellipse under command section and then select **Edit parameter**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Add additional parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="This screenshots shows how to add additional parameters for your message extension.":::
 
 1. Select **+ Add a Parameters** and enter all the parameters.
 
-   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameter.PNG":::
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### Create an action command manually
 
