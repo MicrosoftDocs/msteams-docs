@@ -1,7 +1,7 @@
 ---
 title: Questions to help plan Teams app development
 author: heath-hamilton
-description: Questions to consider while you plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
+description: Questions to consider while you plan your app, understand your user and their needs, problems that your app solves, user authentication and their onboarding experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -124,7 +124,7 @@ Suggestion: Options that help determine the best distribution model.
 
 Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains a only configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
 
 ## Plan beyond app building
 

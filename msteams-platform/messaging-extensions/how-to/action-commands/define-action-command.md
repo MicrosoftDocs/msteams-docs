@@ -1,7 +1,7 @@
 ---
 title: Define message extension action commands
 author: surbhigupta
-description: An overview of messaging extension action commands with app manifest example
+description: In this module, learn to define messaging extension action commands with app manifest example in Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -11,13 +11,22 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+> [!NOTE]
+> When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
+
+Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
 
 Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
 1. [How will the task module be created?](#select-how-to-create-your-task-module)
 1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
+
+See the following video to learn how to define message extension action commands:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## Select action command invoke locations
 
@@ -73,7 +82,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 You can create an action command using **App Studio** or **Developer Portal**.
 
 > [!WARNING]
- > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
+ > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 # [App Studio](#tab/AS)
 
@@ -181,7 +190,7 @@ The following section is an example of a `composeExtensions` object defining two
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -208,7 +217,7 @@ The following section is an example of a `composeExtensions` object defining two
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

@@ -2,7 +2,7 @@
 title: Build action based message extension
 metadata:
   title: Build action based message extension
-  description: In this tutorial, you'll learn to set up action message extension for Teams.
+  description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
   audience: Developer
   level: Beginner
   ms.date: 24/02/2022
@@ -18,10 +18,10 @@ items:
 
     **Key features of action based message extension**
 
-    * Presents the user with a modal popup to collect or display information.
+    * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. You'll see the following output:
        
       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
     
@@ -55,7 +55,7 @@ items:
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, add messaging endpoint, and then perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -71,7 +71,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/sbs-messagingextension-action/azure-bot.png)
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -91,7 +91,7 @@ items:
 
     1. Select **MultiTenant** under **Bot Type**.
 
-        ![Type](~/assets/images/sbs-messagingextension-action/bot-type.png)
+        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
 
     1. Select **Review + create**.
 
@@ -120,7 +120,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/sbs-messagingextension-action/manage.png)
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -149,9 +149,9 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -178,7 +178,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/sbs-messagingextension-action/ngrok.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -288,7 +288,8 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/sbs-messagingextension-action/addpermission.png)
+        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+
 
     1. Select **Microsoft Graph**.
 
@@ -338,7 +339,7 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID** .
+         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
@@ -430,7 +431,7 @@ items:
 
        ![card](~/assets/images/sbs-messagingextension-action/create-card.png)
 
-    1. Enter your information in the modal popup.
+    1. Enter your information in the modal pop-up.
 
        ![information](~/assets/images/sbs-messagingextension-action/output-card.png)
 

@@ -23,7 +23,7 @@ Ensure that you verify the following app manifest changes for resource-specific 
 
 <details>
 
-<summary><b>RSC permissions for app manifest version 1.12</b></summary>
+<summary><b>RSC permissions for app manifest version 1.12 and later</b></summary>
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
@@ -189,7 +189,7 @@ Example for RSC in a chat
 
 <details>
 
-<summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
+<summary><b>RSC permissions for app manifest version 1.11 and earlier</b></summary>
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 

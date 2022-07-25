@@ -1,14 +1,13 @@
 ---
 title: Prepare your store submission  
-description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
+description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package and more.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: submission store distribute validate app package guidelines localize
 ---
 
-# Prepare your Microsoft Teams store submission
+# Prepare your Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
@@ -25,7 +24,7 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
 > [!WARNING]
-> If you have been using App Studio, we recommend that you'd try the [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
+> If you have been using App Studio, we recommend that you'd try the [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 

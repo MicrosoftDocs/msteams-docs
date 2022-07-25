@@ -1,7 +1,7 @@
 ---
 title: Add Capabilities to Your Teams apps
 author: MuyangAmigo
-description:  Describes Add Capabilities of Teams Toolkit
+description:  In this module, learn how to add Capabilities of Teams Toolkit, advantages, limitations and capabilities
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -22,22 +22,22 @@ Add capability in Teams Toolkit helps you to add additional capability to your e
 
 The following list provides advantages to add more capabilities in TeamsFx:
 
-* Provides convenience
-* Adds more function to your app by automatically adding source codes using Teams Toolkit
+* Provides convenience.
+* Adds more function to your app by automatically adding source codes using Teams Toolkit.
 
 ## Limitations
 
 The following list provides limitations to add more capabilities in TeamsFx:
 
-* You can add tabs up to 16 instances
-* You can add a bot and message extension for one instance each
+* You can add tabs up to 16 instances.
+* You can add a bot and message extension for one instance each.
 
 ## Add capabilities
 
 **You can add capabilities by the following methods:**
 
-* To add capabilities by using Teams Toolkit in Visual Studio Code
-* To add capabilities by using command palette
+* To add capabilities by using Teams Toolkit in Visual Studio Code.
+* To add capabilities by using command palette.
 
   > [!Note]
   > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
@@ -48,7 +48,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
    1. Select **Teams Toolkit** from left panel.
    1. Select **Add features** under **DEVELOPMENT**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="updated one":::
 
 * **To add capabilities by using command palette:**
 
@@ -56,21 +56,21 @@ The following list provides limitations to add more capabilities in TeamsFx:
    1. Enter **Teams:Add features**.
    1. Press **Enter**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature" border="true":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="To add capabilities by using command palette.":::
 
    1. From the pop-up, select the capability to add in your project.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
 
 ## Add capabilities using TeamsFx CLI
 
-* Change directory to your **project directory**
+* Change directory to your **project directory**.
 * The following table lists the capabilities and required commands:
 
   |Capability and Scenario| Command|
   |-----------------------|----------|
-  |To add notification bot |`teamsfx add notification `|
-  |To add command bot |`teamsfx add command-and-response `|
+  |To add notification bot |`teamsfx add notification`|
+  |To add command bot |`teamsfx add command-and-response`|
   |To add sso-enabled tab |`teamsfx add sso-tab`|
   |To add tab |`teamsfx add tab`|
   |To add bot |`teamsfx add bot`|
@@ -95,24 +95,24 @@ The following table lists the available capabilities to add in your project:
 
 After adding a bot and message extension, the changes in your project are as follows:
 
-* A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project
-* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally
+* A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
+* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
 * `manifest.template.json` file under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
   * The ID of your bot
   * The scopes of your bot
   * The commands that hello world bot application can respond to
-* The files under `templates/azure/teamsfx` are be updated, and `templates/azure/provision/xxx`.bicep files are regenerated
-* The files under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability
+* The files under `templates/azure/teamsfx` are be updated, and `templates/azure/provision/xxx`.bicep files are regenerated.
+* The files under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
 After adding tab, the changes in your project are as follows:
 
-* A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project
-* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally
+* A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
+* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
 * `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
   * The configurable and static tabs
   * The scopes of the tabs
-* The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated
-* The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability
+* The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
+* The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
 ## Step-by-step guide
 

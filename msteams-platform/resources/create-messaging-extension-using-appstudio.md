@@ -13,11 +13,11 @@ ms.author: anclear
 
 At a high level, you'll need to complete the following steps to create a messaging extension.
 
-1. Prepare your development environment
-2. Create and deploy your web service (while developing use a tunneling service like ngrok to run it locally)
-3. Register your web service with the Bot Framework
-4. Create your app package
-5. Upload your package to Microsoft Teams
+1. Prepare your development environment.
+2. Create and deploy your web service (while developing use a tunneling service like ngrok to run it locally).
+3. Register your web service with the Bot Framework.
+4. Create your app package.
+5. Upload your package to Teams.
 
 Creating your web service, creating your app package, and registering your web service with the Bot Framework can be done in any order. Because those three pieces are so intertwined, no matter which order you do them in you'll need return to update the others. Your registration needs the messaging endpoint from your deployed web service, and your web service needs the ID and password created from your registration. Your app manifest also needs that ID to connect Teams to your web service.
 
@@ -50,7 +50,7 @@ You can either use App Studio to help you create your app manifest, or create it
 
 ### Create your app manifest using App Studio
 
-You can use the App Studio app from within the Microsoft Teams client to help create your app manifest.
+You can use the App Studio app from within the Teams client to help create your app manifest.
 
 1. In the Teams client, open App Studio from the **...** overflow menu on the left navigation rail. If it isn't already installed, you can do so by searching for it.
 2. On the **Manifest editor** tab select **Create a new app** (or if you're adding a messaging extension to an existing app, you can import your app package)
@@ -65,7 +65,7 @@ From the **Finish => Test and distribute** tab you can **Download** your app pac
 
 ### Create your app manifest manually
 
-As with bots and tabs, you update the [app manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [app manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
 
 #### Declare your messaging extension
 

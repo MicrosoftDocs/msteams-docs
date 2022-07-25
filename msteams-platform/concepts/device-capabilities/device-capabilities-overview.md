@@ -1,7 +1,7 @@
 ---
 title: Device capabilities - Overview
 author: Rajeshwari-v
-description:  Learn how to integrate native device capabilities, such as camera, image, media, microphone, QR code, and more with Microsoft Teams app.
+description: Learn how to integrate native device capabilities, such as, camera, image, media, microphone, QR code, and more with Microsoft Teams app.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -11,7 +11,7 @@ ms.topic: overview
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location with their web apps. This integration reduces the barrier to app development, speeds up development cycle, and creates new scenarios or use-cases for the developer community.
 
-Device permissions are different in the browser. Previously, browser handled how to grant access permissions and now these permissions are handled in Microsoft Teams. For more information, see [browser device permissions](browser-device-permissions.md).
+Device permissions are different in the browser. Previously, browser handled how to grant access permissions and now these permissions are handled in Teams. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Native device capabilities
 
@@ -32,7 +32,7 @@ Use the tools present in [Microsoft Teams JavaScript client SDK](/javascript/api
 
 ## Integrate device capabilities
 
-After getting access to device capabilities, use Teams media capability APIs to [integrate media capabilities](mobile-camera-image-permissions.md) with the Teams platform to enhance the user experience. These integrated capabilities allow your app to:
+After getting access to device capabilities, use Teams media capability APIs to [integrate media capabilities](media-capabilities.md) with the Teams platform to enhance the user experience. These integrated capabilities allow your app to:
 
 * Capture and share images.
 * Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md).
@@ -40,3 +40,9 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Share location using [location picker](location-capability.md).
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
+
+## Code sample
+
+| Sample Name           | Description | Node.js    |
+|:---------------------|:--------------|:---------|
+|Device permissions | Describes how to demonstrates Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
