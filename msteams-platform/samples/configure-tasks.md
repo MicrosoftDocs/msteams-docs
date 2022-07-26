@@ -31,7 +31,7 @@ Following are the steps to create external tasks:
     Following is the schema definition for the tasks configuration Fetch XML. Any Fetch XML needs to be designed to meet the following requirements:
 
     * Query result shall return the following properties for each user object:
-      * id,
+      * ID,
       * displayname,
       * email, use alias if needed
     * Query shall contain the **@top** parameter to allow caller to limit the number of results.
@@ -71,7 +71,7 @@ Following are the steps to create external tasks:
 
 1. Bind the Task controls to the subgrid within the classic form designer. Select **Save** and then select **Switch to classic**.
 
-1. Move through in the classic form designer, till you find the **Tasks** tab. Double-click the subgrid to open its property dialog.
+1. Move through in the classic form designer, until you find the **Tasks** tab. Double-click the subgrid to open its property dialog.
 
     :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Tasks property dialog":::
 

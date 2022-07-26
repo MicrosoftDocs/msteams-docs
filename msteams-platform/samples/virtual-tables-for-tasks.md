@@ -43,7 +43,7 @@ To follow along with this guide, you'll need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
 1. A user account in the Dataverse environment, which has the “Collaboration controls User” role assigned to it.
-1. A third-party tool, e.g.,  Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
+1. A third-party tool, for example: Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
 > Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See Use Postman with Microsoft Dataverse Web API (Developer Guide for Dataverse) - Power Apps | Microsoft Docs.
@@ -62,7 +62,7 @@ This section describes the HTTP requests and responses for each step in the samp
 
 **Task 2: Begin a Collaboration Session**
 
-This step creates a collaboration session, which will be used in the following steps. A collaboration session is a record in the collaboration root table, which allows us to associate multiple collaborations,  e.g., tasks, events, appointments, etc. with a business record. This allows us to perform operations such as list of the calendar events associated with a business record for example, an inspections application.
+This step creates a collaboration session, which will be used in the following steps. A collaboration session is a record in the collaboration root table, which allows us to associate multiple collaborations, for example, tasks, events, appointments, etc. with a business record. This allows us to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
 
 **Request**
 
@@ -82,7 +82,7 @@ HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationse
 
 * `applicationName`: Unique name for the application
 * `collaborationRootEntityName`: Name of the business record entity  
-* `collaborationRootEntityId`:  Primary key (id) of the specific business record
+* `collaborationRootEntityId`:  Primary key (ID) of the specific business record
 
 **Response**
 
@@ -302,7 +302,7 @@ HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/ m365_graphplannertasks?$f
 
 ```
 
-**$filter**: Use the $filter system query to request records associated with the collaboration session (by specifying the id of the collaboration root record).
+**$filter**: Use the $filter system query to request records associated with the collaboration session (by specifying the ID of the collaboration root record).
 **$select**: Use the $select system query option to request specific properties.
 
 **Response**
@@ -535,7 +535,7 @@ This section describes common error scenarios and how the virtual tables will re
 
 Attempt to create a virtual record without a collaboration session
 
-A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record, which includes the virtual record primary key, entity name and the external id i.e., Graph resource id. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
+A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record, which includes the virtual record primary key, entity name and the external ID that is, Graph resource ID. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
 
 **Request**
 
@@ -589,7 +589,7 @@ To resolve this issue, you must always provide a valid `collaborationRootId` pro
 
 #### Attempt to read a virtual record without a collaboration map
 
-Virtual tables allow you to execute requests which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq '{{planId}}'. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
+Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq '{{planId}}'. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
 
 **Request**
 
@@ -631,7 +631,7 @@ Related to the previous error, you need to handle the case where a Graph resourc
 HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
 ```
 
-The plannerTaskId property is associated with a planner task which was deleted.
+The plannerTaskId property is associated with a planner task, which was deleted.
 
 **Response**
 
@@ -657,7 +657,7 @@ This case must be handled by any client code, which retrieves virtual records as
 
 #### Attempt to update a virtual record with an invalid @odata.etag
 
-The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When a record is read the current etag is returned and remains valid until the record is changed. The etag should be included in any update request and will be checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request will fail.
+The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When, a record is read the current etag is returned, and remains valid until the record is changed. The etag should be included in any update request and will be checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request will fail.
 
 If you perform two update requests using the same @odata.etag then the second request will fail:
 

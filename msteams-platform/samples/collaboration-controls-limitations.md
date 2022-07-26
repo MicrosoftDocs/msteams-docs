@@ -47,7 +47,7 @@ If the Conversations button doesn't respond when you select it, and you observe 
 This is caused by a localization error for the Conversations component. You can resolve the issue by updating your browser locale to en-US.
 
 **Conversations button disappears in Teams Web UI**
- There's an issue that causes the Conversations button to intermittently disappear when viewing a record in the Teams Web UI. You can follow this workaround to reload the button when the “App high density page header” setting is turned off:,
+ There's an issue that causes the Conversations button to intermittently disappear when viewing a record in the Teams Web UI. You can follow this workaround to reload the button when the “App high density page header” setting is turned off:
 
  1. Go back to the list view that shows all the records for the entity.
 
@@ -63,7 +63,7 @@ This is caused by a localization error for the Conversations component. You can 
 
 **Multiple Conversations buttons are displayed in Teams channels**
 
- When an app is played in a Teams channel, there's an another chat icon in the header bar that opens the Posts tab with channel conversations. This isn't present when apps are played as a personal app or group chat app.
+ When an app is played in a Teams channel, there's another chat icon in the header bar that opens the Posts tab with channel conversations. This isn't present when apps are played as a personal app or group chat app.
 
 **Meeting attendee status is incorrect**
 
@@ -102,7 +102,7 @@ This is caused by a localization error for the Conversations component. You can 
 
 * If you're updating the manifest, you've to unzip it, and manually update the version number so that it's higher.
 
-* After changing the app catalog in the tenant, you've to log out and log back in as the user to get the updated catalogue.
+* After changing the app catalog in the tenant, you've to sign out, and log back in as the user to get the updated catalog.
 
  **Tasks, Meetings controls fail to save**
 
@@ -121,7 +121,7 @@ This is caused by a localization error for the Conversations component. You can 
 
 ## Error Logging
 
- The controls provides the following methods to debug your application.
+ The controls provide the following methods to debug your application.
 
  1. Trace logging of plugin events when an API is invoked. This information is stored in your Dataverse environment.
 

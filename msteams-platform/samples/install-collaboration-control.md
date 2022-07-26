@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Install Collaboration controls
 
-In this article, you'll learn how to install Collaboration Controls.The following are required to build and deploy Collaboration Manager applications using the Collaboration controls:
+In this article, you'll learn how to install Collaboration Controls. The following are required to build and deploy Collaboration Manager applications using the Collaboration controls:
 
 * **Power apps**: To build Model Driven Applications using the Collaboration controls.
 * **M365 E3 or higher**: To deploy custom applications to Microsoft Teams and store tasks in Planner, files in SharePoint, and meetings in Outlook.
@@ -67,7 +67,7 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 
    :::image type="content" source="../assets/images/collaboration-control/install-collaboration-control.png" alt-text="Install collaboration control" border="true":::
 
-1. Select **Install**, installation might take approximately fifteen minutes to complete.
+1. Select **Install**, installation might take approximately 15 minutes to complete.
 
    :::image type="content" source="../assets/images/collaboration-control/install-solution.png" alt-text="Collaboration control install" border="true":::
 
