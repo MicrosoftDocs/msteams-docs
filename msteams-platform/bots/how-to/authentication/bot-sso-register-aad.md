@@ -473,15 +473,11 @@ Next, you must configure bot app in Azure AD to enable SSO.
 
 </details>
 
-### Configure SSO for bot resource in Azure AD
-
-In this section, you'll configure the bot resource for messaging endpoint and OAuth connection.
-
-#### Add messaging endpoint
+### Add messaging endpoint
 
 Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
-##### To configure messaging endpoint
+#### To configure messaging endpoint
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
@@ -502,7 +498,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
     The messaging endpoint is created.
 
-#### Update OAuth connection
+### Update OAuth connection
 
 For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
 
@@ -512,7 +508,7 @@ For a bot to support SSO, you must update its OAuth connection settings. This pr
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
-##### To update OAuth connection
+#### To update OAuth connection
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
