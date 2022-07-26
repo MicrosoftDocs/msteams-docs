@@ -84,7 +84,7 @@ You can create an action command using **Developer Portal**.
 > [!NOTE]
 > The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**To create an action command**
+To create an action command:
 
 1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
 1. If you already created your app package in **Developer Portal**, select it from the list. If you haven't created an app package, import an existing one.
@@ -110,7 +110,7 @@ The following image displays command addition for message extension:
 
 1. Enter **Command ID**, **Command title**,**Command description**.
 
-1. Enter all the parameters to add a command.
+1. Enter all the parameters and select the type of input from the dropdown.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Add a parameters to define your command for message extension.":::
 

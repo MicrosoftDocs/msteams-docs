@@ -18,7 +18,7 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## Select search command invoke locations
@@ -36,44 +36,59 @@ The following image displays the invoke locations of the search command:
 
 ## Add the search command to your app manifest
 
-To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of App Studio, or manually.
+To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
 
-### Create a search command using App Studio
+### Create a search command using Developer Portal
 
 The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-To create a search command:
+**To create an action command**
 
-1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1. If you already created your app package in **App Studio**, select from the list. If you haven't created an app package, import an existing one.
-1. After importing app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
-1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up page:
+1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
+1. If you already created your app package in **Developer Portal**, select it from the list. If you haven't created an app package, import an existing one.
+1. After importing an app package, select **Message extensions** under **App features**.
+1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
+(image to be added)
 
-1. To create the message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
+1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown or select **Enter bot id** if you have a bot id created already.
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
+(image to be added)
 
-1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
+1. Select the scope of the messaging extension.
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
+1. Select checkbox if you need to reconfigure the app.
 
-1. Select **Add** in the **Command section** of the message extensions page to include the commands, which decide the behaviour of message extension.
+1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Add a command to define the behavior of the message extension.":::
 
-1. Select **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
+1. Select **Search** and enter **Command ID**, **Command title**,**Command description**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Search command parameter selection":::
+1. Enter all the parameters and select the type of input from the dropdown.
 
-1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be invoked. The following image displays the search command invoke location:
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Add a parameters to define your command for message extension.":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="Search command invoke location selection":::
+1. Select **Add a domain** under **Preview links**.
 
-1. Add your search parameter and select **Save**.
+1. Enter valid domain and then select **Add**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Add a valid domain to your messaging extension for link unfurlings.":::
+
+1. Select **Save**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Save all your setting and parameters for your message extension.":::
+
+**To add additional parameters**
+
+1. Select ellipse under command section and then select **Edit parameter**.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="This screenshots shows how to add additional parameters for your message extension.":::
+
+1. Select **+ Add a Parameters** and enter all the parameters.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### Create a search command manually
 
