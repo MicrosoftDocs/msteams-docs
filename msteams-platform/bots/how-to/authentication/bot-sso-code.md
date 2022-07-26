@@ -56,11 +56,13 @@ If the app user is using the application for the first time and user consent is 
 
 When the user selects **Continue**, one of the following events occurs:
 
-* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if your app requires Graph permissions other than `openid`.
+* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require app user's consent. Use this approach if your app requires Graph permissions other than `openid`.
 
-* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
+* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
 
 ### C# token request without a sign-in button
+
+Use the following code snippet for requesting a token without needing the app user to sign-in.
 
 # [charp](#tab/cs)
 
@@ -154,7 +156,7 @@ async onSignInInvoke(context) {
 ```
 ---
 
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
+The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens for performance reasons and refresh them.
 
 ## Token exchange failure
 
@@ -172,7 +174,7 @@ If there's a token exchange failure, use the following code:
 }​​
 ```
 
-To understand what the bot does when the token exchange fails to trigger a consent prompt, see the following steps:
+To understand the bot behavior when the token exchange fails to trigger a consent prompt, see the following steps:
 
 >[!NOTE]
 > No user action is required to be taken as the bot takes the actions when the token exchange fails.
