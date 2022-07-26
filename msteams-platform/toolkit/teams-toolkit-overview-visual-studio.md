@@ -38,7 +38,7 @@ The main milestones of this journey are:
 1. You can download the latest VS installer from the [VS download page](https://visualstudio.microsoft.com/vs/preview/). You need to first install the VS installer before installing VS.
 
     > [!IMPORTANT]
-    > You are recommended to download VS 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*.
+    > You are recommended to download VS 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*
 
 2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
