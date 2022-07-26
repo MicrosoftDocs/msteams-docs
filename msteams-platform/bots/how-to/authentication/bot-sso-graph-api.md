@@ -95,7 +95,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
 
-    The Configure Web page appears.
+    The **Configure Web** page appears.
 
     > [!NOTE]
     > The configurations will be different based on the platform you select.
