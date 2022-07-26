@@ -131,6 +131,8 @@ To learn more about the directory structure of different types of basic Teams ap
 | For command bot app | [Build command bot](../sbs-gs-commandbot.yml) |
 | For SPFx tab app | [Build a Teams app with SPFx](../sbs-gs-spfx.yml) |
 
+</details>
+
 <details>
 <summary><b>Directory structure for multi-capability app</b></summary>
 
