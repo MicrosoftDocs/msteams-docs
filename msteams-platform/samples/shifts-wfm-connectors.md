@@ -14,7 +14,7 @@ Teams Shifts Workforce management (WFM) connectors are production-ready, open-so
 
 Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository. You can explore in detail or fork, and customize to meet your specific needs.
 
-This document gives an overview of key benefits of Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector, and JDA-to-Teams Shifts connector.
+This document gives an overview of key benefits of Teams Shifts WFM connectors.
 
 ## Key benefits of Teams Shifts WFM connectors
 
