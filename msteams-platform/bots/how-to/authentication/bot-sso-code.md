@@ -113,6 +113,8 @@ The response with the token is sent through an invoke activity with the same sch
 
 ### C# code to handle the invoke activity
 
+Use the following code snippet to invoke response.
+
 # [charp](#tab/csharp)
 
 ```csharp
