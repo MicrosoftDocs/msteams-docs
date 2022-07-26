@@ -18,10 +18,10 @@ items:
 
     **Key features of action based message extension**
 
-    * Presents the user with a modal popup to collect or display information.
+    * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. You'll see the following output:
        
       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
     
@@ -149,9 +149,9 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -288,7 +288,8 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/sbs-messagingextension-action/addpermission.png)
+        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+
 
     1. Select **Microsoft Graph**.
 
@@ -338,7 +339,7 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID** .
+         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
@@ -430,7 +431,7 @@ items:
 
        ![card](~/assets/images/sbs-messagingextension-action/create-card.png)
 
-    1. Enter your information in the modal popup.
+    1. Enter your information in the modal pop-up.
 
        ![information](~/assets/images/sbs-messagingextension-action/output-card.png)
 
