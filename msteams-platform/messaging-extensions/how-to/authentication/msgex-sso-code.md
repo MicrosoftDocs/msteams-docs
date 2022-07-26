@@ -16,7 +16,6 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 > [!NOTE]
 > SSO handlers except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file aren't supported.
 
-<!--
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
@@ -66,7 +65,9 @@ When the user selects **Continue**, one of the following events occurs:
 
 ### C# token request without a sign-in button
 
-# [charp](#tab/cs)
+Use the following code snippet for requesting a token without needing the app user to sign-in.
+
+# [csharp](#tab/cs)
 
 ```csharp
     var attachment = new Attachment
@@ -113,9 +114,83 @@ The response with the token is sent through an invoke activity with the same sch
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
 
+You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling the SSO for:
+
+```json
+JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
+if(valueObject["authentication"] !=null)
+ {
+    JObject authenticationObject=JObject.FromObject(valueObject["authentication"]);
+    if(authenticationObject["token"] !=null)
+ }
+```
+
+To configure an OAuth connection, add the following code snippet to `TeamsMessagingExtensionsSearchAuthConfigBot.cs`:
+
+```c#
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+     {
+         JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
+         if (valueObject["authentication"] != null)
+         {
+             JObject authenticationObject = JObject.FromObject(valueObject["authentication"]);
+             if (authenticationObject["token"] != null)
+             {
+                 //If the token is NOT exchangeable, then return 412 to require user consent
+                 if (await TokenIsExchangeable(turnContext, cancellationToken))
+                 {
+                     return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
+                 }
+                 else
+                 {
+                     var response = new InvokeResponse();
+                     response.Status = 412;
+                     return response;
+                 }
+             }
+         }
+         return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
+     }
+     private async Task<bool> TokenIsExchangeable(ITurnContext turnContext, CancellationToken cancellationToken)
+     {
+         TokenResponse tokenExchangeResponse = null;
+         try
+         {
+             JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
+             var tokenExchangeRequest =
+             ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
+             var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+             tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                             turnContext.Activity.From.Id,
+                              _connectionName,
+                              turnContext.Activity.ChannelId,
+                              new TokenExchangeRequest
+              {
+                  Token = tokenExchangeRequest.Token,
+              },
+               cancellationToken).ConfigureAwait(false);
+         }
+ #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
+         catch
+ #pragma warning restore CA1031 //Do not catch general exception types
+         {
+             //ignore exceptions
+             //if token exchange failed for any reason, tokenExchangeResponse above remains null, and a failure invoke response is sent to the caller.
+             //This ensures the caller knows that the invoke has failed.
+         }
+         if (tokenExchangeResponse == null || string.IsNullOrEmpty(tokenExchangeResponse.Token))
+         {
+             return false;
+         }
+         return true;
+     }
+```
+
 ### C# code to handle the invoke activity
 
-# [charp](#tab/csharp)
+Use the following code snippet to invoke response.
+
+# [csharp](#tab/csharp)
 
 ```csharp
     protected override async Task<InvokeResponse> OnInvokeActivityAsync
@@ -159,62 +234,6 @@ async onSignInInvoke(context) {
 ---
 
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
-
-## Token exchange failure
-
-If there's a token exchange failure, use the following code:
-
-```json
-{​​ 
-    "status": "<response code>", 
-    "body": 
-    {​​ 
-        "id":"<unique Id>", 
-        "connectionName": "<connection Name on the bot (from the OAuth card)>", 
-        "failureDetail": "<failure reason if status code is not 200, null otherwise>" 
-    }​​ 
-}​​
-```
-
-To understand what the bot does when the token exchange fails to trigger a consent prompt, see the following steps:
-
->[!NOTE]
-> No user action is required to be taken as the bot takes the actions when the token exchange fails.
-
-1. The client starts a conversation with the bot triggering an OAuth scenario.
-2. The bot sends back an OAuth card to the client.
-3. The client intercepts the OAuth card before displaying it to the user and checks if it contains a `TokenExchangeResource` property.
-4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user, which must be an Azure AD v2 token and whose audience must be the same as `TokenExchangeResource.Uri` property. The client sends an invoke activity to the bot with the following code:
-
-    ```json
-    {
-        "type": "Invoke",
-        "name": "signin/tokenExchange",
-        "value": 
-        {
-            "id": "<any unique Id>",
-            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
-            "token": "<exchangeable token>"
-        }
-    }
-    ```
-
-5. The bot processes the `TokenExchangeInvokeRequest` and returns a `TokenExchangeInvokeResponse` back to the client. The client must wait until it receives the `TokenExchangeInvokeResponse`.
-
-    ```json
-    {
-        "status": "<response code>",
-        "body": 
-        {
-            "id":"<unique Id>",
-            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
-            "failureDetail": "<failure reason if status code is not 200, null otherwise>"
-        }
-    }
-    ```
-
-6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
--->
 
 ## Next step
 
