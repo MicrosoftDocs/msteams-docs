@@ -1,0 +1,1 @@
+{"version":3,"file":"startsWith.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/startsWith.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAMzF;;;GAGG;AACH,qBAAa,UAAW,SAAQ,mBAAmB;IAC/C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAUxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

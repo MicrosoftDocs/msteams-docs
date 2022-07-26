@@ -1,0 +1,37 @@
+{
+    "name": "@types/stoppable",
+    "version": "1.1.1",
+    "description": "TypeScript definitions for stoppable",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/stoppable",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Eric Byers",
+            "url": "https://github.com/EricByers",
+            "githubUsername": "EricByers"
+        },
+        {
+            "name": "John Plusjé",
+            "url": "https://github.com/jplusje",
+            "githubUsername": "jplusje"
+        },
+        {
+            "name": "BendingBender",
+            "url": "https://github.com/BendingBender",
+            "githubUsername": "BendingBender"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/stoppable"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/node": "*"
+    },
+    "typesPublisherContentHash": "9d6aed80d51a632fcd46a781556cba3ba6ce7c749fe00919cd4be55dedc1aba4",
+    "typeScriptVersion": "3.6"
+}

@@ -1,0 +1,16 @@
+# Installation
+> `npm install --save @types/es-aggregate-error`
+
+# Summary
+This package contains type definitions for es-aggregate-error (https://github.com/es-shims/AggregateError#readme).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/es-aggregate-error.
+
+### Additional Details
+ * Last updated: Sun, 20 Jun 2021 19:31:09 GMT
+ * Dependencies: [@types/node](https://npmjs.com/package/@types/node)
+ * Global values: none
+
+# Credits
+These definitions were written by [AverageHelper](https://github.com/AverageHelper).

@@ -1,0 +1,1 @@
+{"version":3,"file":"ticksToHours.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/ticksToHours.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,YAAa,SAAQ,mBAAmB;IACjD,OAAO,CAAC,MAAM,CAAC,QAAQ,CAAC,YAAY,CAA8B;IAElE;;OAEG;;IAUH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAiB3B"}

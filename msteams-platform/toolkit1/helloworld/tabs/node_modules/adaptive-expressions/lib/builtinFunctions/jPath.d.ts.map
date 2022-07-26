@@ -1,0 +1,1 @@
+{"version":3,"file":"jPath.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/jPath.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAKH,OAAO,EAA8B,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAKzG;;GAEG;AACH,qBAAa,KAAM,SAAQ,mBAAmB;IAC1C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAIxB;;OAEG;IAEH,OAAO,CAAC,MAAM,CAAC,SAAS;IA4BxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

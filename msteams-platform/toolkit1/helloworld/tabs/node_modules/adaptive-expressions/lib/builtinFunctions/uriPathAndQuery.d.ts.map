@@ -1,0 +1,1 @@
+{"version":3,"file":"uriPathAndQuery.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/uriPathAndQuery.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,eAAgB,SAAQ,mBAAmB;IACpD;;OAEG;;IAUH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAexB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,mBAAmB;CAcrC"}

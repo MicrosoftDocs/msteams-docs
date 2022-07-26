@@ -1,0 +1,34 @@
+"use strict";
+/**
+ * @module adaptive-expressions
+ */
+/**
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const expressionEvaluator_1 = require("../expressionEvaluator");
+const functionUtils_1 = require("../functionUtils");
+const returnType_1 = require("../returnType");
+/**
+ * Evaluator that transforms a number to another number.
+ */
+class NumberTransformEvaluator extends expressionEvaluator_1.ExpressionEvaluator {
+    /**
+     * Initializes a new instance of the [NumberTransformEvaluator](xref:adaptive-expressions.NumberTransformEvaluator) class.
+     *
+     * @param type Name of the built-in function.
+     * @param func The evaluation function, it takes a list of objects and returns a number.
+     */
+    constructor(type, func) {
+        super(type, NumberTransformEvaluator.evaluator(func), returnType_1.ReturnType.Number, functionUtils_1.FunctionUtils.validateUnaryNumber);
+    }
+    /**
+     * @private
+     */
+    static evaluator(func) {
+        return functionUtils_1.FunctionUtils.apply(func, functionUtils_1.FunctionUtils.verifyNumber);
+    }
+}
+exports.NumberTransformEvaluator = NumberTransformEvaluator;
+//# sourceMappingURL=numberTransformEvaluator.js.map

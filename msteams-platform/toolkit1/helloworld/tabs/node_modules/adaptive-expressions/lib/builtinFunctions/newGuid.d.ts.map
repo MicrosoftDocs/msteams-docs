@@ -1,0 +1,1 @@
+{"version":3,"file":"newGuid.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/newGuid.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAIH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAKzF;;GAEG;AACH,qBAAa,OAAQ,SAAQ,mBAAmB;IAC5C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAIxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,WAAW;IAI1B;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"merge.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/merge.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAEH,OAAO,EAA8B,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAKzG;;;GAGG;AACH,qBAAa,KAAM,SAAQ,mBAAmB;IAC1C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAoBxB,OAAO,CAAC,MAAM,CAAC,iBAAiB;CAqBnC"}

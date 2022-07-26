@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"../src/","sources":["selection/index.ts"],"names":[],"mappings":";;;IAAA,iDAAkC;IAClC,2CAA4B","sourcesContent":["export * from './Selection.types';\nexport * from './Selection';\n"]}

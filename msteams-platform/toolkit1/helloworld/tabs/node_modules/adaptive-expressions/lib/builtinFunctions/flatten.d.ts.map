@@ -1,0 +1,1 @@
+{"version":3,"file":"flatten.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/flatten.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAKzF;;GAEG;AACH,qBAAa,OAAQ,SAAQ,mBAAmB;IAC5C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAQxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,WAAW;IAoB1B;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

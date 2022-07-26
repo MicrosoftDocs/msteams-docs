@@ -1,0 +1,1 @@
+{"version":3,"file":"subtractFromTime.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/subtractFromTime.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAMH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,gBAAiB,SAAQ,mBAAmB;IACrD;;OAEG;;IAUH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IA2BxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAS3B"}

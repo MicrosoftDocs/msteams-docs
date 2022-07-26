@@ -1,0 +1,1 @@
+{"version":3,"file":"coalesce.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/coalesce.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAEH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAKzF;;;GAGG;AACH,qBAAa,QAAS,SAAQ,mBAAmB;IAC7C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAIxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,YAAY;CAS9B"}

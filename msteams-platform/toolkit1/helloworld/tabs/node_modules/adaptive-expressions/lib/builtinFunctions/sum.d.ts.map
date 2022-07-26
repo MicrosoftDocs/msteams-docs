@@ -1,0 +1,1 @@
+{"version":3,"file":"sum.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/sum.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAKzF;;GAEG;AACH,qBAAa,GAAI,SAAQ,mBAAmB;IACxC;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAOxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

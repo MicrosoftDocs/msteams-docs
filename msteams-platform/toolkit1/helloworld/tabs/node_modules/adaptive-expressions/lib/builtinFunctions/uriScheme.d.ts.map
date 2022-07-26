@@ -1,0 +1,1 @@
+{"version":3,"file":"uriScheme.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/uriScheme.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,SAAU,SAAQ,mBAAmB;IAC9C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAexB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,aAAa;CAc/B"}

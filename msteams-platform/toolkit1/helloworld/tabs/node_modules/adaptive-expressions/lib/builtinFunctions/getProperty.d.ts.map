@@ -1,0 +1,1 @@
+{"version":3,"file":"getProperty.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/getProperty.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAS7E;;GAEG;AACH,qBAAa,WAAY,SAAQ,mBAAmB;IAChD;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAgCxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

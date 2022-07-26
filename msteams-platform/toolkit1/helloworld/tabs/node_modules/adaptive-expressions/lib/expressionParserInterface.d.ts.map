@@ -1,0 +1,1 @@
+{"version":3,"file":"expressionParserInterface.d.ts","sourceRoot":"","sources":["../src/expressionParserInterface.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AACH,OAAO,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAE1C;;GAEG;AACH,MAAM,WAAW,yBAAyB;IACtC;;;;;OAKG;IACH,KAAK,CAAC,UAAU,EAAE,MAAM,GAAG,UAAU,CAAC;CACzC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"if.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/if.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,EAAG,SAAQ,mBAAmB;IACvC;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAexB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

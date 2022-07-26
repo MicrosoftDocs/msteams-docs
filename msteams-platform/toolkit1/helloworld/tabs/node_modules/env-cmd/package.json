@@ -1,0 +1,96 @@
+{
+  "name": "env-cmd",
+  "version": "10.1.0",
+  "description": "Executes a command using the environment variables in an env file",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "bin": {
+    "env-cmd": "bin/env-cmd.js"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register ./test/**/*.ts",
+    "test-cover": "nyc npm test",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "lint": "ts-standard --fix && tsc --noEmit",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toddbluhm/env-cmd.git"
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "cli",
+    "command",
+    "cmd",
+    "execute",
+    "run",
+    "file",
+    "variables",
+    "config"
+  ],
+  "author": "Todd Bluhm",
+  "contributors": [
+    "Eric Lanehart <eric@pushred.co>",
+    "Jon Scheiding <jonscheiding@gmail.com>",
+    "serapath (Alexander Praetorius) <dev@serapath.de>",
+    "Anton Versal <ant.ver@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toddbluhm/env-cmd/issues"
+  },
+  "homepage": "https://github.com/toddbluhm/env-cmd#readme",
+  "dependencies": {
+    "commander": "^4.0.0",
+    "cross-spawn": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/cross-spawn": "^6.0.0",
+    "@types/mocha": "^7.0.0",
+    "@types/node": "^12.0.0",
+    "@types/sinon": "^7.0.0",
+    "chai": "^4.0.0",
+    "coveralls": "^3.0.0",
+    "mocha": "^7.0.0",
+    "nyc": "^15.0.0",
+    "sinon": "^8.0.0",
+    "ts-node": "^8.0.0",
+    "ts-standard": "^4.0.0",
+    "typescript": "^3.7.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "ts-standard": {
+    "project": "./tsconfig.eslint.json",
+    "ignore": [
+      "dist"
+    ]
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@types/node"
+    ]
+  }
+}

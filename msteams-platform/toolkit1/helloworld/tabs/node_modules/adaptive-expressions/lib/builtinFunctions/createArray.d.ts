@@ -1,0 +1,22 @@
+/**
+ * @module adaptive-expressions
+ */
+/**
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+import { ExpressionEvaluator } from '../expressionEvaluator';
+/**
+ * Return an array from multiple inputs.
+ */
+export declare class CreateArray extends ExpressionEvaluator {
+    /**
+     * Initializes a new instance of the [CreateArray](xref:adaptive-expressions.CreateArray) class.
+     */
+    constructor();
+    /**
+     * @private
+     */
+    private static evaluator;
+}
+//# sourceMappingURL=createArray.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"accessor.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/accessor.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAS7E;;GAEG;AACH,qBAAa,QAAS,SAAQ,mBAAmB;IAC7C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAsBxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAiB3B"}

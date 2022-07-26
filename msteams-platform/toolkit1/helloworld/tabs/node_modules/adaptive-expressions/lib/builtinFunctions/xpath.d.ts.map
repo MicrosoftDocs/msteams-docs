@@ -1,0 +1,1 @@
+{"version":3,"file":"xpath.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/xpath.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAKzF;;GAEG;AACH,qBAAa,KAAM,SAAQ,mBAAmB;IAC1C;;OAEG;;IAKH,OAAO,CAAC,MAAM,CAAC,SAAS;IAMxB,OAAO,CAAC,MAAM,CAAC,qBAAqB;IA+DpC;;;OAGG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

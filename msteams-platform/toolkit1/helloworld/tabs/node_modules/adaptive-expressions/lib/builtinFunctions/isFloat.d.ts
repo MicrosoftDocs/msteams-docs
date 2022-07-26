@@ -1,0 +1,23 @@
+/**
+ * @module adaptive-expressions
+ */
+/**
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+import { ExpressionEvaluator } from '../expressionEvaluator';
+/**
+ * Return true if a given input is a floating-point number.
+ * Due to the alignment between C# and JavaScript, a number with an non-zero residue of its modulo 1 will be treated as a floating-point number.
+ */
+export declare class IsFloat extends ExpressionEvaluator {
+    /**
+     * Initializes a new instance of the [IsFloat](xref:adaptive-expressions.IsFloat) class.
+     */
+    constructor();
+    /**
+     * @private
+     */
+    private static evaluator;
+}
+//# sourceMappingURL=isFloat.d.ts.map

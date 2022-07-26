@@ -1,0 +1,1 @@
+{"version":3,"file":"utcNow.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/utcNow.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAMH,OAAO,EAA8B,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAMzG;;GAEG;AACH,qBAAa,MAAO,SAAQ,mBAAmB;IAC3C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAexB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

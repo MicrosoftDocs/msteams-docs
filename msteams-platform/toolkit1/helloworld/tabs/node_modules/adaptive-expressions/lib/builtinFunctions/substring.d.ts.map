@@ -1,0 +1,1 @@
+{"version":3,"file":"substring.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/substring.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAO7E;;GAEG;AACH,qBAAa,SAAU,SAAQ,mBAAmB;IAC9C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IA4CxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

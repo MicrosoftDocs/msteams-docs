@@ -1,0 +1,1 @@
+{"version":3,"file":"replaceIgnoreCase.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/replaceIgnoreCase.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAMzF;;;GAGG;AACH,qBAAa,iBAAkB,SAAQ,mBAAmB;IACtD;;OAEG;;IAUH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAoBxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

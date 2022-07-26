@@ -1,0 +1,1 @@
+{"version":3,"file":"uriPort.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/uriPort.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,OAAQ,SAAQ,mBAAmB;IAC5C;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAexB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,WAAW;CAc7B"}

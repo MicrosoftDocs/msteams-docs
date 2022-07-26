@@ -1,0 +1,1 @@
+{"version":3,"file":"divide.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/divide.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAKH,OAAO,EAAE,4BAA4B,EAAE,MAAM,gCAAgC,CAAC;AAE9E;;GAEG;AACH,qBAAa,MAAO,SAAQ,4BAA4B;IACpD;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,IAAI;IAQnB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,MAAM;CASxB"}

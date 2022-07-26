@@ -1,0 +1,1 @@
+{"version":3,"file":"dateTimeDiff.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/dateTimeDiff.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAS7E;;GAEG;AACH,qBAAa,YAAa,SAAQ,mBAAmB;IACjD;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAkBxB;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

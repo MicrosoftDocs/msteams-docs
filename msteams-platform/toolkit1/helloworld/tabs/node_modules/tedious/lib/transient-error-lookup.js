@@ -1,0 +1,22 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.TransientErrorLookup = void 0;
+
+// This simple piece of code is factored out into a separate class to make it
+// easy to stub it out in tests. It's hard, if not impossible, to cause a
+// transient error on demand in tests.
+class TransientErrorLookup {
+  isTransientError(error) {
+    // This list of transient errors comes from Microsoft implementation of SqlClient:
+    //  - https://github.com/dotnet/corefx/blob/master/src/System.Data.SqlClient/src/System/Data/SqlClient/SqlInternalConnectionTds.cs#L115
+    const transientErrors = [4060, 10928, 10929, 40197, 40501, 40613];
+    return transientErrors.indexOf(error) !== -1;
+  }
+
+}
+
+exports.TransientErrorLookup = TransientErrorLookup;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJUcmFuc2llbnRFcnJvckxvb2t1cCIsImlzVHJhbnNpZW50RXJyb3IiLCJlcnJvciIsInRyYW5zaWVudEVycm9ycyIsImluZGV4T2YiXSwic291cmNlcyI6WyIuLi9zcmMvdHJhbnNpZW50LWVycm9yLWxvb2t1cC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBUaGlzIHNpbXBsZSBwaWVjZSBvZiBjb2RlIGlzIGZhY3RvcmVkIG91dCBpbnRvIGEgc2VwYXJhdGUgY2xhc3MgdG8gbWFrZSBpdFxuLy8gZWFzeSB0byBzdHViIGl0IG91dCBpbiB0ZXN0cy4gSXQncyBoYXJkLCBpZiBub3QgaW1wb3NzaWJsZSwgdG8gY2F1c2UgYVxuLy8gdHJhbnNpZW50IGVycm9yIG9uIGRlbWFuZCBpbiB0ZXN0cy5cbmV4cG9ydCBjbGFzcyBUcmFuc2llbnRFcnJvckxvb2t1cCB7XG4gIGlzVHJhbnNpZW50RXJyb3IoZXJyb3I6IG51bWJlcikge1xuICAgIC8vIFRoaXMgbGlzdCBvZiB0cmFuc2llbnQgZXJyb3JzIGNvbWVzIGZyb20gTWljcm9zb2Z0IGltcGxlbWVudGF0aW9uIG9mIFNxbENsaWVudDpcbiAgICAvLyAgLSBodHRwczovL2dpdGh1Yi5jb20vZG90bmV0L2NvcmVmeC9ibG9iL21hc3Rlci9zcmMvU3lzdGVtLkRhdGEuU3FsQ2xpZW50L3NyYy9TeXN0ZW0vRGF0YS9TcWxDbGllbnQvU3FsSW50ZXJuYWxDb25uZWN0aW9uVGRzLmNzI0wxMTVcbiAgICBjb25zdCB0cmFuc2llbnRFcnJvcnMgPSBbNDA2MCwgMTA5MjgsIDEwOTI5LCA0MDE5NywgNDA1MDEsIDQwNjEzXTtcbiAgICByZXR1cm4gdHJhbnNpZW50RXJyb3JzLmluZGV4T2YoZXJyb3IpICE9PSAtMTtcbiAgfVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ08sTUFBTUEsb0JBQU4sQ0FBMkI7RUFDaENDLGdCQUFnQixDQUFDQyxLQUFELEVBQWdCO0lBQzlCO0lBQ0E7SUFDQSxNQUFNQyxlQUFlLEdBQUcsQ0FBQyxJQUFELEVBQU8sS0FBUCxFQUFjLEtBQWQsRUFBcUIsS0FBckIsRUFBNEIsS0FBNUIsRUFBbUMsS0FBbkMsQ0FBeEI7SUFDQSxPQUFPQSxlQUFlLENBQUNDLE9BQWhCLENBQXdCRixLQUF4QixNQUFtQyxDQUFDLENBQTNDO0VBQ0Q7O0FBTitCIn0=

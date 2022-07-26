@@ -1,0 +1,33 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.BulkLoadPayload = void 0;
+
+let _Symbol$asyncIterator;
+
+_Symbol$asyncIterator = Symbol.asyncIterator;
+
+class BulkLoadPayload {
+  constructor(bulkLoad) {
+    this.bulkLoad = void 0;
+    this.iterator = void 0;
+    this.bulkLoad = bulkLoad; // We need to grab the iterator here so that `error` event handlers are set up
+    // as early as possible (and are not potentially lost).
+
+    this.iterator = this.bulkLoad.rowToPacketTransform[Symbol.asyncIterator]();
+  }
+
+  [_Symbol$asyncIterator]() {
+    return this.iterator;
+  }
+
+  toString(indent = '') {
+    return indent + 'BulkLoad';
+  }
+
+}
+
+exports.BulkLoadPayload = BulkLoadPayload;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTeW1ib2wiLCJhc3luY0l0ZXJhdG9yIiwiQnVsa0xvYWRQYXlsb2FkIiwiY29uc3RydWN0b3IiLCJidWxrTG9hZCIsIml0ZXJhdG9yIiwicm93VG9QYWNrZXRUcmFuc2Zvcm0iLCJ0b1N0cmluZyIsImluZGVudCJdLCJzb3VyY2VzIjpbIi4uL3NyYy9idWxrLWxvYWQtcGF5bG9hZC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQnVsa0xvYWQgZnJvbSAnLi9idWxrLWxvYWQnO1xuXG5leHBvcnQgY2xhc3MgQnVsa0xvYWRQYXlsb2FkIGltcGxlbWVudHMgQXN5bmNJdGVyYWJsZTxCdWZmZXI+IHtcbiAgYnVsa0xvYWQ6IEJ1bGtMb2FkO1xuICBpdGVyYXRvcjogQXN5bmNJdGVyYWJsZUl0ZXJhdG9yPEJ1ZmZlcj47XG5cbiAgY29uc3RydWN0b3IoYnVsa0xvYWQ6IEJ1bGtMb2FkKSB7XG4gICAgdGhpcy5idWxrTG9hZCA9IGJ1bGtMb2FkO1xuXG4gICAgLy8gV2UgbmVlZCB0byBncmFiIHRoZSBpdGVyYXRvciBoZXJlIHNvIHRoYXQgYGVycm9yYCBldmVudCBoYW5kbGVycyBhcmUgc2V0IHVwXG4gICAgLy8gYXMgZWFybHkgYXMgcG9zc2libGUgKGFuZCBhcmUgbm90IHBvdGVudGlhbGx5IGxvc3QpLlxuICAgIHRoaXMuaXRlcmF0b3IgPSB0aGlzLmJ1bGtMb2FkLnJvd1RvUGFja2V0VHJhbnNmb3JtW1N5bWJvbC5hc3luY0l0ZXJhdG9yXSgpO1xuICB9XG5cbiAgW1N5bWJvbC5hc3luY0l0ZXJhdG9yXSgpIHtcbiAgICByZXR1cm4gdGhpcy5pdGVyYXRvcjtcbiAgfVxuXG4gIHRvU3RyaW5nKGluZGVudCA9ICcnKSB7XG4gICAgcmV0dXJuIGluZGVudCArICgnQnVsa0xvYWQnKTtcbiAgfVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7d0JBY0dBLE1BQU0sQ0FBQ0MsYTs7QUFaSCxNQUFNQyxlQUFOLENBQXVEO0VBSTVEQyxXQUFXLENBQUNDLFFBQUQsRUFBcUI7SUFBQSxLQUhoQ0EsUUFHZ0M7SUFBQSxLQUZoQ0MsUUFFZ0M7SUFDOUIsS0FBS0QsUUFBTCxHQUFnQkEsUUFBaEIsQ0FEOEIsQ0FHOUI7SUFDQTs7SUFDQSxLQUFLQyxRQUFMLEdBQWdCLEtBQUtELFFBQUwsQ0FBY0Usb0JBQWQsQ0FBbUNOLE1BQU0sQ0FBQ0MsYUFBMUMsR0FBaEI7RUFDRDs7RUFFRCwwQkFBeUI7SUFDdkIsT0FBTyxLQUFLSSxRQUFaO0VBQ0Q7O0VBRURFLFFBQVEsQ0FBQ0MsTUFBTSxHQUFHLEVBQVYsRUFBYztJQUNwQixPQUFPQSxNQUFNLEdBQUksVUFBakI7RUFDRDs7QUFsQjJEIn0=

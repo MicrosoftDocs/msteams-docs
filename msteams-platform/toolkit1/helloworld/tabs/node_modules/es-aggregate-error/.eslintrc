@@ -1,0 +1,21 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"id-length": 1,
+		"new-cap": [2, {
+			"capIsNewExceptions": [
+				"CreateDataPropertyOrThrow",
+				"CreateMethodProperty",
+				"GetIntrinsic",
+				"GetIterator",
+				"IsArray",
+				"IterableToList",
+				"OrdinarySetPrototypeOf",
+				"Type"
+			],
+		}],
+	},
+}

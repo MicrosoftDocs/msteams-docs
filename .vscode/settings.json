@@ -40,5 +40,6 @@
             "front_matter_title": ""
         },
     },
-    "docsImages.maxWidth": 0
+    "docsImages.maxWidth": 0,
+    "git.ignoreLimitWarning": true
 }

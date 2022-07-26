@@ -1,0 +1,1 @@
+{"version":3,"file":"ticksToDays.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/ticksToDays.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAGH,OAAO,EAAE,mBAAmB,EAAkB,MAAM,wBAAwB,CAAC;AAQ7E;;GAEG;AACH,qBAAa,WAAY,SAAQ,mBAAmB;IAChD,OAAO,CAAC,MAAM,CAAC,QAAQ,CAAC,WAAW,CAAmC;IAEtE;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;CAiB3B"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"formatNumber.d.ts","sourceRoot":"","sources":["../../src/builtinFunctions/formatNumber.ts"],"names":[],"mappings":"AACA;;GAEG;AACH;;;GAGG;AAIH,OAAO,EAA8B,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAOzF;;GAEG;AACH,qBAAa,YAAa,SAAQ,mBAAmB;IACjD;;OAEG;;IAKH;;OAEG;IACH,OAAO,CAAC,MAAM,CAAC,SAAS;IAgCxB,OAAO,CAAC,MAAM,CAAC,gBAAgB,CACmC;IAElE,OAAO,CAAC,MAAM,CAAC,SAAS;CAG3B"}

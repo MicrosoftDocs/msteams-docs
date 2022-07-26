@@ -1,0 +1,1 @@
+{"version":3,"file":"memoryInterface.d.ts","sourceRoot":"","sources":["../../src/memory/memoryInterface.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AAEH;;GAEG;AACH,MAAM,WAAW,eAAe;IAC5B;;;;;;OAMG;IACH,QAAQ,CAAC,IAAI,EAAE,MAAM,GAAG,GAAG,CAAC;IAE5B;;;;;;OAMG;IACH,QAAQ,CAAC,IAAI,EAAE,MAAM,EAAE,KAAK,EAAE,GAAG,GAAG,IAAI,CAAC;IAEzC;;;OAGG;IACH,OAAO,IAAI,MAAM,CAAC;CACrB"}

@@ -1,0 +1,51 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _writableTrackingBuffer = _interopRequireDefault(require("./tracking-buffer/writable-tracking-buffer"));
+
+var _allHeaders = require("./all-headers");
+
+let _Symbol$iterator;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Symbol$iterator = Symbol.iterator;
+
+/*
+  s2.2.6.6
+ */
+class SqlBatchPayload {
+  constructor(sqlText, txnDescriptor, options) {
+    this.sqlText = void 0;
+    this.txnDescriptor = void 0;
+    this.options = void 0;
+    this.sqlText = sqlText;
+    this.txnDescriptor = txnDescriptor;
+    this.options = options;
+  }
+
+  *[_Symbol$iterator]() {
+    if (this.options.tdsVersion >= '7_2') {
+      const buffer = new _writableTrackingBuffer.default(18, 'ucs2');
+      const outstandingRequestCount = 1;
+      (0, _allHeaders.writeToTrackingBuffer)(buffer, this.txnDescriptor, outstandingRequestCount);
+      yield buffer.data;
+    }
+
+    yield Buffer.from(this.sqlText, 'ucs2');
+  }
+
+  toString(indent = '') {
+    return indent + ('SQL Batch - ' + this.sqlText);
+  }
+
+}
+
+var _default = SqlBatchPayload;
+exports.default = _default;
+module.exports = SqlBatchPayload;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTeW1ib2wiLCJpdGVyYXRvciIsIlNxbEJhdGNoUGF5bG9hZCIsImNvbnN0cnVjdG9yIiwic3FsVGV4dCIsInR4bkRlc2NyaXB0b3IiLCJvcHRpb25zIiwidGRzVmVyc2lvbiIsImJ1ZmZlciIsIldyaXRhYmxlVHJhY2tpbmdCdWZmZXIiLCJvdXRzdGFuZGluZ1JlcXVlc3RDb3VudCIsImRhdGEiLCJCdWZmZXIiLCJmcm9tIiwidG9TdHJpbmciLCJpbmRlbnQiLCJtb2R1bGUiLCJleHBvcnRzIl0sInNvdXJjZXMiOlsiLi4vc3JjL3NxbGJhdGNoLXBheWxvYWQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFdyaXRhYmxlVHJhY2tpbmdCdWZmZXIgZnJvbSAnLi90cmFja2luZy1idWZmZXIvd3JpdGFibGUtdHJhY2tpbmctYnVmZmVyJztcbmltcG9ydCB7IHdyaXRlVG9UcmFja2luZ0J1ZmZlciB9IGZyb20gJy4vYWxsLWhlYWRlcnMnO1xuXG4vKlxuICBzMi4yLjYuNlxuICovXG5jbGFzcyBTcWxCYXRjaFBheWxvYWQgaW1wbGVtZW50cyBJdGVyYWJsZTxCdWZmZXI+IHtcbiAgc3FsVGV4dDogc3RyaW5nO1xuICB0eG5EZXNjcmlwdG9yOiBCdWZmZXI7XG4gIG9wdGlvbnM6IHsgdGRzVmVyc2lvbjogc3RyaW5nIH07XG5cbiAgY29uc3RydWN0b3Ioc3FsVGV4dDogc3RyaW5nLCB0eG5EZXNjcmlwdG9yOiBCdWZmZXIsIG9wdGlvbnM6IHsgdGRzVmVyc2lvbjogc3RyaW5nIH0pIHtcbiAgICB0aGlzLnNxbFRleHQgPSBzcWxUZXh0O1xuICAgIHRoaXMudHhuRGVzY3JpcHRvciA9IHR4bkRlc2NyaXB0b3I7XG4gICAgdGhpcy5vcHRpb25zID0gb3B0aW9ucztcbiAgfVxuXG4gICpbU3ltYm9sLml0ZXJhdG9yXSgpIHtcbiAgICBpZiAodGhpcy5vcHRpb25zLnRkc1ZlcnNpb24gPj0gJzdfMicpIHtcbiAgICAgIGNvbnN0IGJ1ZmZlciA9IG5ldyBXcml0YWJsZVRyYWNraW5nQnVmZmVyKDE4LCAndWNzMicpO1xuICAgICAgY29uc3Qgb3V0c3RhbmRpbmdSZXF1ZXN0Q291bnQgPSAxO1xuXG4gICAgICB3cml0ZVRvVHJhY2tpbmdCdWZmZXIoYnVmZmVyLCB0aGlzLnR4bkRlc2NyaXB0b3IsIG91dHN0YW5kaW5nUmVxdWVzdENvdW50KTtcblxuICAgICAgeWllbGQgYnVmZmVyLmRhdGE7XG4gICAgfVxuXG4gICAgeWllbGQgQnVmZmVyLmZyb20odGhpcy5zcWxUZXh0LCAndWNzMicpO1xuICB9XG5cbiAgdG9TdHJpbmcoaW5kZW50ID0gJycpIHtcbiAgICByZXR1cm4gaW5kZW50ICsgKCdTUUwgQmF0Y2ggLSAnICsgdGhpcy5zcWxUZXh0KTtcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBTcWxCYXRjaFBheWxvYWQ7XG5tb2R1bGUuZXhwb3J0cyA9IFNxbEJhdGNoUGF5bG9hZDtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOztBQUNBOzs7Ozs7bUJBZ0JJQSxNQUFNLENBQUNDLFE7O0FBZFg7QUFDQTtBQUNBO0FBQ0EsTUFBTUMsZUFBTixDQUFrRDtFQUtoREMsV0FBVyxDQUFDQyxPQUFELEVBQWtCQyxhQUFsQixFQUF5Q0MsT0FBekMsRUFBMEU7SUFBQSxLQUpyRkYsT0FJcUY7SUFBQSxLQUhyRkMsYUFHcUY7SUFBQSxLQUZyRkMsT0FFcUY7SUFDbkYsS0FBS0YsT0FBTCxHQUFlQSxPQUFmO0lBQ0EsS0FBS0MsYUFBTCxHQUFxQkEsYUFBckI7SUFDQSxLQUFLQyxPQUFMLEdBQWVBLE9BQWY7RUFDRDs7RUFFRCxzQkFBcUI7SUFDbkIsSUFBSSxLQUFLQSxPQUFMLENBQWFDLFVBQWIsSUFBMkIsS0FBL0IsRUFBc0M7TUFDcEMsTUFBTUMsTUFBTSxHQUFHLElBQUlDLCtCQUFKLENBQTJCLEVBQTNCLEVBQStCLE1BQS9CLENBQWY7TUFDQSxNQUFNQyx1QkFBdUIsR0FBRyxDQUFoQztNQUVBLHVDQUFzQkYsTUFBdEIsRUFBOEIsS0FBS0gsYUFBbkMsRUFBa0RLLHVCQUFsRDtNQUVBLE1BQU1GLE1BQU0sQ0FBQ0csSUFBYjtJQUNEOztJQUVELE1BQU1DLE1BQU0sQ0FBQ0MsSUFBUCxDQUFZLEtBQUtULE9BQWpCLEVBQTBCLE1BQTFCLENBQU47RUFDRDs7RUFFRFUsUUFBUSxDQUFDQyxNQUFNLEdBQUcsRUFBVixFQUFjO0lBQ3BCLE9BQU9BLE1BQU0sSUFBSSxpQkFBaUIsS0FBS1gsT0FBMUIsQ0FBYjtFQUNEOztBQTFCK0M7O2VBNkJuQ0YsZTs7QUFDZmMsTUFBTSxDQUFDQyxPQUFQLEdBQWlCZixlQUFqQiJ9
