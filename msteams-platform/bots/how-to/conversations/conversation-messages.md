@@ -191,6 +191,39 @@ async def on_members_added_activity(
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate efficiently on that channel. The Bot Builder SDK allows you to modify the message structure.
 
+## Send suggested actions
+
+Suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard. 
+The buttons remain visible and accessible to the user in the rich cards even after user makes a selection whereas for suggested actions, buttons aren't available. This prevents the user from selection of stale buttons within a conversation.
+
+To add suggested actions to a message, set the `suggestedActions` property of the [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+The following is an example for implementation and experience of suggested actions:
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` are only supported for one-on-one chat bots and text based messages and not for Adaptive Cards or attachments.
+> * Currently `imBack` is the only supported action type and Teams display up to three suggested actions.
+
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
