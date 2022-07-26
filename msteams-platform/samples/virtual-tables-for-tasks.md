@@ -13,10 +13,10 @@ A new capability with this release is a set of Virtual Tables. These enable deve
 
 **Overview**
 
-The Collaboration Controls Core solution includes a set of virtual tables, which can be used for programmatic access to the data created by the Collaboration controls.
+The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
 
 > [!TIP]
-> Virtual tables (also known as virtual entities) enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+> [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 
 The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans/tasks and SharePoint drives/folders/files.
 
