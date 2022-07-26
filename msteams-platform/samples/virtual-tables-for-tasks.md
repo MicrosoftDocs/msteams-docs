@@ -18,12 +18,12 @@ The Collaboration controls core solution includes a set of [virtual tables](/pow
 > [!TIP]
 > [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 
-The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans/tasks and SharePoint drives/folders/files.
+The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans or tasks and SharePoint drives, folders, and files.
 
 This guide provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
 
 > [!TIP]
-> For more information on the Dataverse REST API go to Use the Microsoft Dataverse Web API (Dataverse) - Power Apps | Microsoft Docs.
+> For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
 
 **Why use Virtual Tables?**
 
@@ -37,6 +37,8 @@ We use them to simplify the development of the Collaboration controls and we're 
 
 Once you install the Collaboration controls, the virtual tables can be treated as another service your applications can depend on.
 
+:::image type="content" source="~/assets/images/collaboration-control/vt-overview.png" alt-text="Virtual tables overview":::
+
 **Pre-requisites**
 
 To follow along with this guide, you'll need:
@@ -46,19 +48,24 @@ To follow along with this guide, you'll need:
 1. A third-party tool, for example: Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
-> Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See Use Postman with Microsoft Dataverse Web API (Developer Guide for Dataverse) - Power Apps | Microsoft Docs.
+> Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See [Use Postman with Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
-**Virtual Tables Sample Scenario**
+## Virtual tables sample scenario
 
 The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
 
-The sequence diagram below shows the interaction between the client (which could be the Tasks collaboration control), the Collaboration API and the Planner Plan and Task virtual tables.
+The following sequence diagram explains the interaction between the client which could be the Tasks collaboration control, the [Collaboration API](/rest/api/industry/collaboration-toolkit/) and the Planner Plan and Task virtual tables.
 
-**Virtual Tables Basic Operations**
+:::image type="content" source="/assets/images/collaboration-control/vt-overview.png" alt-text="sequence diagram for virtual tables":::
+
+## Virtual Tables Basic Operations
 
 This section describes the HTTP requests and responses for each step in the sample scenario.
 
-**Task 1: Retrieve the Group ID used in Exercise 4**
+1. Retrieve the Group ID used in [settings for your Collaboration](samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
+
+    > [!NOTE]
+    >
 
 **Task 2: Begin a Collaboration Session**
 
