@@ -10,16 +10,16 @@ ms.date: 03/14/2022
 
 # Create a new Teams app using Teams Toolkit
 
-You can built a new Teams app by selecting **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
+You can build a new Teams app by selecting **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
 
 | App Type | Definition |
 | --- | --- |
-| Basic Teams app | Basic Teams app are tab, bot, or message extension app that you can create and customize based on your needs. |
-| Scenario based Teams app | Scenario based Teams app are notification bot, command bot, SSO-enabled tab, or SPFx tab app and it is suitable for one particular scenario. For example, notification bot is suitable only to send notification and not used for chat. |
+| Basic Teams app | Basic Teams apps are tab, bot, or message extension app that you can create and customize based on your needs. |
+| Scenario based Teams app | Scenario based Teams apps are notification bot, command bot, SSO-enabled tab, or SPFx tab app and it's suitable for one particular scenario. For example, notification bot is suitable only to send notification and not used for chat. |
 
 ## Create a new Teams app
 
-The steps to create a new Teams app is similar for all types of app except SPFx, and notification bot. The following steps help you to built a new tab app:
+The steps to create a new Teams app is similar for all types of app except SPFx, and notification bot. The following steps help you to build a new tab app:
 
 **To create an app**
 
@@ -33,7 +33,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-1. For this tutorial, select **Tab** as the capability to built your app.
+1. For this tutorial, select **Tab** as the capability to build your app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="Select App Capability":::
 
@@ -118,7 +118,7 @@ The core notification implementation in **bot** folder and it contains:
 | `src/internal/` | Generated initialize code for notification functionality |
 | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
 | `.gitignore` | File to exclude local files from bot project |
-| `package.json` | The NPM package file for bot project |
+| `package.json` | The npm package file for bot project |
 
 > [!NOTE]
 > If you have a command bot, SSO-enabled tab, or SPFx tab app, relevant folders is added to the directory structure.
@@ -134,7 +134,7 @@ To learn more about the directory structure of different types of basic Teams ap
 <details>
 <summary><b>Directory structure for multi-capability app</b></summary>
 
-You can add additional features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app, Teams Toolkit adds the bot folder with relevant files and code.
+You can add more features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app, Teams Toolkit adds the bot folder with relevant files and code.
 
 The following image shows the directory structure of tab app:
 
