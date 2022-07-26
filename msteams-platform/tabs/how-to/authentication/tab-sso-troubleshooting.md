@@ -37,7 +37,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>1. Error: consent missing.</summary>
 <br>
-When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the user (or tenant administrator) have given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
+When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the app user or tenant administrator has given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 
@@ -57,7 +57,7 @@ To handle this error, your server-side code should send a 403 Forbidden resp
 <details>
 <summary>3. Error: Invalid Audience in the access token for Microsoft Graph.</summary>
 <br>
-The server-side code should send a 403 Forbidden response to the client to show a message to the user. It is recommended that it should also log the error to the console, or record it in a log.
+The server-side code should send a 403 Forbidden response to the client to show a message to the user. It's recommended that it should also log the error to the console, or record it in a log.
 </details>
 <br>
 <details>
@@ -65,8 +65,8 @@ The server-side code should send a 403 Forbidden response to the client to s
 <br>
 You can get this error in one of the two scenarios:
 
-1. The custom domain is not added to Azure AD. To add custom domain to Azure AD and register it, follow the [add a custom domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain) procedure, and then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
-1. You are not signed in with Administrator credentials in the Microsoft 365 tenancy. Sign-in to Microsoft 365 as an administrator.
+1. The custom domain isn't added to Azure AD. To add custom domain to Azure AD and register it, follow the [add a custom domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain) procedure. Then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
+1. You aren't signed in with Administrator credentials in the Microsoft 365 tenancy. Sign-in to Microsoft 365 as an administrator.
 
 </details>
 <br>
@@ -106,7 +106,7 @@ Check that the following values match between Azure AD, client-side code, and Te
 
 - **Application ID URI**: The app ID URI in the code and in Teams app manifest file should match the **Application ID URI** in Azure AD.
 
-- **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they were granted to the user in the access token.
+- **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they had been granted to the user in the access token.
 
 - **Admin consent**: If any scope requires admin consent, check if the consent was granted for the particular scope to the user.
 
@@ -114,7 +114,7 @@ In addition, inspect the access token that was sent to the tab app to verify if 
 
 - **Audience (aud)**: Check if the app ID in the token is correct as given in Azure AD.
 - **Tenant Id(tid)**: Check if the tenant mentioned in the token is correct.
-- **User identity (preferred_username)**: Check if the user identity matches the username in the request for access token for the scope that the current user wants to access.
+- **User identity (preferred_username)**: Check if the user identity matches the username in the request for access token, for the scope that the current user wants to access.
 - **Scopes (scp)**: Check if the scope for which the access token is requested is correct, and as defined in Azure AD.
 - **Azure AD version 1.0 or 2.0 (ver)**: Check if Azure AD version is correct.
 

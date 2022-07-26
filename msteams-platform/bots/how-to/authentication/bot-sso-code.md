@@ -64,7 +64,7 @@ When the user selects **Continue**, one of the following events occurs:
 
 Use the following code snippet for requesting a token without needing the app user to sign-in.
 
-# [charp](#tab/cs)
+# [csharp](#tab/cs)
 
 ```csharp
     var attachment = new Attachment
@@ -115,7 +115,7 @@ The response with the token is sent through an invoke activity with the same sch
 
 Use the following code snippet to invoke response.
 
-# [charp](#tab/csharp)
+# [csharp](#tab/csharp)
 
 ```csharp
     protected override async Task<InvokeResponse> OnInvokeActivityAsync
