@@ -417,10 +417,18 @@
       href: bots/how-to/authentication/auth-aad-sso-bots.md
   - name: Message extensions
     items:
-    - name: Add authentication to your message extension
+    - name: Overview
       href: messaging-extensions/how-to/add-authentication.md
     - name: Enable SSO for message extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
+      items:
+      - name: Configure message extension app in Azure AD
+        href: messaging-extensions/how-to/authentication/msgex-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: messaging-extensions/how-to/authentication/msgex-sso-code.md
+      - name: Update manifest for SSO and preview app
+        href: messaging-extensions/how-to/authentication/msgex-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: messaging-extensions/how-to/authentication/msgex-sso-graph-api.md
 - name: Integrate device capabilities
   items:
   - name: Overview
