@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Configure your bot app in Azure AD
 
-Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. You'll need to register your bot app with Azure AD. The app user who has signed into Teams can be given access to your bot app.
+Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. The app user who has signed into Teams can be given access to your bot app.
 
 To enable SSO for a bot resource, learn about:
 
@@ -41,7 +41,7 @@ For this tutorial, you'll configure your app with Azure AD, and then configure a
 
 ## Configure your app for SSO
 
-You can configure your bot app in Azure AD, and configure the scope and permissions for access tokens.
+You can configure your bot app in Azure AD to configure the scope and permissions for access tokens.
 
 You'll need to register your app in Azure AD before you can configure it. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
 
