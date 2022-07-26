@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Collaboration controls
 
-The Collaboration controls enable applying Microsoft 365 and Microsoft Teams for Approvals, Files, Meetings, Notes, and Tasks to enable contextual collaboration around business processes. These controls allows you to build custom collaborative experiences that can be surfaced right in Teams. The solutions that make up Collaboration controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, Outlook, and SharePoint in a low code manner.
+The Collaboration controls enable applying Microsoft 365 and Microsoft Teams for Approvals, Files, Meetings, Notes, and Tasks to enable contextual collaboration around business processes. These controls allow you to build custom collaborative experiences that can be surfaced right in Teams. The solutions that make up Collaboration controls allow makers to build applications that integrate with Microsoft 365 services like Planner, Bookings, Outlook, and SharePoint in a low code manner.
 
 These controls give you the power to simplify your users workflow collaboration by building line of business apps with Approvals, Chat, Files, Meetings, Notes, and Tasks without switching the context from app to app.
 
@@ -38,4 +38,4 @@ The controls run within a Power Apps Model Driven Application [MDA] that can be 
 
 * Data can be read from Dataverse via standard OData APIs and submitted to external sources such as a system of record or a portal.
 
-:::image type="content" source="~/assets/images/collaboration-control/consumption-mda.png" alt-text="Collaboration lifecycle" border="true":::
+:::image type="content" source="~/assets/images/collaboration-control/consumption-mda.png" alt-text="Collaboration lifecycle":::
