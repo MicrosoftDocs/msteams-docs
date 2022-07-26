@@ -271,7 +271,7 @@ To enable SSO for your bot resource:
 
   With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
-You'll need to create a bot resource and enable it for Teams before enabling SSO. You must also create and note the client secret for your bot resource. You'll need to update it later to update OAuth connection. If you haven't created and configured a bot resource in Azure AD, follow these steps:
+You'll need to create a bot resource, create client secret, and enable it for Teams before enabling SSO. Note the client secret for your bot resource. You'll need to update it later to update OAuth connection. If you haven't created and configured a bot resource in Azure AD, follow these steps:
 <br>
 <details>
 <summary><b>Learn how to create and configure bot resource in Azure AD</b></summary>
