@@ -35,12 +35,12 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Microsoft 365 account with valid credentials, the Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in.
 * Custom app uploading or sideloading for your developer tenant is turned on, if not then the local debug terminates.
-* Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin` manages the Ngrok binary.
-* Azure Functions Core Tools version 3, if Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
-* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
-* Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
-* Azure Functions Core Tools version 4, if Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **MacOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
-* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
+* Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin` manages the Ngrok binary.
+* Azure Functions Core Tools version 3, if Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools npm package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools npm package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages the Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
+* Ngrok binary version 2.3 is applicable for bot and message extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Azure Functions Core Tools version 4, if Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools npm package, azure-functions-core-tools@3 for **Windows** and for **MacOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools npm package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages the Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
 
@@ -49,9 +49,9 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Windows, macOS (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOS (arm64) |6.0 |
 
-* Development certificate, if the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams Toolkit prompts you to install it.
+* Development certificate, if the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams Toolkit prompts you to install it.
 * Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions isn't installed, the Teams Toolkit installs Azure Functions binding extensions.
-* NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM isn't installed, the Teams Toolkit installs all NPM packages.
+* npm packages, applicable for tab app, bot app, message extension app, and Azure Functions. If npm isn't installed, the Teams Toolkit installs all npm packages.
 * Bot and message extension, the Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 * Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
 
@@ -177,6 +177,5 @@ You can view the project folders and files under **Explorer** in VS Code after t
 ## See also
 
 * [Debug your Teams app locally](debug-local.md)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
