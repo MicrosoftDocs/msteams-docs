@@ -1,7 +1,7 @@
 ---
 title: Questions to help plan Teams app development
 author: heath-hamilton
-description: Questions to consider while you plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
+description: Questions to consider while you plan your app, understand your user and their needs, problems that your app solves, user authentication and their onboarding experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -73,7 +73,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | What happens when a user first configures your tab in a channel? |
-| 2 | If you are sharing cards with a message extension, does it make sense to add a small link to a learn more page to help introduce users to what else your app can do? |
+| 2 | If you're sharing cards with a message extension, does it make sense to add a small link to a learn more page to help introduce users to what else your app can do? |
 | 3 | Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? |
 | 4 | Are they coming to your app with no prior knowledge? |
 
@@ -85,8 +85,8 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
-| 2 | Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company. |
-| 3 | Are there any personalized notifications or messages that needs to be sent to a user throughout the Teams app experience? |
+| 2 | Are they're going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company. |
+| 3 | Are there any personalized notifications or messages that need to be sent to a user throughout the Teams app experience? |
 
 </details>
 <br>
@@ -96,7 +96,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
-| 2 | Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. |
+| 2 | Could the app’s context change depending on the team in which it's added to? For example, Planner’s tasks are different in different teams. |
 | 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
@@ -124,7 +124,7 @@ Suggestion: Options that help determine the best distribution model.
 
 Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains a only configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
 
 ## Plan beyond app building
 

@@ -1,8 +1,7 @@
 ---
 title: Integrate location capabilities
 author: Rajeshwari-v
-description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
-keywords:  location map capabilities native device permissions 
+description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -12,7 +11,9 @@ ms.author: surbhigupta
 
 You can integrate the location capabilities of native device with your Teams app.  
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app.
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Advantages of integrating location capabilities
 
@@ -21,13 +22,13 @@ The main advantage of integrating location capabilities in your Teams apps is th
 Following examples show how the integration of location capabilities is used in different scenarios:
 
 * In a factory, the supervisor can track the attendance of workers by asking them to take a selfie in the vicinity of the factory and share it through the specified app. The location data also gets captured and sent along with the image.
-* The location capabilities enables the maintenance staff of a service provider to share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
+* The location capabilities enable the maintenance staff of a service provider to share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
 
 To integrate location capabilities, you must update the app manifest file and call the APIs. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs.
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
-> Currently, Microsoft Teams support for location capabilities is available for mobile clients only.
+> Currently, Microsoft Teams supports for location capabilities is available for mobile clients only.
 
 ## Update manifest
 
@@ -40,6 +41,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
+>
 > * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
@@ -49,17 +51,51 @@ You must use the following set of APIs to enable your device's location capabili
 
 | API      | Description   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Gives user’s current device location or opens native location picker and returns the location chosen by the user. |
-|[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Shows location on map. |
+|[getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) | Gives user’s current device location or opens native location picker and returns the location chosen by the user. |
+|[showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) | Shows location on map. |
 
 > [!NOTE]
-> The `getLocation()` API comes along with following [input configurations](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` and `showMap`. <br/> If the value of `allowChooseLocation` is *true*, then the users can choose any location of their choice.<br/>  If the value is *false*, then the users cannot change their current location.<br/> If the value of `showMap` is *false*, the current location is fetched without displaying the map. `showMap` is ignored if `allowChooseLocation` is set to *true*.
+> The `getLocation()` API comes along with following [input configurations](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops), `allowChooseLocation` and `showMap`. <br/> If the value of `allowChooseLocation` is *true*, then the users can choose any location of their choice.<br/>  If the value is *false*, then the users cannot change their current location.<br/> If the value of `showMap` is *false*, the current location is fetched without displaying the map. `showMap` is ignored if `allowChooseLocation` is set to *true*.
 
 The following image depicts web app experience of location capabilities:
 
 ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
 
 ### Code snippets
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+**Calling `getLocation` API to retrieve the location:**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let locationProps = {"allowChooseLocation":true,"showMap":true};
+if(location.isSupported()) {
+    const locationPromise = location.getLocation(locationProps);
+    locationPromise.
+        then((result) => {output(JSON.stringify(result));}.
+        catch((error) => {output(error);});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+**Calling `showLocation` API to display the location:**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let location = {"latitude":17,"longitude":17};
+if(location.isSupported()) {
+    const locationPromise = location.showLocation(location);
+    locationPromise.
+         then((result) => {/*Successful map display*/}).
+         catch((error) => {/*Failed map display*/});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 **Calling `getLocation` API to retrieve the location:**
 
@@ -87,18 +123,20 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
+---
+
 ## Error handling
 
 You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
-| **1000** | PERMISSION_DENIED |User denied location permissions to the Teams App or the web-app .|
+| **1000** | PERMISSION_DENIED |User denied location permissions to the Teams App or the web-app.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
-| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
+| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API isn't present. Upgrading the build should resolve the issue.|
 
 ### Code sample
 
@@ -108,6 +146,6 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## See also
 
-* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate People Picker in Teams](people-picker-capability.md)

@@ -1,88 +1,98 @@
 ---
-title: Add Resources to Your Teams apps
+title: Add Resources to Teams apps
 author: MuyangAmigo
-description:  Describes Add Resources of Teams Toolkit
+description:  In this module, learn how to add Resources of Teams Toolkit, advantages, limitations and capabilities
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add cloud resources to your Teams app
+# Add cloud resources to Teams app
 
-TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fit your development needs.
+TeamsFx helps to provision the cloud resources for your application hosting. You can add the cloud resources optionally, that fit your development needs.
 
-## Prerequisite
+## Advantages
 
-[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+The following list provides advantages to add more cloud resources in TeamsFx:
 
-> [!TIP]
-> Ensure you have Teams app project in Visual Studio Code.
+* Provides convenience.
+* Autogenerates all configuration files and connect to Teams app by using Teams Toolkit.
 
-## Add cloud resources using Teams Toolkit
+## Limitation
 
-> [!IMPORTANT]
-> You need to provision each environment after you add a resource.
+If you have created SPFx based tab project, you can't add Azure cloud resources.
 
-1. Open **Microsoft Visual Studio Code**.
-1. Select **Teams Toolkit** from left pane.
-1. In the Teams Toolkit side bar panel, select **Add cloud resources**:
+## Add cloud resources
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add cloudresources.png" alt-text="Add resources":::
+**You can add cloud resources by the following methods:**
 
-   You can also open the command palette and enter **Teams: Add cloud resources**:
+* To add cloud resources by using Teams Toolkit in Visual Studio Code.
+* To add cloud resources by using command palette.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addcloud.png" alt-text="add cloud resources":::
+  > [!NOTE]
+  > You need to provision for each environment, after you have successfully added the resource in your Teams app.
+  
+* **To add cloud resources by using Teams Toolkit in Visual Studio Code:**
 
-1. From the pop-up, select the cloud resources you want to add to your Teams app project:
+   1. Open **Visual Studio Code**.
+   1. Select **Teams Toolkit** from left panel.
+   1. Select **Add features** under **DEVELOPMENT**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="add":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature":::
 
-1. Select **OK**.
+* **To add cloud resources by using command palette:**
 
-The selected resources are successfully added to your project.
+   1. Open **command palette**.
+   1. Enter **Teams:Add features**.
+   1. Press **Enter**.
 
-## Add cloud resources using TeamsFx CLI in command window
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="cloud":::
 
-1. Change directory to your **project directory**.
-1. Execute the following command to add different resources in your project:
+   1. From the pop-up, select the cloud resources to add in your project.
 
-|Cloud Resource|Command|
-|---------------|----------|
-| Azure function|`teamsfx resource add azure-function --function-name your-func-name`|
-| Azure SQL database|`teamsfx resource add --function-name your-func-name`|
-| Azure API management|`teamsfx resource add azure-apim`|
-| Azure Key Vault|`teamsfx resource add azure-keyvault`|
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
+
+## Add cloud resources using TeamsFx CLI
+
+* Change directory to your **project directory**.
+* The following table lists the capabilities and required commands:
+
+  |Cloud Resource|Command|
+  |---------------|----------|
+  | Azure function|`teamsfx add azure-function`|
+  | Azure SQL database|`teamsfx add azure-sql`|
+  | Azure API management|`teamsfx add azure-apim`|
+  | Azure Key Vault|`teamsfx add azure-keyvault`|
 
 ## Types of cloud resources
 
-TeamsFx integrates with Azure services for the following scenarios:
+In the following scenarios, TeamsFx integrates with Azure services:
 
-- [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
-- [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
-- [Azure API management](deploy.md): An API gateway that can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power apps.
-- [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
+* [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
+* [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
+* [Azure API management](deploy.md): An API gateway can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power apps.
+* [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
 
 ## Add Cloud resources
 
-After adding any resource, the changes in your project are as follows:
+The following changes appear after adding resources in your project:
 
-- New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
-- New content is appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
-- The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
-- `.fx/projectSettings.json` is updated to track the resources present in your project.
+* New parameters added to azure.parameter.{env}.json to provide required information for provision.
+* New content is included to ARM template under `templates/azure`, except the files are in `templates/azure/teamsfx` folder for added the Azure resources.
+* The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
+* `.fx/projectSettings.json` is updated to track the available resources in your project.
 
-After adding resources, the additional changes in your project are as follows:
+The following additional changes appear after adding resources in your project:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
 |Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.visual studio code` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
 |Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it's the API specification file.|
 
-## Limitation
-
-You can't add resources if you've created SPFx based tab project.
-
 ## See also
 
-[Provision cloud resources](provision.md)
+* [Provision cloud resources](provision.md)
+* [Create a new Teams app](create-new-project.md)
+* [Add capabilities to Teams apps](add-capability.md)
+* [Deploy to the cloud](deploy.md)

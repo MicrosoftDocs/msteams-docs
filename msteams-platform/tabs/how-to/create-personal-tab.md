@@ -1,11 +1,10 @@
 ---
 title: Create a personal tab
 author: laujan
-description: A quickstart guide to creating a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
+description: In this module, learn how to create a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
 zone_pivot_groups: teams-app-environment
 ---
 
@@ -13,7 +12,9 @@ zone_pivot_groups: teams-app-environment
 
 Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
-Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
+Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -52,7 +53,7 @@ Following are the steps to create a personal tab:
 
 1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator":::
 
     <details>
     <summary><b>Series of questions to update your manifest.json file</b></summary>
@@ -224,11 +225,11 @@ gulp build
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
 1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab":::
 
 ### Establish a secure tunnel to your tab
 
@@ -243,19 +244,19 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded":::
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
-   Now you have succesfully created and added your personal tab in Teams.
+   Now you have successfully created and added your personal tab in Teams.
   
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
@@ -289,10 +290,10 @@ Following are the steps to create a personal tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -329,7 +330,7 @@ This folder contains the following required app package files:
 * A transparent outline icon measuring 32 x 32 pixels.
 * A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
 
 #### .csproj
 
@@ -361,10 +362,10 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `app.initialize()` in the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -406,9 +407,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Now you have succesfully created and added your personal tab in Teams.
+   Now you have successfully created and added your personal tab in Teams.
   
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
@@ -442,10 +443,10 @@ Following are the steps to create a personal tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -478,7 +479,7 @@ This folder contains the following required app package files:
 * A **transparent outline icon** measuring 32 x 32 pixels.
 * A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
 #### .csproj
 
@@ -526,10 +527,10 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `app.initialize()` inside the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -575,9 +576,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-   Now you have succesfully created and added your personal tab in Teams.
+   Now you have successfully created and added your personal tab in Teams.
 
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 

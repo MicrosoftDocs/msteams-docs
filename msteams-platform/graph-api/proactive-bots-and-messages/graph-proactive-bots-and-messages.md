@@ -1,14 +1,13 @@
 ---
 title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
-description: Describes proactive messaging in Teams and how to implement it. Learn about enabling proactive app installation and messaging using code sample. 
-ms.localizationpriority: high
+description: This article describes proactive messaging in Teams and how to implement it. Learn about enabling proactive app installation and messaging using code sample. 
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams proactive messaging chat installation Graph
 ---
 
-# Proactive installation of apps using Graph API to send messages
+# Send proactive installation messages 
 
 ## Proactive messaging in Teams
 
@@ -21,7 +20,7 @@ Proactive messages are initiated by bots to start conversations with a user. The
 
 ## Proactive app installation in Teams
 
-Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that have not installed or previously interacted with your app. For example, the need to message important information to everyone in your organization. For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.
+Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that haven't installed or previously interacted with your app. For example, If you need to message important information to everyone in your organization, then you can use the Microsoft Graph API to proactively install your bot for your users.
 
 ## Permissions
 
@@ -122,7 +121,7 @@ GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$exp
 
 The request returns:
 
-* An empty array if the app is not installed.
+* An empty array if the app isn't installed.
 * An array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) object if the app is installed.
 
 ### Install your app
@@ -150,7 +149,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
 **Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
-1. You must have your app's `{teamsAppInstallationId}`. If you do not have it, use the following:
+1. You must have your app's `{teamsAppInstallationId}`. If you don't have it, use the following:
 
     **HTTP GET** request:
 
@@ -162,7 +161,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
 1. Make the following request to fetch the `chatId`:
 
-    **HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
+    **HTTP GET** request (permission—`TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
@@ -172,7 +171,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
     You can also retrieve the `chatId` with the following request but it requires the broader `Chat.Read.All` permission:
 
-    **HTTP GET** request (permission — `Chat.Read.All`):
+    **HTTP GET** request (permission—`Chat.Read.All`):
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
@@ -243,3 +242,4 @@ server.get('/api/notify', async (req, res) => {
 
 * [Manage app setup policies in Microsoft Teams](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
