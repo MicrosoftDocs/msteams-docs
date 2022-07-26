@@ -9,10 +9,10 @@ ms.date: 03/14/2022
 ---
 # Prerequisites for creating your Teams app
 
-Ensure that you have the following prerequisites to create your Teams app using Teams Toolkit in Visual Studio Code:
+Ensure that you have the following prerequisites to create your Microsoft Teams app using Teams Toolkit in Visual Studio Code:
 
 * [Basic requirements to build your Teams app](#basic-requirements-to-build-your-teams-app)
-* [Accounts to build your Teams app](#accounts-to-build-your-teams-app)
+* [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
 * [Sideloading permission](#sideloading-permission)
 
 ## Basic requirements to build your Teams app
@@ -22,20 +22,22 @@ For creating different Teams app using Teams Toolkit in Visual Studio Code, you'
 | &nbsp; | Basic requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
-   | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. | JavaScript and SPFx|
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.| JavaScript and SPFx|
+   | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, call - all in one place.| JavaScript and SPFx|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript and SPFx|
    | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. | JavaScript and SPFx|
    | **Optional** | &nbsp; | &nbsp; | &nbsp; |
-   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. | JavaScript|
+   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based backend for your Teams app in Azure. | JavaScript|
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript|
-   | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and SPFx|
+   | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and SPFx|
    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript and SPFx|
 
-   > [!TIP]
-   > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
+   > [!NOTE]
+   >
+   > * The document is tested with Teams Toolkit version 4.0.0 and Nodejs version 16.
+   > * Bookmark the Microsoft Graph Explorer, to learn about Microsoft Graph services. This browser-based tool allows you to query and access Microsoft Graph outside of an app.
 
 ## Accounts to build your Teams app
 
@@ -78,7 +80,7 @@ You can sign-up for the developer program by using one of the following account 
 
     :::column span="3":::
 
-       The account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. 
+       The account provides access to all small, medium, and enterprise business-level Microsoft cloud services. The services include Azure, Microsoft Intune, or Microsoft 365. 
 
        When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
 
@@ -109,7 +111,8 @@ You need an Azure account to host a Teams app or the backend resources for your 
 * If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform, you must have an Azure subscription.
 * You can select an Azure subscription to host your backend resources using another cloud provider, or on your own servers if they're available from the public domain.
 
-[Create a free account](https://azure.microsoft.com/free/) before you begin.
+> [!NOTE]
+> You need to [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
 ### SharePoint collection site administrator account
 
@@ -117,7 +120,7 @@ While creating Teams app using SPFx environment, you'll need SharePoint collecti
 
 ## Sideloading permission
 
-After creating the app, you must load your app in Teams without distributing to test it in the Teams environment. This process is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
 You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
 
@@ -126,9 +129,15 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 <summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
 
 1. Open **Visual Studio Code**.
-2. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
-3. Select **Accounts** and log-in to your Microsoft 365 account.
-4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon from the Teams Toolkit toolbar.
+
+   > [!NOTE]
+   > If you're unable to see the option, see [Install and explore Teams Toolkit](install-and-explore.md) to install Teams Toolkit extension in Visual Studio Code.
+1. Select **Sign in to M365** under **ACCOUNTS** and sign-in to your Microsoft 365 account.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/accounts.png" alt-text="Enable sideloading":::
+
+1. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
 
@@ -137,15 +146,15 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 <details>
 <summary><b>Verify sideloading permission using Teams client</b></summary>
 
-1. Open **Microsoft Teams**.
-2. Select **Apps** in left panel.
-3. Select **Publish an app**.
+1. In the Teams client, select **Apps**.
+1. Select **Manage your app**.
+1. Select **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publish an app":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-app.png" alt-text="Publish an app":::
 
 4. Check whether you can see the option **Upload a custom app** as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app1.png" alt-text="Upload a custom app":::
 
 </details>
 

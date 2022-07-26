@@ -10,7 +10,7 @@ ms.date: 03/14/2022
 
 # Create a new Teams app using Teams Toolkit
 
-You can built a new Teams app by using **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
+You can built a new Teams app by selecting **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
 
 | App Type | Definition |
 | --- | --- |
@@ -21,7 +21,7 @@ You can built a new Teams app by using **Create a new Teams app** in Teams Toolk
 
 The steps to create a new Teams app is similar for all types of app except SPFx, and notification bot. The following steps help you to built a new tab app:
 
-To create an app,
+**To create an app**
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon.
@@ -33,18 +33,18 @@ To create an app,
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-1. For this tutorial, select **Tab** as the capability that you want to build in your app.
+1. For this tutorial, select **Tab** as the capability to built your app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="Select App Capability":::
 
    > [!NOTE]
-   > You can select any type of capability based on your app requirement.
+   > You can select any type of capability based on your requirement.
 
 1. Select **JavaScript** as the programming language.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="Screenshot showing how to select the programming language":::
 
-1. Select the location for project workspace and select the **Select Folder**.
+1. Select the location for project workspace and **Select Folder**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder1.png" alt-text="select-folder":::
 
@@ -63,12 +63,10 @@ To create an app,
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer**.
 
-Directory structure for basic Teams app:
-
-You have three different types of basic Teams app and directory structure looks similar for all types of apps. The following example shows you one basic Teams app directory structure:
-
 <details>
-<summary><b>Tab app</b></summary>
+<summary><b>Directory structure for basic Teams app</b></summary>
+
+You have three different types of basic Teams app and directory structure looks similar for all types of apps. The following example shows a basic Teams tab app directory structure:
 
 | Folder name | Contents |
 | --- | --- |
@@ -84,7 +82,6 @@ You have three different types of basic Teams app and directory structure looks 
 | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
 | - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
 | `templates/azure` | BICEP template files |
-</details>
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders is added to the directory structure.
@@ -97,12 +94,12 @@ To learn more about the directory structure of different types of basic Teams ap
 | For bot app | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) |
 | For message extension app | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml) |
 
-Directory structure for scenario based Teams app:
-
-You have four different types of scenario based Teams app and directory structure looks similar for all types of apps. The following example shows you one scenario based Teams app directory structure:
+</details>
 
 <details>
-<summary><b>Notification bot app</b></summary>
+<summary><b>Directory structure for scenario based Teams app</b></summary>
+
+You have four different types of scenario based Teams app and directory structure looks similar for all types of apps. The following example shows a scenario based notification bot Teams app directory structure:
 
 The new project folder contains following content:
 
@@ -122,7 +119,6 @@ The core notification implementation in **bot** folder and it contains:
 | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
 | `.gitignore` | File to exclude local files from bot project |
 | `package.json` | The NPM package file for bot project |
-</details>
 
 > [!NOTE]
 > If you have a command bot, SSO-enabled tab, or SPFx tab app, relevant folders is added to the directory structure.
@@ -135,7 +131,8 @@ To learn more about the directory structure of different types of basic Teams ap
 | For command bot app | [Build command bot](../sbs-gs-commandbot.yml) |
 | For SPFx tab app | [Build a Teams app with SPFx](../sbs-gs-spfx.yml) |
 
-### Directory structure for multi-capability app
+<details>
+<summary><b>Directory structure for multi-capability app</b></summary>
 
 You can add additional features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app, Teams Toolkit adds the bot folder with relevant files and code.
 
@@ -147,11 +144,11 @@ The following image shows the directory structure of tab app with bot feature:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/tab-app-with-bot-app.png" alt-text="Tab app with bot app directory structure":::
 
+</details>
+
 ## See also
 
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Support for app types and Azure function](app-types-and-azure-function.md)
-* [Add capabilities to Teams apps](add-capability.md)
-* [Add cloud resources to Teams app](add-resource.md)

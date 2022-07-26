@@ -10,12 +10,7 @@ ms.date: 05/24/2022
 
 # Install and explore Teams Toolkit
 
-Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. In Teams Toolkit you can create a new Teams app, debug your Teams app, provision cloud resources, deploy Teams app to the cloud and publish your Teams app.
-
-Here's what you'll learn in this section:
-
-* [Install Teams Toolkit](#install-teams-toolkit)
-* [Explore Teams Toolkit](#explore-teams-toolkit)
+Teams Toolkit is an extension in Visual Studio Code and it primarily requires NPM and Node.js to start with your first Teams app development. In this document you can learn, how to install Teams Toolkit extension in Visual Studio Code and guides you to understand different UI elements along with description and basic usage.
 
 ## Install Teams Toolkit
 
@@ -34,7 +29,7 @@ You can install Teams Toolkit from an extension in Visual Studio Code and from V
 
 1. Select **Install**.
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="install toolkit 4.0.0":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="install toolkit 4.0.0":::
 
    After successful installation of Teams Toolkit in Visual Studio Code, Teams Toolkit icon appears in the Visual Studio Code toolbar.
 
@@ -78,16 +73,16 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 
 | Serial No | UI Elements | Definition |
 | --- | --- |
-| 1 | **Get Started** | To explore the Teams Toolkit. |
-| &nbsp; | **Tutorials** | To access different tutorials. |
-| &nbsp; | **Documentation** | To access the Microsoft Teams Developer Documentation. |
-| 2 | **Create a new Teams App** | To create one Teams project. |
-| 3 | **View Samples** | To build different types of app based on existing samples. |
-| 4 | **Open Folder** | To open the existing Teams app |
-| 5 | **New File** | To create new file. |
-| &nbsp; | **Open File** | To open the existing file. |
-| &nbsp; | **Open Folder** | To open the existing folder |
-| 6 | **Recent** | To view the recent files |
+| 1 | **Get Started** | Explore Teams Toolkit. |
+| &nbsp; | **Tutorials** | Access different tutorials. |
+| &nbsp; | **Documentation** | Access the Microsoft Teams Developer Documentation. |
+| 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
+| 3 | **View Samples** | Build different types of app based on existing samples. |
+| 4 | **Open Folder** | Open the existing Teams app |
+| 5 | **New File** | Create new file. |
+| &nbsp; | **Open File** | Open the existing file. |
+| &nbsp; | **Open Folder** | Open the existing folder |
+| 6 | **Recent** | View the recent files |
 
 You can explore more UI elements from task pane in Teams Toolkit. Task pane is visible only after creating an app using Teams Toolkit. The following video helps you to know about the process of creating new Teams app and after this process you can view the task pane in Teams Toolkit.
 
@@ -195,8 +190,10 @@ From the task pane you can see the following sections:
 
 ## See also
 
+* [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [Choose your build environments](build-environments.md)
 * [Support for app types and Azure function](app-types-and-azure-function.md)
+* [Provision cloud resources using Teams Toolkit](provision.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
