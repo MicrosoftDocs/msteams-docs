@@ -14,7 +14,7 @@ To enable SSO for a bot resource, learn about:
 - Permissions: It's a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
 - Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
 
-## Enable bot for SSO
+## Enable SSO for your bot app
 
 To enable SSO for your bot app in Azure AD:
 
@@ -39,7 +39,7 @@ You can enable SSO for a bot app in one of the two ways:
 
 For this tutorial, you'll configure your app with Azure AD, and then configure a bot resource for enabling SSO.
 
-## Configure your app for SSO
+## Configure your app in Azure AD
 
 You can configure your bot app in Azure AD to configure the scope and permissions for access tokens.
 
@@ -208,8 +208,7 @@ To configure scope and authorize trusted client applications, you'll need:
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-app.png" alt-text="Add a client application" border="true":::
 
     > [!NOTE]
-    >
-    > - The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
+    > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
 
     1. Choose one of the following client IDs:
 
