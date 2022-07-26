@@ -18,7 +18,7 @@ In this section, you'll learn to:
 
 ## Configure API permissions in Azure AD
 
-You can configure more Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your bot app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+You can configure Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your bot app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 
@@ -54,7 +54,7 @@ You can configure more Graph scopes in Azure AD as required for your app. Delega
 
     A message pops up on the browser stating that the permissions were updated.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/updated-permission-msg.png" alt-text="Permissions updated message." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/updated-permission-msg.png" alt-text="Permissions updated message." border="true":::
 
     The added permissions are displayed in the **API permissions** page.
 
@@ -64,7 +64,7 @@ You can configure more Graph scopes in Azure AD as required for your app. Delega
 
 ## Configure authentication for different platforms
 
-Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, specific authentication settings, or details specific to the platform.
+Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or plaform-specific details.
 
 > [!NOTE]
 >
