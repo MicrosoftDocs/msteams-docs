@@ -262,8 +262,8 @@ Next, you must create and configure a bot resource in Azure AD.
 
 To enable SSO for your bot resource:
 
-- **[To configure messaging endpoint](#to-configure-messaging-endpoint)**: Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
-- **[To update OAuth connection](#to-update-oauth-connection)**: For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
+- [To configure messaging endpoint](#to-configure-messaging-endpoint): Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
+- [To update OAuth connection](#to-update-oauth-connection): For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
 
   - Azure AD application associated with the bot
   - The app's application ID URI
@@ -271,7 +271,7 @@ To enable SSO for your bot resource:
 
   With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
-If you haven't created and configured a bot resource in Azure AD, follow these steps:
+You'll need to create a bot resource and enable it for Teams before enabling SSO. You must also create and note the client secret for your bot resource. You'll need to update it later to update OAuth connection. If you haven't created and configured a bot resource in Azure AD, follow these steps:
 <br>
 <details>
 <summary><b>Learn how to create and configure bot resource in Azure AD</b></summary>
