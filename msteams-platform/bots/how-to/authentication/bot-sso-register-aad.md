@@ -479,7 +479,7 @@ In this section, you'll configure the bot resource for messaging endpoint and OA
 
 #### Add messaging endpoint
 
-Messaging endpoint is where messages are sent to your bot. It enables communicate with your bot.
+Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
 ##### To configure messaging endpoint
 
@@ -507,7 +507,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
 
 - Azure AD application associated with the bot
-- The application's ID URI
+- The app's application ID URI
 - The permissions that the bot needs to obtain an access token
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
@@ -534,7 +534,7 @@ With the Client ID and Client secret provided, the token store exchanges the tok
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="OAuth configuration settings" border="true":::
 
     1. Enter a name for the configuration setting.
-    1. Select **Azure Active Directory v2** as the service provider. /Check if this value is as per code sample.  Or if any user can select it. /
+    1. Select the service provider.
 
         The remaining configuration details appear.
 
@@ -543,7 +543,7 @@ With the Client ID and Client secret provided, the token store exchanges the tok
     1. Enter the client ID that was generated when you created the bot app.
     1. Enter the client secret that you've created for your bot.
     1. Enter the application ID URI of your bot in the **Token Exchange URL**.
-    1. Type **common** as the value for tenant.
+    1. Enter the name for the tenant.
     1. Enter the scope that you defined when you configured the permissions.
 
 1. Select **Save**.
