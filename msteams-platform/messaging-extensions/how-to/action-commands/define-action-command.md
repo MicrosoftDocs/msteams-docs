@@ -25,7 +25,7 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## Select action command invoke locations
@@ -104,7 +104,7 @@ To create an action command:
 1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Add a command to define the behavior of the message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot shows how to add a command to define the behavior of the message extension.":::
 
 1. Select **Action** and then select parameter type.
 
@@ -112,27 +112,27 @@ The following image displays command addition for message extension:
 
 1. Enter all the parameters and select the type of input from the dropdown.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Add a parameters to define your command for message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shows how to add a parameters to define your command for message extension.":::
 
 1. Select **Add a domain** under **Preview links**.
 
 1. Enter valid domain and then select **Add**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Add a valid domain to your messaging extension for link unfurlings.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurlings.":::
 
 1. Select **Save**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Save all your setting and parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shows how to save all your setting and parameters for your message extension.":::
 
 **To add additional parameters**
 
 1. Select ellipse under command section and then select **Edit parameter**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="This screenshots shows how to add additional parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
 
 1. Select **+ Add a Parameters** and enter all the parameters.
 
-   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### Create an action command manually
 

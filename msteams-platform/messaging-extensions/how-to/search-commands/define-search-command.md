@@ -18,7 +18,7 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## Select search command invoke locations
@@ -62,33 +62,33 @@ The prerequisite to create a search command is that you must already have create
 1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Add a command to define the behavior of the message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot shwos how to add a command to define the behavior of the message extension.":::
 
 1. Select **Search** and enter **Command ID**, **Command title**,**Command description**.
 
 1. Enter all the parameters and select the type of input from the dropdown.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Add a parameters to define your command for message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shwos how to add a parameters to define your command for message extension.":::
 
 1. Select **Add a domain** under **Preview links**.
 
 1. Enter valid domain and then select **Add**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Add a valid domain to your messaging extension for link unfurlings.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shwos how to add a valid domain to your messaging extension for link unfurlings.":::
 
 1. Select **Save**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Save all your setting and parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shwos how to aave all your setting and parameters for your message extension.":::
 
 **To add additional parameters**
 
 1. Select ellipse under command section and then select **Edit parameter**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="This screenshots shows how to add additional parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
 
 1. Select **+ Add a Parameters** and enter all the parameters.
 
-   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### Create a search command manually
 
