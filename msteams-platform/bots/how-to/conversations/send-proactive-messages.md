@@ -9,7 +9,9 @@ ms.localizationpriority: high
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-A proactive message is any message sent by a bot that isn't in response to a request from a user. This can include messages, such as:
+A proactive message is a message that is initiated by the bot. The proactive message sent to the user isn't in response to a request from a user. The bot sends out the first message to the user to begin a conversation.
+
+Proactive messages can include the following:
 
 * Welcome messages
 * Notifications
@@ -23,7 +25,8 @@ A proactive message is any message sent by a bot that isn't in response to a req
 > * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
 > * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
-For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
+Your bot must have access to be able to send out a proactive message to a user, group chat, or a team. Install the app with proactive bot locally to use the bot for a group chat or team.
+
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
 
 Sending a proactive message is different from sending a regular message. There's no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
@@ -79,7 +82,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ## Best practices for proactive messaging
