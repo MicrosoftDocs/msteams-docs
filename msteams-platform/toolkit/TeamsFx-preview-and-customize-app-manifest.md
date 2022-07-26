@@ -102,7 +102,7 @@ The following steps help to preview manifest file by using preview option in cod
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
 
-1. Select your environment**.
+1. Select your environment.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 

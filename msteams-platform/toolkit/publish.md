@@ -14,10 +14,10 @@ After creating the app, you can distribute your app to different scope, such as 
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* [Install latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-> [!TIP]
-> Ensure you have Teams app project in VS code.
+  > [!TIP]
+  > Ensure you have Teams app project in VS code.
 
 ## Publish to individual scope or sideload permission
 
