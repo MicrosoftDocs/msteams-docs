@@ -53,11 +53,11 @@ The request to get the token is a normal POST message request using the existing
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-If the app user is using the application for the first time, app user consent is required.
+If the app user is using the application for the first time, consent is required for SSO authentication.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
 
-When the app user selects the user name, the validation is done using the Teams identity.
+When the app user selects the user name, validation is done using the Teams identity.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
