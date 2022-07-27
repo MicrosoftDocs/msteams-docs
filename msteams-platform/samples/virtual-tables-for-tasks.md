@@ -65,33 +65,30 @@ This section describes the HTTP requests and responses for each step in the samp
 1. Retrieve the Group ID used in [settings for your Collaboration](samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
 
     > [!NOTE]
-    >
+    > The user you use to create the Plan in the subsequent steps, must be a member of this group. If not you will get 403 Forbidden response.
 
-**Task 2: Begin a Collaboration Session**
+1. A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record. This allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
 
-This step creates a collaboration session, which will be used in the following steps. A collaboration session is a record in the collaboration root table, which allows us to associate multiple collaborations, for example, tasks, events, appointments, etc. with a business record. This allows us to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
-
-**Request**
+# [Request](#tab/request)
 
 ```http
-HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
+  HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
 ```
 
 ```json
-{ 
+ { 
 
-"applicationName": "{{applicationName}}", 
-"collaborationRootEntityId": "{{collaborationRootEntityId}}", 
-"collaborationRootEntityName": "{{entityName}}" 
-
-} 
+     "applicationName": "{{applicationName}}", 
+     "collaborationRootEntityId": "{{collaborationRootEntityId}}", 
+     "collaborationRootEntityName": "{{entityName}}" 
+ } 
 ```
 
 * `applicationName`: Unique name for the application
 * `collaborationRootEntityName`: Name of the business record entity  
 * `collaborationRootEntityId`:  Primary key (ID) of the specific business record
 
-**Response**
+# [Response](#tab/response)
 
 ```http
 HTTP/1.1 200 OK 
@@ -109,7 +106,7 @@ HTTP/1.1 200 OK
 
 Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
 
-**Task 3: Create a Planner Plan**
+1. Task 3: Create a Planner Plan**
 
 This step creates a Planner Plan and associates it with the collaboration session created in the previous step.
 
