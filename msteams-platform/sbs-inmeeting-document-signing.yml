@@ -366,43 +366,41 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettingslocation.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseUrl"` to the fully qualified ngrok domain name.
+         * Set **MicrosoftAppId** and **ClientId** to your bot's Microsoft App ID.
+         * Set **MicrosoftAppPassword** and **ClientSecret** to your bot's client secret ID value.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings.png" alt-text="App settings":::
           
-
     1. Navigate to **manifest.json** in cloned repository.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifestlocation.png" alt-text="Manifest file location":::
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<ClientId>>` with your bot's client secret ID value.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2.png" alt-text="Manifest image2":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-2.png" alt-text="Manifest image2":::
 
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio or Command line**
+    **To build and run the service using Visual Studio**
 
     # [Visual Studio](#tab/vs)
 
        1. Open **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-           :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/project-solution.png" alt-text="Open file":::
 
-       1. Select **SidePanel.sln** file from **csharp** folder.
+       1. Select **SidePanel.sln** file from **Source** folder.
 
-           :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready.png" alt-text="Solution File":::
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png" alt-text="Solution File":::
 
        1. Press **F5** to run the project.
     
@@ -410,107 +408,42 @@ items:
 
             :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Trust Certificate":::
 
-          A webpage opens with a message **Your bot is ready!**.
+          The following webpage opens.
 
-           :::image type="content" source="~/assets/images/meetings-side-panel/appisready.png" alt-text="App ready"::: 
-
-        
-    # [Command line](#tab/cli)
-
-    Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
-
-    ```bash
-    dotnet run
-    ```
-    :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Dotnet"::: 
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready.png" alt-text="App ready"::: 
       
 - title: Add Meetings Side Panel to Teams
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
+    1. In your cloned repository, navigate to **Source > MeetingSigning.Web > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/zipfile.png" alt-text="Zip file"::: 
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/zipfile.png" alt-text="Zip file"::: 
     
-    1. Create a meeting with a few presenters and attendees.
-   
-    1. After the meeting is created, go to the meeting details page and select **Add an app**.
+    1. Go to Teams Client.
+    1. Select **Store**.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/addanapp.png" alt-text="Add an app":::
-   
-    1. In the pop-up window, select **Manage apps**.
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/manageapps.png" alt-text="Manage apps"::: 
-   
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/publish.png" alt-text="Publish"::: 
+     
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp.png" alt-text="Upload custom app"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload.png" alt-text="Upload custom app"::: 
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/selectzip.png" alt-text="Select zip file"::: 
 
-    1. Select **Add**.
+    1. Select **Add to a meeting**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/addtheapp.png" alt-text="Add the app"::: 
 
-       The **Manage apps** section displays the list of applications.
+    1. Enter meeting name.
    
-        :::image type="content" source="~/assets/images/meetings-side-panel/manageappsection.png" alt-text="App in Manage apps"::: 
-   
-    1. Go to Teams meeting.
-    
-    1. Select **Add an app**. 
-    
-       In the app selection page, the app is displayed as **Side Panel**.
-  
-        :::image type="content" source="~/assets/images/meetings-side-panel/appicon-1.png" alt-text="App icon in Teams"::: 
-
-    1. Select the **Side Panel** app.
-    
-    1. Select **Save**.
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp.png" alt-text="Welcome App"::: 
-   
-       The app is visible in the meeting Side Panel.         
-
-- title: Interact with the app in Teams
-  durationInMinutes: 1
-  content: |
-    Let's interact with the app in Teams!
-
-    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet.png" alt-text="Token in Meet"::: 
-
-    1. Enter a new agenda item to the list and select **Add**.
-
-         :::image type="content" source="~/assets/images/meetings-side-panel/newagenda.png" alt-text="Token in Meet"::: 
-
-       The new agenda is added in the list.
-
-    1. Select **Publish Agenda**.
-
-         :::image type="content" source="~/assets/images/meetings-side-panel/youragenda.png" alt-text="Your Token"::: 
-
-       The new agenda list is displayed in the meeting chat.
-
-         :::image type="content" source="~/assets/images/meetings-side-panel/agendainchat.png" alt-text="Your Token"::: 
-
-- title: Complete challenge
-  durationInMinutes: 1
-  content: |
-    Did you come up with something like this?
-
-       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Token in Meet"::: 
-
-
-- content: |
-    You've completed the tutorial to get started with a **Side Panel** app!
-
-
+        :::image type="content" source="~/assets/images/meetings-side-panel/meeting-name.png" alt-text="App in Manage apps":::
