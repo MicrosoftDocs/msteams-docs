@@ -6,7 +6,9 @@ ms.localizationpriority: high
 ---
 # Register your bot app in Azure AD
 
-Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. You'll need to register your bot app with Azure AD. The app user who has signed into Teams can be given access to your bot app.
+Your message extension app is a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communitation. You'll need to register your web service as a bot for enabling SSO for your message extension app.
+
+Azure AD provides app users access to your message extension app. It's based on the app user's Teams identity. You'll need to register your bot app with Azure AD. The app user who has signed into Teams can be given access to your bot app.
 
 To enable SSO for a bot resource, configure:
 
@@ -14,7 +16,7 @@ To enable SSO for a bot resource, configure:
 - Permissions: It's a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
 - Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
 
-## Enable SSO for your bot app
+## Enable SSO for your app
 
 To enable SSO for your bot app in Azure AD:
 
@@ -26,18 +28,6 @@ To enable SSO for your bot app in Azure AD:
   - Update OAuth connection
 
 You can configure them in any order. For this tutorial, you'll configure your app with Azure AD, and then configure a bot resource for enabling SSO.
-
-<!--
-| &nbsp; | Method 1 | &nbsp; | Method 2 |
-| --- | --- | --- | --- |
-| 1. | **App SSO configuration** | 1. | **Bot resource configuration** |
-| &nbsp; | a. Configure app ID URI | &nbsp; | a. Configure messaging endpoint |
-| &nbsp; | b. Configure scopes and permissions | &nbsp; | b. Update OAuth connection |
-| &nbsp; | c. Configure trusted client apps | 2. | **App SSO configuration** |
-| 2. | **Bot resource configuration** | &nbsp; | a. Configure app ID URI |
-| &nbsp; | a. Configure messaging endpoint | &nbsp; | b. Configure scopes and permissions |
-| &nbsp; | b. Update OAuth connection | &nbsp; | c. Configure trusted client apps |
--->
 
 ## Configure your app in Azure AD
 
