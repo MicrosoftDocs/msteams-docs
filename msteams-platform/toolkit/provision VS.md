@@ -134,7 +134,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | Managed Identity | Authenticates Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Helps to create function app | Not applicable |
-| App Service plan | Hosts your function bot App | Not applicable |
+| App Service plan | Hosts the function bot App | Not applicable |
 | Function app | Hosts your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
 ### Resource creation for Teams Notification bot with Timer Trigger (Azure Function) application
@@ -144,7 +144,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Helps to create function app | Not applicable |
-| App Service plan | Hosts your function bot App | Not applicable |
+| App Service plan | Hosts the function bot App | Not applicable |
 | Function App | Hosts your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
 ### Resource creation for Teams Notification bot with HTTP Trigger + Timer Trigger (Azure Function) application
@@ -154,7 +154,7 @@ When you create a new project, you also need to create some Azure resources. The
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 | Storage account | Helps to create function app | Not applicable |
-| App Service plan | Host your function bot App | Not applicable |
+| App Service plan | Hosts the function bot App | Not applicable |
 | Function App | Hosts your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
 ### Manage your resources
