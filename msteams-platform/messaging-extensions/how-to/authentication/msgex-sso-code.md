@@ -53,13 +53,15 @@ The request to get the token is a normal POST message request using the existing
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-If the app user is using the application for the first time and user consent is required, the following message appears:
+If the app user is using the application for the first time, app user consent is required.
 
+<!--
 :::image type="content" source="../../../assets/images/authentication/teams-sso-mex/MEActions.png" alt-text="SSO authentication for message extension app":::
 
 When the app user selects **AAD SSO authentication**, the validation is done using the Teams identity.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-mex/MESsoCard.png" alt-text="SSO authentication completed for message extension app":::
+-->
 
 ### C# token request without a sign-in button
 
