@@ -29,8 +29,8 @@ The main milestones of this journey are:
 
 1. You can start creating a new project or try building a sample Teams app.
 1. You can edit code or the manifest file as needed.
-1. To build and debug the Teams app you can use your Microsoft 365 account .
-1. To provision and deploy your app to cloud you can use your Azure account.
+1. For building and debugging the Teams app you can use your Microsoft 365 account.
+1. For provisioning and deploying your app to cloud you can use your Azure account.
 1. You can now publish your app to Teams.
 
 ## Install Teams Toolkit for Visual Studio
@@ -59,7 +59,7 @@ You can also access Teams Toolkit menu from solution explorer by right clicking 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
 > [!NOTE]
-> In this case the project name is **MyTeamsApp1**.
+> In this scenario the project name is **MyTeamsApp1**.
 
 You can do the following operations on TTK for VS:
 
@@ -68,8 +68,8 @@ You can do the following operations on TTK for VS:
 |Create Teams Project     |Create Teams project using Teams template in VS         |
 |Prepare Teams App Dependencies     |This step is required  before local debug, it helps you to set up the local debug dependencies and register Teams app in Teams platform. So this requires you to have a Microsoft 365 account as well. For more information, see [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Open Manifest File     |To open Teams manifest file, you can hover by the parameters to preview value. For more information, see [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
-|Update Manifest in Teams Developer Portal     |When you need to update the manifest file, then you can only redeploy the manifest file to Azure without deploying the whole project again. use this command to update your changes to remote. For more information, refer to [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
-|Provision to the Cloud     |This option helps you to create Azure resources which hosts your Teams app. For more information, see [Provision cloud resources] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Update Manifest in Teams Developer Portal     |When you need to update the manifest file, then you can only redeploy the manifest file to Azure without deploying the whole project again. use this command to update your changes to remote. For more information, see [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Provision to the Cloud     |This option helps you to create Azure resources that host your Teams app. For more information, see [Provision cloud resources] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you did “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud](http://{placeholder_url_to_doc_page_?zone=vs})         |
 |Preview in Teams     |This option will launch the Teams web client and let you preview Teams app in their browser.         |
 |Zip App Package     |This option will generate a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
