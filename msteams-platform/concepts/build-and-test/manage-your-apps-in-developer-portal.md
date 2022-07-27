@@ -1,6 +1,6 @@
 ---
 title: Manage your apps with the Developer Portal
-description: In this module, learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
+description: In this article, learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -17,18 +17,18 @@ After you created or uploaded your app, you can manage your apps in Developer Po
 
 ## Overview
 
-In the Overview section, you can see the following features to manage your app:
+In the **Overview** section, you can see the following features to manage your app:
 
 * Dashboard
 
   * In the **Dashboard** under **Overview** section, you can see the following features for your app:
-    * **Teams store validation** - App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
-    * **Announcement** - Latest updates of your apps on Developer Portal for Teams
-    * **Upgrade to 1.14** - (content to be added)
-    * **Active users (Preview)** - Shows you the active user count
-    * **Basic information** - Shows you the App ID, Version, Manifest version and more.
+    * **Teams store validation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
+    * **Announcement**: Latest updates of your apps on Developer Portal for Teams
+    * **Upgrade to 1.14**: (content to be added)
+    * **Active users (Preview)**: Shows you the active user count
+    * **Basic information**: Shows you the App ID, Version, Manifest version and more.
 
-    :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="Overview page of the app you created in Developer Portal for Teams.":::
+    :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
 
 * Analytics
 
@@ -143,7 +143,7 @@ To add a bot:
 1. In the bot management page, select **+ New Bot**.
 1. Enter a name and select **Add**.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.PNG" alt-text="This screenshot shows you the tools in developer portal which helps you to build some key features.":::
+:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.PNG" alt-text="This screenshot is an example that shows the tools in developer portal, which helps you to build some key features.":::
 
 From the Developer portal, you can navigate to Bot framework portal and configure your bot to update bot icon and other bot properties.
 
