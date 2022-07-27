@@ -1,0 +1,132 @@
+---
+title: Virtual Tables for Tasks, Meetings, and Files in collaboration control app
+author: surbhigupta
+description: In this article, learn about Virtual Tables web API for collaboration control app in Microsoft Teams.
+ms.localizationpriority: medium
+ms.author: v-npaladugu
+ms.topic: conceptual
+---
+
+# Virtual tables Web API
+
+When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features are not supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See the Virtual Tables Entity Reference for details on what each virtual table supports.
+
+## Virtual Table Sorting
+
+With the virtual tables, you can use the OData $orderby query parameter to set criteria for how the result set should be sorted. Use the asc or desc suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied.  
+
+Supported Tables: Each virtual table supports the same sorting functionality as it’s respective Graph resource. The virtual tables which support sorting are:  
+
+* Graph Drive Item
+* Graph Event
+
+> [!NOTE]
+> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, this result set will have its default order. This is the same behaviour as the Dataverse Web API on columns that do not support sorting.
+
+Examples:
+
+* GET [Organization URI]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq ‘00000000-0000-0000-0000-000000000000’&$orderby=m365_name desc
+* GET [Organization URI]/api/data/v9.2/m365_graphevents?$filter=m365_groupid eq ‘00000000-0000-0000-0000-000000000000’$orderby=m365_subject asc
+
+## Virtual Table Filtering
+
+With the virtual tables, you can use the OData $filter query parameter to set criteria for which rows will be returned. The virtual tables are queried using the same OData operators that are supported by the Dataverse Web API.
+
+* Comparison operators
+
+  |Operator|Description|Example|
+  |----|----|----|
+  |eq|Equal|$filter=m365_name eq ‘Contoso’|
+  |ne|Not Equal|$filter=m365_name ne ‘Contoso’|
+  |gt|Greater Than|$filter=m365_price gt 50.0|
+  |ge|Greater Than or Equal|$filter=m365_price ge 50.0|
+  |lt|Less Than|$filter=m365_price lt 50.0|
+  |le|Less Than or Equal|$filter=m365_price le 50.0|
+
+* Logical operators
+
+  |Operator|Description|Example|
+  |----|----|----|
+  |and|Logical and |$filter=m365_name eq ‘Contoso’ and m365_price eq 50.0|
+  |or|Logical or |$filter=m365_name ne ‘Contoso’ or m365_price eq 50.0|
+  |not|Logical negotiation |$filter=not contains(m365_name,’Contoso’)|
+
+* Grouping operators
+
+  |Operator|Description|Example|
+  |----|----|----|
+  |( )|Precedence grouping |$filter=(m365_name eq ‘Contoso’ and m365_price eq 50.0) or contains(m365_subject,’Team Sync’)|
+
+* Query Functions
+
+  |Function |Example |
+  |----|----|
+  |contains|$filter=contains(m365_name,’Contoso’)|
+  |endswith|$filter=endswith(m365_name,’Contoso’)|
+  |startswith|$filter=startswith(m365_name,’Contoso’)|
+
+Supported Tables: Each virtual table supports the same filtering functionality as it’s respective Graph resource. The virtual tables which support filtering are:
+
+* Graph Booking Appointment
+* Graph Drive Item
+* Graph Event
+
+> [!Note]
+> Filtering is not supported on all the attributes of the respective Graph resources. If a user tries to filter on a virtual table with an unsupported attribute, this filter will be ignored. This is the same behaviour as the Dataverse Web API on columns that do not support filtering.
+
+Examples:
+
+* GET [Organization URI]/api/data/v9.2/m365_graphbookingappointments?$filter=m365_bookingbusinessid eq ‘ContosoBank@Contoso.onmicrosoft.com’ and m365_price eq 100.0
+* GET [Organization URI]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq ‘00000000-0000-0000-0000-000000000000’ and m365_name eq ‘Meeting Notes.docx’
+* GET [Organization URI]/api/data/v9.2/m365_graphevents?$filter=m365_groupid eq ‘00000000-0000-0000-0000-000000000000’ and m365_subject eq ‘Monthly Sync’
+
+## Virtual table pagination
+
+Pagination is a useful resource for fetching a large set of records. Virtual Table pagination can be achieved in three different ways:
+
+1. You can specify the page size by using the `odata.maxpagesize` preference value in the request header. If the result set spans multiple pages, the response will include the `@odata.nextLink` property. Sample request and response are as following:
+
+# [Request](#tab/request)
+
+```http
+    GET [Organization URI]/api/data/v9.2/m365_driveitems 
+    Accept: application/json 
+    Prefer: odata.maxpagesize=2 
+```
+
+# [Response](#tab/response)
+
+```json
+{ 
+
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphdriveitems", 
+    "value": [ 
+        { 
+            "@odata.etag": "W/\"{FA93AF7C-1F45-4714-85A5-BB95EB86E1E5}\"", 
+            "m365_name": "Review.doc", 
+            "m365_graphdriveitemid": "f50aae23-6644-3d35-66d7-e3c5a979dad3", 
+            …
+        }, 
+        { 
+            "@odata.etag": "W/\"{3938D549-1AEF-46A5-BF3C-38472AD934C2}\"", 
+            "m365_name": "Review.doc", 
+            "m365_graphdriveitemid": "3d59a7e2-ec83-d0b3-270e-8ad676622027", 
+            … 
+        } 
+    ], 
+    "@odata.nextLink": "[Organization URI]/api/data/v9.0/m365_graphdriveitems &$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22UGFnZWQ9VFJVRSZwX1NvcnRCZWhhdmlvcj0xJnBfRmlsZUxlYWZSZWY9dGVzdCZwX0lEPTI5%22%20istracking=%22False%22%20/%3E" 
+} 
+```
+
+---
+
+Currently the following Virtual Tables support the `odata.maxpagesize` preference:
+
+* m365_graphbookingappointment
+* m365_graphcalendarevent
+* m365_graphchat
+* m365_graphchatemessage
+* m365_drive
+* m365_graphdriveitem
+
+1.
