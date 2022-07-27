@@ -16,7 +16,7 @@ TeamsFx integrates with Azure and Microsoft 365 cloud that allows you to place y
 
 Here's a list of tools you'll need for provisioning your cloud resources:
 
-* [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app.
+* [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Microsoft Teams account with the appropriate permissions to install an app.
 * [Azure account](https://portal.azure.com/) with a valid subscription.
 * Teams Toolkit installation for Visual Studio.
 
@@ -27,14 +27,14 @@ The following steps can help you to provision cloud resources using Visual Studi
 ### Sign in to your Microsoft 365 account
 
 1. Open Visual Studio.
-2. Open the Teams App project.
-3. Select **Project > Teams Toolkit > Prepare Teams App dependencies**.
+2. Open the Microsoft Teams app project.
+3. Select **Project > Teams Toolkit > Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Prepare teams app dependencies":::
 
 4. Select **Sign in...** to sign in to your Azure account.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
     > [!NOTE]
     > If you are already logged in, your username displays, or you can select the same to switch your account.
@@ -54,7 +54,7 @@ The following steps can help you to provision cloud resources using Visual Studi
 
 4. Select **Sign in...** to sign in to your Azure account.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
    > [!NOTE]
    > If you're already logged in, your username is displayed, or you have an option to switch account.
