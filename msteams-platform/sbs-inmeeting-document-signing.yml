@@ -82,17 +82,15 @@ items:
     
        You can also create a new resource group by the following steps:
 
-              1. To create new resource group, select **Create new** > enter resource name > select **OK**.
+           1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-                   :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresourcecreation.png" alt-text="New resource creation":::
+                :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresourcecreation.png" alt-text="New resource creation":::
 
-              1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+           1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
         
-                   :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
+                :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
     
       1. Select **Type of App** as **Multi Tenant**.
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select review-create.png" alt-text="Select review and create":::
 
       1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -102,6 +100,8 @@ items:
          > You can't create more than one bot with the same **Microsoft App ID**.
 
       1. Select **Review + create**.
+
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select review-create.png" alt-text="Select review and create":::
 
     1. After the validation passed, select **Create**. 
 
@@ -278,7 +278,7 @@ items:
 
           Your Application ID URI is created with **Scope name**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes.png" alt-text="Scopes":::
+            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes.png" alt-text="Scopes":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -330,7 +330,7 @@ items:
          * **OpenId**
          * **profile**
          * **User.Read**
-         * **User.ReadBasic.All
+         * **User.ReadBasic.All**
 
     1. Select **Add permissions**.
 
@@ -339,8 +339,6 @@ items:
     **To set redirect URI**
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication"::: 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -390,8 +388,6 @@ items:
   durationInMinutes: 1
   content: |
     **To build and run the service using Visual Studio**
-
-    # [Visual Studio](#tab/vs)
 
        1. Open **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
