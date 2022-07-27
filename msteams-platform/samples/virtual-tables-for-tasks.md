@@ -71,55 +71,50 @@ This section describes the HTTP requests and responses for each step in the samp
 
 # [Request](#tab/request)
 
-    ```http
-        HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
-    ```
+```http
+    HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
+```
 
-    ```json
-     { 
+```json
+{
+    "applicationName": "{{applicationName}}", 
+    "collaborationRootEntityId": "{{collaborationRootEntityId}}", 
+    "collaborationRootEntityName": "{{entityName}}" 
+}
+```
 
-         "applicationName": "{{applicationName}}", 
-         "collaborationRootEntityId": "{{collaborationRootEntityId}}", 
-         "collaborationRootEntityName": "{{entityName}}" 
-     } 
-    ```
-
-    * `applicationName`: Unique name for the application
-    * `collaborationRootEntityName`: Name of the business record entity  
-    * `collaborationRootEntityId`:  Primary key (ID) of the specific business record
+* `applicationName`: Unique name for the application
+* `collaborationRootEntityName`: Name of the business record entity  
+* `collaborationRootEntityId`:  Primary key (ID) of the specific business record
 
 # [Response](#tab/response)
 
-    ```http
-        HTTP/1.1 200 OK 
-    ```
+```http
+    HTTP/1.1 200 OK 
+```
 
-    ```json
-    { 
+```json
+{ 
+    "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.m365_begincollaborationsessionResponse", 
+    "collaborationRootId": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
+}
+```
 
-        "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.m365_begincollaborationsessionResponse", 
+---
 
-        "collaborationRootId": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
-
-    } 
-    ```
-
-    Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
+Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
 
 1. Create a Planner Plan and associate it with the collaboration session created above with `Group ID` and `collaborationRootId`.
 
-# [Request](#tab/request)
+# [Request](#tab/request1)
 
 ```http
     HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannerplans  
 ```
 
-Content-Type: application/json
-
 ```json
 
 { 
-
     "m365_collaborationrootid": "{{collaborationRootId}}", 
     "m365_owner": "{{groupId}}", 
     "m365_title": "{{planTitle}}" 
@@ -127,13 +122,13 @@ Content-Type: application/json
 
 ```
 
-**collaborationRootId**: Identifies the collaboration session we want to associate this plan with, use the value from step 2
+`collaborationRootId`**`: Identifies the collaboration session we want to associate this plan with, use the value from step 2
 
-**groupId**: Identifies the group who will own this plan, use the value from step 1
+`groupId`: Identifies the group who will own this plan, use the value from step 1
 
-**planTitle**: Title for the plan
+`planTitle`: Title for the plan
 
-# [Response](#tab/response)
+# [Response](#tab/response1)
 
 ```http
     HTTP/1.1 201 Created 
@@ -156,9 +151,9 @@ Content-Type: application/json
 
 ```
 
-Keep track of the`m365_id` as it will be needed in subsequent requests.
-
 ---
+
+Keep track of the`m365_id` as it will be needed in subsequent requests.
 
 **Task 4: Create a Planner Task**
 
