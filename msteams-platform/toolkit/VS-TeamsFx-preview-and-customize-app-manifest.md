@@ -51,8 +51,8 @@ You can preview values in app manifest in two ways:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder":::
 
-> [!NOTE]
-> If the environment has not been provisioned, or the Teams app dependencies has not been prepared, it indicates that the values for placeholder have not been generated.
+   > [!NOTE]
+   > If the environment has not been provisioned, or the Teams app dependencies has not been prepared, it indicates that the values for placeholder have not been generated.
 
 ### Preview manifest file
 
