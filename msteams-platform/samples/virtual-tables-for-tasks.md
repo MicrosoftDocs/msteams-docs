@@ -364,6 +364,8 @@ Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` proper
     HTTP/1.1 204 No Content 
 ```
 
+---
+
 1. Delete a Planner Task with `PlannerTask ID` to perform a Delete operation on one of the planner tasks created in a previous step. To delete a planner task, execute the following request:
 
 # [Request](#tab/request6)
@@ -379,6 +381,8 @@ Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` proper
 ```http
     HTTP/1.1 204 No Content
 ```
+
+---
 
 ## Virtual Tables Error Handling
 
@@ -572,6 +576,8 @@ To fix this problem change the request to this format:
 ```http
     HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/ m365_graphbookingappointments?$filter=m365_bookingbusinessid eq '{{bookingBusinessId}}'
 ```
+
+---
 
 ### Creating Virtual Records and Graph Access Control
 
