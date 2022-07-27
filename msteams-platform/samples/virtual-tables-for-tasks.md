@@ -69,10 +69,10 @@ This section describes the HTTP requests and responses for each step in the samp
 
 1. A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record. This allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
 
-    # [Request](#tab/request)
+# [Request](#tab/request)
 
     ```http
-      HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
+        HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
     ```
 
     ```json
@@ -88,10 +88,10 @@ This section describes the HTTP requests and responses for each step in the samp
     * `collaborationRootEntityName`: Name of the business record entity  
     * `collaborationRootEntityId`:  Primary key (ID) of the specific business record
 
-    # [Response](#tab/response)
+# [Response](#tab/response)
 
     ```http
-    HTTP/1.1 200 OK 
+        HTTP/1.1 200 OK 
     ```
 
     ```json
@@ -106,18 +106,12 @@ This section describes the HTTP requests and responses for each step in the samp
 
     Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
 
-1. Task 3: Create a Planner Plan**
+1. Create a Planner Plan and associate it with the collaboration session created above with `Group ID` and `collaborationRootId`.
 
-This step creates a Planner Plan and associates it with the collaboration session created in the previous step.
-
-Prereq: Group ID, Collab Root ID
-
-**Request**
+# [Request](#tab/request)
 
 ```http
-
-HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannerplans  
-
+    HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannerplans  
 ```
 
 Content-Type: application/json
@@ -127,12 +121,9 @@ Content-Type: application/json
 { 
 
     "m365_collaborationrootid": "{{collaborationRootId}}", 
-
     "m365_owner": "{{groupId}}", 
-
-     "m365_title": "{{planTitle}}" 
-
-}   
+    "m365_title": "{{planTitle}}" 
+}
 
 ```
 
@@ -142,43 +133,32 @@ Content-Type: application/json
 
 **planTitle**: Title for the plan
 
-**Response**
+# [Response](#tab/response)
 
 ```http
-
-HTTP/1.1 201 Created 
-
+    HTTP/1.1 201 Created 
 ```
 
 ```json
 
 { 
-
     "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#m365_graphplannerplans/$entity", 
-
     "@odata.etag": "W/\"JzEtUGxhbiAgQEBAQEBAQEBAQEBAQEBARCc=\"", 
-
     "m365_createdby": "{\"user\":{\"displayName\":null,\"email\":null,\"id\":\"be330617-0e2b-48e9-8bf7-429a09c78e65\"},\"group\":null}", 
-
     "m365_createddatetime": "2022-05-16T16:58:33.1833561Z", 
-
     "m365_owner": "03614cef-8f5b-4265-9944-080d013c55d6", 
-
     "m365_title": "Multi-byte plan", 
-
     "m365_id": "8I6fu1kNS0elsbTxd67bi2UADnJu", 
-
     "m365_collaborationrootid": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f", 
-
     "m365_graphplannerplanid": "5c9c3ecf-f157-0f67-dcd9-733a77ad593e", 
-
     "m365_details": null 
-
 } 
 
 ```
 
 Keep track of the`m365_id` as it will be needed in subsequent requests.
+
+---
 
 **Task 4: Create a Planner Task**
 
