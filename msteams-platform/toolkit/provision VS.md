@@ -1,6 +1,6 @@
 ---
 title: Use Teams Toolkit to provision cloud resources using Teams Toolkit for Visual Studio
-author: MuyangAmigo
+author: surbhigupta
 description: In this module, learn how to provision cloud resources using Teams Toolkit. Also to create resources and customize resource provision in Visual Studio
 ms.author: shenwe
 ms.localizationpriority: medium
@@ -10,14 +10,14 @@ ms.date: 11/29/2021
 
 # Provision cloud resources using Visual Studio
 
-TeamsFx integrates with Azure and Microsoft 365 cloud, that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources.
+TeamsFx integrates with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources.
 
 ## Prerequisites
 
 Here's a list of tools you'll need for provisioning your cloud resources:
 
-* Microsoft 365 account with a valid subscription.
-* Azure account with a valid subscription.
+* [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app.
+* [Azure account](https://portal.azure.com/) with a valid subscription.
 * Teams Toolkit (TTK) installation for Visual Studio.
 
 ## Steps to provision cloud resources
@@ -37,10 +37,10 @@ The following steps can help you to provision cloud resources using Visual Studi
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
     > [!NOTE]
-    > If you are already logged in, your username will be displayed, or you can select the same to switch your account.
+    > If you are already logged in, your username displays, or you can select the same to switch your account.
 
 5. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
-6. Select **Continue** once you are signed in to your account.
+6. Select **Continue** once you're signed in to your account.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
@@ -67,18 +67,18 @@ The following steps can help you to provision cloud resources using Visual Studi
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in cloud":::
 
-2. In the Provision dialogue box you can see a list of all the subscriptions in your Azure account.
+2. In the **Provision** dialogue box you can see a list of all the subscriptions in your Azure account.
 3. You can either select or create a new **resource group**.
-4. Select Provision.
+4. Select **Provision**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
 
-5. A dialog box warns you that costs may incur when running resources in Azure. Select **Provision**.
+5. A dialog box warns you that charges may be added as per Azure usage. Select **Provision**.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
 6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking TTK output window.
-7. You are prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
+7. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
@@ -86,7 +86,7 @@ The following steps can help you to provision cloud resources using Visual Studi
 
 When you trigger provision command in TTK or TeamsFx CLI, you can create the following resources:
 
-* Microsoft Azure Active Directory (AAD) application under your Microsoft 365 tenant.
+* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
@@ -96,8 +96,8 @@ When you create a new project, you also need to create some Azure resources. The
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| App Service plan | Host the web app of tab | Not applicable |
-| App Service | Host your Blazor tab app and simple auth server that helps you gain access to other services | Adds user assigned identity to access other Azure resources |
+| App Service plan | Hosts your web app of tab | Not applicable |
+| App Service | Hosts your Blazor tab app and simple auth server that helps gain access to other services | Adds user assigned identity to access other Azure resources |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
 ### Resource creation for Teams Message Extension application
@@ -127,17 +127,17 @@ When you create a new project, you also need to create some Azure resources. The
 | App Service | Host your bot app | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Teams Notification bot with HTTP Trigger(Azure Function) application
+### Resource creation for Teams Notification bot with HTTP Trigger (Azure Function) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure Bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| Managed Identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
-| Storage account | Required to create function app | Not applicable |
-| App Service plan | Host the Function bot App | Not applicable |
-| Function app | Host your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
+| Managed Identity | Authenticates Azure service-to-service requests | Shared across different capabilities and resources |
+| Storage account | Helps to create function app | Not applicable |
+| App Service plan | Hosts the Function bot App | Not applicable |
+| Function app | Hosts your bot app | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
 
-### Resource creation for Teams Notification bot with Timer Trigger(Azure Function) application
+### Resource creation for Teams Notification bot with Timer Trigger (Azure Function) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
@@ -159,9 +159,9 @@ When you create a new project, you also need to create some Azure resources. The
 
 ### Manage your resources
 
-You can sign in to [Azure Portal](https://portal.azure.com/) and manage all resources created by TTK.
+You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by TTK.
 
-* You can select Resource group from the existing ones or the Resource group that you've just created.
+* You can select Resource group from the list existing ones or the Resource group that you've created.
 * You can see the details of the resource group you've chosen in the overview section of the table of content.
 
 ### Customize resource provision
@@ -184,7 +184,7 @@ Provision with ARM involves changing the following sets of files, parameters and
 | teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
 
 > [!NOTE]
-> Once you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated, then you can't customize them. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This does not make you lose any changes while adding resources or capabilities to your project.
+> After you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated, then you can't customize them. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This doesn't make you lose any changes while adding resources or capabilities to your project.
 
 The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json` file.
 
@@ -192,16 +192,16 @@ The ARM template files use placeholders for parameters. The purpose of the place
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client ID created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant ID of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client ID created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 
 ### Referencing environment variables in parameter files
 
-When the value is secret, then you do not need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for TTK to resolve from current environment variable.
+When the value is secret, then you don't need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for TTK to resolve from current environment variable.
 
 The following example reads the value of `mySelfHostedDbConnectionString` parameter from environment variable `DB_CONNECTION_STRING`:
 
@@ -219,11 +219,11 @@ To ensure the TeamsFx tool functions properly, customize ARM template, which sat
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the name of auto-generated parameters and its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of auto-generated ARM template is unchanged as well. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy and validate manifest file.
+* Ensure that the output of auto-generated ARM template is unchanged as well. You can add more outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy and validate manifest file.
 
 ### Customization scenarios
 
-You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. You can perform this in the following ways:
+You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. You can perform the in the following ways:
 
 #### Use an existing Azure AD app for your bot
 
@@ -263,3 +263,5 @@ If you get an insufficient permission error when TTK tries to add user to SQL da
 ```json
 "skipAddingSqlUser": true
 ```
+
+## See also
