@@ -81,56 +81,62 @@ items:
        1. Select your **Resource group** from the dropdown list that you want to provision for your bot app.
     
        You can also create a new resource group by the following steps:
-       
-        :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Select resource Azure bot":::
+
+              1. To create new resource group, select **Create new** > enter resource name > select **OK**.
+
+                   :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresourcecreation.png" alt-text="New resource creation":::
+
+              1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+        
+                   :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
     
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+      1. Select **Type of App** as **Multi Tenant**.
+
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select review-create.png" alt-text="Select review and create":::
+
+      1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+         You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
-          :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location":::
+         > [!NOTE]
+         > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
-    
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+      1. Select **Review + create**.
 
-       > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**.
+    1. After the validation passed, select **Create**. 
 
-    1. Select **Type of App** as **Multi Tenant**.
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/validation-passed.png" alt-text="Validation Pass":::
 
-    1. Select **Review + create**.
+       It takes a few moments for your bot service to be provisioned and the following page appears:
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/Review-create.png" alt-text="Create Microsoft App ID":::
-
-    1. If the validation passes, select **Create**. 
-
-        It takes a few moments for your bot service to be provisioned. 
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/bot-service-provision.png" alt-text="Bot Service Provision":::
 
     1. Select **Go to resource**. 
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/botdeployment.png" alt-text="Deploy App":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/go-to-resource.png" alt-text="Go to resource":::
 
-        Your Azure bot is created.
+        Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/bot-page.png" alt-text="Azure bot resource created":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-bot-created.png" alt-text="Azure bot resource created":::
 
     **To create client secret**
 
-      Perform the following steps if you've created a new **Microsoft App ID**:
+      Perform the following steps to create client secret:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left panel, select **Configuration**.
+
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-configuration.png" alt-text="Select configuration":::
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-manage.png" alt-text="Select manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-client-secret.png" alt-text="New client secret":::
     
        The **Add a client secret** window appears.  
 
@@ -138,11 +144,11 @@ items:
     
     1. Select **Add**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret.png" alt-text="Add client secret to app":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-secret.png" alt-text="Add client secret":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientvalue.png" alt-text="Value of client secret":::
+         ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/copy-client-secret.png" alt-text="Copy client secret":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
