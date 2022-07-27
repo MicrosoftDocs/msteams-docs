@@ -20,6 +20,9 @@ The following sections describe how to do this:
 
 To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
 
+ >[!Note]
+ >`justInTimeInstall` functions when you upload an app to the app catalog, it fails when you sideload an app.
+
 ### Complete app manifest example
 
 ```json
