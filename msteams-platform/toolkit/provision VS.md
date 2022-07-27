@@ -10,19 +10,19 @@ ms.date: 11/29/2021
 
 # Provision cloud resources using Visual Studio
 
-TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources.
+TeamsFx integrates with Azure and Microsoft 365 cloud, that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources.
 
 ## Prerequisites
 
 Here's a list of tools you'll need for provisioning your cloud resources:
 
-* Microsoft 365 account with a valid subscription
-* Azure account with a valid subscription
-* Install Teams Toolkit (TTK) for Visual Studio.
+* Microsoft 365 account with a valid subscription.
+* Azure account with a valid subscription.
+* Teams Toolkit (TTK) installation for Visual Studio.
 
 ## Steps to provision cloud resources
 
-The following steps helps you to provision cloud resources using Visual Studio:
+The following steps can help you to provision cloud resources using Visual Studio:
 
 ### Sign in to your Microsoft 365 account
 
@@ -37,10 +37,10 @@ The following steps helps you to provision cloud resources using Visual Studio:
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
     > [!NOTE]
-    > If you are already logged in, your username will be displayed, you can select the same to switch your account.
+    > If you are already logged in, your username will be displayed, or you can select the same to switch your account.
 
 5. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
-6. Select **Continue**.
+6. Select **Continue** once you are signed in to your account.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
@@ -57,7 +57,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
    > [!NOTE]
-   > If you're already logged in, your username is displayed, you have an option to switch account.
+   > If you're already logged in, your username is displayed, or you have an option to switch account.
 
 5. Sign in to Azure account using your credentials. The browser closes automatically.
 
@@ -67,7 +67,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in cloud":::
 
-2. In the Provision dialogue box you can see the list of all subscriptions in your Azure account.
+2. In the Provision dialogue box you can see a list of all the subscriptions in your Azure account.
 3. You can either select or create a new **resource group**.
 4. Select Provision.
 
@@ -78,7 +78,7 @@ The following steps helps you to provision cloud resources using Visual Studio:
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
 6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking TTK output window.
-7. You are prompted after provisioning is complete. Select **View Provisioned Resources** to check all the resources that were provisioned.
+7. You are prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
