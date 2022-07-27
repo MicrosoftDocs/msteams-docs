@@ -18,7 +18,7 @@ Here's a list of tools you'll need for provisioning your cloud resources:
 
 * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app.
 * [Azure account](https://portal.azure.com/) with a valid subscription.
-* Teams Toolkit (TTK) installation for Visual Studio.
+* Teams Toolkit installation for Visual Studio.
 
 ## Steps to provision cloud resources
 
@@ -77,14 +77,14 @@ The following steps can help you to provision cloud resources using Visual Studi
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
-6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking TTK output window.
+6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking Teams Toolkit output window.
 7. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
 ### Resource creation
 
-When you trigger provision command in TTK or TeamsFx CLI, you can create the following resources:
+When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can create the following resources:
 
 * Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
@@ -159,16 +159,16 @@ When you create a new project, you also need to create some Azure resources. The
 
 ### Manage your resources
 
-You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by TTK.
+You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
 * You can select Resource group from the list existing ones or the Resource group that you've created.
 * You can see the details of the resource group you've chosen in the overview section of the table of content.
 
 ### Customize resource provision
 
-TTK enables you to use an infrastructure for the code approach to define the Azure resources that you'd want to provision. TTK also helps you to configure it the way you want to.
+Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you'd want to provision. TTK also helps you to configure it the way you want to.
 
-TTK uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -201,7 +201,7 @@ The ARM template files use placeholders for parameters. The purpose of the place
 
 ### Referencing environment variables in parameter files
 
-When the value is secret, then you don't need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for TTK to resolve from current environment variable.
+When the value is secret, then you don't need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for Teams Toolkit to resolve from current environment variable.
 
 The following example reads the value of `mySelfHostedDbConnectionString` parameter from environment variable `DB_CONNECTION_STRING`:
 
@@ -238,7 +238,7 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the snippet, add your client secret to the related environment variable so that TTK can resolve the actual client secret during provision.
+After adding the snippet, add your client secret to the related environment variable so that Teams Toolkit can resolve the actual client secret during provision.
 
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you will get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
@@ -254,11 +254,11 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the preceding snippet, add your client secret to the related environment variable for TTK to resolve the actual client secret during provision.
+After adding the preceding snippet, add your client secret to the related environment variable for Teams Toolkit to resolve the actual client secret during provision.
 
 #### Skip adding user for SQL database
 
-If you get an insufficient permission error when TTK tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
+If you get an insufficient permission error when Teams Toolkit tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
