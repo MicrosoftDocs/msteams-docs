@@ -22,6 +22,8 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <details>
 <summary>Understand your user</summary>
 
+Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution. For more information, see [Understand your use cases](understand-use-cases.md)
+
 | # | Consider... |
 | --- | --- |
 | 1 | Are the users primarily front-line workers on mobile clients? |
@@ -58,6 +60,8 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <details>
 <summary>Provide authentication</summary>
 
+Authentication is all about validating app users and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app. For more information, see [Authenticate users in Microsoft Teams](../authentication/authentication.md)
+
 | # | Consider...|
 |--- | --- |
 | 1 | Will the users access different views of data based on their roles? |
@@ -69,6 +73,8 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <br>
 <details>
 <summary>Plan onboarding experience</summary>
+
+Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [Create Teams conversation bot](../../sbs-teams-conversation-bot.yml)
 
 | # | Consider... |
 | --- | --- |
@@ -104,17 +110,23 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <details>
 <summary>Choose build environment</summary>
 
+With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started. For more information, see [Plan your app with Teams features](../app-fundamentals-overview.md)
+
 Suggestion: Options that help select the correct environment based on app needs.
 </details>
 <br>
 <details>
 <summary>Plan for testing app</summary>
 
+After integrating your app with Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For more information, see [Test your app](../build-and-test/test-app-overview.md)
+
 Suggestion: Options that help determine the best testing environment for the app.
 </details>
 <br>
 <details>
 <summary>Plan for app distribution</summary>
+
+You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors, including users' needs, business and technical requirements, and your goals for the app. For more information, see [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
 
 Suggestion: Options that help determine the best distribution model.
 
