@@ -157,48 +157,52 @@ items:
 
     1. Select **Home**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/gotohome.png" alt-text="Home page":::
+        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-home.png" alt-text="Select Home":::
 
     1. Select your bot from **Recent resources**.
 
+        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-your-bot-resources.png" alt-text="Select your bot resource":::
+
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
+        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-teams.png" alt-text="Select Teams":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/terms-of-service1.png" alt-text="Terms of service":::
+        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/checkbox.png" alt-text="Select Checkbox":::
 
     1. Select **Apply**.  
+
+        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-apply.png" alt-text="Select Apply":::
     
     **To create tunnel for local web server**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
-     ngrok http -host-header=localhost 3978
+     ngrok http https://localhost:44326 -host-header=localhost:44326
      ```
-
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
     **To add messaging endpoint**
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
+    1. Go back to the Azure portal.
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
+
+         :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/configuration.png" alt-text="Configuration":::
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint.png" alt-text="Messaging Endpoint":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-message-endpoint.png" alt-text="Messaging Endpoint":::
 
     1. Select **Apply**.
 
@@ -213,25 +217,29 @@ items:
 
     1. Select **Azure Active Directory**.
 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Azure active directory":::
+
     1. In the left navigation panel, select **App Registrations**.
 
     1. Select your bot.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/appregister.png" alt-text="App registration":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registration.png" alt-text="App registration":::
 
     1. Under **Manage**, select **Expose an API**.
 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/exposeanapi.png" alt-text="Expose an API":::
+
     1. Select **Set**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi.png" alt-text="Expose an API":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Select Set":::
 
-    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}` and select **Save**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/setlink.png" alt-text="Set link":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri.png" alt-text="App URI":::
         
        The following image shows the domain name:
         
-        :::image type="content" source="~/assets/images/meetings-side-panel/appIDuri.png" alt-text="App ID URI":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri.png" alt-text="App ID URI":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -239,68 +247,82 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Select scope":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Select scope":::
     
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    Add a scope panel appears.
+
+    1. Enter the following details to add a scope.
+
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page.png" alt-text="Add a scope page":::
+
+       1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+
+          > [!NOTE]
+          > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
   
-    1. Set **Who can consent?** to `Admins and users`.
+       1. Set **Who can consent?** to `Admins and users`.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+       1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+          * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+          * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
+          * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
-    1. Ensure that **State** is set to **Enabled**.
+       1. Ensure that **State** is set to **Enabled**.
   
-    1. Select **Add scope** to save.
+       1. Select **Add scope** to save.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addascope.png" alt-text="Add a scope":::
+          Your Application ID URI is created with **Scope name**.
 
-        > [!NOTE]
-        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://4d52****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/scopes.png" alt-text="Scopes":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes.png" alt-text="Scopes":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Select client application":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-application.png" alt-text="Select client application":::
 
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
+       Add a client application panel appears.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Add client application 1"::: 
+    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
 
-       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+       |**Client ID**|**For authorizing**|
+       |--------|-------------|
+       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+    
+    1. Select **Authorized scopes** to determine which type of token is returned by the service.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Add client application 2":::
-
-    1. Select **Authorized scopes**.
-
-         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope.png" alt-text="Add client application 2":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope.png" alt-text="Add client application 2":::
 
        The following image displays the client Id:
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications"::: 
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
   
+    **Configure Graph permissions**
+
     1. In the left panel, select **API Permissions**. 
 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png" alt-text="Select API permissions"::: 
+        
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission.png" alt-text="Add permission"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addpermission.png" alt-text="Add permission"::: 
 
     1. Select **Microsoft Graph**.
 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/microsoft-graph.png" alt-text="Microsoft Graph"::: 
+
     1. Select **Delegated permissions**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/delegated-permission.png" alt-text="Delegated-permission"::: 
 
     1. Add the following permissions:</br>
          * **email**
@@ -308,12 +330,17 @@ items:
          * **OpenId**
          * **profile**
          * **User.Read**
+         * **User.ReadBasic.All
 
     1. Select **Add permissions**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions.png" alt-text="Other permissions":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permission.png" alt-text="Delegated-permission"::: 
+
+    **To set redirect URI**
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
+
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication"::: 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -321,7 +348,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-             :::image type="content" source="~/assets/images/meetings-side-panel/webauth.png" alt-text="Web":::
+             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -332,7 +359,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meetings-side-panel/authend.png" alt-text="Auth-end":::
+             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
