@@ -66,7 +66,7 @@ You can do the following operations on TTK for VS:
 |Operation  |Description  |
 |---------|---------|
 |Create Teams Project     |Create Teams project using Teams template in VS         |
-|Prepare Teams App Dependencies     |This step is required  before local debug, it helps to set up the local debug dependencies and register Teams app in Teams platform. So this requires Microsoft 365 account as well. For more information, see [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Prepare Teams App Dependencies     |This step is required  before local debug, it helps you to set up the local debug dependencies and register Teams app in Teams platform. So this requires you to have a Microsoft 365 account as well. For more information, see [Debug your Teams app locally] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Open Manifest File     |To open Teams manifest file, you can hover by the parameters to preview value. For more information, see [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Update Manifest in Teams Developer Portal     |When you need to update the manifest file, then you can only redeploy the manifest file to Azure without deploying the whole project again. use this command to update your changes to remote. For more information, refer to [Edit Teams manifest file] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Provision to the Cloud     |This option helps you to create Azure resources which hosts your Teams app. For more information, see [Provision cloud resources] (<http://{placeholder_url_to_doc_page_?zone=vs>})         |
