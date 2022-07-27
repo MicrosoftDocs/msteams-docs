@@ -69,42 +69,42 @@ This section describes the HTTP requests and responses for each step in the samp
 
 1. A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record. This allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
 
-# [Request](#tab/request)
+    # [Request](#tab/request)
 
-```http
-  HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
-```
+    ```http
+      HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_begincollaborationsession  
+    ```
 
-```json
- { 
+    ```json
+     { 
 
-     "applicationName": "{{applicationName}}", 
-     "collaborationRootEntityId": "{{collaborationRootEntityId}}", 
-     "collaborationRootEntityName": "{{entityName}}" 
- } 
-```
+         "applicationName": "{{applicationName}}", 
+         "collaborationRootEntityId": "{{collaborationRootEntityId}}", 
+         "collaborationRootEntityName": "{{entityName}}" 
+     } 
+    ```
 
-* `applicationName`: Unique name for the application
-* `collaborationRootEntityName`: Name of the business record entity  
-* `collaborationRootEntityId`:  Primary key (ID) of the specific business record
+    * `applicationName`: Unique name for the application
+    * `collaborationRootEntityName`: Name of the business record entity  
+    * `collaborationRootEntityId`:  Primary key (ID) of the specific business record
 
-# [Response](#tab/response)
+    # [Response](#tab/response)
 
-```http
-HTTP/1.1 200 OK 
-```
+    ```http
+    HTTP/1.1 200 OK 
+    ```
 
-```json
-{ 
+    ```json
+    { 
 
-    "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.m365_begincollaborationsessionResponse", 
+        "@odata.context": "https:// [Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.m365_begincollaborationsessionResponse", 
 
-    "collaborationRootId": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
+        "collaborationRootId": "72fc6b52-39d5-ec11-a7b6-0022481bfe8f" 
 
-} 
-```
+    } 
+    ```
 
-Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
+    Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
 
 1. Task 3: Create a Planner Plan**
 
