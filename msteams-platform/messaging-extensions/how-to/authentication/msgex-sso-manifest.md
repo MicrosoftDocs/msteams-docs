@@ -165,7 +165,9 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 You've configured the bot app to enable SSO. You can now sideload your bot app in Teams, and preview it in Teams environment.
 
+<!--
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app" border="false":::
+-->
 
 To preview your bot app in Teams:
 
