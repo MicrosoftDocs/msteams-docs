@@ -27,7 +27,7 @@ Proactive messages can include the following:
 
 Your bot must have access to be able to send out a proactive message to a user, group chat, or a team. Install the app with proactive bot locally to use the bot for a group chat or team.
 
-You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
+You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app must either be installed for the user or the user must be part of a team where your app is installed.
 
 Sending a proactive message is different from sending a regular message. There's no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
@@ -52,7 +52,7 @@ To create a new conversation or conversation thread in a channel, you must have 
 * You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
 * Every activity your bot receives must contain the required information.
 
-Regardless of how you get the information, you must store the `tenantId` and either the `userId` or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
+Regardless of how you get the information, you must store the `tenantId` and either the `userId` or the `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
 
 The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots. The `channelId` is global. However, your bot must be installed in the team before you can send a proactive message to a channel.
 
@@ -76,7 +76,7 @@ After you get the appropriate address information, you can send your message.
 
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
-Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
+Now that you've sent the proactive message, you must follow the best practices while sending proactive messages for better information exchange between users and the bot.
 
 See the following video to learn how to send proactive message from bots:
 
@@ -87,18 +87,18 @@ See the following video to learn how to send proactive message from bots:
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. When you use proactive messaging, it is important to provide the context and complete information to the user. The user should be able to easily understand the purpose of your message.
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time users interact with your app. It's an opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging sends a welcome message to a user, there's no pre-existing context for the user receiving the message. This is the first time users interact with your app. It's an opportunity to create a good first impression. The best welcome messages must include:
 
 * Why a user is receiving the message? It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
 * What do you offer? Users must be able to identify what they can do with your app and what value can you bring to them.
 
 * What should they do next? Invite users to try out a command, or interact with your app.
-Poor welcome messages can lead the users to block your bot. Write to the point and clear welcome messages. Iterate on the welcome messages if they aren't having the desired effect.
+Poor welcome messages can lead the users to block your bot. Write clear and to the point welcome messages. Iterate on the welcome message if you aren't receiving the right response.
 
 ### Notification messages
 
