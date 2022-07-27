@@ -111,8 +111,8 @@ On the General (Tab/Item) fill the host with the address of Dynamic 365 instance
 On the Security tab,  
 Client secret input: use your saved app secret value in the input  
 Client ID: Your Azure app (Client ID)  
-Resource URL:  The URL of your Dynamic 365 instance (https://<org>.<crm>.dynamics.com/)
-Scope: Same as above with “.default” suffix (https://<org>.<crm>.dynamics.com/.default)
+Resource URL:  The URL of your Dynamic 365 instance (<https://org>.crm.dynamics.com/)
+Scope: Same as above with “.default” suffix (<https://org>.crm.dynamics.com/.default)
 
 Select the update connector and this will save the changes and allow your flow to establish connections.
 
@@ -146,7 +146,7 @@ By default, the trigger Planner Task will be disabled and won't trigger. To, ena
 
 * Create a support ticket  under the path Power Apps/Collaboration controls/Settings.
 * Request that your environment is enabled for the Collaboration connector and provides your Environment URL (preferred) or Organization ID.  
-* You can add the following sample text to your support request: “enable Environment URL: <url> for the Collaboration Connector.
+* You can add the following sample text to your support request: “enable Environment URL: url for the Collaboration Connector.
 * To open a support ticket, follow the steps at Get Help + Support - Power Platform | Microsoft Docs
 
 1. **Actions**
@@ -274,7 +274,7 @@ This step action updates an existing collaboration map.
 This step action lists all metadata matching the specified filter.
 **Filter:** A filter to apply to the metadata query.  
 Example retrieving all metadata related to a collaboration map entity ID  
-m365_entityname eq 'm365_collaborationmap' and m365_entityid eq '<GUID>'
+m365_entityname eq 'm365_collaborationmap' and m365_entityid eq 'GUID'
 
 **Create Planner Task**
 
@@ -295,11 +295,11 @@ Active Checklist Item Count (Advanced): Number of checklist items with value set
 **Advanced options:**
 
 **Applied Categories:** A json formatter object that represents all the categories to apply for the task. See. plannerAppliedCategories resource type - Microsoft Graph v1.0 | Microsoft Docs  
-**Assignee Priority:** String value hintss used to order items of this type in a list view. See. <https://docs.microsoft.com/en-us/graph/api/resources/planner-order-hint-format?view=graph-rest-1.0>  
+**Assignee Priority:** String value hints used to order items of this type in a list view. See. docs.microsoft.com/en-us/graph/api/resources/planner-order-hint-format?view=graph-rest-1.0
 **Checklist Item Count:** Number of checklist items that are present on the task.
-**Completed By:** A json formatted object that represents the identity of the user that completed the task. See. <https://docs.microsoft.com/en-us/graph/api/resources/identityset?view=graph-rest-1.0>  
+**Completed By:** A json formatted object that represents the identity of the user that completed the task. See. docs.microsoft.com/en-us/graph/api/resources/identityset?view=graph-rest-1.0&preserve-view=true
 **Conversation Thread ID:** Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-**Created By:** A json formatted object that represents the identity of the user that created the task. See. <https://docs.microsoft.com/en-us/graph/api/resources/identityset?view=graph-rest-1.0>.
+**Created By:** A json formatted object that represents the identity of the user that created the task. See. docs.microsoft.com/en-us/graph/api/resources/identityset?view=graph-rest-1.0
 **Due Date Time:** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1st, 2014 is 2014-01-01T00:00:00Z.
 **Order Hint:** Hint used to order items of this type in a list view. The format is defined as outline here.
 **Percent Complete:** Percentage of task completion (0-100)
@@ -333,7 +333,7 @@ This step action updates a planner task record using Collaboration controls Plan
 **Advanced options:**
 
 **Applied Categories:** A json formatted object that represents all the categories to apply for the task. See. plannerAppliedCategories resource type - Microsoft Graph v1.0 | Microsoft Docs
-**Assignee Priority:** String value hints used to order items of this type in a list view. See. <https://docs.microsoft.com/en-us/graph/api/resources/planner-order-hint-format?view=graph-rest-1.0>.
+**Assignee Priority:** String value hints used to order items of this type in a list view. See. docs.microsoft.com/en-us/graph/api/resources/planner-order-hint-format?view=graph-rest-1.0
 **Conversation Thread ID:** Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
 **Collaboration Root ID:** The collaboration session unique identifier.
 **Order Hint:** Hint used to order items of this type in a list view. The format is defined as outline here
