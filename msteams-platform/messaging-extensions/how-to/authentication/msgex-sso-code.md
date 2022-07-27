@@ -53,15 +53,13 @@ The request to get the token is a normal POST message request using the existing
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-If the app user is using the application for the first time and user consent is required, the following dialog box appears:
+If the app user is using the application for the first time and user consent is required, the following message appears:
 
-:::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/MEActions.png" alt-text="SSO authentication for message extension app":::
 
-When the user selects **Continue**, one of the following events occurs:
+When the app user selects **AAD SSO authentication**, the validation is done using the Teams identity.
 
-* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require user's consent. Use this approach if your app requires Graph permissions other than `openid`.
-
-* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/MESsoCard.png" alt-text="SSO authentication completed for message extension app":::
 
 ### C# token request without a sign-in button
 
