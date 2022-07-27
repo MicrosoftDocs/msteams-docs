@@ -203,7 +203,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes:
+The list of handlers defined in `ActivityHandler` includes the following items:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
