@@ -36,7 +36,7 @@ The Collaboration controls are currently intended for use as described in this d
 **View after installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="view after installation" border="true":::
 
-When upgrading the controls to a later version, the same installation started banner displays, but the controlstatus remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the Solutions list at [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes. You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
+When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the Solutions list at [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes. You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
      :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="History check" border="true":::
 
 **Conversations button does not respond unless browser locale is English (United States)**
@@ -137,3 +137,25 @@ This is caused by a localization error for the Conversations component. You can 
 
  > [!TIP]
  > If an error occurs in a Teams desktop client, try to replicate in Teams web to capture the error log. Support
+
+## FAQ
+
+Q: What are the Collaboration controls (Preview)?
+
+A: Collaboration controls (Preview) enable you to easily add Microsoft 365 capabilities to your Power Apps line of business custom applications to simplify user workflows when collaborating on business processes in Teams or Power Apps.
+
+Q: What is the benefit of the Collaboration controls (Preview) for makers?
+
+A: With these new controls, you as a maker can easily drag-and-drop controls that bring Microsoft 365 collaboration to your app for the first time
+
+Q: What is the benefit of the Collaboration controls (Preview) for users?
+
+A: Your users can experience productivity gains and stay in their flow by collaborating on approvals, files, meetings, notes and tasks without leaving the context of your app.
+
+Q: How do I get access to the Collaboration controls (Preview)?
+
+A: Request that your Power Platform administrator install the controls from AppSource to your Power Apps environment.
+
+Q: How do I add the controls to a Model Driven App?
+
+A: Navigate to Form Designer and drag the controls from the Component pane onto a form
