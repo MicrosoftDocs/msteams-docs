@@ -82,13 +82,13 @@ items:
     
        You can also create a new resource group by the following steps:
 
-           1. To create new resource group, select **Create new** > enter resource name > select **OK**.
+          1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-                :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresourcecreation.png" alt-text="New resource creation":::
+              :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresourcecreation.png" alt-text="New resource creation":::
 
-           1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+          1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
         
-                :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
+              :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
     
       1. Select **Type of App** as **Multi Tenant**.
 
