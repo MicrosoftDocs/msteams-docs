@@ -61,7 +61,7 @@ The following steps can help you to provision cloud resources using Visual Studi
 
 5. Sign in to Azure account using your credentials. The browser closes automatically.
 
-### Adding provision cloud resources
+### To provision cloud resources
 
 1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
 
