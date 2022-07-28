@@ -8,7 +8,7 @@ ms.author: surbhigupta
 
 # Manage your apps in Developer Portal
 
-After you created or uploaded your app, you can manage your apps in Developer Portal with the following:
+After you create or upload your app, you can manage your apps in Developer Portal with the following:
 
 * [Overview](#overview)
 * [Configure](#configure)
@@ -42,9 +42,9 @@ To install and render your app in Teams, you must include a set of configuration
 
 In the Configure section, you can see the following features to manage and access your app:
 
-* **Basic information** - This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
-* **Branding** - This page shows you the app icon details.
-* **App features** - This section allows you to add the following features to your app:
+* **Basic information**: This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
+* **Branding**: This page shows you the app icon details.
+* **App features**: This section allows you to add the following features to your app:
   * Personal app
   * Bot
   * Connector
@@ -53,10 +53,10 @@ In the Configure section, you can see the following features to manage and acces
   * Messaging extension
   * Meeting extension
   * Activity feed notification
-* **Permissions** - This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on** - This section allows you to configure your app to authenticate users with single sign-on (SSO).
-* **Languages** - This section allows you to set up or change the language of your app.
-* **Domain** -
+* **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
+* **Single sign-on**: This section allows you to configure your app to authenticate users with single sign-on (SSO).
+* **Languages**: This section allows you to set up or change the language of your app.
+* **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
 ## Advanced
 
@@ -74,9 +74,10 @@ In the Advanced section, you can see the following features to manage your app i
     1. Under **Role**, select **Operative** or **Administrator**.
     1. Select **Add**.
 
-* **App content**
-
-(content to be added)
+* **App content**: You can configure your app with the following additional features:
+  
+  * Loading indicator: Displays an indicator to let users know your hosted app content (For example: Tabs and Task modules) is loading.
+  * Full-screen mode: Displays a personal app without an app header. This is supported only for the apps published to your org.
 
 * **Environments**
 
@@ -95,8 +96,8 @@ In the Advanced section, you can see the following features to manage your app i
     1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
     1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-* **Plan and pricing** - This section allows you to link a SaaS offer which you created in the Partner center to your app.
-* **Admin settings** - This section allows you to do app customization and to block your app by default.
+* **Plan and pricing**: This section allows you to link a SaaS offer which you created in the Partner center to your app.
+* **Admin settings**: This section allows you to do app customization and to block your app by default.
 
 ## Publish
 
@@ -117,7 +118,7 @@ This section allows you to publish your app to your org, or to the Teams store.
 
    You can download the app package using **Download app package** button from the publish to Teams Store page.
 
-* **App package** -
+* **App package**: The app package describes how your app is configured, including its features, required resources, and other important attributes in manifest. It also shows icon used for your app.
 
 ## Test your app directly in Teams
 
