@@ -1,10 +1,10 @@
 ---
-title: Extend bot app with Microsoft Graph permissions
-description: Describes configuring API permissions with Microsoft Graph for bot app
+title: Extend app with Microsoft Graph permissions
+description: Describes configuring API permissions with Microsoft Graph for message extension app
 ms.topic: how-to
 ms.localizationpriority: high
 ---
-# Extend bot app with Microsoft Graph permissions and scope
+# Extend app with Microsoft Graph permissions and scope
 
 You can extend your bot app by using Microsoft Graph. These permissions can allow app users to view user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
 

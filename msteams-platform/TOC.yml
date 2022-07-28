@@ -428,7 +428,7 @@
     - name: Use external OAuth providers
       href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Add authentication to your bot
-        href: bots/how-to/authentication/add-authentication.md  
+      href: bots/how-to/authentication/add-authentication.md  
 - name: Integrate device capabilities
   items:
   - name: Overview
