@@ -20,7 +20,7 @@ This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
 1. [Add code to request a token](#add-code-to-request-a-token)
-1. [Receive the token](#receive-the-token)
+1. [Add code to receive the token](#add-code-to-receive-the-token)
 
 ## Update development environment variables
 
@@ -104,15 +104,13 @@ When the app user selects the user name, validation is done using the Teams iden
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
-## Receive the token
+## Add code to receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
-
-### Add code to invoke response
 
 Use the following code snippet example to invoke response:
 
