@@ -1,7 +1,7 @@
 ---
-title: Limitations and known issues in collaboration controls app for Microsoft Teams
+title: Limitations and known issues in Collaboration controls app for Microsoft Teams
 author: surbhigupta
-description: In this article, learn about limitations and known issues in collaboration controls app for Microsoft Teams.
+description: In this article, learn about limitations and known issues in Collaboration controls app for Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -39,31 +39,10 @@ The Collaboration controls are currently intended for use as described in this d
 When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the Solutions list at [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes. You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
      :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="History check" border="true":::
 
-**Conversations button does not respond unless browser locale is English (United States)**
+**Bookings Meetings: 1:1**
 
-If the Conversations button doesn't respond when you select it, and you observe the following error in the console logs:
-     :::image type="content" source="../assets/images/collaboration-control/console-log.png" alt-text="console log" border="true":::
+The Meetings control supports 1:1 meetings when using Bookings to engage with users outside of your organization. 1:Many meetings with external users are not supported at this time. 
 
-This is caused by a localization error for the Conversations component. You can resolve the issue by updating your browser locale to en-US.
-
-**Conversations button disappears in Teams Web UI**
- There's an issue that causes the Conversations button to intermittently disappear when viewing a record in the Teams Web UI. You can follow this workaround to reload the button when the “App high density page header” setting is turned off:
-
- 1. Go back to the list view that shows all the records for the entity.
-
- 1. Refresh the browser.
-
- 1. Select on a record.
-
- 1. The Conversations button is now visible.
-
-**Conversations are not refreshed when moving to another record**
-
- The conversations pane isn't refreshed when you move between records. As a result, you'll see all the conversations from the teams channel, and not just the ones linked to that specific record. Deleted conversations will also be displayed with "(no title)".
-
-**Multiple Conversations buttons are displayed in Teams channels**
-
- When an app is played in a Teams channel, there's another chat icon in the header bar that opens the Posts tab with channel conversations. This isn't present when apps are played as a personal app or group chat app.
 
 **Meeting attendee status is incorrect**
 
@@ -80,29 +59,6 @@ This is caused by a localization error for the Conversations component. You can 
 **System Error after Upgrade**
 
  If you experience the error ‘System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]:Dataset with name 'gridData' not found Dataset Configuration for reference:…’ you may have a subgrid bound to an earlier version of the Events control. Solution: Remove subgrids that were bound to the Events control and after importing the new package, add the events control back.
-
-**Cannot add app in Teams**
-
- Sometimes an app can't be added to a Teams channel because the app details don't load correctly and the Save button is disabled:
-     :::image type="content" source="../assets/images/collaboration-control/collab-mgr-inspection.png" alt-text="Collab manager inspection" border="true":::
-
- This can be worked around by creating a new model driven app that uses the same table (repeating exercise 2, exercise 4 task 2 and exercise 6 task 2).
-
- It can also be helpful to:
-
- 1. Ensure the app has a different name or description, so you can identify the new app in the Teams app catalog.
- 1. Test publishing the app to Teams before repeating exercise 4, task 2
- Can't change app details after uploading to Teams
- If you want to change the app name, icon, or description after uploading it to Teams, you can follow this process:
- 1. Go to admin.teams.microsoft.com
- 1. Either select the option to upload a new file, or delete the app and it can be uploaded to Teams
- following the process in exercise 6 task 2.
-
-     :::image type="content" source="../assets/images/collaboration-control/manage-apps.png" alt-text="manage apps" border="true":::
-
-* If you're updating the manifest, you've to unzip it, and manually update the version number so that it's higher.
-
-* After changing the app catalog in the tenant, you've to sign out, and log back in as the user to get the updated catalog.
 
  **Tasks, Meetings controls fail to save**
 
@@ -136,17 +92,17 @@ This is caused by a localization error for the Conversations component. You can 
  message or searching for Collaboration Manager control names such as Tasks.<br/>
 
  > [!TIP]
- > If an error occurs in a Teams desktop client, try to replicate in Teams web to capture the error log. Support
+ > If an error occurs in a Teams desktop client, try to replicate in Teams web to capture the error log. 
 
 ## FAQ
 
 Q: What are the Collaboration controls (Preview)?
 
-A: Collaboration controls (Preview) enable you to easily add Microsoft 365 capabilities to your Power Apps line of business custom applications to simplify user workflows when collaborating on business processes in Teams or Power Apps.
+A: Collaboration controls (Preview) enable you to add Microsoft 365 capabilities to your Power Apps line of business custom applications to simplify user workflows when collaborating on business processes in Teams or Power Apps.
 
 Q: What is the benefit of the Collaboration controls (Preview) for makers?
 
-A: With these new controls, you as a maker can easily drag-and-drop controls that bring Microsoft 365 collaboration to your app for the first time
+A: With these new controls, you as a maker can drag-and-drop controls that bring Microsoft 365 collaboration to your app.
 
 Q: What is the benefit of the Collaboration controls (Preview) for users?
 
