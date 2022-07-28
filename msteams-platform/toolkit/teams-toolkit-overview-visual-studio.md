@@ -27,8 +27,8 @@ Teams Toolkit automates manual work and provides you with great integration of T
 
 The main milestones of this journey are:
 
-1. You can start creating a new project or try building a sample Teams app.
-1. You can edit code or the manifest file as needed.
+1. You can start by creating a new project or try building a sample Teams app.
+1. You can then edit code or the manifest file as needed.
 1. For building and debugging the Teams app you can use your Microsoft 365 account.
 1. For provisioning and deploying your app to cloud you can use your Azure account.
 1. You can now publish your app to Teams.
