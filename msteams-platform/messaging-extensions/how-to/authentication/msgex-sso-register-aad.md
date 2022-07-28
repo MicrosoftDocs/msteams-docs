@@ -1,5 +1,5 @@
 ---
-title: Register your Teams app with Azure AD
+title: Configure your app in Azure AD
 description: Describes registering your Teams app with Azure AD
 ms.topic: how-to
 ms.localizationpriority: high 

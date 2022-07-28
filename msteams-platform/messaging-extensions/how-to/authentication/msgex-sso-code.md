@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
-> [Register with Azure AD](msgex-sso-register-aad.md)
+> [Configure your app with Azure AD](msgex-sso-register-aad.md)
 
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
@@ -19,12 +19,12 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
-1. [Request a bot token](#request-a-bot-token)
-1. [Receive the bot token](#receive-the-bot-token)
+1. [Request a token](#request-a-token)
+1. [Receive the token](#receive-the-token)
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure your bot app code with these variables.
+You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure your app code with these variables.
 
 To update the development environment variables:
 
@@ -46,7 +46,7 @@ To update the development environment variables:
 
 You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
 
-## Request a bot token
+## Request a token
 
 The request to get the token is a normal POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign-in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
@@ -104,7 +104,7 @@ await context.sendActivity({
 ```
 ---
 
-## Receive the bot token
+## Receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
