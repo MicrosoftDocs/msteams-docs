@@ -10,7 +10,7 @@ ms.localizationpriority: high
 Deep links are a navigation mechanism that you can use to connect users with information and features within Teams and Teams apps. Some scenarios where creating deep links can be useful are as follows:
 
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
-* Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
+* Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required the parameters. This avoids the need for users to manually enter information.
 
 The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or even launching a chat dialog, the SDK provides strongly typed APIs that make for an improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
 
@@ -405,7 +405,7 @@ Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 ## Navigate to an audio or audio-video call
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there is group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In the case of group calls, you can call a set of VoIP users and a set of PSTN users on the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
@@ -429,12 +429,52 @@ else { /* handle case where capability isn't supported */ }
 
 You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
 
-When deep link is selected in an app and user is already in a meeting, the app is shared to stage, and a permission pop-up window appears. Users can grant permissions for the participants such as co-editing a document or collaborating with an app.
+> [!Note]
+> Deep link to share content to stage in meeting is supported in Teams desktop client only.
+
+When a deep link is selected in an app and the user is already in a meeting, the app is shared to stage, and a permission pop-up window appears. Users can grant permissions for the participants, such as co-editing a document or collaborating with an app.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="The screenshot is an example that shows a permission pop-up window.":::
 
 > [!NOTE]
-> Permission pop-up window appears only for Microsoft 365 apps.
+> Permission pop-up window appears only for Office apps.
 
-When user isn't in a meeting then user is redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meetnow) can be initiated, where user can add participants and they can interact with an app.
+When user isn't in a meeting then user is redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meet now) can be initiated.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-of-meet-now-join-pop-up.png" alt-text="The screenshot is an example that shows an option to join the meeting.":::
+
+Once the user joins the meeting, they can add participants and interact with the app.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="The screenshot is an example that shows an option to add participants and how to interact with the app.":::
+
+To add a deep link to share content on stage, you need to have a app context, as in the following example.
+
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false}`
+
+The query parameters are:
+
+* `appContext`: This consists the following
+
+  * `appID`: It allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. It can be taken from the app manifest or it can be the ID that is used to register an app in the Teams app store.
+  * `appSharingUrl`: The URL which needs to be shared on stage.
+  * `useMeetNow`: It allows to create a Meet now meeting while using deep link for sharing on stage. The boolean parameters are either true or false. The default value is false, meaning if there’s no meeting, the calendar popup will be shown.
+
+Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+The following is the format of a deep link with app context to share content on stage.
+
+* `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+The query parameters are:
+
+* `deepLinkId`: GUID or UUID used for telemetry correlation.
+* `fqdn`: Teams supports multi-tenant multi-account, and Teams can run AAD and MSA accounts at the same time. `fqdn`( teams.microsoft.com or teams.live.com ) is needed in Teams deep link service for tenant or account authentication. When the meeting is scheduled with Teams for Life, the `fqdn` is: teams.live.com. When the meeting is scheduled for Teams for Business, the `fqdn` will be teams.microsoft.com or teams.microsoft.us (for Gov) etc. The Teams client will find the right linked identity and suggest switching to the right one.
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
@@ -442,27 +482,7 @@ When user isn't in a meeting then user is redirected to the Teams calendar where
 |To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: false }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false}` |
 |To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: true }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: true}` |
 
-The query parameters are:
-
-* `deepLinkId`: GUID or UUID used for telemetry correlation.
-* `fqdn`: Teams supports multi-tenant multi-account, and Teams can run AAD and MSA accounts at the same time. `fqdn`( teams.microsoft.com or teams.live.com ) is needed in Teams deeplink service for tenant or account authentication.
-* `appContext`: This consists the following
-
-  * `appID`: To fetch the app manifest and check if the sharing on stage is possible.
-  * `appSharingUrl`: The URL which needs to be shared on stage.
-  * `useMeetNow`: Boolean parameter either to be true or false.
-
-> [!IMPORTANT]
->
-> * Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
->
->      ```javascript
->        var encodedcontext = encodeURI({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb" , “useMeetNow”:false });
->        encodedcontext = encodeURI(encodedcontext);
->        var deeplinkurl= msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext=+encodedContext ;
->      ```
->
-> * To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For more information, see [app manifest](~/resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts. Otherwise, meeting attendees may not be able to see the content on stage. For more information, see [app manifest](../../resources/schema/manifest-schema.md).
 
 ## Generate a deep link to a call
 
