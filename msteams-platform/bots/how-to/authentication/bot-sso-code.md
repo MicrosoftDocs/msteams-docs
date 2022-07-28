@@ -43,14 +43,12 @@ To update the development environment variables:
 
 You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
 
-## Request a bot token
+## Add code to request a token
 
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign-in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
-
-### Add code to request a token
 
 Use the following code snippet for requesting a token without needing the app user to sign-in.
 
@@ -105,7 +103,7 @@ When the user selects **Continue**, one of the following events occurs:
 
 * If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
 
-## Receive the bot token
+## Add code to receive the bot token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
@@ -113,9 +111,7 @@ The response with the token is sent through an invoke activity with the same sch
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token.
 
-### Add code to invoke response
-
-Use the following code snippet to invoke response.
+Use the following code snippet to invoke response:
 
 # [csharp](#tab/csharp)
 
