@@ -46,22 +46,12 @@ To update the development environment variables:
 
 You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
 
-## Request a token
+## Add code to request a token
 
 The request to get the token is a normal POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it's similar to a sign-in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
-
-If the app user is using the application for the first time, consent is required for SSO authentication.
-
-:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
-
-When the app user selects the user name, validation is done using the Teams identity.
-
-:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
-
-### C# token request without a sign-in button
 
 Use the following code snippet for requesting a token without needing the app user to sign-in.
 
@@ -103,6 +93,16 @@ await context.sendActivity({
 });
 ```
 ---
+
+### Consent dialog for getting access token
+
+If the app user is using the application for the first time, consent is required for SSO authentication.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
+
+When the app user selects the user name, validation is done using the Teams identity.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
 ## Receive the token
 
