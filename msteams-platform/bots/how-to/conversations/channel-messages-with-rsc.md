@@ -30,7 +30,6 @@ For your bot to receive all channel messages, RSC must be configured in the Team
 
 ![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
 
-
 The following is an example of the `webApplicationInfo` object:
 
 * **id**: Your Microsoft Azure Active Directory (Azure AD) app ID. This can be the same as your bot ID.
@@ -123,3 +122,4 @@ this.onMessage(async (context, next) => {
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http)
