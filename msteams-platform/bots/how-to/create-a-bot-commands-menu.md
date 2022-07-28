@@ -25,36 +25,33 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 ## Create a command menu for your bot
 
-Command menus are defined in your app manifest. You can either use **App Studio** to create them or add them manually in the app manifest.
+Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
-### Create a command menu for your bot using App Studio
+### Create a command menu for your bot using Developer Portal
 
 A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
-**To create a command menu for your bot using App Studio**
+To create a command menu for your bot using Developer Portal:
 
-1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**.
+1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and select **Open**.
 
-   > [!WARNING]
-   > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
+   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
+2. In **Developer Portal**, select the **Apps** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md).
 
-2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update C# app package in App Studio](../../get-started/deploy-csharp-app-studio.md).
+3. In the left pane of the **Apps** and in the **App features** section, select **Bots**.
 
-3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
+4. Select **Add a command** under **Commands** section.
 
-4. In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**. The **New Command** screen appears.
+   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="Select the app package" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
+5. Enter the **Command** that must appear as the command menu for your bot.
 
-5. Enter the **Command text** that must appear as the command menu for your bot.
+6. Enter the **Description** that must appear under the command text in the menu. **Description** must be a brief explanation of the purpose of the command.
 
-6. Enter the **Help text** that must appear under the command text in the menu. **Help text** must be a brief explanation of the purpose of the command.
+7. Select the **Scope** check boxes to select where this command menu must appear, and select **Add**.
 
-7. Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.
-
-   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio new commands menu button "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description and scopes for your bot.":::
 
 ### Create a command menu for your bot by editing Manifest.json
 
