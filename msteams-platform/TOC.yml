@@ -141,9 +141,7 @@
   - name: Developer Portal
     items:
     - name: Developer Portal for Teams
-      href: concepts/build-and-test/teams-developer-portal.md
-    - name: App Studio
-      href: concepts/build-and-test/app-studio-overview.md     
+      href: concepts/build-and-test/teams-developer-portal.md   
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
