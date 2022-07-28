@@ -1,10 +1,10 @@
 ---
-title: Register your Teams bot app with Azure AD
-description: Describes registering your Teams bot app with Azure AD
+title: Register your Teams app with Azure AD
+description: Describes registering your Teams app with Azure AD
 ms.topic: how-to
 ms.localizationpriority: high 
 ---
-# Configure your bot app in Azure AD
+# Configure your app in Azure AD
 
 Your message extension app is a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communication. You'll need to register your web service as a bot to enable SSO for your message extension app.
 
