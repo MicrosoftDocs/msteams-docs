@@ -170,7 +170,7 @@ if(valueObject["authentication"] !=null)
  }
 ```
 
-### Configure OAuth connection
+## Configure OAuth connection
 
 To configure an OAuth connection, use the following code snippet example:
 
