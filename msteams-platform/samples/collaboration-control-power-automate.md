@@ -82,7 +82,7 @@ In the settings details page, expand the Users + permissions and enter the Appli
 
   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Application user link":::
 
-In the App users page,, select the **Plus New app user** and a new right pane will appear
+In the App users page, select the **Plus New app user** and a new right pane will appear
 
   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="new app user":::
 
@@ -142,7 +142,7 @@ When a Collaboration Session is Created.
 
   :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Task is created or modified":::
 
-By default, the trigger Planner Task will be disabled and won't trigger. To, enable it the following steps must be completed by the tenant admin:
+By default, the trigger Planner Task will be disabled and won't trigger. To enable it the following steps must be completed by the tenant admin:
 
 * Create a support ticket  under the path Power Apps/Collaboration controls/Settings.
 * Request that your environment is enabled for the Collaboration connector and provides your Environment URL (preferred) or Organization ID.  
@@ -156,7 +156,7 @@ Begin Collaboration Session
 
 This step action creates a new collaboration session for your dataverse business entity.
 
-**Application Name:** Name of the associated application,  e.g. could be “Collaboration Manager for Loans” or “Collaboration Manager for Closed Loan Auditing”.
+**Application Name:** Name of the associated application, for example, could be “Collaboration Manager for Loans” or “Collaboration Manager for Closed Loan Auditing”.
 **Collaboration Root Entity Name:** Type of application record (table name) for example, could be “msfi_loanapplication” for a Collaboration Manager for Loans application.
 **Collaboration Root Entity ID:** ID of the associated application record, e.g.could be the ID of a Loan Application record.  
 

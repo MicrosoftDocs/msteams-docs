@@ -10,3 +10,294 @@ ms.topic: conceptual
 # Virtual Tables Entity Reference
 
 Use this reference learn about all the available Collaboration controls virtual entities and their attributes. These entities have a one-to-one mapping with a specific Microsoft Graph resource type e.g. the Graph Planner Task entities maps to the [Microsoft Graph Planner Task resource type](/graph/api/resources/plannertask). The virtual entity shares the same attributes as the resource type
+
+## Collaboration controls virtual entities
+
+| Name | Description |
+|---|---|
+| Graph Planner Task | The Graph Planner Task table represents a Planner task in Microsoft 365. |
+| Graph Planner Plan | The Graph Planner Plan table represents a Planner plan in Microsoft 365. |
+| Graph Event | The Graph Event table represents an event in a user calendar, or the default calendar of a Microsoft 365 group. |
+| Graph Booking Appointment | The Graph Booking Appointment table represents a customer appointment for a Booking Service, performed by a set of staff members, provided by a Microsoft Bookings business. |
+| Graph Drive | The Graph Drive table represents t he top-level object that represents a user's OneDrive or a document library in SharePoint. |
+| Graph Drive Item | The Graph Drive Item table represents a file, folder, or other item stored in a drive. |
+
+### Graph Planner Task
+
+* Entity name: m365_graphplannertask.
+* Graph resource:  graph/api/resources/plannertask.
+* Sorting is not supported.
+* Filtering is not supported.
+* Server driven pagination is supported, with maximum page size being 400.
+
+| Column  | Dataverse Type | Details |
+|---|---|---|
+| m365_collaborationrootid | StringType | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string.
+Note: This attribute will not be returned when retrieving multiple records. |
+| m365_activechecklistitemcount | IntegerType | Number of checklist items with value set to false, representing incomplete items. |
+| m365_appliedcategories | StringType | Number of checklist items with value set to false, representing incomplete items. |
+| m365_appliedcategories | StringType | The categories to which the task has been applied.
+This attribute is a JSON encoded string e.g."{ \"category1\": true, \"category6\": true, \"category9\": true }" |
+| m365_assigneepriority | StringType | Hint used to order items of this type in a list view. The format is defined as outlined here. |
+| m365_assignments | StringType | The set of assignees the task is assigned to. This attribute is a JSON encoded string e.g. "{\"7be...\": {\"assignedBy\": {\"user\": {\"displayName\":null, \"email\":null, \"id\":\"7be...\"}, \"group\":null, \"application\":null, \"device\":null}" |
+| m365_bucketid | StringType | Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service. |
+| m365_checklistitemcount | IntegerType | Number of checklist items that are present on the task. |
+| m365_completedby | StringType | Identity of the user that completed the task. This attribute is a JSON encoded string e.g. {\"user\": {\"displayName\":null,\"id\":\"d55...\"}} |
+| m365_completeddatetime | DateTimeType | Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_conversationthreadid |StringType | Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. |
+| m365_createdby | StringType | Identity of the user that created the task. This attribute is a JSON encoded string e.g. {\"user\": {\"displayName\":null,\"id\":\"d55...\"}} |
+| m365_createddatetime | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_duedatetime | DateTimeType | Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_hasdescription | BooleanType | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
+| m365_id | StringType | Read-only. ID of the task. It is 28 characters long and case-sensitive. Format validation is done on the service.|
+| m365_orderhint | StringType | Hint used to order items of this type in a list view. The format is defined as outlined here. |
+| m365_percentcomplete | IntegerType | Percentage of task completion. When set to 100, the task is considered completed. |
+| m365_priority | IntegerType | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Currently, Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
+| m365_planid | StringType | Plan ID to which the task belongs. |
+| m365_previewtype | StringType | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
+| m365_referencecount | IntegerType | Number of external references that exist on the task.|
+| m365_startdatetime | DateTimeType | Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_title | StringType |Title of the task. Primary lookup column |
+
+### Graph Planner Plan
+
+* Entity name: m365_graphplannerplan.
+* Graph resource:  graph/api/resources/plannerplan.
+* Sorting is not supported.
+* Filtering is not supported.
+* Server driven pagination is supported, with maximum page size being 400.
+
+| Column  | Dataverse Type | Details |
+|---|---|---|
+| m365_collaborationrootid | StringType | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
+| m365_graphplannerplanid |StringType |
+| m365_createdby | StringType | Identity of the user that created the task. This attribute is a JSON encoded string e.g.{\"user\": {\"displayName\":null,\"id\":\"d55...\"}} |
+| m365_createddatetime | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_id | StringType | Read-only. ID of the plan. It is 28 characters long and case-sensitive. Format validation is done on the service.|
+| m365_owner | StringType | ID of the group that owns the plan. After it is set, this property can’t be updated.|
+| m365_title | StringType | Title of the plan.
+Primary lookup column |
+
+## Graph Event
+
+* Entity name: m365_graphevent
+* Graph resource: graph/api/resources/event
+* Sorting is supported on the following columns:
+* m365_lastmodifieddatetime
+* m365_createddatetime
+* m365_hasattachments
+* m365_importance
+* m365_responserequested
+* m365_sensitivity
+* m365_showas
+* m365_subject
+* Filtering is supported on the following columns:
+* m365_allownewtimeproposals
+* m365_lastmodifieddatetime
+* m365_createddatetime
+* m365_icaluid
+* m365_importance
+* m365_isallday
+* m365_iscancelled
+* m365_isdraft
+* m365_responserequested
+* m365_sensitivity
+* m365_showas
+* m365_subject
+* m365_type
+* Server driven pagination is supported.
+
+### Attributes
+
+| Column  | Dataverse Type | Details |
+|---|---|---|
+| m365_collaborationrootid |StringType |Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
+| m365_allownewtimeproposals | BooleanType | true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+m365_attendees StringType The collection of attendees for the event.
+This attribute is a JSON encoded string, 15000 max in length e.g. [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
+| m365_body | StringType | The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length.
+e.g.{\"contentType\":\"html\",\"content\":\"<html></html>\"} |
+| m365_bodypreview | StringType | The preview of the message associated with the event. It is in text format.|
+| m365_categories | StringType | The categories associated with the event. Each category corresponds to the displayName property of an outlookCategory defined for the user.
+e.g. [\"string\"] |
+| m365_changekey | StringType | Identifies the version of the event object. Every time the event is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.|
+| m365_createddatetime | DateTimeType | The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_start | DateTimeType | The start date, time, and time zone of the event.
+This attribute is a JSON encoded string, 100 max in length.e.g {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"} |
+| m365_end | DateTimeType | The date, time, and time zone that the event ends.
+This attribute is a JSON encoded string, 100 max in length.
+e.g. {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"} |
+| m365_hasattachments | BooleanType | Set to true if the event has attachments.|
+| m365_hideattendees | BooleanType | When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.|
+| m365_icaluid | StringType | A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.|
+| m365_isallday | BooleanType | Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone.|
+|m365_iscancelled | BooleanType | Set to true if the event has been cancelled.
+m365_id StringType Read-only. ID of the event.|
+| m365_isdraft | BooleanType | Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.|
+| m365_isonlinemeeting | BooleanType | True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional. After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Subsequently Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.|
+| m365_isorganizer | BooleanType | Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.|
+| m365_isreminderon | BooleanType | Set to true if an alert is set to remind the user of the event.|
+| m365_lastmodifieddatetime | DateTimeType |The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_location StringType | The location of the event. JSON encoded string, max 4000 in length.
+e.g.[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"} |
+| m365_locations | StringType | The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value. JSON encoded string, max 4000 in length.e.g.[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}] |
+| m365_onlinemeeting | StringType | Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you cannot change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again. JSON encoded string, max 4000 in length.
+e.g.{\"conferenceId\": \"String\",\"joinUrl\": \"String\",\"phones\": [{\"@odata.type\": \"microsoft.graph.phone\"}],\"quickDial\": \"String\",\"tollFreeNumbers\": [\"String\"],\"tollNumber\": \"String\"} |
+| m365_onlinemeetingprovider | StringType | Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you cannot change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.|
+| m365_onlinemeetingurl | StringType | A URL for an online meeting. The property is set only when an organizer specifies in Outlook that an event is an online meeting such as Skype. Read-only. To access the URL to join an online meeting, use joinUrl which is exposed via the onlineMeeting property of the event. The onlineMeetingUrl property will be deprecated in the future.|
+| m365_organizer | StringType | The organizer of the event. JSON encoded string, max 4000 in length. {\"emailAddress\":{\"@odata.type\":\"microsoft.graph.emailAddress\"}} |
+| m365_originalendtimezone | StringType | The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook. |
+| m365_originalstart | DateTimeType | Represents the start time of an event when it is initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| m365_originalstarttimezone | StringType | The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.|
+| m365_recurrence | StringType | The recurrence pattern for the event.
+JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"daysOfWeek\":[\"monday\",\"wednesday\",\"friday\"],\"firstDayOfWeek\":\"sunday\",\"index\":\"first\",\"interval\":1,\"month\":0,\"type\":\"weekly\"},\"range\":{\"startDate\":\"2017-08-14\",\"endDate\":\"2018-08-14\",\"numberOfOccurrences\":0,\"recurrenceTimeZone\":\"Eastern Standard Time\",\"type\":\"endDate\"}} |
+| m365_reminderminutesbeforestart | IntegerType | The number of minutes before the event start time that the reminder alert occurs.|
+| m365_responserequested | BooleanType | Default is true, which represents the organizer would like an invitee to send a response to the event.|
+| m365_responsestatus | StringType | Indicates the type of response sent in response to an event message. JSON encoded string, max 4000 in length. {\"response\": \"String\",\"time\": \"String (timestamp)\"} |
+| m365_sensitivity | StringType | Possible values are: normal, personal, private, confidential.|
+| m365_seriesmasterid | StringType | The ID for the recurring series master item, if this event is part of a recurring series.|
+| m365_showas | StringType | The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.|
+| m365_subject | StringType | The text of the event's subject line. Primary lookup column
+| m365_transactionid | StringType | A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.|
+| m365_type | StringType | The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only |
+| m365_weblink | StringType | The URL to open the event in Outlook on the web. Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in. This URL cannot be accessed from within an iFrame.|
+| m365_grapheventid | StringType | Unique identifier of the graph event.|
+| m365_groupid | StringType | Group ID to which the event belongs.|
+
+### Graph Booking Appointment
+
+* Entity name: m365_graphbookingappointment
+* Graph resource: graph/api/resources/bookingAppointment
+* Sorting is not supported.
+* Filtering is supported on the following columns:
+* m365_bookingbusinessid
+* m365_collaborationrootid
+* m365_customertimezone
+* m365_optoutofcustomeremail
+* m365_price
+* m365_pricetype
+* m365_serviceid
+* m365_servicename
+* Pagination is not supported.
+
+| Column  | Dataverse Type | Details |
+|---|---|---|
+| m365_collaborationrootid| StringType| Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
+| m365_graphbookingappointmentid | StringType | Unique identifier of the graph booking appointment.|
+| m365_bookingbusinessid | StringType | The unique identifier of the booking business the appointment is scheduled under.|
+| m365_additionalinformation | StringType | Additional information that is sent to the customer when an appointment is confirmed.|
+| m365_customers | StringType| It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional[{\"customerId\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\":null,\"state\":\"\",\"street\":\"\",\"type\":null},\"coordinates\":{\"accuracy\":null,\"altitude\":null,\"altitudeAccuracy\":null,\"latitude\":null,\"longitude\":null},\"displayName\":\"\",\"locationEmailAddress\":null,\"locationType\":null,\"locationUri\":\"\",\"uniqueId\":null,\"uniqueIdType\":null},\"name\":\"Jordan Miller\",\"notes\":null,\"phone\":null,\"timeZone\":null,\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
+| m365_customertimezone | StringType | The time zone of the customer. For a list of possible values, see <https://docs.microsoft.com/en-us/graph/api/resources/datetimetimezone?view=graph-rest-beta> |
+| m365_duration | StringType | The length of the appointment, denoted in ISO8601 format.|
+| m365_enddatetime | DateTimeType | The date, time, and time zone that the appointment ends.|
+| m365_filledattendeescount | IntegerType | The current number of customers in the appointment.|
+| m365_id | StringType | The ID of the bookingAppointment. Read-only.|
+| m365_islocationonline | BooleanType | True indicates that the appointment will be held online. Default value is false.|
+| m365_joinweburl | StringType | The URL of the online meeting for the appointment.|
+| m365_maximumattendeescount | IntegerType | The maximum number of customers allowed in an appointment.|
+| m365_optoutofcustomeremail | BooleanType | True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.|
+| m365_postbuffer | StringType | The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.|
+| m365_prebuffer | StringType | The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.|
+| m365_price | DecimalType | The regular price for an appointment for the specified bookingService.|
+| m365_pricetype | StringType | A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.|
+| m365_reminders | StringType | The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
+[{\"message\":\"We look forward to seeing you!\",\"offset\":\"P1D\",\"recipients\":\"customer\"},{\"message\":\"Reminder that you have an appointment!\",\"offset\":\"P1D\",\"recipients\":\"staff\"}] |
+| m365_selfserviceappointmentid | StringType | An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.|
+| m365_serviceid | StringType | The ID of the bookingService associated with this appointment.|
+| m365_servicelocation | StringType | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\":null,\"state\":\"\",\"street\":\"\",\"type\":null},\"coordinates\":{\"accuracy\":null,\"altitude\":null,\"altitudeAccuracy\":null,\"latitude\":null,\"longitude\":null},\"displayName\":\"Our office address\",\"locationEmailAddress\":null,\"locationType\":null,\"locationUri\":\"\",\"uniqueId\":null,\"uniqueIdType\":null} |
+| m365_servicename | StringType | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property. |
+| m365_servicenotes |StringType | Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.|
+| m365_smsnotificationsenabled | BooleanType | True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.|
+| m365_staffmemberids | StringType | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
+| m365_startdatetime | DateTimeType | The date, time, and time zone that the appointment begins.|
+
+### Graph Drive
+
+* Entity name: m365_graphdrive
+* Graph resource: graph/api/resources/drive
+* Sorting is not supported.
+* Filtering is not supported.
+* Server driven pagination is supported.
+
+| Column  | Dataverse Type | Details |
+|---|---|---|
+| m365_collaborationrootid | StringType | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
+| m365_createdby | StringType | Identity of the user, device, or application which created the item. Read-only. This attribute is a JSON encoded string. e.g. { "user": { "displayName": "System Account" } } |
+| m365_createddatetime | DateTimeType | Date and time of item creation. Read-only.|
+| m365_description | StringType | Provide a user-visible description of the drive. Read-only.|
+| m365_drivetype | StringType | Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.|
+| m365_graphdriveid | Guid |Unique identifier of the graph drive.|
+| m365_id | StringType | The unique identifier of the drive. Read-only.|
+| m365_lastmodifiedby | StringType | Identity of the user, device, and application which last modified the item. Read-only.| This attribute is a JSON encoded string.e.g.{ "user": { "email": “user@contoso.com”,  "id": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
+| m365_lastmodifieddatetime | DateTimeType | Date and time the item was last modified. Read-only.|
+| m365_name | StringType | The name of the item. Read-only.|
+| m365_owner | StringType | Optional. The user account that owns the drive. Read-only. This attribute is a JSON encoded string. e.g.{ "group": { "id": "76c7286f-8645-4ba8-bc0f-c65a16424aaa", "displayName": "Group Name" } } |
+| m365_quota | StringType | Optional. Information about the drive's storage space quota. Read-only. This attribute is a JSON encoded string. e.g. { "deleted": 482586,  "remaining": 27487788645969, "state": "normal", "total": 27487790694400, "used": 1565845 } |
+| m365_sharepointids | StringType | Returns identifiers useful for SharePoint REST compatibility. Read-only. This property is not returned by default and must be selected using the $select query parameter. This attribute is a JSON encoded string. e.g."sharePointIds": { "listId":"29d8457a-8e26-4291-9901-09718a388aaa","siteId":"93618739-b3ca-4107-a77c-fba278c48aaa", "siteUrl": “<https://contoso.sharepoint.com>”, "tenantId":"53986071-de92-43ad-a41f-f3c4adb2beef""webId":"a0d0e9ec-e547-4338-92d9-4c2c62e5beef" } |
+| m365_siteid | StringType | The identifier for the site that contains the document library.|
+| m365_system | StringType | If present, indicates that this is a system-managed drive. Read-only. |
+| m365_weburl | StringType | URL that displays the resource in the browser. Read-only.|
+
+### Graph Drive Item
+
+* Entity name: m365_graphdriveitem
+* Graph resource: graph/api/resources/driveitem
+* Sorting is supported on the following columns:
+* m365_name
+* Filtering is supported on the following columns:
+* m365_name
+* Server driven pagination is supported.
+
+| Column  | Dataverse Type | Details |
+|---|---|---|
+| m365_audio | StringType | Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128,   "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false,"isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 } |
+| M365_bundle| StringType | Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. e.g.{ "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
+| m365_collaborationrootid | StringType | | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
+| m365_copy | StringType | If present in the request then a copy operation is performed.|
+| m365_createdby | StringType | Identity of the user, device, and application which created the item. Read-only. This attribute is a JSON encoded string. e.g.{"user":{"displayName":"User Name","email":"alias@contoso.com","id":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group":null,"application":null,"device":null}
+| m365_createddatetime | DateTimeType | Date and time of item creation. Read-only.
+| m365_ctag | StringType | An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+| m365_deleted |StringType | Information about the deleted state of the item. Read-only. This attribute is a JSON encoded string. e.g. { "state": "string" } |
+| m365_description | StringType |Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.|
+| m365_driveid | StringType | The identifier for the drive that contains the drive item.|
+| m365_etag | StringType | eTag for the entire item (metadata + content). Read-only.|
+| m365_file | StringType | File metadata, if the item is a file. Read-only. This attribute is a JSON encoded string. e.g. {"hashes":{"crc32Hash":null,"quickXorHash":"Biuzvwdu+Tmu6yRefayD27hD9vD=","sha1Hash":null,"sha256Hash":null},"mimeType":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","processingMetadata":null} |
+| m365_filesysteminfo | StringType |File system information on client.
+This attribute is a JSON encoded string. e.g. {"createdDateTime":"2022-07-21T15:02:47+00:00","lastAccessedDateTime":null,"lastModifiedDateTime":"2022-07-21T15:02:55+00:00"} |
+| m365_folder | StringType | Folder metadata, if the item is a folder. Read-only.This attribute is a JSON encoded string. e.g. {"childCount":0,"view":null} |
+| m365_graphdriveitemid | Guid | Unique identifier of the graph drive item.|
+| m365_id | StringType | The unique identifier of the item within the Drive. Read-only. |
+| m365_image | StringType | Image metadata, if the item is an image. Read-only.
+This attribute is a JSON encoded string. e.g.{"height":null,"width":null}
+| m365_lastmodifiedby | StringType | Identity of the user, device, and application which last modified the item. Read-only. This attribute is a JSON encoded string. e.g. {"user":{"displayName":"User Name","email":"alias@contoso.com","id":"a298b975-3493-4d9e-b2d4-3cad78f9a00e"},"group":null,"application":null,"device":null} |
+| m365_lastmodifieddatetime | DateTimeType | Date and time the item was last modified. Read-only.|
+| m365_location | StringType | Location metadata, if the item has location data. Read-only.
+This attribute is a JSON encoded string. e.g. "location": { "altitude": 1.0, "latitude": 1.0, "longitude": 1.0 } |
+| m365_malware | StringType | Malware metadata, if the item was detected to contain malware. Read-only. This attribute is a JSON encoded string. e.g.{ "description": "string" } |
+| m365_name | StringType | The name of the item (filename and extension). Read-write.|
+| m365_package | StringType | If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. This attribute is a JSON encoded string. e.g. { "type": "oneNote" }
+| m365_parentreference | StringType | Parent information, if the item has a parent.
+This attribute is a JSON encoded string.e.g.
+{"driveId":"b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1gq","driveType":"documentLibrary","id":"01EYDCV4YHV77FE3EDDFHIVD6WJ2ETT3PP","name":null,"path":"/drives/b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1no/root:/folder name","shareId":null,"sharepointIds":{"listId":"401172a8-6085-421a-8893-2d9712a35c3c","listItemId":null,"listItemUniqueId":"52feaf12-836c-4e19-8a8f-d64e8939ee52","siteId":"f34e02aa-b373-4a5f-884a-f7c60a20b64a","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantId":null,"webId":"6dd2ef66-9411-43d8-bcd4-0366c08ccabd"},
+"siteId":null} |
+| m365_parentreferenceid | StringType | The identifier for the drive item that is the parent of the drive item.|
+| m365_pendingoperations | StringType | If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. This attribute is a JSON encoded string. e.g. { "pendingContentUpdate": {"@odata.type": "microsoft.graph.pendingContentUpdate"} } |
+| m365_photo | StringType | Photo metadata, if the item is a photo. Read-only.
+This attribute is a JSON encoded string.e.g.{ "cameraMake": "Camera Make", "cameraModel": "Camera Model", "exposureDenominator": 1000000, "exposureNumerator": 41671, "focalLength": 4.38, "fNumber": 1.73, "iso": 70, "orientation": 6, "takenDateTime": "2020-04-29T14:17:39Z" } |
+| m365_publication | StringType | Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. |Read-only. This attribute is a JSON encoded string. e.g. {"level":"published","versionId":"2.0"}
+| m365_remoteitem | StringType | Remote item data, if the item is shared from a drive other than the one being accessed. Read-only. This attribute is a JSON encoded string.
+e.g. { "id": "string", "createdBy": { "@odata.type": "microsoft.graph.identitySet" }, "createdDateTime": "timestamp", "file": { "@odata.type": "microsoft.graph.file" }, "fileSystemInfo": { "@odata.type": "microsoft.graph.fileSystemInfo" }, "folder": { "@odata.type": "microsoft.graph.folder" }, "image" : { "@odata.type": "microsoft.graph.image" }, "lastModifiedBy": { "@odata.type": "microsoft.graph.identitySet" }, "lastModifiedDateTime": "timestamp", "name": "string", "package": { "@odata.type": "microsoft.graph.package" }, "parentReference": { "@odata.type": "microsoft.graph.itemReference" }, "shared": { "@odata.type": "microsoft.graph.shared" }, "sharepointIds": { "@odata.type": "microsoft.graph.sharepointIds" }, "specialFolder": { "@odata.type": "microsoft.graph.specialFolder" }, "size": 1024, "video": { "@odata.type": "microsoft.graph.video" }, "webDavUrl": "url", "webUrl": "url" } |
+| m365_root | StringType | If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.|
+| m365_searchresult | StringType | Search metadata, if the item is from a search result. Read-only. This attribute is a JSON encoded string. e.g. { "onClickTelemetryUrl": "url" } |
+| m365_shared | StringType | Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. This attribute is a JSON encoded string. e.g.{ "scope": "users", "owner": { "user": { "displayName": "User Name", "id": "bbbb6fa48aaaaaaa" } } } |
+| m365_sharepointids | StringType | Returns identifiers useful for SharePoint REST compatibility. Read-only. This attribute is a JSON encoded string.e.g.
+{"listId":"401172a7-6085-421a-8893-2d9712a35aba","listItemId":"338","listItemUniqueId":"0edc89e5-24ea-4c6b-a019-dc51f45eeccc","siteId":"f2be02aa-b373-4a5f-884a-f7c60a20bddd","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantId":"1c137272-0581-487f-b195-aeeb93cc4ccc","webId":"6dd2ef66-9411-43d8-bcd4-0366c08caaaa"} |
+| m365_siteid | StringType | The identifier for the site that contains the document library.|
+| m365_size | IntType | Size of the item in bytes. Read-only.|
+| m365_specialfolder | StringType | If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string.
+e.g. { "name": "documents" } |
+| m365_thumbnail | StringType | If present in the request then the drive item thumbnails will be retrieved.|
+| m365_video | StringType |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. e.g.
+{"bitrate": 10646968, "duration": 1050683, "height": 720,  "width": 1280,  "audioBitsPerSample": 16, "audioChannels": 1, "audioFormat": "PCM", "audioSamplesPerSecond": 32000, "fourCC": "H264", "frameRate": 60} |
+| m365_webdavurl | StringType | WebDAV compatible URL for the item.|
+| m365_weburl| StringType | URL that displays the resource in the browser. Read-only.|
