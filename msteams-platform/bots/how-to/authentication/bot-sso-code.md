@@ -50,17 +50,7 @@ The request to get the token is a POST message request using the existing messag
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-If the app user is using the application for the first time and user consent is required, the following dialog box appears:
-
-:::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
-
-When the user selects **Continue**, one of the following events occurs:
-
-* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require app user's consent. Use this approach if your app requires Graph permissions other than `openid`.
-
-* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
-
-### C# token request without a sign-in button
+### Add code to request a token
 
 Use the following code snippet for requesting a token without needing the app user to sign-in.
 
@@ -103,6 +93,18 @@ await context.sendActivity({
 ```
 ---
 
+### Consent dialog for getting access token
+
+If the app user is using the application for the first time and user consent is required, the following dialog box appears:
+
+:::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
+
+When the user selects **Continue**, one of the following events occurs:
+
+* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require app user's consent. Use this approach if your app requires Graph permissions other than `openid`.
+
+* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
+
 ## Receive the bot token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
@@ -111,7 +113,7 @@ The response with the token is sent through an invoke activity with the same sch
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token.
 
-### C# code to handle the invoke activity
+### Add code to invoke response
 
 Use the following code snippet to invoke response.
 
