@@ -16,8 +16,8 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
-1. [Request a bot token](#request-a-bot-token)
-1. [Receive the bot token](#receive-the-bot-token)
+1. [Add code to request a token](#add-code-to-request-a-token)
+1. [Add code to receive the token](#add-code-to-receive-the-token)
 
 ## Update development environment variables
 
@@ -103,7 +103,7 @@ When the user selects **Continue**, one of the following events occurs:
 
 * If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
 
-## Add code to receive the bot token
+## Add code to receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
