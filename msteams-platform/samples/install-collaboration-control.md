@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 In this article, you'll learn how to install Collaboration Controls. The following are required to build and deploy Collaboration Manager applications using the Collaboration controls:
 
-* **Power apps**: To build Model Driven Applications using the Collaboration controls.
+* **Power apps**: To build and run Model Driven Applications using the Collaboration controls.
 * **M365 E3 or higher**: To deploy custom applications to Microsoft Teams and store tasks in Planner, files in SharePoint, and meetings in Outlook.
 
 To install the components into a Power Platform environment the following roles are required:
@@ -71,14 +71,13 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 
    :::image type="content" source="../assets/images/collaboration-control/install-solution.png" alt-text="Collaboration control install" border="true":::
 
-1. Go to [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/home), it's also supported if you're signed up to Power Apps preview.
+1. Go to [https://make.powerapps.com/](https://make.powerapps.com/), it's also supported if you're signed up to Power Apps preview.
 
 1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the top right of the Power Apps portal.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-apps.png" alt-text="power apps" border="true":::
-
 1. Select the **Solutions** tab to view all the solutions that you've installed in the right environment.
-
+ 
+ 1. _update image below _
    :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="solutions collaboration control" border= "true":::
 
 > [!NOTE]
