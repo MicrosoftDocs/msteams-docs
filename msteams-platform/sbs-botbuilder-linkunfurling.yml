@@ -27,7 +27,7 @@ items:
 
     This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
-    :::image type="content" source="~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
+    :::image type="content" source="~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -50,7 +50,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository-new.png" alt-text="Clone repository" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository-new.png" alt-text="Clone repository":::
 
     1. Select **Clone**. 
 
@@ -73,20 +73,20 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
   
-       :::image type="content" source="~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
-    
+       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
     
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot":::
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
+       :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location.":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -99,7 +99,7 @@ items:
 
     1. Select **Review + create**.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/register-bot-3.png" alt-text="Create Microsoft App ID" border="true":::
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot-2.png" alt-text="Create Microsoft App ID":::
 
     1. If the validation passes, select **Create**. 
 
@@ -107,11 +107,11 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment.png" alt-text="Deploy App" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment.png" alt-text="Deploy App":::
 
        Your Azure bot is created.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page.png" alt-text="Azure bot resource created" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page.png" alt-text="Azure bot resource created":::
         
       **To create client secret**
 
@@ -124,11 +124,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/config1.png" alt-text="Azure bot resource created" border="true":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret" border="true":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret":::
             
        The **Add a client secret** window appears.
 
@@ -136,11 +136,11 @@ items:
     
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Add client secret to app" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Add client secret to app":::
        
     1. In the **Value** column, select **Copy to clipboard**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientvalue.png" alt-text="Value of client secret" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientvalue.png" alt-text="Value of client secret":::
              
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -149,7 +149,7 @@ items:
 
     1. Select **Home**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/gotohome.png" alt-text="Home page" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/gotohome.png" alt-text="Home page":::
        
     1. Select your bot from **Recent resources**.
 
@@ -161,11 +161,11 @@ items:
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/terms.png" alt-text="Terms of service" border="true":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms.png" alt-text="Terms of service":::
       
     1. Select **Save**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/configteams.png" alt-text="Select Teams" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/configteams.png" alt-text="Select Teams":::
       
     **To create tunnel for local web server**
 
@@ -181,7 +181,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Teams-link-unfurling/ngrok.png)
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -191,7 +191,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/messaging-endpoint.png" alt-text="Messaging Endpoint" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/messaging-endpoint.png" alt-text="Messaging Endpoint":::
          
     1. Select **Apply**.
 
@@ -208,21 +208,21 @@ items:
 
     1. Select your bot.
        
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appregister.png" alt-text="App registration" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appregister.png" alt-text="App registration":::
        
     1. Select **Expose an API**.
 
     1. Select **Set**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/exposeanapi.png" alt-text="Expose an API" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/exposeanapi.png" alt-text="Expose an API":::
       
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/setlink.png" alt-text="Set link" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/setlink.png" alt-text="Set link":::
                
        The following image shows the domain name:
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appIDuri.png" alt-text="App id" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appIDuri.png" alt-text="App id":::
       
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -230,7 +230,7 @@ items:
 
     1. Select **Add a scope**. 
        
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope.png" alt-text="Select scope" border="true"::: 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope.png" alt-text="Select scope"::: 
           
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -250,35 +250,35 @@ items:
   
     1. Select **Add a scope** to save.
 
-        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addscope.png" alt-text="Add a scope" border="true"::: 
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addscope.png" alt-text="Add a scope"::: 
         
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://your ngrok/botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
-          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/scope.png" alt-text="Scopes" border="true"::: 
+          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/scope.png" alt-text="Scopes"::: 
         
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Select client application" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Select client application":::
        
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams desktop application. 
    
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Add client application" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Add client application":::
        
        Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Add client application" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Add client application":::
       
     1. Select **Authorized scopes**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authorizedscope.png" alt-text="Add client application" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authorizedscope.png" alt-text="Add client application":::
       
        The following image displays the **Client Id**:
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Client app" border="true"::: 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Client app"::: 
          
     1. In the left panel, select **API Permissions**. 
 
@@ -287,7 +287,7 @@ items:
 
     1. Select **Add a permission**.
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addpermission.png" alt-text="Add permission" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addpermission.png" alt-text="Add permission":::
       
     1. Select **Microsoft Graph**.
 
@@ -302,7 +302,7 @@ items:
 
     1. Select **Add permissions**.
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/other-permissions.png" alt-text="Other permissions" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/other-permissions.png" alt-text="Other permissions":::
          
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -312,7 +312,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/webauth.png" alt-text="Web" border="true":::
+            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/webauth.png" alt-text="Web":::
          
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -323,7 +323,7 @@ items:
    
          1. Select **Configure**.
 
-            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authend.png" alt-text="Auth-end" border="true":::
+            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authend.png" alt-text="Auth-end":::
             
 
 - title: Set up app settings and manifest files
@@ -331,7 +331,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
  
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettingslocation.png" alt-text="App settings location" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettingslocation.png" alt-text="App settings location":::
       
     1. Open **appsettings.json** in Visual Studio.
     
@@ -342,11 +342,11 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
-           :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings.png" alt-text="App settings" border="true":::
+           :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings.png" alt-text="App settings":::
         
     1. Navigate to **manifest.json** in cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifestlocation.png" alt-text="[Manifest file location" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifestlocation.png" alt-text="[Manifest file location":::
         
     1. Open **manifest.json** in Visual Studio.
 
@@ -368,7 +368,7 @@ items:
 
     1. Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifest.png" alt-text="Manifest image" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifest.png" alt-text="Manifest image":::
       
 - title: Build and run the service
   durationInMinutes: 1
@@ -380,31 +380,31 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
 
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile.png" alt-text="Open file" border="true":::
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile.png" alt-text="Open file":::
           
        1. Select **TeamsLinkUnfurling.csproj** file from **55.teams-link-unfurling** folder.
 
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/csproj.png" alt-text="Select from folder" border="true":::
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/csproj.png" alt-text="Select from folder":::
       
        1. Open **Solution Explorer** from **View**.
 
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/solutionexplorer.png" alt-text="Solution Explorer" border="true":::
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/solutionexplorer.png" alt-text="Solution Explorer":::
           
        1. Right-click on **TeamsLinkUnfurling**.
 
        1. Select **Set as Startup Project**.
           
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/startup.png" alt-text="Solution Explorer" border="true"::: 
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/startup.png" alt-text="Solution Explorer"::: 
           
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/certificate.png" alt-text="Trust Certificate" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/certificate.png" alt-text="Trust Certificate":::
           
           A webpage opens with a message **Your bot is ready!**.
 
-          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appisready.png" alt-text="App ready" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appisready.png" alt-text="App ready":::
                   
     # [Command line](#tab/cli)
 
@@ -413,7 +413,7 @@ items:
     ```bash
     dotnet run
     ```
-    :::image type="content" source="~/assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet" border="true":::
+    :::image type="content" source="~/assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet":::
 
       ---
 
@@ -427,29 +427,29 @@ items:
        * icon-outline.png
        * icon-color.png
 
-         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/zipfile.png" alt-text="Zip file" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/zipfile.png" alt-text="Zip file":::
        
     1. Go to **Microsoft Teams**.
 
     1. Select **Apps**.
  
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file":::
        
     1. In the lower left corner, select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps":::
           
     1. Select **Upload an app to your org's app catalog**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app":::
       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/selectzip.png" alt-text="Select zip file" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/selectzip.png" alt-text="Select zip file":::
       
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app":::
        
        The app opens in a chat.
    
@@ -457,18 +457,18 @@ items:
 
        The link unfurls as shown in the following image:
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/result.png" alt-text="Link unfurling result" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/result.png" alt-text="Link unfurling result":::
        
     1. Press Enter.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result-1.png" alt-text="Link unfurling result" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result-1.png" alt-text="Link unfurling result":::
  
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling":::
 
 - content: |
     You've completed the tutorial to get started with Teams link unfurling app!

@@ -5,9 +5,9 @@ ms.topic: reference
 ms.localizationpriority: high
 ---
 
-# Reference: Manifest schema for Microsoft Teams
+# App manifest schema for Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are each  supported (using "v1.x" in the URL).
+The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.13, and the current version is 1.14 are each  supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -20,8 +20,8 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -501,7 +501,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+A list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -656,7 +656,10 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only for apps published to your organization.
+>
+> * `isFullScreen` only works for apps published to your organization. Sideloaded and published third-party apps cannot use this property (it is ignored).
+>
+> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
 
 ## activities
 
@@ -770,9 +773,20 @@ You can define any of the following properties:
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
 
+## supportedChannelTypes
+
+**Optional** - array
+
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
+
+> [!NOTE]
+>
+> * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
+> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [retrieve context in shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## defaultBlockUntilAdminAction
 
-**Optional**—Boolean
+**Optional** - Boolean
 
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
@@ -803,6 +817,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
+|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
 
 ### meetingExtensionDefinition.scenes
 

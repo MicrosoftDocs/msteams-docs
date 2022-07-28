@@ -738,7 +738,7 @@
       },
       {
         "source_path": "msteams-platform/platform/tabs/how-to/authentication/auth-aad-sso.md",
-        "redirect_url": "/msteams-platform/platform/tabs/how-to/tab-sso-overview"
+        "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
       }
     ]
 }

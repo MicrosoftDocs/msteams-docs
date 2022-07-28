@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Tab re-configuration and removal page
+# Create a removal page
 
 You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel or group tab and you can permit users to reconfigure your tab after installation. Additionally, the tab removal experience provides the users with post-removal options to delete or archive content.
 
@@ -30,7 +30,7 @@ When your tab is uploaded to a channel or group chat, Teams adds a right-click d
 
 ## Create a tab removal page for your application
 
-The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setConfig()` method (formerly `setSettings()`) within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab prerequisites](../../../tabs/how-to/tab-requirements.md).
+The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setConfig()` method (or `setSettings()` prior to TeamsJS v.2.0.0) within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab prerequisites](../../../tabs/how-to/tab-requirements.md).
 
 ### Register a remove handler
 
@@ -52,7 +52,7 @@ You can use `getContext()` to get the current context in which the frame is runn
 
 #### Include authentication
 
-Authentication is required before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+Authentication is required before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `validDomains` array of your app manifest.
 
 The following is a sample tab removal code block:
 
@@ -61,8 +61,9 @@ The following is a sample tab removal code block:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();
