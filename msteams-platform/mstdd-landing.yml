@@ -95,6 +95,7 @@ landingContent:
         url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
+     
 
 - title: Monetize your app
   linkLists:
@@ -173,7 +174,14 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-      
+
+
+    - linkListType: tutorial
+      links:
+        - text: Send activity feed notification 
+          url:  ~/sbs-graphactivity-feedbroadcast.yml
+
+
     - linkListType: tutorial
       links:
         - text: Build command bot with JavaScript
@@ -196,7 +204,8 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
-
+        
+           
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
