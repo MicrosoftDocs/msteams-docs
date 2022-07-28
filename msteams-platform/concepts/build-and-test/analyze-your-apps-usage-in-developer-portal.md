@@ -3,7 +3,7 @@ title: Analyze your app's usage in Developer Portal
 description: In this module, learn how to analyze your app's usage in Developer Portal
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ---
 
 # Analyze your app's usage in Developer Portal
