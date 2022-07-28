@@ -742,7 +742,7 @@
       },
       {
         "source_path": "msteams-platform/platform/concepts/build-and-test/app-studio-overview.md",
-        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal.md"
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
       }
     ]
 }
