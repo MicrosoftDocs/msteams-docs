@@ -43,6 +43,10 @@ When upgrading the controls to a later version, the same installation started ba
 
 The Meetings control supports 1:1 meetings when using Bookings to engage with users outside of your organization. 1:Many meetings with external users are not supported at this time. 
 
+**Bookings: Guests unable to join meetings**
+
+If your external guests are unable to join meetings using the browser join link, ensure your organisation meeting policies enable guests to join calls. For more information please visit: https://docs.microsoft.com/en-us/microsoftteams/meeting-policies-participants-and-guests#let-anonymous-people-join-a-meeting
+
 
 **Meeting attendee status is incorrect**
 
@@ -50,7 +54,7 @@ The Meetings control supports 1:1 meetings when using Bookings to engage with us
 
 **Cannot join meetings from Power Apps runtime**
 
- The join button doesn't work for meetings when apps are played in Power Apps. This issue can be worked around by playing apps inside Teams.
+ If the join button doesn't work for meetings when apps are played in Power Apps, this can be worked around by playing apps inside Teams.
 
 **Duplicate Archive Folders**
 
