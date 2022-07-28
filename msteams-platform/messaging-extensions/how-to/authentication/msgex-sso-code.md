@@ -19,7 +19,7 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
-1. [Request a token](#request-a-token)
+1. [Add code to request a token](#add-code-to-request-a-token)
 1. [Receive the token](#receive-the-token)
 
 ## Update development environment variables
@@ -53,7 +53,7 @@ The request to get the token is a normal POST message request using the existing
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-Use the following code snippet for requesting a token without needing the app user to sign-in.
+Use the following code snippet example for requesting a token:
 
 # [csharp](#tab/cs)
 
@@ -112,6 +112,55 @@ The response with the token is sent through an invoke activity with the same sch
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
 
+### Add code to invoke response
+
+Use the following code snippet example to invoke response:
+
+# [csharp](#tab/csharp)
+
+```csharp
+    protected override async Task<InvokeResponse> OnInvokeActivityAsync
+    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+            {
+                try
+                {
+                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
+                    {
+                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
+                        return new InvokeResponse() { Status = 200 };
+                    }
+                    else
+                    {
+                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
+                    }
+                }
+                catch (InvokeResponseException e)
+                {
+                    return e.CreateInvokeResponse();
+                }
+            }
+```
+
+# [JavaScript](#tab/javascript)
+
+```JavaScript
+async onSignInInvoke(context) {
+        if (context.activity && context.activity.name === tokenExchangeOperationName) {
+            await onTokenResponseEvent(context);
+            const response = {
+                        status: 200
+                    };
+                    return response;
+        }
+        else {
+            return await super.onInvokeActivity(context);
+        }
+    }
+```
+---
+
+The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
+
 You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling the SSO for:
 
 ```json
@@ -123,7 +172,9 @@ if(valueObject["authentication"] !=null)
  }
 ```
 
-To configure an OAuth connection, add the following code snippet to `TeamsMessagingExtensionsSearchAuthConfigBot.cs`:
+### Configure OAuth connection
+
+To configure an OAuth connection, use the following code snippet example:
 
 ```c#
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -183,55 +234,6 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
          return true;
      }
 ```
-
-### C# code to handle the invoke activity
-
-Use the following code snippet to invoke response.
-
-# [csharp](#tab/csharp)
-
-```csharp
-    protected override async Task<InvokeResponse> OnInvokeActivityAsync
-    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-            {
-                try
-                {
-                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
-                    {
-                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
-                        return new InvokeResponse() { Status = 200 };
-                    }
-                    else
-                    {
-                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
-                    }
-                }
-                catch (InvokeResponseException e)
-                {
-                    return e.CreateInvokeResponse();
-                }
-            }
-```
-
-# [JavaScript](#tab/javascript)
-
-```JavaScript
-async onSignInInvoke(context) {
-        if (context.activity && context.activity.name === tokenExchangeOperationName) {
-            await onTokenResponseEvent(context);
-            const response = {
-                        status: 200
-                    };
-                    return response;
-        }
-        else {
-            return await super.onInvokeActivity(context);
-        }
-    }
-```
----
-
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
 ## Next step
 
