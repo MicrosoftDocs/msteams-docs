@@ -383,12 +383,12 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
-  - name: Tabs
+  - name: Enable SSO for your Teams app
     items:
-    - name: Enable SSO for tab app
+    - name: Overview
+      href: tabs/how-to/authentication/tab-sso-overview.md
+    - name: Enable SSO for your tab app
       items:
-      - name: Overview
-        href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Register your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
@@ -397,31 +397,19 @@
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-      - name: Troubleshoot SSO authentication
-        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-    - name: Use third party OAuth IdP authentication
+    - name: Enable SSO for your bot app
       items:
-      - name: Overview
-        href: tabs/how-to/authentication/auth-flow-tab.md
-      - name: Configure third party OAuth IdP authentication
-        href: tabs/how-to/authentication/auth-tab-aad.md
-      - name: Use external OAuth providers
-        href: tabs/how-to/authentication/auth-oauth-provider.md 
-  - name: Bots
-    items:
-    - name: Authentication flow in bots
-      href: bots/how-to/authentication/auth-flow-bot.md
-    - name: Add authentication to your bot
-      href: bots/how-to/authentication/add-authentication.md
-    - name: Use SSO authentication
-      href: bots/how-to/authentication/auth-aad-sso-bots.md
-  - name: Message extensions
-    items:
-    - name: Overview
-      href: messaging-extensions/how-to/add-authentication.md
-    - name: Enable SSO for message extensions
+      - name: Configure bot app in Azure AD
+        href: messaging-extensions/how-to/authentication/bot-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: messaging-extensions/how-to/authentication/bot-sso-code.md
+      - name: Update manifest for SSO and preview app
+        href: messaging-extensions/how-to/authentication/bot-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: messaging-extensions/how-to/authentication/bot-sso-graph-api.md
+    - name: Enable SSO for message extension app
       items:
-      - name: Configure message extension app in Azure AD
+      - name: Configure app in Azure AD
         href: messaging-extensions/how-to/authentication/msgex-sso-register-aad.md
       - name: Add code to enable SSO
         href: messaging-extensions/how-to/authentication/msgex-sso-code.md
@@ -429,6 +417,18 @@
         href: messaging-extensions/how-to/authentication/msgex-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: messaging-extensions/how-to/authentication/msgex-sso-graph-api.md
+    - name: Troubleshoot SSO authentication
+      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+  - name: Use third party OAuth IdP authentication
+    items:
+    - name: Overview
+      href: tabs/how-to/authentication/auth-flow-tab.md
+    - name: Configure third party OAuth IdP authentication
+      href: tabs/how-to/authentication/auth-tab-aad.md
+    - name: Use external OAuth providers
+      href: tabs/how-to/authentication/auth-oauth-provider.md
+    - name: Add authentication to your bot
+        href: bots/how-to/authentication/add-authentication.md  
 - name: Integrate device capabilities
   items:
   - name: Overview
