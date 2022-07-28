@@ -145,9 +145,7 @@
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
     - name: Analyze your apps usage in Developer Portal
-      href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
-    - name: App Studio
-      href: concepts/build-and-test/app-studio-overview.md     
+      href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md    
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
