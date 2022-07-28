@@ -82,43 +82,43 @@ Examples:
 
 ## Virtual table pagination
 
-Pagination is a useful resource for fetching a large set of records. Virtual Table pagination can be achieved in three different ways:
+Pagination is a useful resource for fetching a large set of records. Virtual Table pagination can be achieved in three different ways.
 
-1. You can specify the page size by using the `odata.maxpagesize` preference value in the request header. If the result set spans multiple pages, the response will include the `@odata.nextLink` property. Sample request and response are as following:
+You can specify the page size by using the `odata.maxpagesize` preference value in the request header. If the result set spans multiple pages, the response will include the `@odata.nextLink` property. Sample request and response are as following:
 
 # [Request](#tab/request)
 
-```http
-    GET [Organization URI]/api/data/v9.2/m365_driveitems 
-    Accept: application/json 
-    Prefer: odata.maxpagesize=2 
-```
+  ```http
+      GET [Organization URI]/api/data/v9.2/m365_driveitems 
+      Accept: application/json 
+      Prefer: odata.maxpagesize=2 
+  ```
 
 # [Response](#tab/response)
 
-```json
-{ 
+  ```json
+  { 
 
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphdriveitems", 
-    "value": [ 
-        { 
-            "@odata.etag": "W/\"{FA93AF7C-1F45-4714-85A5-BB95EB86E1E5}\"", 
-            "m365_name": "Review.doc", 
-            "m365_graphdriveitemid": "f50aae23-6644-3d35-66d7-e3c5a979dad3", 
-            …
-        }, 
-        { 
-            "@odata.etag": "W/\"{3938D549-1AEF-46A5-BF3C-38472AD934C2}\"", 
-            "m365_name": "Review.doc", 
-            "m365_graphdriveitemid": "3d59a7e2-ec83-d0b3-270e-8ad676622027", 
-            … 
-        } 
-    ], 
-    "@odata.nextLink": "[Organization URI]/api/data/v9.0/m365_graphdriveitems &$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22UGFnZWQ9VFJVRSZwX1NvcnRCZWhhdmlvcj0xJnBfRmlsZUxlYWZSZWY9dGVzdCZwX0lEPTI5%22%20istracking=%22False%22%20/%3E" 
-} 
-```
+      "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphdriveitems", 
+      "value": [ 
+          { 
+              "@odata.etag": "W/\"{FA93AF7C-1F45-4714-85A5-BB95EB86E1E5}\"", 
+              "m365_name": "Review.doc", 
+              "m365_graphdriveitemid": "f50aae23-6644-3d35-66d7-e3c5a979dad3", 
+              …
+          }, 
+          { 
+              "@odata.etag": "W/\"{3938D549-1AEF-46A5-BF3C-38472AD934C2}\"", 
+              "m365_name": "Review.doc", 
+              "m365_graphdriveitemid": "3d59a7e2-ec83-d0b3-270e-8ad676622027", 
+              … 
+          } 
+      ], 
+      "@odata.nextLink": "[Organization URI]/api/data/v9.0/m365_graphdriveitems &$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22UGFnZWQ9VFJVRSZwX1NvcnRCZWhhdmlvcj0xJnBfRmlsZUxlYWZSZWY9dGVzdCZwX0lEPTI5%22%20istracking=%22False%22%20/%3E" 
+  } 
+  ```
 
----
+  ---
 
 Currently the following Virtual Tables support the `odata.maxpagesize` preference:
 
@@ -129,4 +129,94 @@ Currently the following Virtual Tables support the `odata.maxpagesize` preferenc
 * m365_drive
 * m365_graphdriveitem
 
-1.
+You can specify the number of records to return by passing the `$top` option in the URL. If you also need to specify the page number, you can do so by passing a paging cookie as an XML-encoded string as the `$skiptoken` option. To fetch a specific page number, you can pass the paging cookie in the following format:
+
+  <cookie pagenumber=3 />
+
+# [Request](#tab/request1)
+
+     ```http
+     GET [Organization URL]/api/data/v9.2/m365_graphevents?$top=2&$skiptoken=<cookie pagenumber=3> 
+     ```
+
+# [Response](#tab/response1)
+
+    ```json
+
+    {
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphdevents", 
+    "value": [
+        { 
+            "@odata.etag": "W/\"{FA93AF7C-1F45-4714-85A5-BB95EB86E1E5}\"", 
+            "m365_graphdeventid": "3d59a7e2-ec83-d0b3-270e-8ad676622027", 
+            "m365_subject": "Important meeting", 
+            … 
+        }, 
+        { 
+            "@odata.etag": "W/\"{3938D549-1AEF-46A5-BF3C-38472AD934C2}\"", 
+            "m365_graphdeventid": "f50aae23-6644-3d35-66d7-e3c5a979dad3", 
+            "m365_subject": "Another important meeting", 
+            …
+        } 
+    ] 
+    }
+
+```
+
+> [!Note]
+> The response will not include the `@nextLink` property. If your use case requires the next page link to be returned, you can use the odata.maxpagesize preference header described in section 1 instead of passing the $top URI parameter.
+
+Currently the following virtual tables support fetching a specific page: 
+
+* m365_graphbookingappointment
+* m365_graphcalendarevent
+* m365_graphchatmessage
+
+You can pass a fetch XML as an XML-encoded string. With the fetch XML option, you can specify several query preferences. The pagination specific options are page (page number) and count (page size). The following XML specifies the page number and size:
+
+  <fetch version="1.0" mapping="logical" returntotalrecordcount="true" page="<Page Number>" count="<Page Size>"></fetch> 
+
+# [Request](#tab/request2)
+
+```http
+GET [Organization URL]/api/data/v9.2/m365_graphevents?$fetchXml=<fetch version="1.0" mapping="logical" returntotalrecordcount="true" page="3" count="2"></fetch> 
+
+```
+
+# [Response](#tab/response2)
+
+```json
+{ 
+
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphdevents", 
+    "@Microsoft.Dynamics.CRM.fetchxmlpagingcookie": "<cookie pagenumber=\"3\" pagingcookie=\"\" istracking=\"False\" />", 
+    "value": [ 
+        { 
+            "@odata.etag": "W/\"{FA93AF7C-1F45-4714-85A5-BB95EB86E1E5}\"", 
+            "m365_graphdeventid": "3d59a7e2-ec83-d0b3-270e-8ad676622027", 
+            "m365_subject": "Important meeting", 
+            …
+        }, 
+        { 
+            "@odata.etag": "W/\"{3938D549-1AEF-46A5-BF3C-38472AD934C2}\"", 
+            "m365_graphdeventid": "f50aae23-6644-3d35-66d7-e3c5a979dad3", 
+            "m365_subject": "Another important meeting", 
+            …
+        } 
+    ] 
+} 
+
+```
+
+The following virtual tables support the count property to be passed as part of the fetchXml option:
+
+* m365_graphchat
+* m365_graphchatemessage
+* m365_drive
+* m365_graphdriveitem
+
+The following virtual tables support the page property as part of the fetchXml option:
+
+* m365_graphbookingappointment
+* m365_graphcalendarevent
+* m365_graphchatmessage
