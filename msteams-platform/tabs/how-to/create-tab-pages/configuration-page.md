@@ -14,7 +14,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Configure a channel or group chat tab
 
@@ -32,15 +32,15 @@ The following code is an example of corresponding code for the configuration pag
 
 ```html
 <head>
-    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
-</head>
+    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script>
-        app.initialize();
+    <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
         let saveGray = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
@@ -208,7 +208,7 @@ After your page uploads, Teams updates the query string placeholders with releva
 
 ```html
 <script>
-   app.initialize();
+   await app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -249,7 +249,8 @@ The following code provides an example of adding this function to the configurat
 
 <span id="user"></span>
 ...
-<script>
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
     const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
@@ -292,6 +293,7 @@ Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for remov
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
+import { pages } from "@microsoft/teams-js";
 const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",
