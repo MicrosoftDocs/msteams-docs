@@ -24,7 +24,7 @@ Cards used by bots and message extensions in Teams support the following activit
 >
 >* Teams does not support `CardAction` types not listed in the previous table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service. Suggested actions are not supported in Microsoft Teams. If you want buttons to appear on a Teams bot message, use a card.
+>* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service.
 >* If you are using a card action as part of a message extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
 
 ## Action type openUrl
