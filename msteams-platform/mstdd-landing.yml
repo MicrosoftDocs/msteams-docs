@@ -52,6 +52,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Build shared channels
+        url: concepts/build-and-test/Shared-channels.md
       - text: Introduced app manifest v1.14
         url: resources/schema/manifest-schema.md
       - text: Enhanced collaboration with Live Share SDK [Developer preview]
