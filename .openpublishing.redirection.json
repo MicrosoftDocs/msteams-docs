@@ -739,6 +739,10 @@
       {
         "source_path": "msteams-platform/platform/tabs/how-to/authentication/auth-aad-sso.md",
         "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/platform/concepts/build-and-test/app-studio-overview.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal.md"
       }
     ]
 }
