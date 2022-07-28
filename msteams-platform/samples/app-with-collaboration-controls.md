@@ -13,7 +13,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 ## Create a model-driven application
 
-1. Open [https://make.preview.powerapps.com.](https://make.preview.powerapps.com/)
+1. Open [https://make.powerapps.com.](https://make.powerapps.com/) or [https://make.preview.powerapps.com.](https://make.preview.powerapps.com/)
 
 1. Select **Solutions** in the left pane.
 
@@ -35,8 +35,6 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot descirbes how to create new activity." border="true":::
 
-    > [!TIP]
-    > Take a note of the schema name in the side pane for the settings, it would be such as cr*****_inspections
 
 1. Select **Save**.
 
@@ -97,9 +95,21 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. After selecting the tab, rename the tab to “Tasks” in the property pane.
 
-1. Select the tab name to select the full section and select **Expand first component to full tab** in the Properties pane. This is required as the controls only support full tab views.
+1. Select the tab name to select the full section and select **Expand first component to full tab** in the Properties pane. This is required as the Collaboration controls are best viewed in full tab views.
 
      :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab." border="true":::
+
+1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form. 
+2.    _add image_
+3. Set the table to Activities & select Done. 
+_4.    add image_
+5. Select ‘Hide Label’ on the Properties
+_6.    add image_
+7. The Tasks control will now display
+_8.    add image_
+9. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
+10. Once all controls are added you will see the controls rendered below in Form Designer 
+11.   _add image_
 
 1. You can now run your power app in Power Apps by selecting it.
 
@@ -116,7 +126,7 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
 
-Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings haven't yet been configured, you'll not be able to create entities such as Tasks, or Meetings.
+Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings haven't yet been configured, you'll not be able to create entities such as Tasks, or Meetings until those are added.
 
 ## Define Settings for your Collaboration
 
@@ -156,7 +166,8 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 
 1. Now retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
-     1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
+     1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All 
+     2. _update image below_
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="The screenshot is an example that shows the Graph Explorer.":::
 
      1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Following is an example:
@@ -209,13 +220,11 @@ The Notes control doesn't require a setting value. Now you can create entities s
 
 ## Navigate your new Collaboration Manager app
 
-Following sections guides you on how to use the Task, Notes, Meetings, Files, Conversations, and Approvals controls.
+Following sections guides you on how to use the Task, Notes, Meetings, Files, and Approvals controls.
 
 ### Creating Tasks
 
 Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens an empty page where users can add all the relevant tasks they need to complete.
-
-:::image type="content" source="../assets/images/collaboration-control/explore-tasks.png" alt-text="The screenshot is an example that shows the explore tasks tab.":::
 
 1. To create a new task for the team, select **Add a task**. This will open a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
 
@@ -275,7 +284,7 @@ Approvals allow users to request sign off from others when working in a record. 
 1. Go to the **Approvals** tab of the application.
 
 1. When there are no approval requests, users see the following screen.
-
+1. _update image_
       :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="The screenshot is an example that shows no approval requests.":::
 
 1. Select the **New approval request** to open the approval request form.
@@ -287,3 +296,6 @@ Approvals allow users to request sign off from others when working in a record. 
       :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="The screenshot is an example that show the list of approvals.":::
 
 1. Select the approval to view the details.
+
+2. For more information on Approvals: Create an approval [(microsoft.com)](https://support.microsoft.com/en-us/office/create-an-approval-6548a338-f837-4e3c-ad02-8214fc165c84)
+ 
