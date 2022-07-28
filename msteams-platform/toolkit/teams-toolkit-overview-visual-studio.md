@@ -10,18 +10,18 @@ ms.date: 05/24/2022
 
 # Teams Toolkit overview for Visual Studio
 
-Teams Toolkit (TTK) for Microsoft Visual Studio Code helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar to TTK for Visual Studio (VS) that includes Toolkit `teamsfx`. TTK lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with TTK has the advantages of:
+Teams Toolkit for Microsoft Visual Studio Code helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar to Teams Toolkit for Visual Studio that includes Toolkit `teamsfx`. TTK lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with TTK has the advantages of:
 
 * Integrated identity.
 * Access to cloud storage.
 * Data from Microsoft Graph.
 * Azure and Microsoft 365 services with zero-configuration approach.
 
-TTK brings all the tools needed to build a Teams app in one place.
+Teams Toolkit brings all the tools needed to build a Teams app in one place.
 
 ## User Journey of Teams Toolkit
 
-TTK automates manual work and provides you with great integration of Teams and Azure resources. The following image shows TTK user journey:
+Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey":::
 
@@ -35,16 +35,16 @@ The main milestones of this journey are:
 
 ## Install Teams Toolkit for Visual Studio
 
-1. You can download the latest VS installer from the [VS download page](https://visualstudio.microsoft.com/vs/preview/). You need to first install the VS installer before installing VS.
+1. You can download the latest VS installer from the [VS download page](https://visualstudio.microsoft.com/vs/preview/). You need to first install the VS installer before installing Visual Studio.
 
    > [!IMPORTANT]
-   > You are recommended to download VS 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for VS 2022 17.3.0 version. Teams Toolkit version 17.3.*.
+   > You are recommended to download Visual Studio 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. And this doc is written for Visual Studio 2022 17.3.0 version. Teams Toolkit version 17.3.*.
 
-2. After you open the VS installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
+2. After you open the Visual Studio installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
 
-3. Select **Launch** to open VS.
+3. Select **Launch** to open Visual Studio.
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
@@ -61,14 +61,14 @@ You can also access Teams Toolkit menu from solution explorer by right clicking 
 > [!NOTE]
 > In this scenario the project name is **MyTeamsApp1**.
 
-You can do the following operations on TTK for VS:
+You can do the following operations on Teams Toolkit for VS:
 
 |Operation  |Description  |
 |---------|---------|
-|Create Teams Project     |Create Teams project using Teams template in VS         |
-|Prepare Teams App Dependencies     |This step is required  before local debug, it helps you to set up the local debug dependencies and register Teams app in Teams platform. So this requires you to have a Microsoft 365 account as well. For more information, see [Debug your Teams app locally](<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Create Teams Project     |Create Teams project using Teams template in Visual Studio         |
+|Prepare Teams App Dependencies     |Before local debug perform this step, it helps you to set up the local debug dependencies and register Teams app in Teams platform. So this requires you to have a Microsoft 365 account as well. For more information, see [Debug your Teams app locally](<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Open Manifest File     |To open Teams manifest file, you can hover by the parameters to preview value. For more information, see [Edit Teams manifest file](<http://{placeholder_url_to_doc_page_?zone=vs>})         |
-|Update Manifest in Teams Developer Portal     |When you need to update the manifest file, then you can only redeploy the manifest file to Azure without deploying the whole project again. use this command to update your changes to remote. For more information, see [Edit Teams manifest file](<http://{placeholder_url_to_doc_page_?zone=vs>})         |
+|Update Manifest in Teams Developer Portal     |When you need to update the manifest file, then you can only redeploy the manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [Edit Teams manifest file](<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Provision to the Cloud     |This option helps you to create Azure resources that host your Teams app. For more information, see [Provision cloud resources](<http://{placeholder_url_to_doc_page_?zone=vs>})         |
 |Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you did “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud](http://{placeholder_url_to_doc_page_?zone=vs})         |
 |Preview in Teams     |This option will launch the Teams web client and let you preview Teams app in their browser.         |
@@ -87,3 +87,5 @@ The following operations aren't supported yet in TTK for VS (compared to TTK for
 |Manage multiple cloud environments     |         |
 |Collaborate on Teams projects     |         |
 |Publish Teams app     |         |
+
+## See Also
