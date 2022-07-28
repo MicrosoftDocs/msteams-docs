@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Configure Tasks for external clients
 
-External or guest tasks are tasks that can be assigned to users who aren't part of your organization or don't have access to your application such as assigning a task to a customer.
+External tasks that can be assigned to users who aren't part of your organization or don't have access to your application such as assigning a task to a customer.
 
-To enable, you'll need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. This XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
+To enable, you'll need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
 
 Following are the steps to create external tasks:
 
@@ -31,9 +31,9 @@ Following are the steps to create external tasks:
     Following is the schema definition for the tasks configuration Fetch XML. Any Fetch XML needs to be designed to meet the following requirements:
 
     * Query result shall return the following properties for each user object:
-      * ID,
-      * displayname,
-      * email, use alias if needed
+      * ID
+      * displayname
+      * email, use alias if needed.
     * Query shall contain the **@top** parameter to allow caller to limit the number of results.
     * Query shall have **@rootEntityId** parameter to filter results by only related records, if needed.
     * Query shall have **@useName** parameter to allow result filtering by name
