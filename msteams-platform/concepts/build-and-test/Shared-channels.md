@@ -23,7 +23,7 @@ Shared channels facilitate collaboration seamlessly. Allows external users outsi
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` is the team that created the shared channel.
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and this property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [app manifest schema for Teams](../../resources/schema/manifest-schema.md)
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
 
 ```JSON
 "supportedChannelTypes": {
