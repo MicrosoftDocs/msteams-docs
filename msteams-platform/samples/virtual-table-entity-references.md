@@ -234,14 +234,14 @@ JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"da
 | m365_createddatetime | DateTimeType | Date and time of item creation. Read-only.|
 | m365_description | StringType | Provide a user-visible description of the drive. Read-only.|
 | m365_drivetype | StringType | Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.|
-| m365_graphdriveid | Guid |Unique identifier of the graph drive.|
+| m365_graphdriveid | Guid | Unique identifier of the graph drive.|
 | m365_id | StringType | The unique identifier of the drive. Read-only.|
 | m365_lastmodifiedby | StringType | Identity of the user, device, and application which last modified the item. Read-only.| This attribute is a JSON encoded string.e.g.{ "user": { "email": “user@contoso.com”,  "id": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
 | m365_lastmodifieddatetime | DateTimeType | Date and time the item was last modified. Read-only.|
 | m365_name | StringType | The name of the item. Read-only.|
 | m365_owner | StringType | Optional. The user account that owns the drive. Read-only. This attribute is a JSON encoded string. e.g.{ "group": { "id": "76c7286f-8645-4ba8-bc0f-c65a16424aaa", "displayName": "Group Name" } } |
 | m365_quota | StringType | Optional. Information about the drive's storage space quota. Read-only. This attribute is a JSON encoded string. e.g. { "deleted": 482586,  "remaining": 27487788645969, "state": "normal", "total": 27487790694400, "used": 1565845 } |
-| m365_sharepointids | StringType | Returns identifiers useful for SharePoint REST compatibility. Read-only. This property is not returned by default and must be selected using the $select query parameter. This attribute is a JSON encoded string. e.g."sharePointIds": { "listId":"29d8457a-8e26-4291-9901-09718a388aaa","siteId":"93618739-b3ca-4107-a77c-fba278c48aaa", "siteUrl": “<https://contoso.sharepoint.com>”, "tenantId":"53986071-de92-43ad-a41f-f3c4adb2beef""webId":"a0d0e9ec-e547-4338-92d9-4c2c62e5beef" } |
+| m365_sharepointids | StringType | Returns identifiers useful for SharePoint REST compatibility. Read-only. This property is not returned by default and must be selected using the $select query parameter. This attribute is a JSON encoded string. e.g."sharePointIds": { "listId":"29d8457a-8e26-4291-9901-09718a388aaa","siteId":"93618739-b3ca-4107-a77c-fba278c48aaa", "siteUrl": “<https://contoso.sharepoint.com>”, "tenantId":"53986071-de92-43ad-a41f-f3c4adb2beef""webId":"a0d0e9ec-e547-4338-92d9-4c2c62e5beef" |
 | m365_siteid | StringType | The identifier for the site that contains the document library.|
 | m365_system | StringType | If present, indicates that this is a system-managed drive. Read-only. |
 | m365_weburl | StringType | URL that displays the resource in the browser. Read-only.|
@@ -261,10 +261,10 @@ JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"da
 | Column | Dataverse Type | Details |
 |---|---|---|
 | m365_audio | StringType | Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128,   "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false,"isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 } |
-| M365_bundle| StringType | Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. e.g.{ "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
-| m365_collaborationrootid | StringType | | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
+| M365_bundle | StringType | Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. e.g.{ "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
+| m365_collaborationrootid | StringType | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
 | m365_copy | StringType | If present in the request then a copy operation is performed.|
-| m365_createdby | StringType | Identity of the user, device, and application which created the item. Read-only. This attribute is a JSON encoded string. e.g.{"user":{"displayName":"User Name","email":"alias@contoso.com","id":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group":null,"application":null,"device":null}
+| m365_createdby | StringType | Identity of the user, device, and application which created the item. Read-only. This attribute is a JSON encoded string. e.g.{"user":{"displayName":"User Name","email":"alias@contoso.com","id":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group":null,"application":null,"device":null} |
 | m365_createddatetime | DateTimeType | Date and time of item creation. Read-only.
 | m365_ctag | StringType | An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
 | m365_deleted |StringType | Information about the deleted state of the item. Read-only. This attribute is a JSON encoded string. e.g. { "state": "string" } |
