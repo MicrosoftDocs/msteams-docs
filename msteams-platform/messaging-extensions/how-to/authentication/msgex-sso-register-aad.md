@@ -33,7 +33,7 @@ You can configure them in any order. For this tutorial, you'll configure your ap
 
 You can configure your bot app in Azure AD to configure the scope and permissions for access tokens.
 
-You'll need to register your app in Azure AD before you can configure it. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
+You'll need to register your app in Azure AD and configure the tenancy and app's platform before you can configure it. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
 
 <details>
 <summary><b>Learn how to register your app in Azure AD</b></summary>

@@ -1,21 +1,21 @@
 ---
-title: Register your tab app with Azure AD
+title: Configure your tab app in Azure AD
 description: Describes registering your tab app with Azure AD
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
 ---
-# Register your tab app in Azure AD
+# Configure your tab app in Azure AD
 
 Azure AD provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enabling SSO on Azure AD
 
-Registering your tab app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and pre-authorize client IDs for trusted applications.
+Register your tab app in Azure AD and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and pre-authorize client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
+After you register your app in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. This allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
 
 You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
 
@@ -26,7 +26,7 @@ Azure AD configuration enables SSO for your tab app in Teams. It responds with a
 > [!NOTE]
 > Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
 
-### Before you register with Azure AD
+### Before you configure your app with Azure AD
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
@@ -41,13 +41,17 @@ It's helpful if you learn about the configuration for registering your app on Az
 
 To create and configure your app in Azure AD for enabling SSO:
 
-- [Register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
 - [Configure scope for access token.](#configure-scope-for-access-token)
 - [Configure access token version.](#configure-access-token-version)
 
-## Create an app registration in Azure AD
+## Configure your app in Azure AD
 
-Register a new app in Azure AD, and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
+You can configure your tab app in Azure AD to configure the scope and permissions for access tokens.
+
+You'll need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
+
+<details>
+<summary><b>Learn how to register your app in Azure AD</b></summary>
 
 ### To register a new app in Azure AD
 
@@ -99,6 +103,8 @@ Register a new app in Azure AD, and configure the tenancy and app's platform. Yo
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Azure AD. You should now have app ID for your tab app.
+
+</details>
 
 ## Configure scope for access token
 
