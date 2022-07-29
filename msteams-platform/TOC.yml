@@ -425,11 +425,11 @@
     items:
     - name: Overview
       href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Configure third party OAuth IdP authentication for tab app
+    - name: Add third party OAuth IdP authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Add authentication to bot app
+    - name: Add third party OAuth IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
-    - name: Add authentication to message extension app
+    - name: Add third party OAuth IdP authentication to message extension app
       href: messaging-extensions/how-to/authentication/add-authentication-mex.md   
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
