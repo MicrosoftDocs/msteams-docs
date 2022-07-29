@@ -178,7 +178,7 @@ If you have admin rights, perform the following steps to upload the custom app u
   1. Sign-in to Microsoft Teams admin center with your admin credentials.
   1. Select **Show All** > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 Admin center1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Microsoft 365 Admin center1":::
 
   1. Select **Global (Org-wide default)**
 
