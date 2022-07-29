@@ -12,7 +12,7 @@ Teams Toolkit in Visual Studio Code offers set of environments to build your Tea
 * JavaScript/TypeScript
 * SharePoint Framework (SPFx)
 
-## Create your Teams app using JavaScript/TypeScript
+## Create your Teams app using JavaScript or TypeScript
 
 Teams Toolkit in Visual Studio Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
 
@@ -31,14 +31,9 @@ Teams Toolkit in Visual Studio Code allows you to create apps using SPFx. These 
 * Integrates with other Microsoft (Office) 365 workloads easily
 * Delivers flexibility to host applications wherever needed
 
-## Teams app using Blazor or Csharp
-
-Teams Toolkit helps you to create Blazor and C# apps in Visual Studio.
-For more information, see [Teams Toolkit for Visual Studio](visual-studio-overview.md).
-
 ## Manage your apps using Developer Portal
 
-As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **Deployment** after creating an app. For more information, see [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **Deployment** after creating an app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal.png" alt-text="build environment developer portal":::
 
