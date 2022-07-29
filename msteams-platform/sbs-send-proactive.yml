@@ -22,11 +22,11 @@ items:
     This step-by-step guide helps you to send a proactive message from a bot. You'll see the following outputs:
 
     * Proactive hello message in chat.     
-    ![Proactive hello in chat](~/assets/images/proactive-scenario/proactive-helo.png)
-
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo.png" alt-text="Screenshot shows the proactive hello message in chat.":::
+    
     * Proactive hello message as an Adaptive Card.
-    ![proactive hello in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) 
-
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the proactive hello message in adaptive card.":::
+    
 - title: Prerequisites
   durationInMinutes: 2
   content: |
@@ -44,8 +44,8 @@ items:
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
-        ![Proactivebot project](~/assets/images/proactive-scenario/proactivebot-project.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project.png" alt-text="Screenshot shows the proactivebot project.":::
+        
         <br>
 
         <details>
@@ -73,81 +73,81 @@ items:
         
     1. Copy the ngrok URL (as highlighted in the image) for further reference as ngrok base URL in the next steps. 
 
-        ![ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)   
-
+        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url.png" alt-text="Screenshot shows the ngrok base URL.":::
+        
 - title: Create and install Teams app
   durationInMinutes: 5
   content: |
     1. Go to Teams > **App Studio** and import the `AppManifest.zip` file available in the downloaded sample code (Zip file).
 
-        ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
-
+        :::image type="content" source="~/assets/images/proactive-scenario/app-studio-import-app.png" alt-text="Screenshot shows the App Studio.":::
+        
     1. Select **Bots** > **Set up**.
 
-        ![Bot set up](~/assets/images/proactive-scenario/bot-setup.png)  
-
+        :::image type="content" source="~/assets/images/proactive-scenario/bot-setup.png" alt-text="Screenshot shows the Bot set up.":::
+        
     1. In the **Set up a bot** window, enter **Name** (for example, **Proactive Message Demo**).
     1. Select **Personal** and then select **Create bot** to create the bot.
 
-        ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
-
+        :::image type="content" source="~/assets/images/proactive-scenario/create-bot-id.png" alt-text="Screenshot shows the steps to create bot id.":::
+        
     1. Append **/api/messages** to the ngrok base URL (that you had copied) and set it as **Bot endpoint address**. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/messages`.
     
-        ![Bot endpoint address](~/assets/images/proactive-scenario/bot-endpoint-address.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/bot-endpoint-address.png" alt-text="Screenshot shows the bot endpoint address.":::
+        
     1. Wait for a few seconds for the changes to take effect.     
 
         > If it's taking longer, select **Tabs** and then the **Bots** section to force update.
         
     1. Select **Generate new password** to generate the new App Password and copy it. 
     
-        ![Generate app password](~/assets/images/proactive-scenario/generate-app-password.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/generate-app-password.png" alt-text="Screenshot shows the steps to generate app password.":::
+        
     1. Go to Visual Studio and open the **appsettings.json** file. Paste the password as the value for `MicrosoftAppPassword`.    
     1. Go to **App Studio**, and copy the App ID. 
 
-        ![Generate app ID](~/assets/images/proactive-scenario/generate-app-id.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/generate-app-id.png" alt-text="Screenshot shows the steps to generate app id.":::
+        
     1. Go to Visual Studio and open the **appsettings.json** file. Paste the App ID as the value for `MicrosoftAppId`. Your `appsettings.json` will have the following setting values:    
 
-        ![Appsetting values](~/assets/images/proactive-scenario/app-setting-values.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/app-setting-values.png" alt-text="Screenshot shows the app setting values.":::
+        
     1. Press **F5** or select **IIS express** to run the code.
 
-        ![Run code](~/assets/images/proactive-scenario/run-code.png)
-    
+        :::image type="content" source="~/assets/images/proactive-scenario/run-code.png" alt-text="Screenshot shows the steps to run the code.":::
+            
         The corresponding proactive message sample appears:  
 
-        ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
-    
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-message-sample.png" alt-text="Screenshot shows sample proactive message.":::
+            
     1. Go to **Test and distribute** > **Install** to install the same app again.
 
-        ![Install App](~/assets/images/proactive-scenario/install-app.png)   
-
+        :::image type="content" source="~/assets/images/proactive-scenario/install-app.png" alt-text="Screenshot shows the steps to install app.":::
+        
     1. Select the `http://localhost:3978/api/notify` URL to get a proactive hello message in the chat.
 
-        ![Proactive message sent](~/assets/images/proactive-scenario/result.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/result.png" alt-text="Screenshot shows the proactive sent message.":::
+        
     1. Go to Teams. You receive a proactive hello message from the bot when installation is successful.          
 
-        ![Proactive hello in chat](~/assets/images/proactive-scenario/proactive-helo.png)    
-
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo.png" alt-text="Screenshot shows the Proactive hello message in chat.":::
+        
 - title: Add Adaptive Card to proactive message
   durationInMinutes: 10
   content: |
     1. In Visual Studio, stop the debugging process.
 
-        ![Stop debug](~/assets/images/proactive-scenario/stop-debug.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/stop-debug.png" alt-text="Screenshot shows the steps to stop the debug.":::
+        
     1. Right-click **Dependencies**, select **Manage NuGet Packages**.
 
-        ![Add Adaptive Card package1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/add-adaptive-card-package1.png" alt-text="Screenshot shows the steps to add adaptive card package.":::
+        
     1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards**. 
     1. Select **Install**. 
 
-        ![Add Adaptive Card package2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)
-
+        :::image type="content" source="~/assets/images/proactive-scenario/add-adaptive-card-package2.png" alt-text="Screenshot shows the steps to install adaptive cards.":::
+        
     1. Open the **NotifyController.cs** file and replace the existing `BotCallback` code with the following code to send the Adaptive Card message:     
         
        ```csharp
@@ -178,13 +178,13 @@ items:
 
     1. Hover over the squiggly red line and select **using AdaptiveCards** to resolve the errors. 
     
-        ![Resolve error](~/assets/images/proactive-scenario/resolve-error.png)  
-    
+        :::image type="content" source="~/assets/images/proactive-scenario/resolve-error.png" alt-text="Screenshot shows the steps to resolve error.":::
+            
     1. Press **F5** to run the code. 
     1. Go to Teams and uninstall your app. 
         
-        ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png) 
-
+        :::image type="content" source="~/assets/images/proactive-scenario/uninstall-app.png" alt-text="Screenshot shows the steps to uninstall app.":::
+        
     1. Reinstall the same app to get the `conversationUpdate` event.   
 
     1. Select the [api/notify] `(http://localhost:3978/api/notify)` URL to get a proactive hello message in the Adaptive Card.     
@@ -194,11 +194,9 @@ items:
   content: |
     Did you come up with something like this? This is how the proactive hello message in Adaptive Card appears:
     
-    ![proactive hello in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png)
-
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the proactive hello messgae in Adaptive Card.":::
+    
 - content: |
     You've completed the scenario.
     * You can send notifications on daily basis or request for feedback from user on periodic basis.
     * Handle throttling limits to avoid multiple notifications.
-    
-   
