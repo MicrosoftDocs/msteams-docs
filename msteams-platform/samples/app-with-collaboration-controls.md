@@ -108,7 +108,7 @@ _6.    add image_
 7. The Tasks control will now display
 _8.    add image_
 9. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
-10. Once all controls are added you will see the controls rendered below in Form Designer 
+10. Once all controls are added you will see the controls rendered below in Form Designer. If a control does not render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
 11.   _add image_
 
 1. You can now run your power app in Power Apps by selecting it.
