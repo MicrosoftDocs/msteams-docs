@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="final output":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="Screenshot shows the final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -46,7 +46,7 @@ items:
      1. From the dropdown menu, select **Open with GitHub Desktop**.
 
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device.png" alt-text="cloning the repository":::
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device.png" alt-text="Screenshot shows the steps to clone the repository.":::
 
     
      1. Select **Clone**.
@@ -63,20 +63,20 @@ items:
        > [!TIP]
        > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3000` command.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text=" ngrok tunnelling":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text="Screenshot shows the ngrok tunnelling.":::
 
 - title: Set up manifest file
   durationInMinutes: 1
   content: | 
      1. Navigate to **manifest.json** in cloned repository.
   
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png" alt-text="manifest file":::
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png" alt-text="Screenshot shows the manifest file.":::
 
      1. Open **manifest.json** in Visual Studio and make the following changes:
        
         Replace `<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// part in all the places.
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png" alt-text="update ngrok in visual studio":::
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png" alt-text="Screenshot shows the steps to update ngrok in visual studio.":::
                
 - title: Build and run client app using npm
   durationInMinutes: 1
@@ -85,11 +85,11 @@ items:
 
      1. Copy the **nodejs** folder path. 
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png" alt-text="copy the path":::  
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png" alt-text="Screenshot shows the steps to copy the path.":::  
 
      1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png" alt-text="copy the path":::     
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png" alt-text="Screenshot shows the copied path.":::     
 
      1. Run the following command in the **Command Prompt** to download packages and dependencies:
 
@@ -103,11 +103,11 @@ items:
         npm start
         ```
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png" alt-text="install and start npm":::     
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png" alt-text="Screenshot shows the steps to install and start npm.":::     
 
      1. You can see the following output in the browser:
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-react.png" alt-text="Browser output":::     
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-react.png" alt-text="Screenshot shows the browser output.":::     
 
 - title: Add tab device permission to Teams
   durationInMinutes: 1
@@ -122,33 +122,33 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png" alt-text="create a zip":::        
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png" alt-text="Screenshot shows the steps to create a zip file.":::        
      
      1. Go to **Microsoft Teams**.
 
      1. Select **Apps**.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png" alt-text="select apps":::         
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png" alt-text="Screenshot shows the steps to select apps.":::         
 
      1. In the lower left corner, select **Manage your apps**.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png" alt-text="select manage app":::         
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png" alt-text="Screenshot shows the steps to select manage app.":::         
 
      1. Select **Upload a custom app**.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png" alt-text="upload custom app":::           
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png" alt-text="Screenshot shows the steps to upload a custom app.":::           
 
      1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png" alt-text="add the manifest zip":::             
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png" alt-text="Screenshot shows the steps to add the manifest zip file.":::             
   
      1. Select **Add**.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png" alt-text="add the app tab device permission":::               
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png" alt-text="Screenshot shows the steps to add the app tab device permission.":::               
 
      1. Select **Device Permission Tab** to see the following output:
      
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="add tab device to desktop"::: 
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="Screenshot shows the steps to add tab device to desktop."::: 
 
 
     # [Browser](#tab/Browser)
@@ -161,33 +161,33 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png" alt-text="create a zip":::        
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png" alt-text="Screenshot shows the steps to create a zip file.":::        
 
     1. Go to **Microsoft Teams**. 
 
     1. Select **Apps**.
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png" alt-text="select apps":::         
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png" alt-text="Screenshot shows the stpes to select apps.":::         
 
     1. In the lower left corner, select **Manage your apps**.
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png" alt-text="select manage app":::         
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png" alt-text="Screenshot shows the steps to select manage app.":::         
 
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png" alt-text="upload custom app":::           
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png" alt-text="SCreenshot shows the steps to upload a custom app.":::           
    
     1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png" alt-text="add the manifest zip":::             
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png" alt-text="Screenshot shows the steps to add the manifest zip file.":::             
   
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png" alt-text="add the app tab device permission":::               
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png" alt-text="Screenshot shows the steps to add the app tab device permission.":::               
 
     1. Select **Device Permission Tab** to see the following output:
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="get location":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="Screenshot shows the steps to select device permission tab.":::
 
   
     # [Mobile](#tab/mobile)
@@ -196,7 +196,7 @@ items:
       Open Teams in mobile to see the following outputs:
 
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png" alt-text="mobile tab device":::                   
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png" alt-text="Screenshot shows the Teams mobile output.":::                   
 
      
 - title: Test your app
@@ -209,7 +209,7 @@ items:
       To test the app on desktop, select **App Permission** icon to allow access to the permission requests:
 
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="desktop":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="Screenshot shows the app permission request for desktop.":::                   
       
       
        # [Browser](#tab/Browser)
@@ -218,7 +218,7 @@ items:
       To test the app in browser, select **App Permission** icon to allow access to the permission requests:
 
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="get location":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="Screenshot shows the app permission request for web.":::                   
      
      
      # [Mobile](#tab/Mobile)
@@ -229,7 +229,7 @@ items:
       * Select **ALLOW** if you want to grant permission.
       * Select **DENY** if you don't want to grant permission.
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png" alt-text="mobile output":::                   
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png" alt-text="Screenshot shows the mobile output.":::                   
     --- 
     
 - title: Complete challenge
@@ -237,8 +237,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="location":::                   
+    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="Screenshot shows the tab device permission.":::                   
 
 - content: |
     You've completed the tutorial and now you can grant tab device permission at Teams.
-
