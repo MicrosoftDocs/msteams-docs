@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2022-06-30T11:04:01+05:30</updated>
+	<updated>2022-07-28T11:57:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://docs.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Sample update: Added video capability to capture video using selectMedia() API]]></title>
+		<id>https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs</id>
+		<link href="https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs?referrer=whats.new.rssfeed"/>
+		<updated>2022-07-28T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Updated existing sample to showcase video capability to capture video using selectMedia() API. .</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20afbc5b84-5be5-b5c4-30c0-58782a748a03%0A*%20Version%20Independent%20ID%3A%20ef6b8aee-52e7-f5d4-7dfa-8f34a1698330%0A*%20Content%3A%20%5BMessages%20in%20bot%20conversations%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fconversation-messages%3Ftabs%3Ddotnet%23send-suggested-actions)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fconversation-messages.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fconversation-messages.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us. ]]></summary>
+		<category label="new" term="new"/>
+	</entry>	
+	<entry>
+		<title type="html"><![CDATA[Feature update: Bots in Microsoft Teams now support suggested actions]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/conversation-messages?tabs=dotnet#send-suggested-actions</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/conversation-messages?referrer=whats.new.rssfeed#send-suggested-actions"/>
+		<updated>2022-07-26T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/issues">feedback</a>? It is important to us. ]]></summary>
+		<category label="updated" term="updated"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Doc update: Introduced step by step guide to send activity feed notifications]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-graphactivity-feedbroadcast</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-graphactivity-feedbroadcast?referrer=whats.new.rssfeed"/>
+		<updated>2022-07-21T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can apply by using the activity feed notification APIs in Microsoft Graph to extend the functionality to your app. This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20cc96dfe0-28d6-7f9c-252e-aa7bd93cb072%0A*%20Version%20Independent%20ID%3A%205d67104d-1088-f619-50d3-008e49d6f7a8%0A*%20Content%3A%20%5BDesigning%20activity%20feed%20notifications%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Factivity-feed-notifications%3Ftabs%3Dmobile)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Factivity-feed-notifications.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdesign%2Factivity-feed-notifications.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Feature update: conversationUpdate even changes to send welcome messages to user selected channel are now GA]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet#members-added</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?referrer=whats.new.rssfeed"/>
+		<updated>2022-07-08T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Welcome messages are now sent to user selected channel instead of general channel. In team context, the activity's conversation.id is set to the id of the channel selected by the user during app installation or the channel where the bot was installed from  (now GA).</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%200a6d00a4-dd28-33c4-002e-2e8e7c653ce2%0A*%20Version%20Independent%20ID%3A%200856927a-25f4-b1e0-5f1b-d55dc61796f3%0A*%20Content%3A%20%5BConversation%20events%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events%3Ftabs%3Ddotnet)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40WashingtonKayaker%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us. ]]></summary>
+		<category label="updated" term="updated"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Feature update: Apps for instant meetings, one-on-one, and group calls availabe in public developer preview]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings</id>
@@ -14,15 +46,7 @@
 		<updated>2022-06-30T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status. Apps for instant meetings, one-on-one, and group calls are currently available only in public developer preview.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2082987815-d508-d642-c1f6-b609241d4750%0A*%20Version%20Independent%20ID%3A%2029e89cc6-c8ca-7d29-7dca-4ac4d06f5c42%0A*%20Content%3A%20%5BApps%20for%20Teams%20meetings%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-apps-in-meetings)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fapps-in-teams-meetings%2Fteams-apps-in-meetings.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-apps-in-meetings.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="updated" term="updated"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Feature update: welcome messages are now sent to user selected channel instead of general channel]]></title>
-		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet</id>
-		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?referrer=whats.new.rssfeed"/>
-		<updated>2022-06-10T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Welcome messages are now sent to user selected channel instead of general channel. In team context, the activity's conversation.id is set to the id of the channel selected by the user during app installation or the channel where the bot was installed from (currently available in Public Developer Preview).</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%200a6d00a4-dd28-33c4-002e-2e8e7c653ce2%0A*%20Version%20Independent%20ID%3A%200856927a-25f4-b1e0-5f1b-d55dc61796f3%0A*%20Content%3A%20%5BConversation%20events%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events%3Ftabs%3Ddotnet)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsubscribe-to-conversation-events.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40WashingtonKayaker%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us. ]]></summary>
-		<category label="updated" term="updated"/>
-	</entry>
+	</entry>	
 	<entry>
 		<title type="html"><![CDATA[Doc update: Revamped documentation for enable single sign-on in a tab app]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview</id>
@@ -102,29 +126,5 @@
 		<updated>2022-04-19T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2054780e5a-ca3a-5277-dc84-37f85d9ea1cb%0A*%20Version%20Independent%20ID%3A%205f89865b-a9fd-ada5-72d2-6375357bba8c%0A*%20Content%3A%20%5BUpload%20your%20custom%20app%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="updated" term="updated"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Share to Teams is now supported from personal app or tab]]></title>
-		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-personal-app-or-tab</id>
-		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-personal-app-or-tab?referrer=whats.new.rssfeed"/>
-		<updated>2022-04-06T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[Share to Teams allows users to share the content from personal app or tab to other user or group or channel within Teams. Users can select Share to Teams to launch the Share to Teams experience in a pop-up window. The pop-up window allows users to add other user or group or channel to share the content.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%206c97644a-1a55-0e81-20f5-ea56a8137c7d%0A*%20Version%20Independent%20ID%3A%206c97644a-1a55-0e81-20f5-ea56a8137c7d%0A*%20Content%3A%20%5BShare%20to%20Teams%20from%20personal%20app%20or%20tab%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fshare-to-teams-from-personal-app-or-tab)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshare-to-teams-from-personal-app-or-tab.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshare-to-teams-from-personal-app-or-tab.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Sample code: In-Meeting Document Signing]]></title>
-		<id>https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp</id>
-		<link href="https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp?referrer=whats.new.rssfeed"/>
-		<updated>2022-04-04T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[This proof of concept demonstrates the use case of sharing a document on Teams Share to Stage with live signing feature in a meeting.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/issues">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Sample code: Live coding interview using shared meeting stage]]></title>
-		<id>https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-live-code-interview</id>
-		<link href="https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-live-code-interview?referrer=whats.new.rssfeed"/>
-		<updated>2022-04-04T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[This sample demos live coding in a Teams meeting. In side panel there is a list of question in specific coding language and on share click specific question with language code editor will be shared with other participant in meeting. Now any participant in meeting can write code for the question and same will be updated to all the other participants in meeting.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/issues">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
 	</entry>
 </feed>
