@@ -131,7 +131,7 @@ Currently the following Virtual Tables support the `odata.maxpagesize` preferenc
 
 You can specify the number of records to return by passing the `$top` option in the URL. If you also need to specify the page number, you can do so by passing a paging cookie as an XML-encoded string as the `$skiptoken` option. To fetch a specific page number, you can pass the paging cookie in the following format:
 
-  <cookie pagenumber=3 />
+  `<cookie pagenumber=3 />`
 
 # [Request](#tab/request1)
 
@@ -176,7 +176,7 @@ Currently the following virtual tables support fetching a specific page:
 
 You can pass a fetch XML as an XML-encoded string. With the fetch XML option, you can specify several query preferences. The pagination specific options are page (page number) and count (page size). The following XML specifies the page number and size:
 
-  <fetch version="1.0" mapping="logical" returntotalrecordcount="true" page="<Page Number>" count="<Page Size>"></fetch>
+  `<fetch version="1.0" mapping="logical" returntotalrecordcount="true" page="<Page Number>" count="<Page Size>"></fetch>`
 
 # [Request](#tab/request2)
 
