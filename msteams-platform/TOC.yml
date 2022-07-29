@@ -333,6 +333,8 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Build shared channel
+    href: concepts/build-and-test/Shared-channels.md
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
