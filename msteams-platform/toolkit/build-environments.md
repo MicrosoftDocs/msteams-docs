@@ -16,7 +16,7 @@ Teams Toolkit in Visual Studio Code offers set of environments to build your Tea
 
 Teams Toolkit in Visual Studio Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
 
-* Supports rich interfaces which is very user friendly
+* Supports rich interfaces that are very user friendly
 * Provides quick upgrades to existing apps
 * Distributes apps on multiple platforms, such as Android and iOS
 * Compatible for creating an app with existing APIs
