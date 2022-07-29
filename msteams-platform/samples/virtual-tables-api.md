@@ -163,6 +163,8 @@ You can specify the number of records to return by passing the `$top` option in 
 
 ```
 
+---
+
 > [!Note]
 > The response will not include the `@nextLink` property. If your use case requires the next page link to be returned, you can use the odata.maxpagesize preference header described in section 1 instead of passing the $top URI parameter.
 
@@ -207,6 +209,8 @@ GET [Organization URL]/api/data/v9.2/m365_graphevents?$fetchXml=<fetch version="
 } 
 
 ```
+
+---
 
 The following virtual tables support the count property to be passed as part of the fetchXml option:
 
