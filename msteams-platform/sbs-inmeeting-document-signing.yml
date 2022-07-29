@@ -14,10 +14,10 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting signing is a Microsoft Teams sample app that enable users to sign documents in real time scenarios. For example, you can review and sign documents in a single session during meetings.
-    This sample let users electronically sign documents with their current tenant identity. Some example documents that can signed during meetings are purchase agreements and purchase orders. This template is also applicable for other scenarios like reviewing and approving code reviews or collaborative reviewing of documents.
+    Meeting signing is a Microsoft Teams sample app that enables users to sign documents in real time scenarios. For example, you can review and sign documents in a single session during meetings.
+    This sample lets users electronically sign documents with their current tenant identity. Some example documents that can be signed during meetings are purchase agreements and purchase orders. This template is also applicable for other scenarios like reviewing and approving code reviews or collaborative reviewing of documents.
 
-    The sample app could be customized to incorporate other kind of signatures like handwritten signatures or certificate based signatures.
+    The sample app could be customized to incorporate other types of signatures like handwritten signatures or certificate based signatures.
 
    
     
@@ -78,7 +78,7 @@ items:
 
        1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
        1. Select your **Subscription** from the dropdown list.
-       1. Select your **Resource group** from the dropdown list that you want to provision for your bot app.
+       1. Select your **Resource group** from the dropdown list.
     
           You can also create a new resource group by the following steps:
 
