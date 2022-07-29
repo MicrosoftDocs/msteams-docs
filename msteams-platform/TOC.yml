@@ -391,7 +391,7 @@
       href: tabs/how-to/authentication/tab-sso-overview.md
     - name: Enable SSO for your tab app
       items:
-      - name: Register your tab app in Azure AD
+      - name: Configure your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
@@ -401,7 +401,7 @@
         href: tabs/how-to/authentication/tab-sso-graph-api.md
     - name: Enable SSO for your bot app
       items:
-      - name: Configure bot app in Azure AD
+      - name: Configure your bot app in Azure AD
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
@@ -411,7 +411,7 @@
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Enable SSO for message extension app
       items:
-      - name: Configure app in Azure AD
+      - name: Configure your app in Azure AD
         href: messaging-extensions/how-to/authentication/msgex-sso-register-aad.md
       - name: Add code to enable SSO
         href: messaging-extensions/how-to/authentication/msgex-sso-code.md
