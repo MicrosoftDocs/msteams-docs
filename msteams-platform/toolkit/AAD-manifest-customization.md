@@ -16,7 +16,7 @@ Teams Toolkit now manages Azure AD application with the manifest file as the sou
 
 This section covers:
 
-* [Customize Azure AD manifest template](#customize-azure-ad-manifest)
+* [Customize Azure AD manifest template](#customize-azure-ad-manifest-template)
 * [Azure AD manifest template placeholders](#azure-ad-manifest-template-placeholders)
 * [Author and preview Azure AD manifest with code lens](#author-and-preview-azure-ad-manifest-with-code-lens)
 * [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment)
