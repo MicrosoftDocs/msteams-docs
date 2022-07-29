@@ -62,7 +62,7 @@ You can add API connection using Teams Toolkit in Visual Studio Code and CLI com
          > [!NOTE]
          > Based on the authentication type selected, additional configuration is needed.
 
-# [CLI](#tab/TeamsFx CLI)
+# [CLI](#tab/CLI)
 
 The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
 
