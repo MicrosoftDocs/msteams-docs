@@ -62,7 +62,7 @@ The following sequence diagram explains the interaction between the client which
 
 This section describes the HTTP requests and responses for each step in the sample scenario.
 
-1. Retrieve the Group ID used in [settings for your Collaboration](samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
+1. Retrieve the Group ID used in [settings for your Collaboration](~/samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
 
     > [!NOTE]
     > The user you use to create the Plan in the subsequent steps, must be a member of this group. If not you will get 403 Forbidden response.
