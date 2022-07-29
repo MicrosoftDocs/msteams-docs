@@ -243,6 +243,49 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
      }
 ```
 
+### Validate the access token
+
+Web APIs on your server must decode the access token, and verify if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.
+
+There are a number of libraries available that can handle JWT validation. Basic validation includes:
+
+- Checking that the token is well-formed
+- Checking that the token was issued by the intended authority
+- Checking that the token is targeted to the web API
+
+Keep in mind the following guidelines when validating the token:
+
+- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
+- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
+- The token's `scp` parameter will be set to `access_as_user`.
+
+#### Example access token
+
+The following is a typical decoded payload of an access token.
+
+```javascript
+{
+    aud: "2c3caa80-93f9-425e-8b85-0745f50c0d24",
+    iss: "https://login.microsoftonline.com/fec4f964-8bc9-4fac-b972-1c1da35adbcd/v2.0",
+    iat: 1521143967,
+    nbf: 1521143967,
+    exp: 1521147867,
+    aio: "ATQAy/8GAAAA0agfnU4DTJUlEqGLisMtBk5q6z+6DB+sgiRjB/Ni73q83y0B86yBHU/WFJnlMQJ8",
+    azp: "e4590ed6-62b3-5102-beff-bad2292ab01c",
+    azpacr: "0",
+    e_exp: 262800,
+    name: "Mila Nikolova",
+    oid: "6467882c-fdfd-4354-a1ed-4e13f064be25",
+    preferred_username: "milan@contoso.com",
+    scp: "access_as_user",
+    sub: "XkjgWjdmaZ-_xDmhgN1BMP2vL2YOfeVxfPT_o8GRWaw",
+    tid: "fec4f964-8bc9-4fac-b972-1c1da35adbcd",
+    uti: "MICAQyhrH02ov54bCtIDAA",
+    ver: "2.0"
+}
+```
+
+
 ## Next step
 
 > [!div class="nextstepaction"]
