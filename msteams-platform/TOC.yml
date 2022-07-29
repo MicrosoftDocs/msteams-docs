@@ -430,7 +430,7 @@
     - name: Add third party OAuth IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
     - name: Add third party OAuth IdP authentication to message extension app
-      href: messaging-extensions/how-to/authentication/add-authentication-mex.md   
+      href: messaging-extensions/how-to/add-authentication.md
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities

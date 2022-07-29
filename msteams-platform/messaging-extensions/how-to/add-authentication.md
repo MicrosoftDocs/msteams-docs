@@ -1,12 +1,12 @@
 ---
-title: Add authentication to your message extension
+title: Add third party OAuth authentication to your message extension
 author: surbhigupta
-description: In this article, you'll learn how to add authentication to a messaging extension using code examples and sample
+description: In this article, you'll learn how to add third party OAuth authentication to a messaging extension using code examples and sample
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Add authentication to your message extension
+# Add third party OAuth authentication to your message extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
