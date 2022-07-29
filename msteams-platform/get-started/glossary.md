@@ -45,7 +45,7 @@ Common terms and definitions used in Teams developer documentation.
 | [Capability](../toolkit/add-capability.md) | A Teams feature you can build into your app for interacting with app users. An app capability is used to extend Teams to fit your app needs. An app may have one or more core capabilities, such as tab, bot, and message extension. <br>**See also**: [Device capability](#d); [Media capability](#m) |
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks for users such as customer service or support staff. <br> **See also**: [Conversational bot](#c) |
 | Channel | A single place for a team to share messages, tools, and files. You can use a channel for teamwork and communication. <br>**See also**: [Conversation](#c) |
-| [Client secret](../bots/how-to/authentication/add-authentication.md) | The Client secret/password or a public or private key pair that is Certificate. It isn't required for native apps. <br> **See also**: [Bot](#b) |
+| [Client secret](../bots/how-to/authentication/add-authentication.md) | A secret string that the application uses to prove its identity when requesting a token. Also can be referred to as application password.|
 | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
 | [Collaboration app](../concepts/extensibility-points.md) | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: [Standalone app](#s) |
 | [Compose Extension](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to message extension capability. It's used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Message extension](#m) |
@@ -82,6 +82,7 @@ Common terms and definitions used in Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They're also called External users. <br>**See also**: [Anonymous user](#a) |
+| [First-run Experience (FRE)](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. A FRE provides users with insight into the functions, features, and benefits of the product and helps influence users' to come back and continue using your product.|
 
 ## G
 
