@@ -82,7 +82,7 @@ Common terms and definitions used in Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They're also called External users. <br>**See also**: [Anonymous user](#a) |
-| [First-run Experience (FRE)](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. A FRE provides users with insight into the functions, features, and benefits of the product and helps influence users' to come back and continue using your product.|
+| [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. A FRE provides users with insight into the functions, features, and benefits of the product and helps influence users' to come back and continue using your product.|
 
 ## G
 
