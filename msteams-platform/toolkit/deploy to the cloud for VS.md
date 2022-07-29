@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Deploy Teams app to the cloud for Visual Studio
 
-Teams Toolkit helps you to deploy or upload your application frontend and backend code to the provisioned cloud resources in your Azure subscription.
+Teams Toolkit helps you to deploy or upload your application front-end and back-end code to the provisioned cloud resources in your Azure subscription.
 
 * The tab, such as frontend applications are deployed to Azure storage and configured for static web hosting.
 * The Notification Bot with Azure function triggers is deployed to Azure functions.
