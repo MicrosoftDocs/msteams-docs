@@ -32,8 +32,6 @@ You can view here an example of user experience with SSO in a tab app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-tab.gif" alt-text="SSO in tab app":::
 
-
-
 ### Enhance user experience with SSO
 
 Here's what your app users get with SSO experience:
@@ -89,16 +87,16 @@ Some scenarios where you can use the SSO API to authenticate your app users are:
 
 To achieve SSO at runtime, configure your app to enable SSO for authenticating and authorizing app users.
 
-## Enable SSO for a tab app
+## Enable SSO for a Teams app
 
-This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
+This section describes the tasks involved in implementing SSO for a Teams app. These tasks are language- and framework-agnostic.
 
-To enable SSO for a tab app:
+To enable SSO for a Teams app:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications.
-2. **Update code**: Add the code to handle access token, calling `getAuthToken()` when an app user accesses your tab app, sending this token to your app's server code in the Authorization header, and validating the access token when it's received.
+2. **Update code**: Add the code to handle access token, sending this token to your app's server code in the Authorization header, and validating the access token when it's received.
 3. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID and application ID URI generated on Azure AD to allow Teams to request access tokens on behalf of your app.
 
 ## Third-party cookies on iOS
@@ -114,6 +112,13 @@ For Teams mobile, client versions that support SSO are:
 - Teams JavaScript SDK (version: 1.11 and later) for SSO to work in meeting side panel
 
 For the best experience with Teams, use the latest version of iOS and Android.
+
+## Step-by-step guides
+
+Use the following step-by-step guides for enabling SSO for Teams app:
+
+- [AAD SSO for tabs and message extension](../../../sbs-tabs-and-messaging-extensions-with-sso.yml)
+- [Build a bot with SSO authentication](../../../sbs-bots-with-sso.yml)
 
 ## Best practices
 
