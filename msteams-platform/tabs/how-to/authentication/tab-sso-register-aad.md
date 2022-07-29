@@ -26,7 +26,7 @@ Azure AD configuration enables SSO for your tab app in Teams. It responds with a
 > [!NOTE]
 > Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
 
-### Before you configure your app with Azure AD
+### Before you configure your app
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
