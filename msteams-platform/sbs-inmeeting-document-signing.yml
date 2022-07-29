@@ -96,10 +96,10 @@ items:
 
        1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-         You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+          You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
-         > [!NOTE]
-         > You can't create more than one bot with the same **Microsoft App ID**.
+          > [!NOTE]
+          > You can't create more than one bot with the same **Microsoft App ID**.
 
        1. Select **Review + create**.
 
