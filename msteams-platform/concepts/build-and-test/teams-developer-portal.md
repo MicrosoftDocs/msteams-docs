@@ -32,7 +32,7 @@ The Developer portal allows you to create a brand new app:
 
    :::image type="content" source="../../assets/images/tdp/home-page.PNG" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page.":::
 
-1. Select **+ New app** and enter app name.
+1. Select **New app** and enter app name.
 
    :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.PNG" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.PNG":::
 
@@ -56,7 +56,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 > [!NOTE]
 >
-> * The Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice. This prevents scenarios where multiple apps have duplicate app IDs.
+> * The Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice, which prevents to have duplicate app IDs for multiple apps.
 > * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in the Developer Portal. For more information, see [Build apps with teams toolkit and Visual studio code](~/toolkit/visual-studio-code-overview.md).
 
 ## See also
