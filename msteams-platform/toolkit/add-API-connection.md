@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Integrate existing third party APIs to Teams app
 
-Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
+Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
 * Generate sample code under `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
@@ -71,11 +71,11 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
-   |API Key|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
-   |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
-   |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
-   |Custom|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
+   |Basic|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name exampleuser--interactive false|
+   |API Key|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
+   |Azure AD|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
+   |Certificate|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
+   |Custom|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
 
 ---
 
