@@ -7,14 +7,14 @@ ms.topic: reference
 
 # Choose your build environment
 
-Teams Toolkit (TTK) in Visual Studio (VS) Code offers set of environments to build your Teams app. You can choose the suitable environment that best suits your app. It supports the following build environments:
+Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. You can choose the suitable environment that best suits your app. It supports the following build environments:
 
 * JavaScript/TypeScript
 * SharePoint Framework (SPFx)
 
 ## Create your Teams app using JavaScript/TypeScript
 
-TTK in VS Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
+Teams Toolkit in Visual Studio Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
 
 * Supports rich interfaces which is very user friendly
 * Provides quick upgrades to existing apps
@@ -23,7 +23,7 @@ TTK in VS Code supports building apps using JavaScript/TypeScript. The apps buil
 
 ## Create your Teams app using SPFx
 
-TTK in VS Code allows you to create apps using SPFx. These apps have the following advantages:
+Teams Toolkit in Visual Studio Code allows you to create apps using SPFx. These apps have the following advantages:
 
 * Provides easy integration with data residing in SharePoint to your Teams
 * Accesses to various open-source tools
@@ -33,12 +33,12 @@ TTK in VS Code allows you to create apps using SPFx. These apps have the followi
 
 ## Teams app using Blazor or Csharp
 
-TTK helps you to create Blazor and C# apps in Visual Studio.
+Teams Toolkit helps you to create Blazor and C# apps in Visual Studio.
 For more information, see [Teams Toolkit for Visual Studio](visual-studio-overview.md).
 
 ## Manage your apps using Developer Portal
 
-As TTK is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **Deployment** after creating an app. For more information, see [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **Deployment** after creating an app. For more information, see [Manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal.png" alt-text="build environment developer portal":::
 
