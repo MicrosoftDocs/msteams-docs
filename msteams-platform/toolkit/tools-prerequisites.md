@@ -96,13 +96,12 @@ You can sign-up for the developer program by using one of the following account 
 To create a free Microsoft 365 developer account, join the Microsoft 365 developer program and perform the following account:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-2. Select **Join Now**.
-3. Select **Set up E5 subscription**.
-4. Set up your administrator account.
+1. Select **Join Now**.
+1. Set up your administrator account.
 
    You can see the following image after the completion of the subscription:
 
-    :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/m365-account.png" alt-text="M365 Account":::
 
 ### Azure account
 
@@ -169,20 +168,25 @@ If you have admin rights, perform the following steps to upload the custom app u
 
   1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
-  2. Select **Show All** > **Teams**.
+  1. Select **Show All** > **Teams**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 Admin center":::
 
      > [!Note]
      > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
-  3. Go to **Teams apps** > **Setup policies**.
+  1. Sign-in to Microsoft Teams admin center with your admin credentials.
+  1. Select **Show All** > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 Admin center":::
 
-  4. Set toggle **Upload custom apps** to **On** position.
+  1. Select **Global (Org-wide default)**
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="toggle":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies.png" alt-text="Microsoft 365 Admin center":::
+
+  1. Set toggle **Upload custom apps** to **On** position.
+
+     :::image type="content" source="../assets/images/teams-toolkit-v2/Upload-custom-apps.png" alt-text="Upload Custom Apps":::
 
   5. Select **Save**.
 

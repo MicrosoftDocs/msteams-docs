@@ -62,6 +62,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 ### Directory structure for different app types
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer**.
+
 <br>
 <details>
 <summary><b>Directory structure for basic Teams app</b></summary>
@@ -123,7 +124,7 @@ The core notification implementation in **bot** folder and it contains:
 > [!NOTE]
 > If you have a command bot, SSO-enabled tab, or SPFx tab app, relevant folders is added to the directory structure.
 
-To learn more about the directory structure of different types of basic Teams app, see the following table:
+To learn more about the directory structure of different types of scenario based Teams app, see the following table:
 
 | App Type | Links |
 | --- | --- |

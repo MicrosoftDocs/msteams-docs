@@ -10,7 +10,7 @@ ms.date: 07/29/2022
 
 # Install Teams Toolkit
 
-Teams Toolkit is an extension in Visual Studio Code and in this document you can learn, how to install Teams Toolkit. Before you start with installation, you need to have Visual Studio Code and Teams client installed. To know more about creation of Microsoft 365 account, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
+Teams Toolkit is an extension in Visual Studio Code and in this document you can learn, how to install Teams Toolkit. Before you start with installation, you need to have Visual Studio Code and Teams client installed. To know more about Microsoft 365 account creation, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
 
 ## Steps to install Teams Toolkit
 
