@@ -32,10 +32,7 @@ You can view here an example of user experience with SSO in a tab app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-tab.gif" alt-text="SSO in tab app":::
 
-See the following video to learn about SSO in a bot app:
-<br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
-<br>
+
 
 ### Enhance user experience with SSO
 

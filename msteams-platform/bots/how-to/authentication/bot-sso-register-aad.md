@@ -14,6 +14,11 @@ To enable SSO for a bot resource, learn about:
 - Permissions: It's a list of the API permissions your app needs the user to consent to, such as `User.Read` or `Mail.Read`.
 - Obtain tokens with the OAuth2 implicit flow: Microsoft Teams must be able to obtain the access tokens and ID tokens.
 
+See the following video to learn about SSO in a bot app:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+<br>
+
 ## Enable SSO for your bot app
 
 To enable SSO for your bot app in Azure AD:
