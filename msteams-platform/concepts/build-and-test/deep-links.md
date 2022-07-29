@@ -406,7 +406,7 @@ Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 ## Navigate to an audio or audio-video call
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In the case of a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
@@ -448,19 +448,20 @@ Once the user joins the meeting, they can add participants and interact with the
 
 :::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="The screenshot is an example that shows an option to add participants and how to interact with the app.":::
 
-To add a deep link to share content on stage, you need to have a app context, as in the following example.
+To add a deep link to share content on stage, you need to have an app context. The app context allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. The following is an example of an app context.
 
-* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false}`
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false }`
 
-The query parameters are:
+The query parameters for the app context are:
 
-* `appContext`: This consists the following
+* `appID`: It can be taken from the app manifest or it can be the ID that is used to register an app in the Teams app store.
+* `appSharingUrl`: The URL which needs to be shared on stage.
+* `useMeetNow`: This includes a boolean parameter that can be either true or false.
+  * **True** - When the `UseMeetNow` value is true and a deep link is shared to the stage, if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
 
-  * `appID`: It allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. It can be taken from the app manifest or it can be the ID that is used to register an app in the Teams app store.
-  * `appSharingUrl`: The URL which needs to be shared on stage.
-  * `useMeetNow`: It allows to create a Meet now meeting while using deep link for sharing on stage. The boolean parameters are either true or false. The default value is false, meaning if there’s no meeting, the calendar popup will be shown.
+  * **False** - The default value of `UseMeetNow` is false, which means when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. When there's an ongoing meeting, then sharing can be done directly.
 
-Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Follow the example.
 
 ```json
 var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
@@ -468,20 +469,34 @@ var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(
 var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
 ```
 
-The following is the format of a deep link with app context to share content on stage.
+A deep link can be launched either from the Teams web or from the Teams desktop client.
 
-* `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+* **Teams web** - Use the following format to launch a deep link from the Teams web to share content on stage.
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Deep link|Format|Example|
+    |---------|---------|---------|
+    |To share the app and open Teams calendar, when UseMeeetNow is "false"|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |To share the app and initiate instant meeting, when UseMeeetNow is "true"|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **Team desktop client** - Use the following format to launch a deep link from the Teams desktop client to share content on stage.
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    Example: `msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Deep link|Format|Example|
+    |---------|---------|---------|
+    |To share the app and open Teams calendar, when UseMeeetNow is "false"|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |To share the app and initiate instant meeting, when UseMeeetNow is "true"|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
 
 The query parameters are:
 
-* `deepLinkId`: GUID or UUID used for telemetry correlation.
-* `fqdn`: Teams supports multi-tenant multi-account, and Teams can run AAD and MSA accounts at the same time. `fqdn`( teams.microsoft.com or teams.live.com ) is needed in Teams deep link service for tenant or account authentication. When the meeting is scheduled with Teams for Life, the `fqdn` is: teams.live.com. When the meeting is scheduled for Teams for Business, the `fqdn` will be teams.microsoft.com or teams.microsoft.us (for Gov) etc. The Teams client will find the right linked identity and suggest switching to the right one.
-
-| Deep link | Format | Example |
-|-----------|--------|---------|
-|To share the app in an ongoing meeting| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": ""}` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb"}` |
-|To share the app and open Teams calendar| `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: false }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false}` |
-|To share the app and initiate instant meeting|`msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={"appSharingUrl" : "", "appId": "", “useMeetNow”: true }` | `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC7AFE-449D-4AA3-8D3E-E8A7B3NB1280&fqdn=&lm=deeplink&appContext={ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: true}` |
+* `deepLinkId`: Any identifier used for telemetry correlation.
+* `fqdn`: This is needed in the Teams deep link service for tenant or account authentication. When the meeting is scheduled with Teams for Life, the `fqdn` is: `teams.live.com`. When the meeting is scheduled for Teams for Business, the `fqdn` will be `teams.microsoft.com` or `teams.microsoft.us` The Teams desktop client will find the right linked identity and suggest switching to the right one.
 
 To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts. Otherwise, meeting attendees may not be able to see the content on stage. For more information, see [app manifest](../../resources/schema/manifest-schema.md).
 
