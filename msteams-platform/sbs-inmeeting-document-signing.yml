@@ -14,13 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting signing is a Microsoft Teams sample app that enables users to sign documents in real time scenarios. It provides enhance experience by allowing you to review and sign documents in a single session during meetings.
-    This sample lets users electronically sign documents with their current tenant identity. You can sign the following documents during meetings:
+    Meeting signing is a Microsoft Teams sample app that enables users to sign documents in real time scenarios. It provides enhanced experience by allowing the users to review and sign documents in a single session during meetings.
+    This sample lets users electronically sign documents with their current tenant identity. The users can sign the following documents during meetings:
     * Purchase agreements 
     * Purchase orders
     
     The template is also applicable for other scenarios. such as for reviewing and approving code samples and collaborative documents.
-    You can customize to incorporate other types of signatures: 
+    The users can customize to incorporate other types of signatures: 
     * Handwritten signatures
     * Certificate based signatures.
 
@@ -32,13 +32,47 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) 
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
-    
+    * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
+
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) 
+
+    Ensure you have the following accounts and set up your development environment: 
+
+    * [Microsoft](https://teams.microsoft.com/) account
+
+      > [!TIP]
+      > Ensure the Microsoft Teams account isn't a guest account.
+
+    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app  
+
+    ## Set up your Teams development tenant
+
+       A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+
+    ### Check for sideloading option
+
+       After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+
+       > [!NOTE]
+       > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+
+       Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    To verify sideload apps in Teams:
+
+    1. In the Teams client, select **Store**.
+    1. Select **Manage your apps**.
+    1. Select **Publish an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="~/assets/images/bots/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+        > [!NOTE]
+        > Contact Teams administrator, if you don't have the option to upload a custom app.  
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -93,24 +127,24 @@ items:
         
               :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
     
-       1. Select **Type of App** as **Multi Tenant**.
+       1. Select **Multi Tenant** as **Type of App**.
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select review-create.png" alt-text="Select review and create":::
 
        1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-          You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+          You can either select **Use existing app registration**, enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
           > [!NOTE]
-          > You can't create more than one bot with the same **Microsoft App ID**.
+          > You can create single bot with the same **Microsoft App ID**.
 
        1. Select **Review + create**.
 
-    1. After the validation passed, select **Create**. 
+    1. After successful validation, select **Create**. 
 
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/validation-passed.png" alt-text="Validation Pass":::
 
-       It takes a few moments for your bot service to be provisioned and the following page appears:
+       It takes a few minutes to provision your bot service and the following page appears:
 
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/bot-service-provision.png" alt-text="Bot Service Provision":::
 
@@ -188,7 +222,7 @@ items:
      ngrok http https://localhost:44326 -host-header=localhost:44326
      ```
 
-    **To add messaging endpoint**
+    **To add Messaging endpoint**
 
     1. From ngrok, copy the HTTPS URL.
 
@@ -261,7 +295,7 @@ items:
        1. In the panel that appears, enter `access_as_user` as the **Scope name**.
 
           > [!NOTE]
-          > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
+          > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.
   
        1. Set **Who can consent?** to `Admins and users`.
   
@@ -291,7 +325,7 @@ items:
 
        Add a client application panel appears.
 
-    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
+    1. Enter the **Client ID** for desktop and web application separately that you want to authorize. It's the application ID of the client that you want to authorize.
 
        |**Client ID**|**For authorizing**|
        |--------|-------------|
