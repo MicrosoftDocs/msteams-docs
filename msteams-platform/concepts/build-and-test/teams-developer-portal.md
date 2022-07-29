@@ -53,10 +53,6 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 1. Select the app manifest file, and then select **Open**.
 1. Select **Import**.
-   1. If your app package has errors, you can import the app and resolve the errors before you upload or publish the app to Teams.
-   1. If you see the following message while uploading the app, select **Import** to add the app package to the Developer Portal.
-
-(image to be added)
 
 > [!NOTE]
 >

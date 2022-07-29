@@ -58,6 +58,8 @@ In the Configure section, you can see the following features to manage and acces
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
+:::image type="content" source="../../assets/images/tdp/configure.png" alt-text="Screenshot show you the configure features to manage and access your app in Developer Portal.":::
+
 ## Advanced
 
 In the Advanced section, you can see the following features to manage your app in Developer Portal:
@@ -86,22 +88,26 @@ In the Advanced section, you can see the following features to manage your app i
     To set up an environment:
 
     1. In the Developer Portal, select the **Apps** you're working on.
-    1. Go to the **Environments** page and select **+ Add an environment**.
-    1. Select **+ Add a variable** to create configuration variables for your environment.
+    1. Go to the **Environments** under **Advanced** section and select **+ Add an environment**.
+    1. Select **Add**.
 
-    To use variables:
+  * **Global variables**
 
-    Use the variable names instead of hard-coded values to set your app configurations.
+      1. Select **+ Add a global variable** to create configuration variables for your environment.
 
-    1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-    1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
+      To use global variables:
+
+      Use the variable names instead of hard-coded values to set your app configurations.
+
+      1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
+      1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
 * **Plan and pricing**: This section allows you to link a SaaS offer which you created in the Partner center to your app.
 * **Admin settings**: This section allows you to do app customization and to block your app by default.
 
 ## Publish
 
-This section allows you to publish your app to your org, or to the Teams store.
+This section allows you to publish your app to your org or to the Teams store.
 
 * **Publish your app to org**:
 
