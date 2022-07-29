@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app using Teams Toolkit
+# Create a new Teams project using Teams Toolkit
 
-You can build a new Teams app by selecting **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
+You can build a new Teams project by selecting **Create a new Teams app** in Teams Toolkit. You can create following types of app in Teams Toolkit:
 
 | App Type | Definition |
 | --- | --- |
@@ -62,7 +62,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 ### Directory structure for different app types
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer**.
-
+<br>
 <details>
 <summary><b>Directory structure for basic Teams app</b></summary>
 
@@ -95,7 +95,7 @@ To learn more about the directory structure of different types of basic Teams ap
 | For message extension app | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml) |
 
 </details>
-
+<br>
 <details>
 <summary><b>Directory structure for scenario based Teams app</b></summary>
 
@@ -132,7 +132,7 @@ To learn more about the directory structure of different types of basic Teams ap
 | For SPFx tab app | [Build a Teams app with SPFx](../sbs-gs-spfx.yml) |
 
 </details>
-
+<br>
 <details>
 <summary><b>Directory structure for multi-capability app</b></summary>
 
