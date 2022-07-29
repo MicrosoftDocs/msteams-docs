@@ -9,17 +9,24 @@ ms.date: 07/29/2022
 ---
 # Create a new Teams app using Teams Toolkit for Visual Studio
 
-Teams Toolkit provides Microsoft Teams app templates in Visual Studio. You can search for Teams app templates when create new project. To create a Teams app, follow the steps below:
+Teams Toolkit provides Microsoft Teams app templates in Visual Studio. You can search for Teams app templates when you create new project. To create a Teams app:
 
-1. Launch the Visual Studio and select on “Create a new project”. Alternatively, select on File > new > Project.
+1. You can launch Visual Studio and select **Create a new project** under the **Get started** section or you can  select on **File > New > Project** directly from the application.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project.png" alt-text="Create new project":::
+
 1. Search for Microsoft Teams app from the template list. Select Microsoft Teams app and select Next.
 
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app.png" alt-text="Microsoft teams app":::
+
 1. Specify your application name in the next page and select Create.
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name.png" alt-text="Name your application":::
 1. In the next dialog, select the Teams app type that you would like to create, and select Create.
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type.png" alt-text="Select the teams app type":::
 
 ## The Teams App templates in Teams Toolkit for Visual Studio
 
-There are prepopulated Teams app templates in Teams Toolkit for various Teams app type. The following table list all the templated available now:
+You can see Teams app templates already populated in Teams Toolkit for various Teams app type. The following table lists all the templated available:
 
 |Teams app template  |Description  |
 |---------|---------|
