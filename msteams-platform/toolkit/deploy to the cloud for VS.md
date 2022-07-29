@@ -28,15 +28,15 @@ Teams Toolkit helps you to deploy or upload your application front-end and back-
 
 1. Right click on your project, select **Teams Toolkit** > **Deploy to the cloud …**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/deploy-vs/VS-deploy-to-cloud.png" alt-text="vs deploy to cloud":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/deploy-vs/VS-deploy-to-cloud.png" alt-text="vs deploy to cloud":::
 
 2. You'll be prompted with a confirmation dialog. Select **Deploy**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/deploy-vs/VS-deploy-confirmation-dialog.png" alt-text="vs deploy to cloud confirmation dialog":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/deploy-vs/VS-deploy-confirmation-dialog.png" alt-text="vs deploy to cloud confirmation dialog":::
 
 3. After the Deploy process is triggered and completed, you'll see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in output window.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/deploy-vs/VS-deploy-popup.png" alt-text="vs deploy to cloud popup":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/deploy-vs/VS-deploy-popup.png" alt-text="vs deploy to cloud popup":::
 
 Now your project is successfully deployed to Azure, you can use Preview in Teams option in Teams Toolkit to launch the Teams app in web browser. Right click on your project and select Teams Toolkit -> Preview in Teams. The same menu options are also available in Project menu.
 
