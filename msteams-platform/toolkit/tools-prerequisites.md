@@ -132,7 +132,7 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon from the Teams Toolkit toolbar.
 
    > [!NOTE]
-   > If you're unable to see the option, see [Install and explore Teams Toolkit](install-and-explore.md) to install Teams Toolkit extension in Visual Studio Code.
+   > If you're unable to see the option, see [Install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
 1. Select **Sign in to M365** under **ACCOUNTS** and sign-in to your Microsoft 365 account.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/accounts.png" alt-text="accounts details":::
