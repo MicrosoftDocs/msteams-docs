@@ -106,7 +106,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
 </details>
 
-## Configure scope for access token
+### Configure scope for access token
 
 After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
@@ -116,7 +116,7 @@ To configure scope and authorize trusted client applications, you'll need:
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
 - [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
-### To expose an API
+#### To expose an API
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
@@ -171,7 +171,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
 1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
 
-### To configure API scope
+#### To configure API scope
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
@@ -200,7 +200,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed":::
 
-### To configure authorized client application
+#### To configure authorized client application
 
 1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
 
@@ -239,11 +239,11 @@ To configure scope and authorize trusted client applications, you'll need:
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-## Configure access token version
+### Configure access token version
 
 You must define the access token version that is acceptable for your app. This configuration is made in the Azure AD application manifest.
 
-### To define the access token version
+#### To define the access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
