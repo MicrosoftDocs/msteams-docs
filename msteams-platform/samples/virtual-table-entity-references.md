@@ -1,7 +1,7 @@
 ---
 title: Virtual Table entity references
 author: surbhigupta
-description: In this article, learn about Virtual Tables web API for collaboration control app in Microsoft Teams.
+description: learn about Virtual Tables web API for collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -109,14 +109,15 @@ Primary lookup column |
 
 ### Attributes
 
-| Column  | Dataverse Type | Details |
+| Column |Dataverse Type |Details |
 |---|---|---|
+
 | m365_collaborationrootid |StringType |Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
 | m365_allownewtimeproposals | BooleanType | true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
 m365_attendees StringType The collection of attendees for the event.
 This attribute is a JSON encoded string, 15000 max in length e.g. [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
 | m365_body | StringType | The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length.
-e.g.{\"contentType\":\"html\",\"content\":\"<html></html>\"} |
+e.g.{\"contentType\":\"html\",\"content\":\"html/html\"} |
 | m365_bodypreview | StringType | The preview of the message associated with the event. It is in text format.|
 | m365_categories | StringType | The categories associated with the event. Each category corresponds to the displayName property of an outlookCategory defined for the user.
 e.g. [\"string\"] |
@@ -187,7 +188,7 @@ JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"da
 | m365_bookingbusinessid | StringType | The unique identifier of the booking business the appointment is scheduled under.|
 | m365_additionalinformation | StringType | Additional information that is sent to the customer when an appointment is confirmed.|
 | m365_customers | StringType| It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional[{\"customerId\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\":null,\"state\":\"\",\"street\":\"\",\"type\":null},\"coordinates\":{\"accuracy\":null,\"altitude\":null,\"altitudeAccuracy\":null,\"latitude\":null,\"longitude\":null},\"displayName\":\"\",\"locationEmailAddress\":null,\"locationType\":null,\"locationUri\":\"\",\"uniqueId\":null,\"uniqueIdType\":null},\"name\":\"Jordan Miller\",\"notes\":null,\"phone\":null,\"timeZone\":null,\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
-| m365_customertimezone | StringType | The time zone of the customer. For a list of possible values, see <https://docs.microsoft.com/en-us/graph/api/resources/datetimetimezone?view=graph-rest-beta> |
+| m365_customertimezone | StringType | The time zone of the customer. For a list of possible values, see docs.microsoft.com/graph/api/resources/datetimetimezone?view=graph-rest-beta> |
 | m365_duration | StringType | The length of the appointment, denoted in ISO8601 format.|
 | m365_enddatetime | DateTimeType | The date, time, and time zone that the appointment ends.|
 | m365_filledattendeescount | IntegerType | The current number of customers in the appointment.|
@@ -221,6 +222,7 @@ JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"da
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
+
 | m365_collaborationrootid | StringType | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
 | m365_createdby | StringType | Identity of the user, device, or application which created the item. Read-only. This attribute is a JSON encoded string. e.g. { "user": { "displayName": "System Account" } } |
 | m365_createddatetime | DateTimeType | Date and time of item creation. Read-only.|
@@ -250,6 +252,7 @@ JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"da
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
+
 | m365_audio | StringType | Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128,   "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false,"isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 } |
 | M365_bundle| StringType | Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. e.g.{ "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
 | m365_collaborationrootid | StringType | | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
