@@ -47,32 +47,48 @@ To enable in-app purchase experience, update your Teams app `manifest.json` file
 
 To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
 
-Following is an example of calling the API from the app:
+Following code snippet is an example of calling the API from the app up to sdk V11:
 
-```json
-<body> 
-<div> 
-<div class="sectionTitle">openPurchaseExperience</div> 
-<button onclick="openPurchaseExperience()">openPurchaseExperience</button> 
-</div> 
-</body> 
-<script> 
-   function openPurchaseExperience() {
+<body>
+<div>
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+   function openPurchaseExperience()
       microsoftTeams.initialize();
       let callbackcalled = false;
       microsoftTeams.monetization.openPurchaseExperience((e) => {
-      console.log("callback is being called");
-      callbackcalled = true;  
-      if (!!e && typeof e !== "string") {
-            e = JSON.stringify(e);
-            alert(e);
-        }
-        return;
-      });
+            console.log("callback is being called");
+            console.log(e);
+            if (!!e && typeof e !== "string") {
+                  alert(JSON.stringify(e));
+              }
+              return;
+            });
       console.log("after callback: ",callbackcalled);
-    } 
-</script> 
-```
+    }
+</script>
+
+Following is the code for V2:
+
+<body>
+<div>
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+   function openPurchaseExperience() {
+      app.initialize();
+    var planInfo = {
+        planId: "<Plan id>", // Plan Id of the published SAAS Offer
+        term: "<Plan Term>" // Term of the plan.
+    }
+      monetization.openPurchaseExperience(planInfo);
+    }
+</script>
 
 ## End-user in-app purchasing experience
 
