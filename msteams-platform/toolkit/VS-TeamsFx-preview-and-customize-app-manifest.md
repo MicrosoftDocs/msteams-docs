@@ -2,7 +2,7 @@
 title: Teams App Manifest in Teams Toolkit for Visual Studio
 author: surbhigupta
 description: In this module, learn how to edit, preview and customize Teams App Manifest in the different environment for Visual Studio.
-ms.author: nliu
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Edit Teams app manifest using Visual Studio
 
-Teams Toolkit in Visual Studio loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. This allows you to create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+Teams Toolkit in Visual Studio loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
 After scaffolding, in the manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
@@ -23,10 +23,10 @@ In the manifest template, select **Project** > **Teams Toolkit** > **Open Manife
 
 There are two types of placeholders in `manifest.template.json`:
 
-- `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. You can't modify the values in `state.{env}.json`.
+- `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. It's recommended to not modify the values in `state.{env}.json`.
 - `{{config.manifest.xx}}` is customized placeholder, whose value is resolved from `config.{env}.json`.
 
-You can have a customized parameter by:
+You can add a customized parameter by:
 
 - Adding a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`.
 - Adding a config value in `config.{env}.json`.
@@ -52,17 +52,17 @@ You can preview values in app manifest in two ways:
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder":::
 
    > [!NOTE]
-   > If the environment has not been provisioned, or the Teams app dependencies has not been prepared, it indicates that the values for placeholder have not been generated.
+   > If the environment has not been provisioned, or the Teams app dependencies have not been prepared, it indicates that the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
 
 ### Preview manifest file
 
 You can preview the manifest file by performing the following steps:
 
-- Select **Project** > **Teams Toolkit** menu and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud**, that generates configuration for local or remote Teams app.
+- Select **Project** > **Teams Toolkit** menu and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** that generates configuration for local or remote Teams app.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file":::
 
-- To preview manifest with real content, Teams Toolkit generates the preview manifest files, right click on **manifest.template.json** under **appPackage** folder. Select **Preview Manifest File** > **For Local** or **For Azure**.
+- To preview manifest with real content, Teams Toolkit generates the preview manifest files, right-click on **manifest.template.json** under **appPackage** folder. Select **Preview Manifest File** > **For Local** or **For Azure**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Preview context menu":::
 
@@ -72,7 +72,7 @@ There are two other ways to preview manifest file:
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package":::
 
-- You can also see the same list of menus that are under Project > Teams Toolkit, if you right click on your project name and then select **Teams Toolkit** under **Solution Explorer**.
+- You can also see the same list of menus that are under Project > Teams Toolkit, if you right-click on your project name and then select **Teams Toolkit** under **Solution Explorer**.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer":::
 
