@@ -25,9 +25,9 @@ It also includes a set of Collaboration controls API and tasks that can be invok
 
 ## Create an Azure App
 
-In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Directory management, sign in to your account with adequate permissions to add an user application to your environment with the following steps:
+In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Directory management, sign in to your account with adequate permissions to add a user application to your environment with the following steps:
 
-1. In the home page of Azure portal, select **Azure Active Directory**. In Azure Active Directory select dropdown for **Add** and select **App registration**.
+1. In the home page of Azure portal, select **Azure Active Directory**. In Azure Active Directory, select dropdown for **Add** and select **App registration**.
 
    :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Add a new App Registration":::
 
@@ -57,7 +57,7 @@ In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Direct
 
    :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Save client ID":::
 
-Now your Azure app is all set and you need to add it as an user application in your environment.
+Now your Azure app is all set and you need to add it as a user application in your environment.
 
 ## Add Azure app to Power Automate environment
 
@@ -106,7 +106,7 @@ After the app is added, set the **Business unit** and **Security Roles** to your
    * Client secret: Use your saved app secret value in the input.
    * Client ID: Your Azure app (Client ID).
    * Resource URL:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
-   * Scope: Same as above with .default suffix (`https://org.crm.dynamics.com/.default`).
+   * Scope: Same as above with. Default suffix (`https://org.crm.dynamics.com/.default`).
 
    :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Dynamic 365 instance":::
 
@@ -141,8 +141,8 @@ The following triggers and actions are supported within a flow:
       By default, the trigger Planner Task will be disabled and won't trigger. To enable it the following steps must be completed by the tenant admin:
 
       * Create a support ticket under the path Power Apps/Collaboration controls/Settings.
-      * Request that your environment is enabled for the Collaboration connector and provide your Environment URL (preferred) or Organization ID.  
-      * You can add the following sample text to your support request: "Please enable Environment URL: `url` for the Collaboration Connector".
+      * Request that your environment is enabled for the Collaboration connector and provides your Environment URL (preferred) or Organization ID.  
+      * You can add the following sample text to your support request: "Enable Environment URL: `url` for the Collaboration Connector".
       * To open a support ticket, see [Get Help + Support](/power-platform/admin/get-help-support)
 
 * **Actions**
@@ -300,7 +300,7 @@ The following triggers and actions are supported within a flow:
      * **Completed By:** A json formatted object that represents the identity of the user that completed the task. See, [identitySet resource type](/graph/api/resources/identityset)
      * **Conversation Thread ID:** Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
      * **Created By:** A json formatted object that represents the identity of the user that created the task. See, [identitySet resource type](/graph/api/resources/identityset)
-     * **Due Date Time:** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1st, 2014 is 2014-01-01T00:00:00Z.
+     * **Due Date Time:** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * **Order Hint:** Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format).
      * **Percent Complete:** Percentage of task completion (0-100)
      * **Preview Type:** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.

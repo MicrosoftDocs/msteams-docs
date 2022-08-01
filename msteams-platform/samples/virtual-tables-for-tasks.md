@@ -49,7 +49,7 @@ To follow along with this article, you'll need:
 
 The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
 
-The following sequence diagram explains the interaction between the client which could be the Tasks collaboration control, the [Collaboration API](~/samples/collaboration-api-reference.md) and the Planner Plan and Task virtual tables.
+The following sequence diagram explains the interaction between the client, which could be the Tasks collaboration control, the [Collaboration API](~/samples/collaboration-api-reference.md) and the Planner Plan and Task virtual tables.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
 
@@ -419,7 +419,7 @@ Header: If-Match: {{@odata.etag}}
 
 * `@odata.etag`: Etag for the task, you must perform a read to retrieve the most up to date version.
 * `planTitle`: Updated title for the task.
-* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the most up to date version. This value will be included in the `m365_details` column of the response. This value is not the same as the `@odata.etag` because in the Planner backend, the Task and it’s details are stored separately.
+* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the most up to date version. This value will be included in the `m365_details` column of the response. This value isn't the same as the `@odata.etag` because in the Planner backend, the Task and its details are stored separately.
 
 # [Response](#tab/response7)
 
@@ -546,7 +546,7 @@ This case must be handled by any client code, which retrieves virtual records as
 
 The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When, a record is read the current etag is returned, and remains valid until the record is changed. The etag should be included in any update request and will be checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request will fail.
 
-If you perform two update requests using the same @odata.etag then the second request will fail:
+If you perform two updates requests using the same @odata.etag then the second request will fail:
 
 # [Request](#tab/request11)
 
@@ -582,7 +582,7 @@ Header: If-Match: {{@odata.etag}}
 
 ### Querying for Associated Virtual Records
 
-In Task 5 of above, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query which specifies the Collaboration Root ID as shown below:
+In Task 5 of above, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query, which specifies the Collaboration Root ID as shown below:
 
 # [Request](#tab/request12)
 
@@ -592,12 +592,12 @@ In Task 5 of above, described how to Retrieve Associated Planner Tasks. This ope
 
 ---
 
-* Additional filtering options cannot be combined with this `$filter` query and if they are they will be ignored.
+* Additional filtering options can't be combined with this `$filter` query and if they're they'll be ignored.
 * Additional filtering must be performed directly on the response from the request.
 
 ### Querying for Virtual Records with Required Key Attributes
 
-When the Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute is not provided, then the request will fail as follows:
+When the Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request will fail as follows:
 
 # [Response](#tab/response13)
 
@@ -619,7 +619,7 @@ When the Dataverse Web API is called to retrieve multiple records from the follo
 
 ---
 
-To fix this problem change the request to this format:
+To fix this problem, change the request to this format:
 
 # [Request](#tab/request14)
 
@@ -631,4 +631,4 @@ To fix this problem change the request to this format:
 
 ### Creating Virtual Records and Graph Access Control
 
-The virtual tables honor the access control specified for Microsoft Graph. The virtual tables will not permit operations that the user could not perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and is not a member of group you use then you will get 403 Forbidden responses.
+The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you'll get 403 Forbidden responses.

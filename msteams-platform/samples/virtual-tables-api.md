@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Virtual tables Web API
 
-When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features are not supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See the Virtual Tables Entity Reference for details on what each virtual table supports.
+When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features aren't supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See the Virtual Tables Entity Reference for details on what each virtual table supports.
 
 > [!NOTE]
 > Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
@@ -18,7 +18,7 @@ When using the Dataverse Web API to retrieve multiple records from a virtual tab
 
 With the virtual tables, you can use the OData $orderby query parameter to set criteria for how the result set should be sorted. Use the asc or desc suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied.  
 
-Supported Tables: Each virtual table supports the same sorting functionality as it’s respective Graph resource. The virtual tables which support sorting are:  
+Supported Tables: Each virtual table supports the same sorting functionality as it’s respective Graph resource. The virtual tables, which support sorting are:  
 
 * Graph Drive Item
 * Graph Event

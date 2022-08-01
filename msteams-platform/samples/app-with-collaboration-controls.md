@@ -36,7 +36,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Give your table a name. Under **Advanced options** select **Creating a new activity**.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot descirbes how to create new activity." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot describes how to create new activity." border="true":::
 
 1. Select **Save**.
 
@@ -45,7 +45,7 @@ columns, relationships, and more (Optional).
 
 1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="The screenshot is an example that shows ths new model driven app." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="The screenshot is an example that shows the new model driven app." border="true":::
 
 1. Choose new **Modern app designer (preview)** to open the new app.
 
@@ -118,7 +118,7 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
      :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Tasks control display":::
 
 1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
-1. Once all controls are added you will see the controls rendered below in Form Designer. If a control does not render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
+1. Once all controls are added, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
      :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Controls form designer":::
 
 1. You can now run your power app in Power Apps by selecting it.
@@ -127,7 +127,7 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Create a new record by selecting **+ New** and then open the record.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="The screenshot is an example that shows the power apps that opens the record." border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="The screenshot is an example that shows the power apps that open the record." border="true":::
 
 1. Now you can see views for each tab that appear similar to the following image:
 
@@ -283,7 +283,7 @@ Open the **Files** tab in your application and select **Upload** to upload files
 
 ### Using Approvals
 
-Approvals allow users to request sign off from others when working in a record. For example, request an approval to complete a task or close a record.
+Approvals allow users to request sign out from others when working in a record. For example, request an approval to complete a task or close a record.
 
 1. Go to the **Approvals** tab of the application.
 
@@ -293,11 +293,11 @@ Approvals allow users to request sign off from others when working in a record. 
 
 1. Select the **New approval request** to open the approval request form.
 
-      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="The screenshot is an example that show the new approval request form.":::
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="The screenshot is an example that shows the new approval request form.":::
 
 1. In the Approval request form, fill the required fields and select **Send**,which creates a request and added to the list.
 
-      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="The screenshot is an example that show the list of approvals.":::
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="The screenshot is an example that shows the list of approvals.":::
 
 1. Select the approval to view the details.
 

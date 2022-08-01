@@ -16,7 +16,7 @@ Collaboration controls currently work best within Microsoft Teams. You can creat
 
 ## Configure the app for Teams
 
-The app that you have created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
+The app that you've created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
 
 > [!NOTE]
 > Don't enable the following steps if you want to display the left pane and high-density header to your users.
@@ -35,7 +35,7 @@ To do so, we'll use Power Apps **new app** settings.
 
      :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Hide the nav bar" border="true":::
 
-1. On the lower right  of your application in the edit pane, there is a section titled **Setting app values**. If you created your app using the modern app designer, your app appears on the list. Select **New app value** under your app.
+1. On the lower right  of your application in the edit pane, there's a section titled **Setting app values**. If you created your app using the modern app designer, your app appears on the list. Select **New app value** under your app.
 
 1. Change the value from **No** to **Yes.**
 
@@ -57,7 +57,7 @@ To do so, we'll use Power Apps **new app** settings.
 
 ## Add the app to Microsoft Teams app catalog
 
-As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you have created and select More options **…**.
+As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you've created and select More options **…**.
 
 To add the app to Teams, select **Add to Teams**.
 
@@ -93,7 +93,7 @@ Following are required to enable users to run the deployed Collaboration Manager
      1. **Description:** Enter a description of the team.
      1. **Business unit:** Select a business unit from the dropdown list.
      1. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters.
-     1. **Team type:** Select the team type. The following steps assumes that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) auto populates team members from Azure Active Directory.
+     1. **Team type:** Select the team type. The following steps assume that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) auto populates team members from Azure Active Directory.
 
          :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="New team" border="true":::
 
