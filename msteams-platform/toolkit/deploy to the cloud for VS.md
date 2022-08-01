@@ -43,7 +43,9 @@ Microsoft Teams Toolkit helps you to deploy or upload your applications front-en
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
-You'll see that your project is successfully deployed to Azure, you can use Preview in Teams option in Teams Toolkit to launch the Teams app in web browser. Right click on your **project** and select **Teams Toolkit** > **Preview in Teams** in Teams. The same menu options are also available in Project menu.
+You'll see that your project is successfully deployed to Azure, you can use Preview in Teams option in Teams Toolkit to launch the Teams app in web browser. Under the solution explorer panel, right click on your **project** and select **Teams Toolkit** > **Preview in Teams**. The same menu options are also available in Project menu.
+
+:::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Preview app in teams":::
 
 > [!NOTE]
 > You can choose to use Zip App package option to generate Teams app package first, then upload to Teams client. Then you can preview your app in Teams client. This is the other way to preview app in web browser from the preview option in Teams.
