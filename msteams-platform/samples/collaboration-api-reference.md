@@ -12,7 +12,7 @@ ms.topic: conceptual
 Developers can use the Collaboration control and Settings REST API to manage settings, start, map, and retrieve collaboration activities with their own business model entities.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 This article provides reference for the Collaboration control solution REST API.
 

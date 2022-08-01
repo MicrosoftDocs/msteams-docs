@@ -10,7 +10,7 @@ ms.topic: conceptual
 # Limitations and known issues
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Following are the limitations for Collaboration controls:
 

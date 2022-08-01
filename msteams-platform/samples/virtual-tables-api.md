@@ -12,7 +12,7 @@ ms.topic: conceptual
 When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features are not supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See the Virtual Tables Entity Reference for details on what each virtual table supports.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Virtual Table Sorting
 
