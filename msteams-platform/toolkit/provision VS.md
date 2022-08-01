@@ -22,25 +22,27 @@ Here's a list of tools you need for provisioning your cloud resources:
 
 ## Steps to provision cloud resources
 
-The following steps helps you to provision cloud resources using Visual Studio:
+The following steps help you to provision cloud resources using Visual Studio:
 
 ### Sign in to your Microsoft 365 account
 
 1. Open Visual Studio.
 2. Open the Microsoft Teams app project.
-3. Select **Project > Teams Toolkit > Prepare Teams App Dependencies**.
+3. Select **Project**.
+4. Select **Teams Toolkit**.
+5. Select **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Prepare teams app dependencies":::
 
-4. Select **Sign in...** to sign in to your Azure account.
+7. Select **Sign in...** to sign in to your Azure account.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
     > [!NOTE]
     > If you are already logged in, your username displays, or you can select the same to switch your account.
 
-5. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
-6. Select **Continue** once you're signed in to your account.
+8. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
+9. Select **Continue** after you've signed in to your account.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
@@ -48,39 +50,45 @@ The following steps helps you to provision cloud resources using Visual Studio:
 
 1. Open Visual Studio.
 2. Open the Teams App project.
-3. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
+3. Select **Project**.
+4. Select **Teams Toolkit**.
+5. Select **Provision in the cloud**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Sign in to Azure account":::
 
-4. Select **Sign in...** to sign in to your Azure account.
+6. Select **Sign in...** to sign in to your Azure account.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
    > [!NOTE]
    > If you're already logged in, your username is displayed, or you have an option to switch account.
 
-5. Sign in to Azure account using your credentials. The browser closes automatically.
+7. Sign in to Azure account using your credentials. The browser closes automatically.
 
 ### To provision cloud resources
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
+1. After you open your project in Visual Studio, Select **Project**
+2. Select **Teams Toolkit**
+3. Select **Provision in the cloud**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud.png" alt-text="Provision in cloud":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud1.png" alt-text="Provision in cloud":::
 
-2. In the **Provision** dialogue box you can see a list of all the subscriptions in your Azure account.
-3. You can either select or create a new **Resource group**.
-4. Select **Provision**.
+5. In the **Provision** dialogue you can see a list of all the subscriptions in your Azure account.
+6. You can either select or create a new **Resource group**.
+7. Select **Provision**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
 
-5. A dialog box warns you that charges may be added as per Azure usage. Select **Provision**.
+8. The dialog warns you that charges may be added as per Azure usage. Select **Provision**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
-6. The provision process of creating the resources in the Azure cloud may take some time. Meanwhile you can monitor the progress by checking Teams Toolkit output window.
+The provision process of creating the resources in the Azure cloud may take some time.
+
+6. Check Teams Toolkit output window to monitor progress.
 7. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
 ### Create resources
 
@@ -90,7 +98,7 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can crea
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you also need to create Azure resources. The ARM template defines all the Azure resources and helps you to create required Azure resources during provision.
+When you create a new project, you also need to create Azure resources. The Azure Resource Manager (ARM) templates defines all the Azure resources and helps you to create required Azure resources during provision.
 
 ### Create resource for Teams tab application
 
@@ -107,7 +115,7 @@ When you create a new project, you also need to create Azure resources. The ARM 
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
 | App Service plan | Hosts your web bot app. | Not applicable |
 | App Service | Hosts your bot app. | Adds user assigned identity to access other Azure resources. |
-| Managed identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 ### Create resources for Teams command bot application
 
@@ -116,9 +124,9 @@ When you create a new project, you also need to create Azure resources. The ARM 
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
 | App service plan | Hosts your web bot app. | Not applicable |
 | App service | Hosts your bot app. | Adds user assigned identity to access other Azure resources. |
-| Managed identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 
-### Create resources for Teams notification bot with HTTp trigger (Web API server) application
+### Create resources for Teams notification bot with HTTP trigger (Web API server) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
@@ -127,32 +135,32 @@ When you create a new project, you also need to create Azure resources. The ARM 
 | App service | Host your bot app. | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 
-### Create resource for Teams notification bot with HTTp trigger (Azure function) application
+### Create resource for Teams notification bot with HTTP trigger (Azure function) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
-| Managed identity | Authenticates Azure service-to-service requests. | Shared across different capabilities and resources. |
+| Manage identity | Authenticates Azure service-to-service requests. | Shared across different capabilities and resources. |
 | Storage account | Helps to create function app. | Not applicable |
 | App service plan | Hosts the function bot App. | Not applicable |
-| Function app | Hosts your bot app. | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
+| Function app | Hosts your bot app. | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
 
 ### Create resource for Teams notification bot with timer trigger (Azure function) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
-| Managed identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 | Storage account | Helps to create function app. | Not applicable. |
-| App service plan | Hosts the function bot App. | Not applicable |
-| Function app | Hosts your bot app. | Adds user assigned identity to access other Azure resources.<br>Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>Adds authentication setting that only allows requests from your Teams app.<br>Adds app settings required by TeamsFx SDK. |
+| App service plan | Hosts the function bot app. | Not applicable |
+| Function app | Hosts your bot app. | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
 
-### Create resources for Teams notification bot with HTTp trigger + timer trigger (Azure function) application
+### Create resources for Teams notification bot with HTTP trigger + timer trigger (Azure function) application
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
-| Managed identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 | Storage account | Helps to create function app | Not applicable |
 | App service plan | Hosts the function bot App | Not applicable |
 | Function App | Hosts your bot app | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
@@ -162,11 +170,11 @@ When you create a new project, you also need to create Azure resources. The ARM 
 You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
 * You can select resource group from the existing list or the new resource group that you've created.
-* You can see the details of the resource group you've chosen in the overview section of the table of content.
+* You can see the details of the resource group you've selected in the overview section of the table of content.
 
 ### Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you want to provision. TTK also helps you to configure it the way you require.
+Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you want to provision. You can change the configuration in Teams Toolkit as per your requirement.
 
 Teams Toolkit uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
