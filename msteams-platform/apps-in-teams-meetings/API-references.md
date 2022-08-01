@@ -131,7 +131,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-| Property name | Purpose |
+| Property name | Description |
 |---|---|
 | **user.id** | ID of the user. |
 | **user.aadObjectId** | Azure Active Directory object ID of the user. |
@@ -223,7 +223,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&<completionBotId>=<BOT_APP_ID>"
         }
     },
     "replyToId": "1493070356924"
@@ -232,7 +232,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
-| Property name | Purpose |
+| Property name | Description |
 |---|---|
 | **type** | Type of activity. |
 | **text** | The text content of the message. |
@@ -240,6 +240,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
 | **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
 | **replyToId** | The ID of the parent or root message of the thread. |
+| **APP_ID** | App Id declared in manifest. |
+| **completionBotId** | Bot app Id |
 
 ### Response codes
 
@@ -488,7 +490,7 @@ The JSON response body for Meeting Details API is as follows:
 
 ---
 
-| Property name | Purpose |
+| Property name | Description |
 |---|---|
 | **details.id** | The meeting's ID, encoded as a BASE64 string. |
 | **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
@@ -896,7 +898,7 @@ The following code provides an example of meeting end event payload:
 }
 ```
 
-| Property name | Purpose |
+| Property name | Description |
 |---|---|
 | **name** | Name of the user.|
 | **type** | Activity type. |
