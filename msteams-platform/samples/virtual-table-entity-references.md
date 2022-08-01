@@ -115,6 +115,7 @@ Primary lookup column |
 
 | Column |Dataverse Type | Details |
 |---|---|---|
+
 | m365_collaborationrootid |StringType |Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
 | m365_allownewtimeproposals | BooleanType | true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
 m365_attendees StringType The collection of attendees for the event.
@@ -260,6 +261,7 @@ JSON encoded string, max 4000 in length.e.g. {\"pattern\":{\"dayOfMonth\":0,\"da
 
 | Column | Dataverse Type | Details |
 |---|---|---|
+
 | m365_audio | StringType | Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128,   "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false,"isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 } |
 | M365_bundle | StringType | Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. e.g.{ "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
 | m365_collaborationrootid | StringType | Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute will not be returned when retrieving multiple records.|
