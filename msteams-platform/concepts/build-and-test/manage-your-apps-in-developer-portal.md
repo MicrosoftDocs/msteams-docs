@@ -24,7 +24,6 @@ In the **Overview** section, you can see the following components to manage your
   * In the **Dashboard** under **Overview** section, you can see the following components for your app:
     * **Teams store validation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
     * **Announcement**: Latest updates of your apps on Developer Portal for Teams
-    * **Upgrade to 1.14**: (content to be added)
     * **Active users (Preview)**: Shows you the active user count
     * **Basic information**: Shows you the App ID, Version, Manifest version, and so on.
 
