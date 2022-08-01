@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Choose your build environment
 
-Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. You can choose the suitable environment that best suits your app. It supports the following build environments:
+Microsoft Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, then you can manage the app in the Developer Portal. You can choose a suitable environment that best suits your app. It supports the following build environments:
 
 * JavaScript/TypeScript
 * SharePoint Framework (SPFx)
