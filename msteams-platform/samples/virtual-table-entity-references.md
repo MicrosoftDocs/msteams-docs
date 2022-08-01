@@ -115,61 +115,54 @@ This attribute is a JSON encoded string, for example "{ \"category1\": true, \"c
 
 ### Attributes Graph Event
 
-| Column |Dataverse Type | Details |
+| Column |Dataverse Type |Details |
 |---|---|---|
-
-| m365_collaborationrootID |StringType |Collaboration root ID(s) of the collaboration session of the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records.|
-| m365_allownewtimeproposals | BooleanType | true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
-m365_attendees StringType The collection of attendees for the event.
-This attribute is a JSON encoded string, 15000 max in length for example [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
-| m365_body | StringType | The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length.
-for example, {\"contentType\":\"html\",\"content\":\"html/html\"} |
-| m365_bodypreview | StringType | The preview of the message associated with the event. It's in text format.|
-| m365_categories | StringType | The categories associated with the event. Each category corresponds to the displayName property of an outlookCategory defined for the user.
-for example,  [\"string\"] |
-| m365_changekey | StringType | IDentifies the version of the event object. Every time the event is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.|
-| m365_createddatetime | DateTimeType | The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_start | DateTimeType | The start date, time, and time zone of the event.
-This attribute is a JSON encoded string, 100 max in length.e.g {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"} |
-| m365_end | DateTimeType | The date, time, and time zone that the event ends.
-This attribute is a JSON encoded string, 100 max in length.
-for example,  {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"} |
-| m365_hasattachments | BooleanType | Set to true if the event has attachments.|
-| m365_hIDeattendees | BooleanType | When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.|
-| m365_icaluID | StringType | A unique Identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.|
-| m365_isallday | BooleanType | Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to mIDnight and be in the same time zone.|
-|m365_iscancelled | BooleanType | Set to true if the event has been canceled.
-m365_ID StringType Read-only. ID of the event.|
-| m365_isdraft | BooleanType | Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.|
-| m365_isonlinemeeting | BooleanType | True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional. After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Later Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.|
-| m365_isorganizer | BooleanType | Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.|
-| m365_isreminderon | BooleanType | Set to true if an alert is set to remind the user of the event.|
-| m365_lastmodifieddatetime | DateTimeType | The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_location StringType | The location of the event. JSON encoded string, max 4000 in length.
-for example, [{\"address\",\"coordinates\",\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\",\"locationType\":\"default\",\"locationUri\",\"uniqueID\":\"Harry\'s Bar\",\"uniqueIDType\":\"private\"} |
-| m365_locations | StringType | The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value. JSON encoded string, max 4000 in length.for example, [{\"address\",\"coordinates\",\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\",\"locationType\":\"default\",\"locationUri\",\"uniqueID\":\"Harry\'s Bar\",\"uniqueIDType\":\"private\"}] |
-| m365_onlinemeeting | StringType | Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvIDer properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvIDer, and onlineMeeting properties again. JSON encoded string, max 4000 in length.
-for example, {\"conferenceID\": \"String\",\"joinUrl\": \"String\",\"phones\": [{\"@odata.type\": \"microsoft.graph.phone\"}],\"quickDial\": \"String\",\"tollFreeNumbers\": [\"String\"],\"tollNumber\": \"String\"} |
-| m365_onlinemeetingprovIDer | StringType | Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvIDer properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvIDer, and onlneMeeting properties again.|
-| m365_onlinemeetingurl | StringType | A URL for an online meeting. The property is set only when an organizer specifies in Outlook that an event is an online meeting such as Skype. Read-only. To access the URL to join an online meeting, use joinUrl, which is exposed via the onlineMeeting property of the event. The onlineMeetingUrl property will be deprecated in the future.|
-| m365_organizer | StringType | The organizer of the event. JSON encoded string, max 4000 in length. {\"emailAddress\":{\"@odata.type\":\" microsoft.graph .emailAddress\ "}} |
-| m365_originalendtimezone | StringType | The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook. |
-| m365_originalstart | DateTimeType | Represents the start time of an event when it's initially created as an occurrence or exception in a recurring series. This property isn't returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, mIDnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_originalstarttimezone | StringType | The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.|
-| m365_recurrence | StringType | The recurrence pattern for the event.
-JSON encoded string, max 4000 in length.for example,  {\"pattern\":{\"dayOfMonth\":0,\"daysOfWeek\":[\"monday\",\"wednesday\",\"frIDay\"],\"firstDayOfWeek\":\"sunday\",\"index\":\"first\",\"interval\":1,\"month\":0,\"type\":\"weekly\"},\"range\":{\"startDate\":\"2017-08-14\",\"endDate\":\"2018-08-14\",\"numberOfOccurrences\":0,\"recurrenceTimeZone\":\"Eastern Standard Time\",\"type\":\"endDate\"}} |
-| m365_reminderminutesbeforestart | IntegerType | The number of minutes before the event start time that the reminder alert occurs.|
-| m365_responserequested | BooleanType | Default is true, which represents the organizer would like an invitee to send a response to the event.|
-| m365_responsestatus | StringType | Indicates the type of response sent in response to an event message. JSON encoded string, max 4000 in length. {\"response\": \"String\",\"time\": \"String (timestamp)\"} |
-| m365_sensitivity | StringType | Possible values are: normal, personal, private, confIDential.|
-| m365_seriesmasterID | StringType | The ID for the recurring series master item, if this event is part of a recurring series.|
-| m365_showas | StringType | The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.|
-| m365_subject | StringType | The text of the event's subject line. Primary look up column
-| m365_transactionID | StringType | A custom Identifier specified by a client app for the server to avoID redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionID when creating an event, you can't change transactionID in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.|
-| m365_type | StringType | The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only |
-| m365_weblink | StringType | The URL to open the event in Outlook on the web. Outlook on the web opens the event in the browser if you're signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in. This URL can't be accessed from within an iFrame.|
-| m365_grapheventID | StringType | Unique Identifier of the graph event.|
-| m365_groupID | StringType | Group ID to which the event belongs.|
+|m365_collaborationrootid |StringType |Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records. |
+|m365_allownewtimeproposals |BooleanType |true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true. |
+|m365_attendees |StringType |The collection of attendees for the event. This attribute is a JSON encoded string, 15000 max in length. for example, [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
+|m365_body |StringType |The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length. for example {\"contentType\":\"html\",\"content\":\"<html></html>\"} |
+|m365_bodypreview |StringType |The preview of the message associated with the event. It is in text format. |
+|m365_categories |StringType |The categories associated with the event. Each category corresponds to the displayName property of an outlookCategory defined for the user. for example [\"string\"] |
+|m365_changekey |StringType |Identifies the version of the event object. Every time the event is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. |
+|m365_createddatetime |DateTimeType |The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+|m365_start |DateTimeType |The start date, time, and time zone of the event. This attribute is a JSON encoded string, 100 max in length. for example {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"}|
+|m365_end |DateTimeType |The date, time, and time zone that the event ends. This attribute is a JSON encoded string, 100 max in length. for example {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"} |
+|m365_hasattachments |BooleanType |Set to true if the event has attachments. |
+|m365_hideattendees |BooleanType |When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false. |
+|m365_icaluid |StringType |A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only. |
+|m365_isallday |BooleanType |Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone. |
+|m365_iscancelled |BooleanType |Set to true if the event has been canceled. |
+|m365_id| StringType |Read-only. ID of the event. |
+|m365_isdraft |BooleanType |Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.|
+|m365_isonlinemeeting|BooleanType|True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional. After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Later Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.|
+|m365_isorganizer|BooleanType|Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.|
+|m365_isreminderon|BooleanType|Set to true if an alert is set to remind the user of the event.|
+|m365_lastmodifieddatetime|DateTimeType|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z|
+|m365_location|StringType|The location of the event. JSON encoded string, max 4000 in length.
+for example[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}|
+|m365_locations|StringType|The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value. JSON encoded string, max 4000 in length.for example[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}]|
+|m365_onlinemeeting|StringType|Details for an attendee to join the meeting online. Default is null. Read-only.After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again. JSON encoded string, max 4000 in length.for example{\"conferenceId\": \"String\",\"joinUrl\": \"String\",\"phones\": [{\"@odata.type\": \"microsoft.graph.phone\"}],\"quickDial\": \"String\",\"tollFreeNumbers\": [\"String\"],\"tollNumber\": \"String\"}|
+|m365_onlinemeetingprovider|StringType|Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.|
+|m365_onlinemeetingurl|StringType|A URL for an online meeting. The property is set only when an organizer specifies in Outlook that an event is an online meeting such as Skype. Read-only.
+To access the URL to join an online meeting, use joinUrl, which is exposed via the onlineMeeting property of the event. The onlineMeetingUrl property will be deprecated in the future.|
+|m365_organizer|StringType|The organizer of the event.JSON encoded string, max 4000 in length.
+{\"emailAddress\":{\"@odata.type\":\"microsoft.graph.emailAddress\"}}|
+|m365_originalendtimezone|StringType|The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.|
+|m365_originalstart|DateTimeType|Represents the start time of an event when it's initially created as an occurrence or exception in a recurring series. This property isn't returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z|
+|m365_originalstarttimezone|StringType|The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.|
+|m365_recurrence|StringType|The recurrence pattern for the event. JSON encoded string, max 4000 in length.for example{\"pattern\":{\"dayOfMonth\":0,\"daysOfWeek\":[\"monday\",\"wednesday\",\"friday\"],\"firstDayOfWeek\":\"sunday\",\"index\":\"first\",\"interval\":1,\"month\":0,\"type\":\"weekly\"},\"range\":{\"startDate\":\"2017-08-14\",\"endDate\":\"2018-08-14\",\"numberOfOccurrences\":0,\"recurrenceTimeZone\":\"Eastern Standard Time\",\"type\":\"endDate\"}}|
+|m365_reminderminutesbeforestart|IntegerType|The number of minutes before the event start time that the reminder alert occurs.|
+|m365_responserequested|BooleanType|Default is true, which represents the organizer would like an invitee to send a response to the event.|
+|m365_responsestatus|StringType|Indicates the type of response sent in response to an event message. JSON encoded string, max 4000 in length.{\"response\": \"String\",\"time\": \"String (timestamp)\"}|
+|m365_sensitivity|StringType|Possible values are: normal, personal, private, confidential.|
+|m365_seriesmasterid|StringType|The ID for the recurring series master item, if this event is part of a recurring series.|
+|m365_showas|StringType|The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.|
+|m365_subject|StringType|The text of the event's subject line. Primary lookup column|
+|m365_transactionid|StringType|A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.|
+|m365_type|StringType|The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only|
+|m365_weblink|StringType|The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you're signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.|
+|m365_grapheventid|StringType|Unique identifier of the graph event.|
+|m365_groupid|StringType|Group ID to which the event belongs.|
 
 ### Graph Booking Appointment
 
