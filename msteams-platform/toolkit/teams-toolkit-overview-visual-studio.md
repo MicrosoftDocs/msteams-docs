@@ -54,7 +54,7 @@ You can first install Teams Toolkit, then select **Project > Teams Toolkit** to 
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
-You can also access Teams Toolkit menu from solution explorer by right clicking on your project then select **Teams Toolkit**:
+You can also access **Teams Toolkit menu** from solution explorer by right clicking on your **Project** > **Teams Toolkit**:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
@@ -74,7 +74,7 @@ You can do the following operations on Teams Toolkit for Visual Studio:
 |Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
 |Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
 
-The following operations aren't supported yet in Teams Toolkit for Visual Studio (compared to Teams Toolkit for Microsoft Visual Studio Code), however they're planned in the future product road map.
+The following operations aren't supported in Teams Toolkit for Visual Studio yet (compared to Teams Toolkit for Microsoft Visual Studio Code), however they're planned in the future product road map.
 
 |Operation  |Description  |
 |---------|---------|
