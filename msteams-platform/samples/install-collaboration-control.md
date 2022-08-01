@@ -9,6 +9,9 @@ ms.topic: conceptual
 
 # Install Collaboration controls
 
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+
 In this article, you'll learn how to install Collaboration Controls. The following are required to build and deploy Collaboration Manager applications using the Collaboration controls:
 
 * **Power apps**: To build and run Model Driven Applications using the Collaboration controls.

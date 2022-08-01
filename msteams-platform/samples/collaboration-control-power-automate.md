@@ -13,6 +13,9 @@ Power Automate can be used to automate workflows around your Collaboration Manag
 
 Collaboration control connector enables developers to access Collaboration control APIs by triggers or actions in automated workflows in Microsoft Power Automate, Microsoft Power Apps and Azure Logic apps.
 
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+
 In this version, the connector enables makers to set up triggers from:
 
 1. When a Collaboration session is created

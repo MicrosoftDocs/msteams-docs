@@ -9,14 +9,17 @@ ms.topic: conceptual
 
 # Limitations and known issues
 
-The Collaboration controls are currently intended for use as described in this document, and there are the following limitations:
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
 
-* Components can't be used in Canvas Apps.
+Following are the limitations for Collaboration controls:
+
+* Components can't be used in Canvas apps.
 * Components only support full tab views.
 
      :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="tasks" border="true":::
 
-* The subgrid view selected isn't honored. All tasks, meetings or notes for the collaborative record will be displayed.
+* The subgrid view selected isn't honored. All tasks, meetings, or notes for the collaborative record will be displayed.
 
      :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="subgrid view" border= "true":::
 
@@ -24,11 +27,11 @@ The Collaboration controls are currently intended for use as described in this d
 * New records must be saved before accessing the components, otherwise you'll see an empty screen.
 * The components don't inherit theming from the form or app they're added to.
 * Localization is only available when running the app inside Microsoft Teams.
-* Microsoft Edge strict mode isn't supported, and cross-site cookies are required.
+* Microsoft Edge strict mode isn't supported and cross-site cookies are required.
 
 **Admin Center does not update when installation or upgrade is complete**
 
- When following the installation steps in exercise 1,' redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation, and when installation is complete it may disappear from the list. You can view the solutions list at <https://make.preview.powerapps.com/> to confirm that installation is complete.
+When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you are redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when installation is complete it may disappear from the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
 
 **View during installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="view during installation" border="true":::
@@ -36,20 +39,16 @@ The Collaboration controls are currently intended for use as described in this d
 **View after installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="view after installation" border="true":::
 
-When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the Solutions list at [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes. You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
+When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes. You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
      :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="History check" border="true":::
 
-**Bookings Meetings: 1:1**
+## Bookings Meetings
 
-The Meetings control supports 1:1 meetings when using Bookings to engage with users outside of your organization. 1:Many meetings with external users are not supported at this time.
-
-**Bookings: Guests unable to join meetings**
-
-If your external guests are unable to join meetings using the browser join link, ensure your organisation meeting policies enable guests to join calls. For more information please visit: docs.microsoft.com/en-us/microsoftteams/meeting-policies-participants-and-guests#let-anonymous-people-join-a-meeting>
+The Meetings control supports one on one meetings when using Bookings to engage with users outside of your organization. one to many meetings are not supported at this time using Collaboration controls.
 
 **Meeting attendee status is incorrect**
 
- When an attendee RSVPs to a meeting, their response status may not display correctly in both the agenda view and the meeting details. Clicking the decline button may also return an error message on screen.
+ When an attendee RSVPs to a meeting, their response status may not display correctly in both the agenda view and the meeting details. Selecting the decline button may also return an error message on screen.
 
 **Cannot join meetings from Power Apps runtime**
 

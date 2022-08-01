@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
 
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+
 ## Create a model-driven application
 
 1. Open [https://make.powerapps.com.](https://make.powerapps.com/) or [https://make.preview.powerapps.com.](https://make.preview.powerapps.com/)

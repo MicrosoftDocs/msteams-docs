@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app.
 
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+
 ## Configure the app for Teams
 
 The app that you have created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.

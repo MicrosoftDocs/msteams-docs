@@ -13,6 +13,9 @@ A new capability with this release is a set of Virtual Tables. These enable deve
 
 The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
 
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+
 > [!TIP]
 > [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 

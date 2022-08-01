@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 Learn about all the available Collaboration controls virtual entities and their attributes. These entities have a one-to-one mapping with a specific Microsoft Graph resource type, for example, the Graph Planner Task entities maps to the [Microsoft Graph Planner Task resource type](/graph/api/resources/plannertask). The virtual entity shares the same attributes as the resource type.
 
+> [!NOTE]
+> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro).
+
 ## Collaboration controls virtual entities
 
 | Name | Description |
