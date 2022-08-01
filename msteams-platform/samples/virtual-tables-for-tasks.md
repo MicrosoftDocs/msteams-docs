@@ -1,7 +1,7 @@
 ---
 title: Virtual Tables for Tasks, Meetings, and Files in collaboration control app
 author: surbhigupta
-description: In this module, learn about Virtual Tables for Tasks, Meetings, and Files in collaboration control app in Microsoft Teams.
+description: In this module, learn about Virtual Tables for Tasks, Meetings, and Files in Collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

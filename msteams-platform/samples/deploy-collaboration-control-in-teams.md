@@ -1,7 +1,7 @@
 ---
 title: Deploy app with Collaboration controls in Microsoft Teams
 author: surbhigupta
-description: In this module, learn how to deploy your app with collaboration control in Microsoft Teams and how to enable others to use your app.
+description: In this module, learn how to deploy your app with Collaboration control in Microsoft Teams and how to enable others to use your app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

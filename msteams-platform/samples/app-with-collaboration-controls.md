@@ -1,7 +1,7 @@
 ---
 title: Application with Collaboration controls for Microsoft Teams
 author: surbhigupta
-description: In this module, learn how to build a model-driven app with collaboration controls for Teams and how to add Collaboration controls to the app.
+description: In this module, learn how to build a model-driven app with Collaboration controls for Teams and how to add Collaboration controls to the app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

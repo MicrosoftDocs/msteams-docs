@@ -1,7 +1,7 @@
 ---
 title: Power Automate in collaboration control app
 author: surbhigupta
-description: In this module, learn about Power Automate in collaboration control app in Microsoft Teams and how to create an Azure app.
+description: In this module, learn about Power Automate in Collaboration control app in Microsoft Teams and how to create an Azure app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

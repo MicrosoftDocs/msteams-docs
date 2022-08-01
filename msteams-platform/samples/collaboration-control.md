@@ -1,7 +1,7 @@
 ---
 title: Collaboration controls for Microsoft Teams
 author: surbhigupta
-description: In this module, learn how collaboration controls allow makers to build apps that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
+description: In this module, learn how Collaboration controls allow makers to build apps that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

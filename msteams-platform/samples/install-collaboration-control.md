@@ -1,7 +1,7 @@
 ---
 title: Install Collaboration controls
 author: surbhigupta
-description: In this module, learn how to install collaboration controls with power apps and M365 E3 and how to install collaboration controls solutions.
+description: In this module, learn how to install Collaboration controls with power apps and M365 E3 and how to install collaboration controls solutions.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

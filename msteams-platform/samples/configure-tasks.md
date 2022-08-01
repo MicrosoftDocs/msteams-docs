@@ -1,7 +1,7 @@
 ---
 title: Configure Tasks for external clients in collaboration control app
 author: surbhigupta
-description: In this module, learn how to configure Tasks for external clients in collaboration control app in Microsoft Teams.
+description: In this module, learn how to configure Tasks for external clients in Collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
