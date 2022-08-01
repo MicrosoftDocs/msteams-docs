@@ -59,7 +59,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 1. **Create the Teams app manifest in Developer Portal**
 
-   1. Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **Developer Portal**, select **Apps**, and select **+ New app**.
+   1. Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **Developer Portal**, select **Apps**, and select **New app**.
 
       :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="Screenshot shows how to create Teams app manifest in Developer Portal.":::
 
@@ -67,16 +67,16 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 1. **Set up your bot**
 
-   To set-up the bot, perform the following steps:
+   To set up your bot, perform the following steps:
      1. Go to **App features** > **Bots**.
-     1. Select **Enter a bot ID** and enter your bot ID.
+     1. Select **Enter a bot ID** and then enter your bot ID.
      1. Select required scopes and then select **Save**.
 
 1. **Add valid domains for your bot**  
 
    This step is only required if your bot requires the user to sign in.
     1. Go to **Domains** under **Configure** section.
-    1. Select **Create your first domain** and enter valid domain.
+    1. Select **Create your first domain** and enter a valid domain.
     1. Select **Add**.
 
     ```bash
@@ -89,7 +89,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 1. **Start a chat**
 
-   The set-up process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
+   The set up process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
 
 ## Next step
 

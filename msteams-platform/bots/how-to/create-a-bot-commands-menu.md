@@ -33,23 +33,24 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 To create a command menu for your bot using Developer Portal:
 
-1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and select **Open**.
+1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and then select **Open**.
 
    :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
 
-2. In **Developer Portal**, select the **Apps** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md).
+1. In **Developer Portal**, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md).
 
-3. In the left pane of the **Apps** and in the **App features** section, select **Bots**.
+1. Select **Apps** tab, select **App features** from the left pane, and then select **Bots**.
 
-4. Select **Add a command** under **Commands** section.
+1. Select **Add a command** under **Commands** section.
 
    :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
 
-5. Enter the **Command** that must appear as the command menu for your bot.
+1. Enter the **Command** that appears as the command menu for your bot.
 
-6. Enter the **Description** that must appear under the command text in the menu. **Description** must be a brief explanation of the purpose of the command.
+1. Enter the **Description** that appears under the command text in the menu. **Description** must be a brief explanation of the purpose of the command.
 
-7. Select the **Scope** check boxes to select where this command menu must appear, and select **Add**.
+1. Select the **Scope** check box and then select **Add**.
+   This defines where the command menu must appear.
 
    :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description and scopes for your bot.":::
 
