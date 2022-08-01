@@ -68,7 +68,7 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
   |endswith|$filter=endswith(m365_name,’Contoso’)|
   |startswith|$filter=startswith(m365_name,’Contoso’)|
 
-Supported Tables: Each virtual table supports the same filtering functionality as it’s respective Graph resource. The virtual tables which support filtering are:
+Supported Tables: Each virtual table supports the same filtering functionality as it’s respective Graph resource. The virtual tables, which support filtering are:
 
 * Graph Booking Appointment
 * Graph Drive Item
