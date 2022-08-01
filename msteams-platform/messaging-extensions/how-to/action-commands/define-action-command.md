@@ -91,15 +91,11 @@ To create an action command:
 1. After importing an app package, select **Message extensions** under **App features**.
 1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-(image to be added)
+:::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
 
-1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown or select **Enter bot id** if you have a bot id created already.
+1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown or select **Enter bot id** if you have a bot id created already.
 
-(image to be added)
-
-1. Select the scope of the messaging extension.
-
-1. Select checkbox if you need to reconfigure the app.
+1. Select the scope of the messaging extension and select **Save**.
 
 1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
 The following image displays command addition for message extension:
