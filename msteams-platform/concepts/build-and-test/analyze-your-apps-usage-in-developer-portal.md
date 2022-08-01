@@ -49,7 +49,7 @@ After you have selected your desired filters, you can explore the following indi
 
 The **Usage by time period** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
- :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
+ :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="The screenshots shows you the usage by time period chart for your published app.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -62,13 +62,13 @@ The **Usage by time period** chart shows you the number of active users or tenan
 
 The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 day) period.
 
- :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
+ :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="The screenshots shows you the usage by platform and OS chart for your published app.":::
 
 ## Usage by retention state
 
 The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
-:::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Retention":::
+:::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="The screenshots shows you the usage by retention state chart for your published app.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ The **Usage by retention state** chart lets you track four key retention or chur
 
 The **Usage intensity** chart shows you key usage intensity metrics for your app.
 
- :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Intensity":::
+ :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="The screenshots shows you the usage intensity chart for your published app.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -95,7 +95,7 @@ The **My App dashboard** table shows you the latest R30 (Rolling 30 day) data fo
 
 You can select each of these **Metric name** to see trends over time.
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="app":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="The screenshots shows you App dashboard chart for your published app.":::
 
 ## See also
 
