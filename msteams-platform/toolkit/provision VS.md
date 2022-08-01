@@ -200,12 +200,12 @@ The ARM template files use placeholders for parameters. The purpose of the place
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client ID created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant ID of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client ID created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client ID created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant ID of your app's Azure AD app. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client ID created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 
 ### Reference environment variables in parameter files
 
@@ -253,7 +253,7 @@ After adding the snippet, add your client secret to the related environment vari
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add the following configuration snippet to `.fx/configs/config.{env}.json` file to use the Azure AD app created for your bot:
+You can add the following configuration snippet to `.fx/configs/config.{env}.json` to use the Azure AD app created for your bot:
 
 ```json
 "bot": {
@@ -262,11 +262,11 @@ You can add the following configuration snippet to `.fx/configs/config.{env}.jso
 }
 ```
 
-After adding the code snippet, add your client secret to the related environment variable for Teams Toolkit to resolve the actual client secret during provision.
+After adding the snippet, add your client secret to the related environment variable for Teams Toolkit to resolve the actual client secret during provision.
 
 #### Skip adding user for SQL database
 
-If you get an insufficient permission error when Teams Toolkit tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
+If you get an insufficient permission error when Teams Toolkit tries to add user to SQL database, you can then add the following configuration snippet to `.fx/configs/config.{env}.json` to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
