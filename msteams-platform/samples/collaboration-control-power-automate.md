@@ -1,7 +1,7 @@
 ---
 title: Power Automate in collaboration control app
 author: surbhigupta
-description: In this article, learn about Power Automate in collaboration control app in Microsoft Teams.
+description: In this module, learn about Power Automate in collaboration control app in Microsoft Teams and how to create an Azure app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -32,7 +32,7 @@ The connector actions will be found in workflow step selections. The connector i
 
 To use the connector in your solution, it’s necessary to create an Azure App trusted by your environment to execute the flows.
 
-## Createan Azure App
+## Create an Azure App
 
 In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Directory management, sign in to your account with adequate permissions to add an user application to your environment with the following steps:
 

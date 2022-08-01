@@ -1,7 +1,7 @@
 ---
 title: Install Collaboration controls
 author: surbhigupta
-description: In this article, learn about installation of collaboration controls.
+description: In this module, learn how to install collaboration controls with power apps and M365 E3 and how to install collaboration controls solutions.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -76,8 +76,8 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the top right of the Power Apps portal.
 
 1. Select the **Solutions** tab to view all the solutions that you've installed in the right environment.
- 
- 1. _update image below _
+
+1. _update image below_
    :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="solutions collaboration control" border= "true":::
 
 > [!NOTE]

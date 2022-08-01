@@ -1,7 +1,7 @@
 ---
 title: Collaboration Toolkit and Settings REST API reference
 author: surbhigupta
-description: The solutions that make up Collaboration Controls API
+description: In this module, learn about collaboration toolkit and settings REST API reference to manage settings and start, map, and retrieve collaboration activities.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

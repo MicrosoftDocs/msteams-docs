@@ -1,7 +1,7 @@
 ---
 title: Limitations and known issues in Collaboration controls app for Microsoft Teams
 author: surbhigupta
-description: In this article, learn about limitations and known issues in Collaboration controls app for Microsoft Teams.
+description: In this module, learn about limitations and known issues in Collaboration controls app for Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

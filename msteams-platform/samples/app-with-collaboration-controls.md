@@ -1,7 +1,7 @@
 ---
 title: Application with Collaboration controls for Microsoft Teams
 author: surbhigupta
-description: In this article, learn how to build a model-driven app and add Collaboration controls to the app.
+description: In this module, learn how to build a model-driven app with collaboration controls for Teams and how to add Collaboration controls to the app.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
@@ -34,7 +34,6 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 1. Give your table a name. Under **Advanced options** select **Creating a new activity**.
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot descirbes how to create new activity." border="true":::
-
 
 1. Select **Save**.
 
@@ -99,9 +98,9 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
      :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab." border="true":::
 
-1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form. 
-2.    _add image_
-3. Set the table to Activities & select Done. 
+1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form.
+2. _add image_
+3. Set the table to Activities & select Done.
 _4.    add image_
 5. Select ‘Hide Label’ on the Properties
 _6.    add image_
@@ -109,7 +108,7 @@ _6.    add image_
 _8.    add image_
 9. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
 10. Once all controls are added you will see the controls rendered below in Form Designer. If a control does not render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
-11.   _add image_
+11. _add image_
 
 1. You can now run your power app in Power Apps by selecting it.
 
@@ -166,7 +165,7 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 
 1. Now retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
-     1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All 
+     1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
      2. _update image below_
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="The screenshot is an example that shows the Graph Explorer.":::
 
@@ -298,4 +297,3 @@ Approvals allow users to request sign off from others when working in a record. 
 1. Select the approval to view the details.
 
 2. For more information on Approvals: Create an approval [(microsoft.com)](https://support.microsoft.com/en-us/office/create-an-approval-6548a338-f837-4e3c-ad02-8214fc165c84)
- 

@@ -1,7 +1,7 @@
 ---
 title: Virtual Table entity references
 author: surbhigupta
-description: learn about Virtual Tables web API for collaboration control app in Microsoft Teams.
+description: In this module, learn about virtual tables entity reference and their attributes in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
