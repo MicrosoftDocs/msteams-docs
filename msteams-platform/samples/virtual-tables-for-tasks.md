@@ -11,8 +11,6 @@ ms.topic: conceptual
 
 A new capability with this release is a set of Virtual Tables. These enable developers to interact with Graph via OData APIs.
 
-**Overview**
-
 The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
 
 > [!TIP]
@@ -20,31 +18,25 @@ The Collaboration controls core solution includes a set of [virtual tables](/pow
 
 The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans or tasks and SharePoint drives, folders, and files.
 
-This guide provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
+This article provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
 
 > [!TIP]
 > For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
 
-**Why use Virtual Tables?**
-
-The virtual tables make the developer's job easier.
-
-We use them to simplify the development of the Collaboration controls and we're making them available for customers to use.
-
 * Virtual tables use the standard Dataverse Web API, which makes it easy to use the virtual tables to populate data in your application.
-* Our virtual tables implement complex workflows required to support our Collaboration controls and these execute within Microsoft data centers for optimum performance.  
-* The virtual tables use the standard Dataverse logging and monitoring capabilities.
+* Virtual tables implement complex workflows required to support Collaboration controls and these execute within Microsoft data centers for optimum performance.  
+* Virtual tables use the standard Dataverse logging and monitoring capabilities.
 
-Once you install the Collaboration controls, the virtual tables can be treated as another service your applications can depend on.
+After you install the Collaboration controls, the virtual tables can be treated as another service to your application that can depend on.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-overview.png" alt-text="Virtual tables overview":::
 
 **Pre-requisites**
 
-To follow along with this guide, you'll need:
+To follow along with this article, you'll need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
-1. A user account in the Dataverse environment, which has the “Collaboration controls User” role assigned to it.
+1. A user account in the Dataverse environment, which has the **Collaboration controls User** role assigned to it.
 1. A third-party tool, for example: Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
@@ -56,18 +48,22 @@ The scenario described in this guide uses the Planner Plan and Task virtual tabl
 
 The following sequence diagram explains the interaction between the client which could be the Tasks collaboration control, the [Collaboration API](/rest/api/industry/collaboration-toolkit/) and the Planner Plan and Task virtual tables.
 
-:::image type="content" source="/assets/images/collaboration-control/vt-overview.png" alt-text="sequence diagram for virtual tables":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-overview.png" alt-text="sequence diagram for virtual tables":::
 
 ## Virtual Tables Basic Operations
 
 This section describes the HTTP requests and responses for each step in the sample scenario.
 
-1. Retrieve the Group ID used in [settings for your Collaboration](~/samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
+**Task 1: Retrieve the Group ID**
 
-    > [!NOTE]
-    > The user you use to create the Plan in the subsequent steps, must be a member of this group. If not you will get 403 Forbidden response.
+Retrieve the Group ID used in [settings for your Collaboration](~/samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
 
-1. A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record. This allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
+> [!NOTE]
+> The user you use to create the Plan in the subsequent steps, must be a member of this group. If not you will get 403 Forbidden response.
+
+**Task 2: Begin a Collaboration session**
+
+A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record. This allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
 
 # [Request](#tab/request)
 
@@ -104,7 +100,9 @@ This section describes the HTTP requests and responses for each step in the samp
 
 Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
 
-1. Create a Planner Plan and associate it with the collaboration session created above with `Group ID` and `collaborationRootId`.
+**Task 3: Create a Planner Plan**
+
+Create a Planner Plan and associate it with the collaboration session created above with `Group ID` and `collaborationRootId`.
 
 # [Request](#tab/request1)
 
@@ -155,7 +153,9 @@ Keep track of the `collaborationRootId` as it will be needed in subsequent reque
 
 Keep track of the`m365_id` as it will be needed in subsequent requests.
 
-1. Create a Planner Task with `PlanId` and `collaborationRootId`. you can create several Planner Tasks and associate them with the collaboration session created earlier.
+**Task 4: Create a Planner Task**
+
+Create a Planner Task with `PlanId` and `collaborationRootId`. you can create several Planner Tasks and associate them with the collaboration session created earlier.
 
 # [Request](#tab/request2)
 
@@ -227,7 +227,9 @@ Keep track of the `m365_graphplannertaskid` as it will be needed in subsequent r
 
 You should repeat this step to create multiple tasks in the plan.
 
-1. Retrieve Associated Planner Tasks with `collaborationRootId` associated with the collaboration session created previously.
+**Task 5: Retrieve Associated Planner Tasks**
+
+Retrieve Associated Planner Tasks with `collaborationRootId` associated with the collaboration session created previously.
 
 # [Request](#tab/request3)
 
@@ -283,7 +285,9 @@ You should repeat this step to create multiple tasks in the plan.
 
 Keep track of the `m365_id‘s` as these will be needed in subsequent requests.
 
-1. Retrieve a Planner Task with `PlannerTaskID` to perform a Read operation on one of the planner tasks created earlier.
+**Task 6: Retrieve a Planner Task**
+
+Retrieve a Planner Task with `PlannerTaskID` to perform a Read operation on one of the planner tasks created earlier.
 
 # [Request](#tab/request4)
 
@@ -336,7 +340,9 @@ Keep track of the `m365_id‘s` as these will be needed in subsequent requests.
 
 Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` property as these will be needed to perform update or delete operations.
 
-1. Update a Planner Task with `PlannerTask ID` to perform an Update operation on one of the planner tasks created in the previous step. To update a planner task, execute the following request:
+**Task 7: Update a Planner Task**
+
+Update a Planner Task with `PlannerTask ID` to perform an Update operation on one of the planner tasks created in the previous step. To update a planner task, execute the following request:
 
 # [Request](#tab/request5)
 
@@ -366,7 +372,9 @@ Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` proper
 
 ---
 
-1. Delete a Planner Task with `PlannerTask ID` to perform a Delete operation on one of the planner tasks created in a previous step. To delete a planner task, execute the following request:
+**Task 8: Delete a Planner Task**
+
+Delete a Planner Task with `PlannerTask ID` to perform a Delete operation on one of the planner tasks created in the previous step. To delete a planner task, execute the following request:
 
 # [Request](#tab/request6)
 
@@ -384,15 +392,52 @@ Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` proper
 
 ---
 
-## Virtual Tables Error Handling
+**Task 9: Update a Planner Task details**
 
-This section describes common error scenarios and how the virtual tables will respond.
+Update a Planner Task with `PlannerTask ID` to perform an update operation on one of the planner tasks created in the previous step.
+
+# [Request](#tab/request7)
+
+```http
+    HTTP/1.1 PATCH https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
+```
+
+Header: If-Match: {{@odata.etag}}
+
+```json
+
+{ 
+
+    "m365_title": "{{$planTitle}}", 
+    "m365_details": "{\"@odata.etag\":\"{{details.etag}}\",\"description\":\"Updated Task Description\"}" 
+
+}   
+```
+
+* `@odata.etag`: Etag for the task, you must perform a read to retrieve the most up to date version.
+* `planTitle`: Updated title for the task.
+* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the most up to date version. This value will be included in the `m365_details` column of the response. This value is not the same as the `@odata.etag` because in the Planner backend, the Task and it’s details are stored separately.
+
+# [Response](#tab/response7)
+
+```http
+HTTP/1.1 204 No Content 
+```
+
+---
+
+> [!NOTE]
+> You can set the `If-Match` header to be '*' and then you'll not need to provide any etag values, but your changes will always overwrite the task and it’s details.
+
+## Virtual tables Error Handling
+
+Virtual tables error handling describes common error scenarios and how the virtual tables will respond.
 
 ### Attempt to create a virtual record without a collaboration session
 
 A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record, which includes the virtual record primary key, entity name and the external ID that is, Graph resource ID. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
 
-# [Request](#tab/request7)
+# [Request](#tab/request8)
 
 ```http
     HTTP/1.1 POST https://[Organization URI]/api/data/v9.0/m365_graphplannertasks  
@@ -411,7 +456,7 @@ A valid collaboration session is required for every request to create a virtual 
 
 The `collaborationRootId` property is missing from the request.
 
-# [Response](#tab/response7)
+# [Response](#tab/response8)
 
 ```http
     HTTP/1.1 400 Bad Request 
@@ -434,9 +479,9 @@ To resolve this issue, you must always provide a valid `collaborationRootId` pro
 
 ### Attempt to read a virtual record without a collaboration map
 
-Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq `{{planId}}`. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
+Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: `$filter=m365_planid eq`{{planId}}``. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
 
-# [Request](#tab/request8)
+# [Request](#tab/request9)
 
 ```http
     HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
@@ -444,7 +489,7 @@ Virtual tables allow you to execute requests, which return collections of virtua
 
 The `plannerTaskId` property is associated with a planner task, which was created using the Planner web interface and so doesn't have a collaboration map record.
 
-# [Response](#tab/response8)
+# [Response](#tab/response9)
 
 ```http
     HTTP/1.1 404 Not Found 
@@ -467,7 +512,7 @@ To resolve this issue, you must check the error message in the response and if i
 
 Related to the previous error, you need to handle the case where a Graph resource has been deleted but the client still has a reference to the deleted virtual record. This can happen if another user deleted the record. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't retrieve the resource from Graph.
 
-# [Request](#tab/request9)
+# [Request](#tab/request10)
 
 ```http
     HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
@@ -475,7 +520,7 @@ Related to the previous error, you need to handle the case where a Graph resourc
 
 The `plannerTaskId` property is associated with a planner task, which was deleted.
 
-# [Response](#tab/response9)
+# [Response](#tab/response10)
 
 ```http
     HTTP/1.1 404 Not Found 
@@ -500,7 +545,7 @@ The `@odata.etag` property is used for data concurrency and to prevent the over 
 
 If you perform two update requests using the same @odata.etag then the second request will fail:
 
-# [Request](#tab/request10)
+# [Request](#tab/request11)
 
 ```http
     HTTP/1.1 PATCH https://[Organization URI]/api/data/v9.0/m365_graphplannertasks({{plannerTaskId}})
@@ -515,7 +560,7 @@ Header: If-Match: {{@odata.etag}}
 
 ```
 
-# [Response](#tab/response10)
+# [Response](#tab/response11)
 
 ```http
     HTTP/1.1 409 Conflict 
@@ -534,9 +579,9 @@ Header: If-Match: {{@odata.etag}}
 
 ### Querying for Associated Virtual Records
 
-Step 5 in this exercise showed how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a $filter query which specifies the Collaboration Root ID as shown below:
+In Task 5 of above, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query which specifies the Collaboration Root ID as shown below:
 
-# [Request](#tab/request11)
+# [Request](#tab/request12)
 
 ```http
     HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/ m365_graphplannertasks?$filter=m365_collaborationrootid eq '{{collaborationRootId}}'&$select=m365_graphplannertaskid,m365_title,m365_createddatetime  
@@ -544,14 +589,14 @@ Step 5 in this exercise showed how to Retrieve Associated Planner Tasks. This op
 
 ---
 
-* Additional filtering options cannot be combined with this $filter query and if they are they will be ignored.
+* Additional filtering options cannot be combined with this `$filter` query and if they are they will be ignored.
 * Additional filtering must be performed directly on the response from the request.
 
 ### Querying for Virtual Records with Required Key Attributes
 
 When the Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute is not provided, then the request will fail as follows:
 
-# [Response](#tab/response12)
+# [Response](#tab/response13)
 
 ```http
     HTTP/1.1 400 Bad Request 
@@ -569,9 +614,11 @@ When the Dataverse Web API is called to retrieve multiple records from the follo
 
 ```
 
+---
+
 To fix this problem change the request to this format:
 
-# [Request](#tab/request12)
+# [Request](#tab/request14)
 
 ```http
     HTTP/1.1 GET https://[Organization URI]/api/data/v9.0/ m365_graphbookingappointments?$filter=m365_bookingbusinessid eq '{{bookingBusinessId}}'
