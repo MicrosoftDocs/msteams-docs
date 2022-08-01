@@ -198,11 +198,11 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
 
 **Do**: In this screen, there are two columns at the bottom of the card. The input component width is set to `stretch`, while the **Select** button width is set to `auto`. This ensures the button remains completely in view.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="The screenshot shows how to set column width in Adaptive Cards.":::
 
 **Don't**: In this screen, both columns have `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="Image shows how not to set column width in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="The screenshot shows how not to set column width in Adaptive Cards.":::
 
 # [Code](#tab/code)
 
@@ -382,11 +382,11 @@ Here's the code for implementing the design example you should follow.
 
 **Do**: Layouts tend to display better on mobile with fewer columns.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="Image shows the right amount of columns in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="The screenshot shows the right amount of columns in Adaptive Cards.":::
 
 **Don't**: Using too many columns can clutter your card content on mobile.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="Image shows how too many columns can negatively affect Adaptive Card layout.":::
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="The screenshot shows how too many columns can negatively affect Adaptive Card layout.":::
 
 #### Example: Fixed width has its place
 
@@ -394,7 +394,7 @@ Here's the code for implementing the design example you should follow.
 
 When the the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="The screenshot shows how to set column width in Adaptive Cards.":::
 
 # [Code](#tab/code)
 
@@ -548,11 +548,11 @@ Whether you're using [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.h
 
 **Do**: In this screen, the card has a `wrap` property set to `true`. This allows the text to fit to any screen size.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="Image shows how to wrap text in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="The screenshot shows how to wrap text in Adaptive Cards.":::
 
 **Don't**: In this screen, the card doesn't use the `wrap` property, so the text cuts off on a mobile screen.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="Image shows what can happen if you don't wrap text in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="The screenshot shows what can happen if you don't wrap text in Adaptive Cards.":::
 
 # [Code](#tab/code)
 
@@ -649,7 +649,7 @@ Follow these guidelines when including images in your cards.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Best practice about how you should include only a small set of actions on an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="The screenshot shows best practice about how you should include only a small set of actions on an Adaptive Card.":::
 
 #### Do: Use up to six primary actions
 
@@ -657,7 +657,7 @@ While Adaptive Cards can support six primary actions, most cards don’t need th
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Best practice about how not to overwhelm users with too many actions on an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="The screenshot shows best practice about how not to overwhelm users with too many actions on an Adaptive Card.":::
 
 #### Don't: Use more than six primary actions
 
@@ -668,7 +668,7 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 
 ### Frequency
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Best practice about Adaptive Card frequency.":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="The screenshot shows best practice about Adaptive Card frequency.":::
 
 #### Do: Be concise
 
