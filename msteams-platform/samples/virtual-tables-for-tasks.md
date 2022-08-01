@@ -46,7 +46,7 @@ To follow along with this article, you'll need:
 
 The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
 
-The following sequence diagram explains the interaction between the client which could be the Tasks collaboration control, the [Collaboration API](/rest/api/industry/collaboration-toolkit/) and the Planner Plan and Task virtual tables.
+The following sequence diagram explains the interaction between the client which could be the Tasks collaboration control, the [Collaboration API](~/samples/collaboration-api-reference.md) and the Planner Plan and Task virtual tables.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
 
@@ -479,7 +479,7 @@ To resolve this issue, you must always provide a valid `collaborationRootId` pro
 
 ### Attempt to read a virtual record without a collaboration map
 
-Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: `$filter=m365_planid eq`{{planId}}``. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
+Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq`{{planId}}`. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
 
 # [Request](#tab/request9)
 
