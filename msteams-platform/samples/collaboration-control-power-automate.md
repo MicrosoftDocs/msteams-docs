@@ -13,24 +13,14 @@ Power Automate can be used to automate workflows around your Collaboration Manag
 
 ## Overview
 
-**What the Collaboration control connector enables developers to do**
+Collaboration control connector enables developers to access Collaboration control APIs by triggers or actions in automated workflows in Microsoft Power Automate, Microsoft Power Apps and Azure Logic apps.
 
-Microsoft Power Automate, Microsoft Power Apps and Azure Logic app developers can access Collaboration controls APIs by triggers or actions in automated workflows.
-
-In this version, the connector enables, makers to set up triggers from:
+In this version, the connector enables makers to set up triggers from:
 
 1. When a Collaboration session is created
 1. When a planner task is created or modified
 
-It also includes a set of Collaboration controls Api and tasks steps that can be invoked with a flow
-
-**How to find the connector once the AppSource package is installed**
-
-The connector actions will be found in workflow step selections. The connector itself would be found on Custom connectors with configurable options.
-
-**Authentication Guidance**
-
-To use the connector in your solution, it’s necessary to create an Azure App trusted by your environment to execute the flows.
+It also includes a set of Collaboration controls API and tasks that can be invoked with a flow. The connector actions will be found in workflow step selections. The connector itself would be found on Custom connectors with configurable options. To use the connector in your solution, it’s necessary to create an Azure App trusted by your environment to execute the flows.
 
 ## Create an Azure App
 
@@ -38,65 +28,65 @@ In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Direct
 
 1. In the home page of Azure portal, select **Azure Active Directory**. In Azure Active Directory select dropdown for **Add** and select **App registration**.
 
-  :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Add a new App Registration":::
+   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Add a new App Registration":::
 
-  :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Add new app registration":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Add new app registration":::
 
 1. In the app registration, set your application name and add the Web redirect URI to `https://global.consent.azure-apim.net/redirect`.
 
-  :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="Register an application":::
+   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="Register an application":::
 
 1. In the Implicit Grant and hybrid flows section, select both Access Tokens and ID tokens.
 
-  :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="Tokens and ID tokens":::
+   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="Tokens and ID tokens":::
 
 1. Select API Permission in the left pane and select **Add a permission** and search for **Dynamic CRM** permission.
 
-  :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="Add a permission":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="Add a permission":::
 
 1. Ensure to select **user_impersonation** in Permissions after selecting the Dynamics CRM.
 
-  :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="enable the checkbox user_impersonation":::
+   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="enable the checkbox user_impersonation":::
 
-1. In the Certificates & Secrets page, add a **New client secret** and copy the value, for later use while setting up the connector security.
+1. In the Certificates & Secrets page, add a **New client secret** and save the value for later use while setting up the connector security.
 
-  :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="copy new secret value":::
+   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="copy new secret value":::
 
-1. In the Application Overview page, copy the **Application (Client) ID** and save it for later use while setting up the connector security.
+1. In the application Overview page, copy the **Application (Client) ID** and save it for later use while setting up the connector security.
 
-  :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Save client ID":::
+   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Save client ID":::
 
-Now your Azure App is all set and you need to add it as an user application in your environment.
+Now your Azure app is all set and you need to add it as an user application in your environment.
 
 ## Add Azure app to Power Automate environment
 
 1. Open Power Apps portal, in the top right corner select **settings** and open **admin center**.
 
-  :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="Power apps interface":::
+   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="Power apps interface":::
 
 1. In the admin center, select **Environment** from the left pane and select your environment in the list that you want to add the connector app.
 
-  :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="adding connector app":::
+   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="adding connector app":::
 
 1. In the environment details page, select settings.
 
-  :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="select settings":::
+   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="select settings":::
 
 1. In the settings details page, select **Users + permissions** section and select **Application users**.
 
-  :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Application user link":::
+   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Application user link":::
 
 1. In the App users page, select the **+ New app user**. **Create a new app user** window appears.
 
-  :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="new app user":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="new app user":::
 
 1. Select **+ Add an app**.
 
-  :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="Create new app user":::
+   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="Create new app user":::
 
 1. Select your app from the search box and select add again.
 
-  :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="add app from Azure Active Directory":::
+   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="add app from Azure Active Directory":::
 
 After the app is added, set the **Business unit** and **Security Roles** to your connector application. Select **Create** and your app will be in the list. With the app user set in the environment, we can proceed to custom connector configuration.
 
@@ -104,24 +94,24 @@ After the app is added, set the **Business unit** and **Security Roles** to your
 
 1. Open PowerApps or Power Automate and select the **Custom Connectors** menu. Select **edit** for the Collaboration connector.
 
-  :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="custom connector menu":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="custom connector menu":::
 
 1. In the General Information tab, enter the host with the address of Dynamic 365 instance domain (without the https://).
 
-  :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="General information":::
+   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="General information":::
 
 1. In the Security tab, enter the following inputs:
 
    * Client secret: Use your saved app secret value in the input.
    * Client ID: Your Azure app (Client ID).
-   * Resource URL:  The URL of your Dynamic 365 instance (<https://org>.crm.dynamics.com/).
-   * Scope: Same as above with .default suffix (<https://org>.crm.dynamics.com/.default).
+   * Resource URL:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
+   * Scope: Same as above with .default suffix (`https://org.crm.dynamics.com/.default`).
 
-  :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Dynamic 365 instance":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Dynamic 365 instance":::
 
 1. Select **Update connector** to save the changes and allow your flow to establish connections.
 
-  :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="custom connector":::
+   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="custom connector":::
 
 ## How to invoke the connector  
 
@@ -354,11 +344,11 @@ The following are some example of flows:
 
 1. Getting a response from Microsoft forms, creating a Collaboration session and a task associated.
 
-  :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="New response submitted":::
+   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="New response submitted":::
 
 1. Every time a collaboration session is created, capture the details and send an e-mail notification.
 
-  :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Collaboration session created":::
+   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Collaboration session created":::
 
 > [!NOTE]
 > Multiple flows could be triggered in this way to perform different actions, using data from the response of the Collaboration session creation.
