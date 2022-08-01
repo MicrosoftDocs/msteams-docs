@@ -10,7 +10,7 @@ ms.date: 05/24/2022
 
 # Teams Toolkit overview for Visual Studio
 
-Teams Toolkit for Visual Studio helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar to Teams Toolkit for Visual Studio that includes Toolkit `teamsfx`. Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio. App development with Teams Toolkit has the advantages of:
+Teams Toolkit for Visual Studio helps you to create and deploy Microsoft Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, you can also use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar to Teams Toolkit for Microsoft Visual Studio code that includes Toolkit `teamsfx`. Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio. App development with Teams Toolkit has the advantages of:
 
 * Integrated identity.
 * Access to cloud storage.
@@ -21,7 +21,7 @@ Teams Toolkit brings all the tools needed to build a Teams app in one place.
 
 ## User Journey of Teams Toolkit
 
-Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
+Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows the user journey:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey":::
 
@@ -74,7 +74,7 @@ You can do the following operations on Teams Toolkit for Visual Studio:
 |Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
 |Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
 
-The following operations aren't supported in Teams Toolkit for Visual Studio yet (compared to Teams Toolkit for Microsoft Visual Studio Code), however they're planned in the future product road map.
+The following operations aren't supported in Teams Toolkit for Visual Studio yet (compared to Teams Toolkit for Visual Studio Code), however they're planned in the future product road map.
 
 |Operation  |Description  |
 |---------|---------|
