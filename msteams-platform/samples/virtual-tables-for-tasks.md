@@ -48,7 +48,7 @@ The scenario described in this guide uses the Planner Plan and Task virtual tabl
 
 The following sequence diagram explains the interaction between the client which could be the Tasks collaboration control, the [Collaboration API](/rest/api/industry/collaboration-toolkit/) and the Planner Plan and Task virtual tables.
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-overview.png" alt-text="sequence diagram for virtual tables":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
 
 ## Virtual Tables Basic Operations
 
@@ -59,7 +59,7 @@ This section describes the HTTP requests and responses for each step in the samp
 Retrieve the Group ID used in [settings for your Collaboration](~/samples/app-with-collaboration-controls.md#define-settings-for-your-collaboration).
 
 > [!NOTE]
-> The user you use to create the Plan in the subsequent steps, must be a member of this group. If not you will get 403 Forbidden response.
+> The user you use to create the Plan in the subsequent tasks, must be a member of this group. If not you will get 403 Forbidden response.
 
 **Task 2: Begin a Collaboration session**
 
