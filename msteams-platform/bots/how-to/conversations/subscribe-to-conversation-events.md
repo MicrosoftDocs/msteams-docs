@@ -1454,7 +1454,7 @@ It's important to know that new events can be added anytime in the future and yo
 
 ## Handling errors in conversation events
 
-When the bot encounters an error while handling different events or activities, it shouldn't post meaning less random messages directly to the conversation, following is an example:
+When the bot encounters an error while handling different events or activities, it shouldn't post random messages directly to the conversation, following is an example:
 
 :::image type="content" source="../../../assets/images/error-msg.PNG" alt-text="Screenshot shows an error message to the conversation with no meaningful context.":::
 
