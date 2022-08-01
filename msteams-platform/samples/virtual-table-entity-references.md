@@ -28,7 +28,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 ### Graph Planner Task
 
 * Entity name: m365_graphplannertask.
-* Graph resource:  graph/api/resources/plannertask.
+* Graph resource: [plannerTask resource type](/graph/api/resources/plannertask)
 * Sorting isn't supported.
 * Filtering isn't supported.
 * Server driven pagination is supported, with maximum page size being 400.
@@ -37,14 +37,12 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| m365_collaborationrootID | StringType | Collaboration root ID(s) of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string.
-Note: This attribute won't be returned when retrieving multiple records. |
-| m365_activechecklistitemcount | IntegerType | Number of checklist items with value set to false, representing incomplete items. |
-| m365_appliedcategories | StringType | Number of checklist items with value set to false, representing incomplete items. |
-| m365_appliedcategories | StringType | The categories to which the task has been applied.
-This attribute is a JSON encoded string, for example "{ \"category1\": true, \"category6\": true, \"category9\": true }" |
-| m365_assigneepriority | StringType | Hint used to order items of this type in a list view. The format is defined as outlined here. |
-| m365_assignments | StringType | The set of assignees, the task is assigned to. This attribute is a JSON encoded string for example "{\" 7be...\": {\"assignedBy\": {\"user\": {\"displayName\", \"email\", \"ID\":\" 7be...\"}, \"group\": null, \"application\": null \"device\": null}" |
+| `m365_collaborationrootID` | StringType | Collaboration root ID(s) of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+| `m365_activechecklistitemcount` | IntegerType | Number of checklist items with value set to false, representing incomplete items. |
+| `m365_appliedcategories` | StringType | Number of checklist items with value set to false, representing incomplete items. |
+| `m365_appliedcategories` | StringType | The categories to which the task has been applied. This attribute is a JSON encoded string, for example "{ \"category1\": true, \"category6\": true, \"category9\": true }" |
+| `m365_assigneepriority` | StringType | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
+| `m365_assignments` | StringType | The set of assignees, the task is assigned to. This attribute is a JSON encoded string for example "{\" 7be...\": {\"assignedBy\": {\"user\": {\"displayName\", \"email\", \"ID\":\" 7be...\"}, \"group\": null, \"application\": null \"device\": null}" |
 | m365_bucketID | StringType | Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format valIDation is done on the service. |
 | m365_checklistitemcount | IntegerType | Number of checklist items that are present on the task. |
 | m365_completedby | StringType | IDentity of the user that completed the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
@@ -120,7 +118,7 @@ This attribute is a JSON encoded string, for example "{ \"category1\": true, \"c
 |m365_collaborationrootid |StringType |Collaboration root id(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records. |
 |m365_allownewtimeproposals |BooleanType |true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true. |
 |m365_attendees |StringType |The collection of attendees for the event. This attribute is a JSON encoded string, 15000 max in length. for example, [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
-|m365_body |StringType |The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length. for example {\"contentType\":\"html\",\"content\":\"<html></html>\"} |
+|m365_body |StringType |The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length. for example {\"contentType\":\"html\",\"content\":\"html/html\"} |
 |m365_bodypreview |StringType |The preview of the message associated with the event. It is in text format. |
 |m365_categories |StringType |The categories associated with the event. Each category corresponds to the displayName property of an outlookCategory defined for the user. for example [\"string\"] |
 |m365_changekey |StringType |Identifies the version of the event object. Every time the event is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. |
