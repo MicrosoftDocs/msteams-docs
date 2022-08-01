@@ -27,7 +27,7 @@ You can view your app's usage and other insights from the **Analytics** page. To
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** or select **View details** under the **Active Users (Preview)** card.
 
- :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="dev-Portal-analytics"lightbox="../../assets/images/tdp/dev-app-portal.PNG":::
+ :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="The screenshots shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.PNG":::
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
@@ -36,7 +36,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 * Operating system
 * Area
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="The screenshots shows you the analytics page filter in Developer Portal.":::
 
 After you have selected your desired filters, you can explore the following individual widgets:
 
