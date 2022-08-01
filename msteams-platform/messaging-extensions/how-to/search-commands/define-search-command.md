@@ -45,24 +45,24 @@ The prerequisite to create a search command is that you must already have create
 **To create an action command**
 
 1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
-1. If you already created your app package in **Developer Portal**, select it from the list. If you haven't created an app package, import an existing one.
+   If you already created your app package in **Developer Portal**, select from the list. If you haven't created an app package, import an existing one.
 1. After importing an app package, select **Message extensions** under **App features**.
-1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
+1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name to the new bot, and then select **Create**.
 
    :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
 
-1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown or select **Enter bot id** if you have a bot id created already.
+1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot id created already.
 
-1. Select the scope of the messaging extension.
+1. Select the scope of the messaging extension and select **Save**.
 
 1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="The screenshot shows how to add a command to define the behavior of the message extension.":::
 
-1. Select **Search** and enter **Command ID**, **Command title**,**Command description**.
+1. Select **Search** and enter **Command ID**, **Command title**, and **Command description**.
 
-1. Enter all the parameters and select the type of input from the dropdown.
+1. Enter all the parameters and select the type of input from the dropdown list.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="The screenshot shows how to add a parameters to define your command for message extension.":::
 
@@ -82,7 +82,7 @@ The following image displays command addition for message extension:
 
    :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
 
-1. Select **+ Add a Parameters** and enter all the parameters.
+1. Select **Add a Parameters** and enter all the parameters.
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
