@@ -102,16 +102,24 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
      :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab." border="true":::
 
 1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form.
-2. _add image_
+
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Preview control onto the section in tasks form":::
+
 3. Set the table to Activities & select Done.
-_4.    add image_
+
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Select the table to activities":::
+
 5. Select ‘Hide Label’ on the Properties
-_6.    add image_
-7. The Tasks control will now display
-_8.    add image_
-9. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
-10. Once all controls are added you will see the controls rendered below in Form Designer. If a control does not render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
-11. _add image_
+
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Select hide label":::
+
+1. The Tasks control will now display
+
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Tasks control display":::
+
+1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
+1. Once all controls are added you will see the controls rendered below in Form Designer. If a control does not render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Controls form designer":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
@@ -169,7 +177,7 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 1. Now retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
      1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
-     2. _update image below_
+
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="The screenshot is an example that shows the Graph Explorer.":::
 
      1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Following is an example:
@@ -234,8 +242,6 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens a
 
 1. The saved task will appear in the tasks list.
 
-     :::image type="content" source="../assets/images/collaboration-control/task-list.png" alt-text="The screenshot is an example that shows the list of tasks.":::
-
 1. As all the tasks are backed by Microsoft Planner. Users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned. To get started, select **More** options‘…’ in Teams left pane. Search and select Tasks by Planner and To Do.
 
      :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="The screenshot is an example of the Tasks by Planner and To Do.":::
@@ -247,13 +253,9 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens a
 To create a note select **Notes** tab from your app, which would redirect to an empty screen where users can provide any relevant information. To add a new note, select **New note**.
 After adding relevant details in the notes, select **Save**.
 
-:::image type="content" source="../assets/images/collaboration-control/notes-tab.png" alt-text="The screenshot describes how to create new Notes.":::
-
 ### Creating meetings
 
 Select **Meetings** tab in a record to schedule both internal and external meetings.
-
-:::image type="content" source="../assets/images/collaboration-control/meeting-tab.png" alt-text="The screenshot descirbes how to schedule meetings.":::
 
 To schedule an internal meeting, select the dropdown next to the **New meeting** button and then select **Internal meeting**.
 
@@ -286,7 +288,7 @@ Approvals allow users to request sign off from others when working in a record. 
 1. Go to the **Approvals** tab of the application.
 
 1. When there are no approval requests, users see the following screen.
-1. _update image_
+
       :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="The screenshot is an example that shows no approval requests.":::
 
 1. Select the **New approval request** to open the approval request form.

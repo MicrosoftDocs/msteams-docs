@@ -158,7 +158,7 @@ To access the URL to join an online meeting, use joinUrl, which is exposed via t
 |m365_subject|StringType|The text of the event's subject line. Primary lookup column|
 |m365_transactionid|StringType|A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.|
 |m365_type|StringType|The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only|
-|m365_weblink|StringType|The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you're signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.|
+|m365_weblink|StringType|The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you're signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in. This URL cannot be accessed from within an iFrame.|
 |m365_grapheventid|StringType|Unique identifier of the graph event.|
 |m365_groupid|StringType|Group ID to which the event belongs.|
 

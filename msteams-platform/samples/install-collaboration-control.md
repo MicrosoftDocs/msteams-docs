@@ -80,7 +80,6 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
 
 1. Select the **Solutions** tab to view all the solutions that you've installed in the right environment.
 
-1. _update image below_
    :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="solutions collaboration control" border= "true":::
 
 > [!NOTE]
