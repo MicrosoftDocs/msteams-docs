@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # In-app purchases
 
-Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
+Microsoft Teams provides APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
 
 ## Implement in-app purchases
 
@@ -49,7 +49,7 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 
 Following code snippet is an example of calling the API from the app up to sdk V11:
 
-<body>
+```json
 <div>
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
@@ -70,10 +70,11 @@ Following code snippet is an example of calling the API from the app up to sdk V
       console.log("after callback: ",callbackcalled);
     }
 </script>
+```
 
 Following is the code for V2:
 
-<body>
+```json
 <div>
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
@@ -89,6 +90,7 @@ Following is the code for V2:
       monetization.openPurchaseExperience(planInfo);
     }
 </script>
+```
 
 ## End-user in-app purchasing experience
 
