@@ -1,6 +1,6 @@
 ---
 title: Include a SaaS offer with your app
-description: Learn how to monetize your Microsoft Teams app with subscription plans and include a SaaS offer with your Microsoft Teams app.
+description: In this module, learn how to monetize your Microsoft Teams app with subscription-based pricing model and include a SaaS offer with your Microsoft Teams app.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
