@@ -30,7 +30,7 @@ items:
     
     This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
        
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="introduction image":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="Screenshot shows the introduction.":::
        
 
 - title: Prerequisites
@@ -53,7 +53,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="Screenshot shows the steps to clone the repository.":::
 
     1. Select **Clone**. 
 
@@ -66,21 +66,21 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
  
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Screenshot shows the Admin center menu.":::
 
     1.  In the left panel, select **Teams apps**.
        
     1.  Select **Setup policies**.
  
-           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Setup policies":::
+           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Screenshot shows the setup policies.":::
    
     1.  Select **Global**.
 
-          ![Global](~/assets/images/sbs-connector/Global.png)
-
+          :::image type="content" source="~/assets/images/sbs-connector/Global.png" alt-text="Screenshot shows the steps to select Global.":::
+          
     1.   Toggle **Upload custom apps** to **On** position.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Screenshot shows the Toggle On position.":::
    
     1.   Select **Save**.
        
@@ -97,7 +97,7 @@ items:
     
     1.   Select **Developer preview**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Developer preview":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Screenshot shows the developer preview.":::
    
     1.   Select **Switch to developer preview**.
    
@@ -108,8 +108,8 @@ items:
 
     1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
 
-       ![sln path](~/assets/images/sbs-connector/sln.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/sln.png" alt-text="Screenshot shows the sln path.":::
+       
     2. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
         ```bash
@@ -118,13 +118,13 @@ items:
        > [!TIP]
        > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
-       ![ngrok path](~/assets/images/sbs-connector/ngrok1.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/ngrok1.png" alt-text="Screenshot shows the ngrok path.":::
+       
     3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     4. Select **New Connector**.
      
-       ![Add new connector](~/assets/images/sbs-connector/connector.png)
-      
+       :::image type="content" source="~/assets/images/sbs-connector/connector.png" alt-text="Screenshot shows the steps to add new connector.":::
+             
     5. Enter the following details to register a new connector:
 
        * Connector name
@@ -139,30 +139,30 @@ items:
        * Select **I accept the terms and conditions of the App Developer Agreement**
        * Select **Save**
 
-       ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/basicdetails.png" alt-text="Screenshot shows the basic details to register a new connector.":::
+       
        You've successfully registered a new connector. The window appears with registered connector ID.
 
-       ![Output screen](~/assets/images/sbs-connector/output.png)
-      
+       :::image type="content" source="~/assets/images/sbs-connector/output.png" alt-text="Screenshot shows the output screen.":::
+             
        > [!TIP]
        > Save the Connector ID for future reference.
 
     6. Select **TeamsToDoAppConnector.csproj** file from **TeamsToDoAppConnector folder**.
 
-       ![Navigation path](~/assets/images/sbs-connector/web.png) 
-
+       :::image type="content" source="~/assets/images/sbs-connector/web.png" alt-text="Screenshot shows the navigation path.":::
+       
     7. Open in Visual Studio. 
 
     8. Replace the `configuration.appSettings.BaseUrl` variable with `ngrok https forwarding url`.
        
-       ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
-
+       :::image type="content" source="~/assets/images/sbs-connector/manifest.png" alt-text="Screenshot shows the steps to configure the manifest file.":::
+       
     9. Press **F5** to run the project.
        A web page opens. 
 
-       ![Local-host](~\assets\images/sbs-connector/local-host.png)    
-
+       :::image type="content" source="~\assets\images/sbs-connector/local-host.png" alt-text="Screenshot shows the local host.":::
+       
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
@@ -174,65 +174,65 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Manifest location](~/assets/images/sbs-connector/zip.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/zip.png" alt-text="Screenshot shows the manifest location.":::
+       
     1. Go to **Microsoft Teams**.
     1. In the left panel, select **Store** > **Manage your apps**.
 
-       ![Manage Apps](~/assets/images/sbs-connector/manageapp.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/manageapp.png" alt-text="Screenshot shows the Manage Apps.":::
+       
     1. Select **Upload a custom app**.
  
-       ![Upload a custom app](~/assets/images/sbs-connector/upload.png)
-      
+       :::image type="content" source="~/assets/images/sbs-connector/upload.png" alt-text="Screenshot shows the steps to upload a custom app.":::
+             
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![manifest](~/assets/images/sbs-connector/open.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/open.png" alt-text="Screenshot shows the manifest folder.":::
+       
     1. Select **Add to a team**.
 
-       ![Add the app](~/assets/images/sbs-connector/addtoteam.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/addtoteam.png" alt-text="Screenshot shows the steps to add an app.":::
+       
     1. Select the team or channel name from the list.
 
-       ![select channel](~/assets/images/sbs-connector/channel.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/channel.png" alt-text="Screenshot shows the steps to select channel.":::
+       
     1. Select **Set up a connector**.
 
     1. In the left panel, search **Teams ToDo Notification** connector in search bar and select **Configure**.
 
-       ![configure notification](~/assets/images/sbs-connector/configure.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/configure.png" alt-text="Screenshot shows the steps to configure notification.":::
+       
     1. Select either **Created** or **Updated** on the registration page and select **Save**.
 
-       ![select](~/assets/images/sbs-connector/create.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/create.png" alt-text="Screenshot shows the steps to select the desired option on the registration page.":::
+       
        After configuration, you can see notification in channel with link to **Task Manager Portal**.
 
-       ![notification message](~/assets/images/sbs-connector/notification.png)
-
+       :::image type="content" source="~/assets/images/sbs-connector/notification.png" alt-text="Screenshot shows the notification message.":::
+       
     12. Go to **Task Manager Portal**.
 
-        ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
-
+        :::image type="content" source="~/assets/images/sbs-connector/taskportal.png" alt-text="Screenshot shows the task manager portal.":::
+        
     13. Select **Create New**.
        
-        ![create new task](~/assets/images/sbs-connector/tasks.png)
-       
+        :::image type="content" source="~/assets/images/sbs-connector/tasks.png" alt-text="Screenshot shows the steps to create new task.":::
+               
     14. Enter the new task details:
 
         * Title
         * Description
         * Assign To
 
-        ![Task details](~/assets/images/sbs-connector/details.png)
-
+        :::image type="content" source="~/assets/images/sbs-connector/details.png" alt-text="Screenshot shows the task details.":::
+        
     15. Select **Save**. 
       
         The message card appears in registered Teams channel.
        
-        ![Message](~/assets/images/sbs-connector/messagecard.png)
-
+        :::image type="content" source="~/assets/images/sbs-connector/messagecard.png" alt-text="Screenshot shows the message card.":::
+        
         > [!TIP]
         > You can try the actionable buttons available on the message card.
 
@@ -241,9 +241,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="final output":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="Screenshot shows the final output.":::
 
 - content: |
     You've completed the tutorial to get started with **Microsoft Teams connectors**!
-
-
