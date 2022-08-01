@@ -24,8 +24,8 @@ items:
 
    This step-by-step guide helps you to create tabs and message extensions enabling AAD SSO authentication. You'll see the following output:
 
-     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
-
+     :::image type="content" source="~/assets/images/Tab-ME-SSO/hello-megan-profile245.png" alt-text="Screenshot shows the congratulation message.":::
+     
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -49,8 +49,8 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
-
+       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png" alt-text="Screenshot shows the steps to clone the repository.":::
+       
     1. Select **Clone**. 
 
 - title: Create and register your bot in Azure AD portal
@@ -72,15 +72,15 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Screenshot shows the azure bot.":::
          
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
-        ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot.png" alt-text="Screenshot shows the steps to register the bot.":::
+        
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        Select **Use existing app registration** and enter **Existing app ID** and **Existing app password** for an existing application. Select **Create new Microsoft App ID** for a new application.
@@ -91,20 +91,20 @@ items:
     1. Select **Type of App** as `Multi Tenant`.
     1. Select **Review + create**.
 
-       ![Register bot](~/assets/images/Tab-ME-SSO/register-bot-2.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot-2.png" alt-text="Screenshot shows the steps to create more than one bot with the same Microsoft App ID.":::
+       
     1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/Tab-ME-SSO/go-to-resource.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/go-to-resource.png" alt-text="Screenshot shows the steps to deploy the app.":::
+        
         Your Azure bot is created.
 
-        ![Deploy App](~/assets/images/Tab-ME-SSO/app-overview.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/app-overview.png" alt-text="Screenshot shows the app created message.":::
+        
     **To create client secret**
 
       Perform the following steps if you've created a new **Microsoft App ID**:
@@ -116,24 +116,24 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/manage.png" alt-text="Screenshot shows the Microsoft App ID.":::
+        
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
-    
+        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png" alt-text="Screenshot shows the new client secret.":::
+            
        The **Add a client secret** window appears.  
 
     1. Enter **Description**.
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/add-client-id.png" alt-text="Screenshot shows the steps to add client secret to app.":::
+        
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
-       
+         :::image type="content" source="~/assets/images/Tab-ME-SSO/client-ids.png" alt-text="Screenshot shows the value of client secret.":::
+                
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
@@ -141,8 +141,8 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/Tab-ME-SSO/home.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/home.png" alt-text="Screenshot shows the home page.":::
+        
     1. Select your bot from **Recent resources**.
 
     1. Select **Channels** in the left pane. 
@@ -153,12 +153,12 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
-
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-terms.png" alt-text="Screenshot shows the Terms of Service.":::
+          
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
-    
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png" alt-text="Screenshot shows the steps to select Teams.":::
+              
     **To create tunnel for local web server**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
@@ -171,8 +171,8 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Tab-ME-SSO/ngrok-image.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/ngrok-image.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
+        
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
@@ -181,8 +181,8 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/Tab-ME-SSO/messaging-endpoint.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint.":::
+        
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
@@ -203,12 +203,12 @@ items:
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/Tab-ME-SSO/application-id-set.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/application-id-set.png" alt-text="Screenshot shows the steps to expose an API.":::
+       
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
-       ![Set link](~/assets/images/Tab-ME-SSO/appid-uri1.png)
-        
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/appid-uri1.png" alt-text="Screenshot shows the steps to set link.":::
+               
     1. Select **Add a scope**. 
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
@@ -229,13 +229,14 @@ items:
 
     1. Select **Add scope** to save.
 
-       ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/add-a-scope.png" alt-text="Screenshot shows the steps to add a scope.":::
+       
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://your ngrok/botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
-          ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope-final1.png) 
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/add-a-scope-final1.png" alt-text="Screenshot shows the Scopes.":::
+          
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -245,17 +246,16 @@ items:
 
          * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)
 
-           ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application.png) 
-
+           :::image type="content" source="~/assets/images/Tab-ME-SSO/add-client-application.png" alt-text="Screenshot shows the client id for Teams mobile or desktop app.":::
+           
          * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
 
-           ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application21.png) 
-        
-
+           :::image type="content" source="~/assets/images/Tab-ME-SSO/add-client-application.png" alt-text="Screenshot shows the client id for Teams web app.":::
+               
        The following image displays the **Client Id**:
 
-         ![Client applications](~/assets/images/Tab-ME-SSO/client-id-2.png) 
-  
+         :::image type="content" source="~/assets/images/Tab-ME-SSO/client-id-2.png" alt-text="Screenshot shows the client applications.":::
+           
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
@@ -265,8 +265,8 @@ items:
 
     1. Select **Microsoft Graph**.
 
-       ![Microsoft Graph](~/assets/images/Tab-ME-SSO/microsoft-graph.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/microsoft-graph.png" alt-text="Screenshot shows the Microsoft Graph.":::
+       
     1. Select **Delegated permissions**.
 
     1. Add the following permissions:</br>
@@ -286,8 +286,8 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/Tab-ME-SSO/configure-platform1.png)
-
+            :::image type="content" source="~/assets/images/Tab-ME-SSO/configure-platform1.png" alt-text="Screenshot shows the web.":::
+            
          1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect`.
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
@@ -296,8 +296,8 @@ items:
    
          1. Select **Configure**.
 
-            ![Configure web](~/assets/images/Tab-ME-SSO/configure-web.png)
-   
+            :::image type="content" source="~/assets/images/Tab-ME-SSO/configure-web.png" alt-text="Screenshot shows the steps to configure web.":::
+               
     **To update manifest**
 
     1. Select **Manifest** from the left pane.
@@ -307,8 +307,8 @@ items:
        > [!Tip]
        > If you're already testing your bot in Teams, you must sign out of the bot and sign out of Teams. Then sign in again to see this change.
 
-       ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
-
+       :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Screenshot shows the steps to update manifest.":::
+       
     **To set up Bot Service connection**
 
     1. Go to **Configuration page** > **Add OAuth Connection Settings**.
@@ -329,15 +329,15 @@ items:
   
     1. Select **Save**.
 
-        <img src="~/assets/images/Tab-ME-SSO/new-connection-setting.png" alt="Bot Service connection" width="300"/>
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/new-connection-setting.png" alt-text="Screenshot shows the bot service connection.":::
+        
 - title: Set up app settings
   durationInMinutes: 1
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/Tab-ME-SSO/app-setting-folder.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/app-setting-folder.png" alt-text="Screenshot shows the app settings location.":::
+        
     1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -348,15 +348,15 @@ items:
          * Set `"AppSecret"` to your bot's client secret ID value.
          * Set `"ApplicationIdURI"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.
 
-        ![App settings](~/assets/images/Tab-ME-SSO/app-setting1.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/app-setting1.png" alt-text="Screenshot shows the app settings.":::
+        
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
     1. Navigate to `manifest.json` in cloned repository.
 
-        ![Manifest file location](~/assets/images/Tab-ME-SSO/folder-manifest.png)
-    
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/folder-manifest.png" alt-text="Screenshot shows the manifest file location.":::
+            
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
          * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
@@ -367,8 +367,8 @@ items:
 
          * Set `"resource"` as `api://584f****.ngrok.io/botid-{AppID}`.</br>
         
-        ![Manifest image2](~/assets/images/Tab-ME-SSO/vs-manifest.png)
-
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/vs-manifest.png" alt-text="Screenshot shows the manifest file.":::
+        
 - title: Build and run the service
   durationInMinutes: 1
   content: |
@@ -379,27 +379,26 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot shows the steps to open a file in Visual Studio.":::
+          
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
 
-          ![Project folder](~/assets/images/Tab-ME-SSO/project-folder1.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/project-folder1.png" alt-text="Screenshot shows the project folder.":::
+          
        1. You'll see the following output:
 
-          ![Token File](~/assets/images/Tab-ME-SSO/output1.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/output1.png" alt-text="Screenshot shows the token file.":::
+          
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
-
+          :::image type="content" source="~/assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot shows the Trust Certificate.":::
+          
           A webpage opens with a message **Your bot is ready!**
 
-          ![App ready](~/assets/images/Tab-ME-SSO/bot-completion-explorer.png) 
-
-        
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot shows the app ready message.":::
+                  
     # [Command line](#tab/cli)
 
     Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
@@ -408,8 +407,8 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
-      
+    :::image type="content" source="~/assets/images/Tab-ME-SSO/dotnet-run1.png" alt-text="Screenshot shows the Dotnet run command.":::
+          
 - title: Upload SSO App to Teams
   durationInMinutes: 1
   content: |
@@ -420,81 +419,78 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso.png)
-   
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/upload-tab-me-sso.png" alt-text="Screenshot shows the steps to select a zip file.":::
+          
     1. Go to **Microsoft Teams**.
 
     1. Select **Store**.
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
 
-       ![Dotnet](~/assets/images/Tab-ME-SSO/publish-an-app.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/publish-an-app.png" alt-text="Screenshot shows the steps to publish an app.":::
+       
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/Tab-ME-SSO/upload-custom-app.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/upload-custom-app.png" alt-text="Screenshot shows the steps to upload a custom app.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso-open.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/upload-tab-me-sso-open.png" alt-text="Screenshot shows the steps to select a zip file.":::
+       
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/Tab-ME-SSO/add-sso-app.png)
-    
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/add-sso-app.png" alt-text="Screenshot shows the steps to add the app.":::
+           
     1. Send a message to the bot. 
     1. The bot will perform Single sign-on and display profile card along with option prompt to view token.
 
-       ![Profile card](~/assets/images/Tab-ME-SSO/Congratulation-image.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/Congratulation-image.png" alt-text="Screenshot shows the profile card.":::
+       
     1. Select **Yes** to view token or **No** to continue with chat.
       
-       ![Token view](~/assets/images/Tab-ME-SSO/token-view1.png)
-
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/token-view1.png" alt-text="Screenshot shows the steps to view the token.":::
+       
       1. If SSO isn't performed, then the bot will perform default authentication method for your tab.
 
-          ![No SSO](~/assets/images/Tab-ME-SSO/not-login11.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/not-login11.png" alt-text="Screenshot shows the default authentication method.":::
+          
       1. Select ellipses **...** to open message extension.
 
-          ![message extension](~/assets/images/Tab-ME-SSO/message-extension.png)
-      
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/message-extension.png" alt-text="Screenshot shows the message extension.":::
+                
       1. Select your new SSO application.
 
-          ![SSO app](~/assets/images/Tab-ME-SSO/recent-app-sso.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/recent-app-sso.png" alt-text="Screenshot shows the SSO app.":::
+          
       1. Select **sign-in**.
 
-          ![Sign in](~/assets/images/Tab-ME-SSO/sign-in-sso1.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/sign-in-sso1.png" alt-text="Screenshot shows the Sign in page.":::
+          
       1. Enter your credentials in sign-in box, and select **Next**.
 
-          ![Sign in box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
-      
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/sign-in-box.png" alt-text="Screenshot shows the Sign in box to enter the credentials.":::
+                
       1. Select **Accept**.
 
-          ![consent box](~/assets/images/Tab-ME-SSO/concent-box.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/concent-box.png" alt-text="Screenshot shows the consent box.":::
+          
       1. Open message extension and select your application.
 
       1. Select your profile under search box. You'll see something like this:
 
-          ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/hello-megan-profile.png" alt-text="Screenshot shows the profile.":::
+          
       1. Send `https://profile.botframework.com` to the application to get a profile card.
        
-          ![Profile card](~/assets/images/Tab-ME-SSO/profile-card.png)
-
+          :::image type="content" source="~/assets/images/Tab-ME-SSO/profile-card.png" alt-text="Screenshot shows the profile card.":::
+          
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/hello-megan-profile245.png" alt-text="Screenshot shows the SSO profile.":::
+       
     
-    
-
 - content: |
     You've completed the tutorial to get started with SSO for tab and message extension app.
-
-
