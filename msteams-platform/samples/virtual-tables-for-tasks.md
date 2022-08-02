@@ -1,15 +1,15 @@
 ---
-title: Virtual Tables for Tasks, Meetings, and Files in collaboration control app
+title: Virtual tables for Tasks, Meetings, and Files in collaboration control app
 author: surbhigupta
-description: In this module, learn about Virtual Tables for Tasks, Meetings, and Files in Collaboration control app in Microsoft Teams.
+description: In this module, learn about Virtual tables for Tasks, Meetings, and Files in Collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
 ---
 
-# Virtual Tables for Tasks, Meetings, Files
+# Virtual tables for Tasks, Meetings, Files
 
-A new capability with this release is a set of Virtual Tables. These enable developers to interact with Graph via OData APIs.
+A new capability with this release is a set of Virtual tables. These enable developers to interact with Graph via OData APIs.
 
 The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
 
@@ -53,71 +53,7 @@ The following sequence diagram explains the interaction between the client, whic
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
 
-## Virtual Tables Authorization
-
-This section details the authorization steps required to make HTTP requests using the Virtual Tables in the Collaboration controls solution.
-
-### Azure App Registration
-
-To acquire the correct bearer token, an app registration in Azure is required. For more information on app registrations, see: [Quickstart](/azure/active-directory/develop/quickstart-register-app)
-
-1. Create an app registration in the Azure portal to authenticate with.
-1. Navigate to “Certificates & secrets”.
-1. Create a new client secret.
-
- > [!IMPORTANT]
- > Make sure to copy the secret value and store for later use. You will not be able to access it again after leaving the current page.
-
-1. Navigate to “API Permissions”.
-1. Add the “user_impersonation” Delegated permission from Dynamics CRM.
-1. Grant admin consent for this permission.
-1. Navigate to “Manifest”.
-1. Set the value of the following attributes to “true”:
-
-   * oauth2AllowIdTokenImplicitFlow
-   * oauth2AllowImplicitFlow
-
-1. Click Save.
-
-   :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="Power automate API permission":::
-
-   :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="Power automate manifest":::
-
-### PowerApps Environment Permissions
-
-Once the app registration has been set up, you must set up an application user in PowerApps environment. This will allow you to authenticate with the correct Dynamics scopes that were configured earlier.
-
-1. Open the Power Platform Admin Center.
-1. Navigate to Environments > Your_Environment > Users > App Users List.
-1. Click “New App User” and select your Azure app registration.
-1. Click “Edit Security Roles” and assign the System Administrator role to the app user.
-   * The System Administrator role is applied to allow authentication for any users that have a lower security role, for example, Collaboration controls User.
-   * This can be restricted by applying a lower role to the application. For example, Collaboration controls Administrator.
-
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="Power automate admin center":::
-
-### Getting the Bearer Token
-
-Once the above steps have been completed, send the following HTTP request to get the Bearer token.
-
-`// Line breaks for legibility only. POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token`
-
-Content-Type: application/x-www-form-urlencoded
-client_id= AZURE_APP_CLIENT_ID
-&client_secret= AZURE_APP_CLIENT_SECRET
-&resource= RESOURCEURL
-&username= USERNAME
-&password= PASSWORD
-&grant_type=password
-
-> [!IMPORTANT]
-> Make sure to include the trailing forward slash on the “resource” parameter. You will get an error related to Graph scopes when calling the virtual table if this is missing.
-
-From the response payload, copy the value of the “access_token” property. You can then pass this Bearer token as the part of the Authorization header when making requests to the Virtual Tables.
-
-   :::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="Power automate authorization":::
-
-## Virtual Tables Basic Operations
+## Virtual tables Basic Operations
 
 This section describes the HTTP requests and responses for each step in the sample scenario.
 
@@ -497,6 +433,74 @@ HTTP/1.1 204 No Content
 
 > [!NOTE]
 > You can set the `If-Match` header to be '*' and then you'll not need to provide any etag values, but your changes will always overwrite the task and it’s details.
+
+## Virtual tables Authorization
+
+Following are the authorization steps required to make HTTP requests using the Virtual tables in the Collaboration controls solution.
+
+### Azure app registration
+
+To acquire the correct bearer token, an app registration in Azure is required. For more information on app registrations, see [register an app](/azure/active-directory/develop/quickstart-register-app)
+
+1. Create an app registration in the Azure portal to authenticate.
+1. Browse to **Certificates & secrets**.
+1. Create a new client secret.
+
+     > [!IMPORTANT]
+     > Make sure to copy the secret value and store for later use. You will not be able to access it again after leaving the current page.
+
+1. Browse to **API Permissions**.
+1. Add the **user_impersonation** delegated permission from Dynamics CRM.
+1. Grant admin consent for this permission.
+
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="The screenshot is an example that shows the Power Automate API permission":::
+
+1. Browse to **Manifest**.
+1. Set the value of the following attributes to true:
+
+   * oauth2AllowIdTokenImplicitFlow
+   * oauth2AllowImplicitFlow
+
+1. Click Save.
+
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="The screenshot is an example that shows the Power Automate manifest":::
+
+### PowerApps environment permissions
+
+After the app registration has been set up, you must set up an application user in PowerApps environment. This will allow you to authenticate with the correct Dynamics scopes that were configured earlier.
+
+1. Open the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/).
+1. Browse to **Environments** > **Your_Environment** > **Users** > **App Users List**.
+1. Select **New App User** and select your Azure app registration.
+1. Click **Edit Security Roles** and assign the **System Administrator** role to the app user.
+
+   1. The **System Administrator** role is applied to allow authentication for any users that have a lower security role. For example, **Collaboration controls User**.
+   1. This can be restricted by applying a lower role to the application. For example, **Collaboration controls Administrator**.
+
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="The screenshot is an example that shows the Power automate admin center":::
+
+### Getting the Bearer Token
+
+After completion of Azure app registration and PowerApps environment permissions, send the following HTTP request to get the Bearer token.
+
+```http
+POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
+```
+
+* **Content-Type**: application/x-www-form-urlencoded
+* **client_id**: <AZURE_APP_CLIENT_ID>
+* **&client_secret**: <AZURE_APP_CLIENT_SECRET>
+* **&resource**: https://<RESOURCEURL>/
+* **&username**: <USERNAME>
+* **&password**: <PASSWORD>
+* **&grant_type**: password
+
+> [!IMPORTANT]
+> Make sure to include the trailing forward slash on the resource parameter. If not you will get an error related to Graph scopes when calling the virtual table.
+
+From the response payload, copy the value of the **access_token** property. You can then pass this Bearer token as the part of the authorization header when making requests to the Virtual tables.
+
+:::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="The screenshot is an example that shows the Power automate authorization":::
 
 ## Virtual tables Error Handling
 
