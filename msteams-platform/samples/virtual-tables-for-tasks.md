@@ -40,18 +40,82 @@ To follow along with this article, you'll need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
 1. A user account in the Dataverse environment, which has the **Collaboration controls User** role assigned to it.
-1. A third-party tool, for example: Postman or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
+1. A third-party tool, for example: Postal worker or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
 > Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See [Use Postman with Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
 ## Virtual tables sample scenario
 
-The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
+The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From, a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
 
 The following sequence diagram explains the interaction between the client, which could be the Tasks collaboration control, the [Collaboration API](~/samples/collaboration-api-reference.md) and the Planner Plan and Task virtual tables.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
+
+## Virtual Tables Authorization
+
+This section details the authorization steps required to make HTTP requests using the Virtual Tables in the Collaboration controls solution.
+
+### Azure App Registration
+
+To acquire the correct bearer token, an app registration in Azure is required. For more information on app registrations, see: [Quickstart](/azure/active-directory/develop/quickstart-register-app)
+
+1. Create an app registration in the Azure portal to authenticate with.
+1. Navigate to “Certificates & secrets”.
+1. Create a new client secret.
+
+ > [!IMPORTANT]
+ > Make sure to copy the secret value and store for later use. You will not be able to access it again after leaving the current page.
+
+1. Navigate to “API Permissions”.
+1. Add the “user_impersonation” Delegated permission from Dynamics CRM.
+1. Grant admin consent for this permission.
+1. Navigate to “Manifest”.
+1. Set the value of the following attributes to “true”:
+
+   * oauth2AllowIdTokenImplicitFlow
+   * oauth2AllowImplicitFlow
+
+1. Click Save.
+
+   :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="Power automate API permission":::
+
+   :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="Power automate manifest":::
+
+### PowerApps Environment Permissions
+
+Once the app registration has been set up, you must set up an application user in PowerApps environment. This will allow you to authenticate with the correct Dynamics scopes that were configured earlier.
+
+1. Open the Power Platform Admin Center.
+1. Navigate to Environments > Your_Environment > Users > App Users List.
+1. Click “New App User” and select your Azure app registration.
+1. Click “Edit Security Roles” and assign the System Administrator role to the app user.
+   * The System Administrator role is applied to allow authentication for any users that have a lower security role, for example, Collaboration controls User.
+   * This can be restricted by applying a lower role to the application. For example, Collaboration controls Administrator.
+
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="Power automate admin center":::
+
+### Getting the Bearer Token
+
+Once the above steps have been completed, send the following HTTP request to get the Bearer token.
+
+`// Line breaks for legibility only. POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token`
+
+Content-Type: application/x-www-form-urlencoded
+client_id=<AZURE_APP_CLIENT_ID>
+&client_secret=<AZURE_APP_CLIENT_SECRET>
+&resource=https://<RESOURCEURL>/
+&username=<USERNAME>
+&password=<PASSWORD>
+&grant_type=password
+
+> [!IMPORTANT]
+> Make sure to include the trailing forward slash on the “resource” parameter. You will get an error related to Graph scopes when calling the virtual table if this is missing.
+
+From the response payload, copy the value of the “access_token” property. You can then pass this Bearer token as the part of the Authorization header when making requests to the Virtual Tables.
+
+   :::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="Power automate authorization":::
 
 ## Virtual Tables Basic Operations
 
@@ -66,7 +130,9 @@ Retrieve the Group ID used in [settings for your Collaboration](~/samples/app-wi
 
 **Task 2: Begin a Collaboration session**
 
-A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record. This allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
+A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record.
+
+A collaboration session allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
 
 # [Request](#tab/request)
 
@@ -286,7 +352,7 @@ Retrieve Associated Planner Tasks with `collaborationRootId` associated with the
 
 ---
 
-Keep track of the `m365_id‘s` as these will be needed in subsequent requests.
+Keep track of the `m365_id‘s` as ID's will be needed in subsequent requests.
 
 **Task 6: Retrieve a Planner Task**
 
@@ -546,7 +612,7 @@ This case must be handled by any client code, which retrieves virtual records as
 
 The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When, a record is read the current etag is returned, and remains valid until the record is changed. The etag should be included in any update request and will be checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request will fail.
 
-If you perform two updates requests using the same @odata.etag then the second request will fail:
+If you perform two updates requests using the same @odata.etag, then the second request will fail:
 
 # [Request](#tab/request11)
 
