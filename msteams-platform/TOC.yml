@@ -307,6 +307,8 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Build shared channel
+    href: concepts/build-and-test/Shared-channels.md  
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -315,8 +317,6 @@
       href: graph-api/meeting-transcripts/fetch-id.md
     - name: Get transcripts
       href: graph-api/meeting-transcripts/api-transcripts.md
-  - name: Custom Together Mode scenes in Teams
-    href: apps-in-teams-meetings/teams-together-mode.md    
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -335,6 +335,8 @@
       href: sbs-teams-live-share.yml
     - name: Live Share SDK FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
+  - name: Custom Together Mode scenes in Teams
+    href: apps-in-teams-meetings/teams-together-mode.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
