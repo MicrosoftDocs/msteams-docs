@@ -125,7 +125,7 @@ Create a Planner Plan and associate it with the collaboration session created ab
 
 ```
 
-* `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, use the value from step 2
+* `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, use the value from task 2
 
 * `groupId`: Identifies the group who will own this plan, use the value from step 1
 
@@ -179,7 +179,7 @@ Create a Planner Task with `PlanId` and `collaborationRootId`. you can create se
 
 ```
 
-* `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, us the value from step 2
+* `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, us the value from task 2
 * `planId`: Identifies the plan this task will be assigned to, use the value from the previous step
 * `taskTitle`: Title for the task
 
@@ -479,7 +479,7 @@ After the app registration has been set up, you must set up an application user 
 
      :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="The screenshot is an example that shows the Power automate admin center":::
 
-### Getting the Bearer Token
+### Getting the bearer token
 
 After completion of Azure app registration and PowerApps environment permissions, send the following HTTP request to get the Bearer token.
 
@@ -490,9 +490,9 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 * **Content-Type**: application/x-www-form-urlencoded
 * **client_id**: <AZURE_APP_CLIENT_ID>
 * **&client_secret**: <AZURE_APP_CLIENT_ID>
-* **&resource**: https://<RESOURCEURL>/
-* **&username**: <USERNAME>
-* **&password**: <PASSWORD>
+* **&resource**: https://\<RESOURCEURL\>/
+* **&username**: \<USERNAME\>
+* **&password**: \<PASSWORD\>
 * **&grant_type**: Password
 
 > [!IMPORTANT]
