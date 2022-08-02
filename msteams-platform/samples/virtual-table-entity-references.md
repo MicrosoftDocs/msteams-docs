@@ -75,7 +75,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session the record is associated with. If, the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
 | `m365_graphplannerplanid` |Guid |Unique identifier of the graph planner plan.|
 | `m365_createdby` | String | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTime | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
@@ -116,8 +116,8 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 | Column |Dataverse Type |Details |
 |---|---|---|
-|`m365_collaborationrootid` |String |Collaboration root of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
-|`m365_allownewtimeproposals` |Boolean |True, if the meeting organizer allows invitees to propose a new time when responding. Otherwise, false which is optional. Default is true. |
+|`m365_collaborationrootid` |String |Collaboration root of the collaboration session the record is associated with. If, the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_allownewtimeproposals` |Boolean |True, if the meeting organizer allows invitees to propose a new time when responding. Otherwise false, which is optional. Default is true. |
 |`m365_attendees` |String |The collection of attendees for the event. This attribute is a JSON encoded string, 15000 max in length. For example, [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
 |`m365_body` |String |The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length. For example {\"contentType\":\"html\",\"content\":\"html/html\"} |
 |`m365_bodypreview` |String |The preview of the message associated with the event. It is in text format. |
@@ -154,7 +154,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 |`m365_seriesmasterid`|String|The ID for the recurring series master item, if this event is part of a recurring series.|
 |`m365_showas`|String|The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.|
 |`m365_subject`|String|The text of the event's subject line. Primary lookup column|
-|`m365_transactionid`|String|A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set `transactionId` when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.|
+|`m365_transactionid`|String|A custom identifier specified by a client app for the server to avoid redundant POST operations if client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set `transactionId` when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.|
 |`m365_type`|String|The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only|
 |`m365_weblink`|String|The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you're signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in. This URL cannot be accessed from within an iFrame.|
 |`m365_grapheventid`|Guid|Unique identifier of the graph event.|
@@ -180,10 +180,10 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootid`| String| Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_collaborationrootid`| String| Collaboration root ID of the collaboration session the record is associated with. If, the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
 | `m365_graphbookingappointmentid` | Guid | Unique Identifier of the graph booking appointment.|
 | `m365_bookingbusinessid` | String | The unique Identifier of the booking business the appointment is scheduled under.|
-| `m365_additionalinformation` | String | Additional information that is sent to the customer when an appointment is confirmed.|
+| `m365_additionalinformation` | String | Extra information that is sent to the customer when an appointment is confirmed.|
 | `m365_customers` | String| It lists down the customer properties for an appointment. appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional[{\"customerID\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" },\"name\":\"Jordan Miller\",\"notes\",\"phone\",\"timeZone\",\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
 | `m365_customertimezone` | String | The time zone of the customer. For a list of possible values, see [dateTimeTimeZone resource type](/graph/api/resources/datetimetimezone). |
 | `m365_duration` | String | The length of the appointment, denoted in ISO8601 format.|
@@ -199,7 +199,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 | `m365_price` | DecimalType | The regular price for an appointment for the specified bookingService.|
 | `m365_pricetype` | String | A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.|
 | `m365_reminders` | String | The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by it's ID. [{\"message\":\"We look forward to seeing you!\",\"offset\":\"P1D\",\"recipients\":\"customer\"},{\"message\":\"Reminder that you have an appointment!\",\"offset\":\"P1D\",\"recipients\":\"staff\"}] |
-| `m365_selfserviceappointmentid` | String | Additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.|
+| `m365_selfserviceappointmentid` | String | Another tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.|
 | `m365_serviceid` | String | The ID of the bookingService associated with this appointment.|
 | `m365_servicelocation` | String | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"Our office address\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" } |
 | `m365_servicename` | String | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceID property. |
@@ -220,7 +220,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 |Column |Dataverse Type |Details |
 |---|---|---|
-|`m365_collaborationrootid` |String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_collaborationrootid` |String | Collaboration root ID of the collaboration session the record is associated with. If, the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
 |`m365_createdby` |String |Identity of the user, device, or application that created the item. Read-only. This attribute is a JSON encoded string for example { "user": { "displayName": "System Account" } } |
 |`m365_createddatetime` |DateTime |Date and time of item creation. Read-only. |
 |`m365_description` |String |Provide a user-visible description of the drive. Read-only. |
@@ -253,7 +253,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 |---|---|---|
 |`m365_audio` |String |Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128, "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false, "isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 }|
 |`M365_bundle` |String |Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. For example { "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
-|`m365_collaborationrootid` |String |Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_collaborationrootid` |String |Collaboration root ID of the collaboration session the record is associated with. If, the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
 |`m365_copy` |String |If present in the request then a copy operation is performed. |
 |`m365_createdby` |String |Identity of the user, device, and application, which created the item. Read-only. This attribute is a JSON encoded string. For example {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group": null,"application","device" } |
 |`m365_createddatetime` |DateTime |Date and time of item creation. Read-only. |

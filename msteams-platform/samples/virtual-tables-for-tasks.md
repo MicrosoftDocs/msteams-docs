@@ -19,9 +19,9 @@ The Collaboration controls core solution includes a set of [virtual tables](/pow
 > [!TIP]
 > [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 
-The external system used by the Collaboration controls is Microsoft Graph and there are virtual tables for group calendar events, booking appointments, planner plans or tasks and SharePoint drives, folders, and files.
+The external system that is used by the Collaboration controls is Microsoft Graph. There are virtual tables for group calendar events, booking appointments, planner plans or tasks and SharePoint drives, folders, and files.
 
-This article provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update and Delete) operations.
+This article provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update, and Delete) operations.
 
 > [!TIP]
 > For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
@@ -40,14 +40,14 @@ To follow along with this article, you'll need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
 1. A user account in the Dataverse environment, which has the **Collaboration controls User** role assigned to it.
-1. A third-party tool, for example: Postal worker or some custom C# code, that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
+1. A third-party tool, for example: Post man or some custom C# code that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
 > Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See [Use Postman with Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
 ## Virtual tables sample scenario
 
-The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From, a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
+The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
 
 The following sequence diagram explains the interaction between the client, which could be the Tasks collaboration control, the [Collaboration API](~/samples/collaboration-api-reference.md) and the Planner Plan and Task virtual tables.
 
@@ -288,7 +288,7 @@ Retrieve Associated Planner Tasks with `collaborationRootId` associated with the
 
 ---
 
-Keep track of the `m365_id‘s` as ID's will be needed in subsequent requests.
+Keep track of the `m365_id‘s` as IDs will be needed in subsequent requests.
 
 **Task 6: Retrieve a Planner Task**
 
@@ -662,12 +662,12 @@ In Task 5 of above, described how to Retrieve Associated Planner Tasks. This ope
 
 ---
 
-* Additional filtering options can't be combined with this `$filter` query and if they're they'll be ignored.
-* Additional filtering must be performed directly on the response from the request.
+* Other filtering options can't be combined with this `$filter` query and if there they'll be ignored.
+* Other filtering must be performed directly on the response from the request.
 
 ### Querying for Virtual records with required key attributes
 
-When the Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request will fail as follows:
+When, Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request will fail as follows:
 
 # [Response](#tab/response13)
 
