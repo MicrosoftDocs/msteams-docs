@@ -25,7 +25,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 | Graph Drive | The Graph Drive table represents the top-level object that represents a user's OneDrive or a document library in SharePoint. |
 | Graph Drive Item | The Graph Drive Item table represents a file, folder, or other item stored in a drive. |
 
-### Graph Planner Task
+## Graph Planner Task
 
 * Entity name: m365_graphplannertask.
 * Graph resource: [plannerTask resource type](/graph/api/resources/plannertask)
@@ -33,54 +33,54 @@ Learn about all the available Collaboration controls virtual entities and their 
 * Filtering isn't supported.
 * Server driven pagination is supported, with maximum page size being 400.
 
-### Attributes Graph Planner Task
+### Attributes for Graph Planner Task
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootID` | StringType | Collaboration root ID(s) of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+| `m365_collaborationrootID` | StringType | Collaboration root ID of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
 | `m365_activechecklistitemcount` | IntegerType | Number of checklist items with value set to false, representing incomplete items. |
 | `m365_appliedcategories` | StringType | Number of checklist items with value set to false, representing incomplete items. |
 | `m365_appliedcategories` | StringType | The categories to which the task has been applied. This attribute is a JSON encoded string, for example "{ \"category1\": true, \"category6\": true, \"category9\": true }" |
 | `m365_assigneepriority` | StringType | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_assignments` | StringType | The set of assignees, the task is assigned to. This attribute is a JSON encoded string for example "{\" 7be...\": {\"assignedBy\": {\"user\": {\"displayName\", \"email\", \"ID\":\" 7be...\"}, \"group\": null, \"application\": null \"device\": null}" |
-| m365_bucketID | StringType | Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format valIDation is done on the service. |
-| m365_checklistitemcount | IntegerType | Number of checklist items that are present on the task. |
-| m365_completedby | StringType | IDentity of the user that completed the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
-| m365_completeddatetime | DateTimeType | Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_conversationthreadID |StringType | Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. |
-| m365_createdby | StringType | IDentity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
-| m365_createddatetime | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_duedatetime | DateTimeType | Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_hasdescription | BooleanType | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
-| m365_ID | StringType | Read-only. ID of the task. It's 28 characters long and case-sensitive. Format valIDation is done on the service.|
-| m365_orderhint | StringType | Hint used to order items of this type in a list view. The format is defined as outlined here. |
-| m365_percentcomplete | IntegerType | Percentage of task completion. When set to 100, the task is consIDered completed. |
-| m365_priority | IntegerType | Priority of the task. The valID range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Currently, Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
-| m365_planID | StringType | Plan ID to which the task belongs. |
-| m365_previewtype | StringType | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
-| m365_referencecount | IntegerType | Number of external references that exist on the task.|
-| m365_startdatetime | DateTimeType | Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_title | StringType |Title of the task. Primary lookup column |
+| `m365_bucketID` | StringType | Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service. |
+| `m365_checklistitemcount` | IntegerType | Number of checklist items that are present on the task. |
+| `m365_completedby` | StringType | Identity of the user that completed the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
+| `m365_completeddatetime` | DateTimeType | Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| `m365_conversationthreadID` |StringType | Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. |
+| `m365_createdby` | StringType | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
+| `m365_createddatetime` | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| `m365_duedatetime` | DateTimeType | Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| `m365_hasdescription` | BooleanType | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
+| `m365_ID` | StringType | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
+| `m365_orderhint` | StringType | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
+| `m365_percentcomplete` | IntegerType | Percentage of task completion. When set to 100, the task is considered completed. |
+| `m365_priority` | IntegerType | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Currently, Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
+| `m365_planID` | StringType | Plan ID to which the task belongs. |
+| `m365_previewtype` | StringType | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
+| `m365_referencecount` | IntegerType | Number of external references that exist on the task.|
+| `m365_startdatetime` | DateTimeType | Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| `m365_title` | StringType |Title of the task. Primary lookup column |
 
-### Graph Planner Plan
+## Graph Planner Plan
 
 * Entity name: m365_graphplannerplan.
-* Graph resource:  graph/api/resources/plannerplan.
+* Graph resource: [plannerPlan resource type](/graph/api/resources/plannerplan).
 * Sorting isn't supported.
 * Filtering isn't supported.
 * Server driven pagination is supported, with maximum page size being 400.
 
-### Attributes Graph Planner Plan
+### Attributes for Graph Planner Plan
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| m365_collaborationrootID | StringType | Collaboration root ID(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records.|
-| m365_graphplannerplanID |StringType |
-| m365_createdby | StringType | IDentity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
-| m365_createddatetime | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, mIDnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| m365_ID | StringType | Read-only. ID of the plan. It's 28 characters long and case-sensitive. Format valIDation is done on the service.|
-| m365_owner | StringType | ID of the group that owns the plan. After it's set, this property can’t be updated.|
-| m365_title | StringType | Title of the plan. Primary lookup column |
+| `m365_collaborationrootID` | StringType | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_graphplannerplanID` |StringType ||
+| `m365_createdby` | StringType | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
+| `m365_createddatetime` | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
+| `m365_ID` | StringType | Read-only. ID of the plan. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
+| `m365_owner` | StringType | ID of the [group](/graph/api/resources/group) that owns the plan. After it's set, this property can’t be updated.|
+| `m365_title` | StringType | Title of the plan. Primary lookup column |
 
 ## Graph Event
 
