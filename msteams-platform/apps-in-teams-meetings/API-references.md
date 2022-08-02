@@ -171,7 +171,7 @@ All users in a meeting receive the notifications sent through in-meeting notific
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -498,7 +498,7 @@ The JSON response body for Meeting Details API is as follows:
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type. For example, GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown. |
+| **details.type** | The meeting's type (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown). |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
@@ -631,7 +631,7 @@ The `getAppContentStageSharingState` API enables you to fetch information about 
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -671,7 +671,7 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the app's c
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -936,7 +936,7 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio sp
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -976,7 +976,7 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
