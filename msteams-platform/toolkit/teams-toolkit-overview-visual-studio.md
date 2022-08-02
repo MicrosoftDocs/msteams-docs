@@ -37,9 +37,6 @@ The main milestones of this journey are:
 
 1. You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/). You'll need to first install the Visual Studio installer before installing Visual Studio.
 
-   > [!IMPORTANT]
-   > You're recommended to download Visual Studio 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 17.3.0 version. Teams Toolkit version 17.3.*.
-
 2. After you open the Visual Studio installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
@@ -48,20 +45,27 @@ The main milestones of this journey are:
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
+   > [!IMPORTANT]
+   > You're recommended to download Visual Studio 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 17.3.0 version. Teams Toolkit version 17.3.*.
+
 ## Take a tour of Teams Toolkit
 
-You can first install Teams Toolkit, then select **Project > Teams Toolkit** to access the **Teams Toolkit menu**:
+1. After you install Teams Toolkit select **Project**.
+1. Select **Teams Toolkit**.
+1. You can now access the **Teams Toolkit menu**
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
-You can also access **Teams Toolkit menu** from solution explorer by right clicking on your **Project** > **Teams Toolkit**:
+1. You can also access **Teams Toolkit menu** from solution explorer.
+1. Right-click on your Project **MyTeamsApp1**.
+1. Select **Teams Toolkit**.
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
 > [!NOTE]
 > In this scenario the project name is **MyTeamsApp1**.
 
-You can do the following operations on Teams Toolkit for Visual Studio:
+You can perform the following operations on Teams Toolkit for Visual Studio:
 
 |Operation  |Description  |
 |---------|---------|
