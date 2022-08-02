@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prerequisites for creating your Teams app
 
-Ensure that you have the following prerequisites to create your Microsoft Teams app using Teams Toolkit in Visual Studio Code:
+Ensure that the following prerequisites are met before you start creating your Teams app:
 
 * [Basic requirements to build your Teams app](#basic-requirements-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
@@ -17,7 +17,7 @@ Ensure that you have the following prerequisites to create your Microsoft Teams 
 
 ## Basic requirements to build your Teams app
 
-For creating different Teams app using Teams Toolkit in Visual Studio Code, you'll need the following basic requirements:
+Ensure the following requirements are met before you build your Teams app:
 
 | &nbsp; | Basic requirements | For using| For environment type|
    | --- | --- | --- |
@@ -41,7 +41,7 @@ For creating different Teams app using Teams Toolkit in Visual Studio Code, you'
 
 ## Accounts to build your Teams app
 
-To create and upload a Teams app, you need to create the following accounts:
+Ensure you have the following accounts before you build your Teams app:
 
 | Accounts | For using| For environment type|
 | --- | --- |
@@ -168,7 +168,7 @@ If you have admin rights, perform the following steps to upload the custom app u
 
   1. Sign-in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
-  1. Select **Show All** > **Teams**.
+  1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 Admin center":::
 
@@ -176,7 +176,7 @@ If you have admin rights, perform the following steps to upload the custom app u
      > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
   1. Sign-in to Microsoft Teams admin center with your admin credentials.
-  1. Select **Show All** > **Teams apps** > **Setup policies**.
+  1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Microsoft 365 Admin center1":::
 

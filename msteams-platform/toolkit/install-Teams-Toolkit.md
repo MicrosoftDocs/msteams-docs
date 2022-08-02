@@ -65,6 +65,15 @@ You can install Teams Toolkit from an extension in Visual Studio Code and from V
 
 ---
 
+#### Upgrade Teams Toolkit
+
+Teams Toolkit is upgraded to the latest version by default. The following steps help you to install different version:
+
+* Select the Extensions :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.PNG"::: icon.
+* Enter **Teams Toolkit**  in the search box.
+* In Teams Toolkit extension, select :::image type="icon" source="../assets/images/teams-toolkit-v2/setting icon.PNG"::: icon.
+* Select **Install Another Version** for upgrade to the latest version of Teams Toolkit.
+
 ## See also
 
 * [Explore Teams Toolkit](explore-Teams-Toolkit.md)
