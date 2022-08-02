@@ -24,43 +24,43 @@ You can add API connection using Visual Studio Code and CLI command.
 
 The following steps help you to add API connection using Visual Studio Code:
 
-    1. Open Microsoft Visual Studio Code.
-    2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the Visual Studio Code toolbar.
-    3. Select **Add features** under **DEVELOPMENT**:
+1. Open Microsoft Visual Studio Code.
+2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the Visual Studio Code toolbar.
+3. Select **Add features** under **DEVELOPMENT**:
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-       * You can also open the command palette and enter **Teams: Add cloud resources**.
+    * You can also open the command palette and enter **Teams: Add cloud resources**.
 
-    4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
+4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
 
-    5. Select **OK**.
+5. Select **OK**.
 
-    6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
+6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
-         > [!NOTE]
-         > Ensure the endpoint is a valid http(s) URL.
+     > [!NOTE]
+     > Ensure the endpoint is a valid http(s) URL.
 
-    7. Select the component that accesses the API.
+7. Select the component that accesses the API.
 
-    8. Select **OK**.
+8. Select **OK**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
 
-    9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
+9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
 
-    10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
+10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
 
-         > [!NOTE]
-         > Based on the authentication type selected, additional configuration is needed.
+     > [!NOTE]
+     > Based on the authentication type selected, additional configuration is needed.
 
 # [CLI](#tab/CLI)
 
