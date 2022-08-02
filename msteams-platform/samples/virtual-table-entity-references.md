@@ -52,7 +52,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 | `m365_createdby` | String | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTime | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
 | `m365_duedatetime` | DateTime | Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| `m365_hasdescription` | BooleanType | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
+| `m365_hasdescription` | Boolean | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
 | `m365_id` | String | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
 | `m365_orderhint` | String | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_percentcomplete` | Int32 | Percentage of task completion. When set to 100, the task is considered completed. |
@@ -117,7 +117,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 | Column |Dataverse Type |Details |
 |---|---|---|
 |`m365_collaborationrootid` |String |Collaboration root of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
-|`m365_allownewtimeproposals` |BooleanType |True, if the meeting organizer allows invitees to propose a new time when responding. Otherwise, false which is optional. Default is true. |
+|`m365_allownewtimeproposals` |Boolean |True, if the meeting organizer allows invitees to propose a new time when responding. Otherwise, false which is optional. Default is true. |
 |`m365_attendees` |String |The collection of attendees for the event. This attribute is a JSON encoded string, 15000 max in length. For example, [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
 |`m365_body` |String |The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length. For example {\"contentType\":\"html\",\"content\":\"html/html\"} |
 |`m365_bodypreview` |String |The preview of the message associated with the event. It is in text format. |
@@ -126,16 +126,16 @@ Learn about all the available Collaboration controls virtual entities and their 
 |`m365_createddatetime` |DateTime |The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
 |`m365_start` |DateTime |The start date, time, and time zone of the event. This attribute is a JSON encoded string, 100 max in length. For example {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"}|
 |`m365_end` |DateTime |The date, time, and time zone that the event ends. This attribute is a JSON encoded string, 100 max in length. For example {\"dateTime\":\"2022-01-19T11:00:00+00:00\",\"timeZone\":\"UTC\"} |
-|`m365_hasattachments` |BooleanType |Set to true if the event has attachments. |
-|`m365_hideattendees` |BooleanType |When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false. |
+|`m365_hasattachments` |Boolean |Set to true if the event has attachments. |
+|`m365_hideattendees` |Boolean |When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false. |
 |`m365_icaluid` |String |A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only. |
-|`m365_isallday`|BooleanType |Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone. |
-|`m365_iscancelled` |BooleanType |Set to true if the event has been canceled. |
+|`m365_isallday`|Boolean |Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone. |
+|`m365_iscancelled` |Boolean |Set to true if the event has been canceled. |
 |`m365_id`| String |Read-only. ID of the event. |
-|`m365_isdraft` |BooleanType |Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.|
-|`m365_isonlinemeeting`|BooleanType|True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional. After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Later Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.|
-|`m365_isorganizer`|BooleanType|Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.|
-|`m365_isremindero`n|BooleanType|Set to true if an alert is set to remind the user of the event.|
+|`m365_isdraft` |Boolean |Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.|
+|`m365_isonlinemeeting`|Boolean|True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional. After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Later Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.|
+|`m365_isorganizer`|Boolean|Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.|
+|`m365_isremindero`n|Boolean|Set to true if an alert is set to remind the user of the event.|
 |`m365_lastmodifieddatetime`|DateTime|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z|
 |`m365_location`|String|The location of the event. JSON encoded string, max 4000 in length. For example[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}|
 |`m365_locations`|String|The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value. JSON encoded string, max 4000 in length.for example[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}]|
@@ -148,7 +148,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 |`m365_originalstarttimezone`|String|The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.|
 |`m365_recurrence`|String|The recurrence pattern for the event. JSON encoded string, max 4000 in length.for example{\"pattern\":{\"dayOfMonth\":0,\"daysOfWeek\":[\"monday\",\"wednesday\",\"friday\"],\"firstDayOfWeek\":\"sunday\",\"index\":\"first\",\"interval\":1,\"month\":0,\"type\":\"weekly\"},\"range\":{\"startDate\":\"2017-08-14\",\"endDate\":\"2018-08-14\",\"numberOfOccurrences\":0,\"recurrenceTimeZone\":\"Eastern Standard Time\",\"type\":\"endDate\"}}|
 |`m365_reminderminutesbeforestart`|Int32|The number of minutes before the event start time that the reminder alert occurs.|
-|`m365_responserequested`|BooleanType|Default is true, which represents the organizer would like an invitee to send a response to the event.|
+|`m365_responserequested`|Boolean|Default is true, which represents the organizer would like an invitee to send a response to the event.|
 |`m365_responsestatus`|String|Indicates the type of response sent in response to an event message. JSON encoded string, max 4000 in length.{\"response\": \"String\",\"time\": \"String (timestamp)\"}|
 |`m365_sensitivity`|String|Possible values are: normal, personal, private, confidential.|
 |`m365_seriesmasterid`|String|The ID for the recurring series master item, if this event is part of a recurring series.|
@@ -190,10 +190,10 @@ Learn about all the available Collaboration controls virtual entities and their 
 | `m365_enddatetime` | DateTime | The date, time, and time zone that the appointment ends.|
 | `m365_filledattendeescount` | Int32 | The current number of customers in the appointment.|
 | `m365_id` | String | The ID of the bookingAppointment. Read-only.|
-| `m365_islocationonline` | BooleanType | True indicates that the appointment will be held online. Default value is false.|
+| `m365_islocationonline` | Boolean | True indicates that the appointment will be held online. Default value is false.|
 | `m365_joinweburl` | String | The URL of the online meeting for the appointment.|
 | `m365_maximumattendeescount` | Int32 | The maximum number of customers allowed in an appointment.|
-| `m365_optoutofcustomeremail` | BooleanType | True indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.|
+| `m365_optoutofcustomeremail` | Boolean | True indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.|
 | `m365_postbuffer` | String | The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.|
 | `m365_prebuffer` | String | The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.|
 | `m365_price` | DecimalType | The regular price for an appointment for the specified bookingService.|
@@ -204,7 +204,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 | `m365_servicelocation` | String | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"Our office address\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" } |
 | `m365_servicename` | String | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceID property. |
 | `m365_servicenotes` |String | Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.|
-| `m365_smsnotificationsenabled` | BooleanType | True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.|
+| `m365_smsnotificationsenabled` | Boolean | True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.|
 | `m365_staffmemberids` | String | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
 | `m365_startdatetime` | DateTime | The date, time, and time zone that the appointment begins.|
 
