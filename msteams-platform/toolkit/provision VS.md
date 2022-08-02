@@ -161,9 +161,9 @@ When you create a new project, you also need to create Azure resources. The Azur
 | --- | --- | --- |
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
 | Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
-| Storage account | Helps to create function app | Not applicable |
-| App service plan | Hosts the function bot App | Not applicable |
-| Function App | Hosts your bot app | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
+| Storage account | Helps to create function app. | Not applicable |
+| App service plan | Hosts the function bot app. | Not applicable |
+| Function App | Hosts your bot app. | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
 
 ### Manage your resources
 
@@ -185,11 +185,11 @@ Provision with ARM involves changing the following sets of files, parameters and
 
 | File | Function | Allow customization |
 | --- | --- | --- |
-| main.bicep | Provide entry point for Azure resource provision | Yes |
-| provision.bicep | Create and configure Azure resources | Yes |
-| config.bicep | Add TeamsFx required configurations to Azure resources | Yes |
-| provision/xxx.bicep | Create and configure each Azure resource consumed by `provision.bicep` | Yes |
-| teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
+| main.bicep | Provide entry point for Azure resource. provision | Yes |
+| provision.bicep | Create and configure Azure resources. | Yes |
+| config.bicep | Add TeamsFx required configurations to Azure resources. | Yes |
+| provision/xxx.bicep | Create and configure each Azure resource consumed by `provision.bicep`. | Yes |
+| teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
 
 > [!NOTE]
 > After you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This doesn't make you lose any changes while adding resources or capabilities to your project.
