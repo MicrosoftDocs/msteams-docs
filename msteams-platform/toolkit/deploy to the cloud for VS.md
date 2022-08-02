@@ -23,7 +23,7 @@ Here's a list of tools you need for building and deploying your apps.
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | Visual Studio <br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
+| &nbsp; | Visual Studio | You can install the free community edition of Visual Studio, and install the workload. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and message extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
