@@ -307,6 +307,8 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Build shared channel
+    href: concepts/build-and-test/Shared-channels.md
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -571,6 +573,8 @@
       href: resources/m365-plugins/m365-plugins-overview.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
+    - name: Install Moodle LMS
+      href: resources/moodleInstructions.md  
     - name: Moodle FAQ
       href: resources/faqs.md
   - name: Share to Teams
