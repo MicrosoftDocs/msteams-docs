@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Deploy Teams app to the cloud using Visual Studio
 
-Teams Toolkit helps you to deploy or upload your application's front-end and back-end code to the provisioned cloud resources in your Azure subscription. The following apps can be deployed in Visual Studio:
+Teams Toolkit helps you to deploy or upload your application's front-end and back-end code to the provisioned cloud resources in your Azure subscription. After deploying, you can preview the app in Teams client or the web browser before you can start using. The following apps can be deployed in Visual Studio:
 
 * The tab app, such as frontend applications are deployed to Azure storage, configured for static web hosting.
 * The notification bot app with Azure function triggers can be deployed to Azure functions.
@@ -22,12 +22,12 @@ Here's a list of tools you need for building and deploying your apps.
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | **Required** | &nbsp; |
 | &nbsp; | Visual Studio | You can install the free community edition of Visual Studio, and install the workload. |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
-   
+
   > [!NOTE]
   > Before you deploy project code to cloud, [Link to be added from PR#6427].
 
@@ -55,15 +55,15 @@ Here's a list of tools you need for building and deploying your apps.
 After your project is successfully deployed to Azure, there are different ways to preview your app in Teams Toolkit:
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package** to generate Teams app package.
-1. Select option **For Local** or **For Azure** and upload to Teams client.
+2. Select option **For Local** or **For Azure** and upload to Teams client.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package.png" alt-text="Generate teams app package":::
 
 **To preview your app in Teams client**
 
-2. Select **Project**
-3. Select **Teams Toolkit**.
-4. Select **Preview in Teams**.
+3. Select **Project**
+4. Select **Teams Toolkit**.
+5. Select **Preview in Teams**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams1.png" alt-text="Preview Teams app in teams client":::
 
