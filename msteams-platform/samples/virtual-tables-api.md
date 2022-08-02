@@ -92,7 +92,7 @@ You can specify the page size by using the `odata.maxpagesize` preference value 
 # [Request](#tab/request)
 
 ```http
-  GET [Organization URI]/api/data/v9.2/m365_driveitems 
+  GET [Organization URI]/api/data/v9.2/m365_graphdriveitems 
   Accept: application/json 
   Prefer: odata.maxpagesize=2 
 ```
@@ -127,8 +127,6 @@ Currently the following Virtual Tables support the `odata.maxpagesize` preferenc
 
 * Graph Booking Appointment
 * Graph Calendar Event
-* Graph Chat
-* Graph Chat Message
 * Graph Drive
 * Graph Drive Item
 
@@ -139,7 +137,7 @@ You can specify the number of records to return by passing the `$top` option in 
 # [Request](#tab/request1)
 
 ```http
-     GET [Organization URL]/api/data/v9.2/m365_graphevents?$top=2&$skiptoken=<cookie pagenumber=3> 
+     GET [Organization URL]/api/data/v9.2/m365_graphevents?$top=2&$skiptoken=<cookie pagenumber='3' /> 
 ```
 
 # [Response](#tab/response1)
@@ -147,7 +145,7 @@ You can specify the number of records to return by passing the `$top` option in 
 ```json
 
 {
-  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphdevents", 
+  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#m365_graphevents", 
   "value": [
    { 
       "@odata.etag": "W/\"{FA93AF7C-1F45-4714-85A5-BB95EB86E1E5}\"", 
@@ -175,7 +173,6 @@ Currently the following virtual tables support fetching a specific page:
 
 * Graph Booking Appointment
 * Graph Calendar Event
-* Graph Chat Message
 
 You can pass a fetch XML as an XML-encoded string. With the fetch XML option, you can specify several query preferences. The pagination specific options are page (page number) and count (page size). The following XML specifies the page number and size:
 
@@ -217,8 +214,6 @@ GET [Organization URL]/api/data/v9.2/m365_graphevents?$fetchXml=<fetch version="
 
 The following virtual tables support the count property to be passed as part of the fetchXml option:
 
-* Graph Chat
-* Graph Chat Message
 * Graph Drive
 * Graph Drive Item
 
@@ -226,4 +221,3 @@ The following virtual tables support the page property as part of the fetchXml o
 
 * Graph Booking Appointment
 * Graph Calendar Event
-* Graph Chat message
