@@ -37,26 +37,26 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootID` | StringType | Collaboration root ID of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+| `m365_collaborationrootid` | StringType | Collaboration root ID of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
 | `m365_activechecklistitemcount` | IntegerType | Number of checklist items with value set to false, representing incomplete items. |
 | `m365_appliedcategories` | StringType | Number of checklist items with value set to false, representing incomplete items. |
 | `m365_appliedcategories` | StringType | The categories to which the task has been applied. This attribute is a JSON encoded string, for example "{ \"category1\": true, \"category6\": true, \"category9\": true }" |
 | `m365_assigneepriority` | StringType | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_assignments` | StringType | The set of assignees, the task is assigned to. This attribute is a JSON encoded string for example "{\" 7be...\": {\"assignedBy\": {\"user\": {\"displayName\", \"email\", \"ID\":\" 7be...\"}, \"group\": null, \"application\": null \"device\": null}" |
-| `m365_bucketID` | StringType | Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service. |
+| `m365_bucketid` | StringType | Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service. |
 | `m365_checklistitemcount` | IntegerType | Number of checklist items that are present on the task. |
 | `m365_completedby` | StringType | Identity of the user that completed the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_completeddatetime` | DateTimeType | Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| `m365_conversationthreadID` |StringType | Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. |
+| `m365_conversationthreadid` |StringType | Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. |
 | `m365_createdby` | StringType | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
 | `m365_duedatetime` | DateTimeType | Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
 | `m365_hasdescription` | BooleanType | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
-| `m365_ID` | StringType | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
+| `m365_id` | StringType | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
 | `m365_orderhint` | StringType | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_percentcomplete` | IntegerType | Percentage of task completion. When set to 100, the task is considered completed. |
 | `m365_priority` | IntegerType | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Currently, Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
-| `m365_planID` | StringType | Plan ID to which the task belongs. |
+| `m365_planid` | StringType | Plan ID to which the task belongs. |
 | `m365_previewtype` | StringType | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
 | `m365_referencecount` | IntegerType | Number of external references that exist on the task.|
 | `m365_startdatetime` | DateTimeType | Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
@@ -74,11 +74,11 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootID` | StringType | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
-| `m365_graphplannerplanID` |StringType ||
+| `m365_collaborationrootid` | StringType | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_graphplannerplanid` |StringType ||
 | `m365_createdby` | StringType | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTimeType | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| `m365_ID` | StringType | Read-only. ID of the plan. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
+| `m365_id` | StringType | Read-only. ID of the plan. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
 | `m365_owner` | StringType | ID of the [group](/graph/api/resources/group) that owns the plan. After it's set, this property can’t be updated.|
 | `m365_title` | StringType | Title of the plan. Primary lookup column |
 
@@ -215,7 +215,7 @@ Learn about all the available Collaboration controls virtual entities and their 
 * Filtering isn't supported.
 * Server driven pagination is supported.
 
-### Attributes Graph Drive
+### Attributes for Graph Drive
 
 |Column |Dataverse Type |Details |
 |---|---|---|
@@ -239,55 +239,54 @@ Learn about all the available Collaboration controls virtual entities and their 
 ### Graph Drive Item
 
 * Entity name: m365_graphdriveitem
-* Graph resource: graph/api/resources/driveitem
-* Sorting is supported on the following columns:
-* m365_name
-* Filtering is supported on the following columns:
-* m365_name
+* Graph resource: [driveItem resource type](/graph/api/resources/driveitem)
+* Sorting is supported on the following column:
+  * m365_name
+* Filtering is supported on the following column:
+  * m365_name
 * Server driven pagination is supported.
 
-### Attributes Graph Drive Item
+### Attributes for Graph Drive Item
 
 |Column |Dataverse Type |Details |
 |---|---|---|
-|m365_audio |StringType |Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128,   "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false, "isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 } |
-|M365_bundle |StringType |Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. for example{ "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
-|m365_collaborationrootID |StringType |Collaboration root ID(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records. |
-|m365_copy |StringType |If present in the request then a copy operation is performed. |
-|m365_createdby |StringType |IDentity of the user, device, and application, which created the item. Read-only. This attribute is a JSON encoded string. for example {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group": null,"application","device" } |
-|m365_createddatetime |DateTimeType |Date and time of item creation. Read-only. |
-|m365_ctag |StringType |An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note. This property isn't returned if the item is a folder. Read-only. |
-|m365_deleted |StringType |Information about the deleted state of the item. Read-only. This attribute is a JSON encoded string. for example { "state": "string" } |
-|m365_description |StringType |Provides a user-visible description of the item. Read-write. Only on OneDrive Personal. |
-|m365_driveID |StringType |The Identifier for the drive that contains the drive item.|
-|m365_etag |StringType |eTag for the entire item (metadata + content). Read-only. |
-| m365_file |StringType |File metadata, if the item is a file. Read-only. This attribute is a JSON encoded string. for example {"hashes":{"crc32Hash","quickXorHash":"Biuzvwdu+Tmu6yRefayD27hD9vD=","sha1Hash","sha256Hash" },"mimeType":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","processingMetadata" } |
-| m365_filesysteminfo |StringType |File system information on client. This attribute is a JSON encoded string. for example {"createdDateTime":"2022-07-21T15:02:47+00:00","lastAccessedDateTime","lastModifiedDateTime":"2022-07-21T15:02:55+00:00"} |
-|m365_folder |StringType | Folder metadata, if the item is a folder. Read-only. This attribute is a JSON encoded string. for example {"childCount":0,"view" } |
-|m365_graphdriveitemID |GuID |Unique Identifier of the graph drive item. |
-|m365_ID |StringType |The unique Identifier of the item within the Drive. Read-only. |
-|m365_image |StringType |Image metadata, if the item is an image. Read-only. This attribute is a JSON encoded string. for example {"height","wIDth" } |
-|m365_lastmodifiedby |StringType |IDentity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string. for example {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f9a00e"},"group","application","device" } |
-|m365_lastmodifieddatetime |DateTimeType |Date and time the item was last modified. Read-only. |
-|m365_location |StringType |Location metadata, if the item has location data. Read-only. This attribute is a JSON encoded string. for example "location": { "altitude": 1.0, "latitude": 1.0, "longitude": 1.0 } |
-|m365_malware |StringType |Malware metadata, if the item was detected to contain malware. Read-only. This attribute is a JSON encoded string. for example { "description": "string" } |
-|m365_name |StringType |The name of the item (filename and extension). Read-write. |
-|m365_package |StringType |If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. This attribute is a JSON encoded string. for example { "type": "oneNote" } |
-|m365_parentreference |StringType |Parent information, if the item has a parent. This attribute is a JSON encoded string. for example
-{"driveID":"b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1gq","driveType":"documentLibrary","ID":"01EYDCV4YHV77FE3EDDFHIVD6WJ2ETT3PP","name","path":"/drives/b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1no/root: /folder name","shareID","sharepointIDs":{"listID":"401172a8-6085-421a-8893-2d9712a35c3c","listItemID","listItemUniqueID":"52feaf12-836c-4e19-8a8f-d64e8939ee52","siteID":"f34e02aa-b373-4a5f-884a-f7c60a20b64a","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantID","webID":"6dd2ef66-9411-43d8-bcd4-0366c08ccabd"},"siteID" } |
-|m365_parentreferenceID |StringType |The Identifier for the drive item that is the parent of the drive item. |
-|m365_pendingoperations |StringType |If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. This attribute is a JSON encoded string. for example { "pendingContentUpdate": {"@odata.type": "microsoft.graph.pendingContentUpdate"} } |
-|m365_photo |StringType |Photo metadata, if the item is a photo. Read-only. This attribute is a JSON encoded string. for example { "cameraMake": "Camera Make", "cameraModel": "Camera Model", "exposureDenominator": 1000000, "exposureNumerator": 41671, "focalLength": 4.38, "fNumber": 1.73, "iso": 70, "orientation": 6, "takenDateTime": "2020-04-29T14:17:39Z" } |
-|m365_publication |StringType |ProvIDes information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only. This attribute is a JSON encoded string. for example {"level":"published","versionID":"2.0"} |
-|m365_remoteitem |StringType |Remote item data, if the item is shared from a drive other than the one being accessed. Read-only. This attribute is a JSON encoded string. for example { "ID": "string", "createdBy": { "@odata.type": "microsoft.graph.IDentitySet" }, "createdDateTime": "timestamp", "file": { "@odata.type": "microsoft.graph.file" }, "fileSystemInfo": { "@odata.type": "microsoft.graph.fileSystemInfo" }, "folder": { "@odata.type": "microsoft.graph.folder" }, "image": { "@odata.type": "microsoft.graph.image" }, "lastModifiedBy": { "@odata.type": "microsoft.graph.IDentitySet" }, "lastModifiedDateTime": "timestamp", "name": "string", "package": { "@odata.type": "microsoft.graph.package" }, "parentReference": { "@odata.type": "microsoft.graph.itemReference" }, "shared": { "@odata.type": "microsoft.graph.shared" }, "sharepointIDs": { "@odata.type": "microsoft.graph.sharepointIDs" }, "specialFolder": { "@odata.type": "microsoft.graph.specialFolder" }, "size": 1024, "vIDeo": { "@odata.type": "microsoft.graph.vIDeo" }, "webDavUrl": "url", "webUrl": "url" } |
-|m365_root |StringType |If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. |
-|m365_searchresult |StringType |Search metadata, if the item is from a search result. Read-only. This attribute is a JSON encoded string. for example { "onClickTelemetryUrl": "url" } |
-|m365_shared |StringType |Indicates that the item has been shared with others and provIDes information about the shared state of the item. Read-only. This attribute is a JSON encoded string. for example { "scope": "users", "owner": { "user": { "displayName": "User Name", "ID": "bbbb6fa48aaaaaaa" } } } |
-|m365_sharepointIDs |StringType |Returns Identifiers useful for SharePoint REST compatibility. Read-only. This attribute is a JSON encoded string. e.g{"listID":"401172a7-6085-421a-8893-2d9712a35aba","listItemID":"338","listItemUniqueID":"0edc89e5-24ea-4c6b-a019-dc51f45eeccc","siteID":"f2be02aa-b373-4a5f-884a-f7c60a20bddd","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantID":"1c137272-0581-487f-b195-aeeb93cc4ccc","webID":"6dd2ef66-9411-43d8-bcd4-0366c08caaaa"} |
-|m365_siteID |StringType |The Identifier for the site that contains the document library. |
-|m365_size |IntType |Size of the item in bytes. Read-only. |
-|m365_specialfolder |StringType |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. for example { "name": "documents" } |
-|m365_thumbnail |StringType |If present in the request then the drive item thumbnails will be retrieved. |
-|m365_vIDeo |StringType |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. for example {"bitrate": 10646968, "duration": 1050683, "height": 720,  "wIDth": 1280,  "audioBitsPerSample": 16, "audioChannels": 1, "audioFormat": "PCM", "audioSamplesPerSecond": 32000, "fourCC": "H264", "frameRate": 60} |
-|m365_webdavurl |StringType | WebDAV compatible URL for the item. |
-|m365_weburl |StringType |URL that displays the resource in the browser. Read-only. |
+|`m365_audio` |StringType |Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128, "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false, "isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 }|
+|`M365_bundle` |StringType |Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. For example { "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
+|`m365_collaborationrootid` |StringType |Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_copy` |StringType |If present in the request then a copy operation is performed. |
+|`m365_createdby` |StringType |Identity of the user, device, and application, which created the item. Read-only. This attribute is a JSON encoded string. For example {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group": null,"application","device" } |
+|`m365_createddatetime` |DateTimeType |Date and time of item creation. Read-only. |
+|`m365_ctag` |StringType |An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note. This property isn't returned if the item is a folder. Read-only. |
+|`m365_deleted` |StringType |Information about the deleted state of the item. Read-only. This attribute is a JSON encoded string. For example { "state": "string" } |
+|`m365_description` |StringType |Provides a user-visible description of the item. Read-write. Only on OneDrive Personal. |
+|`m365_driveid` |StringType |The Identifier for the drive that contains the drive item.|
+|`m365_etag` |StringType |eTag for the entire item (metadata + content). Read-only. |
+| `m365_file` |StringType |File metadata, if the item is a file. Read-only. This attribute is a JSON encoded string. For example {"hashes":{"crc32Hash","quickXorHash":"Biuzvwdu+Tmu6yRefayD27hD9vD=","sha1Hash","sha256Hash" },"mimeType":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","processingMetadata" } |
+| `m365_filesysteminfo` |StringType |File system information on client. This attribute is a JSON encoded string. For example {"createdDateTime":"2022-07-21T15:02:47+00:00","lastAccessedDateTime","lastModifiedDateTime":"2022-07-21T15:02:55+00:00"} |
+|`m365_folder` |StringType | Folder metadata, if the item is a folder. Read-only. This attribute is a JSON encoded string. For example {"childCount":0,"view" } |
+|`m365_graphdriveitemid` |GuID |Unique Identifier of the graph drive item. |
+|`m365_id` |StringType |The unique Identifier of the item within the Drive. Read-only. |
+|`m365_image` |StringType |Image metadata, if the item is an image. Read-only. This attribute is a JSON encoded string. For example {"height","width" } |
+|`m365_lastmodifiedby` |StringType |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string. For example {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f9a00e"},"group","application","device" } |
+|`m365_lastmodifieddatetime` |DateTimeType |Date and time the item was last modified. Read-only. |
+|`m365_location` |StringType |Location metadata, if the item has location data. Read-only. This attribute is a JSON encoded string. For example "location": { "altitude": 1.0, "latitude": 1.0, "longitude": 1.0 } |
+|`m365_malware` |StringType |Malware metadata, if the item was detected to contain malware. Read-only. This attribute is a JSON encoded string. For example { "description": "string" } |
+|`m365_name` |StringType |The name of the item (filename and extension). Read-write. |
+|`m365_package` |StringType |If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. This attribute is a JSON encoded string. For example { "type": "oneNote" } |
+|`m365_parentreference` |StringType |Parent information, if the item has a parent. This attribute is a JSON encoded string. For example {"driveID":"b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1gq","driveType":"documentLibrary","ID":"01EYDCV4YHV77FE3EDDFHIVD6WJ2ETT3PP","name","path":"/drives/b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1no/root: /folder name","shareID","sharepointIDs":{"listID":"401172a8-6085-421a-8893-2d9712a35c3c","listItemID","listItemUniqueID":"52feaf12-836c-4e19-8a8f-d64e8939ee52","siteID":"f34e02aa-b373-4a5f-884a-f7c60a20b64a","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantID","webID":"6dd2ef66-9411-43d8-bcd4-0366c08ccabd"},"siteID" } |
+|`m365_parentreferenceid` |StringType |The Identifier for the drive item that is the parent of the drive item. |
+|`m365_pendingoperations` |StringType |If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. This attribute is a JSON encoded string. For example { "pendingContentUpdate": {"@odata.type": "microsoft.graph.pendingContentUpdate"} } |
+|`m365_photo` |StringType |Photo metadata, if the item is a photo. Read-only. This attribute is a JSON encoded string. For example { "cameraMake": "Camera Make", "cameraModel": "Camera Model", "exposureDenominator": 1000000, "exposureNumerator": 41671, "focalLength": 4.38, "fNumber": 1.73, "iso": 70, "orientation": 6, "takenDateTime": "2020-04-29T14:17:39Z" } |
+|`m365_publication` |StringType |Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only. This attribute is a JSON encoded string. For example {"level":"published","versionID":"2.0"} |
+|`m365_remoteitem` |StringType |Remote item data, if the item is shared from a drive other than the one being accessed. Read-only. This attribute is a JSON encoded string. For example { "ID": "string", "createdBy": { "@odata.type": "microsoft.graph.IdentitySet" }, "createdDateTime": "timestamp", "file": { "@odata.type": "microsoft.graph.file" }, "fileSystemInfo": { "@odata.type": "microsoft.graph.fileSystemInfo" }, "folder": { "@odata.type": "microsoft.graph.folder" }, "image": { "@odata.type": "microsoft.graph.image" }, "lastModifiedBy": { "@odata.type": "microsoft.graph.IdentitySet" }, "lastModifiedDateTime": "timestamp", "name": "string", "package": { "@odata.type": "microsoft.graph.package" }, "parentReference": { "@odata.type": "microsoft.graph.itemReference" }, "shared": { "@odata.type": "microsoft.graph.shared" }, "sharepointIDs": { "@odata.type": "microsoft.graph.sharepointIDs" }, "specialFolder": { "@odata.type": "microsoft.graph.specialFolder" }, "size": 1024, "video": { "@odata.type": "microsoft.graph.video" }, "webDavUrl": "url", "webUrl": "url" } |
+|`m365_root` |StringType |If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. |
+|`m365_searchresult` |StringType |Search metadata, if the item is from a search result. Read-only. This attribute is a JSON encoded string. For example { "onClickTelemetryUrl": "url" } |
+|`m365_shared` |StringType |Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. This attribute is a JSON encoded string. For example { "scope": "users", "owner": { "user": { "displayName": "User Name", "ID": "bbbb6fa48aaaaaaa" } } } |
+|`m365_sharepointids` |StringType |Returns Identifiers useful for SharePoint REST compatibility. Read-only. This attribute is a JSON encoded string. e.g{"listID":"401172a7-6085-421a-8893-2d9712a35aba","listItemID":"338","listItemUniqueID":"0edc89e5-24ea-4c6b-a019-dc51f45eeccc","siteID":"f2be02aa-b373-4a5f-884a-f7c60a20bddd","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantID":"1c137272-0581-487f-b195-aeeb93cc4ccc","webID":"6dd2ef66-9411-43d8-bcd4-0366c08caaaa"} |
+|`m365_siteid` |StringType |The Identifier for the site that contains the document library. |
+|`m365_size` |IntType |Size of the item in bytes. Read-only. |
+|`m365_specialfolder` |StringType |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example { "name": "documents" } |
+|`m365_thumbnail` |StringType |If present in the request then the drive item thumbnails will be retrieved. |
+|`m365_video` |StringType |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example {"bitrate": 10646968, "duration": 1050683, "height": 720,  "width": 1280,  "audioBitsPerSample": 16, "audioChannels": 1, "audioFormat": "PCM", "audioSamplesPerSecond": 32000, "fourCC": "H264", "frameRate": 60} |
+|`m365_webdavurl` |StringType | WebDAV compatible URL for the item. |
+|`m365_weburl` |StringType |URL that displays the resource in the browser. Read-only. |
