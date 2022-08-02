@@ -59,7 +59,7 @@ After your project is successfully deployed to Azure, there are two ways to prev
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams1.png" alt-text="Preview Teams app in teams client":::
 
-The other way for you to preview your app:
+The other way to preview your app:
 
 1. Right click on your project **MyTeamsApp1** under the solution explorer panel.
 1. Select **Teams Toolkit**.
