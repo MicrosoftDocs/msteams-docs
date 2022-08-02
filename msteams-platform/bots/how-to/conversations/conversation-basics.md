@@ -18,7 +18,7 @@ A conversation is a series of messages exchanged between your Microsoft Teams bo
 | `personal` | This conversation type includes the conversations between bots and a single user. |
 | `groupChat` | This conversation type includes the chat between a bot and two or more users. It also enabled for your bot in meeting chats. |
 
-A bot behaves sccording to the conversation it is involved in:
+A bot behaves according to the conversation it is involved in:
 
 * Bots in channel and group chat conversations require the user to @mention the bot to invoke it in a channel.
 
