@@ -99,7 +99,7 @@ After the app is added, set the **Business unit** and **Security Roles** to your
 
 1. In the General Information tab, enter the host with the address of Dynamic 365 instance domain (without the https://).
 
-   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="General information":::
+   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="The screenshot is an example that shows the General information":::
 
 1. In the Security tab, enter the following inputs:
 
@@ -108,17 +108,17 @@ After the app is added, set the **Business unit** and **Security Roles** to your
    * Resource URL:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
    * Scope: Same as above with. Default suffix (`https://org.crm.dynamics.com/.default`).
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Dynamic 365 instance":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="The screenshot is an example that shows the Dynamic 365 instance.":::
 
 1. Select **Update connector** to save the changes and allow your flow to establish connections.
 
-   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="custom connector":::
+   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="he screenshot is an example that shows the custom connector.":::
 
 ## How to invoke the connector  
 
 Triggers and actions are pre-defined with configurable input and output as a workflow step. Adding the workflow step to the proper workflow position with correct input and output configuration to define when the trigger or action is to be invoked.
 
-  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="Invoke the connector":::
+  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="The screenshot is an example that shows how to invoke the connector.":::
 
 ### Triggers and actions supported with connector
 
@@ -151,7 +151,7 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="The screenshot is an example that shows how to begin collaboration session":::
 
-     This step action creates a new collaboration session for your dataverse business entity
+     This step action creates a new collaboration session for your dataverse business entity:
 
       * **Application Name:** Name of the associated application, for example, could be “Collaboration Manager for Loans” or “Collaboration Manager for Closed Loan Auditing”.
       * **Collaboration Root Entity Name:** Type of application record (table name) for example, could be “msfi_loanapplication” for a Collaboration Manager for Loans application.
@@ -167,7 +167,7 @@ The following triggers and actions are supported within a flow:
 
   1. Retrieve Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Retrieve collaboration session":::
+      r::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="The screenshot is an example that shows how to Retrieve collaboration session.":::
 
      This step action returns the collaboration session that matches the provided inputs:
 
@@ -177,13 +177,13 @@ The following triggers and actions are supported within a flow:
 
   1. Update Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="Update collaboration session":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="The screenshot is an example that shows how to update collaboration session.":::
 
      This step action updates an existing collaboration session:
 
      * **Collaboration Root ID:** The GUID for the target collaboration session/root record.
-     * **Collaboration Root Entity ID:** The business entity ID that the collaboration session will refer to.
-     * **Collaboration Root Entity Name:** The business entity type name that the collaboration session will refer to.
+     * **Collaboration Root Entity ID:** The business entity ID that the collaboration session refers to.
+     * **Collaboration Root Entity Name:** The business entity type name that the collaboration session refers to.
 
      ***Advanced options:***
 
@@ -206,7 +206,7 @@ The following triggers and actions are supported within a flow:
 
   1. Associate Collaboration Map (external)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="Associate collaboration map":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="The screenshot is an example that shows how to associate collaboration map.":::
 
      This step action creates a mapping of an external collaboration entity (outside dataverse) with your collaboration session:
 
@@ -223,7 +223,7 @@ The following triggers and actions are supported within a flow:
 
   1. Associate Collaboration Map (internal)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Associate collaboration map internal":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="The screenshot is an example that shows how to associate collaboration map internal.":::
 
      This step action creates a mapping of a collaboration entity (dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities/tables only.
 
@@ -241,9 +241,9 @@ The following triggers and actions are supported within a flow:
 
   1. Update Collaboration Map
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="Update collaboration map":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="The screenshot is an example that shows how to update collaboration map.":::
 
-     This step action updates an existing collaboration map.
+     This step action updates an existing collaboration map:
 
      * **Collaboration Map ID:** The collaboration map unique identifier to update.
      * **Collaboration Map Entity ID:** The collaborative entity ID to map. This value must be empty if the external ID is Provided
@@ -271,7 +271,7 @@ The following triggers and actions are supported within a flow:
 
   1. Get Collaboration Metadata
 
-      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="get collaboration metadata":::
+      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="The screenshot is an example that shows how to get collaboration metadata.":::
 
      This step action lists all metadata matching the specified filter.
      **Filter:** A filter to apply to the metadata query.
@@ -280,9 +280,9 @@ The following triggers and actions are supported within a flow:
 
   1. Create Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="Create planner task":::
+      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="The screenshot is an example that shows how to create planner task.":::
 
-     This step action creates a Graph Planner Task using Collaboration controls Planner task virtual table.
+     This step action creates a Graph Planner Task using Collaboration controls Planner task virtual table:
 
      * **Collaboration Root ID (Required):** Collaboration session unique identifier
      * **Plan ID (Required):** Plan ID that the task belongs
@@ -309,9 +309,9 @@ The following triggers and actions are supported within a flow:
 
   1. Get Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="Get planner task":::
+      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="The screenshot is an example that shows the get planner task.":::
 
-     This step action returns a Planner Task data using Collaboration controls Planner task virtual table
+     This step action returns a Planner Task data using Collaboration controls Planner task virtual table:
 
      **Task ID (Required):** Task unique identifier
 
@@ -321,7 +321,7 @@ The following triggers and actions are supported within a flow:
 
      This step action updates a planner task record using Collaboration controls Planner task virtual table
 
-     * **Task ID (Required):** Task unique identifier
+     * **Task ID (Required):** Task unique identifier.
      * **Assignments:** A json formatted object that represents all the assignments of a Task. See. plannerAssignments resource type - Microsoft Graph v1.0 | Microsoft Docs  
      * **Bucket ID:** Bucket ID to where the task belongs.  
      * **Planner Task Details:** Represents the additional information about a task.
@@ -345,11 +345,11 @@ The following are some example of flows:
 
 1. Getting a response from Microsoft forms, creating a Collaboration session and a task associated.
 
-   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="New response submitted":::
+   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="The screenshot is an example that shows how to submit new response.":::
 
 1. Every time a collaboration session is created, capture the details and send an e-mail notification.
 
-   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Collaboration session created":::
+   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="The screenshot is an example that shows the Collaboration session created":::
 
 > [!NOTE]
 > Multiple flows could be triggered in this way to perform different actions, using data from the response of the Collaboration session creation.
