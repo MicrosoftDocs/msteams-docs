@@ -27,19 +27,22 @@ Teams Toolkit helps you to deploy or upload your application's front-end and bac
 
 ## Deploy Teams app using Teams Toolkit
 
-1. Launch Visual Studio and create a new or open an existing project.
-2. Right click on your **project** under Solution Explorer panel, select **Teams Toolkit** > **Deploy to the cloud…**
+1. Launch Visual Studio
+1. Create a new or open an existing project.
+1. Right click on your project **MyTeamsApp1**
+1. Select **Teams Toolkit**
+1. Select **Deploy to the cloud…**
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="deploy to cloud":::
 
 > [!NOTE]
 > In this scenario the project name is MyTeamsApp1.
 
-3. Select **Deploy** when prompted with a confirmation dialog.
+1. Select **Deploy** when prompted with a confirmation dialog.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
 
-4. After the Deploy process is triggered and completed, you'll see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+1. After the Deploy process is triggered and completed, you'll see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
