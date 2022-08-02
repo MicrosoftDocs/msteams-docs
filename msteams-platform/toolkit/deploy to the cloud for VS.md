@@ -24,7 +24,6 @@ Here's a list of tools you need for building and deploying your apps.
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | Visual Studio | You can install the free community edition of Visual Studio, and install the workload. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and message extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
