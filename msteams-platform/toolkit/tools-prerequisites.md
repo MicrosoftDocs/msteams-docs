@@ -17,7 +17,7 @@ Ensure that the following prerequisites are met before you start creating your T
 
 ## Basic requirements to build your Teams app
 
-Ensure the following requirements are met before you build your Teams app:
+Ensure the following requirements are met before you start build your Teams app:
 
 | &nbsp; | Basic requirements | For using| For environment type|
    | --- | --- | --- |
@@ -41,7 +41,7 @@ Ensure the following requirements are met before you build your Teams app:
 
 ## Accounts to build your Teams app
 
-Ensure you have the following accounts before you build your Teams app:
+Ensure you have the following accounts before you start build your Teams app:
 
 | Accounts | For using| For environment type|
 | --- | --- |
