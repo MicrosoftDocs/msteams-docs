@@ -61,7 +61,7 @@ Now your Azure app is all set and you need to add it as a user application in yo
 
 ## Add Azure app to Power Automate environment
 
-1. Open Power Apps portal, in the top right corner select **settings** and open **admin center**.
+1. Open Power Apps portal, in the upper right corner select **settings** and open **admin center**.
 
    :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="The screenshot is an example that shows the Power apps interface":::
 
@@ -116,7 +116,7 @@ After the app is added, set the **Business unit** and **Security Roles** to your
 
 ## How to invoke the connector  
 
-Triggers and actions are pre-defined with configurable input/output as a workflow step. Adding the workflow step to the proper workflow position with correct input/output configuration to define when the trigger or action is to be invoked.
+Triggers and actions are pre-defined with configurable input and output as a workflow step. Adding the workflow step to the proper workflow position with correct input and output configuration to define when the trigger or action is to be invoked.
 
   :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="Invoke the connector":::
 
@@ -130,13 +130,13 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Collaboration session created":::
 
-      **Scope:** A scope to limit which rows can trigger the flow.
+      **Scope:** A scope to limit, which rows can trigger the flow.
 
       **Run as:** The running user for steps where invoker connections are used.
 
   1. When a Task is created or modified
 
-      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Task is created or modified":::
+      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="The screenshot is an example that shows the task is created or modified":::
 
       By default, the trigger Planner Task will be disabled and won't trigger. To enable it the following steps must be completed by the tenant admin:
 
@@ -149,7 +149,7 @@ The following triggers and actions are supported within a flow:
 
   1. Begin Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="begin collaboration session":::
+      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="The screenshot is an example that shows how to begin collaboration session":::
 
      This step action creates a new collaboration session for your dataverse business entity
 
