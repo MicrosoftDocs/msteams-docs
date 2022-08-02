@@ -14,7 +14,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not available in Department of Defense (DOD).
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user":::
 
 ## What you need to know: Bots
 

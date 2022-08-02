@@ -30,7 +30,7 @@ items:
     
     This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
        
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="introduction image" border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="introduction image":::
        
 
 - title: Prerequisites
@@ -53,7 +53,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository":::
 
     1. Select **Clone**. 
 
@@ -66,13 +66,13 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
  
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu" border="true":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu":::
 
     1.  In the left panel, select **Teams apps**.
        
     1.  Select **Setup policies**.
  
-           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Setup policies" border="true":::
+           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Setup policies":::
    
     1.  Select **Global**.
 
@@ -80,7 +80,7 @@ items:
 
     1.   Toggle **Upload custom apps** to **On** position.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On":::
    
     1.   Select **Save**.
        
@@ -97,7 +97,7 @@ items:
     
     1.   Select **Developer preview**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Developer preview" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Developer preview":::
    
     1.   Select **Switch to developer preview**.
    
@@ -241,7 +241,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="final output" border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="final output":::
 
 - content: |
     You've completed the tutorial to get started with **Microsoft Teams connectors**!

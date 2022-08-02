@@ -1,5 +1,5 @@
 ---
-title: Channel and group conversations with a bot
+title: Create conversation bots for channel or group chat
 author: surbhigupta
 description: Learn how to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines and more.
 ms.topic: conceptual
@@ -283,4 +283,7 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to cre
 
 ## See also
 
-[Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
+

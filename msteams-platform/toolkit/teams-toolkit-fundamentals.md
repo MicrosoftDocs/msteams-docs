@@ -24,7 +24,7 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit User Journey" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 The main milestones of this journey are:
 
@@ -100,7 +100,7 @@ During or after the development, ensure to provision, deploy, and publish Teams 
 
 ### Provision in the cloud
 
-It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
+It integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
 
 ### Deploy to the cloud
 

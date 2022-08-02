@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 11/01/2019
 ---
 
-# Add test data to your Microsoft 365 test tenant
+# Add test data to your environment
 
 You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.
 

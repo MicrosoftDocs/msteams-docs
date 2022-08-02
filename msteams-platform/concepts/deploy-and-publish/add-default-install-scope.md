@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
-# Configure default install options for your Microsoft Teams app
+# Configure default install options for Teams app
 
 It’s common for an app to support multiple scenarios in Teams, but you may have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the store is **Add to a team**.
 

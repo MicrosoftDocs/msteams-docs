@@ -71,7 +71,7 @@ If you want to host your application related resources or access resources withi
     3. Select **Accounts** and log in to your Microsoft 365 account.
     4. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
 
 * **Verify sideloading permission using Teams client**
 
@@ -79,11 +79,11 @@ If you want to host your application related resources or access resources withi
     2. Select **Apps** in left panel.
     3. Select **Publish an app**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publish an app" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publish an app":::
 
     4. Check whether you can see the option **Upload a custom app** as shown in the following image:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Upload a custom app":::
 
         If you are unable to view the option **Upload a custom app,** then it indicates that you don't have the required permission for sideloading.
 
@@ -101,7 +101,7 @@ If you want to host your application related resources or access resources withi
 
   2. Select **Show All** > **Teams**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all":::
 
      > [!Note]
      > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.

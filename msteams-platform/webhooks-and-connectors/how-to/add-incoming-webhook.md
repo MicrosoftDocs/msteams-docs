@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Create an Incoming Webhook
+# Create Incoming Webhooks
 
 An Incoming Webhook lets external applications to share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL, to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single topic. You can use cards in the following capabilities:
 
@@ -101,3 +101,4 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Secure access and data in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app)

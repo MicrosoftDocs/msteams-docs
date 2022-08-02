@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 
-# Choose a setup to test and debug your Microsoft Teams app
+# Choose a test setup and debug your Teams app
 
 Microsoft Teams apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
 
@@ -81,4 +81,4 @@ To load and run your experience within Teams, you need to create a package and u
 
 ## See also
 
-[Test and debug your bot locally](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+[Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)

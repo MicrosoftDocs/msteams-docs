@@ -126,7 +126,7 @@ The following table provides the features that support Adaptive Cards:
 
 ### Example of Adaptive Card
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card" border="true":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card":::
 
 The following code shows an example of an Adaptive Card:
 

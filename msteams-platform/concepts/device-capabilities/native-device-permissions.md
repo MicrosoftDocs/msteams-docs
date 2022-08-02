@@ -21,11 +21,11 @@ You must request the device permissions to access native device capabilities. Th
 You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
-* Capture and view images.
-* Scan QR or barcode.
-* Record and share short videos.
-* Record audio memos and save them for later use.
-* Use the location information of the user to display relevant information.
+* Capture and view images
+* Scan QR or barcode
+* Record and share short videos
+* Record audio memos and save them for later use
+* Use the location information of the user to display relevant information
 
 > [!NOTE]
 >
@@ -52,7 +52,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
     <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions.":::
 
 # [Desktop](#tab/desktop)
 
@@ -63,7 +63,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
    <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission.":::
 
 ---
 
@@ -127,7 +127,7 @@ For example:
 * To prompt the user to access their location, you must call `getCurrentPosition()`:
 
     ```JavaScript
-    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
     ```
 
 * To prompt the user to access their camera on desktop or web, you must call `getUserMedia()`:
@@ -212,6 +212,17 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
+    # [TeamsJS v2](#tab/teamsjs-v2)
+
+    ```JavaScript
+     function getLocation() {
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+            let currentLocation = JSON.stringify(location);
+     }).catch((error) => { /*Error getting location*/ })} 
+    ```
+
+    # [TeamsJS v1](#tab/teamsjs-v1)
+
     ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -220,17 +231,21 @@ For example:
      } 
     ```
 
+    ***
+
+Here's how the device permissions prompts appear to users on mobile and desktop.
+
 # [Mobile](#tab/mobile)
 
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission.":::
 
 # [Desktop](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop.":::
 
 ---
 

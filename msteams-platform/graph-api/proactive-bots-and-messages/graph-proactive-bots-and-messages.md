@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.topic: Overview
 ---
 
-# Proactive installation of apps using Graph API to send messages
+# Send proactive installation messages 
 
 ## Proactive messaging in Teams
 

@@ -18,7 +18,7 @@ Here's an idea of what you'll learn:
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app" border="true":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
 
 ## App capabilities and development tools
 
@@ -44,7 +44,7 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 > [!div class="nextstepaction"]
 > [Build a Teams tab app with JavaScript using React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Build a Teams bot app with JavaScript using React](../sbs-gs-bot.yml)
+> [Build a Teams bot app with JavaScript](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams message extension app with JavaScript using React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
@@ -63,5 +63,5 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 ## See also
 
-- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-- [Git and GitHub resources](/contribute/additional-resources)
+* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git and GitHub resources](/contribute/additional-resources)

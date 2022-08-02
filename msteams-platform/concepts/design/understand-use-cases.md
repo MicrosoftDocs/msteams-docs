@@ -48,7 +48,7 @@ A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client.":::
 
    :::column-end:::
 
@@ -65,7 +65,7 @@ Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where peo
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client.":::
 
    :::column-end:::
 
@@ -82,7 +82,7 @@ Conversations often result in the need to do something (generate an order, revie
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client.":::
 
    :::column-end:::
 
@@ -100,7 +100,7 @@ With [message extensions](../../messaging-extensions/what-are-messaging-extensio
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -134,7 +134,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -151,7 +151,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams.":::
 
    :::column-end:::
 :::row-end:::

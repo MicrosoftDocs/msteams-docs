@@ -4,7 +4,7 @@ description: In this article, learn Teams authentication tabs Microsoft Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
 ---
-# Configure third party OAuth authentication
+# Configure third party OAuth IdP authentication
 
 > [!Note]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
