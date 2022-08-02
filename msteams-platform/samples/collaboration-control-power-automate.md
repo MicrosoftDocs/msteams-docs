@@ -53,7 +53,7 @@ In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Direct
 
    :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="The screenshot is an example that shows how to copy new secret value":::
 
-1. In the application Overview page, copy the **Application (Client) ID** and save it for later use while setting up the connector security.
+1. In the application Overview page, copy the **Application (client) ID** and save it for later use while setting up the connector security.
 
    :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="The screenshot is an example that shows how to save client ID":::
 
@@ -61,7 +61,7 @@ Now your Azure app is all set and you need to add it as a user application in yo
 
 ## Add Azure app to Power Automate environment
 
-1. Open Power Apps portal, in the upper right corner select **settings** and open **admin center**.
+1. Open Power Apps portal, in the upper right corner select **settings** and open **Admin center**.
 
    :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="The screenshot is an example that shows the Power apps interface":::
 
@@ -69,7 +69,7 @@ Now your Azure app is all set and you need to add it as a user application in yo
 
    :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="The screenshot is an example that shows how to add connector app":::
 
-1. In the environment details page, select settings.
+1. In the environment details page, select **Settings**.
 
    :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="The screenshot is an example that shows how to select settings":::
 

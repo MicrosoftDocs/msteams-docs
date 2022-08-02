@@ -36,7 +36,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
      :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="The screenshot describes how to create a new table.":::
 
-1. Give your table a name. Under **Advanced options** select **Creating a new activity**.
+1. Give your table a name. Under **Advanced options**, select **Creating a new activity**.
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot describes how to create new activity.":::
 
@@ -147,7 +147,7 @@ Now you’ve successfully added the Collaboration controls to your application. 
 
 You can define settings for Collaboration controls for the business entity such as the table created in [new model-driven app](#create-a-new-model-driven-app-with-collaboration-controls-for-teams).
 
-The settings that you can apply are as follows
+The settings that you can apply are as follows:
 
 |Settings|Used by|
 |---|---|
@@ -167,7 +167,7 @@ Use the following instructions to retrieve the Group ID of your Teams team for A
 
 1. Find your team in your teams list.
 
-1. Select the More options **...** and **Get link** to team.
+1. Select the ellipse **...** and select **Get link to team**.
 
      :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="The screenshot describes how to get the linked to the team.":::
 
@@ -241,13 +241,13 @@ Following sections guides you on how to use the Task, Notes, Meetings, Files, an
 
 Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens an empty page where users can add all the relevant tasks they need to complete.
 
-1. To create a new task for the team, select **Add a task**. This will open a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
+1. To create a new task for the team, select **Add a task**. It opens a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
 
      :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="The screenshot describes on how to add a task.":::
 
 1. The saved task will appear in the tasks list.
 
-1. As all the tasks are backed by Microsoft Planner. Users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned. To get started, select **More** options‘…’ in Teams left pane. Search and select Tasks by Planner and To Do.
+1. As all the tasks are backed by Microsoft Planner. Users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned. To get started, select ellipses **…** in Teams left pane. Search and select Tasks by Planner and To Do.
 
      :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="The screenshot is an example of the Tasks by Planner and To Do.":::
 

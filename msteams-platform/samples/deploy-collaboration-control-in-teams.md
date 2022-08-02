@@ -57,7 +57,7 @@ To do so, we'll use Power Apps **new app** settings.
 
 ## Add the app to Microsoft Teams app catalog
 
-As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you've created and select More options **…**.
+As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you've created and select ellipse **…**.
 
 To add the app to Teams, select **Add to Teams**.
 
@@ -67,7 +67,7 @@ Selecting **Add to Teams** opens a dialog where you can review the details and s
 
 :::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="The screenshot is an example that shows the collaboration manager inspection":::
 
-To upload your app to Teams, see [upload your app in Team](~/concepts/deploy-and-publish/apps-upload.md)
+To upload your app to Teams, see [upload your app in Team](~/concepts/deploy-and-publish/apps-upload.md).
 
 ## Enable others to use your application
 
@@ -80,7 +80,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 ### Create a Collaboration team
 
-1. Sign into [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments)
+1. Sign into [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 
      1. Select the environment where the app is deployed.
      1. Select **Settings** > **Users** + **permissions**.
@@ -106,7 +106,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 > [!NOTE]
 > Adding members to the team isn't necessary if your team type is Azure Active Directory or Microsoft 365.
 
-1. Select a team, and then select **Manage team members**
+1. Select a team, and then select **Manage team members**.
 
 1. To add new team members, select **+ Add team members** and choose users from your organization to add.
 
@@ -126,7 +126,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 1. On the **Details tab**, provide a name for your security role.
 
-1. Go to **Custom Entities** tab
+1. Go to **Custom Entities** tab.
 
      1. Give organization permissions (full green circle) for each of the collaboration entities, **Collaboration Map**, **Collaboration Metadata**, and **Collaboration Root**.
 
@@ -148,4 +148,4 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 1. Select **Save**.
 
-For more information on role privileges, see [configure user security in an environment](/power-platform/admin/database-security)
+For more information on role privileges, see [configure user security in an environment](/power-platform/admin/database-security).

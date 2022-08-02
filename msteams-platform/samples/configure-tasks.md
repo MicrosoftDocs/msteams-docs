@@ -92,4 +92,4 @@ Following are the steps to create external tasks:
 
 1. Select **Ok** in Configure Property "Custom Tasks" and Set Properties windows.
 
-1. Save and Publish
+1. Save and Publish.

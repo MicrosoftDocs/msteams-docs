@@ -440,7 +440,7 @@ Following are the authorization steps required to make HTTP requests using the V
 
 ### Azure app registration
 
-To acquire the correct bearer token, an app registration in Azure is required. For more information on app registrations, see [register an app](/azure/active-directory/develop/quickstart-register-app)
+To acquire the correct bearer token, an app registration in Azure is required. For more information on app registrations, see [register an app](/azure/active-directory/develop/quickstart-register-app).
 
 1. Create an app registration in the Azure portal to authenticate.
 1. Browse to **Certificates & secrets**.
@@ -579,7 +579,7 @@ The `plannerTaskId` property is associated with a planner task, which was create
 
 ---
 
-To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map)
+To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map).
 
 ### Attempt to read a virtual record and the Graph resource has been deleted
 

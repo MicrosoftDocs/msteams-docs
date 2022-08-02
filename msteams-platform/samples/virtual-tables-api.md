@@ -125,12 +125,12 @@ You can specify the page size by using the `odata.maxpagesize` preference value 
 
 Currently the following Virtual Tables support the `odata.maxpagesize` preference:
 
-* m365_graphbookingappointment
-* m365_graphcalendarevent
-* m365_graphchat
-* m365_graphchatemessage
-* m365_drive
-* m365_graphdriveitem
+* Graph Booking Appointment
+* Graph Calendar Event
+* Graph Chat
+* Graph Chat Message
+* Graph Drive
+* Graph Drive Item
 
 You can specify the number of records to return by passing the `$top` option in the URL. If you also need to specify the page number, you can do so by passing a paging cookie as an XML-encoded string as the `$skiptoken` option. To fetch a specific page number, you can pass the paging cookie in the following format:
 
@@ -173,9 +173,9 @@ You can specify the number of records to return by passing the `$top` option in 
 
 Currently the following virtual tables support fetching a specific page:
 
-* m365_graphbookingappointment
-* m365_graphcalendarevent
-* m365_graphchatmessage
+* Graph Booking Appointment
+* Graph Calendar Event
+* Graph Chat Message
 
 You can pass a fetch XML as an XML-encoded string. With the fetch XML option, you can specify several query preferences. The pagination specific options are page (page number) and count (page size). The following XML specifies the page number and size:
 
@@ -217,13 +217,13 @@ GET [Organization URL]/api/data/v9.2/m365_graphevents?$fetchXml=<fetch version="
 
 The following virtual tables support the count property to be passed as part of the fetchXml option:
 
-* m365_graphchat
-* m365_graphchatemessage
-* m365_drive
-* m365_graphdriveitem
+* Graph Chat
+* Graph Chat Message
+* Graph Drive
+* Graph Drive Item
 
 The following virtual tables support the page property as part of the fetchXml option:
 
-* m365_graphbookingappointment
-* m365_graphcalendarevent
-* m365_graphchatmessage
+* Graph Booking Appointment
+* Graph Calendar Event
+* Graph Chat message

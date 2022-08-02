@@ -102,7 +102,7 @@ The controls provide the following methods to debug your application.
 
 1. **Trace logging** of plugin events when an API is invoked. This information is stored in your Dataverse environment.
 
-    1. To enable trace logging follow these steps in [logging and tracing](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email)
+    1. To enable trace logging follow these steps in [logging and tracing](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email).
 
 1. **Browser logging** for UI controls. This is standard console logging.
 
