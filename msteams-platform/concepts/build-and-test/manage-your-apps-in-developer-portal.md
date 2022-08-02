@@ -37,7 +37,7 @@ In the **Overview** section, you can see the following components to manage your
 
 To install and render your app in Teams, you must include a set of configurations that Teams recognizes. To upload your apps in Teams, you need to have app manifest, which contains all the app details to display your app in Teams. This can be achieved with the help of components and tools that are available in Developer Portal.
 
-In the **Configure** section, you can see the following features to manage and access your app:
+In the **Configure** section, you can see the following components to manage and access your app:
 
 * **Basic information**: This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
 * **Branding**: This page shows the app icon details.
@@ -59,7 +59,7 @@ In the **Configure** section, you can see the following features to manage and a
 
 ## Advanced
 
-In the **Advanced** section, you can see the following features to manage your app in Developer Portal:
+In the **Advanced** section, you can see the following components to manage your app in Developer Portal:
 
 * **Owners**
 
@@ -90,7 +90,7 @@ In the **Advanced** section, you can see the following features to manage your a
 
   * **Global variables**
 
-      1. Select **+ Add a global variable** to create configuration variables for your environment.
+      1. Select **Add a global variable** to create configuration variables for your environment.
 
       To use global variables:
 
@@ -123,7 +123,7 @@ You can publish your app to your org or to the Teams store.
 
    You can download the app package by selecting **Download app package** button from the Publish to store page.
 
-* **App package**: The app package describes how your app is configured that includes features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
+* **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
 
 ## Test your app directly in Teams
 
