@@ -9,19 +9,19 @@ ms.topic: conceptual
 
 # Shared channels
 
-Shared channels in Teams allow members of a channel to collaborate with users across other Teams and organizations. You can create and share a shared channel with:
+Shared channels in Microsoft Teams allow members of a channel to collaborate with users across other Teams and organizations. You can create and share a shared channel with:
 
 * Members of another Team within the same organization.
 * Individuals within the same organization.
 * Individuals and other Teams of other organizations.
 
-Shared channels facilitate collaboration seamlessly. Allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhances user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications can now extend the powerful collaboration space.
+Shared channels facilitate collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications can now extend the powerful collaboration space.
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Shared Channel image"border="true" :::
 
 ## Manifest update in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. `hostTeam` is the team that created the shared channel.
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
 SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams will enable your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
 
@@ -41,7 +41,7 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 
 > [!NOTE]
 >
-> * If your app supports the team scope, it will always function in standard channels, regardless of what values are defined in this property.
+> * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
 > * Your app may need to account for the unique properties of each of these channel types in order to function properly.
 
 For more information on enabling your tab, see:
@@ -88,11 +88,11 @@ You can classify members as in-tenant or out-tenant by comparing `tenantID` of t
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
-2. Using `getContext`, compare the `tenantID` of the member to the `hostTenantID` property.
+2. Use `getContext`, compare the `tenantID` of the member to the `hostTenantID` property.
 
 ## Azure AD native identity
 
-Apps must function cross-tenant in installation and usage. The following table lists the channel types and their corresponding group IDs:
+Apps must function cross-tenants in installation and usage. The following table lists the channel types and their corresponding group IDs:
 
 |Channel type| groupId | hostTeamGroupId |
 |----------|---------|-----------------|
