@@ -46,7 +46,7 @@ Teams Toolkit helps you to deploy or upload your application's front-end and bac
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
-After your project is successfully deployed to Azure, their are two ways to preview your app in Teams Toolkit:
+After your project is successfully deployed to Azure, there are two ways to preview your app in Teams Toolkit:
 
 1. First select **Project** > **Teams Toolkit** > **Zip App Package** to generate Teams app package.
 1. Select option **For Local** or **For Azure** and upload to Teams client.
