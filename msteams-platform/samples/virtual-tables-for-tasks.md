@@ -488,12 +488,12 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 ```
 
 * **Content-Type**: application/x-www-form-urlencoded
-* **client_id**: <AZURE_APP_CLIENT_ID>
-* **&client_secret**: <AZURE_APP_CLIENT_SECRET>
-* **&resource**: <https://RESOURCEURL/>
-* **&username**: USERNAME
-* **&password**: PASSWORD
-* **&grant_type**: password
+* **client_id**: <Azure_app_client_id>
+* **&client_secret**: <Azure_app_client_secret>
+* **&resource**: https://<resourceURL>/
+* **&username**: Username
+* **&password**: Password
+* **&grant_type**: Password
 
 > [!IMPORTANT]
 > Make sure to include the trailing forward slash on the resource parameter. If not you will get an error related to Graph scopes when calling the virtual table.
