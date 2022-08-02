@@ -517,4 +517,4 @@ After your app obtains the meeting ID and the organizer ID, it triggers the Grap
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Graph APIs for fetching transcripts](api-transcripts.md)
+> [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)

@@ -316,7 +316,7 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
     - name: Get transcripts
-      href: graph-api/meeting-transcripts/api-transcripts.md
+      href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
