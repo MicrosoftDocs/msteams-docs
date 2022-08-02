@@ -73,20 +73,20 @@ The following steps help you to provision cloud resources using Visual Studio:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud1.png" alt-text="Provision in cloud":::
 
-5. In the **Provision** dialogue you can see a list of all the subscriptions in your Azure account.
-6. You can either select or create a new **Resource group**.
-7. Select **Provision**.
+4. In the **Provision** dialogue you can see a list of all the subscriptions in your Azure account.
+5. You can either select or create a new **Resource group**.
+6. Select **Provision**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
 
-8. The dialog warns you that charges may be added as per Azure usage. Select **Provision**.
+7. The dialog warns you that charges may be added as per Azure usage. Select **Provision**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
 The provision process of creating the resources in the Azure cloud may take some time.
 
-6. Check Teams Toolkit output window to monitor progress.
-7. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
+8. Check Teams Toolkit output window to monitor progress.
+9. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
