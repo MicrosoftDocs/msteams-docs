@@ -53,7 +53,7 @@ The following sequence diagram explains the interaction between the client, whic
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
 
-## Virtual tables Basic Operations
+## Virtual tables basic operations
 
 This section describes the HTTP requests and responses for each step in the sample scenario.
 
@@ -434,7 +434,7 @@ HTTP/1.1 204 No Content
 > [!NOTE]
 > You can set the `If-Match` header to be '*' and then you'll not need to provide any etag values, but your changes will always overwrite the task and it’s details.
 
-## Virtual tables Authorization
+## Virtual tables authorization
 
 Following are the authorization steps required to make HTTP requests using the Virtual tables in the Collaboration controls solution.
 
@@ -488,11 +488,11 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 ```
 
 * **Content-Type**: application/x-www-form-urlencoded
-* **client_id**: <Azure_app_client_id>
-* **&client_secret**: <Azure_app_client_secret>
-* **&resource**: <`https://resourceURL/`>
-* **&username**: Username
-* **&password**: Password
+* **client_id**: <AZURE_APP_CLIENT_ID>
+* **&client_secret**: <AZURE_APP_CLIENT_ID>
+* **&resource**: https://<RESOURCEURL>/
+* **&username**: <USERNAME>
+* **&password**: <PASSWORD>
 * **&grant_type**: Password
 
 > [!IMPORTANT]
@@ -502,11 +502,11 @@ From the response payload, copy the value of the **access_token** property. You 
 
 :::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="The screenshot is an example that shows the Power automate authorization":::
 
-## Virtual tables Error Handling
+## Virtual tables error handling
 
 Virtual tables error handling describes common error scenarios and how the virtual tables will respond.
 
-### Attempt to create a virtual record without a collaboration session
+### Attempt to create a virtual record without a Collaboration session
 
 A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record, which includes the virtual record primary key, entity name and the external ID that is, Graph resource ID. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
 
@@ -550,7 +550,7 @@ The `collaborationRootId` property is missing from the request.
 
 To resolve this issue, you must always provide a valid `collaborationRootId` property when creating a virtual record.
 
-### Attempt to read a virtual record without a collaboration map
+### Attempt to read a virtual record without a Collaboration map
 
 Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq`{{planId}}`. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
 
@@ -665,7 +665,7 @@ In Task 5 of above, described how to Retrieve Associated Planner Tasks. This ope
 * Additional filtering options can't be combined with this `$filter` query and if they're they'll be ignored.
 * Additional filtering must be performed directly on the response from the request.
 
-### Querying for Virtual Records with Required Key Attributes
+### Querying for Virtual records with required key attributes
 
 When the Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request will fail as follows:
 
@@ -699,6 +699,6 @@ To fix this problem, change the request to this format:
 
 ---
 
-### Creating Virtual Records and Graph Access Control
+### Creating virtual records and Graph access control
 
 The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you'll get 403 Forbidden responses.
