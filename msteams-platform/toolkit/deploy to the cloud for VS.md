@@ -18,17 +18,24 @@ Teams Toolkit helps you to deploy or upload your application's front-end and bac
 
 ## Prerequisite
 
-* Install Visual Studio.
-* Install Teams Toolkit.
-* Create the Azure cloud resources to host your Microsoft Teams app from your project in Visual Studio.
+Here's a list of tools you need for building and deploying your apps.
 
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | **Required** | &nbsp; | &nbsp; |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
+   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+   
   > [!NOTE]
   > Before you deploy project code to cloud, [Link to be added from PR#6427].
 
 ## Deploy Teams app using Teams Toolkit
 
 1. Launch Visual Studio
-1. Seldct **Create a new project** or open an existing project from the list.
+1. Select **Create a new project** or open an existing project from the list.
 1. Right-click on your project **MyTeamsApp1**
 1. Select **Teams Toolkit**
 1. Select **Deploy to the cloud…**
@@ -55,7 +62,7 @@ After your project is successfully deployed to Azure, there are different ways t
 
 **To preview your app in Teams client**
 
-2. select **Project**
+2. Select **Project**
 3. Select **Teams Toolkit**.
 4. Select **Preview in Teams**.
 
