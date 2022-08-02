@@ -35,28 +35,43 @@ Teams Toolkit helps you to deploy or upload your application's front-end and bac
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="deploy to cloud":::
 
-> [!NOTE]
-> In this scenario the project name is MyTeamsApp1.
+   > [!NOTE]
+   > In this scenario the project name is MyTeamsApp1.
 
-1. Select **Deploy** when prompted with a confirmation dialog.
+6. Select **Deploy** in the confirmation dialog.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
 
-1. After the Deploy process is triggered and completed, you'll see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+7. After the Deploy process is triggered and completed, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
-You'll see that your project is successfully deployed to Azure, you can now use Preview in Teams option in Teams Toolkit to launch the Teams app in web browser. Under the solution explorer panel, right click on your **project** and select **Teams Toolkit** > **Preview in Teams**.
-After your app is successfully deployed to Azure:
-1.
-2.
-3.
-:::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Preview app in teams":::
+After your project is successfully deployed to Azure, their are two ways to preview your app in Teams Toolkit:
+
+1. First select **Project** > **Teams Toolkit** > **Zip App Package** to generate Teams app package.
+1. Select option **For Local** or **For Azure** and upload to Teams client.
+
+:::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package.png" alt-text="Generate teams app package":::
+
+1. To preview your app in Teams client, select **Project**
+1. Select**Teams Toolkit**.
+1. Select**Preview in Teams**.
+
+:::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams1.png" alt-text="Preview Teams app in teams client":::
+
+The other way for you to preview your app:
+
+1. Right click on your project **MyTeamsApp1** under the solution explorer panel.
+1. Select **Teams Toolkit**.
+1. Select **Preview in Teams** to launch the Teams app in web browser.
+
+:::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Preview teams app in web browser":::
 
 > [!NOTE]
 > First you can choose Zip App package option to generate Teams app package, then upload to Teams client. You can now preview your app in Teams client. This is the other way to preview your app in the web browser from preview option in Teams.
 
-The same menu options are also available in Project menu.
+> [!NOTE]
+>The same menu options are also available in Project menu.
 
 ## See also
 
