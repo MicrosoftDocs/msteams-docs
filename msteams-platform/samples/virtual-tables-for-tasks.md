@@ -490,9 +490,9 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 * **Content-Type**: application/x-www-form-urlencoded
 * **client_id**: <AZURE_APP_CLIENT_ID>
 * **&client_secret**: <AZURE_APP_CLIENT_SECRET>
-* **&resource**: https://`<RESOURCEURL>`/
-* **&username**: <`USERNAME`>
-* **&password**: <`PASSWORD`>
+* **&resource**: <https://RESOURCEURL/>
+* **&username**: USERNAME
+* **&password**: PASSWORD
 * **&grant_type**: password
 
 > [!IMPORTANT]
