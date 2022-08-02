@@ -272,7 +272,7 @@ The response with the token is sent through an invoke activity with the same sch
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
-> Bot SSO is supported only in 1:1 chat.
+> Bot SSO is supported only in one-on-one chat.
 
 ##### C# code to handle the invoke activity
 
