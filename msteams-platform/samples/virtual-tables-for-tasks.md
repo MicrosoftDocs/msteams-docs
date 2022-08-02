@@ -461,7 +461,7 @@ To acquire the correct bearer token, an app registration in Azure is required. F
    * oauth2AllowIdTokenImplicitFlow
    * oauth2AllowImplicitFlow
 
-1. Click Save.
+1. Select Save.
 
      :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="The screenshot is an example that shows the Power Automate manifest":::
 
@@ -472,7 +472,7 @@ After the app registration has been set up, you must set up an application user 
 1. Open the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/).
 1. Browse to **Environments** > **Your_Environment** > **Users** > **App Users List**.
 1. Select **New App User** and select your Azure app registration.
-1. Click **Edit Security Roles** and assign the **System Administrator** role to the app user.
+1. Select **Edit Security Roles** and assign the **System Administrator** role to the app user.
 
    1. The **System Administrator** role is applied to allow authentication for any users that have a lower security role. For example, **Collaboration controls User**.
    1. This can be restricted by applying a lower role to the application. For example, **Collaboration controls Administrator**.

@@ -14,11 +14,11 @@ When using the Dataverse Web API to retrieve multiple records from a virtual tab
 > [!NOTE]
 > Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-## Virtual Table Sorting
+## Virtual table sorting
 
 With the virtual tables, you can use the OData $orderby query parameter to set criteria for how the result set should be sorted. Use the asc or desc suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied.  
 
-Supported Tables: Each virtual table supports the same sorting functionality as it’s respective Graph resource. The virtual tables, which support sorting are:  
+**Supported Tables**: Each virtual table supports the same sorting functionality as it’s respective Graph resource. The virtual tables, which support sorting are:  
 
 * Graph Drive Item
 * Graph Event
@@ -31,11 +31,11 @@ Examples:
 * GET [Organization URI]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq ‘00000000-0000-0000-0000-000000000000’&$orderby=m365_name desc
 * GET [Organization URI]/api/data/v9.2/m365_graphevents?$filter=m365_groupid eq ‘00000000-0000-0000-0000-000000000000’$orderby=m365_subject asc
 
-## Virtual Table Filtering
+## Virtual table filtering
 
 With the virtual tables, you can use the OData $filter query parameter to set criteria for which rows will be returned. The virtual tables are queried using the same OData operators that are supported by the Dataverse Web API.
 
-* Comparison operators
+* **Comparison operators**
 
   |Operator|Description|Example|
   |----|----|----|
@@ -46,7 +46,7 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
   |lt|Less Than|$filter=m365_price lt 50.0|
   |le|Less Than or Equal|$filter=m365_price le 50.0|
 
-* Logical operators
+* **Logical operators**
 
   |Operator|Description|Example|
   |----|----|----|
@@ -54,13 +54,13 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
   |or|Logical or |$filter=m365_name ne ‘Contoso’ or m365_price eq 50.0|
   |not|Logical negotiation |$filter=not contains(m365_name,’Contoso’)|
 
-* Grouping operators
+* **Grouping operators**
 
   |Operator|Description|Example|
   |----|----|----|
   |( )|Precedence grouping |$filter=(m365_name eq ‘Contoso’ and m365_price eq 50.0) or contains(m365_subject,’Team Sync’)|
 
-* Query Functions
+* **Query Functions**
 
   |Function |Example |
   |----|----|
@@ -68,7 +68,7 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
   |endswith|$filter=endswith(m365_name,’Contoso’)|
   |startswith|$filter=startswith(m365_name,’Contoso’)|
 
-Supported Tables: Each virtual table supports the same filtering functionality as it’s respective Graph resource. The virtual tables, which support filtering are:
+**Supported Tables**: Each virtual table supports the same filtering functionality as it’s respective Graph resource. The virtual tables, which support filtering are:
 
 * Graph Booking Appointment
 * Graph Drive Item

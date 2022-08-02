@@ -1,5 +1,5 @@
 ---
-title: Virtual Table entity references
+title: Virtual table entity references
 author: surbhigupta
 description: In this module, learn about virtual tables entity reference and their attributes in Microsoft Teams.
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.author: v-npaladugu
 ms.topic: conceptual
 ---
 
-# Virtual Tables Entity Reference
+# Virtual tables entity reference
 
 Learn about all the available Collaboration controls virtual entities and their attributes. These entities have a one-to-one mapping with a specific Microsoft Graph resource type, for example, the Graph Planner Task entities maps to the [Microsoft Graph Planner Task resource type](/graph/api/resources/plannertask). The virtual entity shares the same attributes as the resource type.
 

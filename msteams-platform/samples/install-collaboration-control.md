@@ -55,9 +55,10 @@ Before installation, you must be in a Power Platform environment or admin tenant
 To install the solutions, begin by browsing to [Microsoft AppSource] and then complete the following steps:
 
 1. Select **Get it now** button.
-1. Sign in with your account, fill in the form and select **Continue**.
 
    :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Preview form "border="true":::
+
+1. Sign in with your account, fill in the form and select **Continue**.
 
    :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="overview collaboration control" border="true":::
 
@@ -68,13 +69,11 @@ To install the solutions, begin by browsing to [Microsoft AppSource] and then co
    > [!TIP]
    > If you see a permissions error when you select the environment, try selecting outside the environment dropdown menu to see if that resolves the issue.
 
-   :::image type="content" source="../assets/images/collaboration-control/install-collaboration-control.png" alt-text="Install collaboration control" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="Install collaboration control environment" border="true":::
 
 1. Select **Install**, installation might take approximately 15 minutes to complete.
 
-   :::image type="content" source="../assets/images/collaboration-control/install-solution.png" alt-text="Collaboration control install" border="true":::
-
-1. Go to [https://make.powerapps.com/](https://make.powerapps.com/), it's also supported if you're signed up to Power Apps preview.
+1. Go to [https://make.powerapps.com/](https://make.powerapps.com/), [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/) is also supported if you're signed up to Power Apps preview.
 
 1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the top right of the Power Apps portal.
 

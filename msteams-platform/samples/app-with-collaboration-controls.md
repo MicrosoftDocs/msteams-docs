@@ -22,11 +22,11 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **New solution**, so that you can provide a home for all your future customizations.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="The screenshot is an example that shows the new solution." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="The screenshot is an example that shows the new solution.":::
 
 1. Provide the name and publisher of your new solution, this solution is going to hold your custom Collaboration Manager.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration manager." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration manager.":::
 
 1. Select **Create**
 
@@ -34,9 +34,11 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Before creating your app, create a home for your data. select **New** > **Table** to get started.
 
+     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="The screenshot describes how to create a new table.":::
+
 1. Give your table a name. Under **Advanced options** select **Creating a new activity**.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot describes how to create new activity." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot describes how to create new activity.":::
 
 1. Select **Save**.
 
@@ -45,29 +47,29 @@ columns, relationships, and more (Optional).
 
 1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="The screenshot is an example that shows the new model driven app." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="The screenshot is an example that shows the new model driven app.":::
 
 1. Choose new **Modern app designer (preview)** to open the new app.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="The screenshot is an example that shows the new model driven app blank." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="The screenshot is an example that shows the new model driven app blank.":::
 
 1. Select **Create.**
 
 1. Give your app a name and select **Create.**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="The screenshot is an example that shows the Collaboration manager for inspection." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="The screenshot is an example that shows the Collaboration manager for inspection.":::
 
 1. Select **Add page.**
 
 1. Select **Table based view and form.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="The screenshot is an example that shows the table based view and form." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="The screenshot is an example that shows the table based view and form.":::
 
 1. Select **Next.**
 
 1. Search and select the table you've created earlier.
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="The screenshot is an example that shows the table view form pages." border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="The screenshot is an example that shows the table view form pages.":::
 
 1. Select **Add.**
 
@@ -87,19 +89,21 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Go to the Forms tab for your table.
 
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="The screenshot is an example that shows the forms tab for your table." border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="The screenshot is an example that shows the forms tab for your table.":::
 
 1. Select the Information form of form type **Main** to open it in the form designer.
 
 1. Once you are in the form designer, press and drag in a **1-column tab** from the **Components** section.
 
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="The screenshot is an example that shows the components of power apps." border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="The screenshot is an example that shows the components of power apps.":::
 
 1. After selecting the tab, rename the tab to “Tasks” in the property pane.
 
 1. Select the tab name to select the full section and select **Expand first component to full tab** in the Properties pane. This is required as the Collaboration controls are best viewed in full tab views.
 
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab." border="true":::
+    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" The screenshot describes how to select first component to full tab.":::
+
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab.":::
 
 1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form.
 
@@ -109,29 +113,30 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
      :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Select the table to activities":::
 
-5. Select ‘Hide Label’ on the Properties
+5. Select ‘Hide Label’ on the Properties.
 
      :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Select hide label":::
 
-1. The Tasks control will now display
+1. The Tasks control will now display.
 
      :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Tasks control display":::
 
-1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app
-1. Once all controls are added, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.  
+1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app.
+1. Once all controls are added, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.
+
      :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Controls form designer":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections":::
 
 1. Create a new record by selecting **+ New** and then open the record.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="The screenshot is an example that shows the power apps that open the record." border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="The screenshot is an example that shows the power apps that open the record.":::
 
 1. Now you can see views for each tab that appear similar to the following image:
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="The screenshot is an example that shows the tasks." border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="The screenshot is an example that shows the tasks.":::
 
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
@@ -164,7 +169,7 @@ Use the following instructions to retrieve the Group ID of your Teams team for A
 
 1. Select the More options **...** and **Get link** to team.
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="The screenshot describes how to get the linked to the team." border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="The screenshot describes how to get the linked to the team.":::
 
 1. Copy the link and record the value of `groupId` from the URL. You'll use this value at a later stage while defining the settings of your solution.
 
@@ -228,11 +233,11 @@ You would need to add the Settings IDs that you've saved earlier for your applic
 
 The Notes control doesn't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you're facing issues launching and saving the controls recheck the settings values.
 
-## Navigate your new Collaboration Manager app
+## Explore your new Collaboration Manager app
 
 Following sections guides you on how to use the Task, Notes, Meetings, Files, and Approvals controls.
 
-### Creating Tasks
+### Create Tasks
 
 Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens an empty page where users can add all the relevant tasks they need to complete.
 
@@ -248,12 +253,12 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens a
 
 1. After opening the Tasks by Planner and To Do app, users can see all the tasks that were created in your app within the **Assigned to me** section of the app. Users can also view the details of a task, add attachments, and mark them as complete.
 
-### Creating notes
+### Create notes
 
 To create a note select **Notes** tab from your app, which would redirect to an empty screen where users can provide any relevant information. To add a new note, select **New note**.
 After adding relevant details in the notes, select **Save**.
 
-### Creating meetings
+### Create meetings
 
 Select **Meetings** tab in a record to schedule both internal and external meetings.
 
@@ -267,6 +272,8 @@ To schedule an internal meeting, select the dropdown next to the **New meeting**
 
 Within the **New meeting** dialog, users can provide relevant information about the meeting and select **Save**. The meeting appears in the meetings list.
 
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="The screenshot describes how to schedule a new meeting.":::
+
 To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option isn't available in the **New Meeting** dropdown, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). You can add additional booking types by adding additional services within your Bookings business.
 
 :::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="The screenshot describes on how to schedule customer Bookings.":::
@@ -275,13 +282,23 @@ Users can see both Internal meetings and Customer Bookings on their meeting list
 
 As the meetings are backed by Outlook, users can navigate to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
-### Adding files
+Following are the steps to add a shared calendar to your Outlook (optional) :
+
+1. On the Home tab of the ribbon, in the Manage Calendars section, select Open Calendar > Open Shared Calendar.
+
+1. In the Open a Shared Calendar dialog , enter the person's name. Select the person you're looking for and then select OK.
+
+In the left Pane, under Shared Calendars you should now see an additional calendar with the person's name.
+
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="The screenshot describes on how to schedule customer Bookings.":::
+
+### Add files
 
 Open the **Files** tab in your application and select **Upload** to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view automatically refreshs to show the files in the list.
 
-:::image type="content" source="../assets/images/collaboration-control/upload-files.png" alt-text="The screenshot describes how to upload files.":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="The screenshot describes how to open shared calendar.":::
 
-### Using Approvals
+### Approvals
 
 Approvals allow users to request sign out from others when working in a record. For example, request an approval to complete a task or close a record.
 
@@ -301,4 +318,4 @@ Approvals allow users to request sign out from others when working in a record. 
 
 1. Select the approval to view the details.
 
-2. For more information on Approvals: Create an approval [(microsoft.com)](https://support.microsoft.com/en-us/office/create-an-approval-6548a338-f837-4e3c-ad02-8214fc165c84)
+For more information on Approvals, See [create an approval](https://support.microsoft.com/en-us/office/create-an-approval-6548a338-f837-4e3c-ad02-8214fc165c84).

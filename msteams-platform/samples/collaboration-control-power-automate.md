@@ -167,7 +167,7 @@ The following triggers and actions are supported within a flow:
 
   1. Retrieve Collaboration session
 
-      r::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="The screenshot is an example that shows how to Retrieve collaboration session.":::
+      ::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="The screenshot is an example that shows how to Retrieve collaboration session.":::
 
      This step action returns the collaboration session that matches the provided inputs:
 
@@ -274,6 +274,7 @@ The following triggers and actions are supported within a flow:
       :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="The screenshot is an example that shows how to get collaboration metadata.":::
 
      This step action lists all metadata matching the specified filter.
+
      **Filter:** A filter to apply to the metadata query.
      Example retrieving all metadata related to a collaboration map entity ID  
      m365_entityname eq 'm365_collaborationmap' and m365_entityid eq 'GUID'
