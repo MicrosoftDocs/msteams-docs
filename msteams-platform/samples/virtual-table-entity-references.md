@@ -159,54 +159,53 @@ Learn about all the available Collaboration controls virtual entities and their 
 |`m365_grapheventid`|StringType|Unique identifier of the graph event.|
 |`m365_groupid`|StringType|Group ID to which the event belongs.|
 
-### Graph Booking Appointment
+## Graph Booking Appointment
 
 * Entity name: m365_graphbookingappointment
-* Graph resource: graph/api/resources/bookingAppointment
+* Graph resource: [bookingAppointment resource type](/graph/api/resources/bookingappointment)
 * Sorting isn't supported.
 * Filtering is supported on the following columns:
-* m365_bookingbusinessID
-* m365_collaborationrootID
-* m365_customertimezone
-* m365_optoutofcustomeremail
-* m365_price
-* m365_pricetype
-* m365_serviceID
-* m365_servicename
+  * m365_bookingbusinessID
+  * m365_collaborationrootID
+  * m365_customertimezone
+  * m365_optoutofcustomeremail
+  * m365_price
+  * m365_pricetype
+  * m365_serviceID
+  * m365_servicename
 * Pagination isn't supported.
 
-### Attributes Graph Booking Appointment
+### Attributes for Graph Booking Appointment
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| m365_collaborationrootID| StringType| Collaboration root ID(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records.|
-| m365_graphbookingappointmentID | StringType | Unique Identifier of the graph booking appointment.|
-| m365_bookingbusinessID | StringType | The unique Identifier of the booking business the appointment is scheduled under.|
-| m365_additionalinformation | StringType | Additional information that is sent to the customer when an appointment is confirmed.|
-| m365_customers | StringType| It lists down the customer properties for an appointment. appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional[{\"customerID\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" },\"name\":\"Jordan Miller\",\"notes\",\"phone\",\"timeZone\",\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
-| m365_customertimezone | StringType | The time zone of the customer. For a list of possible values, see docs.microsoft.com/graph/api/resources/datetimetimezone?view=graph-rest-beta> |
-| m365_duration | StringType | The length of the appointment, denoted in ISO8601 format.|
-| m365_enddatetime | DateTimeType | The date, time, and time zone that the appointment ends.|
-| m365_filledattendeescount | IntegerType | The current number of customers in the appointment.|
-| m365_ID | StringType | The ID of the bookingAppointment. Read-only.|
-| m365_islocationonline | BooleanType | True indicates that the appointment will be held online. Default value is false.|
-| m365_joinweburl | StringType | The URL of the online meeting for the appointment.|
-| m365_maximumattendeescount | IntegerType | The maximum number of customers allowed in an appointment.|
-| m365_optoutofcustomeremail | BooleanType | True indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.|
-| m365_postbuffer | StringType | The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.|
-| m365_prebuffer | StringType | The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.|
-| m365_price | DecimalType | The regular price for an appointment for the specified bookingService.|
-| m365_pricetype | StringType | A setting to provIDe flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.|
-| m365_reminders | StringType | The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
-[{\"message\":\"We look forward to seeing you!\",\"offset\":\"P1D\",\"recipients\":\"customer\"},{\"message\":\"Reminder that you have an appointment!\",\"offset\":\"P1D\",\"recipients\":\"staff\"}] |
-| m365_selfserviceappointmentID | StringType | additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.|
-| m365_serviceID | StringType | The ID of the bookingService associated with this appointment.|
-| m365_servicelocation | StringType | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"Our office address\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" } |
-| m365_servicename | StringType | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceID property. |
-| m365_servicenotes |StringType | Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.|
-| m365_smsnotificationsenabled | BooleanType | True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.|
-| m365_staffmemberIDs | StringType | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
-| m365_startdatetime | DateTimeType | The date, time, and time zone that the appointment begins.|
+| `m365_collaborationrootid`| StringType| Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_graphbookingappointmentid` | StringType | Unique Identifier of the graph booking appointment.|
+| `m365_bookingbusinessid` | StringType | The unique Identifier of the booking business the appointment is scheduled under.|
+| `m365_additionalinformation` | StringType | Additional information that is sent to the customer when an appointment is confirmed.|
+| `m365_customers` | StringType| It lists down the customer properties for an appointment. appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional[{\"customerID\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" },\"name\":\"Jordan Miller\",\"notes\",\"phone\",\"timeZone\",\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
+| `m365_customertimezone` | StringType | The time zone of the customer. For a list of possible values, see [dateTimeTimeZone resource type](/graph/api/resources/datetimetimezone). |
+| `m365_duration` | StringType | The length of the appointment, denoted in ISO8601 format.|
+| `m365_enddatetime` | DateTimeType | The date, time, and time zone that the appointment ends.|
+| `m365_filledattendeescount` | IntegerType | The current number of customers in the appointment.|
+| `m365_id` | StringType | The ID of the bookingAppointment. Read-only.|
+| `m365_islocationonline` | BooleanType | True indicates that the appointment will be held online. Default value is false.|
+| `m365_joinweburl` | StringType | The URL of the online meeting for the appointment.|
+| `m365_maximumattendeescount` | IntegerType | The maximum number of customers allowed in an appointment.|
+| `m365_optoutofcustomeremail` | BooleanType | True indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.|
+| `m365_postbuffer` | StringType | The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.|
+| `m365_prebuffer` | StringType | The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.|
+| `m365_price` | DecimalType | The regular price for an appointment for the specified bookingService.|
+| `m365_pricetype` | StringType | A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.|
+| `m365_reminders` | StringType | The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by it's ID. [{\"message\":\"We look forward to seeing you!\",\"offset\":\"P1D\",\"recipients\":\"customer\"},{\"message\":\"Reminder that you have an appointment!\",\"offset\":\"P1D\",\"recipients\":\"staff\"}] |
+| `m365_selfserviceappointmentid` | StringType | Additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.|
+| `m365_serviceid` | StringType | The ID of the bookingService associated with this appointment.|
+| `m365_servicelocation` | StringType | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"Our office address\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" } |
+| `m365_servicename` | StringType | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceID property. |
+| `m365_servicenotes` |StringType | Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.|
+| `m365_smsnotificationsenabled` | BooleanType | True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.|
+| `m365_staffmemberids` | StringType | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
+| `m365_startdatetime` | DateTimeType | The date, time, and time zone that the appointment begins.|
 
 ### Graph Drive
 
