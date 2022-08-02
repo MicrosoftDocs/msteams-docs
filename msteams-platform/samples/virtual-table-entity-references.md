@@ -207,10 +207,10 @@ Learn about all the available Collaboration controls virtual entities and their 
 | `m365_staffmemberids` | StringType | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
 | `m365_startdatetime` | DateTimeType | The date, time, and time zone that the appointment begins.|
 
-### Graph Drive
+## Graph Drive
 
 * Entity name: m365_graphdrive
-* Graph resource: graph/api/resources/drive
+* Graph resource: [drive resource type](/graph/api/resources/drive)
 * Sorting isn't supported.
 * Filtering isn't supported.
 * Server driven pagination is supported.
@@ -219,23 +219,22 @@ Learn about all the available Collaboration controls virtual entities and their 
 
 |Column |Dataverse Type |Details |
 |---|---|---|
-|m365_collaborationrootID |StringType | Collaboration root ID(s) of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note: This attribute won't be returned when retrieving multiple records. |
-|m365_createdby |StringType |IDentity of the user, device, or application that created the item. Read-only. This attribute is a JSON encoded string for example { "user": { "displayName": "System Account" } } |
-|m365_createddatetime |DateTimeType |Date and time of item creation. Read-only. |
-|m365_description |StringType |ProvIDe a user-visible description of the drive. Read-only. |
-|m365_drivetype |StringType |Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only. |
-|m365_graphdriveID |GuID |Unique Identifier of the graph drive. |
-|m365_ID |StringType |The unique Identifier of the drive. Read-only. |
-|m365_lastmodifiedby | StringType |IDentity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string for example { "user": { "email": “user@contoso.com”,  "ID": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
-|m365_lastmodifieddatetime |DateTimeType |Date and time the item was last modified. Read-only.|
-|m365_name |StringType |The name of the item. Read-only. |
-|m365_owner |StringType |Optional. The user account that owns the drive. Read-only. This attribute is a JSON encoded string. For example { "group": { "ID": "76c7286f-8645-4ba8-bc0f-c65a16424aaa", "displayName": "Group Name" } } |
-|m365_quota |StringType |Optional. Information about the drive's storage space quota. Read-only.
-This attribute is a JSON encoded string. For example { "deleted": 482586,  "remaining": 27487788645969, "state": "normal", "total": 27487790694400, "used": 1565845 } |
-|m365_sharepointIDs |StringType |Returns Identifiers useful for SharePoint REST compatibility. Read-only. This property isn't returned by default and must be selected using the $select query parameter. This attribute is a JSON encoded string. For example "sharePointIDs": { "listID": "29d8457a-8e26-4291-9901-09718a388aaa", "siteID": "93618739-b3ca-4107-a77c-fba278c48aaa", "siteUrl": “<https://contoso.sharepoint.com>”,  "tenantID": "53986071-de92-43ad-a41f-f3c4adb2beef",  "webID": "a0d0e9ec-e547-4338-92d9-4c2c62e5beef" } |
-| m365_siteID |StringType |The Identifier for the site that contains the document library.
-|m365_system |StringType |If present, indicates that this is a system-managed drive. Read-only.
-|m365_weburl |StringType |URL that displays the resource in the browser. Read-only.
+|`m365_collaborationrootid` |StringType | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_createdby` |StringType |Identity of the user, device, or application that created the item. Read-only. This attribute is a JSON encoded string for example { "user": { "displayName": "System Account" } } |
+|`m365_createddatetime` |DateTimeType |Date and time of item creation. Read-only. |
+|`m365_description` |StringType |Provide a user-visible description of the drive. Read-only. |
+|`m365_drivetype` |StringType |Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only. |
+|`m365_graphdriveid` |GuID |Unique Identifier of the graph drive. |
+|`m365_id` |StringType |The unique Identifier of the drive. Read-only. |
+|`m365_lastmodifiedby` | StringType |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string for example { "user": { "email": “user@contoso.com”,  "ID": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
+|`m365_lastmodifieddatetime` |DateTimeType |Date and time the item was last modified. Read-only.|
+|`m365_name` |StringType |The name of the item. Read-only. |
+|`m365_owner` |StringType |Optional. The user account that owns the drive. Read-only. This attribute is a JSON encoded string. For example { "group": { "ID": "76c7286f-8645-4ba8-bc0f-c65a16424aaa", "displayName": "Group Name" }} |
+|`m365_quota` |StringType |Optional. Information about the drive's storage space quota. Read-only. This attribute is a JSON encoded string. For example { "deleted": 482586,  "remaining": 27487788645969, "state": "normal", "total": 27487790694400, "used": 1565845 } |
+|`m365_sharepointids` |StringType |Returns Identifiers useful for SharePoint REST compatibility. Read-only. This property isn't returned by default and must be selected using the $select query parameter. This attribute is a JSON encoded string. For example "sharePointIDs": { "listID": "29d8457a-8e26-4291-9901-09718a388aaa", "siteID": "93618739-b3ca-4107-a77c-fba278c48aaa", "siteUrl": “<https://contoso.sharepoint.com>”,  "tenantID": "53986071-de92-43ad-a41f-f3c4adb2beef",  "webID": "a0d0e9ec-e547-4338-92d9-4c2c62e5beef" } |
+| `m365_siteid` |StringType |The Identifier for the site that contains the document library.
+|`m365_system` |StringType |If present, indicates that this is a system-managed drive. Read-only.
+|`m365_weburl` |StringType |URL that displays the resource in the browser. Read-only.
 
 ### Graph Drive Item
 
@@ -259,7 +258,7 @@ This attribute is a JSON encoded string. For example { "deleted": 482586,  "rema
 |m365_createddatetime |DateTimeType |Date and time of item creation. Read-only. |
 |m365_ctag |StringType |An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note. This property isn't returned if the item is a folder. Read-only. |
 |m365_deleted |StringType |Information about the deleted state of the item. Read-only. This attribute is a JSON encoded string. for example { "state": "string" } |
-|m365_description |StringType |ProvIDes a user-visible description of the item. Read-write. Only on OneDrive Personal. |
+|m365_description |StringType |Provides a user-visible description of the item. Read-write. Only on OneDrive Personal. |
 |m365_driveID |StringType |The Identifier for the drive that contains the drive item.|
 |m365_etag |StringType |eTag for the entire item (metadata + content). Read-only. |
 | m365_file |StringType |File metadata, if the item is a file. Read-only. This attribute is a JSON encoded string. for example {"hashes":{"crc32Hash","quickXorHash":"Biuzvwdu+Tmu6yRefayD27hD9vD=","sha1Hash","sha256Hash" },"mimeType":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","processingMetadata" } |
