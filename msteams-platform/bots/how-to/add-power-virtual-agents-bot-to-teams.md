@@ -74,10 +74,10 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 1. **Add valid domains for your bot**  
 
-   This step is only required if your bot requires the user to sign in.
-    1. Go to **Domains** under **Configure** section.
-    1. Select **Create your first domain** and enter a valid domain.
-    1. Select **Add**.
+   This step is only applicable, if you want your user to sign in to the bot:
+     1. Go to **Domains** under **Configure** section.
+     1. Select **Create your first domain** and enter a valid domain.
+     1. Select **Add**.
 
     ```bash
        token.botframework.com
