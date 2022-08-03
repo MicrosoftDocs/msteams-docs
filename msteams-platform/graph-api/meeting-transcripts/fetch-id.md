@@ -514,6 +514,12 @@ dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
 
 After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
 
+## Code samples
+
+| **Sample name** | **Description** | **C#** | **Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+| Meeting transcription | This is a sample application which demonstrates how to get Transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
+
 ## Next step
 
 > [!div class="nextstepaction"]
