@@ -10,7 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app locally using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is the process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
 
 * Prepare Teams app dependencies
 * Start debugging
@@ -34,6 +34,8 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 
 ## Debug your app locally
 
+You can debug your app locally in Visual Studio using Teams Toolkit by performing the following:
+
 ### Set up Ngrok (Only for Bot and Message Extension app)
 
 Use a Command Prompt to run this command:
@@ -44,28 +46,32 @@ ngrok http 5130.
 
 ### Set up your Teams Toolkit
 
-Perform the following steps to debug your app after you create a new app using the Teams Toolkit:
+Perform the following steps using the Teams Toolkit to debug your app after you create a project:
 
-1. In Visual Studio Solution Explorer, right click on your project file and select "Teams Toolkit"
+1. Right-click on your **project**.
+1. Select **Teams Toolkit**.
+1. Select **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-selectTeamsToolkit.png" alt-text="localdebug selectTeamsToolkit":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug":::
 
-Then select "Prepare Teams app dependencies".
+   > [!NOTES]
+   > [In this scenario the project name is MyTeamsApp1]
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-selectTeamsPrepare.png" alt-text="localdebug selectTeamsPrepare":::
+Before you sign in to your Microsoft 365 account needs to have the sideloading permission. Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
-You'll be asked to sign in to your Microsoft 365 account.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-selectAccountContinue.png" alt-text="localdebug selectAccountContinue":::
+4. Sign in to your Microsoft 365 Account.
+5. Select **Continue"
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
-   > Your M365 account need to have the sideloading permission to ensure Teams app can be uploaded to your tenant, otherwise you will end up with failure to see your Teams app running in Teams client. Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
+   > Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
 
-2. Go to the "Debug" menu > select "Start Debugging" or directly press **F5**. Visual Studio will launch the Teams app inside Microsoft Teams client in a browser.
+6. Select **Debug**.
+7. Select **Start Debugging**, or directly press **F5**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-menu-selectDebug.png" alt-text="localdebug menu selectDebug":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-menu-startDebugging.png" alt-text="localdebug menu startDebug":::
+Visual Studio launches the Teams app inside Microsoft Teams client in a browser.
 
    > [!Note]
    > Learn more by visiting <https://aka.ms/teamsfx-vs-debug>.
