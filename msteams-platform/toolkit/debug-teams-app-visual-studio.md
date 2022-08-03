@@ -28,6 +28,7 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 | &nbsp; | Visual Studio | You can install the free community edition of Visual Studio, and install the workload. |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+ | &nbsp; | [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
 | &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
 |&nbsp;  | **Optional** | &nbsp; |
 |&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok is used to forward external messages from Azure Bot Framework to your local machine.|
@@ -90,41 +91,41 @@ Ensure to post HTTP request to <http://localhost:5130/api/notification> to trigg
 
 ## Key features of Teams Toolkit
 
+You can note the following key features of the Teams Toolkit, that automate the local debugging process of your Teams app:
+
 ### Prepare Teams app dependencies
 
-Teams Toolkit will prepare local debug dependencies and register a Teams app in the tenant, which your account belongs to.
-For Bot and Message Extension apps, Teams Toolkit will register and configure a bot.
+Teams Toolkit prepares a local debug dependencies and registers your Teams app in the tenant in your account. For Bot and Message Extension apps, Teams Toolkit will register and configure a bot.
 
 ### Start debugging
 
-You can perform single operation, press **F5** to start debugging. The Teams Toolkit starts to build code, starts services, and launches browser.
+You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and launches app in your browser.
 
 ### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser.
+You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in your web browser.
 The following image shows the toggle breakpoints:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-togglebreakpoints.png" alt-text="localdebug togglebreakpoints":::
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure functions at the same time when you're debugging the Teams app.
-And then select the hot reload button as follow to apply your edits:
+Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source codes simultaneously during debugging:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-hotreload.png" alt-text="localdebug hotreload":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Select hot reload icon":::
 
-Or you can enable "Hot Reload on File Save" for auto hot reload:
+Select the option **Hot Reload on File Save** in the drop down to enable auto hot reload
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-hotreload-onSave.png" alt-text="localdebug hotreload onSave":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Select hot reload on file save":::
   
    > [!Tip]
-   > You can use hotreload function of VS during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
+   > To learn more about Hot Reload function of Visual Studio during debug you can visit <https://aka.ms/teamsfx-vs-hotreload>.
 
 ### Stop debugging
 
-When you complete local debug, you can stop debugging. The following image shows the stop debug action:
+Select **Stop Debugging** when the local debug is complete:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-stopDebugging.png" alt-text="localdebug stopDebugging":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Select stop debug icon":::
 
 ## Customize debug settings
 
