@@ -55,10 +55,10 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug":::
 
-   > [!NOTES]
+   > [!NOTE]
    > [In this scenario the project name is MyTeamsApp1]
 
-Before you sign in to your Microsoft 365 account needs to have the sideloading permission. Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+Before you sign in to your Microsoft 365 account. Your account needs to have the sideloading permission. Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 4. Sign in to your Microsoft 365 Account.
 5. Select **Continue"
@@ -68,11 +68,11 @@ Before you sign in to your Microsoft 365 account needs to have the sideloading p
    > Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
 
 6. Select **Debug**.
-7. Select **Start Debugging**, or directly press **F5**.
+7. Select **Start Debugging**, or directly select **F5**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
 
-Visual Studio launches the Teams app inside Microsoft Teams client in a browser.
+Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
 
    > [!Note]
    > Learn more by visiting <https://aka.ms/teamsfx-vs-debug>.
@@ -84,14 +84,14 @@ Visual Studio launches the Teams app inside Microsoft Teams client in a browser.
    > [!TIP]
    > You can also use hot reload function of Visual Studio during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
 
-Ensure to post HTTP request to <http://localhost:5130/api/notification> to trigger notification, when you're debugging Notification Bot app. You can use any API tool: curl (Windows Command Prompt), Postman, etc., if you selected http trigger when creating the project.
+Ensure to post HTTP request to <http://localhost:5130/api/notification> to trigger notification, when you're debugging Notification Bot app. You can use any API tool: curl (Windows Command Prompt), Postman, etc., if you've selected http trigger when creating the project.
 
    > [!TIP]
    > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you locally try to run the Teams app again.
 
 ## Key features of Teams Toolkit
 
-You can note the following key features of the Teams Toolkit, that automate the local debugging process of your Teams app:
+You can see the following key features of the Teams Toolkit, that automate the local debugging process of your Teams app:
 
 ### Prepare Teams app dependencies
 
@@ -110,11 +110,11 @@ The following image shows the toggle breakpoints:
 
 ### Hot reload
 
-Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source codes simultaneously during debugging:
+Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source codes simultaneously during debugging.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Select hot reload icon":::
 
-Select the option **Hot Reload on File Save** in the drop-down to enable auto hot reload
+Select the option **Hot Reload on File Save** in the drop-down to enable auto hot reload.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Select hot reload on file save":::
   
@@ -133,7 +133,7 @@ You can customize debug setting for your Teams app as per your requirement.
 
 ### Use your bot endpoint
 
-Set siteEndpoint configuration in **.fx/configs/config.local.json** to your endpoint.
+You can set siteEndpoint configuration in **.fx/configs/config.local.json** to your endpoint.
 
 ```
 "bot": {
@@ -149,14 +149,14 @@ You can add environment variables to **Properties/launchSettings.json** file.
 
 ### Launch Teams app as a web app
 
-You can launch the Teams app as a web app instead of running in Teams client.
+You can launch Teams app as a web app instead of running in Teams client.
 
 1. Select **Properties** > **launchSettings.json** in solution explorer panel under your project.
 1. Remove the **'launchUrl'** from the file.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl":::
 
-1. Right-click on the **Solution**.
+1. Right-click on **Solution**.
 1. Select **Properties**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties":::
