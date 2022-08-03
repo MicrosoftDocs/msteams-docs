@@ -1,33 +1,42 @@
 ---
 title: Create new Teams app in Visual Studio
-author: zyxiaoyuer
+author: surbhigupta
 description: In this module, learn how to create a new Teams app using Teams Toolkit for Visual Studio
-ms.author: surbhigupta
+ms.author: VS-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 07/29/2022
 ---
 # Create new Teams app in Visual Studio
 
-Teams Toolkit provides Microsoft Teams app templates in Visual Studio. You can search for Teams app templates when you create new project. To create a Teams app:
+Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create Teams app. You can search for Teams app templates when you create new project.
 
-1. You can launch Visual Studio and select **Create a new project** under the **Get started** section, or you can select on **File > New > Project** directly from the application.
+1. Select **Create a new project** under the **Get started** section when you launch Visual Studio.
+You can also create a new project directly from the application.
+
+1. Select **File** menu.
+1. Select  **New**.
+1. Select **Project**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project.png" alt-text="Create new project":::
 
-1. Search for Microsoft Teams app from the template list. choose **Microsoft Teams app** and then select **Next**.
+1. Search for Microsoft Teams app from the template list.
+1. Select **Microsoft Teams app**.
+1. Select **Next**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app.png" alt-text="Search and choose microsoft teams app":::
 
-1. Specify your application name by giving a **Project name** in this page and select **Create**.
+1. Select **Project name** and enter your project name.
+1. Select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name.png" alt-text="Name your application":::
 
-1. You can choose the **Teams app type** that you would like to create in this page, and select **Create**.
+1. Select the **Teams app type** that you would like to create.
+1. Select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type.png" alt-text="Select the teams app type":::
 
-## The Teams App templates in Teams Toolkit for Visual Studio
+## Teams app templates in Teams Toolkit for Visual Studio
 
 You can see Teams app templates already populated in Teams Toolkit for various Teams app type. The following table lists all the templates available:
 
