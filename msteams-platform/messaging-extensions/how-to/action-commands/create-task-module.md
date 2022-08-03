@@ -643,7 +643,7 @@ Respond to the invoke request with a `task` object that contains either a `taskI
 
 |Property name|Purpose|
 |---|---|
-|`type`| Can be either `continue` to present a form, or `message` for a simple popup. |
+|`type`| Can be either `continue` to present a form, or `message` for a simple pop-up. |
 |`value`| Either a `taskInfo` object for a form, or a `string` for a message. |
 
 The schema for the taskInfo object is:

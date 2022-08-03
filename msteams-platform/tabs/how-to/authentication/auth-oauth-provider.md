@@ -105,7 +105,7 @@ The following image provides the flow to add authentication to external browsers
       ```JavaScript
       const state = JSON.parse(req.query.state)
       if (state.oauthRedirectMethod === 'deeplink') {
-         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
+         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}')
       }
       else {
       // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web
