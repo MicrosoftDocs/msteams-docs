@@ -74,7 +74,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL.
 
-    For more information, see [Get event](/graph/api/event-get.md).
+    For more information, see [Get event](/graph/api/event-get).
 
     Use the following example to request the meeting URL:
 
@@ -151,9 +151,9 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     The chat ID is contained in `threadId`.
 
-4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
 
-    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
+    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
 5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
