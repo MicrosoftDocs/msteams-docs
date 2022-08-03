@@ -305,6 +305,16 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Build shared channel
+    href: concepts/build-and-test/Shared-channels.md  
+  - name: Get meeting transcripts using Graph APIs
+    items:
+    - name: Overview
+      href: graph-api/meeting-transcripts/overview-transcripts.md
+    - name: Fetch meeting ID and organizer ID
+      href: graph-api/meeting-transcripts/fetch-id.md
+    - name: Get transcripts
+      href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -322,9 +332,9 @@
     - name: Agile Poker tutorial
       href: sbs-teams-live-share.yml
     - name: Live Share SDK FAQ
-      href: apps-in-teams-meetings/teams-live-share-faq.md  
+      href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
-    href: apps-in-teams-meetings/teams-together-mode.md   
+    href: apps-in-teams-meetings/teams-together-mode.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -557,6 +567,44 @@
       href: samples/teams-low-code-solutions.md
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+  - name: Collaboration controls
+    items:
+    - name: Overview
+      href: samples/collaboration-control.md
+    - name: Install Collaboration controls
+      href: samples/install-collaboration-control.md
+    - name: Create an app with Collaboration controls
+      href: samples/app-with-collaboration-controls.md
+    - name: Deploy an app with Collaboration control to Teams
+      href: samples/deploy-collaboration-control-in-teams.md
+    - name: Optional configurations for Collaboration control app
+      items:
+      - name: Power Automate
+        href: samples/collaboration-control-power-automate.md
+      - name: Configure Tasks for external clients 
+        href: samples/configure-tasks.md
+      - name: Virtual tables for Tasks, Meetings, and Files
+        items:
+        - name: Overview
+          href: samples/virtual-tables-for-tasks.md
+        - name: Virtual tables web API 
+          href: samples/virtual-tables-api.md
+        - name: Virtual tables entity reference  
+          href: samples/virtual-table-entity-references.md            
+    - name: Collaboration controls and Settings API
+      items:
+      - name: Overview
+        href: samples/collaboration-api-reference.md
+      - name: Collaboration - Custom APIs
+        href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+      - name: Collaboration - Standard OData APIs
+        href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+      - name: Settings - Custom APIs
+        href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+      - name: Settings - Standard OData APIs
+        href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+    - name: Limitations for Collaboration control   
+      href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
@@ -605,5 +653,3 @@
     href: resources/troubleshoot.md
 - name: Support and feedback
   href: feedback.md
-  
-  
