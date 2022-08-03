@@ -1,7 +1,7 @@
 ---
 title: Designing your custom app
 author: heath-hamilton
-description: Learn how to design Microsoft Teams apps. Resources include the Microsoft Teams UI Kit, best practices, examples, and more.
+description: Learn how to design Microsoft Teams apps and resources include the Microsoft Teams UI Kit, best practices, examples, and more.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
@@ -117,7 +117,7 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 * [Personal apps](../../concepts/design/personal-apps.md)
 * [Tabs](../../tabs/design/tabs.md)
-* [Messaging extensions](../../messaging-extensions/design/messaging-extension-design.md)
+* [Message extensions](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Meeting extensions](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
@@ -179,7 +179,7 @@ Design Adaptive Cards in our web-based tool.
 
 ## See also
 
-* [Prerequisites and API references for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Enable and configure your apps for Teams meetings](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Designing your Microsoft Teams bot](~/bots/design/bots.md)
 * [Create Virtual Assistant](~/samples/virtual-assistant.md)
 * [Designing task modules for your Microsoft Teams app](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

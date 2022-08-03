@@ -1,7 +1,6 @@
 ---
 title: Add a bot menu
-description: Describes how to create menus for bots in Microsoft Teams
-keywords: teams bots menus creation
+description: In this module, learn how to add a bot menu in Microsoft Teams and create menus for bots in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
@@ -17,7 +16,8 @@ To aid discovery and to help educate users about your bot’s functionality, you
 When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.
 
 ## Bot menu support on Teams mobile app
-> [!NOTE] 
+
+> [!NOTE]
 > Bot menus are not displayed on mobile devices.
 
 ## App manifest

@@ -1,7 +1,7 @@
 ---
 title: Teams solution for building apps
 author: heath-hamilton
-description: Overview of Teams solution for building apps
+description: Learn the overview of Teams solution for building apps and provide support from planning your app to distributing it.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
@@ -9,7 +9,8 @@ ms.date: 11/02/2021
 ---
 # The Teams solution
 
-The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Microsoft Teams. It provides a vast suite of development environments and tools to support app development.
+
+The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
 
 ## The user story
 
@@ -25,20 +26,19 @@ Collate and map requirements to Teams features:
 | User app needs | Check forecast | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | Microsoft Graph, Weather API |
+| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph, Weather API |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
-|
 
 **Teams app solution**: A Teams *personal chat bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Microsoft Teams that sends weather forecast to customers so that they can plan ahead their traveling dates" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates":::
 
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. Create a personal chat bot app.
 1. Integrate with an external weather forecast API to connect and request forecast for specific date and location.
-1. Integrate with Microsoft Graph for registered users.
+1. Integrate with :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph for registered users.
 1. Check and send forecast details based on user's travel date and travel location.
 
 ## Choose what suits you
@@ -47,7 +47,7 @@ You can build a Teams app as per your app's requirements. Based on factors, such
 
 A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Business need app" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Business need app":::
 
 Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
@@ -59,17 +59,17 @@ A Teams app brings your users the advantages of a collaborative workspace.
 
 As a platform for building apps, Teams offers the full range of apps and toolkits. Teams platform supports you at every stage from planning your app to distributing it.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below." border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below.":::
 
 From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. Plan your project and figure out the requirement.
 1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Build the app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities and M365 data with Microsoft Graph.
+1. Extend functionality by adding more Teams capabilities and M365 data with :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
-1. Manage and publish the apps to Store with Developer Portal.
+1. Manage and publish the apps to Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
 
 ## Next step
 
@@ -104,7 +104,7 @@ From designing to building and distributing a Teams app, you can use various too
         **Design your app**
     :::column-end:::
     :::column span="2":::
-        Design your app UI with Microsoft Teams UI Kit.
+        Design your app UI with Teams UI Kit.
 
         > [!div class="nextstepaction"]
         > [Design your Teams app](~/concepts/design/design-teams-app-process.md)
@@ -119,7 +119,7 @@ From designing to building and distributing a Teams app, you can use various too
         Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
         > [!div class="nextstepaction"]
-        > [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+        > [See app scenarios](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
     :::column-end:::
 :::row-end:::
 
@@ -128,7 +128,7 @@ From designing to building and distributing a Teams app, you can use various too
         **Extend your app across Microsoft 365**
     :::column-end:::
     :::column span="2":::
-        You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
+You can preview your Teams apps running in other high usage Microsoft 365 experiences with Teams JavaScript client SDK v2 Preview.
 
         > [!div class="nextstepaction"]
         > [Extend your app](m365-apps/overview.md)
@@ -140,7 +140,7 @@ From designing to building and distributing a Teams app, you can use various too
         **Test your app**
     :::column-end:::
     :::column span="2":::
-        After integrating your app with Microsoft Teams, you must test your app before publishing it.
+        After integrating your app with Teams, you must test your app before publishing it.
 
         > [!div class="nextstepaction"]
         > [Test your app](concepts/build-and-test/test-app-overview.md)
@@ -152,10 +152,22 @@ From designing to building and distributing a Teams app, you can use various too
         **Distribute your app**
     :::column-end:::
     :::column span="2":::
-        You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it.
+        You can provide your Teams app to an individual, team, organization, or anyone who wants to use it.
 
         > [!div class="nextstepaction"]
         > [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Monetize your app**
+    :::column-end:::
+    :::column span="2":::
+        Teams store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
+
+        > [!div class="nextstepaction"]
+        > [Monetize your app](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
     :::column-end:::
 :::row-end:::
 

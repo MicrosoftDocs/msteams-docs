@@ -64,7 +64,7 @@ In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** 
 ## Upload your tab
 
 >[!Note]
-> App Studio can be used to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file if you prefer. If you do, be sure to build the solution again to create the `tab.zip` file to upload.
 
 **To upload your tab**
 
@@ -72,13 +72,13 @@ In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** 
 
 1. Go to **App Studio** and select the **Manifest editor** tab.
 
-1. Select **Import an existing app** in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available here:
+1. Select **Import an existing app** in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available here:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Upload **tab.zip** to App Studio.
+1. Upload `tab.zip` to App Studio.
 
 ### Update your app package with Manifest editor
 
@@ -86,7 +86,7 @@ After you have uploaded your app package into App Studio, you must finish config
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There is a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your **manifest.json** but there are a few fields that you must update:
+There is a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your `manifest.json` but there are a few fields that you must update:
 
 #### Details: App details
 

@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Update and delete messages sent from your bot
+# Update and delete messages sent from bot 
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -52,7 +52,6 @@ update_result = await context.update_activity(new_activity)
 # [REST API](#tab/rest)
 
 > [!NOTE]
-
 > You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do so, you need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
 
 To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
@@ -66,7 +65,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
 
 ---
-* * *
+---
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
@@ -119,7 +118,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 |----|----|
 | An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
 
-* * *
+---
 
 Now that you have updated cards, you can delete messages using the Bot Framework.
 

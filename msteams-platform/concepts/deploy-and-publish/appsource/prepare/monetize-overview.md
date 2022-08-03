@@ -1,16 +1,16 @@
 ---
 title: Monetize your app overview
-description: Learn how to monetize your Microsoft Teams app.
+description: Learn how to monetize your Microsoft Teams app that includes choose a pricing model with Saas offer.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal 
+ms.localizationpriority: high 
 ---
 
 # Monetize your app
 
-Microsoft Teams app Store provide features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
-
+Microsoft Teams app Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
+ 
 ## Choose a pricing model
 
 :::row:::
@@ -43,6 +43,7 @@ You can offer a free trial version of your app to get more customers to try it. 
         ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
     :::column-end:::
     :::column span="2":::
+
 **In-app purchases**
 
 Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
@@ -64,6 +65,7 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
     :::column-end:::
 :::row-end:::
+
 ## Next step
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

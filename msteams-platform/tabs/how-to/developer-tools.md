@@ -1,14 +1,13 @@
 ---
 title: DevTools for Microsoft Teams tabs
-description: Describes how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
+description: In this module, learn how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools debug mobile chrome desktop client developer tools tab 
 ---
 
 # DevTools for Microsoft Teams tabs
 
-When Teams is running in a browser, it is easy to access the browser's DevTools: F12 on Windows or Command-Option-I on MacOS. The DevTools gives you access to:
+When Teams is running in a browser, it's easy to access the browser's DevTools: F12 on Windows or Command-Option-I on MacOS. The DevTools gives you access to:
 
 1. View console logs.
 1. View or modify HTML, CSS, and network requests during runtime.
@@ -24,9 +23,13 @@ While the web version and the desktop version of Teams are almost the same, ther
 1. Ensure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 1. Open up a tab so you have something to inspect with the DevTools.
 1. Open the DevTools one of the following ways:
-    * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:<br>
-  ![Right-click to open DevTools](~/assets/images/dev-preview/devtools-right-click.png)
-    * On MacOS, click on the Microsoft Teams icon in the Dock.
+    * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.
+
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="developer-tool-windows":::
+
+    * On MacOS, select the Microsoft Teams icon in the Dock.
+
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="mac-os-dev-tools":::
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 

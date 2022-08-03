@@ -23,7 +23,7 @@ Ensure that you verify the following app manifest changes for resource-specific 
 
 <details>
 
-<summary><b>RSC permissions for app manifest version 1.12</b></summary>
+<summary><b>RSC permissions for app manifest version 1.12 and later</b></summary>
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
@@ -179,7 +179,7 @@ Example for RSC in a chat
     }
 }
 ```
-    
+
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
 
@@ -189,7 +189,7 @@ Example for RSC in a chat
 
 <details>
 
-<summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
+<summary><b>RSC permissions for app manifest version 1.11 and earlier</b></summary>
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
@@ -253,7 +253,7 @@ Example for RSC in a chat
 
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
-    
+
 </details>
 
 > [!IMPORTANT]
@@ -274,7 +274,7 @@ To check whether the RSC permissions are being honored by the API request payloa
     1. In the Teams client, select **Teams** from the far left navigation bar.
     2. Select the team where the app is installed from the dropdown menu.
     3. Select the **More options** icon (&#8943;).
-    4. Select **Get link to team**. 
+    4. Select **Get link to team**.
     5. Copy and save the **groupId** value from the string.
 
 ## Test added RSC permissions to a chat using the Postman app
@@ -296,10 +296,10 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 1. Open the [Postman](https://www.postman.com) app.
 2. Select **File** > **Import** > **Import file** to upload the updated JSON file from your environment.  
-3. Select the **Collections** tab. 
+3. Select the **Collections** tab.
 4. Select the chevron **>** next to the **Test RSC** to expand the details view and see the API requests.
 
-Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meet expectations.
+Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meets expectations.
 
 > [!NOTE]
 > To test specific DELETE and READ API calls, add those instance scenarios to the JSON file.
@@ -307,7 +307,7 @@ Execute the entire permissions collection for each API call. The permissions tha
 ## Test revoked RSC permissions using [Postman](https://www.postman.com/)
 
 1. Uninstall the app from the specific resource.
-2. Follow the steps for either chat or team: 
+2. Follow the steps for either chat or team:
     1. [Test added RSC permissions to a team using Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Check all the response status codes to confirm that the specific API calls **have failed with an HTTP 403 status code**.

@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: Plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
+description: In this article, you'll learn Microsoft Teams app capabilities, plan and understand Teams app and features, and also user problems that Teams app would solve.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Understand your use cases
 
-In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges gap in achieving effective collaboration is a great fit.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
@@ -48,7 +48,7 @@ A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client.":::
 
    :::column-end:::
 
@@ -65,7 +65,7 @@ Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where peo
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client.":::
 
    :::column-end:::
 
@@ -82,7 +82,7 @@ Conversations often result in the need to do something (generate an order, revie
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client.":::
 
    :::column-end:::
 
@@ -92,15 +92,15 @@ Conversations often result in the need to do something (generate an order, revie
 
    :::column span="":::
 
-#### Messaging extensions
+#### Message extensions
 
-With [messaging extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+With [message extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -134,7 +134,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client.":::
 
    :::column-end:::
 :::row-end:::
@@ -145,20 +145,20 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams.":::
 
    :::column-end:::
 :::row-end:::
 
 > [!NOTE]
 > Teams store has evolved:
-> 
+>
 > Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 ### App scope

@@ -1,10 +1,9 @@
 ---
 title: Create and send messages
 author: laujan
-description: Describes how to use Office 365 Connectors in Microsoft Teams
+description: In this module, learn how to use Office 365 Connectors and create and send actionable message in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams Office365 connector
 ---
 
 # Create and send messages
@@ -39,6 +38,7 @@ To display the multiple-selection list in the compact style, specify `"isMultiSe
 For more information on connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
 > [!NOTE]
+>
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 > * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Office 365 user who took the action.
 
@@ -46,7 +46,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 
 To send a message through your Incoming Webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and message extensions.
 
 ### Example of connector message
 
@@ -163,7 +163,7 @@ To post a message in the webhook with cURL, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `curl`.
 
-1. Check the Microsoft Teams client for the new card posted.
+1. Check the Teams client for the new card posted.
 
 # [PowerShell](#tab/PowerShell)
 
@@ -180,16 +180,17 @@ To post a message to the webhook with PowerShell, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-1. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+1. Check the Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
-    - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
+    * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
+    * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
 
 ---
 
 ## Send Adaptive Cards using an Incoming Webhook
 
 > [!NOTE]
+>
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
