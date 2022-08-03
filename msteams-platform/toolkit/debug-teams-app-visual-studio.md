@@ -35,7 +35,7 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 
 ## Debug your app locally
 
-You can debug your app locally in Visual Studio using Teams Toolkit by performing the following:
+You can debug your app locally in Visual Studio using Teams Toolkit by performing:
 
 ### Set up Ngrok (Only for Bot and Message Extension app)
 
@@ -114,7 +114,7 @@ Select **Hot Reload** to apply your changes in your Teams app when you want to u
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Select hot reload icon":::
 
-Select the option **Hot Reload on File Save** in the drop down to enable auto hot reload
+Select the option **Hot Reload on File Save** in the drop-down to enable auto hot reload
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Select hot reload on file save":::
   
@@ -128,6 +128,8 @@ Select **Stop Debugging** when the local debug is complete:
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Select stop debug icon":::
 
 ## Customize debug settings
+
+You can customize debug setting for your Teams app as per your requirement.
 
 ### Use your bot endpoint
 
@@ -143,7 +145,7 @@ Set siteEndpoint configuration in **.fx/configs/config.local.json** to your endp
 
 You can add environment variables to **Properties/launchSettings.json** file.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-customEnvironmentVariables.png" alt-text="localdebug customEnvironmentVariables":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Add custom environment variables":::
 
 ### Launch the Teams app as a web app
 
