@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 * Hot reload
 * Stop debugging
 
-During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads the Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
+During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > [!NOTE]
    > [In this scenario the project name is MyTeamsApp1]
 
-Before you sign in to your Microsoft 365 account. Your account needs to have the side loading permission. Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 4. Sign in to your Microsoft 365 Account.
 5. Select **Continue"
@@ -99,7 +99,7 @@ Teams Toolkit prepares a local debug dependencies and registers your Teams app i
 
 ### Start debugging
 
-You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and launches app in your browser.
+You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and the launches app in your browser.
 
 ### Toggle breakpoints
 
@@ -129,7 +129,7 @@ Select **Stop Debugging** when the local debug is complete.
 
 ## Customize debug settings
 
-You can customize debug setting for your Teams app as per your requirement.
+You can customize debug setting for your Teams app to use your bot endpoints and add environment variables:
 
 ### Use your bot endpoint
 
