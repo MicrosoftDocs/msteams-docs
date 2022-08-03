@@ -1,9 +1,11 @@
 ---
 title: Live Share overview
+author: surbhigupta
 description: In this module, learn what is Microsoft Live Share SDK and its user scenarios.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
 
 ---

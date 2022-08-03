@@ -1,7 +1,7 @@
 ## Deploy your app to Azure
 
 Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
-<br> 
+<br>
 <br>
 <details>
 <summary>What's the difference between Provision and Deploy?</summary>
@@ -33,7 +33,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 

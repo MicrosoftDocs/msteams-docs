@@ -4,7 +4,7 @@ author: MuyangAmigo
 description: In this module, learn about TeamsFX multi environment such as, create a new environment, select target environment and more
 ms.author: nintan
 ms.localizationpriority: medium
-ms.topic: overview of multiple environment
+ms.topic: conceptual
 ms.date: 11/29/2021
 ---
 
@@ -37,7 +37,7 @@ After creating a new project, Teams Toolkit by default creates:
 
 **To add another remote environment**:
 
-1. Select the **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
+1. Select the **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
 2. Select **+Teams: Create new environment** under the **Environment** section as shown in the following image:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
