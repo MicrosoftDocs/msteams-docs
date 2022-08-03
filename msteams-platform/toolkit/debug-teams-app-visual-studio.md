@@ -147,12 +147,24 @@ You can add environment variables to **Properties/launchSettings.json** file.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Add custom environment variables":::
 
-### Launch the Teams app as a web app
+### Launch Teams app as a web app
 
-if you want to launch the Teams app as a web app instead of running in Teams client, first remove the **'launchUrl'** in **Properties/launchSettings.json**.
+You can launch the Teams app as a web app instead of running in Teams client.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/vS-localdebug-launchWebApp.png" alt-text="localdebug launchWebApp":::
+1. Select **Properties** > **launchSettings.json** in solution explorer panel under your project.
+1. Remove the **'launchUrl'** from the file.
 
-Then right click on the solution, in Properties > Configuration Properties > Configuration, uncheck the 'Deploy' process and select 'OK'.
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-disableDeploy.png" alt-text="localdebug disableDeploy":::
+1. Right-click on the **Solution**.
+1. Select **Properties**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties":::
+
+1. Select **Configuration Properties** > **Configuration**
+1. Select uncheck the **Deploy** process.
+1. Select **OK**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties ":::
+
+## See Also
