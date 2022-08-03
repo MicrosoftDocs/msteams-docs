@@ -10,7 +10,7 @@ ms.date: 03/01/2018
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-There are many services that you may want to consume inside your Teams app, and most of those the services require authentication and authorization to get the access. The Services include Facebook, Twitter, and Teams. Users of Teams have user profile information stored in Azure Active Directory using Microsoft Graph. This topic focuses on authentication using Azure AD to get access.
+There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access. The services include Facebook, Twitter, and Teams. Users in Teams have user profile information stored in Azure Active Directory using Microsoft Graph. This topic focuses on authentication using Azure AD to get access.
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The following examples use the OAuth 2.0 Implicit Grant flow to eventually read the user's profile information from Azure AD and Microsoft Graph.
 
 The authentication flow described in this topic is similar to the tabs, except that tabs can use web-based authentication flow, and bots require authentication to be driven from code. The concepts in this topic will also be useful when implementing authentication from the mobile platform.
@@ -58,7 +58,7 @@ Because of the validation that must be performed for security reasons and the su
 
 The validation and mobile support are explained in the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
-Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. If you don't sign in, the popup won't appear.
+Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. If you don't sign in, the pop-up won't appear.
 
 ## Showing user profile information
 
@@ -97,7 +97,7 @@ public async getProfileAsync(accessToken: string): Promise<any> {
 }
 ```
 
-If the user is not signed in, they're prompted to do so.
+If the user isn't signed in, they're prompted to do so.
 
 ## Sign the user out
 
