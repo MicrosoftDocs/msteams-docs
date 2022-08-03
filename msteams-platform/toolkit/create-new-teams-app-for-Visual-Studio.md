@@ -45,7 +45,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 |Teams app template  |Description  |
 |---------|---------|
-|Notification Bot     |Notification Bot app can send notification to your Teams client, there are multiple ways to trigger the notification. For example, trigger the notification by http request, or by time. You can also select triggered notification based on your business scenario.         |
+|Notification Bot     |Notification Bot app can send notification to your Teams client, there are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can also select triggered notification based on your business scenario.         |
 |Command Bot     |Users can type a command to interact with the bot using the Command Bot app.         |
 |Tab     |Tab app shows a webpage inside Teams, and it enables single sign-on using Teams account.         |
 |Message Extension     |Message Extension app implements simple features like create adaptive card, search Nugget packages, unfurling links for "dev.botframework.com" domain.         |
