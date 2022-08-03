@@ -1,7 +1,8 @@
 ---
+author: surbhigupta
 title: Debug your Teams app for Visual Studio
 description: In this module, learn how to debug your Teams app locally in Visual Studio using Teams Toolkit
-ms.author: surbhigupta
+ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
@@ -9,7 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app locally using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of building, checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is the process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
 
 * Prepare Teams app dependencies
 * Start debugging
@@ -17,13 +18,19 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * Hot reload
 * Stop debugging
 
-During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side loads the Teams app. The Teams app is available for preview in Teams web client locally after debugging. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
+During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side loads the Teams app. After debug you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
 
 ## Prerequisites
 
-* Install the latest version of Teams Toolkit for Visual Studio.
-* To run / debug a Bot or Message Extension app, you'll need to set up [Ngrok](https://ngrok.com/) first.
-Ngrok is used to forward external messages from Azure Bot Framework to your local machine.
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio | You can install the free community edition of Visual Studio, and install the workload. |
+| &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+| &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+|&nbsp;  | **Optional** | &nbsp; |
+|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok is used to forward external messages from Azure Bot Framework to your local machine.|
 
 ## Debug your app locally
 
