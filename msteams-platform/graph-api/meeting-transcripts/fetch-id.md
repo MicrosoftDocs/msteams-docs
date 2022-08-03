@@ -514,7 +514,9 @@ dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
 
 After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
 
-## Code samples
+### Code samples
+
+You can try the following code sample for a bot app:
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
