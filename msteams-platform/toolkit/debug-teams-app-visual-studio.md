@@ -108,7 +108,7 @@ The following image shows the toggle breakpoints:
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app.
+You can update and save the source codes of tab, bot, message extension, and Azure functions at the same time when you're debugging the Teams app.
 And then select the hot reload button as follow to apply your edits:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-hotreload.png" alt-text="localdebug hotreload":::
