@@ -18,7 +18,7 @@ items:
 
     Key features of meeting side panel
 
-    * Provisions to add new agenda point.
+    * Provision to add new agenda point.
     * Adds the agenda as text input to the **Side Panel** list.
     * Publishes the agenda list to the meeting chat.
     
