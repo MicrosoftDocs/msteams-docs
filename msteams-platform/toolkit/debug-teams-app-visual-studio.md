@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 * Hot reload
 * Stop debugging
 
-During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side loads the Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
+During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads the Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > [!NOTE]
    > [In this scenario the project name is MyTeamsApp1]
 
-Before you sign in to your Microsoft 365 account. Your account needs to have the sideloading permission. Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+Before you sign in to your Microsoft 365 account. Your account needs to have the side loading permission. Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 4. Sign in to your Microsoft 365 Account.
 5. Select **Continue"
@@ -84,7 +84,7 @@ Visual Studio launches the Teams app inside Microsoft Teams client in your brows
    > [!TIP]
    > You can also use hot reload function of Visual Studio during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
 
-Ensure to post HTTP request to <http://localhost:5130/api/notification> to trigger notification, when you're debugging Notification Bot app. You can use any API tool: curl (Windows Command Prompt), Postman, etc., if you've selected http trigger when creating the project.
+Ensure to post HTTP request to <http://localhost:5130/api/notification> to trigger notification, when you're debugging Notification Bot app. You can use any API tool: curl (Windows Command Prompt), Postman, etc., if you've selected HTTP trigger when creating the project.
 
    > [!TIP]
    > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you locally try to run the Teams app again.
@@ -114,7 +114,7 @@ Select **Hot Reload** to apply your changes in your Teams app when you want to u
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Select hot reload icon":::
 
-Select the option **Hot Reload on File Save** in the drop-down to enable auto hot reload.
+Select the option **Hot Reload on File Save** from the drop-down to enable auto hot reload.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Select hot reload on file save":::
   
@@ -123,7 +123,7 @@ Select the option **Hot Reload on File Save** in the drop-down to enable auto ho
 
 ### Stop debugging
 
-Select **Stop Debugging** when the local debug is complete:
+Select **Stop Debugging** when the local debug is complete.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Select stop debug icon":::
 
@@ -143,7 +143,7 @@ You can set siteEndpoint configuration in **.fx/configs/config.local.json** to y
 
 ### Add environment variables
 
-You can add environment variables to **Properties/launchSettings.json** file.
+You can add **environmentVariables** to **launchSettings.json** file.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Add custom environment variables":::
 
@@ -161,8 +161,8 @@ You can launch Teams app as a web app instead of running in Teams client.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties":::
 
-1. Select **Configuration Properties** > **Configuration**
-1. Select uncheck the **Deploy** process.
+1. Select **Configuration Properties** > **Configuration** in the dialogue.
+1. Select uncheck the **Deploy** process box.
 1. Select **OK**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties ":::
