@@ -34,6 +34,8 @@ You can configure your app to access meeting transcripts across the tenant. In t
 
 For more information about the organization-wide application permissions that can be granted to your app, see [Online meeting permissions](graph/permissions-reference#online-meetings-permissions).
 
+[Online meeting permissions](/graph/permissions-reference#online-meetings-permissions)
+
 ### Use meeting-specific RSC application permissions
 
 If you want your app to fetch transcripts only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
