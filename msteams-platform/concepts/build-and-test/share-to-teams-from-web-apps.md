@@ -28,7 +28,7 @@ This article guides you on how to create and embed a Share to Teams button for y
 
 See the following video to learn how to embed Share to Teams button:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
 
 ## Embed a Share to Teams button
