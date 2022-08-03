@@ -27,7 +27,7 @@ In the **Overview** section, you can see the following components to manage your
     * **Active users (Preview)**: Shows you the active user count
     * **Basic information**: Shows you the App ID, Version, Manifest version, and so on.
 
-    :::image type="content" source="../../assets/images/tdp/dashboard-page.PNG" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
+    :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
 
 * Analytics
 
@@ -119,7 +119,7 @@ You can publish your app to your org or to the Teams store.
    1. Select **Publish**.
 
    > [!NOTE]
-   > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. You must resolve errors or warnings and read the **App submission checklist** before submitting your app.
+   > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
    You can download the app package by selecting **Download app package** button from the Publish to store page.
 
@@ -149,7 +149,7 @@ To add a bot:
 1. In the Bot management page, select **New Bot**.
 1. Enter the name and select **Add**.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.PNG" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features.":::
+:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features.":::
 
 From the Developer portal, you can go to Bot framework portal and configure your bot to update icon and other properties.
 
