@@ -1,7 +1,7 @@
 ---
 title: Typeahead search in Adaptive Cards 
 author: Rajeshwari-v
-description: Describes typeahead search with Input.ChoiceSet control in Adaptive Cards 
+description: In this module, learn what is typeahead search in adaptive cards with Input.ChoiceSet control and implement typeahead search
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta

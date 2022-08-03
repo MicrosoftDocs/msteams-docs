@@ -1,9 +1,8 @@
 ---
 title: Test your app overview
-description: Describes the process to test and debug your Teams custom app in Microsoft 365
+description: In this module, learn the process to test and debug your Teams custom app in Microsoft 365 and add test data to your Microsoft 365 tenant
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configure Microsoft 365 tenant Teams uploading test app 
+ms.localizationpriority: medium
 ---
 
 # Test your app

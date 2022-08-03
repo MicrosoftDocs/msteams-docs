@@ -1,20 +1,20 @@
 ---
 title: Plan to monetize your app
-description: learn how plan to monetize your Microsoft Teams app.
+description: In this learning module, you'll learn how plan to monetize your Microsoft Teams app and also understand the best monetization option for global visibility.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 # Plan to monetize your app
 
-One of the most important objectives for building a Teams app is to solve the problems of your users in a collaborative zone. An app that achieves this goal is fit for being a utility for global consumption. Microsoft Teams app store provides features that let you to monetize your apps and gain customers by engaging with your users.
+One of the most important objectives for building a Teams app is to solve the problems of your users in a collaborative zone. An app that achieves this goal is fit for being a utility for global consumption. Microsoft Teams app store provides features that let you monetize your apps and gain customers by engaging with your users.
 
 Consider publishing your app on Teams store to offer your app the best platform for global visibility. Factors, such as type of app, nature of service, and target customers influence your choice for the best monetization option.
 
 :::row:::
     :::column span="":::
 
-        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetize apps" border="false":::
+        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetize apps":::
     :::column-end:::
     :::column span="":::
         The most common ways to monetize your app are:

@@ -8,7 +8,7 @@ A message extension is a cloud-hosted service that listens to user requests and 
 
 If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
-Record your bot app ID and app password, you will need to supply the app ID in your app manifest.
+Record your bot app ID and app password, you'll need to supply the app ID in your app manifest.
 
 ### Update your app manifest
 
@@ -16,7 +16,7 @@ As with bots and tabs, you update the [manifest](~/resources/schema/manifest-sch
 
 #### Declare your message extension
 
-To add a message extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single message extension for your app.
+To add a message extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you're limited to creating a single message extension for your app.
 
 > [!NOTE]
 > The manifest refers to message extensions as `composeExtensions`. This is to maintain backward compatibility.
@@ -28,7 +28,7 @@ The extension definition is an object that has the following structure:
 | `botId` | The unique Microsoft app ID for the bot as registered with the Bot Framework. This should typically be the same as the ID for your overall Teams app. | Yes |
 | `scopes` | Array declaring whether this extension can be added to `personal` or `team` scopes (or both). | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
-| `commands` | Array of commands that this message extension supports. You are limited to 10 commands. | Yes |
+| `commands` | Array of commands that this message extension supports. You're limited to 10 commands. | Yes |
 
 #### Define commands
 
@@ -43,9 +43,9 @@ In the app manifest, your command item is an object with the following structure
 | `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-| `type` | Set the type of command. Possible values include `query` and `action`. If not present the default value is set to `query`. | No | 1.4 |
+| `type` | Set the type of command. Possible values include `query` and `action`. If not, present the default value is set to `query`. | No | 1.4 |
 | `initialRun` | Optional parameter, used with `query` commands. If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
-| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch the adaptive card or web url to display within the [task module](~/task-modules-and-cards/what-are-task-modules.md). This is used when the inputs to the `action` command is dynamic as opposed to a static set of parameters. Note that the if set to **true** the static parameter list for the command is ignored. | No | 1.4 |
+| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch the adaptive card or web url to display within the [task module](~/task-modules-and-cards/what-are-task-modules.md). This is used when the input to the `action` command is dynamic as opposed to a static set of parameters. Note that if set to **true** the static parameter list for the command is ignored. | No | 1.4 |
 | `parameters` | Static list of parameters for the command. | Yes | 1.0 |
 | `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |

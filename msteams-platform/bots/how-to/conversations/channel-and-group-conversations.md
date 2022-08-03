@@ -1,9 +1,9 @@
 ---
-title: Channel and group conversations with a bot
+title: Create conversation bots for channel or group chat
 author: surbhigupta
-description: How to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines, creating conversation threads, using @mentions using Code samples
+description: Learn how to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines and more.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Channel and group chat conversations with a bot
@@ -21,6 +21,12 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 >
 > Posting a message or Adaptive Card to a private channel is currently not supported.
 
+See the following video to learn about channel and group chat conversations with a bot:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
+
 ## Design guidelines
 
 Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
@@ -29,7 +35,7 @@ Now, you can create new conversation threads and easily manage different convers
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it's difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
@@ -280,4 +286,7 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to cre
 
 ## See also
 
-[Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
+

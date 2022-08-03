@@ -1,9 +1,8 @@
 ---
 title: Integrate QR or barcode scanner capability
 author: Rajeshwari-v
-description: How to use Teams JavaScript client SDK to leverage QR or barcode scanner capability
-keywords: camera media qr code qrcode bar code barcode scanner scan capabilities native device permissions
-ms.localizationpriority: high
+description: Learn how to use Teams JavaScript client SDK to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
@@ -22,7 +21,7 @@ Following are the advantages of integration of QR or barcode scanner capabilitie
 * With this feature, the user only needs to align a QR or barcode within a frame at the center of the scanner UI and the code gets scanned automatically. The stored data is shared back with the calling web app. This avoids the inconvenience and human errors of entering lengthy product codes or other relevant information manually.
 
 To integrate QR or barcode scanner capability, you must update the app manifest file and call the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API. For effective integration, you must have a good understanding of [code snippet](#code-snippet) for calling the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API, which allows you to use native QR or barcode scanner capability. The API gives an error for an unsupported barcode standard.
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
 > Currently, Microsoft Teams support for QR or barcode scanner capability is only available for mobile clients.
@@ -73,14 +72,14 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
 | **1000** | PERMISSION_DENIED |Permission is denied by the user.|
-| **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
+| **3000** | NO_HW_SUPPORT | Underlying hardware doesn't support the capability.|
 | **4000** | INVALID_ARGUMENTS | One or more arguments are invalid.|
 | **8000** | USER_ABORT |User aborts the operation.|
-| **8001** | OPERATION_TIMED_OUT | Could not detect the barcode in the given time interval.|
-| **9000** | OLD_PLATFORM | Platform code is outdated and does not implement this API.|
+| **8001** | OPERATION_TIMED_OUT | Couldn't detect the barcode in the given time interval.|
+| **9000** | OLD_PLATFORM | Platform code is outdated and doesn't implement this API.|
 
 ## Code snippet
 
@@ -104,6 +103,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## See also
 
-* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate media capabilities](media-capabilities.md)
 * [Integrate location capabilities in Teams](location-capability.md)
 * [Integrate People Picker in Teams](people-picker-capability.md)

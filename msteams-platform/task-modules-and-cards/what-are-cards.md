@@ -1,8 +1,7 @@
 ---
 title: Cards
-description: Describes cards and how they are used in bots, connectors, and message extensions
+description: In this module, learn what are cards and how they're used in bots, connectors, and message extensions
 ms.localizationpriority: high
-keywords: connectors bots cards messaging
 ms.topic: overview
 ---
 
@@ -49,7 +48,7 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 ## Adaptive Cards
 
-[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
+[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They're the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
@@ -71,7 +70,7 @@ Type ahead search added as an input control in Adaptive Cards enable [dynamic se
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
-Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
+Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
 ## Support for Azure AD Object ID and UPN in user mention
 
