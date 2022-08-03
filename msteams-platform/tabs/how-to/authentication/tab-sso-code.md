@@ -2,7 +2,7 @@
 title: Code configuration for enabling SSO for tabs
 description: Describes code configuration for enabling SSO for tabs
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
 # Add code to enable SSO

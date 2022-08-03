@@ -19,7 +19,7 @@ If your Teams app has declared in the [application manifest](native-device-permi
 * **Chats, channel, or meeting tabs**: The **App permissions** option is available in the dropdown of the tab.
 ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
 
-After the **App permissions** option is selected, a popup appears where the user can enable the permissions button.
+After the **App permissions** option is selected, a pop-up appears where the user can enable the permissions button.
 
 A user will need to enable these permissions in the browser for these permissions to take effect. After user changes the app’s device permissions in the browser, they're prompted to reload the application in Teams.
 

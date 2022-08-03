@@ -58,7 +58,7 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 
 > [!WARNING]
 >
-> * If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
+> * If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 ## Cloud-hosted
 

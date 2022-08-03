@@ -4,6 +4,8 @@ author: surbhigupta
 description: Learn about Teams meeting lifecycle and users meeting experience in desktop and mobile, User types, integrate bots and message extension in meeting lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.author: surbhigupta
+ms.date: 04/07/2022
 ---
 
 # Unified meetings apps
@@ -34,8 +36,7 @@ Tabs allow the team members to access services and content in a specific space w
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md).
 
 > [!NOTE]
->
-> * Add app option for Teams meeting extension tab app is not supported in Teams web client.
+> Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
 #### Pre-meeting app experience
 

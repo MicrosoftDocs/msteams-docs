@@ -34,7 +34,6 @@ See the following video to learn how to embed Share to Teams button:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
 
-
 ## Embed a Share to Teams button
 
 1. Add the `launcher.js` script on your webpage.
