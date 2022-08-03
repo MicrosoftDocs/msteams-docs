@@ -26,12 +26,12 @@ Microsoft Teams platform features that are available to all app developers.
 
 <br>
 
-<details>
+<details expand>
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| / date / | Added feature for retrieving meeting transcripts in the post-meeting scenario. | / breadcrumb path / |
+| 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 07/28/2022 | Add the Teams display picture and people card for in-meeting notification| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [In-meeting notification](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Build shared channels in Teams | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Introduced app manifest v1.14| App manifest > [App manifest schema for Teams](resources/schema/manifest-schema.md)|
