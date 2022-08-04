@@ -63,17 +63,17 @@ After you install Teams Toolkit, you can take a brief look at the different menu
 1. Select **Teams Toolkit**.
 1. You can now access the **Teams Toolkit menu**
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
 You can also access Teams Toolkit menu from solution explorer.
 
 4. Right-click on your **Project**.
 5. Select **Teams Toolkit** > **Teams Toolkit menu**.
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
-> [!NOTE]
-> In this scenario the project name is **MyTeamsApp1**.
+   > [!NOTE]
+   > In this scenario the project name is **MyTeamsApp1**.
 
 You can perform the following operations on Teams Toolkit for Visual Studio:
 
