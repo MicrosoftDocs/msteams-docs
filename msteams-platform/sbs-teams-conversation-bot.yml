@@ -70,7 +70,7 @@ items:
     1. Enter bot handle name in **Bot handle** field.
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
-
+       For more information see [Create resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
 
         :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create Azure bot.":::
 
@@ -78,8 +78,7 @@ items:
 
         > [!NOTE]
         > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field. 
-        For more information see [Create resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
-
+        
     1. Select **Review + create**.
 
         :::image type="content" source="./assets/images/conversation-bot/review-create.png" alt-text="Review and create.":::
