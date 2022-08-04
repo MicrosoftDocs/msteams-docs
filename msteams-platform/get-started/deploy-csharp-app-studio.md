@@ -171,7 +171,7 @@ After entering the details of your app, complete the following steps to register
 
 1. Use **Preview** of Developer Portal to install your app in Teams.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="he screenshot shows the preview button on Developer Portal.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="The screenshot shows the preview button on Developer Portal.":::
 
 1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension.
 
