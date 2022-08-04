@@ -1,8 +1,8 @@
 ---
 title: Teams Toolkit overview for Visual Studio
-author: zyxiaoyuer
+author: surbhigupta
 description: In this module, learn Teams Toolkit Overview for Visual Studio
-ms.author: surbhigupta
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
@@ -31,17 +31,24 @@ The main milestones of this journey are:
 1. You can then edit code or the manifest file as required.
 1. For building and debugging the Teams app you can use your Microsoft 365 account.
 1. For provisioning and deploying your app to cloud you can use your Azure account.
-1. You can now publish your app to Teams.
+1. You can finally publish your app to Teams.
 
 ## Install Teams Toolkit for Visual Studio
 
-1. You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/). You'll need to first install the Visual Studio installer before installing Visual Studio.
+You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
 
-2. After you open the Visual Studio installer, in the pop-up Workloads window, ensure that you select checkboxes against the **ASP.NET and web development** workload. You also need to select the **Microsoft Teams development tools** in the installation details panel. Select **Install**.
+> [!NOTE]
+> [You'll need to first install the Visual Studio installer before installing Visual Studio.]
+
+After you open the Visual Studio installer, in the pop-up Workloads window.
+
+1. Select the box **ASP.NET and web development** workload.
+1. Select the box **Microsoft Teams development tools** in the installation details panel.
+1. Select **Install**.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
 
-3. Select **Launch** to open Visual Studio.
+1. Select **Launch** to open Visual Studio.
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
@@ -50,15 +57,18 @@ The main milestones of this journey are:
 
 ## Take a tour of Teams Toolkit
 
-1. After you install Teams Toolkit select **Project**.
+After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit:
+
+1. Select **Project**.
 1. Select **Teams Toolkit**.
 1. You can now access the **Teams Toolkit menu**
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
 
-1. You can also access **Teams Toolkit menu** from solution explorer.
-1. Right-click on your Project **MyTeamsApp1**.
-1. Select **Teams Toolkit**.
+You can also access Teams Toolkit menu from solution explorer.
+
+4. Right-click on your **Project**.
+5. Select **Teams Toolkit** > **Teams Toolkit menu**.
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
 
