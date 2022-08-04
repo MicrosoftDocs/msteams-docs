@@ -50,8 +50,14 @@ landingContent:
 
 - title: Explore the latest
   linkLists:
+    - linkListType: reference
+      links:
+      - text: Community chat room for Microsoft Teams app developers
+        url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Collaboration controls [Developer preview]
+        url: samples/collaboration-control.md
       - text: Build shared channels
         url: concepts/build-and-test/Shared-channels.md
       - text: Introduced app manifest v1.14
