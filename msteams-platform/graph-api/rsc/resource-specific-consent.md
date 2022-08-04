@@ -92,7 +92,7 @@ You can enable or disable [group owner consent](/azure/active-directory/manage-a
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
 
-    :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="The screenshot describes the steps for azure RSC team configuration.":::
+    :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="The screenshot shows the steps for azure RSC team configuration.":::
 
 In addition, you can enable or disable group owner consent using PowerShell, follow the steps outlined in [configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
@@ -100,7 +100,7 @@ In addition, you can enable or disable group owner consent using PowerShell, fol
 
 You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
 
-   :::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.png" alt-text="The screenshot describes how to enable or disable RSC for chats using Graph API.":::
+   :::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.png" alt-text="The screenshot shows the steps to enable or disable RSC for chats using Graph API.":::
    
 >  The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
 
@@ -401,7 +401,7 @@ After the app has been installed to a resource, you can use [Graph Explorer](htt
 1. Sign in to **Graph Explorer**.
 1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
 
-    :::image type="content" source="../../assets/images/team-graph-permissions.png" alt-text="The screenshot is an example that shows the Graph explorer response to GET call for team RSC permissions.":::
+    :::image type="content" source="../../assets/images/team-graph-permissions.png" alt-text="The screenshot shows the Graph explorer response to GET call for team RSC permissions.":::
 
 For more information on how to get details of the apps installed in a specific team, see [get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
 
@@ -412,12 +412,12 @@ For more information on how to get details of the apps installed in a specific t
 1. Select the chat where the app is installed from the dropdown menu.
 1. Copy the web URL and save the chat thread ID from the string.
 
-    :::image type="content" source="../../assets/images/chat-thread-id.png" alt-text="The screenshot is an example that shows the chat thread ID from web url.":::
+    :::image type="content" source="../../assets/images/chat-thread-id.png" alt-text="The screenshot shows the chat thread ID from web url.":::
 
 1. Sign in to **Graph Explorer**.
 1. Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
 
-    :::image type="content" source="../../assets/images/chat-graph-permissions.png" alt-text="The screenshot is an example that shows Graph explorer response to GET call for chat RSC permissions.":::
+    :::image type="content" source="../../assets/images/chat-graph-permissions.png" alt-text="The screenshot shows the Graph explorer response to GET call for chat RSC permissions.":::
 
 For more information on how to get details of apps installed in a specific chat, see [get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
 
