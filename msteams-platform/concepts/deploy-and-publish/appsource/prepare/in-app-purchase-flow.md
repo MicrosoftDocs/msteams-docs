@@ -49,7 +49,7 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 
 Following code snippet is an example of calling the API from the Teams app built using teams-js sdk up to version 11:
 
-# [JSON](#tab/jsonV11)
+# [JSON V11](#tab/jsonV11)
 
 ```json
 <div>
@@ -76,7 +76,7 @@ Following code snippet is an example of calling the API from the Teams app built
 
 Following code snippet is an example of calling the API from the Teams app built using teams-js sdk from Version 2:
 
-# [JSON](#tab/jsonV2)
+# [JSON V2](#tab/jsonV2)
 
 ```json
 <div>
