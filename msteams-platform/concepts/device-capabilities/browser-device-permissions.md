@@ -31,7 +31,7 @@ A user will need to enable these permissions in the browser for these permission
 Teams app that requires device permissions in the browser must show instructions to users on where to find and enable these permissions in the Teams UI. Depending on the context in which your application is running, you need to ensure that your instructions are pointing the user to correct location to access these permissions. The permissions differ for personal apps, task module dialogs, tabs in chats, and channels or meetings.
 
 </br>
-:::image type="content" source="../../assets/images/tabs/enable-access.png" alt-text="The screenshot describes on how to enable camera.":::
+:::image type="content" source="../../assets/images/tabs/enable-access.png" alt-text="The screenshot shows the steps to enable camera.":::
 
 ## Code sample
 
