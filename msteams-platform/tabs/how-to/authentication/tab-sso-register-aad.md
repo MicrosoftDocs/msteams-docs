@@ -23,9 +23,6 @@ User-level Graph API permissions are supported, that is, email, profile, offline
 
 Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
-> [!NOTE]
-> Microsoft Teams Toolkit registers the Azure AD application in an SSO project. However, you would need to configure permissions and scope, and trust client applications.
-
 ### Before you configure your app
 
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
@@ -49,6 +46,9 @@ To create and configure your app in Azure AD for enabling SSO:
 You can configure your tab app in Azure AD to configure the scope and permissions for access tokens.
 
 You'll need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
+
+> [!NOTE]
+> Microsoft Teams Toolkit registers the Azure AD application in an SSO project. You can skip this section if you've used Teams Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
 
 <details>
 <summary><b>Learn how to register your app in Azure AD</b></summary>
