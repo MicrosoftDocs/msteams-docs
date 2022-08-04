@@ -51,8 +51,8 @@ Following code snippet is an example of calling the API from the Teams app built
 
 # [JSON V11](#tab/jsonV11)
 
-```json
-<div>
+```json 
+<div> 
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
 </div>
@@ -93,6 +93,7 @@ Following code snippet is an example of calling the API from the Teams app built
     }
 </script>
 ```
+---
 
 ## End-user in-app purchasing experience
 
