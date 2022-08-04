@@ -23,8 +23,7 @@ items:
     In this tutorial, you'll learn:
 
     - How to set up a new project.
-    - How to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019.
-    - How to deploy your app from Developer Portal.
+    - How to build apps with tab capability using C# and latest version of Visual Studio.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -34,11 +33,10 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
+    | &nbsp; | [Latest version of Visual Studio](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
     | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample C# app repo from GitHub. |
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and message extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
@@ -63,31 +61,18 @@ items:
 
     Teams Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
 
-    Teams Toolkit is available as a Visual Studio 2019 extension.
+    Teams Toolkit is available as an extension in Visual Studio.
 
     To install Teams Toolkit extension:
 
-    1. Open Visual Studio 2019 and select the **Extensions** > **Manage Extensions**.
-    1. In the search box, enter **Teams Toolkit**.
-    1. Select **Download** next to the Teams Toolkit.
+    1. Open Visual Studio and select the **Extensions** > **Manage Extensions**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/install-teams-toolkit-vs19.png" alt-text="Image shows installation for Teams Toolkit"::: 
-    
-        The changes are available after you close Visual Studio 2019. It's required as Visual Studio 2019 must restart after the installing the extension.
+       The following Manage Extension page appears:
 
-    1. Select **Close**.
+    1. Select **Installed** and you can see Teams Toolkit extension is installed by default.
     
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit" lightbox="~/assets/images/teams-toolkit-v2/toolkit-installed.png":::
-    
-    1. Close Visual Studio 2019.
-        
-        The VSIX installer opens with instructions for installing the extension.
-
-    1. Follow the instructions of VSIX installer to complete the installation of the toolkit.
-    1. Open Visual Studio 2019 again.
-    
-    The Teams Apps will be available as a template in Visual Studio 2019.
-
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+       
     You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit).
 
     ## Set up your Teams development tenant
