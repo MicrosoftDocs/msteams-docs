@@ -59,7 +59,7 @@ You can show the following information:
 * Data visuals, maps, and infographics.
 * Charts, graphs, and tables.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="The screenshot is an example that shows the data in the form of visualization.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="The image shows the data visualization apps on Teams mobile platform .":::
 
 Quick actions:
 
@@ -69,7 +69,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 * Filter data.
 * Create bookmarks.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="The screenshot describes the quick actions on the existing chart and visuals.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="The image shows the quick actions on the existing chart and visuals.":::
 
 Enablement:
 
@@ -81,7 +81,7 @@ You can provide following access to users:
 * Insert data items to create visualizations.
 * Share visualizations in a channel or group chat.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="The screenshot describes on how to enable users to create content such as, charts and graphics.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="The screenshot describes on how to enable users to create content, such as charts and graphics.":::
 
 <br>
 
