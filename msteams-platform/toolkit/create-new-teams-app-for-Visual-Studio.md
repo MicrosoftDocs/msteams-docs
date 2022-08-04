@@ -2,7 +2,7 @@
 title: Create new Teams app in Visual Studio
 author: surbhigupta
 description: In this module, learn how to create a new Teams app using Teams Toolkit for Visual Studio
-ms.author: VS-amprasad
+ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 07/29/2022
