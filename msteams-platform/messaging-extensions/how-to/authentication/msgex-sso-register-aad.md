@@ -29,6 +29,9 @@ To enable SSO for your bot app in Azure AD:
 
 You can configure them in any order. For this tutorial, you'll configure your app with Azure AD, and then configure a bot resource for enabling SSO.
 
+> [!NOTE]
+> Microsoft Teams Toolkit registers the Azure AD application in an SSO project. However, you would need to configure permissions and scope, and trust client applications.
+
 ## Configure your app in Azure AD
 
 You can configure your bot app in Azure AD to configure the scope and permissions for access tokens.
