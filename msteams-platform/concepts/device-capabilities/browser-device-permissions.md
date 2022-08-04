@@ -14,10 +14,10 @@ Teams app that requires device permissions, such as camera or microphone access,
 If your Teams app has declared in the [application manifest](native-device-permissions.md#specify-permissions) that it needs device permissions, then the **App permissions** option appears for the users to enable the app's device permissions. The **App permissions** option is available in the following capabilities:
 
 * **Personal apps and task module dialogs**: The **App permissions** option is available in the upper-right corner of the page.
-:::image type="content" source="../../assets/images/tabs/apppermissions.png" alt-text="The screenshot describes on how to select app permissions button.":::
+:::image type="content" source="../../assets/images/tabs/apppermissions.png" alt-text="The screenshot shows the steps to select app permissions button.":::
 
 * **Chats, channel, or meeting tabs**: The **App permissions** option is available in the dropdown of the tab.
-:::image type="content" source="../../assets/images/tabs/drop-downapppermissions.png" alt-text="The screenshot is an example that shows app permissions dropdown box.":::
+:::image type="content" source="../../assets/images/tabs/drop-downapppermissions.png" alt-text="The screenshot shows app permissions dropdown box.":::
 
 After the **App permissions** option is selected, a pop-up appears where the user can enable the permissions button.
 
