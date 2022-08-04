@@ -90,7 +90,7 @@ items:
     
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/newresource.png" alt-text="Create resource Azure bot":::
+         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Create resource Azure bot":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -155,7 +155,9 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
@@ -232,7 +234,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/selectscope.png" alt-text="Add Scope":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Add Scope":::
             
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -293,7 +295,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/addpermission.png" alt-text="Add Permission":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission.png" alt-text="Add Permission":::
 
     1. Select **Microsoft Graph**.
 

@@ -13,9 +13,10 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Add a connector to Teams app
 
@@ -45,20 +46,23 @@ You can reuse your existing web configuration experience or create a separate ve
 
 To integrate the configuration experience:
 
-1. Initialize the SDK by calling `microsoftTeams.initialize()`.
-1. Call `microsoftTeams.settings.setValidityState(true)` to enable **Save**.
+> [!NOTE]
+> Starting with Teams JavaScript client SDK (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+
+1. Initialize the SDK by calling `app.initialize()`.
+1. Call `pages.config.setValidityState(true)` to enable **Save**.
 
     > [!NOTE]
-    > You must call `microsoftTeams.settings.setValidityState(true)` as a response to user selection or field update.
+    > You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
 
-1. Register  `microsoftTeams.settings.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
-1. Call `microsoftTeams.settings.setSettings()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
-1. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL.
+1. Register  `microsoftTeams.pages.config.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
+1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
+1. Call `microsoftTeams.pages.getConfig()` to fetch webhook properties, including the URL.
 
     > [!NOTE]
-    > You must call `microsoftTeams.settings.getSettings()` when your page is first loaded in case of reconfiguration.
+    > You must call `microsoftTeams.pages.getConfig()` when your page is first loaded in case of reconfiguration.
 
-1. Register `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
+1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
 
 This event gives your service an opportunity to perform any cleanup actions.
 
@@ -77,17 +81,18 @@ The following code provides a sample HTML to create a connector configuration pa
     </section>
 </div>
 
-<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="text/javascript">
-
+<script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        
         function onClick() {
-            microsoftTeams.settings.setValidityState(true);
+            pages.config.setValidityState(true);
         }
 
-        microsoftTeams.initialize();
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+        await app.initialize();
+        pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
             var eventType = '';
@@ -97,22 +102,22 @@ The following code provides a sample HTML to create a connector configuration pa
                 eventType = radios[1].value;
             }
 
-            microsoftTeams.settings.setSettings({
-                 entityId: eventType,
+            await pages.config.setConfig({
+                entityId: eventType,
                 contentUrl: "https://YourSite/Connector/Setup",
                 removeUrl:"https://YourSite/Connector/Setup",
-                 configName: eventType
+                configName: eventType
                 });
 
-            microsoftTeams.settings.getSettings(function (settings) {
-                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+            pages.getConfig().then(async (config) {
+                // We get the Webhook URL from config.webhookUrl which needs to be saved. 
                 // This can be used later to send notification.
             });
 
             saveEvent.notifySuccess();
         });
 
-        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+        pages.config.registerOnRemoveHandler(function (removeEvent) {
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
@@ -122,46 +127,46 @@ The following code provides a sample HTML to create a connector configuration pa
 To authenticate the user as part of loading your page, see [authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md) to integrate sign in when your page is embedded.
 
 > [!NOTE]
-> Due to cross client compatibility reasons, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()`.
+> Prior to TeamsJS v.2.0.0, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()` due to cross-client compatibility reasons. Starting with TeamsJS v.2.0.0, *registerAuthenticationHandlers* has been deprecated in favor of directly calling [authenticate()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) with the required authentication parameters.
 
-#### `GetSettings` response properties
+#### `getConfig` response properties
 
 >[!NOTE]
->The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings).
+>The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig).
 
-The following table provides the parameters and the details of `GetSetting` response properties:
+The following table provides the parameters and the details of `getConfig` response properties:
 
 | Parameters   | Details |
 |-------------|---------|
-| `entityId`       | The entity ID, as set by your code when calling `setSettings()`. |
-| `configName`  | The configuration name, as set by your code when calling `setSettings()`. |
-| `contentUrl` | The URL of the configuration page, as set by your code when calling `setSettings()`. |
+| `entityId`       | The entity ID, as set by your code when calling `setConfig()`. |
+| `configName`  | The configuration name, as set by your code when calling `setConfig()`. |
+| `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Teams respectively. |
 | `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### Handle edits
 
-Your code must handle users who return to edit an existing connector configuration. To do this, call `microsoftTeams.settings.setSettings()` during the initial configuration with the following parameters:
+Your code must handle users who return to edit an existing connector configuration. To do this, call `microsoftTeams.pages.config.setConfig()` during the initial configuration with the following parameters:
 
 * `entityId` is the custom ID that represents what the user has configured and understood by your service.
 * `configName` is a name that configuration code can retrieve.
 * `contentUrl` is a custom URL that gets loaded when a user edits an existing connector configuration.
 
-This call is made as part of your save event handler. Then, when the `contentUrl` is loaded, your code must call `getSettings()` to pre populate any settings or forms in your configuration user interface.
+This call is made as part of your save event handler. Then, when the `contentUrl` is loaded, your code must call `getConfig()` to pre populate any settings or forms in your configuration user interface.
 
 #### Handle removals
 
-You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.settings.registerOnRemoveHandler()`. This handler is used to perform cleanup operations, such as removing entries from a database.
+You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform cleanup operations, such as removing entries from a database.
 
 ### Include the connector in your Manifest
 
-Download the auto generated `Teams app manifest` from the portal. Perform the following steps, before testing or publishing the app:
+Download the auto-generated *Teams app manifest* from the Developer Portal (<https://dev.teams.microsoft.com>). Perform the following steps, before testing or publishing the app:
 
 1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
 
-The following manifest.json file contains the elements needed to test and submit the app:
+The following *manifest.json* file contains the elements needed to test and submit the app:
 
 > [!NOTE]
 > Replace `id` and `connectorId` in the following example with the GUID of the connector.
@@ -225,7 +230,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
 
-1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a Office 365 Connector.
+1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in an Office 365 Connector.
 
 1. Package and publish your connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 

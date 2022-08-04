@@ -11,7 +11,10 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+> [!NOTE]
+> When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
+
+Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
 
 Before creating the action command, you must decide the following factors:
 
@@ -79,7 +82,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 You can create an action command using **App Studio** or **Developer Portal**.
 
 > [!WARNING]
- > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
+ > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
 
 # [App Studio](#tab/AS)
 

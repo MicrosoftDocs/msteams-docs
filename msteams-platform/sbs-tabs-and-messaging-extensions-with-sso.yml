@@ -393,7 +393,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/Tab-ME-SSO/certificate.png)
+          ![Trust Certificate](~/assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
 
           A webpage opens with a message **Your bot is ready!**
 

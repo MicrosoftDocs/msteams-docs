@@ -1,7 +1,7 @@
 ---
 title: Moodle Frequently asked questions
 description: In this article, fetch answers to some frequently asked questions while using the Moodle LMS. 
-ms.topic: Frequently asked questions on Moodle LMS
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
 ---

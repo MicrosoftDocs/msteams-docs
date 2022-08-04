@@ -127,7 +127,7 @@ For example:
 * To prompt the user to access their location, you must call `getCurrentPosition()`:
 
     ```JavaScript
-    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
     ```
 
 * To prompt the user to access their camera on desktop or web, you must call `getUserMedia()`:
@@ -212,6 +212,17 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
+    # [TeamsJS v2](#tab/teamsjs-v2)
+
+    ```JavaScript
+     function getLocation() {
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+            let currentLocation = JSON.stringify(location);
+     }).catch((error) => { /*Error getting location*/ })} 
+    ```
+
+    # [TeamsJS v1](#tab/teamsjs-v1)
+
     ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -219,6 +230,10 @@ For example:
      });
      } 
     ```
+
+    ***
+
+Here's how the device permissions prompts appear to users on mobile and desktop.
 
 # [Mobile](#tab/mobile)
 
