@@ -4,7 +4,7 @@ author: MuyangAmigo
 description: In this module, learn about TeamsFX multi environment such as, create a new environment, select target environment and more
 ms.author: nintan
 ms.localizationpriority: medium
-ms.topic: overview of multiple environment
+ms.topic: conceptual
 ms.date: 11/29/2021
 ---
 
