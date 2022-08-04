@@ -432,7 +432,7 @@ You can also generate a deep link to [share the app to stage](~/apps-in-teams-me
 
 > [!Note]
 >
-> * Currently, deep link to share content to stage in meetings are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Currently, deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Deep link to share content to stage in meeting is supported in Teams desktop client only.
 
 When a deep link is selected in an app by a user who is part of an ongoing meeting, then the app is shared to the stage and a permission pop-up window appears. Users can grant permissions for the participants, such as co-editing a document or collaborating with an app.
