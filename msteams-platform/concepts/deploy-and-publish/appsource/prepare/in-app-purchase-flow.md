@@ -72,7 +72,7 @@ Following code snippet is an example of calling the API from the Teams app built
 </script>
 ```
 
-Following code snippet is an example of calling the API from the Teams app built using teams-js sdk from version 12:
+Following code snippet is an example of calling the API from the Teams app built using teams-js sdk from Version 2:
 
 ```json
 <div>
