@@ -56,12 +56,12 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug":::
 
    > [!NOTE]
-   > [In this scenario the project name is MyTeamsApp1]
+   > In this scenario the project name is MyTeamsApp1
 
 Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
-4. Sign in to your Microsoft 365 Account.
-5. Select **Continue"
+4. Sign in to your **Microsoft 365 Account**.
+5. Select **Continue**
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
@@ -87,15 +87,15 @@ Visual Studio launches the Teams app inside Microsoft Teams client in your brows
 Ensure to post HTTP request to <http://localhost:5130/api/notification> to trigger notification, when you're debugging Notification Bot app. You can use any API tool: curl (Windows Command Prompt), Postman, etc., if you've selected HTTP trigger when creating the project.
 
    > [!TIP]
-   > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you locally try to run the Teams app again.
+   > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you try to run the Teams app again locally.
 
 ## Key features of Teams Toolkit
 
-You can see the following key features of the Teams Toolkit, that automate the local debugging process of your Teams app:
+You can see the following key features of Teams Toolkit, that automate the local debugging process of your Teams app:
 
 ### Prepare Teams app dependencies
 
-Teams Toolkit prepares a local debug dependencies and registers your Teams app in the tenant in your account. For Bot and Message Extension apps, Teams Toolkit will register and configure a bot.
+Teams Toolkit prepares local debug dependencies and registers your Teams app in the tenant in your account. For Bot and Message Extension apps, Teams Toolkit will register and configure bot.
 
 ### Start debugging
 
