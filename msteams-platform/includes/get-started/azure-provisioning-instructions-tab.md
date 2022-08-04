@@ -22,6 +22,8 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
+    For more information see [Create resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
+
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
 
@@ -89,4 +91,3 @@ Once the provisioning and deployment steps are complete:
     Congratulations, your first tab app is running in your Azure environment!
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows message to try the app now or later":::
- 

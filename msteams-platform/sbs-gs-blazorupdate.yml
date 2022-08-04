@@ -331,7 +331,8 @@ items:
     1. Enter the following in the **Provision** dialog:
 
        1. **Subscription name**: Visual Studio Enterprise Subscription. </br>
-       1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
+       1. **Resource group**: Select **New** to add the resource group generated for your app.</br> For more information see [Create resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
+
        1. Select your **Region**.
        1. Select **Provision**.
 

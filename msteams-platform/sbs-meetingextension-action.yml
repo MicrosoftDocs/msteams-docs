@@ -81,7 +81,8 @@ items:
         ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/create-azurebot.png) 
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
+       For more information see [Create resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
+       
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
      
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
