@@ -106,7 +106,7 @@ You can perform debugging with a single operation, press **F5** to start debuggi
 You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in your web browser.
 The following image shows the toggle breakpoints:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug-VS/VS-localdebug-togglebreakpoints.png" alt-text="localdebug togglebreakpoints":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Local debug toggle breakpoints":::
 
 ### Hot reload
 
