@@ -458,25 +458,15 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/zipfile.png" alt-text="Zip file"::: 
     
-    1. Go to Teams Client.
-    1. Select **Store**.
-    1. Select **Manage your apps**.
-    1. Select **Upload an app**.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/publish.png" alt-text="Publish"::: 
-     
-    1. Select **Upload a custom app**. 
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload.png" alt-text="Upload custom app"::: 
-
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/selectzip.png" alt-text="Select zip file"::: 
-
-    1. Select **Add to a meeting**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addtheapp.png" alt-text="Add the app"::: 
-
-    1. Enter meeting name.
+    1. Create a meeting with a few presenters and attendees.
    
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-name.png" alt-text="App in Manage apps":::
+    1. After the meeting is created, go to the meeting details page and select **Add an app**.
+
+    1. Select **Manage apps**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-teams.png" alt-text="Add an app to Teams"::: 
+    
+    1. Select **Upload a custom app**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-an-app.png" alt-text="Upload an app to Teams"::: 
+  
