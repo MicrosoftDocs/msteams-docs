@@ -33,29 +33,9 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Latest version of Visual Studio](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
-    | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample C# app repo from GitHub. |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and message extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
+    | &nbsp; | [Visual Studio Enterprise 2022 Preview](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise preview version in Visual Studio 2022, and install the workloads. |
+    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-    | **Optional** | &nbsp; | &nbsp; |
-    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
-    
-
-    ## Verify git installation
-
-    If Visual Studio installation prompts you to add `git` to the path, select it. 
-   
-    To verify the version of git installed:
-
-    1. Open a terminal window. 
-    2. Run the following command to verify the `git` version installed on your machine:
-
-        ```bash
-        $ git --version
-        ```
-
-        Output example: `git version 2.17.1.windows.2`
 
     ## Install Teams Toolkit
 
@@ -65,19 +45,20 @@ items:
 
     To install Teams Toolkit extension:
 
-    1. Open Visual Studio and select the **Extensions** > **Manage Extensions**.
+    1. Open Visual Studio and select **Extensions** > **Manage Extensions**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-extension.png" alt-text="Select Extensions.":::
 
-       The following Manage Extension page appears:
+       The following Manage Extension window appears:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions.":::
 
-    1. Select **Installed** and you can see Teams Toolkit extension is installed by default.
+    1. Select **Installed** and you can see **Teams Toolkit** extension.
     
        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit":::
-       
-    You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit).
+
+       > [!NOTE]
+       > By default, Teams Toolkit extension is installed in Visual Studio.
 
     ## Set up your Teams development tenant
 
@@ -135,7 +116,7 @@ items:
     1. [About the directory structure of your app]
 
     ## Create your tab project workspace
-
+    
     If the prerequisites are in place, let's begin!
 
     The following steps help you to create project workspace for your tab app in Visual Studio
@@ -150,12 +131,12 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/select-create-project.png" alt-text="Select create project":::
     
-    The following page appears:
+       The following page appears:
  
         :::image type="content" source="~/assets/images/teams-toolkit-v2/select-create-project.png" alt-text="Select create project":::
 
     1. Enter **Teams** in the search box.
-    1. Select **Microsoft Teams app** and select **Next**.
+    1. Select **Microsoft Teams App** and select **Next**.
     
         :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams":::
 
@@ -223,7 +204,7 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/select-add.png" alt-text="Select Add":::
 
-       Congratulations, your first app is running on Teams!
+       Congratulations, your first tab app is running on Teams!
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/final-output-vs.png" alt-text="Final Output for VS":::
 
@@ -242,8 +223,8 @@ items:
 
     You've created a tab app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+    Now that you've learned to create a basic app.
 
     That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. 
 
-    You've completed the tutorial to build tab app with C#.
+    You've completed the tutorial to build tab app using C#.
