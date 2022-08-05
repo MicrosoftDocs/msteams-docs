@@ -23,7 +23,7 @@ items:
     In this tutorial, you'll learn:
 
     - How to set up a new project.
-    - How to build apps with tab capability using C# and latest version of Visual Studio.
+    - How to build apps with tab capability using C# and Visual Studio.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -111,10 +111,6 @@ items:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
 
-    In this page, you'll learn:
-    1. [How to set up a new tab project with Teams Toolkit]
-    1. [About the directory structure of your app]
-
     ## Create your tab project workspace
     
     If the prerequisites are in place, let's begin!
@@ -130,17 +126,13 @@ items:
     1. Select **Create a new project**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/select-create-project.png" alt-text="Select create project":::
-    
-       The following page appears:
- 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-create-project.png" alt-text="Select create project":::
 
     1. Enter **Teams** in the search box.
     1. Select **Microsoft Teams App** and select **Next**.
     
         :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams":::
 
-       Configure your new project page appears:
+       Configure your new project page appears.
 
     1. Enter the following details to configure your new project.
 
@@ -162,9 +154,9 @@ items:
 
     ## Take a tour of tab app source code
       
-       Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the  
+        Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the  
 
-         :::image type="content" source="~/assets/images/teams-toolkit-v2/solution explorer.png" alt-text="Solution Explorer":::   
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/solution explorer.png" alt-text="Solution Explorer":::   
 
 - title: Build and run your first tab app using C#
   durationInMinutes: 1
