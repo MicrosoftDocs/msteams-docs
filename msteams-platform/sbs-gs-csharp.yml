@@ -177,7 +177,7 @@ items:
 
        Now Teams tab app is created in a few seconds.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation":::    
 
     ## Take a tour of tab app source code
       
@@ -185,56 +185,65 @@ items:
 
          :::image type="content" source="~/assets/images/teams-toolkit-v2/solution explorer.png" alt-text="Solution Explorer":::   
 
-- title: Preview and test your first C# app
+- title: Build and run your first tab app using C#
   durationInMinutes: 1
   content: |
 
-    After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
+    After you set up your project workspace with Teams Toolkit, build your tab app. 
+    You'll need to sign in to your Microsoft 365 account.
 
-    ## Preview your app in Teams
+    ## Sign in to your Microsoft 365 account
 
-    After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
+    Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    To preview your app:
 
-    1. Select **Preview in Teams** from the Developer Portal toolbar.
+    1. Right click on **Mytabapp** under **Solution Mytabapp**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button"lightbox="~/assets/images/teams-toolkit-v2/preview-in-teams.png":::
+    1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        The Developer Portal informs you that your app is sideloaded successfully.
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png" alt-text="Teams app Dependencies":::
+    
+    1. Select **Microsoft 365 Account** and select **Continue**. 
 
-    1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
-    1. Select **Manage your apps**.
-       Your app is listed in the sideloaded apps. 
-    1. Find your app using the search box, select the three-dots in its row.
-    1. Select the **View** option.
-        The **Add** page appears for your app.
-    1. Select **Add** to load the app on Teams.
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-m365-account.png" alt-text="Select-M365-account":::
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog":::
+    ## Build and run your app locally in Visual Studio
 
-        Your app is now available in Teams. You can view all the tabs and test the capabilities:
+    To build and run your app locally:
 
-        - Hello tab:
+    1. From Visual Studio, select **F5** or **Debug** > **Start Debugging** to run the application in debug mode.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-tab.png" alt-text="Image showing Hello tab in local environment":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/start-debugging.png" alt-text="Start Debugging":::
 
-        - Chat bot:
+       Teams web client opens in a browser window.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot.png" alt-text="Image showing the app's bot in local environment":::
+    1. Sign in with your Microsoft 365 account, if prompted. 
 
-            You can send a message using the chat.
+    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot-chat.png" alt-text="Image showing chat in local environment":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-add.png" alt-text="Select Add":::
 
-        - Message extension:
+       Congratulations, your first app is running on Teams!
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext.png" alt-text="Image showing message extension in local environment":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/final-output-vs.png" alt-text="Final Output for VS":::
 
-            You can try a search using the message extension.
+      <details>
+      <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext-query.png" alt-text="Image showing search using message extension in local environment"lightbox="~/assets/images/teams-toolkit-v2/helloworld-msgext-query.png":::
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
-        - About tab:
+      </details>   
+           
+- title: Congratulations!
+  durationInMinutes: 1
+  content: |
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-about.png" alt-text="Image showing About tab in local environment":::
+    You've done it!
+
+    You've created a tab app.
+
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+
+    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. 
+
+    You've completed the tutorial to build tab app with C#.
