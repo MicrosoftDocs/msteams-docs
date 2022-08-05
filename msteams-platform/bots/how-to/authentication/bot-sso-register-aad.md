@@ -89,7 +89,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     The page with app ID and other configurations is displayed.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-created.png" alt-text="App registration is successful." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="App registration is successful." border="true":::
 
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
