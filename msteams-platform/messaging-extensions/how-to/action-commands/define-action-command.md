@@ -81,6 +81,11 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 You can create an action command using **Developer Portal**.
 
+> [!WARNING]
+> If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio is deprecated on August 01, 2022.
+
+# [App Studio](#tab/AS)
+
 > [!NOTE]
 > The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
