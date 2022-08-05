@@ -156,7 +156,7 @@ items:
       
         Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the  
 
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/solution explorer.png" alt-text="Solution Explorer":::   
+           :::image type="content" source="~/assets/images/teams-toolkit-v2/solution explorer.png" alt-text="Solution Explorer":::   
 
 - title: Build and run your first tab app using C#
   durationInMinutes: 1
