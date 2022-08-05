@@ -55,9 +55,6 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 > [!NOTE]
 > To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
-> [!WARNING]
-> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio is deprecated on August 01, 2022.
-
 ## Cloud-hosted
 
 You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.

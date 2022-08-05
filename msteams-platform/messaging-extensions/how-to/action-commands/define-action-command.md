@@ -25,7 +25,7 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## Select action command invoke locations
@@ -80,9 +80,6 @@ To add the action command to the app manifest, you must add a new `composeExtens
 ### Create an action command using Developer Portal
 
 You can create an action command using **Developer Portal**.
-
-> [!WARNING]
-> If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio is deprecated on August 01, 2022.
 
 # [App Studio](#tab/AS)
 
