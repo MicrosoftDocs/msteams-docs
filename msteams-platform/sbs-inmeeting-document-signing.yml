@@ -405,19 +405,21 @@ items:
 
     1. Open **appsettings.json** in Visual Studio and update the following information:  
 
-         * Set **MicrosoftAppId** and **ClientId** to your bot's Microsoft App ID.
-         * Set **MicrosoftAppPassword** and **ClientSecret** to your bot's client secret ID value.
+         * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name without `https://`.
+         * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
 
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings1.png" alt-text="App settings":::
           
     1. Navigate to **manifest.json** in cloned repository.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifestlocation.png" alt-text="Manifest file location":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file.png" alt-text="Manifest file location":::
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
-         * Replace all occurrences of `<<ClientId>>` with your bot's client secret ID value.
+         * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name without `https://`.
+         * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-2.png" alt-text="Manifest image2":::
 
