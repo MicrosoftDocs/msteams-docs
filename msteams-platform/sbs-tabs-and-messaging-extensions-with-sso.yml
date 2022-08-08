@@ -78,7 +78,7 @@ items:
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-       For more information see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
+       
         ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
