@@ -38,7 +38,7 @@ The main milestones of this journey are:
 You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
 
 > [!NOTE]
-> [You'll need to first install the Visual Studio installer before installing Visual Studio.]
+> You'll need to first install the Visual Studio installer before installing Visual Studio.
 
 After you open the Visual Studio installer, in the pop-up Workloads window.
 
