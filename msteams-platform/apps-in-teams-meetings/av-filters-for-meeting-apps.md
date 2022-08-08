@@ -47,12 +47,10 @@ Update your app's manifest.json by adding RSC permission `CameraStream.Read.User
 
 ### Sample manifest
 
-App manifest example
-
-The following is an example of a manifest for a video filter app
+The following is an example of a manifest for a video filter app:
 
 ```json
-
+{
 "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview", // Required for meetingExtensionDefinition for sideloading. Will have a published version 1.10
   "id": "e58bac8e-94ff-4dce-8892-9bcd564fb36c", // Guid
@@ -107,36 +105,57 @@ The following is an example of a manifest for a video filter app
     // Video app web page url for both processing video frames and ustomization experience. The domain should be one of **validDomain**。
     "videoAppContentUrl": "https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html"  
   }
+}
 ```
 
 Ensure that the video filter app manifest meets the following requirements:
 
-• Each filter must have a non-empty guid, and the Guid must be unique for the `meetingExtensionDefinition` property
+* Each filter must have a non-empty guid, and the Guid must be unique for the `meetingExtensionDefinition` property
 
-• The number of filters for an app is limited to 32
+* The number of filters for an app is limited to 32
 
-• The file size for the video filter thumbnail image must not exceed 2 MB
+* The file size for the video filter thumbnail image must not exceed 2 MB
 
-• The 'videoAppContentUrl' property must not be empty
+* The 'videoAppContentUrl' property must not be empty
 
-• Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width or height - 74 or 42) < 0.01.
+* Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width or height - 74 or 42) < 0.01.
 
-• Value of each filter's thumbnail must be a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA
+* Value of each filter's thumbnail must be a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA
 
-• RawFormat: PNG
+* RawFormat: PNG
 
-• PixelFormat: PixelFormat24bppRGB or PixelFormat32bppARGB
+* PixelFormat: PixelFormat24bppRGB or PixelFormat32bppARGB
 
-• Filter Categories: Styles, Frames, Makeup, and Others
+* Filter Categories: Styles, Frames, Makeup, and Others
 
-|File category|Description|Example|
-|---------|---------|---------|
-|Styles    |Filters that add visual effects to the video stream, including graphical styles such as color and texture changes. |         |
-|Frames     |Filters with additional add-on designs, which do not have semantic information. |         |
-|Makeup     |Virtual makeup based on facial area.  |         |
-|Others     |Filters that don’t fall into the categories above.    |         |
+   |File category|Description|Example|
+   |---------|---------|---------|
+   |Styles    |Filters that add visual effects to the video stream, including graphical styles such as color and texture changes. |         |
+   |Frames     |Filters with additional add-on designs, which do not have semantic information. |         |
+   |Makeup     |Virtual makeup based on facial area.  |         |
+   |Others     |Filters that don’t fall into the categories above.    |         |
+
+* Filter naming:
+  * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that do not conform with Microsoft’s value of inclusivity.
+  * There is no mandatory requirement for the number of word floats. For a better user experience, it is recommended to keep the total filter and app name word counts within 12-16, and no more than 20.
+
+* When the mouse hovers over the filter, the tooltip must display the text **[Filter name] from [Developer name]**. For example, Island Style from Contoso.
+
+* After applying a filter, the hovers over text on the applied filter's ellipses icon (**...**) and tooltip must display as **Open [App name]**. For example, Open Contoso.
+
+* Add a prefix to the filter name.
+  * Styles: Styles_[Filter name]. For example, Styles_Island Style.
+  * Frames: Frames_[Filter name]
+  * Makeup: Makeup_[Filter name]
+  * Others: Others_[Filter name]
+
+### Validate your app
+
+After updating the app manifest, you can validate your app at in the [app validation website](https://dev.teams.microsoft.com/appvalidation.html).
 
 ### Register for Video frame API
+
+Register to read the video frames in Permissions section
 
 ```typescript
 function registerForVideoFrame(frameCallback: VideoFrameCallback, config: VideoFrameConfig),
@@ -157,6 +176,8 @@ format: VideoFrameFormat;
 
 ### Register for Video effect
 
+Register the video effect callback, host client uses this to notify the video extension the new video effect will by applied
+
 ```typescript
 function registerForVideoEffect(callback: VideoEffectCallBack)
 
@@ -165,6 +186,8 @@ type VideoEffectCallBack = (effectId: string | undefined) => void,
 ```
 
 ### notifySelectedVideoEffectChanged
+
+Video extension should call this to notify host client that the current selected effect parameter changed. If it's pre-meeting, host client will call videoEffectCallback immediately then use the videoEffect. If it's the in-meeting scenario, we will call videoEffectCallback when apply button clicked.
 
 ```typescript
 }
@@ -194,3 +217,44 @@ enum EffectChangeType
 } 
 
 ```
+
+### Tips to implement API
+
+* Video frame related data, including any raw video frame and any data calculated from video frame, must only be consumed in user's local computer, and should not be uploaded to the network.
+
+* Only NV12 video format is supported. RGB(A) is not supported. The sample app has provided sample code for video format conversion between NV12 and RGB(A).
+
+* The JavaScript in the video app must only operate on the latest videoFrame. References to previous video frames can result in unexpected behavior.
+
+* Video frame size can change any time, so size sensitive resources for processing video frames should be recreated when video frame size changes.
+
+* Call microsoftTeams.video.registerForVideoEffects() as early as possible. Call microsoftTeams.video.registerForVideoFrame() after required resources downloaded and the video app initialization is finished.
+
+* Ensure the stability of the effect algorithm. When calling notifyFrameProcessed(), ensure the video frame has been fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
+
+* Video app should be compliant to Teams client SDK [terms of use](/legal/microsoft-apis/terms-of-use).
+
+## Test your video filter app
+
+You can test the functionality and performance of your video filter app.
+
+To test your video filter app:
+
+1. Download the [video sample app](https://github.com/microsoft/teams-videoapp-sample/blob/main/test-app/vxTestApp-v1.0.2-win32-x64.zip).
+1. Extract the files from the folder.
+1. Run the vxTestApp.exe.
+1. Enter the Video app url and select **Load**.
+1. Select an effect from the list and select **Apply effect**.
+1. Select **real-time evaluation** or **Full Evaluation** to analyze the performance data.
+
+A good functioning video filter app should have the following performance:
+
+* Video frame processing time less than 30 ms.
+* Video app loading time less than 4 sec.
+* App Size less than 20 MB.
+* Memory less than 150 MB.
+* Latency less than 100 ms.
+
+### Sideload the video filter app
+
+After you test the video filter app, sideload the app to your tenant in Teams. For more information, see [Upload you custom app](../concepts/deploy-and-publish/apps-upload.md).
