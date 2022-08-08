@@ -934,7 +934,7 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio sp
 > [!NOTE]
 >
 > * The `getIncomingClientAudioState` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
-> * Resource specific consent are available after manifest version 1.11, hence this API does not work for manifest version 1.11 or later.
+> * Resource specific consent are only available after manifest version 1.11, hence this API does not work for manifest version 1.11 or below.
 
 ### Query parameter
 
@@ -976,7 +976,7 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 > [!NOTE]
 >
 > * The `toggleIncomingClientAudio` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
-> * Resource specific consent are available after manifest version 1.11, hence this API does not work for manifest version 1.11 or later.
+> * Resource specific consent are only available after manifest version 1.11, hence this API does not work for manifest version 1.11 or below.
 
 ### Query parameter
 
