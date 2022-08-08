@@ -1,5 +1,5 @@
 ---
-title: Build environment in Your Teams apps
+title: Prepare to build Apps with Teams Toolkit
 author: surbhigupta
 description:  In this module, learn how to build environment of Teams Toolkit
 ms.author: v-amprasad
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Build environment in Your Teams apps
+# Prepare to build Apps with Teams Toolkit
 
 Microsoft Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, then you can manage the app in the Developer Portal. You can choose a suitable environment that best suits your app. It supports the following build environments:
 
