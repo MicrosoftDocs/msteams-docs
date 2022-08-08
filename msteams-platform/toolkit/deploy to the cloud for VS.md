@@ -80,4 +80,9 @@ The other way to preview your app:
 
 ## See also
 
+* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](provision VS.md)
+* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
+* [Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)
+
 * TBD
