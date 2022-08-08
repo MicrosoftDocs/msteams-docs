@@ -22,7 +22,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
-    For more information see [Create resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
+    For more information see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)
 
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
