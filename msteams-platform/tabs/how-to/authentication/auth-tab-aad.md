@@ -96,7 +96,7 @@ microsoftTeams.authentication.authenticate({
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign-in. This redirection could be done on the server side using HTTP 302, but in this case it's done on the client side using with a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of the page is to redirect to your identity provider so the user can sign-in. This redirection can be done on the server side using HTTP 302, but in this case it's done on the client side using a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
