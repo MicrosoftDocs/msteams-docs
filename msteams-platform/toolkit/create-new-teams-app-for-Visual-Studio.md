@@ -68,4 +68,6 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 > [!NOTE]
 >After the project is created, Teams Toolkit automatically opens Get started. You can now see the instructions in Get started and check out the different features in Teams Toolkit.
 
-## See Also
+## See also
+
+* [Provision cloud resources using Visual Studio](provision VS.md)
