@@ -16,8 +16,8 @@ items:
   content: |
     Meeting signing is a Microsoft Teams sample app that enables users to sign documents in real time scenarios. It provides enhanced experience by allowing the users to review and sign documents in a single session during meetings.
     This sample lets users electronically sign documents with their current tenant identity. The users can sign the following documents during meetings:
-    * Purchase agreements 
-    * Purchase orders
+    * Purchase agreements.
+    * Purchase orders.
     
     The template is also applicable for other scenarios. such as for reviewing and approving code samples and collaborative documents.
     The users can customize to incorporate other types of signatures: 
