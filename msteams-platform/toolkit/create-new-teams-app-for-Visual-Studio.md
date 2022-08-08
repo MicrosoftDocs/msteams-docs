@@ -71,4 +71,4 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 ## See also
 
 * [Provision cloud resources using Visual Studio](provision VS.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy to the cloud using VS.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy to the cloud for VS.md)
