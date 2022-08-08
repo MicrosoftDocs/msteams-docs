@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Introduce Teams Toolkit for Visual Studio
+        url: teams-toolkit-overview-visual-studio.md
       - text: Collaboration controls [Developer preview]
         url: samples/collaboration-control.md
       - text: Build shared channels
