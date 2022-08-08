@@ -33,10 +33,10 @@ Here's a list of tools you need for building and deploying your apps.
 
 ## Deploy Teams app using Teams Toolkit
 
-1. Launch Visual Studio
+1. Launch Visual Studio.
 1. Select **Create a new project** or open an existing project from the list.
 1. Right-click on your project **MyTeamsApp1**
-1. Select **Teams Toolkit**
+1. Select **Teams Toolkit**.
 1. Select **Deploy to the cloud…**
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="deploy to cloud":::
@@ -69,7 +69,7 @@ After your project is successfully deployed to Azure, there are different ways t
 
 The other way to preview your app:
 
-1. Right-click on your project **MyTeamsApp1** under the Solution explorer panel.
+1. Right-click on your project **MyTeamsApp1** under the Solution Explorer panel.
 1. Select **Teams Toolkit**.
 1. Select **Preview in Teams** to launch the Teams app in web browser.
 
