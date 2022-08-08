@@ -102,4 +102,8 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 * Collaborate on Teams projects.
 * Publish Teams app.
 
-## See Also
+## See also
+
+* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](provision VS.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy to the cloud for VS.md)
