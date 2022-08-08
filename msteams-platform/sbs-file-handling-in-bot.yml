@@ -83,7 +83,7 @@ items:
 
     1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/newresource.png" alt-text="selection of new resource location":::
+        :::image type="content" source="../msteams-platform/assets/images/bots/newresource.png" alt-text="selection of new resource location":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -154,10 +154,10 @@ items:
        
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1.Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
+       :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+      
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.

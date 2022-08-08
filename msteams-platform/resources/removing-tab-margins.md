@@ -33,9 +33,9 @@ No, you must provide your own padding or margins to the left and right of all ap
 
 **What's the size of the tab margins that Teams applied previously?**
 
-* Left and right: 20 px
-* Top: 16 px
-* Bottom: 0 px
+* Left and right: 20 pixels
+* Top: 16 pixels
+* Bottom: 0 pixels
 
 > [!IMPORTANT]
 >

@@ -147,8 +147,8 @@ items:
     1. From the **Recent resources** section, open your bot.
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
         
-        :::image type="content" source="./assets/images/conversation-bot/channels-teams.png" alt-text="Select Teams.":::
-    
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+
     1. Select the checkbox to accept the terms of service and select **Agree**.
 
         :::image type="content" source="./assets/images/conversation-bot/terms-of-service.png" alt-text="Terms of Service.":::
