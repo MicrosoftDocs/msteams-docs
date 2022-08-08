@@ -20,7 +20,7 @@ The following sections describe how to do this:
 
 To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
 
- >[!Note]
+ >[!NOTE]
  >`justInTimeInstall` functions when you upload an app to the app catalog, it fails when you sideload an app.
 
 ### Complete app manifest example
@@ -442,7 +442,7 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
->[!Note]
+>[!NOTE]
 >The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
 
 ```json
