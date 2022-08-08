@@ -40,7 +40,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
    > [!NOTE]
    > You can select any type of capability based on your requirement.
 
-1. Select **JavaScript** as the programming language.
+1. Select **JavaScript** as the programming language
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="Screenshot showing how to select the programming language":::
 
