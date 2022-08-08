@@ -27,7 +27,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
    >
    >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
-    A dialog warns you that costs may be incurred when running resources in Azure.
+    A dialog warns you that costs may be incurred when running resources in Azure
 
 1. Select **Provision**.
 
