@@ -151,7 +151,7 @@ You can add **environmentVariables** to **launchSettings.json** file.
 
 You can launch Teams app as a web app instead of running in Teams client.
 
-1. Select **Properties** > **launchSettings.json** in solution explorer panel under your project.
+1. Select **Properties** > **launchSettings.json** in Solution Explorer panel under your project.
 1. Remove the **'launchUrl'** from the file.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl":::
