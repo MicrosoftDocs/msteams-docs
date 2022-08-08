@@ -1,16 +1,16 @@
 ---
 title: Audio or video filters for meeting apps
 author: v-ypalikila
-description: Learn about Teams meeting lifecycle and users meeting experience in desktop and mobile, User types, integrate bots and message extension in meeting lifecycle.
+description: Learn how to add filters, frames, makeups and so on to videos and make your videos more presentable for meetings.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-ypalikila
-ms.date: 08/008/2022
+ms.date: 08/08/2022
 ---
 
 # Video filters for meeting apps
 
-As online meetings have become more prominent and Teams users spend significant amount of time reviewing work with teammates, watching videos together, and collaborating on video calls. With Video filters you can add filters, frames, makeups and so on to videos and make your videos more presentable for meetings.
+As online meetings have become more prominent and Teams users spend significant amount of time reviewing work with teammates, watching videos together, and collaborating on video calls. With Video filters you can add filters, frames, makeups, and so on to videos and make your videos more presentable for meetings.
 
 Prerequisites
 
@@ -50,6 +50,8 @@ Update your app's manifest.json by adding RSC permission `CameraStream.Read.User
 App manifest example
 
 The following is an example of a manifest for a video filter app
+
+```json
 
 "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview", // Required for meetingExtensionDefinition for sideloading. Will have a published version 1.10
@@ -105,7 +107,7 @@ The following is an example of a manifest for a video filter app
     // Video app web page url for both processing video frames and ustomization experience. The domain should be one of **validDomain**。
     "videoAppContentUrl": "https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html"  
   }
-}
+```
 
 Ensure that the video filter app manifest meets the following requirements:
 
@@ -130,7 +132,7 @@ Ensure that the video filter app manifest meets the following requirements:
 |File category|Description|Example|
 |---------|---------|---------|
 |Styles    |Filters that add visual effects to the video stream, including graphical styles such as color and texture changes. |         |
-|Frames     |Filters with additional add-on designs which do not have semantic information. |         |
+|Frames     |Filters with additional add-on designs, which do not have semantic information. |         |
 |Makeup     |Virtual makeup based on facial area.  |         |
 |Others     |Filters that don’t fall into the categories above.    |         |
 
