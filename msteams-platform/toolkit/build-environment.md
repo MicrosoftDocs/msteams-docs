@@ -1,5 +1,5 @@
 ---
-title: Prepare to build Apps with Teams Toolkit
+title: Prepare to build apps with Teams Toolkit
 author: surbhigupta
 description:  In this module, learn how to build environment of Teams Toolkit
 ms.author: v-amprasad
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prepare to build Apps with Teams Toolkit
+# Prepare to build apps with Teams Toolkit
 
 Microsoft Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, then you can manage the app in the Developer Portal. You can choose a suitable environment that best suits your app. It supports the following build environments:
 
@@ -19,20 +19,20 @@ Microsoft Teams Toolkit in Visual Studio Code offers set of environments to buil
 
 Teams Toolkit in Visual Studio Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
 
-* Supports rich interfaces that are very user friendly
-* Provides quick upgrades to existing apps
-* Distributes apps on multiple platforms, such as Android and iOS
-* Compatible for creating an app with existing APIs
+* Supports rich interfaces that are very user friendly.
+* Provides quick upgrades to existing apps.
+* Distributes apps on multiple platforms, such as Android and iOS.
+* Compatible for creating an app with existing APIs.
 
 ## Create your Teams app using SPFx
 
 Teams Toolkit in Visual Studio Code allows you to create apps using SPFx. These apps have the following advantages:
 
-* Provides easy integration with data residing in SharePoint to your Teams
-* Accesses to various open-source tools
-* Creates powerful applications that can deliver a great UX
-* Integrates with other Microsoft (Office) 365 workloads easily
-* Delivers flexibility to host applications wherever needed
+* Provides easy integration with data residing in SharePoint to your Teams.
+* Accesses to various open-source tools.
+* Creates powerful applications that can deliver a great UX.
+* Integrates with other Microsoft (Office) 365 workloads easily.
+* Delivers flexibility to host applications wherever needed.
 
 ## Manage your apps using Developer Portal
 
