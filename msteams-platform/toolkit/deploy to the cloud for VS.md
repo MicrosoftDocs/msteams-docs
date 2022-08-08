@@ -35,7 +35,7 @@ Here's a list of tools you need for building and deploying your apps.
 
 1. Launch Visual Studio.
 1. Select **Create a new project** or open an existing project from the list.
-1. Right-click on your project **MyTeamsApp1**
+1. Right-click on your project **MyTeamsApp1**.
 1. Select **Teams Toolkit**.
 1. Select **Deploy to the cloud…**
 
