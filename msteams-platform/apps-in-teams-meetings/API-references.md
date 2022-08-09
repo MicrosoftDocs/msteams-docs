@@ -942,7 +942,7 @@ The following table includes the query parameter:
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
 
-### Syntax
+### Example
 
 ```typescript
 function getIncomingClientAudioState(
@@ -956,35 +956,6 @@ function getIncomingClientAudioState(
   }
 
 ```
-
-### Example
-
-callback = (error, result) => {
-        if (error) {
-            // Handle error code
-        }
-        else {
-            // Handle success code
-        }
-    }
-
-microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
-
-> [!NOTE]
-> RSC has been enabled after 1.11, this feature won't work before 1.12.
-
-### Manifest
-
-"authorization": {
-    "permissions": {
-      "resourceSpecific": [
-        {
-          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-          "type": "Delegated"
-        }
-      ]
-    }
-  }
 
 ### Response codes
 
@@ -1011,7 +982,7 @@ The following table includes the query parameter:
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
 
-### Example
+### Syntax
 
 ```typescript
 function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
@@ -1023,6 +994,35 @@ function toggleIncomingClientAudio(callback: (error: SdkError | null, result: bo
   }
 
 ```
+
+### Example
+
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+
+> [!NOTE]
+> RSC has been enabled after 1.11, this feature won't work before 1.12.
+
+### Example
+
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 
 ### Response code
 
