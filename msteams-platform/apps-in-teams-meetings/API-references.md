@@ -1,7 +1,7 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: Learn to identify the meeting apps API references with examples and Code samples, Teams apps meetings user role api user context notification signal query.
+description: In this module, learn to identify the meeting apps API references with examples, code samples and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
