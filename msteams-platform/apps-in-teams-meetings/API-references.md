@@ -1,7 +1,7 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: In this module, learn to identify the meeting apps API references with examples, code samples and response codes.
+description: In this module, learn meeting apps API references available for Teams client and Bot Framework SDK's with examples, code samples and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
