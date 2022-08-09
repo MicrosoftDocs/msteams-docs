@@ -221,7 +221,7 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
   - name: Build apps for shared channels
-    href: concepts/build-and-test/build-apps-for-shared-channels.md  
+    href: concepts/build-and-test/shared-channels.md  
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Tabs link unfurling and Stage View
