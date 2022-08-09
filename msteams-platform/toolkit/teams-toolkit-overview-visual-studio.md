@@ -93,7 +93,7 @@ You can perform the following functions on Teams Toolkit for Visual Studio:
 |Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
 |Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
 
-The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Visual Studio Code, however they're planned in the future product road-map.
+The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Visual Studio Code, however they're planned in the future product road map.
 
 * Add another Teams capabilities to your Teams app.
 * Add more Azure resources to your Teams app
