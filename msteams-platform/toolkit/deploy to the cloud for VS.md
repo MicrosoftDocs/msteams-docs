@@ -23,7 +23,7 @@ Here's a list of tools you need for building and deploying your apps.
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | **Required** | &nbsp; |
-| &nbsp; | Visual Studio | You can install the free community edition of Visual Studio, and install the workload. |
+| &nbsp; | Visual Studio 2022 v17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
