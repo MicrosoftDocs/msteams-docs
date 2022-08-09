@@ -1,6 +1,6 @@
 ---
 title: Extend Teams apps across Microsoft 365 (preview)
-description: In this article, learn how to build, update, and extend your Teams app experiences and how to use Teams apps across other high-usage areas of Microsoft 365.
+description: In this article, learn how to build, update, and extend your Teams app experiences and how to create apps that are used across other high-usage areas of Microsoft 365.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
