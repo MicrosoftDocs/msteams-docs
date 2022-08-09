@@ -127,6 +127,94 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
 
     ## Create your tab project workspace
+
+        When the app starts, a browser window opens. It shows the root of your app. You can go to the following URLs to verify that all the app URLs are loading:
+
+        - `https://localhost:3333/`
+
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host":::
+
+        - `https://localhost:3333/hello`
+
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app":::
+
+        - `https://localhost:3333/first`
+
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app":::
+
+        - `https://localhost:3333/second`
+
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app":::
+
+        > [!Note]
+        > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`.
+
+    ## Deploy your sample app locally
+
+    Microsoft Teams apps are web applications that provide one or more capabilities. Make your app available on the internet so that the Teams platform can load it. Host your app using `ngrok` to create a tunnel to the local process on your computer.
+
+    After you host your app, make a note of its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+
+    ### Tunnel using ngrok
+
+    After you install ngrok, you can create a tunnel to deploy your app locally:
+
+    1. Open a new terminal window.
+    1. Run the following command to create a tunnel. The sample app uses port 3333.
+
+        ```bash
+        ngrok http 3333 --host-header=localhost:3333
+        ````
+        The ngrok tunnel is created. Here's an example:
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel":::
+
+        You can try adding `hello`, `first`, or `second` to the ngrok tunnel url to view different tab pages of the app.
+        
+        Ngrok listens to requests from the internet and routes them to your app running on port 3333.
+
+    To verify the app's local deployment:
+
+    1. Open the browser.
+    1. Load your app using the following URL:
+
+        `https://<forwarding address in ngrok console session>/`
+
+        Here's an example of the URL:
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-verify-tunnel.png" alt-text="Image showing C# app running locally on ngrok tunnel":::
+
+    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
+
+        > [!NOTE]
+        > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
+        > [!TIP]
+        > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app, when you'll need to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
+        > [!IMPORTANT]
+        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
+
+- title: Configure your first C# app using Developer Portal
+  durationInMinutes: 1
+  content: |
+
+    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams and configure app capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    
+    After you build and test your Teams app, you can configure and preview it using Developer Portal.
+    
+    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
+
+    <details>
+    <summary>Publish option in Visual Studio 2019</summary>
+
+    This tutorial uses Developer Portal to configure app capabilities and publish your app. 
+    
+    However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019":::
+
+    Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
+
+    If you use this option, you can enter the details of the Azure site and Azure resources and publish your app. 
     
     If the prerequisites are in place, let's begin!
 
