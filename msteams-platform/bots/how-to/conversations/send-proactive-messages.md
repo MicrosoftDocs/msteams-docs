@@ -88,7 +88,7 @@ Sending proactive messages to the users is an effective way to communicate with 
 
 > [!NOTE]
 >
-> * You can send a proactive message to the bot to know if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, the bot returns a 403 response with a `subCode` **MessageWritesBlocked** indicating that the chat thread is blocked from message writes.
+> * You can send a proactive message to the bot to know if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a 403 response with a `subCode` **MessageWritesBlocked** indicating that the chat thread is blocked from message writes.
 > * The 403 response code is sent on a per-user basis.
 
 Example of a 403 response code.
