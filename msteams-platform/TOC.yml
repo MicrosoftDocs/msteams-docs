@@ -135,9 +135,9 @@
   - name: Teams Toolkit for Visual Studio 
     items:
     - name: Teams Toolkit overview
-      href: toolkit/teams-toolkit-overview-visual-studio.md      
+      href: toolkit/teams-toolkit-overview-visual-studio.md     
     - name: Create a new Teams app
-      href: toolkit/create-new-teams-app-for-Visual-Studio.md
+      href: toolkit/toolkit/create-new-teams-app-for-Visual-Studio.md
     - name: Debug your Teams app
       href: toolkit/debug-teams-app-visual-studio.md
     - name: Provision cloud resources
