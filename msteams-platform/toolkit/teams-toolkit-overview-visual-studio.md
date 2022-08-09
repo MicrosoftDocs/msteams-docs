@@ -104,7 +104,8 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 * Manage multiple cloud environments.
 * Collaborate on Teams projects.
 * Publish Teams app.
-
+* TeamsFx .NET SDK Reference docs:
+  [Microsoft.Extensions.DependencyInjection Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection)
 ## See also
 
 * [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
