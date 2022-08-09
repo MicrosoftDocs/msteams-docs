@@ -109,9 +109,9 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 
 * [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
 * [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
-* [Microsoft.TeamsFx.Configuration Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Configuration)
-* [Microsoft.TeamsFx.Conversation Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Conversation)
-* [Microsoft.TeamsFx.Helper Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Helper)
+* [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
+* [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
+* [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
 ## See also
 
