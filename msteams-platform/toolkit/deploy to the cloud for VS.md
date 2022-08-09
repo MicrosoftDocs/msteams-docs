@@ -29,7 +29,7 @@ Here's a list of tools you need for building and deploying your apps.
 | &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
 
   > [!NOTE]
-  > Before you deploy project code to cloud, [Link to be added from PR#6427].
+  > Before you deploy project code to cloud, [Provision cloud resources for TTK Visual Studio](provision VS.md).
 
 ## Deploy Teams app using Teams Toolkit
 
