@@ -61,7 +61,7 @@ You must create the conversation if it doesn't exist or you don't know the `conv
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, you must get the conversation ID. The `conversationId` is available in the conversation update events.
 
-If you don't have the `conversationId` you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
+If you don't have the `conversationId`, you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
 ## Get the conversation ID
 
