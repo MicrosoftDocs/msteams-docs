@@ -105,13 +105,13 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 * Collaborate on Teams projects.
 * Publish Teams app.
 
-## TeamsFx .NET SDK Reference docs
+### TeamsFx .NET SDK Reference docs
 
-  [Microsoft.Extensions.DependencyInjection Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection)
-  [Microsoft.TeamsFx Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx)
-  [Microsoft.TeamsFx.Configuration Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Configuration)
-  [Microsoft.TeamsFx.Conversation Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Conversation)
-  [Microsoft.TeamsFx.Helper Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Helper)
+* [Microsoft.Extensions.DependencyInjection Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection)
+* [Microsoft.TeamsFx Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx)
+* [Microsoft.TeamsFx.Configuration Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Configuration)
+* [Microsoft.TeamsFx.Conversation Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Conversation)
+* [Microsoft.TeamsFx.Helper Namespace](https://docs.microsoft.com/dotnet/api/Microsoft.TeamsFx.Helper)
 
 ## See also
 
