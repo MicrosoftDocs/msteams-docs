@@ -38,12 +38,12 @@ During the debug process, Teams Toolkit automatically starts app services, initi
 
 You can debug your app locally in Visual Studio using Teams Toolkit by performing:
 
-### Set up Ngrok (Only for Bot and Message Extension app)
+### Set up ngrok (Only for Bot and Message Extension app)
 
 Use a Command Prompt to run this command:
 
 ```
-ngrok http 5130.
+ngrok http 5130
 ```
 
 ### Set up your Teams Toolkit
@@ -174,4 +174,3 @@ You can launch Teams app as a web app instead of running in Teams client.
 * [Provision cloud resources for TTK Visual Studio](provision-cloud-resources-using-Visual-Studio.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-Teams-app-to-the-cloud-using-Visual-Studio.md)
-
