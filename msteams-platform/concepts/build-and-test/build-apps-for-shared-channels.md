@@ -1,7 +1,7 @@
 ---
 title: Teams Connect shared channels
 author: Rajeshwari-v
-description:  Collaborating with shared channels.
+description:  Learn about Teams connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Microsoft Teams Connect shared channels
 
-Teams connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Microsoft Teams connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Individuals within the same organization.
@@ -17,7 +17,7 @@ Teams connect shared channels allow members of a channel to collaborate with use
 
 Teams connect shared channels facilitate secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications extend the powerful collaboration space.
 
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Shared Channel image"border="true" :::
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from Organization B collaborating in a shared Channel as Team A." border="true" :::
 
 ## Enable your app for shared channels
 
