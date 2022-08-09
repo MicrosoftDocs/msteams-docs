@@ -1,7 +1,7 @@
 ---
 title: Prepare to build apps with Teams Toolkit
 author: surbhigupta
-description:  In this module, learn how to build environment of Teams Toolkit
+description:  In this article, you'll learn how to build environment of Teams Toolkit and manage the app in Developer Portal
 ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
