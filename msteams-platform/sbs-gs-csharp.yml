@@ -43,22 +43,37 @@ items:
 
     Teams Toolkit is available as an extension in Visual Studio.
 
-    To install Teams Toolkit extension:
+    You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
 
-    1. Open Visual Studio and select **Extensions** > **Manage Extensions**.
+    > [!NOTE]
+    > You'll need to first install the Visual Studio installer before installing Visual Studio.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/select-extension.png" alt-text="Select Extensions.":::
+    After you open the Visual Studio installer, in the pop-up workloads window.
 
-       The following Manage Extension window appears:
+      1. Select the box **ASP.NET and web development** workload.
+      1. Select the box **Microsoft Teams development tools** in the installation details panel.
+      1. Select **Install**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/select-mstools.png" alt-text="Visual studio-installation":::
 
-    1. Select **Installed** and you can see **Teams Toolkit** extension.
+      1. Select **Launch** to open Visual Studio.
+
+          :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
+
+         > [!IMPORTANT]
+         > You're recommended to download Visual Studio 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 17.3.0 version. Teams Toolkit version 17.3.*.
+
+      1. Select **Extensions** > **Manage Extensions**.
+
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-extension.png" alt-text="Select Extensions.":::
+
+         The following Manage Extension window appears:
+
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions.":::
+
+      1. Select **Installed** and you can see **Teams Toolkit** extension installed.
     
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit":::
-
-       > [!NOTE]
-       > By default, Teams Toolkit extension is installed in Visual Studio.
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit":::
 
     ## Set up your Teams development tenant
 
