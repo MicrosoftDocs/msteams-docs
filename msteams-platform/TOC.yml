@@ -132,7 +132,7 @@
       href: toolkit/TeamsFx-collaboration.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
-  - name: Teams Toolkit for Visual Studio Code 
+  - name: Teams Toolkit for Visual Studio 
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-overview-visual-studio.md      
