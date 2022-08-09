@@ -279,6 +279,6 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 
 ## See also
 
-* [Deploy Teams app to the cloud using Visual Studio](Deploy%20Teams%20app%20to%20the%20cloud%20using%20Visual%20Studio.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
 * [Debug Teams app locally for Visual Studio](debug-teams-app-visual-studio.md)

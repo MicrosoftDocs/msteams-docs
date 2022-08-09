@@ -12,11 +12,11 @@ ms.date: 03/21/2022
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
 
-* Prepare Teams app dependencies.
-* Start debugging.
-* Toggle breakpoints.
-* Hot reload.
-* Stop debugging.
+* Prepare Teams app dependencies
+* Start debugging
+* Toggle breakpoints
+* Hot reload
+* Stop debugging
 
 During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
 
@@ -38,12 +38,12 @@ During the debug process, Teams Toolkit automatically starts app services, initi
 
 You can debug your app locally in Visual Studio using Teams Toolkit by performing:
 
-### Set up Ngrok (Only for Bot and Message Extension app)
+### Set up ngrok (Only for Bot and Message Extension app)
 
-Use a Command Prompt to run this command:
+Use a command prompt to run this command:
 
 ```
-ngrok http 5130.
+ngrok http 5130
 ```
 
 ### Set up your Teams Toolkit
@@ -59,26 +59,26 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1
 
-Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+   Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
-4. Sign in to your **Microsoft 365 Account**.
-5. Select **Continue**
+1. Sign in to your **Microsoft 365 Account**.
+1. Select **Continue**
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
    > Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
 
-6. Select **Debug**.
-7. Select **Start Debugging**, or directly select **F5**.
+1. Select **Debug**.
+1. Select **Start Debugging**, or directly select **F5**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
 
-Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
+   Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
 
    > [!Note]
    > Learn more by visiting <https://aka.ms/teamsfx-vs-debug>.
 
-8. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
+1. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="Select add to load app":::
 
@@ -171,7 +171,6 @@ You can launch Teams app as a web app instead of running in Teams client.
 
 ## See also
 
-* [Provision cloud resources for TTK Visual Studio](provision-cloud-resources-using-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-Teams-app-to-the-cloud-using-Visual-Studio.md)
-
