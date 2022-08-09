@@ -135,17 +135,17 @@
   - name: Teams Toolkit for Visual Studio 
     items:
     - name: Teams Toolkit overview
-      href: toolkit/teams-toolkit-overview-visual-studio.md     
+      href: toolkit/teams-toolkit-overview-visual-studio.md    
     - name: Create a new Teams app
-      href: toolkit/toolkit/create-new-teams-app-for-Visual-Studio.md
+      href: toolkit/create-new-teams-app-for-Visual-Studio.md
     - name: Debug your Teams app
       href: toolkit/debug-teams-app-visual-studio.md
     - name: Provision cloud resources
-      href: toolkit/provision VS.md    
+      href: toolkit/Provision cloud resources using Visual Studio.md   
     - name: Deploy Teams app to the cloud
-      href: toolkit/deploy to the cloud for VS.md
+      href: toolkit/Deploy Teams app to the cloud using Visual Studio.md
     - name: Edit Teams app manifest
-      href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md   
+      href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md 
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
   - name: Yeoman generator for Teams (GitHub)
