@@ -17,11 +17,11 @@ Microsoft Teams connect shared channels allow members of a channel to collaborat
 
 Teams connect shared channels facilitate secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications extend the powerful collaboration space.
 
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from Organization B collaborating in a shared Channel as Team A." border="true" :::
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from organization B collaborating in a shared Channel as Team A." border="true" :::
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
 "supportedChannelTypes": {
