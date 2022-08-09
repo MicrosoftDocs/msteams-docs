@@ -2,7 +2,7 @@
 title: Use Teams Toolkit to provision cloud resources using Teams Toolkit for Visual Studio
 author: surbhigupta
 description: In this module, learn how to provision cloud resources using Teams Toolkit. Also to create resources and customize resource provision in Visual Studio
-ms.author: shenwe
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -16,9 +16,14 @@ TeamsFx integrates with Azure and Microsoft 365 cloud that allows you to place y
 
 Here's a list of tools you need for provisioning your cloud resources:
 
-* [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Microsoft Teams account with the appropriate permissions to install an app.
-* [Azure account](https://portal.azure.com/) with a valid subscription.
-* Teams Toolkit installation for Visual Studio.
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio 2022 v17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
+| &nbsp; | [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+| &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | [Azure account](https://portal.azure.com/) | Azure account with a valid subscription. |
 
 ## Steps to provision cloud resources
 
@@ -273,3 +278,7 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 ```
 
 ## See also
+
+* [Deploy Teams app to the cloud using Visual Studio](deploy to the cloud for VS.md)
+* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
+* [Debug Teams app locally for Visual Studio](debug-teams-app-visual-studio.md)
