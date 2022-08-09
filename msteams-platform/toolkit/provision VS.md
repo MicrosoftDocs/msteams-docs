@@ -31,7 +31,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 
 ### Sign in to your Microsoft 365 account
 
-1. Visual Studio 2022 v17.3.
+1. Visual Studio 2022.
 2. Open the Microsoft Teams app project.
 3. Select **Project**.
 4. Select **Teams Toolkit**.
