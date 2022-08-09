@@ -997,7 +997,8 @@ function toggleIncomingClientAudio(callback: (error: SdkError | null, result: bo
 
 ### Example
 
-```callback = (error, result) => {
+```Typescript
+callback = (error, result) => {
         if (error) {
             // Handle error code
         }
@@ -1013,9 +1014,10 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 > [!NOTE]
 > RSC has been enabled after 1.11, this feature won't work before 1.12.
 
-### Example
+### Manifest
 
-```callback = (error, result) => {
+```typescript
+callback = (error, result) => {
         if (error) {
             // Handle error code
         }
@@ -1025,6 +1027,7 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
     }
 
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+
 ```
 
 ### Response code
