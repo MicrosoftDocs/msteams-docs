@@ -11,10 +11,10 @@ ms.date: 07/29/2022
 
 Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create Teams app.  You can search and select Teams app template that you require when you create a new project. You can have Teams app templates for creating.
 
-* Tab app.
-* Command bot.
-* Notification bot.
-* Message extension.
+* Tab app
+* Command bot
+* Notification bot
+* Message extension
 
 ## Prerequisites
 
@@ -30,11 +30,11 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1.png" alt-text="Create new project from get started":::
 
-You can also create a new project directly from the application.
+   You can also create a new project directly from the application.
 
-2. Select **File** menu.
-3. Select  **New**.
-4. Select **Project**.
+1. Select **File** menu.
+1. Select  **New**.
+1. Select **Project**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2.png" alt-text="Create new project from file menu":::
 
@@ -70,5 +70,5 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 ## See also
 
-* [Provision cloud resources using Visual Studio](Provision%20cloud%20resources%20using%20Visual%20Studio.md)
-* [Deploy Teams app to the cloud using Visual Studio](Deploy%20Teams%20app%20to%20the%20cloud%20using%20Visual%20Studio.md)
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
