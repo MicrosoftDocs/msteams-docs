@@ -57,7 +57,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Introduced Teams Toolkit for Visual Studio 2022
-        url: teams-toolkit-overview-visual-studio.md
+        url: toolkit/teams-toolkit-overview-visual-studio.md
       - text: Collaboration controls [Developer preview]
         url: samples/collaboration-control.md
       - text: Build shared channels

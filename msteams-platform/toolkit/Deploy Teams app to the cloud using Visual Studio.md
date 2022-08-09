@@ -55,15 +55,15 @@ Here's a list of tools you need for building and deploying your apps.
 After your project is successfully deployed to Azure, there are different ways to preview your app in Teams Toolkit:
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package** to generate Teams app package.
-2. Select option **For Local** or **For Azure** and upload to Teams client.
+1. Select option **For Local** or **For Azure** and upload to Teams client.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package.png" alt-text="Generate teams app package":::
 
 **To preview your app in Teams client**
 
-3. Select **Project**
-4. Select **Teams Toolkit**.
-5. Select **Preview in Teams**.
+1. Select **Project**
+1. Select **Teams Toolkit**.
+1. Select **Preview in Teams**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams1.png" alt-text="Preview Teams app in teams client":::
 
@@ -76,13 +76,11 @@ The other way to preview your app:
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Preview teams app in web browser":::
 
    > [!NOTE]
-   >The same menu options are available in Project menu.
+   > The same menu options are available in Project menu.
 
 ## See also
 
 * [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources-using-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](Provision%20cloud%20resources%20using%20Visual%20Studio.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
 * [Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)
-
-* TBD

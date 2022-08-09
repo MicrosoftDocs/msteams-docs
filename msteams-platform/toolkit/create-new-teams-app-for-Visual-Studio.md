@@ -24,7 +24,7 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 | &nbsp; | Visual Studio version 17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
- | &nbsp; | [Microsoft 365 developer account](/../concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+ | &nbsp; | [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
 
 1. Select **Create a new project** from **Get started** section when you launch Visual Studio.
 
@@ -70,5 +70,5 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 ## See also
 
-* [Provision cloud resources using Visual Studio](provision-cloud-resources-using-Visual-Studio.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-Teams-app-to-the-cloud-using-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](Provision%20cloud%20resources%20using%20Visual%20Studio.md)
+* [Deploy Teams app to the cloud using Visual Studio](Deploy%20Teams%20app%20to%20the%20cloud%20using%20Visual%20Studio.md)
