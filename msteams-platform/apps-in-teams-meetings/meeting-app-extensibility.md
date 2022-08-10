@@ -179,14 +179,14 @@ After you design your app based on participant roles in a meeting, you can ident
 
 In channel meetings, team owners can manage Meeting App permissions through team settings.​
 
-Channel meeting app permissions defer to the team app CRUD model (not the non-channel meeting app CRUD model). If a user can add an app to a team or channel, they will be able to use it in the meeting.​
+Channel meeting app permissions refer to the team app CRUD model (not the non-channel meeting app CRUD model). If a user can add an app to a team or channel, they can use it in the meeting.​
 
 While both team settings are enabled, Meeting Apps respect the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot.​
 
 In cases where users cannot add Meeting Apps, the entry points in pre-meeting and in-meeting experiences are removed.
 
 > [!NOTE]
-> Attendee will still be able to indirectly add apps to their meetings when the ‘Allow team members to add/remove apps’ setting is enabled, by adding the app outside of the meeting interface, then returning to the meeting.
+> Attendee can add apps indirectly to their meetings when the ‘Allow team members to add/remove apps’ setting is enabled, by adding the app outside of the meeting interface, then returning to the meeting.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/channel-permission.png" alt-text="Channel Permission.":::
 
