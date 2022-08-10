@@ -18,7 +18,7 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## Select search command invoke locations
@@ -51,11 +51,11 @@ The prerequisite to create a search command is that you must already have create
 
    :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
 
-1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot id created already.
+1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list, or select **Enter a bot ID** if you have a bot ID created already.
 
 1. Select the scope of the messaging extension and select **Save**.
 
-1. Select **Add a command** in the **Command** section to include the commands which decides the behavior of message extension.
+1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="The screenshot shows how to add a command to define the behavior of the message extension.":::
@@ -64,7 +64,7 @@ The following image displays command addition for message extension:
 
 1. Enter all the parameters and select the type of input from the dropdown list.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="The screenshot shows how to add a parameters to define your command for message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="The screenshot shows how to add a parameter to define your command for message extension.":::
 
 1. Select **Add a domain** under **Preview links**.
 
@@ -74,7 +74,7 @@ The following image displays command addition for message extension:
 
 1. Select **Save**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shows how to aave all your setting and parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shows how to save all your setting and parameters for your message extension.":::
 
 **To add additional parameters**
 
@@ -92,14 +92,14 @@ To manually add your message extension search command to your app manifest, you 
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | This property is an unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
+| `id` | This property is a unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` | This property is a command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | This property is a help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | This property must be a `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
-You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
+You must add the details of the search parameter that defines the text visible to your user in the Teams client.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|

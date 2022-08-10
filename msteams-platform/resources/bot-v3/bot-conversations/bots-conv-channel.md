@@ -47,13 +47,13 @@ In a channel, replying to a message shows as a reply to the initiating reply cha
 
 ### Best practice: Welcome messages in Teams
 
-When your bot is first added to the group or team, it's useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. For more information, see [Team member or bot addition](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) for more details.
+When your bot is first added to the group or team, it's useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. For more information, see [Team member or bot addition](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
-* The team is big (obviously subjective, for example, more than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* The team is large (obviously subjective, for example, more than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel, versus being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
@@ -188,7 +188,7 @@ session.send(generalMessage);
 
 ## Accessing groupChat or channel scope
 
-Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. For more information, see [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md).
+Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, and the list of channels. For more information, see [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md).
 
 ## See also
 

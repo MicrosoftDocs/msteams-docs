@@ -52,7 +52,7 @@ For more information, see [complete instructions on the Bot Framework Emulator](
 > [!Important]
 > Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you have added to your bot fails to work.
 
-Initiate a conversation with your bot by using its ID. When a bot is added through one of these methods, it isn't addressable in channel conversations and you can't take advantage of other Teams app capabilities like tabs or message extensions. Initiate a conversation in one of the following ways:
+Initiate a conversation with your bot by using its ID. When a bot is added through one of these methods, it isn't addressable in channel conversations, and you can't take advantage of other Teams app capabilities like tabs or message extensions. Initiate a conversation in one of the following ways:
 
 * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Teams launches a personal chat with your bot.
 
