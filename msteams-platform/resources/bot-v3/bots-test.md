@@ -13,7 +13,7 @@ When testing your bot you have to take into consideration both the context(s) yo
 
 ## Test by uploading to Teams
 
-The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. Uploading the app to Teams is the only method to test the full functionality available to your bot, across all scopes.
 
 There are two methods for uploading your app. You can either use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest, and reupload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
 

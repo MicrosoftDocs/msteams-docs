@@ -1,7 +1,7 @@
 ---
 title: Test and debug your bot locally
 author: surbhigupta
-description: Learn about testing and debugging your bot locally with an IDE within Teams environment via sideloading and more
+description: Learn about testing and debugging your bot locally with an IDE within Teams environment via sideloading and more.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -13,7 +13,7 @@ When testing your bot, you need to consider both the contexts you want your bot 
 
 ## Test by uploading to Teams
 
-The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. Uploading the app package to Teams is the only method to test the full functionality available to your bot, across all scopes.
 
 There are two methods for uploading your app:
 
@@ -61,7 +61,7 @@ Initiate a conversation with your bot by using its ID. When a bot is added throu
   
       ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
   
-   2. Open Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. In **To:**, paste your bot's Microsoft App ID.
+   2. Open Microsoft Teams, on the Chat pane, selects the **Add chat** icon. In **To:**, paste your bot's Microsoft App ID.
   
       ![Uploading bots](~/assets/images/bots_uploading.png)
 
