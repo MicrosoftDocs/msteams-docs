@@ -145,7 +145,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 ---
 In scheduled channel meetings, after a meeting apps can be accessed from the meeting details page by selecting on the meeting object. See the following example:
 
-:::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="Post meeting app experience.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="After a meeting":::
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
