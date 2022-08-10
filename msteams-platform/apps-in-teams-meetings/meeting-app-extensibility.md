@@ -24,7 +24,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 > [!NOTE]
 >
-> * Apps for instant, and recurring channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for instant meetings, scheduled channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
 
@@ -55,6 +55,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
    >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
+   > * Tabs already in the channel are not automatically brought into the channel meeting.
 
 # [Desktop](#tab/desktop)
 
@@ -142,6 +143,9 @@ The following image displays the **Contoso** tab with results of poll and feedba
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience.":::
 
 ---
+In scheduled channel meetings, after a meeting apps can be accessed from the meeting details page by selecting on the meeting object. See the following example:
+
+:::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="Post meeting app experience.":::
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
@@ -155,19 +159,6 @@ Bots that are enabled in `groupchat` scope start functioning in meetings. To imp
 To implement message extension, start with [build a message extension](../messaging-extensions/how-to/create-messaging-extension.md), and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
-
-### Supported capabilities in meeting
-
-The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings for mobile and desktop:
-
-| Capability | Support available | In-tenant | Guest | Federated or external | Anonymous |
-| :-- | :-- | :-- | :-- | :-- |
-| **Mobile** | | | | |
-| Scheduled or recurring private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| **Desktop** | | | | |
-| Scheduled or recurring private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 
 ## Participant roles in a meeting
 
@@ -185,6 +176,19 @@ The default participant settings are determined by an organization's IT administ
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
+
+In channel meetings, team owners can manage Meeting App permissions through team settings.​
+
+Channel meeting app permissions defer to the team app CRUD model (not the non-channel meeting app CRUD model). If a user can add an app to a team or channel, they will be able to use it in the meeting.​
+
+While both team settings are enabled, Meeting Apps respect the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot.​
+
+In cases where users cannot add Meeting Apps, the entry points in pre-meeting and in-meeting experiences are removed.
+
+> [!NOTE]
+> Attendee will still be able to indirectly add apps to their meetings when the ‘Allow team members to add/remove apps’ setting is enabled, by adding the app outside of the meeting interface, then returning to the meeting.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/channel-permission.png" alt-text="Channel Permission.":::
 
 ## User types in a meeting
 

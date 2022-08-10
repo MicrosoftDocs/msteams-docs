@@ -14,7 +14,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 > [!Note]
 >
-> Apps for instant, and recurring channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Apps for instant meetings, scheduled channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Teams supports access to apps during meeting for the following meeting types:
 
@@ -36,7 +36,7 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 >
 > * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
-> * Currently app experiences are supported in Teams channel scheduled meetings and apps on the channel will not be available in the meeting by default.
+> * Currently app experiences are supported in Teams channel scheduled meetings only and adding meeting apps to a channel meeting does not add them to the channel itself.
 
 Team owners manages the meeting app permissions through team settings:
 
