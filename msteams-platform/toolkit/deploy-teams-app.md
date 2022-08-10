@@ -59,11 +59,11 @@ After your project is successfully deployed to Azure, there are different ways t
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package.png" alt-text="Generate teams app package":::
 
-**To preview your app in Teams client**
+  **To preview your app in Teams client**
 
-1. Select **Project**
-1. Select **Teams Toolkit**.
-1. Select **Preview in Teams**.
+3. Select **Project**.
+4. Select **Teams Toolkit**.
+5. Select **Preview in Teams**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams1.png" alt-text="Preview Teams app in teams client":::
 
