@@ -186,7 +186,7 @@ While both team settings are enabled, meeting apps respect the existing permissi
 
 :::image type="content" source="~/assets/images/apps-in-meetings/channel-permission.png" alt-text="Channel Permission.":::
 
-By default, **Allow members to add and remove apps to meetings** are enabled in the team settings page through this members can add or remove meeting apps before, during, or after meetings.
+By default, **Allow members to add and remove apps to meetings** are enabled in the team settings page. Through this members can add or remove meeting apps before, during, or after meetings.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
 
@@ -230,7 +230,7 @@ The following table provides the user types and lists the features that each use
 >
 > * Federated users can't interact with tab apps in calls.
 > * If federated users are added to an existing call with in-tenant or guest users, then all participants lose the ability to add, update, or remove apps. However, only the existing in-tenant or guest users would be able to still interact with the apps that were added before inviting federated users to the call.
-> * On mobile, anonymous users will not be able to access apps in standard channel meetings.
+> * On mobile, anonymous users will not be able to access apps in scheduled public channel meetings.
 
 ## Next step
 
