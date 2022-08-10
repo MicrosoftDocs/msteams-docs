@@ -17,17 +17,17 @@ As online meetings have become more prominent, Teams users spend significant amo
 
 Prerequisites
 
-1. Understand about building apps for Teams
-2. Public Developer Preview for Teams
-3. Formats for Video Rendering
-4. Enable sideloading for your Tenant
+1. [Understand about building apps for Teams](../get-started/get-started-overview.md)
+2. [Public Developer Preview for Teams](../resources/dev-preview/developer-preview-intro.md)
+3. [Formats for Video Rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering)
+4. [Enable sideloading for your Tenant](../concepts/deploy-and-publish/apps-upload.md)
 5. Ensure that the Administrator has granted permission to Upload a custom app and selected all filters as part of App Setup and Meeting policies respectively.
 
 ## Create a video filter app
 
-A video filter app’s purpose is to define the video filters and then apply video filters on to the video stream of a use., should the user choose to do so. You can use the video filter app during pre- and in- meeting scenarios and easily apply video effects in all meetings and calls.
+A video filter app’s purpose is to define the video filters and then apply video filters on to the video stream of a use. You can use the video filter app during pre- and in- meeting scenarios and easily apply video effects in all meetings and calls.
 
-The video filter app takes permission from a user to access their video stream, modify the video stream using an algorithm of its choice and then feed that video stream back into Teams. All this processing is required to be done on the user’s local machine and should not be uploaded to the network.
+The video filter app takes permission from a user to access their video stream, modify the video stream using an algorithm of its choice and then feed that video stream back into Teams. All this processing is required to be done on the user’s local machine and shouldn't be uploaded to the network.
 
 ## Update app manifest
 
@@ -106,9 +106,9 @@ Ensure that the video filter app manifest meets the following requirements:
 
 * The number of filters for an app is limited to 32.
 
-* The file size for the video filter thumbnail image must not exceed 2 MB.
+* The file size for the video filter thumbnail image mustn't exceed 2 MB.
 
-* The `videoAppContentUrl` property must not be empty.
+* The `videoAppContentUrl` property mustn't be empty.
 
 * Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width or height - 74 or 42) < 0.01.
 
@@ -120,14 +120,14 @@ Ensure that the video filter app manifest meets the following requirements:
 
 * Filter categories:
   * Styles: Filters that add visual effects to the video stream, including graphical styles such as color and texture changes.
-  * Frames: Filters with additional add-on designs, which do not have semantic information.
+  * Frames: Filters with additional add-on designs, which don't have semantic information.
   * Makeup: Virtual makeup based on facial area.
   * Others: Filters that don’t fall into the categories above.
 
 * Filter naming:
-  * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that do not conform with Microsoft’s value of inclusivity.
+  * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that don't conform with Microsoft’s value of inclusivity.
 
-  * There is no mandatory requirement for the number of word floats. For a better user experience, it is recommended to keep the total filter and app name word counts within 12-16, and no more than 20.
+  * It's recommended to keep the total filter and app name word counts within 12-16, and no more than 20 for a better user experience.
 
   * When the mouse hovers over the filter, the tooltip must display the text **[Filter name] from [Developer name]**. For example, Island Style from Contoso.
 
@@ -166,7 +166,7 @@ format: VideoFrameFormat;
 
 ### Register for Video effect
 
-Register the video effect callback, host client uses this to notify the video extension the new video effect will by applied
+Register the video effect callback, host client uses this to notify the video extension the new video effect is applied.
 
 ```typescript
 function registerForVideoEffect(callback: VideoEffectCallBack)
@@ -177,7 +177,7 @@ type VideoEffectCallBack = (effectId: string | undefined) => void,
 
 ### notifySelectedVideoEffectChanged
 
-Video extension should call this to notify host client that the current selected effect parameter changed. If it's pre-meeting, host client will call videoEffectCallback immediately then use the videoEffect. If it's the in-meeting scenario, we will call videoEffectCallback when apply button clicked.
+Video extension should call this to notify host client that the current selected effect parameter changed. During the pre-meeting stage, the host client calls `videoEffectCallback` immediately then use the videoEffect and during the in-meeting stage, the `videoEffectCallback` is called when the apply button is clicked.
 
 ```typescript
 function notifySelectedVideoEffectChanged(effectChangeType: EffectChangeType, effectId: string | undefined)
@@ -208,13 +208,13 @@ enum EffectChangeType
 
 ### Tips to implement API
 
-* Video frame related data, including any raw video frame and any data calculated from video frame, must only be consumed in user's local computer, and should not be uploaded to the network.
+* Video frame related data, including any raw video frame and any data calculated from video frame, must only be consumed in user's local computer, and shouldn't be uploaded to the network.
 
-* Only NV12 video format is supported. RGB(A) is not supported. The sample app has provided sample code for video format conversion between NV12 and RGB(A).
+* Only NV12 video format is supported. RGB(A) isn't supported. The sample app has provided sample code for video format conversion between NV12 and RGB(A).
 
 * The JavaScript in the video app must only operate on the latest videoFrame. References to previous video frames can result in unexpected behavior.
 
-* Video frame size can change any time, so size sensitive resources for processing video frames should be recreated when video frame size changes.
+* Video frame size can change anytime, so size sensitive resources for processing video frames should be recreated when video frame size changes.
 
 * Call `microsoftTeams.video.registerForVideoEffects()` as early as possible. Call `microsoftTeams.video.registerForVideoFrame()` after required resources downloaded and the video app initialization is finished.
 
