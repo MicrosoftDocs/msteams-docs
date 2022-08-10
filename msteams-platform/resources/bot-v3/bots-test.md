@@ -76,11 +76,11 @@ Bots in personal context can't be disabled or removed by a user, short of comple
 
 ## Disabling a bot in Teams
 
-To stop your bot receiving messages, go to your Bot Dashboard and edit the Microsoft Teams channel. Clear the **Enable on Microsoft Teams** option. This prevents users from interacting with the bot, but it will still be discoverable and users can add it to teams.
+To stop your bot receiving messages, go to your Bot Dashboard and edit the Microsoft Teams channel. Clear the **Enable on Microsoft Teams** option. Disabling a bot in Teams prevents users from interacting with the bot, but it will still be discoverable and users can add it to teams.
 
 ## Deleting a bot from Teams
 
-To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. This doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
+To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. Deleting a bot from Teams prevents users from discovering, adding, or interacting with your bot. Deleting a bot from Teams doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
 
 ## Removing your bot from AppSource
 
