@@ -12,10 +12,10 @@ ms.date: 05/24/2022
 
 Teams Toolkit for Visual Studio helps you to create, debug and deploy Microsoft Teams apps. Teams Toolkit for Visual Studio is GA in Visual Studio 2022 version 17.3. App development with Teams Toolkit has the advantages of:
 
-* Integrated identity.
-* Access to cloud storage.
-* Data from Microsoft Graph.
-* Azure and Microsoft 365 services with zero-configuration approach.
+* Integrated identity
+* Access to cloud storage
+* Data from Microsoft Graph
+* Azure and Microsoft 365 services with zero-configuration approach
 
 For Teams app development, you can also use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar to Teams Toolkit for Microsoft Visual Studio code that includes Toolkit `teamsfx`.
 
