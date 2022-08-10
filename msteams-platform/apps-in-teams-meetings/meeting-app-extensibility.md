@@ -171,7 +171,6 @@ The overall user experience in standard channel meetings will be same as in sche
 
  > [!NOTE]
  >
- > * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
  > * Apps on the channel will not be available in the meeting by default.
 
 ## Meeting app permissions
@@ -183,7 +182,7 @@ Team owners manages the meeting app permissions through team settings:
 * If users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
 
 > [!NOTE]
-> By adding the app outside of the meeting interface,Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
+> By adding the app outside of the meeting interface, Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
 
 The following image illustrates member permissions setting:
 
@@ -251,6 +250,7 @@ The following table provides the user types and lists the features that each use
 >
 > * Federated users can't interact with tab apps in calls.
 > * If federated users are added to an existing call with in-tenant or guest users, then all participants lose the ability to add, update, or remove apps. However, only the existing in-tenant or guest users would be able to still interact with the apps that were added before inviting federated users to the call.
+> * On mobile, anonymous users will not be able to access apps in standard channel meetings.
 
 ## Next step
 
