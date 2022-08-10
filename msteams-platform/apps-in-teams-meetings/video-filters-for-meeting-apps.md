@@ -1,5 +1,5 @@
 ---
-title: Audio or video filters for meeting apps
+title: Video filters for meeting apps
 author: v-ypalikila
 description: Learn how to add filters, frames, makeups and so on to videos and make your videos more presentable for meetings.
 ms.topic: conceptual
@@ -10,7 +10,10 @@ ms.date: 08/08/2022
 
 # Video filters for meeting apps
 
-As online meetings have become more prominent and Teams users spend significant amount of time reviewing work with teammates, watching videos together, and collaborating on video calls. With Video filters you can add filters, frames, makeups, and so on to videos and make your videos more presentable for meetings.
+> [!NOTE]
+> A/V filters is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the A/V filters.
+
+As online meetings have become more prominent, Teams users spend significant amount of time reviewing work with teammates, watching videos together, and collaborating on video calls. With Video filters you can add filters, frames, makeups, and so on to videos and make your videos more presentable for meetings.
 
 Prerequisites
 
@@ -22,28 +25,17 @@ Prerequisites
 
 ## Create a video filter app
 
-A video filter app’s purpose is to define the video filters and then apply video filters on to the video stream of a user, should the user choose to do so. To do so, a video filter app must take permission from a user to access their video stream, access the video stream, modify the video stream using an algorithm of its choice and then feed that video stream back into Teams. All this processing is required to be done on the user’s local machine and should not be uploaded to the network.
+A video filter app’s purpose is to define the video filters and then apply video filters on to the video stream of a use., should the user choose to do so. You can use the video filter app during pre- and in- meeting scenarios and easily apply video effects in all meetings and calls.
 
-The video filter app
+The video filter app takes permission from a user to access their video stream, modify the video stream using an algorithm of its choice and then feed that video stream back into Teams. All this processing is required to be done on the user’s local machine and should not be uploaded to the network.
 
 ## Update app manifest
 
 You must configure your Teams app manifest with the devicePermissions and resource-specific consent (RSC) permissions for your app to access the video stream and video API's.
 
-### Device permissions
+* **Device permissions**: Update your app's manifest.json by adding devicePermissions and specifying `media` property in your application.
 
-Update your app's manifest.json by adding devicePermissions and specifying `media` property in your application:
-
-```json
-"devicePermissions": [
-    "media"
-],
-
-```
-
-### RSC permissions
-
-Update your app's manifest.json by adding RSC permission `CameraStream.Read.User` and `OutgoingVideoStream.Write.User`.
+* **RSC permissions**: Update your app's manifest.json by adding RSC permission `CameraStream.Read.User` and `OutgoingVideoStream.Write.User`.
 
 ### Sample manifest
 
@@ -110,48 +102,46 @@ The following is an example of a manifest for a video filter app:
 
 Ensure that the video filter app manifest meets the following requirements:
 
-* Each filter must have a non-empty guid, and the Guid must be unique for the `meetingExtensionDefinition` property
+* Each filter must have a non-empty guid, and the Guid must be unique for the `meetingExtensionDefinition` property.
 
-* The number of filters for an app is limited to 32
+* The number of filters for an app is limited to 32.
 
-* The file size for the video filter thumbnail image must not exceed 2 MB
+* The file size for the video filter thumbnail image must not exceed 2 MB.
 
-* The 'videoAppContentUrl' property must not be empty
+* The `videoAppContentUrl` property must not be empty.
 
 * Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width or height - 74 or 42) < 0.01.
 
-* Value of each filter's thumbnail must be a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA
+* Value of each filter's thumbnail must be a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA.
 
-* RawFormat: PNG
+* The supported RawFormat is PNG.
 
-* PixelFormat: PixelFormat24bppRGB or PixelFormat32bppARGB
+* Supported PixelFormat is PixelFormat24bppRGB or PixelFormat32bppARGB.
 
-* Filter Categories: Styles, Frames, Makeup, and Others
-
-   |File category|Description|Example|
-   |---------|---------|---------|
-   |Styles    |Filters that add visual effects to the video stream, including graphical styles such as color and texture changes. |         |
-   |Frames     |Filters with additional add-on designs, which do not have semantic information. |         |
-   |Makeup     |Virtual makeup based on facial area.  |         |
-   |Others     |Filters that don’t fall into the categories above.    |         |
+* Filter categories:
+  * Styles: Filters that add visual effects to the video stream, including graphical styles such as color and texture changes.
+  * Frames: Filters with additional add-on designs, which do not have semantic information.
+  * Makeup: Virtual makeup based on facial area.
+  * Others: Filters that don’t fall into the categories above.
 
 * Filter naming:
   * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that do not conform with Microsoft’s value of inclusivity.
+
   * There is no mandatory requirement for the number of word floats. For a better user experience, it is recommended to keep the total filter and app name word counts within 12-16, and no more than 20.
 
-* When the mouse hovers over the filter, the tooltip must display the text **[Filter name] from [Developer name]**. For example, Island Style from Contoso.
+  * When the mouse hovers over the filter, the tooltip must display the text **[Filter name] from [Developer name]**. For example, Island Style from Contoso.
 
-* After applying a filter, the hovers over text on the applied filter's ellipses icon (**...**) and tooltip must display as **Open [App name]**. For example, Open Contoso.
+  * After applying a filter, the hovers over text on the applied filter's ellipses icon (**...**) and tooltip must display as **Open [App name]**. For example, Open Contoso.
 
-* Add a prefix to the filter name.
-  * Styles: Styles_[Filter name]. For example, Styles_Island Style.
-  * Frames: Frames_[Filter name]
-  * Makeup: Makeup_[Filter name]
-  * Others: Others_[Filter name]
+  * Add a prefix to the filter name to the following categories:
+    * **Styles**: Styles_[Filter name]
+    * **Frames**: Frames_[Filter name]
+    * **Makeup**: Makeup_[Filter name]
+    * **Others**: Others_[Filter name]
 
-### Validate your app
+## Validate your app
 
-After updating the app manifest, you can validate your app at in the [app validation website](https://dev.teams.microsoft.com/appvalidation.html).
+After you've completed updating the app manifest, you can validate your app at in the [app validation website](https://dev.teams.microsoft.com/appvalidation.html).
 
 ### Register for Video frame API
 
@@ -190,8 +180,6 @@ type VideoEffectCallBack = (effectId: string | undefined) => void,
 Video extension should call this to notify host client that the current selected effect parameter changed. If it's pre-meeting, host client will call videoEffectCallback immediately then use the videoEffect. If it's the in-meeting scenario, we will call videoEffectCallback when apply button clicked.
 
 ```typescript
-}
-
 function notifySelectedVideoEffectChanged(effectChangeType: EffectChangeType, effectId: string | undefined)
 
 enum EffectChangeType 
@@ -228,11 +216,11 @@ enum EffectChangeType
 
 * Video frame size can change any time, so size sensitive resources for processing video frames should be recreated when video frame size changes.
 
-* Call microsoftTeams.video.registerForVideoEffects() as early as possible. Call microsoftTeams.video.registerForVideoFrame() after required resources downloaded and the video app initialization is finished.
+* Call `microsoftTeams.video.registerForVideoEffects()` as early as possible. Call `microsoftTeams.video.registerForVideoFrame()` after required resources downloaded and the video app initialization is finished.
 
-* Ensure the stability of the effect algorithm. When calling notifyFrameProcessed(), ensure the video frame has been fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
+* Ensure the stability of the effect algorithm. When calling `notifyFrameProcessed()`, ensure the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
 
-* Video app should be compliant to Teams client SDK [terms of use](/legal/microsoft-apis/terms-of-use).
+* Video app should be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
 ## Test your video filter app
 

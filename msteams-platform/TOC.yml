@@ -324,7 +324,9 @@
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
   - name: Build shared channel
-    href: concepts/build-and-test/Shared-channels.md  
+    href: concepts/build-and-test/Shared-channels.md
+  - name: Video filter for meeting apps
+    href: apps-in-teams-meetings/video-filters-for-meeting-apps.md   
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
