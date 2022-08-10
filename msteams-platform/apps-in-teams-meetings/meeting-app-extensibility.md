@@ -24,7 +24,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 > [!NOTE]
 >
-> * Apps for instant meetings, scheduled channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for instant meetings, scheduled public channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
 
@@ -143,7 +143,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience.":::
 
 ---
-In scheduled channel meetings, after a meeting apps can be accessed from the meeting details page by selecting on the meeting object. See the following example:
+In scheduled public channel meetings, after a meeting apps can be accessed from the meeting details page by selecting on the meeting object. See the following example:
 
 :::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="After a meeting":::
 
@@ -177,18 +177,18 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 
 After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
 
-In channel meetings, team owners can manage Meeting App permissions through team settings.​
+In public channel meetings, team owners can manage meeting app permissions through team settings.​ Channel meeting app permissions refer to the team app CRUD model (not the non-channel meeting app CRUD model). If a user can add an app to a team or channel, they can use it in the meeting.​
 
-Channel meeting app permissions refer to the team app CRUD model (not the non-channel meeting app CRUD model). If a user can add an app to a team or channel, they can use it in the meeting.​
-
-While both team settings are enabled, Meeting Apps respect the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot.​
-
-In cases where users cannot add Meeting Apps, the entry points in pre-meeting and in-meeting experiences are removed.
+While both team settings are enabled, meeting apps respect the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot.​ In cases where users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
 
 > [!NOTE]
-> Attendee can add apps indirectly to their meetings when the ‘Allow team members to add/remove apps’ setting is enabled, by adding the app outside of the meeting interface, then returning to the meeting.
+> Attendee can also add apps to their meetings when the **Allow team members to add/remove apps** setting is enabled, by adding the app outside of the meeting interface.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/channel-permission.png" alt-text="Channel Permission.":::
+
+By default, **Allow members to add and remove apps to meetings** are enabled in the team settings page through this members can add or remove meeting apps before, during, or after meetings.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
 
 ## User types in a meeting
 

@@ -14,12 +14,12 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 > [!Note]
 >
-> Apps for instant meetings, scheduled channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Apps for instant meetings, scheduled public channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Teams supports access to apps during meeting for the following meeting types:
 
 * [**Scheduled meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
-* [**Scheduled channel meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams channel.
+* [**Scheduled channel meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams public channels.
 * [**One-on-one calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
 * [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
@@ -36,25 +36,7 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 >
 > * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
-> * Currently app experiences are supported in Teams channel scheduled meetings only and adding meeting apps to a channel meeting does not add them to the channel itself.
-
-Team owners manages the meeting app permissions through team settings:
-
-* Channel meeting app permissions are different from the team app CRUD model (not the non-channel meeting app CRUD model). If a user adds an app to a team or channel, they are able to use it in the meeting.
-* When team settings are enabled, meeting apps follow the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot add.
-* If users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
-
-> [!NOTE]
-> By adding the app outside of the meeting interface, Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
-
-The following image illustrates member permissions setting:
-
-:::image type="content" source="~/assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
-
-* Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
-* If enabled, members can add/remove meeting apps before, during, or after meetings.
-
-:::image type="content" source="~/assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
+> * Currently app experiences are supported in Teams public channel scheduled meetings only and adding meeting apps to a channel meeting does not add them to the channel itself.
 
 The following illustration gives you an idea of the meeting app extensibility features:
 
