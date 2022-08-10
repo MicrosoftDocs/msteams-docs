@@ -47,7 +47,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 1. **Install Developer Portal in Teams**
 
-   Developer Portal is a Teams app. Install Developer Portal from the Teams store that simplifies the process of bot creation and registration in Teams:
+   Install Developer Portal from the Teams store that simplifies the process of bot creation and registration in Teams:
 
    1. Select the app store icon from Teams instance, and search for **Developer Portal**.
 
