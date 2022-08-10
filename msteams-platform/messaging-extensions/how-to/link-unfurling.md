@@ -1,12 +1,12 @@
 ---
 title: Link unfurling
 author: surbhigupta
-description: Learn how to add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually using code examples and samples.
+description: In this module, learn how to add link unfurling with messaging extension in a Teams app with app manifest or manually using code examples and samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Link unfurling
+# Add link unfurling
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -20,6 +20,11 @@ This document guides you on how to add link unfurling to your app manifest using
 The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
+
+See the following video to learn more about link unfurling:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+<br>
 
 ## Add link unfurling to your app manifest
 
@@ -37,6 +42,9 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
     :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Message handlers section in App Studio":::
 
 ### Add link unfurling manually
+
+> [!NOTE]
+> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 To enable your message extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually:
 

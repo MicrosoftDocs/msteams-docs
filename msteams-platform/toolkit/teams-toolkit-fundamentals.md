@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
+description: In this module, learn Teams Toolkit, Installation of Teams Toolkit, and User journey of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -16,7 +16,7 @@ Teams Toolkit lets you create, debug, and deploy your Teams app right from Visua
 * Integrated identity
 * Access to cloud storage
 * Data from Microsoft Graph
-* Azure and Microsoft 365 services with zero-configuration approach
+* Azure and Microsoft 365 services with zero-configuration approach.
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
@@ -24,7 +24,7 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit User Journey" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 The main milestones of this journey are:
 
@@ -88,7 +88,7 @@ It helps you to start with Teams app development by creating new Teams project u
 
 ### Add Features
 
-It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app. 
+It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app.
 
 ### Edit manifest file
 
@@ -100,7 +100,7 @@ During or after the development, ensure to provision, deploy, and publish Teams 
 
 ### Provision in the cloud
 
-It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
+It integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
 
 ### Deploy to the cloud
 

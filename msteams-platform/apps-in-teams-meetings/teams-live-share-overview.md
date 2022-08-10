@@ -1,9 +1,11 @@
 ---
 title: Live Share overview
+author: surbhigupta
 description: In this module, learn what is Microsoft Live Share SDK and its user scenarios.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
+ms.date: 04/07/2022
 ---
 
 ---
@@ -28,12 +30,12 @@ Building collaborative apps can be difficult, time consuming, costly, and includ
 
 Here are some key benefits of the Live Share SDK:
 
-* Zero-hassle session management and security
-* Stateful and stateless distributed data structures
-* Media extensions to easily synchronize video and audio
-* Respect meeting privileges using role verification
-* Free and fully managed service with low latency
-* Intelligent audio ducking
+* Zero-hassle session management and security.
+* Stateful and stateless distributed data structures.
+* Media extensions to easily synchronize video and audio.
+* Respect meeting privileges using role verification.
+* Free and fully managed service with low latency.
+* Intelligent audio ducking.
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 

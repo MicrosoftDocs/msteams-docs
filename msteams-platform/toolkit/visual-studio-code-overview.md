@@ -1,6 +1,6 @@
 ---
 title: Build apps with the Microsoft Teams Toolkit and Visual Studio Code
-description: Get started building great custom apps directly within Visual Studio Code with the Microsoft Teams Toolkit
+description: Get started building great custom apps directly within Visual Studio Code with the Microsoft Teams Toolkit.
 keywords: teams visual studio code toolkit
 ms.localizationpriority: medium
 ms.topic: overview
@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Build apps with the Teams Toolkit and Visual Studio Code
 
-The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a “zero-configuration” approach to the developer experience.  
+The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a “zero-configuration” approach to the developer experience.
 
 You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).
 
@@ -77,9 +77,9 @@ The Teams Toolkit can create React apps that are hosted in Azure or SPFx web par
 
 1. Select a workspace folder. A folder is created within your workspace folder for the project you're creating.
 
-1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters. Press **Enter** to continue.
 
-Your Teams app is created within a few seconds. The scaffolded app contains code to handle single sign-on with Azure Active Directory and access to the Microsoft Graph.  If you selected Azure resources, then the code for those resources is also available.
+Your Teams app is created within a few seconds. The scaffolded app contains code to handle single sign-on with Azure Active Directory and access to the Microsoft Graph. If you selected Azure resources, then the code for those resources is also available.
 
 For a walk-through of the SPFx creation and publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).
 
@@ -110,7 +110,7 @@ To build and run your app locally:
 
 1. From Visual Studio Code, press **F5** to run your application in debug mode.
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
 
    The toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
@@ -123,7 +123,7 @@ To build and run your app locally:
 1. You may be prompted to sign in. If so, sign in with your Microsoft 365 account.
 1. When prompted to install the app onto Teams, press **Add**.
 
-Both the backend and frontend are hooked into the Visual Studio Code debugger.  This allows you to set breakpoints anywhere in your code and inspect state.  You can also use any frontend debugging tools (such as the React Developer Tools) within the browser.  For more information about debugging in Visual Studio Code, review [the documentation](https://code.visualstudio.com/Docs/editor/debugging).
+Both the backend and frontend are hooked into the Visual Studio Code debugger. This allows you to set breakpoints anywhere in your code and inspect state.  You can also use any frontend debugging tools (such as the React Developer Tools) within the browser.  For more information about debugging in Visual Studio Code, review [the documentation](https://code.visualstudio.com/Docs/editor/debugging).
 
 ## Publish your app to Teams
 
@@ -141,5 +141,5 @@ If using Azure hosting, you must have provisioned and deployed to the cloud. For
 
 ## See also
 
-* [Build apps with the Teams Toolkit and Visual Studio](~/toolkit/visual-studio-overview.md)
-* [Build tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)
+- [Build apps with the Teams Toolkit and Visual Studio](~/toolkit/visual-studio-overview.md)
+- [Build tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)

@@ -1,7 +1,7 @@
 ---
 title: Publish Teams apps using Teams Toolkit
 author: zyxiaoyuer
-description:  publish Teams apps
+description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or sideload permission
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -37,7 +37,7 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** in left bar.
 2. Select **Manage your apps**.
-3. Select **publish an app**
+3. Select **publish an app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 

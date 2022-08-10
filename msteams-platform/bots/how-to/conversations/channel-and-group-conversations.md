@@ -1,7 +1,7 @@
 ---
-title: Channel and group conversations with a bot
+title: Create conversation bots for channel or group chat
 author: surbhigupta
-description: How to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines, creating conversation threads, using @mentions using Code samples
+description: Learn how to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -20,6 +20,12 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 > Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 >
 > Posting a message or Adaptive Card to a private channel is currently not supported.
+
+See the following video to learn about channel and group chat conversations with a bot:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## Design guidelines
 
@@ -277,4 +283,7 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to cre
 
 ## See also
 
-[Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
+

@@ -1,9 +1,8 @@
 ---
 title: Tabs on mobile
-description: Learn about implementing tabs on Microsoft Teams mobile, their authentication, low bandwidth connection, testing on mobile clients, distribution, and more.
+description: In this module, learn about implementing tabs on Microsoft Teams mobile, their authentication, low bandwidth connection, testing on mobile clients, distribution, and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: app mobile tab channel group authentication distribution
 ---
 
 # Tabs on mobile

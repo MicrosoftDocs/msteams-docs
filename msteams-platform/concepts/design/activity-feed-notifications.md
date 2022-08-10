@@ -12,17 +12,17 @@ The activity feed is a surface for users to access their notifications in Micros
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile.":::
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed.":::
 
 ---
 
 ## Anatomy
 
-:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-anatomy.png" alt-text="Design anatomy of the Teams activity feed notification." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-anatomy.png" alt-text="Design anatomy of the Teams activity feed notification.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -37,7 +37,7 @@ The activity feed is a surface for users to access their notifications in Micros
 
 The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications.
 
-:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variants of Teams activity feed cards." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variants of Teams activity feed cards.":::
 
 ## Manage activity feed notifications
 
@@ -49,7 +49,7 @@ Each activity generates a system notification. What displays depends on what the
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variants of Teams activity feed cards on Android and iOS." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variants of Teams activity feed cards on Android and iOS.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -58,7 +58,7 @@ Each activity generates a system notification. What displays depends on what the
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity cards on different operating systems." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity cards on different operating systems.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -67,6 +67,10 @@ Each activity generates a system notification. What displays depends on what the
 |3|Mac|
 
 ---
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-graphactivity-feedbroadcast.yml) to send activity feed notifications in Teams.
 
 ## Next step
 

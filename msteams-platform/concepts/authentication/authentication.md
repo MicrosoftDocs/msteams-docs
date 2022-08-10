@@ -1,9 +1,8 @@
 ---
 title: Authenticating app users
-description: Describes authentication in Teams and how to use it in the apps
+description: In this module, learn authentication in Teams and how to use it in the apps, web based authentication flow and OAuthPrompt flow for conversational bots
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
 ---
 # Authenticate users in Microsoft Teams
 
@@ -34,7 +33,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -43,12 +42,12 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
         
     :::column-end:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentication with third-party OAuth provider for tab app." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentication with third-party OAuth provider for tab app." link="../../tabs/how-to/authentication/auth-tab-aad.md":::
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -57,12 +56,12 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
         
     :::column-end:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentication with third-party OAuth provider for bot app." link="../../bots/how-to/authentication/add-authentication.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentication with third-party OAuth provider for bot app." link="../../bots/how-to/authentication/add-authentication.md":::
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -71,7 +70,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
         
     :::column-end:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md":::
     :::column-end:::
 :::row-end:::
 
