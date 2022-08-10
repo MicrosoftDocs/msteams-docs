@@ -22,7 +22,7 @@ There are two methods for uploading your app. You can either use [Developer Port
 If you're hosting your bot locally during development, you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service. You may need to add ngrok to your path.
 
 ```bash
-ngrok http <port> -host-header=localhost:<port>
+ngrok http <port> --host-header=localhost:<port>
 ```
 
 Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart, you'll get a new URL, and need to update your bot endpoint address to use that one as well.
