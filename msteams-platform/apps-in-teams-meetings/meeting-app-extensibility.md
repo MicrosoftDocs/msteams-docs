@@ -1,7 +1,7 @@
 ---
 title: Unified meetings apps
 author: surbhigupta
-description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and messaging extension in meeting lifecycle.
+description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and message extension in meeting lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: none
 ms.author: surbhigupta
@@ -16,7 +16,7 @@ Teams unified meetings apps are based on the following concepts:
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting: in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
-This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
+This article covers the information about meeting lifecycle and how to integrate tabs, bots, and message extensions. It identifies different participant roles and user types.
 
 ## Meeting lifecycle
 
@@ -24,7 +24,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 > [!NOTE]
 >
-> * Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for instant, and channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
 
@@ -52,6 +52,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
+   >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
 
@@ -63,7 +64,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Mobile pre-meeting experience":::
 
 ---
 
@@ -93,7 +94,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view":::
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -101,6 +102,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 ---
 
 > [!NOTE]
+>
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
@@ -109,11 +111,11 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog.png" alt-text="In-meeting side panel":::
 
 # [Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="In-meeting side panel mobilel":::
 
 ---
 
@@ -148,7 +150,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 Bots that are enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-### Integrate messaging extensions into the meeting lifecycle
+### Integrate message extensions into the meeting lifecycle
 
 To implement message extension, start with [build a message extension](../messaging-extensions/how-to/create-messaging-extension.md), and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
@@ -168,6 +170,7 @@ The overall user experience in standard channel meetings will be same as in sche
 | Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 
  > [!NOTE]
+ >
  > * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
  > * Apps on the channel will not be available in the meeting by default.
 
@@ -184,12 +187,12 @@ Team owners manages the meeting app permissions through team settings:
 
 The following image illustrates member permissions setting:
 
-:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
+:::image type="content" source="~/assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
 
 * Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
 * If enabled, members can add/remove meeting apps before, during, or after meetings.
 
-:::image type="content" source="../assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
+:::image type="content" source="~/assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
 
 ## Participant roles in a meeting
 
@@ -254,10 +257,10 @@ The following table provides the user types and lists the features that each use
 > [!div class="nextstepaction"]
 > [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 
-## See also 
+## See also
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
-* [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+* [Message extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Microsoft Teams meeting attendance report](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)
