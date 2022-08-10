@@ -24,7 +24,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 > [!NOTE]
 >
-> * Apps for instant, and recurring channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for instant, and recurring channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md)
 >
 > * Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
 
