@@ -1454,14 +1454,14 @@ It's important to know that new events can be added anytime in the future and yo
 
 ## Handling errors in conversation events
 
-When the bot encounters an error while handling different events or activities, it shouldn't post random messages directly to the conversation, following is an example:
+When the bot encounters an error while handling different events or activities, its better to send appropriate messages directly to the conversation, following is an example:
 
 :::image type="content" source="../../../assets/images/error-msg.PNG" alt-text="The screenshot shows an error message to the conversation with no meaningful context.":::
 
-The bot must send meaningful messages in conversations with specific error message for better user experience. For more information, see [handle unexpected errors](/azure/bot-service/bot-builder-howto-handle-user-interrupt).
+The bot must send meaningful messages in conversations based on the specific events like: Welcome messages should be handled through [installationUpdate](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet).
 
 > [!NOTE]
-> In production environment, you should consider sign in to Azure Application Insights. For more information, see [https://aka.ms/bottelemetry](https://aka.ms/bottelemetry) to add telemetry capture to your bot.
+> In production environment, you should consider Azure Application Insights for events or errors logging. For more information, see [https://aka.ms/bottelemetry](https://aka.ms/bottelemetry) to add telemetry capture to your bot.
 
 ## Code sample
 
