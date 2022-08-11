@@ -38,7 +38,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
    > [!WARNING]
    > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio is deprecated on August 01, 2022.
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="The screenshot describes the steps for creating command menu using app studio.":::
+   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="The screenshot shows the steps to create command menu using App Studio.":::
 
 2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update C# app package in App Studio](../../get-started/deploy-csharp-app-studio.md).
 
@@ -46,7 +46,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 4. In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**. The **New Command** screen appears.
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="The screenshot describes about selecting the app package." lightbox="media/AppStudio-CommandMenu-Add.png ":::
+   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="The screenshot shows the steps to select the app package." lightbox="media/AppStudio-CommandMenu-Add.png ":::
 
 5. Enter the **Command text** that must appear as the command menu for your bot.
 
@@ -54,7 +54,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 7. Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.
 
-   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="The screenshot is an example that shows the App Studio new command menu button. "lightbox="media/AppStudio-NewCommandMenu.png ":::
+   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="The screenshot shows the App Studio New Command Menu. "lightbox="media/AppStudio-NewCommandMenu.png ":::
 
 ### Create a command menu for your bot by editing Manifest.json
 
