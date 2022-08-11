@@ -19,16 +19,17 @@ Example of localization JSON schema is as follows:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "name.short": "Le App Studio",
-  "name.full": "App Studio pour Microsoft Teams",
-  "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio.",
-  "description.full": "Créez de nouvelles applications Microsoft Teams, concevez et prévisualisez des cartes bot, et explorez la documentation avec App Studio.",
-  "staticTabs[0].name": "Editeur de manifest",
-  "staticTabs[1].name": "Editeur de cartes",
-  "staticTabs[2].name": "Bibliothèque de contrôles",
-  "bots[0].commandLists[0].commands[0].title": "chercher",
-  "bots[0].commandLists[0].commands[0].description": "Rechercher la documentation Teams pertinente"
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.Localization.schema.json",
+    "name.short": "Portail de Développement",
+    "name.full": "Portail des développeurs",
+    "description.short": "Configurer, distribuer et gérer vos applications Microsoft Teams",
+    "description.full": "Anciennement App Studio, le portail des développeurs peut vous aider où que vous soyez dans votre parcours de développement d’applications Microsoft Teams.1. Configurez une nouvelle application ou importez une application existante.2. Configurez les fonctionnalités de votre application et d’autres métadonnées importantes.3. Obtenez des ressources pour vous aider à créer une application de haute qualité.3. Testez votre application directement dans Teams.4. Distribuez votre application dans votre organisation ou dans le Store Teams.5. Analysez l’utilisation, l’engagement et d’autres informations sur votre application. Le portail inclut également des outils pour concevoir des scènes virtuelles personnalisées, des cartes adaptatives et l’intégration à la Plateforme d’identités Microsoft.",
+    "staticTabs[0].name": "Accueil",
+    "staticTabs[1].name": "Applications",
+    "staticTabs[2].name": "Outils",
+    "staticTabs[3].name": "Developer Portal",
+    "bots[0].commandLists[0].commands[0].title": "Rechercher",
+    "bots[0].commandLists[0].commands[0].description": "Rechercher la documentation Teams appropriée"
 }
 ```
 
