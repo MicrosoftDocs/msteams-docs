@@ -980,20 +980,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
-
-### Syntax
-
-```typescript
-function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
-    if (!callback) {
-      throw new Error('[toggle incoming client audio] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('toggleIncomingClientAudio', callback);
-  }
-
-```
+|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false.
 
 ### Example
 
@@ -1014,19 +1001,20 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 > [!NOTE]
 > RSC has been enabled after 1.11, this feature won't work before 1.12.
 
-### Manifest
+### Sample Manifest
 
-```typescript
-callback = (error, result) => {
-        if (error) {
-            // Handle error code
+```JSON
+
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
         }
-        else {
-            // Handle success code
-        }
+      ]
     }
-
-microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+  }
 
 ```
 
