@@ -838,7 +838,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`id`|||✔️| The unique identifier for the A/V filter. This id must be a GUID. |
 |`name`| string | 128 characters |✔️| The name of the A/V filter. |
-|`thumbnail`|||✔️| The relative file path to the A/V filter thumbnail.|
+|`thumbnail`||32 MB|✔️| The relative file path to the A/V filter thumbnail.|
 
 ## authorization
 
