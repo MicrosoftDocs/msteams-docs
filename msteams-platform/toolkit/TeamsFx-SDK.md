@@ -84,8 +84,8 @@ Use the following snippet:
 ```ts
 // Equivalent to:
 // const teamsfx = new TeamsFx(IdentityType.App, {
-//   initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-//   clientId: process.env.REACT_APP_CLIENT_ID,
+//   clientId: process.env.AAD_APP_ID,
+//   clientSecret: process.env.AAD_APP_SECRET,
 // });
 const teamsfx = new TeamsFx(IdentityType.App);
 const graphClient = createMicrosoftGraphClient(teamsfx);
@@ -227,6 +227,8 @@ const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
 const profile = await graphClient.api("/me").get();
 ```
 
+For more information on sample to use Graph API in tab app, see the [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
+
 </details>
 
 <br>
@@ -282,6 +284,8 @@ connection.on("connect", (error) => {
   }
 });
 ```
+
+For more information on sample to access SQL database in Azure function, see the [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
 
 </details>
 
@@ -346,6 +350,8 @@ dialogs.add(
   ])
 );
 ```
+
+For more information on sample to use graph API in bot application, see the [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
 
 </details>
 
