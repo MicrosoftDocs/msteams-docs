@@ -160,10 +160,22 @@
         href: concepts/build-and-test/teams-developer-portal.md
     - name: FAQ
       href: toolkit/faq.md        
+  - name: Teams Toolkit for Visual Studio 
+    items:
+    - name: Teams Toolkit overview
+      href: toolkit/teams-toolkit-overview-visual-studio.md    
+    - name: Create a new Teams app
+      href: toolkit/create-new-teams-app-for-Visual-Studio.md
+    - name: Debug your Teams app
+      href: toolkit/debug-teams-app-visual-studio.md
+    - name: Provision cloud resources
+      href: toolkit/provision-cloud-resources.md  
+    - name: Deploy Teams app to the cloud
+      href: toolkit/deploy-teams-app.md
+    - name: Edit Teams app manifest
+      href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md 
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
-  - name: Teams Toolkit for Visual Studio
-    href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
   - name: Developer Portal for Teams
@@ -247,7 +259,9 @@
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
-    href: tabs/how-to/access-teams-context.md  
+    href: tabs/how-to/access-teams-context.md
+  - name: Build apps for shared channels
+    href: concepts/build-and-test/shared-channels.md  
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Tabs link unfurling and Stage View
@@ -338,9 +352,7 @@
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
-    href: apps-in-teams-meetings/API-references.md
-  - name: Build shared channel
-    href: concepts/build-and-test/Shared-channels.md  
+    href: apps-in-teams-meetings/API-references.md  
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview

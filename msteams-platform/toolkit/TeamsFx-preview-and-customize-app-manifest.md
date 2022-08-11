@@ -18,6 +18,8 @@ The Teams app manifest describes how your app integrates into the Microsoft Team
 * [Customize Teams app manifest](#customize-teams-app-manifest)
 * [Validate manifest](#validate-manifest)
 
+# Edit Teams app manifest for Visual Studio
+
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
