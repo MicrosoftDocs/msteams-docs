@@ -612,15 +612,15 @@
     - name: Collaboration controls and Settings API
       items:
       - name: Overview
-        href: samples/collaboration-api-reference.md
+        href: /rest/api/industry/collaboration-controls/
       - name: Collaboration - Custom APIs
-        href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+        href: /rest/api/industry/collaboration-controls/collaboration-custom-ap-is
       - name: Collaboration - Standard OData APIs
-        href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+        href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-ap-is
       - name: Settings - Custom APIs
-        href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+        href: /rest/api/industry/collaboration-controls/settings-custom-ap-is
       - name: Settings - Standard OData APIs
-        href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+        href: /rest/api/industry/collaboration-controls/settings-standard-o-data-ap-is
     - name: Limitations for Collaboration control   
       href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
