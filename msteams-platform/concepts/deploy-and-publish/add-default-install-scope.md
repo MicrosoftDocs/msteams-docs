@@ -12,7 +12,7 @@ It’s common for an app to support multiple scenarios in Teams, but you may hav
 :::row:::
    :::column span="2":::
 
-:::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="The screenshot describes on how to add an app dropdown example." :::
+:::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="The screenshot shows the steps to add an app." :::
 
    :::column-end:::
    :::column span="2":::
