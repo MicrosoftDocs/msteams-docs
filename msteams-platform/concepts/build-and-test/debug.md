@@ -58,7 +58,7 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 
 > [!WARNING]
 >
-> * If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022.
+> * If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio is deprecated on August 01, 2022.
 
 ## Cloud-hosted
 
@@ -82,3 +82,5 @@ To load and run your experience within Teams, you need to create a package and u
 ## See also
 
 [Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[DevTools for Microsoft Teams tabs](../../tabs/how-to/developer-tools.md)

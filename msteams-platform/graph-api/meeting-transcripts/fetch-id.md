@@ -31,7 +31,7 @@ When your app is notified of a subscribed meeting event, it can retrieve the mee
 
 Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
-For subscribing your app to calendar events, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview.md).
+For subscribing your app to calendar events, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
 
 Use the following example to subscribe to user-level notifications:
 
@@ -74,7 +74,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL.
 
-    For more information, see [Get event](/graph/api/event-get.md).
+    For more information, see [Get event](/graph/api/event-get).
 
     Use the following example to request the meeting URL:
 
@@ -151,9 +151,9 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     The chat ID is contained in `threadId`.
 
-4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-in-a-chat).
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
 
-    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage.md#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
+    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
 5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
@@ -161,7 +161,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
 
-For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage.md#subscribe-to-messages-across-all-chats).
+For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
 When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 

@@ -24,9 +24,6 @@ The following image displays the link unfurling experience through Share to Team
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="The screenshot is an example that shows the Share to Teams link unfurling.":::
 
-> [!NOTE]
-> Link unfurling in share to Teams is currently available only in public developer preview.
-
 This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
 
 See the following video to learn how to embed Share to Teams button:
