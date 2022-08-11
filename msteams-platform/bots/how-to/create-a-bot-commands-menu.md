@@ -15,11 +15,11 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="The screenshot is an example that shows the command menu desktop view.":::
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="The screenshot shows the command menu desktop view.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="The screenshot is an example that shows the command menu mobile view.":::
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="The screenshot shows the command menu mobile view.":::
 
 * * *
 
