@@ -32,7 +32,7 @@ A scene only app is still an app in Teams. The Scene studio handles the app pack
 You must have a basic understanding of the following to use custom Together Mode scenes:
 
 * Define scene and seats in a scene.
-* Have a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
+* Have a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 * Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
 
@@ -48,7 +48,7 @@ Consider the following practices for a scene building experience:
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal.
 
 A scene in the context of the Scene studio is an artifact that contains the following elements:
 

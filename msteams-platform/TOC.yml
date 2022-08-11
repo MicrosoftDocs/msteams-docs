@@ -231,7 +231,9 @@
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
-    href: tabs/how-to/access-teams-context.md  
+    href: tabs/how-to/access-teams-context.md
+  - name: Build apps for shared channels
+    href: concepts/build-and-test/shared-channels.md  
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Tabs link unfurling and Stage View
@@ -325,8 +327,8 @@
     href: apps-in-teams-meetings/API-references.md
   - name: Build shared channel
     href: concepts/build-and-test/Shared-channels.md
-  - name: Video filter for meeting apps
-    href: apps-in-teams-meetings/video-filters-for-meeting-apps.md   
+  - name: Video filters for meeting apps
+    href: apps-in-teams-meetings/video-filters-for-meeting-apps.md  
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
