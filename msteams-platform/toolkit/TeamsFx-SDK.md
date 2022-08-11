@@ -84,8 +84,8 @@ Use the following snippet:
 ```ts
 // Equivalent to:
 // const teamsfx = new TeamsFx(IdentityType.App, {
-//   clientId: process.env.AAD_APP_ID,
-//   clientSecret: process.env.AAD_APP_SECRET,
+//   clientId: process.env.M365_CLIENT_ID,
+//   clientSecret: process.env.M365_CLIENT_SECRET,
 // });
 const teamsfx = new TeamsFx(IdentityType.App);
 const graphClient = createMicrosoftGraphClient(teamsfx);
