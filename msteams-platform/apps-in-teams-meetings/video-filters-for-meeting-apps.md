@@ -13,9 +13,25 @@ ms.date: 08/08/2022
 > [!NOTE]
 > A/V filters is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the A/V filters.
 
-As online meetings have become more prominent, Teams users spend significant amount of time reviewing work with teammates, watching videos together, and collaborating on video calls. With Video filters you can add filters, frames, makeups, and so on to videos and make your videos more presentable for meetings.
+As online meetings have become more prominent, Teams users spend significant amount of time reviewing work with teammates, watching videos together, and collaborating on video calls. With Video filters you can add filters, frames, makeups, and so on to videos and make your videos more presentable for meetings. A/V filters in Microsoft Teams provides an immersive and engaging meeting environment along with the following actions:
 
-Prerequisites
+* Easily develop filters apps for Teams meetings.
+
+* Bring people together and encourage them to turn on their video.
+
+* Apply creative, fun filters that change up users' appearance.
+
+# [Pre-meeting](#tab/pre-meeting)
+
+:::image type="content" source="../assets/images/apps-in-meetings/pre-meeting-video-filter-experience.png" alt-text="Screenshot that shows an pre-meeting video filter app experience":::
+
+# [In-meeting](#tab/in-meeting)
+
+:::image type="content" source="../assets/images/in-meeting-experience.png" alt-text="Screenshot that shows an in-meeting video filter app experience.":::
+
+---
+
+## Prerequisites
 
 You must have a basic understanding of the following to create a video filter app for meetings in Teams:
 
@@ -25,7 +41,7 @@ You must have a basic understanding of the following to create a video filter ap
 4. [Enable sideloading for your Tenant](../concepts/deploy-and-publish/apps-upload.md)
 5. Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
 
-## Create a video filter app
+## Build a video filter app
 
 The video filter app defines the video filter and applies it to the user's video stream. You can use the video filter app during pre-meeting and in- meeting scenarios and easily apply video effects in all meetings and calls.
 
@@ -154,9 +170,9 @@ For a complete manifest schema, see [Public developer preview manifest schema fo
 
 After you've completed updating the app manifest, you can validate your app package at [app validation website](https://dev.teams.microsoft.com/appvalidation.html).
 
-### Video extensibility API Reference
+## Video extensibility API Reference
 
-You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. You can use the [video extensibility API's](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest) to access video stream of the user and get notified when a user has selected and applied a filter.
+You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. You can use the [video extensibility API's](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) to access video stream of the user and get notified when a user has selected and applied a filter.
 
 #### Register for Video frame API
 
@@ -223,7 +239,7 @@ enum EffectChangeType
 
 ### Best practices
 
-Consider the the following be
+Consider the the following practices to use the video extensibility APIs:
 
 * Video frame related data, including any raw video frame and any data calculated from video frame, must only be consumed in user's local computer, and shouldn't be uploaded to the network.
 
@@ -239,16 +255,17 @@ Consider the the following be
 
 * Video app should be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
-## Test your video filter app performance
+## Test the video filter app performance
 
-You can test the functionality and performance of your video filter app.
+You can test the functionality and performance of your video filter app using a filter test app .
 
 To test your video filter app:
 
-1. Download the [video sample app](https://github.com/microsoft/teams-videoapp-sample/blob/main/test-app/vxTestApp-v1.0.2-win32-x64.zip).
+1. Download the [video test app](https://github.com/microsoft/teams-videoapp-sample/blob/main/test-app/vxTestApp-v1.0.2-win32-x64.zip).
 1. Extract the files from the folder.
-1. Run the vxTestApp.exe.
+1. Run the **vxTestApp.exe** file.
 1. Enter the Video app url and select **Load**.
+   A default sample video filter app link is already available, replace the link wih your app url.
 1. Select an effect from the list and select **Apply effect**.
 1. Select **real-time evaluation** or **Full Evaluation** to analyze the performance data.
 
