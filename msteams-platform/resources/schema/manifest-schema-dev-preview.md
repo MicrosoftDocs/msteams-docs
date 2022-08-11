@@ -810,3 +810,4 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
+* [Video filters for meeting apps](../../apps-in-teams-meetings/video-filters-for-meeting-apps.md)
