@@ -23,7 +23,7 @@ Users can use the video filter app during pre-meeting and in-meeting scenarios a
 
 # [In-meeting experience](#tab/in-meeting-experience)
 
-:::image type="content" source="../assets/images/in-meeting-experience.png" alt-text="Screenshot that shows an in-meeting video filter app experience.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-video-filter-experience.png" alt-text="Screenshot that shows an in-meeting video filter app experience.":::
 
 ---
 
