@@ -305,3 +305,5 @@ Follow the [step-by-step guide](../../../sbs-send-proactive.yml), which helps yo
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
+* [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
+* [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
