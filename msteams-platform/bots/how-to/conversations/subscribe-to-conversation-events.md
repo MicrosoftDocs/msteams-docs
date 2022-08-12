@@ -1456,8 +1456,6 @@ It's important to know that new events can be added anytime in the future and yo
 
 When the bot encounters an error while handling different events or activities, its better to send appropriate messages directly to the conversation, following is an example:
 
-:::image type="content" source="../../../assets/images/error-msg.PNG" alt-text="The screenshot shows an error message to the conversation with no meaningful context.":::
-
 The bot must send meaningful messages in conversations based on the specific events like: Welcome messages should be handled through [installationUpdate](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet).
 
 > [!NOTE]
