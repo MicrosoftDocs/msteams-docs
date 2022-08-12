@@ -8,7 +8,7 @@ ms.topic: reference
 ---
 # Designing your Microsoft Teams app with basic Fluent UI components
 
-You can build your Teams app from scratch with the following basic Fluent UI components. Designed as flat as possible, these components can work across different use cases, themes, and screen sizes.
+You can design and build your Teams app from scratch with the following basic Fluent UI components. Designed as flat as possible, these components can work across different use cases, themes, and screen sizes.
 
 The illustrations on this page show how components look in Teams default (light) and dark themes.
 

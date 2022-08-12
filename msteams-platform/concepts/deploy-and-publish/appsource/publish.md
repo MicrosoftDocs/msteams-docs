@@ -140,7 +140,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. You've correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
 
-      1. You must ensure your linked SaaS offer is designed to support licenses assigned on a named [per user model](/azure/marketplace/create-new-saas-offer-plans). Linked SaaS offers that support other pricing models such as flat rate are currently not accepted for publishing to the Teams store.
+      1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
       1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
 
