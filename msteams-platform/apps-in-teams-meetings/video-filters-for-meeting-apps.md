@@ -1,7 +1,7 @@
 ---
 title: Video filters for meeting apps
 author: v-ypalikila
-description: Learn how to add filters, frames, makeups and so on to videos and make your videos more presentable for meetings.
+description: Learn how to add filters, frames, makeups, and so on, to videos and make your videos more presentable for meetings.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-ypalikila
@@ -163,9 +163,9 @@ You can configure your app to fetch the user's video stream during the pre-meeti
 
 To trigger the video filter for the app:
 
-* Invoke the `registerForVideoFrame` to read the video frames in Permissions section.
-* Invoke the `registerForVideoEffect` to get select effect in Teams client or notify that the selected effect in video app’s UI is applied.
-* Call the `notifyVideoFrameProcessed` to notify the teams client that a different effect is selected by the users in the video app.Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
+* Invoke the `registerForVideoFrame` method to read the video frames in Permissions section.
+* Invoke the `registerForVideoEffect` method to get select effect in Teams client or notify that the selected effect in video app’s UI is applied.
+* Call the `notifyVideoFrameProcessed` method to notify the teams client that a different effect is selected by the users in the video app.Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
 
 >[!NOTE]
 > After you call notifySelectedEffectChanged API:
