@@ -104,10 +104,15 @@ TeamsFx class instance access all TeamsFx settings from environment variables by
 When creating a TeamsFx instance, you also need to specify the identity type.
 There are two identity types:
 
-* User Identity
-* Application Identity
+* **User Identity**: Represents the current user of Teams.
+* **Application Identity**: Represents the application itself.
 
-#### User Identity
+For these two different identity types, there are differences in TeamsFx constructors and methods.
+
+<br>
+
+<details>
+<summary><b> User Identity </b></summary>
 
 | Command | Description |
 |----------------|-------------|
@@ -118,8 +123,12 @@ There are two identity types:
 
 > [!NOTE]
 > You can access resources on behalf of current Teams user.
+</details>
 
-#### Application Identity
+<br>
+
+<details>
+<summary><b> Application Identity </b></summary>
 
 | Command | Description |
 |----------------|-------------|
@@ -128,6 +137,9 @@ There are two identity types:
 
 > [!NOTE]
 > You need admin consent for resources.
+</details>
+
+<br>
 
 ### Credential
 
@@ -193,7 +205,20 @@ try {
 }
 ```
 
-If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed.
+If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed. To learn to hanle a certain type of error, you can refer to `Use Graph API in tab app` sample in [Scenarios](#Scenarios). 
+
+
+
+## Scenarios
+
+The following section provides several code snippets for common scenarios:
+
+<br>
+
+<details>
+<summary><b>Use Graph API in tab app</b></summary>
+
+Use `TeamsFx` and `createMicrosoftGraphClient`.
 
 ```ts
 try {
@@ -208,23 +233,6 @@ try {
     });
   }
 }
-```
-
-## Scenarios
-
-The following section provides several code snippets for common scenarios:
-
-<br>
-
-<details>
-<summary><b>Use Graph API in tab app</b></summary>
-
-Use `TeamsFx` and `createMicrosoftGraphClient`.
-
-```ts
-const teamsfx = new TeamsFx();
-const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
-const profile = await graphClient.api("/me").get();
 ```
 
 For more information on sample to use Graph API in tab app, see the [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
