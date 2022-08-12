@@ -41,7 +41,7 @@ Before you start to learn how to build Incoming webhooks, you may also want to k
 | Send Adaptive Card | Yes | Yes |
 | Send a welcome message | Can send a welcome message | No welcome message |
 | Trigger Supported | All triggers supported, if using Teams Toolkit, you can quickly get template projects with following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service <br> • HTTP trigger hosted on Azure Functions | All triggers supported |
-| Building Tools | • [Teams Toolkit for Visual Studio Code](/toolkit/teams-toolkit-fundamentals.md)] <br> • [Teams Toolkit for Visual Studio](/toolkit/teams-toolkit-overview-visual-studio.md) <br> • [Teams Toolkit CLI](/toolkit/teamsfx-cli.md) <br> • [TeamsFx SDK](/toolkit/teamsfx-sdk?view=msteams-client-js-latest&preserve-view=true) | No tools required |
+| Building Tools | • [Teams Toolkit for Visual Studio Code](/toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit for Visual Studio](/toolkit/teams-toolkit-overview-visual-studio.md) <br> • [Teams Toolkit CLI](/toolkit/teamsfx-cli.md) <br> • [TeamsFx SDK](/toolkit/teamsfx-sdk?view=msteams-client-js-latest&preserve-view=true) | No tools required |
 | Cloud resource required | Azure Bot Framework | No resources required |
 | Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | NA |
 
