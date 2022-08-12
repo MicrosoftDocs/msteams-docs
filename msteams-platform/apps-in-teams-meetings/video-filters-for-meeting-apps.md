@@ -51,7 +51,7 @@ You must have an app package to build and run your application in Teams. For mor
 >[!NOTE]
 > Update your app manifest as per the [Public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
-You must configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video API's.
+You must configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video APIs.
 
 The following is an example of a manifest for a video filter app:
 
@@ -159,7 +159,7 @@ After you've completed updating the app manifest, you can validate your app pack
 
 ## Video extensibility API reference
 
-You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. You can use the [video extensibility API's](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) to access video stream of the user and get notified when a user has selected and applied a filter.
+You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. You can use the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) to access video stream of the user and get notified when a user has selected and applied a filter.
 
 To trigger the video filter for the app:
 
@@ -272,7 +272,7 @@ A video filter app must meet the following performance requirements:
 * Video frame processing time must be less than 30 ms.
 * Video app loading time must be less than 4 sec.
 * App Size is must be less than 20 MB.
-* Memory size muse be less than 150 MB.
+* Memory size must be less than 150 MB.
 * Latency must be less than 100 ms.
 
 ### Sideload the video filter app
