@@ -39,11 +39,11 @@ Perform the following steps to upload app package:
 2. Select **Manage your apps**.
 3. Select **upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish.png" alt-text="publish":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish.png" alt-text="publish an app":::
 
 4. Select **Upload a custom app**:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload an app":::
 
 ## Publish to your organization
 
@@ -53,13 +53,13 @@ You can select **Publish to Teams** from tree view of Teams Toolkit and from com
 
 * Select **Publish to Teams** from **DEPLOYMENT** in TreeView of Teams Toolkit.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="upload":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="Select Publish":::
 
   * Trigger **Teams: Publish to Teams** from command palette.
 
 * Select **Install for your organization**
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="upload":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Install for your organization":::
 
 The app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin, can review and approve it.
 
