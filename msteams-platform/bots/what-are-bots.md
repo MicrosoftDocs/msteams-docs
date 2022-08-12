@@ -9,7 +9,7 @@ ms.author: anclear
 # Build bots for Teams
 
 > [!NOTE]
-> It's recommended that you'd create your first bot app or notification bot app using the new generation development Tool of Teams. For more information, see [Teams Toolkit for VS Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for VS](../toolkit/teams-toolkit-overview-visual-studio.md).
+> It's recommended that you'd create your first bot app or notification bot app using the new generation development Tool of Teams. For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
 
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
