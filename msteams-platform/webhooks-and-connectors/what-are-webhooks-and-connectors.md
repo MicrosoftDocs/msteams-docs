@@ -26,6 +26,25 @@ Connectors allow users to subscribe to receive notifications and messages from t
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
+#### Notification bot or incoming webhook - choose the right one!
+
+Before you start to learn how to build Incoming webhooks, you may also want to know that you can build Notification Bot using Teams Toolkit. Notification Bots can enable more customizable experience to meet different business scenarios. Read the following table to learn more about the differences between Notification Bot and Incoming webhook so that you can choose correct solutions for your scenarios.
+
+| &nbsp; | Notification bot |  Incoming Webhook |
+| --- | --- | --- |
+| &nbsp; | Teams app | Teams feature |
+| Installation required | Yes | No |
+| Suitable scenarios |  |  | 
+| Scope configuration |  |  |
+| Message process |   |  |
+| Retrieve Teams context |  |  |
+| Send Adaptive Card |  |  |
+| Send a welcome message |  |  |
+| Trigger Supported |  |  |
+| Building Tools |  |  |
+| Cloud resource required |  |  |
+| Tutorial |  |  |
+
 ### Office 365 Connectors
 
 Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. For example, a weather connector that allows users to select a location and a time of day, to receive updates about tomorrow's weather. They are configured on a channel level but are installed at a team level.
