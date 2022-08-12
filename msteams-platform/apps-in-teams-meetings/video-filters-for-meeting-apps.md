@@ -278,6 +278,6 @@ After you test the video filter app, sideload the app to your tenant in Teams. F
 
 * [Public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
-* [Teams client SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest)
+* [Teams client SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true)
 
 * [Meeting apps API references](API-references.md)
