@@ -19,7 +19,7 @@ Microsoft Teams Toolkit in Visual Studio Code offers set of environments to buil
 
 Teams Toolkit in Visual Studio Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
 
-* Supports rich interfaces that are very user friendly.
+* App comes with its own UI and UX capabilities, that are rich and user friendly.
 * Provides quick upgrades to existing apps.
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with existing APIs.
@@ -28,17 +28,30 @@ Teams Toolkit in Visual Studio Code supports building apps using JavaScript/Type
 
 Teams Toolkit in Visual Studio Code allows you to create apps using SPFx. These apps have the following advantages:
 
-* Provides easy integration with data residing in SharePoint to your Teams.
-* Accesses to various open-source tools.
-* Creates powerful applications that can deliver a great UX.
+* Provides you easy integration with data residing in SharePoint to your Teams.
+* You can integrate your SPFx solution with your business APIs secured with Azure Active Directory.
+* Gives you Accesses to various open-source tools.
+* Creates for you powerful applications that can deliver a great UX.
 * Integrates with other Microsoft (Office) 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
+
+## App types built with Teams Toolkit
+
+Teams Toolkit allows you to build different app types using JavaScript and SPFx:
+
+* Tab app using JavaScript
+* Bot app using JavaScript
+* Notification bot with JavaScript
+* Message extension app with JavaScript
+* Apps using SPFx
 
 ## Manage your apps using Developer Portal
 
 As Teams Toolkit is integrated with developer portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **Deployment** after creating an app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal.png" alt-text="build environment developer portal":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/teams-toolkit-VSC/vsc-build-environment/build-environment-developer-portal.png" alt-text="Steps to build environment using developer portal":::
+
+## Support for Azure functions
 
 ## See also
 
