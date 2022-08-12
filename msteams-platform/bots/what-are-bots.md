@@ -1,7 +1,7 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: With this learning path, get started with conversational bots in Microsoft Teams and it's code samples.
+description: In this article, use conversational bots in Microsoft Teams to share files, send proactive nofication, interactive cards, make calls, invoke bot command, IVR.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
