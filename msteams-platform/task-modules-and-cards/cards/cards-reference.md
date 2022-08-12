@@ -69,7 +69,7 @@ You can identify and use different types of cards based on your application requ
 >
 > * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 >
-> * Adaptive Card supports only Incoming Webhook O365 Connector type, doesn't function in any other O365 Connector types.
+> * Adaptive Card supports only Incoming Webhook O365 Connector type, it doesn't support in any other O365 Connector types.
 
 ## Common properties for all cards
 
