@@ -293,7 +293,7 @@ The following table provides a simple code sample that incorporates basic conver
 
 ## Step-by-step guide
 
-Follow the [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) which helps you to send a proactive message from a bot.
+Follow the step-by-step guide to [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml), which helps you to send a proactive message from a bot.
 
 ## Next step
 
