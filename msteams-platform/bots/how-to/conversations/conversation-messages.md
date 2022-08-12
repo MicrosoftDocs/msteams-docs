@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn the ways to have a conversation with a Teams bot and Teams channel data, notification to your message, picture messages, adaptive cards using Code samples
+description: Learn how to send recieve a message, suggested actions, notification, attachments, images, Adaptive Cards, status error code responses for Throttle.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
