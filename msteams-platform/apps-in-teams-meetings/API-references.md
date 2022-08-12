@@ -1001,6 +1001,20 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 > [!NOTE]
 > RSC has been enabled after 1.11, this feature won't work before 1.12.
 
+Use the following example to configure your app manifest's `webapplicationinfo` property for any private meeting:
+
+### For App manifest post version 1.12
+
+```JSON
+
+"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RSCPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+}
+
 ### Sample Manifest
 
 ```JSON
