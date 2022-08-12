@@ -1015,6 +1015,8 @@ Use the following example to configure your app manifest's `webapplicationinfo` 
     ]
 }
 
+```
+
 ### Sample Manifest
 
 ```JSON
