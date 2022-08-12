@@ -32,7 +32,7 @@ Before you start to learn how to build Incoming webhooks, you may also want to k
 
 | &nbsp; | Notification bot |  Incoming Webhook |
 | --- | --- | --- |
-| &nbsp; | Teams app | Teams feature |
+| What is it? | Teams app | Teams feature |
 | Installation required | Yes | No |
 | Suitable scenarios | • Receive notifications and messages periodically based on timer manner, for example, receive daily notification of team tasks. <br>  • Receive notifications and messages based on real events. For example, once teammates upload files, you receive notifications. | Communicate with external apps and receive notifications and messages from other apps. |
 | Scope configuration | • Teams channel <br> • Group chat <br> • Personal chat | Teams channel |
