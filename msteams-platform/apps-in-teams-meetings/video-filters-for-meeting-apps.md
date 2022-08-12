@@ -124,7 +124,7 @@ Ensure that you follow the following requirements to update the app manifest:
 
 * The `videoAppContentUrl` property isn't empty.
 
-* The Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width or height - 74 or 42) < 0.01.
+* The Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width by height - 74 by 42) less than 0.01.
 
 * The value of each filter's thumbnail is a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA.
 
@@ -165,7 +165,7 @@ To trigger the video filter for the app:
 
 * Invoke the `registerForVideoFrame` method to read the video frames in Permissions section.
 * Invoke the `registerForVideoEffect` method to get select effect in Teams client or notify that the selected effect in video app’s UI is applied.
-* Call the `notifyVideoFrameProcessed` method to notify the teams client that a different effect is selected by the users in the video app.Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
+* Call the `notifyVideoFrameProcessed` method to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
 
 >[!NOTE]
 > After you call notifySelectedEffectChanged API:
@@ -250,7 +250,7 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 ## Test the video filter app performance
 
-You can test the functionality and performance of your video filter app using a filter test app .
+You can test the functionality and performance of your video filter app using a filter test app.
 
 To test your video filter app:
 
@@ -258,11 +258,11 @@ To test your video filter app:
 1. Extract the files from the folder.
 1. Run the **vxTestApp.exe** file.
 1. Enter the Video app url and select **Load**.
-   A default sample video filter app link is already available, replace the link wih your app url.
+   A default sample video filter app link is already available, replace the link with your app url.
 1. Select an effect from the list and select **Apply effect**.
 1. Select **real-time evaluation** or **Full Evaluation** to analyze the performance data.
 
-A good functioning video filter app must meetthe following performance requirements:
+A good functioning video filter app must meet the following performance requirements:
 
 * Video frame processing time less than 30 ms.
 * Video app loading time less than 4 sec.
