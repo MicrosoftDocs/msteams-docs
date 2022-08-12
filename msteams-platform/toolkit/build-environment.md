@@ -19,7 +19,7 @@ Microsoft Teams Toolkit in Visual Studio Code offers set of environments to buil
 
 Teams Toolkit in Visual Studio Code supports building apps using JavaScript/TypeScript. The apps built with JavaScript have the following advantages:
 
-* App comes with its own UI and UX capabilities, that are rich and user friendly.
+* App comes with its own UI and UX capabilities that are rich and user friendly.
 * Provides quick upgrades to existing apps.
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with existing APIs.
@@ -31,7 +31,7 @@ Teams Toolkit in Visual Studio Code allows you to create apps using SPFx. These 
 * Provides you easy integration with data residing in SharePoint to your Teams.
 * You can integrate your SPFx solution with your business APIs secured with Azure Active Directory.
 * Gives you Accesses to various open-source tools.
-* Creates for you powerful applications that can deliver a great UX.
+* Creates for your powerful applications that can deliver a great UX.
 * Integrates with other Microsoft (Office) 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
 
