@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
-> [!Note]
+> [!NOTE]
 >
 > Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -29,7 +29,7 @@ Users can add apps to the meeting using the **+** option from their Teams meetin
 
 Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and explore apps designed specifically for meetings.
 
-> [!Note]
+> [!NOTE]
 >
 > * Currently, adding an app is not supported in mobile. However, a user can view the app and share the app to stage from mobile.
 >
@@ -43,11 +43,12 @@ The following illustration gives you an idea of the meeting app extensibility fe
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-- **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
-- **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
-- **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
-- **Customize app permission in shared channel: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
-- **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
+* **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
+* **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
+* **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
+* **Customize app permission in shared channel**: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
+* **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
+* **Video filters for meeting apps**: Video filters allow you to add filters, frames, makeups, and so on, to videos and make your videos more presentable for meetings.
 
 ## Next step
 
@@ -62,3 +63,4 @@ This article provides an overview of meeting app extensibility, API references, 
 * [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Meeting lifecycle](meeting-app-extensibility.md#meeting-lifecycle)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
+* [Video filters for meeting apps](video-filters-for-meeting-apps.md)
