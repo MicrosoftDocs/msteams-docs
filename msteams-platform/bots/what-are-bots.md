@@ -9,7 +9,7 @@ ms.author: anclear
 # Build bots for Teams
 
 > [!NOTE]
-> It's recommended that you'd learn to create your first bot app or notification bot app using the new generation development Tool of Teams, learn more about the tools at Teams Toolkit for VS Code and Teams Toolkit for VS.
+> It's recommended that you'd create your first bot app or notification bot app using the new generation development Tool of Teams. For more information, see [Teams Toolkit for VS Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for VS](../toolkit/teams-toolkit-overview-visual-studio.md).
 
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
@@ -62,6 +62,9 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Adaptive Card Notification | This is a sample which shows how to send notifications with different adaptive cards using Bots. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Incoming Webhook Notification | This is a sample which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## See also
 
