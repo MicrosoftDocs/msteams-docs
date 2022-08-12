@@ -63,7 +63,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 |----------------|-----------------|--------------|--------------|
 | Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
 | Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
-| Adaptive Card Notification | This is a sample which shows how to send notifications with different adaptive cards using Bots. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Adaptive Card Notification | This is a sample which shows how to send notifications with different adaptive cards using Bots. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
 | Incoming Webhook Notification | This is a sample which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## See also
