@@ -1,7 +1,7 @@
 ---
 title: Receive all channel messages with RSC
 author: surbhigupta12
-description: In this module, learn how to receive all channel messages with RSC permissions and how to enable bots to receive all channel messages.
+description: Enable bots to receive all channel messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -40,12 +40,12 @@ The following code provides an example of the app manifest:
 
 ```json
 "webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
-"ChannelMessage.Read.Group"
-    ]
-  }
+  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+  "resource": "https://AnyString",
+  "applicationPermissions": [
+    "ChannelMessage.Read.Group"
+  ]
+}
 ```
 
 ## Sideload in a team
