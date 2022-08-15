@@ -108,6 +108,7 @@ You must add the details of the search parameter that defines the text visible t
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
+| `parameters.value` | Initial value for the parameter. Currently the value is not supported | No | 1.5 |
 
 #### Example
 
