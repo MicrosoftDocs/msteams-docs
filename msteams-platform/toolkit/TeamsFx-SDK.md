@@ -143,29 +143,43 @@ For these two different identity types, there are differences in TeamsFx constru
 
 ### Credential
 
+Credential and auth flow related classes are under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+
 You must choose identity type when initializing TeamsFx. After you've specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
 
-There are three credential classes to simplify authentication. [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
+There are three credential classes to simplify authentication. Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
 
 Here's the corresponding scenarios for each credential class target.
 
-#### User Identity in browser environment
+<details>
+<summary><b> User Identity in browser environment </b></summary>
 
 `TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developers choose user identity in browser environment.
 
 Required configuration: `initiateLoginEndpoint`, `clientId`.
+</details>
 
-#### User Identity in Node.js environment
+<br>
+
+<details>
+<summary><b> User Identity in Node.js environment </b></summary>
 
 `OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It's designed to be used in Azure Function or bot scenarios. SDK uses this credential when developers choose user identity in Node.js environment.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
+</details>
 
-#### Application Identity in Node.js environment
+<br>
+
+<details>
+<summary><b> Application Identity in Node.js environment </b></summary>
 
 `AppCredential` represents the application identity. It's used when user isn't involved like time-triggered automation job. SDK uses this credential when developers choose App identity in Node.js environment.
 
 Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
+</details>
+
+<br>
 
 ### Bot SSO
 
@@ -189,7 +203,7 @@ Required configuration:
 
 ### Error handling
 
-API error response is `ErrorWithCode`, which contains error code and error message. For example, to filter out specific error, you can use the following snippet:
+Basic type of API error response is `ErrorWithCode`, which contains error code and error message. For example, to filter out specific error, you can use the following snippet:
 
 ```ts
 try {
@@ -200,7 +214,7 @@ try {
     throw err;
   } else {
     // Silently fail because user cancels the consent dialog
-        return;
+    return;
   }
 }
 ```
@@ -216,9 +230,20 @@ The following section provides several code snippets for common scenarios:
 <br>
 
 <details>
-<summary><b>Use Graph API in tab app</b></summary>
+<summary><b>Use Graph API in tab application</b></summary>
 
-Use `TeamsFx` and `createMicrosoftGraphClient`.
+Use `TeamsFx` and `createMicrosoftGraphClient`. This code snippet also shows you how to catch and handle a `GraphError`.
+
+1. Import the classed needed.
+
+```ts
+import {
+  createMicrosoftGraphClient,
+  TeamsFx,
+} from "@microsoft/teamsfx";
+```
+
+2. Initial a graph client and get information from MS Graph by this client.
 
 ```ts
 try {
@@ -242,88 +267,9 @@ For more information on sample to use Graph API in tab app, see the [hello-world
 <br>
 
 <details>
-<summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
-
-:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Create api client":::
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Call Azure Function in tab app</b></summary>
-
-Use `axios` library to make HTTP request to Azure Function.
-
-```ts
-const teamsfx = new TeamsFx();
-const credential = teamsfx.getCredential(); //Create an API Client that uses SSO token to authenticate requests
-const apiClient = CreateApiClient(teamsfx.getConfig("apiEndpoint")),
-new BearerTokenAuthProvider(async () =>  (await credential.getToken(""))!.token);// Call API hosted in Azure Functions on behalf of user
-const response = await apiClient.get("/api/" + functionName);
-```
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Access SQL database in Azure Function</b></summary>
-
-Use `tedious` library to access SQL and leverage `DefaultTediousConnectionConfiguration` that manages authentication.
-Apart from `tedious`, you can also compose connection config of other SQL libraries based on the result of `sqlConnectionConfig.getConfig()`.
-
-```ts
-// Equivalent to:
-// const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
-//    sqlServerEndpoint: process.env.SQL_ENDPOINT,
-//    sqlUsername: process.env.SQL_USER_NAME,
-//    sqlPassword: process.env.SQL_PASSWORD,
-// });
-const teamsfx = new TeamsFx();
-// If there's only one SQL database
-const config = await getTediousConnectionConfig(teamsfx);
-// If there are multiple SQL databases
-const config2 = await getTediousConnectionConfig(teamsfx "your database name");
-const connection = new Connection(config);
-connection.on("connect", (error) => {
-  if (error) {
-    console.log(error);
-  }
-});
-```
-
-For more information on sample to access SQL database in Azure function, see the [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Use certificate-based authentication in Azure Function</b></summary>
-
-```ts
-const authConfig = {
-  clientId: process.env.M365_CLIENT_ID,
-  certificateContent: "The content of a PEM-encoded public/private key certificate",
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  tenantId: process.env.M365_TENANT_ID,
-};
-const teamsfx = new TeamsFx(IdentityType.App);
-teamsfx.setCustomeConfig({
-  certificateContent: "The content of a PEM-encoded public/private key certificate"
-});
-const token = teamsfx.getCredential().getToken();
-```
-
-</details>
-
-<br>
-
-<details>
 <summary><b>Use Graph API in bot application</b></summary>
 
-Add `TeamsBotSsoPrompt` to dialog set.
+1. Initialize and add `TeamsBotSsoPrompt` to dialog set.
 
 ```ts
 const { ConversationState, MemoryStorage } = require("botbuilder");
@@ -340,7 +286,11 @@ dialogs.add(
     scopes: ["User.Read"],
   })
 );
+```
 
+2. Begin the dialog and login.
+
+```ts
 dialogs.add(
   new WaterfallDialog("taskNeedingLogin", [
     async (step) => {
@@ -360,6 +310,122 @@ dialogs.add(
 ```
 
 For more information on sample to use graph API in bot application, see the [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
+
+Basically, you can refer to the following snippet to call an existing API in Bot.(`ApiKeyProvider`)
+
+```ts
+const teamsfx = new TeamsFx();
+
+// Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
+// BearerTokenAuthProvider, BasicAuthProvider, CertificateAuthProvider.
+const authProvider = new ApiKeyProvider("YOUR_API_KEY_NAME",
+  teamsfx.getConfig("YOUR_API_KEY_VALUE"), // This reads the value of YOUR_API_KEY_VALUE environment variable.
+  ApiKeyLocation.Header
+);
+
+// Create an API client using above auth provider.
+// You can also implement AuthProvider interface and use it here.
+const apiClient = createApiClient(
+  teamsfx.getConfig("YOUR_API_ENDPOINT"), // This reads YOUR_API_ENDPOINT environment variable.
+  authProvider
+);
+
+// Send a GET request to "RELATIVE_API_PATH", "/api/apiname" for example.
+const response = await apiClient.get("RELATIVE_API_PATH");
+```
+
+What's more, you can also refer to the following snippet to call an existing API in Azure Function.(`BearerTokenAuthProvider`)
+
+```ts
+const teamsfx = new TeamsFx();
+
+// Get the credential.
+const credential = teamsfx.getCredential(); 
+// Create an API client by providing the token and endpoint.
+const apiClient = CreateApiClient(
+  teamsfx.getConfig("YOUR_API_ENDPOINT"), // Create an API Client that uses SSO token to authenticate requests
+  new BearerTokenAuthProvider(async () =>  (await credential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user
+);
+
+// Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
+const response = await apiClient.get("RELATIVE_API_PATH");
+```
+
+Two snippets above are very similar, the differences between them are two types of providers and parameters in different providers.
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Access SQL database in Azure Function</b></summary>
+
+Use `tedious` library to access SQL and leverage `DefaultTediousConnectionConfiguration` that manages authentication.
+Apart from `tedious`, you can also compose connection config of other SQL libraries based on the result of `sqlConnectionConfig.getConfig()`.
+
+1. Set the connection configuration.
+
+```ts
+// Equivalent to:
+// const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
+//    sqlServerEndpoint: process.env.SQL_ENDPOINT,
+//    sqlUsername: process.env.SQL_USER_NAME,
+//    sqlPassword: process.env.SQL_PASSWORD,
+// });
+const teamsfx = new TeamsFx();
+// If there's only one SQL database
+const config = await getTediousConnectionConfig(teamsfx);
+// If there are multiple SQL databases
+const config2 = await getTediousConnectionConfig(teamsfx, "your database name");
+```
+
+2. Connect to your database.
+
+```ts
+const connection = new Connection(config);
+connection.on("connect", (error) => {
+  if (error) {
+    console.log(error);
+  }
+});
+```
+
+For more information on sample to access SQL database in Azure function, see the [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Use certificate-based authentication in Azure Function</b></summary>
+
+1. Initialize the `authConfig` by providing a `PEM-encoded key certificate`.
+
+```ts
+const authConfig = {
+  clientId: process.env.M365_CLIENT_ID,
+  certificateContent: "The content of a PEM-encoded public/private key certificate",
+  authorityHost: process.env.M365_AUTHORITY_HOST,
+  tenantId: process.env.M365_TENANT_ID,
+};
+```
+
+2. Use the `authConfig` to get the token.
+
+```ts
+const teamsfx = new TeamsFx(IdentityType.App);
+teamsfx.setCustomeConfig({
+  certificateContent: "The content of a PEM-encoded public/private key certificate"
+});
+const token = teamsfx.getCredential().getToken();
+```
 
 </details>
 
