@@ -12,7 +12,7 @@ ms.date: 07/21/2022
 
 # How to: custom Azure Fluid Relay service
 
-While most developers will find it preferable to use our free hosted service, there are still situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While most developers will find it preferable to use our free hosted service, there are situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
 ## Pre-requisites
 
@@ -92,7 +92,7 @@ const { container } = await client.joinContainer(schema);
 
 ## Why use a custom Azure Fluid Relay service?
 
-While most developers will find it beneficial to use our free hosted service, there may still be times where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While most developers will find our free service meets all their requirements, there may be cases where using your own Azure Fluid Relay service for your Live Share app is ideal.
 
 Consider using a custom AFR service connection if you:
 
@@ -102,9 +102,9 @@ Consider using a custom AFR service connection if you:
 
 ## Why use Live Share with your custom service?
 
-Azure Fluid Relay is designed to work with any web-based application, meaning it works with or without Teams. That raises an important question: why use Live Share at all?
+Azure Fluid Relay is designed to work with any web-based application, meaning it works with or without Microsoft Teams. That raises an important question: if I build my own Azure Fluid Relay service, do I still need Live Share?
 
-Live Share has features that are beneficial to meeting scenarios that can augment other features in your app, including:
+Live Share has features that are beneficial to common meeting scenarios that augment other features in your app, including:
 
 - Container mapping
 - Ephemeral objects & role verification
