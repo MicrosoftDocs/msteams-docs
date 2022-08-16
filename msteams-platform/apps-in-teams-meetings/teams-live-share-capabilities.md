@@ -224,7 +224,10 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 
 ### EphemeralPresence example
 
-The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as a unique identifier or name.
+The `EphemeralPresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name or profile picture. By listening to `presenceChanged` events, each client receives the latest `EphemeralPresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
+
+> [!NOTE]
+> The default `userId` assigned to each `EphemeralPresenceUser` is a random UUID and is not directly tied to an AAD identity. You can assign override this by setting a custom `userId` to be the primary key, as shown in the example below.
 
 Example:
 
@@ -391,6 +394,9 @@ notifications.sendEvent({
 ## Role verification for ephemeral data structures
 
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Ephemeral objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual ephemeral object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+
+> [!NOTE]
+> The `EphemeralPresence` class does not support role verification. Instead, each `EphemeralPresenceUser` object has a `getRoles` method, which return the meeting roles for a given user.
 
 Example using `EphemeralState`:
 
