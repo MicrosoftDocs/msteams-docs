@@ -34,9 +34,6 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
-> [!WARNING]
-> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. <br> App studio will be deprecated by August 01, 2022.
-
 ## Build your first Teams app
 
 Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
@@ -63,5 +60,5 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 ## See also
 
-* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Git and GitHub resources](/contribute/additional-resources)
+- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Git and GitHub resources](/contribute/additional-resources)

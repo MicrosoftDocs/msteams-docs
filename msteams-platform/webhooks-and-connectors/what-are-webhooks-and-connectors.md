@@ -26,6 +26,27 @@ Connectors allow users to subscribe to receive notifications and messages from t
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
+#### Notification bot or incoming webhook - choose the right one!
+
+Before you start to learn how to build Incoming webhooks, you may also want to know that you can build Notification Bot using Teams Toolkit. Notification Bots can enable more customizable experience to meet different business scenarios.
+
+Learn more about the differences between Notification Bot and Incoming webhook so that you can choose correct solutions for your scenarios:
+
+| &nbsp; | Notification bot |  Incoming Webhook |
+| --- | --- | --- |
+| What is it? | A Teams app | A Teams feature |
+| Installation required | Yes | No |
+| Suitable scenarios | • Receive regular notifications and messages periodically, for example, receive daily notification of team tasks. <br>  • Receive notifications and messages based on real events. For example, once teammates upload files, you receive notifications. | Communicate with external apps and receive notifications and messages from other apps. |
+| Scope configuration | • Teams channel <br> • Group chat <br> • Personal chat | Teams channel |
+| Message process | A Notification Bot works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
+| Retrieve Teams context | Notification Bot can retrieve Teams context such as the channel or user information, messages, etc. | No |
+| Send Adaptive Card | Yes | Yes |
+| Send a welcome message | Can send a welcome message | No welcome message |
+| Trigger Supported | All triggers supported. If you use Teams Toolkit, you can quickly get template projects with following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service <br> • HTTP trigger hosted on Azure Functions | All triggers supported |
+| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit overview for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools required |
+| Cloud resource required | Azure Bot Framework | No resources required |
+| Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | NA |
+
 ### Office 365 Connectors
 
 Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. For example, a weather connector that allows users to select a location and a time of day, to receive updates about tomorrow's weather. They are configured on a channel level but are installed at a team level.
@@ -47,3 +68,5 @@ Actionable messages allow users to take action without leaving their email clien
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
+* [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
