@@ -23,8 +23,8 @@ Common terms and definitions used in Teams developer documentation.
 | App tray | An application tray located on the bottom bar of a Teams mobile app. It collects all apps that are open but not currently used or active. <br>**See also**: [Teams Mobile](#t) |
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external resources. |
-| [Authentication](../concepts/authentication/authentication.md) | A process to validate user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
-| [Authentication flow](../concepts/authentication/authentication.md) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
+| [Authentication](../concepts/authentication/authentication.md) | The process to validate a user's identity to access your app.It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
+| [Authentication flow](../concepts/authentication/authentication.md) | The way a user authenticates to your app. For Teams apps we recommend using Single Sign On (SSO) using Azure Active Directory (AAD), but an alternative is to use a third-party OAuth provider.|
 
 ## B
 
