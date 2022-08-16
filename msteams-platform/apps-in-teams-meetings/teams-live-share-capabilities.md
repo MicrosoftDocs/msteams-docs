@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
-> [!Note]
+> [!NOTE]
 > Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-dashboard.png" alt-text="Teams Live Share":::
@@ -21,13 +21,13 @@ The Live Share SDK can be added to your meeting extension's `sidePanel` and `mee
 
 The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
 
-**npm**
+### npm
 
 ```bash
 npm install @microsoft/live-share --save
 ```
 
-**Yarn**
+### yarn
 
 ```bash
 yarn add @microsoft/live-share

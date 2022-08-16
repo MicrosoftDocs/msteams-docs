@@ -223,7 +223,7 @@ function renderSidePanel(elem) {
 
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
-> [!Important]
+> [!IMPORTANT]
 > The Live Share SDK's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
@@ -276,8 +276,8 @@ After you've started running your app locally with `npm run start`, you can then
 
 1. Use ngrok to create a tunnel with port 8080. Run the following command:
 
-   ```
-    `ngrok http 8080 --host-header=localhost`
+   ```bash
+    ngrok http 8080 --host-header=localhost
    ```
 
    A new ngrok terminal opens with a new url, for example `https:...ngrok.io`. The new URL is the tunnel that points to your app, which needs to be updated in your app `manifest.json`.
