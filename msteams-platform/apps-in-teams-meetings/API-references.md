@@ -994,7 +994,7 @@ callback = (error, result) => {
         }
     }
 
-microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 
 ```
 
