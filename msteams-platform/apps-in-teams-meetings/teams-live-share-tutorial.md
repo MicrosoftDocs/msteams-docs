@@ -359,7 +359,8 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Core capabilities](teams-live-share-capabilities.md)
+> [!div class="nextstepaction"]
+> [Core capabilities](teams-live-share-capabilities.md)
 
 ## See also
 

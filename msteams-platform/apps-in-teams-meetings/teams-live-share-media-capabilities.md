@@ -323,7 +323,8 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Agile Poker tutorial](../sbs-teams-live-share.yml)
+> [!div class="nextstepaction"]
+> [Agile Poker tutorial](../sbs-teams-live-share.yml)
 
 ## See also
 

@@ -497,7 +497,8 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Live Share media capabilities](teams-live-share-media-capabilities.md)
+> [!div class="nextstepaction"]
+> [Live Share media capabilities](teams-live-share-media-capabilities.md)
 
 ## See also
 
