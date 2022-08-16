@@ -114,6 +114,7 @@ To learn more, visit our custom Azure Fluid Relay service [how-to guide](./teams
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | During a marketing review, a user wants to collect feedback on their latest video edit. | User shares the video to the meeting stage and starts the video. As needed, the user pauses the video to discuss the scene and participants draw over parts of the screen to emphasize key points. |
 | A project manager plays Agile Poker with their team during planning.                    | Manager shares an Agile Poker app to the meeting stage that enables playing the planning game until the team has consensus.                                                                        |
+| A financial advisor reviews PDF documents with clients before signing.                  | The financial advisor shares the PDF contract to the meeting stage. All attendees can see each others cursors and highlighted text in the PDF, after which both parties sign the agreement.        |
 
 ## Next step
 
