@@ -763,15 +763,15 @@ The `configurableProperties` block defines the app properties that Teams admins 
 
 You can define any of the following properties:
 
-* [name](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#name): The app's display name.
-* [shortDescription](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#description): The app's short description.
-* [longDescription](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#description): The app's long description.
-* [smallImageUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#icons): The app's outline icon.
-* [largeImageUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#icons): The app's color icon.
-* [accentColor](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#accentcolor): The color to use and a background for your outline icons.
-* [developerUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#developer): The HTTPS URL of the developer's website.
-* [privacyUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#developer): The HTTPS URL of the developer's privacy policy.
-* [termsOfUseUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#developer): The HTTPS URL of the developer's terms of use.
+* [name](manifest-schema.md#name): The app's display name.
+* [shortDescription](manifest-schema.md#description): The app's short description.
+* [longDescription](manifest-schema.md#description): The app's long description.
+* [smallImageUrl](manifest-schema.md#icons): The app's outline icon.
+* [largeImageUrl](manifest-schema.md#icons): The app's color icon.
+* [accentColor](manifest-schema.md#accentcolor): The color to use and a background for your outline icons.
+* [developerUrl](manifest-schema.md#developer): The HTTPS URL of the developer's website.
+* [privacyUrl](manifest-schema.md#developer): The HTTPS URL of the developer's privacy policy.
+* [termsOfUseUrl](manifest-schema.md#developer): The HTTPS URL of the developer's terms of use.
 
 ## supportedChannelTypes
 
