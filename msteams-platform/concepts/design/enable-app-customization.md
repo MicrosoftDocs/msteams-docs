@@ -9,14 +9,17 @@ ms.topic: overview
 
 # Customize your Teams app
 
-## Enable your Microsoft Teams app to be customized
+Microsoft Teams lets admins customize Teams app to enhance store experience and adhere to their organization's branding. An app developer can allow their app to be customized by a Teams admin. For more information, see
+[Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps).
+
+## Enable customization for your Microsoft Teams app
 
 You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams store. Sideloaded apps and apps published for an org can't be customized.
 
 Some possible examples of this feature include:
 
 * Changing the app's accent color to match an org's brand.
-* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. 
+* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see.
 (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
 You can enable this feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. That can be done in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home) if you've chosen to use the Developer Portal to edit the manifest of your app.
@@ -29,27 +32,25 @@ You can't test this feature during development. App customization isn't supporte
 
 Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/MicrosoftTeams/customize-apps).
 
-## Hide Teams app until admin approves
+## Hide Teams app from users
 
 To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
 
 > [!NOTE]
-> Teams store has evolved:
-> 
-> Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
+> The Teams store has evolved. Earlier, updating the LOB apps involved selecting the ellipses on the tile. You may now update the LOB apps by logging into the [Teams Admin Centre](https://admin.teams.microsoft.com) with the updated Teams store experience.
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
-:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Manage apps blocked by publisher.":::
+:::image type="content" source="../../assets/images/manage-apps-status.png" alt-text="The screenshot is an example that shows an app blocked by publisher." lightbox="../../assets/images/manage-apps-status-expanded.png":::
 
 The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with **Blocked by publisher** status:
 
-![Manage apps](../../assets/images/apps-in-meetings/manageapp.png)
+:::image type="content" source="../../assets/images/Manage-apps-allow.png" alt-text="The screenshot is an example that shows an allow option to the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
 
 If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken any explicit action.
 
 > [!NOTE]
-> `defaultBlockUntilAdminAction` is not supported for LOB apps. If you upload an LOB app with this property then the app will not be blocked.
+> For LOB apps, `defaultBlockUntilAdminAction` is not supported. The app won't be blocked if you upload a LOB app with this property.
 
 ## See also
 
