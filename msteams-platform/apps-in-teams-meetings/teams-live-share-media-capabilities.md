@@ -77,7 +77,7 @@ const synchronizer = mediaSession.synchronize(player);
 
 // Define roles you want to allow playback control and start sync
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-await mediaSession.start(allowedRoles);
+await mediaSession.initialize(allowedRoles);
 ```
 
 # [TypeScript](#tab/typescript)
@@ -105,7 +105,7 @@ const synchronizer: MediaPlayerSynchronizer = mediaSession.synchronize(player);
 
 // Define roles you want to allow playback control and start sync
 const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-await mediaSession.start(allowedRoles);
+await mediaSession.initialize(allowedRoles);
 ```
 
 ---

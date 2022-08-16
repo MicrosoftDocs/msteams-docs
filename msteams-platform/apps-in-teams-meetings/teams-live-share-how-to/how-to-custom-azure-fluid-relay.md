@@ -68,7 +68,7 @@ const clientProps: ITeamsFluidClientOptions = {
   connection: {
     tenantId: "MY_TENANT_ID",
     tokenProvider: new AzureFunctionTokenProvider(
-      "MY_SERVICE_ENDPOINT_URL" + "/api/GetAzureToken",
+      "MY_FUNCTION_ENDPOINT_URL" + "/api/GetAzureToken",
       { userId: "userId", userName: "Test User" }
     ),
     endpoint: "MY_SERVICE_ENDPOINT_URL",

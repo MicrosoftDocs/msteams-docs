@@ -224,7 +224,7 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 
 ### EphemeralPresence example
 
-The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as a unique identifier or name.
+The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as a unique identifier or name.
 
 Example:
 
@@ -253,7 +253,7 @@ presence.on("presenceChanged", (userPresence, local) => {
 });
 
 // Start tracking presence
-presence.start("YOUR_CUSTOM_USER_ID", {
+presence.initialize("YOUR_CUSTOM_USER_ID", {
   name: "Anonymous",
   picture: "DEFAULT_PROFILE_PICTURE_URL",
 });
@@ -293,7 +293,7 @@ presence.on("presenceChanged", (userPresence: EphemeralPresenceUser<ICustomUserD
 });
 
 // Start tracking presence
-presence.start("YOUR_CUSTOM_USER_ID", {
+presence.initialize("YOUR_CUSTOM_USER_ID", {
   name: "Anonymous",
   picture: "DEFAULT_PROFILE_PICTURE_URL",
 });
@@ -337,7 +337,7 @@ notifications.on("received", (event, local) => {
 });
 
 // Start listening for incoming notifications
-await notifications.start();
+await notifications.initialize();
 
 notifications.sendEvent({
   senderName: "LOCAL_USER_NAME",
@@ -378,7 +378,7 @@ notifications.on("received", (event: ICustomEvent, local: boolean) => {
 });
 
 // Start listening for incoming notifications
-await notifications.start();
+await notifications.initialize();
 
 notifications.sendEvent({
   senderName: "LOCAL_USER_NAME",
@@ -418,7 +418,7 @@ appState.on("stateChanged", (state, data, local) => {
 
 // Set roles who can change state and start listening for changes
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-appState.start(allowedRoles);
+appState.initialize(allowedRoles);
 
 function onSelectEditMode(documentId) {
   appState.changeState("editing", {
@@ -462,7 +462,7 @@ appState.on("stateChanged", (state: string, data: ICustomState | undefined, loca
 
 // Set roles who can change state and start listening for changes
 const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-appState.start(allowedRoles);
+appState.initialize(allowedRoles);
 
 function onSelectEditMode(documentId: string) {
   appState.changeState("editing", {
