@@ -763,15 +763,15 @@ The `configurableProperties` block defines the app properties that Teams admins 
 
 You can define any of the following properties:
 
-* `name`: The app's display name.
-* `shortDescription`: The app's short description.
-* `longDescription`: The app's long description.
-* `smallImageUrl`: The app's outline icon.
-* `largeImageUrl`: The app's color icon.
-* `accentColor`: The color to use and a background for your outline icons.
-* `developerUrl`: The HTTPS URL of the developer's website.
-* `privacyUrl`: The HTTPS URL of the developer's privacy policy.
-* `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
+* [name](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#name): The app's display name.
+* [shortDescription](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#description): The app's short description.
+* [longDescription](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#description): The app's long description.
+* [smallImageUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#icons): The app's outline icon.
+* [largeImageUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#icons): The app's color icon.
+* [accentColor](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#accentcolor): The color to use and a background for your outline icons.
+* [developerUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#developer): The HTTPS URL of the developer's website.
+* [privacyUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#developer): The HTTPS URL of the developer's privacy policy.
+* [termsOfUseUrl](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#developer): The HTTPS URL of the developer's terms of use.
 
 ## supportedChannelTypes
 
