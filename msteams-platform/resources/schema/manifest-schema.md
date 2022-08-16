@@ -763,15 +763,15 @@ The `configurableProperties` block defines the app properties that Teams admins 
 
 You can define any of the following properties:
 
-* [name](manifest-schema.md#name): The app's display name.
-* [shortDescription](manifest-schema.md#description): The app's short description.
-* [longDescription](manifest-schema.md#description): The app's long description.
-* [smallImageUrl](manifest-schema.md#icons): The app's outline icon.
-* [largeImageUrl](manifest-schema.md#icons): The app's color icon.
-* [accentColor](manifest-schema.md#accentcolor): The color to use and a background for your outline icons.
-* [developerUrl](manifest-schema.md#developer): The HTTPS URL of the developer's website.
-* [privacyUrl](manifest-schema.md#developer): The HTTPS URL of the developer's privacy policy.
-* [termsOfUseUrl](manifest-schema.md#developer): The HTTPS URL of the developer's terms of use.
+* [name](#name): The app's display name.
+* [shortDescription](#description): The app's short description.
+* [longDescription](#description): The app's long description.
+* [smallImageUrl](#icons): The app's outline icon.
+* [largeImageUrl](#icons): The app's color icon.
+* [accentColor](#accentcolor): The color to use and a background for your outline icons.
+* [developerUrl](#developer): The HTTPS URL of the developer's website.
+* [privacyUrl](#developer): The HTTPS URL of the developer's privacy policy.
+* [termsOfUseUrl](#developer): The HTTPS URL of the developer's terms of use.
 
 ## supportedChannelTypes
 
