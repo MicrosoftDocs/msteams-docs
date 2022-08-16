@@ -13,7 +13,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
