@@ -132,18 +132,32 @@
       href: toolkit/TeamsFx-collaboration.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
+  - name: Teams Toolkit for Visual Studio 
+    items:
+    - name: Teams Toolkit overview
+      href: toolkit/teams-toolkit-overview-visual-studio.md    
+    - name: Create a new Teams app
+      href: toolkit/create-new-teams-app-for-Visual-Studio.md
+    - name: Debug your Teams app
+      href: toolkit/debug-teams-app-visual-studio.md
+    - name: Provision cloud resources
+      href: toolkit/provision-cloud-resources.md  
+    - name: Deploy Teams app to the cloud
+      href: toolkit/deploy-teams-app.md
+    - name: Edit Teams app manifest
+      href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md 
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
-  - name: Teams Toolkit for Visual Studio
-    href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
-  - name: Developer Portal
+  - name: Developer Portal for Teams
     items:
-    - name: Developer Portal for Teams
+    - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
-    - name: App Studio
-      href: concepts/build-and-test/app-studio-overview.md     
+    - name: Manage your apps in Developer Portal
+      href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
+    - name: Analyze your apps usage in Developer Portal
+      href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md   
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
@@ -215,7 +229,9 @@
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
-    href: tabs/how-to/access-teams-context.md  
+    href: tabs/how-to/access-teams-context.md
+  - name: Build apps for shared channels
+    href: concepts/build-and-test/shared-channels.md  
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Tabs link unfurling and Stage View
@@ -306,7 +322,15 @@
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
-    href: apps-in-teams-meetings/API-references.md
+    href: apps-in-teams-meetings/API-references.md  
+  - name: Get meeting transcripts using Graph APIs
+    items:
+    - name: Overview
+      href: graph-api/meeting-transcripts/overview-transcripts.md
+    - name: Fetch meeting ID and organizer ID
+      href: graph-api/meeting-transcripts/fetch-id.md
+    - name: Get transcripts
+      href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -324,9 +348,9 @@
     - name: Agile Poker tutorial
       href: sbs-teams-live-share.yml
     - name: Live Share SDK FAQ
-      href: apps-in-teams-meetings/teams-live-share-faq.md  
+      href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
-    href: apps-in-teams-meetings/teams-together-mode.md   
+    href: apps-in-teams-meetings/teams-together-mode.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -559,6 +583,44 @@
       href: samples/teams-low-code-solutions.md
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+  - name: Collaboration controls
+    items:
+    - name: Overview
+      href: samples/collaboration-control.md
+    - name: Install Collaboration controls
+      href: samples/install-collaboration-control.md
+    - name: Create an app with Collaboration controls
+      href: samples/app-with-collaboration-controls.md
+    - name: Deploy an app with Collaboration control to Teams
+      href: samples/deploy-collaboration-control-in-teams.md
+    - name: Optional configurations for Collaboration control app
+      items:
+      - name: Power Automate
+        href: samples/collaboration-control-power-automate.md
+      - name: Configure Tasks for external clients 
+        href: samples/configure-tasks.md
+      - name: Virtual tables for Tasks, Meetings, and Files
+        items:
+        - name: Overview
+          href: samples/virtual-tables-for-tasks.md
+        - name: Virtual tables web API 
+          href: samples/virtual-tables-api.md
+        - name: Virtual tables entity reference  
+          href: samples/virtual-table-entity-references.md            
+    - name: Collaboration controls and Settings API
+      items:
+      - name: Overview
+        href: /rest/api/industry/collaboration-controls/
+      - name: Collaboration - Custom APIs
+        href: /rest/api/industry/collaboration-controls/collaboration-custom-ap-is
+      - name: Collaboration - Standard OData APIs
+        href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-ap-is
+      - name: Settings - Custom APIs
+        href: /rest/api/industry/collaboration-controls/settings-custom-ap-is
+      - name: Settings - Standard OData APIs
+        href: /rest/api/industry/collaboration-controls/settings-standard-o-data-ap-is
+    - name: Limitations for Collaboration control   
+      href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
@@ -571,6 +633,8 @@
       href: resources/m365-plugins/m365-plugins-overview.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
+    - name: Install Moodle LMS
+      href: resources/moodleInstructions.md  
     - name: Moodle FAQ
       href: resources/faqs.md
   - name: Share to Teams
@@ -605,5 +669,3 @@
     href: resources/troubleshoot.md
 - name: Support and feedback
   href: feedback.md
-  
-  

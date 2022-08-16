@@ -1,7 +1,7 @@
 ---
 title: Receive all channel messages with RSC
 author: surbhigupta12
-description: In this module, learn how to receive all channel messages with RSC permissions and how to enable bots to receive all channel messages
+description: Enable bots to receive all channel messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -30,6 +30,8 @@ For your bot to receive all channel messages, RSC must be configured in the Team
 
 :::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="The screenshot describes the steps to update app manifest.":::
 
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Screenshot of app manifest update.":::
+
 The following is an example of the `webApplicationInfo` object:
 
 * **id**: Your Microsoft Azure Active Directory (Azure AD) app ID. This can be the same as your bot ID.
@@ -40,12 +42,12 @@ The following code provides an example of the app manifest:
 
 ```json
 "webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
-"ChannelMessage.Read.Group"
-    ]
-  }
+  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+  "resource": "https://AnyString",
+  "applicationPermissions": [
+    "ChannelMessage.Read.Group"
+  ]
+}
 ```
 
 ## Sideload in a team
@@ -58,12 +60,18 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
    :::image type="content" source="~/bots/how-to/conversations/Media/managingteam.png" alt-text="The screenshot describes the steps to Manage apps in Teams.":::
 
+   :::image type="content" source="Media/managingteam.png" alt-text="Screenshot of Managing team option in Teams application.":::
+
 1. Select **Apps**. Multiple apps appear.
+
 1. Select **Upload a custom app** from the lower right corner.
 
       :::image type="content" source="Media/uploadingcustomapp.png" alt-text="The screenshot describes how to upload custom app.":::
+
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Screenshot of upload a custom app option.":::
   
 1. Select the app package from the **Open** dialog box.
+
 1. Select **Open**.
 
       :::image type="content" source="Media/selectapppackage.png" alt-text="The screenshot describes how to select the app package."lightbox="Media/selectapppackage.png":::
@@ -72,11 +80,19 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
       :::image type="content" source="Media/addingbot.png" alt-text="The screenshot describes how to add bot."lightbox="Media/addingbot.png":::
 
+      :::image type="content" source="Media/selectapppackage.png" alt-text="Screenshot of the open dialog box to select the app package." lightbox="Media/selectapppackage.png":::
+
+1. Select **Add** from the app details pop-up, to add the bot to your selected team.
+
+      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot of the Add button to add a bot to a team." lightbox="Media/addingbot.png":::
+
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
       :::image type="content" source="Media/botreceivingmessage.png" alt-text="The screenshot describes how Bot receives  message."lightbox="Media/botreceivingmessage.png":::
+
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Screenshot of a bot receiving message in a channel." lightbox="Media/botreceivingmessage.png":::
 
 ## Code snippets
 
@@ -120,3 +136,4 @@ this.onMessage(async (context, next) => {
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

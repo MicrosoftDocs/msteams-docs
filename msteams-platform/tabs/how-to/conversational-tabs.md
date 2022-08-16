@@ -47,9 +47,12 @@ The following image shows the conversation panel:
 If the user starts a conversation, it's important to listen for the callback of that event to retrieve and save the **conversationId**:
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 The `conversationResponse` object contains information related to the conversation that was started. It's recommended that you save all the properties of this response object for later use.
@@ -76,12 +79,15 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the conversation view is closed by a user.
+You can also listen for an event when the users selects **Close (X)** in the conversation view.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## Code sample

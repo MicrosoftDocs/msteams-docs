@@ -1,19 +1,25 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: With this learning path, get started with conversational bots in Microsoft Teams and it's code samples.
+description: In this article, use conversational bots in Microsoft Teams to share files, send proactive nofication, interactive cards, make calls, invoke bot command, IVR.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
 ---
 # Build bots for Teams
 
+> [!NOTE]
+> It's recommended that you'd create your first bot app or notification bot app using the new generation development tool for Teams. For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
+
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
 >
-> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
+> * Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+>
+> * Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
+>
+> * Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
@@ -56,6 +62,9 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Adaptive Card Notification | This is a sample which shows how to send notifications with different adaptive cards using Bots. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Incoming Webhook Notification | This is a sample which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## See also
 
@@ -65,3 +74,5 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 * [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)
 * [Bot activity handlers](~/bots/bot-basics.md)
 * [Conversation events in your Teams bot](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
+* [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
