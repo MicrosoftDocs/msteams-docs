@@ -1,10 +1,11 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design meeting extensions for your apps in Teams meetings. Use the UI templates in the Microsoft Teams UI Kit to help you design your meeting tab.
+description: Learn how to implement the design guidelines and use the UI templates to design a meeting extension for Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 04/07/2022
 ---
 # Designing your Microsoft Teams meeting extension
 
