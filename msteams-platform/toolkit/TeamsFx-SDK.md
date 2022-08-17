@@ -153,8 +153,8 @@ If you have created tab project using VS Code Toolkit, the following config valu
   * clientId (REACT_APP_CLIENT_ID)
   * initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
   * applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
-  * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
-  * apiName (REACT_APP_FUNC_NAME)
+  * apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there is a backend function
+  * apiName (REACT_APP_FUNC_NAME) // only used when there is a backend function
 </details>
 
 <br>
@@ -171,11 +171,11 @@ If you have created Azure Function / bot project using VS Code Toolkit, the foll
   * clientSecret (M365_CLIENT_SECRET)
   * applicationIdUri (M365_APPLICATION_ID_URI)
   * apiEndpoint (API_ENDPOINT)
-  * sqlServerEndpoint (SQL_ENDPOINT)
-  * sqlUsername (SQL_USER_NAME)
-  * sqlPassword (SQL_PASSWORD)
-  * sqlDatabaseName (SQL_DATABASE_NAME)
-  * sqlIdentityId (IDENTITY_ID)
+  * sqlServerEndpoint (SQL_ENDPOINT) // only used when there is a sql instance
+  * sqlUsername (SQL_USER_NAME) // only used when there is a sql instance
+  * sqlPassword (SQL_PASSWORD) // only used when there is a sql instance
+  * sqlDatabaseName (SQL_DATABASE_NAME) // only used when there is a sql instance
+  * sqlIdentityId (IDENTITY_ID) // only used when there is a sql instance
 </details>
 
 <br>
@@ -273,7 +273,7 @@ The following section provides several code snippets for common scenarios:
 
 Use `TeamsFx` and `createMicrosoftGraphClient`. This code snippet also shows you how to catch and handle a `GraphError`.
 
-1. Import the classed needed.
+1. Import the classes needed.
 
 ```ts
 import {
@@ -287,6 +287,10 @@ import {
 ```ts
 try {
   const teamsfx = new TeamsFx();
+  await teamsfx.login(["User.Read"]); // Login with scope
+  const provider = new TeamsFxProvider(teamsfx, scope);
+  Providers.globalProvider = provider;
+  Providers.globalProvider.setState(ProviderState.SignedIn);
   const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
   const profile = await graphClient.api("/me").get();
 } catch (err: unknown) {
@@ -462,6 +466,34 @@ const authConfig = {
 const teamsfx = new TeamsFx(IdentityType.App);
 teamsfx.setCustomeConfig({
   certificateContent: "The content of a PEM-encoded public/private key certificate"
+});
+const token = teamsfx.getCredential().getToken();
+```
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Use client secret in Azure Function </b></summary>
+
+1. Initialize the `authConfig` by providing a `client secret`.
+
+```ts
+const authConfig = {
+  clientId: process.env.M365_CLIENT_ID,
+  clientSecret: process.end.M365_CLIENT.SECRET,
+  authorityHost: process.env.M365_AUTHORITY_HOST,
+  tenantId: process.env.M365_TENANT_ID,
+};
+```
+
+2. Use the `authConfig` to get the token.
+
+```ts
+const teamsfx = new TeamsFx(IdentityType.App);
+teamsfx.setCustomeConfig({
+  clientSecret: process.end.M365_CLIENT.SECRET
 });
 const token = teamsfx.getCredential().getToken();
 ```
