@@ -18,14 +18,13 @@ Common terms and definitions used in Teams developer documentation.
 | [App Catalog](../toolkit/publish.md) | A site that stores SharePoint and Office apps for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file, color icon, and outline icon. |
-| [App permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: Device permissions |
+| [App permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: [Device permissions](#d) |
 | [App scope](../concepts/design/app-structure.md) | An area in Teams where people can use your app. Apps can have one or many scopes, including personal, channels, chats, and meetings. A Teams app can exist across scopes. |
-| [App Studio](../concepts/build-and-test/app-studio-overview.md) | An app to start creating or integrating your own Microsoft Teams apps. It has now evolved to Developer Portal. <br> > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by August 01, 2022 <br> **See also**: [Developer Portal](#d) |
 | App tray | An application tray located on the bottom bar of a Teams mobile app. It collects all apps that are open but not currently used or active. <br>**See also**: [Teams Mobile](#t) |
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
-| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external Azure resources. |
-| [Authentication](../concepts/authentication/authentication.md) | A process to validate user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
-| [Authentication flow](../concepts/authentication/authentication.md) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
+| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external resources. |
+| [Authentication](../concepts/authentication/authentication.md) | The process to validate a user's identity to access your app. <br> **See also**: [Identity providers](#i); [SSO](#s) |
+| [Authentication flow](../concepts/authentication/authentication.md) | The way a user authenticates to your app. For Teams apps we recommend using Single Sign On (SSO) using Azure Active Directory (AAD), but an alternative is to use a third-party OAuth provider.|
 
 ## B
 
@@ -45,7 +44,7 @@ Common terms and definitions used in Teams developer documentation.
 | [Capability](../toolkit/add-capability.md) | A Teams feature you can build into your app for interacting with app users. An app capability is used to extend Teams to fit your app needs. An app may have one or more core capabilities, such as tab, bot, and message extension. <br>**See also**: [Device capability](#d); [Media capability](#m) |
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks for users such as customer service or support staff. <br> **See also**: [Conversational bot](#c) |
 | Channel | A single place for a team to share messages, tools, and files. You can use a channel for teamwork and communication. <br>**See also**: [Conversation](#c) |
-| [Client secret](../bots/how-to/authentication/add-authentication.md) | The Client secret/password or a public or private key pair that is Certificate. It isn't required for native apps. <br> **See also**: [Bot](#b) |
+| [Client secret](../bots/how-to/authentication/add-authentication.md) | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password.|
 | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
 | [Collaboration app](../concepts/extensibility-points.md) | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: [Standalone app](#s) |
 | [Compose Extension](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to message extension capability. It's used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Message extension](#m) |
@@ -59,6 +58,7 @@ Common terms and definitions used in Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
+|[Department of Defense (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD environments deliver compliance with Department of Defense Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).|
 | [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) | The primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
 | [Developer Preview](../resources/dev-preview/developer-preview-intro.md) | A public program for developers that provides early access to unreleased features in Microsoft Teams. It lets you explore and test upcoming features for potential inclusion in your Microsoft Teams app. |
 | Deploy | A process to upload the backend and frontend code for the application. At Deployment, the code for your app is copied to the resources you created during provisioning. <br>**See also**: [Provision](#p) |
@@ -81,11 +81,14 @@ Common terms and definitions used in Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They're also called External users. <br>**See also**: [Anonymous user](#a) |
+| [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product.The FRE helps users to get started with the functions, features, and benefits of the product and influences users' to come back and continue using your product.|
 
 ## G
 
 | Term | Definition |
 | --- | --- |
+|[Government community cloud (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC environment provides compliance with federal requirements for cloud services, including FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS), and requirements for criminal justice and federal tax information systems (CJI and FTI data types).|
+|[Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC high environments deliver compliance with Department of Defense (DoD) Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).<br>**See also**: [Department of Defense (DoD)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
 

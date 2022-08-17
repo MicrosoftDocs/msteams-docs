@@ -1,7 +1,7 @@
 ---
 title: Design your app with basic Fluent UI components
 author: heath-hamilton
-description: Learn to design Microsoft Teams apps using the Fluent UI components from the Teams UI Kit.
+description: Learn how to use UI components from Teams UI kit to build Microsoft Teams apps. Learn to use UI components such a Fluent kit, breadcrumb, button card, carousel, dropdown, and toggle.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference

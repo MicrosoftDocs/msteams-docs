@@ -13,7 +13,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -254,3 +254,6 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
+* [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
+* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
+* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)

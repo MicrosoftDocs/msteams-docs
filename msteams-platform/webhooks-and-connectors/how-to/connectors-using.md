@@ -284,3 +284,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Format cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Format cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
+* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
