@@ -88,7 +88,7 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
 
 1. Select **Go to admin portal**.
 
-1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/showall icon.PNG"::: icon > **Teams app** > **Manage apps**.
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Showall.PNG"::: icon > **Teams app** > **Manage apps**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manage-apps.png" alt-text="Select Manage apps":::
 
