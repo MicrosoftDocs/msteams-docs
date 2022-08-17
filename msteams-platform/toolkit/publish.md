@@ -41,7 +41,7 @@ Perform the following steps to upload app package:
 
    Upload an app window appears.
 
-2. Select **Upload a custom app**:
+2. Select **Upload a custom app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload an app":::
 
@@ -49,7 +49,7 @@ Perform the following steps to upload app package:
 
 When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Teams toolkit.
 
-You can select **Publish to Teams** in two ways such as from tree view of Teams Toolkit, and from command palatte.
+You can select **Publish to Teams** in two ways, such as from tree view of Teams Toolkit, and from command palatte.
 
 * Select **Publish to Teams** from **DEPLOYMENT** in treeview of Teams Toolkit.
 
@@ -57,9 +57,13 @@ You can select **Publish to Teams** in two ways such as from tree view of Teams 
 
   * Trigger **Teams: Publish to Teams** from command palette.
 
-* Select **Install for your organization**
+* Select **Install for your organization**.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Install for your organization":::
+
+  Now the app is successfully is published to the admin portal and you see the following notice:
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirm Publish":::
 
   Now the app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin can review and approve it.
 
@@ -82,15 +86,15 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
 
 ### Publish your Teams apps
 
-1. Open [Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps).
+1. Select **Go to admin portal**.
 
-1. Select **Show all** from the left navigation panel.
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/showall icon.PNG"::: icon > **Teams app** > **Manage apps**.
 
-1. Select **Teams app** > **Manage apps**.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manage-apps.png" alt-text="Select Manage apps":::
 
    You can view all Teams app for your organization.
 
-   In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publish the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app:
+   In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publish the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="approval":::
 
@@ -98,7 +102,7 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="submitted app":::
 
-1. In the status box, select **Publish**.
+1. Select the status dropdown and change from **Submitted** to **Publish**.
 
    After you publish the app, the publishing status changes to published and the status automatically changes to allowed.
 
