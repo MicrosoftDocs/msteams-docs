@@ -976,21 +976,6 @@ The following table includes the query parameter:
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
 
-### Syntax
-
-```typescript
-function getIncomingClientAudioState(
-    callback: (error: SdkError | null, result: boolean | null) => void,
-  ): void {
-    if (!callback) {
-      throw new Error('[get incoming client audio state] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('getIncomingClientAudioState', callback);
-  }
-
-```
-
 ### Response codes
 
 The following table provides the response codes:
@@ -1018,7 +1003,8 @@ The following table includes the query parameter:
 
 ### Example
 
-```Typescript
+```javascript
+
 callback = (error, result) => {
         if (error) {
             // Handle error code
