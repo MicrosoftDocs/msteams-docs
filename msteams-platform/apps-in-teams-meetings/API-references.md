@@ -936,7 +936,7 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio st
 
 ### Example
 
-```json
+```javascript
 
 callback = (errcode, result) => {
         if (errcode) {
