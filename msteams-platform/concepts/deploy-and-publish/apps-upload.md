@@ -19,7 +19,9 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 > Sideloading your app multiple times displays more than one instance for messaging extensions.
 
 > [!IMPORTANT]
-> Currently, sideloading apps are available in Government Community Cloud (GCC), but are not available for GCC-High and Department of Defense (DOD).
+>
+> * Currently, sideloading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
+> * App installation is supported only on Teams desktop app.
 
 ## Prerequisites
 
