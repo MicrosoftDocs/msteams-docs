@@ -53,6 +53,14 @@ As Teams Toolkit is integrated with developer portal, you can configure, distrib
 
 ## Support for Azure functions
 
+Teams Toolkit provides Azure functions capabilities to integrate into building apps. Azure functions helps to focus on the pieces of code that matter most and it does the rest.
+Azure functions allows you to implement:
+
+1. System logic into your readily available blocks of code. These blocks are called "functions".
+1. As the requests increases, Azure functions meets the demand with as many demands as necessary.
+
+A function integrates with an array of cloud services to provide feature-rich implementations. The following are just a few common scenarios for Azure functions, for example when building a web API, processing to database changes, processing Iot data streams, or even managing message queues.
+
 ## See also
 
 * [Teams Toolkit for Visual Studio](visual-studio-overview.md)
