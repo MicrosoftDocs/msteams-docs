@@ -206,13 +206,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name.":::
 
-        Your Teams app with a bot capability is created in a few seconds.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created.":::
-
         A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot of the dialog to trust or not, the authors of the files in this folder ":::
+
+        Your Teams app with a bot capability is created in a few seconds.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created.":::
 
         After your app is created, the Teams Toolkit displays the following message:
 
