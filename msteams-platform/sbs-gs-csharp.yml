@@ -191,9 +191,7 @@ items:
     Now that you've got the sample repo cloned, let's build your first C# app for Teams.
 
 - title: Build and run your first C# app
-
 - title: Create project workspace for your tab app using C#
-
   durationInMinutes: 1
   content: |
 
@@ -331,9 +329,7 @@ items:
         > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
 - title: Configure your first C# app using Developer Portal
-
 - title: Build and run your first tab app using C#
-
   durationInMinutes: 1
   content: |
 
@@ -667,7 +663,6 @@ items:
       </details>   
            
 - title: Congratulations!
-
   durationInMinutes: 1
   content: |
 
