@@ -391,6 +391,121 @@ notifications.sendEvent({
 
 ---
 
+### EphemeralTimer example
+
+`EphemeralTimer` enables scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import { TeamsFluidClient, EphemeralTimer } from "@microsoft/live-share";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema = {
+  initialObjects: { timer: EphemeralTimer },
+};
+const { container } = await client.joinContainer(schema);
+const { timer } = container.initialObjects;
+
+// Register listener for when the timer starts its countdown
+timer.on("started", (config, local) => {
+  // Update UI to show timer has started
+});
+
+// Register listener for when a paused timer has resumed
+timer.on("played", (config, local) => {
+  // Update UI to show timer has resumed
+});
+
+// Register listener for when a playing timer has paused
+timer.on("paused", (config, local) => {
+  // Update UI to show timer has paused
+});
+
+// Register listener for when a playing timer has finished
+timer.on("finished", (config) => {
+  // Update UI to show timer is finished
+});
+
+// Register listener for the timer progressed by 20 milliseconds
+timer.on("onTick", (milliRemaining) => {
+  // Update UI to show remaining time
+});
+
+// Start synchronizing timer events for users in session
+await timer.initialize();
+
+// Start a 60 second timer
+const durationInMilliseconds = 1000 * 60;
+timer.start(durationInMilliseconds);
+
+// Pause the timer for users in session
+timer.pause();
+
+// Resume the timer for users in session
+timer.play();
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  TeamsFluidClient,
+  EphemeralTimer,
+  EphemeralTimerEvents,
+  ITimerConfig,
+} from "@microsoft/live-share";
+
+// Join the Fluid container
+const client = new TeamsFluidClient();
+const schema = {
+  initialObjects: { timer: EphemeralTimer },
+};
+const { container } = await client.joinContainer(schema);
+const timer = container.initialObjects.timer as EphemeralTimer;
+
+// Register listener for when the timer starts its countdown
+timer.on(EphemeralTimerEvents.started, (config: ITimerConfig, local: boolean) => {
+  // Update UI to show timer has started
+});
+
+// Register listener for when a paused timer has resumed
+timer.on(EphemeralTimerEvents.played, (config: ITimerConfig, local: boolean) => {
+  // Update UI to show timer has resumed
+});
+
+// Register listener for when a playing timer has paused
+timer.on(EphemeralTimerEvents.paused, (config: ITimerConfig, local: boolean) => {
+  // Update UI to show timer has paused
+});
+
+// Register listener for when a playing timer has finished
+timer.on(EphemeralTimerEvents.finished, (config: ITimerConfig) => {
+  // Update UI to show timer is finished
+});
+
+// Register listener for the timer progressed by 20 milliseconds
+timer.on(EphemeralTimerEvents.onTick, (milliRemaining: number) => {
+  // Update UI to show remaining time
+});
+
+// Start synchronizing timer events
+await timer.initialize();
+
+// Start a 60 second timer for users in session
+const durationInMilliseconds = 1000 * 60;
+timer.start(durationInMilliseconds);
+
+// Pause the timer for users in session
+timer.pause();
+
+// Resume the timer for users in session
+timer.play();
+```
+
+---
+
 ## Role verification for ephemeral data structures
 
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Ephemeral objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual ephemeral object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
