@@ -189,12 +189,12 @@ tools:
     - title: Microsoft Teams Toolkit extension for Visual Studio Code
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-code.svg
-      url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+      url: /microsoftteams/platform/toolkit/teams-toolkit-fundamentals
   # Card
     - title: Microsoft Teams Toolkit extension for Visual Studio
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-ide.svg
-      url: /microsoftteams/platform/toolkit/visual-studio-overview
+      url: /microsoftteams/platform/toolkit/teams-toolkit-overview-visual-studio
     # Card
     - title: Developer Portal
     # imageSrc should be square in ratio with no whitespace

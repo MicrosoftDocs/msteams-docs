@@ -73,6 +73,10 @@ items:
 
     1. Select **Clone**. 
 
+       > [!NOTE]
+       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
+
+
 - title: Create and register your bot 
   durationInMinutes: 5
   content: |
@@ -303,7 +307,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-authorizedscope.png" alt-text="bot home":::
 
-       The following image displays the Client Id:
+       The following image displays the Client ID:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png" alt-text="bot home":::
   
@@ -329,7 +333,7 @@ items:
 
     1. Select **Add permissions**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png" alt-text="bot home":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-otherpermissions.png" alt-text="Other permissions":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
