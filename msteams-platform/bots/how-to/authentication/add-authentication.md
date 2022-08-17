@@ -444,7 +444,7 @@ The following wizard is displayed:
 1. Select the **Add to a team** button.
 1. In the next window, select the team where you want to use the bot.
 1. Select the **Set up a bot** button.
-1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **App Studio** icon.
+1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
 1. Also, you should be able to see the bot listed as a contact in the chat list
 that you can use to exchange messages with the bot.
