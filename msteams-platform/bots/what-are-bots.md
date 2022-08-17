@@ -1,7 +1,7 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: In this article, use conversational bots in Microsoft Teams to share files, send proactive nofication, interactive cards, make calls, invoke bot command, IVR.
+description: In this article, use conversational bots in Microsoft Teams to share files, send proactive notification, interactive cards, make calls, invoke bot command, IVR.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
@@ -11,7 +11,7 @@ ms.author: anclear
 > [!NOTE]
 > It's recommended that you'd create your first bot app or notification bot app using the new generation development tool for Teams. For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
 
-A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
+A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
 >
@@ -29,11 +29,19 @@ Conversational bots allow users to interact with your web service using text, in
 
 :::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows the conversational bot interacting with web service using task module."lightbox="../assets/images/task-module-example.png":::
 
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text."lightbox="../assets/images/invokebotwithtext.png":::
+
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards."lightbox="../assets/images/invokebotwithcard.png"border="true":::
+
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using task module." lightbox="../assets/images/task-module-example-expanded.png":::
+
 Conversational bots are incredibly flexible. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
 
 Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The illustration is an example that shows the sample FAQ bot.":::
+
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The screenshot is an example that shows a sample FAQ bot.":::
 
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 
