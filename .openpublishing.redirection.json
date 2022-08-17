@@ -744,7 +744,8 @@
         "source_path": "msteams-platform/concepts/build-and-test/app-studio-overview.md",
         "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
       },
-      { "source_path": "msteams-platform//resources/bot-v3/bot-authentication/auth-flow-bot.md,
+      { 
+        "source_path": "msteams-platform//resources/bot-v3/bot-authentication/auth-flow-bot.md",
         "redirect_url": "/msteams-platform/platform/bots/how-to/authentication/auth-flow-bot"
       }
     ]
