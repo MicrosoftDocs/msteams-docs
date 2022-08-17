@@ -24,8 +24,8 @@ Microsoft Power Platform combines four robust Microsoft technologies, such as Po
 > - If you are interested to in publishing your power apps in the Teams Store for users across all organizations, please fill out this [form](https://go.microsoft.com/fwlink/?linkid=2204468).
 > - If you are interested in publishing an app for a specific organization, see the following:
 >
->   - [Power Apps and Microsoft Teams integration](/power-apps/teams/overview.md)
->   - [Create apps in Microsoft Teams by using Power Apps](/power-apps/teams/create-apps-overview.md)
+>   - [Power Apps and Microsoft Teams integration](/power-apps/teams/overview)
+>   - [Create apps in Microsoft Teams by using Power Apps](/power-apps/teams/create-apps-overview)
 
 ### ✔ Teams and Power BI
 
