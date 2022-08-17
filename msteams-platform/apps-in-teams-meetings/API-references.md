@@ -1019,7 +1019,7 @@ microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 ```
 
 > [!NOTE]
-> RSC has been enabled after 1.11, this feature won't work post 1.12.
+> RSC has been enabled for app manifest after v1.11, this feature won't work for v1.12 and later versions.
 
 Use the following example to configure your app manifest's `webapplicationinfo` property for post version 1.12
 
