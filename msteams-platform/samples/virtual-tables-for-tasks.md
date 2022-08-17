@@ -49,7 +49,7 @@ To follow along with this article, you'll need:
 
 The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
 
-The following sequence diagram explains the interaction between the client, which could be the Tasks collaboration control, the [Collaboration API](~/samples/collaboration-api-reference.md) and the Planner Plan and Task virtual tables.
+The following sequence diagram explains the interaction between the client, which could be the Tasks collaboration control, the [Collaboration API](/rest/api/industry/collaboration-controls/) and the Planner Plan and Task virtual tables.
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
 
@@ -579,7 +579,7 @@ The `plannerTaskId` property is associated with a planner task, which was create
 
 ---
 
-To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map).
+To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map).
 
 ### Attempt to read a virtual record and the Graph resource has been deleted
 
