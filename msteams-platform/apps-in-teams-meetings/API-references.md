@@ -927,12 +927,46 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
-## Get incoming audio speaker
+## Get incoming audio state
 
 The `getIncomingClientAudioState` API allows an app to get the incoming audio speaker setting for the meeting user. The API is available through the Teams client SDK.
 
 > [!NOTE]
 > The `getIncomingClientAudioState` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+
+### Example
+
+```json
+
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+
+```
+
+### Manifest
+
+```JSON
+
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+
+```
 
 ### Query parameter
 
@@ -942,7 +976,7 @@ The following table includes the query parameter:
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
 
-### Example
+### Syntax
 
 ```typescript
 function getIncomingClientAudioState(
