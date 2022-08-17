@@ -1025,13 +1025,10 @@ Use the following example to configure your app manifest's `webapplicationinfo` 
     "permissions": {
       "resourceSpecific": [
         {
-          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+           "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
           "type": "Delegated"
         }
       ]
-    }
-  }
-
 ```
 
 ### Response code
