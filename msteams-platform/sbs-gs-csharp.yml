@@ -659,9 +659,8 @@ items:
         You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app. The next step is to register your app in Teams and test your app.
 
 - title: Preview and test your first C# app
-
       </details>   
-           
+    
 - title: Congratulations!
   durationInMinutes: 1
   content: |
