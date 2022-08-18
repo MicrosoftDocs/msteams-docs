@@ -87,7 +87,6 @@ const graphClient = createMicrosoftGraphClient(teamsfx);
 const profile = await graphClient.api("/users/{object_id_of_another_people}").get(); // Get the profile of certain user
 ```
 </details>
-<br>
 
 ## Core concepts and code structure
 
@@ -127,7 +126,6 @@ For these two different identity types, there are differences in TeamsFx constru
 > [!NOTE]
 > You need admin consent for resources.
 </details>
-<br>
 
 ### Override configuration
 
@@ -165,7 +163,6 @@ If you have created Azure Function / bot project using VS Code Toolkit, the foll
   * sqlDatabaseName (SQL_DATABASE_NAME) // only used when there is a sql instance
   * sqlIdentityId (IDENTITY_ID) // only used when there is a sql instance
 </details>
-<br>
 
 ### Credential
 
@@ -200,7 +197,6 @@ Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` 
 
 Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
-<br>
 
 ### Bot SSO
 
