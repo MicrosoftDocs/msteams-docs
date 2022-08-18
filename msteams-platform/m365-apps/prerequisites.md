@@ -25,11 +25,7 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 
 You'll also need to enable sideloading for your tenant:
 
- 1. Sign in to Teams admin center with your test tenant credentials.
-
- 1. From the left pane, select **Show all**.
-
- 1. Under admin centers, select **Teams**. A new tab opens the Microsoft Teams admin center.
+ 1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
 
  1. Go to **Teams apps** > **Manage apps**.
 
@@ -39,7 +35,7 @@ You'll also need to enable sideloading for your tenant:
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
 
- 1. Apart from Org-wide app settings, app setup policies also allow users to upload custom apps to Teams. If you are unable to upload custom apps after updating the Org-wide app settings, enable the **Upload custom apps** option in **App setup policies**. For more information, see [Manage app setup policies](/microsoftteams/teams-app-setup-policies).
+ 1. Apart from Org-wide app settings, app setup policies also allow users to upload custom apps to Teams. Enable the **Upload custom apps** option in **App setup policies**. For more information, see [Manage app setup policies](/microsoftteams/teams-app-setup-policies).
 
 ## Enroll your developer tenant for Office 365 Targeted releases
 
