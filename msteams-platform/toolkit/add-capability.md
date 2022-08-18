@@ -39,13 +39,10 @@ The following are limitations to adding more capabilities in TeamsFx:
 
 You can add capabilities by the following methods:
 
-* Using Teams Toolkit in Microsoft Visual Studio Code.
-* Using the Command Palette.
+<br>
 
-  > [!Note]
-  > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
-
-* **To add capabilities by using Teams Toolkit in Visual Studio Code:**
+<details>
+<summary><b>Using Teams Toolkit in Microsoft Visual Studio Code</b></summary>
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from the activity bar.
@@ -53,7 +50,13 @@ You can add capabilities by the following methods:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Add capabilities from Teams Toolkit":::
 
-* **To add capabilities by using Command Palette:**
+    > [!Note]
+    > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
+
+  </details>
+  <details>
+
+ <summary><b>Using the Command Palette</b></summary>
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
@@ -67,6 +70,9 @@ You can add capabilities by the following methods:
    1. From the pop-up, select the capability you need to add in your project.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
+
+  </details>
+  <details>
 
 ## Add capabilities using TeamsFx CLI
 
