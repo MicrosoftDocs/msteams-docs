@@ -1,14 +1,14 @@
 ---
 title: Add Capabilities to Your Teams apps
-author: MuyangAmigo
-description:  In this module, learn how to add Capabilities of Teams Toolkit, advantages, limitations and capabilities
-ms.author: zhany
+author: surbhigupta
+description:  In this module, learn how to add Capabilities of Teams Toolkit
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to Teams apps
+# Add capabilities to Microsoft Teams apps
 
 Adding capabilities in Teams Toolkit helps you to include additional features to your existing Teams app.The following table lists the Teams app capabilities:
 
@@ -34,10 +34,10 @@ The following are limitations to adding more capabilities in TeamsFx:
 
 ## Add capabilities
 
-**You can add capabilities by the following methods:**
+You can add capabilities by the following methods:
 
-* Using Teams Toolkit in Visual Studio Code.
-* Using the command palette.
+* Using Teams Toolkit in Microsoft Visual Studio Code.
+* Using the Command Palette.
 
   > [!Note]
   > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
@@ -54,7 +54,7 @@ The following are limitations to adding more capabilities in TeamsFx:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-pallete.png" alt-text="Adding capabilities from command palatte":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="Add capabilities from command palatte":::
 
    1. Enter **Teams:Add features**.
    1. Press **Enter**.
