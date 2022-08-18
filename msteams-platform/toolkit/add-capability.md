@@ -72,7 +72,6 @@ You can add capabilities by the following methods:
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
 
   </details>
-  <details>
 
 ## Add capabilities using TeamsFx CLI
 
