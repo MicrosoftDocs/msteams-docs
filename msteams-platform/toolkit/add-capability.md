@@ -45,7 +45,7 @@ You can add capabilities by the following methods:
 * **To add capabilities by using Teams Toolkit in Visual Studio Code:**
 
    1. Open **Visual Studio Code**.
-   1. Select **Teams Toolkit** from left panel.
+   1. Select **Teams Toolkit** from the activity bar.
    1. Select **Add features** under **DEVELOPMENT**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Add capabilities from Teams Toolkit":::
@@ -56,7 +56,8 @@ You can add capabilities by the following methods:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="Add capabilities from command palatte":::
 
-   1. Select **Teams:Add features** and enter.
+   1. Enter **Teams:Add features**.
+   1. Press enter.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="To add capabilities by using command palette.":::
 
@@ -113,7 +114,7 @@ After adding your tab, the changes in your project are as follows:
 * `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
   * The configurable and static tabs.
   * The scopes of the tabs.
-* The files under `templates/azure/teamsfx` is updated, and `templates/azure/provision/xxx`.bicep file is regenerated.
+* The files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep file is regenerated.
 * The file under `.fx/config` is regenerated, which ensures your project is set with right configurations for newly added capability.
 
 ## Step-by-step guide
