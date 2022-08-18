@@ -31,7 +31,7 @@ You'll also need to enable sideloading for your tenant:
 
  1. At the top right, select **Org-wide app settings**.
 
- 1. Under Custom apps, turn on the **"Interaction with custom app"** toggle.
+ 1. Under Custom apps, turn on the **"Interaction with custom app"** toggle and save.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
 
