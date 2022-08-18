@@ -773,11 +773,11 @@
         "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
       },
       {
-        "source_path": "msteams-platform/platform/tabs/how-to/authentication/tab-sso-client-secret.md",
+        "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-client-secret.md",
         "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
       },
       {
-        "source_path": "msteams-platform/platform/tabs/how-to/authentication/tab-sso-admin-consent.md",
+        "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-admin-consent.md",
         "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
       }
     ]
