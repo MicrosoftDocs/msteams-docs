@@ -779,6 +779,10 @@
       {
         "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-admin-consent.md",
         "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/authentication/configure-identity-provider.md",
+        "redirect_url": "/msteams-platform/platform/concepts/authentication/authentication"
       }
     ]
 }
