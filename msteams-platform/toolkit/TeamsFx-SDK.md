@@ -258,7 +258,7 @@ try {
 }
 ```
 
-If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed. To learn to hanle a certain type of error, you can refer to `Use Graph API in tab app` sample in [Scenarios](#Scenarios). 
+If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed. To learn to hanle a certain type of error, you can refer to `Use Graph API in tab app` sample in [Scenarios](#scenarios). 
 
 
 ## Scenarios
