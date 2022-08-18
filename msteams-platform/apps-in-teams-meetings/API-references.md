@@ -934,27 +934,9 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio st
 > [!NOTE]
 > The `getIncomingClientAudioState` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 
-### Example
-
-```javascript
-
-callback = (errcode, result) => {
-        if (errcode) {
-            // Handle error code
-        }
-        else {
-            // Handle success code
-        }
-    }
-
-microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
-
-```
-
 ### Manifest
 
 ```JSON
-
 "authorization": {
     "permissions": {
       "resourceSpecific": [
@@ -965,9 +947,22 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
       ]
     }
   }
-
 ```
+  
+### Example
 
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
 ### Query parameter
 
 The following table includes the query parameter:
@@ -975,7 +970,7 @@ The following table includes the query parameter:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
-
+  
 ### Response codes
 
 The following table provides the response codes:
@@ -993,18 +988,24 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 > [!NOTE]
 > The `toggleIncomingClientAudio` API for mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 
-### Query parameter
+### Manifest
 
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false.
-
+```JSON
+"authorization": {
+	"permissions": {
+		"resourceSpecific": [
+			{
+				"name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+				"type": "Delegated"
+			}
+		]
+	}
+}
+```
+ 
 ### Example
 
 ```javascript
-
 callback = (error, result) => {
         if (error) {
             // Handle error code
@@ -1015,37 +1016,16 @@ callback = (error, result) => {
     }
 
 microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
-
 ```
+  
+### Query parameter
 
-> [!NOTE]
-> RSC has been enabled for app manifest after v1.11, this feature won't work for v1.12 and later versions.
+The following table includes the query parameter:
 
-Use the following example to configure your app manifest's `webapplicationinfo` property for version 1.12:
-
-```JSON
-
-"webApplicationInfo": {
-    "id": "<bot id>",
-    "resource": "https://RSCPermission",
-}
-
-```
-
-### Sample Manifest
-
-```JSON
-
-"authorization": {
-    "permissions": {
-      "resourceSpecific": [
-        {
-           "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-          "type": "Delegated"
-        }
-      ]
-```
-
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false.
+  
 ### Response code
 
 The following table provides the response codes:
