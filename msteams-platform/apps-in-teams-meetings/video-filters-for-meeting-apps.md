@@ -34,7 +34,7 @@ Users can use the video filter app during the meeting lobby and in-meeting scena
 > * Video filters is currently supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
 > * Currently, video filter is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
-Before you begin, you must have a basic understanding of [Formats for Video Rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
+Before you begin, you must have a basic understanding of [Formats for video rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
 
 The video filter app defines the video filter and applies it to the user's video stream. To enable video filters experience to the users of your app, ensure that your app meets the following requirements:
 
@@ -44,12 +44,12 @@ The video filter app defines the video filter and applies it to the user's video
 
 * App is invoked with [Video extensibility API](#video-extensibility-api-reference).
 
-You must have an app package to build and run your application in Teams. For more information, see [Create Teams app package](../concepts/build-and-test/apps-package.md).
+You must have an app package to build and run your application in Teams. For more information, see [create Teams app package](../concepts/build-and-test/apps-package.md).
 
 ## Update app manifest
 
 >[!NOTE]
-> Update your app manifest as per the [Public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
+> Update your app manifest as per the [public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
 You must configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video APIs.
 
@@ -163,9 +163,9 @@ After you've completed updating the app manifest, you can validate your app pack
 
 You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.
 
-You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) in your app. You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.  To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter for the app:
+You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app. You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.  To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter for the app:
 
-* Call the `registerForVideoEffect` method  to get the selected effect in Teams client and notify the video extension that the new effect will be applied.
+* Call the `registerForVideoEffect` method  to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
 
   Following code snippet is an example of calling the `registerForVideoEffect` method:
 
@@ -180,6 +180,8 @@ You can pass a call to `app.initialize()` to initialize the [teams client SDK](/
   * Get video frames from video pipeline.
   * Return processed video frames from video pipeline.
   * Notify error.
+
+  The `VideoFrameCallback` function registers and processes the video frame.
 
   Following code snippet is an example of calling the `registerForVideoFrame` method:
 
