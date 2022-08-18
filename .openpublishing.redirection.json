@@ -783,6 +783,10 @@
       {
         "source_path": "msteams-platform/concepts/authentication/configure-identity-provider.md",
         "redirect_url": "/msteams-platform/platform/concepts/authentication/authentication"
+      },
+      {
+        "source_path": "msteams-platform/resources/create-messaging-extension-using-appstudio.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
       }
     ]
 }
