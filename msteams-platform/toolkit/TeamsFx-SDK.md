@@ -51,8 +51,8 @@ npm install @microsoft/teamsfx
 ### Create `MicrosoftGraphClient` service
 
 To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
-
 <br>
+
 <details>
 <summary><b>Invoke Graph API on behalf of Teams User (User Identity)</b></summary>
 
@@ -70,6 +70,7 @@ const profile = await graphClient.api("/me").get(); // Get the profile of curren
 ```
 </details>
 <br>
+
 <details>
 <summary><b>Invoke Graph API without user (Application Identity)</b></summary>
 
@@ -89,6 +90,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 ```
 </details>
 <br>
+
 ## Core concepts and code structure
 
 ### TeamsFx class
@@ -116,6 +118,7 @@ For these two different identity types, there are differences in TeamsFx constru
 > You can access resources on behalf of current Teams user.
 </details>
 <br>
+
 <details>
 <summary><b> Application Identity </b></summary>
 
@@ -127,8 +130,8 @@ For these two different identity types, there are differences in TeamsFx constru
 > [!NOTE]
 > You need admin consent for resources.
 </details>
-
 <br>
+
 ### Override configuration
 
 You can pass custom config when creating a new `TeamsFx` instance to override default configuration or set required fields when `environment variables` are missing.
@@ -147,6 +150,7 @@ If you have created tab project using VS Code Toolkit, the following config valu
   * apiName (REACT_APP_FUNC_NAME) // only used when there is a backend function
 </details>
 <br>
+
 <details>
 <summary><b>
 If you have created Azure Function / bot project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
@@ -166,6 +170,7 @@ If you have created Azure Function / bot project using VS Code Toolkit, the foll
   * sqlIdentityId (IDENTITY_ID) // only used when there is a sql instance
 </details>
 <br>
+
 ### Credential
 
 Credential and auth flow related classes are under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
@@ -183,7 +188,6 @@ Here's the corresponding scenarios for each credential class target.
 
 Required configuration: `initiateLoginEndpoint`, `clientId`.
 </details>
-
 <br>
 
 <details>
@@ -193,7 +197,6 @@ Required configuration: `initiateLoginEndpoint`, `clientId`.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
-
 <br>
 
 <details>
@@ -203,8 +206,8 @@ Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` 
 
 Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
-
 <br>
+
 ### Bot SSO
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
@@ -298,6 +301,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     </details>
     <br>
+
     <details>
     <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
 
@@ -353,6 +357,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     </details>
     <br>
+
   * User delegate permission in backend (Use OnBehalfOfUserCredential)
     <details>
     <summary><b>Use Graph API in bot Application</b></summary>
@@ -401,6 +406,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     </details>
     <br>
+
     <details>
     <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
 
@@ -460,6 +466,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     </details>
     <br>
+
   * Application permission in backend
     <details>
     <summary><b>Use certificate-based authentication in Azure Function</b></summary>
@@ -513,6 +520,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     </details>
     <br>
+
 * Other scenario:
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
@@ -542,6 +550,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
   </details>
   <br>
+
   <details>
   <summary><b>Access SQL database in Azure Function</b></summary>
 
@@ -578,6 +587,7 @@ This section provides several code snippets for common scenarios. Most of scenar
   For more information on sample to access SQL database in Azure function, see the [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
   </detials>
   <br>
+
 ## Advanced Customization
 
 ### Configure log
