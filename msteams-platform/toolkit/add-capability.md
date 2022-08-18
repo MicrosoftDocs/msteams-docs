@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams apps
 
-Adding capabilities in Teams Toolkit helps you to include additional features to your existing Teams app. The following table lists the Teams app capabilities:
+Adding capabilities with Teams Toolkit helps you to include additional features to your existing Teams app. The following table lists the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
@@ -50,7 +50,7 @@ You can add capabilities by the following methods:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Add capabilities from Teams Toolkit":::
 
-* **To add capabilities by using command palette:**
+* **To add capabilities by using Command Palette:**
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
@@ -60,7 +60,7 @@ You can add capabilities by the following methods:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="To add capabilities by using command palette.":::
 
-   1. From the pop-up, select the capability to add in your project.
+   1. From the pop-up, select the capability you need to add in your project.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
 
@@ -78,10 +78,10 @@ You can add capabilities by the following methods:
   |To add bot |`teamsfx add bot`|
   |To add message extension |`teamsfx add message extension`|
 
-## Available capabilities to add for different Teams project
+## Capabilities available for different Teams project
 
-You can choose to add different capabilities based on project you've created in Teams app.
-The following table lists the available capabilities to add in your project:
+You can choose to add different capabilities based on project you've created in your Teams app.
+The following table lists the capabilities available that can be added in your project:
 
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
@@ -99,7 +99,7 @@ After adding your bot and message extension, the changes in your project are as 
 
 * A bot template code is added into a subfolder with path `yourProjectFolder/bot`, which includes a **hello world** bot application template into your project.
 * Files `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* The file`manifest.template.json` under `templates/appPackage` folder is updated, which includes bot related information in the manifest file that represents your application in Teams Platform. The changes are made to:
+* The file`manifest.template.json` under `templates/appPackage` folder is updated, which includes bot related information in the manifest file that represents your application in Teams Platform. The changes are:
   * The ID of your bot.
   * The scopes of your bot.
   * The commands that hello world bot application can respond to.
@@ -111,8 +111,8 @@ After adding your tab, the changes in your project are as follows:
 * A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
 * The Files `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
 * `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
-  * The configurable and static tabs
-  * The scopes of the tabs
+  * The configurable and static tabs.
+  * The scopes of the tabs.
 * The files under `templates/azure/teamsfx` is updated, and `templates/azure/provision/xxx`.bicep file is regenerated.
 * The file under `.fx/config` is regenerated, which ensures your project is set with right configurations for newly added capability.
 
