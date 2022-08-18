@@ -51,7 +51,6 @@ npm install @microsoft/teamsfx
 ### Create `MicrosoftGraphClient` service
 
 To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
-<br>
 
 <details>
 <summary><b>Invoke Graph API on behalf of Teams User (User Identity)</b></summary>
@@ -69,7 +68,6 @@ const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initi
 const profile = await graphClient.api("/me").get(); // Get the profile of current user
 ```
 </details>
-<br>
 
 <details>
 <summary><b>Invoke Graph API without user (Application Identity)</b></summary>
@@ -117,7 +115,6 @@ For these two different identity types, there are differences in TeamsFx constru
 > [!NOTE]
 > You can access resources on behalf of current Teams user.
 </details>
-<br>
 
 <details>
 <summary><b> Application Identity </b></summary>
@@ -149,7 +146,6 @@ If you have created tab project using VS Code Toolkit, the following config valu
   * apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there is a backend function
   * apiName (REACT_APP_FUNC_NAME) // only used when there is a backend function
 </details>
-<br>
 
 <details>
 <summary><b>
@@ -188,7 +184,6 @@ Here's the corresponding scenarios for each credential class target.
 
 Required configuration: `initiateLoginEndpoint`, `clientId`.
 </details>
-<br>
 
 <details>
 <summary><b> User Identity in Node.js environment </b></summary>
@@ -197,7 +192,6 @@ Required configuration: `initiateLoginEndpoint`, `clientId`.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
-<br>
 
 <details>
 <summary><b> Application Identity in Node.js environment </b></summary>
@@ -300,7 +294,6 @@ This section provides several code snippets for common scenarios. Most of scenar
     For more information on sample to use Graph API in tab app, see the [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
 
     </details>
-    <br>
 
     <details>
     <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
@@ -356,7 +349,6 @@ This section provides several code snippets for common scenarios. Most of scenar
     For more information on sample to initialize the TeamsFx provider, see the [Contacts Exporter sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-toolkit-contact-exporter).
 
     </details>
-    <br>
 
   * User delegate permission in backend (Use OnBehalfOfUserCredential)
     <details>
@@ -405,7 +397,6 @@ This section provides several code snippets for common scenarios. Most of scenar
     For more information on sample to use graph API in bot application, see the [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
 
     </details>
-    <br>
 
     <details>
     <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
@@ -465,7 +456,6 @@ This section provides several code snippets for common scenarios. Most of scenar
     For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
 
     </details>
-    <br>
 
   * Application permission in backend
     <details>
@@ -493,7 +483,7 @@ This section provides several code snippets for common scenarios. Most of scenar
     ```
 
     </details>
-    <br>
+    
     <details>
     <summary><b>Use client secret authentication in Azure Function</b></summary>
 
@@ -519,7 +509,6 @@ This section provides several code snippets for common scenarios. Most of scenar
     ```
 
     </details>
-    <br>
 
 * Other scenario:
   <details>
@@ -549,7 +538,6 @@ This section provides several code snippets for common scenarios. Most of scenar
   ```
 
   </details>
-  <br>
 
   <details>
   <summary><b>Access SQL database in Azure Function</b></summary>
@@ -586,7 +574,6 @@ This section provides several code snippets for common scenarios. Most of scenar
 
   For more information on sample to access SQL database in Azure function, see the [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
   </detials>
-  <br>
 
 ## Advanced Customization
 
