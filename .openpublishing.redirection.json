@@ -759,6 +759,10 @@
       {
         "source_path": "msteams-platform/toolkit/visual-studio-code-overview.md",
         "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/visual-studio-code-tab-sso.md",
+        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
       }
     ]
 }
