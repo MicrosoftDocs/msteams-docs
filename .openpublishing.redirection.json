@@ -767,6 +767,10 @@
       {
         "source_path": "msteams-platform/get-started/deploy-csharp-app-studio.md",
         "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-nodejs-app-studio.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
       }
     ]
 }
