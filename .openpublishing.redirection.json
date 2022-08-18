@@ -763,6 +763,10 @@
       {
         "source_path": "msteams-platform/toolkit/visual-studio-code-tab-sso.md",
         "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-csharp-app-studio.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
       }
     ]
 }
