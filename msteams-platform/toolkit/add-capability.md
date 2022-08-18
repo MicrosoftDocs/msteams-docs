@@ -54,9 +54,9 @@ You can add capabilities by the following methods:
       > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
 
   </details>
-  <details>
 
- <summary><b>Using the Command Palette</b></summary>
+  <details>
+  <summary><b>Using the Command Palette</b></summary>
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
