@@ -157,11 +157,16 @@ Ensure that you adhere to the following requirements to update the app manifest:
 
 After you've completed updating the app manifest, you can validate your app package at [app validation website](https://dev.teams.microsoft.com/appvalidation.html).
 
+:::image type="content" source="../assets/videos/video-filters-app-validation.gif" alt-text="GIF of an app package app validation on the ap valiation website.":::
+
 ## Video extensibility API reference
 
-You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. You can use the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) to access video stream of the user and get notified when a user has selected and applied a filter.
+You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. To trigger the video filter for the app:
 
-To trigger the video filter for the app:
+1. Initialize the [Teams Client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest).
+1. Initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true).
+
+You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.
 
 * Invoke the `registerForVideoFrame` method to:
   * Get video frames from video pipeline.
@@ -252,20 +257,6 @@ Ensure that you implement the following guidelines to use the video extensibilit
 * Ensure that the stability of the effect algorithm. When calling `notifyFrameProcessed()`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
 
 * Video app should be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
-
-## Test the video filter app performance
-
-You can test the functionality and performance of your video filter app using a filter test app.
-
-To test your video filter app:
-
-1. Download the [video test app](https://github.com/microsoft/teams-videoapp-sample/blob/main/test-app/vxTestApp-v1.0.2-win32-x64.zip).
-1. Extract the files from the folder.
-1. Run the **vxTestApp.exe** file.
-1. Enter the Video app url and select **Load**.
-   A default sample video filter app link is already available, replace the link with your app url.
-1. Select an effect from the list and select **Apply effect**.
-1. Select **Real-time evaluation** or **Full Evaluation** to analyze the performance data.
 
 A video filter app must meet the following performance requirements:
 

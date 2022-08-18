@@ -1,0 +1,148 @@
+### YamlMime:Tutorial
+title: Video filter app for Teams meetings
+metadata:
+  title: Video filter app for Teams meetings 
+  description: With this learning module, learn how to create a video filter app for Teams meetings.
+  audience: Developer
+  level: Beginner
+  ms.date: 08/17/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: apps-in-teams-meetings\video-filters-for-meeting-apps.md
+  nextTutorialTitle: Video filter app
+  ms.custom: mvc
+  ms.localizationpriority: none
+items:
+- durationInMinutes: 1
+  content: |
+    Microsoft Teams provides an immersive and engaging meeting experience with video filters. Users can use the video filter app during pre-meeting and in-meeting scenarios and easily apply video effects such as filters, frames, makeups, and so on, in meetings to make the meeting experience more presentable.
+ 
+    This step-by-step guide helps you to create a video filter app for Teams meetings. By the end of this tutorial you can achieve the following output:
+    ![Final output](~/assets/images/calls-and-meetings/final-output.png)
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    Ensure that you install the following tools and set up your development environment:  
+    * [Office 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program)
+    * [Visual Studio code](https://code.visualstudio.com/Download)
+    * [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) with a valid account.
+    * [GitHub account](https://github.com/)
+    * [Latest version of node.js](https://nodejs.org/en/download/)
+    * [Git](https://git-scm.com/downloads) 
+    * [Node.js and NPM](https://nodejs.org/)
+    
+- title: Set up your Teams development tenant
+  durationInMinutes: 10
+  content: |
+ 
+    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings.
+    This space is also where you sideload and test your app. 
+    
+    Let's verify if you're ready to develop with the tenant.
+    ### Enable sideloading option
+    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+      
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+    Verify if you can sideload apps in Teams:
+    1. In the Teams client, select **Store** icon.
+    1. Select **Manage your apps**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        > [!NOTE]
+        > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
+    ### Create a free Teams developer tenant
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. In the welcome screen, select **Set up E5 subscription**.
+    1. Set up your administrator account. After you finish, the following screen appears.
+        :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+    ## Get a free Azure account
+    If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+    Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
+
+
+- title: Build and run the video filter sample app
+  durationInMinutes: 5
+  content: |
+
+    1. Go to the [Video filter](https://github.com/microsoft/teams-videoapp-sample) sample app.
+
+    1. Open a terminal window.
+
+    1. Run the following command to clone the sample repository to your computer:
+       ```
+         git clone https://github.com/microsoft/teams-videoapp-sample.git
+    
+       ```
+
+    1. Run the following command to go to the Video filter sample app folder:
+        ```
+        cd \teams-videoapp-sample
+        ```
+    1. Run the following command to install yarn:
+        ```
+        npm install yarn
+        ```
+
+    1. Run the following command to install the dependency package:
+       ```
+       yarn install
+       ```
+
+- title: Set up manifest file and upload your app
+  durationInMinutes: 1
+  content: |
+
+   You need to setup the manifest file and upload the manifest.zip package to Teams.
+   
+     1. Go to the **manifest.json** file in your sample app folder.
+  
+     1. Open **manifest.json** in Visual Studio Code and update the name, appId, and videoAppContentUrl.
+       
+        Add the GitHub URL to the videoAppContentUrl.
+
+         :::image type="content" source="~/assets/images/apps-in-meetings/video-filter-sbs-content-url.png" alt-text="Screenshot that shows a sample code for video app content url property in the manifest file.":::
+      
+     1. Zip the contents of the **manifest** folder to create `manifest.zip`.
+        > [!NOTE]
+        > Ensure that the `manifest.zip` contains the `manifest.json` source file, `color` icon, `outline` icon, half thumbnail image, and grey thumbnail image.
+     
+     ## Upload your app to the Teams meeting
+
+     Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. Make your app available on the internet so that the Teams platform can load it. To make your app reachable from the internet, you need to host your app.
+
+     For testing, you can host your app on GitHub and use the GitHub page URL as the host.
+
+      1. Open Teams.
+      1. Go to Store > Manage your apps > Upload a custom app and open manifest.zip.
+      1. Select **Upload a custom app**.
+      1. Upload the `manifest.zip` file.
+      1. Select **Add** to add the app to Teams.
+         :::image type="content" source="~/assets/images/apps-im-meetings/video-filter-sbs-sideload-app-to-teams.png" alt-text="Screenshot that shows how to sideload load an app to Teams.":::
+      1. Schedule a meeting from the calendar in Teams.
+         Ensure you invite atleast one attendee to the meeting.
+      1. Join the meeting.
+      1. In the meeting window, select More > **Effects and avatars**.
+      1. In the left pane, under Video effects, go to **Filters** > **Others**.    
+
+
+- title: Test your app
+  durationInMinutes: 1
+  content: |
+   Select a filter from **others** in the meeting side panel, and then select **Apply and turn on video**.
+   Teams applies the filter to the video in the meeting.
+    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="start presenting":::
+    
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+    
+     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="play game":::
+- content: |
+    You've completed the tutorial to get started with video filters for Teams meetings.
+    :::image type="content" source="" alt-text="":::
