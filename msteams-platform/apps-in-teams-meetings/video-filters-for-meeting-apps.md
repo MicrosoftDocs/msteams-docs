@@ -11,15 +11,15 @@ ms.date: 08/08/2022
 # Video filters for meeting apps
 
 > [!NOTE]
-> A/V filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the A/V filters.
+> A/V filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the video filters.
 
 As online meetings have become more prominent, teams users spend significant amount of time  reviewing work, watching videos, and collaborating with teammates on video calls. Considering this, Microsoft Teams provides an immersive and engaging meeting experience with video filters.
 
-Users can use the video filter app during pre-meeting and in-meeting scenarios and easily apply video effects in all meetings and calls. Teams supports filters, frames, makeups, and so on, to make your meeting experience more presentable.
+Users can use the video filter app during the meeting lobby and in-meeting scenarios and easily apply video effects in all meetings and calls. Teams supports filters, frames, makeups, and so on, to make your meeting experience more presentable.
 
-# [Pre-meeting experience](#tab/pre-meeting-experience)
+# [Meeting lobby experience](#tab/meeting-lobby-experience)
 
-:::image type="content" source="../assets/images/apps-in-meetings/pre-meeting-video-filter-experience.png" alt-text="Screenshot that shows an pre-meeting video filter app experience":::
+:::image type="content" source="../assets/images/apps-in-meetings/pre-meeting-video-filter-experience.png" alt-text="Screenshot that shows an meeting lobby video filter app experience":::
 
 # [In-meeting experience](#tab/in-meeting-experience)
 
@@ -31,8 +31,8 @@ Users can use the video filter app during pre-meeting and in-meeting scenarios a
 
 > [!NOTE]
 >
-> * A/V filters is currently supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
-> * Currently, A/V filter is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
+> * Video filters is currently supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
+> * Currently, video filter is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
 Before you begin, you must have a basic understanding of [Formats for Video Rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
 
@@ -157,18 +157,26 @@ Ensure that you adhere to the following requirements to update the app manifest:
 
 After you've completed updating the app manifest, you can validate your app package at [app validation website](https://dev.teams.microsoft.com/appvalidation.html).
 
-:::image type="content" source="../assets/videos/video-filters-app-validation.gif" alt-text="GIF of an app package app validation on the ap valiation website.":::
+:::image type="content" source="../assets/videos/video-filters-app-validation.gif" alt-text="GIF of an app package app validation on the ap validation website.":::
 
 ## Video extensibility API reference
 
-You can configure your app to fetch the user's video stream during the pre-meeting and in-meeting experience. To trigger the video filter for the app:
+You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.
 
-1. Initialize the [Teams Client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest).
-1. Initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true).
+You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) in your app. You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.  To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter for the app:
 
-You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.
+* Call the `registerForVideoEffect` method  to get the selected effect in Teams client and notify the video extension that the new effect will be applied.
 
-* Invoke the `registerForVideoFrame` method to:
+  Following code snippet is an example of calling the `registerForVideoEffect` method:
+
+  ```typescript
+  function registerForVideoEffect(callback: VideoEffectCallBack)
+  
+  type VideoEffectCallBack = (effectId: string | undefined) => void,
+  
+  ```
+
+* Call the `registerForVideoFrame` method to:
   * Get video frames from video pipeline.
   * Return processed video frames from video pipeline.
   * Notify error.
@@ -190,17 +198,6 @@ You can use the video extensibility APIs to access video stream of the user and 
   format: VideoFrameFormat;
   }
 
-  ```
-
-* Invoke the `registerForVideoEffect` method  to get the selected effect in Teams client or to notify the video extension that the new effect will be applied.
-
-  Following code snippet is an example of calling the `registerForVideoEffect` method:
-
-  ```typescript
-  function registerForVideoEffect(callback: VideoEffectCallBack)
-  
-  type VideoEffectCallBack = (effectId: string | undefined) => void,
-  
   ```
 
 * Call the `notifySelectedVideoEffectChanged` method to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
@@ -252,29 +249,28 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 * Video frame size can change anytime, so size sensitive resources for processing video frames should be recreated when video frame size changes.
 
-* Call `microsoftTeams.video.registerForVideoEffects()` as early as possible. Call `microsoftTeams.video.registerForVideoFrame()` after required resources downloaded and the video app initialization is finished.
+* Call `registerForVideoEffect()` as early as possible. Call `registerForVideoFrame()` after required resources downloaded and the video app initialization is finished.
 
-* Ensure that the stability of the effect algorithm. When calling `notifyFrameProcessed()`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
+* Ensure that the stability of the effect algorithm. When calling `notifyVideoFrameProcessed`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
 
-* Video app should be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
+* Video filter app must be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
-A video filter app must meet the following performance requirements:
-
-* Video frame processing time must be less than 30 ms.
-* Video app loading time must be less than 4 sec.
-* App Size is must be less than 20 MB.
-* Memory size must be less than 150 MB.
-* Latency must be less than 100 ms.
+* A video filter app must meet the following performance requirements:
+  * Video frame processing time must be less than 30 ms.
+  * Video app loading time must be less than 4 sec.
+  * App Size is must be less than 20 MB.
+  * Memory size must be less than 150 MB.
+  * Latency must be less than 100 ms.
 
 ### Sideload the video filter app
 
-After you test the video filter app, sideload the app to your tenant in Teams. For more information, see [Upload you custom app](../concepts/deploy-and-publish/apps-upload.md).
+Sideload the app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). You can use the video filter app to apply filters to videos in Teams meetings.
 
 ## Code sample
 
 |**Sample name** | **Description** | **JavaScript** |
 |----------------|-----------------|--------------|
-|  |  |  |
+| teams-videoapp-sample|  | [View](https://github.com/microsoft/teams-videoapp-sample) |
 
 ## See also
 

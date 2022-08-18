@@ -17,7 +17,6 @@ items:
     Microsoft Teams provides an immersive and engaging meeting experience with video filters. Users can use the video filter app during pre-meeting and in-meeting scenarios and easily apply video effects such as filters, frames, makeups, and so on, in meetings to make the meeting experience more presentable.
  
     This step-by-step guide helps you to create a video filter app for Teams meetings. By the end of this tutorial you can achieve the following output:
-    ![Final output](~/assets/images/calls-and-meetings/final-output.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -105,13 +104,29 @@ items:
        
         Add the GitHub URL to the videoAppContentUrl.
 
-         :::image type="content" source="~/assets/images/apps-in-meetings/video-filter-sbs-content-url.png" alt-text="Screenshot that shows a sample code for video app content url property in the manifest file.":::
+         :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-content-url.png" alt-text="Screenshot that shows a sample code for video app content url property in the manifest file.":::
       
      1. Zip the contents of the **manifest** folder to create `manifest.zip`.
         > [!NOTE]
-        > Ensure that the `manifest.zip` contains the `manifest.json` source file, `color` icon, `outline` icon, half thumbnail image, and grey thumbnail image.
+        > Ensure that the `manifest.zip` contains the `manifest.json` source file, `color` icon, `outline` icon, `half`` thumbnail image, and `grey` thumbnail image.
      
-     ## Upload your app to the Teams meeting
+    ## Video extensibility APi reference
+    
+    You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter. You can call to `app.initialize()` to initialize the teams client SDK prior to calling any other teams-js methods. 
+
+    To begin using the filter in the app, the first thing you need to update is what happens when the user selects a video effect in Teams. Call the `registerForVideoEffect` method to get the selected effect in Teams client and notify the video extension that the new effect will be applied.
+
+    The next update is to call the `registerForVideoFrame` method to get video frames from video pipeline, process the video frame and return the processed video frame to the video pipeline.
+
+    After the video frame is processed and returned to the video pipeline, call the `the notifySelectedVideoEffectChanged` method to notify the user that the video effect is applied.
+
+     >[!NOTE]
+     > After you call notifySelectedEffectChanged API:
+     >
+     > * For pre-meeting: The callback is invoked immediately.
+     > * For in-meeting: The callback isn't invoked until the user selects the `Apply` button.
+     
+    ## Upload your app to the Teams meeting
 
      Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. Make your app available on the internet so that the Teams platform can load it. To make your app reachable from the internet, you need to host your app.
 
@@ -122,7 +137,7 @@ items:
       1. Select **Upload a custom app**.
       1. Upload the `manifest.zip` file.
       1. Select **Add** to add the app to Teams.
-         :::image type="content" source="~/assets/images/apps-im-meetings/video-filter-sbs-sideload-app-to-teams.png" alt-text="Screenshot that shows how to sideload load an app to Teams.":::
+         :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-sideload-app-to-teams.png" alt-text="Screenshot that shows how to sideload load an app to Teams.":::
       1. Schedule a meeting from the calendar in Teams.
          Ensure you invite atleast one attendee to the meeting.
       1. Join the meeting.
@@ -135,14 +150,13 @@ items:
   content: |
    Select a filter from **others** in the meeting side panel, and then select **Apply and turn on video**.
    Teams applies the filter to the video in the meeting.
-    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="start presenting":::
+    
     
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
     
-     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="play game":::
+     
 - content: |
     You've completed the tutorial to get started with video filters for Teams meetings.
-    :::image type="content" source="" alt-text="":::
