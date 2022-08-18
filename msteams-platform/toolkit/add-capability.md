@@ -14,9 +14,12 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 
 |**Capability**|**Description**|
 |--------|-------------|
+| Basic Teams app |              |
 | Tabs |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
 | Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
+|Scenario-based Teams app|             |
+| Notification bot | The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts.
 
 ## Advantages
 
