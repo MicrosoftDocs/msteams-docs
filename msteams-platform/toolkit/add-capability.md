@@ -50,8 +50,8 @@ You can add capabilities by the following methods:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Add capabilities from Teams Toolkit":::
 
-    > [!NOTE]
-    > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
+      > [!NOTE]
+      > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
 
   </details>
   <details>
