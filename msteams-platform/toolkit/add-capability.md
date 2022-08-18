@@ -52,7 +52,10 @@ The following are limitations to adding more capabilities in TeamsFx:
 
 * **To add capabilities by using command palette:**
 
-   1. Open **command palette**.
+   1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-pallete.png" alt-text="Adding capabilities from command palatte":::
+
    1. Enter **Teams:Add features**.
    1. Press **Enter**.
 
