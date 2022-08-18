@@ -751,6 +751,10 @@
       {
         "source_path": "msteams-platform//resources/bot-v3/bot-authentication/auth-bot-aad.md",
         "redirect_url": "/msteams-platform/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform//resources/bot-v3/bot-authentication/auth-oauth-card.md",
+        "redirect_url": "/msteams-platform/platform/bots/how-to/authentication/auth-flow-bot"
       }
     ]
 }
