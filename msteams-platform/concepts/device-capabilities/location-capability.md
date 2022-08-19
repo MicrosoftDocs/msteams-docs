@@ -13,6 +13,8 @@ You can integrate the location capabilities of native device with your Teams app
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## Advantages of integrating location capabilities
 
 The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
@@ -61,6 +63,40 @@ The following image depicts web app experience of location capabilities:
 
 ### Code snippets
 
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+**Calling `getLocation` API to retrieve the location:**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let locationProps = {"allowChooseLocation":true,"showMap":true};
+if(location.isSupported()) {
+    const locationPromise = location.getLocation(locationProps);
+    locationPromise.
+        then((result) => {output(JSON.stringify(result));}.
+        catch((error) => {output(error);});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+**Calling `showLocation` API to display the location:**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let location = {"latitude":17,"longitude":17};
+if(location.isSupported()) {
+    const locationPromise = location.showLocation(location);
+    locationPromise.
+         then((result) => {/*Successful map display*/}).
+         catch((error) => {/*Failed map display*/});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
 **Calling `getLocation` API to retrieve the location:**
 
 ```javascript
@@ -86,6 +122,8 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
      output(result);
 });
 ```
+
+---
 
 ## Error handling
 
