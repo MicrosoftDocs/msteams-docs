@@ -19,7 +19,7 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
 | Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 |Scenario-based Teams app|             |
-| Notification bot | The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts.
+| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts.
 
 ## Advantages
 
@@ -62,7 +62,7 @@ You can add capabilities by the following methods:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="Add capabilities from command palatte":::
 
-   1. Enter **Teams:Add features**.
+   1. Enter **Teams: Add features**.
    1. Press enter.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="To add capabilities by using command palette.":::
