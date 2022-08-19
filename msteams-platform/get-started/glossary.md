@@ -96,7 +96,6 @@ Common terms and definitions used in Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Identity provider](../concepts/authentication/configure-identity-provider.md) | An entity that stores and provides credentials to the user. Users can register themselves with an identity provider as well.  <br>**See also**: [Authentication](#a) |
 | [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
 
