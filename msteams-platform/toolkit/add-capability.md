@@ -19,7 +19,8 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
 | Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 |Scenario-based Teams app|             |
-| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts.
+| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |
+| Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |
 
 ## Advantages
 
