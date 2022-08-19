@@ -57,7 +57,7 @@ Azure functions allow you to implement:
 1. System logic into your readily available blocks of code. These blocks are called functions.
 1. As the requests increases, Azure functions meet the demand with as many demands as necessary.
 
-Azure functions integrates with an array of cloud services to[Types of cloud resources](add-resource.md#types-of-cloud-resources) provide feature-rich implementations. The following are just a few common scenarios for Azure functions:
+Azure functions integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) provide feature-rich implementations. The following are just a few common scenarios for Azure functions:
 
 * When building a web API
 * Processing to database changes
