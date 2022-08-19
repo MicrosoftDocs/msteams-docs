@@ -1,5 +1,5 @@
 ---
-title: Unified meetings apps
+title: Meetings apps
 author: surbhigupta
 description: Learn about Teams meeting lifecycle and users meeting experience in desktop and mobile, User types, integrate bots and message extension in meeting lifecycle.
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
-# Unified meetings apps
+# Meetings apps
 
-Teams unified meetings apps are based on the following concepts:
+Teams meetings apps are based on the following concepts:
 
 * Meeting lifecycle has different stages: pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
@@ -155,7 +155,7 @@ Bots that are enabled in group chat scope start functioning in meetings. To impl
 
 To implement message extension, start with [build a message extension](../messaging-extensions/how-to/create-messaging-extension.md), and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
+The Teams meetings apps allow you to design your app based on participant roles in a meeting.
 
 ## Participant roles in a meeting
 

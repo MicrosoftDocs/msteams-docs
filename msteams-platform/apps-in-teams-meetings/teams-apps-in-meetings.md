@@ -10,11 +10,17 @@ ms.date: 04/07/2022
 
 # Apps for Teams meetings and calls
 
-Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
+Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. The following image gives you an idea of the meeting app extensibility:
 
-> [!Note]
->
-> Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+
+An application developer should familiarize themselves with the following product concepts to be able to create custom meeting experiences in Microsoft Teams with apps.
+
+## Meeting lifecycle
+
+Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
+
+### Types of Teams meetings
 
 Teams supports access to apps during meeting for the following meeting types:
 
@@ -22,6 +28,12 @@ Teams supports access to apps during meeting for the following meeting types:
 * [**One-on-one calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
 * [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
+
+> [!NOTE]
+>
+> Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
+To learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [Meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 
 Users can add apps to the meeting using the **+** option from their Teams meeting window.
 
@@ -37,17 +49,32 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 >
 > * Currently app experiences are not supported in Teams channel meetings (both scheduled meetings and instant meetings).
 
-The following illustration gives you an idea of the meeting app extensibility features:
-
-![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
-
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-- **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
-- **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
-- **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
-- **Customize app permission in shared channel: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
-- **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
+* **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
+* **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
+* **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
+* **Customize app permission in shared channel: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
+* **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
+
+## User roles in Teams meeting
+
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Participant roles in a meeting.":::
+
+The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
+
+* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+
+* **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session.
+
+* **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting. For more information, see
+
+> [!NOTE]
+> Only an organizer or presenter can add, remove, or uninstall apps.
+
+For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+
+After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
 
 ## Next step
 
