@@ -11,7 +11,7 @@ ms.date: 08/08/2022
 # Video filters for meeting apps
 
 > [!NOTE]
-> A/V filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the video filters.
+> Video filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the video filters.
 
 As online meetings have become more prominent, teams users spend significant amount of time  reviewing work, watching videos, and collaborating with teammates on video calls. Considering this, Microsoft Teams provides an immersive and engaging meeting experience with video filters.
 
@@ -31,7 +31,7 @@ Users can use the video filter app during the meeting lobby and in-meeting scena
 
 > [!NOTE]
 >
-> * Video filters is currently supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
+> * Currently, video filter is supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
 > * Currently, video filter is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
 Before you begin, you must have a basic understanding of [Formats for video rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
@@ -57,7 +57,7 @@ The following is an example of a manifest for a video filter app:
 
 ```json
 {
-"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview", // Required for meetingExtensionDefinition for sideloading. Will have a published version 1.10
   "id": "e58bac8e-94ff-4dce-8892-9bcd564fb36c", // Guid
   "version": "1.0.0",
@@ -124,7 +124,7 @@ Ensure that you adhere to the following requirements to update the app manifest:
 
 * The `videoAppContentUrl` property isn't empty.
 
-* The Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width by height - 74 x 42) less than 0.01.
+* The Thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width by height: 74 x 42) less than 0.01.
 
 * The value of each filter's thumbnail is a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA.
 
@@ -161,9 +161,11 @@ After you've completed updating the app manifest, you can validate your app pack
 
 ## Video extensibility API reference
 
-You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.
+:::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-process.png" alt-text="Diagram that shows how a video is received, processed and sent as an output. ":::
 
-You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app. You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.  To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter for the app:
+You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app.
+
+You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.  To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter app:
 
 * Call the `registerForVideoEffect` method  to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
 
@@ -257,7 +259,7 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 * Video filter app must be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
-* A video filter app must meet the following performance requirements:
+* Ensure that the video filter app meets the following performance requirements:
   * Video frame processing time must be less than 30 ms.
   * Video app loading time must be less than 4 sec.
   * App Size is must be less than 20 MB.
@@ -266,13 +268,18 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 ### Sideload the video filter app
 
-Sideload the app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). You can use the video filter app to apply filters to videos in Teams meetings.
+Sideload the video filter app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). After sideloading, you can use the video filter app to apply filters to videos in Teams meetings.
 
 ## Code sample
 
 |**Sample name** | **Description** | **JavaScript** |
 |----------------|-----------------|--------------|
-| teams-videoapp-sample|  | [View](https://github.com/microsoft/teams-videoapp-sample) |
+|Teams video app sample| The sample app demonstrates how to create a sample video filter app for Teams meetings. | [View](https://github.com/microsoft/teams-videoapp-sample) |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Video filter app tutorial](../sbs-video-filter-sample-app.yml)
 
 ## See also
 

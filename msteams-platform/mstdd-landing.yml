@@ -166,6 +166,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Video filter app tutorial
+          url: ~/sbs-video-filter-sample-app.yml
         - text: Grant tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Create Teams conversation bot
