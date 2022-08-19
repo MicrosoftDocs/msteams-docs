@@ -413,6 +413,34 @@ The JSON response body for Meeting Details API is as follows:
     } 
     ```
 
+* **Scheduled channel meetings:**
+
+    ```json
+    GET https://smba.trafficmanager.net/amer/v1/meetings/ MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==
+    { 
+        "details": { 
+        "msGraphResourceId": "MSoxNmUwYjdiYi05M2Q1LTQzNTItOTllMC0yM2VlNWYyZmZmZTIqMTY2MDc1ODYwNzc0MCoqMTk6a0RtQkpEWFZsYWl0QWhHcVB2SzBtRExZbHVTWnJub01WX1MxeFNkTjQxNDFAdGhyZWFkLnRhY3Yy", 
+        "scheduledStartTime": "2022-08-17T18:00:00Z", 
+        "scheduledEndTime": "2022-08-17T18:30:00Z", 
+        "type": "ChannelScheduled", 
+        "id": "MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==", 
+        "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3akDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141%40thread.tacv2/1660758607740?context=%7b%22Tid%22%3a%229f044231-b634-4bdd-b29d-2776e3dbd699%22%2c%22Oid%22%3a%2216e0b7bb-93d5-4352-99e0-23ee5f2fffe2%22%7d", 
+        "title": "Test channel meeting"
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "channel", 
+        "id": "19:kDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141@thread.tacv2;messageid=1660758607740"
+    }, 
+    "organizer": { 
+        "tenantId": "9f044231-b634-4bdd-b29d-2776e3dbd699", 
+        "objectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2", 
+        "id": "29:1q4D6ekLXEAALkrqyLXUIcwtVSdXx31bf6vMdfahmkTb9euYVYSsN9x4133pXLV_I2idpVriFe40e19XEZt57bQ", 
+        "aadObjectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2"
+    }
+    }
+    ```
+
 * **One-on-one calls:**
 
     ```json
