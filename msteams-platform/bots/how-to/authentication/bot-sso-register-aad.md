@@ -29,7 +29,7 @@ To enable SSO for your bot app in Azure AD:
 - **[Configure bot resource in Azure AD](#configure-bot-resource-in-azure-ad)**: You'll need to create and configure a bot resource in Azure AD beforehand. To enable SSO for the bot resource:
   - Add messaging endpoint
   - Update OAuth connection
- 
+
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/register-bot-aad.png" alt-text="Register bot in Azure AD" border="false":::
 
 You can configure them in any order. For this tutorial, you'll configure your app with Azure AD, and then configure a bot resource for enabling SSO.
