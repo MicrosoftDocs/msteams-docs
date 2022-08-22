@@ -114,7 +114,7 @@ If you plan to update your app with new `SharedObject` or `EphemeralObject` inst
 <details>
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
-While Live Share in Preview, we do not enforce any limit to events emitted through Live Share. For optimal performance, you should debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50ms or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+While Live Share is in Preview, we do not enforce any limit to events emitted through Live Share. For optimal performance, you should debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50ms or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
 > [!IMPORTANT]
 > In the future, formal rate limiting may be added to the Live Share service. We are monitoring this situation continually. Any update to these terms will be added here in advance.
