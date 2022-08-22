@@ -22,8 +22,8 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 * Tab app: Your tab app can have web-based content, you can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * Bot app: Bots can be chat bot or conversational bot which allows you to do simple and repetitive tasks like customer service or support staff.
 * Notification bot: You can send messages in Teams channel or group or personal chat by Notification bots with a HTTP request.
-* Command bot: You can automate repetitive tasks using command bot.
-* Message extensions: You can interact with your web service through buttons and forms, a capability provided by message extension.
+* Command bot: You can automate repetitive tasks using command bot. Command bots help you to answers simple queries or commands sent in chats.
+* Message extensions: You can interact with your web service through buttons and forms. Capability provided by message extension.
 
 The apps built with JavaScript have the following advantages:
 
