@@ -395,7 +395,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     <details>
     <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
 
-    1. Use `axios` library to make HTTP request to Azure Function.
+    1. You can use `CreateApiClient` provided by TeamsFx sdk to call Azure Function:
 
     ```ts
     async function callFunction(teamsfx?: TeamsFx) {
@@ -411,6 +411,22 @@ This section provides several code snippets for common scenarios. Most of the sc
 
       // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
       const response = await apiClient.get("RELATIVE_API_PATH");
+      return response.data;
+    }
+    ```
+     
+    You can also use `axios` library to call Azure Function.
+
+    ```ts
+    async function callFunction(teamsfx?: TeamsFx) {
+      const accessToken = await teamsfx.getCredential().getToken(""); // Get SSO token 
+      // teamsfx.getConfig("apiEndpoint") will read REACT_APP_FUNC_ENDPOINT environment variable 
+      const endpoint = teamsfx.getConfig("apiEndpoint");
+      const response = await axios.default.get(endpoint + "/api/" + functionName, {
+        headers: {
+          authorization: "Bearer " + accessToken.token,
+        },
+      });
       return response.data;
     }
     ```
