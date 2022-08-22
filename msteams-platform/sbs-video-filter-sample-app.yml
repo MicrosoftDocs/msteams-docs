@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams provides an immersive and engaging meeting experience with video filters. Users can use the video filter app during pre-meeting and in-meeting scenarios and easily apply video effects such as filters, frames, makeups, and so on, in meetings to make the meeting experience more presentable.
+    Microsoft Teams provides an immersive and engaging meeting experience with video filters. Users can use the video filter app during the meeting lobby and in-meeting scenarios and easily apply video effects such as filters, frames, makeups, and so on, to make the meeting experience more presentable.
   
     This step-by-step guide helps you to create a video filter app for Teams meetings. By the end of this tutorial you can achieve the following output:
 
@@ -42,7 +42,7 @@ items:
     After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
     Verify if you can sideload apps in Teams:
     1. In the Teams client, select **Store** icon.
@@ -129,7 +129,7 @@ items:
      
     ## Upload your app to the Teams meeting
 
-     Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. Make your app available on the internet so that the Teams platform can load it. To make your app reachable from the internet, you need to host your app.
+     Apps in Microsoft Teams are web applications exposing one or more capabilities. Make your app available on the internet so that the Teams platform can load it. To make your app reachable from the internet, you need to host your app.
 
       1. Open Teams.
       1. Go to Store > **Manage your apps** > **Upload an app**.

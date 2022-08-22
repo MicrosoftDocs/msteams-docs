@@ -80,7 +80,7 @@ You must have an app package to build and run your application in Teams. For mor
 
 ### Update app manifest
 
-The meeting app capability for filters is defined in your app manifest using the `filters` object. You must also configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
+The meeting app capability for filters is defined in your app manifest using the `filters` object. You must configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
 
 The following is an example of a manifest for a video filter app:
 
@@ -294,9 +294,9 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 * Video frame size can change anytime, so size sensitive resources for processing video frames should be recreated when video frame size changes.
 
-* Call `registerForVideoEffect()` as early as possible. Call `registerForVideoFrame()` after required resources downloaded and the video app initialization is finished.
+* Call `registerForVideoEffect()` as early as possible. Call `registerForVideoFrame()` after the required resources are downloaded and the video app initialization is finished.
 
-* Ensure that the stability of the effect algorithm. When calling `notifyVideoFrameProcessed`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect applied.
+* Ensure that the stability of the effect algorithm. When calling `notifyVideoFrameProcessed`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect.
 
 * Video filter app must be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
