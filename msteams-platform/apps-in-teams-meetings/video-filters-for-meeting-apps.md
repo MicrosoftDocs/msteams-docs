@@ -26,6 +26,9 @@ Users can use the video filter app during the meeting lobby and in-meeting scena
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-video-filter-experience.png" alt-text="Screenshot that shows an in-meeting video filter app experience.":::
 
 ---
+The video filter app takes permission from a user to access their video stream, modifies the video stream by applying effects and then feeds that video stream back into Teams.
+
+:::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-process.png" alt-text="Diagram that shows how a video is received, processed and sent as an output. ":::
 
 ## Create a video filter app
 
@@ -43,6 +46,30 @@ The video filter app defines the video filter and applies it to the user's video
 * App access is enabled with [RSC permissions](#update-app-manifest).
 
 * App is invoked with [Video extensibility API](#video-extensibility-api-reference).
+
+## Install the JavaScript SDK
+
+The [Microsoft Teams Javascript SDK](https://www.npmjs.com/package/@microsoft/teams-js) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
+
+### npm
+
+```bash
+npm install --save @microsoft/teams-js
+```
+
+### yarn
+
+```bash
+yarn add @microsoft/teams-js
+```
+
+If you are using any dependency loader or module bundler such as RequireJS, SystemJS, browserify, or webpack, you can use import syntax to import specific modules. For example:
+
+```typescript
+import * as microsoftTeams from "@microsoft/teams-js";
+```
+
+For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit)
 
 ## Enable your app for Teams meetings
 
@@ -162,11 +189,11 @@ After you've completed updating the app manifest, you can validate your app pack
 
 ## Video extensibility API reference
 
-:::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-process.png" alt-text="Diagram that shows how a video is received, processed and sent as an output. ":::
-
 You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app.
 
-You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.  To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter app:
+You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.
+
+ To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter app:
 
 * Call the `registerForVideoEffect` method  to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
 
