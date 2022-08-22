@@ -455,7 +455,7 @@ Once the user initiates an instant meeting (Meet now), they can add participants
 
 To add a deep link to share content on stage, you need to have an app context. The app context allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. The following is an example of an app context.
 
-* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , “useMeetNow”: false }`
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
 
 The query parameters for the app context are:
 
@@ -501,7 +501,7 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
 The query parameters are:
 
 * `deepLinkId`: Any identifier used for telemetry correlation.
-* `fqdn`: This is needed in the Teams deep link service for a tenant or account authentication. When the meeting is scheduled with Teams for Life, the `fqdn` is: `teams.live.com`. When the meeting is scheduled for Teams for Business, the `fqdn` will be `teams.microsoft.com` or `teams.microsoft.us`. `fqdn` is to explicitly specify the tenant. If no tenant is specified, the deeplink will be executed on the current tenant.
+* `fqdn`: This is needed in the Teams deep link service for a tenant or account authentication. When the meeting is scheduled with Teams for Life, the `fqdn` is: `teams.live.com`. When the meeting is scheduled for Teams for Business, the `fqdn` will be `teams.microsoft.com` or `teams.microsoft.us`.
 
 To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
