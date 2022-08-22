@@ -9,13 +9,13 @@ ms.date: 03/20/2019
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-When testing your bot you have to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you chose to test your bot aligns with its functionality.
+When testing your bot you have to take into consideration both the context(s) you want your bot to run in, and any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you chose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams
 
-The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. Uploading the app to Teams is the only method to test the full functionality available to your bot, across all scopes.
 
-There are two methods for uploading your app. You can either use [App Studio](~/concepts/build-and-test/app-studio-overview.md) or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest, and reupload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
+There are two methods for uploading your app. You can either use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest, and reupload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
 
 ## Debug your bot locally
 
@@ -76,11 +76,11 @@ Bots in personal context can't be disabled or removed by a user, short of comple
 
 ## Disabling a bot in Teams
 
-To stop your bot receiving messages, go to your Bot Dashboard and edit the Microsoft Teams channel. Clear the **Enable on Microsoft Teams** option. This prevents users from interacting with the bot, but it will still be discoverable and users can add it to teams.
+To stop your bot receiving messages, go to your Bot Dashboard and edit the Microsoft Teams channel. Clear the **Enable on Microsoft Teams** option. Disabling a bot in Teams prevents users from interacting with the bot, but it will still be discoverable and users can add it to teams.
 
 ## Deleting a bot from Teams
 
-To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. This doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
+To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. Deleting a bot from Teams prevents users from discovering, adding, or interacting with your bot. Deleting a bot from Teams doesn't remove the bot from other users' Teams instances, although it will cease functioning for them as well.
 
 ## Removing your bot from AppSource
 
