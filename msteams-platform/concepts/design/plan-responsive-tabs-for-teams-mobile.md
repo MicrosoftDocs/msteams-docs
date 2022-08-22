@@ -59,7 +59,7 @@ You can show the following information:
 * Data visuals, maps, and infographics.
 * Charts, graphs, and tables.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="The image shows the data visualization apps on Teams mobile platform .":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="The image shows the example of data visualization apps on Teams mobile platform.":::
 
 Quick actions:
 
@@ -81,7 +81,7 @@ You can provide following access to users:
 * Insert data items to create visualizations.
 * Share visualizations in a channel or group chat.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="The screenshot shows the steps to enable users to create content, such as charts and graphics.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="The screenshot shows how to enable users to create content, such as charts and graphics.":::
 
 <br>
 
@@ -112,7 +112,7 @@ In the second stage, you can provide the following app access to users:
 * Move the tasks into different categories.
 * Share relevant tasks in chats and channels through emails and activity feed.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="The screenshot shows the steps to create tasks to reduce cognitive load of the users.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="The screenshot is an example that shows the tasks to reduce cognitive load of the users.":::
 
 Enablement:
 
@@ -122,7 +122,7 @@ In the third stage, you can enable users' experience with the following activiti
 * Add and modify different categories, such as **Proposed**, **Active**, and **Closed**.
 * Configure the tasks for comments, attachments, and other complex features.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="The screenshot shows the steps to enable the user experience by adding projects and boards.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="The screenshot is an example that shows how to enable the user experience by adding projects and boards.":::
 
 <br>
 
@@ -144,7 +144,7 @@ In the first stage, you can consider desktop experience to show the content and 
 * Zoom in or out.
 * Current stage or progress of a pending document.
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="The screennshot shows the content and assets in desktop experience.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="The screenshot shows the content and assets in desktop experience.":::
 
 Quick Actions:
 
@@ -157,7 +157,7 @@ In the second stage, you can introduce the following actions:
 > [!TIP]
 > You expose actions, which can be shown easily on the small screens.
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="The screenshot shows the steps to create new board for collaboration.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="The screenshot shows the create new board for collaboration.":::
 
 Enablement:
 
@@ -169,7 +169,7 @@ In the third stage, provide complete experience to your users. You can enable us
 * Delete, undo, and redo operations.
 * Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="The screenshot shows the steps to enable user experience by adding text shapes, quick notes, and other capabilities.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="The screenshot is an example that shows how to enable user experience by adding text shapes, quick notes, and other capabilities.":::
 
 <br>
 
