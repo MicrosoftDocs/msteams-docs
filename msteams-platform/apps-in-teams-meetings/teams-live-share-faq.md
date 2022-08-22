@@ -111,6 +111,18 @@ If you plan to update your app with new `SharedObject` or `EphemeralObject` inst
 
 </details>
 
+<details>
+<summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
+
+While Live Share in Preview, we do not enforce any limit to changes emitted through Live Share. For optimal performance, you should debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50ms or greater on a per client basis. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+
+> [!IMPORTANT]
+> In the future, formal rate limiting may be added to the Live Share service. We are monitoring this situation continually. Any update to these terms will be added here in advance.
+
+<br>
+
+</details>
+
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).
