@@ -11,9 +11,9 @@ ms.date: 08/08/2022
 # Video filters for meeting apps
 
 > [!NOTE]
-> Video filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the video filters.
+> Video filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the public developer preview for Microsoft Teams to use the video filters.
 
-As online meetings have become more prominent, teams users spend significant amount of time  reviewing work, watching videos, and collaborating with teammates on video calls. Considering this, Microsoft Teams provides an immersive and engaging meeting experience with video filters.
+As online meetings have become more prominent, teams users spend significant amount of time reviewing work, watching videos, and collaborating with teammates on video calls. Considering this, Microsoft Teams provides an immersive and engaging meeting experience with video filters.
 
 Users can use the video filter app during the meeting lobby and in-meeting scenarios and easily apply video effects in all meetings and calls. Teams supports filters, frames, makeups, and so on, to make your meeting experience more presentable.
 
@@ -31,12 +31,12 @@ Users can use the video filter app during the meeting lobby and in-meeting scena
 
 > [!NOTE]
 >
-> * Currently, video filter is supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
-> * Currently, video filter is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
+> * Currently, video filters is supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
+> * Currently, video filters is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
 Before you begin, you must have a basic understanding of [Formats for video rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
 
-The video filter app defines the video filter and applies it to the user's video stream. To enable video filters experience to the users of your app, ensure that your app meets the following requirements:
+The video filter app defines the video filter and applies it to the user's video stream. To enable video filter experience to the users of your app, ensure that your app meets the following requirements:
 
 * App is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js).
 
@@ -44,14 +44,16 @@ The video filter app defines the video filter and applies it to the user's video
 
 * App is invoked with [Video extensibility API](#video-extensibility-api-reference).
 
-You must have an app package to build and run your application in Teams. For more information, see [create Teams app package](../concepts/build-and-test/apps-package.md).
-
-## Update app manifest
+## Enable your app for Teams meetings
 
 >[!NOTE]
 > Update your app manifest as per the [public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
-You must configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video APIs.
+You must have an app package to build and run your application in Teams. For more information, see [create Teams app package](../concepts/build-and-test/apps-package.md). To enable your app for Teams meetings, update your app manifest and use he filter properties to determine the filter name, category name, and filter image.
+
+### Update app manifest
+
+The meetings app capability for filters is defined in your app manifest using the `filters` object. You must also configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
 
 The following is an example of a manifest for a video filter app:
 
@@ -138,8 +140,7 @@ Ensure that you adhere to the following requirements to update the app manifest:
   * Makeup: Virtual makeup based on facial area.
   * Others: Filters that don’t fall into the categories above.
 
-* Filter name:
-  * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that don't conform with Microsoft’s value of inclusivity.
+* Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that don't conform with Microsoft’s value of inclusivity.
 
   * It's recommended to keep the total filter and app name word counts within 12 to 16 characters, and not more than 20 characters for a better user experience.
 
