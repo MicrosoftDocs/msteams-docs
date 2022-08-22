@@ -263,7 +263,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     } from "@microsoft/teamsfx";
     ```
 
-    3. Use `TeamsFx.login()` to get user consent.
+    2. Use `TeamsFx.login()` to get user consent.
 
     ```ts
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
@@ -280,9 +280,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     } catch (err: unknown) {
       // ErrorWithCode is handled by Graph client
       if (err instanceof GraphError && err.code?.includes(ErrorCode.UiRequiredError)) {
-        this.setState({
-          showLoginBtn: true,
-        });
+        // Need to show login button to ask for user consent.
       }
     }
     ```
