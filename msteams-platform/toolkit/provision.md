@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Use Teams Toolkit to provision cloud resources
+# Provision cloud resources using Teams Toolkit
 
-TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.  
+TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
 
 ## Prerequisites
 
@@ -117,46 +117,7 @@ Provision with ARM involves changing the following sets of files, parameters and
 > [!NOTE]
 > When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you to not lose changes while adding resources or capabilities.
 
-### Customize ARM parameters and templates
-
-You can customize Azure resources by customizing the parameter files and customizing the bicep files.
-
-#### Customize ARM template parameter files
-
-The toolkit provides a set of predefined parameters for you to customize the Azure resources. The parameter files are located at `.fx/configs/azure.parameters.{env}.json` and all the available parameters are defined in the `provisionParameters` property. It's recommended to customize the parameter files if the predefined parameters satisfies your requirement.
-
-The following table provides a list of available predefined parameters:
-
-| Parameter name | Default value | What can be customized by the parameter | Value constraints |
-| --- | --- | --- | --- |
-| resourceBaseName | Auto-generated for each environment | Default name for all resources | 2-20 lowercase letters and numbers |
-| simpleAuthServerFarmsName | ${resourceBaseName}simpleAuth | Name of simple auth app service plan | 1-40 alphanumerics and hyphens |
-| simpleAuthWebAppName | ${resourceBaseName}simpleAuth | Name of simple auth web app | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
-| simpleAuthSku | F1 | SKU of simple auth app service plan | Not applicable |
-| frontendHostingStorageName | ${resourceBaseName}tab | Name of frontend hosting storage account | 3-24 lowercase letters and numbers |
-| frontendHostingStorageSku | Standard_LRS | SKU of frontend hosting storage account |[Available SKUs](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep)|
-| functionServerfarmsName | ${resourceBaseName}api | Name of function apps service plan | 1-40 alphanumerics and hyphens |
-| functionServerfarmsSku | Y1 | SKU of function apps service plan | Not applicable|
-| functionAppName | ${resourceBaseName}api | Name of function app | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
-| functionStorageName | ${resourceBaseName}api | Name of function app's storage account | 3-24 lowercase letters and numbers |
-| functionStorageSku | Standard_LRS | SKU of function app's storage account | [Available SKUs](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) |
-| botServiceName | ${resourceBaseName} | Name of Azure bot service | 2-64 alphanumerics, underscores, periods, and hyphens <br /> Start with alphanumeric |
-| botServiceSku | F0 | SKU of Azure bot service | [Available SKUs](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep) |
-| botDisplayName | ${resourceBaseName} | Display name of your bot | 1-42 characters |
-| botServerfarmsName | ${resourceBaseName}bot | Name of bot's app service plan | 1-40 alphanumerics and hyphens |
-| botWebAppName | ${resourceBaseName}bot | Name of bot's web app | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
-| botWebAppSKU | F1 | SKU of Bot App Service Plan | Not applicable |
-| userAssignedIdentityName | ${resourceBaseName} | Name of user assigned identity | 3-128 alphanumerics, hyphens, and underscores <br /> Start with letter or number |
-| sqlServerName | ${resourceBaseName} | Name of Azure SQL server | 1-63 lowercase letters, numbers, and hyphens <br /> Can't start or end with hyphen |
-| sqlDatabaseName | ${resourceBaseName} | Name of Azure SQL database | 1-128 characters, can't use <>*%&:\/? or control characters <br /> Can't end with period or space |
-| sqlDatabaseSku | Basic | SKU of Azure SQL database | Not applicable  |
-| apimServiceName | ${resourceBaseName} | Name of APIM service | 1-50 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
-| apimServiceSku | Consumption | SKU of APIM service | [Available SKUs](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
-| apimProductName | ${resourceBaseName} | Name of APIM product | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
-| apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
-| keyVaultSkuName | standard | SKU name of Azure Key Vault Service| |
-
-In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure creation of new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
 ##### Azure AD application-related parameters
 
@@ -168,8 +129,6 @@ In the meanwhile, following parameters are available with values populated durin
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Azure AD app client ID created during provision | Delete the placeholder and fill the actual value |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Azure AD app client secret created during provision | Delete the placeholder and fill the actual value |
 
 ##### Azure resource-related parameters
 
@@ -177,8 +136,6 @@ In the meanwhile, following parameters are available with values populated durin
 | --- | --- | --- | --- |
 | azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server admin account you provided during provision | Delete the placeholder and fill the actual value |
 | azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server admin password you provided during provision | Delete the placeholder and fill the actual value |
-| apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM's publisher email, default value is your Azure account | Delete the placeholder and fill the actual value |
-| apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM's publisher name, default value is your Azure account | Delete the placeholder and fill the actual value |
 
 #### Referencing environment variables in parameter files
 
@@ -258,8 +215,8 @@ You can use `contosoteamsappapi` for function app instance instead of using the 
 The following steps are:
 
 1. Open `.fx/configs/azure.parameters.{env}.json` for your current environment.
-2. Add a new property `functionAppName` to the value of parameter `provisionParameters`.
-3. Enter `contosoteamsappapi` as value of `functionAppName`.
+2. Add a new property, for example, `functionAppName` under the `provisionParameters` section.
+3. Enter a value of `functionAppName`, for example `contosoteamsappapi`.
 4. Final parameter file is shown in the following snippet:
 
     ```json

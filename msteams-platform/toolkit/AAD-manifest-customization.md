@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/20/2022
 ---
 
-# Azure AD manifest
+# Customize Azure AD manifest
 
 The [Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contains definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
 

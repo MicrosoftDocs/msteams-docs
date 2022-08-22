@@ -24,7 +24,7 @@ Cards used by bots and message extensions in Teams support the following activit
 >
 >* Teams does not support `CardAction` types not listed in the previous table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service. Suggested actions are not supported in Microsoft Teams. If you want buttons to appear on a Teams bot message, use a card.
+>* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service.
 >* If you are using a card action as part of a message extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
 
 ## Action type openUrl
@@ -424,7 +424,9 @@ Adaptive Cards support four action types:
 You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
-> Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+>* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+> 
+>* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams. 
 
 ### Adaptive Cards with messageBack action
 
@@ -551,6 +553,16 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
   }
 }
 ```
+
+## Code samples
+
+|S.no|Card| description|.NET|Javascript|Python|Java|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
+|1|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+
+> [!NOTE]
+> Media elements are not supported for adaptive card in Teams
 
 ## Next step
 

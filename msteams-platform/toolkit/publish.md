@@ -37,7 +37,7 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** in left bar.
 2. Select **Manage your apps**.
-3. Select **publish an app**
+3. Select **publish an app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 

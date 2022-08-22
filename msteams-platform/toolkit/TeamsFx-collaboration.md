@@ -14,8 +14,8 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Prerequisites
 
-* Microsoft 365 subscription
-* Azure with valid subscription
+* Microsoft 365 subscription.
+* Azure with valid subscription.
   
   For more information on different accounts, see [prepare accounts to build Teams app](accounts.md).
 

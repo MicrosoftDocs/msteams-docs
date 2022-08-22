@@ -59,7 +59,7 @@ You can show the following information:
 * Data visuals, maps, and infographics.
 * Charts, graphs, and tables.
 
-![Dashboarding and data visualization apps consumption](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Show the data in the form of visualization.":::
 
 Quick actions:
 
@@ -69,7 +69,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 * Filter data.
 * Create bookmarks.
 
-![Dashboarding and data visualization apps quick actions](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Quick actions on the existing chart and visuals.":::
 
 Enablement:
 
@@ -81,7 +81,7 @@ You can provide following access to users:
 * Insert data items to create visualizations.
 * Share visualizations in a channel or group chat.
 
-![Dashboarding and data visualization apps enablement](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Enable users to create content such as charts graphics.":::
 
 <br>
 
@@ -99,7 +99,7 @@ Consumption:
 
 In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as **Proposed**, **Active**, and **Closed** then provide filters for showing grouped tasks or as headers to see the grouped tasks.
 
-![Task boarding apps consumption](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Shows the list of tasks in a vertical stack.":::
 
 Quick actions:
 
@@ -112,7 +112,7 @@ In the second stage, you can provide the following app access to users:
 * Move the tasks into different categories.
 * Share relevant tasks in chats and channels through emails and activity feed.
 
-![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Create tasks to reduce cognitive load of the users.":::
 
 Enablement:
 
@@ -122,7 +122,8 @@ In the third stage, you can enable users' experience with the following activiti
 * Add and modify different categories, such as **Proposed**, **Active**, and **Closed**.
 * Configure the tasks for comments, attachments, and other complex features.
 
-![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Enable the user experience by adding projects and boards.":::
+
 <br>
 
 </details>
@@ -143,7 +144,7 @@ In the first stage, you can consider desktop experience to show the content and 
 * Zoom in or out.
 * Current stage or progress of a pending document.
 
-![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Shows content and assets in desktop experience.":::
 
 Quick Actions:
 
@@ -156,7 +157,7 @@ In the second stage, you can introduce the following actions:
 > [!TIP]
 > You expose actions, which can be shown easily on the small screens.
 
-![Coauthoring and whiteboarding apps quick actions](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Introduces to create new board for collaboration.":::
 
 Enablement:
 
@@ -168,7 +169,7 @@ In the third stage, provide complete experience to your users. You can enable us
 * Delete, undo, and redo operations.
 * Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
-![Coauthoring and whiteboarding apps enablement](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities.":::
 
 <br>
 

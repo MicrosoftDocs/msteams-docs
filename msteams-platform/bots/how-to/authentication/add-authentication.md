@@ -114,11 +114,11 @@ To create client secret:
 
 1. Next to **Microsoft App ID**, select **Manage**.
 
-    ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
 1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
 
-    ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+    ![New Client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
 
 1. Enter **Description** and select **Add**.
 
@@ -136,9 +136,9 @@ To add the Microsoft Teams channel:
 
 1. Open your bot, which is listed in the **Recent resources** section.
 
-1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Channel Teams":::
+    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
 1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
@@ -444,7 +444,7 @@ The following wizard is displayed:
 1. Select the **Add to a team** button.
 1. In the next window, select the team where you want to use the bot.
 1. Select the **Set up a bot** button.
-1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **App Studio** icon.
+1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
 1. Also, you should be able to see the bot listed as a contact in the chat list
 that you can use to exchange messages with the bot.

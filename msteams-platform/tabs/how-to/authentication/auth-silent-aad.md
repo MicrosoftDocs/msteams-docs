@@ -4,7 +4,7 @@ description: In this module, learn how to do silent authentication, Single-sign-
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
-# Silent authentication
+# Use silent authentication in Azure AD
 
 > [!IMPORTANT]
 > Microsoft support and development for Active Directory Authentication Library (ADAL) including the security fixes, ends on **June 30, 2022**. To continue receiving support, update your applications to use Microsoft Authentication Library (MSAL).See [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration).
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Silent authentication in Azure AD minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/tab-sso-overview.md).
 
-To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a popup dialog box.
+To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a pop-up dialog box.
 
 While Active Directory Authentication Library is optimized for AngularJS applications, it also works with JavaScript single-page applications (SPA).
 

@@ -1,7 +1,7 @@
 ---
 title: Bot activity handlers
 author: surbhigupta
-description: In this article, learn about bot activity handlers, frameworks, Teams activity handlers and bot logic in Microsoft Teams.
+description: Learn about Microsoft Teams events and activity handlers for messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -28,7 +28,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `OnConversationUpdateActivityAsync` and `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` routes all conversation update activities and `OnInvokeActivityAsync` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers, therefore, you must add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
 The code snippets for Teams activity handlers:
 
@@ -168,7 +168,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers, therefore, you must add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
 ---
 

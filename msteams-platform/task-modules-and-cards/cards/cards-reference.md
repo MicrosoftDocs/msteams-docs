@@ -13,7 +13,7 @@ Before you identify the different card types, understand how to create a hero ca
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
-To create a hero card, thumbnail card, or Adaptive Card from App Studio:
+To create a hero card, thumbnail card, or Adaptive Card from Developer Portal for Teams:
 
 1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 1. Select **Design and build Adaptive cards**.
@@ -126,7 +126,7 @@ The following table provides the features that support Adaptive Cards:
 
 ### Example of Adaptive Card
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card" border="true":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card":::
 
 The following code shows an example of an Adaptive Card:
 
