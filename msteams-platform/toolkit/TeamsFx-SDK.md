@@ -67,6 +67,7 @@ const teamsfx = new TeamsFx();
 const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get(); // Get the profile of current user
 ```
+
 </details>
 
 <details>
@@ -86,6 +87,7 @@ const teamsfx = new TeamsFx(IdentityType.App);
 const graphClient = createMicrosoftGraphClient(teamsfx);
 const profile = await graphClient.api("/users/{object_id_of_another_people}").get(); // Get the profile of certain user
 ```
+
 </details>
 
 ## Core concepts and code structure
@@ -136,13 +138,14 @@ You can pass custom config when creating a new `TeamsFx` instance to override de
 If you have created tab project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
 </b> </summary>
 
-  * authorityHost (REACT_APP_AUTHORITY_HOST)
-  * tenantId (REACT_APP_TENANT_ID)
-  * clientId (REACT_APP_CLIENT_ID)
-  * initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
-  * applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
-  * apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there is a backend function
-  * apiName (REACT_APP_FUNC_NAME) // only used when there is a backend function
+* authorityHost (REACT_APP_AUTHORITY_HOST)
+* tenantId (REACT_APP_TENANT_ID)
+* clientId (REACT_APP_CLIENT_ID)
+* initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
+* applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
+* apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there is a backend function
+* apiName (REACT_APP_FUNC_NAME) // only used when there is a backend function
+
 </details>
 
 <details>
@@ -150,18 +153,19 @@ If you have created tab project using VS Code Toolkit, the following config valu
 If you have created Azure Function / bot project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
 </b></summary>
 
-  * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
-  * authorityHost (M365_AUTHORITY_HOST)
-  * tenantId (M365_TENANT_ID)
-  * clientId (M365_CLIENT_ID)
-  * clientSecret (M365_CLIENT_SECRET)
-  * applicationIdUri (M365_APPLICATION_ID_URI)
-  * apiEndpoint (API_ENDPOINT)
-  * sqlServerEndpoint (SQL_ENDPOINT) // only used when there is a sql instance
-  * sqlUsername (SQL_USER_NAME) // only used when there is a sql instance
-  * sqlPassword (SQL_PASSWORD) // only used when there is a sql instance
-  * sqlDatabaseName (SQL_DATABASE_NAME) // only used when there is a sql instance
-  * sqlIdentityId (IDENTITY_ID) // only used when there is a sql instance
+* initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
+* authorityHost (M365_AUTHORITY_HOST)
+* tenantId (M365_TENANT_ID)
+* clientId (M365_CLIENT_ID)
+* clientSecret (M365_CLIENT_SECRET)
+* applicationIdUri (M365_APPLICATION_ID_URI)
+* apiEndpoint (API_ENDPOINT)
+* sqlServerEndpoint (SQL_ENDPOINT) // only used when there is a sql instance
+* sqlUsername (SQL_USER_NAME) // only used when there is a sql instance
+* sqlPassword (SQL_PASSWORD) // only used when there is a sql instance
+* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there is a sql instance
+* sqlIdentityId (IDENTITY_ID) // only used when there is a sql instance
+
 </details>
 
 ### Credential
@@ -236,12 +240,11 @@ try {
 }
 ```
 
-If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed. To learn to hanle a certain type of error, you can refer to `Use Graph API in tab app` sample in [Scenarios](#scenarios). 
-
+If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed. To learn to handle a certain type of error, you can refer to `Use Graph API in tab app` sample in [Scenarios](#scenarios).
 
 ## Scenarios
 
-This section provides several code snippets for common scenarios. Most of scenarios in practice are Microsoft Graph related. In Microsoft Graph related scenarios, user can call APIs using different permissions in different ends(frontend/backend). 
+This section provides several code snippets for common scenarios. Most of the scenarios in practice are Microsoft Graph related. In Microsoft Graph related scenarios, user can call APIs using different permissions in different ends(frontend/backend).
 
 * Graph related scenarios:
 
@@ -291,7 +294,7 @@ This section provides several code snippets for common scenarios. Most of scenar
     <details>
     <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
 
-    The [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph. 
+    The [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
 
     The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class, which uses `TeamsFx` class to sign in users and acquire tokens to use with Graph.
 
@@ -474,7 +477,7 @@ This section provides several code snippets for common scenarios. Most of scenar
     ```
 
     </details>
-    
+
     <details>
     <summary><b>Use client secret authentication in Azure Function</b></summary>
 
