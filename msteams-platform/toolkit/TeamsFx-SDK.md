@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
+TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK can be used in browser and Node.js environment, common scenarios include:
 
 * Teams tab application
 * Azure Function
@@ -28,7 +28,7 @@ Install the following tools and set up your development environment:
 * Latest version of Node.js
 * If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. Currently, the required version is 4.15.0 or later, for more information, see [bot builder packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
 
-You must have working knowledge of the following:
+You must have working knowledge of:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
@@ -143,8 +143,8 @@ If you have created tab project using VS Code Toolkit, the following config valu
 * clientId (REACT_APP_CLIENT_ID)
 * initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
 * applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
-* apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there is a backend function
-* apiName (REACT_APP_FUNC_NAME) // only used when there is a backend function
+* apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there's a backend function
+* apiName (REACT_APP_FUNC_NAME) // only used when there's a backend function
 
 </details>
 
@@ -160,11 +160,11 @@ If you have created Azure Function / bot project using VS Code Toolkit, the foll
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
-* sqlServerEndpoint (SQL_ENDPOINT) // only used when there is a sql instance
-* sqlUsername (SQL_USER_NAME) // only used when there is a sql instance
-* sqlPassword (SQL_PASSWORD) // only used when there is a sql instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there is a sql instance
-* sqlIdentityId (IDENTITY_ID) // only used when there is a sql instance
+* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's a sql instance
+* sqlUsername (SQL_USER_NAME) // only used when there's a sql instance
+* sqlPassword (SQL_PASSWORD) // only used when there's a sql instance
+* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's a sql instance
+* sqlIdentityId (IDENTITY_ID) // only used when there's a sql instance
 
 </details>
 
@@ -181,7 +181,7 @@ Here's the corresponding scenarios for each credential class target.
 <details>
 <summary><b> User Identity in browser environment </b></summary>
 
-`TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developers choose user identity in browser environment.
+`TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It uses the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developers choose user identity in browser environment.
 
 Required configuration: `initiateLoginEndpoint`, `clientId`.
 </details>
@@ -189,7 +189,7 @@ Required configuration: `initiateLoginEndpoint`, `clientId`.
 <details>
 <summary><b> User Identity in Node.js environment </b></summary>
 
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It's designed to be used in Azure Function or bot scenarios. SDK uses this credential when developers choose user identity in Node.js environment.
+`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. This can be used in Azure Function or bot scenarios. SDK uses this credential when developers choose user identity in Node.js environment.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
@@ -206,7 +206,7 @@ Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateCo
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develop bot application and want to leverage the bot SSO.
+`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
 
 Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
 
@@ -369,7 +369,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     );
     ```
 
-    2. Begin the dialog and login.
+    2. Begin the dialog and sign-in.
 
     ```ts
     dialogs.add(
@@ -534,7 +534,7 @@ This section provides several code snippets for common scenarios. Most of the sc
   <details>
   <summary><b>Access SQL database in Azure Function</b></summary>
 
-  Use `tedious` library to access SQL and leverage `DefaultTediousConnectionConfiguration` that manages authentication.
+  Use `tedious` library to access SQL and use `DefaultTediousConnectionConfiguration` that manages authentication.
   Apart from `tedious`, you can also compose connection config of other SQL libraries based on the result of `sqlConnectionConfig.getConfig()`.
 
   1. Set the connection configuration.
