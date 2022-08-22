@@ -76,11 +76,11 @@ For more information, see [Teams JavaScript client SDK](/microsoftteams/platform
 >[!NOTE]
 > Update your app manifest as per the [public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
-You must have an app package to build and run your application in Teams. For more information, see [create Teams app package](../concepts/build-and-test/apps-package.md). To enable your app for Teams meetings, update your app manifest and use he filter properties to determine the filter name, category name, and filter image.
+You must have an app package to build and run your application in Teams. For more information, see [create Teams app package](../concepts/build-and-test/apps-package.md). To enable your app for Teams meetings, update your app manifest and use the filter properties to determine the filter name, category name, and filter thumbnail image.
 
 ### Update app manifest
 
-The meetings app capability for filters is defined in your app manifest using the `filters` object. You must also configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
+The meeting app capability for filters is defined in your app manifest using the `filters` object. You must also configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
 
 The following is an example of a manifest for a video filter app:
 
@@ -187,13 +187,26 @@ After you've completed updating the app manifest, you can validate your app pack
 
 :::image type="content" source="../assets/videos/video-filters-app-validation.gif" alt-text="GIF of an app package app validation on the ap validation website.":::
 
+### Developer portal
+
+You can also validate your app package using Microsoft Teams Developer Portal. To validate your app:
+
+1. Go to Teams Developer Portal.
+1. From the left pane, select **Apps** > **Import app**.
+1. Upload the manifest.zip file.
+1. In the app overview page, under Teams store validation, select **View details**.
+
+The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the App submission checklist.
+
+:::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-validation.png" alt-text="Screenshot of app validation details for an app package in Teams developer portal.":::
+
 ## Video extensibility API reference
 
 You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app.
 
 You can use the video extensibility APIs to access video stream of the user and get notified when a user has selected and applied a filter.
 
- To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) use the following API methods to trigger the video filter app:
+ To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true), use the following API methods to trigger the video filter app:
 
 * Call the `registerForVideoEffect` method  to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
 
