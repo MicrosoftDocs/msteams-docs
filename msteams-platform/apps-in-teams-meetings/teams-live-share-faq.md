@@ -91,6 +91,26 @@ Currently, Live Share only supports having one container using our provided Azur
 
 </details>
 
+<details>
+<summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
+
+Currently, Live Share does not support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+
+> [!NOTE]
+> If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
+
+To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you are testing in a Teams meeting, start a new meeting and try again.
+
+If you plan to update your app with new `SharedObject` or `EphemeralObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session should not be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
+
+- Deploy schema changes for your web application outside of normal business hours.
+- Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
+- Versioning your schema for each session. *Note:* Live Share API to do this, and difficulty may vary for your project.
+
+<br>
+
+</details>
+
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).
