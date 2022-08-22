@@ -11,7 +11,7 @@ ms.date: 08/08/2022
 # Video filters for meeting apps
 
 > [!NOTE]
-> Video filters is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the public developer preview for Microsoft Teams to use the video filters.
+> Video filter is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). You must be part of the public developer preview for Microsoft Teams to use the video filters.
 
 As online meetings have become more prominent, teams users spend significant amount of time reviewing work, watching videos, and collaborating with teammates on video calls. Considering this, Microsoft Teams provides an immersive and engaging meeting experience with video filters.
 
@@ -34,14 +34,14 @@ The video filter app takes permission from a user to access their video stream, 
 
 > [!NOTE]
 >
-> * Video filters is supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
-> * Video filters is not supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
+> * Video filter is supported only on Teams desktop client. However, if a user joins a meeting through mobile and another user applies video filters from desktop, the mobile users can see the effects applied by the user on desktop.
+> * Video filter isn't supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
 Before you begin, you must have a basic understanding of [Formats for video rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
 
 The video filter app defines the video filter and applies it to the user's video stream. To enable video filter experience for your app:
 
-1. [Install Microsoft Teams Javascript SDK](https://github.com/OfficeDev/microsoft-teams-library-js).
+1. [Install Microsoft Teams JavaScript SDK](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 1. [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings).
 
@@ -53,7 +53,7 @@ The video filter app defines the video filter and applies it to the user's video
 
 ## Install the JavaScript SDK
 
-The [Microsoft Teams Javascript SDK](https://www.npmjs.com/package/@microsoft/teams-js) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
+The [Microsoft Teams JavaScript SDK](https://www.npmjs.com/package/@microsoft/teams-js) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
 
 ### npm
 
@@ -201,7 +201,7 @@ To validate your app package using the app validator:
 
 The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the preliminary checklist.
 
-:::image type="content" source="../assets/videos/video-filters-app-validation.gif" alt-text="GIF of an app package app validation on the ap validation website.":::
+:::image type="content" source="../assets/videos/video-filters-app-validation.gif" alt-text="GIF of an app package app validation on the app validation website.":::
 
 # [Developer portal](#tab/developer-portal)
 
@@ -220,7 +220,7 @@ The app validation tool checks your app package against the test cases that Micr
 
 ## Video extensibility API reference
 
-You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience.You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app.
+You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience. You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app.
 
 You can use the video extensibility APIs to access the video stream of the user and get notified when a user has selected and applied a filter.
 
@@ -320,8 +320,8 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 * Ensure that the video filter app meets the following performance requirements:
   * Video frame processing time must be less than 30 ms.
-  * Video app loading time must be less than 4 sec.
-  * App Size is must be less than 20 MB.
+  * Video app loading time must be less than four seconds.
+  * App Size must be less than 20 MB.
   * Memory size must be less than 150 MB.
   * Latency must be less than 100 ms.
 
