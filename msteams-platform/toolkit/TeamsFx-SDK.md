@@ -101,7 +101,7 @@ There are two identity types:
 * **User Identity**: Represents the current user of Teams.
 * **Application Identity**: Represents the application itself.
 
-For these two different identity types, there are differences in TeamsFx constructors and methods.
+For these two different identity types, the TeamsFx constructors and methods are not the same.
 
 <details>
 <summary><b> User Identity </b></summary>
@@ -135,7 +135,7 @@ You can pass custom config when creating a new `TeamsFx` instance to override de
 
 <details>
 <summary><b>
-If you have created tab project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
+If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
 </b> </summary>
 
 * authorityHost (REACT_APP_AUTHORITY_HOST)
@@ -150,7 +150,7 @@ If you have created tab project using VS Code Toolkit, the following config valu
 
 <details>
 <summary><b>
-If you have created Azure Function / bot project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
+If you've created Azure Function / bot project using Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
 </b></summary>
 
 * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
@@ -414,7 +414,7 @@ This section provides several code snippets for common scenarios. Most of the sc
       return response.data;
     }
     ```
-     
+
     You can also use `axios` library to call Azure Function.
 
     ```ts
