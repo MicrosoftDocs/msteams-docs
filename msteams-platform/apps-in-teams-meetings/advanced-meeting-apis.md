@@ -1,6 +1,6 @@
 ---
-title: Meeting apps API references
-author: surbhigupta
+title: Advanced meeting APIs
+author: v-sdhakshina
 description: In this article, learn meeting apps API references that are available for Teams client and Bot Framework SDK's with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
 
-# Meeting apps API references
+# Advanced meeting APIs
 
 The meeting extensibility provides APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
 
@@ -28,9 +28,6 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
-|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio speaker**](#get-incoming-audio-speaker) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
@@ -567,142 +564,6 @@ The following table provides the error codes:
 | **401** | Unauthorized. Bad or expired token. If you receive this error, generate a new CART URL in Teams. |
 | **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
 | **500** |Internal server error. For more information, [contact support or provide feedback](../feedback.md).|
-
-## Share app content to stage API
-
-The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
-
-### Prerequisite
-
-* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
-
-    ```json
-    "authorization": {
-        "permissions": { 
-        "resourceSpecific": [
-        { 
-        "name": "MeetingStage.Write.Chat",
-        "type": "Delegated"
-        }
-        ]
-    }
-    }
-    ```
-
-* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
-
-### Query parameter
-
-The following table includes the query parameters:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
-|**appContentURL**| String | Yes | The URL that will be shared on to the stage.|
-
-### Example
-
-```javascript
-const appContentUrl = "https://www.bing.com/";
-
-microsoftTeams.meeting.shareAppContentToStage((err, result) => {
-    if (result) {
-        // handle success
-    }
-    if (err) {
-        // handle error
-    }
-}, appContentUrl);
-```
-
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
-## Get app content stage sharing state API
-
-The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
-
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
-
-### Example
-
-```javascript
-microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
-    if (result.isAppSharing) {
-        // Indicates app has permission to share contents to meeting stage.
-    }
-});
-```
-
-The JSON response body for the `getAppContentStageSharingState` API is:
-
-```json
-{
-   "isAppSharing":true
-} 
-```
-
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
-## Get app content stage sharing capabilities API
-
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
-
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The result can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
-
-### Example
-
-```javascript
-microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
-    if (result.doesAppHaveSharePermission) {
-        // Indicates app has permission to share contents to meeting stage.
-    }
-});
-```
-
-The JSON response body for `getAppContentStageSharingCapabilities` API is:
-
-```json
-{
-   "doesAppHaveSharePermission":true
-} 
-```
-
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **1000** | App doesn't have permissions to allow share to stage.|
 
 ## Get real-time Teams meeting events API
 

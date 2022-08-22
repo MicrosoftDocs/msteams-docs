@@ -317,12 +317,16 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Unified meetings apps
-    href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Enable and configure apps for meetings
-    href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  - name: Meeting apps API references
-    href: apps-in-teams-meetings/API-references.md  
+  - name: Enable and configure apps for Teams meetings
+    items:
+    - name: Overview
+      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Building apps for meeting stage
+      href: apps-in-teams-meetings/build-apps-for-teams-meeting.md
+    - name: Build extensible conversations for meeting chat
+      href: apps-in-teams-meetings\build-extensible-conversation-for-meeting-chat.md
+    - name: Advanced meeting APIs
+      href: apps-in-teams-meetings/advanced-meeting-apis.md  
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview

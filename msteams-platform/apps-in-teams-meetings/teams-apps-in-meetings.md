@@ -82,11 +82,6 @@ After you design your app based on participant roles in a meeting, you can ident
 > * Participant Role is not available in one-on-one call.
 > * A user who starts the group call from chat is considered as organizer role.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Unified meetings apps](meeting-app-extensibility.md)
-
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
