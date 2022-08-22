@@ -260,7 +260,14 @@ This section provides several code snippets for common scenarios. Most of scenar
     } from "@microsoft/teamsfx";
     ```
 
-    2. Initial a graph client and get information from MS Graph by this client.
+    3. Use `TeamsFx.login()` to get user consent.
+
+    ```ts
+    // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
+    await teamsfx.login(["User.Read"]); // Login with scope
+    ```
+
+    3. Initial a TeamsFx instance and graph client and get information from MS Graph by this client.
 
     ```ts
     try {
@@ -275,16 +282,6 @@ This section provides several code snippets for common scenarios. Most of scenar
         });
       }
     }
-    ```
-
-    3. Use the `teamsfx.login(scopes)` method to get required access token.
-
-    ```ts
-    // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
-    await teamsfx.login(["User.Read"]); // Login with scope
-    const provider = new TeamsFxProvider(teamsfx, "User.Read");
-    Providers.globalProvider = provider;
-    Providers.globalProvider.setState(ProviderState.SignedIn);
     ```
 
     For more information on sample to use Graph API in tab app, see the [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
@@ -472,9 +469,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     ```ts
     const teamsfx = new TeamsFx(IdentityType.App);
-    teamsfx.setCustomeConfig({
-      certificateContent: "The content of a PEM-encoded public/private key certificate"
-    });
+    teamsfx.setCustomeConfig(authConfig);
     const token = teamsfx.getCredential().getToken();
     ```
 
@@ -498,9 +493,7 @@ This section provides several code snippets for common scenarios. Most of scenar
 
     ```ts
     const teamsfx = new TeamsFx(IdentityType.App);
-    teamsfx.setCustomeConfig({
-      clientSecret: process.end.M365_CLIENT.SECRET
-    });
+    teamsfx.setCustomeConfig(authConfig);
     const token = teamsfx.getCredential().getToken();
     ```
 
