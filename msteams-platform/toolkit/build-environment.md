@@ -43,12 +43,6 @@ Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. Th
 * Integrates with other Microsoft (Office) 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
 
-## Manage your apps using Developer Portal
-
-As Teams Toolkit is integrated with Developer Portal, you can configure, distribute, and manage your app using <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> under **DEPLOYMENT** after creating an app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/teams-toolkit-VSC/vsc-build-environment/build-environment-developer-portal-1.png" alt-text="Steps to build environment using developer portal":::
-
 ## Support for Azure Functions
 
 You can use Teams Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities into building apps. You can focus on the pieces of code that matter most and Azure Functions does the rest.
