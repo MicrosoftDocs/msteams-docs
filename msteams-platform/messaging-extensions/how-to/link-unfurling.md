@@ -22,9 +22,10 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
 
 doc-feature-app-less-adaptive-card-preview-with-schema.org-templates-TFW
+
 ## App less Adaptive Card
 
-User can add metadata tags to the website, and can copy the link and paste it into the compose box, the adaptive card takes the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
+User can add metadata tags to the website, copy the link and paste it into the compose box, the adaptive card takes the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
 
 There is one template registered for each app type product. Microsoft has incorporated its own templates and following are the web categories:
 
@@ -47,12 +48,10 @@ Following screenshot displays metadata of how an adaptive card unfurls on mobile
 
 (Mobile experience image to be added)
 
-
 See the following video to learn more about link unfurling:
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
-
 
 ## Add link unfurling to your app manifest
 
