@@ -499,7 +499,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     ```ts
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
-      clientSecret: process.end.M365_CLIENT.SECRET,
+      clientSecret: process.env.M365_CLIENT_SECRET,
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
     };
