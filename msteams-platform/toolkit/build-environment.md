@@ -10,12 +10,19 @@ ms.date: 11/29/2021
 
 # Prepare to build apps with Teams Toolkit
 
-Microsoft Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, then you can manage the app in the Developer Portal. You can choose anyone of the following environment that best suits your app:
+Microsoft Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, you can choose anyone of the following environment that best suits your app:
 
 * JavaScript/TypeScript
 * SharePoint Framework (SPFx)
 
 ## Create your Teams app using JavaScript or TypeScript
+
+The apps built with JavaScript have the following advantages:
+
+* App comes with its own UI and UX capabilities that are rich and user friendly.
+* Provides quick upgrades to existing apps.
+* Distributes apps on multiple platforms, such as Android and iOS.
+* Compatible for creating an app with existing APIs.
 
 Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript/TypeScript:
 
@@ -24,13 +31,6 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 * Notification bot: You can send messages in Teams channel or group or personal chat by Notification bots with a HTTP request.
 * Command bot: You can automate repetitive tasks using command bot. Command bots help you to answers simple queries or commands sent in chats.
 * Message extensions: You can interact with your web service through buttons and forms. Capability provided by message extension.
-
-The apps built with JavaScript have the following advantages:
-
-* App comes with its own UI and UX capabilities that are rich and user friendly.
-* Provides quick upgrades to existing apps.
-* Distributes apps on multiple platforms, such as Android and iOS.
-* Compatible for creating an app with existing APIs.
 
 ## Create your Teams app using SPFx
 
