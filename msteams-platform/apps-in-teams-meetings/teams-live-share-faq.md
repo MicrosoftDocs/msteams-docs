@@ -67,7 +67,7 @@ No. Teams currently doesn't support encrypted media for tab applications on desk
 <details>
 <summary><b>How many people can attend a Live Share session?</b></summary>
 
-Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, [start a discussion](https://github.com/microsoft/live-share-sdk/discussions)!
+Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
