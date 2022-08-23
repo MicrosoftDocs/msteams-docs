@@ -155,7 +155,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 ## Suspensions and wait points
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Suspension sync to presenter":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Screenshot that shows a suspension sync to the presenter.":::
 
 If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
