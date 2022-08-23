@@ -227,7 +227,7 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 The `EphemeralPresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name or profile picture. By listening to `presenceChanged` events, each client receives the latest `EphemeralPresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
 
 > [!NOTE]
-> The default `userId` assigned to each `EphemeralPresenceUser` is a random UUID and is not directly tied to an AAD identity. You can assign override this by setting a custom `userId` to be the primary key, as shown in the example below.
+> The default `userId` assigned to each `EphemeralPresenceUser` is a random UUID and is not directly tied to an AAD identity. You can override this by setting a custom `userId` to be the primary key, as shown in the example below.
 
 Example:
 
