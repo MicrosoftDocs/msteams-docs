@@ -76,7 +76,7 @@ Currently, Live Share supports a maximum of 100 attendees per session. If this i
 <details>
 <summary><b>Can I use Live Share's ephemeral data structures outside of Teams?</b></summary>
 
-Currently, Live Share packages require the Teams Client SDK to function properly. No features in `@microsoft/live-share` or `@microsoft/live-share-media` will work outside of a Microsoft Teams. If this is something you're interested in, [start a discussion](https://github.com/microsoft/live-share-sdk/discussions)!
+Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
