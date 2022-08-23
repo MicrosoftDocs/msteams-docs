@@ -95,6 +95,22 @@ If an update is available to your app, then the **Update available** option is e
 
      :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Updated app.":::
 
+### Contextless apps - Upgrade once, upgrade everywhere
+
+When a user updates an app in one thread. The new version of the app is automatically updated in all other installed contexts.
+
+1. Go to Teams apps store > Select manage apps
+
+     :::image type="content" source="../../assets/images/publish-app/manage-your-apps.png" alt-text="Select manage your app":::
+
+1. User can view apps update available
+
+     :::image type="content" source="../../assets/images/publish-app/updates-available.png" alt-text="Users can view updates available":::
+
+1. update with one click
+
+     :::image type="content" source="../../assets/images/publish-app/update-with-one-click.png" alt-text="Update apps with one click":::
+
 ### Remove your app
 
 To remove app from Teams, follow the steps:
