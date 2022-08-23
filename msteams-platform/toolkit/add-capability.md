@@ -98,7 +98,7 @@ The following table lists the capabilities available that can be added in your p
 * The commands that hello world bot application can respond to.         |
 |         | Files under `templates/azure/teamsfx` are also updated, and `templates/azure/provision/xxx`.bicep files are regenerated.         |
 |         | Files under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.         |
-| Tab        |         |
+| Tab     |         |
 |         | A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.         |
 |         | Files `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.        |
 |         | `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
