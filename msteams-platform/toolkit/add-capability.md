@@ -10,40 +10,26 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams apps
 
-Adding capabilities with Teams Toolkit helps you to include additional features to your existing Teams app. The following table lists the Teams app capabilities:
+Adding capabilities with Teams Toolkit helps you to include additional features to your existing Teams app. The advantage of adding more capabilities is that you can add more function to your app by automatically adding source codes using Teams Toolkit. The following table lists the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
-| Basic Teams app |              |
+|**Basic Teams app**|              |
 | Tabs |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
-| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
-|Scenario-based Teams app|             |
+| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client. You can add a message extension for one instance at a time.|
+|**Scenario-based Teams app**|             |
 | Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |
 | Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |
 
-## Advantages
-
-The following list provides advantages to add more capabilities in TeamsFx:
-
-* Provides convenience within your app.
-* Adds more function to your app by automatically adding source codes using Teams Toolkit.
-
-## Limitations
-
-The following are limitations to adding more capabilities in TeamsFx:
-
-* You can add tabs up to 16 instances.
-* You can add a bot and message extension for one instance at a time.
+> [!NOTE]
+> You can add tabs up to 16 instances. As for your bot and message extension you can add one for each instance at a time.
 
 ## Add capabilities
 
 You can add capabilities by the following methods:
 
-<br>
-
-<details>
-<summary><b>Using Teams Toolkit in Microsoft Visual Studio Code</b></summary>
+### Using Teams Toolkit in Visual Studio Code
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from the activity bar.
@@ -54,10 +40,7 @@ You can add capabilities by the following methods:
       > [!NOTE]
       > After successfully adding the capabilities in your Teams app, you need to provision for each environment.
 
-  </details>
-
-  <details>
-  <summary><b>Using the Command Palette</b></summary>
+### Using the Command Palette
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
@@ -72,9 +55,7 @@ You can add capabilities by the following methods:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
 
-  </details>
-
-## Add capabilities using TeamsFx CLI
+### Using TeamsFx CLI
 
 * Change directory to your **project directory**.
 * The following table lists the capabilities and required commands:
