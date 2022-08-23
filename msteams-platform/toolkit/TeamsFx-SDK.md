@@ -102,7 +102,7 @@ There are two identity types:
 * **User Identity**: Represents the current user of Teams.
 * **Application Identity**: Represents the application itself.
 
-For these two different identity types, the TeamsFx constructors and methods are not the same.
+For these two identity types, the TeamsFx constructors and methods are not the same.
 
 <details>
 <summary><b> User Identity </b></summary>
@@ -173,11 +173,9 @@ If you've created Azure Function / bot project using Visual Studio Code Toolkit,
 
 Credential and auth flow related classes are under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
-You must choose identity type when initializing TeamsFx. After you've specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
+You must choose identity type when initializing TeamsFx. After you've specified the identity type, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
 
-There are three credential classes to simplify authentication. Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
-
-Here's the corresponding scenarios for each credential class target.
+There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
 
 <details>
 <summary><b> User Identity in browser environment </b></summary>
