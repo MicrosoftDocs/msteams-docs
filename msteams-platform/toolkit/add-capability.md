@@ -17,19 +17,19 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 |**Basic Teams app**|              |
 | Tabs |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
-| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client. You can add a message extension for one instance at a time.|
+| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 |**Scenario-based Teams app**|             |
 | Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |
 | Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |
 
 > [!NOTE]
-> You can add tabs up to 16 instances. As for your bot and message extension you can add one for each instance at a time.
+> You can add tabs up to 16 instances. As for your bot and message extension, you can add one for each instance at a time.
 
 ## Add capabilities
 
 You can add capabilities by the following methods:
 
-### Using Teams Toolkit in Visual Studio Code
+### Using Teams Toolkit in Microsoft Visual Studio Code
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from the activity bar.
