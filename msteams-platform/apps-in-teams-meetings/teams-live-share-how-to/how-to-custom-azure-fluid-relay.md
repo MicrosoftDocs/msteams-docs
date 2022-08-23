@@ -107,7 +107,7 @@ Azure Fluid Relay is designed to work with any web-based application, meaning it
 Live Share has features that are beneficial to common meeting scenarios that augment other features in your app, including:
 
 - [Container mapping](#container-mapping)
-- [Ephemeral objects & role verification](#ephemeral-objects--role-verification)
+- [Ephemeral objects and role verification](#ephemeral-objects-and-role-verification)
 - [Media synchronization](#media-synchronization)
 
 ### Container mapping
