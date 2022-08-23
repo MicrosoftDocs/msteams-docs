@@ -337,6 +337,20 @@ The query parameters are:
 > [!NOTE]
 > You can see `channelId` and `groupId` in the URL from the channel.
 
+### Generate deep links to chat messages
+
+Use this deep link format to navigate to a message in individual and group chats in Teams:
+
+`http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={contextObject}`
+
+Example: `http://dev.local/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context={"contextType"%3A"chat"}`
+
+The query parameters are:
+
+* `chatId`: ChatId that is available from the tab context for group and meeting chat. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+* `messageId`: Message ID of the conversation. For example, `1563480968434`.
+* `contextObject`: Specify the contextType as chat.
+
 ### Generate deep links to file in channel
 
 The following deep link format can be used in a bot, connector, or message extension card:
