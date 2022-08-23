@@ -81,8 +81,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     </details>
 
-    > [!NOTE]
-    > You don't need  to enter **Redirect URI** for enabling SSO for a bot app.
+6. Enter the redirect URI for enabling SSO for a bot app.
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
