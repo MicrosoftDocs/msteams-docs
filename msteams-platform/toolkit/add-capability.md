@@ -91,7 +91,8 @@ The following table lists the capabilities available that can be added in your p
 |Bot and message extension     |         |
 |         | A bot template code is added into a subfolder with path `yourProjectFolder/bot`, which includes a **hello world** bot application template into your project.         |
 |         | Files `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.         |
-|         | File`manifest.template.json` under `templates/appPackage` folder is updated, which includes bot related information in the manifest file that represents your application in Teams Platform. The changes are:
+|         | File`manifest.template.json` under `templates/appPackage` folder is updated, which includes bot related information in the manifest file that represents your application in Teams Platform.
+The changes are:
 
 * The ID of your bot.
 * The scopes of your bot.
@@ -101,9 +102,10 @@ The following table lists the capabilities available that can be added in your p
 | Tab     |         |
 |         | A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.         |
 |         | Files `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.        |
-|         | `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
-  * The configurable and static tabs.
-  * The scopes of the tabs.        |
+|         | `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform.
+The changes are:
+* The configurable and static tabs.
+* The scopes of the tabs.        |
 |         | Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep file is regenerated.       |
 |         | File under `.fx/config` is regenerated, which ensures your project is set with right configurations for newly added capability.|
 
