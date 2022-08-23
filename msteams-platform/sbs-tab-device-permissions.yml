@@ -58,10 +58,10 @@ items:
      Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
-     ngrok http -host-header=localhost 3000
+     ngrok http --host-header=localhost 3000
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3000` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3000` command.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text=" ngrok tunnelling":::
 
