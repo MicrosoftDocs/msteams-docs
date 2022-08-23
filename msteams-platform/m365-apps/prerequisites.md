@@ -35,7 +35,7 @@ You'll also need to enable sideloading for your tenant:
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
 
- 1. Apart from Org-wide app settings, app setup policies also allow users to upload custom apps to Teams. For more information, see [custom apps settings](/microsoftteams/teams-custom-app-policies-and-settings#configure-the-org-wide-custom-app-setting).
+ 1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#configure-the-org-wide-custom-app-setting).
 
 ## Enroll your developer tenant for Office 365 Targeted releases
 
