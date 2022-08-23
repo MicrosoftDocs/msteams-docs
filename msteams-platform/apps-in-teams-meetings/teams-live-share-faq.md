@@ -58,7 +58,7 @@ During Preview, only scheduled meetings are supported and all participants must 
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, [track the issue](https://github.com/microsoft/live-share-sdk/issues/14)!
+No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Microsoft Edge, and mobile clients are supported. For more information, [track the issue](https://github.com/microsoft/live-share-sdk/issues/14)!
 
 <br>
 
@@ -85,7 +85,7 @@ Currently, Live Share packages require the Teams Client SDK to function properly
 <details>
 <summary><b>Can I use multiple Fluid containers?</b></summary>
 
-Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it is possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 
 <br>
 
@@ -94,14 +94,14 @@ Currently, Live Share only supports having one container using our provided Azur
 <details>
 <summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
 
-Currently, Live Share does not support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
 
-To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you are testing in a Teams meeting, start a new meeting and try again.
+To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
 
-If you plan to update your app with new `SharedObject` or `EphemeralObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session should not be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
+If you plan to update your app with new `SharedObject` or `EphemeralObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
 
 * Deploy schema changes for your web application outside of normal business hours.
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
@@ -114,7 +114,7 @@ If you plan to update your app with new `SharedObject` or `EphemeralObject` inst
 <details>
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
-While Live Share is in Preview, we do not enforce any limit to events emitted through Live Share. For optimal performance, you should debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50ms or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+While Live Share is in Preview, we don't enforce any limit to events emitted through Live Share. For optimal performance, you should debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50 ms or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
 > [!IMPORTANT]
 > In the future, formal rate limiting may be added to the Live Share service. We are monitoring this situation continually. Any update to these terms will be added here in advance.

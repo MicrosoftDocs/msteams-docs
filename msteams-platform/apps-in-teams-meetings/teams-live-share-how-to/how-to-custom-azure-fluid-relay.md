@@ -12,7 +12,7 @@ ms.date: 07/21/2022
 
 # How to: custom Azure Fluid Relay service
 
-While most developers will find it preferable to use our free hosted service, there are situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While most developers will find it preferable to use our free hosted service, there are situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
 ## Pre-requisites
 
@@ -98,7 +98,7 @@ Consider using a custom AFR service connection if you:
 
 - Require storage of data in Fluid containers beyond the lifetime of a meeting.
 - Transmit sensitive data through the service that requires a custom security policy.
-- Develop features through Fluid Framework (e.g., `SharedMap`) for your application outside of Teams.
+- Develop features through Fluid Framework (for example, `SharedMap`) for your application outside of Teams.
 
 ## Why use Live Share with your custom service?
 
@@ -118,7 +118,7 @@ If your app already has a mechanism for creating Fluid containers and sharing th
 
 ### Ephemeral objects and role verification
 
-Live Share's ephemeral data structures such as `EphemeralPresence`, `EphemeralState`, and `EphemeralEvent` are tailored to collaboration in meetings and thus are not supported in Fluid containers used outside of Microsoft Teams. Features like role verification help your app align with expectations of our users.
+Live Share's ephemeral data structures such as `EphemeralPresence`, `EphemeralState`, and `EphemeralEvent` are tailored to collaboration in meetings and thus aren't supported in Fluid containers used outside of Microsoft Teams. Features like role verification help your app align with expectations of our users.
 
 > [!NOTE]
 > As an added benefit, ephemeral objects also feature faster message latencies compared to traditional Fluid data structures.
@@ -127,7 +127,7 @@ For more information, see [core capabilities](../teams-live-share-capabilities.m
 
 ### Media synchronization
 
-Packages from `@microsoft/live-share-media` are not supported in Fluid containers used outside of Microsoft Teams.
+Packages from `@microsoft/live-share-media` aren't supported in Fluid containers used outside of Microsoft Teams.
 
 For more information, see [media capabilities](../teams-live-share-media-capabilities.md) page.
 
