@@ -275,8 +275,6 @@ Don't send a message in the following cases:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-:::image type="content" source="../../../assets/images/validation-test.png" alt-text="This is a test sample image.":::
-
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create a Teams conversational bot.
