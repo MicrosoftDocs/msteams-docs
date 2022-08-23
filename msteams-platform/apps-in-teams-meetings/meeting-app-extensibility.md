@@ -33,7 +33,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
 
 > [!IMPORTANT]
-> If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md).
+> We recommend you to follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md), if you have integrated a tab app in your meeting.
 
 > [!NOTE]
 > Add app option for Teams meeting extension tab app is not supported in Teams web client.
