@@ -22,13 +22,13 @@ Get answers to common questions when using Live Share.<br>
 
 Yes! When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
-While most developers will find it beneficial to use our free hosted service, there may still be times where it is beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
+While most of you find it beneficial to use our free hosted service, there may still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
 
-- Require storage of data in Fluid containers beyond the lifetime of a meeting.
-- Transmit sensitive data through the service that requires a custom security policy.
-- Develop features through Fluid Framework (e.g., `SharedMap`) for your application outside of Teams.
+* Require storage of data in Fluid containers beyond the lifetime of a meeting.
+* Transmit sensitive data through the service that requires a custom security policy.
+* Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
-For more information, read our [how to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
+For more information, see [how to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 
 <br>
 
@@ -48,7 +48,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-During Preview, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now aren't supported. Other meeting types will be supported in the future.
+During Preview, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now aren't supported.
 
 <br>
 
@@ -103,9 +103,9 @@ To fix errors resulting from changes to `initialObjects` when testing locally in
 
 If you plan to update your app with new `SharedObject` or `EphemeralObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session should not be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
 
-- Deploy schema changes for your web application outside of normal business hours.
-- Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
-- Versioning your schema for each session. *Note:* Live Share API to do this, and difficulty may vary for your project.
+* Deploy schema changes for your web application outside of normal business hours.
+* Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
+* Versioning your schema for each session. *Note:* Live Share API to do this, and difficulty may vary for your project.
 
 <br>
 
@@ -129,7 +129,7 @@ Submit issues and feature requests to the SDK repository for [Live Share SDK](ht
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
-- [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Teams apps in meetings](teams-apps-in-meetings.md)

@@ -511,7 +511,7 @@ timer.play();
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Ephemeral objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual ephemeral object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
 > [!NOTE]
-> The `EphemeralPresence` class does not support role verification. Instead, each `EphemeralPresenceUser` object has a `getRoles` method, which return the meeting roles for a given user.
+> The `EphemeralPresence` class doesn't support role verification. The `EphemeralPresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
 
 Example using `EphemeralState`:
 
@@ -617,8 +617,8 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
-- [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Live Share FAQ](teams-live-share-faq.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Live Share FAQ](teams-live-share-faq.md)
+* [Teams apps in meetings](teams-apps-in-meetings.md)

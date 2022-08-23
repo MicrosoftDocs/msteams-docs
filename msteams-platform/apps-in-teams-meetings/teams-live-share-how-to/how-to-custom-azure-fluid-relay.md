@@ -106,30 +106,30 @@ Azure Fluid Relay is designed to work with any web-based application, meaning it
 
 Live Share has features that are beneficial to common meeting scenarios that augment other features in your app, including:
 
-- Container mapping
-- Ephemeral objects & role verification
-- Media synchronization
+- [Container mapping](#container-mapping)
+- [Ephemeral objects & role verification](#ephemeral-objects--role-verification)
+- [Media synchronization](#media-synchronization)
 
 ### Container mapping
 
-Live Share's `TeamsFluidClient` class is responsible for mapping a unique meeting identifier to your Fluid containers, which ensures that all meeting participants join the same container. As part of this process, the client will attempt to connect to a `containerId` mapped to the meeting should one already exist. If one does not exist, the `AzureClient` is used to create a container using your `AzureConnectionConfig` and then relay the `containerId` to other meeting participants.
+Live Share's `TeamsFluidClient` class is responsible for mapping a unique meeting identifier to your Fluid containers, which ensures that all meeting participants join the same container. As part of this process, the client attempts to connect to a `containerId` mapped to the meeting that one already exists. If one doesn't exist, the `AzureClient` is used to create a container using your `AzureConnectionConfig` and then relay the `containerId` to other meeting participants.
 
-If your app already has a mechanism for creating Fluid containers and sharing them to other members -- such as by inserting the `containerId` into the URL shared to the meeting stage -- then this may not be necessary for your app.
+If your app already has a mechanism for creating Fluid containers and sharing them to other members, such as by inserting the `containerId` into the URL shared to the meeting stage, then this may not be necessary for your app.
 
-### Ephemeral objects & role verification
+### Ephemeral objects and role verification
 
 Live Share's ephemeral data structures such as `EphemeralPresence`, `EphemeralState`, and `EphemeralEvent` are tailored to collaboration in meetings and thus are not supported in Fluid containers used outside of Microsoft Teams. Features like role verification help your app align with expectations of our users.
 
 > [!NOTE]
 > As an added benefit, ephemeral objects also feature faster message latencies compared to traditional Fluid data structures.
 
-To learn more, visit our [core capabilities](../teams-live-share-capabilities.md) page.
+For more information, see [core capabilities](../teams-live-share-capabilities.md) page.
 
 ### Media synchronization
 
 Packages from `@microsoft/live-share-media` are not supported in Fluid containers used outside of Microsoft Teams.
 
-To learn more, visit our [media capabilities](../teams-live-share-media-capabilities.md) page.
+For more information, see [media capabilities](../teams-live-share-media-capabilities.md) page.
 
 ## See also
 
