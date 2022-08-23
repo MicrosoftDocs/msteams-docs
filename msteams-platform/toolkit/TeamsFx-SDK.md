@@ -61,7 +61,7 @@ Use the following snippet:
 // Equivalent to:
 // const teamsfx = new TeamsFx(IdentityType.User, {
 //   initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-//   clientId: process.env.REACT_APP_CLIENT_ID,
+//   clientId: process.env.REACT_APP_CLIENT_ID
 // });
 const teamsfx = new TeamsFx();
 const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
@@ -82,6 +82,7 @@ Use the following snippet:
 // const teamsfx = new TeamsFx(IdentityType.App, {
 //   clientId: process.env.M365_CLIENT_ID,
 //   clientSecret: process.env.M365_CLIENT_SECRET,
+//   tenantId: process.env.M365_TENANT_ID
 // });
 const teamsfx = new TeamsFx(IdentityType.App);
 const graphClient = createMicrosoftGraphClient(teamsfx);
