@@ -151,7 +151,7 @@ document.getElementById("change-track-button").onclick = () => {
 ```
 
 > [!NOTE]
-> While you can use the `EphemeralMediaSession` object to synchronize media manually, we generally recommend using the `MediaPlayerSynchronizer`. Depending on the player you use in your app, you might need to create a delegate shim to make your web player's interface match the [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) interface.
+> While you can use the `EphemeralMediaSession` object to synchronize media manually, it's generally recommend to use the `MediaPlayerSynchronizer`. Depending on the player you use in your app, you might need to create a delegate shim to make your web player's interface match the [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) interface.
 
 ## Suspensions and wait points
 
