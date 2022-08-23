@@ -10,19 +10,19 @@ ms.date: 07/21/2022
 
 ---
 
-# How to: custom Azure Fluid Relay service
+# Custom Azure Fluid Relay service
 
-While most developers will find it preferable to use our free hosted service, there are situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While you likely will prefer using our free hosted service, there are situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
 ## Pre-requisites
 
-1. Build a meeting side panel and/or stage app meeting extension, as shown in our [dice roller tutorial](../teams-live-share-tutorial.md).
+1. Build a meeting side panel and/or stage app meeting extension, as shown in the [dice roller tutorial](../teams-live-share-tutorial.md).
 2. Update your app manifest to include all [necessary permissions](../teams-live-share-capabilities.md#register-rsc-permissions).
 3. Provision an Azure Fluid Relay service as outlined in this [tutorial](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal).
 
 ## Connect to Azure Fluid Relay service
 
-When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. In this example, we use Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. In this example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
 # [JavaScript](#tab/javascript)
 
@@ -92,13 +92,11 @@ const { container } = await client.joinContainer(schema);
 
 ## Why use a custom Azure Fluid Relay service?
 
-While most developers will find our free service meets all their requirements, there may be cases where using your own Azure Fluid Relay service for your Live Share app is ideal.
-
 Consider using a custom AFR service connection if you:
 
-- Require storage of data in Fluid containers beyond the lifetime of a meeting.
-- Transmit sensitive data through the service that requires a custom security policy.
-- Develop features through Fluid Framework (for example, `SharedMap`) for your application outside of Teams.
+* Require storage of data in Fluid containers beyond the lifetime of a meeting.
+* Transmit sensitive data through the service that requires a custom security policy.
+* Develop features through Fluid Framework for your application outside of Teams.
 
 ## Why use Live Share with your custom service?
 
@@ -106,9 +104,9 @@ Azure Fluid Relay is designed to work with any web-based application, meaning it
 
 Live Share has features that are beneficial to common meeting scenarios that augment other features in your app, including:
 
-- [Container mapping](#container-mapping)
-- [Ephemeral objects and role verification](#ephemeral-objects-and-role-verification)
-- [Media synchronization](#media-synchronization)
+* [Container mapping](#container-mapping)
+* [Ephemeral objects and role verification](#ephemeral-objects-and-role-verification)
+* [Media synchronization](#media-synchronization)
 
 ### Container mapping
 
@@ -133,10 +131,10 @@ For more information, see [media capabilities](../teams-live-share-media-capabil
 
 ## See also
 
-- [GitHub repository](https://github.com/microsoft/live-share-sdk)
-- [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
-- [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Live Share capabilities](../teams-live-share-capabilities.md)
-- [Live Share media capabilities](../teams-live-share-media-capabilities.md)
-- [Live Share FAQ](../teams-live-share-faq.md)
-- [Teams apps in meetings](../teams-apps-in-meetings.md)
+* [GitHub repository](https://github.com/microsoft/live-share-sdk)
+* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+* [Live Share capabilities](../teams-live-share-capabilities.md)
+* [Live Share media capabilities](../teams-live-share-media-capabilities.md)
+* [Live Share FAQ](../teams-live-share-faq.md)
+* [Teams apps in meetings](../teams-apps-in-meetings.md)

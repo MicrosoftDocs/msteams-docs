@@ -58,7 +58,7 @@ During Preview, only scheduled meetings are supported and all participants must 
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Microsoft Edge, and mobile clients are supported. For more information, [track the issue](https://github.com/microsoft/live-share-sdk/issues/14)!
+No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 
 <br>
 
@@ -105,7 +105,9 @@ If you plan to update your app with new `SharedObject` or `EphemeralObject` inst
 
 * Deploy schema changes for your web application outside of normal business hours.
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
-* Versioning your schema for each session. *Note:* Live Share API to do this, and difficulty may vary for your project.
+
+> [!NOTE]
+> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
 
 <br>
 
@@ -114,10 +116,7 @@ If you plan to update your app with new `SharedObject` or `EphemeralObject` inst
 <details>
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
-While Live Share is in Preview, we don't enforce any limit to events emitted through Live Share. For optimal performance, you should debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50 ms or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
-
-> [!IMPORTANT]
-> In the future, formal rate limiting may be added to the Live Share service. We are monitoring this situation continually. Any update to these terms will be added here in advance.
+While Live Share is in Preview, any limit to events emitted through Live Share is not enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `EphemeralObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
 <br>
 
