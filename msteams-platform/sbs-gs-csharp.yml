@@ -190,7 +190,6 @@ items:
 
     Now that you've got the sample repo cloned, let's build your first C# app for Teams.
 
-- title: Build and run your first C# app
 - title: Create project workspace for your tab app using C#
   durationInMinutes: 1
   content: |
@@ -328,7 +327,6 @@ items:
         > [!IMPORTANT]
         > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
-- title: Configure your first C# app using Developer Portal
 - title: Build and run your first tab app using C#
   durationInMinutes: 1
   content: |
@@ -656,10 +654,7 @@ items:
     1. Open **App features** pane.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-capabilities-configured.png" alt-text="Screenshot shows capabilities configured for Hello World app.":::
-        You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app. The next step is to register your app in Teams and test your app.
-
-- title: Preview and test your first C# app
-      </details>   
+        You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app. The next step is to register your app in Teams and test your app.  
     
 - title: Congratulations!
   durationInMinutes: 1
