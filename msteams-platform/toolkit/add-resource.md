@@ -8,42 +8,40 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add cloud resources to Teams app
+# Add cloud resources to Microsoft Teams app
 
-TeamsFx helps to you provision the cloud resources for your application hosting. You can add the cloud resources optionally, that fit your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
+Teams Toolkit helps you to provision the cloud resources for your application hosting. You can add the cloud resources optionally, that fit your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
 
 > [!NOTE]
 > If you have created SPFx based tab project, you can't add Azure cloud resources.
 
 ## Add cloud resources
 
-**You can add cloud resources by the following methods:**
+You can add cloud resources by the following methods:
 
-* To add cloud resources by using Teams Toolkit in Visual Studio Code.
-* To add cloud resources by using command palette.
-
-  > [!NOTE]
-  > You need to provision for each environment, after you have successfully added the resource in your Teams app.
-  
-* **To add cloud resources by using Teams Toolkit in Visual Studio Code:**
+### To add cloud resources by using Teams Toolkit in Visual Studio Code
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
    1. Select **Add features** under **DEVELOPMENT**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Add feature from Teams Toolkit":::
 
 * **To add cloud resources by using command palette:**
 
-   1. Open **command palette**.
-   1. Enter **Teams:Add features**.
-   1. Press **Enter**.
+   1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="cloud":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Add feature from command palette":::
+
+   1. Enter **Teams: Add features**.
+   1. Press **Enter**.
 
    1. From the pop-up, select the cloud resources to add in your project.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
+
+  > [!NOTE]
+  > You need to provision for each environment, after you have successfully added the resource in your Teams app.
 
 ## Add cloud resources using TeamsFx CLI
 
