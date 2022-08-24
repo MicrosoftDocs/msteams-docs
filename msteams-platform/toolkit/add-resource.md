@@ -38,7 +38,7 @@ You can add cloud resources by the following methods:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features1.png" alt-text="Type add feature and enter":::
 
-   1. From the pop-up, select the cloud resources to add in your project.
+   1. From the pop-up, select the **Cloud resources** to add in your project.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
 
