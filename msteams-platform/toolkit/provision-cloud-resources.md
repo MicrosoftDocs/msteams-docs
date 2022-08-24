@@ -88,7 +88,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
-The provision process of creating the resources in the Azure cloud may take some time.
+   The provision process of creating the resources in the Azure cloud may take some time.
 
 8. Check Teams Toolkit output window to monitor progress.
 9. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
@@ -279,6 +279,6 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 
 ## See also
 
-* [Deploy Teams app to the cloud using Visual Studio](deploy-Teams-app-to-the-cloud-using-Visual-Studio.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
 * [Debug Teams app locally for Visual Studio](debug-teams-app-visual-studio.md)

@@ -92,7 +92,5 @@ Your local changes can be synced to the Developer Portal, after you've previewed
 
 ## See also
 
-- [Provision cloud resources using Visual Studio](provision-cloud-resources-using-Visual-Studio.md)
-- [Deploy Teams app to the cloud using Visual Studio](deploy-Teams-app-to-the-cloud-using-Visual-Studio.md)
-
-TBA
+- [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+- [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
