@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 As a developer, you can create a per-user report to understand which user has blocked, muted, or uninstalled a bot and drive app usage.
 
-You can send a proactive message to the bot using Microsoft Teams to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a 403 response with a `subCode` `MessageWritesBlocked` indicating the user can't receive any messages sent by the bot.
+You can send a proactive message to the bot using Microsoft Teams to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a 403 response with a `subCode: MessageWritesBlocked` indicating that the message sent by the bot isn't delivered to the user.
 
 The response code is sent on a per-user basis and includes the identity of each user. You can collate the response code for each user from the user identity to create a report as required.
 
