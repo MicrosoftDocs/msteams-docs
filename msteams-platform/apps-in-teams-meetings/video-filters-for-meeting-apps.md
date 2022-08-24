@@ -189,7 +189,7 @@ Ensure that you adhere to the following requirements to update the app manifest:
 
 ## Validate your app package
 
-After you've completed updating the app manifest, you can validate your app package using App Validator and Teams developer Portal.
+After you've completed updating the app manifest, you can validate your app package using App Validator and Teams Developer Portal.
 
 # [App Validator](#tab/app-validator)
 
@@ -214,7 +214,7 @@ To validate your app package using Teams Developer Portal:
 
 The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the App submission checklist.
 
-:::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-validation.png" alt-text="Screenshot of app validation details for an app package in Teams developer portal.":::
+:::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-validation.png" alt-text="Screenshot of app validation details for an app package in Teams Developer Portal.":::
 
 ---
 

@@ -34,6 +34,9 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio speaker**](#get-incoming-audio-speaker) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Register for video effect**](#register-for-video-effect) | Allows an app to get the selected effect in Teams client and notify the video extension that the new effect will be applied.| [MSTC SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) |
+| [**Register for video frame**](#register-for-video-frame) | Allows an app to get the video frame, process the video frame and returns the processed video frame.| [MSTC SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) |
+| [**Notify selected video effect change**](#notify-selected-video-effect-change) | Allows an app to notify the user that the video effect is applied.| [MSTC SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -1008,6 +1011,116 @@ The following table provides the response codes:
 | **500** | Internal error. |
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have proper permissions to allow share to stage.|
+
+## Register for video effect
+
+The `registerForVideoEffect` API allows you to get the selected effect in Teams client and notify the video extension that the new effect will be applied.
+
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
+
+### Example
+
+```typescript
+  function registerForVideoEffect(callback: VideoEffectCallBack)
+  
+  type VideoEffectCallBack = (effectId: string | undefined) => void,
+  
+```
+
+### Response code
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
+
+## Register for video frame
+
+The `registerForVideoFrame` API allows you to get the video frame from the video pipeline, process the video frame and returns the processed video frame to the video pipeline.
+
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**frameCallback**| String | Yes | |
+|**config**|String|Yes||
+
+### Example
+
+```typescript
+  function registerForVideoFrame(frameCallback: VideoFrameCallback, config: VideoFrameConfig),
+  type VideoFrameCallback = (frame: VideoFrame, notifyVideoFrameProcessed: () => void, notifyError: (errorMessage: string) => void) => void,
+  /** 
+   
+  * video format 
+  
+  */
+  
+  interface VideoFrameConfig { 
+  format: VideoFrameFormat;
+  }
+
+```
+
+### Response code
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| | |
+
+## Notify selected video effect change
+
+The `notifySelectedVideoEffectChanged` API allows you to notify the user that the video effect is applied.
+
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**effectChangeType**| String | Yes | |
+|**effectId**|String||
+
+### Example
+
+```typescript
+  function notifySelectedVideoEffectChanged(effectChangeType: EffectChangeType, effectId: string | undefined)
+  
+  enum EffectChangeType 
+  
+  { 
+  
+     /** 
+     * current video effect changed 
+     */ 
+    EffectChanged, 
+    /** 
+     * disable the video effect 
+     */ 
+    EffectDisabled, 
+  } 
+```
+
+### Response code
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| | |
 
 ## Code sample
 
