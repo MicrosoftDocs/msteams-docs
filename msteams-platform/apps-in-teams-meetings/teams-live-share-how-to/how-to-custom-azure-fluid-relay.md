@@ -16,13 +16,13 @@ While you likely will prefer using our free hosted service, there are situations
 
 ## Pre-requisites
 
-1. Build a meeting side panel and/or stage app meeting extension, as shown in the [dice roller tutorial](../teams-live-share-tutorial.md).
+1. Build a meeting side panel and stage app meeting extension, as shown in the [dice roller tutorial](../teams-live-share-tutorial.md).
 2. Update your app manifest to include all [necessary permissions](../teams-live-share-capabilities.md#register-rsc-permissions).
 3. Provision an Azure Fluid Relay service as outlined in this [tutorial](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal).
 
 ## Connect to Azure Fluid Relay service
 
-When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. In this example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. This example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
 # [JavaScript](#tab/javascript)
 
