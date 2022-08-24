@@ -115,7 +115,7 @@ The Azure AD portal provides a central platform for you to register and configur
 
 A bot can currently be registered at three different locations. It would be beneficial to have a separate page for the registrations that explains the various options and their differences, as well as the Microsoft recommended method for production. Ready bots (Azure AD registrations preferred over bot / developer portal bots).
 
-:::image type="content"source="~/assets/images/bot-registration.png" alt-text="Registering a bot":::
+:::image type="content"source="../../assets/images/bot-registration.png" alt-text="Registering a bot":::
 
 ## Review your application permissions in the Azure AD portal
 
