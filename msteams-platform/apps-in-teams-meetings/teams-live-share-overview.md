@@ -99,15 +99,15 @@ const { container } = await client.joinContainer(schema);
 
 #### Using a custom Azure Fluid Relay service
 
-While most developers will find it preferable to use our free hosted service, there are still situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While most of you find it preferable to use our free hosted service, there are still situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
 Consider using a custom service if you:
 
 - Require storage of data in Fluid containers beyond the lifetime of a meeting.
 - Transmit sensitive data through the service that requires a custom security policy.
-- Develop features through Fluid Framework (e.g., `SharedMap`) for your application outside of Teams.
+- Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
-To learn more, visit our custom Azure Fluid Relay service [how-to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md).
+For more information, see the custom Azure Fluid Relay service [how-to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md).
 
 ## User scenarios
 
