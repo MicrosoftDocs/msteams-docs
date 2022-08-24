@@ -20,6 +20,9 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 -->
 
+> [!NOTE]
+> **App Studio** is deprecated, use [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home) to manage your apps.
+
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.
