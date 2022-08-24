@@ -321,7 +321,7 @@ items:
     1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
         > [!NOTE]
-        > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
+        > If you've used a different port during [build](#Build-and-run-your-first-tab-app-using-C#), ensure you use the same port number to setup the `ngrok` tunnel.
         > [!TIP]
         > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app, when you'll need to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
         > [!IMPORTANT]
