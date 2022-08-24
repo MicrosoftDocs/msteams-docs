@@ -22,12 +22,12 @@ You can add cloud resources by the following methods:
 ### To add cloud resources by using Teams Toolkit in Visual Studio Code
 
    1. Open **Visual Studio Code**.
-   1. Select **Teams Toolkit** from left panel.
+   1. Select **Teams Toolkit** from the activity bar.
    1. Select **Add features** under **DEVELOPMENT**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Add feature from Teams Toolkit":::
 
-* **To add cloud resources by using command palette:**
+### To add cloud resources by using command palette:**
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
@@ -36,6 +36,8 @@ You can add cloud resources by the following methods:
    1. Enter **Teams: Add features**.
    1. Press **Enter**.
 
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features1.png" alt-text="Type add feature and enter":::
+
    1. From the pop-up, select the cloud resources to add in your project.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
@@ -43,7 +45,7 @@ You can add cloud resources by the following methods:
   > [!NOTE]
   > You need to provision for each environment, after you have successfully added the resource in your Teams app.
 
-## Add cloud resources using TeamsFx CLI
+### Add cloud resources using TeamsFx CLI
 
 * Change directory to your **project directory**.
 * The following table lists the capabilities and required commands:
