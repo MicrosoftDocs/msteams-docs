@@ -44,6 +44,12 @@ Specifically, before creating a meeting tab, it is important to learn about the 
 
 ### Meeting chat view
 
+1. From the Teams chat panel, select the meeting chat view.
+
+1. Select + and tab gallery appears.
+
+1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
+
 ### Meeting side panel view
 
 1. During a meeting, Users can add apps to the meeting using the + option from their Teams meeting window.
@@ -54,9 +60,13 @@ Specifically, before creating a meeting tab, it is important to learn about the 
 
 ### Meeting stage view
 
+1. Once a tab is added to the meeting side panel, you can now choose to opt into global app sharing  
+
+1. This will result in rendering tab on the stage for every participant in the meeting.
+
 ### App manifest settings for Tabs in meeting
 
-Update your manifest with fine grained context prop to target the above different tab views. The meetings app capabilities are declared in your app manifest using the configurableTabs, scopes, and context arrays.
+Update your [manifest](/microsoftteams/platform/resources/schema/manifest-schema) with fine grained context prop to target the above different tab views. The meetings app capabilities are declared in your app manifest using the configurableTabs, scopes, and context arrays.
 
 The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. The tabs in the `team` or `groupchat` scope can have more than one context.
 
@@ -141,7 +151,7 @@ To target just the in-meeting side panel experience: 
 
 ### Frame context
 
-Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab url is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel. This allows app developers to build customized experiences according to the size of the frame in which their app is loaded. For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
+Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab url is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel. This allows you to build customized experiences according to the size of the frame in which your app is loaded. For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
 ## Code sample
 
