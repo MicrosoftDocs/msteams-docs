@@ -16,8 +16,7 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
-1. [Add code to request a token](#add-code-to-request-a-token)
-1. [Add code to receive the token](#add-code-to-receive-the-token)
+1. [Add code to handle an access token](#add-code-to-handle-an-access-token)
 
 ## Update development environment variables
 
