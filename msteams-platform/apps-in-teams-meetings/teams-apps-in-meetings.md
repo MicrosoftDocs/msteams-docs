@@ -14,7 +14,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 :::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
 
-An application developer should familiarize themselves with the following product concepts to be able to create custom meeting experiences in Microsoft Teams with apps.
+An application developer must be familiar with the following product concepts to create custom meeting experiences in Microsoft Teams with apps.
 
 ## Meeting lifecycle
 
@@ -37,13 +37,13 @@ Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeti
 
 Users can add apps to the meeting using the **+** option from their Teams meeting window.
 
-:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Add an app in meeting" border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="This screenshot shows how to add an app in Teams meeting":::
 
 Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and explore apps designed specifically for meetings.
 
 ## User roles in Teams meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Participant roles in a meeting.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="This screenshot shows the participant roles in a Teams meeting window.":::
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
