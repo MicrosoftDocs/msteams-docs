@@ -325,6 +325,8 @@
       href: apps-in-teams-meetings/build-apps-for-teams-meeting.md
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings\build-extensible-conversation-for-meeting-chat.md
+    - name: Build apps for anonymous users
+      href: apps-in-teams-meetings\build-apps-for-anonymous-user.md
     - name: Advanced meeting APIs
       href: apps-in-teams-meetings/advanced-meeting-apis.md  
   - name: Get meeting transcripts using Graph APIs
