@@ -54,7 +54,7 @@ Specifically, before creating a meeting tab, it is important to learn about the 
 
 1. During a meeting, Users can add apps to the meeting using the + option from their Teams meeting window.
 
-:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Add an app in meeting" border="true":::
+   :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Add an app in meeting" border="true":::
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -151,7 +151,7 @@ To target just the in-meeting side panel experience: 
 
 ### Frame context
 
-Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab url is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel. This allows you to build customized experiences according to the size of the frame in which your app is loaded. For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
+Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel. This allows you to build customized experiences according to the size of the frame in which your app is loaded. For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
 ## Code sample
 

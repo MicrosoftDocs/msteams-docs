@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 Share to Stage allows users to share an app to the meeting stage from the app side panel in an ongoing meeting. This sharing is interactive & collaborative as opposed to passive screen sharing.
 
-Users can invoke share to stage by selecting on the **Share to Stag** icon on the top right side of the app side panel. This is a native Teams client button and selecting it shares the entire app to the meeting stage.  
+Users can invoke share to stage by selecting on the **Share to Stage** icon on the top right side of the app side panel. This is a native Teams client button and selecting it shares the entire app to the meeting stage.  
 
 ## Manifest settings for meeting stage apps
 
@@ -27,17 +27,17 @@ To share an app to the meeting stage, the app must call the meeting side panel e
 
 ## Advanced share to stage APIs
 
-There are many scenarios where sharing the entire app to the meeting stage is not as useful as sharing specific parts of the app:  
+There are many scenarios where sharing the entire app to the meeting stage isn't as useful as sharing specific parts of the app:  
 
 1. For a brainstorming or whiteboard app, a user may want to share a specific board in a meeting vs the entire app with all the boards.  
 
-1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient vs sharing the entire app with all the patients' records/results etc  
+1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient vs sharing the entire app with all the patients' records or results etc.  
 
 1. For an app like Arcade, the user would want to share individual games to the meeting stage vs the entire Arcade app.  
 
-1. A user can want to share content from a single content provider at a time (e.g. Youtube, TikTok, Disney etc) vs sharing the entire an entire video catalog onto stage.
+1. A user can want to share content from a single content provider at a time (for example, YouTube, TikTok, Disney, etc) vs sharing the entire an entire video catalog onto stage.
 
-To solve for these scenarios, we released APIs within the Teams Client SDK that will allow you to programmatically invoke share to stage for specific parts of the app from a button in the app side panel.
+To solve for these scenarios, we released APIs within the Teams Client SDK that allows you to programmatically invoke share to stage for specific parts of the app from a button in the app side panel.
 
 :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
 
@@ -78,7 +78,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, if there is a successful share, or null when the share fails.|
 |**appContentURL**| String | Yes | The URL that will be shared on to the stage.|
 
 ### Example
