@@ -21,7 +21,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 -->
 
 > [!NOTE]
-> **App Studio** is deprecated, use [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home) to manage your apps.
+> **App Studio** is deprecated on August 01, 2022, use [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home) to manage your apps.
 
 ## GA features
 
