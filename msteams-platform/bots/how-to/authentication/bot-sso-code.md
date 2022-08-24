@@ -102,18 +102,6 @@ private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepCo
             return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
 private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             // Get the token from the previous step. Note that we could also have gotten the
