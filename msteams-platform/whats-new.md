@@ -126,7 +126,7 @@ Explore updates from the previous GA releases listed here.
 |08/19/2021| Installation update event received when you install a bot to a conversation thread | Build bots > Bot conversations > [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|Build tabs with Adaptive Cards| Build tabs > [Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md) |
 |08/04/2021|Tabs will no longer have margins surrounding their experiences | Build tabs > [Removing tab margins](resources/removing-tab-margins.md) |
-|07/08/2021|Teams mobile adds support for apps in meetings | Build apps for Teams meetings > [Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|07/08/2021|Teams mobile adds support for apps in meetings | Build apps for Teams meetings > [Build apps for Teams meeting](apps-in-teams-meetings/build-apps-for-teams-meeting.md) |
 |06/28/2021|Integrate People Picker capability | Integrate with Teams > [Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md) |  
 |06/25/2021| Introduced step-by-step guide to send proactive messages | Build bots > Bot conversation > Proactive messages > [Step-by-step guide to send proactive messages](sbs-send-proactive.yml) |
 |06/09/2021| Stage view for images in Adaptive Cards with `allowExpand` attribute | Build cards and task modules > Build cards > [Stage view for images in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
