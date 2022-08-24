@@ -27,7 +27,7 @@ You can add cloud resources by the following methods:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Add feature from Teams Toolkit":::
 
-### To add cloud resources by using command palette:**
+### To add cloud resources by using command palette
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
