@@ -1,10 +1,10 @@
 ---
 title: Create conversational tabs
 author: surbhigupta
-description: In this module, learn to create conversational subentity chat for your channel tabs, to manage conversations using code samples
+description: Learn to create conversational tabs in Microsoft Teams to start, continue, enhance, and close a conversation.
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Create conversational tabs
