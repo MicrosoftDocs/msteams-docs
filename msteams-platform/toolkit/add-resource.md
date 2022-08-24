@@ -10,18 +10,10 @@ ms.date: 11/29/2021
 
 # Add cloud resources to Teams app
 
-TeamsFx helps to provision the cloud resources for your application hosting. You can add the cloud resources optionally, that fit your development needs.
+TeamsFx helps to you provision the cloud resources for your application hosting. You can add the cloud resources optionally, that fit your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
 
-## Advantages
-
-The following list provides advantages to add more cloud resources in TeamsFx:
-
-* Provides convenience.
-* Autogenerates all configuration files and connect to Teams app by using Teams Toolkit.
-
-## Limitation
-
-If you have created SPFx based tab project, you can't add Azure cloud resources.
+> [!NOTE]
+> If you have created SPFx based tab project, you can't add Azure cloud resources.
 
 ## Add cloud resources
 
