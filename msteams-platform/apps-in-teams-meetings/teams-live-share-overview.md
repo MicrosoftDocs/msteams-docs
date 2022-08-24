@@ -41,9 +41,9 @@ Here are some key benefits of the Live Share SDK:
 
 To understand if Live Share is right for your collaborative scenario, it is helpful to understand the differences between Live Share and other collaborative frameworks, including:
 
-- Web sockets
-- Azure Fluid Relay
-- Live Share
+- [Web sockets](#web-sockets)
+- [Azure Fluid Relay](#azure-fluid-relay)
+- [Live Share](#live-share-hosted-service)
 
 ### Web sockets
 
