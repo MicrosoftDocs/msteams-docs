@@ -345,11 +345,15 @@
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
-    - name: Media capabilities
+    - name: Media synchronization
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-    - name: Agile Poker tutorial
-      href: sbs-teams-live-share.yml
-    - name: Live Share SDK FAQ
+    - name: How-to guides
+      items:
+      - name: Agile Poker tutorial
+        href: sbs-teams-live-share.yml
+      - name: Custom Azure Fluid Relay service
+        href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+    - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Video filters for meeting apps
     href: apps-in-teams-meetings/video-filters-for-meeting-apps.md
