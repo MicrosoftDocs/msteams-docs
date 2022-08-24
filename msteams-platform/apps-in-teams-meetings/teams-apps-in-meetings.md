@@ -14,11 +14,12 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 > [!Note]
 >
-> Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Apps for instant meetings, scheduled public channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Teams supports access to apps during meeting for the following meeting types:
 
 * [**Scheduled meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
+* [**Scheduled channel meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams public channels.
 * [**One-on-one calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
 * [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
@@ -35,7 +36,7 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 >
 > * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
-> * Currently app experiences are not supported in Teams channel meetings (both scheduled meetings and instant meetings).
+> * Currently app experiences are supported in Teams public channel scheduled meetings only and adding meeting apps to a channel meeting does not add them to the channel itself.
 
 The following illustration gives you an idea of the meeting app extensibility features:
 
@@ -43,11 +44,11 @@ The following illustration gives you an idea of the meeting app extensibility fe
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-- **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
-- **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
-- **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
-- **Customize app permission in shared channel: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
-- **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
+* **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
+* **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
+* **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
+* **Customize app permission in shared channel: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
+* **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
 
 ## Next step
 
