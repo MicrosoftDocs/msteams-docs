@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.introduction-publish-process
+title: Introduction
+metadata:
+  title: Introduction
+  description: Introduction
+  ms.date: 08/24/2022
+  author: author-name
+  ms.author: author-name
+  ms.topic: interactive-tutorial
+  ms.prod: learning-m365
+durationInMinutes: 3
+content: |
+  [!include[](includes ../../includes/learn/publish.md)]

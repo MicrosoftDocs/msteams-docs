@@ -1,0 +1,50 @@
+### YamlMime:Module
+uid: learn.publish-to-teams
+metadata:
+  title: Learn to publish Teams app in Microsoft Teams Store
+  description: In this module, we'll discuss how to publish Teams app in Microsoft Teams Store.
+  ms.date: 08/24/2022
+  author: author-name
+  ms.author: author-name
+  ms.topic: interactive-tutorial
+  ms.prod: learning-m365
+title: Publish Teams app in Microsoft Teams Store
+summary: >
+  Developers can provide their Microsoft Teams apps to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors including users' needs, business, technical requirements, and your goals for the app.
+  Developers can also distribute their apps directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
+  In this module, you’ll learn how to publish your app to Teams app store, focusing primarily on App validation process, best time to complete this module is during the planning stage of building an app
+
+abstract: | 
+  By the end of this module, you'll be able to:
+  - Understand the Microsoft Teams store validation guidelines
+  - Understand step by step process in submitting your app on partner center
+  - Improve the quality of app submission for faster publishing time
+  - Know how to resolve issues flagged by Teams store validation team
+  - Reduce rework by avoiding common validation failures
+
+prerequisites: |
+  - Access to Partner Center account
+  - Microsoft Partner Network ID
+  - App package
+
+iconUrl: /learn/achievements/align-requirements-in-azure.svg
+ratingEnabled: false
+levels:
+- beginner
+roles:
+- solutions-architect
+products:
+- Microsoft Teams
+subjects:
+- validation
+units:
+- learn.align-requirements-in-azure.1-introduction
+- learn.align-requirements-in-azure.2-public-private-hybrid
+- learn.align-requirements-in-azure.3-service-models
+- learn.align-requirements-in-azure.4-iaas
+- learn.align-requirements-in-azure.5-paas
+- learn.align-requirements-in-azure.6-saas
+- learn.align-requirements-in-azure.7-quiz
+- learn.align-requirements-in-azure.8-summary
+badge:
+  uid: learn.align-requirements-in-azure.badge
