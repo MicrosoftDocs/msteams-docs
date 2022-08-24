@@ -69,7 +69,8 @@ After you design your app based on participant roles in a meeting, you can ident
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Meeting apps API references - Teams](~/apps-in-teams-meetings/api-references.md)
+* [Advanced meeting APIs](advanced-meeting-apis.md)
+* [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Meeting lifecycle](meeting-app-extensibility.md#meeting-lifecycle)
