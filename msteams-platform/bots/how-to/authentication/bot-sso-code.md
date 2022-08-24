@@ -29,10 +29,10 @@ To update the development environment variables:
 1. Open the environment file for your project.
 1. Update the following variables:
 
-  - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
-  - For `MicrosoftAppPassword`, update the Bot registration client secret.
-  - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
-  - For `MicrosoftAppTenantId`, update the tenant ID.
+    - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
+    - For `MicrosoftAppPassword`, update the Bot registration client secret.
+    - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
+    - For `MicrosoftAppTenantId`, update the tenant ID.
 <!--
 1. Update the variable `MICROSOFT_APP_PASSWORD` and its value as shown below:
 
@@ -51,35 +51,90 @@ To update the development environment variables:
 
 You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
 
-## Add code to request a token
+## Add code to handle an access token
 
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
+Add the following code snippet to the class that handles error codes. In this example the class used is `AdapterWithErrorHandler.cs`:
+
+```csharp
+base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+```
+
 Use the following code snippet for requesting a token without needing the app user to sign-in.
 
 # [csharp](#tab/cs)
 
 ```csharp
-    var attachment = new Attachment
-            {
-                Content = new OAuthCard
+public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
+      : base(nameof(MainDialog), configuration["ConnectionName"])
+        {
+            Logger = logger;
+
+            AddDialog(new OAuthPrompt(
+                nameof(OAuthPrompt),
+                new OAuthPromptSettings
                 {
-                    TokenExchangeResource = new TokenExchangeResource
-                    {
-                        Id = requestId
-                    }
-                },
-                ContentType = OAuthCard.ContentType,
-            };
-            var activity = MessageFactory.Attachment(attachment);
+                    ConnectionName = ConnectionName,
+                    Text = "Please Sign In",
+                    Title = "Sign In",
+                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
+                    EndOnInvalidMessage = true
+                }));
 
-            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. 
-            // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
+            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
 
-       await turnContext.SendActivityAsync(activity, cancellationToken);
+            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
+            {
+                PromptStepAsync, // Explained Later
+                LoginStepAsync,  // Explained Later
+            }));
+
+            // The initial child Dialog to run.
+            InitialDialogId = nameof(WaterfallDialog);
+       }
+
+
+private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            // Get the token from the previous step. Note that we could also have gotten the
+            // token directly from the prompt itself. There is an example of this in the next method.
+            var tokenResponse = (TokenResponse)stepContext.Result;
+            if (tokenResponse?.Token != null)
+            {
+                var token = tokenResponse.Token;
+
+                // Login Successful, token contains sign in token, do whatever is required with this token 
+
+                return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
+{ Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
+            }
+
+            await stepContext.Context.SendActivityAsync(
+MessageFactory.Text("Login was not successful please try again."), cancellationToken);
+
+            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+        }
 ```
 
 # [JavaScript](#tab/js)
@@ -121,6 +176,7 @@ The consent dialog that appears is for open-id scopes defined in Azure AD. The a
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
+<!--
 ## Add code to receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
@@ -175,6 +231,7 @@ async onSignInInvoke(context) {
 ---
 
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens and refresh them as needed by the app user.
+-->
 
 ### Validate the access token
 
@@ -228,3 +285,27 @@ The following is a typical decoded payload of an access token.
 
 > [!div class="nextstepaction"]
 > [Update Teams app manifest and preview the app](bot-sso-manifest.md)
+
+
+<!--
+Code for requesting access token from live site
+```csharp
+    var attachment = new Attachment
+            {
+                Content = new OAuthCard
+                {
+                    TokenExchangeResource = new TokenExchangeResource
+                    {
+                        Id = requestId
+                    }
+                },
+                ContentType = OAuthCard.ContentType,
+            };
+            var activity = MessageFactory.Attachment(attachment);
+
+            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. 
+            // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
+
+       await turnContext.SendActivityAsync(activity, cancellationToken);
+```
+>
