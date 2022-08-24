@@ -102,7 +102,7 @@ There are two identity types:
 * **User Identity**: Represents the current user of Teams.
 * **Application Identity**: Represents the application itself.
 
-For these two identity types, the TeamsFx constructors and methods are not the same.
+For these two identity types, the TeamsFx constructors and methods aren't the same.
 
 <details>
 <summary><b> User Identity </b></summary>
@@ -188,7 +188,7 @@ Required configuration: `initiateLoginEndpoint`, `clientId`.
 <details>
 <summary><b> User Identity in Node.js environment </b></summary>
 
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. This can be used in Azure Function or bot scenarios. SDK uses this credential when developers choose user identity in Node.js environment.
+`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It can be used in Azure Function or bot scenarios. SDK uses this credential when developers choose user identity in Node.js environment.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
@@ -196,7 +196,7 @@ Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` 
 <details>
 <summary><b> Application Identity in Node.js environment </b></summary>
 
-`AppCredential` represents the application identity. It's used when user isn't involved like time-triggered automation job. SDK uses this credential when developers choose App identity in Node.js environment.
+`AppCredential` represents the application identity. It can be used when user isn't involved, for example in a time-triggered automation job. SDK uses this credential when developers choose App identity in Node.js environment.
 
 Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
@@ -218,8 +218,8 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
 Required configuration:
 
-* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity.
-* `sqlServerEndpoint`, `sqlIdentityId` if you want to use MSI identity.
+* `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required if you want to use user identity.
+* `sqlServerEndpoint`and `sqlIdentityId` are required if you want to use MSI identity.
 
 ### Error handling
 
@@ -597,7 +597,8 @@ Set log level using the following snippet:
 setLogLevel(LogLevel.Warn);
 ```
 
-You can redirect log output by setting custom logger or log function.
+> [!NOTE]
+> You can redirect log output by setting custom logger or log function.
 
 #### Redirect by setting custom logger
 
@@ -608,9 +609,6 @@ setLogger(context.log);
 ```
 
 #### Redirect by setting custom log function
-
-> [!NOTE]
-> Log function will not take effect, if you set a custom logger.
 
 ```ts
 setLogLevel(LogLevel.Info);
@@ -625,9 +623,12 @@ setLogFunction((level: LogLevel, message: string) => {
 });
 ```
 
+> [!NOTE]
+> Log function will not take effect, if you set a custom logger.
+
 ## Upgrade latest SDK version
 
-If you're using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
+If you're using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version:
 
 1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`
 2. Replace `new TeamsUserCredential()` with `new TeamsFx()`
