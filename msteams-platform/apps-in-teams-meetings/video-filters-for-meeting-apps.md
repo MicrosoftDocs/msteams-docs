@@ -207,7 +207,7 @@ The app validation tool checks your app package against the test cases that Micr
 
 To validate your app package using Teams Developer Portal:
 
-1. Go to[Developer Portal](https://dev.teams.microsoft.com/home).
+1. Go to [Developer Portal](https://dev.teams.microsoft.com/home).
 1. From the left pane, select **Apps** > **Import app**.
 1. Upload the manifest.zip file.
 1. In the app overview page, under Teams store validation, select **View details**.
