@@ -63,7 +63,7 @@ After you design your app based on participant roles in a meeting, you can ident
 > [!TIP]
 >
 > * The default participant settings are determined by an organization's IT administrator. As per default settings, participants joining a meeting have the presenter role.
-> * Participant Role is not available in one-on-one call.
+> * Participant role isn't available in one-on-one call.
 > * A user who starts the group call from chat is considered as organizer role.
 
 ## See also
