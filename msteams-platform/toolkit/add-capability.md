@@ -88,7 +88,7 @@ The following table lists the capabilities available that can be added in your p
 
 The following table shows the changes that can be seen in the files of your app when adding the capabilities:
 
-|**Add capability**  |**Changes**  |**Description** |
+|Add capability|Changes|Description|
 |---------|---------|--------------------------|
 |Bot and message extension    |A bot template code is added into a subfolder with path `yourProjectFolder/bot`.|Includes a **hello world** bot application template into your project. |
 |     |Files `launch.json` and `task.json` under `.vscode` folder are updated.|Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |
