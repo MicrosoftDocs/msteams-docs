@@ -102,7 +102,7 @@ You can enable or disable RSC for chats using Graph API. The property `isChatRes
 
    ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
+> The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
 
 ## Register your app with Microsoft identity platform using the Azure AD portal
 
@@ -110,6 +110,12 @@ The Azure AD portal provides a central platform for you to register and configur
 
 > [!WARNING]
 > An Azure AD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
+
+### Register BOT
+
+A bot can currently be registered at three different locations. It would be beneficial to have a separate page for the registrations that explains the various options and their differences, as well as the Microsoft recommended method for production. Ready bots (Azure AD registrations preferred over bot / developer portal bots).
+
+:::image type="content"source="~/assets/images/bot-registration.png" alt-text="Registering a bot":::
 
 ## Review your application permissions in the Azure AD portal
 
