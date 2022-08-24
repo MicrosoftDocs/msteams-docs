@@ -59,7 +59,7 @@ After you have the user or channel information, you must create the conversation
 
 You must create the conversation if it doesn't exist or you don't know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
-You can get the conversation when the app is installed for the first time. After the conversation is created, you must get the conversation ID. The `conversationId` is available in the conversation update events.
+You can get the conversation when the app is installed for the first time. After the conversation is created, you must [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
 If you don't have the `conversationId`, you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
@@ -82,17 +82,16 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
-## Best practices for proactive messaging
+### Understand who blocked, muted, or uninstalled a bot
 
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+As a developer, you can create a per-user report to understand which user has blocked, muted, or uninstalled a bot and drive app usage.
 
-> [!NOTE]
->
-> * You can send a proactive message to the bot to know if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a 403 response with a `subCode` **MessageWritesBlocked** indicating that the chat thread is blocked from message writes.
-> * The 403 response code is sent on a per-user basis.
+You can send a proactive message to the bot using Microsoft Teams to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a 403 response with a `subCode` `MessageWritesBlocked` indicating the user can't receive any messages sent by the bot.
+
+The response code is sent on a per-user basis and includes the identity of each user. You can collate the response code for each user from the user identity to create a report as required.
 
 Example of a 403 response code.
 
@@ -120,6 +119,10 @@ Cache-Control: no-store, must-revalidate, no-cache
 
 {"errorCode":209,"message":"{\r\n  \"subCode\": \"MessageWritesBlocked\",\r\n  \"details\": \"Thread is blocked from message writes.\",\r\n  \"errorCode\": null,\r\n  \"errorSubCode\": null\r\n}"}
 ```
+
+## Best practices for proactive messaging
+
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 ### Welcome messages
 
