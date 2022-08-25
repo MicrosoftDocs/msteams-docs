@@ -9,22 +9,22 @@ ms.topic: conceptual
 
 # Using Fluid with Microsoft Teams
 
-This is a tutorial for integrating Fluid-powered real-time collaboration features into a [Microsoft Teams tab application](platform/tabs/what-are-tabs). By the end of this tutorial you will be able to integrate any Fluid-powered applications into Microsoft Teams and collaborate with others in real-time.
+This is a tutorial for integrating Fluid-powered real-time collaboration features into a [Microsoft Teams tab application](what-are-tabs). By the end of this tutorial you will be able to integrate any Fluid-powered applications into Microsoft Teams and collaborate with others in real-time.
 
 Concepts you will learn:
 1. How to integrate a Fluid client into a Microsoft Teams tab application
-1. How to run and connect your Teams application to a Fluid service (Azure Fluid Relay)
-1. How to create and get Fluid Containers and pass them to a React component
+2. How to run and connect your Teams application to a Fluid service (Azure Fluid Relay)
+3. How to create and get Fluid Containers and pass them to a React component
 
 For an example of how this recipe may be used to build a more complex application, check out the [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
 
 > [!NOTE]
-> This tutorial assumes that you are familiar with the [Fluid Framework Overview](https://fluidframework.com/docs/) and that you have completed the [QuickStart](https://fluidframework.com/docs/start/quick-start/). You should also be familiar with the basics of [React](https://reactjs.org/), [React Hooks](https://reactjs.org/docs/hooks-intro.html), and [Microsoft Teams Tabs](platform/tabs/what-are-tabs).
+> This tutorial assumes that you are familiar with the [Fluid Framework Overview](https://fluidframework.com/docs/) and that you have completed the [QuickStart](https://fluidframework.com/docs/start/quick-start/). You should also be familiar with the basics of [React](https://reactjs.org/), [React Hooks](https://reactjs.org/docs/hooks-intro.html), and [Microsoft Teams Tabs](what-are-tabs).
 
 ## Create the project
 
 1. Open a Command Prompt and navigate to the parent folder where you want to create the project, e.g., `/My Microsoft Teams Projects`.
-2. Create a vanilla Teams tab application by running the below command. See [the Microsoft Teams documentation](platform/tabs/how-to/create-channel-group-tab?tabs=nodejs&pivots=node-java-script) for more information on setting up Teams applications.
+2. Create a vanilla Teams tab application by running the below command. See [the Microsoft Teams documentation](create-channel-group-tab?tabs=nodejs&pivots=node-java-script) for more information on setting up Teams applications.
 
     ```dotnetcli
     yo teams
@@ -260,9 +260,9 @@ If you are running your Teams application locally with Azure Client local mode, 
 npx @fluidframework/azure-local-service@latest
 ```
 
-To run and start the Teams application, open another terminal and follow the [instructions to run the application server](platform/tabs/how-to/create-channel-group-tab?tabs=nodejs&pivots=node-java-script#upload-your-application-to-teams).
+To run and start the Teams application, open another terminal and follow the [instructions to run the application server](create-channel-group-tab?tabs=nodejs&pivots=node-java-script#upload-your-application-to-teams).
 
-Now follow the [instructions to upload the application to a Teams Tab](platform/tabs/how-to/create-channel-group-tab?tabs=nodejs&pivots=node-java-script#upload-your-application-to-teams).
+Now follow the [instructions to upload the application to a Teams Tab](create-channel-group-tab?tabs=nodejs&pivots=node-java-script#upload-your-application-to-teams).
 
 > [!WARNING]
 > Hostnames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. This means that anytime a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, please visit [the section below](#using-azureclient-with-azure-fluid-relay)
