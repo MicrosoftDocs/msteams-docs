@@ -10,6 +10,9 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
+> [!NOTE]
+> After adding authentication to the message extension, the user must add "**token.botframework.com**" to the "**validDomains**" section in the manifest.
+
 ## Identify the user
 
 Every request to your services includes the user ID, the user's display name, and Azure Active Directory object ID.
