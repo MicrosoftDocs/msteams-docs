@@ -175,9 +175,7 @@ If you've created Azure function or bot project using Visual Studio Code Toolkit
 
 ### Credential
 
-Credential and auth flow related classes are under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
-
-You must choose identity type when initializing TeamsFx. After you've specified the identity type, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
+To initialize TeamsFx, you must choose the required identity type. Post specifying the identity type SDK uses different type of credential class. These help represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`. For more information on credential and auth flow related classes,see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
 There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
 
