@@ -14,7 +14,7 @@ TeamsFx helps to reduce your tasks by using Teams Single-Sign-On (Teams SSO) and
 
 * Teams tab
 * Teams bot
-* Azure Function
+* Azure function
 
 You can use the TeamsFx SDK to:
 
@@ -59,7 +59,7 @@ npm install @microsoft/teamsfx
 
 ### Create `MicrosoftGraphClient` service
 
-To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
+you need credentials to create a graph client object and to access the Microsoft Graph API. SDK provides APIs to be configured.
 
 <details>
 <summary><b>Invoke Graph API on behalf of Teams user (User Identity)</b></summary>
