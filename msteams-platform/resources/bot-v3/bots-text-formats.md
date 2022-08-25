@@ -24,6 +24,7 @@ Microsoft Teams supports the following formatting options:
 Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
 Currently, the following limitations apply:
+
 * Text-only messages do not support table formatting.
 
 For information on formatting in cards, see [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
@@ -78,5 +79,5 @@ Support for text formatting varies by type of message and by platform.
 | ordered list | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
+| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | [Bing](https://www.bing.com/) |
 | image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

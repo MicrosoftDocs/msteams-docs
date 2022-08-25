@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Designing your Microsoft Teams bot
 
-Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
+Bots are conversational apps that perform a specific set of tasks. Based on the [Microsoft Bot Framework](https://dev.botframework.com/), bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
 > Bots are available in Government Community Cloud (GCC) and GCC High environments but not in Department of Defense (DoD) environments.
@@ -289,7 +289,7 @@ Use these recommendations to create a quality app experience.
 
 Is your bot's tone friendly and light, “just the facts”, or super quirky? How should it respond in different scenarios? Planning and documenting your bot's persona makes it easier to write responses that seem natural and cohesive.
 
-See more about writing for bots in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma).</a>
+See more about writing for bots in the [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 :::row:::
    :::column span="":::
