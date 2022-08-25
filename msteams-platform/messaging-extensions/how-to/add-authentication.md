@@ -11,7 +11,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 > [!NOTE]
-> The user must add "**token.botframework.com**" to the "**validDomains**" section in the manifest, after adding authentication to the message extension.
+> After adding authentication to the message extension, the user must add "**token.botframework.com**" to the "**validDomains**" section in the manifest.
 
 ## Identify the user
 
