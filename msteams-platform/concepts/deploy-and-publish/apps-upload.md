@@ -97,7 +97,7 @@ If an update is available to your app, then the **Update available** option is e
 
 ### Contextless apps - Upgrade once, upgrade everywhere
 
-When a user updates an app in one thread. The new version of the app is automatically updated in all other installed contexts.
+When a user updates an app in one thread, the new version of the app is automatically updated in all other installed contexts.
 
 1. Go to Teams apps store > Select manage apps
 
