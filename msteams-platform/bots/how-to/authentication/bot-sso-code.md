@@ -57,13 +57,15 @@ The request to get the token is a POST message request using the existing messag
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+Update your app's code with the following code snippets:
 
-```csharp
-base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-```
+1. Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code:
 
-Use the following code snippet for requesting a token without needing the app user to sign-in.
+    ```csharp
+    base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+    ```
+
+1. Use the following code snippet for requesting a token without needing the app user to sign-in.
 
 # [csharp](#tab/cs)
 
@@ -96,13 +98,6 @@ public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
             InitialDialogId = nameof(WaterfallDialog);
        }
 
-
-private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
-        }
-```
-
 # [JavaScript](#tab/js)
 
 ```JavaScript
@@ -118,6 +113,7 @@ await context.sendActivity({
     attachments: [attachment]
 });
 ```
+
 ---
 
 ### Consent dialog for getting access token
@@ -142,7 +138,6 @@ The consent dialog that appears is for open-id scopes defined in Azure AD. The a
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
-
 ## Add code to receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
@@ -156,6 +151,11 @@ Use the following code snippet to invoke response:
 # [csharp](#tab/csharp)
 
 ```csharp
+private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
+        }
+
 private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             // Get the token from the previous step. Note that we could also have gotten the
@@ -165,14 +165,14 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
             {
                 var token = tokenResponse.Token;
 
-                // Login Successful, token contains sign in token, do whatever is required with this token 
+            // Login Successful, token contains sign in token, do whatever is required with this token 
 
-                return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
-{ Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
+            return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
+            { Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
             }
 
             await stepContext.Context.SendActivityAsync(
-MessageFactory.Text("Login was not successful please try again."), cancellationToken);
+            MessageFactory.Text("Login was not successful please try again."), cancellationToken);
 
             return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
         }
@@ -272,5 +272,28 @@ Code for requesting access token from live site
             // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
 
        await turnContext.SendActivityAsync(activity, cancellationToken);
+```
+Code for receiving access token from live site
+```csharp
+    protected override async Task<InvokeResponse> OnInvokeActivityAsync
+    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+            {
+                try
+                {
+                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
+                    {
+                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
+                        return new InvokeResponse() { Status = 200 };
+                    }
+                    else
+                    {
+                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
+                    }
+                }
+                catch (InvokeResponseException e)
+                {
+                    return e.CreateInvokeResponse();
+                }
+            }
 ```
 >
