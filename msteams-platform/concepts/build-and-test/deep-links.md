@@ -17,11 +17,7 @@ The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of na
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
-> * This topic reflects version 2.0.x of the Microsoft Teams JavaScript client SDK. If you are using an earlier version, refer to the Teams JS SDK overview for guidance on the differences between the latest TeamsJS and earlier versions.
->
-> * It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
-> * The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
+> The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
 >
 > **Tab**:  
 > ✔ Directly navigates to the deep link url.
