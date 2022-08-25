@@ -526,6 +526,8 @@ This section provides several code snippets for common scenarios. Most of the sc
 
     </details>
 
+    For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
+
 * Other scenario:
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
