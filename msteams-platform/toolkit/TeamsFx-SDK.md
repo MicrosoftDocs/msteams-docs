@@ -269,7 +269,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     await teamsfx.login(["User.Read"]); // Login with scope
     ```
 
-    3. Initial a TeamsFx instance and graph client and get information from MS Graph by this client.
+    3. Initialize a TeamsFx instance and graph client and get information from MS Graph by this client.
 
     ```ts
     try {
