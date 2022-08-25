@@ -65,7 +65,7 @@ Update your app's code with the following code snippets:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-1. Use the following code snippet for requesting a token without needing the app user to sign-in.
+1. Use the following code snippet for requesting a token<!--without needing the app user to sign-in-->.
 
 # [csharp](#tab/cs)
 
@@ -97,6 +97,7 @@ public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
        }
+```
 
 # [JavaScript](#tab/js)
 
