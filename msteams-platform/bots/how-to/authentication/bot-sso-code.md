@@ -197,7 +197,8 @@ async onSignInInvoke(context) {
 ```
 ---
 
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens and refresh them as needed by the app user.
+<!--
+The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens and refresh them as needed by the app user.-->
 
 ### Validate the access token
 
