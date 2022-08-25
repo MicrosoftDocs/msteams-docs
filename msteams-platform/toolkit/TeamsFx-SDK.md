@@ -53,7 +53,7 @@ npm install @microsoft/teamsfx
 To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
 
 <details>
-<summary><b>Invoke Graph API on behalf of Teams User (User Identity)</b></summary>
+<summary><b>Invoke Graph API on behalf of Teams user (User Identity)</b></summary>
 
 Use the following snippet:
 
@@ -136,8 +136,10 @@ You can pass custom config when creating a new `TeamsFx` instance to override de
 
 <details>
 <summary><b>
-If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
+For tab project
 </b> </summary>
+
+If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
 
 * authorityHost (REACT_APP_AUTHORITY_HOST)
 * tenantId (REACT_APP_TENANT_ID)
@@ -151,8 +153,10 @@ If you've created tab project using Microsoft Visual Studio Code Toolkit, the fo
 
 <details>
 <summary><b>
-If you've created Azure Function / bot project using Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
+For Azure function or bot project
 </b></summary>
+
+If you've created Azure function or bot project using Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
 
 * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
 * authorityHost (M365_AUTHORITY_HOST)
