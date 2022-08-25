@@ -26,7 +26,7 @@ See the following video to learn more about link unfurling:
 > [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
-## Add link unfurling to your app manifest
+### Add link unfurling to your app manifest
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
@@ -77,7 +77,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 You can add link unfurling to your Teams without installing app. Users can unfurl links without the message extension. It allows developers to create pre-authenticated Adaptive Card previews for users to view before they install or authenticate. The domain regex in the manifest triggers link unfurling.
 
-## Handle the `composeExtension/queryLink` invoke
+### Handle the `composeExtension/queryLink` invoke
 
 After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
