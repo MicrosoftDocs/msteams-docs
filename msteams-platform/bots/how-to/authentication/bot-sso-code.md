@@ -57,7 +57,7 @@ The request to get the token is a POST message request using the existing messag
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-Add the following code snippet to the class that handles error codes. In this example the class used is `AdapterWithErrorHandler.cs`:
+Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
 ```csharp
 base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
@@ -101,27 +101,6 @@ private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepCo
         {
             return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
         }
-
-private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            // Get the token from the previous step. Note that we could also have gotten the
-            // token directly from the prompt itself. There is an example of this in the next method.
-            var tokenResponse = (TokenResponse)stepContext.Result;
-            if (tokenResponse?.Token != null)
-            {
-                var token = tokenResponse.Token;
-
-                // Login Successful, token contains sign in token, do whatever is required with this token 
-
-                return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
-{ Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
-            }
-
-            await stepContext.Context.SendActivityAsync(
-MessageFactory.Text("Login was not successful please try again."), cancellationToken);
-
-            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
-        }
 ```
 
 # [JavaScript](#tab/js)
@@ -163,7 +142,7 @@ The consent dialog that appears is for open-id scopes defined in Azure AD. The a
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
-<!--
+
 ## Add code to receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
@@ -177,26 +156,26 @@ Use the following code snippet to invoke response:
 # [csharp](#tab/csharp)
 
 ```csharp
-    protected override async Task<InvokeResponse> OnInvokeActivityAsync
-    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            // Get the token from the previous step. Note that we could also have gotten the
+            // token directly from the prompt itself. There is an example of this in the next method.
+            var tokenResponse = (TokenResponse)stepContext.Result;
+            if (tokenResponse?.Token != null)
             {
-                try
-                {
-                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
-                    {
-                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
-                        return new InvokeResponse() { Status = 200 };
-                    }
-                    else
-                    {
-                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
-                    }
-                }
-                catch (InvokeResponseException e)
-                {
-                    return e.CreateInvokeResponse();
-                }
+                var token = tokenResponse.Token;
+
+                // Login Successful, token contains sign in token, do whatever is required with this token 
+
+                return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
+{ Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
             }
+
+            await stepContext.Context.SendActivityAsync(
+MessageFactory.Text("Login was not successful please try again."), cancellationToken);
+
+            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+        }
 ```
 
 # [JavaScript](#tab/javascript)
@@ -218,7 +197,6 @@ async onSignInInvoke(context) {
 ---
 
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens and refresh them as needed by the app user.
--->
 
 ### Validate the access token
 
