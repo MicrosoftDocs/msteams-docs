@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to add link unfurling to your app manifest using Developer Portal or manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area. You can respond with a card that the user can unfurl for additional information or actions. This works as a search command with the URL as the search term.
+This document guides you on how to add link unfurling to your app manifest using App studio and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to your Teams without installing app.
 
 > [!NOTE]
 >
@@ -23,7 +23,7 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -72,6 +72,10 @@ To enable your message extension to interact with links, first you must add the 
 ```
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
+
+### Add link unfurling without installing app
+
+You can add link unfurling to your Teams without installing app. Users can unfurl links without the message extension. It allows developers to create pre-authenticated Adaptive Card previews for users to view before they install or authenticate. The domain regex in the manifest triggers link unfurling.
 
 ## Handle the `composeExtension/queryLink` invoke
 
