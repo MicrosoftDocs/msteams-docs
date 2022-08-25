@@ -454,9 +454,10 @@ Following are the status codes and their error code and message values:
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
+|Sample name | Description | .NETCore | Node.js | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+|Teams app localization | Teams app localization using bot and tab. | | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) ||| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## Next step
 
@@ -469,3 +470,4 @@ Following are the status codes and their error code and message values:
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Localize your app](../../../concepts/build-and-test/apps-localization.md)
