@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Using Fluid with Microsoft Teams
 
-This is a tutorial for integrating Fluid-powered real-time collaboration features into a [Microsoft Teams tab application](what-are-tabs). By the end of this tutorial you will be able to integrate any Fluid-powered applications into Microsoft Teams and collaborate with others in real-time.
+This is a tutorial for integrating Fluid-powered real-time collaboration features into a [Microsoft Teams tab application](~/tabs/how-to/what-are-tabs.md). By the end of this tutorial you will be able to integrate any Fluid-powered applications into Microsoft Teams and collaborate with others in real-time.
 
 Concepts you will learn:
 1. How to integrate a Fluid client into a Microsoft Teams tab application
@@ -19,7 +19,7 @@ Concepts you will learn:
 For an example of how this recipe may be used to build a more complex application, check out the [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
 
 > [!NOTE]
-> This tutorial assumes that you are familiar with the [Fluid Framework Overview](https://fluidframework.com/docs/) and that you have completed the [QuickStart](https://fluidframework.com/docs/start/quick-start/). You should also be familiar with the basics of [React](https://reactjs.org/), [React Hooks](https://reactjs.org/docs/hooks-intro.html), and [Microsoft Teams Tabs](what-are-tabs).
+> This tutorial assumes that you are familiar with the [Fluid Framework Overview](https://fluidframework.com/docs/) and that you have completed the [QuickStart](https://fluidframework.com/docs/start/quick-start/). You should also be familiar with the basics of [React](https://reactjs.org/), [React Hooks](https://reactjs.org/docs/hooks-intro.html), and [Microsoft Teams Tabs](~/tabs/how-to/what-are-tabs.md).
 
 ## Create the project
 
