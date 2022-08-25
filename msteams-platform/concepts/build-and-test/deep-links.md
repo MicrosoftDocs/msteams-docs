@@ -14,6 +14,14 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 
 The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or even launching a chat dialog, the SDK provides typed APIs that make for an improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
 
+> [!NOTE]
+>
+> * This topic reflects version 2.0.x of the Microsoft Teams JavaScript client SDK. If you are using an earlier version, refer to the Teams JS SDK overview for guidance on the differences between the latest TeamsJS and earlier versions.
+>
+> * It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
+
+This topic reflects version 2.0.x of the Microsoft Teams JavaScript client SDK. If you are using an earlier version, refer to the Teams JS SDK overview for guidance on the differences between the latest TeamsJS and earlier versions.
+
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
