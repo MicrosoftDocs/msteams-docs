@@ -67,55 +67,55 @@ Update your app's code with the following code snippets:
 
 1. Use the following code snippet for requesting a token<!--without needing the app user to sign-in-->.
 
-# [csharp](#tab/cs)
-
-```csharp
-public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
-      : base(nameof(MainDialog), configuration["ConnectionName"])
-        {
-            Logger = logger;
-
-            AddDialog(new OAuthPrompt(
-                nameof(OAuthPrompt),
-                new OAuthPromptSettings
-                {
-                    ConnectionName = ConnectionName,
-                    Text = "Please Sign In",
-                    Title = "Sign In",
-                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
-                    EndOnInvalidMessage = true
-                }));
-
-            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-
-            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
+    # [csharp](#tab/cs)
+    
+    ```csharp
+    public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
+          : base(nameof(MainDialog), configuration["ConnectionName"])
             {
-                PromptStepAsync, // Explained Later
-                LoginStepAsync,  // Explained Later
-            }));
-
-            // The initial child Dialog to run.
-            InitialDialogId = nameof(WaterfallDialog);
-       }
-```
-
-# [JavaScript](#tab/js)
-
-```JavaScript
-var attachment = {
-    content: {
-        tokenExchangeResource: {
-            id: requestId
-                }
-            },
-    contentType: "application/vnd.microsoft.card.oauth",
-};
-await context.sendActivity({
-    attachments: [attachment]
-});
-```
-
----
+                Logger = logger;
+    
+                AddDialog(new OAuthPrompt(
+                    nameof(OAuthPrompt),
+                    new OAuthPromptSettings
+                    {
+                        ConnectionName = ConnectionName,
+                        Text = "Please Sign In",
+                        Title = "Sign In",
+                        Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
+                        EndOnInvalidMessage = true
+                    }));
+    
+                AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
+    
+                AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
+                {
+                    PromptStepAsync, // Explained Later
+                    LoginStepAsync,  // Explained Later
+                }));
+    
+                // The initial child Dialog to run.
+                InitialDialogId = nameof(WaterfallDialog);
+           }
+    ```
+    
+    # [JavaScript](#tab/js)
+    
+    ```JavaScript
+    var attachment = {
+        content: {
+            tokenExchangeResource: {
+                id: requestId
+                    }
+                },
+        contentType: "application/vnd.microsoft.card.oauth",
+    };
+    await context.sendActivity({
+        attachments: [attachment]
+    });
+    ```
+    
+    ---
 
 ### Consent dialog for getting access token
 
