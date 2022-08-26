@@ -17,7 +17,6 @@ The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of na
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
 >
 > **Tab**:  
