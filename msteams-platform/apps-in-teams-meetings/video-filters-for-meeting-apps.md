@@ -143,7 +143,7 @@ The following is an example of a manifest for a video filter app:
         "thumbnail": "PreviewEffect.png" // A relative path to the filter thumbnail.png
       }
     ],
-    // Video app web page url for both processing video frames and ustomization experience. The domain should be one of **validDomain**。
+    // Video app web page url for both processing video frames and customization experience. The domain should be one of **validDomain**。
     "videoAppContentUrl": "https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html"
   }
 }
