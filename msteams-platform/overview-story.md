@@ -15,7 +15,7 @@ Take a look at this scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="A developer at a travel agency builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates":::
 
-As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
+As a developer, you want a way to share important, and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 
 Let’s dig deeper into this story and find out.
 
