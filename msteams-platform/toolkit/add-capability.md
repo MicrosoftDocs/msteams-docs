@@ -88,7 +88,7 @@ The following table lists the capabilities available that can be added in your p
 
 The following table shows the changes that can be seen in the files of your app when adding the capabilities:
 
-|Add capability|Description|Changes| &nbsp; |
+|Add capability|Description| &nbsp; |Changes|
 |------------|------------------------|---------|--------|
 |Bot and message extension | &nbsp; |
 | &nbsp; |Includes a **hello world** bot application template into your project.|A bot template code is added into a subfolder with path `yourProjectFolder/bot`.|
