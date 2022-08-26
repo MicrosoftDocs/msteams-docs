@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
     
     > [!NOTE]
-    > In this tutorial, you'll create a tab app with Javascript.
+    > In this tutorial, you'll create a tab app with JavaScript.
 
     In this tutorial, you'll learn:
 
@@ -46,7 +46,7 @@ items:
    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
-   | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; | [Microsoft&nbsp;Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | **Optional** | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
@@ -118,7 +118,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -140,7 +140,7 @@ items:
 
    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
    1. Select **Join Now** and follow the onscreen instructions.
-   1. In the welcome screen, select **Set up E5 subscription**.
+   1. In the welcome screen, select **Setup E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
@@ -287,7 +287,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
+    1. Select **Sign-in to Microsoft 365**.
 
         Your default web browser opens to let you sign in to the account.
 
@@ -306,7 +306,7 @@ items:
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login m365
+        teamsfx account log in m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -314,7 +314,7 @@ items:
     2. Sign in to Azure with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login azure
+        teamsfx account log in Azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -412,10 +412,10 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the tab app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
+    1. Select **Sign-in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Sign in to your Azure account using your credentials.
@@ -425,7 +425,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -433,7 +433,7 @@ items:
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login m365
+        teamsfx account log in m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -441,14 +441,14 @@ items:
     2. Sign in to Azure with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login azure
+        teamsfx account login Azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
