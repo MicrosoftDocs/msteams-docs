@@ -632,11 +632,8 @@ items:
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
     
     > [!NOTE]
-<<<<<<< Updated upstream
+
     > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
-=======
-    > Currently the Teams Developer App supports only first party apps. Use the [Developer Portal](https://dev.teams.microsoft.com/home) for third party apps to preview.
->>>>>>> Stashed changes
 
     ## Preview your app in Teams
 
@@ -644,7 +641,7 @@ items:
 
     To preview your app:
 
-    1. Select **Preview in Teams** from the Developer Portal toolbar.
+    1. Select **Preview in Teams** from the Developer Portal toolbar
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button":::
 
