@@ -633,9 +633,7 @@ items:
     
     > [!NOTE]
 
-    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
-
-    ## Preview your app in Teams
+    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app in Teams or Teams store due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
 
     After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
 
