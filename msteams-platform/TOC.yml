@@ -234,7 +234,7 @@
       href: concepts/build-and-test/shared-channels.md
     - name: Build tabs with Adaptive Cards
       href: tabs/how-to/build-adaptive-card-tabs.md
-    - name: Using Fluid with Microsoft Teams
+    - name: Use Fluid with Microsoft Teams
       href: tabs/how-to/using-fluid-msteam.md
     - name: Tabs link unfurling and Stage View
       href: tabs/tabs-link-unfurling.md
