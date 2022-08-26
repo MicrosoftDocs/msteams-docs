@@ -15,6 +15,9 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Message extensions
 * Connectors
 
+> [!IMPORTANT]
+> Since Teams Toolkit is launched now, we recommend you to download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and build Teams Bot app which performs same behavior instead of creating Incoming Webhooks. You can start with [Build your first notification bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Learn more at [Teams Toolkit documents](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+
 See the following video to learn how to create an Incoming Webhooks:
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
@@ -90,9 +93,9 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name           | Description | C#    | Node.js   |
+| Sample Name           | Description | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|Incoming Webhook|This sample code demonstrates how to send card using incoming webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|Incoming Webhook|This sample code demonstrates how to send card using incoming webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ## See also
 
