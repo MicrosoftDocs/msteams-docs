@@ -16,6 +16,9 @@ A proactive message is any message sent by a bot that isn't in response to a req
 * Scheduled messages
 
 > [!IMPORTANT]
+> Since Teams Toolkit is launched now, we recommend you to download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and build Teams Bot sending proactive messages. You can start with [Build your first notification bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) or [Build your first Teams bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-bot). Learn more at [Teams Toolkit documents](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+
+> [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
 >
 > For proactive messages the bots should use the following end points for government cloud environments:
