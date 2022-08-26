@@ -262,7 +262,7 @@ This section provides several code snippets for common scenarios. Most of the sc
     <details>
     <summary><b>Use graph API in tab app</b></summary>
 
-    Use `TeamsFx` and `createMicrosoftGraphClient`. This code snippet also shows you how to catch and handle a `GraphError`.
+    This code snippet shows you how to use `TeamsFx` and `createMicrosoftGraphClient` to get user profiles from Microsoft Graph. It also shows you how to catch and handle a `GraphError`.
 
     1. Import the classes needed.
 
@@ -358,6 +358,8 @@ This section provides several code snippets for common scenarios. Most of the sc
     <details>
     <summary><b>Use Graph API in bot Application</b></summary>
 
+    This code snippet shows you how to use `TeamsBotSsoPrompt` to set a dialog and then sign-in to get an access token.
+
     1. Initialize and add `TeamsBotSsoPrompt` to dialog set.
 
     ```ts
@@ -404,6 +406,8 @@ This section provides several code snippets for common scenarios. Most of the sc
 
     <details>
     <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
+
+    This code snippet shows you how to use `CreateApiClient` or `axios` library to call Azure Function, and how to call Graph API in Azure function to get user profiles. 
 
     1. You can use `CreateApiClient` provided by TeamsFx sdk to call Azure Function:
 
@@ -481,6 +485,8 @@ This section provides several code snippets for common scenarios. Most of the sc
     <details>
     <summary><b>Use certificate-based authentication in Azure Function</b></summary>
 
+    This code snippet shows you how to use certificate-based application permission to get the token, which can be used to call Graph API.
+
     1. Initialize the `authConfig` by providing a `PEM-encoded key certificate`.
 
     ```ts
@@ -505,6 +511,8 @@ This section provides several code snippets for common scenarios. Most of the sc
     <details>
     <summary><b>Use client secret authentication in Azure Function</b></summary>
 
+    This code snippet shows you how to use client secret application permission to get the token, which can be used to call Graph API.
+
     1. Initialize the `authConfig` by providing a `client secret`.
 
     ```ts
@@ -524,15 +532,15 @@ This section provides several code snippets for common scenarios. Most of the sc
     const token = teamsfx.getCredential().getToken();
     ```
 
-    </details>
-
     For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
+
+    </details>
 
 * Other scenario:
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
-  Basically, you can refer to the following snippet to call an existing API in Bot.(`ApiKeyProvider`)
+  This code snippet shows you how to call an existing API in Bot by `ApiKeyProvider`.
 
   ```ts
   const teamsfx = new TeamsFx();
