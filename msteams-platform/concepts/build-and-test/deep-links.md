@@ -384,7 +384,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
 
 > [!NOTE]
-> If your app has been approved for mobile platform, you can use deep link to an app on mobile. An additional check of Apple App Store Connect Team ID is required for the deep linking to work on Teams-iOS. For more information on the steps to update Apple App Store Connect Team ID, see how to [create your Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account#update-apple-app-store-connect-team-id-on-partner-center). 
+> If your app has been approved for mobile platform, you can deep link to an app on mobile. An additional check of Apple App Store Connect Team ID is required for the deep linking to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](~/deploy-and-publish/appsource/prepare/create-partner-center-dev-account#update-apple-app-store-connect-team-id-on-partner-center).
 
 ### Deep linking for SharePoint Framework tabs
 
