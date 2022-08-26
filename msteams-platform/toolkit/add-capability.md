@@ -10,17 +10,19 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams apps
 
-Adding capabilities with Teams Toolkit helps you to include additional features to your existing Teams app. The advantage of adding more capabilities is that you can add more function to your app by automatically adding source codes using Teams Toolkit. The following table lists the Teams app capabilities:
+Adding capabilities with Teams Toolkit helps you to include additional features to your existing Teams app. The advantage of adding more capabilities is that you can add more function to your app by automatically adding source codes using Teams Toolkit. You can also choose different capabilities based on project you've created in your Teams app. The following table lists the Teams app capabilities:
 
-|**Capability**|**Description**|
-|--------|-------------|
+|Capability|Description|Other supported capabilities|
+|--------|-------------|-----------------|
 |**Basic Teams app**|              |
-| Tabs |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
-| Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
-| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
+| Tab |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Tab, notification bot, command bot, bot, message extension|
+|SPFx tab|           |None|
+|SSO-enabled tab|           |SSO-enabled tab, notification bot, command bot, bot, message extension|
+| Bot |  Bots help to interact with your web service through text, interactive cards, and task modules.|Message extension, SSO-enabled tab, tab|
+| Message extension | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Bot, SSO-enabled tab, tab|
 |**Scenario-based Teams app**|             |
-| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |
-| Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |
+| Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab, tab|
+| Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |SSO-enabled tab, tab|
 
 > [!NOTE]
 > You can add tabs up to 16 instances. As for your bot and message extension, you can add one for each instance at a time.
@@ -68,21 +70,6 @@ You can add capabilities by the following methods:
   |To add tab |`teamsfx add tab`|
   |To add bot |`teamsfx add bot`|
   |To add message extension |`teamsfx add message extension`|
-
-## Capabilities available for different Teams project
-
-You can choose to add different capabilities based on project you've created in your Teams app.
-The following table lists the capabilities available that can be added in your project:
-
-|Existing app capabilities|Other supported capabilities|
-|--------------------|--------------------|
-|SPFx tab |None|
-|SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
-|Notification bot |SSO-enabled tab, tab|
-|Command bot |SSO-enabled tab, tab|
-|Tab |Tab, notification bot, command bot, bot, message extension|
-|Bot |Message extension, SSO-enabled tab, tab|
-|Message extension |Bot, SSO-enabled tab, tab |
 
 ## Changes after adding capabilities
 
