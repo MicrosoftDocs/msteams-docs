@@ -90,7 +90,7 @@ The following table shows the changes that can be seen in the files of your app 
 
 |Add capability|Description| Changes|
 |------------|------------------------|---------|
-|Bot and message extension | &nbsp; |
+|Bot and message extension | &nbsp; |&nbsp; |
 | &nbsp; |Includes a **hello world** bot application template into your project.|A bot template code is added into a subfolder with path `yourProjectFolder/bot`.|
 | &nbsp; |Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
 | &nbsp; |Includes bot related information in the manifest file that represents your application in Teams Platform.|File`manifest.template.json` under `templates/appPackage` folder is updated. The changes are visible in ID of your bot, scopes of your bot, and The commands that hello world bot application can respond to.|
