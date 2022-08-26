@@ -35,6 +35,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Link unfurling for share to teams from web apps | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | Add the Teams display picture and people card for in-meeting notification| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [In-meeting notification](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Build shared channels in Teams | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Introduced app manifest v1.14| App manifest > [App manifest schema for Teams](resources/schema/manifest-schema.md)|
