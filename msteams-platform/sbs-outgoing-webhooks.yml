@@ -2,7 +2,7 @@
 title: Build Outgoing Webhooks
 metadata:
   title: Build Outgoing Webhooks
-  description: In this tutorial, you'll learn to set up Outgoing Webhooks for Teams.
+  description: With this learning module, learn how to set up Outgoing Webhooks for Microsoft Teams to integrate with external apps.
   audience: Developer
   level: Beginner
   ms.date: 14/01/2022
@@ -108,7 +108,7 @@ items:
 
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-           ![Open file](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)
+           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
 
        1. Select **WebhookSampleBot.sln** file from **csharp** folder.
 

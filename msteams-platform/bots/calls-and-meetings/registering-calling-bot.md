@@ -1,9 +1,8 @@
 ---
 title: Register calls and meetings bot for Microsoft Teams
-description: Learn how to register a new audio/video calling bot for Microsoft Teams, create a new bot or add calling capability, and add graph permissions.
+description: In this module, learn how to register a new audio/video calling bot for Microsoft Teams, create a new bot or add calling capability, and add graph permissions.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: calling bot audio/video audio video media
 ---
 # Register calls and meetings bot for Microsoft Teams
 
@@ -53,7 +52,7 @@ The following table provides a list of application permissions for calls:
 |Permission    |Display string   |Description |Admin consent required |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Initiate outgoing 1:1 calls from the app preview. |Allows the app to place outbound calls to a single user and transfer calls to users in your organization’s directory, without a signed-in user.|Yes|
-| Calls.InitiateGroupCall.All |Initiate outgoing group calls from the app preview. |Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.|Yes|
+| Calls.InitiateGroupCall.All |Initiate outgoing 1:1 and group calls from the app preview. |Allows the app to place outbound calls to a single user, multiple users, transfer calls and add participants to meetings in your organization, without a signed-in user.|Yes|
 | Calls.JoinGroupCall.All |Join group calls and meetings as an app preview. |Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app is joined with the privileges of a directory user to meetings in your tenant.|Yes|
 | Calls.JoinGroupCallasGuest.All |Join group calls and meetings as a guest preview. |Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app is joined as a guest to meetings in your tenant.|Yes|
 | Calls.AccessMedia.All |Access media streams in a call as an app preview. |Allows the app to get direct access to media streams in a call, without a signed-in user.|Yes|

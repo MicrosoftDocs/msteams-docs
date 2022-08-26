@@ -1,10 +1,9 @@
 ---
 title: Send proactive messages
-description: Learn how to send proactive messages with your Microsoft Teams bot, proactively install your app using Microsoft Graph and check the code samples based on Bot Framework SDK v4.
+description: Learn how to send proactive messages with your Teams bot, install your app using Microsoft Graph and check code samples based on Bot Framework SDK v4
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-Keywords: send a message get user ID channel ID conversation ID
 ---
 # Proactive messages
 
@@ -20,8 +19,9 @@ A proactive message is any message sent by a bot that isn't in response to a req
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
 >
 > For proactive messages the bots should use the following end points for government cloud environments:
->    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
->    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+>
+> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
+> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
@@ -59,7 +59,9 @@ After you have the user or channel information, you must create the conversation
 
 You must create the conversation if it doesn't exist or you don't know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
-After the conversation is created, you must get the conversation ID.
+You can get the conversation when the app is installed for the first time. After the conversation is created, you must get the conversation ID. The `conversationId` is available in the conversation update events.
+
+If you don't have the `conversationId` you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
 ## Get the conversation ID
 
@@ -71,7 +73,17 @@ After you get the appropriate address information, you can send your message.
 
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
+> [!NOTE]
+> Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
+
 Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
+
+See the following video to learn how to send proactive message from bots:
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## Best practices for proactive messaging
 
@@ -275,6 +287,7 @@ The following table provides a simple code sample that incorporates basic conver
 | Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Start new thread in a channel | Demonstrates creating a new thread in a channel. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 | Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Proactive Messaging | This is a sample which shows how to save user's conversation reference information to send proactive reminder message using Bots. | Coming soon | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
 
 ### Additional code sample
 
@@ -283,7 +296,7 @@ The following table provides a simple code sample that incorporates basic conver
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-send-proactive.yml), which helps you to send a proactive message from a bot.
+Follow the step-by-step guide to [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml), which helps you to send a proactive message from a bot.
 
 ## Next step
 
@@ -296,3 +309,5 @@ Follow the [step-by-step guide](../../../sbs-send-proactive.yml), which helps yo
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
+* [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
+* [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)

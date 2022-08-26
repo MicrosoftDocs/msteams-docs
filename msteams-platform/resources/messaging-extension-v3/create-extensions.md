@@ -1,9 +1,8 @@
 ---
 title: Initiate actions with message extensions
-description: Create Action-based message extensions to allow users to trigger external services
+description: In this module, learn create Action-based message extensions to allow users to trigger external services
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams message extensions message extensions search
 ---
 # Initiate actions with message extensions
 
@@ -20,6 +19,9 @@ The following sections describe how to do this:
 ## Action type message extensions
 
 To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
+
+ > [!NOTE]
+ >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
 
 ### Complete app manifest example
 
@@ -440,8 +442,9 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
->[!Note]
->The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
+> [!NOTE]
+> The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
+
 
 ```json
 {
