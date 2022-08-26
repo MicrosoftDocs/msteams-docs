@@ -29,6 +29,9 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
 
+> [!NOTE]
+> It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
+
 The following code provides an example of how your page and the Teams client communicate:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
