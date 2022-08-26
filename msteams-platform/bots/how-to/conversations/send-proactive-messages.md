@@ -23,7 +23,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 > * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
 > * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
-For your bot to send a proactive message to a user, a group chat, or a team, it must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
+To send a proactive message to a user, a group chat, or a team, your bot must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use a [custom app policy](/microsoftteams/teams-custom-app-policies-and-settings) to install an app in your teams and for organization's users. For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). For a user to receive proactive messages, install the app for the user or make the user a part of a team in which the app is installed.
 
@@ -88,7 +88,7 @@ See the following video to learn how to send proactive message from bots:
 
 As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled a bot. This information may help your organization's admins to broadcast org-wide messages or drive app usage.
 
-You can send a proactive message to the bot using Teams to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the bot isn't delivered to the user.
+Using Teams, you can send a proactive message to the bot to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the bot isn't delivered to the user.
 
 The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the bot.
 
@@ -125,9 +125,9 @@ Sending proactive messages to the users is an effective way to communicate with 
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome messages and iterate on the welcome messages if those aren't having the desired effect.
+When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
 
-A good welcome messages can include the following:
+A good welcome message can include the following:
 
 * Reason for the message - It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
@@ -137,7 +137,7 @@ A good welcome messages can include the following:
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
 
 * What happened? A clear indication of what happened to cause the notification.
 
@@ -147,7 +147,7 @@ To send notifications using proactive messaging, ensure your users have a clear 
 
 * What can users do in response? Make it easy for your users to take actions based on your notifications.
 
-* How can users opt-out? You must provide a path for users to opt-out of additional notifications.
+* How can users opt-out? You must provide a path for users to opt-out of more notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
@@ -322,12 +322,10 @@ The following table provides a simple code sample that incorporates basic conver
 | Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Start new thread in a channel | Demonstrates creating a new thread in a channel. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 | Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
-| Proactive Messaging | This is a sample which shows how to save user's conversation reference information to send proactive reminder message using Bots. | Coming soon | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
-
-### Additional code sample
+| Proactive Messaging | This is a sample that shows how to save user's conversation reference information to send proactive reminder message using Bots. | Coming soon | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
 
 > [!div class="nextstepaction"]
-> [Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [More code sample of proactive messaging](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
 ## Next step
 
