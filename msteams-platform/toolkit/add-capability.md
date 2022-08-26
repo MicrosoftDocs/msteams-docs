@@ -88,20 +88,20 @@ The following table lists the capabilities available that can be added in your p
 
 The following table shows the changes that can be seen in the files of your app when adding the capabilities:
 
-|Add capability|Changes|Description| &nbsp; |
-|------------|---------|--------------------------|--------|
+|Add capability|Description|Changes| &nbsp; |
+|------------|------------------------|---------|--------|
 |Bot and message extension | &nbsp; |
-| &nbsp; |A bot template code is added into a subfolder with path `yourProjectFolder/bot`.|Includes a **hello world** bot application template into your project.|
-| &nbsp; |Files `launch.json` and `task.json` under `.vscode` folder are updated.|Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |
-| &nbsp; |File`manifest.template.json` under `templates/appPackage` folder is updated. The changes are visible in ID of your bot, scopes of your bot, and The commands that hello world bot application can respond to.|Includes bot related information in the manifest file that represents your application in Teams Platform.|
-| &nbsp; |Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep files are regenerated.|                  |
-| &nbsp; |Files under `.fx/config` are regenerated|Ensures your project is set with right configurations for newly added capability.|
+| &nbsp; |Includes a **hello world** bot application template into your project.|A bot template code is added into a subfolder with path `yourProjectFolder/bot`.|
+| &nbsp; |Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
+| &nbsp; |Includes bot related information in the manifest file that represents your application in Teams Platform.|File`manifest.template.json` under `templates/appPackage` folder is updated. The changes are visible in ID of your bot, scopes of your bot, and The commands that hello world bot application can respond to.|
+| &nbsp; |                  |Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep files are regenerated.|
+| &nbsp; |Ensures your project is set with right configurations for newly added capability.|Files under `.fx/config` are regenerated|
 |Tab | &nbsp; |
-| &nbsp; |A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`.|Includes a **hello world** tab application template into your project. |
-| &nbsp; |Files `launch.json` and `task.json` under `.vscode` folder are updated.|Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |
-| &nbsp; |`manifest.template.json` file under `templates/appPackage` folder is updated. The changes are visible in configurable and static tabs, and scopes of the tabs.|Includes tab-related information in the manifest file that represents your application in the Teams Platform. |
-| &nbsp; |Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep file is regenerated.|          |
-| &nbsp; |File under `.fx/config` is regenerated.|Ensures your project is set with right configurations for newly added capability. |
+| &nbsp; |Includes a **hello world** tab application template into your project. |A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`.|
+| &nbsp; |Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
+| &nbsp; |Includes tab-related information in the manifest file that represents your application in the Teams Platform. |`manifest.template.json` file under `templates/appPackage` folder is updated. The changes are visible in configurable and static tabs, and scopes of the tabs.|
+| &nbsp; |          |Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep file is regenerated.|
+| &nbsp; |Ensures your project is set with right configurations for newly added capability. |File under `.fx/config` is regenerated.|
 
 ## Step-by-step guide
 
