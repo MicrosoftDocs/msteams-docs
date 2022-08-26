@@ -146,7 +146,7 @@ Runs tasks as defined in `.vscode/tasks.json`.
 |  Bot or message extensions |  **Start Bot** |  bot |
 |  Azure Functions |  **Start Backend** |  API |
 
-The following image displays task names on the **Output** and **Terminal** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
+The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
@@ -158,7 +158,7 @@ Launches the debug configurations as defined in `.vscode/launch.json`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Launch debugger":::
 
-The following table lists the debug configuration names and types for project with tab app and bot or message extension app as well as Azure Functions:
+The following table lists the debug configuration names and types for project with tab, bot or message extension app, and Azure Functions:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
@@ -178,7 +178,7 @@ The following table lists the debug configuration names and types for project wi
 <details>
 <summary><b>Sideloads the Teams app</b></summary>
 
-The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, then select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches a Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, then select **Add** or select an option from the dropdown as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug":::
 
