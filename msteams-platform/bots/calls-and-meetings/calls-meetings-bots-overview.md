@@ -106,3 +106,4 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
 * [Work with communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
