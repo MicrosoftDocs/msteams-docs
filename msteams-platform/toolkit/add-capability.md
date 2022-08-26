@@ -93,14 +93,14 @@ The following table shows the changes that can be seen in the files of your app 
 |Bot and message extension | &nbsp; |&nbsp; |
 | &nbsp; |Includes a **hello world** bot application template into your project.|A bot template code is added into a subfolder with path `yourProjectFolder/bot`.|
 | &nbsp; |Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
-| &nbsp; |Includes bot related information in the manifest file that represents your application in Teams Platform.|File`manifest.template.json` under `templates/appPackage` folder is updated. The changes are visible in ID of your bot, scopes of your bot, and The commands that hello world bot application can respond to.|
+| &nbsp; |Includes bot-related information in the manifest file that represents your application in Teams Platform.|File`manifest.template.json` under `templates/appPackage` folder is updated. The changes are visible in ID of your bot, scopes of your bot, and The commands that hello world bot application can respond to.|
 | &nbsp; |Includes bot related information in the teamsfx and provision files that are for integrating Azure functions.|Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep files are regenerated.|
 | &nbsp; |Ensures your project is set with right configurations for newly added capability.|Files under `.fx/config` are regenerated|
 |Tab | &nbsp; |&nbsp; |
 | &nbsp; |Includes a **hello world** tab application template into your project. |A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`.|
 | &nbsp; |Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
 | &nbsp; |Includes tab-related information in the manifest file that represents your application in the Teams Platform. |`manifest.template.json` file under `templates/appPackage` folder is updated. The changes are visible in configurable and static tabs, and scopes of the tabs.|
-| &nbsp; |Includes tab related information in the teamsfx and provision files that are for integrating Azure functions.|Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep file is regenerated.|
+| &nbsp; |Includes tab-related information in the teamsfx and provision files that are for integrating Azure functions.|Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep file is regenerated.|
 | &nbsp; |Ensures your project is set with right configurations for newly added capability. |File under `.fx/config` is regenerated.|
 
 ## Step-by-step guide
