@@ -11,6 +11,9 @@ ms.author: anclear
 
 Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It is a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
+> [!IMPORTANT]
+> Since Teams Toolkit is launched now, we recommend you to download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and build Teams Bot app which performs same behavior as Webhooks and Connectors. You can start with [Build your first notification bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Learn more at [Teams Toolkit documents](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+
 ## Outgoing Webhooks
 
 Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you can send text messages from a channel to the web services. After configuring the Outgoing Webhooks, users can @mention Outgoing Webhook and send a message to web services. The service responds within ten seconds to the message with a text or a card.
@@ -45,7 +48,7 @@ Learn more about the differences between Notification Bot and Incoming webhook s
 | Trigger Supported | All triggers supported. If you use Teams Toolkit, you can quickly get template projects with following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service <br> • HTTP trigger hosted on Azure Functions | All triggers supported |
 | Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit overview for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools required |
 | Cloud resource required | Azure Bot Framework | No resources required |
-| Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | NA |
+| Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ### Office 365 Connectors
 
