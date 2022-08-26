@@ -32,7 +32,7 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 
 *You aren't limited to using these particular stacks!*
 
-If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
+If you're already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
 ## Build your first Teams app
 
