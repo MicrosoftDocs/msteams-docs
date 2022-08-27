@@ -214,6 +214,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+    displayName: build tabs with adaptive cards, web pages embeded in Microsoft Teams
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
   - name: Create a personal tab
