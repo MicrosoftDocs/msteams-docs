@@ -1,6 +1,6 @@
 ---
 title: Create deep links 
-description: Learn how to create deep links and how to use and navigate them in your Microsoft Teams apps with tabs.
+description: In this article, you'll learn how to create deep links and navigate them in your Microsoft Teams apps with tabs.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -17,7 +17,6 @@ The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of na
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
 >
 > **Tab**:  
@@ -383,7 +382,10 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ### Deep linking to an app
 
 Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
-  
+
+> [!NOTE]
+> Currently, the deep linking to an app isn't supported on mobile platform.
+
 ### Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or message extension card:
