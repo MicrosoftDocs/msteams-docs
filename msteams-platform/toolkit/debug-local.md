@@ -91,7 +91,7 @@ The following steps can help you to debug your Teams using the Teams Toolkit:
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Select **Yes** if the following dialog box appears:
+5. Select **Yes** in the **Security Warning** dialog box appears:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority":::
 
