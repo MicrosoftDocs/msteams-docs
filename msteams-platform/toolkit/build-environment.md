@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Teams Toolkit
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/teams-toolkit-VSC/vsc-build-environment/buildapps-TTK.png" alt-text="Prepare to build apps using teams tookit":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/teams-toolkit-VSC/vsc-build-environment/buildapps-TTK.png" alt-text="Prepare to build apps using teams toolkit":::
 
 Microsoft Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, you can choose anyone of the following environment that best suits your app:
 
@@ -29,8 +29,8 @@ The apps built with JavaScript have the following advantages:
 Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript/TypeScript:
 
 * Tab app: Your tab app can have web-based content, you can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
-* Bot app: Bots can be chat bot or conversational bot which allows you to do simple and repetitive tasks like customer service or support staff.
-* Notification bot: You can send messages in Teams channel or group or personal chat by Notification bots with a HTTP request.
+* Bot app: Bots can be chat bot or conversational bot that allows you to do simple and repetitive tasks like customer service or support staff.
+* Notification bot: You can send messages in Teams channel or group or personal chat by Notification bots with HTTP request.
 * Command bot: You can automate repetitive tasks using command bot. Command bots help you to answers simple queries or commands sent in chats.
 * Message extensions: You can interact with your web service through buttons and forms. Capability provided by message extension.
 
@@ -47,11 +47,11 @@ Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. Th
 
 ## Support for Azure Functions
 
-You can use Teams Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities into building apps. You can focus on the pieces of code that matter most and Azure Functions does the rest.
+You can use Teams Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities into building apps. You can focus on the pieces of code that matter most and Azure Functions do the rest.
 Azure functions allow you to implement:
 
 1. System logic into your readily available blocks of code. These blocks are called functions.
-1. As the requests increases, Azure Functions meet the requirement with as many demands as necessary.
+1. As the requests increases, Azure Functions meets the requirement with as many demands as necessary.
 
 Azure Function integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) provide feature-rich implementations. The following are just a few common scenarios for Azure functions:
 
