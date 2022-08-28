@@ -10,39 +10,48 @@ ms.date: 11/29/2021
 
 # Manage multiple environments
 
- Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.
+ Microsoft Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Microsoft Teams App.
 
  You can perform the following with the multiple environments:
 
 1. **Test before production**: You can set up multiple environments such as dev, test, and staging before publishing a Teams App to production environment in modern app development lifecycle.
 
-2. **Manage app behaviors in different environments**: You can set up different behaviors for multiple environments such as enable telemetry in production environment, however disable it in development environment.
+2. **Manage app behaviors in different environments**: You can set up different app behaviors for multiple environments such as enable telemetry in production environment.
+
+> [!NOTE]
+> Ensure that telemetry is disabled in development environment.
 
 ## Prerequisite
 
-* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+| &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio code.
 
 ## Create a new environment
 
-After creating a new project, Teams Toolkit by default creates:
+After you create a project, Teams Toolkit by default configures:
 
-* One `local` environment to represent the local machine environment configurations
-* One `dev` environment to represent the remote or cloud environment configurations
+* One `local` environment to represent the local machine environment configuration.
+* One `dev` environment to represent the remote or cloud environment configuration.
 
 > [!NOTE]
 > Each project can have only one `local` environment but multiple remote environments.
 
 **To add another remote environment**:
 
-1. Select the **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
-2. Select **+Teams: Create new environment** under the **Environment** section as shown in the following image:
+1. Select the **Teams Toolkit** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="From the activity bar"::: from the activity bar.
+2. Select **+Teams: Create new environment** under the **ENVIRONMENT** section as shown in the following image:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create new environment":::
 
-   If you have more than one environments, you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment created.
+> [!Note]
+> If you have more than one environments, then you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
 
 ## Select target environment
 
