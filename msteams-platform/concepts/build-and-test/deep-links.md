@@ -339,7 +339,7 @@ The query parameters are:
 
 ### Generate deep links to chat messages
 
-Use this deep link format to navigate to a message in individual and group chats in Teams:
+Use this deep link format to go to a message in individual and group chats in Teams:
 
 `http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={contextObject}`
 
