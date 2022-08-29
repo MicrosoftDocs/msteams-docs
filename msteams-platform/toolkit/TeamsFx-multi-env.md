@@ -193,7 +193,7 @@ As the Teams app manifest template is shared across all environments, we can upd
 1. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
 2. Update the property **`description > short`** with hard-coded string **`my app description`**.
   
-  The updates to `manifest.template.json` are as follows:
+  The updates to `manifest.template.json` are:
 
   ```json
   {
