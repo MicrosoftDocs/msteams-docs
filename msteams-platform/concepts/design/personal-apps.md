@@ -213,5 +213,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
-* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
-* [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest"&preserve-view=true")
+* [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest"&preserve-view=true")
