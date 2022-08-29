@@ -77,4 +77,3 @@ You can use the Teams bot APIs to get information for members of a chat or a tea
 * [Proactive messages](how-to/conversations/send-proactive-messages.md)
 * [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
-
