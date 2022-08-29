@@ -220,7 +220,7 @@
     displayName: iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.
-    displayName: Personal tab with Node.js, ASP.NET Core, ASP.NET Core MVC, App generator, secure tunnel, Reorder static personal tabs
+    displayName: Personal tab with Node.js, ASP.NET Core MVC, App generator, secure tunnel, Reorder static personal tabs
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
   - name: Create a content page
