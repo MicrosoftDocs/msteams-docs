@@ -44,6 +44,13 @@ With a private workspace, users can view app content that's meaningful to them i
 |C|**More menu**: Includes additional app options and information.|
 |D|**Primary navigation**: Provides navigation to your app other main Teams features.|
 
+#### Configure and create a flyout menu for multiple actions
+
+App developers can configure and place actions on top right of the nav bar and build a flyout menu.
+
+>[!NOTE]
+> A maximum of five actions is supported. It includes both the top nav bar and the flyout menu.
+
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy.":::
 
 |Counter|Description|
@@ -96,6 +103,13 @@ Personal apps can include a bot for one-on-one conversations and private notific
 |B|**Back button**: Takes users back to the private workspace.|
 |C|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
 |D|**Compose box**: Input field for sending messages to the bot.|
+
+#### Configure back button
+
+App developers can configure the action for the back button to be either one of the following:
+
+* Configure the back button to leave the app and navigate to Teams (default).
+* Configure the back button and navigate within the app.
 
 #### Desktop
 
@@ -199,3 +213,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
+* [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest)
