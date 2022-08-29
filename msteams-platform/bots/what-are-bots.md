@@ -1,7 +1,7 @@
 ---
 title: Bots in Microsoft Teams
 author: surbhigupta
-description: With this learning path, get started with conversational bots in Microsoft Teams and it's code samples.
+description: In this article, use conversational bots in Microsoft Teams to share files, send proactive notification, interactive cards, make calls, invoke bot command, IVR.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
@@ -9,6 +9,9 @@ ms.author: anclear
 # Build bots for Teams
 
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks performed by users such as customer service or support staff. Everyday use of bots includes bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can range from quick questions and answers to complex conversations.
+
+> [!NOTE]
+> It's recommended that you'd create your first bot app or notification bot app using the new generation development tool for Teams. For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
 
 > [!IMPORTANT]
 >
@@ -20,17 +23,17 @@ A bot is also referred to as a chatbot or conversational bot. It is an app that 
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="Web service using text"lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text."lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="web service using interactive cards"lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards."lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-:::image type="content" source="../assets/images/task-module-example.png" alt-text="web service using task module"lightbox="../assets/images/task-module-example.png"border="true":::
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using task module." lightbox="../assets/images/task-module-example-expanded.png":::
 
 Conversational bots are incredibly flexible. Bots can be used to handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can used as standalone or as part of a larger application.
 
 You can use the right mix of cards, text, and task modules to create a bot for your specific needs. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Sample FAQ bot":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The screenshot is an example that shows a sample FAQ bot.":::
 
 Each interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 
@@ -59,6 +62,9 @@ You can use the Teams bot APIs to get information for members of a chat or a tea
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Adaptive Card Notification | This is a sample which shows how to send notifications with different adaptive cards using Bots. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Incoming Webhook Notification | This is a sample which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## See also
 
@@ -69,3 +75,6 @@ You can use the Teams bot APIs to get information for members of a chat or a tea
 * [Bot activity handlers](~/bots/bot-basics.md)
 * [Conversation events in your Teams bot](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Proactive messages](how-to/conversations/send-proactive-messages.md)
+* [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
+* [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
+

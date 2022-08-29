@@ -1,7 +1,7 @@
 ---
 title: Bot activity handlers
 author: surbhigupta
-description: In this article, learn about bot activity handlers, frameworks, Teams activity handlers and bot logic in Microsoft Teams.
+description: Learn about Microsoft Teams events and activity handlers for messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
