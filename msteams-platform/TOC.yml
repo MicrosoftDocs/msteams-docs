@@ -219,7 +219,7 @@
     href: tabs/how-to/tab-requirements.md
     displayName: iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok
   - name: Create a personal tab
-    href: tabs/how-to/create-personal-tab.
+    href: tabs/how-to/create-personal-tab.md
     displayName: Personal tab with Node.js, ASP.NET Core MVC, App generator, secure tunnel, Reorder static personal tabs
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
