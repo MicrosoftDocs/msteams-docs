@@ -382,3 +382,4 @@ The following table provides the content scope:
 
 * [Microsoft Graph and Teams integration](/graph/teams-concept-overview)
 * [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
+* [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
