@@ -10,16 +10,11 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser, and Node.js environment. The following list includes the common scenarios:
+TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser, and Node.js environment. You can use the TeamsFx SDK to access the core functionalities in client as well as server environment and write user authentication code in a simplified way for:
 
 * Teams tab
 * Teams bot
 * Azure function
-
-You can use the TeamsFx SDK to:
-
-* Access the core functionalities in client and server environment.
-* Write user authentication code in a simplified way.
 
 ## Prerequisites
 
@@ -99,7 +94,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 </details>
 
-## Core concepts and code structure
+## TeamsFx core functionalities
 
 ### TeamsFx class
 
