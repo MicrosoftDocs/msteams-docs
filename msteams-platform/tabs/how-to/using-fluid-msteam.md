@@ -6,6 +6,13 @@ description: Tutorial for integrating Fluid-powered real-time collaboration feat
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---
+# Prerequisites
+
+This tutorial assumes that you are familiar with the following concepts and material
+- [Fluid Framework Overview](https://fluidframework.com/docs/)
+- [Fluid Framework QuickStart](https://fluidframework.com/docs/start/quick-start/)
+- The basics of [React](https://reactjs.org/) and [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- and how to build a [Microsoft Teams Tab](/microsoftteams/platform/tabs/what-are-tabs).
 
 # Use Fluid with Microsoft Teams
 
@@ -19,13 +26,10 @@ In this section you'll learn the following concepts:
 
 For an example of how this recipe may be used to build a more complex application, check out the [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
 
-> [!NOTE]
-> This tutorial assumes that you are familiar with the [Fluid Framework Overview](https://fluidframework.com/docs/) and that you have completed the [QuickStart](https://fluidframework.com/docs/start/quick-start/). You should also be familiar with the basics of [React](https://reactjs.org/), [React Hooks](https://reactjs.org/docs/hooks-intro.html), and [Microsoft Teams Tabs](/microsoftteams/platform/tabs/what-are-tabs).
-
 ## Create the project
 
 1. Open a Command Prompt and navigate to the parent folder where you want to create the project, for example, `/My Microsoft Teams Projects`.
-2. Create a vanilla Teams tab application by running the below command. See [the Microsoft Teams documentation](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs)for more information on setting up Teams applications.
+2. Create a Teams tab application by running the below command and following [the Create a channel tab documentation](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs).
 
     ```dotnetcli
     yo teams
@@ -42,7 +46,7 @@ For an example of how this recipe may be used to build a more complex applicatio
 
     Run the following command to install the libraries.
 
-    ```dotnetcli
+    ```cmd
     npm install @fluidframework/azure-client fluid-framework @fluidframework/test-client-utils
     ```
 
@@ -180,7 +184,7 @@ export const <your tab name> = () => {
 }
 ```
 
-1. Replace `TODO 1` with the following code. For the content page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to initialize it after your page loads.
+1. Replace `TODO 1` with the following code. For the content page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
 
 ```ts
 microsoftTeams.initialize();
@@ -250,13 +254,13 @@ return (
 
 ### Create React component for Fluid view and data
 
-Now that you've married the basic creation flow of Teams and Fluid, you can now create your own React component that handles the interactions between the application view and Fluid data. From this point on, the logic and flow behaves just like any other Fluid-powered application. With the basic structure established, you can create any of the [Fluid examples](https://github.com/microsoft/FluidExamples) as a Teams application by changing the `ContainerSchema` and the application view's interaction with the DDSes/data objects on the content page.
+Now that you've integrated the basic creation flow of Teams and Fluid, you can now create your own React component that handles the interactions between the application view and Fluid data. From this point on, the logic and flow behaves just like any other Fluid-powered application. With the basic structure established, you can create any of the [Fluid examples](https://github.com/microsoft/FluidExamples) as a Teams application by changing the `ContainerSchema` and the application view's interaction with the DDSes/data objects on the content page.
 
 ## Start the Fluid server and run the application
 
 If you're running your Teams application locally with Azure Client local mode, make sure to run the following command in the Command Prompt to start the Fluid service.
 
-```dotnetcli
+```cmd
 npx @fluidframework/azure-local-service@latest
 ```
 
@@ -265,7 +269,7 @@ To run and start the Teams application, open another terminal, and follow the [i
 Now follow the [instructions to upload the application to a Teams Tab](create-channel-group-tab.md#upload-your-application-to-teams).
 
 > [!WARNING]
-> Hostnames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. This means that anytime a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, please visit [the section below](#using-azureclient-with-azure-fluid-relay)
+> Hostnames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. This means that anytime a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, please visit [the section below](#use-azureclient-with-azure-fluid-relay)
 
 > [!NOTE]
 > You may need to install an additional dependency to make this demo compatible with Webpack 5. If you receive a compilation error related to a "buffer" package, please run `npm install -D buffer` and try again. This will be resolved in a future release of Fluid Framework.
@@ -276,7 +280,7 @@ Now follow the [instructions to upload the application to a Teams Tab](create-ch
 
 Because this is a Teams tab application, collaboration and interaction are the main focuses. Consider replacing the local mode `AzureClientProps` provided above with non-local credentials from your Azure service instance, so others can join in and interact with you in the application! Check out [how to provision your Azure Fluid Relay service](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal).
 
-> [!NOTE]
+> [!IMPORTANT]
 > It is important to hide the credentials you are passing into `AzureClientProps` from being accidentally committed to source control. The Teams project comes with a `.env` file where you can store your credentials as environment variables and the file itself is already included in the `.gitignore`. Refer to the section below if you want to use the environment variables in Teams.
 
 > [!WARNING]
@@ -286,7 +290,7 @@ Because this is a Teams tab application, collaboration and interaction are the m
 
 To set an environment variable and retrieve it in Teams, you can take advantage of the built-in `.env` file. Set the environment variable in `.env` like below.
 
-```bash
+```
 # .env
 
 TENANT_KEY=foobar
