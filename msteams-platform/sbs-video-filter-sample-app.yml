@@ -42,7 +42,9 @@ items:
     This space is also where you sideload and test your app. 
     
     Let's verify if you're ready to develop with the tenant.
+
     ### Enable sideloading option
+
     After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
@@ -57,7 +59,9 @@ items:
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
+
     ### Create a free Teams developer tenant
+    
     If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
@@ -65,7 +69,7 @@ items:
     1. Set up your administrator account. After you finish, the following screen appears.
 
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
-        
+
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
 - title: Build and run the video filter sample app
@@ -110,13 +114,13 @@ items:
   
      1. Open **manifest.json** in Visual Studio Code and update the `name`, `appId`, and `videoAppContentUrl`.
        
-        Add the URL https://github.com/microsoft/teams-videoapp-sample/app/ to the `videoAppContentUrl` property.
+        Add the URL https://microsoft.github.io/teams-videoapp-sample/app/ to the `videoAppContentUrl` property.
 
          :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-content-url.png" alt-text="Screenshot that shows a sample code for video app content url property in the manifest file.":::
       
      1. Zip the contents of the **manifest** folder to create `manifest.zip`.
         > [!NOTE]
-        > Ensure that the `manifest.zip` contains the `manifest.json` source file, `color` icon, `outline` icon, `half`` thumbnail image, and `grey` thumbnail image.
+        > Ensure that the `manifest.zip` contains the `manifest.json` source file, `color` icon, `outline` icon, `half` thumbnail image, and `grey` thumbnail image.
         > Ensure that the filter category is added as a prefix to the filter name. For example, Others_half. 
      
     ## Upload your app to the Teams meeting
@@ -133,7 +137,7 @@ items:
 
       1. Schedule a meeting from the calendar in Teams.
 
-         Ensure you invite atleast one attendee to the meeting.
+         Ensure you invite at least one attendee to the meeting.
       1. Join the meeting.
       1. In the meeting window, select More > **Effects and avatars**.
       1. In the left pane, go to **Video effects** > **Filters** > **Others**.

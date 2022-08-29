@@ -120,15 +120,15 @@ The following is an example of a manifest for a video filter app:
   "devicePermissions": [
     "media"
   ],
-  "authorization": { // RSC permission section for gating teams client sdk video api.
+  "authorization": { // RSC permission section for getting teams client sdk video api.
     "permissions": {
       "resourceSpecific": [
         {
-          "name": "CameraStream.Read.User", // gating api: registerForVideoFrame
+          "name": "CameraStream.Read.User", // getting api: registerForVideoFrame
           "type": "Delegated"
         },
         {
-          "name": "OutgoingVideoStream.Write.User", // gating api: registerForVideoFrame
+          "name": "OutgoingVideoStream.Write.User", // getting api: registerForVideoFrame
           "type": "Delegated"
         }
       ]

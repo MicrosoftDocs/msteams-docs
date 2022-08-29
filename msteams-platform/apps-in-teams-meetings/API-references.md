@@ -32,7 +32,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Get incoming audio speaker**](#get-incoming-audio-speaker) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio speaker setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Register for video effect**](#register-for-video-effect) | Allows an app to get the selected effect in Teams client and notify the video extension that the new effect will be applied.| [MSTC SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) |
 | [**Register for video frame**](#register-for-video-frame) | Allows an app to get the video frame, process the video frame and returns the processed video frame.| [MSTC SDK](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true) |
@@ -968,6 +968,7 @@ callback = (errcode, result) => {
 
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
+
 ### Query parameter
 
 The following table includes the query parameter:
@@ -999,17 +1000,17 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 
 ```JSON
 "authorization": {
-	"permissions": {
-		"resourceSpecific": [
-			{
-				"name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-				"type": "Delegated"
-			}
-		]
-	}
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+    "type": "Delegated"
+   }
+  ]
+ }
 }
 ```
- 
+
 ### Example
 
 ```javascript
@@ -1053,7 +1054,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
+|**VideEffectCallBack**|String|Yes|VideEffectCallBack is the callback function as first parameter that passed to registerForVideoEffect function. Video app developer can put logics that want to be called into VideEffectCallBack  after calling registerForVideoEffect.|
 
 ### Example
 
@@ -1063,16 +1064,6 @@ The following table includes the query parameter:
   type VideoEffectCallBack = (effectId: string | undefined) => void,
   
 ```
-
-### Response code
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Register for video frame
 
@@ -1084,7 +1075,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**frameCallback**| String | Yes | |
+|**VideoFrameCallback**| String | Yes |VideoFrameCallback is the callback function as first parameter that passed to registerForVideoFrame function. Video app developer can put logics that want to be called into VideoFrameCallback after calling registerForVideoFrame. |
 |**config**|String|Yes||
 
 ### Example
@@ -1104,14 +1095,6 @@ The following table includes the query parameter:
 
 ```
 
-### Response code
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| | |
-
 ## Notify selected video effect change
 
 The `notifySelectedVideoEffectChanged` API allows you to notify the user that the video effect is applied.
@@ -1122,8 +1105,8 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**effectChangeType**| String | Yes | |
-|**effectId**|String||
+|**effectChangeType**| String | Yes |Video effect change type enum. It includes two types one is for effect changed another is to clear or disable video effect.|
+|**effectId**|String| Yes |The id for the applied effect|
 
 ### Example
 
@@ -1144,14 +1127,6 @@ The following table includes the query parameter:
     EffectDisabled, 
   } 
 ```
-
-### Response code
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| | |
 
 ## Code sample
 
