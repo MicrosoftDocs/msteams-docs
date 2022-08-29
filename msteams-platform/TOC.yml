@@ -220,17 +220,22 @@
     displayName: iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: Personal tab with Node.js, ASP.NET Core MVC, App generator, secure tunnel, Reorder static personal tabs
+    displayName: Personal tab with Node.js, ASP. NET Core, ASP.NET Core MVC, App generator, secure tunnel to your tab, Reorder static personal tabs
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
+    displayName: Channel tab with Node.js, ASP NET Core MVC, secure tunnel to your tab
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
+    displayName: Task module, code integration, native loading indicator property
   - name: Create configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
+    displayName: Secured HTTPs endpoints, context data for your tab, tabs on mobile
   - name: Create removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
+    displayName: Reconfigure tab, register remove handler
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
+    displayName: 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
   - name: Build apps for shared channels
