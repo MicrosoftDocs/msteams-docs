@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser, and Node.js environment. You can use the TeamsFx SDK to access the core functionalities in client as well as server environment and write user authentication code in a simplified way for:
+TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser and Node.js environment. TeamsFx core functionalities can be accessed in client as well as server environment and you can write user authentication code in a simplified way for:
 
 * Teams tab
 * Teams bot
@@ -133,6 +133,56 @@ For these two identity types, the TeamsFx constructors and methods aren't the sa
 > You need admin consent for resources.
 </details>
 
+### Credential
+
+To initialize TeamsFx, you must choose the required identity type. Post specifying the identity type SDK uses different type of credential class. These help represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+
+There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
+
+<details>
+<summary><b> User Identity in browser environment </b></summary>
+
+`TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in browser environment.
+
+The required configurations are: `initiateLoginEndpoint` and `clientId`.
+</details>
+
+<details>
+<summary><b> User Identity in Node.js environment </b></summary>
+
+`OnBehalfOfUserCredential` uses On-Behalf-Of flow and require Teams SSO token, in Azure function or bot scenarios. TeamsFx SDK uses the following credential when you choose user identity in Node.js environment.
+
+Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
+</details>
+
+<details>
+<summary><b> App Identity in Node.js environment </b></summary>
+
+`AppCredential` represents the app identity. You can use app identity when user isn't involved, for example in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
+
+Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
+</details>
+
+### Bot credential
+
+Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
+
+`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
+
+Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
+
+### Supported functions
+
+TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
+
+* Microsoft Graph Service:`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
+* SQL:`getTediousConnectionConfig` returns a tedious connection config.
+
+Required configuration:
+
+* If you want to use user identity then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
+* If you want to use MSI identity then `sqlServerEndpoint`and `sqlIdentityId` are required.
+
 ### Override configuration
 
 You can pass custom config when creating a new `TeamsFx` instance to override default configuration or set required fields when `environment variables` are missing.
@@ -175,56 +225,6 @@ If you've created Azure function or bot project using Visual Studio Code Toolkit
 * sqlIdentityId (IDENTITY_ID) // only used when there's a sql instance
 
 </details>
-
-### Credential
-
-To initialize TeamsFx, you must choose the required identity type. Post specifying the identity type SDK uses different type of credential class. These help represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
-
-There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
-
-<details>
-<summary><b> User Identity in browser environment </b></summary>
-
-`TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in browser environment.
-
-The required configurations are: `initiateLoginEndpoint` and `clientId`.
-</details>
-
-<details>
-<summary><b> User Identity in Node.js environment </b></summary>
-
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and require Teams SSO token, in Azure function or bot scenarios. TeamsFx SDK uses the following credential when you choose user identity in Node.js environment.
-
-Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
-</details>
-
-<details>
-<summary><b> Application Identity in Node.js environment </b></summary>
-
-`AppCredential` represents the app identity. You can use app identity when user isn't involved, for example in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
-
-Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
-</details>
-
-### Bot SSO
-
-Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
-
-`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
-
-Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
-
-### Supported functions
-
-TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
-
-* Microsoft Graph Service:`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
-* SQL:`getTediousConnectionConfig` returns a tedious connection config.
-
-Required configuration:
-
-* If you want to use user identity then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
-* If you want to use MSI identity then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
 ### Error handling
 
