@@ -190,7 +190,7 @@ There are three credential classes to simplify authentication. Here's the corres
 <details>
 <summary><b> User Identity in browser environment </b></summary>
 
-`TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the On-Behalf-Of flow for token exchange. SDK uses this credential when developers choose user identity in browser environment.
+`TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in browser environment.
 
 The required configurations are: `initiateLoginEndpoint` and `clientId`.
 </details>
