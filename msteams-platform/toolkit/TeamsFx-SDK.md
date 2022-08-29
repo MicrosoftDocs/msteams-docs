@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser and Node.js environment. TeamsFx core functionalities can be accessed in client as well as server environment and you can write user authentication code in a simplified way for:
+TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser and Node.js environment. TeamsFx core functionalities can be accessed in client as well as server environment. You can write user authentication code in a simplified way for:
 
 * Teams tab
 * Teams bot
@@ -29,7 +29,7 @@ You need to install the following tools and set up your development environment:
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 > [!NOTE]
-> If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. Currently, the required version is 4.15.0 or later, for more information, see [bot builder packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
+> If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. For more information, see [bot builder packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548), the required version is 4.15.0 or later.
 
 You must have working knowledge of:
 
@@ -105,10 +105,13 @@ There are two identity types:
 * **User Identity**: Represents the current user of Teams.
 * **Application Identity**: Represents the application itself.
 
-For these two identity types, the TeamsFx constructors and methods aren't the same.
+    > [!NOTE]
+    > For these two identity types, the TeamsFx constructors and methods aren't the same.
+
+You can learn more about user identity and application identity in the following section:
 
 <details>
-<summary><b> User Identity </b></summary>
+<summary><b> User identity </b></summary>
 
 | Command | Description |
 |----------------|-------------|
@@ -122,7 +125,7 @@ For these two identity types, the TeamsFx constructors and methods aren't the sa
 </details>
 
 <details>
-<summary><b> Application Identity </b></summary>
+<summary><b> Application identity </b></summary>
 
 | Command | Description |
 |----------------|-------------|
@@ -163,11 +166,11 @@ Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` 
 Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 </details>
 
-### Bot credential
+### Bot SSO
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
+`TeamsBotSsoPrompt` integrates with bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
 
 Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
 
@@ -244,7 +247,7 @@ try {
 }
 ```
 
-If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed. You can refer to `Use Graph API in tab app` sample in [Scenarios](#scenarios) for resolving errors.
+If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed.
 
 ## Microsoft Graph Scenarios
 
@@ -530,7 +533,7 @@ This section provides several code snippets for common scenarios that are relate
 
     </details>
 
-* Other scenario:
+* Other scenarios:
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
@@ -641,7 +644,7 @@ setLogFunction((level: LogLevel, message: string) => {
 ```
 
 > [!NOTE]
-> Log function will not take effect if you set a custom logger.
+> Log functions don't take effect if you set a custom logger.
 
 ## Upgrade latest SDK version
 
@@ -653,11 +656,9 @@ If you're using the version of SDK that has `loadConfiguration()`, you can follo
 4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`.
 5. Pass the instance of `TeamsFx` to helper functions to replace credential instance.
 
-For more information, see [TeamsFx class](#teamsfx-class).
-
 ## Next step
 
-[Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use TeamsFx SDK.
+For detailed examples on how to use TeamsFx SDK[Samples](https://github.com/OfficeDev/TeamsFx-Samples) project.
 
 ## See also
 
