@@ -6,13 +6,6 @@ description: Tutorial for integrating Fluid-powered real-time collaboration feat
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---
-# Prerequisites
-
-This tutorial assumes that you are familiar with the following concepts and material
-- [Fluid Framework Overview](https://fluidframework.com/docs/)
-- [Fluid Framework QuickStart](https://fluidframework.com/docs/start/quick-start/)
-- The basics of [React](https://reactjs.org/) and [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-- and how to build a [Microsoft Teams Tab](/microsoftteams/platform/tabs/what-are-tabs).
 
 # Use Fluid with Microsoft Teams
 
@@ -25,6 +18,14 @@ In this section you'll learn the following concepts:
 3. How to create and get Fluid Containers and pass them to a React component.
 
 For an example of how this recipe may be used to build a more complex application, check out the [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
+
+## Prerequisites
+
+This tutorial assumes that you are familiar with the following concepts and materials
+- [Fluid Framework Overview](https://fluidframework.com/docs/)
+- [Fluid Framework QuickStart](https://fluidframework.com/docs/start/quick-start/)
+- The basics of [React](https://reactjs.org/) and [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- and how to build a [Microsoft Teams Tab](/microsoftteams/platform/tabs/what-are-tabs)
 
 ## Create the project
 
