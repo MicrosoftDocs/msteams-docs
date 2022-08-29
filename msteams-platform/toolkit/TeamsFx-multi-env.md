@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Manage multiple environments
 
- Microsoft Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Microsoft Teams App.
+ Microsoft Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for your Microsoft Teams App.
 
  You can perform the following with the multiple environments:
 
@@ -18,8 +18,8 @@ ms.date: 11/29/2021
 
 2. **Manage app behaviors in different environments**: You can set up different app behaviors for multiple environments such as enable telemetry in production environment.
 
-> [!NOTE]
-> Ensure that telemetry is disabled in development environment.
+   > [!NOTE]
+   > Ensure that telemetry is disabled in development environment.
 
 ## Prerequisite
 
@@ -102,9 +102,9 @@ You can set the Teams app name to `myapp(dev)` for the default environment `dev`
 Steps for customization:
 
 1. Open config file `.fx/configs/config.dev.json`.
-2. Update the property of **manifest** > **appName** > **short*** to **`myapp(dev)`**.
+2. Update the property of **manifest** > **appName** > **short** to **`myapp(dev)`**.
 
-  The updates to `.fx/configs/config.dev.json` are as follows:
+  The updates to `.fx/configs/config.dev.json` are:
 
   ```json
   {
@@ -140,7 +140,7 @@ Steps for customization:
 1. Open config file `.fx/configs/config.dev.json`.
 2. Add new property of **manifest** > **description** > **short** with value **`my app description for dev`**.
 
-  The updates to `.fx/configs/config.dev.json` are as follows:
+  The updates to `.fx/configs/config.dev.json` are:
 
   ```json
   {
@@ -163,7 +163,7 @@ Steps for customization:
 6. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
 7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`.
   
-  The updates to `manifest.template.json` are as follows:
+  The updates to `manifest.template.json` are:
 
   ```json
   {
@@ -191,7 +191,7 @@ You can set the description of Teams app to `my app description` for all the env
 As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
 
 1. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
-2. Update the property **`description** > **short`** with hard-coded string **`my app description`**.
+2. Update the property **`description > short`** with hard-coded string **`my app description`**.
   
   The updates to `manifest.template.json` are as follows:
 
@@ -219,7 +219,7 @@ As the Teams app manifest template is shared across all environments, we can upd
 
 You can customize Azure resources for each environment, for example edit the environment corresponding to fx/configs/azure.parameters.{env}.json file to specify Azure Function name.
 
-For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
+For more information on Bicep template and parameter files, see [provision cloud resources](provision.md).
 </details>
 </br>
 
