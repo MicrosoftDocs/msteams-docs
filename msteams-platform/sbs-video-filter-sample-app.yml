@@ -20,8 +20,6 @@ items:
 
     :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-output.png" alt-text="Screenshot that shows the video experience for the user after the filter is applied.":::
 
-    [This is a sample image, need to update the image with the video filter effect.] 
-
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -160,8 +158,6 @@ items:
     Did you come up with something like this?
     
     :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-output.png" alt-text="Screenshot that shows the video experience for the user after the filter is applied.":::
-
-    [This is a sample image, need to update the image with the video filter effect.] 
 
 - content: |
     You've completed the tutorial to get started with video filters for Teams meetings.
