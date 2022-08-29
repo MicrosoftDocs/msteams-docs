@@ -930,15 +930,44 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
-## Get incoming audio speaker
+## Get incoming audio state
 
-The `getIncomingClientAudioState` API allows an app to get the incoming audio speaker setting for the meeting user. The API is available through the Teams client SDK.
+The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the Teams client SDK.
 
 > [!NOTE]
 >
 > * The `getIncomingClientAudioState` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
+### Manifest
+
+```JSON
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+```
+  
+### Example
+
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
 ### Query parameter
 
 The following table includes the query parameter:
@@ -946,22 +975,7 @@ The following table includes the query parameter:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
-
-### Example
-
-```typescript
-function getIncomingClientAudioState(
-    callback: (error: SdkError | null, result: boolean | null) => void,
-  ): void {
-    if (!callback) {
-      throw new Error('[get incoming client audio state] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('getIncomingClientAudioState', callback);
-  }
-
-```
-
+  
 ### Response codes
 
 The following table provides the response codes:
@@ -974,34 +988,51 @@ The following table provides the response codes:
 
 ## Toggle incoming audio
 
-The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio speaker setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
 
 > [!NOTE]
 >
 > * The `toggleIncomingClientAudio` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
+### Manifest
+
+```JSON
+"authorization": {
+	"permissions": {
+		"resourceSpecific": [
+			{
+				"name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+				"type": "Delegated"
+			}
+		]
+	}
+}
+```
+ 
+### Example
+
+```javascript
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
+```
+  
 ### Query parameter
 
 The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
-
-### Example
-
-```typescript
-function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
-    if (!callback) {
-      throw new Error('[toggle incoming client audio] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('toggleIncomingClientAudio', callback);
-  }
-
-```
-
+|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false.
+  
 ### Response code
 
 The following table provides the response codes:
