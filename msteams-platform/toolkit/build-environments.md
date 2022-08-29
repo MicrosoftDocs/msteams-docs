@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Microsoft Teams Toolkit
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/teams-toolkit-VSC/vsc-build-environment/buildapps-TTK.png" alt-text="Prepare to build apps using Teams Toolkit":::
+:::image type="content" source="../assets/images/buildapps-TTK.png" alt-text="Prepare to build apps using Teams Toolkit":::
 
 Teams Toolkit in Microsoft Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, you can choose anyone of the following environment that best suits your app:
 
