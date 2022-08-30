@@ -551,17 +551,19 @@
       displayName: Update Apple app store
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-      displayName: Testing instructions, publisher verification, attestation, 
+      displayName: Testing instructions, publisher verification, attestation
     - name: Submit your app
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if your Teams store submission fails
-      href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md   
+      href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md  
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+      displayName: Promote your app, stop selling
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+       
 - name: Monetize your app
   items:
   - name: Overview
