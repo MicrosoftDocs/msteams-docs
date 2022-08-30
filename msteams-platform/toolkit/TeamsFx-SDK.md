@@ -551,6 +551,7 @@ This section provides several code snippets for common scenarios that are relate
   ```
 
   For more information on sample to access SQL database in Azure function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
+
   </detials>
 
 ## Advanced Customization
