@@ -74,7 +74,7 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Support Adaptive Card loop for build
 
-Adaptive Card version 1.6 adds a new field called metadata web url and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
+Adaptive Card version 1.6 adds a new field called metadata web url and copy option for the url. The web url under the metadata can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
 
 ### To unfurl an Adaptive card loop
 
@@ -88,7 +88,7 @@ Adaptive Card version 1.6 adds a new field called metadata web url and copy opti
 
 1. Select **Create cards**
 
-   :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Select create cards.":::
+   :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Select create cards from the ... menu.":::
 
 1. In the Bot Message Renderer, select **Adaptive Card**, paste the metadata URL in **Card payload** and then select Submit.
 
