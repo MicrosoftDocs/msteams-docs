@@ -78,27 +78,27 @@ Adaptive Card version 1.6 adds a new field called metadata web URL and copy opti
 
 ### To unfurl an Adaptive card loop
 
-1. Select `...` menu from Teams.
+1. Select **...** menu from Teams.
 
    :::image type="content" source="../assets/images/adaptive-cards/select-dot-menu.png" alt-text="Select ... menu from Teams.":::
 
-1. Search for `Adapto V4 Bot` from the menu
+1. Search for **Adapto V4 Bot** from the menu
 
    :::image type="content" source="../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Select adapto v4 card.":::
 
-1. Select `create cards`
+1. Select **Create cards**
 
    :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Select create cards.":::
 
-1. In the Bot Message Renderer, select `Adaptive Card`, paste the metadata URL in `card payload` and then select Submit.
+1. In the Bot Message Renderer, select **Adaptive Card**, paste the metadata URL in **Card payload** and then select Submit.
 
    :::image type="content" source="../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Select Adaptive Card, paste metadata url and submit.":::
 
-1. After submitting, the metadata unfurls into an Adaptive Card loop. Copy the url by selecting the copy button on the Adaptive Card and paste it in the compose section and select the send button.
+1. After submitting, the metadata unfurls into an **Adaptive Card loop**. Copy the web url by selecting the **Copy** option on the Adaptive Card and paste it in the compose section and select the send button.
 
    :::image type="content" source="../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="Unfurling into an Adaptive Card loop.":::
 
-1. The metadata web url unfurls into an Adaptive Card V2.
+1. The web url unfurls into an **Adaptive Card V2**.
 
    :::image type="content" source="../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="Unfurling into an Adaptive Card version2.":::
 
