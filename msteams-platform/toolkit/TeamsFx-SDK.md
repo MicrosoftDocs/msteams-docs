@@ -14,7 +14,7 @@ TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Team
 
 * Teams tab
 * Teams bot
-* Azure function
+* Azure Function
 
 ## Prerequisites
 
@@ -50,49 +50,6 @@ Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
 ```bash
 npm install @microsoft/teamsfx
 ```
-
-### Create `MicrosoftGraphClient` service
-
-You need credentials to create a graph client object and to access the Microsoft Graph API. SDK provides APIs to be configured.
-
-<details>
-<summary><b>Invoke Graph API on behalf of Teams user (User Identity)</b></summary>
-
-Use the following snippet:
-
-```ts
-// Equivalent to:
-// const teamsfx = new TeamsFx(IdentityType.User, {
-//   initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-//   clientId: process.env.REACT_APP_CLIENT_ID
-// });
-const teamsfx = new TeamsFx();
-const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
-const profile = await graphClient.api("/me").get(); // Get the profile of current user
-```
-
-</details>
-
-<details>
-<summary><b>Invoke Graph API without user (Application Identity)</b></summary>
-
-It doesn't require the interaction with Teams user. You can call Microsoft Graph as application identity.
-
-Use the following snippet:
-
-```ts
-// Equivalent to:
-// const teamsfx = new TeamsFx(IdentityType.App, {
-//   clientId: process.env.M365_CLIENT_ID,
-//   clientSecret: process.env.M365_CLIENT_SECRET,
-//   tenantId: process.env.M365_TENANT_ID
-// });
-const teamsfx = new TeamsFx(IdentityType.App);
-const graphClient = createMicrosoftGraphClient(teamsfx);
-const profile = await graphClient.api("/users/{object_id_of_another_people}").get(); // Get the profile of certain user
-```
-
-</details>
 
 ## TeamsFx core functionalities
 
@@ -253,9 +210,7 @@ If credential instance is used in other library such as Microsoft Graph, it's po
 
 This section provides several code snippets for common scenarios that are related to Microsoft Graph. In such scenarios, user can call APIs using different permissions in different ends(frontend/backend).
 
-* Graph related scenarios:
-
-  * User delegate permission in frontend (Use TeamsUserCredential)
+* User delegate permission in frontend (Use TeamsUserCredential)
     <details>
     <summary><b>Use graph API in tab app</b></summary>
 
@@ -351,7 +306,7 @@ This section provides several code snippets for common scenarios that are relate
 
     </details>
 
-  * User delegate permission in backend (Use OnBehalfOfUserCredential)
+* User delegate permission in backend (Use OnBehalfOfUserCredential)
     <details>
     <summary><b>Use Graph API in bot Application</b></summary>
 
@@ -478,7 +433,7 @@ This section provides several code snippets for common scenarios that are relate
 
     </details>
 
-  * Application permission in backend
+* Application permission in backend
     <details>
     <summary><b>Use certificate-based authentication in Azure Function</b></summary>
 
@@ -533,7 +488,8 @@ This section provides several code snippets for common scenarios that are relate
 
     </details>
 
-* Other scenarios:
+## Other scenarios
+
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
