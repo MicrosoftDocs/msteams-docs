@@ -117,6 +117,9 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
+> [!NOTE]
+> If you are using REST APIs, then set `charset=UTF-8` in your request headers for emoji in Adaptive Cards.
+
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive card emoji":::
 
 ### Mention support within Adaptive Cards
