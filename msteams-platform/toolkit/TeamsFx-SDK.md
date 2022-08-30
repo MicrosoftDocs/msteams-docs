@@ -618,7 +618,7 @@ If you're using the version of SDK that has `loadConfiguration()`, you can follo
 
 ## Next step
 
-For detailed examples on how to use TeamsFx SDK[Samples](https://github.com/OfficeDev/TeamsFx-Samples) project.
+For detailed examples on how to use TeamsFx SDK [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project.
 
 ## See also
 
