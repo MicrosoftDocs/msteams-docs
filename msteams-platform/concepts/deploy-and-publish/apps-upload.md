@@ -84,7 +84,7 @@ You don't have to sideload your app again if you make code changes (these are re
 
 If an update is available to your app, then the **Update available** option is enabled. To update, follow the steps:
 
-1. Select **Update available** to view update.
+1. Select **Update available** to view update
 
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Update Teams app.":::
 
