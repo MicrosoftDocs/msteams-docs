@@ -490,6 +490,8 @@ This section provides several code snippets for common scenarios that are relate
 
 ## Other scenarios
 
+This section provides several code snippets for other scenarios that are related to Microsoft Graph. You can create API client in Bot or Azure Function and access SQL database in Azure Function.
+
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
@@ -550,9 +552,10 @@ This section provides several code snippets for common scenarios that are relate
   });
   ```
 
-  For more information on sample to access SQL database in Azure function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
+  </detials>
 
-</detials>
+  > [!NOTE]
+  > For more information on sample to access SQL database in Azure function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
 
 ## Advanced Customization
 
