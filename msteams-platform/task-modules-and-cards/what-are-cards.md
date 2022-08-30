@@ -108,13 +108,18 @@ Adaptive Card version 1.6 adds a new field called metadata web URL and copy opti
 
     :::image type="content" source="../assets/images/adaptive-cards/messaging-extension-card.png" alt-text="Copy option unavailable in messaging extension cards.":::
 
-1. The Adaptive Card has a copy option enabled to copy the metadata URL.
+1. The Adaptive Card version 2 has a copy and refresh option enabled.
 
     :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-copy-option.png" alt-text="The copy option is enabled to copy the metadata URL":::
 
 1. The metadata URL in the Adaptive Card can be unfurled in the overflow menu secondary option.
 
     :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="metadata url option in secondary menu of overflow menu":::
+
+### UI changes
+
+* The text on the Adaptive Card is bolder in style.
+* The title of the Adaptive Card is enabled as a link, by hovering on the title you'll be able to select the link.
 
 ## Support for Azure AD Object ID and UPN in user mention
 
