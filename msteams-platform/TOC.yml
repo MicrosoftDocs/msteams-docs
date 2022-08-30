@@ -102,10 +102,8 @@
       href: toolkit/install-Teams-Toolkit.md
     - name: Explore Teams Toolkit
       href: toolkit/explore-Teams-Toolkit.md
-    - name: Support for build environments
+    - name: Prepare to build apps using Microsoft Teams Toolkit
       href: toolkit/build-environments.md
-    - name: Support for app types and azure function
-      href: toolkit/app-types-and-azure-function.md 
     - name: Use Teams Toolkit to create your app 
       items:
       - name: Prerequisites
