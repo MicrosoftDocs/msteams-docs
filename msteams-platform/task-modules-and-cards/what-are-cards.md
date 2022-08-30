@@ -16,7 +16,7 @@ The bots for Teams support the following types of cards:
 * List card
 * Office 365 Connector card
 * Receipt card
-* Signin card
+* Sign-in card
 * Thumbnail card
 * Card collections
 
@@ -74,9 +74,9 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Support Adaptive Card loop for build
 
-Adaptive Card version 1.6 adds a new field called metadata web URL and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card.
+Adaptive Card version 1.6 adds a new field called metadata web URL and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
 
-### To unfurl an Adaptive card loops
+### To unfurl an Adaptive card loop
 
  Select `...` menu from Teams.
 
@@ -90,19 +90,19 @@ Adaptive Card version 1.6 adds a new field called metadata web URL and copy opti
 
  :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Select create cards ":::
 
- In the bot message renderer select `Adaptive Card`, paste the metadata URL in `card payload` and select `submit`this unfurls into an Adaptive Card loops.
+ In the bot message renderer select `Adaptive Card`, paste the metadata URL in `card payload` and select `submit`.
 
  :::image type="content" source="../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Select Adaptive Card, paste metadata url and submit":::
 
- After submitting, the metadata unfurls into an Adaptive Card loop.
+ After submitting, the metadata unfurls into an Adaptive Card loop. Copy the url by selecting the copy button on the Adaptive Card and paste it in the compose section and select the send button.
 
  :::image type="content" source="../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="After submission, metadata unfurls into an Adaptive Card":::
 
- Copy the url by selecting the copy button on the Adaptive Card and paste it in the compose section and select the send button, this unfurls into an Adaptive Card V2.
+ The metadata web url unfurls into an Adaptive Card V2.
 
  :::image type="content" source="../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="unfurling of Adaptive Card version2":::
 
-Revised copy option in Adaptive Cards.
+### Revised copy option in Adaptive Cards
 
 1. Copy option is disabled for regular ME cards.
 
