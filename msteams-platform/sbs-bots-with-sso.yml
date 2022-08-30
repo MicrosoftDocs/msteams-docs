@@ -138,7 +138,7 @@ items:
                    :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="New resource creation":::
 
               1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
-                 
+
                    :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource":::
 
         1. Select **Type of App** as **Multi Tenant**.

@@ -1,7 +1,7 @@
 ## Deploy your app to Azure
 
 Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
-<br> 
+<br>
 <br>
 <details>
 <summary>What's the difference between Provision and Deploy?</summary>
@@ -23,7 +23,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
    > [!NOTE]
-   > There are always some Azure resources used for hosting your app.
+   > Your app will always be hosted using certain Azure resources.
 
     A dialog warns you that costs may be incurred when running resources in Azure.
 
@@ -89,19 +89,14 @@ Once the provisioning and deployment steps are complete:
    The toolkit displays a message to indicate that the app is added to Teams.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows message to try the app now or later":::
- 
+
     - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
     - If you select **Try it**, Teams loads your app.
 
    Your app is loaded on the Azure site.
-   
+
 1. Select **Try it**.
 
    The Message Extension app is loaded in a chat bot app.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot that shows app sideloaded in Teams":::
-
-
-
-
-

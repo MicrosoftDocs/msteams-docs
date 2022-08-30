@@ -332,7 +332,6 @@ items:
 
        1. **Subscription name**: Visual Studio Enterprise Subscription. </br>
        1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
-
        1. Select your **Region**.
        1. Select **Provision**.
 
