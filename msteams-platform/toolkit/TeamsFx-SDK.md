@@ -552,10 +552,10 @@ This section provides several code snippets for other scenarios that are related
   });
   ```
 
-  </detials>
-
   > [!NOTE]
   > For more information on sample to access SQL database in Azure function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
+
+</details>
 
 ## Advanced Customization
 
