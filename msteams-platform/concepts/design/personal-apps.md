@@ -46,7 +46,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### Configure and create a flyout menu for multiple actions
 
-App developers can configure and place actions on top right of the nav bar and build a flyout menu.
+App developers can configure and place actions on upper right and build a flyout menu.
 
 >[!NOTE]
 > A maximum of five actions is supported. It includes both the top nav bar and the flyout menu.
