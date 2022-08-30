@@ -99,15 +99,15 @@ If an update is available to your app, then the **Update available** option is e
 
 When a user updates an app in one thread, the new version of the app is automatically updated in all other installed contexts.
 
-1. Go to Teams apps store > Select manage apps
+1. Go to **Teams apps store** > Select **manage apps**
 
      :::image type="content" source="../../assets/images/publish-app/manage-your-apps.png" alt-text="Screenshot is an example that shows the selection of manage your app":::
 
-1. User can view apps update available
+1. User can view updates available for apps
 
      :::image type="content" source="../../assets/images/publish-app/updates-available.png" alt-text="Screenshot is an example that shows users can view updates available":::
 
-1. update with one click
+1. User can update an app by selecting once, the new version of the app is automatically updated in all other installed contexts which makes an update contextless.
 
      :::image type="content" source="../../assets/images/publish-app/update-with-one-click.png" alt-text="Screenshot is an example of updating apps in a click":::
 
