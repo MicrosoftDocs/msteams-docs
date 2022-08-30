@@ -74,7 +74,7 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Support Adaptive Card loop for build
 
-Adaptive Card version 1.6 adds a new field called metadata web URL and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
+Adaptive Card version 1.6 adds a new field called metadata web url and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
 
 ### To unfurl an Adaptive card loop
 
@@ -94,7 +94,7 @@ Adaptive Card version 1.6 adds a new field called metadata web URL and copy opti
 
    :::image type="content" source="../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Select Adaptive Card, paste metadata url and submit.":::
 
-1. After submitting, the metadata unfurls into an **Adaptive Card loop**. Copy the web url by selecting the **Copy** option on the Adaptive Card and paste it in the compose section and select the send button.
+1. After submitting, the metadata unfurls into an **Adaptive Card loop**. Copy the web url by selecting the **copy** option on the Adaptive Card, and paste it in the compose section and select the send button.
 
    :::image type="content" source="../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="Unfurling into an Adaptive Card loop.":::
 
@@ -112,14 +112,14 @@ Adaptive Card version 1.6 adds a new field called metadata web URL and copy opti
 
     :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-copy-option.png" alt-text="Adaptive Card displaying the copy and refresh option.":::
 
-1. The metadata URL in the Adaptive Card can be unfurled in the overflow menu secondary option.
+1. The metadata url in the Adaptive Card can be unfurled in the overflow menu secondary option.
 
     :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="Adaptive Card displaying open url option in secondary menu of overflow menu.":::
 
 ### UI changes
 
 * The text on the Adaptive Card is bolder in style.
-* The title of the Adaptive Card is enabled as a link, by hovering on the title you'll be able to select the link.
+* The title of the Adaptive Card is enabled as a link, by hovering on the title you'll be able to select the link and copy the url.
 
 ## Support for Azure AD Object ID and UPN in user mention
 
