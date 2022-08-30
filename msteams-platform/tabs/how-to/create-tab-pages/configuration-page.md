@@ -1,8 +1,8 @@
 ---
 title: Create a configuration page
 author: surbhigupta
-description: In this module, learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, and more
-ms.localizationpriority: medium
+description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
