@@ -74,47 +74,47 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Support Adaptive Card loop for build
 
-Adaptive Card version 1.6 adds a new field called metadata web URL and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling the Adaptive Card loop.
+Adaptive Card version 1.6 adds a new field called metadata web URL and copy option for the url. The web url can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
 
 ### To unfurl an Adaptive card loop
 
- Select `...` menu from Teams.
+1. Select `...` menu from Teams.
 
- :::image type="content" source="../assets/images/adaptive-cards/select-dot-menu.png" alt-text="Select ... menu from Teams":::
+   :::image type="content" source="../assets/images/adaptive-cards/select-dot-menu.png" alt-text="Select ... menu from Teams.":::
 
- Search for `Adapto V4 Bot` from the menu
+1. Search for `Adapto V4 Bot` from the menu
 
- :::image type="content" source="../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Select adapto v4 card":::
+   :::image type="content" source="../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Select adapto v4 card.":::
 
- Select `create cards`
+1. Select `create cards`
 
- :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Select create cards ":::
+   :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Select create cards.":::
 
- In the Bot Message Renderer, select `Adaptive Card`, paste the metadata URL in `card payload` and then select Submit.
+1. In the Bot Message Renderer, select `Adaptive Card`, paste the metadata URL in `card payload` and then select Submit.
 
- :::image type="content" source="../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Select Adaptive Card, paste metadata url and submit":::
+   :::image type="content" source="../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Select Adaptive Card, paste metadata url and submit.":::
 
- After submitting, the metadata unfurls into an Adaptive Card loop. Copy the url by selecting the copy button on the Adaptive Card and paste it in the compose section and select the send button.
+1. After submitting, the metadata unfurls into an Adaptive Card loop. Copy the url by selecting the copy button on the Adaptive Card and paste it in the compose section and select the send button.
 
- :::image type="content" source="../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="After submission, metadata unfurls into an Adaptive Card":::
+   :::image type="content" source="../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="Unfurling into an Adaptive Card loop.":::
 
- The metadata web url unfurls into an Adaptive Card V2.
+1. The metadata web url unfurls into an Adaptive Card V2.
 
- :::image type="content" source="../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="unfurling of Adaptive Card version2":::
+   :::image type="content" source="../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="Unfurling into an Adaptive Card version2.":::
 
 ### Revised copy option in Adaptive Cards
 
 1. Copy option is disabled for regular ME cards.
 
-    :::image type="content" source="../assets/images/adaptive-cards/messaging-extension-card.png" alt-text="Copy option unavailable in messaging extension cards.":::
+    :::image type="content" source="../assets/images/adaptive-cards/messaging-extension-card.png" alt-text="Copy option disabled in ME cards.":::
 
 1. The Adaptive Card version 2 has a copy and refresh option enabled.
 
-    :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-copy-option.png" alt-text="The copy option is enabled to copy the metadata URL":::
+    :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-copy-option.png" alt-text="Adaptive Card displaying the copy and refresh option.":::
 
 1. The metadata URL in the Adaptive Card can be unfurled in the overflow menu secondary option.
 
-    :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="metadata url option in secondary menu of overflow menu":::
+    :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="Adaptive Card displaying open url option in secondary menu of overflow menu.":::
 
 ### UI changes
 
