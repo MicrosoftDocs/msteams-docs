@@ -101,15 +101,15 @@ When a user updates an app in one thread, the new version of the app is automati
 
 1. Go to Teams apps store > Select manage apps
 
-     :::image type="content" source="../../assets/images/publish-app/manage-your-apps.png" alt-text="Select manage your app":::
+     :::image type="content" source="../../assets/images/publish-app/manage-your-apps.png" alt-text="Screenshot is an example that shows the selection of manage your app":::
 
 1. User can view apps update available
 
-     :::image type="content" source="../../assets/images/publish-app/updates-available.png" alt-text="Users can view updates available":::
+     :::image type="content" source="../../assets/images/publish-app/updates-available.png" alt-text="Screenshot is an example that shows users can view updates available":::
 
 1. update with one click
 
-     :::image type="content" source="../../assets/images/publish-app/update-with-one-click.png" alt-text="Update apps with one click":::
+     :::image type="content" source="../../assets/images/publish-app/update-with-one-click.png" alt-text="Screenshot is an example of updating apps in a click":::
 
 ### Remove your app
 
