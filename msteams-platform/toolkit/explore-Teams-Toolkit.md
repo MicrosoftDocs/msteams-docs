@@ -141,8 +141,7 @@ From the task pane you can see the following sections:
 
 * [Install Teams Toolkit](install-Teams-Toolkit.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [Choose your build environments](build-environments.md)
-* [Support for app types and Azure function](app-types-and-azure-function.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Teams Toolkit](provision.md)
 
 <!--  

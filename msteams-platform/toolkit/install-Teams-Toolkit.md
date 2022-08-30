@@ -78,6 +78,5 @@ Teams Toolkit is upgraded to the latest version by default. The following steps 
 
 * [Explore Teams Toolkit](explore-Teams-Toolkit.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [Choose your build environments](build-environments.md)
-* [Support for app types and Azure function](app-types-and-azure-function.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Teams Toolkit](provision.md)

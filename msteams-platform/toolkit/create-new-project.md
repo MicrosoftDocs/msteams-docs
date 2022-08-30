@@ -154,4 +154,4 @@ The following image shows the directory structure of tab app with bot feature:
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
-* [Support for app types and Azure function](app-types-and-azure-function.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
