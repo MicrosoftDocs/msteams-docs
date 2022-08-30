@@ -24,7 +24,7 @@ The application must reference the [Microsoft Teams JavaScript client SDK](/java
 
 An example of a configuration page is shown in the following image:
 
-<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot is an example that shows configuration page":::
 
 The following code is an example of corresponding code for the configuration page:
 
@@ -156,7 +156,7 @@ The following image displays the tab content with **Gray** icon selected:
 
 The following image displays the tab content with **Red** icon selected:
 
-<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot is an example that shows configure tab with select red":::
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 

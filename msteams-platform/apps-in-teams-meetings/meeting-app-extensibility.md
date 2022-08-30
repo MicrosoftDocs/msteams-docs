@@ -30,7 +30,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
+Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot is an example that shows plus button":::, and select the app that you want to install.
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md).
@@ -64,7 +64,7 @@ To add tabs to an existing meeting:
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience":::
 
 ---
 
@@ -94,7 +94,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view":::
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -116,7 +116,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+:::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile:::"
 
 ---
 

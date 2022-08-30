@@ -82,7 +82,7 @@ With Sequential Workflow support, users can progress through a series of workflo
 
 The following image illustrates a food ordering bot example: <br/>
 
-<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
+:::image type="content" source="../../../assets/images/bots/sequentialWorkflow.gif" alt-text="Screenshot is an example that shows sequential Workflow":::
 
 The following image shows the various states for different users in the chat or channel:
 
