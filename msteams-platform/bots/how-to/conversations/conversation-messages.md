@@ -189,7 +189,7 @@ async def on_members_added_activity(
 > [!NOTE]
 >
 >* Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
->* Users can localize messages and send them. For more information, see [Localize your app](../../../concepts/build-and-test/apps-localization.md)
+>* Users can localize messages and send them. For more information, see [Localize your app](../../../concepts/build-and-test/apps-localization.md).
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
