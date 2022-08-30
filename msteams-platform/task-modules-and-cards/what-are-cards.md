@@ -84,7 +84,7 @@ Adaptive Card version 1.6 adds a new field called metadata web url and copy opti
 
 1. Search for **Adapto V4 Bot** from the menu
 
-   :::image type="content" source="../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Screen shot is an example that shows the selection of adapto v4 card from the list.":::
+   :::image type="content" source="../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Screenshot is an example that shows the selection of adapto v4 card from the list.":::
 
 1. Select **Create cards**
 
