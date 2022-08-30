@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Customize Teams app manifest
 
-The Teams app manifest describes how your app integrates into the Microsoft Teams product. This section covers:
+The Teams app manifest describes how your app integrates into the Microsoft Teams product. For more information on Manifest, see [App manifest schema for Teams](../resources/schema/manifest-schema.md). This section covers:
 
 * [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
 * [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
@@ -104,10 +104,10 @@ The following steps help to preview manifest file by using preview option in cod
 
 1. Select your environment.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
-
    > [!NOTE]
    > If there are more than one environment, you need to select the environment you want to preview as shown in the image:
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
 The following steps help to preview manifest file by using **Zip Teams metadata package** option in remote environment:
 
@@ -131,6 +131,9 @@ The following steps help to preview manifest file by using **Zip Teams metadata 
 ## Sync local changes to Dev Portal
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
+
+> [!NOTE]
+> For more information on developer portal, see [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 1. Deploy Teams app manifest.
 

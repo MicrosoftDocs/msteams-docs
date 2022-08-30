@@ -16,14 +16,8 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 * The backend APIs are deployed to Azure functions.
 * The bot or message extension is deployed to Azure app service.
 
-## Prerequisite
-
-* [Install latest version of Teams Toolkit](install-Teams-Toolkit.md)
-
-  > [!NOTE]
-  >
-  > * Ensure you have Teams app project opened in VS code.
-  > * Before you deploy project code to cloud, [provision the cloud resources](provision.md).
+  >[NOTE!]
+  > Before you deploy project code to cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
 
 ## Deploy Teams apps using Teams Toolkit
 
