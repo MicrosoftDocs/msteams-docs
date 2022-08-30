@@ -220,13 +220,13 @@
     displayName: iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: Personal tab with Node.js, ASP. NET Core, ASP.NET Core MVC, App generator, secure tunnel to your tab, Reorder static personal tabs
+    displayName: App generator, secure tunnel to your tab, Reorder static personal tabs
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
-    displayName: Channel tab with Node.js, ASP NET Core MVC, secure tunnel to your tab
+    displayName: Secure tunnel to your tab, channel or group tab with ASP.NET Core
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
-    displayName: Task module, code integration, native loading indicator property
+    displayName: Task module, code integration, native loading indicator property, access additional content, TeamsJS
   - name: Create configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
     displayName: Secured HTTPs endpoints, context data for your tab, tabs on mobile
@@ -241,17 +241,19 @@
     displayName: User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
-    displayName: Cross-tenant notifications, 
+    displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
     displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
-    displayName: Deep link, 
+    displayName: Deep link, invoke stage view, tab information property
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
+    displayName: New converstaion, channel and static tabs
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
+    displayName: margins align, UI Kit desings, extra padding effect, 
 - name: Build bots
   items:
   - name: Overview
