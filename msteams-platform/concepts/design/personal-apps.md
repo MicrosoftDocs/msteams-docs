@@ -106,10 +106,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-App developers can configure the action for the back button to be either one of the following:
-
-* Configure the back button to leave the app and navigate to Teams (default).
-* Configure the back button and navigate within the app.
+If a user opens an app inside Teams and selects the back button, by default, they exit from the app and go to Teams. App developers can configure the back button so that when the user selects the back button, they can go back to the previous steps and navigate within the app.
 
 #### Desktop
 
