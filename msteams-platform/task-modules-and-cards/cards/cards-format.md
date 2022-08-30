@@ -323,7 +323,7 @@ The following image is an example of masking information in Adaptive Cards:
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
 
 > [!NOTE]
-> Ensure to test your full width Adaptive Card in mobile environment at 280 pixels, as the content may get trucated in mobile experience.
+> Ensure to test your full width Adaptive Card in mobile environment at 280 pixels, as the content may get truncated in mobile experience.
 
 #### Construct full width cards
 
