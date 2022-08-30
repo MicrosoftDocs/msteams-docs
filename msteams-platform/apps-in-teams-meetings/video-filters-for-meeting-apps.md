@@ -139,7 +139,7 @@ The following is an example of a manifest for a video filter app:
     "filters": [ // for showing filters inside of video effects quick picker section.
       {
         "id": "310a65de-24ce-445e-9e1e-dd4ef0f0114b", // Guid
-        "name": "FilterA",
+        "name": "Category_FilterA",
         "thumbnail": "PreviewEffect.png" // A relative path to the filter thumbnail.png
       }
     ],
