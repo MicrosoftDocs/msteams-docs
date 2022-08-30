@@ -1,6 +1,6 @@
 ---
 title: Incoming call notifications
-description: In this module, learn about detailed technical information on handling notifications from incoming calls, redirecting and authenticating calls using code samples
+description: Learn about incoming notification protocol to convert the call to Microsoft Graph, reirects for region affinity, and authenticate the callback.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2019
