@@ -1,6 +1,6 @@
 ---
 title: Send tenant ID and conversation ID to the request headers of the bot
-description: In this module, learn how to send tenant ID and conversation ID to the request headers of the bot in Teams.
+description: Learn how to send tenant ID and conversation ID to the request headers of the bot in Teams. The activities are sent to the bot through a URL.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
