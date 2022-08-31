@@ -25,32 +25,29 @@ doc-feature-app-less-adaptive-card-preview-with-schema.org-templates-TFW
 
 ## App less Adaptive Card
 
-User can add metadata tags to the website, copy the link and paste it into the compose box, the adaptive card takes the template of the tag and unfurls into an Adaptive Card based on the type of product it's tagged.
+User can copy the metadata link from any website and paste it into the Adaptive Card designer, it takes the template of the tag and unfurls into an Adaptive Card based on the type of product it's tagged.
 
-There's one template registered for each app type product. Microsoft has incorporated its own templates and following are the web categories:
+### Schema.org
 
-* Creative works
-* Embedded non-text objects
-* Event
-* Organization
-* Person
-* Place
-* Local business
-* Restaurant
-* Products
-* Reviews
+Schema.org is an open-source standard for schemas of structured data on the internet. The templates have been leveraged from schema.org to unfurl rich previews for your links in Teams.
 
-Following screenshot displays metadata of how an adaptive card unfurls on desktop:
+### Unfurling Adaptive Card
 
-:::image type="content" source="../../assets/images/messaging-extension/meta.png" alt-text="Meta data"border="true"lightbox="../../assets/images/messaging-extension/meta-data.png":::
+1. Copy the link from any website and paste into the **Adaptive Card designer**.
 
-Following screenshot displays metadata of how an adaptive card unfurls on mobile:
+    :::image type="content" source="../../assets/images/adaptive-cards/copy-metadata-link.png" alt-text="Screenshot is an example of copying metadata link from the website":::
 
-(Mobile experience image to be added)
+1. Copy the JSON code for the chosen category from your website and paste it in the **Adaptive Card designer** **>** **Sample data editor**
+
+   :::image type="content" source="../../assets/images/adaptive-cards/card-payload-editor.png" alt-text="Screenshot is an example that shows JSON code copied and pasted into the card payload editor":::
+
+1. Choose a matching template from the template library and paste it into the **card payload editor** you'll see the unfurling of an Adaptive Card.
+
+   :::image type="content" source="../../assets/images/adaptive-cards/unfurling-adaptive-card.png" alt-text="Screenshot is an example that shows unfurling of an Adaptive Card":::
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
