@@ -10,14 +10,18 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Microsoft Teams Toolkit
 
+Teams Toolkit supports environments for creating apps. Teams Toolkit also helps to integrate Azure Functions capabilities as well as cloud services in the Teams app you've built.
+
 :::image type="content" source="../assets/images/buildapps-TTK.png" alt-text="Prepare to build apps using Teams Toolkit":::
 
-Teams Toolkit in Microsoft Visual Studio Code offers set of environments to build your Teams app. If you create an app using Teams Toolkit for Visual Studio Code, you can choose anyone of the following environment that best suits your app:
+## Build Environments
+
+Teams Toolkit in Microsoft Visual Studio Code offers set of environments to build your Teams app. You can choose anyone of the following environment that best suits your app:
 
 * JavaScript/TypeScript
 * SharePoint Framework (SPFx)
 
-## Create your Teams app using JavaScript or TypeScript
+### Create your Teams app using JavaScript or TypeScript
 
 The apps built with JavaScript have the following advantages:
 
@@ -34,7 +38,7 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 * Command bot: You can automate repetitive tasks using command bot. Command bots help you to answers simple queries or commands sent in chats.
 * Message extensions: You can interact with your web service through buttons and forms. Capability provided by message extension.
 
-## Create your Teams app using SPFx
+### Create your Teams app using SPFx
 
 Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
 
