@@ -35,15 +35,15 @@ Schema.org is an open-source standard for schemas of structured data on the inte
 
 1. Copy the link from any website and paste into the **Adaptive Card designer**.
 
-    :::image type="content" source="../../assets/images/adaptive-cards/copy-metadata-link.png" alt-text="Screenshot is an example of copying metadata link from the website":::
+    :::image type="content" source="../../assets/images/adaptive-cards/copy-metadata-link.png" alt-text="Screenshot is an example of copying metadata link from the website.":::
 
 1. Copy the JSON code for the chosen category from your website and paste it in the **Adaptive Card designer** **>** **Sample data editor**
 
-   :::image type="content" source="../../assets/images/adaptive-cards/card-payload-editor.png" alt-text="Screenshot is an example that shows JSON code copied and pasted into the card payload editor":::
+   :::image type="content" source="../../assets/images/adaptive-cards/sample-data-editor.png" alt-text="Screenshot is an example that shows JSON code copied into sample editor.":::
 
 1. Choose a matching template from the template library and paste it into the **card payload editor** you'll see the unfurling of an Adaptive Card.
 
-   :::image type="content" source="../../assets/images/adaptive-cards/unfurling-adaptive-card.png" alt-text="Screenshot is an example that shows unfurling of an Adaptive Card":::
+    :::image type="content" source="../../assets/images/adaptive-cards/card-payload-editor.png"alt-text="Screenshot is an example that shows unfurling of an Adaptive Card.":::
 
 See the following video to learn more about link unfurling:
 <br>
