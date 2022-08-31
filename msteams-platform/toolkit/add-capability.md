@@ -16,8 +16,8 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 |--------|-------------|-----------------|
 |**Basic Teams app**|              |
 | Tab |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Tab, notification bot, command bot, bot, message extension|
-|SPFx tab|           |None|
-|SSO-enabled tab|           |SSO-enabled tab, notification bot, command bot, bot, message extension|
+|SPFx tab| SPFx tab apps is hosted in Microsoft 365 and it supports developing and hosting your client-side SPFx solution|None|
+|SSO-enabled tab|You can build SSO-enabled tab app that allows the user with single sign on feature|SSO-enabled tab, notification bot, command bot, bot, message extension|
 | Bot |  Bots help to interact with your web service through text, interactive cards, and task modules.|Message extension, SSO-enabled tab, tab|
 | Message extension | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Bot, SSO-enabled tab, tab|
 |**Scenario-based Teams app**|             |
@@ -30,6 +30,10 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 ## Add capabilities
 
 You can add capabilities by the following methods:
+
+* [Using Teams Toolkit in Microsoft Visual Studio Code](#using-teams-toolkit-in-microsoft-visual-studio-code)
+* Using the Command Palette[Using the Command Palette](#using-the-command-palette)
+* [Using TeamsFx CLI](#changes-after-adding-capabilities)
 
 ### Using Teams Toolkit in Microsoft Visual Studio Code
 
