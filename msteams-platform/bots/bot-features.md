@@ -205,3 +205,4 @@ this.onMessage(async (context, next) => {
 * [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
