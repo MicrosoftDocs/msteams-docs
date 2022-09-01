@@ -1,7 +1,7 @@
 ---
 title: Define message extension action commands
 author: surbhigupta
-description: In this module, learn to define messaging extension action commands with app manifest example in Microsoft Teams.
+description: Learn to define messaging extension action commands with app manifest example in Microsoft Teams. Sample (.NET, Node.js) how to define action commands, create task module, and respond to task module submit action.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
