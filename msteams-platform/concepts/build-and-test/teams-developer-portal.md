@@ -37,7 +37,7 @@ The Developer portal allows you to create a brand new app:
 
 1. Select **Apps** from the left pane.
 
-   :::image type="content" source="~/assets/images/tdp/select-app.png" alt-text="Developer portal first page":::
+   :::image type="content" source="~/assets/images/tdp/select-app.png" alt-text="Select app":::
 
 1. Select **New app**.
 
@@ -59,7 +59,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 1. In the Developer Portal, select **Apps** from the left pane.
 
-  :::image type="content" source="~/assets/images/tdp/select-app.png" alt-text="Developer portal first page":::
+  :::image type="content" source="~/assets/images/tdp/select-app.png" alt-text="Select app1":::
 
 1. Select **Import App**.
 
