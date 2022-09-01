@@ -267,7 +267,7 @@ The following code shows an example of an Adaptive Card:
 
 Adaptive Card version 1.6 adds a new schema field called copy option for the url. The web url under the metadata can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
 
-### To unfurl an Adaptive card loop
+### To unfurl an Adaptive Card loop
 
 1. Select more option **...** from Teams chat window.
 
