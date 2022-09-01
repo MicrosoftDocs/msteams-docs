@@ -131,6 +131,8 @@ To create an action command:
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
+---
+
 ### Create an action command manually
 
 To manually add your action-based message extension command to your app manifest, you must add the following parameters to the `composeExtension.commands` array of objects:
