@@ -1,6 +1,6 @@
 ---
 title: Authenticating app users
-description: In this module, learn authentication in Teams and how to use it in the apps, web based authentication flow and OAuthPrompt flow for conversational bots
+description: Learn about authentication methods that you can enable in Teams app, such as Single sign-on (SSO) and using third-party OAuth providers
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
