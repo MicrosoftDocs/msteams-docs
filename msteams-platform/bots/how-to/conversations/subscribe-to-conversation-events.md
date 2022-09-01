@@ -1457,7 +1457,7 @@ It's important to know that new events can be added anytime in the future and yo
 When the bot encounters an error while handling different events or activities, the bot should send relevant messages in conversations based on the specific events like Welcome messages and it should be handled through [Installation update event](#installation-update-event).
 
 > [!NOTE]
-> In production environment, you should consider Azure Application Insights for events or errors logging. For more information, see [https://aka.ms/bottelemetry](https://aka.ms/bottelemetry) to add telemetry capture to your bot.
+> In production environment, you must consider Azure Application Insights for events or errors logging. For more information, see [https://aka.ms/bottelemetry](https://aka.ms/bottelemetry) to add telemetry capture to your bot.
 
 ## Code sample
 
