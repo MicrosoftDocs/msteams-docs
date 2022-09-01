@@ -1,8 +1,8 @@
 ---
 title: Create a channel tab
 author: laujan
-description: In this module, learn how to create a channel and group tab with the Yeoman Generator for Microsoft Teams, including reviewing source code with code examples.
-ms.localizationpriority: medium
+description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
