@@ -1,6 +1,6 @@
 ---
 title: Package your app
-description: Learn how to package your Microsoft Teams app with icons for testing, uploading, and store publishing.
+description: Learn how to package your Microsoft Teams app and upload it to Teams. Create app package, enable custom uploading, ensure your app is running and accessible using HTTPs.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
