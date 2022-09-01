@@ -43,7 +43,7 @@ In the **Configure** section, you can see the following components to manage and
 | **Languages** | You can set up or change the language of your app.|
 | **Domain** | You can add the domains to load your apps in the Teams client (For example: *.example.com).|
 
-:::image type="content" source="~/assets/images/tdp/config-section.png" alt-text="config-section":::
+:::image type="content" source="~/assets/images/tdp/config-section.png" alt-text="configure section":::
 
 ## Advanced
 
