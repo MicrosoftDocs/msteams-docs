@@ -1,6 +1,6 @@
 ---
 title: Single sign-on support for bots 
-description: Enable SSO using Azure AD configuration and OAuth card support for Teams bot apps.
+description: Enable Single sign-on (SSO) using Azure AD configuration and OAuth card support for Teams bot apps.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---

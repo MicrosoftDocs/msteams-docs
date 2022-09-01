@@ -1,6 +1,6 @@
 ---
 title: Silent authentication
-description: Configure your tab app with Azure AD for tabs and how it works
+description: Configure your tab app with Azure AD for tabs and how it works.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---

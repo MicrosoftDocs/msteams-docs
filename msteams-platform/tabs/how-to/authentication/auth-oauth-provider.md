@@ -1,6 +1,6 @@
 ---
 title: Use external OAuth providers  
-description: Authenticate your app users using external OAuth providers and learn how to add it to external browser 
+description: Authenticate your app users using external OAuth providers and learn how to add it to external browser.
 ms.topic: how-to
 ms.localizationpriority: high
 ---

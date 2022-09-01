@@ -1,6 +1,6 @@
 ---
 title: Authenticating app users
-description: Learn about authentication methods that you can enable in Teams app, such as Single sign-on (SSO) and using third-party OAuth providers
+description: Learn about authentication methods that you can enable in Teams app, such as Single sign-on (SSO) and using third-party OAuth providers.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---

@@ -1,6 +1,6 @@
 ---
 title: Update manifest for enabling SSO for tabs
-description: Update Teams manifest for enabling SSO for tabs and sideload it into Teams client for testing SSO authentication
+description: Update Teams manifest for enabling Single sign-on (SSO) for tabs and sideload it into Teams client for testing SSO authentication.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API

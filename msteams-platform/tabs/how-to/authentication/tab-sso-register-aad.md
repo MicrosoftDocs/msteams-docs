@@ -1,6 +1,6 @@
 ---
 title: Register your tab app with Azure AD
-description: Configure SSO with Azure AD by configuring App ID URI, scope for access token, and pre-authorize trusted clients
+description: Configure Single sign-on (SSO) with Azure AD by configuring App ID URI, scope for access token, and pre-authorize trusted clients.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
