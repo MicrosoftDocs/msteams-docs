@@ -263,11 +263,13 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
-## Adaptive Card loop
+### Adaptive Card loop
 
-Adaptive Card version 1.6 adds a new schema field called copy option for the url. The web url under the metadata can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
+Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and outlook.
 
-### To unfurl an Adaptive Card loop
+In version 1.6 you can change an Adaptive Card in to a loop component which has actionable content, enabling users to make quick updates without switching context, and changes made in the loop component stays in sync as its copy pasted across Teams.
+
+#### To unfurl an Adaptive Card loop
 
 1. Select more option **...** from Teams chat window.
 
@@ -293,7 +295,7 @@ Adaptive Card version 1.6 adds a new schema field called copy option for the url
 
     :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="Screenshot is an example that shows open url option in the overflow menu of the Adaptive Card.":::
 
-1. The web url unfurls into an **Adaptive Card V2**.
+1. The web url unfurls into an **Adaptive Card loop**.
 
     :::image type="content" source="../../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="Screenshot is an example that shows Adaptive card loop unfurling into an Adaptive Card version2.":::
 
