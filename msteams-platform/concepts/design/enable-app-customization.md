@@ -1,5 +1,5 @@
 ---
-title: Customize your Teams app
+title: Enable app customization and block apps till admin allows
 author: heath-hamilton
 description: In this module, understand how Teams admins can customize your Teams app for their org and hide Teams app until admin approves.
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.topic: overview
 ---
 
-# Customize your Teams app
+# Enable app customization and block apps till admin allows
 
 Microsoft Teams lets admins customize Teams app to enhance store experience and adhere to their organization's branding. An app developer can allow their app to be customized by a Teams admin. For more information, see
 [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps).
@@ -24,20 +24,16 @@ Some possible examples of this feature include:
 
 You can enable this feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. That can be done in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home) if you've chosen to use the Developer Portal to edit the manifest of your app.
 
-### Test your app
-
-You can't test this feature during development. App customization isn't supported when sideloading or publishing to an org's app catalog.
+> [!IMPORTANT]
+> You can't test this feature during development. App customization isn't supported when sideloading or publishing to an org's app catalog.
 
 ### User considerations
 
 Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/MicrosoftTeams/customize-apps).
 
-## Hide Teams app from users
+## Block apps by default for users until an admin approves
 
 To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
-
-> [!NOTE]
-> The Teams store has evolved. Earlier, updating the LOB apps involved selecting the ellipses on the tile. You may now update the LOB apps by logging into the [Teams Admin Centre](https://admin.teams.microsoft.com) with the updated Teams store experience.
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
@@ -45,12 +41,12 @@ To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction
 
 The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with **Blocked by publisher** status:
 
-:::image type="content" source="../../assets/images/Manage-apps-allow.png" alt-text="The screenshot is an example that shows an allow option to the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
+:::image type="content" source="../../assets/images/manage-apps-allow.png" alt-text="The screenshot is an example that shows the allow option for the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
 
 If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken any explicit action.
 
 > [!NOTE]
-> For LOB apps, `defaultBlockUntilAdminAction` is not supported. The app won't be blocked if you upload a LOB app with this property.
+> For LOB apps, `defaultBlockUntilAdminAction` is not supported. The app is not blocked if you upload a LOB app with this property.
 
 ## See also
 
