@@ -94,22 +94,22 @@ The following is an example of a manifest for a video filter app:
 {
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview", // Required for meetingExtensionDefinition for sideloading. Will have a published version 1.10
-  "id": "e58bac8e-94ff-4dce-8892-9bcd564fb36c", // Guid
+  "id": "your_app_guid", // Newly generated Guid
   "version": "1.0.0",
-  "packageName": "com.microsoft.teams.videopp",
+  "packageName": "your_package_name", // Example: com.microsoft.teams.videopp
   "developer": {
-    "name": "Microsoft",
-    "websiteUrl": "https://videoapp.microsoft.com",
-    "privacyUrl": "https://videoapp.microsoft.com/privacy",
-    "termsOfUseUrl": "https://videoapp.microsoft.com/terms"
+    "name": "your_developer_name", // Example: Microsoft
+    "websiteUrl": "your_developer_website", // Example: https://videoapp.microsoft.com
+    "privacyUrl": "your_privacy_url", // Example: https://videoapp.microsoft.com/privacy
+    "termsOfUseUrl": "your_terms_of_use_url" //Example: https://videoapp.microsoft.com/terms
   },
   "name": {
-    "short": "Teams VideoApp example",
-    "full": "Teams VideoApp example (Preview)"
+    "short": "your_app_short_name", // Example: Teams VideoApp example
+    "full": "your_app_full_name" // Example: Teams VideoApp example (Preview)
   },
   "description": {
-    "short": "A short description for the video app",
-    "full": "A full description for the video app"
+    "short": "your_app_short_description", // A short description for the video app
+    "full": "your_app_full_description" // A full description for the video app
   },
   "icons": {
     "outline": "outline.png", // A relative path to a transparent .png icon — 32px X 32px
@@ -134,17 +134,17 @@ The following is an example of a manifest for a video filter app:
       ]
     }
   },
-  "validDomains": [ "videoapp.microsoft.com" ], // Domain for video app url
+  "validDomains": [ "your_domain_of_videoAppContentUrl" ], // The domain for videoAppContentUrl, Example: videoapp.microsoft.com
   "meetingExtensionDefinition": {
     "filters": [ // for showing filters inside of video effects quick picker section.
       {
         "id": "310a65de-24ce-445e-9e1e-dd4ef0f0114b", // Guid
-        "name": "Category_FilterA",
+        "name": "Category_FilterA", // Category can be: Styles, Frames, Makeup
         "thumbnail": "PreviewEffect.png" // A relative path to the filter thumbnail.png
       }
     ],
-    // Video app web page url for both processing video frames and customization experience. The domain should be one of **validDomain**。
-    "videoAppContentUrl": "https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html"
+    // Video app web page url for both processing video frames and customization experience. The domain should be one of **validDomain**.
+    "videoAppContentUrl": "your_app_content_url" // Example: https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html
   }
 }
 ```
@@ -224,7 +224,32 @@ You can configure your app to fetch the user's video stream during the meeting l
 
 You can use the video extensibility APIs to access the video stream of the user and get notified when a user has selected and applied a filter.
 
- To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true), use the following API methods to trigger the video filter app:
+To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true), include the external JavaScript file to the HTML page using the src attribute.
+
+Following is the code sample of the `src` attribute with the JavaScript file path:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video app sample</title>
+</head>
+<body>
+    <h1 class="app-title">Video app sample</h1>
+    <div class="horizontal">
+      <!-- UI for sampleEffect1 -->
+      <div class="filter" id="sampleEffect1">
+        <a class="thumbnail"></a>
+      </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="./src/index.css" />
+    <script src="./src/index.js" type="module"></script>
+</body>
+</html>
+```
+
+Use the following API methods in the JavaScript file to trigger the video filter app:
 
 * Call the `registerForVideoEffect` method to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
 
@@ -246,22 +271,49 @@ You can use the video extensibility APIs to access the video stream of the user 
 
   Following code snippet is an example of calling the `registerForVideoFrame` method:
 
-  ```typescript
-  function registerForVideoFrame(frameCallback: VideoFrameCallback, config: VideoFrameConfig),
-  type VideoFrameCallback = (frame: VideoFrame, notifyVideoFrameProcessed: () => void, notifyError: (errorMessage: string) => void) => void,
+```typescript
+ // import video module from sdk
 
-  /** 
-   
-  * video format 
-  
-  */
-  
-  interface VideoFrameConfig { 
+import { video } from "@microsoft/teams-js";
 
-  format: VideoFrameFormat;
+// video frame handler for sampleEffect1
+
+function sampleEffectHandler1(videoFrame) {
+    // process video frame with sampleEffect1
+
+}
+
+// video frame handler for sampleEffect2
+
+function sampleEffectHandler2(videoFrame) {
+
+    // process video frame with sampleEffect2
+
+}
+function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
+  // selectedEffectId is the effect id that is using currently in video app
+  switch (selectedEffectId) {
+    case sampleEffect1:
+      sampleEffectHandler1(videoFrame);
+      break;
+    case sampleEffect1:
+      sampleEffectHandler2(videoFrame);
+      break;
+    default:
+      break;
   }
-
-  ```
+  //send notification the effect processing is finshed.
+  notifyVideoProcessed();
+  //send error to Teams if any
+  // if (errorOccurs) {
+  //   notifyError("some error message");
+  // }
+}
+// call registerForVideoFrame
+video.registerForVideoFrame(videoFrameHandler, {
+  format: "NV12",
+});
+```
 
 * Call the `notifySelectedVideoEffectChanged` method to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
 
@@ -271,34 +323,21 @@ You can use the video extensibility APIs to access the video stream of the user 
   > * For pre-meeting: The callback is invoked immediately.
   > * For in-meeting: The callback isn't invoked until the user selects the `Apply` button.
 
-  Following code snippet is an example of calling the `notifySelectedVideoEffectChanged` method:
+Following code snippet is an example of calling the `notifySelectedVideoEffectChanged` method:
 
-  ```typescript
-  function notifySelectedVideoEffectChanged(effectChangeType: EffectChangeType, effectId: string | undefined)
-  
-  enum EffectChangeType 
-  
-  { 
-  
-     /** 
+```typescript
+// notify Teams when user click on app page
+const sampleEffect1Element = document.getElementById("sampleEffect1");
 
-     * current video effect changed 
+// add event listener for sampleEffect1 ui element. This can change according to how you implement you UI for video effect.
 
-     */ 
+sampleEffect1Element.addEventListener("click", function () {
 
-    EffectChanged, 
+  // notify for selected video effect changed event
+  video.notifySelectedVideoEffectChanged("EffectChanged", sampleEffect1_id);
 
-    /** 
-
-     * disable the video effect 
-
-     */ 
-
-    EffectDisabled, 
-
-  } 
-
-  ```
+});
+```
 
 ### Guidelines to use the Video extensibility API
 

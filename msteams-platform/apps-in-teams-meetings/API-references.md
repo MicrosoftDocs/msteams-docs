@@ -1059,10 +1059,9 @@ The following table includes the query parameter:
 ### Example
 
 ```typescript
-  function registerForVideoEffect(callback: VideoEffectCallBack)
-  
-  type VideoEffectCallBack = (effectId: string | undefined) => void,
-  
+function registerForVideoEffect(callback: VideoEffectCallBack)
+
+type VideoEffectCallBack = (effectId: string | undefined) => void,
 ```
 
 ## Register for video frame
@@ -1081,18 +1080,47 @@ The following table includes the query parameter:
 ### Example
 
 ```typescript
-  function registerForVideoFrame(frameCallback: VideoFrameCallback, config: VideoFrameConfig),
-  type VideoFrameCallback = (frame: VideoFrame, notifyVideoFrameProcessed: () => void, notifyError: (errorMessage: string) => void) => void,
-  /** 
-   
-  * video format 
-  
-  */
-  
-  interface VideoFrameConfig { 
-  format: VideoFrameFormat;
-  }
+ // import video module from sdk
 
+import { video } from "@microsoft/teams-js";
+
+// video frame handler for sampleEffect1
+
+function sampleEffectHandler1(videoFrame) {
+    // process video frame with sampleEffect1
+
+}
+
+// video frame handler for sampleEffect2
+
+function sampleEffectHandler2(videoFrame) {
+
+    // process video frame with sampleEffect2
+
+}
+function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
+  // selectedEffectId is the effect id that is using currently in video app
+  switch (selectedEffectId) {
+    case sampleEffect1:
+      sampleEffectHandler1(videoFrame);
+      break;
+    case sampleEffect1:
+      sampleEffectHandler2(videoFrame);
+      break;
+    default:
+      break;
+  }
+  //send notification the effect processing is finshed.
+  notifyVideoProcessed();
+  //send error to Teams if any
+  // if (errorOccurs) {
+  //   notifyError("some error message");
+  // }
+}
+// call registerForVideoFrame
+video.registerForVideoFrame(videoFrameHandler, {
+  format: "NV12",
+});
 ```
 
 ## Notify selected video effect change
@@ -1111,21 +1139,17 @@ The following table includes the query parameter:
 ### Example
 
 ```typescript
-  function notifySelectedVideoEffectChanged(effectChangeType: EffectChangeType, effectId: string | undefined)
-  
-  enum EffectChangeType 
-  
-  { 
-  
-     /** 
-     * current video effect changed 
-     */ 
-    EffectChanged, 
-    /** 
-     * disable the video effect 
-     */ 
-    EffectDisabled, 
-  } 
+// notify Teams when user click on app page
+const sampleEffect1Element = document.getElementById("sampleEffect1");
+
+// add event listener for sampleEffect1 ui element. This can change according to how you implement you UI for video effect.
+
+sampleEffect1Element.addEventListener("click", function () {
+
+  // notify for selected video effect changed event
+  video.notifySelectedVideoEffectChanged("EffectChanged", sampleEffect1_id);
+
+});
 ```
 
 ## Code sample
