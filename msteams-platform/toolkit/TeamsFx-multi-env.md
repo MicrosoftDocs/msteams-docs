@@ -161,7 +161,7 @@ Steps for customization:
 4. Open config file `.fx/configs/config.staging.json`.
 5. Add the same property to `my app description for staging`.
 6. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
-7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`.
+7. Update the property **`description > short`** to use the **variable** defined in configure files with mustache syntax **`{{config.manifest.description.short}}`**.
   
   The updates to `manifest.template.json` are:
 
@@ -187,7 +187,6 @@ Steps for customization:
 <summary><b>Scenario 3: Customize Teams app description for all environments</b></summary>
 
 You can set the description of Teams app to `my app description` for all the environments.
-
 As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
 
 1. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
