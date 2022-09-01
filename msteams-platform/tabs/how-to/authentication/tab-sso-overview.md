@@ -1,6 +1,6 @@
 ---
 title: Overview to authentication for tabs using SSO in Teams with Azure AD
-description: Learn about SSO authentication in Teams and how to emable it in tabs
+description: Learn about SSO authentication in Teams and how to enable it in tabs
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO access token app manifest 
