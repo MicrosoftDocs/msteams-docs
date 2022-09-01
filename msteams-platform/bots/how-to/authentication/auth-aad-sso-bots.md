@@ -1,6 +1,6 @@
 ---
 title: Single sign-on support for bots 
-description: Learn how to get a user token and a bot developer can use a sign-in card or the Azure bot service with the OAuth card support.
+description: Enable SSO using Azure AD configuration and OAuth card support for Teams bot apps.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---

@@ -1,6 +1,6 @@
 ---
 title: Silent authentication
-description: In this module, learn how to do silent authentication, Single-sign-on, and Azure AD for tabs and how it works
+description: Configure your tab app with Azure AD for tabs and how it works
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
