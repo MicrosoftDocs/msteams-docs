@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams.":::
+:::image type="content" source="~/assets/images/tdp/developer-portal.png" alt-text="Developer portal Home page":::
 
 > [!NOTE]
 >
@@ -43,7 +43,7 @@ The Developer portal allows you to create a brand new app:
 
    :::image type="content" source="~/assets/images/tdp/select-new-app.png" alt-text="Select new app":::
 
-   Add app window appears.
+   **Add app** window appears.
 
 1. Enter app name and select **Add**.
 
@@ -59,13 +59,13 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 1. In the Developer Portal, select **Apps** from the left pane.
 
-  :::image type="content" source="~/assets/images/tdp/select-app.png" alt-text="Select app1":::
+   :::image type="content" source="~/assets/images/tdp/select-app.png" alt-text="Select app1":::
 
 1. Select **Import App**.
 
-  :::image type="content" source="~/assets/images/tdp/select-import-app.png" alt-text="Import an app":::
+   :::image type="content" source="~/assets/images/tdp/select-import-app.png" alt-text="Import an app":::
 
-1. Select the app manifest file, and then select **Open**.
+1. Select the app manifest file, and select **Open**.
 1. Select **Import**.
 
    > [!NOTE]

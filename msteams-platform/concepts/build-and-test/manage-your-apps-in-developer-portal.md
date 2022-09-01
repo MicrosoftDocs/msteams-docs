@@ -19,19 +19,13 @@ After you create or upload your app, you can manage your apps in Developer Porta
 
 In the **Overview** section, you can see the following components to manage your app:
 
-* Dashboard
+| Components | Description |
+| --- | --- |
+| **Teams store validation** | App validation tool checks your app package against the test cases Microsoft uses when reviewing your app. |
+| **Announcement** | Latest updates of your apps on Developer Portal for Teams.|
+| **Basic information** | Shows you the App ID, Version, Manifest version, and so on. |
 
-  * In the **Dashboard** under **Overview** section, you can see the following components for your app:
-    * **Teams store validation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
-    * **Announcement**: Latest updates of your apps on Developer Portal for Teams
-    * **Active users (Preview)**: Shows you the active user count
-    * **Basic information**: Shows you the App ID, Version, Manifest version, and so on.
-
-    :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
-
-* Analytics
-
-    In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
+    :::image type="content" source="~/assets/images/tdp/overview.png" alt-text="Overview of Developer Portal":::
 
 ## Configure
 
@@ -39,44 +33,26 @@ To install and render your app in Teams, you must include a set of configuration
 
 In the **Configure** section, you can see the following components to manage and access your app:
 
-* **Basic information**: This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
-* **Branding**: This page shows the app icon details.
-* **App features**: You can add the following features to your app:
-  * Personal app
-  * Bot
-  * Connector
-  * Scene
-  * Group and channel app
-  * Messaging extension
-  * Meeting extension
-  * Activity feed notification
-* **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on**: You can configure your app to authenticate users with single sign-on (SSO).
-* **Languages**: You can set up or change the language of your app.
-* **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
+| Components | Description |
+| --- | --- |
+| **Basic information** | This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID. |
+| **Branding** | This page shows the app icon details.|
+| **App features** | You can add the following features to your app: <br> *Personal app <br>* Bot <br> *Connector <br>* Scene <br> *Group and channel app <br>* Messaging extension <br> *Meeting extension <br>* Activity feed notification|
+| **Permissions** | This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.|
+| **Single sign-on** | You can configure your app to authenticate users with single sign-on (SSO).|
+| **Languages** | You can set up or change the language of your app.|
+| **Domain** | You can add the domains to load your apps in the Teams client (For example: *.example.com).|
 
-:::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
+:::image type="content" source="~/assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
 
 ## Advanced
 
 In the **Advanced** section, you can see the following components to manage your app in Developer Portal:
 
-* **Owners**
-
-    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has the same permissions as the **Administrator** role except to delete an app.
-
-    To add an owner:
-
-    1. In the **Advanced** section, select **Owners**.
-    1. Select **Add an owner**.
-    1. Enter a name and select a user ID from the drop-down list.
-    1. Under **Role**, select **Operative** or **Administrator**.
-    1. Select **Add**.
-
-* **App content**: You can configure your app with the following additional features:
-  
-  * Loading indicator: Displays an indicator to let users know your hosted app content (For example: Tabs and Task modules) is loading.
-  * Full-screen mode: Displays a personal app without an app header. It is only supported for the published apps to your org.
+| Components | Description |
+| --- | --- |
+| **Owners** | Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has the same permissions as the **Administrator** role except to delete an app. <br> To add an owner:<br> 1. In the **Advanced** section, select **Owners**. <br> 1. Select **Add an owner**. <br> 1. Enter a name and select a user ID from the drop-down list. <br> 1. Under **Role**, select **Operative** or **Administrator**. <br> 1. Select **Add**.|
+| **App content** | You can configure your app with the following additional features: <br> *Loading indicator: Displays an indicator to let users know your hosted app content (For example: Tabs and Task modules) is loading. <br>* Full-screen mode: Displays a personal app without an app header. It is only supported for the published apps to your org.|
 
 * **Environments**
 
