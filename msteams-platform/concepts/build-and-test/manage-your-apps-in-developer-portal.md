@@ -41,7 +41,7 @@ In the **Configure** section, you can see the following components to manage and
 | **Permissions** | This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.|
 | **Single sign-on** | You can configure your app to authenticate users with single sign-on (SSO).|
 | **Languages** | You can set up or change the language of your app.|
-| **Domain** | You can add the domains to load your apps in the Teams client (For example: *.example.com).|
+| **Domains** | You can add the domains to load your apps in the Teams client (For example: *.example.com).|
 
 :::image type="content" source="~/assets/images/tdp/config-section.png" alt-text="configure section":::
 
@@ -53,7 +53,7 @@ In the **Advanced** section, you can see the following components to manage your
 | --- | --- |
 | **Owners** | Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has the same permissions as the **Administrator** role except to delete an app. <br> To add an owner:<br> 1. In the **Advanced** section, select **Owners**. <br> 2. Select **Add an owner**. <br> 3. Enter a name and select a user ID from the drop-down list. <br> 4. Under **Role**, select **Operative** or **Administrator**. <br> 5. Select **Add**.|
 | **App content** | You can configure your app with the following additional features: <br> - Loading indicator: Displays an indicator to let users know your hosted app content (For example: Tabs and Task modules) is loading. <br> - Full-screen mode: Displays a personal app without an app header. It is only supported for the published apps to your org.|
-| ***Environments** | **Environments**: <br> You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments. <br> To set up an environment:<br> 1. In the Developer Portal, select the **Apps** that you're working. <br> 2. Go to **Environments** under **Advanced** section and select **+ Add an environment**. <br> 3. Select **Add**. <br> **Global variables:** <br> 1. Select **Add a global variable** to create configuration variables for your environment.<br> To use global variables: <br> Use the variable names instead of hard-coded values to set your app configurations. <br> 1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears. <br> 2. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.|
+| **Environments** | **Environments**: <br> You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments. <br> To set up an environment:<br> 1. In the Developer Portal, select the **Apps** that you're working. <br> 2. Go to **Environments** under **Advanced** section and select **+ Add an environment**. <br> 3. Select **Add**. <br> **Global variables:** <br> 1. Select **Add a global variable** to create configuration variables for your environment.<br> To use global variables: <br> Use the variable names instead of hard-coded values to set your app configurations. <br> 1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears. <br> 2. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.|
 | **Admin settings** | 1. **App Customization**: You can customize your app. <br> 2. **App default blocked**: You can block your app by default for users until a tenant admin chooses to enable it.|
 | **First Party settings**| Set features for first party applications that extend beyond the public functionality. You can also add Screenshot urls, App keywords, Video Url, Third party notice url and so on.|
 
@@ -68,14 +68,16 @@ In the **Publish** section, you can see the following components to publish your
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
 
 * **Publish your app to org**:
+    The following steps help you to publish your app to the organization:
 
-   1. In the app **Overview** page, under **Publish**, select **Publish to Org**.
-   1. Select **Publish your App**.
+       1. Select **Publish to org** under **Publish**.
+       1. Select **Publish your App**.
 
-* **Publish your app to store**:
+* **Publish to store**:
+    The following steps help you to publish your app to the store:
 
-   1. In the app **Overview** page, under **Publish**, select **Publish to Store**.
-   1. Select **Publish**.
+      1. Select **Publish to store** under **Publish**..
+      1. Select **Publish**.
 
    > [!NOTE]
    > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
