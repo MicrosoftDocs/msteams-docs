@@ -70,14 +70,14 @@ In the **Publish** section, you can see the following components to publish your
 * **Publish your app to org**:
     The following steps help you to publish your app to the organization:
 
-       1. Select **Publish to org** under **Publish**.
-       1. Select **Publish your App**.
+    1. Select **Publish to org** under **Publish**.
+    1. Select **Publish your App**.
 
 * **Publish to store**:
     The following steps help you to publish your app to the store:
 
-      1. Select **Publish to store** under **Publish**..
-      1. Select **Publish**.
+    1. Select **Publish to store** under **Publish**..
+    1. Select **Publish**.
 
    > [!NOTE]
    > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
