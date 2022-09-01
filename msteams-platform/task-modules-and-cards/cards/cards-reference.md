@@ -126,7 +126,7 @@ The following table provides the features that support Adaptive Cards:
 > * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
-> * Test your full width adaptive card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
+> * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 
 ### Example of Adaptive Card
 
