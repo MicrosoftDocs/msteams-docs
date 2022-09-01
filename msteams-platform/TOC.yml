@@ -531,7 +531,7 @@
     displayName: default install scope, default capability for shared scopes
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
-    displayName: App icons
+    displayName: App manifest, host your app
   - name: Upload your app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
     displayName: Manage, access, update, and remove your app
