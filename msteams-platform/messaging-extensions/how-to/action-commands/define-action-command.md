@@ -25,7 +25,7 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## Select action command invoke locations
@@ -81,8 +81,6 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 You can create an action command using **Developer Portal**.
 
-# [Developer Portal](#tab/DA)
-
 > [!NOTE]
 > The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
@@ -130,8 +128,6 @@ To create an action command:
 1. Select **Add a Parameters** and enter all the parameters.
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
-
----
 
 ### Create an action command manually
 
