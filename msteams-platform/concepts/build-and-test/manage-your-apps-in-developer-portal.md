@@ -25,7 +25,7 @@ In the **Overview** section, you can see the following components to manage your
 | **Announcement** | Latest updates of your apps on Developer Portal for Teams.|
 | **Basic information** | Shows you the App ID, Version, Manifest version, and so on. |
 
-    :::image type="content" source="~/assets/images/tdp/overview.png" alt-text="Overview of Developer Portal":::
+:::image type="content" source="~/assets/images/tdp/overview.png" alt-text="Overview of Developer Portal":::
 
 ## Configure
 
