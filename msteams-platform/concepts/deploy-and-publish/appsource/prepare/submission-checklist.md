@@ -1,6 +1,6 @@
 ---
 title: Prepare your store submission  
-description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package and more.
+description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package. Know how to ppdate Apple App Store Connect Team ID on Partner Center.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
