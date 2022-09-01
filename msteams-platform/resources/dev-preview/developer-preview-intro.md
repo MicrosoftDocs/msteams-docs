@@ -1,6 +1,6 @@
 ---
 title: Public developer preview for Microsoft Teams
-description: Learn about Developer Preview, a public program for developers to explore and test upcoming features for potential inclusion in your Teams app.
+description: A Developer Preview is public program for developers to explore and test upcoming features for potential inclusion in your Microsoft Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
