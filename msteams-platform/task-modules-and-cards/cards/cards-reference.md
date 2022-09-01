@@ -263,6 +263,40 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
+## Adaptive Card loop
+
+Adaptive Card version 1.6 adds a new schema field called copy option for the url. The web url under the metadata can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
+
+### To unfurl an Adaptive card loop
+
+1. Select more option **...** from Teams chat window.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/select-dot-menu.png" alt-text="Screenshot is an example that shows the selection of more option menu from Teams.":::
+
+1. Select your **bot** from the menu.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Screenshot is an example that shows the selection of your bot from the list.":::
+
+1. Select **Create cards** from the **more option**.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/select-create-cards.png" alt-text="Screenshot is an example that shows the selection of create cards from the more option.":::
+
+1. In the Bot Message Renderer window, select **Adaptive Card**, paste the metadata URL in **Card payload** and then select **Submit**.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Screenshot is an example that shows Adaptive Card selected, metadata pasted into the card payload and shows the submit action.":::
+
+1. After submitting, metadata unfurls into an **Adaptive Card loop**. Copy the web url by selecting the **copy** option on the Adaptive Card, and paste it in the compose section and select the send button.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="Screenshot is an example that shows metadata url unfurling into an Adaptive Card loop.":::
+
+1. There is yet another alternative, by selecting the **more option**, you'll see the **open url** and can use this option to directly open the url.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="Screenshot is an example that shows open url option in the overflow menu of the Adaptive Card.":::
+
+1. The web url unfurls into an **Adaptive Card V2**.
+
+    :::image type="content" source="../../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="Screenshot is an example that shows Adaptive card loop unfurling into an Adaptive Card version2.":::
+
 #### Additional information on Adaptive Cards
 
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).

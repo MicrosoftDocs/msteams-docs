@@ -72,55 +72,6 @@ Type ahead search added as an input control in Adaptive Cards enable [dynamic se
 
 Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
-## Support Adaptive Card loop for build
-
-Adaptive Card version 1.6 adds a new field called metadata web url and copy option for the url. The web url under the metadata can be copied and pasted across Microsoft Teams chat for unfurling an Adaptive Card loop.
-
-### To unfurl an Adaptive card loop
-
-1. Select **...** menu from Teams.
-
-   :::image type="content" source="../assets/images/adaptive-cards/select-dot-menu.png" alt-text="Screenshot is an example that shows the selection of ... menu from Teams.":::
-
-1. Search for **Adapto V4 Bot** from the menu
-
-   :::image type="content" source="../assets/images/adaptive-cards/select-adapto-v4.png" alt-text="Screenshot is an example that shows the selection of adapto v4 card from the list.":::
-
-1. Select **Create cards**
-
-   :::image type="content" source="../assets/images/adaptive-cards/select-create-cards.png" alt-text="Screenshot is an example that shows the selection of create cards from the ... menu.":::
-
-1. In the Bot Message Renderer, select **Adaptive Card**, paste the metadata URL in **Card payload** and then select Submit.
-
-   :::image type="content" source="../assets/images/adaptive-cards/select-adaptive-card-paste-metadata.png" alt-text="Screenshot is an example that shows the selection of Adaptive Card, metadata url pasted into the card payload and shows the submit action.":::
-
-1. After submitting, the metadata unfurls into an **Adaptive Card loop**. Copy the web url by selecting the **copy** option on the Adaptive Card, and paste it in the compose section and select the send button.
-
-   :::image type="content" source="../assets/images/adaptive-cards/submit-unfurls-adaptive-card.png" alt-text="Screenshot is an example that shows metadata url unfurling into an Adaptive Card loop.":::
-
-1. The web url unfurls into an **Adaptive Card V2**.
-
-   :::image type="content" source="../assets/images/adaptive-cards/unfurls-adaptive-v2-card.png" alt-text="Screenshot is an example that shows Adaptive card loop unfurling into an Adaptive Card version2.":::
-
-### Revised copy option in Adaptive Cards
-
-1. Copy option is disabled for regular ME cards.
-
-    :::image type="content" source="../assets/images/adaptive-cards/messaging-extension-card.png" alt-text="Screenshot is an example that shows copy option being disabled in ME cards.":::
-
-1. The Adaptive Card version 2 has a copy and refresh option enabled.
-
-    :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-copy-option.png" alt-text="Screenshot is an example that shows the copy and refresh option in the Adaptive Card.":::
-
-1. The metadata url in the Adaptive Card can be unfurled in the overflow menu secondary option.
-
-    :::image type="content" source="../assets/images/adaptive-cards/adaptive-card-overflow-menu-open-url.png" alt-text="Screenshot is an example that shows open url option in the overflow menu of the Adaptive Card.":::
-
-### UI changes
-
-* The text on the Adaptive Card is bolder in style.
-* The title of the Adaptive Card is enabled as a link, by hovering on the title you'll be able to select the link and copy the url.
-
 ## Support for Azure AD Object ID and UPN in user mention
 
 Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
