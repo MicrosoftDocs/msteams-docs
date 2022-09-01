@@ -1,6 +1,6 @@
 ---
 title: Enable resource-specific consent in Teams
-description: In this article, you'll learn resource-specific consent in Microsoft Teams and how to make advantage of it.
+description: Learn about Resource-specific consent (RSC), a Microsoft Teams and Microsoft Graph API integration. Enable RSC in your app and configure consent settings. 
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
