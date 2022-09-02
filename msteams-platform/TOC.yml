@@ -600,8 +600,10 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+    displayName: Pricing model, SaaS offer, In-app purchases, 
   - name: Include a SaaS offer with your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    displayName: Transactable Software-as-a-Service, Recloud app
   - name: In-app purchases
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
   - name: Test preview for monetized apps
