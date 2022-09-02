@@ -95,21 +95,6 @@ Microsoft Teams platform features that are available to all app developers.
 
 </details>
 
-## Deprecated features
-
-Microsoft Teams platform features that are deprecated.
-
-<br>
-
-<details>
-<summary><b>2022</b></summary>
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-
-</details>
-
 <details>
 <summary><b>Older updates</b></summary>
 <br>
@@ -274,6 +259,21 @@ Explore updates from the previous GA releases listed here.
 | 02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 |
 </details>
+</details>
+
+## Deprecated features
+
+Microsoft Teams platform features that are deprecated.
+
+<br>
+
+<details>
+<summary><b>2022</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
+
 </details>
 
 ## Developer preview
