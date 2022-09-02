@@ -12,7 +12,7 @@ ms.date: 03/03/2022
 
 The local debug process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Microsoft Visual Studio Code. The Visual Studio Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance.
 
-The following is the the debug process workflow:
+The debug process workflow is as follows:
 
 1. `launch.json` file configures the debugger in Visual Studio Code.
 
