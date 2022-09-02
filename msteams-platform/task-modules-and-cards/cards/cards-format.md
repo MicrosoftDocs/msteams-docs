@@ -325,6 +325,9 @@ The following image is an example of masking information in Adaptive Cards:
 
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
 
+> [!NOTE]
+> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
+
 #### Construct full width cards
 
 To make a full width Adaptive Card, the `width` object in `msteams` property in the card content must be set to `Full`.
