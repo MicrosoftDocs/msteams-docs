@@ -21,10 +21,10 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 -->
 :::row:::
    :::column span="":::
-      :::image type="content" source="assets/images/generaly-available-feature.png" alt-text="Generally available features" link="#GA features":::
+      :::image type="content" source="assets/images/generaly-available-feature.png" alt-text="Generally available features" link="#ga-features":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="assets/images/feature-deprecated.jpg" alt-text="feature deprecated":::
+      :::image type="content" source="assets/images/feature-deprecated.jpg" alt-text="feature deprecated" link="#deprecated-features":::
     :::column-end:::
 :::row-end:::
 
