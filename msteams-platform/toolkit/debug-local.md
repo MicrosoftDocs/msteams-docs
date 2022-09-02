@@ -29,9 +29,9 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 | &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 
-## Key features of Teams Toolkit
+## Key debug features of Teams Toolkit
 
-Following are the key features of Teams Toolkit:
+Following are the key debug features of Teams Toolkit:
 
 ### Start debugging
 
