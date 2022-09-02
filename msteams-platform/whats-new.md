@@ -108,6 +108,8 @@ Microsoft Teams platform features that are deprecated.
 | -------- | --------- | ----------------|
 | 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 
+</details>
+
 <br>
 
 <details>
