@@ -346,42 +346,53 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Unified meetings apps
     href: apps-in-teams-meetings/meeting-app-extensibility.md
+    displayName: Chat tab, poll survey, guest access
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    displayName: Access, organizer, meeting token generator app, channels, organizer
   - name: Meeting apps API references
-    href: apps-in-teams-meetings/API-references.md  
+    href: apps-in-teams-meetings/API-references.md
+    displayName: CART URL, channel, permissions, access, audio state
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
+      displayName: Access, permissions
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
+      displayName: Access, permisssions, chat entity
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
       href: apps-in-teams-meetings/teams-live-share-overview.md
+      displayName: Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets
     - name: Getting started
       items:
       - name: Quick start guide
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        displayName: Fluid container, static view
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
+      displayName: Ephemeral data structures
     - name: Media synchronization
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+      displayName: Audio ducking, 
     - name: How-to guides
       items:
       - name: Agile Poker tutorial
         href: sbs-teams-live-share.yml
       - name: Custom Azure Fluid Relay service
         href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+        displayName: Access
     - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
+    displayName: Single vitrual scene, organizer
 - name: Build webhooks and connectors
   items:
   - name: Overview
