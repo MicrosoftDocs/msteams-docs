@@ -187,7 +187,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response that is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> * Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response that is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> * Messages sent can be localized to provide personalization. For more information, see [Localize your app](../../../concepts/build-and-test/apps-localization.md).
+
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate efficiently on that channel. The Bot Builder SDK allows you to modify the message structure.
 
@@ -454,9 +456,10 @@ Following are the status codes and their error code and message values:
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
-| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Sample name | Description | Node.js | .NETCore | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
+| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
+| Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## Next step
 
@@ -469,3 +472,4 @@ Following are the status codes and their error code and message values:
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Localize your app](../../../concepts/build-and-test/apps-localization.md)

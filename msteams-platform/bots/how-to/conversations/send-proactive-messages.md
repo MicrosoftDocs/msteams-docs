@@ -46,9 +46,9 @@ To create a new conversation or a conversation thread in a channel, you must hav
 
 * When your app is installed in a particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * When a new user is added to a context where your app is installed, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* Every event that the bot receives contains the required information, which you can get from the bot context (TurnContext object).
 * You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
 * You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
-* Every activity your bot receives must contain the required information.
 
 
 Regardless of how you get the information, you must store the `tenantId` and either the `userId` or the `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
@@ -84,7 +84,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -342,3 +342,4 @@ The following table provides a simple code sample that incorporates basic conver
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

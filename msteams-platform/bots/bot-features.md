@@ -12,6 +12,8 @@ ms.author: anclear
 You can create a bot that works in Microsoft Teams with one of the following tools or capabilities:
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
+* [Azure Active Directory](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
+* [Developer Portal](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
 * [Webhooks and connectors](#bots-with-webhooks-and-connectors)
@@ -306,3 +308,4 @@ this.onMessage(async (context, next) => {
 * [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
