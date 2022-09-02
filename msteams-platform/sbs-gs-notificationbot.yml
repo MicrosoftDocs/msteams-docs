@@ -161,10 +161,19 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::    
 
-    1. Select **Default folder** to store your project root folder.
-    1. Select the **Select Folder**.
+    1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
+    
+       You can also change the default location by the following steps:
+
+        1. Select **Browse**.
+
+        1. Select the location for project workspace.
+
+        1. Select the **Select Folder**.
+
+           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
     
     1. Enter a suitable name for your app, such as mynotificationbot as the application name. 
     1. Select **Enter**.
@@ -173,6 +182,10 @@ items:
 
        > [!NOTE]
        > Ensure that you use only alphanumeric characters in the application name.
+
+    1. By default, project is open in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
         The notification bot app is created in a few seconds.
 
