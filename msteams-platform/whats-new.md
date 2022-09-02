@@ -35,6 +35,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Link unfurling for share to teams from web apps | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | Add the Teams display picture and people card for in-meeting notification| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [In-meeting notification](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Build shared channels in Teams | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Introduced app manifest v1.14| App manifest > [App manifest schema for Teams](resources/schema/manifest-schema.md)|
@@ -258,7 +259,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 08/16/2022 | Generate a deep link to share content to stage in meetings | Integrate with Teams > [Create deep links](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) |
+| 09/10/2022 | Generate a deep link to share content to stage in meetings | Integrate with Teams > [Create deep links](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) |
+| 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
 | 06/30/2022 | Apps for instant meetings, one-on-one, and group calls| Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|

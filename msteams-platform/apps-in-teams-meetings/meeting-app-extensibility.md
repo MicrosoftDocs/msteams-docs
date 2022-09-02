@@ -33,7 +33,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
 
 > [!IMPORTANT]
-> If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md).
+> We recommend you to follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md), if you have integrated a tab app in your meeting.
 
 > [!NOTE]
 > Add app option for Teams meeting extension tab app is not supported in Teams web client.
@@ -209,7 +209,7 @@ The following table provides the user types and lists the features that each use
 
 | User type | Tabs | Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Not available |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Not available | Not available | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage only on Teams desktop client |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed in scheduled meetings. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage only on Teams desktop client. |
 
