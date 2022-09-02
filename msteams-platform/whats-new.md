@@ -110,8 +110,6 @@ Microsoft Teams platform features that are deprecated.
 
 </details>
 
-<br>
-
 <details>
 <summary><b>Older updates</b></summary>
 <br>
