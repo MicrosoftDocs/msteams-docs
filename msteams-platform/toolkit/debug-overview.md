@@ -76,7 +76,7 @@ Teams Toolkit unchecks some prerequisites and allows you to customize the debug 
 <details>
 <summary><b>Use your bot endpoint</b></summary>
 
-1. In Visual Studio Code settings, you need uncheck **Ensure Ngrok is installed and started (ngrok)**.
+1. In Visual Studio Code settings, you need to uncheck **Ensure Ngrok is installed and started (ngrok)**.
 
 1. You can set `siteEndpoint` configuration in `.fx/configs/config.local.json` to your endpoint.
 
