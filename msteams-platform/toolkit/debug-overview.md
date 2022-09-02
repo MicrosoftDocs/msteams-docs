@@ -182,7 +182,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 </details>
 
-## See also
+## Next
 
-* [Debug your app locally](debug-local.md)
-* [Debug background process](debug-background-process.md)
+> [!div class="nextstepaction"]
+> [Debug your app locally](debug-local.md)
