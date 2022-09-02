@@ -26,25 +26,15 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 
 You'll also need to enable sideloading for your tenant:
 
- 1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
+1. Sign in to Microsoft 365 admin center (https://admin.microsoft.com) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*.
+1. Select: Teams apps > Manage apps > **Org-wide app settings**.
+1. Under **Custom apps**, toggle on the option *Interaction with custom apps*.
 
- 1. Go to **Teams apps** > **Manage apps**.
-
- 1. At the top right, select **Org-wide app settings**.
-
- 1. Under Custom apps, turn on the **Interaction with custom app** toggle and save.
-
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
-
- 1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
-
- 1. In the Teams admin center, go to **Teams apps** > **Setup policies**, and then select **Global (Org-wide default) policy**.
-
- 1. Turn on **Upload custom apps**, and select **Save**.
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
 
 ## Enroll your developer tenant for Office 365 Targeted releases
 
-> [!IMPORTANT]
+> [!Important]
 > It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Office 365 Targeted releases](#enroll-your-developer-tenant-for-office-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Office.
 
 To enroll your test tenant for Office 365 targeted releases:
@@ -63,6 +53,8 @@ To enroll your test tenant for Office 365 targeted releases:
 For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
 
 ## Install Office apps in your test environment
+
+### Desktop
 
 You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Office 365 Beta Channel build.
 
@@ -83,6 +75,19 @@ To install Office 365 Beta Channel applications in your test environment:
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Search for 'webview' under 'Apps and features' in your Windows Settings":::
 
     If it's not listed, install [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) to your test environment.
+
+### Mobile
+
+You can preview Teams personal tabs running in Office for Android by joining the [Office Insider Program for Android](https://insider.office.com/en-us/join/Android). 
+
+To install the latest Office Current Channel (Preview) build to your physical Android device or Android emulator:
+
+1. Verify you are using a [supported Android device](https://support.google.com/googleplay/answer/1727131).
+1. [Join the Android best tester program](https://insider.office.com/en-us/join/Android#Join-the-Android-beta-tester-program) to install the Current Channel (Preview) build of the Office app on your Android device.
+1. From your Android device, launch the Office app. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+1. Verify you are running version #.#.# (16.0.15620.20000) or higher of Office for Android.
+
+[Placeholder for screenshot]
 
 ## Switch to the Developer Preview version of Teams
 
