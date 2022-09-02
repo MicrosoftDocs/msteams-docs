@@ -348,7 +348,7 @@ The query parameters are:
 
 * `chatId`: ChatId of the conversation. You can get the `chatId` from URL of the chat in Teams web client or using the [Microsoft Graph API](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
 
-  Apps can read a group chat Id through context using the Microsoft Teams JavaScript library or from the incoming request payload to Bot.
+  Apps can read a group chat ID through context using the Microsoft Teams JavaScript library or from the incoming request payload to Bot.
 
 * `messageId`: Message ID of the conversation. For example, `1563480968434`.
 * `contextObject`: Specify the contextType as chat.
