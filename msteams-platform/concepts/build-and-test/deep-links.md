@@ -458,7 +458,7 @@ To add a deep link to share content on stage, you need to have an app context. T
 The query parameters for the app context are:
 
 * `appID`: This is the ID that can be obtained from the app manifest.
-* `appSharingUrl`: The URL which needs to be shared on stage should be a valid domain defined in the app manifest.
+* `appSharingUrl`: The URL which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL is not a valid domain, an error dialog will pop-up to provide the user with a description of the error.
 * `useMeetNow`: This includes a boolean parameter that can be either true or false.
   * **True** - When the `UseMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
 
