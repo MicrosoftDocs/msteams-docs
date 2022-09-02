@@ -133,8 +133,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a Edge or Ch
 ## Next
 
 > [!div class="nextstepaction"]
-
-[Debug background processes](debug-background-process.md)
+> [Debug background processes](debug-background-process.md)
 
 ## See also
 
