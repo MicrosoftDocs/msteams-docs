@@ -35,7 +35,7 @@ Following are the key debug features of Teams Toolkit:
 
 ### Start debugging
 
-You can start debugging by pressing the **F5** key. Teams Toolkit starts to check prerequisites and registers your Azure AD app. After it registers your Teams app, and bot, it then starts the services and launches your browser.
+You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites and registers your Azure AD app. After it registers your Teams app, and bot, it then starts the services and launches your browser.
 
 ### Multi-target debugging
 
@@ -43,7 +43,7 @@ Teams Toolkit utilizes multi-target debugging feature to debug your tab, bot, me
 
 ### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of your tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source codes of your tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in web browser. The following image shows toggle breakpoint:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
 
