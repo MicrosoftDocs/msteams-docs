@@ -328,18 +328,23 @@
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
+      displayName: Command invoke locations, static list of parameters, command to your app manifest
     - name: Create and send task module
       href: messaging-extensions/how-to/action-commands/create-task-module.md
+      displayName: Initial invoke request, respond to fetchTask
     - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+      displayName: Respond to initial submit action, configure the poll, attribution for bot messages
   - name: Search commands
     items:
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
     - name: Respond to search commands
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
+      displayName: Handle tap actions
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
+    displayName: Through wildcards
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
