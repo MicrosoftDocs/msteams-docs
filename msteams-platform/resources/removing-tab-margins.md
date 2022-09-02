@@ -1,7 +1,7 @@
 ---
 title: Tab margin changes
 author: surbhigupta
-description: In this module, learn how the removal of tab margins enhances app building experience.
+description: Learn how to remove margins around tabs in Microsoft Teams with UI kit. Know extra padding effect, margin size for left, right, top, and bottom.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur

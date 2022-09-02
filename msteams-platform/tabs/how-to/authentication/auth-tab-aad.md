@@ -52,7 +52,7 @@ Azure AD, like most identity providers, doesn't allow its content to be placed i
 ```javascript
 import { authentication } from "@microsoft/teams-js";
 authentication.authenticate({
-    url: window.location.origin + "/tab/simple-start-v2"),
+    url: window.location.origin + "/tab/simple-start-v2",
     width: 600,
     height: 535})
 .then((result) => {
