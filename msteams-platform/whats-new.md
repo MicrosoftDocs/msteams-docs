@@ -255,10 +255,10 @@ Explore updates from the previous GA releases listed here.
 
 <br>
 
+## Developer preview
+
 <details>
 <summary><b>Developer preview</b></summary>
-
-## Developer preview
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
@@ -278,6 +278,8 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 </details>
 </br>
+
+## Deprecated features
 
 ## Teams app template catalog
 
