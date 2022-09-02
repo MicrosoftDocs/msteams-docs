@@ -18,7 +18,7 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
-## Locally hosted environment
+## Locally-hosted environment
 
 Teams is cloud-based that requires all services it accesses, to be available publicly using HTTPS endpoints. You can enable your app to work within Teams by either publishing the code to the cloud of your choice or make our local running instance externally accessible. You can locally run the instance with a tunneling software.
 
