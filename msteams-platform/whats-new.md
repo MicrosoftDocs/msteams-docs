@@ -253,6 +253,11 @@ Explore updates from the previous GA releases listed here.
 </details>
 </details>
 
+<br>
+
+<details>
+<summary><b>Developer preview</b></summary>
+
 ## Developer preview
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.  
@@ -270,6 +275,9 @@ Developer preview is a public program that provides early access to unreleased T
 | 06/16/2021 | Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+</details>
+</br>
 
 ## Teams app template catalog
 
