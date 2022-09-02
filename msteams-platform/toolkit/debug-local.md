@@ -195,11 +195,11 @@ Teams Toolkit unchecks some prerequisites and allows you to customize the debug 
 <details>
 <summary><b>Use your bot endpoint</b></summary>
 
-1. In Visual Studio Code settings, uncheck **Ensure Ngrok is installed and started. (ngrok)**
+1. In Visual Studio Code settings, you need to uncheck **Ensure Ngrok is installed and started. (ngrok)**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
 
-1. Set `siteEndpoint` configuration in `.fx/configs/config.local.json` to your endpoint.
+1. You can set `siteEndpoint` configuration in `.fx/configs/config.local.json` to your endpoint.
 
 ```json
 {
@@ -215,11 +215,11 @@ Teams Toolkit unchecks some prerequisites and allows you to customize the debug 
 <details>
 <summary><b>Use your development certificate</b></summary>
 
-1. In Visual Studio Code settings, uncheck **Ensure development certificate is trusted. (devCert)**
+1. In Visual Studio Code settings, you need to uncheck **Ensure development certificate is trusted. (devCert)**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
 
-1. Set `sslCertFile` and `sslKeyFile` configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
+1. You can set `sslCertFile` and `sslKeyFile` configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
 
 ```json
 {
