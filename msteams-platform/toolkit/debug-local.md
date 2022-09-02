@@ -130,6 +130,12 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a Edge or Ch
 
    Your app is added to Teams!
 
+## Next
+
+> [!div class="nextstepaction"]
+
+[Debug background processes](debug-background-process.md)
+
 ## See also
 
 * [Use Teams Toolkit to provision cloud resources](provision.md)
