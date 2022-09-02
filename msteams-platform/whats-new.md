@@ -20,11 +20,14 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 -->
 :::row:::
-   :::column span="":::
+   :::column:::
       :::image type="content" source="assets/images/generaly-available-feature.png" alt-text="Generally available features" link="#ga-features":::
    :::column-end:::
-   :::column:::
+   :::column span="":::
       :::image type="content" source="assets/images/feature-deprecated.jpg" alt-text="feature deprecated" link="#deprecated-features":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview" link="#developer-preview":::
     :::column-end:::
 :::row-end:::
 
@@ -93,6 +96,13 @@ Microsoft Teams platform features that are available to all app developers.
 </details>
 
 ## Deprecated features
+
+Microsoft Teams platform features that are deprecated.
+
+<br>
+
+<details>
+<summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
