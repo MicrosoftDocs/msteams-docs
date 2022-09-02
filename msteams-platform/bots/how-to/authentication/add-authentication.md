@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: Learn how to add OAuth authentication to a bot in Teams using Azure Active Directory. Learn how to create, deploy, and integrate authentication-enabled bots.
+description: Learn how to enable authentication using third-party OAuth provider to a bot app in Teams using Azure AD.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
