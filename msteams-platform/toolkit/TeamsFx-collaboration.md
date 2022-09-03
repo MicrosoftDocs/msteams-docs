@@ -25,7 +25,7 @@ The following lists guide us to understand the collaboration process and how to 
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Select teams toolkit from activity bar":::
 
-  1. In **ENVIRONMENT** section, select collaborators. It displays as option **1** **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **2** **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following image:
+  1. In **ENVIRONMENT** section, select collaborators, that displays as option **1** **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **2** **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following image:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
