@@ -16,7 +16,7 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 The following lists guide us to understand the collaboration process and how to remove collaborators:
 
-* As project owner
+### As project owner
 
   > [!NOTE]
   > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
@@ -31,7 +31,7 @@ The following lists guide us to understand the collaboration process and how to 
 
   2. Select **Add Microsoft 365 Teams App (with Azure AD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Add project owner":::
 
   3. To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
 
@@ -42,7 +42,7 @@ The following lists guide us to understand the collaboration process and how to 
      > [!NOTE]
      > The newly added collaborators do not receive any notification. The Project owner needs to notify collaborator.
 
-* As project collaborator
+### As project collaborator
 
   1. Clone the project from GitHub.
   2. Log on to Microsoft 365 account.
