@@ -21,17 +21,8 @@ ms.date: 11/29/2021
    > [!NOTE]
    > Ensure that telemetry is disabled in development environment.
 
-## Prerequisite
-
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| &nbsp; | **Required** | &nbsp; |
-| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-| &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-
-> [!TIP]
-> Ensure you have Teams app project opened in Visual Studio code.
+   > [!TIP]
+   > Ensure you have Teams app project opened in Visual Studio code.
 
 ## Create new environment
 
