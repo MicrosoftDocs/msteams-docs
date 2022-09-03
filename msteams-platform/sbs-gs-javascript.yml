@@ -211,7 +211,7 @@ items:
 
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
 
     1. By default, project is open in new window within 10 seconds. If you want to open in current window, select **Open in current window**.    
 
