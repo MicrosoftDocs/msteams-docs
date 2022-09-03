@@ -20,7 +20,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select anyone of the existing subscription.
 
-   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-subscription.png" alt-text="Add the app to Teams":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Select Subscription":::
 
 1. Select a resource group to use for the Azure resources.
 
@@ -33,7 +33,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/provision-confirm1.png" alt-text="Add the app to Teams":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Select Subscription":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
