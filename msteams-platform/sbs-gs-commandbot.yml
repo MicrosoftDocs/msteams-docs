@@ -286,7 +286,7 @@ items:
 
        The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success1.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
