@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts.
+    The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts.
     
     In this tutorial, you'll learn:
 
@@ -169,6 +169,8 @@ items:
 
         1. Select **Browse**.
 
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+            
         1. Select the location for project workspace.
 
         1. Select the **Select Folder**.
@@ -238,7 +240,7 @@ items:
     | `src/internal/` | Generated initialize code for notification functionality |
     | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
     | `.gitignore` | File to exclude local files from bot project |
-    | `package.json` | The NPM package file for bot project |
+    | `package.json` | The npm package file for bot project |
 
 - title: Send notification to Teams channel
   durationInMinutes: 1
@@ -385,6 +387,10 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
 
+    1. Select anyone of the existing subscription.
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/select-subscription.png" alt-text="Select Subscription":::
+
     1. Select an existing or create new resource group.
     
         :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning":::
@@ -394,7 +400,7 @@ items:
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog.":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
 
        The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
 
