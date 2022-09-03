@@ -64,7 +64,7 @@ var button = new CardAction()
 {
     Type = ActionTypes.OpenUrl,
     Title = "Tabs in Teams",
-    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+    Value = "https://learn.microsoft.com/en-us/microsoftteams/platform/"
 };
 ```
 
@@ -77,7 +77,7 @@ CardFactory.actions([
 {
     type: 'openUrl',
     title: 'Tabs in Teams',
-    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+    value: 'https://learn.microsoft.com/en-us/microsoftteams/platform/'
 }])
 ```
 
