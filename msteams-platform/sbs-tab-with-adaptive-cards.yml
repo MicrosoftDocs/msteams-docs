@@ -37,7 +37,7 @@ items:
     * [Visual Studio Code](https://code.visualstudio.com/)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
-    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
+    * [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
 - title: Create a Bot Registration in Microsoft Azure portal
   durationInMinutes: 2
