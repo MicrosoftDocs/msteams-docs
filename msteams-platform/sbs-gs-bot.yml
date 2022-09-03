@@ -220,6 +220,10 @@ items:
         A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="This screenshot is an example of the dialog to trust or not the authors of the files in this folder ":::
+    
+    1. By default, project is open in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/new-window-notification.png" alt-text="New window pop-up":::
 
         Your Teams app with a bot capability is created in a few seconds.
 
@@ -264,7 +268,7 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-folder-structure-bot-new.png" alt-text="hw new tab":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/folder-structure-bot-app.png" alt-text="hw new tab":::
 
     | Folder name | Contents |
     | --- | --- |
