@@ -198,6 +198,14 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language.":::
 
+    1. Select **Default folder** to store your project root folder in default location.
+
+       You can also change the default location by the following steps:
+
+       1. Select **Browse**.
+       1. Select the location for project workspace.
+       1. Select the **Select Folder**.
+       
     1. Select your **Workspace folder** by choosing your required folder.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the programming language.":::
