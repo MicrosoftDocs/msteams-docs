@@ -268,7 +268,7 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/folder-structure-bot-app.png" alt-text="hw new tab":::
+    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="hw new tab":::
 
     | Folder name | Contents |
     | --- | --- |
