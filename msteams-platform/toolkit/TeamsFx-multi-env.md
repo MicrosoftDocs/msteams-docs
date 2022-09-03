@@ -21,17 +21,8 @@ ms.date: 11/29/2021
    > [!NOTE]
    > Ensure that telemetry is disabled in development environment.
 
-## Prerequisite
-
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| &nbsp; | **Required** | &nbsp; |
-| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-| &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-
-> [!TIP]
-> Ensure you have Teams app project opened in Visual Studio code.
+   > [!TIP]
+   > Ensure you have Teams app project opened in Visual Studio code.
 
 ## Create new environment
 
@@ -82,11 +73,11 @@ The following table lists the common scenarios for customized resource provision
 
 | Scenarios | Location| Description |
 | --- | --- | --- |
-| Customize Azure Resource | <ul> <li>Bicep files under `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [Customize ARM parameters and templates](provision.md#customize-arm-template-files) |
-| Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
-| Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
-| Customize app manifest | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` section in `.fx/config.<envName>.json`</li>  </ul> | [Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)|
+| Customize Azure Resource |Bicep files under `templates/azure` `.fx/azure.parameters.<envName>.json` | [Customize ARM parameters and templates](provision.md#customize-arm-template-files) |
+| Reuse existing Azure AD app for Teams app | `auth` section in`.fx/config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Reuse existing Azure AD app for bot |`bot` section in`.fx/config.<envName>.json`| [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
+| Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx/config.<envName>.json`| [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
+| Customize app manifest |`templates/manifest.template.json` file under `manifest` section in `.fx/config.<envName>.json`| [Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## Scenarios
 
@@ -161,7 +152,7 @@ Steps for customization:
 4. Open config file `.fx/configs/config.staging.json`.
 5. Add the same property to `my app description for staging`.
 6. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
-7. Update the property **`description > short`** to use the **variable** defined in configure files with mustache syntax **`{{config.manifest.description.short}}`**.
+7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`.
   
   The updates to `manifest.template.json` are:
 
@@ -187,6 +178,7 @@ Steps for customization:
 <summary><b>Scenario 3: Customize Teams app description for all environments</b></summary>
 
 You can set the description of Teams app to `my app description` for all the environments.
+
 As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
 
 1. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
