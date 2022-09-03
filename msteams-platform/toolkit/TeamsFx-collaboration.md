@@ -1,39 +1,31 @@
 ---
 title: Collaborate on TeamsFx Project using Teams Toolkit
-author: yanjiang
+author: surbhigupta
 description: In this article, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers.
-ms.author: rentu
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Collaborate on Teams project using Teams Toolkit
+# Collaborate on Teams project using Microsoft Teams Toolkit
 
 Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and Microsoft Azure Active Directory (Azure AD) App. Teams Toolkit supports collaboration feature to allow developers and project owner to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
-## Prerequisites
-
-* Microsoft 365 subscription.
-* Azure with valid subscription.
-  
-  For more information on different accounts, see [prepare accounts to build Teams app](accounts.md).
-
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+
-
-> [!TIP]
-> Ensure you have a Teams app project opened in Visual Studio Code.
-
 ## Collaborate with other developers
 
-The following lists guide us to understand the collaboration process and its limitation:
+The following lists guide us to understand the collaboration process and how to remove collaborators:
 
 * As project owner
 
   > [!NOTE]
   > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-  1. In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following images:
+  1. Select **Teams Toolkit** in the activity bar.
+  
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Select teams toolkit from activity bar":::
+
+  1. In **ENVIRONMENT** section, select collaborators. It displays as option **1** **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **2** **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following image:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
@@ -61,7 +53,7 @@ The following lists guide us to understand the collaboration process and its lim
      > [!NOTE]
      > Collaborators must log in using the account that project owner adds under the same tenant with project owner. For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
-### Limitations
+## Remove Collaborators
 
 If you want to remove collaborators from Teams Toolkit extension, you need to remove manually as you can't remove them directly. Perform the following steps to remove collaborators manually:
 
