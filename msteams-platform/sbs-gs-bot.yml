@@ -190,11 +190,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Wizard start for Create New Project":::
 
-    1. Select **Bot**, and select **OK**.
+    1. Ensure that **Bot** is selected as the capability that you want to build in your app.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-    1. Select **JavaScript** in the **Programming Language** section.
+    1. Select **JavaScript** as the programming language.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
 
