@@ -31,7 +31,7 @@ Teams Toolkit supports the following debug features:
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
 
-Teams Toolkit also [verifies the prerequisites](debug-background-process.md#teams-toolkit-verification-of-prerequisites) required for debug in the background when debugging. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can [register and configure your Teams app](debug-background-process.md#register-and-configure-teams-app).
+Teams Toolkit also verifies the prerequisites required for debug in the background when debugging. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
 
 ### Start debugging
 
@@ -188,3 +188,10 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 > [!div class="nextstepaction"]
 > [Debug your app locally](debug-local.md)
+
+## See also
+
+* [Debug background process](debug-background-process.md)
+* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Deploy to the cloud](deploy.md)
+* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
