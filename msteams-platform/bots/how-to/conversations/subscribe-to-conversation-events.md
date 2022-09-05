@@ -576,7 +576,6 @@ A member removed event is sent to your bot in the following scenarios:
 
 The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
@@ -668,7 +667,6 @@ The `channelData` object in the following payload example is based on adding a m
     }
 }
 ```
-
 
 # [Python](#tab/python)
 
@@ -1336,14 +1334,19 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
 ```csharp
 protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
-var activity = turnContext.Activity; if
-(string.Equals(activity.Action, "Add",
-StringComparison.InvariantCultureIgnoreCase)) {
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var activity = turnContext.Activity; if
+    (string.Equals(activity.Action, "Add",
+    StringComparison.InvariantCultureIgnoreCase))
+    {
 // TO:DO Installation workflow }
 else
-{ // TO:DO Uninstallation workflow
-} return; }
+        { // TO:DO Uninstallation workflow
+        }
+        return;
+    }
+}
 ```
 
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
@@ -1351,8 +1354,9 @@ You can also use a dedicated handler for *add* or *remove* scenarios as an alter
 ```csharp
 protected override async Task
 OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken) {
-// TO:DO Installation workflow return;
+turnContext, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
 }
 ```
 
