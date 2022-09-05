@@ -424,7 +424,7 @@ Following are the status codes and their error code and message values:
 | 502 | **Code**: `ServiceError` <br/> **Message**: *various. | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue here [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
 | 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue here [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
 
-### Generals retry guidance for the developers
+### General retry guidance for the developers
 
 |Retriable status code | Retry strategy |
 |----------------|-----------------|
