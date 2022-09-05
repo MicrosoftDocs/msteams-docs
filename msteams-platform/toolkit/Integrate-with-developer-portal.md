@@ -10,7 +10,11 @@ ms.date: 07/29/2022
 
 # Integrate with Developer Portal in Teams Toolkit
 
-You can configure and manage your app in developer portal within Teams Toolkit. The following steps help you to publish your app in Developer Portal:
+You can configure and manage your app in developer portal within Teams Toolkit.
+
+## To Publish app using Developer Portal
+
+The following steps help you to publish your app in Developer Portal:
 
 1. Select **Developer Portal for Teams** under **DEPLOYMENT**.
 
