@@ -222,7 +222,7 @@ To share specific parts of the app to stage, you must invoke the related APIs in
 > [!NOTE]
 >
 > * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
-> * Currently, you can share specific parts of the app to meeting stage only on Teams desktop clients.
+> * You can share specific parts of the app to meeting stage only on Teams desktop clients. Mobile users can share share specific parts of the app to stage using the share to stage API.
 
 ### After a meeting
 
