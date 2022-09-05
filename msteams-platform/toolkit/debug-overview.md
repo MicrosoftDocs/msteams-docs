@@ -45,7 +45,7 @@ Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message
 
 You can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows toggle breakpoint:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints" lightbox="../assets/images/teams-toolkit-v2/debug/toggle-points.png":::
 
 ### Hot reload
 
