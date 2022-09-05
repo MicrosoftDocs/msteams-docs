@@ -10,6 +10,8 @@ ms.date: 03/03/2022
 
 # Sideload and test app in Teams environment
 
+After adding API connection, you can test API connection in the Teams Toolkit local environment and deploy your application to the cloud. In CI/CD pipeline, after set-up with different platform, you need to create Azure service principal to provision and deploy resources.
+
 In this section, you'll learn
 
 * [Test API connection in local environment](#test-api-connection-in-local-environment)

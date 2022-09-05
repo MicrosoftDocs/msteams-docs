@@ -18,6 +18,19 @@ You can configure and manage your app in developer portal within Teams Toolkit. 
 
    Now Developer Portal opens in a browser.
 
+1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+1. Import your app package in zip, select **App** > **Import app**.
+1. Select **Publish** > **Publish to your org**.
+
+## To update Manifest file and app package
+
+If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+
+1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+1. Import your app package in zip, select **App** > **Import app** > **Replace**.
+1. Select the target app in app list.
+1. To publish your app, select **Publish** > **Publish to your org**.
+
 You can do the following configuration in the Developer Portal:
 
 * **Basic information**: This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
@@ -35,17 +48,6 @@ You can do the following configuration in the Developer Portal:
 * **Single sign-on**: You can configure your app to authenticate users with single sign-on (SSO).
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
-
-## Publish Teams app using Teams Developer Portal
-
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
-
-Perform the following steps to publish your app:
-
-1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
-2. Import your app package in zip, select `App -> Import app -> Replace`.
-3. Select the target app in app list.
-4. Publish your app, select `Publish -> Publish to your org`.
 
 ## See also
 
