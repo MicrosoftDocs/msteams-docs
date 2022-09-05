@@ -31,8 +31,8 @@ The following steps help you to publish your app in Developer Portal:
 If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
-1. Import your app package in zip, select **App** > **Import app** > **Replace**.
-1. Select the target app in app list.
+1. Import your app package in zip, select **App** > **Import app**.
+   You need to replace the app, that you previously uploaded to the Developer Portal.
 1. To publish your app, select **Publish** > **Publish to your org**.
 
 You can do the following configuration in the Developer Portal:

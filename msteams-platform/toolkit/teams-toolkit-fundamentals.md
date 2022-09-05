@@ -19,8 +19,6 @@ Teams Toolkit lets you create, debug, and deploy your Teams app right from Visua
 
 For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 
-Teams Toolkit brings all tools needed for building a Teams app in one place.
-
 ## User journey of Teams Toolkit
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
@@ -36,6 +34,12 @@ The main milestones of this journey are:
 1. Publish your app to Teams.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-overview.png" alt-text="Teams Toolkit flow":::
+
+### Entities integrated with Teams Toolkit
+
+Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit.such as Azure AD and Microsoft 365, Developer Portal and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app.
+
+Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 ## Manage your apps using Developer Portal
 
