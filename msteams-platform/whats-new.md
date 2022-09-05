@@ -19,23 +19,66 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 -->
+
 :::row:::
-   :::column:::
+   :::column span="":::
       :::image type="content" source="assets/images/generaly-available-feature.png" alt-text="Generally available features" link="#ga-features":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="assets/images/feature-deprecated.jpg" alt-text="feature deprecated" link="#deprecated-features":::
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview" link="#developer-preview":::
-    :::column-end:::
+      #### Generally available features
+
+        Microsoft Teams platform features that are available to all app developers.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      #### Deprecated features
+
+        Microsoft Teams platform features that are deprecated.
+   :::column-end:::
+   :::column span="":::
+       :::image type="content" source="assets/images/feature-deprecated.jpg" alt-text="feature deprecated" link="#deprecated-features":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview" link="#developer-preview":::
+   :::column-end:::
+   :::column span="":::
+      #### Developer preview
+
+        Developer preview is a public program that provides early access to unreleased Teams platform features.
+   :::column-end:::
 :::row-end:::
 
 ## GA features
 
-Microsoft Teams platform features that are available to all app developers.
+<details>
+<summary><b>September<b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
+| 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+| 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
+| 08/03/2022 | Link unfurling for share to teams from web apps | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 
 <br>
+<details>
+
+<details>
+<summary><b>August<b></summary>
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 07/28/2022 | Add the Teams display picture and people card for in-meeting notification| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [In-meeting notification](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 07/28/2022 | Build shared channels in Teams | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
+| 07/28/2022|Introduced app manifest v1.14| App manifest > [App manifest schema for Teams](resources/schema/manifest-schema.md)|
+| 07/26/2022|Suggested actions for bots| Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
+| 07/21/2022 | Introduced step by step guide to send activity feed notifications | Design your app > UI components> Activity feed notifications > [Send activity feed notification](sbs-graphactivity-feedbroadcast.yml) |
+| 07/08/2022| Updates to send channel ID selected by user during app installation to bots via conversation and installation update events |  Build bots > Bot conversations > Conversation events in your Teams bot > [Conversation events in your Teams bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
+
+<br>
+<details>
 
 <details>
 <summary><b>2022</b></summary>
