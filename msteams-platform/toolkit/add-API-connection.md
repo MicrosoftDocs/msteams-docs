@@ -20,7 +20,7 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 You can add API connection using Visual Studio Code and CLI command.
 
-# [Visual Studio Code](#tab/vscode)
+### Add API connection using Visual Studio Code
 
 The following steps help you to add API connection using Visual Studio Code:
 
@@ -57,12 +57,39 @@ The following steps help you to add API connection using Visual Studio Code:
 
 10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
-     > [!NOTE]
-     > Based on the authentication type selected, additional configuration is needed.
+     Based on the authentication type selected, following steps is required to completed additional configuration
 
-# [CLI](#tab/CLI)
+# [Basic](#tab/basic)
+
+* Enter the username for basic Auth.
+
+  Now the sample code got generated to call your API at bot\myAPI.js.
+
+# [Certification](#tab/certification)
+
+   Now the sample code got generated to call your API at bot\myAPI.js.
+
+# [Azure Active Directory](#tab/AAD)
+
+  Now the sample code got generated to call your API at bot\myAPI.js.
+
+# [API Key](#tab/apikey)
+
+* Select the required API key position in request.
+
+* Enter an API key name.
+
+  Now the sample code got generated to call your API at bot\myAPI.js.
+
+# [Custom Auth Implementation](#tab/CustomAuthImplementation)
+
+  Now the sample code got generated to call your API at bot\myAPI.js.
+
+---
+
+## Add API connection using CLI
 
 The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
 
