@@ -64,7 +64,7 @@ To add tabs to an existing meeting:
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Mobile pre-meeting experience.":::
+:::image type="content" source="../assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="The screenshot displays Mobile pre-meeting experience.":::
 
 ---
 
@@ -132,15 +132,13 @@ For more information, see [store validation guidelines](../concepts/deploy-and-p
 
 With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab, get meeting notes, and see the results on which organizers and attendees must take action.
 
-The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
-
 # [Desktop](#tab/desktop3)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="The screenshot is an example that shows the Contoso tab with results in desktop.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="The screenshot displays the Contoso tab with results of poll and feedback received from meeting attendees.":::
 
 # [Mobile](#tab/mobile3)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="The screenshot is an example that shows the Post meeting app experience in mobile.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="The screenshot is an example that shows the Post meeting app experience in mobile.":::
 
 ---
 
