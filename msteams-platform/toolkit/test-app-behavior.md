@@ -10,20 +10,20 @@ ms.date: 03/03/2022
 
 # Test app behavior in different environment
 
-You can test your Teams app after integrating with Microsoft Teams using Teams Toolkit. To test your Teams app, you need to create at least one workspace in your environment. You can select a test setup with Teams Toolkit, such as locally or remotely to test and debug the app. You can use one of the following ways to debug:
+You can test your Teams app after integrating with Microsoft Teams using Teams Toolkit. To test your Teams app, you need to create at least one workspace in your environment. You can select a test setup with Teams Toolkit, such as locally by sideloading or remotely with Microsoft Azure Active Directory(Azure AD). You can use one of the following ways to debug:
 
 * **Locally hosted in Teams**:
 This involves running your app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
 
 * **Cloud-hosted in Teams**:
-This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
+This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This would require you to provision and deploy your project with Azure AD using Teams Toolkit.
 
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
 ## Locally hosted environment
 
-Teams is cloud-based that requires all services it accesses, to be available publicly using HTTPS endpoints. You can enable your app to work within Teams by either publishing the code to the cloud of your choice or make our local running instance externally accessible. You can locally run the instance with a tunneling software.
+Teams is cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. You can enable your app using Teams Toolkit. You can work within your Teams app by either publishing the code to the cloud of your choice or make our local running instance externally accessible. You can locally run the instance with a tunneling software.
 
 > [!NOTE]
 > Although you can use any tool of your choice, we recommend you to use [ngrok](https://ngrok.com/download)
@@ -38,3 +38,4 @@ To host your development and production code and their HTTPS endpoints, you can 
 ## See Also
 
 [Manage multiple environments](TeamsFx-multi-env.md)
+[Collaborate on Teams project using Microsoft Teams Toolkit](TeamsFx-collaboration.md)
