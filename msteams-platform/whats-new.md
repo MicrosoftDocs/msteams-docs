@@ -53,17 +53,6 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
    :::column-end:::
 :::row-end:::
-:::row:::
-   :::column span="":::
-      #### Teams app template catalog
-
-        Craft the right app experience for your users with an app that fits their requirement. 
-
-   :::column-end:::
-   :::column span="":::
-       :::image type="content" source="" alt-text="":::
-   :::column-end:::
-:::row-end:::
 
 ::: zone-end
 
