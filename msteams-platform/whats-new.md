@@ -9,6 +9,51 @@ ms.localizationpriority: high
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+:::row:::
+   :::column span="":::
+      :::image type="content" source="" alt-text="":::
+   :::column-end:::
+   :::column span="":::
+      #### GA features
+
+        Microsoft Teams platform features that are available to all app developers.
+
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      #### Developer preview
+
+        Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+   :::column-end:::
+   :::column span="":::
+       :::image type="content" source="" alt-text="":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="content" source="" alt-text="":::
+   :::column-end:::
+   :::column span="":::
+      #### Deprecated features
+
+        Microsoft Teams platform features that are not available anymore. 
+
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      #### Teams app template catalog
+
+        Craft the right app experience for your users with an app that fits their requirement. 
+
+   :::column-end:::
+   :::column span="":::
+       :::image type="content" source="" alt-text="":::
+   :::column-end:::
+:::row-end:::
+
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
 
