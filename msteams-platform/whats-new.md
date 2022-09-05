@@ -21,28 +21,15 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 -->
 
 :::row:::
-   :::column span="":::
-      :::image type="content" source="assets/images/generaly-available-feature.png" alt-text="Generally available features" link="#ga-features":::
+   :::column:::
+      :::image type="content" source="assets/images/generally-available-feature.png" alt-text="Generally available feature." link="#ga-features":::
    :::column-end:::
    :::column span="":::
-        Microsoft Teams platform features that are available to all app developers.
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-        Microsoft Teams platform features that are deprecated.
+     :::image type="content" source="assets/images/feature-deprecated.png" alt-text="Deprecated features." link="#deprecated-features":::
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="assets/images/feature-deprecated.jpg" alt-text="feature deprecated" link="#deprecated-features":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview" link="#developer-preview":::
-   :::column-end:::
-   :::column span="":::
-        Developer preview is a public program that provides early access to unreleased Teams platform features.
-   :::column-end:::
+      :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview." link="#developer-preview":::
+    :::column-end:::
 :::row-end:::
 
 ## GA features
@@ -347,19 +334,66 @@ Microsoft Teams platform features that are deprecated.
 
 ## Developer preview
 
-Developer preview is a public program that provides early access to unreleased Teams platform features.  
+Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+Explore updates for the developer preview releases for **2022** listed here.
+
+<details>
+<summary><b>August</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
+
+</details>
+
+<details>
+<summary><b>June</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
 | 06/30/2022 | Apps for instant meetings, one-on-one, and group calls| Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+
+</details>
+
+<details>
+<summary><b>May</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
 |05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
+
+</details>
+
+<details>
+<summary><b>February</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
 | 02/03/2022 | Introduced app manifest version 1.13 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+
+</details>
+
+<details>
+<summary><b>January</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
 | 01/17/2022 | People Picker in Adaptive cards for mobile | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
+
+</details>
+
+<details>
+<summary><b>Older updates</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
 | 10/28/2021 |Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 06/16/2021 | Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
+
+</details>
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
