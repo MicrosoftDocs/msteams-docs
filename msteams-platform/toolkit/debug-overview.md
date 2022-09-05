@@ -31,6 +31,8 @@ Teams Toolkit supports the following debug features:
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
 
+Teams Toolkit also [verifies the prerequisites](debug-background-process.md#teams-toolkit-verification-of-prerequisites) required for debug in the background when debugging. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can [register and configure your Teams app](debug-background-process.md#register-and-configure-teams-app).
+
 ### Start debugging
 
 You can press **F5** as a single operation to start debugging. The Teams Toolkit starts to check prerequisites, registers Azure AD app, Teams app, and registers bot, starts services, and launches browser.
