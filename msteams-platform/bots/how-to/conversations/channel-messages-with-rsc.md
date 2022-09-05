@@ -106,7 +106,7 @@ The following code provides an example of RSC permissions:
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
+  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels in team without being @mentioned."));
 }
 ```
 
@@ -117,7 +117,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 // Handle when a message is addressed to the bot. 
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 this.onMessage(async (context, next) => {
-   await context.sendActivity(MessageFactory.text("Using RSC the bot can recieve messages across channles in team without being @mentioned."))
+   await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channles in team without being @mentioned."))
    await next();
 });
 ```
