@@ -37,5 +37,5 @@ To host your development and production code and their HTTPS endpoints, you can 
 
 ## See Also
 
-[Manage multiple environments](TeamsFx-multi-env.md)
-[Collaborate on Teams project using Microsoft Teams Toolkit](TeamsFx-collaboration.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Collaborate on Teams project using Microsoft Teams Toolkit](TeamsFx-collaboration.md)
