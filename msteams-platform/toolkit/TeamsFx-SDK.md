@@ -234,7 +234,7 @@ const profile = await graphClient.api("/me").get();
 <details>
 <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Create api client" border="false":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Create api client":::
 
 </details>
 
@@ -346,6 +346,63 @@ dialogs.add(
   ])
 );
 ```
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Integration with Microsoft Graph Toolkit</b></summary>
+
+The [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph. 
+
+The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class, which uses `TeamsFx` class to sign in users and acquire tokens to use with Graph.
+
+1. Install the required packages.
+
+    ```bash
+    npm install @microsoft/mgt-element @microsoft/mgt-teamsfx-provider @microsoft/teamsfx
+    ```
+
+2. Initialize the provider inside your component.
+
+    ```ts
+    // Import the providers and credential at the top of the page
+    import {Providers} from '@microsoft/mgt-element';
+    import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
+    import {TeamsUserCredential} from "@microsoft/teamsfx";
+
+    const scope = ["User.Read"];
+    const teamsfx = new TeamsFx();
+    const provider = new TeamsFxProvider(teamsfx, scope);
+    Providers.globalProvider = provider;
+    ```
+
+3. Use the `teamsfx.login(scopes)` method to get required access token.
+
+    ```ts
+    // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
+    await teamsfx.login(this.scope);
+    Providers.globalProvider.setState(ProviderState.SignedIn);
+    ```
+
+4. Now, you can add any component in your HTML page or in your `render()` method with React to use the `TeamsFx` context to access Microsoft Graph.
+
+    ```html
+    <mgt-person query="me" view="threeLines"></mgt-person>
+    ```
+
+    ```ts
+    public render(): void {
+    return (
+        <div>
+            <Person personQuery="me" view={PersonViewType.threelines}></Person>
+        </div>
+    );
+    }
+    ```
+
+For more information on sample to initialize the TeamsFx provider, see the [Contacts Exporter sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
 
 </details>
 

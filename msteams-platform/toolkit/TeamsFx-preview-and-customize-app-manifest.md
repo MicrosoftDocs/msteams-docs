@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/13/2022
 ---
 
-# Edit Teams app manifest
+# Edit Teams app manifest for Visual Studio
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
@@ -113,7 +113,7 @@ If the manifest file is outdated due to configuration file change or template ch
 * **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform.
 * **Cancel**: No action is taken.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 ## Customize Teams app manifest
 

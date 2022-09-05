@@ -69,7 +69,7 @@ To stop distribution of an app after you've published, follow the steps:
 1. On the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
 1. To initiate de-listing of the app, on **Partner Center**, select the **Overview** page, and then select **Stop selling**.
 
-After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](../publish.md).
+After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
 ## See also
 

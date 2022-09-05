@@ -1,8 +1,8 @@
 ---
 title: Prerequisites
 author: surbhigupta
-description: In this module, learn the requirements for every tab in Microsoft Teams must adhere and Tools to build tabs.
-ms.localizationpriority: medium
+description: In this article, learn the prerequisites to build Microsoft Teams personal, channel, or group tab tab. Know the tools required to build your tab.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---

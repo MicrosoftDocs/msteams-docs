@@ -6,9 +6,6 @@ ms.localizationpriority: medium
 ---
 # Share to Teams from personal app or tab
 
-> [!NOTE]
-> Share to Teams is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-
 Share to Teams allows users to share the content from personal app or tab to other user or group or channel within Teams. Users can select Share to Teams to launch the Share to Teams experience in a pop-up window. The pop-up window allows users to add other user or group or channel to share the content.
 
 The following image shows the Share to Teams pop-up window:
@@ -95,9 +92,6 @@ After you enable share to teams button on personal app or tab, you can share the
 2. Add other user or group or channel to share the content.
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
-
-    > [!NOTE]
-    > You can add a note in **say something about this**.
 
 3. Select **Share**.
 

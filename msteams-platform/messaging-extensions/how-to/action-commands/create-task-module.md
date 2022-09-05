@@ -1,12 +1,12 @@
 ---
-title: Create and send the task module
+title: Create and send task module
 author: surbhigupta
 description: In this module, learn how to handle the initial invoke action and respond with a task module from an action messaging extension command
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create and send the task module
+# Create and send task module
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -643,7 +643,7 @@ Respond to the invoke request with a `task` object that contains either a `taskI
 
 |Property name|Purpose|
 |---|---|
-|`type`| Can be either `continue` to present a form, or `message` for a simple popup. |
+|`type`| Can be either `continue` to present a form, or `message` for a simple pop-up. |
 |`value`| Either a `taskInfo` object for a form, or a `string` for a message. |
 
 The schema for the taskInfo object is:
@@ -978,10 +978,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
+| Sample Name           | Description | .NET    | Node.js   | Python |
 |:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search)|
 
 ## Next step
 

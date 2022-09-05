@@ -1,8 +1,9 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
-description: Learn about the prerequisites required to run preview builds for extending your Teams apps across Microsoft 365.
+description: In this article, you'll know about the prerequisites required to run preview builds for extending your Teams apps across Microsoft 365.
 ms.date: 05/24/2022
 ms.custom: m365apps
+ms.topic: conceptual
 ms.localizationpriority: high
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
@@ -25,15 +26,25 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 
 You'll also need to enable sideloading for your tenant:
 
-1. Sign in to Microsoft 365 admin center (https://admin.microsoft.com) with your test tenant credentials and select **Teams** from the side panel to open the *Microsoft Teams admin center*.
-1. Select: Teams apps > Manage apps > **Org-wide app settings**.
-1. Under **Custom apps**, toggle on the option *Interaction with custom apps*.
+ 1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
+ 1. Go to **Teams apps** > **Manage apps**.
+
+ 1. At the top right, select **Org-wide app settings**.
+
+ 1. Under Custom apps, turn on the **Interaction with custom app** toggle and save.
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
+
+ 1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+ 1. In the Teams admin center, go to **Teams apps** > **Setup policies**, and then select **Global (Org-wide default) policy**.
+
+ 1. Turn on **Upload custom apps**, and select **Save**.
 
 ## Enroll your developer tenant for Office 365 Targeted releases
 
-> [!Important]
+> [!IMPORTANT]
 > It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Office 365 Targeted releases](#enroll-your-developer-tenant-for-office-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Office.
 
 To enroll your test tenant for Office 365 targeted releases:

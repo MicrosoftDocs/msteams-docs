@@ -3,10 +3,12 @@ title: Enable and configure your apps for Teams meetings
 author: surbhigupta
 description: Learn how to enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features and more.
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 04/07/2022
 ---
 
-# Enable and configure your apps for Teams meetings
+# Enable and configure apps for meetings
 
 Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest.
 
@@ -16,7 +18,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * Know how to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
 
-* Use your app that supports configurable tabs in the groupchat scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
+* Use your app that supports configurable tabs in the `groupchat` scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
 
 * Adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
@@ -74,7 +76,7 @@ Support the `groupchat` scope to enable your app in pre-meeting and post-meeting
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app on Teams room clients. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
@@ -93,9 +95,9 @@ Before a meeting, users can add tabs, bots, and message extensions. Users with o
 To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
+1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="The screenshot describes how to use plus button icon in the details tab to install app as Tab.":::.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="The screenshot describes how to install the app as a tab in the pre meeting tab in Teams meeting.":::
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -121,9 +123,9 @@ During a meeting, you can use the `meetingSidePanel` or in-meeting notification 
 
 #### Meeting SidePanel
 
-The `meetingSidePanel` enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add `meetingSidePanel` to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+The `meetingSidePanel` enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add `meetingSidePanel` to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameInfo interface](/javascript/api/@microsoft/teams-js/frameinfo) (known as `FrameContext` prior to TeamsJS v.2.0.0).
 
-To use the `userContext` API to route requests, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is similar to the authentication flow for websites. So tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+You can [use the user's context to route requests](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is similar to the authentication flow for websites. Tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 Message extension works as expected when a user is in an in-meeting view. The user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
@@ -136,7 +138,34 @@ The in-meeting notification is used to engage participants during the meeting an
 
 In-meeting notification must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog.":::
+
+You can also add the Teams display picture and people card of the user to in-meeting notification based on `onBehalfOf` token with user MRI and display name passed in payload. Following is an example payload:
+
+```json
+    {
+       "type": "message",
+       "text": "John Phillips assigned you a weekly todo",
+       "summary": "Don't forget to meet with Marketing next week",
+       "channelData": {
+           onBehalfOf: [
+             { 
+               itemId: 0, 
+               mentionType: 'person', 
+               mri: context.activity.from.id, 
+               displayname: context.activity.from.name 
+             }
+            ],
+           "notification": {
+           "alertInMeeting": true,
+           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        },
+       "replyToId": "1493070356924"
+    }
+```
+
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Example shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
 
 #### Shared meeting stage
 
@@ -149,7 +178,18 @@ Shared meeting stage allows meeting participants to interact with and collaborat
 
 Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+> [!NOTE]
+> Share entire app to meeting stage in mobile is currently available only in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+
+# [Desktop](#tab/Desktop)
+
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="The screenshot describes how to share entire app to the collaborative meeting stage on desktop.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="The screenshot describes how to share entire app to the collaborative meeting stage on mobile.":::
+
+---
 
 To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
@@ -175,14 +215,14 @@ For more information, see [app manifest](../resources/schema/manifest-schema-dev
 
 Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="The screenshot describes how to share specific part of the app to meeting stage in Teams meeting.":::
 
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 > [!NOTE]
 >
 > * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
-> * Share specific parts of the app to stage is supported for Teams desktop clients only.
+> * Currently, you can share specific parts of the app to meeting stage only on Teams desktop clients.
 
 ### After a meeting
 
@@ -199,7 +239,7 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 ## Step-by-step guides
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting sidepanel in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting SidePanel in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting stage view in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate meeting content bubble in your Teams meeting.
 

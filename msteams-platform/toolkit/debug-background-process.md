@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 03/03/2022
 ---
 
-# Debug background processes
+# Debug background process
 
 The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code (VS Code). The VS Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance as follows:
 
@@ -29,7 +29,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Project type|Node.js LTS version|
   |----------|--------------------------------|
   |Tab | 14, 16 (recommended) |
-  |SPFx Tab | 12, 14 (recommended)|
+  |SPFx Tab | 14, 16 (recommended)|
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
