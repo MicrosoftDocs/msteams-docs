@@ -160,7 +160,7 @@ For tab app or message extension app:
 
 ### Registers and configures Teams app
 
-Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.template.json`.
+Registers a Teams app in [Developer Portal](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.template.json`.
 
 After registration and configuration of the app, local debug files generates.
 

@@ -83,7 +83,7 @@ Teams Toolkit launches your browser instance and opens a web page to load Teams 
 After the initial set up process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
-* [Launches debuggers](#launches-debuggers)
+* [Launches debug configurations](#launches-debug-configurations)
 * [Sideloads the Teams app](#sideloads-the-teams-app)
 
 ### Starts app services
@@ -100,7 +100,7 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
-### Launches debuggers
+### Launches debug configurations
 
 Launches the debug configurations as defined in `.vscode/launch.json`.
 
