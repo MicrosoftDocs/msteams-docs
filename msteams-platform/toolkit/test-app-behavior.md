@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Test app behavior in different environment
 
-You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can select a test setup, such as local host or cloud-based host to test and debug the app. You can use one of the following ways to debug:
+You can test your Teams app after integrating with Microsoft Teams using Teams Toolkit. To test your Teams app, you need to create at least one workspace in your environment. You can select a test setup with Teams Toolkit, such as locally or remotely to test and debug the app. You can use one of the following ways to debug:
 
 * **Locally hosted in Teams**:
 This involves running your app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
@@ -28,14 +28,13 @@ Teams is cloud-based that requires all services it accesses, to be available pub
 > [!NOTE]
 > Although you can use any tool of your choice, we recommend you to use [ngrok](https://ngrok.com/download)
 
-## Cloudhosted environment
+## Cloud-hosted environment
 
 To host your development and production code and their HTTPS endpoints, you can use any externally addressable service. You need to ensure that all domains are accessible from your Teams app listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.jason` file
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
 
-## Next step
+## See Also
 
-> [!div class="nextstepaction"]
-> [Add test data to your environment](~/concepts/build-and-test/test-data.md)
+[Manage multiple environments](TeamsFx-multi-env.md)
