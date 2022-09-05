@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your message extension
 author: surbhigupta
-description: In this article, you'll learn how to add authentication to a messaging extension using code examples and sample
+description: Enable authentication in Teams message extension app using third-party OAuth provider with Azure AD configuration and code sample.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
