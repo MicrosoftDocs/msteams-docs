@@ -36,7 +36,16 @@ You can do the following configuration in the Developer Portal:
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
-For more information on Developer Portal overview, see [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) and for manage your apps in Developer Portal, see [Manage your apps in Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md)
+## Publish Teams app using Teams Developer Portal
+
+If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+
+Perform the following steps to publish your app:
+
+1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+2. Import your app package in zip, select `App -> Import app -> Replace`.
+3. Select the target app in app list.
+4. Publish your app, select `Publish -> Publish to your org`.
 
 ## See also
 

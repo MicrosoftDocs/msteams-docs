@@ -93,6 +93,4 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
 
-## Limitations
-
 ## See also
