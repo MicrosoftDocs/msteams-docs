@@ -39,6 +39,13 @@ The main milestones of this journey are:
 
 Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit.such as Azure AD and Microsoft 365, Developer Portal and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app.
 
+| Entities | Description |
+| ---- | ---- |
+| Azure AD :::image type="content" source="../assets/images/teams-toolkit-v2/azure icon.png" alt-text="Azure icon list"::: | Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. |
+| Microsoft 365 :::image type="content" source="../assets/images/teams-toolkit-v2/M365 icon.png" alt-text="M365 icon"::: | Teams developer account while developing an app.|
+| Developer Portal | The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
+| Microsoft Graph :::image type="content" source="../assets/images/teams-toolkit-v2/graph-icon.png" alt-text="Microsoft Graph icon"::: | Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. |
+
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 ## Manage your apps using Developer Portal
