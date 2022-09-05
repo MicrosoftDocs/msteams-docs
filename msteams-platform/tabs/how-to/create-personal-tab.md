@@ -1,7 +1,7 @@
 ---
 title: Create a personal tab
 author: laujan
-description: In this module, learn how to create a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
+description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build and run app.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar

@@ -1,10 +1,10 @@
 ---
 title: Tabs link unfurling and Stage View
 author: Rajeshwari-v
-description: Learn how to unfurl a link, open the Stage View and pin a tab with Microsoft Teams app. Learn about stage view and invoking it using Adaptive card using code example and sample. 
+description: Learn about stage view, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Tabs link unfurling and Stage View

@@ -1,7 +1,7 @@
 ---
 title: SSO support for your message extensions
 author: KirtiPereira
-description: In this article, you'll learn how to enable Single sign-on (SSO) support for your messaging extensions with Code samples.
+description: Enable Single sign-on (SSO) in your Teams message extension app using Azure AD and code sample.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
