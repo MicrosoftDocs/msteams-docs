@@ -1,8 +1,8 @@
 ---
 title: Create a content page
 author: surbhigupta
-description: In this module, learn how to create a content page for your tab and tab content and design guidelines
-ms.localizationpriority: medium
+description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside task module.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -28,6 +28,9 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 ## Integrate your code with Teams
 
 For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
+
+> [!NOTE]
+> It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
 
 The following code provides an example of how your page and the Teams client communicate:
 
