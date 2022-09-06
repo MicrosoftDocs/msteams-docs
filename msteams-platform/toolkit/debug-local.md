@@ -48,7 +48,7 @@ Toolkit launches a new Edge or Chrome browser instance based on your selection a
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug** in the activity bar.
+1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug ▷** drop down.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists":::
 
