@@ -334,7 +334,7 @@ const sampleEffect1Element = document.getElementById("sampleEffect1");
 sampleEffect1Element.addEventListener("click", function () {
 
   // notify for selected video effect changed event
-  video.notifySelectedVideoEffectChanged("EffectChanged", sampleEffect1_id);
+  video.notifySelectedVideoEffectChanged("EffectChanged", effectId);
 
 });
 ```
@@ -367,6 +367,77 @@ Ensure that you implement the following guidelines to use the video extensibilit
 ## Sideload the video filter app
 
 Sideload the video filter app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). After sideloading, you can use the video filter app to apply filters to videos in Teams meetings.
+
+## Diversity and Inclusion requirements
+
+The following are the guiding principles for defining requirements and app approval process :
+
+1. The brand of Microsoft as a diverse and inclusive company should not be tarnished.
+1. The video filters feature should be perceived as diverse and inclusive.
+1. The filter app developer should be asked to provide filters only within their area of expertise
+1. A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities.
+1. A filter should not allow dysmorphia. For example, morphing the face, eyes, nose, and so on, to skinnier, fatter, distorted, and so on.
+1. A filter should not allow skin smoothing.
+1. A filter should not be offensive or contain objectionable content.
+1. A filter thumbnail should be inclusive. For example, it should not indicate to the user that only a certain type of person can use this filter .
+1. The filter app must cater to at least 1 type of Category-1 diversity.
+   1. A filer app must provide filters across the spectrum for its chosen type of diversity . For example, if the filter app caters to white skin tones, it should also cater to  darker skin tones.
+   1. The number of  filters in the diversity category should cater to at least be 3 filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, one black and one middle skin tone in the color spectrum.
+1. A filter app can cater to at least 1 type of Category 2 diversity.
+   1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
+   1. The number of  filters in the diversity category should cater to at least be 3 filters across the extreme and middle ends of the spectrum.
+1. A filter app shouldn't have a combination of filters relating to diversities in Category 3. For example, The filter app can't have 3 filters with the words we, love, and democrats which is indirectly related to political beliefs.
+</br>
+</br>
+
+<details> <summary> Category 1</summary>
+
+1. Skin tones
+2. Gender identity
+
+</details>
+</br>
+
+<details> <summary> Category 2</summary>
+
+1. Age
+2. Hair
+3. Eyes
+
+</details>
+</br>
+
+<details> <summary> Category 3</summary>
+
+* Eyes – shape and size spectrum
+* Ethnicity
+* National origin
+* Cultural identity
+* Physical ability
+* Mental ability
+* Personal interests
+* Education
+* Citizenship
+* Religious beliefs
+* Location
+* Familial status
+* Relationship status
+* Socioeconomic status
+* Life experiences
+* Job function
+* Place of work
+* Management status
+* Employment status
+* Pay type
+* Seniority
+* Union affiliation
+* Political beliefs
+* Moral compass
+* Outlook on life
+* Epistemology
+* Any other type not mentioned above
+
+</br>
 
 ## Code sample
 
