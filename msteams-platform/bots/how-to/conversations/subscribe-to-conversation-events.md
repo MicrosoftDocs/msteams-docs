@@ -1333,28 +1333,26 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 # [C#](#tab/dotnet)
 
 ```csharp
-protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
     var activity = turnContext.Activity; if
     (string.Equals(activity.Action, "Add",
     StringComparison.InvariantCultureIgnoreCase))
     {
-// TO:DO Installation workflow }
-else
-        { // TO:DO Uninstallation workflow
-        }
-        return;
+        // TO:DO Installation workflow
     }
+    else
+    {
+        // TO:DO Uninstallation workflow
+    }
+    return;
 }
 ```
 
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
 
 ```csharp
-protected override async Task
-OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken)
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
     // TO:DO Installation workflow return;
 }
