@@ -59,7 +59,7 @@ The following steps help you to add API connection using Visual Studio Code:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
-     Based on the authentication type selected, following steps is required to completed additional configuration
+     Based on the authentication type selected, following steps is required to completed extra configuration
 
 # [Basic](#tab/basic)
 
@@ -121,3 +121,5 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
 
 ## See also
+
+* [Publish Teams apps using Teams Toolkit](publish.md)

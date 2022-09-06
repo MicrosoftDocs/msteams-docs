@@ -24,8 +24,8 @@ Here's what you'll learn in this section:
 
 * Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
-* Ensure that your app is running and accessible using HTTPs and for more information see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure you have followed set of guidelines in the [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md) to publish your app.
+* Ensure that your app is running and accessible using HTTPs.
+* Ensure you have followed set of guidelines in the publish your app to the Microsoft Teams store to publish your app.
 
 ## Publish to individual scope or sideload permission
 
@@ -35,7 +35,7 @@ You can add custom app to Teams by uploading an [app package](../concepts/build-
 * Build an app for yourself, such as to automate a workflow.
 * Build an app for small set of users, such as, your work group.
 
-You can build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store. For more information see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+You can build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store. For more information, see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 
 ### To build your app to zip app package file
 
@@ -81,7 +81,7 @@ The following steps help you to publish the app from Teams Toolkit:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Install for your organization":::
 
-  Now the app is successfully is published to the admin portal and you see the following notice:
+  Now the app is successfully published to the admin portal and you see the following notice:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirm Publish":::
 
@@ -116,7 +116,7 @@ The following steps help you to approve from Admin Center:
 
    You can view all Teams app for your organization.
 
-   In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publish the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
+   In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="approval":::
 
