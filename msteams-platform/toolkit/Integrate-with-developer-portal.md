@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 07/29/2022
 ---
 
-# Integrate with Developer Portal in Teams Toolkit
+# Integrate with Developer Portal
 
 You can configure and manage your app in developer portal within Teams Toolkit.
 
@@ -31,7 +31,7 @@ The following steps help you to publish your app in Developer Portal:
 If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
-1. Import your app package in zip, select **App** > **Import app**.
+1. Import your app package in zip, select **App** > **Import app**.<br>
    You need to replace the app, that you previously uploaded to the Developer Portal.
 1. To publish your app, select **Publish** > **Publish to your org**.
 

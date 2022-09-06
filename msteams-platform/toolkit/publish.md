@@ -41,7 +41,7 @@ You can build an app for internal use only and share it with your team without s
 
 You need to run `Provision in the cloud` first before you build the app package. The following steps help you to build the app package.
 
-* Select **Zip Teams metadata package** under **DEPLOYMENT**.
+* Select **Zip Teams metadata package** under **DEPLOYMENT**.<br>
     The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip`.
 
 ### To upload app package

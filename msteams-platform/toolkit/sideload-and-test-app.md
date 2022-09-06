@@ -71,3 +71,5 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## See also
+
+* [Publish Teams apps using Teams Toolkit](publish.md)

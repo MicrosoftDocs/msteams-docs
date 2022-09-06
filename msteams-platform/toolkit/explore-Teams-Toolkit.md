@@ -25,11 +25,11 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 | &nbsp; | **Documentation** | Access the Microsoft Teams Developer Documentation. |
 | 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
 | 3 | **View Samples** | Build different types of app based on existing samples. |
-| 4 | **Open Folder** | Open the existing Teams app |
+| 4 | **Open Folder** | Open the existing Teams app. |
 | 5 | **New File** | Create new file. |
 | &nbsp; | **Open File** | Open the existing file. |
-| &nbsp; | **Open Folder** | Open the existing folder |
-| 6 | **Recent** | View the recent files |
+| &nbsp; | **Open Folder** | Open the existing folder. |
+| 6 | **Recent** | View the recent files. |
 
 ### Exploring the Teams Toolkit task pane
 
@@ -49,7 +49,7 @@ Let's take a tour of the Teams Toolkit UI.
 | --- | --- |
 | **Explorer** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | To view the directory structure of the app. |
 | **Run and Debug** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | To start the local or remote debug process. |
-| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in Teams Toolkit|
+| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in Teams Toolkit. |
 
 From the task pane you can see the following sections:
 

@@ -106,7 +106,7 @@
       href: toolkit/build-environments.md
     - name: Use Teams Toolkit to create your app 
       items:
-      - name: Prerequisites
+      - name: Prerequisites for creating your Teams app
         href: toolkit/tools-prerequisites.md   
       - name: Create a new Teams app project
         href: toolkit/create-new-project.md
@@ -124,7 +124,7 @@
         items:
         - name: Customize Teams app Manifest
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Customize Azure AD Manifest
+        - name: Edit Azure AD manifest
           href: toolkit/AAD-manifest-customization.md
       - name: TeamsFx SDK
         href: toolkit/TeamsFx-SDK.md

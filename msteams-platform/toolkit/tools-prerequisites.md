@@ -141,7 +141,7 @@ You can verify if the sideloading permission is enabled using either Visual Stud
     :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
 
 </details>
-
+<br>
 <details>
 <summary><b>Verify sideloading permission using Teams client</b></summary>
 
@@ -202,3 +202,5 @@ If you have admin rights, perform the following steps to upload the custom app u
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
 * [Upload custom apps](/microsoftteams/teams-app-setup-policies)
+* [Provision cloud resources using Teams Toolkit](provision.md)
+* [Deploy Teams app to the cloud](deploy.md)

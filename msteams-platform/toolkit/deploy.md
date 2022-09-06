@@ -39,3 +39,7 @@ The Get started guides help you to deploy using Teams Toolkit. You can use the f
 > When you include Azure API management resource in your project and trigger deploy, you can publish your APIs in Azure functions to Azure API management service.
 
 ## See also
+
+* [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
+* [Create multi-capability Teams apps](add-capability.md)
+* [Add cloud resources to Microsoft Teams app](add-resource.md)
