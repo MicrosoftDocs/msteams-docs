@@ -34,10 +34,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ## GA features
 
-Explore updates for the GA releases for **2022** listed here.
+Updates for GA releases in 2022 and preceding years are listed below.
 
-<br>
-<details open>
 <summary><b>August</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -322,9 +320,8 @@ Explore updates from the previous GA releases listed here.
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-Explore updates for the developer preview releases for **2022** listed here.
+Updates for developer preview in 2022 and preceding years are listed below.
 
-<details open>
 <summary><b>August</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -332,8 +329,6 @@ Explore updates for the developer preview releases for **2022** listed here.
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
-
-</details>
 
 <details>
 <summary><b>June</b></summary>
