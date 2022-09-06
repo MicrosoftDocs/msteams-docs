@@ -292,6 +292,12 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
         **2022 October**
 
         * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * 
+        * 
+
+        |Aug|Jul|Jun|May|
+        |April|Mar|Feb|Jan|
+        |2021|2020|2019|2018|
 
    :::column-end:::
 :::row-end:::

@@ -22,7 +22,7 @@ groups:
     title: ASP.NET Core MVC
 - id: What-new-features
   title: Teams feature updates
-  prompt: Select the feature availability type to explore the features
+  prompt: Select the feature availability type to explore the features ![bullhorn icon](~/assets/images/bullhorn.png)
   pivots:
   - id: ga-feature
     title: Generally available
