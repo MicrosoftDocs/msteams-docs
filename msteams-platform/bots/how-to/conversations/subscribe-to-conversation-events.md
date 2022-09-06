@@ -1335,9 +1335,8 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 ```csharp
 protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-    var activity = turnContext.Activity; if
-    (string.Equals(activity.Action, "Add",
-    StringComparison.InvariantCultureIgnoreCase))
+    var activity = turnContext.Activity;
+    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
     {
         // TO:DO Installation workflow
     }
