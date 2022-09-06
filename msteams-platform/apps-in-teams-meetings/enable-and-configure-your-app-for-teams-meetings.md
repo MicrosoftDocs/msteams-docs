@@ -46,7 +46,7 @@ Specifically, before creating a meeting tab, it is important to learn about the 
 
 1. From the Teams chat panel, select the meeting chat view.
 
-1. Select + and tab gallery appears.
+1. Select + and the app gallery appears.
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
 
