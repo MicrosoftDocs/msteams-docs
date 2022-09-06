@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
  Microsoft Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for your Microsoft Teams App.
 
- You can perform the following with the multiple environments:
+ You can perform the following with multiple environments:
 
 1. **Test before production**: You can set up multiple environments such as dev, test, and staging before publishing a Teams App to production environment in modern app development lifecycle.
 
@@ -129,7 +129,7 @@ You can set different Teams app description for the different environments:
 Steps for customization:
 
 1. Open config file `.fx/configs/config.dev.json`.
-2. Add new property of **manifest** > **description** > **short** with value **`my app description for dev`**.
+2. Add new property of **`manifest`** > **`description`** > **`short`** with value **`my app description for dev`**.
 
   The updates to `.fx/configs/config.dev.json` are:
 
@@ -152,7 +152,7 @@ Steps for customization:
 4. Open config file `.fx/configs/config.staging.json`.
 5. Add the same property to `my app description for staging`.
 6. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
-7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`.
+7. Update the property **`description`** > **`short`** to use the **variable** defined in configure files with mustache syntax **`{{config.manifest.description.short}}`**.
   
   The updates to `manifest.template.json` are:
 
@@ -182,7 +182,7 @@ You can set the description of Teams app to `my app description` for all the env
 As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
 
 1. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
-2. Update the property **`description > short`** with hard-coded string **`my app description`**.
+2. Update the property **`description`** > **`short`** with hard-coded string **`my app description`**.
   
   The updates to `manifest.template.json` are:
 
@@ -219,3 +219,4 @@ For more information on Bicep template and parameter files, see [provision cloud
 * [Provision cloud resources](provision.md)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Test app behavior in different environment](test-app-behavior.md)
