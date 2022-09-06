@@ -12,65 +12,6 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ::: zone pivot="ga-feature"
 
-::: zone-end
-
-::: zone pivot="dev-preview"
-
-::: zone-end
-
-::: zone pivot="dep-feature"
-
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Features that are generally available for developers":::
-   :::column-end:::
-   :::column span="":::
-      #### GA features
-
-        Microsoft Teams platform features that are available to all app developers.
-
-        **2022 October**
-
-        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
-
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      #### Developer preview
-
-        Developer preview is a public program that provides early access to unreleased Teams platform features.
-
-   :::column-end:::
-   :::column span="":::
-       :::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Features that are available for developers preview":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/deprecated.png" alt-text="Features that are not available anymore in Teams":::
-   :::column-end:::
-   :::column span="":::
-      #### Deprecated features
-
-        Microsoft Teams platform features that are not available anymore. 
-
-   :::column-end:::
-:::row-end:::
-
-::: zone-end
-
-<!--
-## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
-
-| Date | Update | Find here |
-| --- | --- | --- |
-|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
-|05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
-|05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
-|05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
--->
-
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.
@@ -307,6 +248,10 @@ Explore updates from the previous GA releases listed here.
 
 <br>
 
+::: zone-end
+
+::: zone pivot="dev-preview"
+
 ## Developer preview
 
 <details>
@@ -331,7 +276,60 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 </details>
 </br>
 
-## Deprecated features
+::: zone-end
+
+::: zone pivot="dep-feature"
+
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Features that are generally available for developers":::
+   :::column-end:::
+   :::column span="":::
+      #### GA features
+
+        Microsoft Teams platform features that are available to all app developers.
+
+        **2022 October**
+
+        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      #### Developer preview
+
+        Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+   :::column-end:::
+   :::column span="":::
+       :::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Features that are available for developers preview":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/deprecated.png" alt-text="Features that are not available anymore in Teams":::
+   :::column-end:::
+   :::column span="":::
+      #### Deprecated features
+
+        Microsoft Teams platform features that are not available anymore. 
+
+   :::column-end:::
+:::row-end:::
+
+::: zone-end
+
+<!--
+## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
+
+| Date | Update | Find here |
+| --- | --- | --- |
+|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
+|05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
+|05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
+|05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
+-->
 
 ## Teams app template catalog
 
