@@ -67,7 +67,7 @@ npm install --save @microsoft/teams-js
 yarn add @microsoft/teams-js
 ```
 
-If you are using any dependency loader or module bundler such as RequireJS, SystemJS, browserify, or webpack, you can use import syntax to import specific modules. For example:
+If you're using any dependency loader or module bundler such as RequireJS, SystemJS, browserify, or webpack, you can use import syntax to import specific modules. For example:
 
 ```typescript
 import * as microsoftTeams from "@microsoft/teams-js";
@@ -353,7 +353,7 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 * Call `registerForVideoEffect()` as early as possible. Call `registerForVideoFrame()` after the required resources are downloaded and the video app initialization is finished.
 
-* Ensure that the stability of the effect algorithm. When calling `notifyVideoFrameProcessed`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect.
+* Ensure the stability of the effect algorithm. When calling `notifyVideoFrameProcessed`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect.
 
 * Video filter app must be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
@@ -370,46 +370,63 @@ Sideload the video filter app to your tenant in Teams. For more information, see
 
 ## Diversity and Inclusion requirements
 
-The following are the guiding principles for defining requirements and app approval process :
+The following are the guiding principles for defining requirements and app approval process:
 
-1. The brand of Microsoft as a diverse and inclusive company should not be tarnished.
+1. The brand of Microsoft as a diverse and inclusive company shouldn't be tarnished.
 1. The video filters feature should be perceived as diverse and inclusive.
 1. The filter app developer should be asked to provide filters only within their area of expertise
-1. A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities.
-1. A filter should not allow dysmorphia. For example, morphing the face, eyes, nose, and so on, to skinnier, fatter, distorted, and so on.
-1. A filter should not allow skin smoothing.
-1. A filter should not be offensive or contain objectionable content.
-1. A filter thumbnail should be inclusive. For example, it should not indicate to the user that only a certain type of person can use this filter .
-1. The filter app must cater to at least 1 type of Category-1 diversity.
-   1. A filer app must provide filters across the spectrum for its chosen type of diversity . For example, if the filter app caters to white skin tones, it should also cater to  darker skin tones.
-   1. The number of  filters in the diversity category should cater to at least be 3 filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, one black and one middle skin tone in the color spectrum.
-1. A filter app can cater to at least 1 type of Category 2 diversity.
+1. A filter shouldn't allow dysmorphia. For example, morphing the face, eyes, and nose, to skinnier, fatter, or distorted.
+1. A filter shouldn't allow skin smoothing.
+1. A filter shouldn't be offensive or contain objectionable content.
+1. A filter thumbnail should be inclusive. For example, it shouldn't indicate to the user that only a certain type of person can use this filter.
+
+A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities.
+</br>
+</br>
+
+<details> <summary>Category 1</summary>
+
+The filter app must cater to at least one type of Category 1 diversity.
+
+   1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to white skin tones, it should also cater to  darker skin tones.
+
+   1. The number of  filters in the diversity category should cater to at least be three filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, one black and one middle skin tone in the color spectrum.
+
+Here are some examples of category 1 diversity:
+
+* Skin tones
+
+* Gender identity
+
+</details>
+</br>
+
+<details> <summary>Category 2</summary>
+
+A filter app can cater to at least one type of Category 2 diversity.
+
    1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
-   1. The number of  filters in the diversity category should cater to at least be 3 filters across the extreme and middle ends of the spectrum.
-1. A filter app shouldn't have a combination of filters relating to diversities in Category 3. For example, The filter app can't have 3 filters with the words we, love, and democrats which is indirectly related to political beliefs.
-</br>
-</br>
 
-<details> <summary> Category 1</summary>
+   1. The number of  filters in the diversity category should cater to at least be three filters across the extreme and middle ends of the spectrum.
 
-1. Skin tones
-2. Gender identity
+Here are some examples of category 2 diversity:
 
-</details>
-</br>
+* Age
 
-<details> <summary> Category 2</summary>
+* Hair
 
-1. Age
-2. Hair
-3. Eyes
+* Eyes
 
 </details>
 </br>
 
-<details> <summary> Category 3</summary>
+<details> <summary>Category 3</summary>
 
-* Eyes – shape and size spectrum
+A filter app must avoid a combination of filters related to diversities in Category 3. For example, The filter app can't have filters with the words we, love, and democrats, which is indirectly related to political beliefs.
+
+Here are some examples of category 3 diversity:
+
+* Eyes: Shape and size spectrum
 * Ethnicity
 * National origin
 * Cultural identity
@@ -436,7 +453,6 @@ The following are the guiding principles for defining requirements and app appro
 * Outlook on life
 * Epistemology
 * Any other type not mentioned above
-
 </br>
 
 ## Code sample
