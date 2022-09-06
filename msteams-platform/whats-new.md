@@ -298,6 +298,18 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 </details>
 </br>
 
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/template-catalog.png" alt-text="Templates that are generally available in catalog":::
+   :::column-end:::
+   :::column span="":::
+      #### Teams app template catalog
+
+       Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
+
+   :::column-end:::
+:::row-end:::
+
 ::: zone-end
 
 ::: zone pivot="dep-feature"
