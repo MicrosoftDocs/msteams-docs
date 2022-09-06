@@ -18,7 +18,7 @@ Teams Toolkit supports environments for creating apps. Teams Toolkit also helps 
 
 Teams Toolkit in Microsoft Visual Studio Code offers set of environments to build your Teams app. You can choose anyone of the following environment that best suits your app:
 
-* JavaScript/TypeScript
+* JavaScript or TypeScript
 * SharePoint Framework (SPFx)
 
 ### Create your Teams app using JavaScript or TypeScript
@@ -30,7 +30,7 @@ The apps built with JavaScript have the following advantages:
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with existing APIs.
 
-Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript/TypeScript:
+Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
 
 * Tab app: Your tab app can have web-based content, you can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * Bot app: Bots can be chat bot or conversational bot that allows you to do simple and repetitive tasks like customer service or support staff.
@@ -52,12 +52,12 @@ Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. Th
 ## Support for Azure Functions
 
 You can use Teams Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities into building apps. You can focus on the pieces of code that matter most and Azure Functions do the rest.
-Azure functions allow you to implement:
+Azure Functions allow you to implement:
 
 1. System logic into your readily available blocks of code. These blocks are called functions.
 1. As the requests increases, Azure Functions meets the requirement with as many demands as necessary.
 
-Azure Function integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) provide feature-rich implementations. The following are just a few common scenarios for Azure functions:
+Azure Function integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) provide feature-rich implementations. The following are just a few common scenarios for Azure Functions:
 
 * When building a web API
 * Processing to database changes
