@@ -295,9 +295,9 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
         * 
         * 
 
-        |Aug|Jul|Jun|May|
+        |<details><summary><b>Aug</b></summary>* Link unfurling for share to teams from web apps</details>|Jul|Jun|May|
         |---|---|---|---|
-        |April|Mar|Feb|Jan|
+        |**April**|**Mar**|Feb|Jan|
         |2021|2020|2019|2018|
 
    :::column-end:::
