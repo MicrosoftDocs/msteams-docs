@@ -256,7 +256,7 @@ Explore updates from the previous GA releases listed here.
 
 :::row:::
    :::column span="":::
-      :::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Features that are generally available for developers":::
+      :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
    :::column-end:::
    :::column span="":::
       #### GA features
