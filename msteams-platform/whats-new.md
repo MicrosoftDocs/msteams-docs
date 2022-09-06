@@ -260,7 +260,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 09/05/2022 | Introduced meeting app support for Scheduled Channel Meetings | Build apps for Teams meetings and calls > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
+| 09/07/2022 | Introduced meeting app support for Scheduled Channel Meetings | Build apps for Teams meetings and calls > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
