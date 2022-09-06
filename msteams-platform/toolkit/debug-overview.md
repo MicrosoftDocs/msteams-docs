@@ -10,8 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Microsoft Teams app
 
-Microsoft Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully.
-Teams.
+Microsoft Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 During the debug process:
 
@@ -61,7 +60,7 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
 ## Prepare for debug
 
-The following steps help you to prepare for debug.
+The following steps help you to prepare for debug:
 
 ### Sign in to Microsoft 365
 
@@ -146,7 +145,7 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 
 Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, message extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
 
-1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`.
+1. Comment **`Attach to Bot`** and **`Attach to Backend`** from debug compound in `.vscode/launch.json`.
 
    ```json
    {
@@ -166,7 +165,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
    }
    ```
 
-2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json.
+2. Comment **`Start Backend`** and Start Bot from Start All task in .vscode/tasks.json.
 
    ```json
    {
