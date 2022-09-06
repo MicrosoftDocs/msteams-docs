@@ -32,9 +32,13 @@ You'll also need to enable sideloading for your tenant:
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Enable sideloading for custom apps from the Teams admin center":::
 
+1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+1. In the Teams admin center, go to **Teams apps** > **Setup policies**, and then select **Global (Org-wide default) policy**.
+1. . Turn on **Upload custom apps**, and select **Save**.
+
 ## Enroll your developer tenant for Office 365 Targeted releases
 
-> [!Important]
+> [!IMPORTANT]
 > It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Office 365 Targeted releases](#enroll-your-developer-tenant-for-office-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Office.
 
 To enroll your test tenant for Office 365 targeted releases:
@@ -86,8 +90,6 @@ To install the latest Office Current Channel (Preview) build to your physical An
 1. [Join the Android best tester program](https://insider.office.com/en-us/join/Android#Join-the-Android-beta-tester-program) to install the Current Channel (Preview) build of the Office app on your Android device.
 1. From your Android device, launch the Office app. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
 1. Verify you are running version #.#.# (16.0.15620.20000) or higher of Office for Android.
-
-[Placeholder for screenshot]
 
 ## Switch to the Developer Preview version of Teams
 

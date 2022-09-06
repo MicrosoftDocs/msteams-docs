@@ -209,13 +209,15 @@ To preview your app running in Office on the web:
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
 
-## Office for Android
+### Office for Android
 
 To view your app running in Office for Android:
 
 1. Launch the Office app and sign in using your dev tenant account.
-1. Select the **More (…)** menu. Your sideloaded app title appears among your installed apps.
+1. Select the **Apps** menu. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office for Android.
+
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="Tap on the 'Apps' option on the side bar of the Office app to see your installed personal tabs":::
 
 ## Troubleshooting
 
