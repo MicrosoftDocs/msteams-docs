@@ -22,13 +22,13 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 :::row:::
    :::column:::
-      :::image type="content" source="assets/images/generally-available-feature.png" alt-text="Generally available feature." link="#ga-features":::
+      :::image type="content" source="assets/images/generally-available-features.png" alt-text="Generally available features." link="#ga-features":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="assets/images/feature-deprecated.png" alt-text="Deprecated features." link="#deprecated-features":::
+     :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview." link="#developer-preview":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="assets/images/developer-preview.png" alt-text="Developer preview." link="#developer-preview":::
+      :::image type="content" source="assets/images/deprecated.png" alt-text="Feature deprecated." link="#deprecated-features":::
     :::column-end:::
 :::row-end:::
 
@@ -37,7 +37,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 Explore updates for the GA releases for **2022** listed here.
 
 <br>
-<details>
+<details open>
 <summary><b>August</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -318,28 +318,13 @@ Explore updates from the previous GA releases listed here.
 </details>
 </details>
 
-## Deprecated features
-
-Microsoft Teams platform features that are deprecated.
-
-<br>
-
-<details>
-<summary><b>2022</b></summary>
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-
-</details>
-
 ## Developer preview
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 Explore updates for the developer preview releases for **2022** listed here.
 
-<details>
+<details open>
 <summary><b>August</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -397,6 +382,21 @@ Explore updates for the developer preview releases for **2022** listed here.
 </details>
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+## Deprecated features
+
+Microsoft Teams platform features that are deprecated.
+
+<br>
+
+<details>
+<summary><b>2022</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
+
+</details>
 
 ## Teams app template catalog
 
