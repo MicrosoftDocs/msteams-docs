@@ -36,7 +36,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 Updates for GA releases in 2022 and preceding years are listed below.
 
-<summary><b>August</b></summary>
+**August**
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
@@ -322,7 +322,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 Updates for developer preview in 2022 and preceding years are listed below.
 
-<summary><b>August</b></summary>
+**August**
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
