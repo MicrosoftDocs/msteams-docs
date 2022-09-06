@@ -254,6 +254,45 @@ Explore updates from the previous GA releases listed here.
 
 ## Developer preview
 
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Features that are generally available for developers":::
+   :::column-end:::
+   :::column span="":::
+      #### GA features
+
+        Microsoft Teams platform features that are available to all app developers.
+
+        **2022 October**
+
+        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * 
+        * 
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+      |<details><summary><b>August</b></summary> * ***August 03, 2022*** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)</br> * ***August 03, 2022*** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab) </details>|
+
+   :::column-end:::
+   :::column span="":::
+
+        <details><summary><b>July</b></summary> * ***August 03, 2022*** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)</br> * ***August 03, 2022*** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab) </details>|
+
+   :::column-end:::
+   :::column span="":::
+
+        <details><summary><b>June</b></summary> * ***August 03, 2022*** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)</br> * ***August 03, 2022*** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab) </details>|
+
+   :::column-end:::
+   :::column span="":::
+
+        <details><summary><b>May</b></summary> * ***August 03, 2022*** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)</br> * ***August 03, 2022*** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab) </details>|
+   :::column-end:::
+:::row-end:::
+
 <details>
 <summary><b>Developer preview</b></summary>
 
