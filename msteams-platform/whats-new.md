@@ -296,6 +296,7 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
         * 
 
         |Aug|Jul|Jun|May|
+        |---|---|---|---|
         |April|Mar|Feb|Jan|
         |2021|2020|2019|2018|
 
