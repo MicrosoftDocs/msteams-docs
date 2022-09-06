@@ -93,7 +93,7 @@ You can set the Teams app name to `myapp(dev)` for the default environment `dev`
 Steps for customization:
 
 1. Open config file `.fx/configs/config.dev.json`.
-2. Update the property of **manifest** > **appName** > **short** to **`myapp(dev)`**.
+2. Update the property of **`manifest`** > **`appName`** > **short** to **`myapp(dev)`**.
 
   The updates to `.fx/configs/config.dev.json` are:
 
