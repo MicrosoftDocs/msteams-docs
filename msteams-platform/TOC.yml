@@ -447,34 +447,44 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
+      displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
+      displayName: Flexible layout, receipt card, carousel card, setting
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
+      displayName: Information masking, background, extension, notification
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
+      displayName: Setting, channel, static typeahead
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md  
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+        displayName: Access, extension, channel, communication
       - name: Work with Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        displayName: Setting, channels, 
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+        displayName: Poll creator controls, channel, extension
       - name: Sequential Workflows
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+        displayName: Channel
       - name: Up to date cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
   - name: Build task modules
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
+      displayName: Channel
     - name: Invoke and dismiss task modules
-      href: task-modules-and-cards/task-modules/invoking-task-modules.md  
+      href: task-modules-and-cards/task-modules/invoking-task-modules.md
+      displayName: Access, module sizing
     - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
     - name: Use task modules from bots
