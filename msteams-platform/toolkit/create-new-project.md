@@ -24,7 +24,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 **To create an app**
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="~/msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create a new Teams app**.
 
@@ -56,7 +56,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 
       1. Select the **Select Folder**.
 
-          :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder for storage":::
 
 1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
