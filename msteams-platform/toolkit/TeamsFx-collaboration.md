@@ -33,11 +33,11 @@ The following sections guide us to understand the collaboration process as proje
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Add project owner":::
 
-  3. To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
+  3. To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then you can see collaborators listed in the output channel as shown in following image:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
-  4. Push the project to GitHub
+  4. Push the project to GitHub.
 
      > [!NOTE]
      > The newly added collaborators do not receive any notification. The Project owner needs to notify collaborator.
@@ -72,7 +72,8 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
    > [!NOTE]
    >
    > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-   > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
+   > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal.
+   > * Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
 
 ## See also
 
