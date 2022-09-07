@@ -24,15 +24,12 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 **To create an app**
 
 1. Open Visual Studio Code.
+
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the left navigation bar.
 
 1. Select **Create a new Teams app**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
-
-1. Select **Create a new Teams app** to create an app using Teams Toolkit.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Wizard starts for creating a new project":::
 
 1. Ensure that **Tab** is selected as your app capability.
 
@@ -69,6 +66,33 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
    The Teams tab app is created in a few seconds.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created.":::
+
+=======
+1. For this tutorial, select **Tab** as the capability to build your app.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="Select App Capability":::
+
+   > [!NOTE]
+   > You can select any type of capability based on your requirement.
+
+1. Select **JavaScript** as the programming language.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="Screenshot showing how to select the programming language":::
+
+1. Select the location for project workspace and **Select Folder**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder1.png" alt-text="select-folder":::
+
+1. For this tutorial, enter `helloworld` as the application name. Select **Enter**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name":::
+
+   > [!NOTE]
+   > You can enter your own application name for other capabilities and ensure that you use only alphanumeric characters.
+
+   The Teams tab app is created in a few seconds.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/tap-app-created1.png" alt-text="Screenshot showing the app created":::
 
 ### Directory structure for different app types
 
