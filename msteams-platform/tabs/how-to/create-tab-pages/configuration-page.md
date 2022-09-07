@@ -18,7 +18,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configure a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and available from the cloud.
+The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and available from the cloud.
 
 ### Example
 
@@ -32,17 +32,19 @@ The following code is an example of corresponding code for the configuration pag
 
 ```html
 <head>
-    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+        await microsoftTeams.app.initialize();
         let saveGray = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
@@ -56,7 +58,7 @@ The following code is an example of corresponding code for the configuration pag
         }
 
         let saveRed = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
@@ -75,14 +77,14 @@ The following code is an example of corresponding code for the configuration pag
         const colorClickGray = () => {
             gr.display = "block";
             rd.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveGray()
         }
 
         const colorClickRed = () => {
             rd.display = "block";
             gr.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveRed();
         }
     </script>
@@ -209,7 +211,7 @@ After your page uploads, Teams updates the query string placeholders with releva
 
 ```html
 <script>
-   await app.initialize();
+   await microsoftTeams.app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');

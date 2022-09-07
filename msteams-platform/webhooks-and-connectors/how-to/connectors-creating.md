@@ -13,7 +13,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -81,17 +81,15 @@ The following code provides a sample HTML to create a connector configuration pa
     </section>
 </div>
 
-<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        
+<script>
         function onClick() {
             pages.config.setValidityState(true);
         }
 
-        await app.initialize();
+        await microsoftTeams.app.initialize();
         pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
