@@ -8,31 +8,15 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Provision cloud resources using Teams Toolkit
+# Provision cloud resources
 
 TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
 
-## Prerequisites
-
-* Account prerequisites
-  To provision cloud resources, you must have the following accounts:
-
-  * Microsoft 365 account with valid subscription.
-  * Azure with valid subscription.
-  For more information, see [how to prepare accounts for building Teams app](accounts.md).
-
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-
-> [!TIP]
-> Ensure you have Teams app project opened in VS code.
-
 ## Provision using Teams Toolkit
 
-Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI as follows:
+Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
-[Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
-
-## Resource creation
+## Create Resources
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
@@ -45,7 +29,11 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 > [!NOTE]
 > Azure services incur costs in your subscription, for more information on cost estimation, see [the pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-### Resource creation for Teams Tab application
+The following list shows the resource creation for different types of app and Azure resources:
+<br>
+
+<details>
+<summary><b>Resource creation for Teams Tab application</b></summary>
 
 |Resource|Purpose|Description |
 |----------|--------------------------------|-----|
@@ -54,7 +42,11 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for simple auth | Host simple auth server to gain access to other services in your single page application | Adds user assigned identity to access other Azure resources |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Teams bot or message extension application
+</details>
+<br>
+
+<details>
+<summary><b>Resource creation for Teams bot or message extension application</b></summary>
 
 |Resource|Purpose| Description |
 |----------|--------------------------------|-----|
@@ -63,7 +55,11 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for bot | Host your bot app | Adds user assigned identity to access other Azure resources. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure Functions in the project
+</details>
+<br>
+
+<details>
+<summary><b>Resource creation for Azure Functions in the project</b></summary>
 
 |Resource|Purpose| Description|
 |----------|--------------------------------|-----|
@@ -72,7 +68,11 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Azure storage for function app | Required to create function app |Not applicable|
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure SQL in the project
+</details>
+<br>
+
+<details>
+<summary><b>Resource creation for Azure SQL in the project</b></summary>
 
 |Resource|Purpose | Description |
 |----------|--------------------------------|-----|
@@ -80,7 +80,11 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Azure SQL database | Store data for your app | Grants user assigned identity, read or write permission to the database |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure API Management in the project
+</details>
+<br>
+
+<details>
+<summary><b>Resource creation for Azure API Management in the project</b></summary>
 
 |Resource|Purpose|
 |----------|--------------------------------|
@@ -90,16 +94,23 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
 | User assigned identity | Authenticate Azure service-to-service requests |
 
-### Resources created when including Azure Key Vault in the project
+</details>
+<br>
+
+<details>
+<summary><b>Resources created when including Azure Key Vault in the project</b></summary>
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
 | Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
+</details>
+<br>
+
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an infrastructure-as-code approach to define Azure resources that you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -117,18 +128,22 @@ Provision with ARM involves changing the following sets of files, parameters and
 > [!NOTE]
 > When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you to not lose changes while adding resources or capabilities.
 
+### Azure AD parameters
+
 The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure creation of new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+
+There are two types of parameters such as Azure AD application related parameters and Azure resource-related parameters.
 
 ##### Azure AD application-related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client id created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
 
 ##### Azure resource-related parameters
 
@@ -234,11 +249,11 @@ The following steps are:
     }
     ```
 
-### Scenerio
-
 To add other Azure resource or storage to the application:
 
-Consider the scenario, you want to add Azure storage to your Azure function backend to store blob data. There is no auto flow to update the bicep template with Azure storage support. However, you can edit the bicep file and add the resource. The steps are as follows:
+Consider the following scenario:
+
+You want to add Azure storage to your Azure function backend to store blob data. There is no auto flow to update the bicep template with Azure storage support. However, you can edit the bicep file and add the resource. The steps are as follows:
 
 1. Create a tab project.
 2. Add function to the project. For more information, see [add resources](./add-resource.md).
@@ -266,55 +281,6 @@ Consider the scenario, you want to add Azure storage to your Azure function back
     ```````````````````
 
 5. You can update your function with Azure storage output bindings.
-
-## FAQ
-
-<br>
-
-<details>
-
-<summary><b>How to troubleshoot?</b></summary>
-
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to navigate to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>How can I switch to another Azure subscription while provisioning?</b></summary>
-
-1. Switch subscription in current account or log out and select a new subscription.
-2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
-3. If you didn't provision current environment, you can trigger provision directly.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>How can I change resource group while provisioning?</b></summary>
-
-Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>How can I provision sharepoint-based app?</b></summary>
-
-You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
-
-> [!NOTE]
-> Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
-
-<br>
-
-</details>
 
 ## See also
 
