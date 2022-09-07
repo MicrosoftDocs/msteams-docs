@@ -104,7 +104,7 @@ When you select **Start Debugging (F5)**, the Teams Toolkit output channel displ
 
 In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Microsoft Azure AD app](#registers-and-configures-azure-ad-app)
+1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
 1. [Registers and configures bot](#registers-and-configures-bot).
 

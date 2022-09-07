@@ -33,7 +33,18 @@ The main milestones of this journey are:
 1. Use Azure account to provision and deploy your app to cloud.
 1. Publish your app to Teams.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-overview.png" alt-text="Teams Toolkit flow":::
+The following table helps you to get the overview of Teams Toolkit in Visual Studio Code:
+
+| Process | Description |
+| ---- | ---- |
+| Install Teams Toolkit | You can install Teams Toolkit in two ways <br> - Using Visual Studio Code <br> - Using Visual Studio Code Marketplace|
+| Support for build environments | You have two different types of environment <br> - Javascript or Typescript <br> - SPFx |
+| Support for app types and Azure function | There are two different types of apps <br> - Capability based app such as tab, bot, message extension  <br> - Scenerio based Teams app such as notification bot, command bot and SSO enabled personal tab |
+| Develop your Teams app | It contains <br> - Add and manage environment <br> - Create multi-capability app <br> - Create capability based cloud resources <br> - Integrate third party API <br> - Customize manifest file <br> - TeamsFx SDK |
+| Debug your Teams app | It contains <br> - Debug your Teams app locally <br> - Debug background process|
+| Host your Teams app | It contains <br> - Provision resources to the cloud <br> - Deploy to the cloud|
+| Test your Teams app | It contains <br> - Integrate and collabrate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment|
+| Publish your Teams app | It contains <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal |
 
 ### Entities integrated with Teams Toolkit
 
