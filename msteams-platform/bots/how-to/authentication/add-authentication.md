@@ -214,7 +214,7 @@ Note-there are two options for Service Providers here- Azure AD V1 and Azure AD 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This isn't used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
 
-       :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="This screenshot shows how to add Teams bot auth bot identity connection adv1.":::
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="This screenshot shows how to add Teams bot auth bot identity connection adv1.":::
 
 1. Select **Save**.
 
