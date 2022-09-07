@@ -49,7 +49,7 @@ When the content UX is loaded in a shared channel, use the data received from `g
 For more information to enable your tab, see:
 
 * [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
-* [Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
+* [Get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## Apps and permissions in shared channels
 
