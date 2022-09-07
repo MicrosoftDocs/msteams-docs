@@ -28,47 +28,47 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 
 1. Select **Create a new Teams app**.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Wizard starts for creating a new project":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Wizard starts for creating a new project":::
 
 1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Select App Capability":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Select App Capability":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Select default location":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Select default location":::
 
    You can also change the default location by the following steps:
 
       1. Select **Browse**.
 
-          :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Select browse for storage":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Select browse for storage":::
 
       1. Select the location for project workspace.
 
       1. Select the **Select Folder**.
 
-          :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
 
 1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
 
 1. By default, project opens in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="New window notification":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="New window notification":::
 
    The Teams tab app is created in a few seconds.
 
-    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created.":::
 
 ### Directory structure for different app types
 
