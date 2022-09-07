@@ -193,8 +193,10 @@ Note-there are two options for Service Providers here- Azure AD V1 and Azure AD 
 1. Select your bot registration link.
 1. Open the resource page and select **Configuration** under **Settings**.
 1. Select **Add OAuth Connection Settings**.
-The following image displays the corresponding selection in the resource page:  
-![SampleAppDemoBot configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+   The following image displays the corresponding selection in the resource page:
+
+   ![SampleAppDemoBot configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv1*.
@@ -212,7 +214,7 @@ The following image displays the corresponding selection in the resource page:
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This isn't used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
 
-    :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="This screenshot shows how to add Teams bot auth bot identity connection adv1.":::
+       :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="This screenshot shows how to add Teams bot auth bot identity connection adv1.":::
 
 1. Select **Save**.
 
@@ -413,7 +415,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. If asked, select the applicable user's account.
     The following image is an example of the bot UI after you've logged in:
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="This screenshot shows an example of the bot UI after you've logged in.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="This screenshot shows an example of the Teams bot UI after you've logged in.":::
 
 1. Select the **Yes** button to display your authentication token. The following image is an example:
 
