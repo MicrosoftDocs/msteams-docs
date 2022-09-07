@@ -385,7 +385,7 @@
       displayName: Ephemeral data structures
     - name: Media synchronization
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-      displayName: Audio ducking, 
+      displayName: Audio ducking
     - name: How-to guides
       items:
       - name: Agile Poker tutorial
@@ -404,12 +404,15 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+    displayName: HMAC security token, access, channel
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    displayName: Access, permissions
   - name: Create Office 365 Connectors
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
+    displayName: Access, settings, configuration
 - name: Build cards and task modules
   items:
   - name: Overview
