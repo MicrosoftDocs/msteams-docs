@@ -493,48 +493,63 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
+    displayName: Access
   - name: Tabs
     items:
     - name: Enable SSO for tab app
       items:
       - name: Overview
         href: tabs/how-to/authentication/tab-sso-overview.md
+        displayName: Cookies, channel, access, permissions
       - name: Register your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
+        displayName: Access, permissions, configurations, browser, extension
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
+        displayName: Extension, access, permissions
       - name: Update app manifest for SSO and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
+        displayName: Access, permissions
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
+        displayName: Access, permissions, channel, browser, configuration, delegated
       - name: Troubleshoot SSO authentication
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        displayName: Access, permissions, configurations
     - name: Use third party OAuth IdP authentication
       items:
       - name: Overview
         href: tabs/how-to/authentication/auth-flow-tab.md
+        displayName: Access, configuration
       - name: Configure third party OAuth IdP authentication
         href: tabs/how-to/authentication/auth-tab-aad.md
+        displayName: Access, configuration, cookies
       - name: Use external OAuth providers
         href: tabs/how-to/authentication/auth-oauth-provider.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
       href: bots/how-to/authentication/auth-flow-bot.md
+      displayName: Access
     - name: Add authentication to your bot
       href: bots/how-to/authentication/add-authentication.md
+      displayName: Configuration, delegate, emulator, tunneling, channels 
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
+      displayName: Acces, permissions, configuration, settings
   - name: Message extensions
     items:
     - name: Add authentication to your message extension
       href: messaging-extensions/how-to/add-authentication.md
+      displayName: Configuration
     - name: Enable SSO for message extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
+      href: messaging-extensions/how-to/enable-SSO-auth-me.md
+      displayName: Setting, extensions  
 - name: Integrate device capabilities
   items:
   - name: Overview
     href: concepts/device-capabilities/device-capabilities-overview.md
+    displayName: Access, premissions
   - name: Request device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
