@@ -118,7 +118,7 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 ```
 
 > [!NOTE]
-> If you are using REST APIs, then set `charset=UTF-8` in your request headers for emoji in Adaptive Cards.
+> If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
 
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive card emoji":::
 
