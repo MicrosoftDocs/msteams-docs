@@ -236,30 +236,11 @@ The following fields are changed when your content page is in a private channel:
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
-## Retrieve context in Microsoft Teams Connect shared channels
-
 > [!NOTE]
-> Currently, Microsoft Teams Connect shared channels are in developer preview only.
-
-When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels.
-The following fields are changed when your content page is in a shared channel:
-
-* `team.groupId`: Undefined for shared channels.
-* `team.internalId`: Set to the `threadId` of the team, the channel is shared for the current user. If the user has access to multiple teams, this is set to the team that hosts (creates) the shared channel.
-* `team.displayName`: Set to the name of the team, the channel is shared for the current user. If the user has access to multiple teams, this is set to the team that hosts (creates) the shared channel.
-* `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the shared channel.
-* `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the shared channel.
-* `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the shared channel.
-
-In addition to these field changes, there are two new fields available for shared channels:
-
-* `hostTeamGroupId`: Set to the `team.groupId` associated with the hosting team, or the team that created the shared channel. The property can make Microsoft Graph API calls retrieve membership of the shared channel.
-* `hostTeamTenantId`: Set to the `channel.ownerTenantId` associated with the hosting team, or the team that created the shared channel. The property can be cross-referenced with the current user's tenant ID found in the `user.tenant.id` field of the *context* object to determine if the user is internal or external to the hosting team's tenant.
-
-If your page makes use of any of these values, the value of `channel.membershipType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
-
-> [!NOTE]
-> `teamSiteUrl` also works well for standard channels.
+>
+> * Currently, Microsoft Teams Connect shared channels are in developer preview only.
+>
+> * `teamSiteUrl` also works well for standard channels.
 > If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 ## Get context in shared channels
