@@ -24,7 +24,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 **To create an app**
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the left navigation bar.
 
 1. Select **Create a new Teams app**.
 
@@ -34,7 +34,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Wizard starts for creating a new project":::
 
-1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
+1. Ensure that **Tab** is selected as your app capability.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Select App Capability":::
 
@@ -46,7 +46,7 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Select default location":::
 
-   You can also change the default location by the following steps:
+   The following steps guides you to change the default location:
 
       1. Select **Browse**.
 
