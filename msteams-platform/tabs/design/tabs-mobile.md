@@ -32,10 +32,9 @@ App developers can configure an app to enable users to download files from the w
 To download a file from an app in the Teams mobile client. Follow the instruction below.
 
 * Add the HMTL download attribute to your app. The following is an example:
-<a href="path_to_file" download="download">Download</a>
-* Add the device permission property in the manifest when specifying the media. The following is an example:
-
     `<a href="path_to_file" download="download">Download</a>`
+
+* Add the device permission property in the manifest when specifying the media. The following is an example:
 
 ## Authentication
 
