@@ -16,10 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 Microsoft Teams platform features that are available to all app developers.
 
-<br>
-
-<details>
-<summary><b>2022</b></summary>
+## 2022
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
@@ -78,13 +75,9 @@ Microsoft Teams platform features that are available to all app developers.
 
 </details>
 
-<br>
+## Older updates
 
-<details>
-<summary><b>Older updates</b></summary>
-<br>
 Explore updates from the previous GA releases listed here.
-<br><br>
 
 <details>
 <summary><b>2021</b></summary>
@@ -254,31 +247,6 @@ Explore updates from the previous GA releases listed here.
 
 ## Developer preview
 
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
-   :::column-end:::
-   :::column span="":::
-      #### GA features
-
-        Microsoft Teams platform features that are available to all app developers.
-
-        **2022 October**
-
-        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
-        * 
-        * 
-   :::column-end:::
-:::row-end:::
-
-|<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
-|---|---|---|---|
-|**April**|**Mar**|**Feb**|**Jan**|
-|**2021**|**2020**|**2019**|**2018**|
-
-<details>
-<summary><b>Developer preview</b></summary>
-
 Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
 | **Date** | **Update** | **Find here** |
@@ -295,69 +263,25 @@ Developer preview is a public program that provides early access to unreleased T
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
-</details>
-</br>
-
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/template-catalog.png" alt-text="Templates that are generally available in catalog":::
-   :::column-end:::
-   :::column span="":::
-      #### Teams app template catalog
-
-       Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
-
-   :::column-end:::
-:::row-end:::
-
 ::: zone-end
 
 ::: zone pivot="dep-feature"
 
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Features that are generally available for developers":::
-   :::column-end:::
-   :::column span="":::
-      #### GA features
+## Deprecated features
 
-        Microsoft Teams platform features that are available to all app developers.
+Deprecated featues are no more available in Teams platform.
 
-        **2022 October**
-
-        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
-        * 
-        * 
-
-        |<details><summary><b>Aug</b></summary>* Link unfurling for share to teams from web apps</details>|Jul|Jun|May|
-        |---|---|---|---|
-        |**April**|**Mar**|Feb|Jan|
-        |2021|2020|2019|2018|
-
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      #### Developer preview
-
-        Developer preview is a public program that provides early access to unreleased Teams platform features.
-
-   :::column-end:::
-   :::column span="":::
-       :::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Features that are available for developers preview":::
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/deprecated.png" alt-text="Features that are not available anymore in Teams":::
-   :::column-end:::
-   :::column span="":::
-      #### Deprecated features
-
-        Microsoft Teams platform features that are not available anymore. 
-
-   :::column-end:::
-:::row-end:::
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
+| 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
+| 06/30/2022 | Apps for instant meetings, one-on-one, and group calls| Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
+| 02/03/2022 | Introduced app manifest version 1.13 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+| 01/17/2022 | People Picker in Adaptive cards for mobile | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
+| 10/28/2021 |Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+| 06/16/2021 | Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 ::: zone-end
 
