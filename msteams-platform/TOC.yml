@@ -589,14 +589,19 @@
   items:
   - name: Overview
     href: m365-apps/overview.md
+    displayName: Access, permissions, channel, extensions
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+    displayName: Channel, configuration, settings, extensions
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
+    displayName: Access, permissions, channel, report, browser
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+    displayName: Access, channel, report, communication
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+    displayName: Access, permissions, channel, extensions
 - name: Test your app
   items:
   - name: Overview
@@ -674,7 +679,7 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    displayName: Pricing model, SaaS offer, In-app purchases, 
+    displayName: Pricing model, SaaS offer, In-app purchases
   - name: Include a SaaS offer with your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: Transactable Software-as-a-Service, Recloud app
@@ -683,15 +688,18 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
-  items:
+  itesms:
     - name: App manifest schema for Teams
       href: resources/schema/manifest-schema.md
+      displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md
+          displayName: Access, setting
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
+          displayName: Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer
 - name: Integrate with Teams
   items:
   - name: Overview
