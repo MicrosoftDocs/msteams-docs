@@ -118,7 +118,7 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
 
 ## How can you act on these insights?
 
-Once you have these insights, visit the How to monitor analytics, performance, feedback while your app is in the market and action on these pages to learn more about how you can leverage them for growing and monetizing your app.
+Once you have these insights, visit the [How to monitor analytics, performance, feedback](#how-to-monitor-analytics-performance-feedback) while your app is in the market and action on these pages to learn more about how you can leverage them for growing and monetizing your app.
 
 ## How to plan & approach growth for your app?
 
