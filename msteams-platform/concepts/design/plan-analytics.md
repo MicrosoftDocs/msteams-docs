@@ -15,7 +15,8 @@ As a developer who’s building an app for millions of Microsoft Teams users to 
 
 Remember, as the app’s developer you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center, within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics such as Monthly, Daily, and Weekly active users, retention and intensity charts, users who have used your app more than five days in the last month, platform, operating system and geographic split of users for your app etc. enabling you to track user demand, user churn and frequency of usage for your app at an aggregate level.
 
-Teams usage report can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics such as a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app. That is because your app on Teams is essentially a web-based service hosted elsewhere for example, Azure cloud but embedded to be surfaced inside Microsoft Teams shell where end-users use your app. This applies to your app irrespective of the platform capabilities used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are essentially means to surface web-based experiences inside Teams.
+Teams usage report can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics such as a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app. That is because your app on Teams is essentially a web-based service hosted elsewhere for example, Azure cloud but embedded to be surfaced inside Microsoft Teams shell where end-users use your app. This applies to your app irrespective of the
+[platform capabilities](../../overview-explore.md) used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are essentially means to surface web-based experiences inside Teams.
 
 This is why you must plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
 
@@ -31,7 +32,7 @@ There are broadly two types of data instrumentation relevant for your Teams app:
 
 ## Data instrumentation in your app specific to Teams
 
-Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these capabilities and UI constructs across personal or shared scopes, it's best to understand, plan and implement your instrumentation around each of these capabilities.
+Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
