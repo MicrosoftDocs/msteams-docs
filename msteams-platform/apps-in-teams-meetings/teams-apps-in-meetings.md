@@ -20,7 +20,7 @@ An application developer must be familiar with the following product concepts to
 
 Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
-### Types of Teams meetings
+## Supported meeting types in Teams
 
 Teams supports access to apps during meeting for the following meeting types:
 
@@ -28,6 +28,7 @@ Teams supports access to apps during meeting for the following meeting types:
 * [**One-on-one calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in one-on-one chat.
 * [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in group chat.
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
+* [**Webinar**](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3): Webinar initiated through **Webinar** button under **New Meeting** dropdown.
 
 > [!NOTE]
 >
@@ -35,15 +36,7 @@ Teams supports access to apps during meeting for the following meeting types:
 
 Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [Meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 
-Users can add apps to the meeting using the **+** option from their Teams meeting window.
-
-:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="This screenshot shows how to add an app in Teams meeting":::
-
-Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and explore apps designed specifically for meetings.
-
 ## User roles in Teams meeting
-
-:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="This screenshot shows the participant roles in a Teams meeting window.":::
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
@@ -69,8 +62,10 @@ After you design your app based on participant roles in a meeting, you can ident
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Advanced meeting APIs](advanced-meeting-apis.md)
-* [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
-* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
+* [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
+* [Build apps for anonymous users](build-apps-for-anonymous-user.md)
+* [Advanced meeting APIs](advanced-meeting-apis.md)
+* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
