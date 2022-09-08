@@ -11,7 +11,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app":::
+        :::image type="content" source="~/assets/images/general-availabe.png" alt-text="Charge a price for your app":::
     :::column-end:::
     :::column span="2":::
 
@@ -26,13 +26,13 @@ Microsoft Teams platform features that are available to all app developers.
     :::column-end:::
 :::row-end:::
 
-## 2022
+### 2022
 
 |<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
 |---|---|---|---|
 |**April**|**Mar**|**Feb**|**Jan**|
 
-## Previous updates
+### Previous updates
 
 > [!div class="nextstepaction"]
 > [2021](~/features-twenty-one.md)
@@ -45,7 +45,8 @@ Microsoft Teams platform features that are available to all app developers.
 
 :::row:::
     :::column:::
-     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Free trials":::
+     :::image type="content" source="~/assets/images/developer-preview.png":::
+" alt-text="Free trials":::
     :::column-end:::
     :::column span="2":::
 
@@ -60,13 +61,13 @@ Developer preview is a public program that provides early access to unreleased T
     :::column-end:::
 :::row-end:::
 
-## 2022
+### 2022
 
 |<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
 |---|---|---|---|
 |**April**|**Mar**|**Feb**|**Jan**|
 
-## Previous updates
+### Previous updates
 
 > [!div class="nextstepaction"]
 > [2021](~/features-twenty-one.md)
@@ -79,7 +80,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 :::row:::
     :::column:::
-        ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+        :::image type="content" source="~/assets/images/deprecated.png":::
     :::column-end:::
     :::column span="2":::
 
@@ -94,22 +95,22 @@ Microsoft Teams platform features that are not available anymore.
     :::column-end:::
 :::row-end:::
 
-## 2022
+### 2022
 
 |<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
 |---|---|---|---|
 |**April**|**Mar**|**Feb**|**Jan**|
 
-## Previous updates
+### Previous updates
 
 > [!div class="nextstepaction"]
-> [2021](~/features-twenty-one.md)
+> [2021]()
 
 > [!div class="nextstepaction"]
-> [2020](~/features-twenty-one.md)
+> [2020]()
 
 > [!div class="nextstepaction"]
-> [2019](~/features-twenty-one.md)
+> [2019]()
 
 ## Teams app template catalog
 
