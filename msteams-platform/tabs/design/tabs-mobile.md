@@ -25,11 +25,17 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 > * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
 > * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
-## Enable file download on Teams mobile client
+## File download on Teams mobile client
 
 App developers can configure an app to enable users to download files from the webview to their mobile devices on the Teams mobile client. All major file formats are supported for download.
 
-To configure an app to download a file, use the HTML `<a>` download attribute and add the devicePermissions property in manifest when specifying media.
+To download a file from an app in the Teams mobile client. Follow the instruction below.
+
+* Add the HMTL download attribute to your app. The following is an example:
+<a href="path_to_file" download="download">Download</a>
+* Add the device permission property in the manifest when specifying the media. The following is an example:
+
+    `<a href="path_to_file" download="download">Download</a>`
 
 ## Authentication
 
