@@ -95,7 +95,9 @@ To install the latest Office Current Channel (Preview) build to your physical An
 1. Verify you are using a [supported Android device](https://support.google.com/googleplay/answer/1727131).
 1. [Join the Android best tester program](https://insider.office.com/en-us/join/Android#Join-the-Android-beta-tester-program) to install the Current Channel (Preview) build of the Office app on your Android device.
 1. From your Android device, launch the Office app. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Verify you are running version #.#.# (16.0.15620.20000) or higher of Office for Android.
+1. Verify you are running version 1.0.1 (16.0.15627.20006) or higher of Office for Android.
+
+    :::image type="content" source="images/office-android-minver.png" alt-text="screen shot of version number 1.0.1 (16.0.15627.20006) of Office for Android":::
 
 ## Switch to the Developer Preview version of Teams
 
