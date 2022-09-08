@@ -227,7 +227,7 @@ landingContent:
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
   
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
       - text: Send notifications to Teams
         url: https://aka.ms/teamsfx-send-notification
