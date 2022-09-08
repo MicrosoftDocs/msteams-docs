@@ -226,6 +226,15 @@ landingContent:
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
+  
+  - linkListType: tutorial
+    links:
+      - text: Send notifications to Teams
+        url: https://aka.ms/teamsfx-send-notification
+      - text: Respond to chat commands in Teams
+        url: https://aka.ms/teamsfx-create-command
+      - text: Respond to card actions in Teams
+        url: https://github.com/dooriya/WorkflowBot#readme
 
 - title: Publish and distribute
   linkLists:
