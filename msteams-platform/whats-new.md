@@ -13,7 +13,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
     :::column:::
         :::image type="content" source="~/assets/images/general-availabe.png" alt-text="Charge a price for your app":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
 
 ## GA features
 
@@ -47,7 +47,7 @@ Microsoft Teams platform features that are available to all app developers.
     :::column:::
      :::image type="content" source="~/assets/images/developer-preview.png" alt-text="Preview featue for app":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
 
 ## Developer preview
 
@@ -81,7 +81,7 @@ Developer preview is a public program that provides early access to unreleased T
     :::column:::
         :::image type="content" source="~/assets/images/deprecated.png" alt-text="deprecated featue for app":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
 
 ## Deprecated features
 
