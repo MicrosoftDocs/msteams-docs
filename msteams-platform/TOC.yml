@@ -98,40 +98,66 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create a new Teams app
-      href: toolkit/create-new-project.md
-    - name: Prepare accounts to build Teams app
-      href: toolkit/accounts.md
-    - name: Debug your Teams app locally
-      href: toolkit/debug-local.md
-    - name: Debug background process
-      href: toolkit/debug-background-process.md
-    - name: Provision cloud resources
-      href: toolkit/provision.md
-    - name: Deploy Teams app to the cloud
-      href: toolkit/deploy.md
-    - name: Edit Teams app manifest
-      href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-    - name: Customize Azure AD manifest
-      href: toolkit/AAD-manifest-customization.md
-    - name: Add capabilities to Teams app
-      href: toolkit/add-capability.md
-    - name: Add cloud resources to Teams app
-      href: toolkit/add-resource.md
-    - name: Add single sign-on to Teams app
-      href: toolkit/add-single-sign-on.md
-    - name: Add API connection to Teams app
-      href: toolkit/add-API-connection.md
-    - name: Set up CI/CD pipelines
-      href: toolkit/use-CICD-template.md 
-    - name: Publish Teams apps using Teams Toolkit 
-      href: toolkit/publish.md
-    - name: Manage multiple environments
-      href: toolkit/TeamsFx-multi-env.md
-    - name: Collaborate on Teams project
-      href: toolkit/TeamsFx-collaboration.md  
-    - name: TeamsFx SDK
-      href: toolkit/TeamsFx-SDK.md
+    - name: Install Teams Toolkit
+      href: toolkit/install-Teams-Toolkit.md
+    - name: Explore Teams Toolkit
+      href: toolkit/explore-Teams-Toolkit.md
+    - name: Prepare to build apps using Microsoft Teams Toolkit
+      href: toolkit/build-environments.md
+    - name: Use Teams Toolkit to create your app 
+      items:
+      - name: Prerequisites for creating your Teams app
+        href: toolkit/tools-prerequisites.md   
+      - name: Create a new Teams app project
+        href: toolkit/create-new-project.md
+      - name: Develop your Teams app
+        items: 
+        - name: Add and manage environment
+          href: toolkit/TeamsFx-multi-env.md
+        - name: Create multi capability app
+          href: toolkit/add-capability.md 
+        - name: Create capability based cloud resources
+          href: toolkit/add-resource.md  
+        - name: Integrate existing third party APIs
+          href: toolkit/add-API-connection.md 
+      - name: Customize Manifest
+        items:
+        - name: Customize Teams app Manifest
+          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+        - name: Edit Azure AD manifest
+          href: toolkit/AAD-manifest-customization.md
+      - name: TeamsFx SDK
+        href: toolkit/TeamsFx-SDK.md
+      - name: Debug your Teams app
+        items: 
+        - name: Overview
+          href: toolkit/debug-overview.md
+        - name: Debug your Teams app locally
+          href: toolkit/debug-local.md
+        - name: Debug background process
+          href: toolkit/debug-background-process.md
+      - name: Host your app on Azure
+        items:    
+        - name: Provision cloud resources
+          href: toolkit/provision.md
+        - name: Deploy Teams app to the cloud
+          href: toolkit/deploy.md
+      - name: Test your Teams app
+        items: 
+        - name: Integrate and collaborate
+          href: toolkit/TeamsFx-collaboration.md 
+        - name: Sideload and test app in Teams environment
+          href: toolkit/sideload-and-test-app.md 
+        - name: Test app behavior in different environment
+          href: toolkit/test-app-behavior.md
+    - name: Publish your Teams app
+      items:
+      - name: Publish Teams apps using Teams Toolkit 
+        href: toolkit/publish.md
+      - name: Integrate with Developer Portal
+        href: toolkit/Integrate-with-developer-portal.md
+    - name: FAQ
+      href: toolkit/faq.md        
   - name: Teams Toolkit for Visual Studio 
     items:
     - name: Teams Toolkit overview
@@ -157,7 +183,7 @@
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
     - name: Analyze your apps usage in Developer Portal
-      href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md   
+      href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
