@@ -3,6 +3,7 @@ title: What is new and updated for developers in Teams
 description: What are the new Microsoft Teams developer features introduced and updates to existing features.
 ms.topic: reference
 ms.localizationpriority: high
+zone_pivot_groups: What-new-features
 ---
 
 # What's new for developers in Microsoft Teams
@@ -276,9 +277,14 @@ Explore updates from the previous GA releases listed here.
 |---|---|---|---|
 |**April**|**Mar**|**Feb**|**Jan**|
 
-|[!div class="nextstepaction"] [2021](~/features-twenty-one.md)|**2020**|**2019**|**2018**|
-|---|---|---|---|
-|  |  |  |  |
+> [!div class="nextstepaction"]
+> [2021](~/features-twenty-one.md)
+
+> [!div class="nextstepaction"]
+> [2020](~/features-twenty-one.md)
+
+> [!div class="nextstepaction"]
+> [2019](~/features-twenty-one.md)
 
 <details>
 <summary><b>Developer preview</b></summary>
