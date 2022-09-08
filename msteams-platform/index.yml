@@ -158,7 +158,7 @@ conceptualContent:
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
-        - url: https://docs.microsoft.com/teamblog/
+        - url: /teamblog/
           itemType: whats-new
           text: Announcements
         - url: /microsoftteams/platform/feedback
@@ -204,7 +204,7 @@ tools:
     - title: Microsoft Graph SDKs
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/graph-icon-1.png
-      url: https://docs.microsoft.com/graph/sdks/sdks-overview  
+      url: /graph/sdks/sdks-overview  
     # Card
     - title: JavaScript client SDK for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace

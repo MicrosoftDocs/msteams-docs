@@ -64,8 +64,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 > [!NOTE]
 > Project **Oakdale** is renamed to project **Dataverse for Teams**.
 
-[Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) is a new low code data platform coming soon to Microsoft Teams. It allows developers to create Teams Power Platform solutions directly within Teams. For more information on Project Oakdale, see [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
+[Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180) is a new low code data platform coming soon to Microsoft Teams. It allows developers to create Teams Power Platform solutions directly within Teams. For more information on Project Oakdale, see [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### ✔ Microsoft Blog insights
 
