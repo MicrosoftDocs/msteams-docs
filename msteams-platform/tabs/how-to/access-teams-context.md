@@ -250,9 +250,9 @@ Use the following `getContext` properties in shared channels:
 
 | Property | Description |
 |----------|--------------|
-|`channelId`| The property is set to the SC channel thread ID.|
+|`channelId`| The property is set to the shared channels thread ID.|
 |`channelType`| The property is set to `sharedChannel` for shared channels.|
-|`groupId`|The property is `null` for shared Channels.|
+|`groupId`|The property is `null` for shared channels.|
 |`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
 |`hostTeamGroupId`| The property is newly added and describes the host team’s Azure AD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. |
