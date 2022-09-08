@@ -77,9 +77,9 @@ items:
       ngrok http 3978 --host-header=localhost
       ```
         
-    1. Copy the ngrok URL (as highlighted in the image) for further reference as ngrok base URL in the next steps. 
+    1. From ngrok, copy the HTTPS URL. 
 
-        ![ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png) 
+         :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="ngrok base URL":::
 
 - title: Enable developer preview
   durationInMinutes: 1
@@ -102,6 +102,23 @@ items:
        The following page appears:
 
        :::image type="content" source="~/assets/images/proactive-scenario/developer-portal-intro.png" alt-text="Developer Portal Introduction":::
+
+    1. Select **Apps** > **Import app**.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Select-upload package":::
+
+    1.     
+
+
+
+
+
+
+
+
+
+
+
 
     1. Go to Teams > **App Studio** and import the `AppManifest.zip` file available in the downloaded sample code (Zip file).
 
