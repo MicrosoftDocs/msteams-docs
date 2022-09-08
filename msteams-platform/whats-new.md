@@ -31,7 +31,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 09/08/2022 | Added status code responses for messages in bot conversations | Build bots > Bot conversations > Message in bot conversations > Message in bot conversations > [Status code responses](bots/how-to/conversations/conversation-messages.md#status-code-responses) |
+| 09/08/2022 | Updated the status code responses for messages in bot conversations | Build bots > Bot conversations > Message in bot conversations > Message in bot conversations > [Status code responses](bots/how-to/conversations/conversation-messages.md#status-code-responses) |
 | 09/06/2022 | `selectMedia` API for capturing videos using camera | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
