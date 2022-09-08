@@ -237,11 +237,7 @@ The following fields are changed when your content page is in a private channel:
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
 > [!NOTE]
->
-> * Currently, Microsoft Teams Connect shared channels are in developer preview only.
->
-> * `teamSiteUrl` also works well for standard channels.
-> If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
+>`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 ## Get context in shared channels
 
