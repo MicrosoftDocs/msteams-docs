@@ -59,7 +59,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
       :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
    :::column-end:::
    :::column span="":::
-      #### GA features
+      #### Developer preview
 
         Microsoft Teams platform features that are available to all app developers.
 
@@ -104,12 +104,14 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ::: zone pivot="dep-feature"
 
+## Deprecated features
+
 :::row:::
    :::column span="":::
       :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
    :::column-end:::
    :::column span="":::
-      #### GA features
+      #### Deprecated features
 
         Microsoft Teams platform features that are available to all app developers.
 
