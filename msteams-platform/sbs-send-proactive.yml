@@ -22,12 +22,12 @@ items:
     This step-by-step guide helps you to send a proactive message from a bot. You'll see the following outputs:
 
     * Proactive hello message in chat.     
-    
-    :::image type="content" source="../assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
+
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
 
     * Proactive hello message as an Adaptive Card. <br>
-     
-    :::image type="content" source="../assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card":::
+
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card":::
 
 - title: Prerequisites
   durationInMinutes: 2
@@ -47,7 +47,7 @@ items:
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
-        ![Proactivebot project](~/assets/images/proactive-scenario/proactivebot-project.png)
+        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Proactive Bot Project":::
 
         <br>
 
