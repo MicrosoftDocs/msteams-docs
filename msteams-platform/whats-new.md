@@ -318,14 +318,14 @@ Explore updates from the previous GA releases listed here.
         * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
         * 
         * 
-
-        |<details><summary><b>Aug</b></summary>* Link unfurling for share to teams from web apps</details>|Jul|Jun|May|
-        |---|---|---|---|
-        |**April**|**Mar**|Feb|Jan|
-        |2021|2020|2019|2018|
-
    :::column-end:::
 :::row-end:::
+
+|<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
+|---|---|---|---|
+|**April**|**Mar**|**Feb**|**Jan**|
+|2021|2020|2019|2018|
+
 :::row:::
    :::column span="":::
       #### Developer preview
