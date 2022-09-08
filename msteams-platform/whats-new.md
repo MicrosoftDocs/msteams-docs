@@ -9,13 +9,13 @@ ms.localizationpriority: high
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## GA features
+
 :::row:::
     :::column:::
         :::image type="content" source="~/assets/images/general-availabe.png" alt-text="Charge a price for your app":::
     :::column-end:::
-    :::column span="1":::
-
-## GA features
+    :::column span="4":::
 
 Microsoft Teams platform features that are available to all app developers.
 
@@ -43,13 +43,13 @@ Microsoft Teams platform features that are available to all app developers.
 > [!div class="nextstepaction"]
 > [2019]()
 
+## Developer preview
+
 :::row:::
     :::column:::
      :::image type="content" source="~/assets/images/developer-preview.png" alt-text="Preview featue for app":::
     :::column-end:::
-    :::column span="1":::
-
-## Developer preview
+    :::column span="4":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
@@ -77,13 +77,13 @@ Developer preview is a public program that provides early access to unreleased T
 > [!div class="nextstepaction"]
 > [2019]()
 
+## Deprecated features
+
 :::row:::
     :::column:::
         :::image type="content" source="~/assets/images/deprecated.png" alt-text="deprecated featue for app":::
     :::column-end:::
-    :::column span="1":::
-
-## Deprecated features
+    :::column span="4":::
 
 Microsoft Teams platform features that are not available anymore.
 
