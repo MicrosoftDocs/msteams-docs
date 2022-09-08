@@ -116,6 +116,13 @@ Suggestion: Options that help select the correct environment based on app needs.
 </details>
 <br>
 <details>
+<summary>Plan analytics for your app</summary>
+
+As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you, you will be interested to measure how your app is performing in the real-world once published. You will also be interested in monitoring who is interested in your app, which users and organizations are using your app, how are users engaging with your app, which users have churned away after using your app for some time and many such data points. Once you know this, you can analyse the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app. For more information, see [plan your app with Teams features](../app-fundamentals-overview.md).
+
+</details>
+<br>
+<details>
 <summary>Plan for testing app</summary>
 
 After integrating your app with Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For more information, see [test your app](../build-and-test/test-app-overview.md).
