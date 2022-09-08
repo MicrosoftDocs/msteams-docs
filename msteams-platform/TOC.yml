@@ -606,24 +606,31 @@
   items:
   - name: Overview
     href: concepts/build-and-test/test-app-overview.md
+    displayName: Access, settings
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
   - name: Choose a test setup and debug Teams app
     href: concepts/build-and-test/debug.md
+    displayName: Access, configuration, browser, channel 
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
+    displayName: Permissions, channel
   - name: Tabs
     items:
     - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
+      displayName: Access, cache, configuration, browser
   - name: Bots
     items:
     - name: Test and debug your bot locally with IDE
+      displayName: Channel, extensions
       href: bots/how-to/debug/locally-with-an-ide.md
     - name: Debug your bot with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
+      displayName: Channels
     - name: Debug your calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+      displayName: Configuration, setting, notification
   - name: Microsoft Graph
     items:
     - name: Test resource-specific consent permissions
