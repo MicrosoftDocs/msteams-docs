@@ -541,24 +541,33 @@
     href: concepts/device-capabilities/browser-device-permissions.md
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
+    displayName: Access, permissions, whiteboard, configuration
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    displayName: Access, permissions, configuration
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md 
+    displayName: Access, permissions, configurations
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
     href: /graph/teams-concept-overview
+    displayname: Permissions, communication, channels, delegated, reports, extensions
   - name: Microsoft Graph Toolkit
     href: /graph/toolkit/overview
+    displayName: Access, routing
   - name: Get started
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+    displayName: Access, report, MSAL2
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
+    displayName: Access, permissions, delegated, channel, organizer, notifications
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    displayName: Permissions, delegated, channel, notifications
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
+    displayName: Permission, channel, communications, setting
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
 - name: Extend your app across Microsoft 365
