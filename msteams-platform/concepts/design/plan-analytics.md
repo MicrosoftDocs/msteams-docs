@@ -13,7 +13,7 @@ As a developer who’s building an app for millions of Microsoft Teams users to 
 
 ## But Teams app usage report must suffice, isn’t it?
 
-Remember, as the app’s developer you can track your app’s usage in the Teams app usage report in Partner Center, within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics such as Monthly, Daily, and Weekly active users, retention and intensity charts, users who have used your app more than five days in the last month, platform, operating system and geographic split of users for your app etc. enabling you to track user demand, user churn and frequency of usage for your app at an aggregate level.
+Remember, as the app’s developer you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center, within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics such as Monthly, Daily, and Weekly active users, retention and intensity charts, users who have used your app more than five days in the last month, platform, operating system and geographic split of users for your app etc. enabling you to track user demand, user churn and frequency of usage for your app at an aggregate level.
 
 Teams usage report can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics such as a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app. That is because your app on Teams is essentially a web-based service hosted elsewhere for example, Azure cloud but embedded to be surfaced inside Microsoft Teams shell where end-users use your app. This applies to your app irrespective of the platform capabilities used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are essentially means to surface web-based experiences inside Teams.
 
@@ -106,8 +106,8 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
 - User-specific metrics
   - Which users are yet to experience channel tabs capability you’ve implemented in your app in the last app update?
   - Which users haven't completed the onboarding inside the personal app?
-  - Among the users who have installed the app in the last one week, which users have not returned to the app even once for engagement after installation?
-  - Which users have installed the app but have not signed-into the app yet?
+  - Among the users who have installed the app in the last one week, which users haven't returned to the app even once for engagement after installation?
+  - Which users have installed the app but haven't signed-into the app yet?
   - How many times has a specific user used your Teams app in the last 30 days?
   - How many days a specific user has actively used your app in the last seven days?
   - When was the last time a specific user had used your app in Teams?
@@ -117,7 +117,7 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
 
 ## How can you act on these insights?
 
-Once you have these insights, visit the How to monitor analytics, perf, feedback while your app is in the market and action on these page to learn more about how you can leverage them for growing and monetizing your app.
+Once you have these insights, visit the How to monitor analytics, performance, feedback while your app is in the market and action on these pages to learn more about how you can leverage them for growing and monetizing your app.
 
 ## How to plan & approach growth for your app?
 
@@ -125,13 +125,15 @@ Shipping your app on the Teams marketplace is just the beginning. Once shipped, 
 
 This document provides high-level guidance about how you should plan:
 
+// TBA //
+
 ### Growing your app
 
 - Via the product itself (product-led growth)
   - Guidance for ISVs on best practices, UX screens and components to build the user experience to help users become familiar with the app and get their first task done, post install
   - Capture best practices via illustrative guides for capturing & measuring, converting new product qualified customer leads (PQLs) coming from Teams app
   - how to do product-led growth (best practices guides)
-- Via sales & marketing-led GTM motions such 
+- Via sales & marketing-led GTM motions such as //content TBA //
   - Launch marketing
   - Sales-led growth
   - Partnering with Microsoft
