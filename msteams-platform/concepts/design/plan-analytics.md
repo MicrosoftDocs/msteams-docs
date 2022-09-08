@@ -115,3 +115,38 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
   - Which users have churned from your app in the last three months?
   - Has a specific user used your app in a Teams meeting?
 
+## How can you act on these insights?
+
+Once you have these insights, visit the How to monitor analytics, perf, feedback while your app is in the market and action on these page to learn more about how you can leverage them for growing and monetizing your app.
+
+## How to plan & approach growth for your app?
+
+Shipping your app on the Teams marketplace is just the beginning. Once shipped, you must meticulously plan how to grow your app, make it a successful product on the marketplace that drives intended business metrics and helps you realize returns on your investment into planning, designing and building the app.
+
+This document provides high-level guidance about how you should plan:
+
+### Growing your app
+
+- Via the product itself (product-led growth)
+  - Guidance for ISVs on best practices, UX screens and components to build the user experience to help users become familiar with the app and get their first task done, post install
+  - Capture best practices via illustrative guides for capturing & measuring, converting new product qualified customer leads (PQLs) coming from Teams app
+  - how to do product-led growth (best practices guides)
+- Via sales & marketing-led GTM motions such 
+  - Launch marketing
+  - Sales-led growth
+  - Partnering with Microsoft
+
+### How to monetize your app on Teams
+
+// content TBA //
+
+### How to monitor analytics, performance, feedback
+
+// While your app is in the market and action on these //
+
+- How to leverage app analytics and user journey signals for churned user re-targeting on Teams and other channels
+- Developer guidance to implement re-engagement reminders for periodic scenarios or if there’s a drop off prior to a given job completion
+
+### How to plan for next update with elaborate visuals and conceptual guidance
+
+// content TBA //
