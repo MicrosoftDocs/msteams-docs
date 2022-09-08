@@ -1,6 +1,6 @@
 ---
 title: Silent authentication
-description: In this module, learn how to do silent authentication, Single-sign-on, and Azure AD for tabs and how it works
+description: Configure your tab app with Azure AD for tabs and how it works.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Silent authentication in Azure AD minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/tab-sso-overview.md).
 
-To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a popup dialog box.
+To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a pop-up dialog box.
 
 While Active Directory Authentication Library is optimized for AngularJS applications, it also works with JavaScript single-page applications (SPA).
 
@@ -51,7 +51,7 @@ Include Active Directory Authentication Library in your tab pages and configure 
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
+In the tab's content page, call `app.getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -103,16 +103,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 Active Directory Authentication Library parses the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign-in callback page.
 
-Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.
+Check that you have a valid user and call `authentication.notifySuccess()` or `authentication.notifyFailure()` to report the status to your main tab content page.
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }
