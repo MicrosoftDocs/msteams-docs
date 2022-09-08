@@ -42,7 +42,7 @@ You can classify Teams platform features into broadly two constructs:
 
 ## Hosted web canvas constructs
 
-What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages? Following the prerequisite to build a tab, since you always add the Teams JavaScript client SDK to your tab’s content or configuration pages, your page gains access to Teams-specific information or context, which can be leveraged for useful insights about your users such as:
+What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages? Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.md), since you always add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab’s content or configuration pages, your page gains access to Teams-specific information or [context](../../tabs/how-to/access-teams-context.md), which can be leveraged for useful insights about your users such as:
 
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure Active Directory (Azure AD), a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU).
