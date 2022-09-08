@@ -55,6 +55,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
    >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
+   > * To support adding tabs in scheduled channel meetings, specify **team** scope in **scopes** section in your app manifest. Without **team** scope the app would not appear in the flyout for channel meetings.
    > * Tabs already in the channel are not automatically brought into the channel meeting.
 
 # [Desktop](#tab/desktop)
