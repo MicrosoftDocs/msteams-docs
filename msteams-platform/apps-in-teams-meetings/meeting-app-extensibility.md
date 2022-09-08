@@ -175,20 +175,7 @@ The default participant settings are determined by an organization's IT administ
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
-
-In public channel meetings, team owners can manage meeting app permissions through team settings.​ Channel meeting app permissions refer to the team app CRUD model (not the non-channel meeting app CRUD model). If a user can add an app to a team or channel, they can use it in the meeting.​
-
-While both team settings are enabled, meeting apps respect the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot.​ In cases where users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
-
-> [!NOTE]
-> Attendee can also add apps to their meetings when the **Allow team members to add/remove apps** setting is enabled, by adding the app outside of the meeting interface.
-
-:::image type="content" source="~/assets/images/apps-in-meetings/channel-permission.png" alt-text="Channel Permission.":::
-
-By default, **Allow members to add and remove apps to meetings** are enabled in the team settings page. Through this members can add or remove meeting apps before, during, or after meetings.
-
-:::image type="content" source="~/assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
+After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.​
 
 ## User types in a meeting
 

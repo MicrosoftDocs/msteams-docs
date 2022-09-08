@@ -36,7 +36,7 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 >
 > * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
-> * Currently app experiences are supported in Teams public channel scheduled meetings only and adding meeting apps to a channel meeting does not add them to the channel itself.
+> * Currently app experiences are supported in Teams public scheduled channel meetings only. Adding an app to a channel or team does not add app to the channel meeting and vice versa.
 
 The following illustration gives you an idea of the meeting app extensibility features:
 
