@@ -26,6 +26,8 @@ You must already know that instrumenting your code with analytics markers (also 
 
 There are broadly two types of data instrumentation relevant for your Teams app:
 
+<!-- Infogfx and links to relevant sections -->
+
 - **Data instrumentation for your core SaaS product or app**: This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.
 
 - **Data instrumentation in your app specific to Teams**: This is the instrumentation that you require to do additionally in your SaaS app because it's now surfacing inside of the Teams client, you may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling etc. This is what is covered in more detail in the rest of this document.
@@ -40,9 +42,11 @@ You can classify Teams platform features into broadly two constructs:
 
 - **Conversational constructs**: These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.
 
-## Hosted web canvas constructs
+### Hosted web canvas constructs
 
-What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages? Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.md), since you always add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab’s content or configuration pages, your page gains access to Teams-specific information or [context](../../tabs/how-to/access-teams-context.md), which can be leveraged for useful insights about your users such as:
+What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages?
+
+Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.md), since you always add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab’s content or configuration pages, your page gains access to Teams-specific information or [context](../../tabs/how-to/access-teams-context.md), which can be leveraged for useful insights about your users such as:
 
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure Active Directory (Azure AD), a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU).
@@ -57,6 +61,16 @@ What comes in handy for your analytics needs is the fact that tabs are “Teams-
 
 To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following:
 
+<!-- replace with cross-functional chart infogfx to show links between Teams-specific information and type of analytics 
+
+**Information > Analytics > Outcome**
+
+- User's organization > track demand > Sales outreach, onboard organization, check in for assistance
+- license type and tenant SKU > user's organization, user role > create customer profile, slice analytics data
+- 
+
+ -->
+
 - The user’s organization is handy to track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product. You can use the organization name to handoff a “lead” to your sales or customer success teams which can plan sales outreaches to the organization for pitching your SaaS app, onboard the organization as a customer of your service or simply to check-in if they need any assistance.
 - Using the license type and the tenant SKU, you can find out and log which type of organization does the user belong to, user’s role within the organization (for example, F1 license is for Frontline workers vs E5 license is for information workers) construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly.
 - Host client type, locale and usage context inferences from team/channel names etc. can all be used to enrich the customer’s profile in your user analytics.
@@ -64,7 +78,7 @@ To illustrate how the wealth of useful Teams-specific information obtained from 
 - The email address of the user allows you to associate a meaningful, real-world identity with the Teams user and also possibly gives you the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. This will allow you to identify the organization the user belongs to. The em.ail address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing and re-engagement. However, be careful not to misuse this channel or spam the user.
 - The unique Azure AD user/object ID of the user is a must for your app to send any proactive notification to the user via your bot and must be stored once obtained at the time of app (bot) installation event.
 
-## Conversational constructs
+### Conversational constructs
 
 A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. This information can be leveraged for useful insights about your users, enrich the bot's functionality and provide a more personalized experience such as:
 
@@ -91,7 +105,7 @@ At the time, your production Teams app is live on the marketplace and customers 
 
 Besides the obvious metrics everyone cares about in the SaaS world such as daily/weekly/monthly active users, time spent in your app etc., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
-- Aggregate metrics
+- **Aggregate metrics**
   - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
   - How many days on an average do users use your app in the first week after installing the app?
   - Week over week / month over month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
@@ -103,8 +117,8 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
   - Which organization has seen the maximum number of installation for your app in the last 30 days?
   - Which organizations do the users installing your app in the last 14 days belong to?
   - Which organization has seen the maximum number of trial sign-ups for your app in the last seven days?
-  - What types of meetings (GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring or Scheduled) is your app used in?
-- User-specific metrics
+  - What types of meetings (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring or Scheduled) is your app used in?
+- **User-specific metrics**
   - Which users are yet to experience channel tabs capability you’ve implemented in your app in the last app update?
   - Which users haven't completed the onboarding inside the personal app?
   - Among the users who have installed the app in the last one week, which users haven't returned to the app even once for engagement after installation?
