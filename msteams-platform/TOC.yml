@@ -493,86 +493,115 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
+    displayName: Access
   - name: Tabs
     items:
     - name: Enable SSO for tab app
       items:
       - name: Overview
         href: tabs/how-to/authentication/tab-sso-overview.md
+        displayName: Cookies, channel, access, permissions
       - name: Register your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
+        displayName: Access, permissions, configurations, browser, extension
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
+        displayName: Extension, access, permissions
       - name: Update app manifest for SSO and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
+        displayName: Access, permissions
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
+        displayName: Access, permissions, channel, browser, configuration, delegated
       - name: Troubleshoot SSO authentication
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        displayName: Access, permissions, configurations
     - name: Use third party OAuth IdP authentication
       items:
       - name: Overview
         href: tabs/how-to/authentication/auth-flow-tab.md
+        displayName: Access, configuration
       - name: Configure third party OAuth IdP authentication
         href: tabs/how-to/authentication/auth-tab-aad.md
+        displayName: Access, configuration, cookies
       - name: Use external OAuth providers
         href: tabs/how-to/authentication/auth-oauth-provider.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
       href: bots/how-to/authentication/auth-flow-bot.md
+      displayName: Access
     - name: Add authentication to your bot
       href: bots/how-to/authentication/add-authentication.md
+      displayName: Configuration, delegate, emulator, tunneling, channels 
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
+      displayName: Acces, permissions, configuration, settings
   - name: Message extensions
     items:
     - name: Add authentication to your message extension
       href: messaging-extensions/how-to/add-authentication.md
+      displayName: Configuration
     - name: Enable SSO for message extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
+      href: messaging-extensions/how-to/enable-SSO-auth-me.md
+      displayName: Setting, extensions  
 - name: Integrate device capabilities
   items:
   - name: Overview
     href: concepts/device-capabilities/device-capabilities-overview.md
+    displayName: Access, premissions
   - name: Request device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
+    displayName: Access, permissions, whiteboard, configuration
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    displayName: Access, permissions, configuration
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md 
+    displayName: Access, permissions, configurations
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
     href: /graph/teams-concept-overview
+    displayname: Permissions, communication, channels, delegated, reports, extensions
   - name: Microsoft Graph Toolkit
     href: /graph/toolkit/overview
+    displayName: Access, routing
   - name: Get started
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+    displayName: Access, report, MSAL2
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
+    displayName: Access, permissions, delegated, channel, organizer, notifications
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    displayName: Permissions, delegated, channel, notifications
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
+    displayName: Permission, channel, communications, setting
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
 - name: Extend your app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md
+    displayName: Access, permissions, channel, extensions
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+    displayName: Channel, configuration, settings, extensions
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
+    displayName: Access, permissions, channel, report, browser
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+    displayName: Access, channel, report, communication
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+    displayName: Access, permissions, channel, extensions
 - name: Test your app
   items:
   - name: Overview
@@ -650,7 +679,7 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    displayName: Pricing model, SaaS offer, In-app purchases, 
+    displayName: Pricing model, SaaS offer, In-app purchases
   - name: Include a SaaS offer with your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: Transactable Software-as-a-Service, Recloud app
@@ -659,15 +688,18 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
-  items:
+  itesms:
     - name: App manifest schema for Teams
       href: resources/schema/manifest-schema.md
+      displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md
+          displayName: Access, setting
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
+          displayName: Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer
 - name: Integrate with Teams
   items:
   - name: Overview
