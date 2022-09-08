@@ -75,3 +75,43 @@ A bot can access additional context data about a team, chat, meeting, 1:1 call o
 Each activity sent by Teams to your bot will contain the turnContext object from which all these relevant fields can be retrieved.
 
 Since message extensions are based on the bot channel, most of the above apply to message extensions as well.
+
+## When should you start the analytics journey for your Teams app?
+
+As you can see above, Teams provides you specific information that you can use to not just analyze who’s using your app, where users are using your app in Teams, get a robust idea of the user’s profile – all of which can be used to tailor the experience for the user and monitor your app’s performance and return on your investment.
+
+You should plan analytics for your Teams app right at the dev design and solution architecture stage.
+
+Whether it is examining which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps etc. in Teams or how to extend existing data instrumentation practices to tab experiences you’re specifically building from scratch for Teams, analytics should never be an afterthought. For Teams-specific capabilities such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events and context from the SDK methods from scratch.
+
+At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational so that you don’t miss tracking instrumentation markers getting fired, Teams-specific events and the relevant, contextual information contained in these events, some of which are only triggered once for you to act upon and capture in your SaaS backend for example, Azure AD user ID for a Teams user is only notified via a specific bot event at the time of installation of the bot app for the user. This user id is mandatory to be captured and mapped to the user’s real-world profile identify such as email address to be able to then send proactive notifications to the user later via the bot.
+
+## Once you’ve implemented analytics for your Teams app, what insights can you generate?
+
+Besides the obvious metrics everyone cares about in the SaaS world such as daily/weekly/monthly active users, time spent in your app etc., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
+
+- Aggregate metrics
+  - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
+  - How many days on an average do users use your app in the first week after installing the app?
+  - Week over week / month over month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
+  - How many users use your app only on Teams mobile clients?
+  - How many users have used the camera device capability in your app?
+  - What does the funnel analysis for your app from app installation to activation to engagement to retention and finally, monetization reveal? Where are the drop-offs happening?
+  - How many users have installed your app in the last one week?
+  - How many users have churned from your app in the last three months? What is the resulting quarterly churn rate?
+  - Which organization has seen the maximum number of installation for your app in the last 30 days?
+  - Which organizations do the users installing your app in the last 14 days belong to?
+  - Which organization has seen the maximum number of trial sign-ups for your app in the last seven days?
+  - What types of meetings (GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring or Scheduled) is your app used in?
+- User-specific metrics
+  - Which users are yet to experience channel tabs capability you’ve implemented in your app in the last app update?
+  - Which users haven't completed the onboarding inside the personal app?
+  - Among the users who have installed the app in the last one week, which users have not returned to the app even once for engagement after installation?
+  - Which users have installed the app but have not signed-into the app yet?
+  - How many times has a specific user used your Teams app in the last 30 days?
+  - How many days a specific user has actively used your app in the last seven days?
+  - When was the last time a specific user had used your app in Teams?
+  - What has been a specific app user’s journey inside Teams?
+  - Which users have churned from your app in the last three months?
+  - Has a specific user used your app in a Teams meeting?
+
