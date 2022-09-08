@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send recieve a message, suggested actions, notification, attachments, images, Adaptive Cards, status error code responses for Throttle.
+description: Learn how to send receive a message, suggested actions, notification, attachments, images, Adaptive Cards, status error code responses and message values.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -443,22 +443,22 @@ For more information on cards and cards in bots, see [cards documentation](~/tas
 
 Following are the status codes and their error code and message values:
 
-| Status code | Error code and message values | Description | Should retry request | Developer Action |
+| Status code | Error code and message values | Description | Retry request | Developer action |
 |----------------|-----------------|-----------------|----------------|----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in 1:1 chat or a channel through moderation settings. | No | Remove conversation from cache. Stop attempting to post conversation until interaction with bot is explicitly initiated by a user in the conversation, indicating bot is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Wait for installationUpdate event [Conversation events Teams Microsoft Docs](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet) indicating that the bot has been readded before attempting to send conversation requests. |
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot. | User to bot interactions are blocked by tenant admins. Tenant admins need to allow the app for the user. See [app policies](/microsoftteams/app-policies). | No | Stop attempting to post conversation until interaction with bot is explicitly initiated by a user in the conversation, indicating bot is no longer blocked. |
+| 400 | **Code**: `Bad Argument` <br/> **Message**: *Scenario specific. | An aspect of the request payload provided by the bot is invalid. See error message for specific details. | No | Re-evaluate request payload for errors, check returned error message for details. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. |  No | Verify the bot ID and password used. Ensure bot ID is registered with Microsoft through the bot channel registration in Azure (must manually enable Teams bot channel) Teams Developer Portal. |
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in 1:1 chat or a channel through moderation settings. | No | Delete the conversational cache. Stop posting conversations until a user starts an interaction with the bot, indicating the bot is no longer blocked. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | App needs to be reinstalled in conversation. | No | `Wait for installationUpdate event` indicating that the bot has been re-added before attempting to send conversation requests. For more information see [conversation events Teams Microsoft Docs](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=dotnet)|
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot. | User to bot interactions are blocked by tenant admins. Tenant admins need to allow the app for the user. See [app policies](/microsoftteams/app-policies). | No | Stop posting conversations until a user starts an interaction with the bot, indicating the bot is no longer blocked. |
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific. | Bot lacks necessary permissions to perform the requested action. | No | Determine action from error message. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password used. Ensure bot ID is registered with Microsoft through the Bot Channel Registration in Azure (must manually enable "Teams" bot channel), Teams Developer Portal, or Teams App Studio (under deprecation). |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | The conversation wasn't found. Conversation doesn't exist or was deleted. | No | Check if conversation ID sent is expected value, remove conversation ID if cached. |
+| 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or was deleted. | No | Check if message ID is expected value, remove message ID if cached. |
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
-| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | The conversation wasn't found. Conversation doesn't exist or was deleted. | No | Check if conversation ID sent is expected value. Remove conversation ID if cached. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size on the incoming request was too large. [Format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce payload size. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). | Yes | Retry using "Retry-After" header to determine backoff time. |
-| 400 | **Code**: `Bad Argument` <br/> **Message**: *Scenario specific. | An aspect of the request payload provided by the bot is invalid. See error message for specific details. | No | Re-evaluate request payload for errors. Check returned error message for details. |
-| 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or was deleted. | No | Check if message ID is expected value. Remove message ID if cached. |
-| 500 | **Code**: `ServiceError` <br/> **Message**: *various. | Internal server error. | No | Report the issue here [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
-| 502 | **Code**: `ServiceError` <br/> **Message**: *various. | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue here [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
-| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue here [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
+| 500 | **Code**: `ServiceError` <br/> **Message**: *various. | Internal server error. | No | Report the issue here: [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various. | Service dependency issue. | Yes | Retry with exponential backoff, if the issue persists, report it here: [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff, if the issue persists, report it here: [Microsoft Teams developer community support and feedback](/microsoftteams/platform/feedback). |
 
 ### General retry guidance for the developers
 
