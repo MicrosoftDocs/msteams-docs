@@ -18,7 +18,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
 
-1. Select a subscription to use for the Azure resources.
+1. Select anyone of the existing subscription.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Select Subscription":::
+
+1. Select a resource group to use for the Azure resources.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
@@ -29,7 +33,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot of the provisioning dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Select Subscription":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
@@ -89,4 +93,3 @@ Once the provisioning and deployment steps are complete:
     Congratulations, your first tab app is running in your Azure environment!
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows message to try the app now or later":::
- 
