@@ -263,9 +263,12 @@ When your bot is first added to the group or team, an introduction message must 
 
 You can send a personal message to each member of the team when the bot is added. To do this, [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
+>[!NOTE]
+> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
+
 Don't send a message in the following cases:
 
-* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message. Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
+* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
