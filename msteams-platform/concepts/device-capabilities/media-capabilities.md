@@ -380,6 +380,21 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
     });
     ```
 
+## File download on Teams mobile client
+
+Developers can configure an app to enable users to download files from the webview to their mobile device within a tab. All major file formats are supported, such as PDF, MP4, Xls, Doc, JPEG.
+
+>[!NOTE]
+> File download is only supported on the Android Teams mobile client and only unauthenticated files are supported for download.
+
+To enable download a file from an app in the Teams mobile client. Follow the instructions below.
+
+* Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. To update, see [update manifest](#update-manifest).
+
+* Use the following format and add the HMTL download attribute to the webpage:
+
+    `<a href="path_to_file" download="download">Download</a>`
+
 ## See also
 
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
