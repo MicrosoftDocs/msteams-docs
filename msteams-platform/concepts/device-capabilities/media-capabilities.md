@@ -15,7 +15,7 @@ For effective integration, you must have a good understanding of [code snippets]
 
 ## Advantages
 
-The main advantage of integrating device capabilities in your Teams apps is it uses native Teams controls to provide a rich and immersive experience to your users. The following scenarios showcase the advantages of media capabilities:
+The main advantage of integrating device capabilities into your Teams apps is that it uses native Teams controls to provide a rich and immersive experience for your users. The following scenarios showcase the advantages of media capabilities:
 
 * Allow the user to capture the rough mockups drawn on a physical whiteboard through the cell phone and use the captured images as poll options in Teams group chat.
 
@@ -75,7 +75,6 @@ The following image depicts the web app experience of `selectMedia` API for the 
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile.":::
 
 > [!NOTE]
->
 > In devices with Android version under 7, the `selectMedia` API launches the native Android camera experience instead of the native Teams camera experience.
 
 The following image depicts the web app experience of `selectMedia` API for the microphone capability:
@@ -387,7 +386,7 @@ Developers can configure an app to enable users to download files from the webvi
 >[!NOTE]
 > File download is only supported on the Android Teams mobile client and only unauthenticated files are supported for download.
 
-To enable download a file from an app in the Teams mobile client. Follow the instructions below.
+To enable downloading a file from an app in Teams mobile client. Follow the instructions below.
 
 * Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. To update, see [update manifest](#update-manifest).
 
