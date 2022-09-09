@@ -35,7 +35,7 @@ Now, you can create new conversation threads and easily manage different convers
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it's difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
