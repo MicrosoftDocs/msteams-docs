@@ -9,7 +9,7 @@ ms.author: johmil
 
 # Teams Toolkit for Visual Studio
 
-Build, test, and develop for Teams inside your IDE.
+Build, test, and develop for Teams inside your IDE
 
 Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your IDE.
 
