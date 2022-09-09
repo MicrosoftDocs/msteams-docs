@@ -13,9 +13,16 @@ As a developer who’s building an app for millions of Microsoft Teams users to 
 
 ## But Teams app usage report must suffice, isn’t it?
 
-Remember, as the app’s developer you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center, within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics such as Monthly, Daily, and Weekly active users, retention and intensity charts, users who have used your app more than five days in the last month, platform, operating system and geographic split of users for your app etc. enabling you to track user demand, user churn and frequency of usage for your app at an aggregate level.
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics that enable you to track user demand, user churn and frequency of usage for your app at an aggregate level, such as:
 
-Teams usage report can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics such as a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app. That is because your app on Teams is essentially a web-based service hosted elsewhere for example, Azure cloud but embedded to be surfaced inside Microsoft Teams shell where end-users use your app. This applies to your app irrespective of the
+- Monthly, Daily, and Weekly active users
+- Retention and intensity charts
+- Users who have used your app more than five days in the last month
+- Platform, operating system, and geographic split of users for your app, etc.
+
+Teams usage reports enable you to track user demand, user churn and frequency of usage for your app at an aggregate level. They can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics. These include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
+
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It is embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the
 [platform capabilities](../../overview-explore.md) used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are essentially means to surface web-based experiences inside Teams.
 
 This is why you must plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
