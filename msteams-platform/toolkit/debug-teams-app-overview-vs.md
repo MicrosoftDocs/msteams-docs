@@ -10,7 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
+Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
 
 * Prepare Teams app dependencies
 * Start debugging
@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 * Hot reload
 * Stop debugging
 
-During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
+During the debug process,
 
 ## Prerequisites
 
