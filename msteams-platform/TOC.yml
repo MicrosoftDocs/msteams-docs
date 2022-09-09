@@ -48,14 +48,14 @@
     href: concepts/design/understand-use-cases.md
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Teams app planning checklist
-    href: concepts/design/planning-checklist.md
-  - name: Plan analytics
-    href: concepts/design/plan-analytics.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Plan analytics
+    href: concepts/design/plan-analytics.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
+  - name: Teams app planning checklist
+    href: concepts/design/planning-checklist.md
 - name: Design your app
   items:
   - name: Overview
