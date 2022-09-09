@@ -353,7 +353,7 @@ If the app requests for permissions change, the users are prompted to upgrade an
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
-## id
+## ID
 
 **Required**—Microsoft app ID
 
@@ -393,7 +393,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
-Ensure that your description describes your experience and helps potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different. Your short description cannot be repeated within the long description and must not include any other app name.
+Ensure that your description describes your experience and helps potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different. Your short description can't be repeated within the long description and must not include any other app name.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -448,7 +448,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**—array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
+Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -573,7 +573,7 @@ Each command item is an object with the following structure:
 |`parameters.name`|string|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|string|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value is not supported|
+|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported|
 |`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
@@ -611,7 +611,7 @@ Provides the native features on a user's device that your app requests access to
 
 A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI navigates to any other domain other than tab configuration, that domain must be specified here.
 
-Do **not** include the domains of identity providers you want to support in your app. For example, to authenticate using a Google ID, it is required to redirect to accounts.google.com, however, you must not include accounts.google.com in `validDomains[]`.
+Do **not** include the domains of identity providers you want to support in your app. For example, to authenticate using a Google ID, it's required to redirect to accounts.google.com, however, you must not include accounts.google.com in `validDomains[]`.
 
 Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
@@ -629,13 +629,13 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
-|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you are not using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, <https://notapplicable> to avoid an error response. |
+|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, <https://notapplicable> to avoid an error response. |
 
 ## graphConnector
 
 **Optional**—object
 
-Specify the app's Graph connector configuration. If this is present then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
+Specify the app's Graph connector configuration. If this is present, then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -763,15 +763,15 @@ The `configurableProperties` block defines the app properties that Teams admins 
 
 You can define any of the following properties:
 
-* `name`: The app's display name.
-* `shortDescription`: The app's short description.
-* `longDescription`: The app's long description.
-* `smallImageUrl`: The app's outline icon.
-* `largeImageUrl`: The app's color icon.
-* `accentColor`: The color to use and a background for your outline icons.
-* `developerUrl`: The HTTPS URL of the developer's website.
-* `privacyUrl`: The HTTPS URL of the developer's privacy policy.
-* `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
+* [name](#name): The app's display name.
+* [shortDescription](#description): The app's short description.
+* [longDescription](#description): The app's long description.
+* [smallImageUrl](#icons): The app's outline icon.
+* [largeImageUrl](#icons): The app's color icon.
+* [accentColor](#accentcolor): The color to use and a background for your outline icons.
+* [developerUrl](#developer): The HTTPS URL of the developer's website.
+* [privacyUrl](#developer): The HTTPS URL of the developer's privacy policy.
+* [termsOfUseUrl](#developer): The HTTPS URL of the developer's terms of use.
 
 ## supportedChannelTypes
 
@@ -788,7 +788,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 **Optional** - Boolean
 
-When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 ## publisherDocsUrl
 
