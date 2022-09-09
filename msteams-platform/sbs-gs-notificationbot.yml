@@ -387,17 +387,14 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
 
-git-issue-Need-documentation-on-how-to-provision-using-a-new-resource-group
     1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
-
 
     1. Select anyone of the existing subscription.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/select-subscription.png" alt-text="Select Subscription":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/select-subscription.png" alt-text="Screenshot showing the selection of existing subscription":::
 
     1. Select an existing or create new resource group.
     
-
         :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning":::
 
        > [!NOTE]
