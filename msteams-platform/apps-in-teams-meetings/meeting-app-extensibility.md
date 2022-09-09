@@ -232,3 +232,4 @@ The following table provides the user types and lists the features that each use
 * [Message extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Microsoft Teams meeting attendance report](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)
+* [Set up the meeting recording option for OneDrive for Business and SharePoint](/MicrosoftTeams/tmr-meeting-recording-change#set-up-the-meeting-recording-option-for-onedrive-for-business-and-sharepoint)
