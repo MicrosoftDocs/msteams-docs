@@ -108,4 +108,4 @@ After you open the Visual Studio installer, in the pop-up Workloads window.
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
 
    > [!IMPORTANT]
-   > You're recommended to download Visual Studio 2022 version 17.3.0, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 version 17.3.0. Teams Toolkit version 17.3.* or higher.
+   > You're recommended to download Visual Studio 2022 version 17.3.0, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 version 17.3.0. Teams Toolkit version 17.3.* or higher...
