@@ -245,7 +245,7 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 
 #### Mobile debugging
 
-1. You can remotely debug your app in Office for Android. From your profile **(Me) > Settings > Allow debugging**, toggle on the option for **Enable remote debugging**.
+1. You can remotely debug your app in Office for Android. From your profile **(Me) > Settings > Enable remote debugging**, toggle on the option for **Enable remote debugging**.
 2. From your dev machine, open your browser to the DevTools inspection page. For example ,go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews. The WebView running your tab application in Office for Android is [placeholder].
 3. Debug this WebView in the same way you would [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging/) a webpage on an Android device.
 
