@@ -214,7 +214,7 @@ To preview your app running in Office on the web:
 To view your app running in Office for Android:
 
 1. Launch the Office app and sign in using your dev tenant account.
-1. Select the **Apps** menu. Your sideloaded app title appears among your installed apps.
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in Office for Android.
 
     :::image type="content" source="images/office-mobile-apps.png" alt-text="Tap on the 'Apps' option on the side bar of the Office app to see your installed personal tabs":::
@@ -246,8 +246,8 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 #### Mobile debugging
 
 1. You can remotely debug your app in Office for Android. From your profile **(Me) > Settings > Allow debugging**, toggle on the option for **Enable remote debugging**.
-1. From your dev machine, open your browser to the DevTools inspection page. For example with Microsoft Edge, open `edge://inspect/#devices` to display a list of debug-enabled Android WebViews. The WebView running your tab application in Office for Android is [placeholder].
-1. Debug this WebView in the same way you would [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging/) a webpage on an Android device.
+2. From your dev machine, open your browser to the DevTools inspection page. For example ,go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews. The WebView running your tab application in Office for Android is [placeholder].
+3. Debug this WebView in the same way you would [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging/) a webpage on an Android device.
 
 ## Code sample
 
