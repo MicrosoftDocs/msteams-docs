@@ -50,13 +50,16 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+   1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+   1. Select **Code**.
+   1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
+     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
 
-    1. Select **Clone**. 
+   1. Select **Clone**. 
+
+       > [!NOTE]
+       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
 
 - title: Create and register your bot 
   durationInMinutes: 5
@@ -174,14 +177,14 @@ items:
     Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
-     ngrok http -host-header=localhost 3978
+     ngrok http --host-header=localhost 3978
      ```
 
      > [!NOTE]
      > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
      
      > [!TIP]
-     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
     
     
     **To add messaging endpoint**
@@ -284,7 +287,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png" alt-text="Add client application":::
 
-       The following image displays the Client Id:
+       The following image displays the Client ID:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png" alt-text="Client applications":::
 
@@ -355,8 +358,8 @@ items:
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
-         * Set `id` to **Microsoft App Id**.
-         * Set `botId` to **Microsoft App Id**.
+         * Set `id` to **Microsoft App ID**.
+         * Set `botId` to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
@@ -447,7 +450,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-feedback.png" alt-text="Bot sends you feedback card"::: 
 
-        Bot sends you feedback message.
+        Bot sends the feedback message.
       
 - title: Complete challenge
   durationInMinutes: 1

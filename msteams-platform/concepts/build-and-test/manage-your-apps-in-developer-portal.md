@@ -149,9 +149,9 @@ To add a bot:
 1. In the Bot management page, select **New Bot**.
 1. Enter the name and select **Add**.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features.":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features.":::
 
-From the Developer portal, you can go to Bot framework portal and configure your bot to update icon and other properties.
+From the Developer Portal, you can go to Bot Framework Portal and configure your bot to update icon and other properties.
 
 ## See also
 
