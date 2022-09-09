@@ -1,7 +1,7 @@
 ---
 author: surbhigupta
 title: Debug your Teams app using Visual Studio
-description: In this module, learn how to debug your Teams app in Teams Toolkit and key features of Teams Toolkit
+description: In this module, learn how to debug your Teams app in Teams Toolkit and key features of Teams Toolkit in Visual Studio
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
