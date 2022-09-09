@@ -98,7 +98,7 @@ Once the provisioning and deployment steps are complete:
     Congratulations, your first tab app is running in your Azure environment!
 
 git-issue-Need-documentation-on-how-to-provision-using-a-new-resource-group
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="The screenshot is an example that shows the message to try the app now or later":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="The screenshot is an example that shows the message to try the app now or later.":::
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows message to try the app now or later":::
 
