@@ -9,27 +9,27 @@ ms.topic: overview
 
 # Enable app customization and block apps till admin allows
 
-Microsoft Teams lets admins customize Teams app to enhance store experience and adhere to their organization's branding. An app developer can allow their app to be customized by a Teams admin. For more information, see
+Microsoft Teams lets admins customize apps to enhance store experience and adhere to their organization's branding. An app developer can allow their app to be customized by a Teams admin. For more information about admin tasks, see
 [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps).
 
 ## Enable customization for your Microsoft Teams app
 
-You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams store. Sideloaded apps and apps published for an org can't be customized.
+You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams store. Sideloaded apps and custom apps (apps published within an org) can't be customized.
 
-Some possible examples of this feature include:
+Some possible uses of this feature are:
 
 * Changing the app's accent color to match an org's brand.
 * Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see.
 (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
+* Changing the description to include language and guidance that is better understood by your organization's end-users.
+* Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 
-You can enable this feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. That can be done in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home) if you've chosen to use the Developer Portal to edit the manifest of your app.
+You can enable this feature by defining the app properties in the [`configurableProperties` section in the app manifest file](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties). You can define the property using [Developer Portal for Teams](https://dev.teams.microsoft.com/home) if you've chosen to use the Developer Portal to edit the manifest of your app or or do it manually in the manifest file.
+
+:::image type="content" source="../../assets/images/dev-portal-app-customization-settings.png" alt-text="Screenshot shows the option in Teams Developer Portal to enable app customization feature and select specific metadata fields that developers allow admins to customize.":::
 
 > [!IMPORTANT]
 > You can't test this feature during development. App customization isn't supported when sideloading or publishing to an org's app catalog.
-
-### User considerations
-
-Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/MicrosoftTeams/customize-apps).
 
 ## Block apps by default for users until an admin approves
 
