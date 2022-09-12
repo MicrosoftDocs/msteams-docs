@@ -680,8 +680,7 @@
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     -  name: Common reasons for app validation failure
-       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       
+       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md     
 - name: Monetize your app
   items:
   - name: Overview
@@ -698,7 +697,6 @@
   itesms:
     - name: App manifest schema for Teams
       href: resources/schema/manifest-schema.md
-      displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer
     - name: Public developer preview
       items:
         - name: Overview
@@ -706,7 +704,6 @@
           displayName: Access, setting
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer
 - name: Integrate with Teams
   items:
   - name: Overview
