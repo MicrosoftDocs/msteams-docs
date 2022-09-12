@@ -14,14 +14,14 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 ## Tabs in Teams meetings
 
-Tabs allow the team members to access services and content in a specific space within a meeting. If you are new to Microsoft Teams tab development, see [Build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
+Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you are new to Microsoft Teams tab development, see [Build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
 Specifically, before creating a meeting tab, it is important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view and meeting stage view.
 
 ### Meeting details view
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select <img src="~/assets/icons/add-icon.png" alt="Plus button" width="30"/>. The tab gallery appears.
+1. Select the **Details** tab and select :::image type="content" source="../assets/icons/add-icon.png" alt-text="This screenshot shows the add button on the meeting stage to add apps.":::. The tab gallery appears.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="This screenshot shows the pre-meeting app experience in Teams meeting.":::
 

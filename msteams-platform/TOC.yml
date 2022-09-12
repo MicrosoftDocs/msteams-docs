@@ -377,7 +377,7 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Enable and configure apps for Teams meetings
     items:
-    - name: Overview
+    - name: Build tabs for Teams meeting
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Building apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting.md
