@@ -494,7 +494,6 @@ Remember the following:
 [*Suggested Fix*]
 
 * Show specific devices, such as phones or laptops.
-* Display chrome or UI that isn't in your app.
 * Capture any Teams or browser UI in your screenshots.
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app being used outside Teams.
 

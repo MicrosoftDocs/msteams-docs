@@ -17,7 +17,7 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 px and file size less than 1 MB. Animated .gif images are not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
+You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images are not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
 You can format Adaptive Cards and Office 365 Connector cards with Markdown that include certain supported styles.
 
@@ -116,6 +116,9 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
+
+> [!NOTE]
+> If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
 
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive card emoji":::
 
@@ -321,6 +324,9 @@ The following image is an example of masking information in Adaptive Cards:
 ### Full width Adaptive Card
 
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
+
+> [!NOTE]
+> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 
 #### Construct full width cards
 

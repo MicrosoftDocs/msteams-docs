@@ -1,9 +1,11 @@
 ---
 title: Live Share quick start
+author: surbhigupta
 description:  In this module, learn how to quickly try the Dice Roller sample
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
+ms.date: 04/07/2022
 ---
 
 # Quick start guide
@@ -30,25 +32,25 @@ To get started, install:
 1. Clone the [Live Share SDK](https://github.com/microsoft/live-share-sdk) repository to test the sample app:
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. Run the following command to go to the Dice Roller sample app folder:
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. Run the following command to install the dependency package:
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. Run the following command to start the client and the local server:
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      A new browser tab opens a `http://localhost:8080` url and the Dice Roller game appears.

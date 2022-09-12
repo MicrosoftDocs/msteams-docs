@@ -23,17 +23,11 @@ The key benefits of using App templates are:
 * **Customizable and extensible:** While all app templates are deployed with minimal configuration, the entire code base and deployment scripts are provided, so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
 
-## Adoption Tool- Champion Management Platform
+## Champion Management Platform
 
 The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard, and event types for logging, and tools to overlay digital badges to program participants.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
-
-## Adoption Tool- Microsoft 365 Learning Pathways (Get Started)
-
-The Get Started app template allows you to bring the power of Microsoft 365 learning pathways inside of Teams. This app template allows you to grant easy access to specific training pages or other intranet assets and load the content directly within Teams. You can also change the app name or logo to match your company branding.
-
-[Get it on GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
 
 ## Company Communicator
 
@@ -46,14 +40,6 @@ It provides a foundation to build custom targeted communication capabilities suc
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
 ![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
-
-## Co-worker Appreciation
-
-Using the co-worker appreciation template in Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This is considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
-
-:::image type="content" source="../assets/images/coworker-appreciation-1.png" alt-text="coworkers appreciation":::
 
 ## FAQ Plus
 
@@ -84,24 +70,23 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 ![Icebreaker app](../assets/images/icebreaker.png)
 
-## New Employee Onboarding
+## Microsoft 365 Learning Pathways (Get Started)
 
-New Employee Onboarding is an integrated Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app is used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
+The Get Started app template allows you to bring the power of Microsoft 365 learning pathways inside of Teams. This app template allows you to grant easy access to specific training pages or other intranet assets and load the content directly within Teams. You can also change the app name or logo to match your company branding.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+[Get it on GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
 
-:::row:::
-  :::column span="2":::
-    **New employee welcome card**
-    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
-:::column-end:::
-:::row-end:::
-:::row:::
-  :::column span="2":::
-    **New employee checklist**
-    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
-:::column-end:::
-:::row-end:::
+## Microsoft Teams Emergency Operations Center (TEOC)
+
+The Microsoft Teams Emergency Operations Center (TEOC) solution template leverages the power of the Microsoft 365 platform to centralize incident response, information sharing and field communications using powerful services like Microsoft Lists, SharePoint and more. An open-source solution supported by Microsoft, provides core functionality and can be extended to meet specific agency requirements.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
+
+## Tournament of Teams
+
+Champions are critical in helping drive adoption and developing new tournaments, helping in your business goals. Make sure you are leveraging your Champions to help identify and build new adoption-themed tournaments, and inspire your organization to learn and participate.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-tournament-of-teams)
 
 ## App Template Code Samples
 
@@ -127,6 +112,7 @@ The following table describes App template code samples:
 | Checklist | Checklist is a custom Teams [message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to collaborate with your team by creating a shared checklist in a chat or channel. The app is supported across all Teams platform clients, such as desktop browser, iOS, and Android. The app is ready for deployment as part of your Microsoft 365 subscription.  | [Checklist](https://github.com/OfficeDev/microsoft-teams-checklist-app)|
 | Classroom Drop-in | Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that enables system leaders to find class teams, means virtual classrooms and add themselves or others to these class teams for a specified drop-in period, as needed. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Teams to ensure educational institutes can optimize their operations in a hybrid learning environment by providing access to relevant stakeholders for class teams per business requirements.| [Classroom Drop-in](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin) |
 | Contact Group Lookup |The Contact Group Lookup app provides a convenient and useful approach to creating, accessing, and managing your organization's contact groups, formerly known as distribution lists or communication groups. Users can quickly view and chat with group members, view member status, and create a group chat with selected members in the contact group, all within the Teams environment.| [Contact Group Lookup](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)|
+| Co-worker Appreciate | The co-worker appreciation template in Teams helps users to recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This is considered as the PowerApps based version of the Open Badges app template, with a leaderboard.| [Co-worker Appreciation](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)|
 | CrowdSourcer | CrowdSourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information sourced collaboratively from group members. It helps to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and helpful information resource.| [CrowdSourcer](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)|
 |Custom Stickers | Self-expression is core to a healthy team culture. This app template is a [message extension](~/messaging-extensions/what-are-messaging-extensions.md) that enables your users to use custom stickers and GIFs within Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs, stickers, and images they want their users to have, allowing your entire team to use any set of stickers you choose. This app also enables easy sharing of images, GIFs, stickers across teams without needing access to SharePoint sites or individual channels as storage and sharing mechanisms. For example, product teams can easily share product images and GIFs to social media, marketing, and sales teams programmatically. One can also extend this app by triggering a notification flow to specific teams or individuals when new images, and GIFs are made available.| [Custom Stickers](https://github.com/OfficeDev/microsoft-teams-stickers-app) |
 | Employee Ideas |The Employee Ideas app is the PowerApps version of the Azure based Great Ideas app template. The app enables the Teams users to set up and configure an idea campaign. An idea campaign is a category for grouping ideas around common themes. Teams users can also perform the following activities:<br/> Configure a standard submission form that employees must submit for each idea.<br/>Review and manage the ideas and list of campaigns. <br/>Modify and delete campaigns. <br/> Review leader boards of ideas. <br/> Vote for and share prioritized ideas. <br/> Submit ideas for a campaign. <br/> View other team member's idea. <br/>Vote on most liked ideas. <br/> Review the performance of their ideas compared with others within a campaign.|[Employee Ideas](https://github.com/OfficeDev/microsoft-teams-apps-employeeideas) |
@@ -144,6 +130,7 @@ The following table describes App template code samples:
 |Incident Reporter | Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that optimizes the management of incidents in your organization. The bot facilitates automated incident data collection, customized incident reports, relevant stakeholder notifications, and end-to-end incident tracking.|[Incident Reporter](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport) |
 | Inspection|Inspection is a Teams app that enables front line workers to inspect anything from  locations to assets and equipments. For example, a retail store, manufacturing plant, or vehicles and machines. There are two apps in this solution, each intended for different types of users. The app empowers the front line workers to inspect an asset or area, to manage quality of products and services, or maintain safety at workplace. It facilitates communication between team members to address issues found during inspection. The app provides simple reports for managers to expedite issue resolution and highlight trends. |[Inspection](https://github.com/OfficeDev/microsoft-teams-apps-inspection) |
 |Issue Reporting |The Issue Reporting app empowers the employees and managers to raise and manage issues. It consists of two apps, Issue reporting app for reporting issues and Manage Issues app for managing issues. The team managers use the Manage Issues app to configure the app experience, including the channel in which Teams messages and Planner tasks are created by the app. Managers also use the app to create template forms to collect details when a user reports an issue. For example, review, edit, or delete issue template forms. The app is also used to review team issues, report on issue history, and efficiently manage issue resolution. The employees use the Issue reporting app to log issues and details required to resolve them. The app is also used to modify and resolve existing issues and get a high-level view of individual or team issues. |[Issue Reporting](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting) |
+| New Employee Onboarding| New Employee Onboarding is an integrated Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19)that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app is used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.|[New Employee Onboarding](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding) |
 | Open Badges| Open Badges is a Teams app that enables individuals to earn digital learning credential badges within the Teams context and share them everywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available to build and share a rich picture of lifetime learning journeys.|[Open Badges](https://github.com/OfficeDev/microsoft-teams-apps-openbadges) |
 | Poll| Poll is a custom Teams [message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to quickly create and send polls in a chat or a channel to gather team opinions and preferences. The app is supported across all Teams platform clients, such as desktop, browser, iOS, and Android and is ready for deployment as part of your Microsoft 365 subscription.|[Poll](https://github.com/OfficeDev/microsoft-teams-poll-app) |
 | Quick Responses| Quick Responses is a Teams app that delivers a robust solution for effectively answering users' commonly asked questions FAQs. Instead of answering each query manually and continuously repeating information, the app builds a library of responses for an interactive user experience through Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md).|[Quick Responses](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses) |

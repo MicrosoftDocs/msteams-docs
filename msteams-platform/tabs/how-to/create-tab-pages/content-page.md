@@ -1,8 +1,8 @@
 ---
 title: Create a content page
 author: surbhigupta
-description: In this module, learn how to create a content page for your tab and tab content and design guidelines
-ms.localizationpriority: medium
+description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside task module.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -21,13 +21,16 @@ This article is specific to using content pages as tabs; however most of the gui
 
 ## Tab content and design guidelines
 
-Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose. 
+Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose.
 
 You need to focus on making your tab design clean, navigation intuitive, and content immersive.For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
 For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
+
+> [!NOTE]
+> It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
 
 The following code provides an example of how your page and the Teams client communicate:
 
@@ -38,14 +41,13 @@ The following code provides an example of how your page and the Teams client com
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 ...
-</head>
-
 <body>
 ...
-    <script>
-    app.initialize();
+    <script type="module">
+        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
     </script>
 ...
 </body>
