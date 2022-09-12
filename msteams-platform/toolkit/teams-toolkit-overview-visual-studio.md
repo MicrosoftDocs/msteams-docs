@@ -48,7 +48,7 @@ You can download the latest Visual Studio installer from the [Visual Studio down
 After you open the Visual Studio installer, in the pop-up Workloads window.
 
 1. Select the box **ASP.NET and web development** workload.
-1. Select the box **Microsoft Teams development tools** in the installation details panel.
+1. Select the box **Microsoft Teams development tools** in the **Installation details** panel.
 1. Select **Install**.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
@@ -74,7 +74,7 @@ After you install Teams Toolkit, you can take a brief look at the different menu
 4. Right-click on your **Project**.
 5. Select **Teams Toolkit** > **Teams Toolkit menu** options.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png":::
 
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp1**.
