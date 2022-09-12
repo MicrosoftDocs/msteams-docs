@@ -260,7 +260,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ::: zone pivot="visual-studio"
 
-# Edit Teams app manifest using Visual Studio
+## Edit Teams app manifest using Visual Studio
 
 Teams Toolkit in Visual Studio loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
 
