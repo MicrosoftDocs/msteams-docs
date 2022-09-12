@@ -29,8 +29,7 @@ ngrok http 5130
 Perform the following steps using the Teams Toolkit to debug your app after you create a project:
 
 1. Right-click on your **project**.
-1. Select **Teams Toolkit**.
-1. Select **Prepare Teams App Dependencies**.
+1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug":::
 
@@ -39,15 +38,14 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
    Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
-1. Sign in to your **Microsoft 365 Account**.
-1. Select **Continue**
+1. Sign in to your **Microsoft 365 Account**, then select **Continue**
+
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
    > Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
 
-1. Select **Debug**.
-1. Select **Start Debugging**, or directly select **F5**.
+1. Select **Debug** > **Start Debugging**, or directly select **F5**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
 
