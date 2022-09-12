@@ -12,7 +12,7 @@ zone_pivot_groups: teams-app-platform
 
 In this document you can understand different UI elements along with description and basic usage in Teams Toolkit.
 
-::: zone pivot="visual-studio"
+::: zone pivot="visual-studio-code"
 
 ## Explore Teams Toolkit for Visual Studio Code
 

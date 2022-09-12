@@ -23,7 +23,7 @@ During the debug process:
 
 ::: zone pivot="visual-studio-code"
 
-# Debug your Microsoft Teams app for Visual Studio Code
+## Debug your Microsoft Teams app for Visual Studio Code
 
 Microsoft Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
