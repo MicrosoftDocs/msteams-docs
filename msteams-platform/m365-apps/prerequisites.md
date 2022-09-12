@@ -64,6 +64,8 @@ For more information on Office 365 release options, see [Set up the Standard or 
 
 ## Install Office apps in your test environment
 
+### Desktop
+
 You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Office 365 Beta Channel build.
 
 To install Office 365 Beta Channel applications in your test environment:
@@ -83,6 +85,19 @@ To install Office 365 Beta Channel applications in your test environment:
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Search for 'webview' under 'Apps and features' in your Windows Settings":::
 
     If it's not listed, install [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) to your test environment.
+
+### Mobile
+
+You can preview Teams personal tabs running in Office for Android by joining the [Office Insider Program for Android](https://insider.office.com/en-us/join/Android). 
+
+To install the latest Office Current Channel (Preview) build to your physical Android device or Android emulator:
+
+1. Verify you are using a [supported Android device](https://support.google.com/googleplay/answer/1727131).
+1. [Join the Android best tester program](https://insider.office.com/en-us/join/Android#Join-the-Android-beta-tester-program) to install the Current Channel (Preview) build of the Office app on your Android device.
+1. From your Android device, launch the Office app. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+1. Verify you are running version 1.0.1 (16.0.15627.20006) or higher of Office for Android.
+
+    :::image type="content" source="images/office-android-minver.png" alt-text="screen shot of version number 1.0.1 (16.0.15627.20006) of Office for Android":::
 
 ## Switch to the Developer Preview version of Teams
 
