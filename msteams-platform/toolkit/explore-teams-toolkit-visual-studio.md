@@ -19,6 +19,8 @@ After you install Teams Toolkit, you can take a brief look at the different menu
 
 # [Project](#tab/prj)
 
+You can access Teams Toolkit menu from **Project** option.
+
 1. Select **Project** > **Teams Toolkit**.
 1. You can now access different Teams Toolkit menu options.
 
@@ -26,13 +28,11 @@ After you install Teams Toolkit, you can take a brief look at the different menu
 
 # [Solution Explorer](#tab/solutionexplorer)
 
-   You can also access Teams Toolkit menu from Solution Explorer.
+   You can access Teams Toolkit menu from **Solution Explorer** option.
 
-   > [!NOTE]
-   > Select **View** > **Solution Explorer** to view Solution Explorer.
-
-4. Right-click on your **Project**.
-5. Select **Teams Toolkit** to access different Teams Toolkit menu options.
+1. Select **View** > **Solution Explorer** to view Solution Explorer.
+1. Right-click on your **Project**.
+1. Select **Teams Toolkit** to access different Teams Toolkit menu options.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams toolkit operations from Project":::
 
@@ -42,6 +42,8 @@ After you install Teams Toolkit, you can take a brief look at the different menu
 ---
 
 You can perform the following functions on Teams Toolkit for Visual Studio:
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Teams toolkit operations from Project menu":::
 
 |Function  |Description  |
 |---------|---------|
