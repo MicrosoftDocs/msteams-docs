@@ -17,16 +17,14 @@ In this document, you can understand different UI elements along with descriptio
 
 After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit in two different options:
 
-::: zone pivot="project"
+# [Project](#tab/prj)
 
 1. Select **Project** > **Teams Toolkit**.
 1. You can now access different Teams Toolkit menu options.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams toolkit operations menu":::
 
-::: zone-end
-
-::: zone pivot="Solution Explorer"
+# [Solution Explorer](#tab/solutionexplorer)
 
    You can also access Teams Toolkit menu from Solution Explorer.
 
@@ -41,7 +39,7 @@ After you install Teams Toolkit, you can take a brief look at the different menu
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp1**.
 
-::: zone-end
+---
 
 You can perform the following functions on Teams Toolkit for Visual Studio:
 
