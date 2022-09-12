@@ -69,46 +69,6 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > [!TIP]
    > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you try to run the Teams app again locally.
 
-## Customize debug settings
-
-You can customize debug setting for your Teams app to use your bot endpoints and add environment variables:
-
-### Use your bot endpoint
-
-You can set siteEndpoint configuration in **.fx/configs/config.local.json** to your endpoint.
-
-```
-"bot": {
-    "siteEndpoint": "https://baidu.com"
-}
-```
-
-### Add environment variables
-
-You can add **environmentVariables** to **launchSettings.json** file.
-
-:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Add custom environment variables":::
-
-### Launch Teams app as a web app
-
-You can launch Teams app as a web app instead of running in Teams client.
-
-1. Select **Properties** > **launchSettings.json** in Solution Explorer panel under your project.
-1. Remove the **'launchUrl'** from the file.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl":::
-
-1. Right-click on **Solution**.
-1. Select **Properties**.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties":::
-
-1. Select **Configuration Properties** > **Configuration** in the dialogue.
-1. Select uncheck the **Deploy** process box.
-1. Select **OK**.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties ":::
-
 ## See also
 
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
