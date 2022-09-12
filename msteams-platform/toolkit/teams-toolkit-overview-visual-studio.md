@@ -28,7 +28,7 @@ Teams Toolkit brings all the tools needed to build a Teams app in one place.
 
 Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows the user journey:
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png":::
 
 The main milestones of this journey are:
 
@@ -51,11 +51,11 @@ After you open the Visual Studio installer, in the pop-up Workloads window.
 1. Select the box **Microsoft Teams development tools** in the **Installation details** panel.
 1. Select **Install**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation" lightbox="../assets/images/teams-toolkit-overview/visual-studio-install1.png":::
 
 1. Select **Launch** to open Visual Studio.
 
-    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio" lightbox="../assets/images/teams-toolkit-overview/visual-studio-launch.png":::
 
    > [!IMPORTANT]
    > You're recommended to download Visual Studio 2022 version 17.3.0, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 version 17.3.0. Teams Toolkit version 17.3.* or higher.
