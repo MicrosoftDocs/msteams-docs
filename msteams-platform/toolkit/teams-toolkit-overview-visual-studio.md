@@ -64,18 +64,17 @@ After you open the Visual Studio installer, in the pop-up Workloads window.
 
 After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit:
 
-1. Select **Project**.
-1. Select **Teams Toolkit**.
+1. Select **Project** > **Teams Toolkit**.
 1. You can now access the **Teams Toolkit menu** options.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png":::
 
    You can also access Teams Toolkit menu from Solution Explorer.
 
 4. Right-click on your **Project**.
 5. Select **Teams Toolkit** > **Teams Toolkit menu** options.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png":::
 
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp1**.
