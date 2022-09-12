@@ -1,7 +1,7 @@
 ---
 title: Explore Teams Toolkit for Visual Studio
 author: surbhigupta
-description: In this module, learn Explore Teams Toolkit for Visual Studio
+description: In this module, learn to Explore Teams Toolkit for Visual Studio
 ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,23 +10,27 @@ ms.date: 05/24/2022
 
 # Explore Teams Toolkit for Visual Studio
 
+In this document, you can understand different UI elements along with description and basic usage in Teams Toolkit.
+
 After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit:
 
-1. Select **Project**.
-1. Select **Teams Toolkit**.
-1. You can now access the **Teams Toolkit menu** options.
+1. Select **Project** > **Teams Toolkit**.
+1. You can now access different Teams Toolkit menu options.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams toolkit operations menu":::
 
    You can also access Teams Toolkit menu from Solution Explorer.
 
-4. Right-click on your **Project**.
-5. Select **Teams Toolkit** > **Teams Toolkit menu** options.
+   > [!NOTE]
+   > Select **View** > **Solution Explorer** to view Solution Explorer.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
+4. Right-click on your **Project**.
+5. Select **Teams Toolkit** to access different Teams Toolkit menu options.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams toolkit operations from Project":::
 
    > [!NOTE]
-   > In this scenario the project name is **MyTeamsApp1**.
+   > In this scenario the project name is **MyTeamsApp**.
 
 You can perform the following functions on Teams Toolkit for Visual Studio:
 
@@ -53,7 +57,7 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 * Collaborate on Teams projects.
 * Publish Teams app.
 
-### TeamsFx .NET SDK Reference docs
+## TeamsFx .NET SDK Reference docs
 
 * [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
 * [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
