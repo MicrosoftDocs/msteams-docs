@@ -17,7 +17,7 @@ After scaffolding, in the manifest template file under `templates/appPackage` fo
 
 In the manifest template, select **Project** > **Teams Toolkit** > **Open Manifest File**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest file":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest file" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png":::
 
 ### Customize app manifest in Teams Toolkit
 
@@ -45,11 +45,11 @@ You can preview values in app manifest in two ways:
 
 - When you hover over the placeholder in `manifest.template.json`, the values for **dev** and **local** environment can be seen.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Hover over placeholder":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Hover over placeholder" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png":::
 
 - You can also hover over the key besides each placeholder in `manifest.template.json`, the same values for **dev** and **local** environment can be seen.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png":::
 
    > [!NOTE]
    > If the environment has not been provisioned, or the Teams app dependencies have not been prepared, it indicates that the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
@@ -70,7 +70,7 @@ There are two other ways to preview manifest file:
 
 - Select **Project** > **Teams Toolkit** > **Zip App Package** then select **For Local** or **For Azure**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png":::
 
 - You can also see the same list of menus that are under Project > Teams Toolkit, if you right-click on your project name and then select **Teams Toolkit** under **Solution Explorer**.
 
