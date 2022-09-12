@@ -10,14 +10,23 @@ ms.date: 05/24/2022
 
 # Explore Teams Toolkit for Visual Studio
 
-In this document, you can understand different UI elements along with description and basic usage in Teams Toolkit.
+In this document, you can understand different UI elements along with description and basic usage from task pane in Teams Toolkit.
 
-After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit:
+   > [!NOTE]
+   > Task pane is visible only after creating an app using Teams Toolkit. Refer to ...
+
+After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit in two different options:
+
+::: zone pivot="project"
 
 1. Select **Project** > **Teams Toolkit**.
 1. You can now access different Teams Toolkit menu options.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams toolkit operations menu":::
+
+::: zone-end
+
+::: zone pivot="Solution Explorer"
 
    You can also access Teams Toolkit menu from Solution Explorer.
 
@@ -30,7 +39,9 @@ After you install Teams Toolkit, you can take a brief look at the different menu
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams toolkit operations from Project":::
 
    > [!NOTE]
-   > In this scenario the project name is **MyTeamsApp**.
+   > In this scenario the project name is **MyTeamsApp1**.
+
+::: zone-end
 
 You can perform the following functions on Teams Toolkit for Visual Studio:
 

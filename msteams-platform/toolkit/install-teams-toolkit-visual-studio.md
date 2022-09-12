@@ -14,15 +14,12 @@ Teams Toolkit is an extension in Visual Studio. In this document you can learn, 
 
 You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
 
-> [!NOTE]
-> You'll need to first install the Visual Studio installer before installing Visual Studio.
-
 ## Steps to install Teams Toolkit
 
 After you open the Visual Studio installer, in the pop-up Workloads window.
 
-1. Select the box **ASP.NET and web development** workload.
-1. Select the box **Microsoft Teams development tools** in the **Installation details** panel.
+1. Select the **ASP.NET and web development** workload.
+1. Select the **Microsoft Teams development tools** in the **Installation details** panel.
 1. Select **Install**.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
