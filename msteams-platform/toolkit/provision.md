@@ -6,7 +6,7 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-zone_pivot_groups: provision-cloud-resources
+zone_pivot_groups: teams-app-platform
 ---
 
 # Provision cloud resources

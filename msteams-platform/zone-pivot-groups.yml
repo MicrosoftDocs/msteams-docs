@@ -20,3 +20,11 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+- id: teams-app-platform
+  title: Teams app platform
+  prompt: Before you begin, select the platform in which you want to build an app
+  pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio   
