@@ -300,24 +300,25 @@ The following steps help you to provision cloud resources using Visual Studio:
 ### Sign-in to your Microsoft 365 account
 
 1. Open Visual Studio 2022.
-2. Open the Microsoft Teams app project.
-3. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Open the Microsoft Teams app project.
+1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies1.png" alt-text="Prepare teams app dependencies":::
 
-7. Select **Sign in** to sign-in to your Azure account.
+1. Select **Sign in** to sign-in to your Azure account.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
     > [!NOTE]
     > If you are already logged in, your username displays, or you can select the same to switch your account.
 
-8. Your default web browser opens to let you [sign-in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
-9. Select **Continue** after you've signed in to your account.
+1. Your default web browser opens to let you [sign-in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
+
+1. Select **Continue** after you've signed into your account.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
-### Sign in to your Azure account
+### Sign-in to your Azure account
 
 1. Open Visual Studio 2022.
 2. Open the Teams App project.
@@ -332,7 +333,7 @@ The following steps help you to provision cloud resources using Visual Studio:
    > [!NOTE]
    > If you're already logged in, your username is displayed, or you have an option to switch account.
 
-7. Sign-in to Azure account using your credentials. The browser closes automatically.
+   After sign-in to your Azure account using your credentials, the browser closes automatically.
 
 ### To provision cloud resources
 
@@ -346,13 +347,13 @@ After you open your project in Visual Studio,
 
 1. Enter the following details to provision your resources.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Select resource group":::
 
    1. Select your **Subscription name** from the dropdown list.
    1. Select your **Resource group** from the dropdown list.
 
       > [!NOTE]
-      > Select **New** to create new resource group.
+      > You can create new Resource group by selecting **New**.
 
    1. Select **Provision**.
 
@@ -471,7 +472,7 @@ When you create a new project, you also need to create Azure resources. The Azur
 
 ### Manage your resources
 
-You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
+You can sign-in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
 * You can select resource group from the existing list or the new resource group that you've created.
 * You can see the details of the resource group you've selected in the overview section of the table of content.
