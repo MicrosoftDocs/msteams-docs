@@ -31,7 +31,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 1. Right-click on your **project**.
 1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1
