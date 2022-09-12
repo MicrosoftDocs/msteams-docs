@@ -6,9 +6,24 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
+zone_pivot_groups: teams-app-platform
 ---
 
 # Debug your Microsoft Teams app
+
+Microsoft Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
+
+During the debug process:
+
+* Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app.
+* Teams Toolkit checks the prerequisites during the debug background process.
+* Your Teams app is available for preview in Teams web client locally after debugging.
+* You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+* Microsoft Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions.
+
+::: zone pivot="visual-studio-code"
+
+# Debug your Microsoft Teams app for Visual Studio Code
 
 Microsoft Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
@@ -188,9 +203,108 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 > [!div class="nextstepaction"]
 > [Debug your app locally](debug-local.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## Debug your Teams app locally using Visual Studio
+
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
+
+* Prepare Teams app dependencies
+* Start debugging
+* Toggle breakpoints
+* Hot reload
+* Stop debugging
+
+During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
+
+## Key features of Teams Toolkit
+
+You can see the following key features of Teams Toolkit, that automate the local debugging process of your Teams app:
+
+### Prepare Teams app dependencies
+
+Teams Toolkit prepares local debug dependencies and registers your Teams app in the tenant in your account. For Bot and Message Extension apps, Teams Toolkit will register and configure bot.
+
+### Start debugging
+
+You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and the launches app in your browser.
+
+### Toggle breakpoints
+
+You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in your web browser.
+The following image shows the toggle breakpoints:
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Local debug toggle breakpoints":::
+
+### Hot reload
+
+Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source codes simultaneously during debugging.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Select hot reload icon":::
+
+Select the option **Hot Reload on File Save** from the drop-down to enable auto hot reload.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Select hot reload on file save":::
+  
+   > [!Tip]
+   > To learn more about Hot Reload function of Visual Studio during debug you can visit <https://aka.ms/teamsfx-vs-hotreload>.
+
+### Stop debugging
+
+Select **Stop Debugging** when the local debug is complete.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Select stop debug icon":::
+
+## Customize debug settings
+
+You can customize debug setting for your Teams app to use your bot endpoints and add environment variables:
+
+### Use your bot endpoint
+
+You can set siteEndpoint configuration in **.fx/configs/config.local.json** to your endpoint.
+
+```
+"bot": {
+    "siteEndpoint": "https://baidu.com"
+}
+```
+
+### Add environment variables
+
+You can add **environmentVariables** to **launchSettings.json** file.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Add custom environment variables":::
+
+### Launch Teams app as a web app
+
+You can launch Teams app as a web app instead of running in Teams client.
+
+1. Select **Properties** > **launchSettings.json** in Solution Explorer panel under your project.
+1. Remove the **'launchUrl'** from the file.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl":::
+
+1. Right-click on **Solution**.
+1. Select **Properties**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties":::
+
+1. Select **Configuration Properties** > **Configuration** in the dialogue.
+1. Select uncheck the **Deploy** process box.
+1. Select **OK**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties ":::
+
+::: zone-end
+
 ## See also
 
 * [Debug background process](debug-background-process.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
