@@ -101,4 +101,4 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
 * [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
-* [people picker control](~/concepts/device-capabilities/people-picker-capability.md)
+* [People picker control](~/concepts/device-capabilities/people-picker-capability.md)
