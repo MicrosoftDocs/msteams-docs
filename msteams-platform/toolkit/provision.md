@@ -6,8 +6,8 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+zone_pivot_groups: provision-cloud-resources
 ---
-
 
 # Provision cloud resources
 
