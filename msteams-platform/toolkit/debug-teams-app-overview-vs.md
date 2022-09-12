@@ -111,8 +111,8 @@ You can launch Teams app as a web app instead of running in Teams client.
 
 ## Next
 
-[!div class="nextstepaction"]
-[Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)
+> [!div class="nextstepaction"]
+> [Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)
 
 ## See also
 
