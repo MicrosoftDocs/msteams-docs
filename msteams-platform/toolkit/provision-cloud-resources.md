@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Provision cloud resources using Visual Studio
 
-TeamsFx integrates with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources
+TeamsFx integrates with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources. For the code approach, your application needs the cloud resources.
 
 ## Prerequisites
 
