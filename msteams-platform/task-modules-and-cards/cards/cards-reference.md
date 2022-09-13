@@ -271,6 +271,200 @@ From version 1.6 of Adaptive Card, you can change an Adaptive Card to a loop com
 
 To enable an Adaptive Card loop, you need to copy the web URL from Adaptive card schema and paste it in the card payload and submit.
 
+The following code shows an example of an Adaptive Card loop:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.6",
+  "metadata": {
+    "webUrl": "https://jarvisacloopsbot.azurewebsites.net/refreshCard"
+  },
+  "body": [
+    {
+      "size": "large",
+      "text": "Overflow Action Test Card",
+      "weight": "bolder",
+      "type": "TextBlock"
+    },
+    {
+      "text": "ActionSet **all secondary actions**",
+      "type": "TextBlock"
+    },
+    {
+      "actions": [
+        {
+          "data": {
+            "key": "Submit from overflow menu"
+          },
+          "title": "Action Submit",
+          "mode": "secondary",
+          "type": "Action.Submit"
+        },
+        {
+          "url": "https://github.com/Microsoft/AdaptiveCards",
+          "title": "OpenUrl",
+          "iconUrl": "https://us-prod.asyncgw.teams.microsoft.com/urlp/v1/url/content?url=https://toppng.com/uploads/preview/mario-mushroom-free-png-image-super-mario-mushroom-11562945955cv6up3e91x.png",
+          "mode": "secondary",
+          "type": "Action.OpenUrl"
+        },
+        {
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "text": "What do you think?",
+                "type": "TextBlock"
+              }
+            ],
+            "actions": [
+              {
+                "title": "Neat!",
+                "type": "Action.Submit"
+              }
+            ]
+          },
+          "title": "Action.ShowCard",
+          "mode": "secondary",
+          "type": "Action.ShowCard"
+        }
+      ],
+      "type": "ActionSet"
+    },
+    {
+      "text": "ActionSet **primary + secondary actions**",
+      "type": "TextBlock"
+    },
+    {
+      "actions": [
+        {
+          "data": {
+            "key": "View"
+          },
+          "title": "View",
+          "type": "Action.Submit"
+        },
+        {
+          "data": {
+            "key": "Edit"
+          },
+          "title": "Edit",
+          "mode": "secondary",
+          "type": "Action.Submit"
+        },
+        {
+          "data": {
+            "key": "Delete"
+          },
+          "title": "Delete",
+          "mode": "secondary",
+          "type": "Action.Submit"
+        }
+      ],
+      "type": "ActionSet"
+    },
+    {
+      "text": "Check actions.length > maxActions",
+      "type": "TextBlock"
+    },
+    {
+      "actions": [
+        {
+          "title": "Action 1",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 2",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 3",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 4",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 5",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 6",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 7",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 8",
+          "type": "Action.Submit"
+        },
+        {
+          "title": "Action 9",
+          "type": "Action.Submit"
+        }
+      ],
+      "type": "ActionSet"
+    },
+    {
+      "text": "========= I am bottom line of body =========",
+      "type": "TextBlock"
+    }
+  ],
+  "actions": [
+    {
+      "url": "https://adaptivecards.io",
+      "title": "OpenUrl 1",
+      "type": "Action.OpenUrl"
+    },
+    {
+      "data": {
+        "key": "Submit from overflow menu"
+      },
+      "title": "Action Submit",
+      "mode": "secondary",
+      "type": "Action.Submit"
+    },
+    {
+      "url": "https://github.com/Microsoft/AdaptiveCards",
+      "title": "OpenUrl",
+      "iconUrl": "https://us-prod.asyncgw.teams.microsoft.com/urlp/v1/url/content?url=https://toppng.com/uploads/preview/mario-mushroom-free-png-image-super-mario-mushroom-11562945955cv6up3e91x.png",
+      "mode": "secondary",
+      "type": "Action.OpenUrl"
+    },
+    {
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "text": "What do you think?",
+            "type": "TextBlock"
+          }
+        ],
+        "actions": [
+          {
+            "title": "Neat!",
+            "type": "Action.Submit"
+          }
+        ]
+      },
+      "title": "Action.ShowCard",
+      "mode": "secondary",
+      "type": "Action.ShowCard"
+    }
+  ],
+  "refresh": {
+    "action": {
+      "verb": "refreshCard",
+      "title": "See Latest",
+      "type": "Action.Execute"
+    }
+  }
+}
+```
+
 #### Additional information on Adaptive Cards
 
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
