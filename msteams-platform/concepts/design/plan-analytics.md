@@ -9,7 +9,12 @@ ms.author: surbhigupta
 
 # Plan and build analytics for your Teams app
 
-As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you, you'll be interested to measure how your app is performing in the real-world once published. You'll also be interested in monitoring who is interested in your app, which users and organizations are using your app, how are users engaging with your app, which users have churned away after using your app for some time and many such data points. Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
+As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you,
+
+you'll be interested to measure how your app is performing in the real-world once published. 
+You'll also be interested in monitoring who is interested in your app, which users and organizations are using your app, how are users engaging with your app, which users have churned away after using your app for some time and many such data points. 
+
+Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
 
 ## But Teams app usage report must suffice, isn’t it?
 
