@@ -507,7 +507,7 @@ The following table provides the features that support hero cards:
 
 The following table provides the properties of a hero card:
 
-| Property | Type  | Description |
+| Property | Type | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum two lines. |
 | subtitle | Rich text | Subtitle of the card. Maximum two lines.|
