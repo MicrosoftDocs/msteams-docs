@@ -698,7 +698,7 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
-  itesms:
+  items:
     - name: App manifest schema for Teams
       href: resources/schema/manifest-schema.md
     - name: Public developer preview
