@@ -12,7 +12,7 @@ ms.date: 05/24/2022
 
 In this document, you can understand different UI elements along with description and basic usage from task pane in Teams Toolkit.
 
-After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit in two different options:
+After you install Teams Toolkit, you can take a brief look at the available menu options of Teams Toolkit in two different methods:
 
 # [Project](#tab/prj)
 
