@@ -83,7 +83,7 @@ As Teams Toolkit is integrated with Developer Portal, you can configure, distrib
 
 ::: zone pivot="visual-studio"
 
-# Teams Toolkit overview for Microsoft Visual Studio
+## Teams Toolkit overview for Microsoft Visual Studio
 
 Teams Toolkit for Visual Studio helps you to create, debug and deploy Microsoft Teams apps. Teams Toolkit for Visual Studio is GA in Visual Studio 2022 version 17.3. App development with Teams Toolkit has the advantages of:
 
