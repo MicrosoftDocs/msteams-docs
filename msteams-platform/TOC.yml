@@ -346,6 +346,14 @@
       href: resources/media-formats.md
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
+  - name: HOWTO Guides
+    items:
+      - name: Send notifications to Teams
+        href: https://aka.ms/teamsfx-send-notification
+      - name: Respond to chat commands in Teams
+        href: https://aka.ms/teamsfx-create-command
+      - name: Respond to card actions in Teams
+        href: https://github.com/dooriya/WorkflowBot#readme
 - name: Build message extensions
   items:
   - name: Overview
