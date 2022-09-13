@@ -18,7 +18,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * Know how to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
 
-* Use your app that supports configurable tabs in the groupchat and team scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
+* Use your app that supports configurable tabs in the groupchat and/or team scope. For more information, see [scopes](../resources/schema/manifest-schema.md#configurabletabs) and [build your first tab app](../build-your-first-app/build-channel-tab.md).
 
 * Adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
@@ -35,6 +35,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
 > [!NOTE]
 >
 > * Apps in meetings require `groupchat` scope. The `team` scope works for tabs in channels only.
+> * To support adding tabs in scheduled channel meetings, specify **team** scope in **scopes** section in your app manifest. Without **team** scope the app would not appear in the flyout for channel meetings.
 > * Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`.
 
 The following code snippet is an example of a configurable tab used in an app for Teams meetings:
