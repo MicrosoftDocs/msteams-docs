@@ -14,7 +14,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 See the following video to learn more about publishing your app to the Microsoft Teams app store:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), ensure you've done the following.
@@ -180,18 +180,35 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. The following table maps Teams Store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).
+During submission, you're asked to categorize your app. The following table maps categories.
 
-| Teams categories       | Partner Center categories  |
+|Categories       |
 |:---------------------|:---------------|
-| Data Visualization and BI | Analytics, Data Visualization, and BI |
-| Developer Tools | Developer Tools, IT Admin |
-| Education | Education |
-| Human resources & recruiting| Human Resources and Recruiting |
-| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
-| Project management | Communication, Project Management, Workflow, and Business Management |
-| Sales and support | Customer and Contact Management, Customer Support, Financial Management, and Sales and Marketing |
-| Social | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+| Microsoft |
+| Education |
+| Images & video galleries |
+| Project management |
+| Utilities |
+| Social |
+| Communication |
+| Content management |
+| Files & documents |
+| Workflow & business management |
+| IT/Admin |
+| Human resources & recruiting|
+| Developer tools |
+| Meetings & scheduling |
+| Data Visualization and BI |
+| Training & tutorial |
+| News & weather |
+|customer support |
+| Reference |
+| Sales & marketing |
+| Look & feel |
+| Customer & contact management(CRM) |
+| Financial management |
+| Maps & feeds |
+| Other |
 
 ### Localize your store listing
 
