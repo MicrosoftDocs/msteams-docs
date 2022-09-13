@@ -119,7 +119,9 @@
         - name: Create capability based cloud resources
           href: toolkit/add-resource.md  
         - name: Integrate existing third party APIs
-          href: toolkit/add-API-connection.md 
+          href: toolkit/add-API-connection.md
+        - name: Add single sign-on to Teams app
+          href: toolkit/add-single-sign-on.md  
       - name: Customize Manifest
         items:
         - name: Customize Teams app Manifest
@@ -145,7 +147,9 @@
       - name: Test your Teams app
         items: 
         - name: Integrate and collaborate
-          href: toolkit/TeamsFx-collaboration.md 
+          href: toolkit/TeamsFx-collaboration.md
+        - name: Set up CI/CD pipelines
+          href: toolkit/use-CICD-template.md  
         - name: Sideload and test app in Teams environment
           href: toolkit/sideload-and-test-app.md 
         - name: Test app behavior in different environment
