@@ -106,7 +106,6 @@ landingContent:
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
      
-
 - title: Monetize your app
   linkLists:
     - linkListType: concept
@@ -122,7 +121,7 @@ landingContent:
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
       - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/publish.md        
+        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
 
 - title: Build apps for Teams
   linkLists:
@@ -221,7 +220,7 @@ landingContent:
   - linkListType: reference
     links:
     - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
