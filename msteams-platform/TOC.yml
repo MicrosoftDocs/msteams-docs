@@ -121,7 +121,9 @@
         - name: Create capability based cloud resources
           href: toolkit/add-resource.md  
         - name: Integrate existing third party APIs
-          href: toolkit/add-API-connection.md 
+          href: toolkit/add-API-connection.md
+        - name: Add single sign-on to Teams app
+          href: toolkit/add-single-sign-on.md  
       - name: Customize Manifest
         items:
         - name: Customize Teams app Manifest
@@ -147,7 +149,9 @@
       - name: Test your Teams app
         items: 
         - name: Integrate and collaborate
-          href: toolkit/TeamsFx-collaboration.md 
+          href: toolkit/TeamsFx-collaboration.md
+        - name: Set up CI/CD pipelines
+          href: toolkit/use-CICD-template.md  
         - name: Sideload and test app in Teams environment
           href: toolkit/sideload-and-test-app.md 
         - name: Test app behavior in different environment
@@ -682,7 +686,7 @@
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     -  name: Common reasons for app validation failure
-       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md     
+       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
 - name: Monetize your app
   items:
   - name: Overview
@@ -702,8 +706,7 @@
     - name: Public developer preview
       items:
         - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md
-          displayName: Access, setting
+          href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integrate with Teams
