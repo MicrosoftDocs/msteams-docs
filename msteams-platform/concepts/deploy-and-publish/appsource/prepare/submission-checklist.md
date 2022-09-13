@@ -182,8 +182,8 @@ You can add a URL for your YouTube or Vimeo video.
 
 During submission, you're asked to categorize your app. The following table maps categories.
 
-|Categories       |
-|:---------------------|:---------------|
+|Categories  |
+|:--------------|
 | Microsoft |
 | Education |
 | Images & video galleries |
