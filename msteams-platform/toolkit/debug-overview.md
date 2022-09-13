@@ -284,7 +284,7 @@ You can launch Teams app as a web app instead of running in Teams client.
 1. Select **Properties** > **launchSettings.json** in Solution Explorer panel under your project.
 1. Remove the **'launchUrl'** from the file.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
 
 1. Right-click on **Solution**.
 1. Select **Properties**.
