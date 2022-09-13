@@ -2,7 +2,7 @@
 title: SSO for tabs and message extension
 metadata:
   title: SSO for tabs and message extension
-  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (AAD SSO) for tabs.
+  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (Azure AD SSO) for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Azure Active Directory Single sign-on (AAD SSO) helps to authenticate users in Teams. 
+   The Azure Active Directory Single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of the step-by-step guide of AAD SSO for tabs and message extensions**:
+   **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
-    * After the first sign-in, AAD SSO allows the user to sign in automatically.
-    * Allows the user to sign in to other devices without re-entering sign-in credentials.
+    * After the first sign-in, Azure AD SSO allows the user to sign in automatically.
+    * Allows the user to sign in to other devices without entering sign-in credentials again.
     * Obtains token for the logged-in user.   
 
-   This step-by-step guide helps you to create tabs and message extensions enabling AAD SSO authentication. You'll see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
      ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
 
@@ -195,7 +195,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. Form the left pane, select **App Registrations**.
+    1. From the left pane, select **App Registrations**.
 
     1. Select your bot.
 
