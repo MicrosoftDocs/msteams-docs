@@ -32,7 +32,7 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 
    You can also select **Continue without Code** to create a new project directly from the application.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="Create new project from get started":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="Create new project with code from get started":::
 
 1. Select **File** menu > **New** > **Project**.
 
