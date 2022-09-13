@@ -709,7 +709,7 @@
           displayName: Access, setting
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer
+          displayName: Access, permission, channel, browser, configuration, chat, notifications, delegated, background, organizer
 - name: Integrate with Teams
   items:
   - name: Overview
