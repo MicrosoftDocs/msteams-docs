@@ -11,20 +11,13 @@ zone_pivot_groups: teams-app-platform
 
 # Deploy Teams app to the cloud
 
-Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure. You can deploy the following to the cloud:
-
-* The tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a sharepoint site.
-* The backend APIs are deployed to Azure functions.
-* The bot or message extension is deployed to Azure app service.
-
-  > [!NOTE]
-  > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
+Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
 
 ::: zone pivot="visual-studio-code"
 
 ## Deploy Teams app to the cloud using Visual Studio Code
 
-Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure. You can deploy the following to the cloud:
+You can deploy the following to the cloud:
 
 * The tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a sharepoint site.
 * The backend APIs are deployed to Azure functions.
@@ -58,11 +51,13 @@ The Get started guides help you to deploy using Teams Toolkit. You can use the f
 
 ## Deploy Teams app to the cloud using Visual Studio
 
-Teams Toolkit helps you to deploy or upload your application's front-end and back-end code to the provisioned cloud resources in your Azure subscription. After deploying, you can preview the app in Teams client or the web browser before you can start using. The following apps can be deployed in Visual Studio:
+The following apps can be deployed in Visual Studio:
 
 * The tab app, such as frontend applications are deployed to Azure storage, configured for static web hosting.
 * The notification bot app with Azure function triggers can be deployed to Azure functions.
 * The bot app or message extension can be deployed to Azure app services.
+
+After deploying, you can preview the app in Teams client or the web browser before you can start using.
 
 ## Deploy Teams app using Teams Toolkit
 
