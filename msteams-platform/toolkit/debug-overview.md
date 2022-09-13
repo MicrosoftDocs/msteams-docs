@@ -207,9 +207,11 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ::: zone pivot="visual-studio"
 
-## Debug your Teams app locally using Visual Studio
+## Debug your Microsoft Teams app using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
+Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Teams Toolkit automates app startup services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client.  
+
+You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit supports the following debug features:
 
 * Prepare Teams app dependencies
 * Start debugging
@@ -217,7 +219,19 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 * Hot reload
 * Stop debugging
 
-During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
+## Prerequisites
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio 2022 version 17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
+| &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+| &nbsp; | [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
+| &nbsp; | [Microsoft 365 developer account](/../concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+| &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+|&nbsp;  | **Optional** | &nbsp; |
+|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok is used to forward external messages from Azure Bot Framework to your local machine.|
 
 ## Key features of Teams Toolkit
 
@@ -236,7 +250,7 @@ You can perform debugging with a single operation, press **F5** to start debuggi
 You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in your web browser.
 The following image shows the toggle breakpoints:
 
-:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Local debug toggle breakpoints":::
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Local debug toggle breakpoints" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
 
 ### Hot reload
 
@@ -286,16 +300,20 @@ You can launch Teams app as a web app instead of running in Teams client.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
 
-1. Right-click on **Solution**.
-1. Select **Properties**.
+1. Right-click on **Solution** and select **Properties**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
 
-1. Select **Configuration Properties** > **Configuration** in the dialogue.
+1. Select **Configuration Properties** > **Configuration** in the dialog.
 1. Select uncheck the **Deploy** process box.
 1. Select **OK**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties ":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
+
+## Next
+
+> [!div class="nextstepaction"]
+> [Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)
 
 ::: zone-end
 
