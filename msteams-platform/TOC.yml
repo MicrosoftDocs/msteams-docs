@@ -699,7 +699,7 @@
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
-    - name: App manifest schema for Teams
+    - name: App manifest schema for Teams 
       href: resources/schema/manifest-schema.md
       displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer
     - name: Public developer preview
