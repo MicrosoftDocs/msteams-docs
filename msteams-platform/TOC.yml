@@ -247,7 +247,7 @@
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, secure tunnel to your tab, Reorder static personal tabs
-  - name: Create a channel tab
+  - name: Create a channel tab or group tab
     href: tabs/how-to/create-channel-group-tab.md
     displayName: Secure tunnel to your tab, channel or group tab with ASP.NET Core
   - name: Create a content page
@@ -379,6 +379,8 @@
     items:
     - name: Build tabs for Teams meeting
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Build in-meeting notification for Teams meeting
+      href: apps-in-teams-meetings/in-meeting-notification-for-teams-meeting.md
     - name: Building apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting.md
     - name: Build extensible conversations for meeting chat

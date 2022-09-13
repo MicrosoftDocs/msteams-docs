@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Generate meeting content bubble
+title: Generate meeting 
 metadata:
-  title: Generate meeting content bubble
-  description: With this learning module, learn how to send reply to meeting content bubble using bot in Teams with attendees.
+  title: Generate in-meeting notifications
+  description: With this learning module, learn how to send reply to in-meeting notifications using bot in Teams with attendees.
   audience: Developer
   level: Beginner
   ms.date: 12/03/2021
@@ -14,20 +14,20 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams helps you to generate and interact with content bubble using bot.
+    Teams helps you to generate and interact with in-meeting notifications using bot.
 
-    **Key features of meeting content bubble**:
+    **Key features of in-meeting notifications**:
 
     * View agenda items listed in an Adaptive Card.
     * Select any option in the given agenda.
-    * Submit your feedback on either content bubble or Adaptive Card sent in chat.
+    * Submit your feedback on either in-meeting notifications or Adaptive Card sent in chat.
     
     > [!NOTE]
-    > Meeting content bubble is available only for Azure AD users and not for anonymous users.
+    > In-meeting notifications is available only for Azure AD users and not for anonymous users.
     
-    This step-by-step guide helps you to generate meeting content bubble using bot in Teams meeting with attendees. You'll see the following output:
+    This step-by-step guide helps you to generate in-meeting notifications using bot in Teams meeting with attendees. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction":::
+      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting in-meeting notifications introduction":::
 
      
 
@@ -387,7 +387,7 @@ items:
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/your-bot-is-ready.png" alt-text="App ready"::: 
     
-- title: Add Meeting content bubble App to Teams
+- title: Add in-meeting notifications App to Teams
   durationInMinutes: 1
   content: |
 
@@ -428,9 +428,9 @@ items:
 
     1. Go to Teams meeting chat.
     
-    1. **Content Bubble Demo** app sends an automatic reply to the meeting chat.
+    1. **in-meeting notifications Demo** app sends an automatic reply to the meeting chat.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="Content Bubble Demo reply"::: 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="in-meeting notifications Demo reply"::: 
 
     1. Send a **hello** message to bot.
 
@@ -457,11 +457,11 @@ items:
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Content Bubble Demo desktop and mobile":::
+     :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="in-meeting notifications Demo desktop and mobile":::
 
 
 - content: |
-    You've completed the tutorial to get started with a generate meeting content bubble app.
+    You've completed the tutorial to get started with a generate in-meeting notifications app.
 
     
 

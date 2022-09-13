@@ -44,7 +44,7 @@ The default participant settings are determined by an organization's IT administ
 
 * **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session.
 
-* **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting. For more information, see
+* **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.

@@ -10,11 +10,11 @@ ms.date: 04/07/2022
 
 # Build apps for Teams meeting stage
 
-Share to Stage allows users to share an app to the meeting stage from the app side panel in an ongoing meeting. This sharing is interactive & collaborative as opposed to passive screen sharing.
+Share to stage allows users to share an app to the meeting stage from the app side panel in an ongoing meeting. This sharing is interactive & collaborative as opposed to passive screen sharing.
 
 Users can invoke share to stage by selecting on the **Share to Stage** icon on the top right side of the app side panel. This is a native Teams client button and selecting it shares the entire app to the meeting stage.  
 
-## Manifest settings for meeting stage apps
+## App manifest settings for apps in meeting stage
 
 To share an app to the meeting stage, the app must call the meeting side panel experience in manifest setting:
 
@@ -78,7 +78,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, if there is a successful share, or null when the share fails. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, if there's a successful share, or null when the share fails. |
 |**appContentURL**| String | Yes | The URL that will be shared on to the stage. |
 
 ### Example
@@ -193,5 +193,9 @@ The following table provides the response codes:
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+* [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+* [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
+* [Build apps for anonymous users](build-apps-for-anonymous-user.md)
+* [Advanced meeting APIs](advanced-meeting-apis.md)
+* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
