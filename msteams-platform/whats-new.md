@@ -285,6 +285,7 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
 
+
 ### To configure RSS feed
 
 1. Open Microsoft Teams.
