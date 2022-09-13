@@ -146,31 +146,9 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a Edge or Ch
 
 ::: zone pivot="visual-studio"
 
-## Debug your Teams app locally using Visual Studio
+## Debug your Microsoft Teams app locally using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Debug is a process of building, checking, detecting, and correcting issues or bugs in your app. Debug ensures that the program runs successfully. Visual Studio allows you to debug tab, bot, message extension. Teams Toolkit supports the following debug features:
-
-* Prepare Teams app dependencies
-* Start debugging
-* Toggle breakpoints
-* Hot reload
-* Stop debugging
-
-During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app.
-
-## Prerequisites
-
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| &nbsp; | **Required** | &nbsp; |
-| &nbsp; | Visual Studio 2022 version 17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
-| &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-| &nbsp; | [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
-| &nbsp; | [Microsoft 365 developer account](/../concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-| &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
-|&nbsp;  | **Optional** | &nbsp; |
-|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok is used to forward external messages from Azure Bot Framework to your local machine.|
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client.
 
 ## Debug your app locally
 
@@ -189,25 +167,23 @@ ngrok http 5130
 Perform the following steps using the Teams Toolkit to debug your app after you create a project:
 
 1. Right-click on your **project**.
-1. Select **Teams Toolkit**.
-1. Select **Prepare Teams App Dependencies**.
+1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1
 
    Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
-1. Sign in to your **Microsoft 365 Account**.
-1. Select **Continue**
+1. Sign in to your **Microsoft 365 Account**, then select **Continue**
+
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
    > Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
 
-1. Select **Debug**.
-1. Select **Start Debugging**, or directly select **F5**.
+1. Select **Debug** > **Start Debugging**, or directly select **F5**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
 
