@@ -189,13 +189,9 @@ The following table provides the response codes:
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Live Share SDK](teams-live-share-overview.md)
-
-## Next steps
-
 * [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
 * [Advanced meeting APIs](advanced-meeting-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
-* [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
+* [Live Share SDK](teams-live-share-overview.md)
