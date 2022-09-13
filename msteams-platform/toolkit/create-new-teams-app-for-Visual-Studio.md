@@ -63,7 +63,7 @@ A **Create a new Teams Application** window is appeared.
 
 A **Getting Started** window with **Welcome to Teams Toolkit** is displayed.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the teams app type":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the Getting Started teams toolkit":::
 
 ## Teams app templates in Teams Toolkit for Visual Studio
 
