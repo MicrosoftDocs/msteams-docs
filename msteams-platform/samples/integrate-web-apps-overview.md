@@ -44,7 +44,7 @@ With Power Apps, you can build business apps that connect to your business data 
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -60,7 +60,7 @@ Moodle is a popular open-source Learning Management System (LMS). It's now integ
 
 ## Create a Share-to-Teams button for your website
 
-Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select the button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching context.
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select the button, it launches the Share to Teams experience in a pop-up window. It allows you to share a link directly to any person or Microsoft Teams channel without switching context.
 
 ## Add a Microsoft Teams tab in SharePoint
 
