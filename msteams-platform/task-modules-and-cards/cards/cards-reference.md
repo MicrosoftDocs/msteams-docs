@@ -265,11 +265,12 @@ The following code shows an example of an Adaptive Card:
 
 ### Adaptive Card loop
 
-Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and outlook.
+Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and outlook. You can change an Adaptive Card to a loop component, which has actionable content, enabling users to make quick updates without switching context, and changes made in the loop component stays in sync when its copy pasted across Teams.
 
-From version 1.6 of Adaptive Card, you can change an Adaptive Card to a loop component, which has actionable content, enabling users to make quick updates without switching context, and changes made in the loop component stays in sync when its copy pasted across Teams.
+> [!NOTE]
+> Adaptive Card loop component is available from version 1.6.
 
-To enable an Adaptive Card loop, you need to copy the web URL from Adaptive card schema and paste it in the card payload and submit.
+To enable an Adaptive Card loop, you need to copy the `metadata` `webUrl` from Adaptive card schema and paste it in the card payload and submit.
 
 The following code shows an example of an Adaptive Card loop:
 
