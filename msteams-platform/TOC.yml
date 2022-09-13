@@ -704,8 +704,7 @@
     - name: Public developer preview
       items:
         - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md
-          displayName: Access, setting
+          href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integrate with Teams
