@@ -61,7 +61,7 @@ A **Create a new Teams Application** window is appeared.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_2.png" alt-text="Select the teams app type":::
 
-A **Getting Started** window with **Welcome to Teams Toolkit** is displayed.
+A **Getting Started** with **Welcome to Teams Toolkit** window is displayed.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the Getting Started teams toolkit":::
 
