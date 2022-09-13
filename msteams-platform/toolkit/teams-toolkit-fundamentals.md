@@ -83,7 +83,7 @@ As Teams Toolkit is integrated with Developer Portal, you can configure, distrib
 
 ::: zone pivot="visual-studio"
 
-## Teams Toolkit overview for Visual Studio
+# Teams Toolkit overview for Microsoft Visual Studio
 
 Teams Toolkit for Visual Studio helps you to create, debug and deploy Microsoft Teams apps. Teams Toolkit for Visual Studio is GA in Visual Studio 2022 version 17.3. App development with Teams Toolkit has the advantages of:
 
@@ -103,7 +103,7 @@ Teams Toolkit brings all the tools needed to build a Teams app in one place.
 
 Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows the user journey:
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png":::
 
 The main milestones of this journey are:
 
@@ -113,14 +113,28 @@ The main milestones of this journey are:
 1. For provisioning and deploying your app to cloud you can use your Azure account.
 1. You can finally publish your app to Teams.
 
-::: zone-end
+The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Microsoft Visual Studio Code, however they're planned in the future product road map.
+
+* Add another Teams capabilities to your Teams app.
+* Add more Azure resources to your Teams app
+* Add Single Sign-on (SSO) to your Teams app.
+* Add API connection to your Teams app.
+* Customize Microsoft Azure Active Directory (Azure AD) manifest.
+* Add CI/CD pipelines.
+* Manage multiple cloud environments.
+* Collaborate on Teams projects.
+* Publish Teams app.
+
+### TeamsFx .NET SDK Reference docs
+
+* [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
+* [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
+* [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
+* [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
+* [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
 ## See also
 
-* [Create a new Teams project](create-new-project.md)
-* [Install Teams Toolkit](install-Teams-Toolkit.md)
-* [Explore Teams Toolkit](explore-Teams-Toolkit.md)
-* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
