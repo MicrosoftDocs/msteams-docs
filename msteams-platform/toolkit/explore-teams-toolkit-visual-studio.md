@@ -12,9 +12,6 @@ ms.date: 05/24/2022
 
 In this document, you can understand different UI elements along with description and basic usage from task pane in Teams Toolkit.
 
-   > [!NOTE]
-   > Task pane is visible only after creating an app using Teams Toolkit. Refer to ...
-
 After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit in two different options:
 
 # [Project](#tab/prj)
@@ -55,18 +52,6 @@ You can perform the following functions on Teams Toolkit for Visual Studio:
 |Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you did “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)        |
 |Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
 |Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
-
-The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Visual Studio Code, however they're planned in the future product road map.
-
-* Add another Teams capabilities to your Teams app.
-* Add more Azure resources to your Teams app
-* Add single sign-on to your Teams app.
-* Add API connection to your Teams app.
-* Customize Azure AD manifest.
-* Add CI/CD pipelines.
-* Manage multiple cloud environments.
-* Collaborate on Teams projects.
-* Publish Teams app.
 
 ## TeamsFx .NET SDK Reference docs
 
