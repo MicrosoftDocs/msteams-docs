@@ -787,6 +787,10 @@
       {
         "source_path": "msteams-platform/resources/create-messaging-extension-using-appstudio.md",
         "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/accounts.md",
+        "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
       }
     ]
 }
