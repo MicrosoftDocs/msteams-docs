@@ -841,7 +841,7 @@ The signin action can be used from any card in Teams, not just the signin card. 
 The following table provides the features that support signin cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
+| --- | --- | --- | ---  |
 | ✔️ | ❌ | ❌ | ✔️ |
 
 ### Additional information on signin cards
