@@ -701,7 +701,7 @@
   items: 
     - name: App manifest schema for Teams 
       href: resources/schema/manifest-schema.md
-      displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer
+      displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer 
     - name: Public developer preview
       items:
         - name: Overview
