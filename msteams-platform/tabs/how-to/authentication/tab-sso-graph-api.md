@@ -215,7 +215,7 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
 
-    For more information, see the [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
+    To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
 5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
 
