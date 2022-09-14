@@ -82,7 +82,7 @@ Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.m
 - Meeting ID is used by a tab running in the meeting context and is added for the response payload (meetingId).
 - Microsoft Azure Active Directory (Azure AD) ID of the current user.
 
-To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following:
+To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following examples:
 
 <!-- replace with cross-functional chart infogfx to show links between Teams-specific information and type of analytics 
 
@@ -91,22 +91,25 @@ To illustrate how the wealth of useful Teams-specific information obtained from 
 - User's organization > track demand > Sales outreach, onboard organization, check in for assistance
 - license type and tenant SKU > user's organization, user role > create customer profile, slice analytics data
 - 
- -->.
+ -->
 
 | Track Teams-specific information | Outcome |
 | --- | --- |
 | User's organization | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for Sales outreach, onboard organization, check in for assistance |
 | User's organization and role | Use license type and tenant SKU to construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly |
 | Host client type, locale and usage context inferences from team/channel names | Enrich the customer’s profile in your user analytics |
+| Use frame context to get information about the context in which the user is using your app, user's journey and usage pattern from various surface areas, capabilities, and scopes. | Craft your user's experiences accordingly and invest more in capabilities popular with your users |
+| User's email address to associate a meaningful, real-world identity with the Teams user, and can provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com | Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing and re-engagement. However, be careful not to misuse this channel or spam the user. |
+| Obtain and store the unique Azure AD user/object ID at the time of app (bot) installation | Send any proactive notification to the user via your bot |
 
-
-
+<!--
 - The user’s organization is handy to track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product. You can use the organization name to handoff a “lead” to your sales or customer success teams which can plan sales outreaches to the organization for pitching your SaaS app, onboard the organization as a customer of your service or simply to check-in if they need any assistance.
 - Using the license type and the tenant SKU, you can find out and log which type of organization does the user belong to, user’s role within the organization (for example, F1 license is for Frontline workers vs E5 license is for information workers) construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly.
 - Host client type, locale and usage context inferences from team/channel names etc. can all be used to enrich the customer’s profile in your user analytics.
 - The frame context can give useful information about the context in which the user is using your app to stitch the user’s journey and usage pattern across various surface areas, capabilities and scopes. Knowing this will enable you to craft your experiences accordingly and invest more in capabilities popular with your users.
-- The email address of the user allows you to associate a meaningful, real-world identity with the Teams user and also possibly gives you the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. This will allow you to identify the organization the user belongs to. The em.ail address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing and re-engagement. However, be careful not to misuse this channel or spam the user.
+- The email address of the user allows you to associate a meaningful, real-world identity with the Teams user and also possibly gives you the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. This will allow you to identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing and re-engagement. However, be careful not to misuse this channel or spam the user.
 - The unique Azure AD user/object ID of the user is a must for your app to send any proactive notification to the user via your bot and must be stored once obtained at the time of app (bot) installation event.
+-->
 
 ### Conversational constructs
 
