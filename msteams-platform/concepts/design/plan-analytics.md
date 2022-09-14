@@ -9,17 +9,16 @@ ms.author: surbhigupta
 
 # Plan and build analytics for your Teams app
 
-As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you,
+As a developer you build an app for millions of Microsoft Teams users to achieve specific business or customer goals. For this purpose, you distribute it using one or more of the many distribution options available to you. After the app is published, you'll want to measure how your app is performing in the real-world once published.
 
-- You'll be interested to measure how your app is performing in the real-world once published.
-- You'll also be interested in monitoring many data points, such as:
+You'll also be interested in monitoring many data points, such as:
 
-  - who is interested in your app
-  - which users and organizations are using your app
-  - how are users engaging with your app
-  - which users have churned away after using your app for some time and
+- Who is interested in your app
+- Which users and organizations are using your app
+- How are users engaging with your app
+- Which users have churned away after using your app for some time and
 
-Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
+This information helps you analyze the data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
 
 **But Teams app usage report must suffice, isn’t it?**
 
@@ -37,7 +36,7 @@ Your app on Teams is essentially a web-based service hosted elsewhere, for examp
 
 This is why you must plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
 
-//Planned flow: When to plan > Generate insights > Instrumenting app (how) to generate insight > Act on insight > How to grow app > How to monitize, monitor, plan for next update //
+//Planned flow: When to plan > Generate insights > Instrumenting app (what) to generate insight > Act on insight > How to grow app > How to monitize, monitor, plan for next update //
 
 ## When should you start the analytics journey for your Teams app?
 
