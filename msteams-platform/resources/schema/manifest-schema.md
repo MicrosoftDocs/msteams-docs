@@ -24,7 +24,6 @@ The following schema sample shows all extensibility options:
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -399,12 +398,6 @@ Ensure that your description describes your experience and helps potential custo
 |---|---|---|---|
 |`short`|80 characters|✔️|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔️|The full description of your app.|
-
-## packageName
-
-**Optional**—string
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## localizationInfo
 
@@ -910,7 +903,6 @@ To create a Teams app manifest file:
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 
