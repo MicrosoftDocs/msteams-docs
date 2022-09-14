@@ -47,23 +47,29 @@ The following steps help you to create a new app in Visual Studio:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app_1.png" alt-text="Search and choose microsoft teams app":::
 
-A **Configure your new project** window is appeared.
+**Configure your new project** window is appeared.
 
 1. Enter name for your project in **Project name**.
 1. Select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name_1.png" alt-text="Name your application":::
 
-A **Create a new Teams Application** window is appeared.
+**Create a new Teams Application** window is appeared.
 
 1. Select the required type of Teams app for your project.
 1. Select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_2.png" alt-text="Select the teams app type":::
 
-A **Getting Started** with **Welcome to Teams Toolkit** window is displayed.
+**Getting Started** with **Welcome to Teams Toolkit** window is appeared.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the Getting Started teams toolkit":::
+
+### Directory Structure
+
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under Explorer.
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="Select the Solution Explorer teams toolkit":::
 
 ## Teams app templates in Teams Toolkit for Visual Studio
 
