@@ -1,8 +1,8 @@
 ---
 title: Create a configuration page
 author: surbhigupta
-description: In this module, learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, and more
-ms.localizationpriority: medium
+description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -168,9 +168,10 @@ The configuration page code informs Teams that the configuration requirements ar
 
 >[!NOTE]
 >
->* You have 30 seconds to complete the save operation (the callback to registerOnSaveHandler) before the timeout. After the timeout, a generic error message appears.
+>* You have 30 seconds to complete the save operation (the callback to `registerOnSaveHandler`) before the timeout. After the timeout, a generic error message appears.
 >* If you register a save handler using `registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
+>* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
 ### Get context data for your tab settings
 
@@ -286,7 +287,7 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify, reconfigure, or rename a channel or group tab. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
 

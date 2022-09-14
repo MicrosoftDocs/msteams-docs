@@ -36,44 +36,55 @@ The following image displays the invoke locations of the search command:
 
 ## Add the search command to your app manifest
 
-To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of App Studio, or manually.
+To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
 
-### Create a search command using App Studio
+### Create a search command using Developer Portal
 
 The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-To create a search command:
+**To create an action command**
 
-1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1. If you already created your app package in **App Studio**, select from the list. If you haven't created an app package, import an existing one.
-1. After importing app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
-1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up page:
+1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
+   If you already created your app package in **Developer Portal**, select from the list. If you haven't created an app package, import an existing one.
+1. After importing an app package, select **Message extensions** under **App features**.
+1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name to the new bot, and then select **Create**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
 
-1. To create the message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
+1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list, or select **Enter a bot ID** if you have a bot ID created already.
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
+1. Select the scope of the messaging extension and select **Save**.
 
-1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
-
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
-
-1. Select **Add** in the **Command section** of the message extensions page to include the commands, which decide the behaviour of message extension.
+1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
 The following image displays command addition for message extension:
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="The screenshot shows how to add a command to define the behavior of the message extension.":::
 
-1. Select **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
+1. Select **Search** and enter **Command ID**, **Command title**, and **Command description**.
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Search command parameter selection":::
+1. Enter all the parameters and select the type of input from the dropdown list.
 
-1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be invoked. The following image displays the search command invoke location:
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="The screenshot shows how to add a parameter to define your command for message extension.":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="Search command invoke location selection":::
+1. Select **Add a domain** under **Preview links**.
 
-1. Add your search parameter and select **Save**.
+1. Enter valid domain and then select **Add**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurlings.":::
+
+1. Select **Save**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shows how to save all your setting and parameters for your message extension.":::
+
+**To add additional parameters**
+
+1. Select ellipse under command section and then select **Edit parameter**.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
+
+1. Select **Add a Parameters** and enter all the parameters.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### Create a search command manually
 
@@ -81,14 +92,14 @@ To manually add your message extension search command to your app manifest, you 
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | This property is an unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
+| `id` | This property is a unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` | This property is a command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | This property is a help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | This property must be a `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
-You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
+You must add the details of the search parameter that defines the text visible to your user in the Teams client.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
@@ -97,6 +108,7 @@ You must add the details of the search parameter, that defines the text visible 
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
+| `parameters.value` | Initial value for the parameter. Currently the value is not supported | No | 1.5 |
 
 #### Example
 

@@ -129,7 +129,7 @@ items:
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
@@ -183,7 +183,7 @@ items:
 
     1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Wizard starts for creating a new project":::
 
     1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
 
@@ -192,14 +192,30 @@ items:
     1. Select **JavaScript** as the programming language.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+    
+    1. Select **Default folder** to store your project root folder in default location.
 
-    1. Select your **Workspace folder** by choosing your required folder.  
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Select default location":::
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
+       You can also change the default location by the following steps:
+
+          1. Select **Browse**.
+
+             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Select browse for storage":::
+
+          1. Select the location for project workspace.
+
+          1. Select the **Select Folder**.
+
+              :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
 
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
+
+    1. By default, project opens in new window within 10 seconds. If you want to open in current window, select **Open in current window**.    
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="New window notification":::
 
         The Teams tab app is created in a few seconds.
 
@@ -245,8 +261,7 @@ items:
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab12.png" alt-text="structure tab":::
-
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/folder-structure-tab-app.png" alt-text="structure tab":::
 
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 

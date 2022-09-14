@@ -45,3 +45,7 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 1. Select **inspect** under the tab you wish to debug, as in the following image:
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## See also
+
+[Clear the Teams client cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)

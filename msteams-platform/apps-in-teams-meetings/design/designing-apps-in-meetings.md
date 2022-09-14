@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design meeting extensions for your apps in Teams meetings. Use the UI templates in the Microsoft Teams UI Kit to help you design your meeting tab.
+description: Learn how to implement the design guidelines and use the UI templates to design a meeting extension for Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -188,9 +188,6 @@ You can allow users to share and interact with some or all of your app content o
 * Playing a game.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
-
-> [!NOTE]
-> Currently, mobile users can't share app content to the meeting stage. They can see content shared from desktop, though.
 
 ### Use cases
 
