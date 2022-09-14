@@ -21,6 +21,8 @@ As a developer who’s building an app for millions of Microsoft Teams users to 
 
 Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
 
+//Planned flow: When to plan > Generate insights > Instrumenting app (how) to generate insight > Act on insight > How to grow app > How to monitize, monitor, plan for next update // 
+
 **But Teams app usage report must suffice, isn’t it?**
 
 As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics that enable you to track user demand, user churn and frequency of usage for your app at an aggregate level, such as:
@@ -47,7 +49,7 @@ Whether it is examining which of the existing data instrumentation and practices
 
 At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational so that you don’t miss tracking instrumentation markers getting fired, Teams-specific events and the relevant, contextual information contained in these events, some of which are only triggered once for you to act upon and capture in your SaaS backend for example, Azure AD user ID for a Teams user is only notified via a specific bot event at the time of installation of the bot app for the user. This user ID is mandatory to be captured and mapped to the user’s real-world profile identify such as email address to be able to then send proactive notifications to the user later via the bot.
 
-## Once you’ve implemented analytics for your Teams app, what insights can you generate?
+### Once you’ve implemented analytics for your Teams app, what insights can you generate?
 
 Besides the obvious metrics everyone cares about in the SaaS world such as daily/weekly/monthly active users, time spent in your app etc., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
@@ -79,6 +81,7 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
   - Has a specific user used your app in a Teams meeting?
 
 // link user-specific metrics from user ID //
+
 
 ## Instrumenting your app
 
