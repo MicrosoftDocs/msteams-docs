@@ -21,7 +21,7 @@ As a developer who’s building an app for millions of Microsoft Teams users to 
 
 Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
 
-## But Teams app usage report must suffice, isn’t it?
+**But Teams app usage report must suffice, isn’t it?**
 
 As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics that enable you to track user demand, user churn and frequency of usage for your app at an aggregate level, such as:
 
