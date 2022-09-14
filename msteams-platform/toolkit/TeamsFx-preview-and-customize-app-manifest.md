@@ -308,6 +308,9 @@ You can preview values in app manifest in two ways:
 
 ### Preview manifest file
 
+> [!NOTE]
+> To preview the manifest file, you need to sideload it for local or deploy for Azure.
+
 You can preview the manifest file by performing the following steps:
 
 * Select **Project** > **Teams Toolkit** and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** that generates configuration for local or remote Teams app.
