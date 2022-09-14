@@ -21,8 +21,6 @@ As a developer who’s building an app for millions of Microsoft Teams users to 
 
 Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
 
-//Planned flow: When to plan > Generate insights > Instrumenting app (how) to generate insight > Act on insight > How to grow app > How to monitize, monitor, plan for next update // 
-
 **But Teams app usage report must suffice, isn’t it?**
 
 As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the marketplace. The usage report provides standard out-of-the-box metrics that enable you to track user demand, user churn and frequency of usage for your app at an aggregate level, such as:
@@ -38,6 +36,8 @@ Your app on Teams is essentially a web-based service hosted elsewhere, for examp
 [platform capabilities](../../overview-explore.md) used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are essentially means to surface web-based experiences inside Teams.
 
 This is why you must plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
+
+//Planned flow: When to plan > Generate insights > Instrumenting app (how) to generate insight > Act on insight > How to grow app > How to monitize, monitor, plan for next update //
 
 ## When should you start the analytics journey for your Teams app?
 
@@ -83,19 +83,19 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
 // link user-specific metrics from user ID //
 
 
-## Instrumenting your app
+## Instrumenting your app for analytics
 
 You must already know that instrumenting your code with analytics markers (also known as telemetry markers) are standard web application development practice. Data instrumentation in your code is critical for long-term success since without robust telemetry instrumentation you'll be unable to measure both aggregate as well as user-specific metrics required to base product, growth, marketing and business decision upon.
 
-There are broadly two types of data instrumentation relevant for your Teams app:
-
 <!-- Infogfx and links to relevant sections -->
 
-Infogfx concept
+// Infogfx concept
 
 core SaaS product or app >  Data instrumentation < Specific to Teams platform capabilities
 
-Cross-refer: Plan to monetize your app; Monetize your app, Plan your app, Map use cases to Teams features
+Cross-refer: Plan to monetize your app; Monetize your app, Plan your app, Map use cases to Teams features //
+
+There are broadly two types of data instrumentation relevant for your Teams app:
 
 - **Data instrumentation for your core SaaS product or app**: This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.
 
@@ -117,19 +117,35 @@ What comes in handy for your analytics needs is the fact that tabs are “Teams-
 
 Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.md), since you always add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab’s content or configuration pages, your page gains access to Teams-specific information or [context](../../tabs/how-to/access-teams-context.md), which can be leveraged for useful insights about your users such as:
 
+
+| Teams-specific information | User insights|
+| --- | --- |
+| Microsoft 365 tenant ID | Tenant domain for the organization and the organization’s name |
+| User's license type and SKU for the current tenant | F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU) |
+| Context where the tab URL | Content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (frameContext) |
+| Host client type where tab is loaded | Android, IoS, web, desktop, surfaceHub etc. (hostClientType) – You can slice your analytics data |
+| Locale awareness for the user | Indication of user's language for example, en-us, fr-fr, ja-jp etc. (app locale) |
+| User Principal Name or login hint (user name) in the current tenant (user’s email address) | -- |
+| Team name and channel name Team name and channel name | -- |
+| Unique ID for the current app session inside a tab used for correlating telemetry data (appSessionId) | -- |
+| Meeting ID is used by a tab running in the meeting context | response payload contains the meetingId |
+|  Microsoft Azure Active Directory (Azure AD) ID of the current user | -- |
+
+
+
+<!--
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure Active Directory (Azure AD), a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU).
 - The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (frameContext).
 - Host client type where tab is loaded. Possible values are android, ios, web, desktop, surfaceHub etc. (hostClientType) – You can slice your analytics data.
 - Locale awareness for the user to indicate language for example, en-us, fr-fr, ja-jp etc. (app locale).
 - User Principal Name or login hint (user name) of the current user in the current tenant (usually user’s email address).
-- Team name and channel name where the channel tab is added (teamName, channelName).
+- Team name and channel name Team name and channel name is added (teamName, channelName).
 - Unique ID for the current app session inside a tab used for correlating telemetry data (appSessionId).
 - Meeting ID is used by a tab running in the meeting context and is added for the response payload (meetingId).
 - Microsoft Azure Active Directory (Azure AD) ID of the current user.
 
-To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following examples:
-
+-->
 <!-- replace with cross-functional chart infogfx to show links between Teams-specific information and type of analytics 
 
 **Information > Analytics > Outcome**
@@ -138,6 +154,8 @@ To illustrate how the wealth of useful Teams-specific information obtained from 
 - license type and tenant SKU > user's organization, user role > create customer profile, slice analytics data
 - 
  -->
+
+To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following examples:
 
 | Track Teams-specific information | Outcome |
 | --- | --- |
