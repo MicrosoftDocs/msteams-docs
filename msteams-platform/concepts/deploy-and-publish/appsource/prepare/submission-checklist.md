@@ -185,7 +185,7 @@ During submission, you're asked to categorize your app. The following table maps
 |Categories  |
 |--------------|
 | Microsoft |
-| Education |
+| Productivity |
 | Images & video galleries |
 | Project management |
 | Utilities |
@@ -205,7 +205,7 @@ During submission, you're asked to categorize your app. The following table maps
 | Reference |
 | Sales & marketing |
 | Look & feel |
-| Customer & contact management(CRM) |
+| Customer & contact management (CRM) |
 | Financial management |
 | Maps & feeds |
 | Other |
