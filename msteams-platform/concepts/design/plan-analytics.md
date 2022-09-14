@@ -11,8 +11,13 @@ ms.author: surbhigupta
 
 As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you,
 
-you'll be interested to measure how your app is performing in the real-world once published. 
-You'll also be interested in monitoring who is interested in your app, which users and organizations are using your app, how are users engaging with your app, which users have churned away after using your app for some time and many such data points. 
+- You'll be interested to measure how your app is performing in the real-world once published.
+- You'll also be interested in monitoring many data points, such as:
+
+  - who is interested in your app
+  - which users and organizations are using your app
+  - how are users engaging with your app
+  - which users have churned away after using your app for some time and
 
 Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
 
@@ -39,6 +44,12 @@ You must already know that instrumenting your code with analytics markers (also 
 There are broadly two types of data instrumentation relevant for your Teams app:
 
 <!-- Infogfx and links to relevant sections -->
+
+Infogfx concept
+
+core SaaS product or app >  Data instrumentation < Specific to Teams platform capabilities
+
+Cross-refer: Plan to monetize your app; Monetize your app, Plan your app, Map use cases to Teams features
 
 - **Data instrumentation for your core SaaS product or app**: This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.
 
@@ -80,8 +91,15 @@ To illustrate how the wealth of useful Teams-specific information obtained from 
 - User's organization > track demand > Sales outreach, onboard organization, check in for assistance
 - license type and tenant SKU > user's organization, user role > create customer profile, slice analytics data
 - 
+ -->.
 
- -->
+| Track Teams-specific information | Outcome |
+| --- | --- |
+| User's organization | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for Sales outreach, onboard organization, check in for assistance |
+| User's organization and role | Use license type and tenant SKU to construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly |
+| Host client type, locale and usage context inferences from team/channel names | Enrich the customer’s profile in your user analytics |
+
+
 
 - The user’s organization is handy to track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product. You can use the organization name to handoff a “lead” to your sales or customer success teams which can plan sales outreaches to the organization for pitching your SaaS app, onboard the organization as a customer of your service or simply to check-in if they need any assistance.
 - Using the license type and the tenant SKU, you can find out and log which type of organization does the user belong to, user’s role within the organization (for example, F1 license is for Frontline workers vs E5 license is for information workers) construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly.
