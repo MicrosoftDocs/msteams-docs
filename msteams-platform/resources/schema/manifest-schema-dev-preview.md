@@ -63,7 +63,8 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
             "scopes": [
                 "team",
                 "groupchat"
-            ]"context": []
+            ],
+            "context": []
         }
     ],
     "staticTabs": [
