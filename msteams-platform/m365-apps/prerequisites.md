@@ -88,16 +88,24 @@ To install Office 365 Beta Channel applications in your test environment:
 
 ### Mobile
 
-You can preview Teams personal tabs running in Office for Android by joining the [Office Insider Program for Android](https://insider.office.com/en-us/join/Android). 
+You can preview Teams personal tabs running in Office app for Android by joining the beta program.
 
-To install the latest Office Current Channel (Preview) build to your physical Android device or Android emulator:
+To install the latest Office app beta build to your physical Android device or Android emulator:
 
-1. Verify you are using a [supported Android device](https://support.google.com/googleplay/answer/1727131).
-1. [Join the Android best tester program](https://insider.office.com/en-us/join/Android#Join-the-Android-beta-tester-program) to install the Current Channel (Preview) build of the Office app on your Android device.
-1. From your Android device, launch the Office app. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Verify you are running version 1.0.1 (16.0.15627.20006) or higher of Office for Android.
+1. Verify you are using a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
+1. On your Android device, launch the **Play Store**.
+1. Search for office and select **Microsoft Office: Edit & Share**.
+1. Select the **Install** button.
 
-    :::image type="content" source="images/office-android-minver.png" alt-text="screen shot of version number 1.0.1 (16.0.15627.20006) of Office for Android":::
+    :::image type="content" source="images/office-android-install.png" alt-text="screenshot of Microsoft Office: Edit & Share app in Google Play Store":::
+
+1. Once installed, from the same screen under Join the beta select **Join**.
+
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="screenshot of Join the beta screen":::
+
+1. Launch the Office app and sign in with your test tenant credentials
+1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+1. Verify you are running version 16.0.15629.20000 or higher of Office app for Android.
 
 ## Switch to the Developer Preview version of Teams
 
