@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Universal Actions for search based messaging extensions
+        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-overview-visual-studio.md
       - text: Collaboration controls [Developer preview]
@@ -73,9 +75,7 @@ landingContent:
       - text: App guidance and what's new in TeamsJS version 2.0.0
         url: tabs/how-to/using-teams-client-sdk.md
       - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
-        url: toolkit/teams-toolkit-fundamentals.md  
-      - text: Bots and Message extensions in GCC and GCCH
-        url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
+        url: toolkit/teams-toolkit-fundamentals.md
 
 - title: Get started
   linkLists:
