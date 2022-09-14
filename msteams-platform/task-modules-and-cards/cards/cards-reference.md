@@ -270,7 +270,7 @@ Adaptive Card loop components are interactive units that sync across Microsoft 3
 > [!NOTE]
 > Adaptive Card loop component is available from version 1.6.
 
-If you want your bot to post an Adaptive Card loop component, add the `metedata` `webUrl` to the card payload option.
+If you want your bot to post an Adaptive Card loop component, add the `metadata` `webUrl` to the card payload option.
 
 The following code shows an example of an Adaptive Card loop:
 
