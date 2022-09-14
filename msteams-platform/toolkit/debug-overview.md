@@ -304,16 +304,11 @@ You can launch Teams app as a web app instead of running in Teams client.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Right click solution and select properties" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
 
-1. Select **Configuration Properties** > **Configuration** in the dialog.
+1. Select **Configuration Properties** > **Configuration** in the dialog box.
 1. Clear the **Deploy** checkbox.
 1. Select **OK**.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
-
-## Next
-
-> [!div class="nextstepaction"]
-> [Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)
 
 ::: zone-end
 
