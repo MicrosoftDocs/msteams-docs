@@ -380,11 +380,10 @@ The following are the guiding principles for defining requirements and app appro
 1. A filter shouldn't be offensive or contain objectionable content.
 1. A filter thumbnail should be inclusive. For example, it shouldn't indicate to the user that only a certain type of person can use this filter.
 
-A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities.
-</br>
+A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities. The following are the diversity categories video filters:
 </br>
 
-<details> <summary>Category 1</summary>
+# [Category 1](#tab/category-1)
 
 The filter app must cater to at least one type of Category 1 diversity.
 
@@ -398,10 +397,7 @@ Here are some examples of category 1 diversity:
 
 * Gender identity
 
-</details>
-</br>
-
-<details> <summary>Category 2</summary>
+# [Category 2](#tab/category-2)
 
 A filter app can cater to at least one type of Category 2 diversity.
 
@@ -417,10 +413,7 @@ Here are some examples of category 2 diversity:
 
 * Eyes
 
-</details>
-</br>
-
-<details> <summary>Category 3</summary>
+# [Category 3](#tab/category-3)
 
 A filter app must avoid a combination of filters related to diversities in Category 3. For example, The filter app can't have filters with the words we, love, and democrats, which is indirectly related to political beliefs.
 
@@ -453,7 +446,8 @@ Here are some examples of category 3 diversity:
 * Outlook on life
 * Epistemology
 * Any other type not mentioned above
-</br>
+
+---
 
 ## Code sample
 
