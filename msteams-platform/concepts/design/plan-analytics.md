@@ -55,7 +55,7 @@ Cross-refer: Plan to monetize your app; Monetize your app, Plan your app, Map us
 
 - **Data instrumentation in your app specific to Teams**: This is the instrumentation that you require to do additionally in your SaaS app because it's now surfacing inside of the Teams client, you may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling etc. This is what is covered in more detail in the rest of this document.
 
-## Data instrumentation in your app specific to Teams
+### Data instrumentation in your app specific to Teams
 
 Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan and implement your instrumentation around each of these capabilities.
 
@@ -65,7 +65,7 @@ You can classify Teams platform features into broadly two constructs:
 
 - **Conversational constructs**: These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.
 
-### Hosted web canvas constructs
+#### Hosted web canvas constructs
 
 What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages?
 
@@ -111,7 +111,7 @@ To illustrate how the wealth of useful Teams-specific information obtained from 
 - The unique Azure AD user/object ID of the user is a must for your app to send any proactive notification to the user via your bot and must be stored once obtained at the time of app (bot) installation event.
 -->
 
-### Conversational constructs
+#### Conversational constructs
 
 A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. This information can be leveraged for useful insights about your users, enrich the bot's functionality and provide a more personalized experience such as:
 
