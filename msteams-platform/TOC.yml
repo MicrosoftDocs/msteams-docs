@@ -547,7 +547,7 @@
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
   - name: In-app purchases
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-  - name: Test preview for monetized apps
+  - name: Test preview for monetized app
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
