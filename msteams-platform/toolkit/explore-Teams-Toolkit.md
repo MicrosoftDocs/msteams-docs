@@ -10,15 +10,11 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-In this document you can understand different UI elements along with description and basic usage in Teams Toolkit.
+In this document you can understand different UI elements along with description and basic usage in Teams Toolkit for both Visual Studio Code and Visual Studio.
 
 ::: zone pivot="visual-studio-code"
 
-## Explore Teams Toolkit for Visual Studio Code
-
-In this document you can understand different UI elements along with description and basic usage in Teams Toolkit.
-
-## Teams Toolkit basic UI elements
+## Teams Toolkit for Visual Studio Code basic UI elements
 
 After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in the following image:
 
@@ -147,27 +143,37 @@ From the task pane you can see the following sections:
 
 ::: zone pivot="visual-studio"
 
-## Take a tour of Teams Toolkit
+## Explore Teams Toolkit for Visual Studio
 
-After you install Teams Toolkit, you can take a brief look at the different menu options of Teams Toolkit:
+After you install Teams Toolkit, you can view Teams Toolkit options in two different methods:
 
-1. Select **Project**.
-1. Select **Teams Toolkit**.
-1. You can now access the **Teams Toolkit menu** options.
+# [Project](#tab/prj)
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Teams toolkit operations menu":::
+You can access Teams Toolkit under **Project**.
 
-   You can also access Teams Toolkit menu from Solution Explorer.
+1. Select **Project** > **Teams Toolkit**.
+1. You can now access different Teams Toolkit options.
 
-4. Right-click on your **Project**.
-5. Select **Teams Toolkit** > **Teams Toolkit menu** options.
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams toolkit operations menu":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1.png" alt-text="Teams toolkit operations from Project":::
+# [Solution Explorer](#tab/solutionexplorer)
+
+   You can access Teams Toolkit under **Solution Explorer**.
+
+1. Select **View** > **Solution Explorer** to view Solution Explorer panel.
+1. Right-click on your **Project**.
+1. Select **Teams Toolkit** to access different Teams Toolkit options.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams toolkit operations from Project":::
 
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp1**.
 
+---
+
 You can perform the following functions on Teams Toolkit for Visual Studio:
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Teams toolkit operations from Project menu":::
 
 |Function  |Description  |
 |---------|---------|
@@ -179,18 +185,6 @@ You can perform the following functions on Teams Toolkit for Visual Studio:
 |Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you did “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)        |
 |Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
 |Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
-
-The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Visual Studio Code, however they're planned in the future product road map.
-
-* Add another Teams capabilities to your Teams app.
-* Add more Azure resources to your Teams app
-* Add single sign-on to your Teams app.
-* Add API connection to your Teams app.
-* Customize Azure AD manifest.
-* Add CI/CD pipelines.
-* Manage multiple cloud environments.
-* Collaborate on Teams projects.
-* Publish Teams app.
 
 ::: zone-end
 

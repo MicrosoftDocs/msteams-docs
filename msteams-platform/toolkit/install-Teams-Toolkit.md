@@ -11,13 +11,13 @@ zone_pivot_groups: teams-app-platform
 
 # Install Teams Toolkit
 
-Teams Toolkit is an extension in Visual Studio Code. In this document you can learn, how to install Teams Toolkit. Before you start with installation, you need to have Visual Studio Code and Teams client installed.
+Teams Toolkit is an extension in both Visual Studio and Visual Studio Code. In this document you can learn, how to install Teams Toolkit.
 
 ::: zone pivot="visual-studio-code"
 
 ## Install Teams Toolkit for Visual Studio Code
 
-Teams Toolkit is an extension in Visual Studio Code. In this document you can learn, how to install Teams Toolkit. Before you start with installation, you need to have Visual Studio Code and Teams client installed.
+Before you start with installation, you need to have Visual Studio Code and Teams client installed.
 
 ## Steps to install Teams Toolkit
 
@@ -87,25 +87,26 @@ Teams Toolkit is upgraded to the latest version by default. The following steps 
 
 ## Install Teams Toolkit for Visual Studio
 
-You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
+Before you start with installation, you need to install Visual Studio Installer.
 
-> [!NOTE]
-> You'll need to first install the Visual Studio installer before installing Visual Studio.
+You can download the latest Visual Studio Installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
 
-After you open the Visual Studio installer, in the pop-up Workloads window.
+## Steps to install Teams Toolkit
 
-1. Select the box **ASP.NET and web development** workload.
-1. Select the box **Microsoft Teams development tools** in the installation details panel.
+After you open the Visual Studio Installer, in the pop-up Workloads window:
+
+1. Select the **ASP.NET and web development** workload.
+1. Select the **Microsoft Teams development tools** in **Installation details** panel.
 1. Select **Install**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install1.png" alt-text="Visual studio-installation":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
 
 1. Select **Launch** to open Visual Studio.
 
-    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch.png" alt-text="Launch visual studio":::
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Launch visual studio":::
 
    > [!IMPORTANT]
-   > You're recommended to download Visual Studio 2022 version 17.3.0, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 version 17.3.0. Teams Toolkit version 17.3.* or higher.
+   > You're recommended to download Visual Studio 2022 version 17.3.3, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 version 17.3.3. Teams Toolkit version 17.3.* or higher.
 
 ::: zone-end
 
