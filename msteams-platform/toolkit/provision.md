@@ -15,11 +15,7 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 
 ::: zone pivot="visual-studio-code"
 
-## Provision cloud resources for Visual Studio Code
-
-TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
-
-## Provision using Teams Toolkit
+## Provision using Teams Toolkit in Visual Studio Code
 
 Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
@@ -293,11 +289,11 @@ You want to add Azure storage to your Azure function backend to store blob data.
 
 ::: zone pivot="visual-studio"
 
-## Steps to provision cloud resources using Visual Studio
+## Provision using Teams Toolkit in Visual Studio
 
 The following steps help you to provision cloud resources using Visual Studio:
 
-### Sign-in to your Microsoft 365 account
+### Sign in to your Microsoft 365 account
 
 1. Open Visual Studio 2022.
 1. Open the Microsoft Teams app project.
@@ -305,35 +301,35 @@ The following steps help you to provision cloud resources using Visual Studio:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies1.png" alt-text="Prepare teams app dependencies":::
 
-1. Select **Sign in** to sign-in to your Azure account.
+1. Select **Sign in** to sign in to your Azure account.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Sign in to Microsoft 365":::
 
     > [!NOTE]
     > If you are already logged in, your username displays, or you can select the same to switch your account.
 
-1. Your default web browser opens to let you [sign-in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
+1. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
 
 1. Select **Continue** after you've signed into your account.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Confirm by selecting continue":::
 
-### Sign-in to your Azure account
+### Sign in to your Azure account
 
 1. Open Visual Studio 2022.
-2. Open the Teams App project.
-3. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
+1. Open the Teams App project.
+1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Sign in to Azure account":::
 
-6. Select **Sign in...** to sign-in to your Azure account.
+1. Select **Sign in...** to sign in to your Azure account.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Sign in to your Azure account":::
 
    > [!NOTE]
    > If you're already logged in, your username is displayed, or you have an option to switch account.
 
-   After sign-in to your Azure account using your credentials, the browser closes automatically.
+   After sign in to your Azure account using your credentials, the browser closes automatically.
 
 ### To provision cloud resources
 
@@ -367,7 +363,7 @@ After you open your project in Visual Studio,
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
-### Create resources
+## Create resources
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can create the following resources:
 
@@ -375,7 +371,10 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can crea
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you also need to create Azure resources. The Azure Resource Manager (ARM) templates defines all the Azure resources and helps you to create required Azure resources during provision.<br>
+When you create a new project, you also need to create Azure resources. The Azure Resource Manager (ARM) templates defines all the Azure resources and helps you to create required Azure resources during provision.
+
+The following list shows the resource creation for different types of app and Azure resources:
+<br>
 
 <details>
 <summary><b>Resource creation for Teams Tab application</b></summary>
@@ -472,12 +471,12 @@ When you create a new project, you also need to create Azure resources. The Azur
 
 ### Manage your resources
 
-You can sign-in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
+You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
 * You can select resource group from the existing list or the new resource group that you've created.
 * You can see the details of the resource group you've selected in the overview section of the table of content.
 
-### Customize resource provision
+## Customize resource provision
 
 Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you want to provision. You can change the configuration in Teams Toolkit as per your requirement.
 
@@ -505,12 +504,12 @@ The ARM template files use placeholders for parameters. The purpose of the place
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client ID created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant ID of your app's Azure AD app. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app. | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client ID created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision. | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client ID created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant ID of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client ID created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
 
 ### Reference environment variables in parameter files
 

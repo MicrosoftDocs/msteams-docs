@@ -63,8 +63,7 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
 1. Open Visual Studio.
 1. Select **Create a new project** or open an existing project from the list.
-1. Right-click on your project **MyTeamsApp1**.
-1. Select **Teams Toolkit** > **Deploy to the cloud…**.
+1. Right-click on your project **MyTeamsApp1** > **Teams Toolkit** > **Deploy to the cloud**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="deploy to cloud":::
 
@@ -88,7 +87,7 @@ After your project is successfully deployed to Azure, there are different ways t
 
 **To preview your app in Teams client**
 
-3. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
+1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams2.png" alt-text="Preview Teams app in teams client":::
 

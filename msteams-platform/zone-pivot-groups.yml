@@ -22,7 +22,7 @@ groups:
     title: ASP.NET Core MVC
 - id: teams-app-platform
   title: Teams app platform
-  prompt: Before you begin, select the platform in which you want to build an app
+  prompt: Before you begin, select anyone of the following application based on the environment in which you want to build an app
   pivots:
   - id: visual-studio-code
     title: Visual Studio Code
