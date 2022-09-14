@@ -47,21 +47,21 @@ The following steps help you to create a new app in Visual Studio:
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app_1.png" alt-text="Search and choose microsoft teams app":::
 
-**Configure your new project** window is appeared.
+**Configure your new project** window appears.
 
 1. Enter name for your project in **Project name**.
 1. Select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name_1.png" alt-text="Name your application":::
 
-**Create a new Teams Application** window is appeared.
+**Create a new Teams Application** window appears.
 
 1. Select the required type of Teams app for your project.
 1. Select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_2.png" alt-text="Select the teams app type":::
 
-**Getting Started** with **Welcome to Teams Toolkit** window is appeared.
+**Getting Started** with **Welcome to Teams Toolkit** window appears.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the Getting Started teams toolkit":::
 
