@@ -153,7 +153,7 @@ Update your Teams app to map to the paid functionality and [Map your Teams app](
 
 1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [monetized apps in Teams](https://aka.ms/TMTG).
 
-1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a redirect URL link or button that the customer selects on the publisher landing page.
+1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the customer selects on the publisher landing page.
 
 ### Integrate with Graph Usage Right API
 
