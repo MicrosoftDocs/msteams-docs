@@ -10,26 +10,26 @@ ms.date: 05/24/2022
 
 # Explore Teams Toolkit for Visual Studio
 
-In this document, you can understand different UI elements along with description and basic usage from task pane in Teams Toolkit.
+In this document, you can understand different UI elements along with description and basic usage in Teams Toolkit.
 
-After you install Teams Toolkit, you can take a brief look at the available menu options of Teams Toolkit in two different methods:
+After you install Teams Toolkit, you can view Teams Toolkit options in two different methods:
 
 # [Project](#tab/prj)
 
-You can access Teams Toolkit menu from **Project** option.
+You can access Teams Toolkit under **Project**.
 
 1. Select **Project** > **Teams Toolkit**.
-1. You can now access different Teams Toolkit menu options.
+1. You can now access different Teams Toolkit options.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams toolkit operations menu":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
-   You can access Teams Toolkit menu from **Solution Explorer** option.
+   You can access Teams Toolkit under **Solution Explorer**.
 
-1. Select **View** > **Solution Explorer** to view Solution Explorer.
+1. Select **View** > **Solution Explorer** to view Solution Explorer panel.
 1. Right-click on your **Project**.
-1. Select **Teams Toolkit** to access different Teams Toolkit menu options.
+1. Select **Teams Toolkit** to access different Teams Toolkit options.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams toolkit operations from Project":::
 
@@ -52,14 +52,6 @@ You can perform the following functions on Teams Toolkit for Visual Studio:
 |Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you did “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)        |
 |Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
 |Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
-
-## TeamsFx .NET SDK Reference docs
-
-* [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
-* [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
-* [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
-* [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
-* [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
 ## See also
 
