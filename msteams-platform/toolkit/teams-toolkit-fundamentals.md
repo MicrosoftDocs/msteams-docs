@@ -11,14 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Teams Toolkit Overview
 
-Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code.App development with the toolkit has the following advantages:
-
-* Integrated identity
-* Access to cloud storage
-* Data from Microsoft Graph
-* Azure and Microsoft 365 services with zero-configuration approach.
-
-For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
+Teams Toolkit is a capability feature which allows you to perform multi-functions in both Microsoft Visual Studio Code as well as Visual Studio. With the help of Teams Toolkit you can automate the process from creating to deploying and customizing an app. The various features and advantages of Teams Toolkit are discussed in the respective documentation for the environments you choose.
 
 ::: zone pivot="visual-studio-code"
 
