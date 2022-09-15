@@ -124,5 +124,6 @@ Example of a dynamic ME and JIT install user flow:
   :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="GIF shows the user flow for a dynamic message extension and JIT install.":::
 
 ## See also
-* [Message extensions](messaging-extensions/what-are-messaging-extensions.md)
-* [Universal Actions for Adaptive Cards](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+
+* [Message extensions](../../what-are-messaging-extensions.md)
+* [Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)

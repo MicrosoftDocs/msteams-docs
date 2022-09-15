@@ -117,4 +117,4 @@ You can get started by updating scenarios using the [quick start guide].(Work-wi
 * [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
-* [Universal Actions for search based messaging extensions](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-messaging-extensions.md)
+* [Universal Actions for search based messaging extensions](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
