@@ -66,6 +66,7 @@ Response body
 ### .NET example
 
 Call `GetConversationMembersAsync` using `Team.Id` to return a list of user IDs.
+Call `GetConversationMembersAsync` to get `userRole` property return the value as user.
 
 ```csharp
 // Fetch the members in the current conversation
