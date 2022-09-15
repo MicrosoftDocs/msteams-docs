@@ -184,7 +184,7 @@ To view your app running in Outlook on Windows desktop:
 To view your app in Outlook on the web:
 
 1. Navigate to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
+1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
@@ -194,7 +194,7 @@ To view your app in Outlook on the web:
 To view your app running in Office on Windows desktop:
 
 1. Launch Office and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
+1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
