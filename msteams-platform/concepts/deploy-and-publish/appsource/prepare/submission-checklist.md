@@ -180,7 +180,7 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. The following table maps categories.
+During submission, you're asked to categorize your app. You can categorize your app based on the following categories:
 
 |Categories  |
 |--------------|
