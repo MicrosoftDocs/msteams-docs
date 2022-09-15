@@ -62,7 +62,7 @@ After you design your app based on participant roles in a meeting, you can ident
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Enable and configure your apps for meeting stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)

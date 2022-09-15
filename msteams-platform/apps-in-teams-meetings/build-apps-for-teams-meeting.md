@@ -191,12 +191,13 @@ The following table provides the response codes:
 |----------------|-----------------|--------------|----------------|
 |Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## See also
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+* [Enable and configure your apps for meeting stage](enable-and-configure-your-app-for-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
 * [Advanced meeting APIs](advanced-meeting-apis.md)

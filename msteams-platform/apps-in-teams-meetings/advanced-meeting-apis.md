@@ -921,5 +921,4 @@ The following table provides the response codes:
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+[Enable and configure your apps for meeting stage](enable-and-configure-your-app-for-meeting-stage.md)
