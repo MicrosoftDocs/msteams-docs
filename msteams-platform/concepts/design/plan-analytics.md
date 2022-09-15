@@ -124,11 +124,13 @@ Below are guidelines and pointers regarding what to look for, which events to ca
 
 You can classify Teams platform features into broadly two constructs:
 
-- **Hosted web canvas constructs**: These are visual canvas-oriented capabilities such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage and in-meeting dialogs. Conceptually, all of these are Teams-aware webpages embedded in Microsoft Teams and likely hosted in the cloud with the rest of your SaaS app that runs in the web browser. As mentioned above, the webpages will likely already have the instrumentation done for your core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code.
+- **Hosted web canvas constructs**: <!--These are visual canvas-oriented capabilities such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage and in-meeting dialogs. Conceptually, all of these are Teams-aware webpages embedded in Microsoft Teams and likely hosted in the cloud with the rest of your SaaS app that runs in the web browser. As mentioned above, the webpages will likely already have the instrumentation done for your core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code.-->
 
-- **Conversational constructs**: These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.
+- **Conversational constructs**: <!--These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.-->
 
 #### Hosted web canvas constructs
+
+These are visual canvas-oriented capabilities such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage and in-meeting dialogs. Conceptually, all of these are Teams-aware webpages embedded in Microsoft Teams and likely hosted in the cloud with the rest of your SaaS app that runs in the web browser. As mentioned above, the webpages will likely already have the instrumentation done for your core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code.
 
 What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages?
 
@@ -169,7 +171,9 @@ Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.m
 - 
  -->
 
-To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following examples:
+After you extract the Teams-specific information from the tab context, use it as shown in the following examples:
+
+<!--To illustrate how the wealth of useful Teams-specific information obtained from the tab context above can be used by you, consider the following examples:-->
 
 | Track Teams-specific information | Outcome |
 | --- | --- |
@@ -190,6 +194,8 @@ To illustrate how the wealth of useful Teams-specific information obtained from 
 -->
 
 #### Conversational constructs
+
+These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.
 
 A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. This information can be leveraged for useful insights about your users, enrich the bot's functionality and provide a more personalized experience such as:
 
