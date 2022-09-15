@@ -171,7 +171,7 @@ You can access Teams Toolkit under **Project**.
 
 ---
 
-After you have create your Teams Project, you can perform the following functions on Teams Toolkit for Visual Studio:
+After you have created your Teams Project, you can perform the following functions on Teams Toolkit for Visual Studio:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Teams toolkit operations from Project menu":::
 

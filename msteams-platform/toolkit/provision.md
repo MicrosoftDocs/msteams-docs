@@ -333,13 +333,13 @@ The following steps help you to provision cloud resources using Visual Studio:
 
 ### To provision cloud resources
 
-After you open your project in Visual Studio,
+After you open your project in Visual Studio:
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**
+1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Provision in cloud":::
 
-   **Provision** window appears.
+   The **Provision** window appears.
 
 1. Enter the following details to provision your resources.
 
@@ -347,6 +347,7 @@ After you open your project in Visual Studio,
 
    1. Select your **Subscription name** from the dropdown list.
    1. Select your **Resource group** from the dropdown list.
+   1. Select your **Region** from the dropdown list.
 
       > [!NOTE]
       > You can create new Resource group by selecting **New**.

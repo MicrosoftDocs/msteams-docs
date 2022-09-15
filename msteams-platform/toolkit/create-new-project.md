@@ -188,15 +188,15 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 
 ## Create a new Teams app
 
-The steps to create a new Teams app is similar for all types of app except SPFx, and notification bot. The following steps help you to create a new app:
+The steps to create a new Teams app is similar for all types of app except notification bot. The following steps help you to create a new tab app:
 
 1. Open Visual Studio.
-1. You can create new project by using one of the two options.
+1. You can create new project by using one of the following two options.
 
      :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="Create new project with code from get started":::
 
     1. Select **Create a new project** under **Get started** helps you to choose the project template with code scaffolding.
-    1. Select **Continue without Code** to create project without code scaffolding and select **File** > **New** > **Project** in Visual Studio
+    1. Select **Continue without Code** to create project without code scaffolding and select **File** > **New** > **Project** in Visual Studio.
 
         :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1.png" alt-text="Create new project from file menu":::
 
@@ -213,40 +213,37 @@ The steps to create a new Teams app is similar for all types of app except SPFx,
     1. Enter a suitable name for your project.
 
          > [!NOTE]
-         > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
+         > The project name you are entering is automatically filled in the **Solution name** also. If you want, you can change the solution name with no affect on project name.
 
     1. Select the folder path where you want to create the project workspace.
-    1. By default, **project name** is same as **Solution name**. If you want to change the **Solution name**, clear the **Place solution and project in the same directory** check box.
-    1. Select **Create**.
     1. Enter a different solution name, if you want.
     1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
     1. Select **Create**.
 
    **Create a new Teams Application** window appears.
 
-1. Select the Teams app for your project. In this tutorial, tab is selected to create new teams application.
-1. Select **Create**.
+1. In this tutorial, **Tab** is selected to create new teams application and select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3.png" alt-text="Select the teams app type":::
 
- > [!NOTE]
+   > [!NOTE]
    > You can select required type of Teams app for your project.
 
-   **Getting Started** with **Welcome to Teams Toolkit** window appears.
+   The **Getting Started** with **Welcome to Teams Toolkit** window appears.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the Getting Started teams toolkit":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="Select the Getting Started teams toolkit":::
 
 ### Directory Structure
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under Explorer.
 
-**Directory structure for basic Teams app.**
+* **Directory structure for basic Teams app**
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="Select the tab Solution Explorer teams toolkit":::
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="Select the tab Solution Explorer teams toolkit":::
 
-**Directory structure for scenario based Teams app.**
+* **Directory structure for scenario based Teams app**
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="Select the Solution Explorer teams toolkit":::
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="Select the Solution Explorer teams toolkit":::
 
 ## Teams app templates in Teams Toolkit for Visual Studio
 
@@ -260,7 +257,8 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |Message Extension     |Message Extension app implements simple features like create adaptive card, search Nugget packages, unfurling links for "dev.botframework.com" domain.         |
 
 > [!NOTE]
->After the project is created, Teams Toolkit automatically opens **Get started** window. You can now see the instructions in **Get started** window and check out the different features in Teams Toolkit.
+> After the project is created, Teams Toolkit automatically opens **Get started** window. You can now see the instructions in **Get started** window and check out the different features in Teams Toolkit.
+
 ::: zone-end
 
 ## See also

@@ -74,14 +74,14 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
 
-   After the deploy process is triggered and completed, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+   After the deploy process is completed, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
-After your project is successfully deployed to Azure, there are different ways to preview your app in Teams Toolkit:
+After your project is successfully deployed to Azure, there are different ways to preview your app in Teams.
 
-1. Select **Project** > **Teams Toolkit** > **Zip App Package** to generate Teams app package.
-1. Select option **For Local** or **For Azure** and upload to Teams client.
+1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
+1. Select option **For Local** or **For Azure** to generate Teams app package and upload to Teams.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="Generate teams app package":::
 
@@ -90,6 +90,10 @@ After your project is successfully deployed to Azure, there are different ways t
 1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams2.png" alt-text="Preview Teams app in teams client":::
+
+   Now your app is sideloaded into Teams.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Sideload Teams app in teams client":::
 
 The other way to preview your app:
 
@@ -100,6 +104,10 @@ The other way to preview your app:
 
    > [!NOTE]
    > The same menu options are available in Project menu.
+
+   Now your app is sideloaded into Teams.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Sideload Teams app in teams client":::
 
 ::: zone-end
 
