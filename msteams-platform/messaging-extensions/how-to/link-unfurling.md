@@ -24,7 +24,7 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 See the following video to learn more about link unfurling:
 <br>
- [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
