@@ -23,15 +23,15 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select :::image type="content" source="../assets/icons/add-icon.png" Border = "false" alt-text="This screenshot shows the add button on the meeting stage to add apps.":::. The app gallery appears.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="This screenshot shows the pre-meeting app experience in Teams meeting.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="This screenshot shows the pre-meeting app experience in Teams meeting.":::
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
 
-# [Desktop](#tab/desktop)
+   # [Desktop](#tab/desktop)
 
    :::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
 
-# [Mobile](#tab/mobile)
+   # [Mobile](#tab/mobile)
 
    :::image type="content" source="../assets/images/mobile-tab.png" alt-text="The screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
 
