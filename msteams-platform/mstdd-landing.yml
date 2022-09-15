@@ -57,7 +57,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Universal Actions for search based messaging extensions
-        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
+        url: messaging-extensions/how-to/search-commands/define-search-command.md#universal-actions-for-search-based-messaging-extensions
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-overview-visual-studio.md
       - text: Collaboration controls [Developer preview]
