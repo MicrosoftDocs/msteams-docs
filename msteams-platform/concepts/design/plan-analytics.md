@@ -38,14 +38,13 @@ Plan analytics for the Teams app you’re building the same way as you do for yo
 
 //Planned flow: When to plan > Generate insights > Instrumenting app (what) to generate insight > Act on insight > How to grow app > How to monetize, monitor, plan for next update //
 
-## When should you start the analytics journey for your Teams app?
+## Plan early for analytics
 
 <!--
 Teams provides you specific information that you can use to not just analyze who’s using your app, where users are using your app in Teams, get a robust idea of the user’s profile – all of which can be used to tailor the experience for the user and monitor your app’s performance and return on your investment.
 -->
 
 You should plan analytics for your Teams app right at the dev design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events and context from the SDK methods from scratch.
-
 
 At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that instrumentation markers get triggered in time to capture:
 
@@ -69,11 +68,9 @@ analytics should never be an afterthought.-->
 <!--
 At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational so that you don’t miss tracking instrumentation markers getting fired, Teams-specific events and the relevant, contextual information contained in these events, [some of which are only triggered once for you to act upon and capture in your SaaS backend for example, Azure AD user ID for a Teams user is only notified via a specific bot event at the time of installation of the bot app for the user]. This user ID is mandatory to be captured and mapped to the user’s real-world profile identify such as email address to be able to then send proactive notifications to the user later via the bot.-->
 
-### Once you’ve implemented analytics for your Teams app, what insights can you generate?
+### Aggregate and user-specific insights
 
-Besides the obvious metrics everyone cares about in the SaaS world such as daily/weekly/monthly active users, time spent in your app etc., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
-
-// How is data for aggregate metrics obtained //
+Besides the generic reports for daily, weekly, and monthly active users, time spent in your app etc., implementing analytics will allow you to get aggregate and user-specific insights:
 
 - **Aggregate metrics**
   - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
@@ -88,6 +85,7 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
   - Which organizations do the users installing your app in the last 14 days belong to?
   - Which organization has seen the maximum number of trial sign-ups for your app in the last seven days?
   - What types of meetings (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring or Scheduled) is your app used in?
+
 - **User-specific metrics**
   - Which users are yet to experience channel tabs capability you’ve implemented in your app in the last app update?
   - Which users haven't completed the onboarding inside the personal app?
@@ -101,7 +99,6 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
   - Has a specific user used your app in a Teams meeting?
 
 // link user-specific metrics from user ID //
-
 
 ## Instrumenting your app for analytics
 
