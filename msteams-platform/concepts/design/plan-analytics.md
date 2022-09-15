@@ -31,12 +31,12 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 
 Teams usage reports can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It is embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the
-[platform capabilities](../../overview-explore.md) used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are essentially means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the
+[platform capabilities](../../overview-explore.md) used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are a means to surface web-based experiences inside Teams.
 
-This is why you must plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
+Plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
 
-//Planned flow: When to plan > Generate insights > Instrumenting app (what) to generate insight > Act on insight > How to grow app > How to monitize, monitor, plan for next update //
+//Planned flow: When to plan > Generate insights > Instrumenting app (what) to generate insight > Act on insight > How to grow app > How to monetize, monitor, plan for next update //
 
 ## When should you start the analytics journey for your Teams app?
 
@@ -44,15 +44,30 @@ This is why you must plan analytics for the Teams app you’re building the same
 Teams provides you specific information that you can use to not just analyze who’s using your app, where users are using your app in Teams, get a robust idea of the user’s profile – all of which can be used to tailor the experience for the user and monitor your app’s performance and return on your investment.
 -->
 
-You should plan analytics for your Teams app right at the dev design and solution architecture stage. At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that instrumentation markers get fired
+You should plan analytics for your Teams app right at the dev design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events and context from the SDK methods from scratch.
 
-Whether it is examining which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps etc. in Teams or how to extend existing data instrumentation practices to tab experiences you’re specifically building from scratch for Teams, analytics should never be an afterthought.
 
-For Teams-specific capabilities such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events and context from the SDK methods from scratch.
+At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that instrumentation markers get triggered in time to capture:
+
+- Teams-specific events
+- Event-specific contextual information
+- Events that can be acted on and captured in your SaaS backend only once at the time they are triggered
+
+> [!NOTE]
+> An example of an information that can be captured only once is the Azure AD user ID for a Teams user. It is notified through a bot event only at the installation of the the bot app for that user. This user ID is vital to mapping the user to a real-world profile identity, such as email address, which you can use to send proactive notifications to the user later.
+
+Additionally, planning analytics beforehand also enables you to examine your existing data instrumentation practices. It helps you determine if such existing practices would be useful for Teams canvas constructs such as tabs, task modules, meeting apps etc. You can also check the possibility of extending your existing practices to Teams tab experiences you're building.
+
+<!--Whether it is examining which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps etc. in Teams
+
+ or 
+
+how to extend existing data instrumentation practices to tab experiences you’re building from scratch for Teams, 
+
+analytics should never be an afterthought.-->
 
 <!--
-At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational so that you don’t miss tracking instrumentation markers getting fired,-->
-Teams-specific events and the relevant, contextual information contained in these events, some of which are only triggered once for you to act upon and capture in your SaaS backend for example, Azure AD user ID for a Teams user is only notified via a specific bot event at the time of installation of the bot app for the user. This user ID is mandatory to be captured and mapped to the user’s real-world profile identify such as email address to be able to then send proactive notifications to the user later via the bot.
+At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational so that you don’t miss tracking instrumentation markers getting fired, Teams-specific events and the relevant, contextual information contained in these events, [some of which are only triggered once for you to act upon and capture in your SaaS backend for example, Azure AD user ID for a Teams user is only notified via a specific bot event at the time of installation of the bot app for the user]. This user ID is mandatory to be captured and mapped to the user’s real-world profile identify such as email address to be able to then send proactive notifications to the user later via the bot.-->
 
 ### Once you’ve implemented analytics for your Teams app, what insights can you generate?
 
