@@ -56,8 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Universal Actions for search based messaging extensions
-        url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-messaging-extensions.md
+      - text: Universal Actions for search based message extensions
+        url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-overview-visual-studio.md
       - text: Collaboration controls [Developer preview]

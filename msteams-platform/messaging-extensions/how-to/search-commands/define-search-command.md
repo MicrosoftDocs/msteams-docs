@@ -18,7 +18,7 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## Select search command invoke locations
@@ -32,7 +32,7 @@ The search command is invoked from any one or both of the following locations:
 
 The following image displays the invoke locations of the search command:
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Search command invoke locations":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Screenshot shows the invoke locations of a search command in a Teams channel.":::
 
 ## Add the search command to your app manifest
 
@@ -49,7 +49,7 @@ The prerequisite to create a search command is that you must already have create
 1. After importing an app package, select **Message extensions** under **App features**.
 1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name to the new bot, and then select **Create**.
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Screenshot shows the options to configure a bot for an app in Teams Developer Portal.":::
 
 1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list, or select **Enter a bot ID** if you have a bot ID created already.
 
@@ -58,19 +58,19 @@ The prerequisite to create a search command is that you must already have create
 1. Select **Add a command** in the **Command** section to include the commands, which decide the behavior of message extension.
 The following image displays command addition for message extension:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="The screenshot shows how to add a command to define the behavior of the message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot shows how to add a command in Teams Developer Portal to define the behavior of the message extension.":::
 
 1. Select **Search** and enter **Command ID**, **Command title**, and **Command description**.
 
 1. Enter all the parameters and select the type of input from the dropdown list.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="The screenshot shows how to add a parameter to define your command for message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shows how to add a parameter to define your command in Teams Developer Portal for a message extension.":::
 
 1. Select **Add a domain** under **Preview links**.
 
 1. Enter valid domain and then select **Add**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurlings.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurling.":::
 
 1. Select **Save**.
 
@@ -80,7 +80,7 @@ The following image displays command addition for message extension:
 
 1. Select ellipse under command section and then select **Edit parameter**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to edit parameters for your message extension.":::
 
 1. Select **Add a Parameters** and enter all the parameters.
 
