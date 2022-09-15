@@ -67,9 +67,9 @@ Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-sc
 
 The scope defines who can access the apps.
 
-* `groupchat`: Makes the app available in group scope and enables app to be added in a call or meeting (scheduled private meeting/ instant meetings).
+* `groupchat` scope makes your app available in group scope and enables app to be added in a call or meeting (scheduled private meeting/ instant meetings).
 
-* `team`: Makes the app available in team scope and enables app to be eligible for adding in team or channel or scheduled channel meeting.
+* `team` scope makes your app available in team scope and enables your app to be added in team or channel or scheduled channel meeting.
 
 #### Context
 
