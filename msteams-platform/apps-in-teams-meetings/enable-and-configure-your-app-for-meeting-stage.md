@@ -1,5 +1,5 @@
 ---
-title: Enable and configure your apps for meeting stage
+title: Build tabs for meeting
 author: surbhigupta
 description: Learn how to enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features and more.
 ms.topic: conceptual
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 04/07/2022
 ---
 
-# Enable and configure apps for meetings
+# Build tabs for meeting
 
 Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest.
 
@@ -53,11 +53,15 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
 
+   :::image type="content" source="../assets/images/side-panel-view.png" alt-text="This screenshot shows side panel view with the list of apps.":::
+
 ### Meeting stage view
 
 1. Once a tab is added to the meeting side panel, you can now choose to opt into global app sharing  
 
 1. This will result in rendering tab on the stage for every participant in the meeting.
+
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting.":::
 
 ### App manifest settings for Tabs in meeting
 

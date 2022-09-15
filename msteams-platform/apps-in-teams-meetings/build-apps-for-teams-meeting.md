@@ -197,7 +197,7 @@ The following table provides the response codes:
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Enable and configure your apps for meeting stage](enable-and-configure-your-app-for-meeting-stage.md)
+* [Build tabs for meeting](enable-and-configure-your-app-for-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
 * [Advanced meeting APIs](advanced-meeting-apis.md)
