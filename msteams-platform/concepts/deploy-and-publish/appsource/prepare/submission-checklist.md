@@ -202,7 +202,7 @@ During submission, you're asked to categorize your app. The following table maps
 | Data Visualization and BI |
 | Training & tutorial |
 | News & weather |
-| customer support |
+| Customer support |
 | Reference |
 | Sales & marketing |
 | Look & feel |
