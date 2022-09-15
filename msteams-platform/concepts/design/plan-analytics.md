@@ -154,7 +154,7 @@ Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.m
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure Active Directory (Azure AD), a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU).
 - The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (frameContext).
-- Host client type where tab is loaded. Possible values are android, ios, web, desktop, surfaceHub etc. (hostClientType) – You can slice your analytics data.
+- Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (hostClientType). You can slice your analytics data.
 - Locale awareness for the user to indicate language for example, en-us, fr-fr, ja-jp etc. (app locale).
 - User Principal Name or login hint (user name) of the current user in the current tenant (usually user’s email address).
 - Team name and channel name Team name and channel name is added (teamName, channelName).
@@ -195,9 +195,14 @@ After you extract the Teams-specific information from the tab context, use it as
 
 #### Conversational constructs
 
-These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. Use this information to get user information to enrich user experience:
 
-A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. This information can be leveraged for useful insights about your users, enrich the bot's functionality and provide a more personalized experience such as:
+
+
+<!--
+These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). These are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.-->
+<!--
+A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. This information can be leveraged for useful insights about your users, enrich the bot's functionality and provide a more personalized experience such as:-->
 
 - Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as name and Azure AD user/object ID. Your bot can also retrieve the details of a particular user using their Teams user ID, UPN or Azure AD user/object id.
 - Using the user’s Azure AD user/object ID, you can find the user’s first name, surname, email address, tenant ID and user’s role in the team – all of which can be leveraged in a similar fashion as described for hosted web canvas constructs above.
