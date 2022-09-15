@@ -54,8 +54,9 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
    > [!NOTE]
    >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
-   > * Adding an app to channel meeting installs the app for whole team. If the app supports bot, that will also be added at team level. You can configure tab at a per channel meeting level.
-   > * Tabs added to the channel are not brought into the channel meeting.
+   > * Install apps for the whole team by adding an app to channel meeting.
+   > * Add bots at team level if apps support.
+   > * Configure tabs at channel meeting level. Tabs that are added to the channel are not brought into the channel meeting.
 
 # [Desktop](#tab/desktop)
 
