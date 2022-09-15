@@ -1,13 +1,13 @@
 ---
-title: Plan and build analytics for your Teams app
+title: Plan analytics for your Teams app
 author: heath-hamilton
-description: Plan and build analytics for your Teams app.
+description: Learn to plan and build analytics for your Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Plan and build analytics for your Teams app
+# Plan analytics for your Teams app
 
 As a developer you build an app for millions of Microsoft Teams users to achieve specific business or customer goals. For this purpose, you distribute it using one or more of the many distribution options available to you. After the app is published, you'll want to measure how your app is performing in the real-world once published.
 
@@ -134,7 +134,7 @@ What comes in handy for your analytics needs is the fact that tabs are “Teams-
 
 Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.md), since you always add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab’s content or configuration pages, your page gains access to Teams-specific information or [context](../../tabs/how-to/access-teams-context.md), which can be leveraged for useful insights about your users such as:
 
-
+<!--
 | Teams-specific information | User insights|
 | --- | --- |
 | Microsoft 365 tenant ID | Tenant domain for the organization and the organization’s name |
@@ -147,10 +147,8 @@ Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.m
 | Unique ID for the current app session inside a tab used for correlating telemetry data (appSessionId) | -- |
 | Meeting ID is used by a tab running in the meeting context | response payload contains the meetingId |
 |  Microsoft Azure Active Directory (Azure AD) ID of the current user | -- |
+-->
 
-
-
-<!--
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure Active Directory (Azure AD), a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU).
 - The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (frameContext).
@@ -162,7 +160,6 @@ Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.m
 - Meeting ID is used by a tab running in the meeting context and is added for the response payload (meetingId).
 - Microsoft Azure Active Directory (Azure AD) ID of the current user.
 
--->
 <!-- replace with cross-functional chart infogfx to show links between Teams-specific information and type of analytics 
 
 **Information > Analytics > Outcome**
