@@ -795,6 +795,10 @@
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
         "redirect_url": "/msteams-platform/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/accounts.md",
+        "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
       }
     ]
 }
