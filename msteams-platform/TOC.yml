@@ -381,11 +381,11 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Enable and configure apps for Teams meetings
     items:
-    - name: Build tabs for meeting stage
+    - name: Build tabs for meeting
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage.md
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting.md
-    - name: Build in-meeting notification for meeting stage
+    - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting-stage.md
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md

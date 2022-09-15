@@ -16,10 +16,6 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 An application developer must be familiar with the following product concepts to create custom meeting experiences in Microsoft Teams with apps.
 
-## Meeting lifecycle
-
-Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
-
 ## Supported meeting types in Teams
 
 Teams supports access to apps during meeting for the following meeting types:
@@ -35,6 +31,10 @@ Teams supports access to apps during meeting for the following meeting types:
 > Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [Meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
+
+## Meeting lifecycle
+
+Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
 ## User roles in Teams meeting
 
