@@ -521,4 +521,4 @@ Floating navigation and controls off screen and requiring a scroll to find can b
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Configure your app for meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+> [Configure your app for meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage.md)

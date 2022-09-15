@@ -791,6 +791,10 @@
       {
         "source_path": "msteams-platform/resources/create-messaging-extension-using-appstudio.md",
         "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
+        "redirect_url": "/msteams-platform/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage"
       }
     ]
 }
