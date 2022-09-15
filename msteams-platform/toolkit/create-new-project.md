@@ -200,13 +200,13 @@ The steps to create a new Teams app is similar for all types of app except notif
 
         :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1.png" alt-text="Create new project from file menu":::
 
-   **The Create a new project** window appears.
+   The **Create a new project** window appears.
 
       :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/visual-studio.png" alt-text="Search and choose microsoft teams app":::
 
 1. Enter teams in the search box and from the list, select **Microsoft Teams App** and then select **Next**.
 
-   **Configure your new project** window appears.
+   The **Configure your new project** window appears.
 
      :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name_1.png" alt-text="Name your application":::
 
