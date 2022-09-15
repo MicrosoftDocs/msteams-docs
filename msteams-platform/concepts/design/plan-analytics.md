@@ -195,21 +195,24 @@ After you extract the Teams-specific information from the tab context, use it as
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. Use this information to get user information to enrich user experience:
-
-
-
 <!--
 These are conversation or chat-oriented capabilities such as bots, message extensions, cards and task modules (displaying an adaptive card). These are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch.-->
 <!--
 A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed. This information can be leveraged for useful insights about your users, enrich the bot's functionality and provide a more personalized experience such as:-->
 
-- Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as name and Azure AD user/object ID. Your bot can also retrieve the details of a particular user using their Teams user ID, UPN or Azure AD user/object id.
-- Using the user’s Azure AD user/object ID, you can find the user’s first name, surname, email address, tenant ID and user’s role in the team – all of which can be leveraged in a similar fashion as described for hosted web canvas constructs above.
-- When installed in a team, your bot can query for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team which returns channel ids and names. These parameters can be leveraged in a similar fashion as described for hosted web canvas constructs above.
-- Using the Meeting Details API, your bot enables your app to get a meeting's or call’s static metadata such as type of meeting such as GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown; conversation type, organizer tenant ID etc.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed.
 
-Each activity sent by Teams to your bot will contain the turnContext object from which all these relevant fields can be retrieved.
+Use your bot to get user information for enriching user experience:
+
+- List of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as name and Azure AD user/object ID.
+- Details of a particular user using their Teams user ID, UPN or Azure AD user or object ID.
+- A user’s first name, surname, email address, tenant ID and user’s role in the team using the user’s Azure AD user/object ID, you can find the user’s first name, surname, email address, tenant ID and user’s role in the team.
+- Metadata about that team where the bot it's installed. It includes:
+  - Azure AD group ID and the team’s name.
+  - List of channels in the team that returns channel IDs and names.
+- Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting such as GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown; conversation type, organizer tenant ID etc.
+
+Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. All of which can be leveraged in a similar fashion as described for hosted web canvas constructs.
 
 Since message extensions are based on the bot channel, most of the above apply to message extensions as well.
 
