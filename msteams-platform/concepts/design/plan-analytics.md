@@ -130,13 +130,9 @@ You can classify Teams platform features into broadly two constructs:
 
 #### Hosted web canvas constructs
 
-Visual canvas-oriented capabilities such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage and in-meeting dialogs are examples of hosted web canvas constructs.
+Visual canvas-oriented capabilities such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage and in-meeting dialogs are examples of hosted web canvas constructs. All of these are Teams-aware webpages embedded in Microsoft Teams and likely hosted in the cloud with the rest of your SaaS app that runs in the web browser.
 
-All of these are Teams-aware webpages embedded in Microsoft Teams and likely hosted in the cloud with the rest of your SaaS app that runs in the web browser.
-
-The webpages often have the instrumentation done for your core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code.
-
-What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages.
+The webpages often have the instrumentation done for your core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code. What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages.
 
 Following the [prerequisite to build a tab](../../tabs/how-to/tab-requirements.md), since you always add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab’s content or configuration pages, your page gains access to Teams-specific information or [context](../../tabs/how-to/access-teams-context.md), which can be leveraged for useful insights about your users such as:
 
