@@ -309,7 +309,7 @@ You can preview values in app manifest in two ways:
 ### Preview manifest file
 
 > [!NOTE]
-> To preview the manifest file, you need to sideload it for local or deploy for Azure.
+> To preview the manifest file, you need to sideload for local or deploy for Azure.
 
 You can preview the manifest file by performing the following steps:
 
