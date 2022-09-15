@@ -374,7 +374,7 @@ The following are the guiding principles for defining requirements and app appro
 
 1. The brand of Microsoft as a diverse and inclusive company shouldn't be tarnished.
 1. The video filters feature should be perceived as diverse and inclusive.
-1. The filter app developer should be asked to provide filters only within their area of expertise
+1. The filter app developer should provide filters only within their area of expertise.
 1. A filter shouldn't allow dysmorphia. For example, morphing the face, eyes, and nose, to skinnier, fatter, or distorted.
 1. A filter shouldn't allow skin smoothing.
 1. A filter shouldn't be offensive or contain objectionable content.
@@ -389,7 +389,7 @@ The filter app must cater to at least one type of Category 1 diversity.
 
    1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to white skin tones, it should also cater to  darker skin tones.
 
-   1. The number of  filters in the diversity category should cater to at least be three filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, one black and one middle skin tone in the color spectrum.
+   1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, black and middle skin tone in the color spectrum.
 
 Here are some examples of category 1 diversity:
 
@@ -403,7 +403,7 @@ A filter app can cater to at least one type of Category 2 diversity.
 
    1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
 
-   1. The number of  filters in the diversity category should cater to at least be three filters across the extreme and middle ends of the spectrum.
+   1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum.
 
 Here are some examples of category 2 diversity:
 
@@ -415,7 +415,7 @@ Here are some examples of category 2 diversity:
 
 # [Category 3](#tab/category-3)
 
-A filter app must avoid a combination of filters related to diversities in Category 3. For example, The filter app can't have filters with the words we, love, and democrats, which is indirectly related to political beliefs.
+A filter app must avoid a combination of filters related to diversities in Category 3.
 
 Here are some examples of category 3 diversity:
 

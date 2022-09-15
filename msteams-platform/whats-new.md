@@ -260,7 +260,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 08/24/2022 | Add video filters for your teams meetings | Build apps for Teams meetings and calls > [Video filters for meeting apps](apps-in-teams-meetings/video-filters-for-meeting-apps.md)|
+| 09/15/2022 | Add video filters for your teams meetings | Build apps for Teams meetings and calls > [Video filters for meeting apps](apps-in-teams-meetings/video-filters-for-meeting-apps.md)|
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
@@ -284,7 +284,6 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 ## Get latest updates
 
 You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
-
 
 ### To configure RSS feed
 
