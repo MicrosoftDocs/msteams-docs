@@ -325,6 +325,9 @@ There are two other ways to upload Zip App Packages before you can preview manif
 
 * You can also upload zip app package from Solution Explorer, if you right-click on **MyTeamsApp1** and then select **Teams Toolkit** > **Zip App Package** > **For Local** or **For Azure**.
 
+  > [!NOTE]
+  > In this scenario the project name is **MyTeamsApp1**.
+
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png":::
 
 Teams Toolkit updates the manifest file, to preview manifest file content you can follow the steps below:
@@ -332,9 +335,6 @@ Teams Toolkit updates the manifest file, to preview manifest file content you ca
 * Right-click on **manifest.template.json** under **appPackage** folder, select **Preview Manifest File** > **For Local** or **For Azure**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Preview context menu" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png":::
-
-    > [!NOTE]
-    >In this scenario the project name is **MyTeamsApp1**.
 
 ### Sync local changes to Developer Portal
 
