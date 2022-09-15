@@ -243,3 +243,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [Define search message extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Create a message extension](../build-your-first-app/build-messaging-extension.md)
+* [Universal Actions for search based messaging extensions](how-to/search-commands/universal-actions-for-search-based-messaging-extensions.md)

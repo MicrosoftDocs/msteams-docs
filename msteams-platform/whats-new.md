@@ -31,7 +31,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 09/15/2022 | Universal Actions for search based messaging extensions | Build Messaging Extensions > Search commands > Define search commands > [Universal Actions for search based messaging extensions](messaging-extensions/how-to/search-commands/define-search-command.md#universal-actions-for-search-based-messaging-extensions) |
+| 09/15/2022 | Adaptive Cards in search based messaging extensions now support Universal Actions. | Build Messaging Extensions > Search commands > Define search commands > [Universal Actions for search based messaging extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-messaging-extensions.md) |
 | 09/06/2022 | `selectMedia` API for capturing videos using camera | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
