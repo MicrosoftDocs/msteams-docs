@@ -18,7 +18,7 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## Select search command invoke locations
@@ -28,7 +28,7 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning in the command box.
 
-  When search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+  When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
 The following image displays the invoke locations of the search command:
 
@@ -55,7 +55,7 @@ The prerequisite to create a search command is that you must already have create
 
 1. Select the scope of the messaging extension and select **Save**.
 
-1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
+1. Select **Add a command** in the **Command** section to include the commands, which decide the behavior of message extension.
 The following image displays command addition for message extension:
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="The screenshot shows how to add a command to define the behavior of the message extension.":::
@@ -104,11 +104,11 @@ You must add the details of the search parameter that defines the text visible t
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
 | `parameters` | This property defines a static list of parameters for the command. | No | 1.0 |
-| `parameter.name` | This property describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
+| `parameter.name` | This property describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. Currently the value is not supported | No | 1.5 |
+| `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
 
 #### Example
 
@@ -144,13 +144,10 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Universal Actions for search based messaging extensions
 
->[!NOTE]
-> Universal Actions for search based messaging extensions is currently available only in [Developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
-
 Adaptive Cards in search based messaging extensions now support Universal Actions. To enable Universal Actions for search based messaging extensions, the app must conform to the [Schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
 
-1. The app must have a conversation bot defined in their app manifest.
-1. If you already have a conversational bot, the bot must be the same that is used in your messaging extension.
+1. The app must have a conversation bot defined in the app manifest.
+1. If you already have a conversational bot, you must use the same bot that is used in your messaging extension.
 1. If the card is sent in a group, the app must specify `team` or `groupchat` scope on their bot in the manifest.
 
 The following is an example of a JSON schema with `team` and `groupchat`values:
@@ -255,7 +252,7 @@ Just-in-time (JIT) allows you to install a card or messaging extension for multi
 When a user selects a card and sends it in a group chat or channel, a **JIT** installation prompt appears. After the user selects the **send** option, the app is added for all the users in the chat or channel in the background.
 
 > [!NOTE]
-> For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt is not shown to the users.
+> For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt isn't shown to the users.
 
 The following is an example of a dynamic ME and JIT install user flow:
 
