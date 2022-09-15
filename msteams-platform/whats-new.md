@@ -23,9 +23,9 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
         Microsoft Teams platform features that are available to all app developers.
 
-        **2022 October**
+        **2022 September**
 
-        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***September 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 
    :::column-end:::
 :::row-end:::
@@ -62,9 +62,9 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
         Microsoft Teams platform features that are available to all app developers.
 
-        **2022 October**
+        **2022 September**
 
-        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***September 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 
    :::column-end:::
 :::row-end:::
@@ -113,9 +113,9 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
         Microsoft Teams platform features that are available to all app developers.
 
-        **2022 October**
+        **2022 September**
 
-        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***September 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 
    :::column-end:::
 :::row-end:::
