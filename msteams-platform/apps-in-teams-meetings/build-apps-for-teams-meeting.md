@@ -185,6 +185,13 @@ The following table provides the response codes:
 | **500** | Internal error. |
 | **1000** | App doesn't have permissions to allow share to stage.|
 
+## Code sample
+
+|Sample name | Description | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+
 ## See also
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
