@@ -15,7 +15,7 @@ Adaptive Cards in search based messaging extensions now support Universal Action
 1. If you already have a conversational bot, you must use the same bot that is used in your messaging extension.
 1. If the card is sent in a group, the app must specify `team` or `groupchat` scope on their bot in the manifest.
 
-The following is an example of a JSON schema with `team` and `groupchat`values:
+Example of a JSON schema with `team` and `groupchat`values:
 
 ```json
 {
@@ -47,7 +47,7 @@ The following is an example of a JSON schema with `team` and `groupchat`values:
 
 Enable automatic refresh for Adaptive Cards in search based messaging extensions to ensure users always see the latest information. To enable, define `userIds` array either in  `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property. For more information, see [Work with Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
 
-The following is an example of `userIds` array in the `refresh` property:
+Example of `userIds` array in the `refresh` property:
 
 ```json
     {
@@ -82,7 +82,7 @@ The following is an example of `userIds` array in the `refresh` property:
 > [!NOTE]
 > Automatic refresh is enabled for all users in the group chat or channel with *less than or equal to* 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
 
-The following is an example of `Action.Execute` in the `refresh` property:
+Example of `Action.Execute` in the `refresh` property:
 
 ```json
     {
@@ -119,7 +119,7 @@ When a user selects a card and sends it in a group chat or channel, a **JIT** in
 > [!NOTE]
 > For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt isn't shown to the users.
 
-The following is an example of a dynamic ME and JIT install user flow:
+Example of a dynamic ME and JIT install user flow:
 
   :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="Dynamic ME JIT flow":::
 
