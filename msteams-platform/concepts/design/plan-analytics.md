@@ -102,7 +102,9 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 
 ## Instrumenting your app for analytics
 
-You must already know that instrumenting your code with analytics markers (also known as telemetry markers) are standard web application development practice. Data instrumentation in your code is critical for long-term success since without robust telemetry instrumentation you'll be unable to measure both aggregate as well as user-specific metrics required to base product, growth, marketing and business decision upon.
+Instrumenting your code with analytics markers (also known as telemetry markers) are standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics, which is required to determine product, growth, marketing, and business decisions.
+
+<!--You must already know that instrumenting your code with analytics markers (also known as telemetry markers) are standard web application development practice. Data instrumentation in your code is critical for long-term success since without robust telemetry instrumentation you'll be unable to measure both aggregate as well as user-specific metrics required to base product, growth, marketing and business decision upon.-->
 
 <!-- Infogfx and links to relevant sections -->
 
@@ -114,9 +116,17 @@ Cross-refer: Plan to monetize your app; Monetize your app, Plan your app, Map us
 
 There are broadly two types of data instrumentation relevant for your Teams app:
 
-- **Data instrumentation for your core SaaS product or app**: This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.
+<!--
+- **Data instrumentation for your core SaaS product or app**: This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.-->
 
-- **Data instrumentation in your app specific to Teams**: This is the instrumentation that you require to do additionally in your SaaS app because it's now surfacing inside of the Teams client, you may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling etc. This is what is covered in more detail in the rest of this document.
+- **Data instrumentation for your core SaaS product or app**: This is required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.
+
+<!--
+- **Data instrumentation in your app specific to Teams**: This is the instrumentation that you require to do additionally in your SaaS app because it's now surfacing inside of the Teams client, you may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling etc. This is what is covered in more detail in the rest of this document.-->
+
+- **Data instrumentation in your app specific to Teams**: This is required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities, such as bots, message extensions etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling etc.
+
+  This is what is covered in more detail in the rest of this document.
 
 ### Data instrumentation in your app specific to Teams
 
