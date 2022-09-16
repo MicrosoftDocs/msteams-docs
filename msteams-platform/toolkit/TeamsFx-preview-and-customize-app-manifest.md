@@ -21,7 +21,7 @@ The Teams app manifest describes how your app integrates into the Microsoft Team
 
 * [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
 * [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
-* [Sync local changes to Dev Portal](#sync-local-changes-to-dev-portal)
+* [Sync local changes to Developer Portal](#sync-local-changes-to-developer-portal)
 * [Customize your Teams app manifest](#customize-your-teams-app-manifest)
 * [Validate manifest](#validate-manifest)
 
@@ -325,7 +325,7 @@ There are two other ways to upload zip app package before you can preview manife
   > [!NOTE]
   > In this scenario the project name is **MyTeamsApp1**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png":::
 
 Teams Toolkit generates the zip app package, and to preview manifest file content you can follow the step below:
 
