@@ -15,7 +15,7 @@ The Teams app manifest describes how your app integrates into the Microsoft Team
 * [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
 * [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
 * [Sync local changes to Dev Portal](#sync-local-changes-to-dev-portal)
-* [Customize Teams app manifest](#customize-teams-app-manifest)
+* [Customize your Teams app manifest](#customize-your-teams-app-manifest)
 * [Validate manifest](#validate-manifest)
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
@@ -183,7 +183,7 @@ If the manifest file is outdated due to configuration file change or template ch
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-## Customize Teams app manifest
+## Customize your Teams app manifest
 
 Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
