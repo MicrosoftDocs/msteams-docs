@@ -388,13 +388,13 @@ You can configure an app to allow users to download files from the webview to th
 
 To enable downloading a file from an app in Teams mobile client. Follow the instructions below:
 
-* Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as in [update manifest](#update-manifest).
+* Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
 
 * Use the following format and add the HMTL download attribute to the webpage:
 
-```html
-<a href="path_to_file" download="download">Download</a>
-```
+    ```html
+    <a href="path_to_file" download="download">Download</a>
+    ```
 
 ## See also
 
