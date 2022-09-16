@@ -11,13 +11,13 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Microsoft Teams app locally
 
-Microsoft Teams Toolkit helps you to debug and preview your Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging. You need to set up Teams Toolkit before you debug your app.
+Teams Toolkit helps you to debug and preview your Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code"
 
 ## Debug your Microsoft Teams app locally for Visual Studio Code
 
-Microsoft Teams Toolkit helps you to debug and preview your Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging. You need to set up Teams Toolkit before you debug your app.
+Teams Toolkit in Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
 
 ## Set up your Teams Toolkit for debugging
 
@@ -148,11 +148,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a Edge or Ch
 
 ## Debug your Microsoft Teams app locally using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit automatically starts app services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client.
-
-## Debug your app locally
-
-You can debug your app locally in Visual Studio using Teams Toolkit by performing:
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. You can debug your app locally in Visual Studio using Teams Toolkit by performing:
 
 ### Set up ngrok (Only for Bot and Message Extension app)
 
