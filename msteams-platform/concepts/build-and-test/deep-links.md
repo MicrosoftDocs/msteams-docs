@@ -496,7 +496,7 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
 The query parameters are:
 
 * `deepLinkId`: Any identifier used for telemetry correlation.
-* `fqdn`: This is needed in the Teams deep link service for a tenant or account authentication. When the meeting is scheduled with Teams for Life, the `fqdn` is: `teams.live.com`. When the meeting is scheduled for Teams for Business, the `fqdn` will be `teams.microsoft.com` or `teams.microsoft.us`.
+* `fqdn`: `fqdn` is used to support scenarios where a specific app share happens in a particular environment. It is necessary to ensure the switch to an appropriate environment happens before sharing on stage. The possible values are Teams.live.com for Teams for Life, teams.microsoft.com, or teams.microsoft.us.
 
 To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
