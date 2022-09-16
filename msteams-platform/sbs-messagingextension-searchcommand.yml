@@ -353,7 +353,7 @@ items:
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
-         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with you're `WebAppDomain` name.
+         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
         ![Manifest](~/assets/images/Teams-Messaging-Extensions-Search/manifest.png)
