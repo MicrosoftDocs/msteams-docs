@@ -1,13 +1,7 @@
 ### YamlMime:Tutorial
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
-title: Azure Active Directory SSO for tabs and message extension
-metadata:
-  title: Azure AD SSO for tabs and message extension
-
 title: SSO for tabs and message extension
 metadata:
   title: SSO for tabs and message extension
- main
   description: With this learning module, learn how to set up Azure Active Directory Single sign-on (Azure AD SSO) for tabs.
   audience: Developer
   level: Beginner
@@ -25,7 +19,7 @@ items:
    **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
     * After the first sign-in, Azure AD SSO allows the user to sign in automatically.
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
+
     * Allows the user to sign in to other devices without reentering sign-in credentials.
 
     * Allows the user to sign in to other devices without entering sign-in credentials again.
