@@ -467,7 +467,7 @@ The recommended retry strategy for each status code is listed in the following t
 > [!NOTE]
 > Bots shouldn't retry on other status codes other than the codes available in the following table.
 
-|status code | Retry strategy |
+|Status code | Retry strategy |
 |----------------|-----------------|
 | 412 | Retry using exponential backoff. |
 | 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests if available . Otherwise, retry using exponential backoff with thread id, if possible. |
