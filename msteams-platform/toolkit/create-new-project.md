@@ -191,20 +191,20 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 The steps to create a new Teams app is similar for all types of app except notification bot. The following steps help you to create a new tab app:
 
 1. Open Visual Studio.
-1. You can create new project by using one of the following two options.
+1. Create new project by using one of the following two options.
 
      :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="Create new project with code from get started":::
 
-    1. Select **Create a new project** under **Get started** helps you to choose the project template with code scaffolding.
-    1. Select **Continue without Code** to create project without code scaffolding and select **File** > **New** > **Project** in Visual Studio.
+    * Select **Create a new project** under **Get started** helps you to choose the project template with code scaffolding.
+    * Select **Continue without Code** to create project without code scaffolding and select **File** > **New** > **Project** in Visual Studio.
 
         :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1.png" alt-text="Create new project from file menu":::
 
-   The **Create a new project** window appears.
-
-      :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/visual-studio.png" alt-text="Search and choose microsoft teams app":::
+   The **Create a new project** window appears.  
 
 1. Enter teams in the search box and from the list, select **Microsoft Teams App** and then select **Next**.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/visual-studio.png" alt-text="Search and choose microsoft teams app":::
 
    The **Configure your new project** window appears.
 
@@ -220,7 +220,7 @@ The steps to create a new Teams app is similar for all types of app except notif
     1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
     1. Select **Create**.
 
-   **Create a new Teams Application** window appears.
+   The **Create a new Teams Application** window appears.
 
 1. In this tutorial, **Tab** is selected to create new teams application and select **Create**.
 

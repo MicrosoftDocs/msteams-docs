@@ -135,12 +135,12 @@ The following steps help to preview manifest file by using **Zip Teams metadata 
    > [!NOTE]
    > If there are more than one environment, you need to select the environment you want to preview as shown in the image:
 
-## Sync local changes to Dev Portal
+## Sync local changes to Developer Portal
 
-After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
+After previewing the manifest file, you can sync your local changes to Developer Portal by the following ways:
 
 > [!NOTE]
-> For more information on developer portal, see [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md).
+> For more information on Developer Portal, see [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 1. Deploy Teams app manifest.
 

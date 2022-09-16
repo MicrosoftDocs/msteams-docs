@@ -78,10 +78,12 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
-After your project is successfully deployed to Azure, there are different ways to preview your app in Teams.
+### Preview your app
+
+To preview your app, you first need to create a Zip app package and sideload into the Teams client.
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
-1. Select option **For Local** or **For Azure** to generate Teams app package and upload to Teams.
+1. Select option **For Local** or **For Azure** to generate Teams app package.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="Generate teams app package":::
 
