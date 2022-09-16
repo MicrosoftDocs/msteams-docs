@@ -44,9 +44,9 @@ Plan analytics for the Teams app you’re building the same way as you do for yo
 Teams provides you specific information that you can use to not just analyze who’s using your app, where users are using your app in Teams, get a robust idea of the user’s profile – all of which can be used to tailor the experience for the user and monitor your app’s performance and return on your investment.
 -->
 
-You should plan analytics for your Teams app right at the dev design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the dev design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
-At the time, your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that instrumentation markers get triggered in time to capture:
+At the time your production Teams app is live and being used on the marketplace, your analytics and data infrastructure should be fully operational. It ensures that instrumentation markers get triggered in time to capture:
 
 - Teams-specific events
 - Event-specific contextual information
@@ -55,7 +55,7 @@ At the time, your production Teams app is live on the marketplace and customers 
 > [!NOTE]
 > An example of an information that can be captured only once is the Azure AD user ID for a Teams user. It is notified through a bot event only at the installation of the the bot app for that user. This user ID is vital to mapping the user to a real-world profile identity, such as email address, which you can use to send proactive notifications to the user later.
 
-Additionally, planning analytics beforehand also enables you to examine your existing data instrumentation practices. It helps you determine if such existing practices would be useful for Teams canvas constructs such as tabs, task modules, meeting apps etc. You can also check the possibility of extending your existing practices to Teams tab experiences you're building.
+Additionally, planning analytics enables you to examine your existing data instrumentation practices. It helps you determine if such existing practices would be useful for Teams canvas constructs such as tabs, task modules, meeting apps etc. You can also check the possibility of extending your existing practices to Teams tab experiences you're building.
 
 <!--Whether it is examining which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps etc. in Teams
 
