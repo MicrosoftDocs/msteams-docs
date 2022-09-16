@@ -24,7 +24,7 @@ items:
 
    This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="output image":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot showing the final output":::
    
 - title: Prerequisites
   durationInMinutes: 1 
@@ -47,7 +47,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample.png" alt-text="cloning the repository":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample.png" alt-text="Screenshot showing the cloning of repository":::
 
     1. Select **Clone**. 
 
