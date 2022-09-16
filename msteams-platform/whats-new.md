@@ -31,7 +31,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 09/16/2022 | Status codes from bot APIs | Build bots > Bot conversations > Message in bot conversations > [Status codes from bot APIs](bots/how-to/conversations/conversation-messages.md#status-codes-from-bot-apis) |
+| 09/16/2022 | Updated status codes from bot APIs | Build bots > Bot conversations > Message in bot conversations > [Status codes from bot APIs](bots/how-to/conversations/conversation-messages.md#status-codes-from-bot-apis) |
 | 09/16/2022 | Adaptive Cards in search based message extensions now support Universal Actions. | Build Message Extensions > Search commands > Define search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
 | 09/06/2022 | `selectMedia` API for capturing videos using camera | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
