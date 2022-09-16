@@ -147,7 +147,7 @@ items:
 
     1. Select **Channels** in the left pane. 
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -328,8 +328,8 @@ items:
         | **Scopes** | Enter **User.Read** and add all the **Scopes** selected while specifying permissions to downstream APIs. |
   
     1. Select **Save**.
-
-        <img src="~/assets/images/Tab-ME-SSO/new-connection-setting.png" alt="Bot Service connection" width="300"/>
+    
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/new-connection-setting.png" alt-text="Screenshot showing connection setting.":::.
 
 - title: Set up app settings
   durationInMinutes: 1
