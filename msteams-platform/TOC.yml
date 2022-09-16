@@ -674,7 +674,7 @@
       displayName: Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars, 
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-      displayName: Update Apple app store
+      displayName: Update Apple app store,app acquisition on mobile
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, publisher verification, attestation
