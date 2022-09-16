@@ -353,7 +353,3 @@ After you've previewed the manifest file in Visual Studio, you can now sync the 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)

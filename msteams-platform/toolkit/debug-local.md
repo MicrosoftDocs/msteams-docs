@@ -209,6 +209,3 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

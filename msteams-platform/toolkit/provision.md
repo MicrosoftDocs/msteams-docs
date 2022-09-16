@@ -584,6 +584,3 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Debug Teams app locally for Visual Studio](debug-teams-app-visual-studio.md)

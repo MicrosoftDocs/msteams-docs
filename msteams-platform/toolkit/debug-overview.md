@@ -307,6 +307,3 @@ You can launch Teams app as a web app instead of running in Teams client.
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
