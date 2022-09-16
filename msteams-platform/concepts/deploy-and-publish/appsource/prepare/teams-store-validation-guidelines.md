@@ -99,17 +99,17 @@ An app's name plays a critical role in how users discover it in the store. Use t
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion.
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
-* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, Help. The app name can shorten to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help on install in the left nav.
+* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help. The app name can shorten to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help on install in the left nav.
 
 * If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 
-* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, or **App** in the app name unless your app is in an official partnership with Microsoft. In such an instance, the app name must come before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**.
+* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, or **App** in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**.
 
 * Don’t use parenthesis in naming to include Microsoft products.
 
 * Developer name must be the same in the manifest and AppSource.
 
-* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a pre-production app. For example, app name mustn't contain words such as Beta, Dev, Preview, and UAT.
+* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a pre-production app. For example, app name must not contain words such as Beta, Dev, Preview, and UAT.
 
  > [!TIP]
  > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
@@ -310,7 +310,7 @@ App packages must be correctly formatted and include all required information an
 
 > [!TIP]
 >
-> * You must ensure the provided test accounts or test environment is valid in perpetuity. That is till the app is live on the commercial marketplace.
+> * You must ensure the provided test accounts or test environment is valid in perpetuity, that is till the app is live on the commercial marketplace.
 > * You must include the following detailed testing instructions for validating your app submission:
 >
 >   * **Steps to configure the app test accounts** in case app depends on external accounts for authentication.
@@ -346,13 +346,13 @@ The Teams app manifest defines your app's configuration.
 
 * When you add, update, or remove an existing capability, add or remove manifest or Partner Center metadata, you must increase the app version number and submit the new app manifest in your Partner Center account for validation.
 
-  The version string must follow the Semantic Versioning Specification (SemVer) standard (MAJOR.MINOR.PATCH). [*Mandatory Fix*]
+* The version string must follow the Semantic Versioning Specification (SemVer) standard (MAJOR.MINOR.PATCH). [*Mandatory Fix*]
 
 * If your app requires admins to review permissions and grant consent in Teams admin center, you must declare `webapplicationinfo` in the manifest. If `webapplicationinfo` isn't declared in the manifest, the **Permissions** page for your app in Teams admin center is shown as **...** [*Mandatory Fix*]
 
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Mandatory Fix*]
 
-* It's recommended to declare the Microsoft Partner Network (MPN) ID in the manifest. The MPN ID helps identify the partner organization that builds the app. [*Suggested Fix*]
+* We recommend that you declare the Microsoft Partner Network (MPN) ID in the manifest. The MPN ID helps identify the partner organization that builds the app. [*Suggested Fix*]
 
 ### App icons
 
@@ -486,7 +486,7 @@ Remember the following:
 * Provide at least three screenshots in your app’s marketplace listing.
 * If your Teams app is extensible to other Microsoft 365 hubs, the screenshots provided must depict the app functionality in other Microsoft 365 hubs.
 * At least one screenshot must depict your app’s functionality on mobile devices.
-* It's recommended to provide captions in your screenshots to let the user clearly understand the app capability.
+* We recommend that you provide captions in your screenshots to let the user clearly understand the app capability.
 
 **Don'ts:**
 
@@ -645,7 +645,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 * Hyperlink the contact us information in the configuration screen instead of plain text to help users to contact you for support requirements. [*Mandatory Fix*]
 
-* For a seamless first run user experience, It's recommended to hyperlink your support URL or email in the configuration screen. [*Suggested Fix*]
+* For a seamless first run user experience, we recommend that you hyperlink your support URL or email in the configuration screen. [*Suggested Fix*]
 
 </details>
 </br>
@@ -1186,7 +1186,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * Meeting apps must complete workflows within the Microsoft Teams platform without redirecting to competitor chat based platforms. [*Mandatory Fix*]
 
-* If your app supports role based views and certain workflows are unavailable to all participants, it's recommended to implement proper messaging for participants in tab and side-panel stating that the app is currently for organizer's view and provide details about how the attendees will receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
+* If your app supports role based views and certain workflows are unavailable to all participants, we recommend that you implement proper messaging for participants in tab and side-panel stating that the app is currently for organizer's view and provide details about how the attendees will receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
 
 </details>
 <br/>
@@ -1280,15 +1280,6 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 > If your apps supports notification scenarios where the notifications are triggered after long intervals, for example, after one day or one month. Before you submit for review, ensure that you trigger such notifications in the background for us to test the notifications.
 
 <br></br>
-<details><summary>General</summary>
-
-* All the notification triggers specified in your app configuration must work.
-* Notifications must be localized per the supported languages configured for your app.
-* Notifications must display within five seconds of user action.
-* Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [*Mandatory Fix*]
-
-</details>
-</br>
 
 <details><summary>Notification design guidelines</summary>
 
@@ -1306,6 +1297,16 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 </details>
 <br/>
+
+<details><summary>General</summary>
+
+* All the notification triggers specified in your app configuration must work.
+* Notifications must be localized per the supported languages configured for your app.
+* Notifications must display within five seconds of user action.
+* Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [*Mandatory Fix*]
+
+</details>
+</br>
 
 <details><summary>Avatars</summary>
 
