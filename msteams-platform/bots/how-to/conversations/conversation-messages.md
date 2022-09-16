@@ -456,9 +456,9 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large, see [format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
-| 500 | **Code**: `ServiceError` <br/> **Message**: *various. | Internal server error. | No | Report this issue in [developer community](~/feedback#developer-community-help). |
-| 502 | **Code**: `ServiceError` <br/> **Message**: *various. | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback#developer-community-help). |
-| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback#developer-community-help). |
+| 500 | **Code**: `ServiceError` <br/> **Message**: *various. | Internal server error. | No | Report this issue in [developer community](~/feedback.md#developer-community-help). |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various. | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
 
 ### Status codes retry strategy
 
