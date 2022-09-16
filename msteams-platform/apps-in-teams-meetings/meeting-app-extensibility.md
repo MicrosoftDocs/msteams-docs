@@ -42,7 +42,7 @@ Tabs allow the team members to access services and content in a specific space w
 
 With the pre-meeting app experience, you can find and add meeting apps. You can also do pre-meeting tasks, such as developing a poll to survey the meeting participants.
 
-**To add tabs to an existing meeting**
+#### To add tabs to an existing meeting
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
@@ -52,11 +52,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
-   >
-   > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
-   > * Install apps for the whole team by adding an app to channel meeting.
-   > * Add bots at team level if apps support.
-   > * Configure tabs at channel meeting level. Tabs that are added to the channel are not brought into the channel meeting.
+   > You can also add a tab to an existing meeting using the meeting **Chat** tab.
 
 # [Desktop](#tab/desktop)
 
@@ -144,12 +140,16 @@ The following image displays the **Contoso** tab with results of poll and feedba
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience.":::
 
 ---
-In scheduled public channel meetings, after a meeting app is added it can be accessed from the meeting details page by selecting on the meeting object. See the following example:
+
+#### Apps in channel meeting
+
+A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
+
+However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a "Development" channel has a "Polly" tab. If we create a "Standup" meeting in that channel, that meeting would not have a "Polly" tab, until we explicitly [To add tabs to an existing meeting](#to-add-tabs-to-an-existing-meeting).
+
+In public scheduled channel meetings, after a meeting tab is added it can be accessed from the meeting details page by selecting on the meeting object. See the following example:
 
 :::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="After a meeting":::
-
-> [!NOTE]
-> Tab layout must be organized when there are more than 10 polls or surveys.
 
 ### Integrate bots into the meeting lifecycle
 
