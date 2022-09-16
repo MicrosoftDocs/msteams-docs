@@ -86,7 +86,7 @@ To enable your app for Teams meetings, update your app manifest and use the filt
 >[!NOTE]
 > Update your app manifest as per the [public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
-The meeting app capability for filters is defined in your app manifest using the `filters` object. You must configure your Teams app manifest with the device permissions and resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
+The meeting app capability for filters is defined in your app manifest using the `filters` object. You must configure your Teams app manifest with the resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
 
 The following is an example of a manifest for a video filter app:
 
@@ -117,9 +117,6 @@ The following is an example of a manifest for a video filter app:
   },
   "accentColor": "#1da2b4",
   "permissions": [ "identity", "messageTeamMembers" ],
-  "devicePermissions": [
-    "media"
-  ],
   "authorization": { // RSC permission section for getting teams client sdk video api.
     "permissions": {
       "resourceSpecific": [
@@ -271,49 +268,49 @@ Use the following API methods in the JavaScript file to trigger the video filter
 
   Following code snippet is an example of calling the `registerForVideoFrame` method:
 
-```typescript
- // import video module from sdk
+  ```typescript
+   // import video module from sdk
 
-import { video } from "@microsoft/teams-js";
+  import { video } from "@microsoft/teams-js";
 
-// video frame handler for sampleEffect1
+  // video frame handler for sampleEffect1
 
-function sampleEffectHandler1(videoFrame) {
-    // process video frame with sampleEffect1
+  function sampleEffectHandler1(videoFrame) {
+      // process video frame with sampleEffect1
 
-}
-
-// video frame handler for sampleEffect2
-
-function sampleEffectHandler2(videoFrame) {
-
-    // process video frame with sampleEffect2
-
-}
-function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
-  // selectedEffectId is the effect id that is using currently in video app
-  switch (selectedEffectId) {
-    case sampleEffect1:
-      sampleEffectHandler1(videoFrame);
-      break;
-    case sampleEffect1:
-      sampleEffectHandler2(videoFrame);
-      break;
-    default:
-      break;
   }
-  //send notification the effect processing is finshed.
-  notifyVideoProcessed();
-  //send error to Teams if any
-  // if (errorOccurs) {
-  //   notifyError("some error message");
-  // }
-}
-// call registerForVideoFrame
-video.registerForVideoFrame(videoFrameHandler, {
-  format: "NV12",
-});
-```
+
+  // video frame handler for sampleEffect2
+
+  function sampleEffectHandler2(videoFrame) {
+
+      // process video frame with sampleEffect2
+
+  }
+  function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
+    // selectedEffectId is the effect id that is using currently in video app
+    switch (selectedEffectId) {
+      case sampleEffect1:
+        sampleEffectHandler1(videoFrame);
+        break;
+      case sampleEffect1:
+        sampleEffectHandler2(videoFrame);
+        break;
+      default:
+        break;
+    }
+    //send notification the effect processing is finshed.
+    notifyVideoProcessed();
+    //send error to Teams if any
+    // if (errorOccurs) {
+    //   notifyError("some error message");
+    // }
+  }
+  // call registerForVideoFrame
+  video.registerForVideoFrame(videoFrameHandler, {
+    format: "NV12",
+  });
+  ```
 
 * Call the `notifySelectedVideoEffectChanged` method to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
 
@@ -323,21 +320,21 @@ video.registerForVideoFrame(videoFrameHandler, {
   > * For pre-meeting: The callback is invoked immediately.
   > * For in-meeting: The callback isn't invoked until the user selects the `Apply` button.
 
-Following code snippet is an example of calling the `notifySelectedVideoEffectChanged` method:
+  Following code snippet is an example of calling the `notifySelectedVideoEffectChanged` method:
 
-```typescript
-// notify Teams when user click on app page
-const sampleEffect1Element = document.getElementById("sampleEffect1");
+  ```typescript
+  // notify Teams when user click on app page
+  const sampleEffect1Element = document.getElementById("sampleEffect1");
 
-// add event listener for sampleEffect1 ui element. This can change according to how you implement you UI for video effect.
+  // add event listener for sampleEffect1 ui element. This can change according to how you implement you UI for video effect.
 
-sampleEffect1Element.addEventListener("click", function () {
+  sampleEffect1Element.addEventListener("click", function () {
 
-  // notify for selected video effect changed event
-  video.notifySelectedVideoEffectChanged("EffectChanged", effectId);
+    // notify for selected video effect changed event
+    video.notifySelectedVideoEffectChanged("EffectChanged", effectId);
 
-});
-```
+  });
+  ```
 
 ### Guidelines to use the Video extensibility API
 
