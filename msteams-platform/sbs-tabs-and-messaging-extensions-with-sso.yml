@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: AAD SSO for tabs and message extension
+title: Azure Active Directory SSO for tabs and message extension
 metadata:
-  title: AAD SSO for tabs and message extension
-  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (AAD SSO) for tabs.
+  title: Azure AD SSO for tabs and message extension
+  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (Azure AD SSO) for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Azure Active Directory Single sign-on (AAD SSO) helps to authenticate users in Teams. 
+   The Azure Active Directory Single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of the step-by-step guide of AAD SSO for tabs and message extensions**:
+   **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
-    * After the first sign-in, AAD SSO allows the user to sign in automatically.
-    * Allows the user to sign in to other devices without re-entering sign-in credentials.
+    * After the first sign-in, Azure AD SSO allows the user to sign in automatically.
+    * Allows the user to sign in to other devices without reentering sign-in credentials.
     * Obtains token for the logged-in user.   
 
-   This step-by-step guide helps you to create tabs and message extensions enabling AAD SSO authentication. You'll see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
      ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
 
@@ -147,7 +147,7 @@ items:
 
     1. Select **Channels** in the left pane. 
 
-    1. Select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
+    1. Select **Microsoft Teams** :::image type="content"source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -252,7 +252,7 @@ items:
            ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application21.png) 
         
 
-       The following image displays the **Client Id**:
+       The following image displays the **Client ID**:
 
          ![Client applications](~/assets/images/Tab-ME-SSO/client-id-2.png) 
   

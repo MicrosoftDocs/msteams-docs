@@ -153,7 +153,7 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
+    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
 
          :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
          
@@ -489,7 +489,7 @@ items:
 
        ![Chat](~/assets/images/Teams-task-module/adaptive-custom-chat.png)
 
-    1. Select **You Tube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
+    1. Select **YouTube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
        ![YouTube](~/assets/images/Teams-task-module/youtube.png)
 

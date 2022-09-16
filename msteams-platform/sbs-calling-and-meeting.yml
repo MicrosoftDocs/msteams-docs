@@ -106,11 +106,11 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
 
-    1. Replace `azure-client-id` with your **Microsoft App ID** of your bot and `object-id` with the **Tenant ID** of your account used to login to the Teams (Copy the link as shown in the following image and you can find the Tenant ID of your Teams account in the link obtained).
+    1. Replace `azure-client-id` with your **Microsoft App ID** of your bot and `object-id` with the **Tenant ID** of your account used to log in to the Teams (Copy the link as shown in the following image and you can find the Tenant ID of your Teams account in the link obtained).
 
         :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
 
-    1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script. Login with your Teams account when PowerShell prompts.
+    1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script. Sign in with your Teams account when PowerShell prompts.
 
         :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
 
@@ -161,7 +161,7 @@ items:
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
         > [!NOTE]
-        > In `Creation type` of Microsoft App ID section, `Create new Microsoft App ID` is already selected to create a new bot. You can also select `Use existing app registration`, if you've already registered a bot. Enter Microsoft App ID in `Existing app id` field, and enter value in `Existing app password` field.
+        > In `Creation type` of Microsoft App ID section, `Create new Microsoft App ID` is already selected to create a new bot. You can also select `Use existing app registration`, if you've already registered a bot. Enter Microsoft App ID in `Existing app ID` field, and enter value in `Existing app password` field.
 
     1. Select **Use existing app registration** and enter **App ID** and **App secret** of your Azure app registered in demo tenant.
     1. Select **Review + create**.
@@ -184,7 +184,7 @@ items:
 
     1. Go to **Home**.
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.    
+    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.    
         
         :::image type="content" source="./assets/images/calls-and-meetings/channels-teams.png" alt-text="Channels Teams.":::
     
@@ -240,12 +240,12 @@ items:
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
-        * You can obtain the `Tenant ID` or `UserId` from the link of the account used to login to the Teams. Follow the path in the image to get the link for `tenant id`.
+        * You can obtain the `Tenant ID` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenant ID`.
         
             :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
         
         * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
-            * Login to the page using your Teams account and add `Users` at the end of the URl in the search box and select **Run query**.
+            * Sign in to the page using your Teams account and add `Users` at the end of the URl in the search box and select **Run query**.
             * Display names and User IDs linked to your account are generated.
             * Pick any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
 
@@ -255,7 +255,7 @@ items:
         > `Tenant ID` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denotes to whom you want to redirect or transfer the call.
 
     1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with your **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with your **Value**.
-    1. Update `BotBaseUrl` with your `ngrok` URL.
+    1. Update `BotBaseUrl` with you are `ngrok` URL.
     1. Update `Tenant ID` and `UserId`.
     1. Update `DisplayName` and `UserId`.
 

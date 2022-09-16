@@ -79,7 +79,7 @@ items:
         ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
 
         > [!NOTE]
-        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
+        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app ID** field, and enter value in **Existing app password** field.
 
     1. Select **Review + create**.
 
@@ -132,7 +132,7 @@ items:
         ![Bot home page](~/assets/images/adaptive-cards/bot-home-page.png)
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
+    1. Select **Channels** in the left pane and select **Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
 
         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
@@ -229,7 +229,7 @@ items:
 
     1. Select **API permissions** from the left pane.
     1. Select **Add a permission**. **Request API permissions** window appears.
-    1. Select **Microsoft API's**. Then select **Microsoft Graph** and select **Delegated permissions**.
+    1. Select **Microsoft APIs**. Then select **Microsoft Graph** and select **Delegated permissions**.
     1. Add any user **Delegated permissions** that your app requires to downstream APIs, for example, User.Read.</br>
 
         ![API permissions](~/assets/images/adaptive-cards/add-permissions.png)

@@ -155,7 +155,7 @@ items:
 
     1. Select **Channels** in the left pane. 
 
-    1. Select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
+    1. Select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -276,14 +276,14 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authorizedscope.png" alt-text="Add client application":::
       
-       The following image displays the **Client Id**:
+       The following image displays the **Client ID**:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Client app"::: 
          
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
 
     1. Select **Add a permission**.
 

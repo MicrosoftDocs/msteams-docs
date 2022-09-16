@@ -30,7 +30,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot is an example that shows plus button":::, and select the app that you want to install.
+Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot is an example that shows plus button."::: and select the app that you want to install.
 
 > [!IMPORTANT]
 > We recommend you to follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/tab-sso-overview.md), if you have integrated a tab app in your meeting.
@@ -45,7 +45,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 To add tabs to an existing meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot showing the details tab":::. The tab gallery appears.
+1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot showing the details tab.":::. The tab gallery appears.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Pre-meeting app experience.":::
 
@@ -64,7 +64,7 @@ To add tabs to an existing meeting:
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience":::
+:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
 
 ---
 
@@ -94,7 +94,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view":::
+:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view.":::
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -116,7 +116,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile:::"
+:::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile.:::"
 
 ---
 

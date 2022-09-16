@@ -154,7 +154,7 @@ items:
        
     1. Select your bot from **Recent resources**.
 
-    1.Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
+    1.Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
 
        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
       
@@ -283,7 +283,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -488,7 +488,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received":::
       
         > [!NOTE]
-        >  After the bot is installed in the personal scope, the user enters into an one on one chat conversation with the bot.
+        >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1

@@ -2,7 +2,7 @@
 title: Build search based message extension
 metadata:
   title: Build search based message extension
-  description: Learn how to build a search based message extension for Microsoft teams, which allows users to search external systems.
+  description: Learn how to build a search based message extension for Microsoft Teams, which allows users to search external systems.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022
@@ -153,7 +153,7 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page":::.
+    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content"source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
 
         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
@@ -353,7 +353,7 @@ items:
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
-         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
+         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with you're `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
         ![Manifest](~/assets/images/Teams-Messaging-Extensions-Search/manifest.png)

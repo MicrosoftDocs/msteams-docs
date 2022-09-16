@@ -24,7 +24,7 @@ The application must reference the [Microsoft Teams JavaScript client SDK](/java
 
 An example of a configuration page is shown in the following image:
 
-:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot is an example that shows configuration page":::
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot is an example that shows configuration page.":::
 
 The following code is an example of corresponding code for the configuration page:
 
