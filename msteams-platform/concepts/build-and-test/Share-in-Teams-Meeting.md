@@ -38,7 +38,7 @@ This option scans your web page to locate any HTMLElements with the classname of
     </div>
     ```
 3. Additional attributes can be specified to customized the share in meeting button:
-   `data-button-type`: specifies the background color of the button (<primaryShareInMeeting or secondaryShareInMeeting>)
+   `data-button-type`: specifies the background color of the button (primaryShareInMeeting or secondaryShareInMeeting)
    `data-button-size`: specifies the size of the button in pixel
    `data-target`: specifies whether the link will open in the same window, new tab, or new window
    `data-locale`: specifies desired user language
