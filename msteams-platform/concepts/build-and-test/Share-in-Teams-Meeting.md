@@ -38,10 +38,10 @@ This option scans your web page to locate any HTMLElements with the classname of
     </div>
     ```
 3. Additional attributes can be specified to customized the share in meeting button:
-   `data-button-type`: specifies the background color of the button (primaryShareInMeeting or secondaryShareInMeeting)
-   `data-button-size`: specifies the size of the button in pixel
-   `data-target`: specifies whether the link will open in the same window, new tab, or new window
-   `data-locale`: specifies desired user language
+   - `data-button-type`: specifies the background color of the button (primaryShareInMeeting or secondaryShareInMeeting)
+   - `data-button-size`: specifies the size of the button in pixel
+   - `data-target`: specifies whether the link will open in the same window, new tab, or new window
+   - `data-locale`: specifies desired user language
 
 ### Option 2:
 `async shareToMicrosoftTeams.renderButtons(options)`: Renders all share buttons that have "teams-share-button" or "teams-share-in-meeting-button" classname currently on the page. If an optional options object is supplied with a list of elements, those elements will be rendered into share buttons or share in meeting buttons.
@@ -52,7 +52,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 **Example**
 1. Add the `launcher.js` script on your webpage.
    ```html
-      <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
 2. Create an HTMLElement and specify the required attributes
@@ -73,7 +73,7 @@ shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shar
 **Example**
 1. Add the `launcher.js` script on your webpage.
    ```html
-      <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
 2. Create an HTMLElement and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its onClick attribute
