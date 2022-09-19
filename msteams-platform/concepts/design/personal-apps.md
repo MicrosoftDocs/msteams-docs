@@ -8,7 +8,7 @@ ms.author: lajanuar
 --- 
 # Designing your personal app for Microsoft Teams
 
-A personal app can be a bot, private workspace, or both. Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that's theirs when the app has been configured as a tab in multiple channels.
+A personal app can be a bot, private workspace, or both. Sometimes it functions as a place to create or view content. Other times, it offers the user a bird’s eye view of everything that's theirs when the app has been configured as a tab in multiple channels.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.
 
@@ -46,7 +46,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### Configure and create an overflow menu for multiple actions
 
-You can configure an app with multiple actions on upper right NavBar and build an overflow menu for additional actions.
+You can configure an app with multiple actions on upper right NavBar and build an overflow menu for additional actions. To configure, see [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true).
 
 >[!NOTE]
 > A maximum of five actions can be added in the NavBar, including the overflow menu.
@@ -108,7 +108,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-If a user opens an app inside Teams and selects the back button, by default, they exit from the app and go to Teams. You can configure the back button so that when a user selects the back button, they can go back to the previous steps and navigate within the app.
+You can configure back button of an app inside Teams. When a user selects the back button, they can go back to the previous steps and navigate within the app. To configure, see [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest).
 
 #### Desktop
 
@@ -212,5 +212,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
-* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest)
 * [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
