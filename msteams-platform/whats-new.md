@@ -287,7 +287,7 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ::: zone pivot="dep-feature"
 
-## Deprecated features
+## Deprecated
 
 :::row:::
 :::column span="":::
