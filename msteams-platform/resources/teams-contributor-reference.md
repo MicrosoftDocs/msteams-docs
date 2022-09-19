@@ -9,7 +9,7 @@ ms.topic: contributor-guide
 
 # Contribute to Teams documentation
 
-Teams documentation is part of the **Microsoft Docs** technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after **docs.microsoft.com**. For example, `/docs.microsoft.com/microsoftteams/...` is the beginning of the Teams docset file path. Teams articles are written in Markdown syntax and hosted on GitHub.
+Teams documentation is part of the **Microsoft Docs** technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after `learn.microsoft.com`. For example, `/learn.microsoft.com/microsoftteams/...` is the beginning of the Teams docset file path. Teams articles are written in Markdown syntax and hosted on GitHub.
 
 ## Set up your workspace
 
