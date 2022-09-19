@@ -368,3 +368,7 @@ Response body
 
 > [!div class="nextstepaction"]
 > [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
+
+## See also
+
+[Localize your app](../../concepts/build-and-test/apps-localization.md)

@@ -1,7 +1,7 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: Learn to identify the meeting apps API references with examples and Code samples, Teams apps meetings user role api user context notification signal query.
+description: In this article, learn meeting apps API references that are available for Teams client and Bot Framework SDK's with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -32,6 +32,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -139,8 +141,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
 | **user.tenantId** | Azure Active Directory tenant ID. |
-| **user.userRole** | Role of the user e.g. 'admin' or 'user'. |
-| **meeting.role** | The participant's role in the meeting. e.g. 'Organizer' or 'Presenter' or 'Attendee'. |
+| **user.userRole** | Role of the user. For example, 'admin' or 'user'. |
+| **meeting.role** | The participant's role in the meeting. For example, 'Organizer' or 'Presenter' or 'Attendee'. |
 | **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
 | **conversation.id** | The meeting chat ID. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
@@ -169,7 +171,7 @@ All users in a meeting receive the notifications sent through in-meeting notific
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -496,7 +498,7 @@ The JSON response body for Meeting Details API is as follows:
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type - e.g. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | The meeting's type (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown). |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
@@ -629,7 +631,7 @@ The `getAppContentStageSharingState` API enables you to fetch information about 
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -669,7 +671,7 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the app's c
 
 ### Query parameter
 
-The following table includes the query parameters:
+The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -924,6 +926,119 @@ The following code provides an example of meeting end event payload:
 | **value.StartTime** | The meeting start time in UTC. |
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
+
+## Get incoming audio state
+
+The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the Teams client SDK.
+
+> [!NOTE]
+>
+> * The `getIncomingClientAudioState` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
+
+### Manifest
+
+```JSON
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+```
+  
+### Example
+
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
+  
+### Response codes
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
+
+## Toggle incoming audio
+
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+
+> [!NOTE]
+>
+> * The `toggleIncomingClientAudio` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
+
+### Manifest
+
+```JSON
+"authorization": {
+	"permissions": {
+		"resourceSpecific": [
+			{
+				"name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+				"type": "Delegated"
+			}
+		]
+	}
+}
+```
+ 
+### Example
+
+```javascript
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
+```
+  
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false.
+  
+### Response code
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Code sample
 
