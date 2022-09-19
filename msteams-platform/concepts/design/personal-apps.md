@@ -44,12 +44,14 @@ With a private workspace, users can view app content that's meaningful to them i
 |C|**More menu**: Includes additional app options and information.|
 |D|**Primary navigation**: Provides navigation to your app other main Teams features.|
 
-#### Configure and create a flyout menu for multiple actions
+#### Configure and create an overflow menu for multiple actions
 
-App developers can configure and place actions on upper right status bar and build a flyout menu.
+You can configure an app with multiple actions on upper right NavBar and build an overflow menu for additional actions.
 
 >[!NOTE]
-> A maximum of five actions is supported. It includes both the top nav bar and the flyout menu.
+> A maximum of five actions can be added in the NavBar, including the overflow menu.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="The screenshot is an example that shows the navbar and multiple actions in an overflow menu.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy.":::
 
@@ -106,7 +108,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-If a user opens an app inside Teams and selects the back button, by default, they exit from the app and go to Teams. App developers can configure the back button so that when the user selects the back button, they can go back to the previous steps and navigate within the app.
+If a user opens an app inside Teams and selects the back button, by default, they exit from the app and go to Teams. You can configure the back button so that when a user selects the back button, they can go back to the previous steps and navigate within the app.
 
 #### Desktop
 
@@ -210,5 +212,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
-* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest"&preserve-view=true")
-* [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest"&preserve-view=true")
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
