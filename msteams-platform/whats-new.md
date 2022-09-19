@@ -27,6 +27,8 @@ Microsoft Teams platform features that are available to all app developers.
 :::column-end:::
 :::row-end:::
 
+<br>
+<br>
 <details>
 <summary><b>2022</b></summary>
 
@@ -85,8 +87,6 @@ Microsoft Teams platform features that are available to all app developers.
 | 01/17/2022 | People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-
-<br>
 
 ## Previous updates
 
