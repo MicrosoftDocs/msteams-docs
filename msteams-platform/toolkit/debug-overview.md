@@ -15,6 +15,10 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is 
 
 ::: zone pivot="visual-studio-code"
 
+## Debug your Teams app for Visual Studio Code
+
+Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
+
 ## Debug your Microsoft Teams app for Visual Studio Code
 
 Teams Toolkit in Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
@@ -199,7 +203,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ::: zone pivot="visual-studio"
 
-## Debug your Microsoft Teams app using Visual Studio
+## Debug your Teams app using Visual Studio
 
 Teams Toolkit automates app startup services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit supports the following debug features:
 
@@ -308,6 +312,3 @@ You can launch Teams app as a web app instead of running in Teams client.
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
