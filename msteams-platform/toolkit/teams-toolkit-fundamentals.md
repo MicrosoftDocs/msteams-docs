@@ -108,15 +108,15 @@ The main milestones of this journey are:
 
 The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Microsoft Visual Studio Code, however they're planned in the future product road map.
 
-* Add another Teams capabilities to your Teams app.
+* Add another Teams capabilities to your Teams app
 * Add more Azure resources to your Teams app
-* Add Single Sign-on (SSO) to your Teams app.
-* Add API connection to your Teams app.
-* Customize Microsoft Azure Active Directory (Azure AD) manifest.
-* Add CI/CD pipelines.
-* Manage multiple cloud environments.
-* Collaborate on Teams projects.
-* Publish Teams app.
+* Add Single Sign-on (SSO) to your Teams app
+* Add API connection to your Teams app
+* Customize Microsoft Azure Active Directory (Azure AD) manifest
+* Add CI/CD pipelines
+* Manage multiple cloud environments
+* Collaborate on Teams projects
+* Publish Teams app
 
 ### TeamsFx .NET SDK Reference docs
 
