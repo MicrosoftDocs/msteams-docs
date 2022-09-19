@@ -49,15 +49,16 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 :::column-end:::
 :::column span="":::
-<details><summary> August </summary>
+<details><summary> July </summary>
 
 | **Date** | **Update** |
 |-----|-----|
-| 08/09/2022 | [Introduced Teams Toolkit for Visual Studio 2022.](oolkit/teams-toolkit-overview-visual-studio.md) |
-| 08/03/2022 | [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
-| 08/03/2022 | [Added feature for retrieving meeting transcripts in the post-meeting scenario.](graph-api/meeting-transcripts/overview-transcripts.md) |
-| 08/03/2022 | [Link unfurling for share to teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 08/01/2021| [Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022.](concepts/build-and-test/teams-developer-portal.md) |
+| 07/28/2022 | [Add the Teams display picture and people card for in-meeting notification](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification)|
+| 07/28/2022 | [Build shared channels in Teams](concepts/build-and-test/Shared-channels.md) |
+| 07/28/2022| [Introduced app manifest v1.14](resources/schema/manifest-schema.md)|
+| 07/26/2022| [Suggested actions for bots](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
+| 07/21/2022 | [Introduced step by step guide to send activity feed notifications](sbs-graphactivity-feedbroadcast.yml) |
+| 07/08/2022| [Updates to send channel ID selected by user during app installation to bots via conversation and installation update events](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 
 </details>
 :::column-end:::
