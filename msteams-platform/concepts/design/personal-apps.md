@@ -108,7 +108,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-You can configure back button of an app inside Teams. When a user selects the back button, they can go back to the previous steps and navigate within the app. To configure, see [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest).
+You can configure back button of an app inside Teams. When a user selects the back button, they can go back to the previous steps and navigate within the app. To configure, see [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true).
 
 #### Desktop
 
@@ -212,5 +212,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
-* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true)
 * [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
