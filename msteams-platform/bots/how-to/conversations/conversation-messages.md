@@ -20,45 +20,6 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 For more information, see [User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
-## Teams channel data
-
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
-
-A typical `channelData` object in an activity sent to your bot contains the following information:
-
-* `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
-* `team`: Passed only in channel contexts, not in personal chat.
-  * `id`: GUID for the channel.
-  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
-* `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot has been added.
-  * `id`: GUID for the channel.
-  * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
-* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
-
-### Example channelData object (channelCreated event)
-
-The following code shows an example of channelData object:
-
-```json
-"channelData": {
-    "eventType": "channelCreated",
-    "tenant": {
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-    },
-    "channel": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
-        "name": "My New Channel"
-    },
-    "team": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
-    }
-}
-```
-
 ## Receive a message
 
 To receive a text message, use the `Text` property of the `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
