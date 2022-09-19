@@ -1,5 +1,5 @@
 ---
-title: Enable app customization and block apps till admin allows
+title: Enable app customization and block apps until admin allows
 author: heath-hamilton
 description: In this module, understand how Teams admins can customize your Teams app for their org and hide Teams app until admin approves.
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.topic: overview
 ---
 
-# Enable app customization and block apps till admin allows
+# Enable app customization and block apps until admin allows
 
 Microsoft Teams lets admins customize apps to enhance store experience and adhere to their organization's branding. An app developer can allow their app to be customized by a Teams admin. For more information about admin tasks, see
 [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps).
@@ -24,7 +24,7 @@ Some possible uses of this feature are:
 * Changing the description to include language and guidance that is better understood by your organization's end-users.
 * Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 
-You can enable this feature by defining the app properties in the [`configurableProperties` section in the app manifest file](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties). You can define the property using [Developer Portal for Teams](https://dev.teams.microsoft.com/home) if you've chosen to use the Developer Portal to edit the manifest of your app or or do it manually in the manifest file.
+You can enable this feature by defining the app properties in the [`configurableProperties` section in the app manifest file](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties). You can define the property using [Developer Portal for Teams](https://dev.teams.microsoft.com/home) or do it manually. You can choose to  use the Developer Portal to edit the manifest of your app or you can edit it manually.
 
 :::image type="content" source="../../assets/images/dev-portal-app-customization-settings.png" alt-text="Screenshot shows the option in Teams Developer Portal to enable app customization feature and select specific metadata fields that developers allow admins to customize.":::
 
@@ -33,9 +33,9 @@ You can enable this feature by defining the app properties in the [`configurable
 
 ## Block apps by default for users until an admin approves
 
-To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
+To enhance Teams app experience, you can block an app from users until an admin approves the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is blocked by default and is available to users only after the admin allows it. The functionality is called blocked by publisher.
 
-To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
+To block the app by default, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, the status of the app in Teams admin center is **Blocked by publisher** in the [Manage apps](https://admin.teams.microsoft.com/policies/manage-apps) page.
 
 :::image type="content" source="../../assets/images/manage-apps-status.png" alt-text="The screenshot is an example that shows an app blocked by publisher." lightbox="../../assets/images/manage-apps-status-expanded.png":::
 
