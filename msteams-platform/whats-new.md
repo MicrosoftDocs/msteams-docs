@@ -38,7 +38,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 :::row:::
    :::column span="":::
-      <details><summary> August </summary>
+      <details><summary> August </summary></br>
         | **Date** | **Update** |
         |-----|-----|
         | 08/09/2022 | [Introduced Teams Toolkit for Visual Studio 2022.](oolkit/teams-toolkit-overview-visual-studio.md) |
