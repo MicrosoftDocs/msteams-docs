@@ -230,7 +230,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Adaptive Cards, channel or group tabs, conversational tabs, SSO capabiity, custom tab
+    displayName: Adaptive Cards, channel or group tabs, conversational tabs, SSO capabiity, custom tabs
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok
