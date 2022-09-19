@@ -22,7 +22,7 @@ Microsoft Teams platform features that are available to all app developers.
 **2022 September**
 
 * ***September 16, 2022*** - [Adaptive Cards in search based message extensions now support Universal Actions.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
-* ***September 16, 2022*** - [`selectMedia` API for capturing videos using camera.](concepts/device-capabilities/media-capabilities.md#code-snippets)
+* ***September 06, 2022*** - [`selectMedia` API for capturing videos using camera.](concepts/device-capabilities/media-capabilities.md#code-snippets)
 
 :::column-end:::
 :::row-end:::
