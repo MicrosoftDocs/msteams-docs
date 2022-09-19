@@ -21,8 +21,8 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 September**
 
-* ***September 16, 2022*** - [Adaptive Cards in search based message extensions now support Universal Actions.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
-* ***September 06, 2022*** - [`selectMedia` API for capturing videos using camera.](concepts/device-capabilities/media-capabilities.md#code-snippets)
+* ***September 16, 2022***: [Adaptive Cards in search based message extensions now support Universal Actions.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* ***September 06, 2022***: [Introduced code snippets for capturing videos using camera through `selectMedia` API.](concepts/device-capabilities/media-capabilities.md#code-snippets)
 
 :::column-end:::
 :::row-end:::
@@ -37,7 +37,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Link unfurling for share to teams from web apps | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 08/01/2021| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
+| 08/01/2022| Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | Add the Teams display picture and people card for in-meeting notification| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [In-meeting notification](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Build shared channels in Teams | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Introduced app manifest v1.14| App manifest > [App manifest schema for Teams](resources/schema/manifest-schema.md)|
@@ -86,8 +86,9 @@ Microsoft Teams platform features that are available to all app developers.
 | 01/17/2022 | People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-
-## Older updates
+</br>
+<details>
+<summary><b>Older updates</b></summary>
 
 Explore updates from the previous GA releases listed here.
 </br>
@@ -250,7 +251,7 @@ Explore updates from the previous GA releases listed here.
 |
 </details>
 </details>
-
+</details>
 ::: zone-end
 
 ::: zone pivot="dev-preview"
@@ -264,9 +265,9 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 August**
 
-* ***August 23, 2022*** - [Share apps to the Teams meeting stage in mobile.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
-* ***August 03, 2022*** - [Mute and unmute APIs for apps in Teams meeting stage.](apps-in-teams-meetings/api-references.md)
-* ***August 02, 2022*** - [Collaboration controls for Teams.](samples/collaboration-control.md)
+* ***August 23, 2022***: [Share apps to the Teams meeting stage in mobile.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* ***August 03, 2022***: [Mute and unmute APIs for apps in Teams meeting stage.](apps-in-teams-meetings/api-references.md)
+* ***August 02, 2022***: [Collaboration controls for Teams.](samples/collaboration-control.md)
 
 :::column-end:::
 :::row-end:::
@@ -295,7 +296,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 August**
 
-* ***August 01, 2022*** - App Studio is deprecated.
+* ***August 01, 2022***: App Studio is deprecated.
 
 :::column-end:::
 :::row-end:::
