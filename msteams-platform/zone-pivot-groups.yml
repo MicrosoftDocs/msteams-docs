@@ -30,3 +30,12 @@ groups:
     title: Developer preview
   - id: dep-feature
     title: Deprecated features
+- id: teams-app-platform
+  title: Teams app platform
+  prompt: Before you begin, select anyone of the following application based on the environment in which you want to build an app
+  pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio   
+

@@ -402,8 +402,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
 | `userTeamRole` | `app.Context.team.userRole`|
-| `userDisplayName` | `app.Context.user.displayName` |
-| N/A | `app.Context.app.host.name`|
+| NA | `app.Context.app.host.name`|
 
 ## Updating to the Teams client SDK v.2.0.0
 
