@@ -41,12 +41,12 @@ With a private workspace, users can view app content that's meaningful to them i
 |----------|-----------|
 |A|**App attribution**: Your app name.|
 |B|**Tabs**: Provides navigation for your personal app.|
-|C|**More menu**: Includes additional app options and information.|
+|C|**More menu**: Includes other app options and information.|
 |D|**Primary navigation**: Provides navigation to your app other main Teams features.|
 
 #### Configure and create an overflow menu for multiple actions
 
-You can configure an app with multiple actions on upper right NavBar and build an overflow menu for additional actions. To configure, see [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true).
+You can configure an app with multiple actions on upper right NavBar and build an overflow menu for extra actions. To configure, see [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true).
 
 >[!NOTE]
 > A maximum of five actions can be added in the NavBar, including the overflow menu.
@@ -69,7 +69,7 @@ You can configure an app with multiple actions on upper right NavBar and build a
 |A|**App attribution**: Your app logo and name.|
 |B|**Tabs**: Provides navigation for your personal app.|
 |C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
-|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
+|D|**More menu**: Includes other app options and information. (You could alternatively make **Settings** a tab.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy.":::
 

@@ -31,6 +31,8 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 09/19/2022 | Configure and create an overflow menu for multiple actions. | Design your app > App capabilities > Personal apps > [Configure and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-create-an-overflow-menu-for-multiple-actions) |
+| 09/19/2022 | Configure back button. | Design your app > App capabilities > Personal apps > [Configure back button](concepts/design/personal-apps.md#configure-back-button) |
 | 09/16/2022 | Adaptive Cards in search based message extensions now support Universal Actions. | Build Message Extensions > Search commands > Define search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
 | 09/06/2022 | `selectMedia` API for capturing videos using camera | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
