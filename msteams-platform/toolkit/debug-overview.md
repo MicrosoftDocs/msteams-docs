@@ -11,16 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Teams app
 
-
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
-
-::: zone pivot="visual-studio-code"
-
-## Debug your Teams app for Visual Studio Code
-
-Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
-
-Teams Toolkit helps you to debug and preview your Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ::: zone pivot="visual-studio-code"
 
