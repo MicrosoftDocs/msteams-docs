@@ -145,7 +145,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
 
-However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a "Development" channel has a "Polly" tab. If we create a "Standup" meeting in that channel, that meeting would not have a "Polly" tab, until we explicitly [to add tabs to an existing meeting](#to-add-tabs-to-an-existing-meeting).
+However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a "Development" channel has a "Polly" tab. If you create a "Standup" meeting in that channel, that meeting would not have a "Polly" tab, until you explicitly [add the tab to the meeting](#to-add-tabs-to-an-existing-meeting).
 
 In public scheduled channel meetings, after a meeting tab is added it can be accessed from the meeting details page by selecting on the meeting object. See the following example:
 
