@@ -58,6 +58,8 @@ landingContent:
       links:
       - text: Video filters for meeting apps
         url: apps-in-teams-meetings/video-filters-for-meeting-apps.md
+      - text: Universal Actions for search based message extensions
+        url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-overview-visual-studio.md
       - text: Collaboration controls [Developer preview]
