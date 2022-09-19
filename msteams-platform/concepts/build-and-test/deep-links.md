@@ -406,7 +406,7 @@ Create a deep link for the app after the app is listed in the Teams store. To cr
 ### Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or message extension card:
-`https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > When a bot sends a TextBlock message with a deep link, a new browser tab opens when users select the link. This happens in Chrome and Microsoft Teams desktop app running on Linux.
