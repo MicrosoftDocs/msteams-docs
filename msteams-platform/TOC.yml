@@ -98,10 +98,12 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Install Teams Toolkit
-      href: toolkit/install-Teams-Toolkit.md
-    - name: Explore Teams Toolkit
-      href: toolkit/explore-Teams-Toolkit.md
+    - name: Install and explore Teams Toolkit 
+      items:
+      - name: Install Teams Toolkit
+        href: toolkit/install-Teams-Toolkit.md
+      - name: Explore Teams Toolkit
+       href: toolkit/explore-Teams-Toolkit.md
     - name: Prepare to build apps using Microsoft Teams Toolkit
       href: toolkit/build-environments.md
     - name: Use Teams Toolkit to create your app 
