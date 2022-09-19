@@ -117,3 +117,6 @@ After you open the Visual Studio Installer, in the pop-up Workloads window:
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Teams Toolkit](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
+* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)

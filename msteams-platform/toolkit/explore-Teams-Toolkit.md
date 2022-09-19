@@ -193,6 +193,9 @@ After you have created your Teams Project, you can perform the following functio
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Teams Toolkit](provision.md)
+* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::

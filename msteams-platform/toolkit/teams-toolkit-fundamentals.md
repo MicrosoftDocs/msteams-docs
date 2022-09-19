@@ -130,6 +130,7 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 
 ## See also
 
-* [Create a new Teams project](create-new-project.md)
-* [Provision cloud resources](provision.md)
-* [Deploy Teams app to the cloud](deploy.md)
+* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+
