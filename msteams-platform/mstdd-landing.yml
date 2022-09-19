@@ -56,8 +56,6 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Introduced meeting app support for Scheduled Channel Meetings
-        url: apps-in-teams-meetings/meeting-app-extensibility.md
       - text: Universal Actions for search based message extensions
         url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
@@ -78,6 +76,10 @@ landingContent:
         url: tabs/how-to/using-teams-client-sdk.md
       - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
         url: toolkit/teams-toolkit-fundamentals.md
+    - linkListType: whats-new
+      links:
+      - text: Introduced meeting app support for Scheduled Channel Meetings
+        url: apps-in-teams-meetings/meeting-app-extensibility.md   
 
 - title: Get started
   linkLists:
