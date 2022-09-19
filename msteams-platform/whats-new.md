@@ -378,12 +378,14 @@ Explore updates from the previous GA releases listed here.
         **2022 September**
 
         * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
-        * ***October 03, 2022*** - [Mute and unmute APIs for apps in Teams meeting stage](apps-in-teams-meetings/api-references)
-        * ***October 02, 2022*** - [Collaboration controls for Teams](samples/collaboration-control)
+        * ***October 03, 2022*** - [Mute and unmute APIs for apps in Teams meeting stage](apps-in-teams-meetings/api-references.md)
+        * ***October 02, 2022*** - [Collaboration controls for Teams](samples/collaboration-control.md)
 
    :::column-end:::
 :::row-end:::
 
+| **Date** | **Update** |
+|-----|-----|
 | 06/30/2022 | [Apps for instant meetings, one-on-one, and group calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |05/24/2022| [Enhanced collaboration with Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | [Introduced app manifest version 1.13](resources/schema/manifest-schema-dev-preview.md) |
