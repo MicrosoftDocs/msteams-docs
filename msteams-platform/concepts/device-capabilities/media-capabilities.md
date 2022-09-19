@@ -163,7 +163,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
        `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wants to record video while reading content on the device screen.
 
-       This mode also supports `isStopButtonVisible: true` which adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
+       This mode also supports `isStopButtonVisible: true` that adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
 
        Following is an example to stop the recording with `maxDuration` time specified:
 
