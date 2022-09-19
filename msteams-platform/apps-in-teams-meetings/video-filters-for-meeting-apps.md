@@ -79,14 +79,14 @@ For more information, see [Teams JavaScript client SDK](/microsoftteams/platform
 
 An app package describes how your app is configured and includes the app manifest file, color icon, and outline icon. [Create a Teams app package](../concepts/build-and-test/apps-package.md) to build and run your application in Teams.
 
-To enable your app for Teams meetings, update your app manifest and use the filter properties to determine the filter name, category name, and filter thumbnail image.
+To enable your app for Teams meetings, update your app manifest and use the `videoFilters` property to determine the filter name, category name, and filter thumbnail image.
 
 ### Update app manifest
 
 >[!NOTE]
 > Update your app manifest as per the [public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md).
 
-The meeting app capability for filters is defined in your app manifest using the `filters` object. You must configure your Teams app manifest with the resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
+The meeting app capability for video filters is defined in your app manifest using the `videoFilters` object. You must configure your Teams app manifest with the resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
 
 The following is an example of a manifest for a video filter app:
 
@@ -131,40 +131,40 @@ The following is an example of a manifest for a video filter app:
       ]
     }
   },
-  "validDomains": [ "your_domain_of_videoAppContentUrl" ], // The domain for videoAppContentUrl, Example: videoapp.microsoft.com
+  "validDomains": [ "your_domain_of_videoFiltersConfigurationUrl" ], // The domain for videoFiltersConfigurationUrl, Example: videoapp.microsoft.com
   "meetingExtensionDefinition": {
-    "filters": [ // for showing filters inside of video effects quick picker section.
+    "videoFilters": [ // for showing video filters inside of video effects quick picker section.
       {
         "id": "310a65de-24ce-445e-9e1e-dd4ef0f0114b", // Guid
-        "name": "Category_FilterA", // Category can be: Styles, Frames, Makeup
-        "thumbnail": "PreviewEffect.png" // A relative path to the filter thumbnail.png
+        "name": "Category_FilterA", // Category can be: Styles, Frames, Makeup, and Others
+        "thumbnail": "PreviewEffect.png" // A relative path to the video filter thumbnail.png
       }
     ],
-    // Video app web page url for both processing video frames and customization experience. The domain should be one of **validDomain**.
-    "videoAppContentUrl": "your_app_content_url" // Example: https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html
+    // The Video app web page url for both processing the video frames and customization experience. The domain should be one of **validDomain**.
+    "videoFiltersConfigurationUrl": "your_videofilters_configuration_url" // Example: https://videoapp.microsoft.com/Teams-VideoApp-example/app/configure.html
   }
 }
 ```
 
 Ensure that you adhere to the following requirements to update the app manifest:
 
-* Each filter has a non-empty guid, and the guid is unique for the `meetingExtensionDefinition` property.
+* Each `videoFilters` property has a non-empty guid, and the guid is unique for the `meetingExtensionDefinition` property.
 
-* The number of filters for an app is limited to 32.
+* The number of video filters for an app is limited to 32.
 
 * The maximum size for a video filter thumbnail image size is 2 MB.
 
-* The `videoAppContentUrl` property isn't empty.
+* The `videoFiltersConfigurationUrl` property isn't empty.
 
 * The thumbnail image file resolution should match 74 x 42 dimensions of the viewport. That is abs (width by height: 74 x 42) less than 0.01.
 
-* The value of each filter's thumbnail is a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA.
+* The value of each video filter's thumbnail is a valid path to a file in the PNG format as 24-bit RGB or 32-bit RGBA.
 
 * Supported RawFormat is PNG.
 
 * Supported PixelFormat is PixelFormat24bppRGB or PixelFormat32bppARGB.
 
-* Filter categories:
+* Video Filter categories:
   * Styles: Filters that add visual effects to the video stream, including graphical styles such as color and texture changes.
   * Frames: Filters with additional add-on designs, which don't have semantic information.
   * Makeup: Virtual makeup based on facial area.
@@ -219,7 +219,7 @@ The app validation tool checks your app package against the test cases that Micr
 
 You can configure your app to fetch the user's video stream during the meeting lobby and in-meeting experience. You can pass a call to `app.initialize()` to initialize the [teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) in your app.
 
-You can use the video extensibility APIs to access the video stream of the user and get notified when a user has selected and applied a filter.
+You can use the video extensibility APIs to access the video stream of the user and get notified when a user has selected and applied a video filter.
 
 To initialize the [video extensibility APIs](/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest&preserve-view=true), include the external JavaScript file to the HTML page using the src attribute.
 
@@ -260,8 +260,8 @@ Use the following API methods in the JavaScript file to trigger the video filter
   ```
 
 * Call the `registerForVideoFrame` method to:
-  * Get video frames from video pipeline.
-  * Return processed video frames from video pipeline.
+  * Get the video frames from video pipeline.
+  * Return the processed video frames from video pipeline.
   * Notify error.
 
   The `VideoFrameCallback` function registers and processes the video frame.
@@ -273,22 +273,22 @@ Use the following API methods in the JavaScript file to trigger the video filter
 
   import { video } from "@microsoft/teams-js";
 
-  // video frame handler for sampleEffect1
+  // The video frame handler for sampleEffect1
 
   function sampleEffectHandler1(videoFrame) {
-      // process video frame with sampleEffect1
+      // process the video frame with sampleEffect1
 
   }
 
-  // video frame handler for sampleEffect2
+  // The video frame handler for sampleEffect2
 
   function sampleEffectHandler2(videoFrame) {
 
-      // process video frame with sampleEffect2
+      // process the video frame with sampleEffect2
 
   }
   function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
-    // selectedEffectId is the effect id that is using currently in video app
+    // selectedEffectId is the effect id that is used currently in video app
     switch (selectedEffectId) {
       case sampleEffect1:
         sampleEffectHandler1(videoFrame);
@@ -299,7 +299,7 @@ Use the following API methods in the JavaScript file to trigger the video filter
       default:
         break;
     }
-    //send notification the effect processing is finshed.
+    //send notification that the effect processing is finished.
     notifyVideoProcessed();
     //send error to Teams if any
     // if (errorOccurs) {
@@ -340,30 +340,30 @@ Use the following API methods in the JavaScript file to trigger the video filter
 
 Ensure that you implement the following guidelines to use the video extensibility APIs:
 
-* Video frame related data, including any raw video frame and any data calculated from video frame, must only be consumed in user's local computer, and shouldn't be uploaded to the network.
+* The video frame related data, including any raw video frame and any data calculated from the video frame, must only be consumed in user's local computer, and shouldn't be uploaded to the network.
 
-* Only NV12 video format is supported. RGB(A) isn't supported. The sample app has provided sample code for video format conversion between NV12 and RGB(A).
+* Only NV12 video format is supported. RGB(A) isn't supported. The [sample app](#code-sample) has provided sample code for the video format conversion between NV12 and RGB(A).
 
 * The JavaScript in the video app must only operate on the latest videoFrame. References to previous video frames can result in unexpected behavior.
 
-* Video frame size can change anytime, so size sensitive resources for processing video frames should be recreated when video frame size changes.
+* The video frame size can change anytime, so size sensitive resources for processing the video frames should be recreated when the video frame size changes.
 
 * Call `registerForVideoEffect()` as early as possible. Call `registerForVideoFrame()` after the required resources are downloaded and the video app initialization is finished.
 
 * Ensure the stability of the effect algorithm. When calling `notifyVideoFrameProcessed`, ensure that the video frame is fully processed even if the algorithm crashes. When using a video app, users will be surprised if they see a video frame without the effect.
 
-* Video filter app must be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
+* The Video filter app must be compliant to [Teams client SDK terms of use](/legal/microsoft-apis/terms-of-use).
 
 * Ensure that the video filter app meets the following performance requirements:
-  * Video frame processing time must be less than 30 ms.
-  * Video app loading time must be less than four seconds.
+  * The Video frame processing time must be less than 30 ms.
+  * The Video app loading time must be less than four seconds.
   * App Size must be less than 20 MB.
   * Memory size must be less than 150 MB.
   * Latency must be less than 100 ms.
 
 ## Sideload the video filter app
 
-Sideload the video filter app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). After sideloading, you can use the video filter app to apply filters to videos in Teams meetings.
+Sideload the video filter app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). After sideloading, you can use the video filter app to apply video filters to videos in Teams meetings.
 
 ## Diversity and Inclusion requirements
 
@@ -377,7 +377,7 @@ The following are the guiding principles for defining requirements and app appro
 1. A filter shouldn't be offensive or contain objectionable content.
 1. A filter thumbnail should be inclusive. For example, it shouldn't indicate to the user that only a certain type of person can use this filter.
 
-A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities. The following are the diversity categories video filters:
+A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities. The following are the diversity categories for video filters:
 </br>
 
 # [Category 1](#tab/category-1)
@@ -396,9 +396,9 @@ Here are some examples of category 1 diversity:
 
 # [Category 2](#tab/category-2)
 
-A filter app can cater to at least one type of Category 2 diversity.
+A video filter app can cater to at least one type of Category 2 diversity.
 
-   1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
+   1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the video filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
 
    1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum.
 
@@ -412,7 +412,7 @@ Here are some examples of category 2 diversity:
 
 # [Category 3](#tab/category-3)
 
-A filter app must avoid a combination of filters related to diversities in Category 3.
+A video filter app must avoid a combination of filters related to diversities in Category 3.
 
 Here are some examples of category 3 diversity:
 

@@ -1054,7 +1054,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**VideEffectCallBack**|String|Yes|VideEffectCallBack is the callback function as first parameter that passed to registerForVideoEffect function. Video app developer can put logics that want to be called into VideEffectCallBack  after calling registerForVideoEffect.|
+|**VideoEffectCallBack**|String|Yes|VideEffectCallBack is the callback function as first parameter that passed to registerForVideoEffect function. Video app developer can put logics that want to be called into VideEffectCallBack  after calling registerForVideoEffect.|
 
 ### Example
 
@@ -1075,7 +1075,6 @@ The following table includes the query parameter:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**VideoFrameCallback**| String | Yes |VideoFrameCallback is the callback function as first parameter that passed to registerForVideoFrame function. Video app developer can put logics that want to be called into VideoFrameCallback after calling registerForVideoFrame. |
-|**config**|String|Yes||
 
 ### Example
 
@@ -1084,18 +1083,18 @@ The following table includes the query parameter:
 
 import { video } from "@microsoft/teams-js";
 
-// video frame handler for sampleEffect1
+// The video frame handler for sampleEffect1
 
 function sampleEffectHandler1(videoFrame) {
-    // process video frame with sampleEffect1
+    // process the video frame with sampleEffect1
 
 }
 
-// video frame handler for sampleEffect2
+// The video frame handler for sampleEffect2
 
 function sampleEffectHandler2(videoFrame) {
 
-    // process video frame with sampleEffect2
+    // process the video frame with sampleEffect2
 
 }
 function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
