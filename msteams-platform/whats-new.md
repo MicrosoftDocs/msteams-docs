@@ -36,6 +36,20 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |---|---|---|---|
 |**April**|**Mar**|**Feb**|**Jan**|
 
+:::row:::
+   :::column span="":::
+      <details><summary> August </summary>
+        | **Date** | **Update** |
+        |-----|-----|
+        | 08/09/2022 | [Introduced Teams Toolkit for Visual Studio 2022.](oolkit/teams-toolkit-overview-visual-studio.md) |
+        | 08/03/2022 | [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+        | 08/03/2022 | [Added feature for retrieving meeting transcripts in the post-meeting scenario.](graph-api/meeting-transcripts/overview-transcripts.md) |
+        | 08/03/2022 | [Link unfurling for share to teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+        | 08/01/2021| [Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022.](concepts/build-and-test/teams-developer-portal.md) |
+      </details>
+   :::column-end:::
+:::row-end:::
+
 ## Previous updates
 
 > [!div class="nextstepaction"]
