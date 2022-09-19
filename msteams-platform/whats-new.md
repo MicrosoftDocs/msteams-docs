@@ -88,6 +88,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 :::column-end:::
 :::row-end:::
 
+</br>
 <details><summary> August </summary>
 
 | **Date** | **Update** |
@@ -99,7 +100,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 08/01/2021| [Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022.](concepts/build-and-test/teams-developer-portal.md) |
 
 </details>
-
+</br>
 <details><summary> July </summary>
 
 | **Date** | **Update** |
@@ -112,7 +113,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 07/08/2022| [Updates to send channel ID selected by user during app installation to bots via conversation and installation update events](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 
 </details>
-
+</br>
 <details><summary> June </summary>
 
 | **Date** | **Update** |
@@ -122,7 +123,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 06/03/2022 | [Updated Add authentication module for enabling SSO for tab app with new structure and procedures](tabs/how-to/authentication/tab-sso-overview.md) |
 
 </details>
-
+</br>
 <details><summary> May </summary>
 
 | **Date** | **Update** |
@@ -135,7 +136,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 5/24/2022| [Bots and Message extensions in GCC and GCCH](concepts/app-fundamentals-overview.md#government-community-cloud)|
 
 </details>
-
+</br>
 <details><summary> April </summary>
 
 | **Date** | **Update** |
@@ -149,7 +150,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 04/01/2022 | [Introduced step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml)|
 
 </details>
-
+</br>
 <details><summary> March </summary>
 
 | **Date** | **Update** |
@@ -164,7 +165,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 03/03/2022 | [How to add authentication using external OAuth provider](tabs/how-to/authentication/auth-oauth-provider.md)|
 
 </details>
-
+</br>
 <details><summary> February </summary>
 
 | **Date** | **Update** |
@@ -184,7 +185,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | 02/02/2022 | [Introduced app manifest version 1.12](resources/schema/manifest-schema.md) |
 
 </details>
-
+</br>
 <details><summary> January </summary>
 
 | **Date** | **Update** |
@@ -198,7 +199,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 ## Previous updates
 
 Explore updates from the previous GA releases listed here.
-
+</br>
 <details>
 <summary><b>2021</b></summary>
 
@@ -376,39 +377,21 @@ Explore updates from the previous GA releases listed here.
 
         **2022 September**
 
-        * ***September 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***October 03, 2022*** - [Mute and unmute APIs for apps in Teams meeting stage](apps-in-teams-meetings/api-references)
+        * ***October 02, 2022*** - [Collaboration controls for Teams](samples/collaboration-control)
 
    :::column-end:::
 :::row-end:::
 
-## 2022
+| 06/30/2022 | [Apps for instant meetings, one-on-one, and group calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|05/24/2022| [Enhanced collaboration with Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md) |
+| 02/03/2022 | [Introduced app manifest version 1.13](resources/schema/manifest-schema-dev-preview.md) |
+| 01/17/2022 | [People Picker in Adaptive cards for mobile](task-modules-and-cards/cards/people-picker.md) |
+| 10/28/2021 |[Bots can be enabled to receive all channel messages using resource-specific consent (RSC)](bots/how-to/conversations/conversation-basics.md) |
+| 06/16/2021 | [Resource-specific consent for chats](graph-api/rsc/resource-specific-consent.md) |
 
-|<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
-|---|---|---|---|
-|**April**|**Mar**|**Feb**|**Jan**|
-
-## Previous updates
-
-> [!div class="nextstepaction"]
-> [2021](~/features-twenty-one.md)
-
-> [!div class="nextstepaction"]
-> [2020](~/features-twenty-one.md)
-
-> [!div class="nextstepaction"]
-> [2019](~/features-twenty-one.md)
-
-:::row:::
-   :::column span="":::
-      :::image type="icon" source="~/assets/images/template-catalog.png" alt-text="Templates that are generally available in catalog":::
-   :::column-end:::
-   :::column span="":::
-      #### Teams app template catalog
-
-       Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
-
-   :::column-end:::
-:::row-end:::
+For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 ::: zone-end
 
@@ -427,39 +410,12 @@ Explore updates from the previous GA releases listed here.
 
         **2022 September**
 
-        * ***September 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***August 01, 2022*** - App Studio is deprecated from August 01, 2022
 
    :::column-end:::
 :::row-end:::
 
-## 2022
-
-|<details><summary>Aug</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jul</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>Jun</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|<details><summary>May</summary> </br>**August 03, 2022** - [Link unfurling for share to teams from web apps](/concepts/build-and-test/share-to-teams-from-web-apps)<br> **August 03, 2022** - [Share to Teams from personal app or tab](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab)</details>|
-|---|---|---|---|
-|**April**|**Mar**|**Feb**|**Jan**|
-
-## Previous updates
-
-> [!div class="nextstepaction"]
-> [2021](~/features-twenty-one.md)
-
-> [!div class="nextstepaction"]
-> [2020](~/features-twenty-one.md)
-
-> [!div class="nextstepaction"]
-> [2019](~/features-twenty-one.md)
 ::: zone-end
-
-<!--
-## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
-
-| Date | Update | Find here |
-| --- | --- | --- |
-|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
-|05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
-|05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
-|05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
--->
 
 ## Teams app template catalog
 
