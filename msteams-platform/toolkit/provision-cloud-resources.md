@@ -82,7 +82,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 5. You can either select or create a new **Resource group**.
 6. Select **Provision**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Select resource group":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Select resource group":::
 
 7. The dialog warns you that charges may be added as per Azure usage. Select **Provision**.
 
