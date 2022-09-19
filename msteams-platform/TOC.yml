@@ -102,7 +102,7 @@
       href: toolkit/install-Teams-Toolkit.md
     - name: Explore Teams Toolkit
       href: toolkit/explore-Teams-Toolkit.md
-    - name: Prepare to build apps using Microsoft Teams Toolkit
+    - name: Prepare to build apps using Teams Toolkit
       href: toolkit/build-environments.md
     - name: Use Teams Toolkit to create your app 
       items:
@@ -164,8 +164,6 @@
       href: toolkit/faq.md        
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
-  - name: Yeoman generator for Teams (GitHub)
-    href: https://github.com/pnp/generator-teams
   - name: Developer Portal for Teams
     items:
     - name: Overview
@@ -180,6 +178,8 @@
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
+  - name: Yeoman generator for Teams (GitHub)
+    href: https://github.com/pnp/generator-teams  
   - name: Microsoft Graph SDKs
     href: /graph/sdks/sdks-overview
   - name: Legacy SDKs
