@@ -96,7 +96,7 @@
   items:
   - name: Teams Toolkit 
     items:
-    - name: Teams Toolkit overview
+    - name: Overview
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Install and explore Teams Toolkit 
       items:
