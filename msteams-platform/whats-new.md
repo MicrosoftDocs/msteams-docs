@@ -12,20 +12,20 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ::: zone pivot="ga-feature"
 
-## GA features
+## Generally available
 
 :::row:::
    :::column span="":::
       :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
    :::column-end:::
    :::column span="":::
-      #### GA features
 
         Microsoft Teams platform features that are available to all app developers.
 
         **2022 September**
 
-        * ***September 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+        * ***September 16, 2022*** - [Adaptive Cards in search based message extensions now support Universal Actions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+        * ***September 16, 2022*** - [`selectMedia` API for capturing videos using camera](concepts/device-capabilities/media-capabilities.md#code-snippets)
 
    :::column-end:::
 :::row-end:::
@@ -371,11 +371,10 @@ Explore updates from the previous GA releases listed here.
       :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
    :::column-end:::
    :::column span="":::
-      #### Developer preview
 
         Microsoft Teams platform features that are available to all app developers.
 
-        **2022 September**
+        **2022 October**
 
         * ***October 23, 2022*** - [Share apps to the Teams meeting stage in mobile](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
         * ***October 03, 2022*** - [Mute and unmute APIs for apps in Teams meeting stage](apps-in-teams-meetings/api-references.md)
@@ -406,11 +405,10 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
       :::image type="icon" source="~/assets/images/developer-preview-new.png" alt-text="Features that are generally available for developers":::
    :::column-end:::
    :::column span="":::
-      #### Deprecated features
 
         Microsoft Teams platform features that are available to all app developers.
 
-        **2022 September**
+        **2022 August**
 
         * ***August 01, 2022*** - App Studio is deprecated from August 01, 2022
 
