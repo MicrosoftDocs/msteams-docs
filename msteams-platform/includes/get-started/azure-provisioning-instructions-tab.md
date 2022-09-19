@@ -1,6 +1,6 @@
 ## Deploy your app to Azure
 
-Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
+Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
 <br>
 <br>
 <details>
@@ -27,15 +27,14 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
    > [!NOTE]
-   > There are always some Azure resources used for hosting your app.
+   > Your app will always be hosted using certain Azure resources.
    >
-   >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal?branch=pr-en-us-6602)
+   >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal)
 
     A dialog warns you that costs may be incurred when running resources in Azure.
 
 1. Select **Provision**.
 
- git-issue-Need-documentation-on-how-to-provision-using-a-new-resource-group
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="The screenshot showing the provisioning of dialog.":::
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot showing the selection of subscription":::
@@ -70,9 +69,6 @@ In your terminal window:
 
    When prompted, select an Azure subscription to use Azure resources.
 
-   > [!NOTE]
-   > There are always some Azure resources used for hosting your app.
-
 1. Run `teamsfx deploy`.
 
    ``` bash
@@ -80,6 +76,9 @@ In your terminal window:
    ```
 
 ---
+
+> [!NOTE]
+> Your app will always be hosted using certain Azure resources.
 
 ## Run the deployed app
 
@@ -96,8 +95,5 @@ Once the provisioning and deployment steps are complete:
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
     Congratulations, your first tab app is running in your Azure environment!
-
-git-issue-Need-documentation-on-how-to-provision-using-a-new-resource-group
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="The screenshot showing the message to try the app now or later.":::
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="The screenshot showing the message to try the app now or later.":::

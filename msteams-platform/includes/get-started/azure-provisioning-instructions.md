@@ -16,11 +16,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision in the Cloud**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under deployment.:::
 
 1. Select a subscription to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
    > [!NOTE]
    > Your app will always be hosted using certain Azure resources.
@@ -29,17 +29,17 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing the provisioning of dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing the provisioning of complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
     The provisioned resource appears in the **Environment** section.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning of complete dialog.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
 
 1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
@@ -62,7 +62,7 @@ In your terminal window:
    When prompted, select an Azure subscription to use Azure resources.
 
    > [!NOTE]
-   > There are always some Azure resources used for hosting your app.
+   > Your app will always be hosted using certain Azure resources.
 
 1. Run `teamsfx deploy`.
 

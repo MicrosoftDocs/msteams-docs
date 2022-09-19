@@ -80,16 +80,14 @@ items:
     
         ![Select resource Azure bot](~/assets/images/Teams-Messaging-Extensions-Search/review-plus-create.png) 
     
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+    1.  To create a new resource group, select the required location from **New resource group location** dropdown list.
         For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
         ![New resource group location](~/assets/images/bots/newresource.png)
 
     1. Select **MultiTenant** under **Bot Type**.
 
-        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
+        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
