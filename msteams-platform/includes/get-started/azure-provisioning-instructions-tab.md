@@ -29,7 +29,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
    > [!NOTE]
    > Your app will always be hosted using certain Azure resources.
    >
-   >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal)
+   >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal.)
 
     A dialog warns you that costs may be incurred when running resources in Azure.
 
@@ -37,7 +37,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="The screenshot showing the provisioning of dialog.":::
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot showing the selection of subscription":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot showing the selection of subscription.":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
