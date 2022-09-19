@@ -110,7 +110,7 @@ items:
 
        Your Azure bot is created.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page.png" alt-text="Screenshot showing the azure bot resource being created.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page.png" alt-text="Screenshot showing the Azure bot resource being created.":::
         
       **To create client secret**
 
@@ -221,7 +221,7 @@ items:
                
        The following image shows the domain name:
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appIDuri.png" alt-text="Screenshot showing the App id.":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appIDuri.png" alt-text="Screenshot showing the App ID.":::
       
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -282,7 +282,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
 
     1. Select **Add a permission**.
 

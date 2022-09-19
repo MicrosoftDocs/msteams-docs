@@ -425,7 +425,7 @@ items:
        > [!NOTE]
        > If you're already in testing your bot in Teams, you must sign out from this app and Teams. Then sign in again to see this change.</br>
         
-          :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Screenshot showing the updation of manifest.":::
+          :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Screenshot showing the updating of manifest.":::
 
     **To set up Bot service connection**
 
@@ -441,7 +441,7 @@ items:
         | ----- | ----- |
         | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
         | Service Provider | Select **Azure Active Directory V2**. |
-        | Client id | Saved previously as your **Microsoft App ID**. |
+        | Client ID | Saved previously as your **Microsoft App ID**. |
         | Client secret | Saved previously as **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
         | Tenant ID | Enter **common**. |
@@ -515,7 +515,7 @@ items:
 
     1. Open the **manifest.json** file.
 
-    1. Replace all occurances of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
+    1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
     
     1. In your cloned repository, navigate to **bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
     
