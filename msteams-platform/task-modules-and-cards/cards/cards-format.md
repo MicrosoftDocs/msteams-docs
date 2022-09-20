@@ -117,6 +117,9 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
+> [!NOTE]
+> If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
+
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive card emoji":::
 
 ### Mention support within Adaptive Cards
@@ -321,6 +324,9 @@ The following image is an example of masking information in Adaptive Cards:
 ### Full width Adaptive Card
 
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
+
+> [!NOTE]
+> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 
 #### Construct full width cards
 

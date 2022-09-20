@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams tabs
 author: surbhigupta
-description: In this module, learn to build a custom tab on the Teams platform, Tab features and Tabs user scenarios
+description: Learn to build tabs, webpages embedded in Microsoft Teams. Create a content page as part of personal, channel, or group tab. Also, learn to build tabs with Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
@@ -75,7 +75,7 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 
 ### Tools to build tabs
 
-* [Teams Toolkit for Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
 * [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## Next step
