@@ -51,7 +51,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on**: This section allows you to add App ID URI that is configured in the Azure AD for your app to authenticate users with single sign-on (SSO).
+* **Single sign-on**: To support SSO configuration of your app, add App ID URI that you have configured in the Azure AD for your app to authenticate users with single sign-on (SSO).
 
    > [!NOTE]
    > Developer Portal is not used to configure SSO, but it supports SSO configuration that is done for a bot app.
