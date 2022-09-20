@@ -41,9 +41,9 @@ items:
 
      You must have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [C#](https://learn.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
-    * [Latest version of ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) 
+    * [Latest version of ASP.NET core](https://learn.microsoft.com/aspnet/core/?view=aspnetcore-3.1) 
     * [Latest version of React.JS](https://reactjs.org/tutorial/tutorial.html) 
 
 - title: Set up local environment
