@@ -163,7 +163,7 @@ You can access Teams Toolkit menu options under **Project** menu.
 
 # [Solution Explorer](#tab/solutionexplorer)
 
-   You can access Teams Toolkit menu options using **Solution Explorer**.
+You can access Teams Toolkit menu options using **Solution Explorer**.
 
 1. Select **View** > **Solution Explorer** to view Solution Explorer panel.
 1. Right-click on your **Project**.
