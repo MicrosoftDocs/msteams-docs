@@ -51,11 +51,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on**: To support SSO configuration of your app, add App ID URI that you have configured in the Azure AD for your app to authenticate users with single sign-on (SSO).
-
-   > [!NOTE]
-   > Developer Portal is not used to configure SSO, but it supports SSO configuration that is done for a bot app.
-
+* **Single sign-on**: Developer Portal supports SSO configured for a Teams app in Azure AD.
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
