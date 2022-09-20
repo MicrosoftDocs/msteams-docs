@@ -355,13 +355,13 @@
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
-      displayName: Command invoke locations, static list of parameters, command to your app manifest
+      displayName: Command invoke locations, static list of parameters, action command manually
     - name: Create and send task module
       href: messaging-extensions/how-to/action-commands/create-task-module.md
-      displayName: Initial invoke request, respond to fetchTask
+      displayName: Initial invoke request, respond to fetchTask, payload activity
     - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-      displayName: Respond to initial submit action, configure the poll, attribution for bot messages
+      displayName: Respond to initial submit action, configure the poll, attribution for bot messages, submit action
   - name: Search commands
     items:
     - name: Define search commands
@@ -370,20 +370,20 @@
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Universal actions for search based message extensions
       href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
-      displayName: Handle tap actions
+      displayName: Handle tap actions, Just-in-time install, JIT
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
-    displayName: Through wildcards
+    displayName: Domain listings can include wildcards
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Unified meetings apps
     href: apps-in-teams-meetings/meeting-app-extensibility.md
-    displayName: Chat tab, poll survey, guest access
+    displayName: Chat tab, poll survey, user access, federated users
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    displayName: Access, organizer, meeting token generator app, channels, organizer
+    displayName: meeting token generator app, meeting scenario
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
     displayName: CART URL, channel, permissions, access, audio state
@@ -391,10 +391,9 @@
     items:
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
-      displayName: Access, permissions
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
-      displayName: Access, permisssions, chat entity
+      displayName: Obtain meeting details using user-level notification, tenant-level notification
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
@@ -408,7 +407,6 @@
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
-        displayName: Fluid container, static view
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
       displayName: Ephemeral data structures
@@ -421,12 +419,11 @@
         href: sbs-teams-live-share.yml
       - name: Custom Azure Fluid Relay service
         href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
-        displayName: Access
     - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
-    displayName: Single vitrual scene, organizer
+    displayName: Single vitrual scene, scene studio
 - name: Build webhooks and connectors
   items:
   - name: Overview
