@@ -694,7 +694,7 @@ The following table provides the response codes:
 
 ## Get app content stage sharing capabilities API
 
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
+The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The API `getAppContentStageSharingCapabilities` will let the app know, if the share to stage button will be rendered or not. If the app has sharing capabilities, then the button will appear.
 
 ### Query parameter
 
@@ -992,6 +992,7 @@ callback = (errcode, result) => {
 
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
+
 ### Query parameter
 
 The following table includes the query parameter:
@@ -1023,17 +1024,17 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 
 ```JSON
 "authorization": {
-	"permissions": {
-		"resourceSpecific": [
-			{
-				"name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-				"type": "Delegated"
-			}
-		]
-	}
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+    "type": "Delegated"
+   }
+  ]
+ }
 }
 ```
- 
+
 ### Example
 
 ```javascript
