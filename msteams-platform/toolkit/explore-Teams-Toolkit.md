@@ -147,7 +147,7 @@ From the task pane you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-After you install Teams Toolkit, the Teams Toolkit menu appears under the Project menu option. You can view its features and functions in the Teams Toolkit menu.
+After you install Teams Toolkit, the **Teams Toolkit** menu appears under the **Project** menu option. You can view its features and functions in the Teams Toolkit menu.
 
 > [!NOTE]
 > The Teams Toolkit menu appears in the Visual Studio Project menu only when a project or solution that is created using Teams Toolkit is currently open.
