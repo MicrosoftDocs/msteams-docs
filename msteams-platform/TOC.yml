@@ -546,7 +546,7 @@
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
   - name: Integrate location capabilities
-    href: concepts/device-capabilities/location-capability.md s
+    href: concepts/device-capabilities/location-capability.md
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
