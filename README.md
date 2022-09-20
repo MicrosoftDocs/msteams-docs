@@ -8,7 +8,7 @@ Get documentation, sample code, tutorials, and more to help you build custom Mic
 
 Teams documentation is part of the Microsoft Docs technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. You can ask questions, provide suggestion, or provide updates. See [how to contribute to Teams documentation](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).
 
-To contribute to any Microsoft Docs, see the [contributor guide overview](https://learn.microsoft.com/contribute/).
+To contribute to Microsoft Docs, see the [contributor guide overview](https://learn.microsoft.com/contribute/).
 
 To know more about Microsoft standards and style guide, see [Microsoft style guide](https://learn.microsoft.com/style-guide/welcome/).
 
