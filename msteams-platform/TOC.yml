@@ -490,76 +490,63 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
-    displayName: Access
+    displayName: Authentication method
   - name: Tabs
     items:
     - name: Enable SSO for tab app
       items:
       - name: Overview
         href: tabs/how-to/authentication/tab-sso-overview.md
-        displayName: Cookies, channel, access, permissions
       - name: Register your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-        displayName: Access, permissions, configurations, browser, extension
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
-        displayName: Extension, access, permissions
       - name: Update app manifest for SSO and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
-        displayName: Access, permissions
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-        displayName: Access, permissions, channel, browser, configuration, delegated
+        displayName: Configure authentication for different platforms
       - name: Troubleshoot SSO authentication
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-        displayName: Access, permissions, configurations
     - name: Use third party OAuth IdP authentication
       items:
       - name: Overview
         href: tabs/how-to/authentication/auth-flow-tab.md
-        displayName: Access, configuration
       - name: Configure third party OAuth IdP authentication
         href: tabs/how-to/authentication/auth-tab-aad.md
-        displayName: Access, configuration, cookies
       - name: Use external OAuth providers
         href: tabs/how-to/authentication/auth-oauth-provider.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
       href: bots/how-to/authentication/auth-flow-bot.md
-      displayName: Access
     - name: Add authentication to your bot
       href: bots/how-to/authentication/add-authentication.md
-      displayName: Configuration, delegate, emulator, tunneling, channels 
+      displayName: Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
-      displayName: Acces, permissions, configuration, settings
   - name: Message extensions
     items:
     - name: Add authentication to your message extension
       href: messaging-extensions/how-to/add-authentication.md
       displayName: Configuration
     - name: Enable SSO for message extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md
-      displayName: Setting, extensions  
+      href: messaging-extensions/how-to/enable-SSO-auth-me.md 
 - name: Integrate device capabilities
   items:
   - name: Overview
     href: concepts/device-capabilities/device-capabilities-overview.md
-    displayName: Access, premissions
+    displayName: Camera, microphone, gallery, QR, barcode scanner, location
   - name: Request device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
-    displayName: Access, permissions, whiteboard, configuration
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-    displayName: Access, permissions, configuration
   - name: Integrate location capabilities
-    href: concepts/device-capabilities/location-capability.md 
-    displayName: Access, permissions, configurations
+    href: concepts/device-capabilities/location-capability.md s
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
@@ -573,65 +560,61 @@
     displayName: Access, report, MSAL2
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-    displayName: Access, permissions, delegated, channel, organizer, notifications
+    displayName: Permissions, delegated
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-    displayName: Permissions, delegated, channel, notifications
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
-    displayName: Permission, channel, communications, setting
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
 - name: Extend your app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md
-    displayName: Access, permissions, channel, extensions
+    displayName: Outlook, and Office as application hosts
   - name: Prerequisites
     href: m365-apps/prerequisites.md
-    displayName: Channel, configuration, settings, extensions
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
-    displayName: Access, permissions, channel, report, browser
+    displayName: Microoft 365, Office 365
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
-    displayName: Access, channel, report, communication
+    displayName: Microoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
-    displayName: Access, permissions, channel, extensions
 - name: Test your app
   items:
   - name: Overview
     href: concepts/build-and-test/test-app-overview.md
-    displayName: Access, settings
+    displayName: Prepare your Microsoft 365 tenant, add test data to your Microsoft 365 tenant
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
+    displayName: Basic, Standard, Enterprise E1, E3, and E5, developer, Education, Education Plus, and Education E5
   - name: Choose a test setup and debug Teams app
     href: concepts/build-and-test/debug.md
-    displayName: Access, configuration, browser, channel 
+    displayName: Purely hosted, locally hosted, cloud hosted
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
-    displayName: Permissions, channel
+    displayName: Allow users to upload apps
   - name: Tabs
     items:
     - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
-      displayName: Access, cache, configuration, browser
   - name: Bots
     items:
     - name: Test and debug your bot locally with IDE
-      displayName: Channel, extensions
+      displayName: Bot Emulator
       href: bots/how-to/debug/locally-with-an-ide.md
     - name: Debug your bot with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
-      displayName: Channels
     - name: Debug your calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-      displayName: Configuration, setting, notification
+      displayName: signaling
   - name: Microsoft Graph
     items:
     - name: Test resource-specific consent permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
+      displayName: Postman app
     - name: Resource-specific consent for team JSON test file
       href: graph-api/rsc/test-team-rsc-json-file.md
     - name: Resource-specific consent for chat JSON test file
