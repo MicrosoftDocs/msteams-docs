@@ -94,12 +94,20 @@ To install Teams Toolkit:
     The Visual Studio installer opens in the **Workloads** window.
 
 1. Select the **ASP.NET and web development** workload.
-1. Select the **Microsoft Teams development tools** in **Installation details** panel.
+
+    The ASP.NET and web development workloads available for installation appear in the **Installation details** panel.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/select-workloads.png" alt-text="Visual studio-installation":::
+
+1. Select **Optional** > **Microsoft Teams development tools** from the  **Installation details** panel.
+
 1. Select **Install**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
-
     The Visual Studio installer adds the Teams Toolkit to Visual Studio.
+
+    :::image type="content" source="../assets/images/teams-toolkit-overview/install-teams-toolkit.png" alt-text="Install Teams Toolkit in Visual Studio":::
+
+    
 
 1. Select **Launch** to open Visual Studio.
 
