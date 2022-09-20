@@ -97,6 +97,9 @@ Following is the deep link syntax:
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
+> [!NOTE]
+> Partners need to use the internal app ID in deep links to task modules rather than the external ID from their manifest. This applies to sideloaded and LOB apps. If they open a task module using a deep link with the external ID then getAuthToken and other APIs that depend on the app definition will not work. We have no plans to change this because it would introduce serious security issues into the product.
+
 ### Examples
 
 When a user enters a URL, it's unfurled into an Adaptive card.
