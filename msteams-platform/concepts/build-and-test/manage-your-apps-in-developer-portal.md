@@ -51,7 +51,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on**: You can configure your app to authenticate users with single sign-on (SSO).
+* **Single sign-on**: This section allows you to add App ID URI that is configured in the Azure AD for your app to authenticate users with single sign-on (SSO).
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
