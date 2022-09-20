@@ -430,15 +430,14 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    displayName: HMAC security token, access, channel
+    displayName: HMAC security token
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    displayName: Access, permissions
   - name: Create Office 365 Connectors
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
-    displayName: Access, settings, configuration
+    displayName: Send messages using cURL and PowerShell, Rate limiting for connectors
 - name: Build cards and task modules
   items:
   - name: Overview
@@ -450,7 +449,7 @@
       displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: Flexible layout, receipt card, carousel card, setting
+      displayName: Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification
