@@ -152,7 +152,7 @@ items:
 
     Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
-    1. **Creating a new project** page: You select the project type.
+    1. **Create a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
     1. **Create a new Teams application** page: You select the Teams app capabilities.
 
@@ -209,7 +209,7 @@ items:
 
         1. Select **Create**.      
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png" alt-text="Illustration shows the options to configure new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png_1" alt-text="Illustration shows the options to configure new project.":::
         
         Your Teams tab app is created in a few seconds.
         
@@ -227,7 +227,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
 
     Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
@@ -248,13 +248,13 @@ items:
 
     To build and run your app:
 
-    1. Select **Project** > **Teams Toolkit** > **Configure Your Microsoft Teams**.
+    1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Select the provision operation for the project":::
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account.png_1" alt-text="Select the provision operation for the project":::
 
     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
@@ -279,7 +279,7 @@ items:
         
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot showing how to add app to Teams web client":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot showing how to add app to Teams web client":::
 
        Congratulations, your first tab app is running in your local environment!
 
@@ -293,7 +293,7 @@ items:
 
         The app requests permission to grant access for displaying user details.    
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission.png" alt-text="Screenshot showing how to accept permission to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot showing how to accept permission to access user information":::
 
     1. Select **Accept** to let your app access user details.
 
@@ -326,7 +326,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Select the provision operation for the project":::
 
     1. Enter the following in the **Provision** dialog:
 
@@ -365,7 +365,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud.png" alt-text="Select deploy to cloud":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Select deploy to cloud":::
 
     1. Select **OK**. 
 
@@ -377,7 +377,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview.png" alt-text="Select preview":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Select preview":::
 
     1. Select **Add** when prompted to install the app to Teams.
 
@@ -395,7 +395,7 @@ items:
 
         The app requests permission to grant access for displaying user details.    
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission.png" alt-text="Screenshot showing how to accept permission to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot showing how to accept permission to access user information":::
 
     1. Select **Accept** to let your app access user details.
 
@@ -474,11 +474,11 @@ items:
 
         Select app feature: 
 
-        1. Select the **Bot app** as the capability for your app.
+        1. Select the **Command Bot app** as the capability for your app.
 
         1. Select **Create**.     
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot.png" alt-text="Illustration shows the options to configure new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot_1.png" alt-text="Illustration shows the options to configure new project.":::
 
         Your Teams bot app is created in a few seconds.
         
@@ -496,7 +496,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-appbot-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-appbot-solution-explorer_1.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
 
     Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
@@ -515,13 +515,13 @@ items:
 
     To build and run your app locally:
     
-    1. Select **Project** > **Teams Toolkit** > **Configure Your Microsoft Teams**.
+    1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Select the provision operation for the project":::
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account.png_1" alt-text="Select the provision operation for the project":::
 
     1.  Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -585,7 +585,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png_1" alt-text="provisioning in cloud":::
 
     1. Enter the following in the **Provision** dialog:
 
@@ -624,7 +624,7 @@ items:
 
      1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure.png" alt-text="deploy to cloud":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="deploy to cloud":::
 
      1. Select **OK**. 
 
@@ -636,7 +636,7 @@ items:
 
      1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure.png" alt-text="Select preview in Azure":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Select preview in Azure":::
 
      1. Select **Add** when prompted to install the app to Teams.
 
