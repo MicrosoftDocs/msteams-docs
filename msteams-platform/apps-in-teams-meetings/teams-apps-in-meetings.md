@@ -32,8 +32,6 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 
 > [!Note]
 >
-> * Currently, adding an app is not supported in mobile. However, a user can view the app and share the app to stage from mobile
->
 > * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
 > * Currently app experiences are not supported in Teams instant channel meetings.
