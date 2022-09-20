@@ -94,7 +94,7 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-  - name: Teams Toolkit for Visual Studio Code 
+  - name: Teams Toolkit 
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
@@ -102,7 +102,7 @@
       href: toolkit/install-Teams-Toolkit.md
     - name: Explore Teams Toolkit
       href: toolkit/explore-Teams-Toolkit.md
-    - name: Prepare to build apps using Microsoft Teams Toolkit
+    - name: Prepare to build apps using Teams Toolkit
       href: toolkit/build-environments.md
     - name: Use Teams Toolkit to create your app 
       items:
@@ -119,7 +119,9 @@
         - name: Create capability based cloud resources
           href: toolkit/add-resource.md  
         - name: Integrate existing third party APIs
-          href: toolkit/add-API-connection.md 
+          href: toolkit/add-API-connection.md
+        - name: Add single sign-on to Teams app
+          href: toolkit/add-single-sign-on.md  
       - name: Customize Manifest
         items:
         - name: Customize Teams app Manifest
@@ -145,7 +147,9 @@
       - name: Test your Teams app
         items: 
         - name: Integrate and collaborate
-          href: toolkit/TeamsFx-collaboration.md 
+          href: toolkit/TeamsFx-collaboration.md
+        - name: Set up CI/CD pipelines
+          href: toolkit/use-CICD-template.md  
         - name: Sideload and test app in Teams environment
           href: toolkit/sideload-and-test-app.md 
         - name: Test app behavior in different environment
@@ -158,24 +162,8 @@
         href: toolkit/Integrate-with-developer-portal.md
     - name: FAQ
       href: toolkit/faq.md        
-  - name: Teams Toolkit for Visual Studio 
-    items:
-    - name: Teams Toolkit overview
-      href: toolkit/teams-toolkit-overview-visual-studio.md    
-    - name: Create a new Teams app
-      href: toolkit/create-new-teams-app-for-Visual-Studio.md
-    - name: Debug your Teams app
-      href: toolkit/debug-teams-app-visual-studio.md
-    - name: Provision cloud resources
-      href: toolkit/provision-cloud-resources.md  
-    - name: Deploy Teams app to the cloud
-      href: toolkit/deploy-teams-app.md
-    - name: Edit Teams app manifest
-      href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md 
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
-  - name: Yeoman generator for Teams (GitHub)
-    href: https://github.com/pnp/generator-teams
   - name: Developer Portal for Teams
     items:
     - name: Overview
@@ -190,6 +178,8 @@
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
+  - name: Yeoman generator for Teams (GitHub)
+    href: https://github.com/pnp/generator-teams  
   - name: Microsoft Graph SDKs
     href: /graph/sdks/sdks-overview
   - name: Legacy SDKs
@@ -367,6 +357,8 @@
       href: messaging-extensions/how-to/search-commands/define-search-command.md
     - name: Respond to search commands
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
+    - name: Universal actions for search based message extensions
+      href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
       displayName: Handle tap actions
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
@@ -606,24 +598,31 @@
   items:
   - name: Overview
     href: concepts/build-and-test/test-app-overview.md
+    displayName: Access, settings
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
   - name: Choose a test setup and debug Teams app
     href: concepts/build-and-test/debug.md
+    displayName: Access, configuration, browser, channel 
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
+    displayName: Permissions, channel
   - name: Tabs
     items:
     - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
+      displayName: Access, cache, configuration, browser
   - name: Bots
     items:
     - name: Test and debug your bot locally with IDE
+      displayName: Channel, extensions
       href: bots/how-to/debug/locally-with-an-ide.md
     - name: Debug your bot with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
+      displayName: Channels
     - name: Debug your calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+      displayName: Configuration, setting, notification
   - name: Microsoft Graph
     items:
     - name: Test resource-specific consent permissions
@@ -659,7 +658,7 @@
       displayName: Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars, 
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-      displayName: Update Apple app store
+      displayName: Update Apple app store,app acquisition on mobile
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, publisher verification, attestation
@@ -673,8 +672,7 @@
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     -  name: Common reasons for app validation failure
-       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       
+       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
 - name: Monetize your app
   items:
   - name: Overview
@@ -688,18 +686,15 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
-  itesms:
+  items:
     - name: App manifest schema for Teams
       href: resources/schema/manifest-schema.md
-      displayName: Access, permissions, configuration, browser, channel, notification, background, delegated, organizer
     - name: Public developer preview
       items:
         - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md
-          displayName: Access, setting
+          href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview manifest schema for Teams
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer
 - name: Integrate with Teams
   items:
   - name: Overview
@@ -790,13 +785,18 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
+      displayName: Notification, setting
   - name: Use silent authentication in Azure AD
     href: tabs/how-to/authentication/auth-silent-aad.md
+    displayName: Access, cache, report
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
+    displayName: Cookies, configuration, browser, chat
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
+    displayName: Channel, chat, settings, browser, domain
 - name: Support and feedback
   href: feedback.md
+  displayName: Channel, chat, report, extensions

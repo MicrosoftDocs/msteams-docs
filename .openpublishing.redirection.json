@@ -743,6 +743,54 @@
       {
         "source_path": "msteams-platform/concepts/build-and-test/app-studio-overview.md",
         "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      { 
+        "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-flow-bot.md",
+        "redirect_url": "/msteams-platform/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-bot-aad.md",
+        "redirect_url": "/msteams-platform/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-oauth-card.md",
+        "redirect_url": "/msteams-platform/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/visual-studio-code-overview.md",
+        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/visual-studio-code-tab-sso.md",
+        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-csharp-app-studio.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-nodejs-app-studio.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-client-secret.md",
+        "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-admin-consent.md",
+        "redirect_url": "/msteams-platform/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/authentication/configure-identity-provider.md",
+        "redirect_url": "/msteams-platform/platform/concepts/authentication/authentication"
+      },
+      {
+        "source_path": "msteams-platform/resources/create-messaging-extension-using-appstudio.md",
+        "redirect_url": "/msteams-platform/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/accounts.md",
+        "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
       }
     ]
 }
