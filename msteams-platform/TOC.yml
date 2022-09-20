@@ -284,10 +284,9 @@
   items:
   - name: Overview
     href: bots/what-are-bots.md
-    displayName: Right mix of cards, text, and task modules, bot activity handlers, rate limiting
   - name: Bots and SDKs
     href: bots/bot-features.md
-    displayName: Multi-turn experiences in chat
+    displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
   - name: Bot activity handlers
     href: bots/bot-basics.md
     displayName: Bot logic, core Bot Framework handlers
@@ -295,9 +294,10 @@
     items:
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
+      displayName: Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, attribution for bot message
+      displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab.
       items:
       - name: Receive all channel messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -305,28 +305,28 @@
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
-      displayName: Entities collection, OAuthPrompt, 
+      displayName: Teams conversational bots
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: Message reaction events
+      displayName: Message reaction events, event handling for install and uninstall events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16
     - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md  
-      displayName: Poll updates, asychronous state change,  
+      href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
-    dispalyName: Fetch the roster
+    dispalyName: Fetch roster or user profile
   - name: Send and receive files using bot
     href: bots/how-to/bots-filesv4.md
+    displayName: File consent and upload files to Teams from a bot
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
-    displayName: handle rate limit, detect transient exceptions, per thread limit
+    displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
   - name: Calls and meetings bots
     items:
     - name: Overview
@@ -336,6 +336,7 @@
       displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, 
     - name: Register calls and meetings bot
       href: bots/calls-and-meetings/registering-calling-bot.md
+      displayName: How Bot can create call, join meeting and transfer call
     - name: Incoming call notifications
       href: bots/calls-and-meetings/call-notifications.md
       displayName: Redirects for region affinity, GeoDNS resolution 
