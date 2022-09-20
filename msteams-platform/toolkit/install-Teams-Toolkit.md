@@ -109,8 +109,6 @@ To install Teams Toolkit:
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/install-teams-toolkit.png" alt-text="Install Teams Toolkit in Visual Studio":::
 
-    
-
 1. Select **Launch** to open Visual Studio.
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Launch visual studio":::

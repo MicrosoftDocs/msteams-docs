@@ -10,7 +10,9 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-In this document you can understand different UI elements along with description and basic usage in Teams Toolkit for both Visual Studio Code and Visual Studio.
+After you've installed Teams Toolkit, you explore Teams Toolkit UI. Teams Toolkit comes with different UI in Visual Studio Code and Visual Studio.
+
+In this section, you can view UI for both variations.
 
 ::: zone pivot="visual-studio-code"
 
@@ -145,11 +147,14 @@ From the task pane you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-After you install Teams Toolkit, you can view Teams Toolkit options in two different methods:
+After you install Teams Toolkit, the Teams Toolkit menu appears under the Project menu option. You can view its features and functions in the Teams Toolkit menu.
+
+> [!NOTE]
+> The Teams Toolkit menu appears in the Visual Studio Project menu only when a project or solution that is created using Teams Toolkit is currently open.
 
 # [Project](#tab/prj)
 
-You can access Teams Toolkit under **Project**.
+You can access Teams Toolkit menu options under **Project** menu.
 
 1. Select **Project** > **Teams Toolkit**.
 1. You can now access different Teams Toolkit options.
@@ -158,7 +163,7 @@ You can access Teams Toolkit under **Project**.
 
 # [Solution Explorer](#tab/solutionexplorer)
 
-   You can access Teams Toolkit under **Solution Explorer**.
+   You can access Teams Toolkit menu options using **Solution Explorer**.
 
 1. Select **View** > **Solution Explorer** to view Solution Explorer panel.
 1. Right-click on your **Project**.
