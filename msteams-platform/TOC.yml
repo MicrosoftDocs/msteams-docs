@@ -2,15 +2,19 @@
   href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
+  displayName: Teams platform features, latest updates, RSS feed, deprecated
 - name: Glossary
-  href: get-started/glossary.md  
+  href: get-started/glossary.md
+  displayName: App tray, terminologies, definitions
 - name: Overview
   expanded: false 
   items:
   - name: Teams app that fits
     href: overview.md
+    displayName: Why build apps with Microsoft Teams platform
   - name: From ideas to Teams app
     href: overview-story.md
+    displayName: Teams app user experience
   - name: Explore Teams platform features
     href: overview-explore.md
   - name: The Teams solution
@@ -19,7 +23,8 @@
   expanded: false
   items:
   - name: Overview
-    href: get-started/get-started-overview.md  
+    href: get-started/get-started-overview.md
+    displayName: First Teams app
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first bot app using JavaScript
@@ -44,20 +49,25 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
+    displayName: Government Community Cloud (GCC), Department of Defense (DOD), GCC-High
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
+    displayName: App scope, Teams app features, capabilities
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
+    displayName: HTTPs, localhost, host your Teams app
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
+    displayName: Subscription, In-app purchases, Free trials, Test preview
 - name: Design your app
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
+    displayName: Design principles, Figma, UI Kit, UI library
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
@@ -92,6 +102,7 @@
       href: concepts/design/activity-feed-notifications.md
   - name: App customization
     href: concepts/design/enable-app-customization.md
+    displayName: Customize your app, update app name, branding, hide and unhide app
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit 
@@ -107,7 +118,8 @@
     - name: Use Teams Toolkit to create your app 
       items:
       - name: Prerequisites for creating your Teams app
-        href: toolkit/tools-prerequisites.md   
+        href: toolkit/tools-prerequisites.md
+        displayName: Accounts to build your Teams app    
       - name: Create a new Teams app project
         href: toolkit/create-new-project.md
       - name: Develop your Teams app
@@ -115,7 +127,8 @@
         - name: Add and manage environment
           href: toolkit/TeamsFx-multi-env.md
         - name: Create multi capability app
-          href: toolkit/add-capability.md 
+          href: toolkit/add-capability.md
+          displayName: Multiple capabilities app 
         - name: Create capability based cloud resources
           href: toolkit/add-resource.md  
         - name: Integrate existing third party APIs
@@ -230,28 +243,26 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Adaptive Cards, channel or group tabs, conversational tabs, SSO capabiity, custom tab
+    displayName: Webpages embedded in Microsoft Teams, declare custom tab in app manifest
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
-    displayName: iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok
+    displayName: clickjacking
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, secure tunnel to your tab, Reorder static personal tabs
+    displayName: App generator, Reorder static personal tabs
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
-    displayName: Secure tunnel to your tab, channel or group tab with ASP.NET Core
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
-    displayName: Task module, code integration, native loading indicator property, access additional content, TeamsJS
+    displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
   - name: Create configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-    displayName: Secured HTTPs endpoints, context data for your tab, tabs on mobile
   - name: Create removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
     displayName: Reconfigure tab, register remove handler
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
-    displayName: Authentication on mobile, with low bandwhidht and intermittent connections, testng and debugging on mobile devices 
+    displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes
@@ -263,13 +274,12 @@
     displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
-    displayName: Deep link, invoke stage view, tab information property
+    displayName: Tab in stage view
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
-    displayName: New converstaion, channel and static tabs
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
-    displayName: margins align, UI Kit desings, extra padding effect, 
+    displayName: margins align, extra padding effect, size of the tab margins
 - name: Build bots
   items:
   - name: Overview
