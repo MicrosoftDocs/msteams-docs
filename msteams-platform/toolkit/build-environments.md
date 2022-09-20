@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prepare to build apps using Microsoft Teams Toolkit
+# Prepare to build apps using Teams Toolkit
 
 Teams Toolkit supports environments for creating apps. Teams Toolkit also helps to integrate Azure Functions capabilities as well as cloud services in the Teams app you've built.
 

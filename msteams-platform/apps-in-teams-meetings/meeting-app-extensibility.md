@@ -1,9 +1,9 @@
 ---
 title: Unified meetings apps
 author: surbhigupta
-description: Learn about Teams meeting lifecycle and users meeting experience in desktop and mobile, User types, integrate bots and message extension in meeting lifecycle.
+description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and message extension in meeting lifecycle.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: none
 ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
@@ -24,7 +24,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 > [!NOTE]
 >
-> * Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for instant meetings, scheduled public channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
 
@@ -42,19 +42,17 @@ Tabs allow the team members to access services and content in a specific space w
 
 With the pre-meeting app experience, you can find and add meeting apps. You can also do pre-meeting tasks, such as developing a poll to survey the meeting participants.
 
-To add tabs to an existing meeting:
+#### To add tabs to an existing meeting
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot showing the details tab.":::. The tab gallery appears.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Pre-meeting app experience.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/PreMeeting.png" alt-text="Pre-meeting app experience.":::
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
-   >
-   > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
-   > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
+   > You can also add a tab to an existing meeting using the meeting **Chat** tab.
 
 # [Desktop](#tab/desktop)
 
@@ -64,13 +62,17 @@ To add tabs to an existing meeting:
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
+doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Mobile pre-meeting experience":::
+
 
 ---
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
@@ -94,7 +96,10 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
+doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view":::
+
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -106,21 +111,24 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
-> * Meeting stage is not supported for Anonymous users and Teams web client.
 
 The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-![In-meeting side panel](../assets/images/in-meeting-dialog.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog1.png" alt-text="In-meeting side panel":::
 
 # [Mobile](#tab/mobile)
 
+ doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile.:::"
+
+:::image type="content" source="~/assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="In-meeting side panel mobilel":::
+
 
 ---
 
-The following table describes the behavior of app when it's validated and not validated:
+The following table describes the behavior of app when it is validated and not validated:
 
 |App capability | App is validated | App isn't validated |
 |---|---|---|
@@ -144,12 +152,19 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ---
 
-> [!NOTE]
-> Tab layout must be organized when there are more than 10 polls or surveys.
+#### Apps in channel meeting
+
+A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
+
+However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a "Development" channel has a "Polly" tab. If you create a "Standup" meeting in that channel, that meeting would not have a "Polly" tab, until you explicitly [add the tab to the meeting](#to-add-tabs-to-an-existing-meeting).
+
+In public scheduled channel meetings, after a meeting tab is added it can be accessed from the meeting details page by selecting on the meeting object. See the following example:
+
+:::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="After a meeting":::
 
 ### Integrate bots into the meeting lifecycle
 
-Bots that are enabled in group chat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md), and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Bots that are enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### Integrate message extensions into the meeting lifecycle
 
@@ -163,23 +178,16 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
-* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
-
-* **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-
-* **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting, such as:
-  * They can interact with other meeting members but can't manage any of the meeting settings or share the content.  
-  * They can view or interact with the tab app on the meeting stage in Teams desktop client without installing the app or without any app entitlements. They can’t view or interact with the app on the meeting stage in a Teams web client.
-  * They can’t view or interact with the app in the side panel without any app entitlements.
-  * They aren't authorized to act as a presenter.
-  * If the attendee joins as an anonymous user, they can’t view or interact with the tab app on the meeting stage in both Teams web and desktop clients.
+* **Organizer**: Organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+* **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
+* **Attendee**: An attendee is invited to attend a meeting but can't act as a presenter. Attendees can interact with other meeting members but can't manage any of the meeting settings or share the content.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
+After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.​
 
 ## User types in a meeting
 
@@ -188,9 +196,11 @@ User types, such as in-tenant, guest, federated or external user in a meeting ca
 > [!NOTE]
 > The user type is not included in the **getParticipantRole** API.
 
+User types, such as, organizer, presenter, or attendee in a meeting can be [a participant in a meeting](#participant-roles-in-a-meeting).
+
 The following list details the various user types along with their accessibility and performance:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Microsoft Azure Active Directory (Azure AD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
 * **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
@@ -200,12 +210,12 @@ The following list details the various user types along with their accessibility
     > [!IMPORTANT]
     > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window and meeting stage. An anonymous user can't be an organizer but can be a presenter or attendee.
+* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-The following table provides the user types and lists the features that each user can access in scheduled meetings:
+The following table provides the user types and lists the features that each user can access in meetings:
 
 | User type | Tabs | Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -219,11 +229,12 @@ The following table provides the user types and lists the features that each use
 >
 > * Federated users can't interact with tab apps in calls.
 > * If federated users are added to an existing call with in-tenant or guest users, then all participants lose the ability to add, update, or remove apps. However, only the existing in-tenant or guest users would be able to still interact with the apps that were added before inviting federated users to the call.
+> * On mobile, anonymous users will not be able to access apps in scheduled public channel meetings.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 
 ## See also
 
