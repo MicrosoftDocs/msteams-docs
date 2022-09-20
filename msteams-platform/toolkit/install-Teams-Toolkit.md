@@ -15,13 +15,11 @@ Teams Toolkit is an extension in both Visual Studio and Visual Studio Code. In t
 
 ::: zone pivot="visual-studio-code"
 
-## Install Teams Toolkit for Visual Studio Code
+## Install Teams Toolkit in Visual Studio Code
 
-Before you start with installation, you need to have Visual Studio Code and Teams client installed.
+Before you start with installation, you need to have Visual Studio Code and Teams client installed. You can install Teams Toolkit from an extension in Visual Studio Code and from Visual Studio Code Marketplace.
 
-## Steps to install Teams Toolkit
-
-You can install Teams Toolkit from an extension in Visual Studio Code and from Visual Studio Code Marketplace. The following steps help you to install Teams Toolkit:
+To install Teams Toolkit:
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -85,15 +83,15 @@ Teams Toolkit is upgraded to the latest version by default. The following steps 
 
 ::: zone pivot="visual-studio"
 
-## Install Teams Toolkit for Visual Studio
+## Install Teams Toolkit in Visual Studio
 
-Before you start with installation, you need to install Visual Studio Installer.
+Before you start with installation, you need to install Visual Studio Installer. You can download the latest Visual Studio Installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
 
-You can download the latest Visual Studio Installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
+To install Teams Toolkit:
 
-## Steps to install Teams Toolkit
+1. Open the Visual Studio Installer.
 
-After you open the Visual Studio Installer, in the pop-up Workloads window:
+    The Visual Studio installed opens in a pop-up Workloads window.
 
 1. Select the **ASP.NET and web development** workload.
 1. Select the **Microsoft Teams development tools** in **Installation details** panel.

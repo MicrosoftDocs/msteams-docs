@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: In this module, learn Teams Toolkit, Installation of Teams Toolkit, and User journey of Teams Toolkit
+description: Learn about Teams Toolkit, it's features and interaction with other applications, and user journey in Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -11,13 +11,17 @@ zone_pivot_groups: teams-app-platform
 
 # Teams Toolkit Overview
 
-Teams Toolkit is a capability feature which allows you to perform multi-functions in both Microsoft Visual Studio Code as well as Visual Studio. With the help of Teams Toolkit you can automate the process from creating to deploying and customizing your app. The various features and advantages of Teams Toolkit are discussed in the respective documentation for the environments you choose.
+Teams Toolkit is an extension that you can add to Visual Studio Code and Visual Studio that enables you to develop, debug, and publish Microsoft Teams apps. It provides end-to-end support for your app building requirements.
+
+In this section, you'll learn about the features and functionalities of Teams Toolkit.
+
+<!--> which allows you to perform multi-functions in both Microsoft Visual Studio Code as well as Visual Studio. With the help of Teams Toolkit you can automate the process from creating to deploying and customizing your app. The various features and advantages of Teams Toolkit are discussed in the respective documentation for the environments you choose.-->
 
 ::: zone pivot="visual-studio-code"
 
 ## Teams Toolkit Overview for  Visual Studio Code
 
-Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code.App development with the toolkit has the following advantages:
+Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with the toolkit has the following advantages:
 
 * Integrated identity
 * Access to cloud storage
