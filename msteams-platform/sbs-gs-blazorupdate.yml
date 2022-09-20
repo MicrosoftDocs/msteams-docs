@@ -209,7 +209,7 @@ items:
 
         1. Select **Create**.      
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png_1" alt-text="Illustration shows the options to configure new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_1.png" alt-text="Illustration shows the options to configure new project.":::
         
         Your Teams tab app is created in a few seconds.
         
@@ -254,7 +254,7 @@ items:
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account.png_1" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Select the provision operation for the project":::
 
     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
@@ -521,7 +521,7 @@ items:
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account.png_1" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Select the provision operation for the project":::
 
     1.  Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -585,7 +585,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png_1" alt-text="provisioning in cloud":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="provisioning in cloud":::
 
     1. Enter the following in the **Provision** dialog:
 
