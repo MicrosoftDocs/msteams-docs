@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, Office 365 Connector, receipt, log in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -63,7 +63,7 @@ You can identify and use different types of cards based on your application requ
 | Thumbnail card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
 | List card | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
 | Receipt card | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
-| Signin card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Log in card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 >
@@ -274,7 +274,7 @@ Adaptive Card loop components are interactive units that sync across Microsoft 3
 > [!NOTE]
 > Adaptive Card loop component is available from Adaptive Card version 1.6.
 
-To enable an Adaptive Card loop you need to add `metadata` `webUrl` to the Adaptive Card schema as shown in the following code sample.
+To enable an Adaptive Card loop, you need to add `metadata` `webUrl` to the Adaptive Card schema as shown in the following code sample.
 
 If you want your bot to post an Adaptive Card loop component, add the `metadata` `webUrl` to the card payload option.
 
