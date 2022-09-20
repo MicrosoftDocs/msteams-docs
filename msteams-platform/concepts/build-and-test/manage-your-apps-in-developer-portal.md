@@ -52,6 +52,10 @@ In the **Configure** section, you can see the following components to manage and
   * Activity feed notification
 * **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
 * **Single sign-on**: This section allows you to add App ID URI that is configured in the Azure AD for your app to authenticate users with single sign-on (SSO).
+
+   > [!NOTE]
+   > Developer Portal is not used to configure SSO, but it supports SSO configuration that is done for a bot app.
+
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
@@ -76,7 +80,7 @@ In the **Advanced** section, you can see the following components to manage your
 * **App content**: You can configure your app with the following additional features:
   
   * Loading indicator: Displays an indicator to let users know your hosted app content (For example: Tabs and Task modules) is loading.
-  * Full-screen mode: Displays a personal app without an app header. It is only supported for the published apps to your org.
+  * Full-screen mode: Displays a personal app without an app header. It's only supported for the published apps to your org.
 
 * **Environments**
 
@@ -99,7 +103,7 @@ In the **Advanced** section, you can see the following components to manage your
       1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
       1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-* **Plan and pricing**: You can link a SaaS offer which you've created in the Partner center for your app.
+* **Plan and pricing**: You can link a SaaS offer that you've created in the Partner center for your app.
 * **Admin settings**:
   * App Customization: You can customize your app
   * Block app by default: You can block your app by default for users until a tenant admin chooses to enable it.
