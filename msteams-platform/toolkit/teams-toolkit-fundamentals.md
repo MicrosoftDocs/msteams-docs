@@ -15,7 +15,7 @@ Teams Toolkit is an extension that you can add to Visual Studio Code and Visual 
 
 In this section, you'll learn about the features and functionalities of Teams Toolkit.
 
-<!--> which allows you to perform multi-functions in both Microsoft Visual Studio Code as well as Visual Studio. With the help of Teams Toolkit you can automate the process from creating to deploying and customizing your app. The various features and advantages of Teams Toolkit are discussed in the respective documentation for the environments you choose.-->
+<!-- which allows you to perform multi-functions in both Microsoft Visual Studio Code as well as Visual Studio. With the help of Teams Toolkit you can automate the process from creating to deploying and customizing your app. The various features and advantages of Teams Toolkit are discussed in the respective documentation for the environments you choose.-->
 
 ::: zone pivot="visual-studio-code"
 
