@@ -32,7 +32,9 @@ Cards used by bots and message extensions in Teams support the following activit
 `openUrl` action type specifies a URL to launch in the default browser.
 
 > [!NOTE]
-> Your bot does not receive any notice on which button was selected.
+>
+> * Your bot doesn't receive any notice on which button was selected.
+> * Machine names with numbers aren't supported in URL.
 
 With `openUrl`, you can create an action with the following properties:
 
@@ -62,7 +64,7 @@ var button = new CardAction()
 {
     Type = ActionTypes.OpenUrl,
     Title = "Tabs in Teams",
-    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+    Value = "https://learn.microsoft.com/en-us/microsoftteams/platform/"
 };
 ```
 
@@ -75,7 +77,7 @@ CardFactory.actions([
 {
     type: 'openUrl',
     title: 'Tabs in Teams',
-    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+    value: 'https://learn.microsoft.com/en-us/microsoftteams/platform/'
 }])
 ```
 

@@ -184,27 +184,46 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Wizard start for Create New Project":::
 
-    1. Select **Bot**, and select **OK**.
+    1. Ensure that **Bot** is selected as the capability that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-    1. Select **JavaScript** in the **Programming Language** section.
+    1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
 
-    1. Select your **Workspace folder** by choosing your required folder.
+    1. Select **Default folder** to store your project root folder in default location.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Select default location.":::
+
+       You can also change the default location by the following steps:
+
+       1. Select **Browse**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Select browse location.":::
+
+       1. Select the location for project workspace.
+       1. Select the **Select Folder**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the programming language.":::
 
     1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot showing where to enter the app name.":::
+
+        A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="This screenshot is an example of the dialog to trust or not the authors of the files in this folder ":::
+    
+    1. By default, project opens in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/new-window-notification.png" alt-text="New window pop-up":::
 
         Your Teams app with a bot capability is created in a few seconds.
 
@@ -249,7 +268,7 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-folder-structure-bot-new.png" alt-text="hw new tab":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Folder Structure.":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -257,9 +276,6 @@ items:
     | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
     | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
     | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | `.fx/states` | Provision output that is generated by the Toolkit.  The toolkit creates this folder after you provision resources for your app. |
-    | `.fx/states/state.<envName>.json` | Provision output file for every environment. |
-    | `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
     | `bot` |  Code for the Bot capability needed at runtime. |
     | `bot/teamsBot.js` | Main entry point for the bot app. |
     | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
