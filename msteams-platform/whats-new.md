@@ -317,7 +317,7 @@ Microsoft Teams platform features that are not available.
 
 **2022 August**
 
-* ***August 01, 2022***: App Studio is deprecated.
+***August 01, 2022***: App Studio is deprecated.
 
 :::column-end:::
 :::row-end:::
