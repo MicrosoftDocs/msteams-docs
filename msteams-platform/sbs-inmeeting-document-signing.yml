@@ -163,14 +163,14 @@ items:
 
     1. In the left panel, select **Configuration**.
 
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-configuration.png" alt-text="Select configuration":::
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-configuration1.png" alt-text="Select configuration":::
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-manage.png" alt-text="Select manage":::
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-manage1.png" alt-text="Select manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -227,7 +227,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -277,7 +277,7 @@ items:
         
        The following image shows the domain name:
         
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri.png" alt-text="App ID URI":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri1.png" alt-text="App ID URI":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -291,7 +291,7 @@ items:
 
     1. Enter the following details to add a scope.
 
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page.png" alt-text="Add a scope page":::
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png" alt-text="Add a scope page":::
 
        1. In the panel that appears, enter `access_as_user` as the **Scope name**.
 
@@ -316,7 +316,7 @@ items:
 
           Your Application ID URI is created with **Scope name**.
 
-            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes.png" alt-text="Scopes":::
+            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes1.png" alt-text="Scopes":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -335,7 +335,7 @@ items:
     
     1. Select **Authorized scopes** to determine which type of token is returned by the service.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope.png" alt-text="Add client application 2":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png" alt-text="Add client application 2":::
 
        The following image displays the client Id:
 
@@ -410,7 +410,7 @@ items:
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
 
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings1.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings":::
           
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -422,7 +422,7 @@ items:
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file.png" alt-text="Manifest image2":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png" alt-text="Manifest image2":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -436,7 +436,7 @@ items:
 
        1. Select **SidePanel.sln** file from **Source** folder.
 
-           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png" alt-text="Solution File":::
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png" alt-text="Solution File":::   
 
        1. Press **F5** to run the project.
     
@@ -446,7 +446,7 @@ items:
 
           The following webpage opens.
 
-           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready.png" alt-text="App ready"::: 
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready1.png" alt-text="App ready"::: 
       
 - title: Add Meetings Side Panel to Teams
   durationInMinutes: 1
@@ -475,7 +475,11 @@ items:
     
     1. Select manifest file and select **Open**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addtheapp.png" alt-text="Add the app":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-open.png" alt-text="Select Open"::: 
+
+    1. Select **Add**.    
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Add the app":::
 
        Now the meeting signing app is added to the meetings.
 
@@ -499,7 +503,7 @@ items:
 
     1. Go the meeting chat in Teams and select **Meeting Signing** tab.
 
-    1. Select **Create Documents**
+    1. Select **Create Documents**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Create Documentation"::: 
 
@@ -511,7 +515,7 @@ items:
 
         1. Select the required documents that you want to review. 
         1. Select viewers of the documents.
-        1. Select signers of the d ocuments
+        1. Select signers of the documents.
         1. Select **Done**.
 
     1. Select **Consent** to access some data from your account.
@@ -536,7 +540,9 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Document shared in meeting":::
 
-     1. The **Meeting Signing** window appears and select **Done**.   
+        The **Meeting Signing** window appears
+        
+     1. Select the checkbox and select **Done**.   
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png" alt-text="Meeting Signing confirmation":::
 
