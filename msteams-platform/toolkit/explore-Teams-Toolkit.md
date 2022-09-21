@@ -26,10 +26,10 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 | 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
 | 3 | **View Samples** | Build different types of app based on existing samples. |
 | 4 | **Open Folder** | Open the existing Teams app. |
-| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** | • Create new file. <br> • Open an existing Teams app project file. • <br> Open an existing Teams app project folder. |
-| 6 | **Recent** | View the recent files. |
+| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** | • Create new file. <br> • Open an existing Teams app project file. <br> • Open an existing Teams app project folder. |
+| 6 | **Recent** | View the recent Teams app project files. |
 
-### Exploring the Teams Toolkit task pane
+### Explore the Teams Toolkit task pane
 
 The app building features and functions of Teams Toolkit are available from its task pane. After you've created an app project using the Teams Toolkit, the task pane is accessible for further app development, debug, and deployment.
 
@@ -47,9 +47,9 @@ Let's take a tour of the Teams Toolkit UI.
 
 | Icon | Description |
 | --- | --- |
-| **Explorer** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | To view the directory structure of the app. |
-| **Run and Debug** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | To start the local or remote debug process. |
-| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in Teams Toolkit. |
+| :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG"::: | **Explorer**: To view the directory structure of the app. |
+| :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG"::: | **Run and Debug**: To start the local or remote debug process. |
+| :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: |**Teams Toolkit**: To view the task pane  in Teams Toolkit. |
 
 From the task pane you can see the following sections:
 
