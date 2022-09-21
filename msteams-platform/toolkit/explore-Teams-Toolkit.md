@@ -16,7 +16,7 @@ In this section, you can view UI for both variations.
 
 ::: zone pivot="visual-studio-code"
 
-## Teams Toolkit for Visual Studio Code basic UI elements
+## Teams Toolkit for Visual Studio Code
 
 After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in the following image:
 
@@ -37,17 +37,19 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 
 ### Exploring the Teams Toolkit task pane
 
-You can explore more UI elements from task pane in Teams Toolkit. Task pane is visible only after creating an app using Teams Toolkit. The following video helps you to know about the process of creating new Teams app and after this process you can view the task pane in Teams Toolkit.
+The app building features and functions of Teams Toolkit are available from its task pane. After you've created an app project using the Teams Toolkit, the task pane is accessible for further app development, debug, and deployment.
+
+Task pane is visible only after creating an app project using Teams Toolkit. The following video helps you to quickly go through the steps of creating a new Teams app project, after which you can view the task pane in Teams Toolkit.
 
    ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
 
-After creating a new Teams app, you can see the directory structure of the app in the left panel and the readme file in the right panel.
+After the app project is created, you can see the directory structure of the app in the left panel and the readme file in the right panel.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="First page of Teams Toolkit":::
 
 Let's take a tour of the Teams Toolkit UI.
 
- In Visual Studio Code toolbar, The following icons are relevant to the Teams Toolkit:
+ In Visual Studio Code toolbar, The following icons are relevant to the Teams app:
 
 | Icon | Description |
 | --- | --- |
