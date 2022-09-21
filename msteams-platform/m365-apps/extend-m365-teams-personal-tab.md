@@ -135,8 +135,12 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook desktop, mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Please note that some Microsoft apps share client IDs as this simplifies SSO and also enables a feature to more easily show up across different Microsoft apps
 
 ## Sideload your app in Teams
 
@@ -209,6 +213,19 @@ To preview your app running in Office on the web:
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
 
+### Office app for Android
+
+To view your app running in Office app for Android:
+
+1. Launch the Office app and sign in using your dev tenant account.
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
+1. Select your app icon to launch your app in Office app for Android.
+
+> [!NOTE]
+> Before installing this app, verify you have followed [the steps To install the latest Office app beta build](prerequisites.md#mobile) and are part of the beta program.
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Tap on the 'Apps' option on the side bar of the Office app to see your installed personal tabs":::
+
 ## Troubleshooting
 
 Currently, a subset of Teams application types and capabilities is supported in Outlook and Office clients. This support expands over time.
@@ -233,6 +250,25 @@ Upon first run of local debug to Office or Outlook, you'll be prompted to sign i
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
+#### Mobile debugging
+
+Here's how to remotely debug your app running in Office app for Android.
+
+1. If you're debugging on a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). (This is enabled by default with the Android emulator.)
+1. From your Android device, launch the Office app.
+1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
+
+:::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot showing Enable remote debugging":::
+
+1. Exit Settings, then exit your profile screen, **Me**.
+1. Select Apps and then launch your sideloaded app so that its running within the Office app.
+1. Ensure your mobile phone is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
+1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
+
+:::image type="content" source="images/office-android-debug.png" alt-text="screenshot showing list of webviews in devtool":::
+
+1. Debug your tab app within the Android WebView the same way you would [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
+
 ## Code sample
 
 | **Sample Name** | **Description** | **Node.js** |
@@ -241,6 +277,7 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Sample Launch Page (Microsoft 365) | Demonstrates SSO authentication and TeamsJS SDK capabilities as available in different hosts. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders app | Demonstrates how to use Microsoft TeamsJS SDK V2 to extend teams application to other M365 host apps. Works in Teams, Outlook, Office. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
 
