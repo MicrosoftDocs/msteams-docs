@@ -8,19 +8,19 @@ zone_pivot_groups: What-new-features
 
 # What's new for developers in Microsoft Teams
 
-Discover Microsoft Teams platform features that are generally available (GA), developer preview, or deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
-
 ::: zone pivot="ga-feature"
+
+Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Generally available
 
 :::row:::
-:::column span="":::
+:::column:::
 
 :::image type="content" source="~/assets/images/general-availabe.png" alt-text="Updates for generally available features ":::
 
 :::column-end:::
-:::column span="":::
+:::column span="2":::
 
 Microsoft Teams platform features that are available to all app developers.
 
@@ -263,13 +263,15 @@ Explore updates from the previous GA releases listed here.
 
 ## Developer preview
 
+Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+
 :::row:::
-:::column span="":::
+:::column:::
 
 :::image type="content" source="~/assets/images/developer-preview.png" alt-text="Updates for features available in developer preview ":::
 
 :::column-end:::
-:::column span="":::
+:::column span="2":::
 
 Microsoft Teams platform features that are available to all app developers.
 
@@ -300,13 +302,15 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ## Deprecated
 
+Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+
 :::row:::
-:::column span="":::
+:::column:::
 
 :::image type="content" source="~/assets/images/deprecated.png" alt-text="Deprecated features":::
 
 :::column-end:::
-:::column span="":::
+:::column span="2":::
 
 Microsoft Teams platform features that are available to all app developers.
 
