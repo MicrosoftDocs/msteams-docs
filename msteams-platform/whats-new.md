@@ -262,7 +262,7 @@ Explore updates from the previous GA releases listed here.
 
 ::: zone pivot="dev-preview"
 
-Discover Microsoft Teams platform features that are in Developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Developer preview
 
@@ -301,7 +301,7 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ::: zone pivot="dep-feature"
 
-Discover Microsoft Teams platform features that are Deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Deprecated
 
@@ -313,7 +313,7 @@ Discover Microsoft Teams platform features that are Deprecated. You can now get 
 :::column-end:::
 :::column span="2":::
 
-Microsoft Teams platform features that are available to all app developers.
+Microsoft Teams platform features that are not available.
 
 **2022 August**
 
