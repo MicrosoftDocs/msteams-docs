@@ -162,7 +162,7 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
 
-After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
+After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sideload your app in Teams. When running the Office app for Android, you'll need to restart to use your personal tab app from the Office app.
 
 You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams don't pin it as an app in Office or Outlook.
 
