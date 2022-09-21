@@ -96,6 +96,7 @@ Microsoft Teams platform features that are available to all app developers.
 <summary><b>Older updates</b></summary>
 
 Explore updates from the previous GA releases listed here.
+
 </br>
 <details>
 <summary><b>2021</b></summary>
@@ -261,9 +262,9 @@ Explore updates from the previous GA releases listed here.
 
 ::: zone pivot="dev-preview"
 
-## Developer preview
-
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+
+## Developer preview
 
 :::row:::
 :::column:::
@@ -300,9 +301,9 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ::: zone pivot="dep-feature"
 
-## Deprecated
-
 Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+
+## Deprecated
 
 :::row:::
 :::column:::
