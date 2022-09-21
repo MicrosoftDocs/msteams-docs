@@ -92,7 +92,7 @@ When you update an app in one thread, the new version of the app is automaticall
 
      :::image type="content" source="../../assets/images/publish-app/updates-available.png" alt-text="Screenshot is an example that shows users can view updates available.":::
 
-1. Select **Update all**, the app is updated across all other installed contexts in Teams.
+1. Select **Update all**, The apps are updated across all the installed contexts in Teams. You can also perform updates for each app individually. In Manage your apps page, go to the app that you want to update and select **View update**, a pop-up window opens the app details page and then select **Update**. The app is updated across all the installed contexts in Teams.
 
      :::image type="content" source="../../assets/images/publish-app/update-with-one-click.png" alt-text="Screenshot is an example of updating apps in a click.":::
 
