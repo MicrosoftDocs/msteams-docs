@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
 ---
-# Explore Teams Toolkit
+# Explore Teams Toolkit UI
 
 After you've installed Teams Toolkit, you can explore the Teams Toolkit features through its UI. Teams Toolkit comes with different UI and UX in Visual Studio Code and Visual Studio. In this section, you can view UI for both flavors.
 
