@@ -16,11 +16,11 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Connectors
 
 > [!IMPORTANT]
-> Other than incoming webhooks, you can choose to build Notification Bot Teams app which can perform similar but more powerful functionalities. You can start with [Build your first notification bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Teams Toolkit can support both and make your life easier, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start exploring! Learn more at [Teams Toolkit documents](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+> Other than incoming webhooks, you can choose to build Notification Bot Teams app which can perform similar but more powerful functionalities. You can start with [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification).Teams Toolkit can support both and make your life easier, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start exploring! Learn more at [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md)
 
 See the following video to learn how to create an Incoming Webhooks:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## Key features of an Incoming Webhook
 

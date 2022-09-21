@@ -12,7 +12,7 @@ ms.author: anclear
 Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It is a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
 > [!IMPORTANT]
-> Other than Webhooks and Connectors, you can choose to build Notification Bot Teams app which can perform similar but more powerful functionalities. You can start with [Build your first notification bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Teams Toolkit can support both and make your life easier, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start exploring! Learn more at [Teams Toolkit documents](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+> Other than Webhooks and Connectors, you can choose to build Notification Bot Teams app which can perform similar but more powerful functionalities. You can start with [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Teams Toolkit can support both and make your life easier, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start exploring! Learn more at [Teams Toolkit Overview](../toolkit/teams-toolkit-fundamentals.md)
 
 ## Outgoing Webhooks
 
@@ -29,7 +29,7 @@ Connectors allow users to subscribe to receive notifications and messages from t
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
-#### Notification bot or incoming webhook - choose the right one!
+#### Notification bot or incoming webhook - choose the right one
 
 Before you start to learn how to build Incoming webhooks, you may also want to know that you can build Notification Bot using Teams Toolkit. Notification Bots can enable more customizable experience to meet different business scenarios.
 

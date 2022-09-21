@@ -17,7 +17,8 @@ A proactive message is any message sent by a bot that isn't in response to a req
 
 > [!IMPORTANT]
 
-> * To send proactive message, it's recommended that you start with [Build your first notification bot](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Teams Toolkit is doing a great job at supporting you to get started and make your life easier, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start explore it! Learn more at [Teams Toolkit documents](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+> * To send proactive message, it's recommended that you start with [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Teams Toolkit is doing a great job at supporting you to get started and make your life easier, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start explore it! Learn more at [Teams Toolkit documents](../../../toolkit/teams-toolkit-fundamentals.md)
+>
 > * Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD). For proactive messages the bots should use the following end points for government cloud environments:
 >
 > * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
@@ -81,7 +82,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot

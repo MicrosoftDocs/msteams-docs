@@ -9,7 +9,7 @@ ms.author: anclear
 # Build bots for Teams
 
 > [!NOTE]
-> It's recommended that you'd [create your first bot app](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-bot) or [notification bot app](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-notificationbot) using the new generation development tool for Teams. For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
+> It's recommended that you'd [Build your first bot app using JavaScript](../sbs-gs-bot.yml) or [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) using the new generation development tool for Teams. For more information, see [Teams Toolkit Overview](../toolkit/teams-toolkit-fundamentals.md)
 
 A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
