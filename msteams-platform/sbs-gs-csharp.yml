@@ -54,7 +54,7 @@ items:
       1. Select the box **Microsoft Teams development tools** in the installation details panel.
       1. Select **Install**.
 
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-mstools.png" alt-text="Visual studio-installation":::
+          :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
 
       1. Select **Launch** to open Visual Studio.
 
