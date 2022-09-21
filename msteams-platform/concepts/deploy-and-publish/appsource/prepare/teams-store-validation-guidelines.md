@@ -414,6 +414,8 @@ Descriptions must not directly or through insinuation disparage another brand (M
   * Role based functionality
   * Dependency on native app
 
+  :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-calledout-pass.png" alt-text="Graphic shows an example of limitations called out in app description.":::
+  
   :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-not-calledout-fail.png" alt-text="Graphic shows an example of limitations not called out in app descriptions.":::
 
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, Partner Center, and AppSource for that offer.
@@ -855,15 +857,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="Graphic shows an example of bot commands listed in the app manifest.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="Graphic shows an example of bot commands not listed in the app manifest.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="Graphic shows an example of bot commands not listed in the app manifest.":::
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="Graphic shows an example of bot sending a valid response to help command.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-no-response.png" alt-text="Graphic shows an example of bot with no response to generic commands.":::
 
 * Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
 * You must list at least one valid bot command in the `items.commands.title` section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the manifest surface as pre-populated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Mandatory Fix*]
 
@@ -875,15 +877,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must always provide a valid response to a user input even if the input is irrelevant or improper. [*Mandatory Fix*]
 
-:::image type="content" source="../../../../assets/images/submission/validation-welcome-message-bot-dead-end-invalid-command.png" alt-text="Graphic shows an example of a failed scenario where a bot sends a same response for a valid and invalid command.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-bot-dead-end-invalid-command.png" alt-text="Graphic shows an example of a failed scenario where a bot sends a same response for a valid and invalid command.":::
 
 * Special characters such as slash (**/**), must not be prefixed to bot commands. [*Mandatory Fix*]
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-commands-special-characters.png" alt-text="Graphic shows an example of a failed scenario where special characters are prefixed to bot commands.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-special-characters.png" alt-text="Graphic shows an example of a failed scenario where special characters are prefixed to bot commands.":::
 
 * Bots must provide a valid response to invalid user commands. Bots must not dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-display-error-for-valid-command.png" alt-text="Graphic shows an example of bot sending error messages for a valid bot command.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-display-error-for-valid-command.png" alt-text="Graphic shows an example of bot sending error messages for a valid bot command.":::
 
 * Bot functionality must be relevant to the scope in which the bot is installed and the bot must provide value in the installed scope. [*Mandatory Fix*]
 
@@ -894,6 +896,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged onto the app. [*Mandatory Fix*]
 
 * Bots must provide a valid response to **help** command.
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="Graphic shows an example of bot sending a valid response to help command.":::
 
 * Bot responses on mobile must be responsive without any data truncation that hampers the end-user's bot usage  to complete desired workflows. [*Mandatory Fix*]
 
@@ -915,15 +919,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
   For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
-  :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
-  :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
 * Notification only bots must send a welcome message that clarifies that the bot is a notification only bot and users won't be able to interact with the bot. [*Mandatory Fix*]
 
