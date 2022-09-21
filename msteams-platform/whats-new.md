@@ -266,7 +266,7 @@ Explore updates from the previous GA releases listed here.
 :::row:::
 :::column span="":::
 
-:::image type="content" source="~assets/images/developer-preview.png" alt-text="Updates for features available in developer preview ":::
+:::image type="content" source="~/assets/images/developer-preview.png" alt-text="Updates for features available in developer preview ":::
 
 :::column-end:::
 :::column span="":::
