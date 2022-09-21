@@ -108,7 +108,7 @@ To remove app from Teams, follow the steps:
 
 1. Select **Remove** to remove your app.
 
-    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png." alt-text="Remove an app from Teams.":::
+    :::image type="content" source="../../assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams.":::
 
 > [!NOTE]
 >
