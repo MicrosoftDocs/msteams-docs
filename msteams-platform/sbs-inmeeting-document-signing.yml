@@ -26,6 +26,7 @@ items:
 
     This step-by-step guide helps you to build in-meeting document signing app. You'll see the following output:
 
+      :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Final Output":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -510,6 +511,32 @@ items:
 
         1. Select the required documents that you want to review. 
         1. Select viewers of the documents.
-        1. Select signers of the documents
+        1. Select signers of the d ocuments
         1. Select **Done**.
-               
+
+    1. Select **Consent** to access some data from your account.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/give-consent.png" alt-text="Give Consent"::: 
+
+       Browser window appears.
+
+    1. Login into Teams with your credentials and select **Sign in**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png" alt-text="Teams Login after Consent"::: 
+
+       In Teams, you'll get the document created successfully notification.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Doc Success Upload":::              
+
+
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="final output for Meeting Signing app"::: 
+
+
+- content: |
+    You've completed the tutorial to get started with a **Side Panel** app!
