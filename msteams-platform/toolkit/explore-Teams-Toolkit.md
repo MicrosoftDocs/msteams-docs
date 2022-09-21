@@ -49,9 +49,9 @@ Let's take a tour of the Teams Toolkit UI.
 | --- | --- |
 | :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG"::: | **Explorer**: To view the directory structure of the app. |
 | :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG"::: | **Run and Debug**: To start the local or remote debug process. |
-| :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: |**Teams Toolkit**: To view the task pane  in Teams Toolkit. |
+| :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: |**Teams Toolkit**: To view the Teams Toolkit task pane. |
 
-From the task pane you can see the following sections:
+Select the Teams Toolkit icon from the Visual Studio Code toolbar to view the task pane. The task pane shows the following sections:
 
 :::row:::
    :::column span="":::
