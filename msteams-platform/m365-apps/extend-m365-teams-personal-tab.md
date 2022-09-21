@@ -140,7 +140,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
 
     > [!NOTE]
-    > Please note that some Microsoft apps share client IDs as this simplifies SSO and also enables a feature to more easily show up across different Microsoft apps
+    > Some Client IDs are shared across Microsoft 365 client applications.
 
 ## Sideload your app in Teams
 
