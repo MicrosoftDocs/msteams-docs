@@ -82,9 +82,9 @@ Teams provide several ways to open apps. For more information, see [access your 
 
 You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations.
 
-When a user updates an app in one thread, the new version of the app is automatically updated in all other installed contexts. Following are the steps to update an app:
+When you update an app in one thread, the new version of the app is automatically updated in all other installed contexts. Following are the steps to update an app:
 
-1. Go to **Teams apps store** > Select **manage apps**.
+1. Go to **Teams apps store** > Select **Manage your apps**.
 
      :::image type="content" source="../../assets/images/publish-app/manage-your-apps.png" alt-text="Screenshot is an example that shows the selection of manage your app.":::
 
@@ -92,7 +92,7 @@ When a user updates an app in one thread, the new version of the app is automati
 
      :::image type="content" source="../../assets/images/publish-app/updates-available.png" alt-text="Screenshot is an example that shows users can view updates available.":::
 
-1. Select **Update all**, the new version of the app is available in all other installed contexts which makes an update contextless.
+1. Select **Update all**, the app is updated across all other installed contexts in Teams.
 
      :::image type="content" source="../../assets/images/publish-app/update-with-one-click.png" alt-text="Screenshot is an example of updating apps in a click.":::
 
