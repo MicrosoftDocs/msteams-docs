@@ -63,7 +63,7 @@ Select the Teams Toolkit icon from the Visual Studio Code toolbar to view the ta
         
         * **Sign in to M365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
 
-        * **Sign in to Azure**: Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+        * **Sign in to Azure**: Use your Azure account for deploying app on Azure. You can create a free Azure account before you start.
    :::column-end:::
 :::row-end:::
 
@@ -197,6 +197,7 @@ After you have created your Teams Project, you can perform the following functio
 * [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Create a free Azure account](https://azure.microsoft.com/free/)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
