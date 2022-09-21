@@ -31,6 +31,8 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 09/16/2022 | Adaptive Cards in search based message extensions now support Universal Actions. | Build Message Extensions > Search commands > Define search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
+| 09/06/2022 | `selectMedia` API for capturing videos using camera | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
@@ -59,7 +61,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
 | 04/01/2022 | Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
 | 03/30/2022 | Updated the Get started module with Blazor app using tabs and bots|  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
-|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+| 03/30/2022 | Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 | 03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
 | 03/23/2022 | Introduced step-by-step guide to unfurl links in Teams using bot | Build message extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
 | 03/22/2022 | Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
@@ -70,7 +72,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 02/24/2022| Introduced step-by-step guide to build action based message extension | Build Message Extensions > Action commands > Define action commands > [Build action based message extension](sbs-meetingextension-action.yml)|
 | 02/24/2022 | Introduced step-by-step guide to build search based message extension | Build message extensions > Search commands > Define search commands > [Build search based message extension](sbs-messagingextension-searchcommand.yml)|
 | 02/24/2022 | Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [Create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
-| 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 02/23/2022 | Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
 | 02/18/2022 | Updated the Overview module for mapping Teams app to organizational goals, user story, and exploring Teams app features | [Overview > Teams app that fits](overview.md) |
 | 02/18/2022 | Updated the App fundamentals module to Plan your app to include mapping use cases to Teams features, and app planning checklist | [Plan your app > Overview](~/concepts/app-fundamentals-overview.md) |
@@ -117,7 +119,7 @@ Explore updates from the previous GA releases listed here.
 |10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| Tabs link unfurling and stage view | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |10/08/2021| New best practices for designing Adaptive Cards | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
-|10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Block apps by default for users until an admin approves](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |10/05/2021| Plan your apps for Teams mobile | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams supports Azure AD Object ID and UPN in user mention for bots and Incoming Webhooks | • Build cards and task modules > Build cards > [Azure AD Object ID and UPN in user mention](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
@@ -162,7 +164,7 @@ Explore updates from the previous GA releases listed here.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|11/30/2020|Identity platform integration with Teams Toolkit and Visual Studio Code for tabs |[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
+|11/30/2020|Identity platform integration with Teams Toolkit and Visual Studio Code for tabs |[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/add-single-sign-on.md)|
 |11/16/2020|Teams app manifest updated to version 1.8.|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams bot design guidelines |[Bot design guidelines](bots/design/bots.md)|
 |09/30/2020|Sending and receiving files to bots on mobile devices is now supported |[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
@@ -177,7 +179,7 @@ Explore updates from the previous GA releases listed here.
 |07/20/2020|Teams App Validation Tool for AppSource submissions |[Teams App Validation Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Create a virtual assistant for Teams |[Virtual Assistant for Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Surfacing a native loading indicator documentation |[Showing a native loading indicator](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit |[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit |[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](sbs-gs-javascript.yml) |
 |07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients |[Single Sign-On (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |06/05/2020| Manifest schema updated to version 1.7.| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integrate Power Virtual Agents with Teams |[Integrate a Power Virtual Agents chatbot with Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
@@ -259,7 +261,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 09/20/2022 | Introduced meeting app support for Scheduled Channel Meetings | Build apps for Teams meetings and calls > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
+| 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md)|
 | 06/30/2022 | Apps for instant meetings, one-on-one, and group calls| Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
