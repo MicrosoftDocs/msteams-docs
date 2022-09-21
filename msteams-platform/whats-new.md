@@ -17,6 +17,11 @@ Discover Microsoft Teams platform features that are generally available (GA), de
 :::row:::
 :::column span="":::
 
+:::image type="content" source="~/assets/images/general-availabe.png" alt-text="Updates for generally available features ":::
+
+:::column-end:::
+:::column span="":::
+
 Microsoft Teams platform features that are available to all app developers.
 
 **2022 September**
@@ -261,6 +266,11 @@ Explore updates from the previous GA releases listed here.
 :::row:::
 :::column span="":::
 
+:::image type="content" source="~assets/images/developer-preview.png" alt-text="Updates for features available in developer preview ":::
+
+:::column-end:::
+:::column span="":::
+
 Microsoft Teams platform features that are available to all app developers.
 
 **2022 August**
@@ -291,6 +301,11 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 ## Deprecated
 
 :::row:::
+:::column span="":::
+
+:::image type="content" source="~/assets/images/deprecated.png" alt-text="Deprecated features":::
+
+:::column-end:::
 :::column span="":::
 
 Microsoft Teams platform features that are available to all app developers.
