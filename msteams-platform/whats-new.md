@@ -262,7 +262,7 @@ Explore updates from the previous GA releases listed here.
 
 ::: zone pivot="dev-preview"
 
-Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are in Developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Developer preview
 
@@ -274,11 +274,11 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column-end:::
 :::column span="2":::
 
-Microsoft Teams platform features that are available to all app developers.
+Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 August**
+**2022 September**
 
-* ***September 23, 2022***: [Introduced meeting app support for Scheduled Channel Meetings](apps-in-teams-meetings/meeting-app-extensibility.md)
+* ***September 23, 2022***: [Introduced meeting app support for Scheduled Channel Meetings.](apps-in-teams-meetings/meeting-app-extensibility.md)
 
 :::column-end:::
 :::row-end:::
@@ -301,7 +301,7 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ::: zone pivot="dep-feature"
 
-Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are Deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Deprecated
 
