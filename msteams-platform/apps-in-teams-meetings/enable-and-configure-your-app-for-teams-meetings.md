@@ -61,6 +61,31 @@ The following code snippet is an example of a configurable tab used in an app fo
   ]
 ```
 
+### App caching
+
+To improve the subsequent loading time of an App that the user has visited during the current meeting (specifically Apps loaded in the meeting sidePanel). App Caching support will be extended to other surfaces (i.e. Chats, Channels, Personal Apps) over time.
+
+#### Enable App Caching
+
+To enable App CAching, Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler`.
+
+Use `contentUrl` passed into the load handler to route to the correct page within your App and invoke `notifySuccess/notifyFailure` to notify Teams client that app initialization flow is complete.
+
+Dispose resources and perform any cleanup needed in the beforeUnload handler, then invoke the readyToUnload callback to notify Teams client that the app unload flow is complete.
+
+#### Limitations
+
+1. The max cache size is one for Apps in Meetings. When the cache size is exceeded, the LRU app will be evicted.
+1. Memory (working set) usage when App is cached must stay under 225 MB.
+1. TTL is 20 min (ie. If the user does not return to the App within 20 minutes, App will be evicted from the cache).
+1. Max time for Teams to receive the "readyToUnload" signal from the App is 30 seconds.
+1. Grace period to get memory usage down after App is cached is 1 minute.
+1. App Caching will not kick in if the system memory is less than 4GB or if the available free memory is less than 1GB (512 MB on Mac).
+1. "SidePanel" is the only FrameContext supported for App Caching in Meetings.
+1. CPU usage must stay under 5% when App is cached.
+1. SDK requests shouldn't exceed 5 (every 12 seconds) when App is cached (some SDK requests will result in rejection).
+1. The conditions for eviction(Memory usage/CPU usage/TimeCached/NumberOfSdkRequests) is monitored every 12 seconds after the App enters the Cached state.
+
 ### Context property
 
 The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. The tabs in the `team` or `groupchat` scope can have more than one context.
