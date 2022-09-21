@@ -381,13 +381,24 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 ### App descriptions
 
 You must have a short and long description for your app. The descriptions in your app configuration and Partner Center must be the same.
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information.png" alt-text="Graphic shows an example of adequete app descriprion in the Teams app.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequete.png" alt-text="Graphic shows a failed scenario for an inadequete app description.":::
+
 <br></br>
 <details><summary>Expand to know more</summary>
 
 Descriptions must not directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure that your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
 
 * App description must not contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
+
 * Hyperlink contact details, get started, help, or sign up in app description.
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-not-hyperlinked.png" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
+
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [*Mandatory Fix*]
 * If you update your app name, replace the old app name with new app name in the offer metadata in the manifest, AppSource, and wherever applicable. [*Mandatory Fix*]
 * Limitations and account dependencies must be called out in the manifest App Description, AppSource, and Partner Center. For example:
@@ -401,8 +412,15 @@ Descriptions must not directly or through insinuation disparage another brand (M
   * Role based functionality
   * Dependency on native app
 
+  :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-not-calledout-fail.png" alt-text="Graphic shows an example of limitations not called out in app descriptions.":::
+
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, Partner Center, and AppSource for that offer.
+
 * If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams.
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-fail.png" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
 
 #### Short description
 
@@ -450,7 +468,17 @@ The long description can provide an engaging narrative that highlights your app'
 
 * Exceed 500 words.
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
+
+  :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-not-abbreviated.png" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
+
+  :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-abbreviated.png" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
+
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-no-offering-indication-from-microsoft.png" alt-text="Graphic that shows an exmaple of how to write app description without using microsoft slogans and taglines.":::
+
 * Use the following language unless you're a certified Microsoft partner:
   * **... certified for ...**
   * **... powered by ...**
@@ -459,6 +487,10 @@ The long description can provide an engaging narrative that highlights your app'
 * Include links to AppSource.
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
+
+:::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long descirpion with typos and errors.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass.png" alt-text="Graphic shows an example of app long description without errors.":::
 
 </details>
 
@@ -812,13 +844,13 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * You must list at least one supported bot command in the `{commandList}` section of your app manifest. These commands display in the compose box when a user tries to message your bot.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="validation-bot-commands-list":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="Graphic shows an example of bot commands listed in the app manifest.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="validation-bot-commands-not-list":::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="Graphic shows an example of bot commands not listed in the app manifest.":::
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="validation-bots-help-command":::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="Graphic shows an example of bot sending a valid response to help command.":::
 
 * Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
 
@@ -834,9 +866,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must always provide a valid response to a user input even if the input is irrelevant or improper. [*Mandatory Fix*]
 
+:::image type="content" source="../../../../assets/images/submission/validation-welcome-message-bot-dead-end-invalid-command.png" alt-text="Graphic shows an example of a failed scenario where a bot sends a same response for a valid and invalid command.":::
+
 * Special characters such as slash (**/**), must not be prefixed to bot commands. [*Mandatory Fix*]
 
+:::image type="content" source="../../../../assets/images/submission/validation-bot-commands-special-characters.png" alt-text="Graphic shows an example of a failed scenario where special characters are prefixed to bot commands.":::
+
 * Bots must provide a valid response to invalid user commands. Bots must not dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-display-error-for-valid-command.png" alt-text="Graphic shows an example of bot sending error messages for a valid bot command.":::
 
 * Bot functionality must be relevant to the scope in which the bot is installed and the bot must provide value in the installed scope. [*Mandatory Fix*]
 
@@ -880,7 +918,13 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Notification only bots must send a welcome message that clarifies that the bot is a notification only bot and users won't be able to interact with the bot. [*Mandatory Fix*]
 
+:::image type="content" source="../../../../assets/images/submission/validation-notification-only-welcome-message-pass.png" alt-text="Graphic shows an example of bot sending a welcome message that it's a notification only bot.":::
+
 * Welcome message must not dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-welcome-message-no-way-forward.png" alt-text="Graphic shows an example of a failed scenario where the bot has no wayforward for the user in a welcome message.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-welcome-message-clear-way-forward.png" alt-text="Graphic shows an example of bot welcome message with a clear wayforward for the user to complete the task.":::
 
 * Bot installed in a channel or group chat scope must not send proactive welcome message to all the team members in 1:1 chat. [*Mandatory Fix*]
 
@@ -893,6 +937,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Bot welcome message must clearly call out the limitations related to bot usage in the installed scope. [*Mandatory Fix*]
 
 * Welcome message must auto trigger on app install in a personal scope. If the bot doesn't send a welcome message in a personal scope, the user is lead to a dead-end. If the app doesn't include a complex configuration workflow, it's optional for the developer to trigger a welcome message in the channel or group chat scope. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message-in-personal-scope.png" alt-text="Graphic shows an example of bot not sending a  welcome message automatically in personal scope.":::
 
 * Welcome messages must trigger only once on bot install. Welcome messages must not trigger every time the user invokes the help command. Help command response must be focused to include a way for the user to access help related to the bot. [*Mandatory Fix*]
 
@@ -939,7 +985,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="Graphic shows an example bot using multi-turn messages to complete a single conversation.":::
 
 * **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
 
