@@ -10,9 +10,7 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-After you've installed Teams Toolkit, you explore Teams Toolkit UI. Teams Toolkit comes with different UI in Visual Studio Code and Visual Studio.
-
-In this section, you can view UI for both variations.
+After you've installed Teams Toolkit, you can explore the Teams Toolkit features through its UI. Teams Toolkit comes with different UI and UX in Visual Studio Code and Visual Studio. In this section, you can view UI for both variations.
 
 ::: zone pivot="visual-studio-code"
 
@@ -22,17 +20,13 @@ After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in th
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1.png" alt-text="Overview of Teams Toolkit":::
 
-| Serial No | UI Elements | Definition |
+| # | UI Elements | Definition |
 | --- | --- |
-| 1 | **Get Started** | Explore Teams Toolkit. |
-| &nbsp; | **Tutorials** | Access different tutorials. |
-| &nbsp; | **Documentation** | Access the Microsoft Teams Developer Documentation. |
+| 1 | • **Get Started** <br> • **Tutorials** <br> • **Documentation** | • Explore Teams Toolkit. <br> • Access different tutorials. <br> • Access the Microsoft Teams Developer Documentation. |
 | 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
 | 3 | **View Samples** | Build different types of app based on existing samples. |
 | 4 | **Open Folder** | Open the existing Teams app. |
-| 5 | **New File** | Create new file. |
-| &nbsp; | **Open File** | Open the existing file. |
-| &nbsp; | **Open Folder** | Open the existing folder. |
+| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** | • Create new file. <br> • Open an existing Teams app project file. • <br> Open an existing Teams app project folder. |
 | 6 | **Recent** | View the recent files. |
 
 ### Exploring the Teams Toolkit task pane
