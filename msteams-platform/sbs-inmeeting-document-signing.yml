@@ -524,11 +524,21 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png" alt-text="Teams Login after Consent"::: 
 
-       In Teams, you'll get the document created successfully notification.
+       In Teams, you'll get notification for successfully creating the document.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Doc Success Upload":::              
 
+     1. Go back to Teams meeting and now you can view the documents in the sidepanel. Select **Share to meeting**.
 
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="View doc in sidepanel":::
+
+     1. Now the document is shared in the meeting and select **Click to Sign**.
+
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Document shared in meeting":::
+
+     1. The **Meeting Signing** window appears and select **Done**.   
+
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png" alt-text="Meeting Signing confirmation":::
 
 - title: Complete challenge
   durationInMinutes: 1
