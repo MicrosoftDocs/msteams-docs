@@ -260,7 +260,7 @@ To remotely debug your app running in Office app for Android.
 
     :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot showing Enable remote debugging":::
 
-1. Exit Settings, then exit your profile screen, **Me**.
+1. Exit Settings > Exit your profile screen.
 1. Select Apps and then launch your sideloaded app so that its running within the Office app.
 1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
 1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
