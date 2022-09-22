@@ -48,7 +48,7 @@ items:
 
     1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
     1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+    1. Select **Open with GitHub Desktop** from the dropdown menu list.
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository-new.png" alt-text="Clone repository":::
 
@@ -73,23 +73,23 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
   
-       :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+       :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** and **Resource group** from the dropdown list.
+    1. Select your **Subscription** and **Resource group** from the respective dropdown list.
         
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create_1.png" alt-text="Select resource Azure bot":::
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+    1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location.":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+       You can either select **Use existing app registration** and enter existing **App ID**, *App tenant ID* and *MSI resource ID*, or select **Create new Microsoft App ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
