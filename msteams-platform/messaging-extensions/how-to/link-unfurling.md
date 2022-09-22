@@ -37,6 +37,14 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 ### Add link unfurling using Developer Portal
 
 1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
+
+   :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="create new app in devoloper portal":::
+
+   > [!NOTE]
+   > You need to add Developer Portal app, if you do not already have it in your Teams client
+
+    :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Add developer portal app":::
+
 1. Load your app manifest.
 1. On the **Messaging Extension** page under **App features**, select existing bot or create a new bot.
 1. Select **Save**.
