@@ -871,7 +871,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Channel`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for chats or meetings**
 
