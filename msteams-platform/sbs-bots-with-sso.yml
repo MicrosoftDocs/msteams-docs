@@ -126,10 +126,8 @@ items:
         :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Create resource Azure bot":::
 
         1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
-
-        1. Select your **Subscription** from the dropdown list.
     
-        1. Select your **Resource group** from the dropdown list that you want to provision for your bot app.
+        1. Select your **Subscription** and **Resource group** from the dropdown list that you want to provision for your bot app.
         
          
            You can also create a new resource group by the following steps:
