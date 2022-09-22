@@ -202,7 +202,7 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Human resources & recruiting|
 | Developer tools |
 | Meetings & scheduling |
-| Data Visualization and BI |
+| Data visualization & BI |
 | Training & tutorial |
 | News & weather |
 | Customer support |
