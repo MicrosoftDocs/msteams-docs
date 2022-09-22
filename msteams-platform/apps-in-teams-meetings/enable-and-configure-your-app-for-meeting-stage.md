@@ -27,11 +27,11 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
 
-   # [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop)
 
    :::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
 
-   # [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile)
 
    :::image type="content" source="../assets/images/mobile-tab.png" alt-text="The screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
 
@@ -62,6 +62,19 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 1. This will result in rendering tab on the stage for every participant in the meeting.
 
    :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting.":::
+
+### Apps in channel meeting
+
+A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
+
+However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a "Development" channel has a "Polly" tab. If you create a "Standup" meeting in that channel, that meeting would not have a "Polly" tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
+
+In public scheduled channel meetings, after a meeting tab is added it can be accessed from the meeting details page by selecting on the meeting object.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="After a meeting":::
+
+> [!NOTE]
+> On mobile, anonymous users will not be able to access apps in scheduled public channel meetings.
 
 ### App manifest settings for Tabs in meeting
 

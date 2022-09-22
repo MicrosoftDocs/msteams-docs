@@ -18,9 +18,6 @@ An application developer must be familiar with the following product concepts to
 
 ## Supported meeting types in Teams
 
-> [!NOTE]
-> Apps for instant meetings, scheduled public channel meetings, one-on-one, and group calls are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 Teams supports access to apps during meeting for the following meeting types:
 
 * [**Scheduled meetings**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Meetings scheduled through Teams calendar.
@@ -32,7 +29,8 @@ Teams supports access to apps during meeting for the following meeting types:
 
 > [!NOTE]
 >
-> Apps for instant meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Apps for instant meetings, scheduled public channel meetings, one-on-one, and group calls are currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Currently app experiences are not supported in Teams instant channel meetings.
 
 Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [Meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 
