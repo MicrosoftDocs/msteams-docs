@@ -46,7 +46,15 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
     :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Add developer portal app" lightbox="../../assets/images/tdp/dev-portal-app.png":::
 
 1. Load your app manifest.
-1. On the **Messaging Extension** page under **App features**, select existing bot or create a new bot.
+
+   :::image type="content" source="../../assets/images/tdp/load-app-manifest.png" alt-text="load your app manifest" lightbox="../../assets/images/tdp/load-app-manifest.png":::
+
+1. Select **Messaging Extension** under **App features** and then either choose **Select an existing bot** or **Create a new bot**.
+
+   :::image type="content" source="../../assets/images/tdp/select-messaging-extension.png" alt-text="Select messaging extension option" lightbox="../../assets/images/tdp/select-messaging-extension.png":::
+
+   :::image type="content" source="../../assets/images/tdp/select-create-bot.png" alt-text="select existing bot or create a new bot" lightbox="../../assets/images/tdp/select-create-bot.png":::
+
 1. Select **Save**.
 1. Select **Add a domain** under **Preview links** section and then enter valid domain.
 1. Select **Add**. The following image explains the process:
