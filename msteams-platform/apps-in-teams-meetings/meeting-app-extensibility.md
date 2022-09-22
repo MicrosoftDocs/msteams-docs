@@ -47,7 +47,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="Screenshot showing the details tab.":::. The tab gallery appears.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/PreMeeting.png" alt-text="Pre-meeting app experience.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/pre-meeting.png" alt-text="Pre-meeting app experience.":::
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -63,10 +63,9 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
 doc-improvement-update-HTML-for-links-and-images-to-Markdown
-:::image type="content" source="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
+:::image type="content" source="../assets/images/apps-in-meetings/mobile-post-meeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Mobile pre-meeting experience":::
-
 
 ---
 
@@ -100,7 +99,6 @@ doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view.":::
 :::image type="content" source="~/assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view":::
 
-
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
 
@@ -124,7 +122,6 @@ The following image illustrates the in-meeting side panel:
 :::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile.:::"
 
 :::image type="content" source="~/assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="In-meeting side panel mobilel":::
-
 
 ---
 

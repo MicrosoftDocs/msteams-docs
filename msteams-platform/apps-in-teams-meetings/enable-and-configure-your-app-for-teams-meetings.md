@@ -98,11 +98,7 @@ To add a tab to a meeting:
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
-    :::image type="content" source="../assets/images/apps-in-meetings/PreMeeting.png" alt-text="Screenshot is an example that shows pre-meeting experience.":::
-
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="The screenshot describes how to install the app as a tab in the pre meeting tab in Teams meeting.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/pre-meeting.png" alt-text="The screenshot describes how to install the app as a tab in the pre meeting tab in Teams meeting.":::
 
    :::image type="content" source="../assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Screenshot showing the navigation to + option in the UI.":::
 
