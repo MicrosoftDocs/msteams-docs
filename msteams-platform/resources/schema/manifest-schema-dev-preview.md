@@ -789,10 +789,9 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
    |Name| Description |
    | ----- | ----- |
-   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
-   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
-   |`MeetingStage.Write.Chat`|<!--- need info --->|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+   |`LiveShareSession.ReadWrite.Channel`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
 
 ## See also
 
