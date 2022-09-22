@@ -2,7 +2,6 @@
 title: Add Teams tab to SharePoint
 author: surbhigupta
 description: Learn how to deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
-keywords: teams tabs sharepoint framework development
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
@@ -63,7 +62,7 @@ With SharePoint Framework v.1.7, you can host your Teams tabs in SharePoint. As 
 
 ### SharePoint Framework in Teams
 
-You can also implement your Microsoft Teams tabs using SharePoint Framework. SharePoint Framework web parts are hosted within SharePoint without any need for external services, such as Azure. For SharePoint developers, this significantly simplifies the development process for Teams tabs. For more information on SharePoint Framework in Teams, see [how to use the SharePoint Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+You can also implement your Teams tabs using SharePoint Framework. SharePoint Framework web parts are hosted within SharePoint without any need for external services, such as Azure. For SharePoint developers, this significantly simplifies the development process for Teams tabs. For more information on SharePoint Framework in Teams, see [how to use the SharePoint Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## Introduction
 

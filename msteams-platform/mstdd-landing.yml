@@ -23,60 +23,22 @@ landingContent:
 
 - title: Explore the latest
   linkLists:
-    - linkListType: concept
+    - linkListType: reference
       links:
-      - text: Integrate location capabilities
-        url: ~/concepts/device-capabilities/location-capability.md
-      - text: Common reasons for app validation failure
-        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-      - text: Upload your app in Microsoft Teams
-        url: ~/concepts/deploy-and-publish/apps-upload.md
-      - text: Share to Teams from personal app or tab
-        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
-      - text: Create Teams conversation bot
-        url: ~/sbs-teams-conversation-bot.yml
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
-      - text: Device permissions for the browser
-        url: ~/concepts/device-capabilities/browser-device-permissions.md
-      - text: Integrate People Picker
-        url: ~/concepts/device-capabilities/people-picker-capability.md
-      - text: Adaptive Cards overflow menu
-        url: ~/task-modules-and-cards/cards/cards-format.md
-      - text: Glossary
-        url: ~/get-started/glossary.md
-     
-
-
-# - title: Explore the latest
-#  linkLists:
-#    - linkListType: whats-new
-#      links:
-#      - text: Common reasons for app validation failure
-#        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-#      - text: Upload your app in Microsoft Teams
-#        url: ~/concepts/deploy-and-publish/apps-upload.md
-#      - text: Share to Teams from personal app or tab
-#        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
-#      - text: Create Teams conversation bot
-#        url: ~/sbs-teams-conversation-bot.yml
-#      - text: Build your first app using Blazor
-#        url:  sbs-gs-blazorupdate.yml
-#      - text: Device permissions for the browser
-#        url: ~/concepts/device-capabilities/browser-device-permissions.md
-#      - text: Integrate People Picker
-#        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
-#      - text: Glossary
-#        url: ~/get-started/glossary.md
-#      - text: Overview
-#        url: ~/overview.md
-
-- title: Microsoft Build 2022
-  linkLists:
+      - text: Community chat room for Microsoft Teams app developers
+        url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Introduced meeting app support for Scheduled Channel Meetings
+        url: apps-in-teams-meetings/meeting-app-extensibility.md
+      - text: Introduced Teams Toolkit for Visual Studio 2022
+        url: toolkit/teams-toolkit-overview-visual-studio.md
+      - text: Collaboration controls [Developer preview]
+        url: samples/collaboration-control.md
+      - text: Build shared channels
+        url: concepts/build-and-test/Shared-channels.md
+      - text: Introduced app manifest v1.14
+        url: resources/schema/manifest-schema.md
       - text: Enhanced collaboration with Live Share SDK [Developer preview]
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Update conversation and installation events in your Teams bot [Developer preview]
@@ -86,11 +48,7 @@ landingContent:
       - text: App guidance and what's new in TeamsJS version 2.0.0
         url: tabs/how-to/using-teams-client-sdk.md
       - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
-        url: toolkit/teams-toolkit-fundamentals.md
-      - text: Introduced app manifest version 1.13
-        url: resources/schema/manifest-schema.md  
-      - text: Bots and Message extensions in GCC and GCCH
-        url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
+        url: toolkit/teams-toolkit-fundamentals.md   
 
 
 - title: Get started
@@ -121,7 +79,7 @@ landingContent:
         url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
-
+     
 - title: Monetize your app
   linkLists:
     - linkListType: concept
@@ -137,7 +95,7 @@ landingContent:
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
       - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/publish.md        
+        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
 
 - title: Build apps for Teams
   linkLists:
@@ -151,6 +109,8 @@ landingContent:
         url: ~/concepts/design/design-teams-app-overview.md
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+      - text: Unified meetings apps
+        url:  ~/apps-in-teams-meetings/meeting-app-extensibility.md
     - linkListType: whats-new
       links:
       - text: What's new
@@ -199,7 +159,14 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-      
+
+
+    - linkListType: tutorial
+      links:
+        - text: Send activity feed notification 
+          url:  ~/sbs-graphactivity-feedbroadcast.yml
+
+
     - linkListType: tutorial
       links:
         - text: Build command bot with JavaScript
@@ -222,13 +189,14 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
-
+        
+           
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
     links:
     - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams

@@ -1,14 +1,13 @@
 ---
 title: Prepare your store submission  
-description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
+description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package and more.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: submission store distribute validate app package guidelines localize
 ---
 
-# Prepare your Microsoft Teams store submission
+# Prepare your Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
@@ -24,12 +23,9 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-> [!WARNING]
-> If you have been using App Studio, we recommend that you'd try the [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
-
 The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
-1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)
+1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -81,7 +77,7 @@ Your app's name (specifically, its *[short name](~/resources/schema/manifest-sch
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -101,7 +97,7 @@ A concise summary of your app that should be original, engaging, and directed at
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -123,7 +119,7 @@ While this description can be as long as 4,000 characters, most users will only 
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -145,7 +141,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Example screenshot highlights where app screenshots display in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="Example screenshot highlights where app screenshots display in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -188,14 +184,14 @@ During submission, you're asked to categorize your app. The following table maps
 
 | Teams categories       | Partner Center categories  |
 |:---------------------|:---------------|
-| Analytics and BI | Analytics, Data Visualization, and BI |
-| Developer and IT | Developer Tools, IT Admin |
+| Data Visualization and BI | Analytics, Data Visualization, and BI |
+| Developer Tools | Developer Tools, IT Admin |
 | Education | Education |
-| Human resources | Human Resources and Recruiting |
+| Human resources & recruiting| Human Resources and Recruiting |
 | Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
 | Project management | Communication, Project Management, Workflow, and Business Management |
 | Sales and support | Customer and Contact Management, Customer Support, Financial Management, and Sales and Marketing |
-| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+| Social | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
 
 ### Localize your store listing
 

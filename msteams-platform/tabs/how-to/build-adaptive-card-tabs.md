@@ -1,18 +1,17 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
+description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, the backend is powered by a bot. Explore invoke activities and handle submits. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: adaptive card personal app authentication data flow
 ---
 
 # Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
 >
-> * Tabs with Adaptive Cards are currently only supported as personal apps.
+> Tabs with Adaptive Cards are currently only supported as personal apps.
 
 When developing a tab using the traditional method, you might run into these issues:
 
@@ -27,7 +26,7 @@ You can build your tabs with ready-made user interface (UI) building blocks nati
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs.":::
 
 ## Prerequisites
 
@@ -351,7 +350,7 @@ In the previous sections, you've seen that most of the development paradigms can
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow.":::
 
 **`tab/fetch` auth response**
 

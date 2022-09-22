@@ -1,7 +1,7 @@
 ---
-title: Channel and group conversations with a bot
+title: Create conversation bots for channel or group chat
 author: surbhigupta
-description: How to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines, creating conversation threads, using @mentions using Code samples
+description: Learn how to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -17,9 +17,15 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 > [!NOTE]
 > This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
 >
-> Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+> Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 >
 > Posting a message or Adaptive Card to a private channel is currently not supported.
+
+See the following video to learn about channel and group chat conversations with a bot:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## Design guidelines
 
@@ -29,7 +35,7 @@ Now, you can create new conversation threads and easily manage different convers
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it's difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
@@ -255,11 +261,14 @@ Now you can send an introduction message when your bot is first installed or add
 
 When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Send a personal message to each team member when the bot is added. To do this, get the team roster and send each user a direct message.
+You can send a personal message to each member of the team when the bot is added. To do this, [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+
+>[!NOTE]
+> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
 
 Don't send a message in the following cases:
 
-* The team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
@@ -277,4 +286,6 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to cre
 
 ## See also
 
-[Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)

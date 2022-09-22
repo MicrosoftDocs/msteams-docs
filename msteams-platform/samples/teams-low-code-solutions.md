@@ -1,13 +1,13 @@
 ---
 title: Create low-code custom apps for Microsoft Teams
 author: surbhigupta
-description: Learn about the available Microsoft low and no code solutions with Teams an Microsoft Power Platform. Learn about solutions, such as Power Apps, Power Automate, Virtual Assistant, and more.
+description: Learn about the available Microsoft low and no code solutions with Teams an Microsoft Power Platform.
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
 ---
 
-# Create low-code custom apps for Microsoft Teams
+# Create low-code custom apps for Teams
 
 Microsoft Teams is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the same demand as apps created from scratch. This document gives an overview of Microsoft Power Platform, Power Virtual Agents chatbot, and Virtual Assistant.
 
@@ -20,7 +20,11 @@ Microsoft Power Platform combines four robust Microsoft technologies, such as Po
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform services":::
 
 > [!NOTE]
-> You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>
+> - If you're interested in publishing your power apps in the Teams Store for users across all organizations, please fill out this [form](https://go.microsoft.com/fwlink/?linkid=2204468).
+> - If you're interested in publishing an app for a specific organization, see the following:
+>   - [Power Apps and Microsoft Teams integration](/power-apps/teams/overview)
+>   - [Create apps in Microsoft Teams by using Power Apps](/power-apps/teams/create-apps-overview)
 
 ### ✔ Teams and Power BI
 
@@ -50,10 +54,10 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 |  Topic  |  Links  |
 |:---------|:----------------------|
-|Power BI|[Power BI for App Makers](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps for App Makers](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate for App Makers](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI for App Makers](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power Apps for App Makers](/training/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate for App Makers](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### ✔ Project Oakdale (preview)
 

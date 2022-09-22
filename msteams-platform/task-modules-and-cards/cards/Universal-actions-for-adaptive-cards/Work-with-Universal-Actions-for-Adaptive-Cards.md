@@ -1,6 +1,6 @@
 ---
 title: Work with Universal Actions for Adaptive Cards
-description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility using Code samples.
+description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -20,7 +20,7 @@ Universal Actions for Adaptive Cards provide a way to implement Adaptive Card ba
 2. Add a `refresh` clause to your Adaptive Card, if you want to use the automatic refresh model or if your scenario requires User Specific Views.
 
     >[!NOTE]
-    > Specify the `userIds` property to identify, which users get automatic updates.
+    > Specify the `userIds` property to identify which users get automatic updates.
 
 3. Handle `adaptiveCard/action` invoke requests in your bot.
 4. Use the invoke request's context to respond back with cards that are created for a user.
@@ -63,7 +63,7 @@ The following are the features of UserIds in refresh:
 
 * UserIds is an array of user MRIs, which is part of the `refresh` property in Adaptive Cards.
 
-* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card is not automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in web or desktop and in the long press context menu in mobile, that is, Android or iOS to manually refresh the card.
+* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card is not automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile, that is, Android or iOS to manually refresh the card. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
 
 * UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. The `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of *60 (sixty) user MRIs*.
 
@@ -111,7 +111,7 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 |Sample name | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Not yet available |
-| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) .|
 
 ## See also
 
