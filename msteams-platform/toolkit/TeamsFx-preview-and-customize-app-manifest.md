@@ -341,11 +341,12 @@ After you've previewed the manifest file in Visual Studio, you can now sync the 
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Update manifest in teams developer portal" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png":::
 
+The changes are updated to Teams Developer Portal.
+
 > [!NOTE]
 >
-> * The changes are updated to Teams Developer Portal. If you have some manual updates in Developer Portal, that can be overwritten. In the **Warning** dialog box you can select **Overwrite and update** or **Cancel**.
-> * The changes are updated to Teams Developer Portal. In Developer Portal, to make any manual updates that can be overwritten, in the **Warning** dialog box, select **Overwrite and update** or **Cancel**.
->   * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and as existing **Bot ID** under **App features**.
+> * In Developer Portal, to make any manual updates that can be overwritten, in the **Warning** dialog box, select **Overwrite and update** or **Cancel**.
+> * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and as existing **Bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
 
