@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # Microsoft Teams app design system
 
-Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159).
+Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## Layout
 

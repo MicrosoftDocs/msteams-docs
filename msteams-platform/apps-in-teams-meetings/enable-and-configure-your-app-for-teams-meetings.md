@@ -104,7 +104,7 @@ doc-improvement-update-HTML-for-links-and-images-to-Markdown
 
    :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="The screenshot describes how to install the app as a tab in the pre meeting tab in Teams meeting.":::
 
-   :::image type="content" source="../assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Screenshot showing the navigation to + option in the UI":::
+   :::image type="content" source="../assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Screenshot showing the navigation to + option in the UI.":::
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 

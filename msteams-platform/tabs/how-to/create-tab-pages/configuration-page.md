@@ -156,7 +156,7 @@ The following image displays the tab content with **Gray** icon selected:
 
 The following image displays the tab content with **Red** icon selected:
 
-:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot is an example that shows configure tab with select red":::
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot is an example that shows configure tab with select red.":::
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
