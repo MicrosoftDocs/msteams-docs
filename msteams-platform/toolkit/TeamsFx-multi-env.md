@@ -114,7 +114,7 @@ Steps for customization:
 3. You can create a new environment and name it `staging` if it doesn't exist.
 4. Open config file `.fx/configs/config.staging.json`.
 5. Update the same property `myapp(staging)`.
-6. Now you can run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+6. Now you can run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit-in-visual-studio-code).
 
 </details>
 
