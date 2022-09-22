@@ -345,8 +345,8 @@ The changes are updated to Teams Developer Portal.
 
 > [!NOTE]
 >
-> * In Developer Portal, to make any manual updates that can be overwritten, in the **Warning** dialog box, select **Overwrite and update** or **Cancel**.
-> * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and as existing **Bot ID** under **App features**.
+> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any maual updates that can be overwritten in the Develope Portal.
+> * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and existing **Bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
 
