@@ -12,7 +12,7 @@ ms.author: v-amprasad
 
 This document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to your Teams without installing app.
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="link unfurling without app installation":::
+:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="link unfurling without app installation" lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
 > [!NOTE]
 >
@@ -34,7 +34,7 @@ See the following video to learn more about link unfurling:
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
 > [!NOTE]
-> Don't add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
+> Ensure not to add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
 ### Add link unfurling using Developer Portal
 
