@@ -9,14 +9,14 @@ ms.author: anclear
 
 # Webhooks and connectors
 
-Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It is a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
+Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It's a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
 > [!IMPORTANT]
 > Other than incoming webhooks, you can choose to build notification bot Teams app which can perform similar but more powerful functionalities. For more information, see [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and start exploring it. For more information, see [Teams Toolkit documents](../toolkit/teams-toolkit-fundamentals.md).
 
 ## Outgoing Webhooks
 
-Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you can send text messages from a channel to the web services. After configuring the Outgoing Webhooks, users can @mention Outgoing Webhook and send a message to web services. The service responds within ten seconds to the message with a text or a card.
+Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you can send text messages from a channel to the web services. After configuring the Outgoing Webhooks, users can @mention Outgoing Webhook and send a message to web services. The service responds within 10 seconds to the message with a text or a card.
 
 > [!NOTE]
 > Outgoing Webhooks are configured on a per team basis and cannot be included as part of a normal Teams app.
@@ -52,7 +52,7 @@ Learn more about the differences between Notification Bot and Incoming webhook s
 
 ### Office 365 Connectors
 
-Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. For example, a weather connector that allows users to select a location and a time of day, to receive updates about tomorrow's weather. They are configured on a channel level but are installed at a team level.
+Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. For example, a weather connector that allows users to select a location and a time of day, to receive updates about tomorrow's weather. They're configured on a channel level but are installed at a team level.
 
 > [!NOTE]
 > You can distribute the Office 365 Connector Teams app to our AppStore.
