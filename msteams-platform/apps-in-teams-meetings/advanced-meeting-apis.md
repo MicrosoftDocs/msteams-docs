@@ -578,7 +578,7 @@ Content-Length: 22
 Hello I’m Cortana, welcome to my meeting. 
 ```
 
-> [!Note]  
+> [!NOTE]  
 > Each POST request generates a new line of captions. To ensure that the end user has enough time to read the content, limit each POST request body to 80-120 characters.
 
 ### Error codes
