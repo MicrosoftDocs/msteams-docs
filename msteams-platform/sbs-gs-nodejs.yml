@@ -632,7 +632,7 @@ items:
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
     
     > [!NOTE]
-    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app in Teams or Teams store due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
+    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
 
     After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
 
