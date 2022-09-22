@@ -77,9 +77,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** from the dropdown list.
-    1. Select your **Resource group** from the dropdown list. 
-    
+    1. Select your **Subscription** and **Resource group** from the dropdown list.
+        
         ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create.png) 
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
