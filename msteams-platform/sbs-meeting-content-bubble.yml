@@ -20,7 +20,7 @@ items:
 
     * View agenda items listed in an Adaptive Card.
     * Select any option in the given agenda.
-    * Submit your feedback on either content bubble or Adaptive Card sent in chat.
+    * Submit your feedback on either content bubble or Adaptive Card sent in chat
     
     > [!NOTE]
     > Meeting content bubble is available only for Azure AD users and not for anonymous users.
