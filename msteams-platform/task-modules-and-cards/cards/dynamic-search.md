@@ -1,7 +1,7 @@
 ---
 title: Typeahead search in Adaptive Cards 
 author: Rajeshwari-v
-description: Describes typeahead search with Input.ChoiceSet control in Adaptive Cards 
+description: In this module, learn what is typeahead search in adaptive cards with Input.ChoiceSet control and implement typeahead search
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
@@ -31,9 +31,9 @@ Dynamic typeahead search is useful to search and select data from large data set
 
 # [Desktop](#tab/desktop)
 
-![Dynamic typeahead search](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="Dynamic typeahead search":::
 
-![Dynamic typeahead search image 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="Dynamic typeahead search 2":::
 
 # [Mobile](#tab/mobile)
 
@@ -56,7 +56,7 @@ The following image illustrates mobile experience of typeahead search:
 ---
 
 > [!NOTE]
-> You can't get rich card experiences with dynamic search, such as query based messaging extensions.
+> You can't get rich card experiences with dynamic search, such as query based message extensions.
 
 ## Implement typeahead search
 
