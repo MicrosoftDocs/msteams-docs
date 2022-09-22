@@ -43,7 +43,7 @@ items:
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
    
       > [!NOTE]
-      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download)
 
 - title: Set up local environment
   durationInMinutes: 1
