@@ -110,7 +110,7 @@ items:
 
        Your Azure bot is created.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page.png" alt-text="Azure bot resource created":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created":::
         
       **To create client secret**
 
@@ -137,7 +137,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Add client secret to app":::
        
-    1. In the **Value** column, select **Copy to clipboard**.
+    1. In the **Value** column, select copy to clipboard icon to copy the value.
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/clientvalue.png" alt-text="Value of client secret":::
              
@@ -160,7 +160,7 @@ items:
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/terms.png" alt-text="Terms of service":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
       
     1. Select **Save**.
 
@@ -168,8 +168,9 @@ items:
       
     **To create tunnel for local web server**
 
-         Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
+      
        ```bash
        ngrok http --host-header=localhost 3978
        ```
@@ -186,7 +187,7 @@ items:
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
+    1. In **Settings**, select **Configuration**.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -203,7 +204,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. From the left pane, select **App registrations**.
+    1. In the left pane, select **App registrations**.
 
     1. Select your bot.
        
@@ -217,11 +218,11 @@ items:
       
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/setlink.png" alt-text="Set link":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/setlink_1.png" alt-text="Set link":::
                
        The following image shows the domain name:
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appIDuri.png" alt-text="App id":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appIDuri_1.png" alt-text="App id":::
       
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -229,7 +230,7 @@ items:
 
     1. Select **Add a scope**. 
        
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope.png" alt-text="Select scope"::: 
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope"::: 
           
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
