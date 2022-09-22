@@ -14,7 +14,7 @@ For example, take a scenario where the cafeteria wants to take an order for a te
 
 The following image shows the Sequential Workflow:
 
-<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
+<img src="~/assets/images/bots/sequentialworkflow1.gif" alt="Sequential Workflow" width="400"/>
 
 A user can progress through their workflow without modifying the card for other users. The workflow is also useful for conducting quizzes using sequential Adaptive Cards. The following image shows different users can be at different stages of the workflow and states of the card:
 
