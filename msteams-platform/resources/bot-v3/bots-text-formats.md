@@ -1,7 +1,6 @@
 ---
 title: Supported text formatting in conversations
-description: Describes text formatting support in bot conversations
-keywords: bots conversations messaging
+description: In this module, learn text formatting support in bot conversations and formatting text content in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018
@@ -22,17 +21,16 @@ Microsoft Teams supports the following formatting options:
 
 ## Formatting text content
 
-Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
+Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
 Currently, the following limitations apply:
-
-* Text-only messages do not support table formatting
+* Text-only messages do not support table formatting.
 
 For information on formatting in cards, see [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### Cross-platform support
 
-To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles are not currently supported across all platforms.
+To ensure that your formatting works across all platforms supported by Teams, be aware that some styles aren't currently supported across all platforms.
 
 | Style                     | Text-only messages | Cards (XML only) |
 |---------------------------|--------------------|------------------|

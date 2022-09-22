@@ -1,6 +1,6 @@
 ---
 title: Sequential Workflows
-description: Learn about Sequential Workflows for Adaptive cards using Universal Actions with Code samples
+description: In this module, learn about Sequential Workflows for Adaptive cards using Universal Actions with Code samples
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ The following image shows the Sequential Workflow:
 
 A user can progress through their workflow without modifying the card for other users. The workflow is also useful for conducting quizzes using sequential Adaptive Cards. The following image shows different users can be at different stages of the workflow and states of the card:
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states" lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
 > [!NOTE]
 > In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.
