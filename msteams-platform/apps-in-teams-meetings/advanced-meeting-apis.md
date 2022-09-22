@@ -853,6 +853,7 @@ callback = (errcode, result) => {
 
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
+
 ### Query parameter
 
 The following table includes the query parameter:
@@ -884,17 +885,17 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 
 ```JSON
 "authorization": {
-	"permissions": {
-		"resourceSpecific": [
-			{
-				"name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-				"type": "Delegated"
-			}
-		]
-	}
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+    "type": "Delegated"
+   }
+  ]
+ }
 }
 ```
- 
+
 ### Example
 
 ```javascript
@@ -948,4 +949,4 @@ The following table provides the response codes:
 
 ## Next steps
 
-[Enable and configure your apps for meeting stage](enable-and-configure-your-app-for-meeting-stage.md)
+[Build tabs for meeting](enable-and-configure-your-app-for-meeting-stage.md)
