@@ -89,7 +89,7 @@ Teams Toolkit is upgraded to the latest version by default. The following steps 
 
 Before you start with installation, you need to install Visual Studio Installer.
 
-You can download the latest Visual Studio Installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
+You can download the latest Visual Studio Installer from the [Visual Studio download page](https://visualstudio.microsoft.com).
 
 ## Steps to install Teams Toolkit
 

@@ -40,7 +40,7 @@ The main milestones of this journey are:
 
 ## Install Teams Toolkit for Visual Studio
 
-You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com/vs/preview/).
+You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com).
 
 > [!NOTE]
 > You'll need to first install the Visual Studio installer before installing Visual Studio.
