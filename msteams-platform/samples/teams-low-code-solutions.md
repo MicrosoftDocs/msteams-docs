@@ -54,10 +54,10 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 |  Topic  |  Links  |
 |:---------|:----------------------|
-|Power BI|[Power BI for App Makers](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps for App Makers](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate for App Makers](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI for App Makers](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power Apps for App Makers](/training/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate for App Makers](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### ✔ Project Oakdale (preview)
 
