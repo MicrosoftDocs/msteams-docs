@@ -27,7 +27,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
    > [!NOTE]
-   > Your app will always be hosted using certain Azure resources.
+   > Your app is hosted using Azure resources.
    >
    >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal.)
 
@@ -41,13 +41,13 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="The screenshot showing the provisioning of complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="The screenshot showing the resource successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
     The provisioned resource appears in the **Environment** section.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="The screenshot is an example that shows the provisioning of complete dialog.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="The screenshot showing the provisioned resource.":::
 
 1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
@@ -78,7 +78,7 @@ In your terminal window:
 ---
 
 > [!NOTE]
-> Your app will always be hosted using certain Azure resources.
+> Your app is hosted using Azure resources.
 
 ## Run the deployed app
 
