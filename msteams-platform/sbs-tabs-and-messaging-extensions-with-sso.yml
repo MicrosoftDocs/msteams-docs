@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: AAD SSO for tabs and message extension
+title: SSO for tabs and message extension
 metadata:
-  title: AAD SSO for tabs and message extension
-  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (AAD SSO) for tabs.
+  title: SSO for tabs and message extension
+  description: With this learning module, learn how to set up Azure Active Directory Single sign-on (Azure AD SSO) for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Azure Active Directory Single sign-on (AAD SSO) helps to authenticate users in Teams. 
+   The Azure Active Directory Single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of the step-by-step guide of AAD SSO for tabs and message extensions**:
+   **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
-    * After the first sign-in, AAD SSO allows the user to sign in automatically.
-    * Allows the user to sign in to other devices without re-entering sign-in credentials.
+    * After the first sign-in, Azure AD SSO allows the user to sign in automatically.
+    * Allows the user to sign in to other devices without entering sign-in credentials again.
     * Obtains token for the logged-in user.   
 
-   This step-by-step guide helps you to create tabs and message extensions enabling AAD SSO authentication. You'll see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
      :::image type="content" source="~/assets/images/Tab-ME-SSO/hello-megan-profile245.png" alt-text="Screenshot shows the congratulation message.":::
      
@@ -35,7 +35,7 @@ items:
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
-    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
+    * [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -164,7 +164,7 @@ items:
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
-     ngrok http --host-header=localhost 3978
+     ngrok http -host-header=localhost 3978
      ```
 
     **To add messaging endpoint**
@@ -195,7 +195,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. Form the left pane, select **App Registrations**.
+    1. From the left pane, select **App Registrations**.
 
     1. Select your bot.
 
@@ -493,4 +493,7 @@ items:
        
     
 - content: |
+Doc-Improvement-Updating-alt-test-for-images9
+    You've completed the tutorial to get started with SSO for tab and message extension app.
+
     You've completed the tutorial to get started with SSO for tab and message extension app.
