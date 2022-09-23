@@ -26,9 +26,10 @@ For more information on role privileges, see [Configure user security in an envi
 
 ## Install the Collaboration controls solutions
 
-You'll install the Collaboration controls into your dataverse environment via a private link. This link must not be shared with any other person inside or outside your organization.
+You'll install the Collaboration controls into your dataverse environment via [Microsoft AppSource.](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)
 
-You'll be able to configure and use the components within your own model-driven app only after receiving the link and installing Collaboration controls into your dataverse environment.
+
+You'll be able to configure and use the components within your own model-driven app only after browsing to [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  and installing Collaboration controls into your dataverse environment.
 
 Collaboration Controls include the following solutions:
 
@@ -52,7 +53,7 @@ Collaboration Controls include the following solutions:
 
 Before installation, you must be in a Power Platform environment or admin tenant. You'll need a dataverse environment with a database. If you don't have one, you'll need to [create a new one](/power-platform/admin/create-environment) to continue with the installation.
 
-To install the solutions, begin by browsing to [Microsoft AppSource] and then complete the following steps:
+To install the solutions, browse to [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) and complete the following steps:
 
 1. Select **Get it now** button.
 

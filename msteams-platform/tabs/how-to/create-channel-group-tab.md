@@ -1,8 +1,8 @@
 ---
 title: Create a channel tab
 author: laujan
-description: In this module, learn how to create a channel and group tab with the Yeoman Generator for Microsoft Teams, including reviewing source code with code examples.
-ms.localizationpriority: medium
+description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
@@ -11,6 +11,8 @@ zone_pivot_groups: teams-app-environment
 # Create a channel tab
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
+
+Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -207,12 +209,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Follow the directions for adding a tab. There is a custom configuration dialog for your channel or group tab.
+1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
 
-    Now you have succesfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -254,7 +256,7 @@ Following are the steps to create a channel or group tab:
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -341,7 +343,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In Visual Studio Solution Explorer go to the **Pages** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml** the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you have completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml** the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -435,7 +437,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
 
-    Now you have succesfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -477,7 +479,7 @@ Following are the steps to create a channel or group tab:
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -572,7 +574,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In Visual Studio Solution Explorer go to the **Tab** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml** the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you have completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml** the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -656,7 +658,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
 
-    Now you have succesfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -672,3 +674,4 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create a removal page](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
