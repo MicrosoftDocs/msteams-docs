@@ -86,17 +86,17 @@ When you update an app in one thread, the new version of the app is automaticall
 
 1. Go to **Teams apps store** > Select **Manage your apps**.
 
-     :::image type="content" source="../../assets/images/publish-app/manage-apps1.png" alt-text="Screenshot is an example that shows the selection of manage your app.":::"lightbox="../../../assets/images/publish-app/manage-your-apps.png":::
+    :::image type="content" source="../../assets/images/publish-app/manage-apps1.png" alt-text="Screenshot is an example that shows the selection of manage your app."lightbox="../../assets/images/publish-app/manage-apps.png":::
 
     You can view updates available for apps.
 
-     :::image type="content" source="../../assets/images/publish-app/updates-available1.png" alt-text="Screenshot is an example that shows users can view updates available.":::"lightbox="../../../assets/images/publish-app/updates-available.png":::
+     :::image type="content" source="../../assets/images/publish-app/updates-available1.png" alt-text="Screenshot is an example that shows users can view updates available.":::"lightbox="../../assets/images/publish-app/updates-available.png":::
 
 1. Select **Update all**, The apps are updated across all the installed contexts in Teams.
 
 1. You can also perform updates for each app individually. In Manage your apps page, go to the app that you want to update and select **View update**, a pop-up window opens the app details page and then select **Update**. The app is updated across all the installed contexts in Teams.
 
-     :::image type="content" source="../../assets/images/publish-app/update-with-one-click1.png" alt-text="Screenshot is an example of updating apps in a click.":::"lightbox="../../../assets/images/publish-app/update-with-one-click.png":::
+     :::image type="content" source="../../assets/images/publish-app/update-with-one-click1.png" alt-text="Screenshot is an example of updating apps in a click.":::"lightbox="../../assets/images/publish-app/update-with-one-click.png":::
 
 ### Remove your app
 
