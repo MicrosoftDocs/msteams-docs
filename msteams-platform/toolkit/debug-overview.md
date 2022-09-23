@@ -83,7 +83,10 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 ## Customize debug settings
 
-Teams Toolkit unchecks some prerequisites and allows you to customize the debug settings to create your tab or bot.
+Teams Toolkit allows you to customize the debug settings to create your tab or bot.
+
+> [!NOTE]
+> To get a full list of customizable options visit our [debug settings doc](https://github.com/kuojianlu/TeamsFx-local-debug-transparency-sample/wiki/Debug-Tasks)
 
 ### Customize Scenarios
 
@@ -110,7 +113,7 @@ Teams Toolkit unchecks some prerequisites and allows you to customize the debug 
 <details>
 <summary><b>Customize npm install args</b></summary>
 
-* In `.fx/configs/tasks.json`, set npmInstallArgs under "Install npm packages".
+* In `.fx/configs/tasks.json`, set npmInstallArgs under **"Install npm packages"**.
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
 
 </details>
