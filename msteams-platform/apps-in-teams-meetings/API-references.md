@@ -700,7 +700,7 @@ The app sharing capabilities depends on the tenant user type and participant rol
 
 * **User type**: In-tenant, guest, and external user type participants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't share, see, or interact with the app that is being shared on the stage. For more information on user types, see [user types in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting)
 
-* **Participant roles**: Presenter and organizer meeting role participants will have the ability to share the app to stage. Attendee will not have the button and ability to share the app to stage. For more information on participant roles, see [participant roles in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#participant-roles-in-a-meeting)
+* **Participant roles**: Presenter and organizer meeting role participants has the ability to share the app to stage. Attendee won't have the button and ability to share the app to stage. For more information on participant roles, see [participant roles in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#participant-roles-in-a-meeting)
 
 ### Query parameter
 
