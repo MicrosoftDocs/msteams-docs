@@ -46,7 +46,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### Configure and create an overflow menu for multiple actions
 
-You can configure an app with multiple actions on upper right NavBar and build an overflow menu for extra actions. To configure, see [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true).
+You can configure an app with multiple actions on the upper right NavBar and build an overflow menu for extra actions. To configure, see [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true).
 
 >[!NOTE]
 > A maximum of five actions can be added in the NavBar, including the overflow menu.
@@ -108,7 +108,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-You can configure back button of an app inside Teams. When a user selects the back button, they can go back to the previous steps and navigate within the app. To configure, see [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+When a user opens an app within Teams and selects the back button, they immediately exit from the app and go back to Teams. You can configure the back button so that they can go back to previous steps and navigate within the app. To configure, see [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
 
 #### Desktop
 
