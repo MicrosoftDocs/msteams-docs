@@ -18,7 +18,7 @@ items:
    
    **Key features of uploading file in Teams using bot** 
    
-     * Upload files to Teams using a bot.
+     * Upload files to Teams using a bot
      * Receive a file sent to bot as an attachment.
      * Fetch inline images sent in message.
 
