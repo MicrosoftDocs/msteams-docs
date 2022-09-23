@@ -53,22 +53,22 @@ conceptualContent:
   # Card
     - title: Learn
       links:
-        - url: /learn/modules/intro-microsoft-teams-apps
+        - url: /training/modules/intro-microsoft-teams-apps
           itemType: learn
           text: Build apps for Microsoft Teams
-        - url: /learn/modules/embedded-web-experiences
+        - url: /training/modules/embedded-web-experiences
           itemType: learn
           text: Create embedded web experiences with tabs
-        - url:  /learn/modules/msteams-conversation-bots/
+        - url:  /training/modules/msteams-conversation-bots/
           itemType: learn
           text: Create conversational interactions with bots
-        - url: /learn/modules/msteams-messaging-extensions/
+        - url: /training/modules/msteams-messaging-extensions/
           itemType: learn
           text: Create task-oriented interactions with message extensions
-        - url: /learn/modules/msteams-task-modules/
+        - url: /training/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
-        - url: /learn/modules/msteams-webhooks-connectors/
+        - url: /training/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Connect web services to channels and teams with webhooks and Office 365 Connectors
         - url: /microsoftteams/platform/m365-apps/overview
