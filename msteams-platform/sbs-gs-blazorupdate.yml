@@ -59,9 +59,9 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Select continue to configure your installation":::  
 
-    1. Select **ASP.NET and web development** under workloads.
+    1. Select **ASP.NET and web development** under **Workloads**.
 
-    1. Select **Microsoft Teams development tools**.
+    1. Select **Microsoft Teams development tools** under **Installation details**.
        
     1. Select **Install**.
 
@@ -108,7 +108,7 @@ items:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Select **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
@@ -150,7 +150,7 @@ items:
 
     ## Create your tab project
 
-    Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+    Use Teams Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
     1. **Create a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
@@ -205,7 +205,7 @@ items:
           
         Select app feature:
 
-        1. Select the **Tab app** as the capability for your app.
+        1. Select the **Tab** as the capability for your app.
 
         1. Select **Create**.      
 
@@ -225,7 +225,7 @@ items:
 
     ## Take a tour of the source code for Teams tab app
 
-    After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
+    After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
 
@@ -330,9 +330,9 @@ items:
 
     1. Enter the following in the **Provision** dialog:
 
-       1. **Subscription name**: Visual Studio Enterprise Subscription. </br>
-       1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
-       1. Select your **Region**.
+       1. Select the subscription name from  **Subscription name** dropdown list.
+       1. Select the resource group from **Resource group** dropdown list or select **New** to add the resource group generated for your app.
+       1. Select your **Region**, if new resource group is created.
        1. Select **Provision**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Select the subscription operation for the project":::
@@ -589,9 +589,9 @@ items:
 
     1. Enter the following in the **Provision** dialog:
 
-        1. **Subscription name**: Teams Cloud - Dev Test with TTL = 3 Days. </br>
-        1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
-        1. Select your **Region**.
+        1. Select the subscription name from **Subscription name** dropdown list.
+        1. Select the resource group from the **Resource group** dropdown list or select **New** to add the resource group generated for your app.
+        1. Select your **Region**, if new resource group is created.
         1. Select **Provision**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window":::
