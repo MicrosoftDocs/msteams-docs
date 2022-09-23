@@ -448,7 +448,7 @@ items:
 
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready1.png" alt-text="App ready"::: 
       
-- title: Add Meetings Side Panel to Teams
+- title: Add Meeting Signing app to Teams
   durationInMinutes: 1
   content: |
 
@@ -463,9 +463,7 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, go to the meeting details page and select **Add an app**.
-
-    1. Select **Manage apps**.
+    1. After the meeting is started, Select **Apps** > **Manage apps**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-teams.png" alt-text="Add an app to Teams"::: 
     
@@ -481,13 +479,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Add the app":::
 
-       Now the meeting signing app is added to the meetings.
+       Now the meeting signing app is added to the meeting.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-to-meeting.png" alt-text="Add app to meeting":::
     
-    1. Go the meeting details page and select **Apps**.
-
-    1. Select **Meeting Signing** app.
+    1. Go back to the meeting details page and select **Apps** > **Meeting Signing** app.
         
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-meeting-signing-app.png" alt-text="Add meeting signing app to meeting":::
 
@@ -501,9 +497,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png" alt-text="Meeting signing app":::         
 
-    1. Go the meeting chat in Teams and select **Meeting Signing** tab.
-
-    1. Select **Create Documents**.
+    1. Go the meeting chat in Teams and select **Meeting Signing** tab > **Create Documents**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Create Documentation"::: 
 
@@ -514,8 +508,8 @@ items:
     1. Enter the following details in the Meeting Signing window.
 
         1. Select the required documents that you want to review. 
-        1. Select viewers of the documents.
-        1. Select signers of the documents.
+        1. Enter viewers of the documents.
+        1. Enter signers of the documents.
         1. Select **Done**.
 
     1. Select **Consent** to access some data from your account.
@@ -542,7 +536,7 @@ items:
 
         The **Meeting Signing** window appears
         
-     1. Select the checkbox and select **Done**.   
+     1. Select **Done**.   
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png" alt-text="Meeting Signing confirmation":::
 
@@ -555,4 +549,4 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **Side Panel** app!
+    You've completed the tutorial to get started with a **In-meeting Signing** app!
