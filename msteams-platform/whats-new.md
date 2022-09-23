@@ -278,7 +278,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 September**
 
-* ***September 23, 2022***: [Introduced meeting app support for Scheduled Channel Meetings.](apps-in-teams-meetings/meeting-app-extensibility.md)
+***September 23, 2022***: [Introduced meeting app support for Scheduled Channel Meetings.](apps-in-teams-meetings/meeting-app-extensibility.md)
 
 :::column-end:::
 :::row-end:::
