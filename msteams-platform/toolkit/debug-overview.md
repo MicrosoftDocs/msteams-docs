@@ -11,7 +11,6 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Teams app
 
-
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ::: zone pivot="visual-studio-code"
@@ -87,60 +86,6 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 Teams Toolkit unchecks some prerequisites and allows you to customize the debug settings to create your tab or bot:
 
 <br>
-
-<details>
-<summary><b>Use your bot endpoint</b></summary>
-
-1. In Visual Studio Code settings, you need to uncheck **Ensure Ngrok is installed and started (ngrok)**.
-
-1. You can set `siteEndpoint` configuration in `.fx/configs/config.local.json` to your endpoint.
-
-```json
-{
-    "bot": {
-        "siteEndpoint": "https://your-bot-tunneling-url"
-    }
-}
-
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
-
-</details>
-
-<details>
-<summary><b>Use your development certificate</b></summary>
-
-1. In Visual Studio Code settings, you need to uncheck **Ensure development certificate is trusted (devCert)**.
-
-1. You can set `sslCertFile` and `sslKeyFile` configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
-
-```json
-{
-    "frontend": {
-        "sslCertFile": "",
-        "sslKeyFile": ""
-    }
-}
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
-
-</details>
-
-<details>
-<summary><b>Use your start scripts to start app services</b></summary>
-
-1. For tab, you need to update `dev:teamsfx` script in `tabs/package.json`.
-
-1. For bot or message extension, you need to update `dev:teamsfx` script in `bot/package.json`.
-
-1. For Azure Functions, you need to update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
-
-   > [!NOTE]
-   > Currently, the tab, bot, message extension apps, and Azure Functions ports don't support customization.
-
-</details>
 
 <details>
 <summary><b>Add environment variables</b></summary>

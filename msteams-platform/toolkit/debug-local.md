@@ -11,7 +11,6 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Teams app locally
 
-
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code"
@@ -106,7 +105,7 @@ Runs tasks as defined in `.vscode/tasks.json`.
 
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Start app services" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### Launches debug configurations
 
