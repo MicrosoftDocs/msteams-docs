@@ -56,7 +56,7 @@ items:
 
     ### Check for sideloading option
 
-       After creating the app, you must load your app in Teams without distributing it. It is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+       After creating the app, you must load your app in Teams without distributing it. It's known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
        > [!NOTE]
        > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -73,7 +73,7 @@ items:
         :::image type="content" source="~/assets/images/bots/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > Contact Teams administrator, if you don't have the option to upload a custom app.  
+        > Contact Teams administrator, if you don't find the option to upload a custom app.  
 
 - title: Create and register your bot
   durationInMinutes: 5
