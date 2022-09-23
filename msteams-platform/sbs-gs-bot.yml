@@ -276,6 +276,7 @@ items:
     | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
     | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
     | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
+    | `.fx/configs/ngrok.yml` | Ngrok settings|
     | `bot` |  Code for the Bot capability needed at runtime. |
     | `bot/teamsBot.js` | Main entry point for the bot app. |
     | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
@@ -360,7 +361,7 @@ items:
           > [!NOTE]
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
-        2. Install npm packages
+        2. Install npm packages.
         3. Starts Ngrok to create a HTTP tunnel.
         4. Registers the app in Azure AD and configures the app.
         5. Registers the bot app in Bot Framework and configures the bot app.
