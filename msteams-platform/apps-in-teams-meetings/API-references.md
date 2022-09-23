@@ -696,7 +696,11 @@ The following table provides the response codes:
 
 The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The API `getAppContentStageSharingCapabilities` will let the app know, if the share to stage button will be rendered or not. If the app has sharing capabilities, then the button will appear.
 
-The app sharing capabilities depends on the tenant user type and meeting roles. In-tenant and guest user type
+The app sharing capabilities depends on the tenant user type and participant roles meeting roles.
+
+* **User type**: In-tenant, guest, and external user type tenants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't share, see, or interact with the app that is being shared on the stage. For more information on user types, see [user types in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting)
+
+* **
 
 ### Query parameter
 
