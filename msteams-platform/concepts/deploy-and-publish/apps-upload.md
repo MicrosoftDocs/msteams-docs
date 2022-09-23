@@ -86,7 +86,7 @@ When you update an app in one thread, the new version of the app is automaticall
 
 1. Go to **Teams apps store** > Select **Manage your apps**.
 
-    :::image type="content" source="../../assets/images/publish-app/manage-apps1.png" alt-text="Screenshot is an example that shows the selection of manage your app."lightbox="../../assets/images/publish-app/manage-apps.png":::
+     :::image type="content" source="../../assets/images/publish-app/manage-apps1.png" alt-text="Screenshot is an example that shows the selection of manage your app."lightbox="../../assets/images/publish-app/manage-apps.png":::
 
     You can view updates available for apps.
 
