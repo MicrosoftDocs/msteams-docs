@@ -2,7 +2,7 @@
 title: Unfurl links in Teams using bot
 metadata:
   title: Unfurl links in Teams using bot
-  description: Learn how to set up Teams link unfurling bot that helps you to register your app and receive an invoke activity.
+  description: Learn how to set up Teams link unfurling bot. This helps you to register your app and receive an invoke activity.
   audience: Developer
   level: Beginner
   ms.date: 01/20/2022
@@ -14,8 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app and receive an invoke activity when the URL with particular 
-    domain is pasted into the compose message area. The invoke contains the full URL and you can respond to it with a card. User can unfurl the link using bot with additional information to get an enhanced experience.
+    Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app. You can receive an invoke activity when the URL with domain is pasted into the compose message area. An invoke contains the full URL and you can respond to it with a card. User can unfurl the link using bot with additional information to get an enhanced experience.
 
      > [!NOTE]
      > Currently, link unfurling isn't supported on mobile clients.
@@ -23,7 +22,7 @@ items:
      **Key features of link unfurling** 
 
      * Allows user to paste URLs and respond with a card.
-     * Allows user to register the app and receive invoke activity.
+     * Allows user to register the app and receives invoke activity.
 
     This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
