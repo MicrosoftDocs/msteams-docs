@@ -90,7 +90,7 @@ Common terms and definitions used in Teams developer documentation.
 |[Government community cloud (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC environment provides compliance with federal requirements for cloud services, including FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS), and requirements for criminal justice and federal tax information systems (CJI and FTI data types).|
 |[Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC high environments deliver compliance with Department of Defense (DoD) Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).<br>**See also**: [Department of Defense (DoD)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
-| [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) | 
+| [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
 
 ## I
 
