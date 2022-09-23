@@ -83,11 +83,75 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 ## Customize debug settings
 
-Teams Toolkit unchecks some prerequisites and allows you to customize the debug settings to create your tab or bot:
+Teams Toolkit unchecks some prerequisites and allows you to customize the debug settings to create your tab or bot.
+
+### Customize Scenarios
 
 <br>
 
 <details>
+
+<summary><b>Skip prerequisite checks</b></summary>
+
+* In `.fx/configs/tasks.json` under **"Validate & install prerequisites"** > **"args"**     > **"prerequisites"**, comment the prerequisite checks you wish to skip.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="skip the prerequisite checks":::
+
+</details>
+
+<details>
+<summary><b>Use your development certificate</b></summary>
+
+1. In `.fx/configs/tasks.json`, uncheck "devCert" under "Validate & install prerequisites" > "args" > "prerequisites".
+1. Set "SSL_CRT_FILE" and "SSL_KEY_FILE" in `.env.teamsfx.local` to your certificate file path and key file path.
+
+</details>
+
+<details>
+<summary><b>Customize npm install args</b></summary>
+
+* In `.fx/configs/tasks.json`, set npmInstallArgs under "Install npm packages".
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
+
+</details>
+
+<details>
+<summary><b>Modify ports</b></summary>
+
+* Bot
+  1. Search for "3978" across your project and look for appearances in `tasks.json`, `ngrok.yml` and `index.js`.
+  1. Replace it with your port.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Replace your port for bot":::
+* Tab
+  1. In `.fx/configs/tasks.json`, search for "53000".
+  1. Replace it with your port.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Replace your port for tab":::
+
+</details>
+
+<details>
+<summary><b>Use your own app package</b></summary>
+
+* In `.fx/configs/tasks.json`, set "appPackagePath" under "Build & upload Teams manifest" to your app package's path.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="use your own app package path":::
+
+</details>
+
+<details>
+<summary><b>Use your own tunnel</b></summary>
+
+1. In `.fx/configs/tasks.json` under "Start Teams App Locally", you can comment **"Start Local tunnel"**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Use your own tunnel":::
+1. Launch your own tunnel service then update "botMessagingEndpoint" to your own message endpoint in `.fx/configs/tasks.json` under "Set up bot"
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="update messaging endpoint":::
+
+</details>
+
+<details>
+
 <summary><b>Add environment variables</b></summary>
 
 You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
