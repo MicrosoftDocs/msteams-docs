@@ -791,6 +791,10 @@
       {
         "source_path": "msteams-platform/toolkit/accounts.md",
         "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
+        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
       }
     ]
 }
