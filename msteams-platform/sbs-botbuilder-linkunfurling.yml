@@ -148,7 +148,7 @@ items:
 
     1. Select **Home**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/gotohome.png" alt-text="Home page":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/gotohome_1.png" alt-text="Home page":::
        
     1. Select your bot from **Recent resources**.
 
@@ -208,13 +208,13 @@ items:
 
     1. Select your bot.
        
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appregister.png" alt-text="App registration":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appregister_1.png" alt-text="App registration":::
        
     1. Select **Expose an API**.
 
     1. Select **Set**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/exposeanapi.png" alt-text="Expose an API":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/exposeanapi_1.png" alt-text="Expose an API":::
       
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
@@ -256,7 +256,7 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://your ngrok/botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
-          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/scope.png" alt-text="Scopes"::: 
+          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/scope_1.png" alt-text="Scopes"::: 
         
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -312,7 +312,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/webauth.png" alt-text="Web":::
+            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/webauth_1.png" alt-text="Web":::
          
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -323,7 +323,7 @@ items:
    
          1. Select **Configure**.
 
-            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authend.png" alt-text="Auth-end":::
+            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authend_1.png" alt-text="Auth-end":::
             
 
 - title: Set up app settings and manifest files
@@ -390,7 +390,7 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/solutionexplorer.png" alt-text="Solution Explorer":::
           
-       1. Right-click on **TeamsLinkUnfurling**.
+       1. Right-click the **TeamsLinkUnfurling**.
 
        1. Select **Set as Startup Project**.
           
@@ -433,15 +433,15 @@ items:
 
     1. Select **Apps**.
  
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore_1.png" alt-text="Zip file":::
        
     1. In the lower left corner, select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
           
     1. Select **Upload an app to your org's app catalog**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp_1.png" alt-text="Upload custom app":::
       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
