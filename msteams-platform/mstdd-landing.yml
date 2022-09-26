@@ -57,7 +57,7 @@ landingContent:
       - text: Introduced meeting app support for Scheduled Channel Meetings
         url: apps-in-teams-meetings/meeting-app-extensibility.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
-        url: toolkit/teams-toolkit-overview-visual-studio.md
+        url: toolkit/teams-toolkit-fundamentals.md
       - text: Collaboration controls [Developer preview]
         url: samples/collaboration-control.md
       - text: Build shared channels
