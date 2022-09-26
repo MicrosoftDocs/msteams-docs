@@ -25,7 +25,7 @@ Teams Toolkit is an extension in Visual Studio Code. It is integrated with the f
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/ttk-integration.png" alt-text="Teams Toolkit is integrated with other entities":::
 
-| Entities | Description |
+| Teams Toolkit works with... | What it means... |
 | ---- | ---- |
 | Teams client | Teams Toolkit is integrated with Teams client. During local debug, Teams Toolkit sideloads the app into Teams client and allows you to test your app in the Teams environment. It uses your Microsoft 365 account to log into your Teams client account. |
 | Azure AD  | Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. During remote debug, Teams Toolkit allows you to test your app in a remote Teams environment on Teams web. You can also use provision Azure resources, collaborate with other developers, and implement CI/CD scenarios. |
