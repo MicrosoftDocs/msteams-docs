@@ -36,6 +36,20 @@ Teams Toolkit is an extension in Visual Studio Code. It is integrated with the f
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
+Integration with other entities adds to the features of Teams Toolkit.
+
+Teams Toolkit features
+
+| Feature | What it means for you |
+| --- | --- |
+| Install Teams Toolkit | You can install Teams Toolkit in two ways: <br> - Using Visual Studio Code <br> - Using Visual Studio Code Marketplace|
+| Support for build environments | You have two different types of environment: <br> - Javascript or Typescript <br> - SPFx |
+| Support for app types and Azure function | There are two different types of apps: <br> - Capability-based app such as tab, bot, message extension  <br> - Scenario-based Teams app such as notification bot, command bot and SSO enabled personal tab |
+| Develop your Teams app | It contains: <br> - Add and manage environment <br> - Create multi-capability app <br> - Create capability based cloud resources <br> - Integrate third party API <br> - Customize manifest file <br> - TeamsFx SDK |
+| Debug your Teams app | It contains: <br> - Debug your Teams app locally <br> - Debug background process|
+| Host your Teams app | It contains: <br> - Provision resources to the cloud <br> - Deploy to the cloud|
+| Test your Teams app | It contains: <br> - Integrate and collabrate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment|
+| Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal |
 
 
 ::: zone pivot="visual-studio-code"
@@ -65,6 +79,7 @@ The main milestones of this journey are:
 1. Use Azure account to provision and deploy your app to cloud.
 1. Publish your app to Teams.
 
+<!--
 The following table helps you to get the overview of Teams Toolkit in Visual Studio Code:
 
 | Process | Description |
@@ -77,7 +92,7 @@ The following table helps you to get the overview of Teams Toolkit in Visual Stu
 | Host your Teams app | It contains: <br> - Provision resources to the cloud <br> - Deploy to the cloud|
 | Test your Teams app | It contains: <br> - Integrate and collabrate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment|
 | Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal |
-
+-->
 
 
 ## Manage your apps using Developer Portal
