@@ -1,15 +1,14 @@
 ---
 title: Register calls and meetings bot for Microsoft Teams
-description: Learn how to register a new audio/video calling bot for Microsoft Teams, create a new bot or add calling capability, and add graph permissions.
+description: In this module, learn how to register a new audio/video calling bot for Microsoft Teams, create a new bot or add calling capability, and add graph permissions.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: calling bot audio/video audio video media
 ---
 # Register calls and meetings bot for Microsoft Teams
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
+* There's a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
@@ -53,7 +52,7 @@ The following table provides a list of application permissions for calls:
 |Permission    |Display string   |Description |Admin consent required |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Initiate outgoing 1:1 calls from the app preview. |Allows the app to place outbound calls to a single user and transfer calls to users in your organization’s directory, without a signed-in user.|Yes|
-| Calls.InitiateGroupCall.All |Initiate outgoing group calls from the app preview. |Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.|Yes|
+| Calls.InitiateGroupCall.All |Initiate outgoing 1:1 and group calls from the app preview. |Allows the app to place outbound calls to a single user, multiple users, transfer calls and add participants to meetings in your organization, without a signed-in user.|Yes|
 | Calls.JoinGroupCall.All |Join group calls and meetings as an app preview. |Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app is joined with the privileges of a directory user to meetings in your tenant.|Yes|
 | Calls.JoinGroupCallasGuest.All |Join group calls and meetings as a guest preview. |Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app is joined as a guest to meetings in your tenant.|Yes|
 | Calls.AccessMedia.All |Access media streams in a call as an app preview. |Allows the app to get direct access to media streams in a call, without a signed-in user.|Yes|
@@ -72,7 +71,7 @@ The following table provides a list of application permissions for online meetin
 
 ### Assign permissions
 
-You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Microsoft Azure Active Directory (Azure AD) V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://portal.azure.com) if you prefer to use the [Microsoft Azure Active Directory (Azure AD) V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### Get tenant administrator consent
 
@@ -90,7 +89,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
-| Calling and meeting bot | The sample app demonstartes how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## Step-by-step guide
 
