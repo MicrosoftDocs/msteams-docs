@@ -245,7 +245,7 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/Teams-task-module/addascope_1.png)
+        ![Add a scope](~/assets/images/Teams-task-module/addascope_2.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -410,7 +410,7 @@ items:
 
     1. Select **Apps**.
 
-       ![Zip file](~/assets/images/Teams-Messaging-Extensions-Search/AppStore_1.png)
+       ![Zip file](~/assets/images/Teams-task-module/AppStore_1.png)
    
     1. In the lower left corner, select **Manage your apps**.
 
