@@ -63,19 +63,19 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 2. Create an HTML Element and specify the required attributes.
 
-```js
-const shareInMeetingButton = document.createElement("div");
-shareInMeetingButton.setAttribute("data-app-id", "<app-id>");
-shareInMeetingButton.textContent = "Share Test App"
-shareInMeetingButton.setAttribute("data-href", "<app-content-url>");
-shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
-shareInMeetingButton.setAttribute("data-locale", "fr-CA");
-shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
-```
+   ```js
+   const shareInMeetingButton = document.createElement("div");
+   shareInMeetingButton.setAttribute("data-app-id", "<app-id>");
+   shareInMeetingButton.textContent = "Share Test App"
+   shareInMeetingButton.setAttribute("data-href", "<app-content-url>");
+   shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
+   shareInMeetingButton.setAttribute("data-locale", "fr-CA");
+   shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
+   ```
 
 ### Option 3
 
-The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams Meeting button which can be executed on selection of a button or menu.
+`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams Meeting button which can be executed on selection of a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -85,15 +85,15 @@ The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` crea
 
 2. Create an HTML Element and add the API `shareToMicrosoftTeams.shareInMeetingClickHandler` to its onClick attribute.
 
-```js
-var customShareInMeetingButton = document.createElement("a");
-customShareInMeetingButton.onclick = shareToMicrosoftTeams.shareInMeetingClickHandler({
+   ```js
+   var customShareInMeetingButton = document.createElement("a");
+   customShareInMeetingButton.onclick = shareToMicrosoftTeams.shareInMeetingClickHandler({
    url: "<app-content-url>",
    appId: "<app-id>",
    entityName: "<app-entity-name>",
    entityDescription: "<app-content-description>",
-});
-```
+   });
+   ```
 
 ### Full Launcher.js definition
 
