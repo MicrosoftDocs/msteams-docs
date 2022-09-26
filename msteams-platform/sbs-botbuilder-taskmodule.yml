@@ -245,13 +245,13 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/Teams-task-module/addascope_2.png)
+        ![Add a scope](~/assets/images/Teams-task-module/addascope_1.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Teams-task-module/scopes_1.png) 
+        ![Scopes](~/assets/images/Teams-task-module/scopes_2.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -477,7 +477,7 @@ items:
 
        ![Chat](~/assets/images/Teams-task-module/adaptive-custom-chat.png)
 
-    1. Select **You Tube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
+    1. Select **YouTube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
        ![YouTube](~/assets/images/Teams-task-module/youtube.png)
 
