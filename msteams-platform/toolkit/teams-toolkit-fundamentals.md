@@ -19,14 +19,20 @@ In this section, you'll learn about the features and functionalities of Teams To
 
 ### Entities integrated with Teams Toolkit
 
-Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit.such as Azure AD and Microsoft 365, Developer Portal and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app.
+Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit, such as Azure AD and Microsoft 365, Developer Portal, and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app.
+
+// Placeholder for Infogfx //
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/ttk-integration.png" alt-text="Teams Toolkit is integrated with other entities":::
 
 | Entities | Description |
 | ---- | ---- |
-| Azure AD  | Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. |
-| Microsoft 365  | Teams developer account while developing an app.|
-| Developer Portal | The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
+| Teams client | Teams Toolkit is integrated with Teams client. During local debug, Teams Toolkit sideloads the app into Teams client and allows you to test your app in the Teams environment. It uses your Microsoft 365 account to log into your Teams client account. |
+| Azure AD  | Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. During remote debug, Teams Toolkit allows you to test your app in a remote Teams environment on Teams web. You can also use provision Azure resources, collaborate with other developers, and implement CI/CD scenarios. |
+| Microsoft 365 | Teams Toolkit uses your Microsoft 365 account to allow you to test and debug your app. |
+| Developer Portal | The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Teams Toolkit, you can import your app into Developer Portal. Use it to validate your app manifest, configure app capabilities, collaborate with colleagues on your app, set up runtime environments, and much more. |
 | Microsoft Graph | Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. |
+| TeamsFx and SDKs | TeamsFx accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation. TeamsFx SDK provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers. |
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
