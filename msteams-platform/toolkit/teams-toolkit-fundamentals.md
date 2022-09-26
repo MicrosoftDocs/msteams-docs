@@ -6,7 +6,6 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-zone_pivot_groups: teams-app-platform
 ---
 
 # Teams Toolkit Overview
@@ -51,8 +50,6 @@ Integration with other entities adds to the features of Teams Toolkit.
 | Test your Teams app | It contains: <br> - Integrate and collabrate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment. | -- |
 | Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal | You can import your app into Developer Portal and use it to validate the app manifest, configure app capabilities, and load the app into Teams client. |
 
-
-::: zone pivot="visual-studio-code"
 
 ## Teams Toolkit Overview for  Visual Studio Code
 
@@ -101,9 +98,6 @@ As Teams Toolkit is integrated with Developer Portal, you can configure, distrib
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-1.png" alt-text="Developer Portal":::
 
-::: zone-end
-
-::: zone pivot="visual-studio"
 
 ## Teams Toolkit overview for Visual Studio
 
@@ -154,8 +148,6 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 * [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
 * [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
-
-::: zone-end
 
 ## See also
 
