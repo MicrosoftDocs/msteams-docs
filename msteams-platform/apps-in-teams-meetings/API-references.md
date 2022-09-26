@@ -694,7 +694,7 @@ The following table provides the response codes:
 
 ## Get app content stage sharing capabilities API
 
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The API `getAppContentStageSharingCapabilities` will let the app know, wheher the share to stage button renderes or not. If the app has sharing capabilities, then the button appears.
+The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The API `getAppContentStageSharingCapabilities` will let the app know, wheher share to stage button renderes or not. If the app has sharing capabilities, then the button appears.
 
 The app sharing capabilities depends on the tenant user type and participant roles in a meeting.
 
