@@ -261,7 +261,6 @@ items:
   
     1. Select **Add scope** to save.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/add-scope_1.png" alt-text="Add a scope":::
 
        > [!NOTE]
        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
