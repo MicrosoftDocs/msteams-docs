@@ -80,14 +80,14 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+        :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
      
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png" alt-text="Create resource Azure bot":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create_1.png" alt-text="Create resource Azure bot":::
 
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
@@ -114,11 +114,11 @@ items:
 
     1. Select **Go to resource**. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment.png" alt-text="Deploy App":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment_1.png" alt-text="Deploy App":::
         
         Your Azure bot is created.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group.png" alt-text="Azure bot resource created":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group_1.png" alt-text="Azure bot resource created":::
 
     **To create client secret**
 
@@ -147,7 +147,7 @@ items:
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret.png" alt-text="Value of client secret":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret_1.png" alt-text="Value of client secret":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -168,7 +168,7 @@ items:
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms.png" alt-text="Terms of service":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms_1.png" alt-text="Terms of service":::
 
     1. Select **Apply**.
     
@@ -191,7 +191,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url_1.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -201,7 +201,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point.png" alt-text="Messaging Endpoint":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point_1.png" alt-text="Messaging Endpoint":::
 
     1. Select **Apply**.
 
@@ -225,11 +225,11 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api.png" alt-text="Set link":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api_1.png" alt-text="Set link":::
 
        The following image shows the domain name:
         
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-exposeapi.png" alt-text="App ID URI":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-exposeapi_1.png" alt-text="App ID URI":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -255,19 +255,19 @@ items:
   
        The following image shows the fields and the values:
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user.png" alt-text="Add a scope":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user_1.png" alt-text="Add a scope":::
 
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/add-scope.png" alt-text="Add a scope":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/add-scope_1.png" alt-text="Add a scope":::
 
        > [!NOTE]
        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
   
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope.png" alt-text="Scope":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope_1.png" alt-text="Scope":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
 
@@ -285,7 +285,7 @@ items:
 
     1. Select **Authorized scopes**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png" alt-text="Add client application":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app_1.png" alt-text="Add client application":::
 
        The following image displays the Client ID:
 
@@ -323,7 +323,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web.png" alt-text="Web":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web_1.png" alt-text="Web":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -334,7 +334,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web.png" alt-text="Auth-end":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web_1.png" alt-text="Auth-end":::
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -349,7 +349,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseURL"` to your `webAppDomain`.
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1_1.png" alt-text="App settings":::
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -365,7 +365,7 @@ items:
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set.png" alt-text="Manifest image1":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set_1.png" alt-text="Manifest image1":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -375,11 +375,11 @@ items:
        1. Open **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-           :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png" alt-text="Open file":::
 
        1. Open **ContentBubbleBot.sln** file.
 
-           :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln_1.png" alt-text="Open file":::
 
        1. Press **F5** to run the project.
 
@@ -398,7 +398,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip.png" alt-text="Zip file"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip_1.png" alt-text="Zip file"::: 
     
     1. Create a meeting with a few presenters and attendees.
    
@@ -420,7 +420,7 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo.png" alt-text="Add the app"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo_1.png" alt-text="Add the app"::: 
 
     1. The **Manage apps** section displays the list of applications.
 
