@@ -92,20 +92,20 @@ You can preview Teams personal tabs running in Office app for Android by joining
 
 To install the latest Office app beta build to your physical Android device or Android emulator:
 
-1. Verify you are using a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
-1. On your Android device, launch the **Play Store**.
+1. Ensure you use a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
+1. Launch the **Play Store** on your Android device,.
 1. Search for office and select **Microsoft Office: Edit & Share**.
-1. Select **Install** button.
+1. Select the **Install** button.
 
     :::image type="content" source="images/office-android-install.png" alt-text="screenshot of Microsoft Office: Edit & Share app in Google Play Store":::
 
-2. Once installed, select **Join** under **Join the beta section**.
+1. Select **Join** under **Join the beta section** after the installation completes.
 
     :::image type="content" source="images/office-android-join-beta.png" alt-text="screenshot of Join the beta screen":::
 
-3. Launch the Office app and sign in with your test tenant credentials
-4. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-5. Verify you are running version 16.0.15629.20000 or higher of Office app for Android.
+1. Launch the Office app and sign in with your test tenant credentials.
+1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+2. Ensure you use Office app version 16.0.15629.20000 or higher for Android.
 
 ## Switch to the Developer Preview version of Teams
 
