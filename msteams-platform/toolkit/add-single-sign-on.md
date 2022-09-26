@@ -345,7 +345,7 @@ After successfully add SSO in your project, you can also add a new sso command.
 
     ```
 
-3. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
+1. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
 
     ```JSON
 
