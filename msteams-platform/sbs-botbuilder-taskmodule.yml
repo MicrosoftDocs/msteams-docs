@@ -377,7 +377,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/sbs-messagingextension-action/certificate.png)
+          ![Trust Certificate](~/assets/images/Teams-task-module/certificate.png)
 
           A webpage opens with a message **Your bot is ready!**.
 
@@ -404,7 +404,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/Teams-task-module/zip-file.png) 
+       ![Zip file](~/assets/images/Teams-task-module/zip-file_1.png) 
 
     1. Go to **Microsoft Teams**.
 
@@ -422,7 +422,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       ![Select zip file](~/assets/images/Teams-task-module/select-zip.png)
+       ![Select zip file](~/assets/images/Teams-task-module/select-zip_1.png)
 
     1. Select **Add**.
 
