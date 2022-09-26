@@ -140,7 +140,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
 
     > [!NOTE]
-    > Some Client IDs are shared across Microsoft 365 client applications.
+    > Microsoft 365 client applications might share Client IDs.
 
 ## Sideload your app in Teams
 
@@ -162,7 +162,7 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
 
-After it's sideloaded to Teams, your personal tab is available in Outlook and Office. You must sign in with the same credentials that you used to sideload your app in Teams. When running the Office app for Android, you need to restart to use your personal tab app from the Office app.
+After it's sideloaded to Teams, your personal tab is available in Outlook and Office. You must sign in with the same credentials that you used to sideload your app in Teams. When running the Office app for Android, you need to restart the app to use your personal tab app from the Office app.
 
 You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams don't pin it as an app in Office or Outlook.
 
@@ -222,7 +222,7 @@ To view your app running in Office app for Android:
 1. Select your app icon to launch your app in Office app for Android.
 
 > [!NOTE]
-> Before installing this app, perform [the steps To install the latest Office app beta build](prerequisites.md#mobile) and be a part of the beta program.
+> Before installing the app, perform [the steps to install the latest Office app beta build](prerequisites.md#mobile) and be a part of the beta program.
 
 :::image type="content" source="images/office-mobile-apps.png" alt-text="Tap on the 'Apps' option on the side bar of the Office app to see your installed personal tabs":::
 
@@ -254,20 +254,21 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 
 To remotely debug your app running in Office app for Android.
 
-1. If you're debugging on a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). (This is enabled by default with the Android emulator.)
-1. From your Android device, launch the Office app.
+1. If you debug using a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). This is enabled by default with the Android emulator.
+1. Launch the Office app From your Android device.
 1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
 
     :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot showing Enable remote debugging":::
 
-1. Exit Settings > Exit your profile screen.
-1. Select Apps and then launch your sideloaded app so that its running within the Office app.
+1. Exit **Settings**.
+1. Exit your profile screen.
+1. Select **Apps** and launch your sideloaded app to run within the Office app.
 1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
 1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
 
     :::image type="content" source="images/office-android-debug.png" alt-text="screenshot showing list of webviews in devtool":::
 
-2. Debug your tab app within the Android WebView. In the same way you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
+1. Debug your tab app within the Android WebView. In the same way you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
 ## Code sample
 
