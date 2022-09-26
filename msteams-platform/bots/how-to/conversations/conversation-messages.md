@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Messages in bot conversations
 
-Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly. 
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
@@ -277,13 +277,6 @@ Messages received from or sent to your bot can include different types of messag
 | Cards     | ❌                | ✔️                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
 | Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
-## Types of messages
-
-There are two different types of messages in bot conversation.
-
-* [Picture messages](#picture-messages)
-* [Adaptive Cards](#adaptive-cards)
-
 ### Picture messages
 
 To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
@@ -329,7 +322,7 @@ The following code shows an example of sending a simple Adaptive Card:
 
 #### Form completion feedback
 
-You can build form completion feedback using adaptive card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+You can build form completion feedback using an adaptive card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
 
 * **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
 
@@ -366,7 +359,12 @@ For more information on cards and cards in bots, see [cards documentation](~/tas
 
 ## Add notifications to your message
 
-You can add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email.
+There are two ways to send a notification from your application.
+
+* By setting `Notification.Alert` property on bot message.
+* By sending an activity feed notification using the Graph API.
+
+You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings.
 
 If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
 
