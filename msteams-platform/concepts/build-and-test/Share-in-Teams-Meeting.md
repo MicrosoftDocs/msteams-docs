@@ -55,8 +55,6 @@ The API `async shareToMicrosoftTeams.renderButtons(options)` renders all share b
 **Args:**
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
 
-#### Example
-
 1. Add the `launcher.js` script on your webpage.
 
    ```html
@@ -78,8 +76,6 @@ shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shar
 ### Option 3
 
 The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams Meeting button which can be executed on selection of a button or menu.
-
-#### Example
 
 1. Add the `launcher.js` script on your webpage.
 
