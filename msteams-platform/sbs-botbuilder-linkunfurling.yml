@@ -283,7 +283,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the AAD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
