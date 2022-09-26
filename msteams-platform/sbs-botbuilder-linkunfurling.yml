@@ -2,7 +2,7 @@
 title: Unfurl links in Teams using bot
 metadata:
   title: Unfurl links in Teams using bot
-  description: Learn how to set up Teams link unfurling bot. This helps you to register your app and receive an invoke activity.
+  description: Learn how to set up Teams link unfurling bot. This guide helps you to register your app and receive an invoke activity.
   audience: Developer
   level: Beginner
   ms.date: 01/20/2022
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app. You can receive an invoke activity when the URL with domain is pasted into the compose message area. An invoke contains the full URL and you can respond to it with a card. User can unfurl the link using bot with additional information to get an enhanced experience.
+    Microsoft Bot Framework extends the cards specification by adding a set of pre-defined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app. You can receive an invoke activity when the URL with domain is pasted into the compose message area. The invoke contains the full URL and you can respond with a card. Users can unfurl the link using bot with additional information to get an enhanced experience.
 
      > [!NOTE]
      > Currently, link unfurling isn't supported on mobile clients.
@@ -88,7 +88,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter existing **App ID**, *App tenant ID* and *MSI resource ID*, or select **Create new Microsoft App ID**.
+       You can select **Create new Microsoft App ID** to create new Microsoft ID details or select **Use existing app registration** and enter existing **App ID**, **App tenant ID* and **MSI resource ID** details.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -275,14 +275,14 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/authorizedscope.png" alt-text="Add client application":::
       
-       The following image displays the **Client Id**:
+       The following image displays the **Client ID**:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Client app"::: 
          
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
