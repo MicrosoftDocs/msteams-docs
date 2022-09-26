@@ -791,30 +791,6 @@
       {
         "source_path": "msteams-platform/toolkit/accounts.md",
         "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
-        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md",
-        "redirect_url": "/msteams-platform/toolkit//teamsfx-preview-and-customize-app-manifest"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/provision-cloud-resources.md",
-        "redirect_url": "/msteams-platform/toolkit/provision"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
-        "redirect_url": "/msteams-platform/toolkit/create-new-project"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
-        "redirect_url": "/msteams-platform/toolkit/debug-overview"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
-        "redirect_url": "/msteams-platform/toolkit/deploy"
       }
     ]
 }
