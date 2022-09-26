@@ -36,11 +36,11 @@ Teams Toolkit is an extension in Visual Studio Code. It is integrated with the f
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
-Integration with other entities adds to the features of Teams Toolkit.
-
 ## Teams Toolkit features
 
-| Feature | Support for Visual Studio Code | Visual Studio |
+Integration with other entities adds to the features of Teams Toolkit.
+
+| Teams Toolkit Feature | Support in Visual Studio Code | Support in Visual Studio |
 | --- | --- | --- |
 | Install Teams Toolkit | You can install Teams Toolkit in two ways: <br> - Using Visual Studio Code <br> - Using Visual Studio Code Marketplace| Teams Toolkit is available as a workload in Visual Studio. |
 | Support for build environments | You have two different types of environment: <br> - Javascript or Typescript <br> - SPFx | You can develope C# app created using Blazor. |
