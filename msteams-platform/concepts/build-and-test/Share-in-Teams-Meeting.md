@@ -15,11 +15,13 @@ The following image shows the Share in Teams Meeting experience:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/present.PNG" alt-text="share-in-teams-meeting":::
 
-## Enable Share in Teams Meeting on third party app
+## Enable Share in Teams Meeting
+
+Following are the options to enable Share in Teams Meeting:
 
 ### Option 1
 
-This option scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate Share in Teams Meeting buttons in your page.
+Scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate Share in Teams Meeting buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -27,7 +29,7 @@ This option scans your web page to locate any HTML Elements with the class name 
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` class name attribute, the app ID (which can be found in the manifest) in the `data-app-id` attribute, and the app content URL to share in the `data-href` attribute. Optionally, you can include more info: `data-entity-name` and `data-description` attributes.
+2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` class name attribute, the app ID (which can be found in the manifest) in the `data-app-id` attribute, and the app content URL to share in the `data-href` attribute. Also, you can include more attributes: `data-entity-name` and `data-description`.
 
     ```html
     <div
@@ -40,20 +42,20 @@ This option scans your web page to locate any HTML Elements with the class name 
     </div>
     ```
 
-3. Other attributes can be specified to customized the Share in Teams Meeting button:
-   - `data-button-type`: specifies the background color of the button (primaryShareInMeeting or secondaryShareInMeeting)
-   - `data-button-size`: specifies the size of the button in pixel
-   - `data-target`: specifies whether the link will open in the same window, new tab, or new window
-   - `data-locale`: specifies desired user language
+3. Following are the other attributes can be specified to customized Share in Teams Meeting button:
+   * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
+   * `data-button-size`: Specifies the size of the button in pixel.
+   * `data-target`: Specifies whether the link will open in the same window, new tab, or new window.
+   * `data-locale`: Specifies desired user language.
 
 ### Option 2
 
-`async shareToMicrosoftTeams.renderButtons(options)`: Renders all share buttons that have "teams-share-button" or "teams-share-in-meeting-button" class name currently on the page. If an optional options object is supplied with a list of elements, those elements will be rendered into share buttons or Share in Teams Meeting buttons.
+The API `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button**, class name currently on the page. If an optional options object is supplied with a list of elements, those elements will be rendered into share buttons or Share in Teams Meeting buttons.
 
 **Args:**
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
 
-**Example**
+#### Example
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -61,7 +63,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Create an HTMLElement and specify the required attributes
+2. Create an HTML Element and specify the required attributes.
 
 ```js
 const shareInMeetingButton = document.createElement("div");
@@ -75,9 +77,9 @@ shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shar
 
 ### Option 3
 
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)`: Creates a callback handler for Share in Teams Meeting which can be executed on click of a button or menu.
+The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams Meeting button which can be executed on selection of a button or menu.
 
-**Example**
+#### Example
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -85,7 +87,7 @@ shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shar
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Create an HTMLElement and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its onClick attribute
+2. Create an HTML Element and add the API `shareToMicrosoftTeams.shareInMeetingClickHandler` to its onClick attribute.
 
 ```js
 var customShareInMeetingButton = document.createElement("a");
@@ -101,14 +103,14 @@ customShareInMeetingButton.onclick = shareToMicrosoftTeams.shareInMeetingClickHa
 
 | Property | HTML attribute | Type | Required | Default | Description |
 | -------------- | ---------------------- | --------------------- | ------- |  ------- |---------------------------------------------------------------------- |
-| url | `data-href` | string | yes | n/a | The URL of the app content to share |
-| appId | `data-app-id` | string | yes | n/a | ID of the app to share |
-| entityName | `data-entity-name` | string | no | n/a | app entity name |
-| entityDescription | `data-entity-description` | string | no | n/a | description of app content to share |
-| locale | `data-locale` | string | no | en-US | user preferred language |
-| target | `data-target` | string | no | self | specifies how deep link will be opened: self, new window, new tab |
-| buttonType | `data-button-type` | string | no | primaryShareInMeeting | specifies the button background color: primaryShareInMeeting or secondaryShareInMeeting |
-| buttonSize | `data-button-size` | string | no | n/a | button size in pixel |
+| url | `data-href` | String | Yes | NA | The URL of the app content to share |
+| appId | `data-app-id` | String | Yes | NA | ID of the app to share |
+| entityName | `data-entity-name` | String | No | NA | App entity name |
+| entityDescription | `data-entity-description` | String | No | NA | Description of app content to share |
+| locale | `data-locale` | String | No | en-US | User preferred language |
+| target | `data-target` | String | No | self | Specifies how deep link will be opened: self, new window, new tab |
+| buttonType | `data-button-type` | String | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting` |
+| buttonSize | `data-button-size` | String | No | NA | Button size in pixel |
 
 ## Deep link Format
 
@@ -118,17 +120,17 @@ When you select Share in Teams Meeting button, it launches the deep link to the 
 
 The query parameters are:
 
-- `msteams`: All deep links should start with **msteams**, so that Teams app recognizes it and can open the deep link.​
+* `msteams`: All deep links should start with **msteams**, so that Teams app recognizes it and can open the deep link.​
 
-- `meeting-stage`: Verb that specifies the protocol type and the deep link type​.
+* `meeting-stage`: Verb that Specifies the protocol type and the deep link type​.
 
-- `deep link Id`: **GUID/UUID** used for telemetry correlation​.
+* `deep link Id`: **GUID/UUID** used for telemetry correlation​.
 
-- `fqdn`: teams.microsoft.com or teams.live.com. FQDN is needed in Teams deep link service for tenant or account checking.
+* `fqdn`: teams.microsoft.com or teams.live.com. FQDN is needed in Teams deep link service for tenant or account checking.
 
-  - When the meeting is scheduled with Teams for Life, the fqdn is: **teams.live.com**.
+  * When the meeting is scheduled with Teams for Life, the fqdn is: **teams.live.com**.
 
-  - When the meeting is scheduled for Teams for business, the fqdn is: **teams.microsoft.com** or **team.microsoft.us** (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
+  * When the meeting is scheduled for Teams for business, the fqdn is: **teams.microsoft.com** or **team.microsoft.us** (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
 
 ## Deep link example
 
@@ -193,5 +195,5 @@ If meeting extension isn't installed:
 
 ## See also
 
-- [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)
-- [Share to Teams from web apps](share-to-teams-from-web-apps.md)
+* [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)
+* [Share to Teams from web apps](share-to-teams-from-web-apps.md)
