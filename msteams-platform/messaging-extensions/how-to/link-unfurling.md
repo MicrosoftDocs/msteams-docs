@@ -1,54 +1,64 @@
 ---
 title: Link unfurling
 author: surbhigupta
-description: In this module, learn how to add link unfurling with messaging extension in a Teams app with app manifest or manually using code examples and samples.
+description: Learn how to add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually using code examples and samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Add link unfurling
+# Link unfurling
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to add link unfurling to your app manifest using Developer Portal or manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area. You can respond with a card that the user can unfurl for additional information or actions. This works as a search command with the URL as the search term.
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URLs and you can respond to it with a card. User can unfurl the link using message extension with additional information to get an enhanced experience. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br> Now link unfurling supports both in Teams mobile and desktop.
 
-> [!NOTE]
->
-> * Currently, link unfurling is not supported on Mobile clients.
-> * The link unfurling result is cached for 30 minutes.
-> * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
+## Advantages of link unfurling
 
-The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
+* Link unfurling helps to display the preview of the URL
+* You can get the specfic URL unfurl in the compose message box
 
-:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
+>[!NOTE]
+>The link unfurling result is cached for 30 minutes.</br>
+>Link unfurling on mobile works only for installed apps in Microsoft 365
 
-See the following video to learn more about link unfurling:
-<br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
-<br>
+The following images displays the experience of link unfurling on mobile and desktop:
+
+# [Mobile](#tab/Samplemobileapp)
+
+  The following steps provides the link unfurling in mobile:
+
+   1. User can paste URLs in the compose message area.
+   1. You can see the link unfurling in the compose message area
+
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/mobile-link-unfurl.png" alt-text="mobile microsoft" border="true":::
+
+# [Desktop](#tab/Sampledesktop)
+
+  The following steps provides the link unfurling in desktop:
+
+   1. User can paste URLs in the compose message area
+   1. You can see the link unfurling in the compose message area
+  
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/desktop-link-unfurl.png" alt-text="unfurl desktop" border="true":::
+
+---
 
 ## Add link unfurling to your app manifest
 
-To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
+To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
 > [!NOTE]
 > Don't add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
-### Add link unfurling using Developer Portal
+### Add link unfurling using App Studio
 
-1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
+1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1. Load your app manifest.
-1. On the **Messaging Extension** page under **App features**, select existing bot or create a new bot.
-1. Select **Save**.
-1. Select **Add a domain** under **Preview links** section and then enter valid domain.
-1. Select **Add**. The following image explains the process:
+1. On the **Message Extension** page, add the domain that you want to look for in the **Message handlers** section. The following image explains the process:
 
-   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Message handlers section in App Studio":::
 
 ### Add link unfurling manually
-
-> [!NOTE]
-> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 To enable your message extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually:
 
@@ -72,11 +82,13 @@ To enable your message extension to interact with links, first you must add the 
 ...
 ```
 
+After adding the domain to the app manifest, you must update your web service code to handle the invoke request.
+
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Handle the `composeExtension/queryLink` invoke
+## Types of cards supported in link unfurling
 
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+If you respond with more than one card, only the first card response is used.
 
 The following card types are supported:
 
