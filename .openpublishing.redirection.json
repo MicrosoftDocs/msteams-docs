@@ -799,6 +799,10 @@
       {
         "source_path": "msteams-platform/toolkit/accounts.md",
         "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
+        "redirect_url": "/msteams-platform/apps-in-teams-meetings/advanced-meeting-apis.md"
       }
     ]
 }
