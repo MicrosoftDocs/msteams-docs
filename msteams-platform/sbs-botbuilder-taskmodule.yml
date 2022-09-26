@@ -334,7 +334,7 @@ items:
          * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
-        ![App settings](~/assets/images/Teams-task-module/appsettings.png)
+        ![App settings](~/assets/images/Teams-task-module/appsettings_1.png)
 
     1. Navigate to `manifest.json`` in cloned repository.
 
@@ -345,7 +345,7 @@ items:
          * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/Teams-task-module/manifest.png)
+        ![Manifest image2](~/assets/images/Teams-task-module/manifest_1.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -357,7 +357,7 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+          ![Open file](~/assets/images/Teams-task-module/VSopenfile.png)
 
        1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
 
@@ -365,13 +365,13 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer.png)
+          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer_1.png)
 
        1. Right-click to select **TeamsTaskModule**.
 
        1. Select **Set as Startup Project**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/startup.png)
+          ![Solution Explorer](~/assets/images/Teams-task-module/startup_1.png)
 
        1. Press **F5** to run the project.
     
