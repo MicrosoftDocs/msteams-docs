@@ -27,7 +27,7 @@ Start by importing the required modules. The sample uses the [SharedMap DDS](htt
 
 Applications create Fluid containers using a schema that defines a set of _initial objects_ that will be available to the container. The sample uses a SharedMap to store the most recent die value that was rolled. For more information, see [Data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
-Teams meeting apps require multiple views, such as content, configuration, and stage. We'll create a `start()` function to help identify the view. This helps to render and perform any initialization that's required. The app supports running both locally in a web browser and from within a Teams Meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
+Teams meeting apps require multiple views, such as content, configuration, and stage. You can create a `start()` function to help identify the view. This helps to render and perform any initialization that's required. The app supports running both locally in a web browser and from within a Teams Meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
 
 > [!NOTE]
 > When running in Teams, your application needs to call `app.initialize()` prior to calling any other teams-js methods.
