@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams Authentication flow for bots
-description: In this module, learn how to do Authentication flow for bots in Microsoft Teams and its  Code sample.
+description: Enable authentication for Microsoft Teams bot app with third-party OAuth provider using code samples.
 ms.localizationpriority: medium
 ms.topic: overview
 ---
