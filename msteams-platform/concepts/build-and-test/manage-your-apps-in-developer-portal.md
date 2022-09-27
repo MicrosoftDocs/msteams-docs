@@ -51,7 +51,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on**: Developer Portal supports the Single sign-on (SSO) configured for the Teams app in Azure AD. Add the **Application ID URI** that you configured for your app in the Azure AD.
+* **Single sign-on**: Bot registered on Azure AD supports Single Sign-On (SSO). If a bot is registered on Bot Framework Portal (or within the Developer Portal under Bot Management) then those bots don't support SSO and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get Application ID URI, see[Use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
