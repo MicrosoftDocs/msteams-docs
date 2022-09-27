@@ -59,9 +59,9 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 
 ### Meeting stage view
 
-1. Once a tab is added to the meeting side panel, you can now choose to opt into global app sharing  
+1. Once a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
-1. This will result in rendering tab on the stage for every participant in the meeting.
+1. This results in rendering tab on the stage for every participant in the meeting.
 
    :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting.":::
 
