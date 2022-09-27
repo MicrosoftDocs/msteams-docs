@@ -370,13 +370,13 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          :::image type="content" source="./assets/images/Teams-task-module/solutionexplorer_1" alt-text="Solution Explorer":::
+          :::image type="content" source="./assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Solution Explorer":::
 
        1. Right-click to select **TeamsMessagingExtensionsSearch**.
 
        1. Select **Set as Startup Project**.
 
-          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/startup_1" alt-text="startup":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/startup_1.png" alt-text="startup":::
 
        1. Press **F5** to run the project.
     
@@ -415,11 +415,11 @@ items:
 
     1. In the left panel, select **Apps** > **Manage your apps**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/AppStore_1" alt-text="App store":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/AppStore_1.png" alt-text="App store":::
    
     1. Select **Upload a custom app**. 
 
-       :::image type="content" source="./assets/images/Teams-task-module/upload-app_1" alt-text="Upload app":::
+       :::image type="content" source="./assets/images/Teams-task-module/upload-app_1.png" alt-text="Upload app":::
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
@@ -427,7 +427,7 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1" alt-text="Add the app":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Add the app":::
 
        A pop-up opens in a chat.
 
