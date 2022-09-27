@@ -54,8 +54,8 @@ The following table lists the changes Teams Toolkit makes to your project:
    |--------|--------|-----------|
    |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.|
    |Modify|`manifest.template.json` under `template/appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
-   |Create|`auth/tab`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a tab project.|
-   |Create|`auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
+   |Create|`auth/tab`|Reference code, auth redirect pages and a `README.md` file are generated in this path for a tab project.|
+   |Create|`auth/bot`|Reference code, auth redirect pages and a `README.md` file are generated in this path for a bot project.|
 
 > [!Note]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
@@ -116,12 +116,12 @@ The following steps help you to enable SSO in your application.
 
 ## Update your business logic
 
-The sample business logic provides a sso command handler `ProfileSsoCommandHandler` that use an AAD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that will display a consent dialog if required.
+The sample business logic provides a SSO command handler `ProfileSsoCommandHandler` that use an AAD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that will display a consent dialog if necessary.
 
 To make this work in your application:
 
 
-1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. ProfileSsoCommandHandler class is a sso command handler to get user info with SSO token. You can follow this method and create your own sso command handler.
+1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. ProfileSsoCommandHandler class is a SSO command handler to get user info with SSO token. You can follow this method and create your own sso command handler.
 
 1. Open `package.json` file, make sure that teamsfx SDK version >= 1.2.0
 1. Execute the following commands under `bot` folder: `npm install isomorphic-fetch --save`
@@ -138,8 +138,7 @@ To make this work in your application:
     ```
     By doing this, the HTML pages used for auth redirect will be copied when building this bot project.
 
-1. After adding the following files, you need to update `bot/src/index` file.
-Please replace the following code to make sso consent flow works:
+1. Replace the following code in `bot/src/index` file to make SSO consent flow works:
 
     ```ts
     server.post("/api/messages", async (req, res) => {
@@ -160,7 +159,7 @@ Please replace the following code to make sso consent flow works:
     });
     ```
 
-1. Replace the options for `ConversationBot` instance in `bot/src/internal/initialize` to add the sso config and sso command handler:
+1. Replace the options for `ConversationBot` instance in `bot/src/internal/initialize` to add the SSO config and SSO command handler:
 
     ```ts
     export const commandBot = new ConversationBot({
@@ -202,11 +201,11 @@ Please replace the following code to make sso consent flow works:
     }
     ```
 
-## (Optional) Add a new sso command to the bot
+## (Optional) Add a new SSO command to the bot
 
-After successfully add SSO in your project, you can also add a new sso command.
+After successfully add SSO in your project, you can also add a new SSO command.
 
-1. Create a new file (e.g. `photoSsoCommandHandler.ts` or `photoSsoCommandHandler.js`) under `bot/src/` and add your own business logic to call Graph API:
+1. Create a new file (for example, `photoSsoCommandHandler.ts` or `photoSsoCommandHandler.js`) under `bot/src/` and add your own business logic to call Graph API:
 
     ```TypeScript
     // for TypeScript:
