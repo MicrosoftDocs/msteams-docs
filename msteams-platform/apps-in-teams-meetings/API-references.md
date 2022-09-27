@@ -694,13 +694,13 @@ The following table provides the response codes:
 
 ## Get app content stage sharing capabilities API
 
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The API `getAppContentStageSharingCapabilities` will let the app know, whether share to stage button renders or not. If the app has sharing capabilities, then the button appears.
+The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The API `getAppContentStageSharingCapabilities` will let the app know to render the share to stage button. If the app has sharing capabilities, then the button appears.
 
 The app sharing capabilities depends on the tenant user type and participant roles in a meeting.
 
-* **User type**: In-tenant, guest, and external user type participants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't share, see, or interact with the app that is being shared on the stage. For more information on user types, see [user types in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting)
+* **User type**: In-tenant, guest, and external user type participants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't see, share, or interact with the app that is being shared on the stage. For more information on user types, see [user types in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting)
 
-* **Participant roles**: Presenter and organizer meeting role participants has the ability to share the app to stage. Attendee won't have the button and ability to share the app to stage. For more information on participant roles, see [participant roles in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#participant-roles-in-a-meeting)
+* **Participant roles**: Presenter and organizer meeting role participants has the ability to share the app to stage. Attendee won't have the share to stage button and ability to share the app to stage. For more information on participant roles, see [participant roles in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#participant-roles-in-a-meeting)
 
 ### Query parameter
 
