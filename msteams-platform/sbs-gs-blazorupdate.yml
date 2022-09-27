@@ -170,7 +170,7 @@ items:
 
          Select the project type:
 
-          1. Select **Microsoft Teams** from **All platforms** dropdown list.  
+          1. Search for **Microsoft Teams** from templates dropdown list.  
         
           1. Select **Microsoft Teams App** as the template.
 
@@ -314,7 +314,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+    You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview on Teams:
 
     1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
     1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
@@ -328,7 +328,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Select the provision operation for the project":::
 
-    1. Enter the following in the **Provision** dialog:
+    1. Enter the subscription and resource group details in the **Provision** dialog:
 
        1. Select the subscription name from  **Subscription name** dropdown list.
        1. Select the resource group from **Resource group** dropdown list or select **New** to add the resource group generated for your app.
@@ -353,7 +353,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Resource group is generated":::
 
-    1. Sign in to your Azure portal account on sign in prompt. 
+    1. Sign in to your Azure portal account on sign-in prompt. 
 
         Your app-dev-rg appears.
 
@@ -421,7 +421,7 @@ items:
 
     Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
-    1. **Creating a new project** page: You select the project type.
+    1. **Create a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
     1. **Create a new Teams application** page: You select the Teams app capabilities.
 
@@ -451,7 +451,7 @@ items:
 
     1.  Configure the new project details.  
 
-          Select the following project configuration:
+          Select the following project configuration details:
 
           1. Enter a suitable name for your project.
 
@@ -573,7 +573,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with bot capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+    You've learned to create, build, and run Teams app with bot capability. The following final steps are to deploy your app on Azure and Preview on Teams:
 
     1. [Provision your bot app in the cloud](#to-provision-your-bot-app-in-the-cloud): You can provision your bot app in the cloud.
     1. [Deploy your bot app to cloud](#to-deploy-your-bot-app-to-cloud): You can deploy your bot app to cloud. 
@@ -587,7 +587,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="provisioning in cloud":::
 
-    1. Enter the following in the **Provision** dialog:
+    1. Enter the subscription and resource group details in the **Provision** dialog:
 
         1. Select the subscription name from **Subscription name** dropdown list.
         1. Select the resource group from the **Resource group** dropdown list or select **New** to add the resource group generated for your app.
@@ -612,7 +612,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="provisioned resource":::
 
-    1. Sign in to your Azure portal account on sign in prompt. 
+    1. Sign in to your Azure portal account on sign-in prompt. 
 
         Your app-dev-rg appears.
 
