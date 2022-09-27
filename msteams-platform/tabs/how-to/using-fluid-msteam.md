@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Use Fluid with Microsoft Teams
 
-This tutorial helps to integrate Fluid-powered real-time collaboration features into a [Microsoft Teams tab application](/microsoftteams/platform/tabs/what-are-tabs). By the end of this tutorial you'll be able to integrate any Fluid-powered application into Microsoft Teams and collaborate with others in real-time.
+By the end of this tutorial, you can integrate any Fluid-powered application into Teams and collaborate with others in real-time.
 
 In this section you'll learn the following concepts:
 
