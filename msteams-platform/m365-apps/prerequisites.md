@@ -105,7 +105,7 @@ To install the latest Office app beta build to your physical Android device or A
 
 1. Launch the Office app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-2. Ensure you use Office app version 16.0.15629.20000 or higher for Android.
+2. Ensure you use Office app version 16.0.15726.20000 or higher for Android.
 
 ## Switch to the Developer Preview version of Teams
 

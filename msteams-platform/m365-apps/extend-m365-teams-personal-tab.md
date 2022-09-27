@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Office on the web (office.com).
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook and Office desktop and web experiences, as well as Office app for Android.
 
 Updating your personal app to run in Outlook and Office involves these steps:
 
@@ -140,7 +140,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
 
     > [!NOTE]
-    > Microsoft 365 client applications might share Client IDs.
+    > Some Microsoft 365 client applications share Client IDs.
 
 ## Sideload your app in Teams
 
@@ -215,14 +215,14 @@ To preview your app running in Office on the web:
 
 ### Office app for Android
 
+> [!NOTE]
+> Before installing the app, perform [the steps to install the latest Office app beta build](prerequisites.md#mobile) and be a part of the beta program.
+
 To view your app running in Office app for Android:
 
 1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you'll need to restart it in order to see it among your installed apps.
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in Office app for Android.
-
-> [!NOTE]
-> Before installing the app, perform [the steps to install the latest Office app beta build](prerequisites.md#mobile) and be a part of the beta program.
 
 :::image type="content" source="images/office-mobile-apps.png" alt-text="Tap on the 'Apps' option on the side bar of the Office app to see your installed personal tabs":::
 
@@ -252,7 +252,7 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 
 #### Mobile debugging
 
-To remotely debug your app running in Office app for Android.
+Teams Toolkit (`F5`) debugging is not yet supported with Office app for Android. Here's how to remotely debug your app running in Office app for Android:
 
 1. If you debug using a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). This is enabled by default with the Android emulator.
 1. Launch the Office app From your Android device.
