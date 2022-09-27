@@ -86,9 +86,13 @@ items:
 
        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
+    1. Select **Data residency** as **Global** or **Regional** according to the resource group location.
+
+    :::image type="content" source="~/assets/images/bots/data-residency_1.png" alt-text="Screenshot showing the data residency.":::
+
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can select **Create new Microsoft App ID** to create new Microsoft ID details or select **Use existing app registration** and enter existing **App ID**, **App tenant ID* and **MSI resource ID** details.
+       You can select **Create new Microsoft App ID** to create new Microsoft ID details or select **Use existing app registration** and enter existing **App ID**, **App tenant ID** and **MSI resource ID** details.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -105,7 +109,7 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment.png" alt-text="Screenshot showing the navigation of go to resource.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment_1.png" alt-text="Screenshot showing the navigation of go to resource.":::
 
        Your Azure bot is created.
 
@@ -438,7 +442,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
           
-    1. Select **Upload an app to your org's app catalog**. 
+    1. Select **Upload a custom app**. 
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp_1.png" alt-text="Upload custom app":::
       
