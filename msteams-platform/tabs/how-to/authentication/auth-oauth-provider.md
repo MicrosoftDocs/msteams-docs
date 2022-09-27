@@ -67,7 +67,7 @@ The following image provides the flow to add authentication to external browsers
 
    The Teams clients open the URL in an external browser after replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.
 
-#### Example
+   #### Example
 
    ```http
     https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890 
@@ -89,7 +89,7 @@ The following image provides the flow to add authentication to external browsers
 
    The 3P app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the 3P app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object.
 
-#### Example
+   #### Example
 
     ```http
     https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://3p.app.server/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…    &response_type=code&access_type=offline&scope= … 
