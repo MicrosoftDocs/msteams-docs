@@ -1,5 +1,5 @@
 ---
-title: Using Fluid with Microsoft Teams
+title: Use Fluid with Teams
 author: timtwang
 ms.author: mobajemu
 description: Tutorial for integrating Fluid-powered real-time collaboration features into a Microsoft Teams tab application
@@ -7,19 +7,15 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 
-# Use Fluid with Microsoft Teams
+# Use Fluid with Teams
 
 By the end of this tutorial, you can integrate any Fluid-powered application into Teams and collaborate with others in real-time.
 
 In this section you'll learn the following concepts:
 
-1. How to integrate a Fluid client into a Microsoft Teams tab application.
-2. How to run and connect your Teams application to a Fluid service (Azure Fluid Relay).
-In this section you can learn the following concepts:
-
 1. Integrate a Fluid client into Teams tab application.
-2. Run and connect your Teams application to a Fluid service (Azure Fluid Relay).
-3. Create and get Fluid Containers, and pass them to a React component.
+1. Run and connect your Teams application to a Fluid service (Azure Fluid Relay).
+1. Create and get Fluid Containers, and pass them to a React component.
 
 For more information to build complex application, see [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
 
@@ -34,14 +30,14 @@ This tutorial requires familiarity with the following concepts and resources:
 ## Create the project
 
 1. Open a Command Prompt and navigate to the parent folder where you want to create the project, for example, `/My Microsoft Teams Projects`.
-2. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs):
+1. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs):
 
     ```cmd
     yo teams
     ```
 
-3. After creating the project, navigate to it with the command `cd <your project name>`.
-4. The project will use three Fluid libraries:
+1. After creating, navigate to the project, with the following command `cd <your project name>`.
+1. The project uses the following libraries:
 
     |Library |Description |
     |---|---|
@@ -57,7 +53,8 @@ This tutorial requires familiarity with the following concepts and resources:
 
 ## Code the project
 
-1. Open the file `/src/client/<your tab name>` in your code editor. Create a new file named `Util.ts`. Then add the following import statements:
+1. Open the file `/src/client/<your tab name>` in your code editor. 
+1. Create a new file named `Util.ts`. Then add the following import statements:
 
     ```ts
     //`Util.ts
@@ -69,7 +66,7 @@ This tutorial requires familiarity with the following concepts and resources:
 
 ### Defining Fluid functions and parameters
 
-1. This app is intended to be used in the context of Microsoft Teams, having all Fluid-related imports, initialization, and functions in one place makes it easier to use in the future. Add the following code below the import statements. The comments will define all the functions and constants needed to interact with the Fluid service and container.
+This app is intended to be used in the context of Microsoft Teams, with all Fluid-related imports, initialization, and functions together. This provides an enhanced experience and makes it easier to use in the future. You can add the following code to the import statements.
 
 ```ts
 // TODO 1: Define the parameter key(s).
@@ -79,14 +76,23 @@ This tutorial requires familiarity with the following concepts and resources:
 // TODO 5: Define create container function.
 // TODO 6: Define get container function.
 ```
+> [!NOTE]
+> The comments define all the functions and constants needed to interact with the Fluid service and container.
 
-1. Replace `TODO 1:` with the following code. The constant is being exported because it will be appended to the `contentUrl` in the Microsoft Teams settings and later for parsing the container ID in the content page. It's a common pattern to store important query parameter keys as constants, rather than typing the raw string each time.
+1. Replace `TODO 1:` with the following code.
 
 ```ts
 export const containerIdQueryParamKey = "containerId";
 ```
 
-1. Before the client can create any containers, it needs a `containerSchema` that will define the shared objects used in this application. This example uses a SharedMap as the `initialObjects`, but any shared object can be used. Note also that `map` is the ID of the `SharedMap` object and it must be unique within the container as with any other DDSes. Replace `TODO: 2` with the following code.
+The constant is being exported because it will be appended to the `contentUrl` in the Microsoft Teams settings and later for parsing the container ID in the content page. It's a common pattern to store important query parameter keys as constants, rather than typing the raw string each time.
+ 
+ Before the client can create any containers, it needs a `containerSchema` that define the shared objects used in this application. This example uses a SharedMap as the `initialObjects`, but any shared object can be used. 
+
+> [!NOTE]
+> The `map` is the ID of the `SharedMap` object and it must be unique within the container as with any other DDSes. 
+
+1. Replace `TODO: 2` with the following code.
 
 ```ts
 const containerSchema = {
@@ -94,7 +100,7 @@ const containerSchema = {
 };
 ```
 
-1. Replace `TODO: 3` with the following code. Before the client can be used, it needs an `AzureClientProps` that will define the type of connection the client will be using. Think of the `connectionConfig` as the properties required to connect to the service. Local mode of Azure Client is used here. To enable collaboration across all client, please replace it with Fluid Relay Service credentials. See how to [set up the Azure Fluid Relay service](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal) for more information.
+1. Replace `TODO: 3` with the following code. 
 
 ```ts
 const connectionConfig : AzureClientProps =
@@ -107,13 +113,15 @@ const connectionConfig : AzureClientProps =
 };
 ```
 
+Before the client can be used, it needs an `AzureClientProps` that will define the type of connection the client will be using. Think of the `connectionConfig` as the properties required to connect to the service. Local mode of Azure Client is used here. To enable collaboration across all client, please replace it with Fluid Relay Service credentials. See how to [set up the Azure Fluid Relay service](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal) for more information.
+
 1. Replace `TODO: 4` with the following code.
 
 ```ts
 const client = new AzureClient(connectionConfig);
 ```
 
-1. Replace `TODO: 5` with the following code. Since you're creating the container in the configuration page and appending it to the `contentUrl` in Microsoft Teams setting, you just need to return the container ID after attaching the container.
+1. Replace `TODO: 5` with the following code.
 
 ```ts
 export async function createContainer() : Promise<string> {
@@ -123,7 +131,9 @@ export async function createContainer() : Promise<string> {
 };
 ```
 
-1. Replace `TODO: 6` with the following code. When you fetch the Fluid container you want to return the container itself since your application will need to interact with the container and the DDSes inside it in the content page.
+Since you're creating the container in the configuration page and appending it to the `contentUrl` in Microsoft Teams setting, you just need to return the container ID after attaching the container.
+
+1. Replace `TODO: 6` with the following code. 
 
 ```ts
 export async function getContainer(id : string) : Promise<IFluidContainer> {
@@ -131,10 +141,13 @@ export async function getContainer(id : string) : Promise<IFluidContainer> {
     return container;
 };
 ```
+When you fetch the Fluid container you want to return the container itself since your application will need to interact with the container and the DDSes inside it in the content page.
 
 ### Create Fluid container in the configuration page
 
-Open the file `src/client/<your tab name>/<your tab name>Config.tsx` in your code editor. The standard Teams tab application flow goes from configuration to content page. To enable collaboration, persisting the container while loading into the content page is crucial. The best solution to persist the container is to append the container ID onto the `contentUrl` and `websiteUrl`, the URLs of the content page, as a query parameter. Since the save button in the Teams configuration page is the gateway between the configuration page and the content page, it's a great place to create the container and append the container ID in the settings.
+1. Open the file `src/client/<your tab name>/<your tab name>Config.tsx` in your code editor. 
+
+The standard Teams tab application flow goes from configuration to content page. To enable collaboration, persisting the container while loading into the content page is crucial. The best solution to persist the container is to append the container ID onto the `contentUrl` and `websiteUrl`, the URLs of the content page, as a query parameter. Since the save button in the Teams configuration page is the gateway between the configuration page and the content page, it's a great place to create the container and append the container ID in the settings.
 
 1. Add the following import statement.
 
@@ -159,7 +172,7 @@ const onSaveHandler = async (saveEvent: microsoftTeams.settings.SaveEvent) => {
 };
 ```
 
-Make sure to replace `<your tab name>` with the actual tab name from your project.
+Ensure you replace `<your tab name>` with the actual tab name from your project.
 
 > [!WARNING]
 > Since the content page URL is used to store the container ID, this record will be removed if the Teams tab is deleted.
@@ -167,7 +180,7 @@ Additionally, every content page can only support one container ID.
 
 ### Refactor content page to reflect Fluid application
 
-Open the file `src/client/<your tab name>/<your tab name>.tsx` in your code editor. A typical Fluid-powered application consists of a view and a Fluid data structure. Let's just focus on getting/loading the Fluid container and leave all the Fluid related interactions in a React component.
+1.Open the file `src/client/<your tab name>/<your tab name>.tsx` in your code editor. A typical Fluid-powered application consists of a view and a Fluid data structure. Let's just focus on getting/loading the Fluid container and leave all the Fluid related interactions in a React component.
 
 1. Add the following import statements in the content page.
 
@@ -176,7 +189,7 @@ import { IFluidContainer } from "fluid-framework";
 import { getContainer, containerIdQueryParamKey } from "./Util";
 ```
 
-1. Now remove all the code below the import statements inside the content page and replace it with the following. Make sure to replace `<your tab name>` with the tab name you defined for your project.
+1. Now remove all the code below the import statements inside the content page and replace it with the following. 
 
 ```ts
 export const <your tab name> = () => {
@@ -188,26 +201,33 @@ export const <your tab name> = () => {
   // TODO 6: Pass the container to the React component as argument.
 }
 ```
+Make sure to replace `<your tab name>` with the tab name you defined for your project.
 
-1. Replace `TODO 1` with the following code. For the content page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
+1. Replace `TODO 1` with the following code. 
 
 ```ts
 microsoftTeams.initialize();
 ```
+For the content page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
 
-1. Replace `TODO 2` with the following code. Because the Teams application is just an IFrame injection of a webpage, you need to initialize the `inTeams` boolean constant in order to know if the application is inside Microsoft Teams or not, and if the Teams resources, such as the `contentUrl`, are available.
+1. Replace `TODO 2` with the following code. 
 
 ```ts
 const [{ inTeams }] = useTeams();
 ```
 
-1. Replace `TODO 3` with the following code. Using a React state for the container will provide the ability to dynamically update the container and the data objects inside it.
+Because the Teams application is just an IFrame injection of a webpage, you need to initialize the `inTeams` boolean constant in order to know if the application is inside Microsoft Teams or not, and if the Teams resources, such as the `contentUrl`, are available.
+
+
+1. Replace `TODO 3` with the following code. 
 
 ```ts
 const [fluidContainer, setFluidContainer] = useState<IFluidContainer | undefined>(undefined);
 ```
 
-1. Replace `TODO 4` with the following code. Here you'll parse the URL to get the query parameter string, defined by `containerIdQueryParamKey`, and retrieve the container ID. With the container ID, you can now load the container to get the container. Once you have the container, set the `fluidContainer` React state, defined above.
+Using a React state for the container will provide the ability to dynamically update the container and the data objects inside it.
+
+1. Replace `TODO 4` with the following code. 
 
 ```ts
 const getFluidContainer = async (url : URLSearchParams) => {
@@ -220,10 +240,9 @@ const getFluidContainer = async (url : URLSearchParams) => {
 };
 ```
 
-1. Replace `TODO 5` with the following code. Now that you've defined how to get the Fluid container, you need to tell React to call `getFluidContainer` on load, and then store the result in state based on if the application is inside Teams.
-React's [useState hook](https://reactjs.org/docs/hooks-state.html) will provide the storage needed, and [useEffect](https://reactjs.org/docs/hooks-effect.html) will allow you to call `getFluidContainer` on render, passing the returned value into `setFluidContainer`.
+Here you'll parse the URL to get the query parameter string, defined by `containerIdQueryParamKey`, and retrieve the container ID. With the container ID, you can now load the container to get the container. Once you have the container, set the `fluidContainer` React state, defined above.
 
-By adding `inTeams` in the dependency array at the end of the `useEffect`, the app ensures that this function only gets called on content page load.
+1. Replace `TODO 5` with the following code. 
 
 ```ts
 useEffect(() => {
@@ -237,7 +256,12 @@ useEffect(() => {
 }, [inTeams]);
 ```
 
-1. Replace `TODO 6` with the following code. Note here that it's important to ensure that the content page is loaded inside Microsoft Teams and that the Fluid container is defined before passing it into the React component (defined as `FluidComponent` below).
+Now that you've defined how to get the Fluid container, you need to tell React to call `getFluidContainer` on load, and then store the result in state based on if the application is inside Teams.
+React's [useState hook](https://reactjs.org/docs/hooks-state.html) will provide the storage needed, and [useEffect](https://reactjs.org/docs/hooks-effect.html) will allow you to call `getFluidContainer` on render, passing the returned value into `setFluidContainer`.
+
+By adding `inTeams` in the dependency array at the end of the `useEffect`, the app ensures that this function only gets called on content page load.
+
+1. Replace `TODO 6` with the following code. 
 
 ```ts
 if (inTeams === false) {
@@ -256,6 +280,8 @@ return (
   <div>Loading FluidComponent...</div>
 );
 ```
+> [!NOTE]
+> here that it's important to ensure that the content page is loaded inside Microsoft Teams and that the Fluid container is defined before passing it into the React component (defined as `FluidComponent` below).
 
 ### Create React component for Fluid view and data
 
