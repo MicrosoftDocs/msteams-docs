@@ -138,10 +138,10 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 * Microsoft Graph Service:`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
 * SQL:`getTediousConnectionConfig` returns a tedious connection config.
 
-Required configuration:
+    Required configuration:
 
-* If you want to use user identity then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
-* If you want to use MSI identity then `sqlServerEndpoint`and `sqlIdentityId` are required.
+    * If you want to use user identity then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
+    * If you want to use MSI identity then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
 ### Override configuration
 
@@ -357,6 +357,53 @@ This section provides several code snippets for common scenarios that are relate
     </details>
 
     <details>
+    <summary><b>Use Graph API in Command Bot</b></summary>
+
+    This code snippet shows you how to implement `TeamsFxBotSsoCommandHandler` for command bot to call Microsoft API.
+
+    ```ts
+    import { Activity, TurnContext } from "botbuilder";
+    import {
+      CommandMessage,
+      TriggerPatterns,
+      TeamsFx,
+      createMicrosoftGraphClient,
+      TeamsFxBotSsoCommandHandler,
+      TeamsBotSsoPromptTokenResponse,
+    } from "@microsoft/teamsfx";
+
+    export class ProfileSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
+      triggerPatterns: TriggerPatterns = "profile";
+
+      async handleCommandReceived(
+        context: TurnContext,
+        message: CommandMessage,
+        tokenResponse: TeamsBotSsoPromptTokenResponse,
+      ): Promise<string | Partial<Activity> | void> {
+        // Init TeamsFx instance with SSO token
+        const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+        // Add scope for your Azure AD app. For example: Mail.Read, etc.
+        const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+      
+        // Call graph api use `graph` instance to get user profile information
+        const me = await graphClient.api("/me").get();
+
+        if (me) {
+          // Bot will send the user profile info to user
+          return `Your command is '${message.text}' and you're logged in as ${me.displayName}`;
+        } else {
+          return "Could not retrieve profile information from Microsoft Graph.";
+        }
+      }
+    }
+    ```
+    For more information about how to use this class in command bot, please refer the document: [Add single sign-on to your Teams apps](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/add-single-sign-on?tabs=typescript). And there is also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project which you can try sso command bot. 
+
+
+    </details>
+
+    <details>
     <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
 
     This code snippet shows you how to use `CreateApiClient` or `axios` library to call Azure Function, and how to call Graph API in Azure function to get user profiles.
@@ -429,7 +476,7 @@ This section provides several code snippets for common scenarios that are relate
     }
     ```
 
-    For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
+    For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend). 
 
     </details>
 
