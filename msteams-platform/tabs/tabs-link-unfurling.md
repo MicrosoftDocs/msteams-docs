@@ -84,8 +84,7 @@ Following is the process to invoke Stage View:
 * The bot responds with a `200` code.
 
 > [!NOTE]
->
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
@@ -98,7 +97,7 @@ Following is the deep link syntax:
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
 > [!NOTE]
-> Partners need to use the internal app ID in deep links to task modules rather than the external ID from their manifest. This applies to sideloaded and LOB apps. If they open a task module using a deep link with the external ID then getAuthToken and other APIs that depend on the app definition will not work. We have no plans to change this because it would introduce serious security issues into the product.
+> Partners should use app ID in deep links to task modules rather than the external ID from their manifest. This applies to sideloaded and Teams apps. If they open a task module using a deep link with the external ID then `getAuthToken` and other APIs that depend on the app definition will not work. If you change this, it would introduce serious security issues into the product.
 
 ### Examples
 
