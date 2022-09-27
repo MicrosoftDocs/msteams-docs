@@ -16,7 +16,7 @@ Collaboration controls currently work best within Microsoft Teams. You can creat
 
 ## Configure the app for Teams
 
-The app that you've created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
+The app that you've created in [create a model-driven application](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
 
 > [!NOTE]
 > Don't enable the following steps if you want to display the left pane and high-density header to your users.
