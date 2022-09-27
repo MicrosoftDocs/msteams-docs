@@ -476,7 +476,7 @@ This section provides several code snippets for common scenarios that are relate
     }
     ```
 
-    For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend). 
+    For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
 
     </details>
 
