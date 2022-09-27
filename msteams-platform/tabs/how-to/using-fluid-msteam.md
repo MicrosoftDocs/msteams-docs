@@ -17,7 +17,7 @@ In this section you'll learn the following concepts:
 2. How to run and connect your Teams application to a Fluid service (Azure Fluid Relay).
 3. How to create and get Fluid Containers and pass them to a React component.
 
-For an example of how this tutorial may be used to build a more complex application, check out the [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
+For more information to build complex application, see [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
 
 ## Prerequisites
 
