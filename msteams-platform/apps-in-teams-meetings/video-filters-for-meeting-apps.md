@@ -53,7 +53,7 @@ The video filter app defines the video filter and applies it to the user's video
 
 ## Install the JavaScript SDK
 
-The [Microsoft Teams JavaScript SDK](https://www.npmjs.com/package/@microsoft/teams-js) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
+The [Microsoft Teams JavaScript SDK](https://www.npmjs.com/package/@microsoft/teams-js) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0), and you can download through npm or Yarn.
 
 ### npm
 
@@ -75,11 +75,11 @@ import * as microsoftTeams from "@microsoft/teams-js";
 
 For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit)
 
-## Enable your app for Teams meetings
+## Enable the video filter app for Teams meetings
 
 An app package describes how your app is configured and includes the app manifest file, color icon, and outline icon. [Create a Teams app package](../concepts/build-and-test/apps-package.md) to build and run your application in Teams.
 
-To enable your app for Teams meetings, update your app manifest and use the `videoFilters` property to determine the filter name, category name, and filter thumbnail image.
+To enable your video filter app for Teams meetings, update your app manifest and use the `videoFilters` property to determine the filter name, category name, and filter thumbnail image.
 
 ### Update app manifest
 
@@ -94,7 +94,7 @@ The following is an example of a manifest for a video filter app:
 {
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview", // Required for meetingExtensionDefinition for sideloading. Will have a published version 1.10
-  "id": "your_app_guid", // Newly generated Guid
+  "id": "your_app_guid", // Newly generated GUID
   "version": "1.0.0",
   "packageName": "your_package_name", // Example: com.microsoft.teams.videopp
   "developer": {
@@ -135,7 +135,7 @@ The following is an example of a manifest for a video filter app:
   "meetingExtensionDefinition": {
     "videoFilters": [ // for showing video filters inside of video effects quick picker section.
       {
-        "id": "310a65de-24ce-445e-9e1e-dd4ef0f0114b", // Guid
+        "id": "310a65de-24ce-445e-9e1e-dd4ef0f0114b", // GUID
         "name": "Category_FilterA", // Category can be: Styles, Frames, Makeup, and Others
         "thumbnail": "PreviewEffect.png" // A relative path to the video filter thumbnail.png
       }
@@ -148,7 +148,7 @@ The following is an example of a manifest for a video filter app:
 
 Ensure that you adhere to the following requirements to update the app manifest:
 
-* Each `videoFilters` property has a non-empty guid, and the guid is unique for the `meetingExtensionDefinition` property.
+* Each `videoFilters` property has a non-empty GUID, and the GUID is unique for the `meetingExtensionDefinition` property.
 
 * The number of video filters for an app is limited to 32.
 
@@ -248,7 +248,7 @@ Following is the code sample of the `src` attribute with the JavaScript file pat
 
 Use the following API methods in the JavaScript file to trigger the video filter app:
 
-* Call the `registerForVideoEffect` method to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
+* Call the `registerForVideoEffect` function to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
 
   Following code snippet is an example of calling the `registerForVideoEffect` method:
 
@@ -259,7 +259,7 @@ Use the following API methods in the JavaScript file to trigger the video filter
   
   ```
 
-* Call the `registerForVideoFrame` method to:
+* Call the `registerForVideoFrame` function to:
   * Get the video frames from video pipeline.
   * Return the processed video frames from video pipeline.
   * Notify error.
@@ -312,7 +312,7 @@ Use the following API methods in the JavaScript file to trigger the video filter
   });
   ```
 
-* Call the `notifySelectedVideoEffectChanged` method to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
+* Call the `notifySelectedVideoEffectChanged` function to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
 
   >[!NOTE]
   > After you call notifySelectedEffectChanged API:
@@ -363,7 +363,7 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 ## Sideload the video filter app
 
-Sideload the video filter app to your tenant in Teams. For more information, see [upload your custom app](../concepts/deploy-and-publish/apps-upload.md). After sideloading, you can use the video filter app to apply video filters to videos in Teams meetings.
+Sideload the video filter app to your tenant in Teams. For more information, see [enable sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). After sideloading, you can use the video filter app to apply video filters to videos in Teams meetings.
 
 ## Diversity and Inclusion requirements
 
