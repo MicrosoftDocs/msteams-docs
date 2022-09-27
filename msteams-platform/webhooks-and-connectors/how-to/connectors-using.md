@@ -86,7 +86,7 @@ An example of connector message is as follows:
         "actions": [{
             "@type": "HttpPOST",
             "name": "Add comment",
-            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+            "target": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -99,14 +99,14 @@ An example of connector message is as follows:
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+            "target": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "OpenUri",
         "name": "Learn More",
         "targets": [{
             "os": "default",
-            "uri": "https://docs.microsoft.com/outlook/actionable-messages"
+            "uri": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -130,7 +130,7 @@ An example of connector message is as follows:
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+            "target": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }]
 }
