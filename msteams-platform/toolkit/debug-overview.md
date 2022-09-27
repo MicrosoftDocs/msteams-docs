@@ -11,7 +11,6 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Teams app
 
-
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ::: zone pivot="visual-studio-code"
