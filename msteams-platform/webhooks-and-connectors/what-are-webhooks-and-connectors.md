@@ -46,7 +46,7 @@ Learn more about the differences between Notification Bot and Incoming webhook s
 | Send Adaptive Card | Yes | Yes |
 | Send a welcome message | Can send a welcome message | No welcome message |
 | Trigger Supported | All triggers supported. If you use Teams Toolkit, you can quickly get template projects with following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service <br> • HTTP trigger hosted on Azure Functions | All triggers supported |
-| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit overview for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools required |
+| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit overview for Visual Studio](../toolkit/teams-toolkit-fundamentals.md) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools required |
 | Cloud resource required | Azure Bot Framework | No resources required |
 | Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
