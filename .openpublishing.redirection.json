@@ -803,7 +803,6 @@
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
         "redirect_url": "/msteams-platform/apps-in-teams-meetings/advanced-meeting-apis.md"
-        "redirect_url": "/microsoftteams/toolkit/tools-prerequisites"
       },
       {
         "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
