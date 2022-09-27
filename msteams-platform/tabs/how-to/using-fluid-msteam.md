@@ -15,7 +15,11 @@ In this section you'll learn the following concepts:
 
 1. How to integrate a Fluid client into a Microsoft Teams tab application.
 2. How to run and connect your Teams application to a Fluid service (Azure Fluid Relay).
-3. How to create and get Fluid Containers and pass them to a React component.
+In this section you can learn the following concepts:
+
+1. Integrate a Fluid client into Teams tab application.
+2. Run and connect your Teams application to a Fluid service (Azure Fluid Relay).
+3. Create and get Fluid Containers, and pass them to a React component.
 
 For more information to build complex application, see [Teams Fluid Hello World](https://github.com/microsoft/FluidExamples/tree/main/teams-fluid-hello-world) example in our FluidExamples repo.
 
