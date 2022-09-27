@@ -398,7 +398,7 @@ This section provides several code snippets for common scenarios that are relate
       }
     }
     ```
-    For more information about how to use this class in command bot, please refer the document: [Add single sign-on to your Teams apps](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/add-single-sign-on?tabs=typescript). And there is also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project which you can try sso command bot. 
+    For more information about how to use this class in command bot, please refer the document: [Add single sign-on to your Teams apps](https://learn.microsoft.com/microsoftteams/platform/toolkit/add-single-sign-on?tabs=typescript). And there is also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project which you can try sso command bot. 
 
 
     </details>
