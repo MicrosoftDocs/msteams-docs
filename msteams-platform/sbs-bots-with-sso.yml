@@ -214,7 +214,7 @@ items:
 
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
 
-        :::image type="content" source="/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
     
         :::image type="content" source="~/assets/images/bots/selectchannel.png" alt-text="Screenshot showing the selection of channel.":::
 
