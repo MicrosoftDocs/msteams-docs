@@ -126,7 +126,7 @@ Following are the steps to create a personal tab:
 
       Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
     > [!NOTE]
-    > After user access tab application, based on user action there might be internal navigation and displaying results. But if user navigates away from tab and open tab app again (or click on back button) will show the tab home page. Previous state will not be maintained. This behavior is By design.
+    > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain/retain the previous state by design.
     </details>
 
 ### Add a content page to the personal tab
