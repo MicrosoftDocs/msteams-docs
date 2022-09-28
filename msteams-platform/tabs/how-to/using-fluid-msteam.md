@@ -79,6 +79,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     // TODO 5: Define create container function.
     // TODO 6: Define get container function.
     ```
+
     > [!NOTE]
     > The comments define all the functions and constants needed to interact with the Fluid service and container.
 
