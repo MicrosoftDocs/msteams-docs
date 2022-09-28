@@ -94,7 +94,6 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view.":::
 :::image type="content" source="~/assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view":::
 
@@ -117,7 +116,6 @@ The following image illustrates the in-meeting side panel:
 
 # [Mobile](#tab/mobile)
 
- doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile.:::"
 
 :::image type="content" source="~/assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="In-meeting side panel mobilel":::
