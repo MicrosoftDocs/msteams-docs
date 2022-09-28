@@ -1,6 +1,6 @@
 ---
 title: Device permissions for the browser
-description: Teams app that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Permissions are handled in Microsoft Teams. 
+description: app that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser.
 localization_priority: medium
 ms.topic: how-to
 ---
