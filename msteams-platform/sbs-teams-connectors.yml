@@ -72,15 +72,15 @@ items:
        
     1.  Select **Setup policies**.
  
-           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Setup policies":::
+           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies_1.png" alt-text="Setup policies":::
    
-    1.  Select **Global**.
+    1.  Select **Global (Org-wide default)**.
 
-          ![Global](~/assets/images/sbs-connector/Global.png)
+          :::image type="content" source="~/assets/images/sbs-connector/Global_1.png" alt-text="Global":::
 
     1.   Toggle **Upload custom apps** to **On** position.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn_1.png" alt-text="Toggle On":::
    
     1.   Select **Save**.
        
@@ -108,7 +108,7 @@ items:
 
     1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
 
-       ![sln path](~/assets/images/sbs-connector/sln.png)
+       :::image type="content" source="~/assets/images/sbs-connector/sln_1.png" alt-text="sln":::
 
     2. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -118,7 +118,7 @@ items:
        > [!TIP]
        > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
-       ![ngrok path](~/assets/images/sbs-connector/ngrok1.png)
+       :::image type="content" source="~/assets/images/sbs-connector/ngrok1_1.png" alt-text="ngrok1":::
 
     3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     4. Select **New Connector**.
@@ -139,24 +139,24 @@ items:
        * Select **I accept the terms and conditions of the App Developer Agreement**
        * Select **Save**
 
-       ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
+       :::image type="content" source="~/assets/images/sbs-connector/basicdetails_1.png" alt-text="basicdetails":::
 
        You've successfully registered a new connector. The window appears with registered connector ID.
 
-       ![Output screen](~/assets/images/sbs-connector/output.png)
+       :::image type="content" source="~/assets/images/sbs-connector/output_1.png" alt-text="output":::
       
        > [!TIP]
        > Save the Connector ID for future reference.
 
     6. Select **TeamsToDoAppConnector.csproj** file from **TeamsToDoAppConnector folder**.
 
-       ![Navigation path](~/assets/images/sbs-connector/web.png) 
+       :::image type="content" source="~/assets/images/sbs-connector/web_1.png" alt-text="web"::: 
 
     7. Open in Visual Studio. 
 
     8. Replace the `configuration.appSettings.BaseUrl` variable with `ngrok https forwarding url`.
        
-       ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
+       :::image type="content" source="~/assets/images/sbs-connector/manifest_1.png" alt-text="manifest"::: 
 
     9. Press **F5** to run the project.
        A web page opens. 
@@ -177,13 +177,13 @@ items:
        ![Manifest location](~/assets/images/sbs-connector/zip.png)
 
     1. Go to **Microsoft Teams**.
-    1. In the left panel, select **Store** > **Manage your apps**.
+    1. In the left panel, select **Apps** > **Manage your apps**.
 
-       ![Manage Apps](~/assets/images/sbs-connector/manageapp.png)
+       :::image type="content" source="~/assets/images/sbs-connector/manageapp_1.png" alt-text="manageapp":::
 
     1. Select **Upload a custom app**.
  
-       ![Upload a custom app](~/assets/images/sbs-connector/upload.png)
+       :::image type="content" source="~/assets/images/sbs-connector/upload_1.png" alt-text="upload":::
       
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
@@ -201,7 +201,7 @@ items:
 
     1. In the left panel, search **Teams ToDo Notification** connector in search bar and select **Configure**.
 
-       ![configure notification](~/assets/images/sbs-connector/configure.png)
+       :::image type="content" source="~/assets/images/sbs-connector/configure_1.png" alt-text="configure":::
 
     1. Select either **Created** or **Updated** on the registration page and select **Save**.
 
@@ -225,7 +225,7 @@ items:
         * Description
         * Assign To
 
-        ![Task details](~/assets/images/sbs-connector/details.png)
+        :::image type="content" source="~/assets/images/sbs-connector/details_1.png" alt-text="details":::
 
     15. Select **Save**. 
       
