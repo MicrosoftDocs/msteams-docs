@@ -62,7 +62,6 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-post-meeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Mobile pre-meeting experience":::
