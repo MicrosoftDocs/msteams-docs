@@ -23,7 +23,7 @@ If you aren't seeing your content in the tab view, it could be:
 * the content domain isn't in the [validDomains](~/resources/schema/manifest-schema.md#validdomains) list in the manifest.
 
 > [!NOTE]
-> A blank tab appears when the given tab URL redirects to login screen. Login pages don’t render in iFrames as a safeguard against clickjacking Your authentication logic must use a method other than redirect.
+> A blank tab appears when the given tab URL redirects to login screen. Login pages don’t render in iFrames as a safeguard against clickjacking. Your authentication logic must use a method other than redirect.
 
 ### The Save button isn't enabled on the settings dialog
 
