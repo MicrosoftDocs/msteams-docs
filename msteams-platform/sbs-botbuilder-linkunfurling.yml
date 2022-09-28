@@ -119,10 +119,12 @@ items:
 
        Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+       :::image type="content" source="~/assets/images/Microsoft ID_1.png" alt-text="Microsoft ID":::
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
