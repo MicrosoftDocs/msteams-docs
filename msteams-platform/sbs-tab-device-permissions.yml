@@ -68,7 +68,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: | 
-     1. Navigate to **manifest.json** in cloned repository.
+     1. Go to **manifest.json** in cloned repository.
   
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png" alt-text="manifest file":::
 

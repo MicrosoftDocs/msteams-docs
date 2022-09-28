@@ -223,7 +223,7 @@ You would need to add the Settings IDs that you've saved earlier for your applic
 
      :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="The screenshot is an example that shows the control window.":::
 
-1. Select **Configure** and navigate to the General tab to add the Group ID.
+1. Select **Configure** and go to the General tab to add the Group ID.
 
      :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="The screenshot describes how to add the Group ID in General tab.":::
 
