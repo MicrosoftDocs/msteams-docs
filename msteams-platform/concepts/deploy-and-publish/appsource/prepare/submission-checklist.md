@@ -77,7 +77,7 @@ Your app's name (specifically, its *[short name](~/resources/schema/manifest-sch
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -97,7 +97,7 @@ A concise summary of your app that should be original, engaging, and directed at
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -119,7 +119,7 @@ While this description can be as long as 4,000 characters, most users will only 
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -141,7 +141,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Example screenshot highlights where app screenshots display in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="Example screenshot highlights where app screenshots display in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -184,14 +184,14 @@ During submission, you're asked to categorize your app. The following table maps
 
 | Teams categories       | Partner Center categories  |
 |:---------------------|:---------------|
-| Analytics and BI | Analytics, Data Visualization, and BI |
-| Developer and IT | Developer Tools, IT Admin |
+| Data Visualization and BI | Analytics, Data Visualization, and BI |
+| Developer Tools | Developer Tools, IT Admin |
 | Education | Education |
-| Human resources | Human Resources and Recruiting |
+| Human resources & recruiting| Human Resources and Recruiting |
 | Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
 | Project management | Communication, Project Management, Workflow, and Business Management |
 | Sales and support | Customer and Contact Management, Customer Support, Financial Management, and Sales and Marketing |
-| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+| Social | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
 
 ### Localize your store listing
 

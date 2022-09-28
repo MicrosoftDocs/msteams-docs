@@ -13,7 +13,7 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 ## Configure default install options
 
-You configure default install options. For example, if your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
+You can configure default install options. For example, if your app's primary capability is a bot, you can make the bot the default capability when a user installs your app to a team.
 
 ## Create your app package
 
