@@ -280,7 +280,7 @@ To schedule an external meeting with the customer, select the dropdown next to t
 
 Users can see both Internal meetings and Customer Bookings on their meeting list. After the meeting is started, users can join by selecting the **Join** button, which opens the meeting directly in Microsoft Teams.
 
-As the meetings are backed by Outlook, users can navigate to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
+As the meetings are backed by Outlook, users can go to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
 Following are the steps to add a shared calendar to your Outlook (optional) :
 
