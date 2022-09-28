@@ -46,26 +46,26 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 Teams Toolkit is available for app development as part of Visual Studio Code and Visual Studio. Teams Toolkit brings all the tools needed to build a Teams app in one place.
 
-- **Teams Toolkit for Visual Studio Code**: Teams Toolkit comes with Visual Studio Code as an extension. After you install the extension, Teams Toolkit helps you to build Teams app. You can use its features to add capabilities, third-party APIs, single sign-on, and many more functionalities. 
-- **Teams Toolkit for Visual Studio 2022**: Teams Toolkit comes with Visual Studio 2022 as a ASP.NET and web development workload.  
+* **Teams Toolkit for Visual Studio Code**: Teams Toolkit comes with Visual Studio Code as an extension. After you install the extension, Teams Toolkit helps you to build Teams app. You can use its features to add capabilities, third-party APIs, single sign-on, and many more functionalities. 
+* **Teams Toolkit for Visual Studio 2022**: Teams Toolkit comes with Visual Studio 2022 as a ASP.NET and web development workload.
 
     > [!NOTE]
     > Teams Toolkit is not available in other versions.
 
 ## Teams Toolkit features
 
-Integration with other entities adds to the features of Teams Toolkit.
+Integration with other entities adds to other features of Teams Toolkit.
 
 | Teams Toolkit Feature | Support in Visual Studio Code | Support in Visual Studio |
 | --- | --- | --- |
-| Install Teams Toolkit | You can install Teams Toolkit in two ways: <br> - Using Visual Studio Code <br> - Using Visual Studio Code Marketplace| Teams Toolkit is available as a workload in Visual Studio. |
-| Support for build environments | You have two different types of environment: <br> - Javascript or Typescript <br> - SPFx | You can develope C# app created using Blazor. |
-| Support for app types and Azure function | There are two different types of apps: <br> - Capability-based app such as tab, bot, message extension  <br> - Scenario-based Teams app such as notification bot, command bot and SSO enabled personal tab | You can create tab, message extension, notification bot, and command bot apps. |
-| Develop your Teams app | It contains: <br> - Add and manage environment <br> - Create multi-capability app <br> - Create capability based cloud resources <br> - Integrate third party API <br> - Customize manifest file <br> - TeamsFx SDK | Teams Toolkit supports app development through the lifecycle.  |
+| Install Teams Toolkit | You can install Teams Toolkit in two ways: <br> * Using Visual Studio Code <br> * Using Visual Studio Code Marketplace| Teams Toolkit is available as a workload in Visual Studio. |
+| Support for build environments | You have two different types of environment: <br> * Javascript or Typescript <br> * SPFx | You can develop C# app using the Blazor framework. |
+| Support for app types and Azure function | There are two different types of apps: <br> * Capability-based app such as tab, bot, message extension  <br> * Scenario-based Teams app such as notification bot, command bot and SSO enabled personal tab | You can create tab, message extension, notification bot, and command bot apps. |
+| Develop your Teams app | It contains: <br> * Add and manage environment <br> * Create multi-capability app <br> * Create capability based cloud resources <br> * Integrate third party API <br> * Customize manifest file <br> * TeamsFx SDK | Teams Toolkit supports app development through the lifecycle. |
 | Debug your Teams app | You can debug your app locally and remotely. | You can debug your app locally and remotely. |
-| Host your Teams app | It contains: <br> - Provision resources to the cloud <br> - Deploy to the cloud | You can deploy provision and deploy Azure resources and host it on Azure. |
-| Test your Teams app | It contains: <br> - Integrate and collaborate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment. | You can create app package for your Teams app for local and remote testing: <br> - Use the app package for local debug by sideloading your app in Teams client to test its functionality. <br> - Use the remote or Azure app package to deploy the app package on Azure AD to test it. |
-| Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal | You can import your app into Developer Portal and use it to validate the app manifest, configure app capabilities, and load the app into Teams client. |
+| Host your Teams app | It contains: <br> * Provision resources to the cloud <br> * Deploy to the cloud | You can deploy provision and deploy Azure resources and host it on Azure. |
+| Test your Teams app | It contains: <br> * Integrate and collaborate <br> * Zip Teams metadata package <br> * Sideload and test app in Teams environment <br> * Test app behavior in different environment. | You can create app package for your Teams app for local and remote testing: <br> * Use the app package for local debug by sideloading your app in Teams client to test its functionality. <br> * Use the remote or Azure app package to deploy the app package on Azure AD to test it. |
+| Publish your Teams app | It contains: <br> * Publish your app <br> * Manage admin approval <br> * Publish to store <br> * Integrate with Developer Portal | You can import your app into Developer Portal and use it to validate the app manifest, configure app capabilities, and load the app into Teams client. |
 
 The following operations aren't supported in Teams Toolkit for Visual Studio. However, they're planned in the future product road map:
 
@@ -87,7 +87,7 @@ The following operations aren't supported in Teams Toolkit for Visual Studio. Ho
 * [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
-## User journey of Teams Toolkit
+## Development cycle in Teams Toolkit
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. Irrespective of the flavor, the developer experience for app development follows similar path.
 
