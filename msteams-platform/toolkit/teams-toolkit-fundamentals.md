@@ -44,7 +44,7 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 ## Teams Toolkit flavours
 
-Teams Toolkit is available for app development as part of Visual Studio Code and Visual Studio. Teams Toolkit brings all the tools needed to build a Teams app in one place.
+Teams Toolkit is available for app development as part of Visual Studio Code and Visual Studio.
 
 * **Teams Toolkit for Visual Studio Code**: Teams Toolkit comes with Visual Studio Code as an extension. After you install the extension, Teams Toolkit helps you to build Teams app. You can use its features to add capabilities, third-party APIs, single sign-on, and many more functionalities. 
 * **Teams Toolkit for Visual Studio 2022**: Teams Toolkit comes with Visual Studio 2022 as a ASP.NET and web development workload.
@@ -52,7 +52,7 @@ Teams Toolkit is available for app development as part of Visual Studio Code and
     > [!NOTE]
     > Teams Toolkit is not available in other versions.
 
-## Teams Toolkit features vs. app development cycle
+## Features vs. app development cycle
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. Irrespective of the flavor, the developer experience for app development follows similar path.
 
@@ -116,14 +116,14 @@ The main milestones of this journey are:
 1. Add capabilities or edit manifest file as needed.
 1. Use Microsoft 365 account to build and debug your Teams app.
 1. Use Azure account to provision and deploy your app to cloud.
-1. Publish your app to Teams.-->
+1. Publish your app to Teams.-
 
 ## Manage your apps using Developer Portal
 
 As Teams Toolkit is integrated with Developer Portal, you can configure, distribute, and manage your app using [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) under DEPLOYMENT after creating an app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-1.png" alt-text="Developer Portal":::
-
+-->
 ## See also
 
 * [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
