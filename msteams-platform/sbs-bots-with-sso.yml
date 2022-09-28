@@ -322,7 +322,7 @@ items:
 
        The **Add a scope** window appears.
 
-    1. Enter the details for configuring scope.    
+    1. Enter the details to configure scope.    
 
           1. Enter `access_as_user` as the **Scope Name**.
 
@@ -347,9 +347,9 @@ items:
 
          :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Screenshot showing configuring scope.":::
 
-    Your Application ID URI is created with **Scope name**.
+       Your Application ID URI is created with **Scope name**.
 
-          :::image type="content" source="~/assets/images/bots/ExposeAPIandaddscope.png" alt-text="Screenshot showing API exposed and scope added.":::
+        :::image type="content" source="~/assets/images/bots/ExposeAPI_2.png" alt-text="Screenshot showing API exposed and scope added.":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application.
     
@@ -357,7 +357,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/addaclientapplication.png" alt-text="Screenshot showing adding a client application.":::
 
-       Add a client application panel appears.
+       The **Add a client application** window appears.
 
     1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
        
@@ -421,6 +421,8 @@ items:
     1. In **Configuration page**, select **Add OAuth Connection Settings**.
 
         :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
+
+    The **New Connection Setting** window appears.
 
         :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
 

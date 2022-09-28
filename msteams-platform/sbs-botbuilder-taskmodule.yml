@@ -87,7 +87,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+       You can also select **Use existing app registration** and enter **App ID** and **App tenant Id** and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -97,7 +97,7 @@ items:
 
         ![Microsoft App ID](~/assets/images/Teams-task-module/multi-tenant-option.png)
 
-    1. If the validation passes, select **Create**. 
+    1. Once the validation is passed, select **Create**. 
 
         It takes a few moments for your bot service to be provisioned. 
 
@@ -113,7 +113,7 @@ items:
 
       Perform the following steps, if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -161,7 +161,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/Teams-task-module/configteams.png)   
+          ![Select Teams](~/assets/images/Teams-task-module/configteams_1.png)   
     
     **To create tunnel for local web server**
 
@@ -224,10 +224,14 @@ items:
     1. Select **Add a scope**. 
 
        ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+
+       The **Add a scope** window appears.
+
+    1. Enter the following details to configure scope:
     
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+        1. Enter `access_as_user` as the **Scope name**.
   
-    1. Set **Who can consent?** to `Admins and users`.
+        1. Set **Who can consent?** to `Admins and users`.
   
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
@@ -410,11 +414,11 @@ items:
 
        ![Zip file](~/assets/images/Teams-task-module/AppStore_1.png)
    
-    1. In the lower left corner, select **Manage your apps**.
+    1. Select **Manage your apps**.
 
        ![Manage apps](~/assets/images/Teams-task-module/manage-apps_1.png)
    
-    1. Select **Upload an app to your org's app catalog**. 
+    1. Select **Upload a custom app**. 
 
        ![Upload custom app](~/assets/images/Teams-task-module/upload-app_1.png)
 
