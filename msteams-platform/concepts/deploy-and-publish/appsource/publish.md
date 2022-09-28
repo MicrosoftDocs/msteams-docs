@@ -118,7 +118,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **Post app submission**
 
-  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report,, or if you need any extra support to resolve the reported issues.
+  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report, or if you need any extra support to resolve the reported issues.
 
   * Ensure that you've adequate developer bandwidth to resolve any reported issues until the app is approved.
 
