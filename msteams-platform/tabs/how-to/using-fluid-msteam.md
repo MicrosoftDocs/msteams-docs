@@ -71,17 +71,17 @@ This tutorial requires familiarity with the following concepts and resources:
 
 This app is intended to be used in the context of Microsoft Teams, with all Fluid-related imports, initialization, and functions together. This provides an enhanced experience and makes it easier to use in the future. You can add the following code to the import statements.
 
-    ```ts
-    // TODO 1: Define the parameter key(s).
-    // TODO 2: Define container schema.
-    // TODO 3: Define connectionConfig (AzureClientProps).
-    // TODO 4: Create Azure client.
-    // TODO 5: Define create container function.
-    // TODO 6: Define get container function.
-    ```
+```ts
+// TODO 1: Define the parameter key(s).
+// TODO 2: Define container schema.
+// TODO 3: Define connectionConfig (AzureClientProps).
+// TODO 4: Create Azure client.
+// TODO 5: Define create container function.
+// TODO 6: Define get container function.
+```
 
-    > [!NOTE]
-    > The comments define all the functions and constants needed to interact with the Fluid service and container.
+> [!NOTE]
+> The comments define all the functions and constants needed to interact with the Fluid service and container.
 
 1. Replace `TODO 1:` with the following code.
 
