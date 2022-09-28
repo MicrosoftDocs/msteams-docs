@@ -73,7 +73,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Screenshot showing the selection of Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -82,10 +82,8 @@ items:
     
         ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create.png) 
     
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
-
+       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
+       
         ![New resource group location](~/assets/images/bots/newresource.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
