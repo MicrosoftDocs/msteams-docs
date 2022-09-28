@@ -182,7 +182,7 @@ items:
 
         * Add your bot name for `MicrosoftAppType`.
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
-        * You can obtain the `MicrosoftAppTenantId` or `UserId` from the link of the account used to log in to the Teams. Follow the path in the image to get the link for `tenant id`:
+        * You can obtain the `MicrosoftAppTenantId` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenant id`:
         
             :::image type="content" source="./assets/images/conversation-bot/teams-link-new.png" alt-text="Tenant ID path in Teams.":::
 
