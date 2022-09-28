@@ -52,11 +52,13 @@ Teams Toolkit is available for app development as part of Visual Studio Code and
     > [!NOTE]
     > Teams Toolkit is not available in other versions.
 
-## Features vs. app development cycle
+## App development lifecycle vs. features
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. Irrespective of the flavor, the developer experience for app development follows similar path.
 
-The following image shows Teams Toolkit user journey:
+### App development lifecycle
+
+The following image shows Teams Toolkit development lifecycle:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
@@ -67,6 +69,8 @@ The main milestones of this journey are:
 1. Use Microsoft 365 account to build and debug your Teams app.
 1. Use Azure account to provision and deploy your app to cloud.
 1. Publish your app to Teams.
+
+### Teams Toolkit features
 
 These milestones map to app development lifecycle. Integration with other entities adds to other features of Teams Toolkit and aids app building.
 
