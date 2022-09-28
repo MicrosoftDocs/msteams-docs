@@ -52,18 +52,6 @@ Teams Toolkit is available for app development as part of Visual Studio Code and
     > [!NOTE]
     > Teams Toolkit is not available in other versions.
 
-The following operations aren't supported in Teams Toolkit for Visual Studio. However, they're planned in the future product road map:
-
-* Add another Teams capabilities to your Teams app
-* Add more Azure resources to your Teams app
-* Add Single Sign-on (SSO) to your Teams app
-* Add API connection to your Teams app
-* Customize Microsoft Azure Active Directory (Azure AD) manifest
-* Add CI/CD pipelines
-* Manage multiple cloud environments
-* Collaborate on Teams projects
-* Publish Teams app
-
 ## Teams Toolkit features
 
 Integration with other entities adds to the features of Teams Toolkit.
@@ -79,9 +67,31 @@ Integration with other entities adds to the features of Teams Toolkit.
 | Test your Teams app | It contains: <br> - Integrate and collabrate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment. | -- |
 | Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal | You can import your app into Developer Portal and use it to validate the app manifest, configure app capabilities, and load the app into Teams client. |
 
+The following operations aren't supported in Teams Toolkit for Visual Studio. However, they're planned in the future product road map:
+
+* Add another Teams capabilities to your Teams app
+* Add more Azure resources to your Teams app
+* Add Single Sign-on (SSO) to your Teams app
+* Add API connection to your Teams app
+* Customize Microsoft Azure Active Directory (Azure AD) manifest
+* Add CI/CD pipelines
+* Manage multiple cloud environments
+* Collaborate on Teams projects
+* Publish Teams app
+
+### TeamsFx .NET SDK Reference docs
+
+* [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
+* [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
+* [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
+* [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
+* [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
+
 ## User journey of Teams Toolkit
 
-Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
+Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. Irrespective of the flavor, the developer experience for app development follows similar path.
+
+The following image shows Teams Toolkit user journey:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
@@ -94,14 +104,6 @@ The main milestones of this journey are:
 1. Publish your app to Teams.
 
 
-
-#### TeamsFx .NET SDK Reference docs
-
-* [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
-* [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
-* [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
-* [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
-* [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
 ## Manage your apps using Developer Portal
 
