@@ -520,9 +520,9 @@ If your app supports localization, your app package must include a file with lan
 <details><summary>Usability and functionality</summary>
 
 * After successful purchase and assignment of licenses, you must provide the following:
-* Access to users for subscribed plan features.
-* Value addition and significant benefits of subscription plan to users.
-* From your Teams app, provide link to the SaaS application home page for subscribers to manage the licenses in the future.
+  * Access to users for subscribed plan features.
+  * Value addition and significant benefits of subscription plan to users.
+  * From your Teams app, provide link to the SaaS application home page for subscribers to manage the licenses in the future.
 
 </details>
 </br>
