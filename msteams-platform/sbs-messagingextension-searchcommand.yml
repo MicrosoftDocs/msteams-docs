@@ -55,7 +55,7 @@ items:
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -71,14 +71,14 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+         :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
     
-        ![Select resource Azure bot](~/assets/images/Teams-Messaging-Extensions-Search/review-plus-create.png) 
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/review-plus-create_1.png" alt-text="review-plus-create"::: 
     
     1.  To create a new resource group, select the required location from **New resource group location** dropdown list.
         For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
@@ -87,18 +87,16 @@ items:
 
     1. Select **MultiTenant** under **Bot Type**.
 
-        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png)
-
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+       You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
     1. Select **Review + create**.
 
-        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
+        :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-appidcreate_1.png" alt-text="app id create":::
 
     1. If the validation passes, select **Create**. 
 
@@ -106,11 +104,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/Teams-Messaging-Extensions-Search/botdeployment.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/botdeployment_1.png" alt-text="bot deployment":::
 
         Your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/Teams-Messaging-Extensions-Search/bot-page.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/bot-page_1.png" alt-text="bot resource created":::
 
     **To create client secret**
 
@@ -139,7 +137,7 @@ items:
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/Teams-Messaging-Extensions-Search/clientvalue.png)
+         :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clientvalue_1.png" alt-text="Value of client secret":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -148,7 +146,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/Teams-Messaging-Extensions-Search/gotohome.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/gotohome_1.png" alt-text="Go to Home":::
 
     1. Select your bot from **Recent resources**.
 
@@ -160,11 +158,11 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/meetings-side-panel/terms.png)
+          :::image type="content" source="./assets/images/meetings-side-panel/terms_1.png" alt-text="terms":::
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/sbs-messagingextension-action/configure-msteams.png) 
+          :::image type="content" source="./assets/images/sbs-messagingextension-action/configure-msteams_1.png" alt-text="configure msteams"::: 
     
     **To create tunnel for local web server**
 
@@ -181,7 +179,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url_1.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -191,7 +189,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/Teams-Messaging-Extensions-Search/messaging-endpoint.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/messaging-endpoint_1.png" alt-text="messaging endpoint":::
 
     1. Select **Apply**.
 
@@ -209,24 +207,21 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/Teams-Messaging-Extensions-Search/appregister.png)
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appregister_1.png" alt-text="App registration":::
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/Teams-Messaging-Extensions-Search/exposeanapi.png)
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/exposeanapi_1.png" alt-text="Expose an API":::
 
-    1. Set the **Application ID URI** in the form of `api://{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://WebAppDomain/{AppID}`.
 
-       ![Set link](~/assets/images/Teams-Messaging-Extensions-Search/setlink.png)
-
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://9179****.ngrok.io/{AppID}`</br>
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/setlink_1.png" alt-text="Set link":::
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/Teams-Messaging-Extensions-Search/appIDuri.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appIDuri_1.png" alt-text="App ID URI":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -254,13 +249,13 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/Teams-Messaging-Extensions-Search/addascope.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addascope_1.png" alt-text="Add a scope":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://9179****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Teams-Messaging-Extensions-Search/scopes.png) 
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/scopes_1.png" alt-text="Scopes"::: 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -278,7 +273,7 @@ items:
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/Teams-Messaging-Extensions-Search/authorizedscope.png) 
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/authorizedscope_1.png" alt-text="Authorized scopes"::: 
 
        The following image displays the client IDs:
 
@@ -316,7 +311,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/Teams-Messaging-Extensions-Search/webauth.png)
+            :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/webauth_1.png" alt-text="Web":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://9179****.ngrok.io/auth-end`. </br>
@@ -327,7 +322,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/Teams-Messaging-Extensions-Search/authend.png)
+            :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/authend_1.png" alt-text="Auth-end":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -344,7 +339,7 @@ items:
          * Set `"MicrosoftAppTenantId"` as blank.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
-        ![App settings](~/assets/images/Teams-Messaging-Extensions-Search/appsettings.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings_1.png" alt-text="App settings":::
 
     1. Navigate to `manifest.json` in cloned repository.
 
@@ -355,7 +350,7 @@ items:
          * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest](~/assets/images/Teams-Messaging-Extensions-Search/manifest.png)
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/manifest_1.png" alt-text="Manifest":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -367,21 +362,21 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+          :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-VSopenfile_1.png" alt-text="Open file":::
 
        1. Select **TeamsMessagingExtensionsSearch.csproj** file from **50.teams-messaging-extensions-search** folder.
 
-          ![CS proj file](~/assets/images/Teams-Messaging-Extensions-Search/fileready.png)
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/fileready_1.png" alt-text="cs proj file":::
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer.png)
+          :::image type="content" source="./assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Solution Explorer":::
 
        1. Right-click to select **TeamsMessagingExtensionsSearch**.
 
        1. Select **Set as Startup Project**.
 
-          ![Solution Explorer](~/assets/images/Teams-Messaging-Extensions-Search/startup.png)
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/startup_1.png" alt-text="startup":::
 
        1. Press **F5** to run the project.
     
@@ -418,17 +413,13 @@ items:
 
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
+    1. In the left panel, select **Apps** > **Manage your apps**.
 
-       ![Zip file](~/assets/images/Teams-Messaging-Extensions-Search/AppStore.png)
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/AppStore_1.png" alt-text="App store":::
    
-    1. In the lower left corner, select **Manage your apps**.
+    1. Select **Upload a custom app**. 
 
-       ![Manage apps](~/assets/images/Teams-task-module/manage-apps.png)
-   
-    1. Select **Upload an app to your org's app catalog**. 
-
-       ![Upload custom app](~/assets/images/Teams-task-module/upload-app.png)
+       :::image type="content" source="./assets/images/Teams-task-module/upload-app_1.png" alt-text="Upload app":::
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
@@ -436,7 +427,7 @@ items:
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/Teams-Messaging-Extensions-Search/addapp.png)
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Add the app":::
 
        A pop-up opens in a chat.
 
