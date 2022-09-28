@@ -33,7 +33,7 @@ Teams Toolkit is integrated with the several entities, such as Azure AD and Micr
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
-| Teams Toolkit works with... | What it means... |
+| Integrated application | What it means... |
 | ---- | ---- |
 | Teams client | Teams Toolkit is integrated with Teams client. During local debug, Teams Toolkit sideloads the app into Teams client and allows you to test your app in the Teams environment. It uses your Microsoft 365 account to log into your Teams client account. |
 | Azure Active Directory | Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. During remote debug, Teams Toolkit allows you to test your app in a remote Teams environment on Teams web. You can also use provision Azure resources, collaborate with other developers, and implement CI/CD scenarios. |
@@ -63,8 +63,8 @@ Integration with other entities adds to the features of Teams Toolkit.
 | Support for app types and Azure function | There are two different types of apps: <br> - Capability-based app such as tab, bot, message extension  <br> - Scenario-based Teams app such as notification bot, command bot and SSO enabled personal tab | You can create tab, message extension, notification bot, and command bot apps. |
 | Develop your Teams app | It contains: <br> - Add and manage environment <br> - Create multi-capability app <br> - Create capability based cloud resources <br> - Integrate third party API <br> - Customize manifest file <br> - TeamsFx SDK | Teams Toolkit supports app development through the lifecycle.  |
 | Debug your Teams app | You can debug your app locally and remotely. | You can debug your app locally and remotely. |
-| Host your Teams app | It contains: <br> - Provision resources to the cloud <br> - Deploy to the cloud| You can deploy provision and deploy Azure resources and host it on Azure. | 
-| Test your Teams app | It contains: <br> - Integrate and collabrate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment. | -- |
+| Host your Teams app | It contains: <br> - Provision resources to the cloud <br> - Deploy to the cloud| You can deploy provision and deploy Azure resources and host it on Azure. | -- |
+| Test your Teams app | It contains: <br> - Integrate and collaborate <br> - Zip Teams metadata package <br> - Sideload and test app in Teams environment <br> - Test app behavior in different environment. | -- |
 | Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal | You can import your app into Developer Portal and use it to validate the app manifest, configure app capabilities, and load the app into Teams client. |
 
 The following operations aren't supported in Teams Toolkit for Visual Studio. However, they're planned in the future product road map:
