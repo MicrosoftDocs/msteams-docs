@@ -207,8 +207,6 @@ For more information, see [app manifest](../resources/schema/manifest-schema-dev
 
 Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
 
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
 :::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="Screenshot is an example that share specific parts of the app.":::
 
 :::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="The screenshot describes how to share specific part of the app to meeting stage in Teams meeting.":::
