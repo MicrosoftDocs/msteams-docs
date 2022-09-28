@@ -32,13 +32,13 @@ items:
   durationInMinutes: 1
   content: |
     Ensure that you install the following tools and set up your development environment:
-
-    * Microsoft Teams with an account (not a guest account)
-    * [Visual Studio Code](https://code.visualstudio.com/)
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
-    * [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
-
+    
+     | &nbsp; | [Microsoft Teams with an account (not a guest account)](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+    
 - title: Create a Bot Registration in Microsoft Azure portal
   durationInMinutes: 2
   content: |
@@ -109,7 +109,7 @@ items:
         > [!NOTE]
         > Ensure **MultiTenant** is selected under **Bot Type**.
 
-    1. Adjacent to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage**.
 
        :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
@@ -318,7 +318,7 @@ items:
     1. Zip the contents of the **AppPackage** folder to create `manifest.zip`.
 
         > [!NOTE]
-        > The `manifest.zip` shouldn't contain any additional folders in it. It should have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
+        > The `manifest.zip` shouldn't contain any more folders in it. It should have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
 
     1. Go to Teams.
     1. To upload `manifest.zip`, select **Store > Manage your apps > Upload a custom app** and open `manifest.zip`.
