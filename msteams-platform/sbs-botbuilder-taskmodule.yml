@@ -346,7 +346,7 @@ items:
 
         ![App settings](~/assets/images/Teams-task-module/appsettings.png)
 
-    1. Navigate to `manifest.json`` in cloned repository.
+    1. Go to `manifest.json`` in cloned repository.
 
         ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
     

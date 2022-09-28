@@ -466,7 +466,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
 1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Teams.
 1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So let's perform these steps:
-    1. In your browser, navigate to the [**Azure portal**][azure-portal].
+    1. In your browser, go to the [**Azure portal**][azure-portal].
     1. Select your **Bot Registration**.
     1. In the left panel, select **Settings**.
     1. In the right panel, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.

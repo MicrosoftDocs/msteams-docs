@@ -183,7 +183,7 @@ To view your app running in Outlook on Windows desktop:
 
 To view your app in Outlook on the web:
 
-1. Navigate to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
+1. Go to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
 1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 

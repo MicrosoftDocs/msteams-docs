@@ -96,7 +96,7 @@ While it's recommended to use `shareDeepLink()` to generate a deep link to your 
 > [!NOTE]
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, See the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still go to the tab but cannot provide the sub entity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
@@ -318,7 +318,7 @@ To use this deep link with your bot, specify this as the URL target in your card
 
 ### Generate deep links to channel conversation
 
-Use this deep link format to navigate to a particular conversation within channel thread:
+Use this deep link format to go to a particular conversation within channel thread:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

@@ -110,7 +110,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
     1. Right-click on **Windows PowerShell**.
     1. Select **Run as Administrator**.
 
-1. Navigate to the unzipped directory by typing `cd .../.../Moodle-AzureAD-Powershell` where `.../...` is the path to the directory.
+1. Go to the unzipped directory by typing `cd .../.../Moodle-AzureAD-Powershell` where `.../...` is the path to the directory.
 
 1. Execute the PowerShell script:
 
@@ -240,7 +240,7 @@ To deploy your app:
 
 4. Select the `manifest.zip` package you downloaded previously and select **Save**. If you have not downloaded the app manifest package, you can download from the **Team Settings** tab of the plugins configuration page in Moodle.
 
-Now that you have the app installed, you can add the tab to any channel that you have access to. To do so, navigate to the channel, select the **plus** (➕) symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
+Now that you have the app installed, you can add the tab to any channel that you have access to. To do so, go to the channel, select the **plus** (➕) symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
 
 ## 5. Allow automatic creation of Moodle tabs in Microsoft Teams
 

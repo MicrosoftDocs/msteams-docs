@@ -343,7 +343,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings.png" alt-text="Screenshot showing the app settings.":::
         
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifestlocation.png" alt-text="Screenshot showing the manifest file location.":::
         
@@ -407,7 +407,7 @@ items:
                   
     # [Command line](#tab/cli)
 
-    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 55.teams-link-unfurling** in Command Prompt window and enter the following command:
+    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 55.teams-link-unfurling** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run

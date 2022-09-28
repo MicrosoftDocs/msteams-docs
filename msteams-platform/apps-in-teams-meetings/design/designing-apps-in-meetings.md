@@ -120,7 +120,7 @@ Remember the following if you allow scrolling:
 
 ### Navigation
 
-For scenarios with navigation layers or heavy content, we recommend allowing users to navigate to a secondary layer. Users must be able to go back to the previous layer.
+For scenarios with navigation layers or heavy content, we recommend allowing users to go to a secondary layer. Users must be able to go back to the previous layer.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Example shows in-meeting navigation.":::
 
