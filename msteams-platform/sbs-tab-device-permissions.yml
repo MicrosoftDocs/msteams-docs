@@ -26,7 +26,7 @@ items:
     Ensure you install the following tools and set up your development environment:
 
  
-    * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) with a valid account.
+    * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) with a valid account
     * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
