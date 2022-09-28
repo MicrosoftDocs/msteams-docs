@@ -78,17 +78,17 @@ items:
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
         
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create_1.png" alt-text="Select resource Azure bot":::
+        :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create_1.png" alt-text="Select resource Azure bot":::
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
-       :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
+        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
     1. Select **Data residency** as **Global** or **Regional** according to the resource group location.
 
-    :::image type="content" source="~/assets/images/bots/data-residency_1.png" alt-text="Screenshot showing the data residency.":::
+        :::image type="content" source="~/assets/images/bots/data-residency_1.png" alt-text="Screenshot showing the data residency.":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -109,11 +109,11 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment_1.png" alt-text="Screenshot showing the navigation of go to resource.":::
+        :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment_1.png" alt-text="Screenshot showing the navigation of go to resource.":::
 
        Your Azure bot is created.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created":::
+        :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created":::
         
       **To create client secret**
 
@@ -124,7 +124,7 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-       :::image type="content" source="~/assets/images/Microsoft ID_1.png" alt-text="Microsoft ID":::
+        :::image type="content" source="~/assets/images/Microsoft ID_1.png" alt-text="Microsoft ID":::
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
