@@ -39,6 +39,14 @@ Visit the [Install Teams Toolkit documentation](./install-Teams-Toolkit.md) for 
 
 Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates. i.e. Tab, Bot, Messaging Extension.
 
+::: zone pivot="visual-studio-code"
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app.png" alt-text="Create new Teams app menu in VS Code":::
+::: zone-end
+
+::: zone pivot="visual-studio"
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app-vs.png" alt-text="Create new Teams app menu in VS Code":::
+::: zone-end
+
 ## Automatic registration and configuration
 
 Save time and let the toolkit automatically register the app in Teams Developer Portal and configure settings like Azure Active Directory automatically when you first run or debug the app. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need more flexibility.
@@ -49,42 +57,15 @@ Save time and let the toolkit automatically register the app in Teams Developer 
 
 With the Environments features, you can create different groupings of cloud resources to make it simpler to run and test your app. Use the "dev" environment with your Azure subscription or create a new one with a different subscription for staging, test, and production. 
 
-## Manage your apps using Developer Portal
+## Quick access to Teams Developer Portal
 
-As Teams Toolkit is integrated with Developer Portal, you can configure, distribute, and manage your app using [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) under DEPLOYMENT after creating an app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
+Quickly access Teams Developer Portal, where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-1.png" alt-text="Developer Portal":::
 
 ::: zone-end
 
 ::: zone pivot="visual-studio"
-
-
-## User Journey of Teams Toolkit
-
-Teams Toolkit automates manual work and provides you with great integration of Teams and Azure resources. The following image shows the user journey:
-
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams toolkit user journey" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png":::
-
-The main milestones of this journey are:
-
-1. You can start by creating a new project or try building a sample Teams app.
-1. You can then edit code or the manifest file as required.
-1. For building and debugging the Teams app you can use your Microsoft 365 account.
-1. For provisioning and deploying your app to cloud you can use your Azure account.
-1. You can finally publish your app to Teams.
-
-The following operations aren't supported in Teams Toolkit for Visual Studio yet compared to Teams Toolkit for Microsoft Visual Studio Code, however they're planned in the future product road map.
-
-* Add another Teams capabilities to your Teams app.
-* Add more Azure resources to your Teams app
-* Add Single Sign-on (SSO) to your Teams app.
-* Add API connection to your Teams app.
-* Customize Microsoft Azure Active Directory (Azure AD) manifest.
-* Add CI/CD pipelines.
-* Manage multiple cloud environments.
-* Collaborate on Teams projects.
-* Publish Teams app.
 
 ### TeamsFx .NET SDK Reference docs
 
