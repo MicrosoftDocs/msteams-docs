@@ -1,7 +1,7 @@
 ---
 title: Install Teams Toolkit 
 author: zyxiaoyuer
-description: In this module, learn Installation of Teams Toolkit
+description: In this module, learn installation of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

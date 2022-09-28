@@ -77,8 +77,9 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
-    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-
+    1. To create a new resource group, select the required location from **New resource group location** dropdown list.
+        For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+        
         ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
@@ -252,7 +253,7 @@ items:
            ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application21.png) 
         
 
-       The following image displays the **Client Id**:
+       The following image displays the **Client ID**:
 
          ![Client applications](~/assets/images/Tab-ME-SSO/client-id-2.png) 
   
@@ -463,7 +464,7 @@ items:
 
           ![SSO app](~/assets/images/Tab-ME-SSO/recent-app-sso.png)
 
-      1. Select **sign-in**.
+      1. Select **sign in**.
 
           ![Sign in](~/assets/images/Tab-ME-SSO/sign-in-sso1.png)
 
@@ -496,5 +497,3 @@ items:
 
 - content: |
     You've completed the tutorial to get started with SSO for tab and message extension app.
-
-
