@@ -153,7 +153,7 @@ items:
 
     1. Select **Client secrets** > **Add a client secret for your bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-client-secret.png" alt-text="Select Client Secret":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-client-secret1.png" alt-text="Select Client Secret":::
 
     1. The ** New client secret generated** window appears and select **OK**. 
 
@@ -162,7 +162,7 @@ items:
         > [!TIP]
         > Save the **New client secret** value for future reference.
 
-    1. Select the Apps :::image type="icon" source="../assets/images/proactive-scenario/apps-icon.png"::: icon and select **Proactive Message Demo**.
+    1. Select the Apps :::image type="icon" source="~/assets/images/proactive-scenario/apps-icon.png"::: icon and select **Proactive Message Demo**.
 
          :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Select Apps"::: 
 
