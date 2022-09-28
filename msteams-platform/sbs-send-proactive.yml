@@ -127,8 +127,6 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Select bot":::    
 
-       The **Bot Management page appears.
-
     1. Select **New Bot**. 
 
         :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Create new bot":::
@@ -139,11 +137,14 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Enter Proactive Message":::
 
-       Now the **Bot Proactive Message bot is successfully added to the application. You can see the **Bot Name** and **Bot ID**.
+       Now the Bot Proactive Message bot is successfully added to the application. You can see the **Bot Name** and **Bot ID**.
 
         :::image type="content" source="~/assets/images/proactive-scenario/bot-name.png" alt-text="Bot Name and ID":::
 
-    1. Double-click on the **Proactive Message Demo**.
+       > [!TIP]
+       > Save the **Bot ID** for future reference.
+
+    1. Double-click on the **Proactive Message bot**.
 
        The **Proactive Message Demo** page appears.
 
@@ -155,7 +156,7 @@ items:
 
         :::image type="content" source="~/assets/images/select-secret_1.png" alt-text="Select client secret":::
 
-    1. The ** New client secret generated** window appears and select **OK**. 
+    1. The **New client secret generated** window appears and select **OK**. 
 
         :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="New Secret":::
 
@@ -174,7 +175,7 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Select app features"::: 
 
-    1. Select **Proactive Message bot** from the **Selecting an existing bot** dropdown.            
+    1. Select **Proactive Message bot** from the **Select an existing bot** dropdown.            
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-send-proactive-message.png" alt-text="Select send proactive messages":::
 
@@ -197,7 +198,7 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Proactive Confirm"::: 
 
-    1. In Developer Portal, select **Preview in Teams**.  
+    1. Go back to Developer Portal, select **Preview in Teams**.  
 
         :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Preview Teams":::  
 
@@ -224,7 +225,7 @@ items:
   content: |
     1. In Visual Studio, stop the debugging process.
 
-        ![Stop debug](~/assets/images/proactive-scenario/stop-debug.png)
+        :::image type="content" source="~/assets/images/proactive-scenario/stop-debugging.png" alt-text="Stop Debugging":::
 
     1. Right-click **Dependencies**, select **Manage NuGet Packages**.
 
@@ -235,7 +236,7 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="select Adaptive Cards":::
 
-    1. Select **OK**.
+    1. In **Preview changes** window, select **OK**.
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="select Ok":::
 
@@ -272,14 +273,16 @@ items:
        ```
     
     1. Press **F5** to run the code. 
+
+       The corresponding proactive message sample appears:
+
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Proactive Confirm"::: 
     
     1. Go to Teams and uninstall your app. 
-        
-        ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png) 
 
     1. Reinstall the same app to get the `conversationUpdate` event.   
 
-    1. Select the [api/notify] `(http://localhost:3978/api/notify)` URL to get a proactive hello message in the Adaptive Card.     
+    1. Copy and paste the `http://localhost:3978/api/notify` URL in browser to get a proactive hello message in the Adaptive Card.    
   
 - title: Complete challenge
   durationInMinutes: 3
