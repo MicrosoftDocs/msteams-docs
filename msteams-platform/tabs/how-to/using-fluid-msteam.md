@@ -27,8 +27,8 @@ This tutorial requires familiarity with the following concepts and resources:
 - The basics of [React](https://reactjs.org/) and [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - How to build a [Microsoft Teams Tab](/microsoftteams/platform/tabs/what-are-tabs)
 
-    > [!div class="nextstepaction"]
-    > [Install prerequisites](tab-requirements.md)
+> [!div class="nextstepaction"]
+> [Install prerequisites](tab-requirements.md)
 
 ## Create the project
 
@@ -183,7 +183,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
 
 ### Refactor content page to reflect Fluid application
 
-1.Open the file `src/client/<your tab name>/<your tab name>.tsx` in your code editor. A typical Fluid-powered application consists of a view and a Fluid data structure. Let's just focus on getting/loading the Fluid container and leave all the Fluid related interactions in a React component.
+1. Open the file `src/client/<your tab name>/<your tab name>.tsx` in your code editor. A typical Fluid-powered application consists of a view and a Fluid data structure. Let's just focus on getting/loading the Fluid container and leave all the Fluid related interactions in a React component.
 
 1. Add the following import statements in the content page.
 
