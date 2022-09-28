@@ -1,7 +1,7 @@
 ---
 title: Plan your app overview
 author: heath-hamilton
-description: Introduce the elements of planning an app, understanding use cases, app capabilities, and other Teams features.
+description: Understand use case and Microsoft Teams app features, map use cases, plan responsive tabs for mobile. Learn Teams features and availability for GCC, GCC-High, and DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
