@@ -23,7 +23,7 @@ In this section, you'll learn about the features and functionalities of Teams To
 
 <!-- which allows you to perform multi-functions in both Microsoft Visual Studio Code as well as Visual Studio. With the help of Teams Toolkit you can automate the process from creating to deploying and customizing your app. The various features and advantages of Teams Toolkit are discussed in the respective documentation for the environments you choose.-->
 
-### Support for app development cycle
+## Support for app development cycle
 
 Teams Toolkit is integrated with the several entities, such as Azure AD and Microsoft 365, Developer Portal, and Microsoft graph. These support you throughout the app development cycle.
 
