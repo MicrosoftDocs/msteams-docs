@@ -25,7 +25,7 @@ In this section, you'll learn about the features and functionalities of Teams To
 
 ### Support for app development cycle
 
-Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit, such as Azure AD and Microsoft 365, Developer Portal, and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app. This integration supports you throughout the development cycle of your app.
+Teams Toolkit is integrated with the several entities, such as Azure AD and Microsoft 365, Developer Portal, and Microsoft graph. These support you throughout the app development cycle.
 
 // Placeholder for Infogfx //
 
@@ -41,6 +41,28 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 | Developer Portal | The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Teams Toolkit, you can import your app into Developer Portal. Use it to validate your app manifest, configure app capabilities, collaborate with colleagues on your app, set up runtime environments, and much more. |
 | Microsoft Graph | Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. |
 | TeamsFx and SDKs | TeamsFx accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation. TeamsFx SDK provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers. |
+
+## Teams Toolkit flavours
+
+Teams Toolkit is available for app development as part of Visual Studio Code and Visual Studio. Teams Toolkit brings all the tools needed to build a Teams app in one place.
+
+- **Teams Toolkit for Visual Studio Code**: Teams Toolkit comes with Visual Studio Code as an extension. After you install the extension, Teams Toolkit helps you to build Teams app. You can use its features to add capabilities, third-party APIs, single sign-on, and many more functionalities. 
+- **Teams Toolkit for Visual Studio 2022**: Teams Toolkit comes with Visual Studio 2022 as a ASP.NET and web development workload.  
+
+    > [!NOTE]
+    > Teams Toolkit is not available in other versions.
+
+The following operations aren't supported in Teams Toolkit for Visual Studio. However, they're planned in the future product road map:
+
+* Add another Teams capabilities to your Teams app
+* Add more Azure resources to your Teams app
+* Add Single Sign-on (SSO) to your Teams app
+* Add API connection to your Teams app
+* Customize Microsoft Azure Active Directory (Azure AD) manifest
+* Add CI/CD pipelines
+* Manage multiple cloud environments
+* Collaborate on Teams projects
+* Publish Teams app
 
 ## Teams Toolkit features
 
@@ -71,24 +93,7 @@ The main milestones of this journey are:
 1. Use Azure account to provision and deploy your app to cloud.
 1. Publish your app to Teams.
 
-## Teams Toolkit flavours
 
-Teams Toolkit is available for app development as part of Visual Studio Code and Visual Studio. Teams Toolkit brings all the tools needed to build a Teams app in one place.
-
-> [!NOTE]
-> Teams Toolkit is not available in other versions.
-
-The following operations aren't supported in Teams Toolkit for Visual Studio. However, they're planned in the future product road map:
-
-* Add another Teams capabilities to your Teams app
-* Add more Azure resources to your Teams app
-* Add Single Sign-on (SSO) to your Teams app
-* Add API connection to your Teams app
-* Customize Microsoft Azure Active Directory (Azure AD) manifest
-* Add CI/CD pipelines
-* Manage multiple cloud environments
-* Collaborate on Teams projects
-* Publish Teams app
 
 #### TeamsFx .NET SDK Reference docs
 
