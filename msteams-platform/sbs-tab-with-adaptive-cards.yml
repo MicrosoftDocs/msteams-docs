@@ -62,7 +62,7 @@ items:
     1. Search for **Azure bot** in the search box.
     1. Select **Azure Bot**.
 
-        :::image type="content" source="/assets/images/azure-bot.png" alt-text="Azure bot.":::
+        :::image type="content" source="~/assets/images/azure-bot.png" alt-text="Azure bot.":::
 
        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
 
@@ -73,7 +73,8 @@ items:
     1. Select your **Resource group** from the dropdown list.
         
         To create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
-
+        For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+        
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
         ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
@@ -263,7 +264,7 @@ items:
         | ----- | ----- |
         | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
         | Service Provider | Select **Azure Active Directory V2**. |
-        | Client id | Saved previously as your **Microsoft App ID**. |
+        | Client ID | Saved previously as your **Microsoft App ID**. |
         | Client secret | Saved previously as **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
         | Tenant ID | Enter **common**. |
