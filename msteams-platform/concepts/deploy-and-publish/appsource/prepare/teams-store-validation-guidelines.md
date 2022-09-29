@@ -397,6 +397,8 @@ Descriptions must not directly or through insinuation disparage another brand (M
 
 * Hyperlink contact details, get started, help, or sign up in app description.
 
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-hyperlinked.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
+
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-not-hyperlinked.png" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
 
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [*Mandatory Fix*]
@@ -496,10 +498,13 @@ The long description can provide an engaging narrative that highlights your app'
 * Include typos, grammatical errors.
 * Unnecessarily capitalize the entire manifest or AppSource long description or app content.
 * Include links to AppSource.
+
+  :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource.png" alt-text="Graphic shows an example of a fail scenarion with links to Appsource in app long desscription.":::
+
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long descirpion with typos and errors.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass.png" alt-text="Graphic shows an example of app long description without errors.":::
 
@@ -864,6 +869,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="Graphic shows an example of bot commands not listed in the app manifest.":::
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
+  
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-no-response.png" alt-text="Graphic shows an example of bot with no response to generic commands.":::
 
@@ -908,6 +915,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * All the links in a bot response adaptive card must be responsive. Any link that takes the user outside the Teams platform must have a clear redirect text such as, **View in..** or **This way to..**, a pop-out icon in the bot response action button, or have a suitable redirect text in the bot response message body. [*Mandatory Fix*]
 
 * By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set `isNotificationOnly` to true in the manifest. [*Mandatory Fix*]
+
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Screenshot show an example of notification only bot not responding for a users message.":::
 
 * Bot user experience must not be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Mandatory Fix*]
 
@@ -960,6 +969,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Welcome messages must trigger only once on bot install. Welcome messages must not trigger every time the user invokes the help command. Help command response must be focused to include a way for the user to access help related to the bot. [*Mandatory Fix*]
 
 * Welcome messages must not trigger with every bot command. This is considered spam. [*Mandatory Fix*]
+
+  :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-trigger-for-any-command.png" alt-text="Graphic shows an example for bot triggering a welcome message for any command.":::
 
 * Welcome message content must be related to the bot workflow mentioned in the app’s long description and the installation scope. Welcome message must include the value offered by the bot to users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. [*Mandatory Fix*]
 
@@ -1317,6 +1328,9 @@ Use the following guidelines for meeting extensions:
 
 * Must be used sparingly and for scenarios that are light and task oriented.
 * Must display content in a single column and not have multiple navigation levels.
+  
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of im-meeting dialog with multiple navigation levels.":::
+
 * Must not use task modules.
 * Must align with the center of the meeting stage.
 
