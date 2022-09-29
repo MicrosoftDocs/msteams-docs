@@ -131,8 +131,7 @@ User retention measures how frequent users come back to use the product. It esse
 | • #, % users using app in more than 1 scope | • Goal would be to encourage use of app across different scopes |
 | • #, % users using more than 1 capability of the app | • Goal would be to encourage users to use different platform capabilities supported by app |
 | • Mean time between [Core Action 1,2..] per user | • Report at tenant level <br> • Goal would be to reduce this time to promote recurring usage |
-| • % of users performing Creation events <br> • % of users performing Consumption events. Track:
-<br>   • Read receipts for bot messages <br>   • Notification clicks |   |
+| • % of users performing Creation events <br> • % of users performing Consumption events. Track: <br> &nbsp;&nbsp;- Read receipts for bot messages <br> &nbsp;&nbsp;- Notification clicks |   |
 | • App capability or scope with high recurring usage |   |
 
 #### Happiness
