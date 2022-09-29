@@ -32,10 +32,10 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 |Capability | Host support | Notes |
 |-----------|--------------|-------|
-| app | Teams, Outlook, Office | Namespace representing app initialization and lifecycle. |
+| app | Teams, Outlook, Office, Office app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
 | appInstallDialog | Teams||
-| authentication | Teams, Outlook, Office | |
+| authentication | Teams, Outlook, Office, Office app for Android | |
 | calendar | Outlook ||
 | call | Teams||
 | chat |Teams||
@@ -43,7 +43,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 | location |Teams| See notes on [App permissions](#app-permissions).|
 | mail | Outlook (Windows desktop only)||
 | media |Teams| See notes on [App permissions](#app-permissions).|
-| pages | Teams, Outlook, Office | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
+| pages | Teams, Outlook, Office, Office app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
 | settings || Deprecated. Replaced by `pages.config`.|
 | sharing | Teams||
