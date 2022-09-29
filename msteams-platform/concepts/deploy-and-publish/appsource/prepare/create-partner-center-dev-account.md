@@ -203,7 +203,7 @@ The following resources can also assist:
 </details>
 
 > [!NOTE]
-> For content for **update Apple App Store Connect Team ID on Partner Center** is moved to [this article.](update-apple-store-team-connect-id.md).
+> To enable end-users to install your app on the Teams iOS platform, see [Update Apple App Store Connect Team ID on Partner Center](update-apple-store-team-connect-id.md).
 
 ## Next step
 
