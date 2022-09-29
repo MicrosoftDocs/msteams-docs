@@ -95,7 +95,7 @@ To create an action command:
 
 1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot id created already.
 
-1. Select the scope of the messaging extension and select **Save**.
+1. Select the scope of the bot and **Save**.
 
 1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
 
@@ -163,17 +163,13 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 
 #### App manifest example
 
-The following section is an example of a `composeExtensions` object defining two action commands. It isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md):
-
+This section isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md). The following is an example of a `composeExtensions` object defining two action commands:
+ 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",
