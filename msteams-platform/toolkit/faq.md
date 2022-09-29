@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# FAQ for Teams Toolkit using Visual Studio Code
+# FAQ for Teams Toolkit
 
 You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
 

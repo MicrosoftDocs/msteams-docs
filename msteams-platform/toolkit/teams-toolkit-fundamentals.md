@@ -54,7 +54,7 @@ The following table helps you to get the overview of Teams Toolkit in Visual Stu
 | Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal |
 
 ### Entities integrated with Teams Toolkit
-
+ 
 Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit.such as Azure AD and Microsoft 365, Developer Portal and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app.
 
 | Entities | Description |
@@ -126,10 +126,11 @@ The following operations aren't supported in Teams Toolkit for Visual Studio yet
 * [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
+::: zone-end
+
 ## See also
 
 * [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
 
-::: zone-end
