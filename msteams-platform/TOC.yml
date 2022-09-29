@@ -423,7 +423,7 @@
       href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
-    displayName: Single vitrual scene, scene studio
+    displayName: Single virtual scene, scene studio
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -481,7 +481,7 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Invoke and dismiss task modules
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules,keyboard and accessility guidelines, module sizing
+      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing
     - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
     - name: Use task modules from bots
@@ -551,7 +551,7 @@
   items:
   - name: Overview
     href: /graph/teams-concept-overview
-    displayname: Permissions, communication, channels, delegated, reports, extensions
+    displayName: Permissions, communication, channels, delegated, reports, extensions
   - name: Microsoft Graph Toolkit
     href: /graph/toolkit/overview
     displayName: Access, routing
@@ -576,10 +576,10 @@
     href: m365-apps/prerequisites.md
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
-    displayName: Microoft 365, Office 365
+    displayName: Microsoft 365, Office 365
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
-    displayName: Microoft 365, Office 365
+    displayName: Microsoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Test your app
@@ -744,7 +744,7 @@
     displayName: Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-    displayName: Teams Shifts Workforce management (WFM), 
+    displayName: Teams Shifts Workforce management (WFM)
   - name: Moodle LMS
     items:
     - name: Overview
