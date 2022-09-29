@@ -203,7 +203,7 @@ The following resources can also assist:
 </details>
 
 > [!NOTE]
-> The content for Update Apple App Store Connect Team ID on Partner Center is moved to the [Prepare your Teams store submission](submission-checklist.md#update-apple-app-store-connect-team-id-on-partner-center) article.
+> For content for **update Apple App Store Connect Team ID on Partner Center** is moved to [this article.](update-apple-store-team-connect-id.md).
 
 ## Next step
 
