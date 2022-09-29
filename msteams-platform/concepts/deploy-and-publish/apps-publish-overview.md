@@ -1,6 +1,6 @@
 ---
 title: Overview - Distribute your app
-description: In this article, learn the options for publishing your Microsoft Teams app, uploading and deploying your app, and GCC.
+description: Learn to distribute, publish your app to Microsoft Teams store or to your org. Understand how app's endpoints must comply with your Government Community Cloud(GCC) organization's requirements.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
