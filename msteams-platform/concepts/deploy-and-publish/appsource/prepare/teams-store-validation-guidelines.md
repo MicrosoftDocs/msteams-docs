@@ -916,7 +916,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set `isNotificationOnly` to true in the manifest. [*Mandatory Fix*]
 
-  :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Screenshot show an example of notification only bot not responding for a users message.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Graphic shows an example of notification only bot not responding for a users message.":::
+
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-true.png" alt-text="Graphic shows an example of notification only property set to true in the app manifest.":::
 
 * Bot user experience must not be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Mandatory Fix*]
 
