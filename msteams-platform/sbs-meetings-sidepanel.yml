@@ -157,7 +157,7 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::
+    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="~/assets/images/bots/teamsicon.png":::
 
         :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
 

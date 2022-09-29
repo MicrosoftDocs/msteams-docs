@@ -133,7 +133,7 @@ items:
         ![Bot home page](~/assets/images/adaptive-cards/bot-home-page.png)
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::
+    1. Select **Channels** in the left pane and select **Teams** :::image type="icon" source="~/assets/images/bots/teamsicon.png":::
 
         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
