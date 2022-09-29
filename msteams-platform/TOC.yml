@@ -265,13 +265,13 @@
     displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes
+    displayName: User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -320,7 +320,7 @@
       href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
-    dispalyName: Fetch roster or user profile
+    displayName: Fetch roster or user profile
   - name: Send and receive files using bot
     href: bots/how-to/bots-filesv4.md
     displayName: File consent and upload files to Teams from a bot
@@ -342,7 +342,7 @@
       displayName: Redirects for region affinity, GeoDNS resolution 
     - name: Requirements and considerations for application-hosted media bots
       href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-      dispalyName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+      displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
     - name: Supported media formats for bots
       href: resources/media-formats.md
   - name: Teams bot API changes to fetch team or chat members
