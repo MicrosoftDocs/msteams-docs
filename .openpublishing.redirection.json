@@ -797,6 +797,10 @@
         "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
+        "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
+        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+      },
+      {
         "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
         "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
       },
