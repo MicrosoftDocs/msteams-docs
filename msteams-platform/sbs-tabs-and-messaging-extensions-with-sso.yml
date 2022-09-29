@@ -22,8 +22,6 @@ items:
 
     * Allows the user to sign in to other devices without reentering sign-in credentials.
 
-    * Allows the user to sign in to other devices without entering sign-in credentials again.
-
     * Obtains token for the logged-in user.   
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
@@ -151,7 +149,7 @@ items:
 
     1. Select **Channels** in the left pane. 
 
-    1. Select **Microsoft Teams** :::image type="content"source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.
+    1. Select **Microsoft Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     

@@ -14,7 +14,7 @@ The illustrations on this page show how components look in Teams default (light)
 
 ## Microsoft Teams UI Kit
 
-Based on [Fluent UI](https://fluentsite.z22.web.core.windows.net/0.64.0), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
+Based on [Fluent UI](https://fluentsite.z22.web.core.windows.net/), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159).

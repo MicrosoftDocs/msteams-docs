@@ -215,13 +215,13 @@ items:
 
         :::image type="content" source="~/assets/images/bots/selectrecentresources.png" alt-text="Select recent resources":::
 
-    1. Select **Channels** in the left pane and select **Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::. 
+    1. Select **Channels** in the left pane and select **Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::
 
         :::image type="content" source="/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
     
         :::image type="content" source="~/assets/images/bots/selectchannel.png" alt-text="Select recent":::
 
-    1. Select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::. 
+    1. Select **Microsoft Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::
     
         :::image type="content" source="~/assets/images/bots/selectmicrosoftteams.png" alt-text="Select Microsoft Teams":::
 

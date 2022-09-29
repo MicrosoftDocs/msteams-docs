@@ -184,7 +184,7 @@ items:
 
     1. Go to **Home**.
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.    
+    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::    
         
         :::image type="content" source="./assets/images/calls-and-meetings/channels-teams.png" alt-text="Channels Teams.":::
     
@@ -255,7 +255,7 @@ items:
         > `Tenant ID` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denotes to whom you want to redirect or transfer the call.
 
     1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with your **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with your **Value**.
-    1. Update `BotBaseUrl` with you are `ngrok` URL.
+    1. Update `BotBaseUrl` with your `ngrok` URL.
     1. Update `Tenant ID` and `UserId`.
     1. Update `DisplayName` and `UserId`.
 

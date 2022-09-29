@@ -145,7 +145,7 @@ items:
 
     1. Go to **Home**.
     1. From the **Recent resources** section, open your bot.
-    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="content" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot showing the home page.":::.    
+    1. Select **Channels** in the left pane and select **Microsoft Teams** :::image type="icon" source="../../../../assets/images/bots/teamsicon.png":::    
         
         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
