@@ -1,6 +1,6 @@
 ---
 title: Plan to monetize your app
-description: In this learning module, you'll learn how plan to monetize your Microsoft Teams app and also understand the best monetization option for global visibility.
+description: Plan to monetize your Microsoft Teams app and also understand the best monetization options for global visibility.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
