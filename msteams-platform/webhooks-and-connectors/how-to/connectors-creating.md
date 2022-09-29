@@ -1,7 +1,7 @@
 ---
 title: Create Office 365 Connectors
 author: laujan
-description: In this module, learn how to get started with Office 365 Connectors and add connector to Teams app in Microsoft Teams
+description: Get started with Office 365 Connectors. Add connector to Teams app in Microsoft Teams. Sample(.NET, Node.js) Office 365 Connector generating notifications to Teams channel.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021

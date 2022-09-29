@@ -54,7 +54,7 @@ The following table helps you to get the overview of Teams Toolkit in Visual Stu
 | Publish your Teams app | It contains: <br> - Publish your app <br> - Manage admin approval <br> - Publish to store <br> - Integrate with Developer Portal |
 
 ### Entities integrated with Teams Toolkit
-
+ 
 Teams Toolkit is an extension in Visual Studio Code. It is integrated with the following entities within Teams Toolkit.such as Azure AD and Microsoft 365, Developer Portal and Microsoft graph. All the entities are integrated within Teams Toolkit and help users to create an app.
 
 | Entities | Description |
