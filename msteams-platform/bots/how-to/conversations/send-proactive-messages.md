@@ -189,7 +189,7 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values)
+        foreach (var conversationReference in _conversationReferences.Values) // Loop through all conversation references, you may need to update to get it from your backend system
         {
             var newReference = new ConversationReference()
         {
@@ -203,7 +203,7 @@ public class NotifyController : ControllerBase
             },
             ServiceUrl = conversationReference.ServiceUrl,
         };
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, BotCallback, default(CancellationToken));
+            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
         // Let the caller know proactive messages have been sent
