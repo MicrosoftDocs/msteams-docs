@@ -84,7 +84,7 @@ Telemetry designed to improve adoption should aim at improving discoverability o
 | • % of users adding app in collaborative scope | • Helps in determining the potential for virality. i.e. organic discovery and use by new users |
 | • % of users configuring the app after adding it in channel / group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
 
-#### Engagement & Task Success
+#### Engagement & task success
 
 **Goal**: Grow number of engaged quality users  who complete core actions within the app.
 
