@@ -79,10 +79,10 @@ Telemetry designed to improve adoption should aim at improving discoverability o
 | • Users installing the app in R1, R7, R14, R28 days <br> • # Sign-ins (if app has sign-in) | • Segment users based on AAD profile <br> • Segment by Tenant, Org Name |
 | • Average time taken to first use (click on Tab, Bot, Adaptive Card, Meeting) | • Report for using the app <br> • Report at a feature or platform capability level |
 | • Extensibility point of first discovery <br> • Scope of first discovery | • Which extensibility point and scope are most of your users discovering your app? |
-| • % of link unfurls leading to app installation | -- |
+| • % of link unfurls leading to app installation |   |
 | • Average time taken to add app in collaborative scope - in Channel, Group Chat, Meeting | -- |
 | • % of users adding app in collaborative scope | • Helps in determining the potential for virality. i.e. organic discovery and use by new users |
-| • % of users configuring the app after adding it in channel / group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
+| • % of users configuring the app after adding it in channel or group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
 
 #### Engagement & task success
 
@@ -107,7 +107,7 @@ Engagement intends to measure the intensity and depth of interaction between use
 | Task Success |  |
 | • % of users completing Core Action | • Report at a week level |
 | • User Journey in Teams app – Funnel view with user drop offs | • Drill down at a tenant level |
-| • Lostness Score for Core Action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different, unique steps performed while performing Core Action. <br> **S** = The total number of steps performed while performing Core Action including repeat steps. <br> **R** = The minimum number of steps required to complete Core Action. | • Drill down at region & tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
+| • Lostness Score for Core Action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action" border="false"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different, unique steps performed while performing Core Action. <br> **S** = The total number of steps performed while performing Core Action including repeat steps. <br> **R** = The minimum number of steps required to complete Core Action. | • Drill down at region & tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
 | • Mean time taken to perform Core Action | • Report alongside meantime taken performing core action outside Teams App |
 | • Average number of times Core Action was performed in a month <br> • Average number of times Key Business events were performed in a month | • View month over month trend <br> • Drill down by Tenant |
 
