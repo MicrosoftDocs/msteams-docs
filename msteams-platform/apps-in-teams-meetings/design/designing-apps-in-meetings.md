@@ -20,7 +20,7 @@ You can find more comprehensive design guidelines, including elements that you c
 
 ## Add a meeting extension
 
-Users can add a meeting extension before and during meetings. They also can add an app for a specific meeting directly from the Teams store.
+Users can add a meeting extension before and during meetings. They can also add an app for a specific meeting directly from the Teams store.
 
 ### Add before a meeting
 
