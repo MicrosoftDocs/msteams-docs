@@ -1,6 +1,6 @@
 ---
 title: Extend Teams apps across Microsoft 365 (preview)
-description: In this article, learn how to build, update, and extend your Teams app experiences and how to create apps that are used across other high-usage areas of Microsoft 365.
+description: Learn how to build, update, and extend your Teams app across Microsoft M365 (Teams, Outlook, and Office as application hosts). Microsoft AppSource submission.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
@@ -16,7 +16,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 |          | App manifest element | Teams support |Outlook* support | Office* support | Notes |
 |--|--|--|--|--|--|
-| [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) (search-based)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
@@ -32,6 +32,10 @@ For guidance about the Teams app manifest and SDK versioning guidance, and furth
 Reach your users where they are, right in the context of their work by extending your web app as a Teams personal tab application that also runs in both Outlook and Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Office, and Teams.":::
+
+On mobile, you can test and debug your Teams personal tab running on Office app for Android.
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Office.":::
 
 You can also extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 

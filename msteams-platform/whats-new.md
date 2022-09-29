@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: What are the new Microsoft Teams developer features introduced and updates to existing features.
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
