@@ -1,6 +1,6 @@
 ---
 title: Public developer preview manifest schema reference
-description: Learn sample manifest file and description of all its components that are supported for Microsoft Teams.
+description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
