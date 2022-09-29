@@ -54,15 +54,15 @@ The following table lists the changes Teams Toolkit makes to your project:
    |--------|--------|-----------|
    |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.|
    |Modify|`manifest.template.json` under `template/appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
-   |Create|`auth/tab`|Reference code, auth redirect pages and a `README.md` file are generated in this path for a tab project.|
-   |Create|`auth/bot`|Reference code, auth redirect pages and a `README.md` file are generated in this path for a bot project.|
+   |Create|`auth/tab`|Reference code, auth redirect pages, and a `README.md` file are generated in this path for a tab project.|
+   |Create|`auth/bot`|Reference code, auth redirect pages, and a `README.md` file are generated in this path for a bot project.|
 
 > [!Note]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
 
 ## Update your application to use SSO
 
-The following steps help you to enable SSO in your application.
+The following steps help you to enable SSO in your application:
 
 > [!NOTE]
 > These changes are based on the templates we scaffold.
@@ -98,7 +98,7 @@ The following steps help you to enable SSO in your application.
 <summary><b>Bot project
 </b></summary>
 
-## Set up the AAD redirects
+#### Set up the AAD redirects
 
 1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When single sign-on flows are initiated with AAD, AAD will redirect the user to these pages.
 1. Modify your `bot/src/index` to add the appropriate `restify` routes to these pages.
@@ -114,31 +114,28 @@ The following steps help you to enable SSO in your application.
     );
     ```
 
-## Update your business logic
+#### Update your app
 
-The sample business logic provides a SSO command handler `ProfileSsoCommandHandler` that use an AAD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that will display a consent dialog if necessary.
+SSO command handler `ProfileSsoCommandHandler` uses an AAD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that will display a consent dialog if necessary.
 
-To make this work in your application:
+1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. `ProfileSsoCommandHandler` class is a SSO command handler to get user info with SSO token, follow this method and create your own sso command handler.
 
-
-1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. ProfileSsoCommandHandler class is a SSO command handler to get user info with SSO token. You can follow this method and create your own sso command handler.
-
-1. Open `package.json` file, make sure that teamsfx SDK version >= 1.2.0
-1. Execute the following commands under `bot` folder: `npm install isomorphic-fetch --save`
-1. (For ts only) Execute the following commands under `bot` folder: `npm install copyfiles --save-dev` and replace following line in package.json:
+1. Open `package.json` file, ensure that teamsfx SDK version >= 1.2.0
+1. Execute the `npm install isomorphic-fetch --save` command in `bot` folder: 
+1. For ts script, execute the `npm install copyfiles --save-dev` command in `bot` folder and replace following line in package.json:
 
     ```json
     "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
     ```
 
-    with:
+    with
 
     ```json
     "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
     ```
     By doing this, the HTML pages used for auth redirect will be copied when building this bot project.
 
-1. Replace the following code in `bot/src/index` file to make SSO consent flow works:
+1. To make SSO consent flow work replace the following code in `bot/src/index` file:
 
     ```ts
     server.post("/api/messages", async (req, res) => {
@@ -146,7 +143,7 @@ To make this work in your application:
     });
     ```
 
-    with:
+    with
 
     ```ts
     server.post("/api/messages", async (req, res) => {
@@ -171,7 +168,7 @@ To make this work in your application:
     });
     ```
 
-    with:
+    with
 
     ```ts
     import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
@@ -201,11 +198,11 @@ To make this work in your application:
     }
     ```
 
-## (Optional) Add a new SSO command to the bot
+#### Add a new SSO command to the bot (Optional) 
 
-After successfully add SSO in your project, you can also add a new SSO command.
+After successfully adding SSO in your project, you can also add a new SSO command.
 
-1. Create a new file (for example, `photoSsoCommandHandler.ts` or `photoSsoCommandHandler.js`) under `bot/src/` and add your own business logic to call Graph API:
+1. Create a new file such as `photoSsoCommandHandler.ts` or `photoSsoCommandHandler.js` in `bot/src/` and add your own sso command handler to call Graph API:
 
     ```TypeScript
     // for TypeScript:
@@ -313,7 +310,7 @@ After successfully add SSO in your project, you can also add a new SSO command.
 
     ```
 
-1. Put `PhotoSsoCommandHandler` instance to `ssoCommands` array in `bot/src/internal/initialize.ts` as below:
+1. Add `PhotoSsoCommandHandler` instance to `ssoCommands` array in `bot/src/internal/initialize.ts`:
     
     ```ts
     // for TypeScript:
