@@ -125,7 +125,8 @@ Following are the steps to create a personal tab:
     * **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
       Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
-
+    > [!NOTE]
+    > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
 
 ### Add a content page to the personal tab
