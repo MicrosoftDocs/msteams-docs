@@ -1,7 +1,7 @@
 ---
 title: Format your bot messages
 author: surbhigupta
-description: In this module, learn how to add rich formatting and styles to your bot messages such as strikethrough, ordered and unordered list, hyperlink, image link, and more.
+description: Learn how to format and style your bot messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
