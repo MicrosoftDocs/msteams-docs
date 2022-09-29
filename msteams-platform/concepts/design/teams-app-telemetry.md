@@ -134,3 +134,23 @@ User retention measures how frequent users come back to use the product. It esse
 | • % of users performing Creation events <br> • % of users performing Consumption events. Track:
 <br>   o Read receipts for bot messages <br> o Notification clicks |   |
 | •	App capability or scope with high recurring usage |   |
+
+#### Happiness
+
+**Goal**: Provide sufficient, differentiated value to end user improving their willingness to pay.
+
+Happiness intends to measure your user’s attitude towards your product and can translate to their willingness to pay, refer other users to your product. Happiness is mostly self-reported. There are leading indicators such as collecting feedback, satisfaction rating, lagging indicators include new subscriptions, users preferring to use Teams app over other modalities.
+
+> [!TIP]
+>
+> - Happiness should be measured in context at right time and contextualized to user. Sending a generic survey on a fixed date might not give accurate happiness measurement as users might not remember their experience.
+> - Integrate product driven feedback capture, rating mechanisms for users to easily submit feedback and rating in the flow, after completing Core Action.
+> - Provide adequate product support, helpdesk for users to get their queries clarified, report bugs and feedback.
+
+| Telemetry | Comments |
+| --- | --- |
+| • App NPS or Feedback submission | • AAD, Tenant information |
+| • % of happy / satisfied users | • Drill down at tenant level <br> • Report trend over time |
+| • # new SaaS subscriptions via Teams App Store |   |
+| • % users using Teams App Vs. Web or Mobile App | • Report month over month |
+| • User feedback on experience after completing Core Action | • Introduce product led way for collecting feedback after completing Core Action |
