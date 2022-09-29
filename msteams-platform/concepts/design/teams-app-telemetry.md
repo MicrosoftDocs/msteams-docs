@@ -52,3 +52,9 @@ Excerpting from the “Teams Ecosystem - Journey to Marketplace Liquidity Whitep
 
 Your telemetry strategy should ensure measuring of your product across these three qualities.
 
+### Monitor events for your app
+
+For the purposes of this article, let’s use HEART framework to indicate representative set of metrics, events you should consider monitoring for your solution. Please note that the below list is not exhaustive and you are encouraged to add additional telemetry relevant to your business and product.
+
+:::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
+
