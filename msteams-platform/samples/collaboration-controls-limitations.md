@@ -10,20 +10,20 @@ ms.topic: conceptual
 # Limitations and known issues
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Following are the limitations for Collaboration controls:
 
 * Components can't be used in Canvas apps.
 * Components only support full tab views.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="The screenshot shows the tasks." border="true":::
 
-* The subgrid view selected isn't honored. All tasks, meetings, or notes for the collaborative record will be displayed.
+* The subgrid view selected isn't honored. All tasks, meetings, or notes for the collaborative record are displayed.
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="subgrid view" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="The screenshot shows the subgrid view of the tasks." border= "true":::
 
-* Activities added to the timeline control don’t appear in the components, tasks, meetings and notes created in the components aren't included in the timeline control.
+* Activities added to the timeline control don’t appear in the components, tasks, meetings, and notes created in the components aren't included in the timeline control.
 * New records must be saved before accessing the components, otherwise you'll see an empty screen.
 * The components don't inherit theming from the form or app they're added to.
 * Localization is only available when running the app inside Microsoft Teams.
