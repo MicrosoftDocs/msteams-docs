@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Update Apple App Store Connect Team ID on Partner Cente
+        url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
         url: apps-in-teams-meetings/meeting-app-extensibility.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
@@ -74,8 +76,6 @@ landingContent:
         url: m365-apps/overview.md
       - text: App guidance and what's new in TeamsJS version 2.0.0
         url: tabs/how-to/using-teams-client-sdk.md
-      - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
-        url: toolkit/teams-toolkit-fundamentals.md   
 
 - title: Get started
   linkLists:
