@@ -819,6 +819,10 @@
       {
         "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
         "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist"
       }
     ]
 }
