@@ -40,7 +40,7 @@ Stage View opens as a model.providing users a full canvas to engage with content
 
 Collaborative Stage View opens in a new Teams window with the originating chat in the side panel.
 
-[![Open a stage from Adaptive Card](~/assets/images/tab-images/collabrative-stage-view.png)](~/assets/images/tab-images/collabrative-stage-view.png#lightbox)
+[![Open a collaborative stage from Adaptive Card](~/assets/images/tab-images/collabrative-stage-view.png)](~/assets/images/tab-images/collabrative-stage-view.png#lightbox)
 
 ## Stage View vs. Task module
 
@@ -61,11 +61,11 @@ When the user enters an app content URL in a chat, the bot is invoked and return
 
 The following images display a stage opened from an Adaptive Card:
 
-[![Open a stage from Adaptive Card](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+[![Open a stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
-[![Open a stage](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
+[![Open a stage example1](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
 
-[![Open a stage](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
+[![Open a stage example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
 ### Example
 
