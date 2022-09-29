@@ -202,6 +202,9 @@ The following resources can also assist:
 
 </details>
 
+> [!NOTE]
+> The content for Update Apple App Store Connect Team ID on Partner Center is moved to the [Submission checklist](submission-checklist.md#update-apple-app-store-connect-team-id-on-partner-center) article.
+
 ## Next step
 
 > [!div class="nextstepaction"]
