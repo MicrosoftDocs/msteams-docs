@@ -1,7 +1,7 @@
 ---
 title: Define message extension search commands
 author: surbhigupta
-description: In this module, learn about search command invoke locations and how to create a search command for messaging extensions.
+description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium

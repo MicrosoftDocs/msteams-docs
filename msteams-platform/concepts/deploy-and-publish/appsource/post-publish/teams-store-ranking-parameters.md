@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams store ranking parameters
-description: Learn Microsoft Teams store ranks app search results in the store using a set of ranking parameters to deliver relevant search results to users.
+description: Understand Microsoft Teams store ranking parameters. Main parameters used to determine app placements are historical usage data, user engagement data, app quality and values, udience relevance, app update.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
