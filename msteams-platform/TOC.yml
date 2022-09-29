@@ -265,13 +265,13 @@
     displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes
+    displayName: User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -320,7 +320,7 @@
       href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
-    dispalyName: Fetch roster or user profile
+    displayName: Fetch roster or user profile
   - name: Send and receive files using bot
     href: bots/how-to/bots-filesv4.md
     displayName: File consent and upload files to Teams from a bot
@@ -342,7 +342,7 @@
       displayName: Redirects for region affinity, GeoDNS resolution 
     - name: Requirements and considerations for application-hosted media bots
       href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-      dispalyName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+      displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
     - name: Supported media formats for bots
       href: resources/media-formats.md
   - name: Teams bot API changes to fetch team or chat members
@@ -427,7 +427,7 @@
     href: apps-in-teams-meetings/video-filters-for-meeting-apps.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
-    displayName: Single vitrual scene, scene studio
+    displayName: Single virtual scene, scene studio
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -485,7 +485,7 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Invoke and dismiss task modules
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules,keyboard and accessility guidelines, module sizing
+      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing
     - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
     - name: Use task modules from bots
@@ -555,7 +555,7 @@
   items:
   - name: Overview
     href: /graph/teams-concept-overview
-    displayname: Permissions, communication, channels, delegated, reports, extensions
+    displayName: Permissions, communication, channels, delegated, reports, extensions
   - name: Microsoft Graph Toolkit
     href: /graph/toolkit/overview
     displayName: Access, routing
@@ -580,10 +580,10 @@
     href: m365-apps/prerequisites.md
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
-    displayName: Microoft 365, Office 365
+    displayName: Microsoft 365, Office 365
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
-    displayName: Microoft 365, Office 365
+    displayName: Microsoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Test your app
@@ -637,8 +637,8 @@
   - name: Upload your app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
-    href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: App catalog, allow and block apps
+    href: /microsoftteams/upload-custom-apps
+    displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
   - name: Publish to the Teams store
     items:
     - name: Overview
@@ -748,7 +748,7 @@
     displayName: Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-    displayName: Teams Shifts Workforce management (WFM), 
+    displayName: Teams Shifts Workforce management (WFM)
   - name: Moodle LMS
     items:
     - name: Overview

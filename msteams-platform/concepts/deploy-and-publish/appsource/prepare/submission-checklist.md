@@ -1,6 +1,6 @@
 ---
 title: Prepare your store submission  
-description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package and more.
+description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package. Know how to update Apple App Store Connect Team ID on Partner Center.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
@@ -25,7 +25,10 @@ While your app may be working in a test environment, you should check your app p
 
 The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
-1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
+1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
+
+   You can also validate your app using [Developer Portal for Teams.](~/concepts/build-and-test/teams-developer-portal.md)
+
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -180,18 +183,36 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. The following table maps Teams Store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).
+During submission, you're asked to categorize your app. You can categorize your app based on the following categories:
 
-| Teams categories       | Partner Center categories  |
-|:---------------------|:---------------|
-| Data Visualization and BI | Analytics, Data Visualization, and BI |
-| Developer Tools | Developer Tools, IT Admin |
-| Education | Education |
-| Human resources & recruiting| Human Resources and Recruiting |
-| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
-| Project management | Communication, Project Management, Workflow, and Business Management |
-| Sales and support | Customer and Contact Management, Customer Support, Financial Management, and Sales and Marketing |
-| Social | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+|Categories  |
+|--------------|
+| Microsoft |
+| Education |
+| Productivity |
+| Images & video galleries |
+| Project management |
+| Utilities |
+| Social |
+| Communication |
+| Content management |
+| Files & documents |
+| Workflow & business management |
+| IT/Admin | 
+| Human resources & recruiting|
+| Developer tools |
+| Meetings & scheduling |
+| Data visualization & BI |
+| Training & tutorial |
+| News & weather |
+| Customer support |
+| Reference |
+| Sales & marketing |
+| Look & feel |
+| Customer & contact management (CRM) |
+| Financial management |
+| Maps & feeds |
+| Other |
 
 ### Localize your store listing
 
