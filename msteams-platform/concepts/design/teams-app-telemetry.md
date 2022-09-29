@@ -84,3 +84,30 @@ Telemetry designed to improve adoption should aim at improving discoverability o
 | • % of users adding app in collaborative scope | • Helps in determining the potential for virality. i.e. organic discovery and use by new users |
 | • % of users configuring the app after adding it in channel / group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
 
+#### Engagement & Task Success
+
+**Goal**: Grow number of engaged quality users  who complete core actions within the app.
+
+Core Action is defined as that User Action which is central to the business and directly contributes towards the North Star.  E.g. if you are an IT Ticketing solution provider, your core user action could be ‘Creating a Ticket’ with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
+
+Engagement intends to measure the intensity and depth of interaction between user and your app. Intensity of engagement measures how much user is using the app (e.g. no. core actions done in the app) and depth of interaction measures the number of various platform capabilities, scopes, app features that user has interacted.
+
+> [!TIP]
+>
+> - It is important to measure engagement, usage not just at overall app level but at individual app capability and feature level as well. Decide on Core Actions and Key Business events that define engaged users for your business. Just signing in or viewing the app may not be quality engagement.
+> - Core action is specific to your business and you should ideally have one core action correlating to your product’s North Start. Do not have more than 2-3 Core Actions.
+> - Key Business events are auxiliary actions that user may take in their journey towards performing Core Action. Key Business events can help prepare a funnel view on how many users are going through the ideal user journey and determine points where drop offs are high.
+
+| Telemetry | Comments |
+| --- | --- |
+| • # App users (R7, R14, R28) – DAU and MAU <br> • # App Users Trendline | • Segment users based on AAD profile, <br> • Report by Client – Desktop, Web and Mobile <br> • Segment by Tenant, Org Name <br> • Segment by product feature (Active users at feature level) |
+| • % of users using key features in Teams App Vs. using the same feature in Web / Native App | • Report at app feature level <br> • Indicates discoverability, ease of use, and value of features within Teams App |
+| • #, % users using the app across different scopes (R28) | • Report by scope <br> • Ability to drill down by capability |
+| • #, % users using the app in different platform capabilities (R28) <br> • #, % Interacting with Tab <br> • #, % Interacting with Messaging extension <br> • #, % Interacting with Bot <br> • #, % Interacting with side panel in meeting <br> • #, % Interacting with Stage view | • If usage of any of platform capabilities is low, consider drilling into details on ease of use, value add. |
+| Task Success |  |
+| • % of users completing Core Action | • Report at a week level |
+| • User Journey in Teams app – Funnel view with user drop offs | • Drill down at a tenant level |
+| • Lostness Score for Core Action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action"::: <br> where, <br> L = Lostness <br> N = The number of different, unique steps performed while performing Core Action. <br> S = The total number of steps performed while performing Core Action including repeat steps. <br> R = The minimum number of steps required to complete Core Action. | • Drill down at region & tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
+| • Mean time taken to perform Core Action | • Report alongside meantime taken performing core action outside Teams App |
+| • Average number of times Core Action was performed in a month <br> • Average number of times Key Business events were performed in a month | • View month over month trend <br> • Drill down by Tenant |
+
