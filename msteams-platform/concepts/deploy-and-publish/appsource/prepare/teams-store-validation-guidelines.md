@@ -686,6 +686,10 @@ If your app includes a tab, ensure that it adheres to these guidelines.
   * Provide an appropriate way forward guidance for the user to acquire or generate the URL. [*Mandatory Fix*]
   * Check for URL that is relevant or appropriate to the app’s functionality as per the app description. [*Mandatory Fix*]
 
+    :::image type="content" source="../../../../assets/images/submission/validation-tab-configuration-way-forward-url-pass.png" alt-text="Screenshot shows an example of tab configuration with a way forward for user to generate a URL.":::
+  
+    :::image type="content" source="../../../../assets/images/submission/validation-tab-configuration-way-forward-url-fail.png" alt-text="Screenshot shows an example of tab configuration without a way forward for user to generate a URL.":::
+
 * Hyperlink the contact us information in the configuration screen instead of plain text to help users to contact you for support requirements. [*Mandatory Fix*]
 
 * For a seamless first run user experience, we recommend that you hyperlink your support URL or email in the configuration screen. [*Suggested Fix*]
