@@ -95,7 +95,7 @@ To create an action command:
 
 1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot id created already.
 
-1. Select the scope of the messaging extension and select **Save**.
+1. Select the scope of the bot and **Save**.
 
 1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
 
