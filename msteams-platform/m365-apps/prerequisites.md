@@ -78,7 +78,7 @@ To install Office 365 Beta Channel applications in your test environment:
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you are running a Beta Channel build.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you're running a Beta Channel build.":::
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
@@ -90,7 +90,7 @@ To install Office 365 Beta Channel applications in your test environment:
 
 You can preview Teams personal tabs running in Office app for Android by joining the beta program.
 
-To install the latest Office app beta build to your physical Android device or Android emulator:
+To install the latest Office app beta, build to your physical Android device, or Android emulator:
 
 1. Ensure you use a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
 1. Launch the **Play Store** on your Android device,.
