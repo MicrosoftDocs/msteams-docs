@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser and Node.js environment. TeamsFx core functionalities can be accessed in client as well as server environment. You can write user authentication code in a simplified way for:
+TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser and Node.js environment. TeamsFx core functionalities can be accessed in client and server environment. You can write user authentication code in a simplified way for:
 
 * Teams tab
 * Teams bot
@@ -140,8 +140,8 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
     Required configuration:
 
-    * If you want to use user identity then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
-    * If you want to use MSI identity then `sqlServerEndpoint`and `sqlIdentityId` are required.
+    * If you want to use user identity, then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
+    * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
 ### Override configuration
 
@@ -413,7 +413,7 @@ This section provides several code snippets for common scenarios that are relate
       }
     }
     ```
-    For more information about how to use this class in command bot, please refer the document: [Add single sign-on to your Teams apps](https://learn.microsoft.com/microsoftteams/platform/toolkit/add-single-sign-on?tabs=typescript). And there is also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project which you can try sso command bot. 
+    For more information about how to use this class in command bot, see [Add single sign-on to your Teams apps](https://learn.microsoft.com/microsoftteams/platform/toolkit/add-single-sign-on?tabs=typescript). And there's also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try sso command bot. 
 
 
     </details>
