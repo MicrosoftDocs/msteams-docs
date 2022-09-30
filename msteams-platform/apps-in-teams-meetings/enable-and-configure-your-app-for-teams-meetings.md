@@ -100,7 +100,7 @@ Following are the parameters to control the conditions that cause apps to be add
 
 1. The maximum cache size is one for apps in meetings. When the cache size is exceeded, the LRU app will be evicted.
 1. When the app is cached, memory (working set) usage must not exceed 225 MB.
-1. If the user doesn't return to the app within 20 mins, app is removed from the cache.
+1. If the user doesn't return to the app within 20 minutes, app is removed from the cache.
 1. The maximum time for Teams to receive the `readyToUnload` signal from the app is 30 seconds.
 1. The grace period to get memory usage down after the app cached is one min.
 1. App caching can't be enabled if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
