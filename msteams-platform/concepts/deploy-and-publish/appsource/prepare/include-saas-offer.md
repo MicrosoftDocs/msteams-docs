@@ -70,7 +70,7 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 
 Teams allows ISV admins or users to manage SaaS licenses for third party apps purchased from Teams storefront. ISV admins or users can easily assign and unassign, use, and track SaaS licenses.
 
-Follow these steps to enable license management for an app in Teams:
+To enable license management for an app in Teams, follow the steps:
 
 1. [Create an offer in Partner Center](#create-an-offer-in-partner-center)
 1. [Update your Teams app](#update-your-teams-app)
