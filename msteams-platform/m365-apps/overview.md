@@ -37,7 +37,7 @@ On mobile, you can test and debug your Teams personal tab running on Office app 
 
 :::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Office.":::
 
-In addition to Microsoft Teams clients, you can extend your search-based Teams message extensions to Outlook on the web and Windows desktop, allowing your customers to search and share results through the compose message area of Outlook.
+In addition to Microsoft Teams clients, you can extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
