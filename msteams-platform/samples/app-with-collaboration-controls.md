@@ -24,9 +24,9 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
    :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="The screenshot is an example that shows the new solution.":::
 
-1. Provide the name and publisher of your new solution, this solution is going to hold your custom Collaboration Manager.
+1. Provide the name and publisher of your new solution, this solution is going to hold your Custom Collaboration Manager.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration manager.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration Manager.":::
 
 1. Select **Create**
 
@@ -107,28 +107,28 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form.
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Preview control onto the section in tasks form":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Screenshot describes preview control onto the section in tasks form.":::
 
 3. Set the table to Activities & select Done.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Select the table to activities":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Screenshot show how to select the table to activities.":::
 
 5. Select ‘Hide Label’ on the Properties.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Select hide label":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Screenshot show how to select hide label.":::
 
 1. The Tasks control will now display.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Tasks control display":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Screenshot will show tasks control display.":::
 
 1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app.
 1. Once all controls are added, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Controls form designer":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot will show Controls form designer.":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Collaboration manager for inspections":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Screenshot Collaboration manager for inspections.":::
 
 1. Create a new record by selecting **+ New** and then open the record.
 
@@ -157,7 +157,7 @@ The settings that you can apply are as follows:
 |Drive ID|SharePoint files|
 
 > [!NOTE]
-> Settings are crtical to launch your app, so ensure that you follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
+> Settings are critical to launch your app, so ensure that you follow the steps as suggested. If you have issues launching and saving the controls recheck the values.
 
 You can get the Group ID by creating a new team or use an existing team in Microsoft Teams to host your application and create settings variables.
 
@@ -208,7 +208,7 @@ To create meetings with users outside of your organization such as customers and
 
 To apply settings and explore the collaborative features of your app in Power Apps, open the application that you've created earlier. You would see a view page, where you can select the existing records or create new one. To begin with open or create a record.
 
-You would need to add the Settings IDs that you've saved earlier for your application
+You would need to add the Settings IDs that you've saved earlier for your application.
 
 |Settings|Used by|
 |---|---|
@@ -294,7 +294,7 @@ In the left Pane, under Shared Calendars you should now see an additional 
 
 ### Add files
 
-Open the **Files** tab in your application and select **Upload** to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view automatically refreshs to show the files in the list.
+Open the **Files** tab in your application and select **Upload** to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view automatically refreshes to show the files in the list.
 
 :::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="The screenshot describes how to open shared calendar.":::
 
