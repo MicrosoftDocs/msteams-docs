@@ -223,7 +223,7 @@ You would need to add the Settings IDs that you've saved earlier for your applic
 
      :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="The screenshot is an example that shows the control window.":::
 
-1. Select **Configure** and navigate to the General tab to add the Group ID.
+1. Select **Configure** and go to the General tab to add the Group ID.
 
      :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="The screenshot describes how to add the Group ID in General tab.":::
 
@@ -280,7 +280,7 @@ To schedule an external meeting with the customer, select the dropdown next to t
 
 Users can see both Internal meetings and Customer Bookings on their meeting list. After the meeting is started, users can join by selecting the **Join** button, which opens the meeting directly in Microsoft Teams.
 
-As the meetings are backed by Outlook, users can navigate to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
+As the meetings are backed by Outlook, users can go to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
 Following are the steps to add a shared calendar to your Outlook (optional) :
 
