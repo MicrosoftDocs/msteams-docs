@@ -24,15 +24,15 @@ From the **Apps** menu, select **Manage your apps** > **Publish an app** > **Sub
 
 ### Teams Developer Portal
 
-Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app for your organization. This requires approval from your IT admin. For more information, see [manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
+Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app for your organization. This requires approval from your IT admin. For more information, see [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 ### Microsoft Teams Admin Center
 
-As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps).
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps).
 
 ### Microsoft Admin Center
 
-As a global admin, you can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). For more information, see [test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
+As a global admin, you can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). For more information, see [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
 ## Multitenant distribution
 
@@ -41,4 +41,4 @@ The [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft commercia
 > [!TIP]
 > Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams store (via [Microsoft Partner Network](https://partner.microsoft.com/)).
 
-To get started, see [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).
+To get started, see [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).

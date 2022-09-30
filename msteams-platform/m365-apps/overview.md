@@ -37,7 +37,7 @@ On mobile, you can test and debug your Teams personal tab running on Office app 
 
 :::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Office.":::
 
-In addition to Microsoft Teams clients, you can extend your search-based Teams message extensions to Outlook on the web and Windows desktop, allowing your customers to search and share results through the compose message area of Outlook.
+In addition to Microsoft Teams clients, you can extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
@@ -57,9 +57,9 @@ For more information, see [Teams manifest for Office Add-ins (preview)](/office/
 
 Join the growing number of production Teams apps in the [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) store with expanded support for Outlook and Office preview (Targeted Release) audiences. The app [submission process for Teams apps enabled for Outlook and Office](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is that you'll use Teams app manifest [version 1.13](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
-Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app in the Outlook and Office app stores, in addition to the Teams store. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
+Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app in the Outlook and Office app stores, in addition to the Teams store. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
-For more information, see [publish Teams apps for Microsoft 365](publish.md).
+For more information, see [Publish Teams apps for Microsoft 365](publish.md).
 
 ## Next step
 
