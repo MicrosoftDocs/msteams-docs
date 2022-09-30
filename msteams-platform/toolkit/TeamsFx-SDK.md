@@ -95,7 +95,7 @@ You can learn more about user identity and application identity in the following
 
 ### Credential
 
-To initialize TeamsFx, you must choose the required identity type. Post specifying the identity type SDK uses different type of credential class. These help represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+To initialize TeamsFx, you must choose the required identity type. Post specifying the identity type SDK uses different type of credential class. These represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
 There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
 
@@ -140,8 +140,8 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
     Required configuration:
 
-    * If you want to use user identity, then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
-    * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
+  * If you want to use user identity, then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
+  * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
 ### Override configuration
 
@@ -178,11 +178,11 @@ If you've created Azure function or bot project using Visual Studio Code Toolkit
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
-* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's a sql instance
-* sqlUsername (SQL_USER_NAME) // only used when there's a sql instance
-* sqlPassword (SQL_PASSWORD) // only used when there's a sql instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's a sql instance
-* sqlIdentityId (IDENTITY_ID) // only used when there's a sql instance
+* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's an sql instance
+* sqlUsername (SQL_USER_NAME) // only used when there's an sql instance
+* sqlPassword (SQL_PASSWORD) // only used when there's an sql instance
+* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an sql instance
+* sqlIdentityId (IDENTITY_ID) // only used when there's an sql instance
 
 </details>
 
@@ -360,6 +360,7 @@ This section provides several code snippets for common scenarios that are relate
     <summary><b>Use Graph API in Message Extension</b></summary>
 
     This code snippet shows you how to override `handleTeamsMessagingExtensionQuery` extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithToken` provided by TeamsFx sdk to sign-in to get an access token:
+
     ``` ts
     public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
       return await handleMessageExtensionQueryWithToken(context, null, 'User.Read', 
@@ -368,6 +369,7 @@ This section provides several code snippets for common scenarios that are relate
         });
     }
     ```
+
     For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://aka.ms/teamsfx-me-sso-sample).
     </details>
 
@@ -413,8 +415,8 @@ This section provides several code snippets for common scenarios that are relate
       }
     }
     ```
-    For more information about how to use this class in command bot, see [Add single sign-on to your Teams apps](toolkit/add-single-sign-on?tabs=typescript). And there's also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try sso command bot. 
 
+    For more information about how to use this class in command bot, see [Add single sign-on to Teams app](add-single-sign-on.md). And there's also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try sso command bot.
 
     </details>
 
