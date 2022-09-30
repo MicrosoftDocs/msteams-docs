@@ -26,7 +26,7 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Provide the name and publisher of your new solution, this solution is going to hold your Custom Collaboration Manager.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration Manager.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration manager.":::
 
 1. Select **Create**
 
