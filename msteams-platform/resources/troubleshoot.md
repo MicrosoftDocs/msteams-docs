@@ -22,6 +22,9 @@ If you aren't seeing your content in the tab view, it could be:
 * your content can't be displayed in an `<iframe>`.
 * the content domain isn't in the [validDomains](~/resources/schema/manifest-schema.md#validdomains) list in the manifest.
 
+> [!NOTE]
+> A blank tab appears when the given tab URL redirects to login screen. Login pages don’t render in iFrames as a safeguard against clickjacking. Your authentication logic must use a method other than redirect.
+
 ### The Save button isn't enabled on the settings dialog
 
 Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
