@@ -66,11 +66,9 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
     :::column-end:::
 :::row-end:::
 
-**First party license management**
+**Manage license for third party apps in Teams**
 
-First party license management allows customers to manage SaaS licenses purchased through Teams UX flows and allows ISVs to leverage the Microsoft licensing mechanism to allow app users to access and use functionality of the Teams apps​.
-
-[Include a SaaS offer with your Microsoft Teams app](include-saas-offer.md)
+Using Microsoft license management, independent software vendors (ISVs) can manage SaaS license purchased in Teams to easily assign, unassign, use, and track SaaS licenses. For more information, see [Manage license for third party apps in Teams](include-saas-offer.md#manage-license-for-third-party-apps-in-teams).
 
 ## Next step
 

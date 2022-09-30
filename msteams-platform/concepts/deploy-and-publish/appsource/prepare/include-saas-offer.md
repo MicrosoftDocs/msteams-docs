@@ -66,9 +66,9 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
 * Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their own subscriptions.
 
-## Manage third-party licenses in Teams
+## Manage license for third party apps in Teams
 
-Teams allows ISV admins or users to manage SaaS licenses for third party apps purchased from Teams storefront. ISV admins or users can easily assign and unassign, use, and track SaaS licenses.
+Teams allows independent software vendors (ISVs) admins or users to manage SaaS licenses for third party apps purchased from Teams storefront. ISV admins or users can easily assign, unassign, use, and track SaaS licenses.
 
 To enable license management for an app in Teams, follow the steps:
 
