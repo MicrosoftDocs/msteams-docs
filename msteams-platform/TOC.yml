@@ -62,7 +62,7 @@
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan analytics
     href: concepts/design/plan-analytics.md
-  - name: App instrumentation and telemetry capture
+  - name: Plan app instrumentation and telemetry capture
     items:
     - name: Overview
       href: concepts/design/teams-app-telemetry.md
