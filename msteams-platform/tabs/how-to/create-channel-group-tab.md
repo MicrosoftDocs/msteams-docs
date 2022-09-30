@@ -247,9 +247,9 @@ Following are the steps to create a channel or group tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -470,9 +470,9 @@ Following are the steps to create a channel or group tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -674,3 +674,4 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create a removal page](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

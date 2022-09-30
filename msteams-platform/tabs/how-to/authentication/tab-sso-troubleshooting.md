@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting authentication for tabs using SSO in Teams
-description: Troubleshooting SSO authentication in Teams and how to use it in tabs
+description: Troubleshoot Single sign-on (SSO) authentication issues in Teams and how to use it in tab app.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions

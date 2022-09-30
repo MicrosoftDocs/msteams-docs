@@ -16,7 +16,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 * You built an app for a small set of users, such as, your work group.
 
 > [!NOTE]
-> Sideloading your app multiple times displays more than one instance for messaging extensions.
+> Sideloading your messaging extension app multiple times displays more than one instance for messaging extensions.
 
 > [!IMPORTANT]
 >
@@ -52,11 +52,11 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 ## Troubleshoot
 
-If your app fails to sideload or any issues to upload, check the following options:
+If your app fails to sideload or encounters any issues to upload, check the following options:
 
 1. Ensure that you've followed all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html).
-1. Ensure your app manifest matches to the latest [schema](../../resources/schema/manifest-schema.md).
+1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
 
 ## Manage your apps
 
@@ -76,7 +76,7 @@ To access apps through **Manage your apps**, follow the steps:
 
 1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view currently.
 
-Teams provide several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
+Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 ### Update your app
 
@@ -88,7 +88,7 @@ If an update is available to your app, then the **Update available** option is e
 
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Update Teams app.":::
 
-1. Select **View update**, a window with update option appears.
+1. Select **View update**. A window with update option appears.
 1. Select **Update** button to update your app.
 
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Update Teams app in manage apps.":::
@@ -123,3 +123,4 @@ To remove app from Teams, follow the steps:
 
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+* [Add app to chat](/graph/api/chat-post-installedapps)
