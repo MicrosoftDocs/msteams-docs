@@ -77,3 +77,45 @@ Search Messaging extensions allow to search external system and bring results in
 | --- | --- | --- | --- |
 | Not Applicable | conversation.conversationType is “channel” channelData.channel gives channel ID and channelData.team gives Team ID | conversation.conversationType is “groupChat” and conversation.id is the ID of the Group Chat | conversation.id contains Meeting Chat ID; channelData.meeting.ID gives meeting ID |
 
+## Meeting apps
+
+Meeting Apps include tabs that work pre and post meetings, meeting side panel which are iframed web pages and in-meeting notification.
+
+- **MeetingTab**: when run in context of meeting, tabs get the meeting ID. All context information for tabs from earlier section on ‘Tab’ apply for meeting tabs too.
+- **Meeting Information**: TeamsInfo.GetMeetingInfoAsync API provides meeting specific details:
+
+  - details.id – meeting ID
+  - details.type – Type of meeting (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown)
+
+- **User Information**: TeamsInfo.GetMeetingParticipantAsync provides information about participants in the meeting:
+
+- user.aadObjectId: AAD ID of the participant
+- user.tenantId: Tenant ID of the participant
+- meeting.role: Role in meeting, that is, Organizer, Presenter and Attendee
+- organizer.tenantId: Organizers Tenant ID
+
+## UI constructs
+
+- **Cards**: Teams supports cards to be sent as messages across scopes. Cards are client side UI containers and can be sent by a bot or via Messaging extensions. Cards support certain actions which are handled by the bot service. Instrumenting may happen in these events
+
+  - openURL: Instrumenting openURL calls will require an intermediary web page to be setup with instrumentation logic and which redirects to the destination URL.
+  - messageBack: Sends a message and payload to the bot with metadata:
+    - from.id: AAD ID of the user who clicked the card button
+    - entities: provides locale, platform, timezone and client information
+    - channelData: provides channel or Team ID, tenant ID
+
+  - imBack: bot receives return message. Bot can receive metadata from turnContext same as the case when user replies to the bot
+  - invoke: Bot receives value object and invoke message payload contains metadata:
+
+    - from.id: AAD ID of the user who clicked the card button
+    - entities: provides locale, platform, timezone and client information
+    - channelData: provides channel / Team ID, tenant ID
+
+  - signin: Initiates OAuth flow via bot. Include instrumentation of authentication event to capture this event.
+
+- **Task Module**: Task modules are modal popup experiences which can contain iframed web page or an Adaptive card. TaskInfo object provides metadata about task module including its width, height,  information on whether it contains a card or web page.
+
+  - If the task module contains an iframed web page, include telemetry in the web page to track user action. In addition, it will contain context the same as a tab context.
+  - If the task module contains adaptive card – all card related telemetry would work when the Adaptive card is inside a task module.
+
+microsoftTeams.tasks.startTask and microsoftTeams.tasks.submitTask are used to invoke a task module and submit information entered in a task module respectively. Instrumenting these events can help map user progress.
