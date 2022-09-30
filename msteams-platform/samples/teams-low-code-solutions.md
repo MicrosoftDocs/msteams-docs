@@ -38,7 +38,7 @@ The new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143374) in Tea
 
 ### ✔ Teams and Power Automate
 
-You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/flows-teams). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
+You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/teams/install-teams-app). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
 
 ### ✔ Teams and Power Virtual Agents
 

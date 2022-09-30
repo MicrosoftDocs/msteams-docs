@@ -1,6 +1,6 @@
 ---
 title: Device permissions for the browser
-description: Learn how to securely bring back device permissions, such as camera or microphone access for apps in web client.
+description: app that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser.
 localization_priority: medium
 ms.topic: how-to
 ---
