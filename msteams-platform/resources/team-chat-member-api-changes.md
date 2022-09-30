@@ -70,4 +70,4 @@ Following are the upcoming API changes:
 
 > [!NOTE]
 >
-> The required steps to use the [Graph API](/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) with an access token to retrieve information.
+> We recommend you to use the [Graph API](/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) with an access token to retrieve information.
