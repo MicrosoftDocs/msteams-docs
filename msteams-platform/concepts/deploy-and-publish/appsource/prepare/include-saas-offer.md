@@ -173,7 +173,7 @@ You can call Graph APIs to determine if the currently logged in user with a vali
 
 ### Check license usage in Partner Center analytics
 
-1. Log into [Partner Center](https://partner.microsoft.com/).
+1. Sign in to [Partner Center](https://partner.microsoft.com/).
 1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
 1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
 
