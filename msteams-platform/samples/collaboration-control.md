@@ -41,7 +41,7 @@ Following are some of the key capabilities of Collaboration controls:
 
 ## How Collaboration controls works
 
-The Collaboration controls run within a Power Apps Model Driven Application (MDA) that can be deployed to Teams. MDA run on Microsoft Dataverse and can be integrated with a custom data model. The controls integrate with Microsoft Graph for Planner tasks, Outlook and Teams calendars, and SharePoint files. The Collaboration controls don't integrate directly with external sources, such as a system of record or a portal.
+The controls run within a Power Apps Model Driven Application (MDA) that can be deployed to Microsoft Teams. MDA run on Microsoft Dataverse and can be integrated with a custom data model. The controls integrate with Microsoft Graph for Planner tasks, Outlook and Teams calendars, and SharePoint files. The Collaboration controls don't integrate directly with external sources, such as a system of record or a portal.
 
 * Data can be added to Dataverse from external sources via standard OData APIs.
 
