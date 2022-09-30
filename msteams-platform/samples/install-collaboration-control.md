@@ -34,8 +34,8 @@ Collaboration Controls include the following solutions:
 
 |**Settings' solutions** | **Purpose** |
 |---|---|
-| Collaboration controls' Settings | Hold the settings infrastructure that powers Collaboration controls |
-| Collaboration controls' Settings Objects | Provides pre-defined settings values that are used by the Collaboration controls'.|
+| Collaboration controls Settings | Hold the settings infrastructure that powers Collaboration controls |
+| Collaboration controls Settings Objects | Provides pre-defined settings values that are used by the Collaboration controls.|
 
 |**Collaboration solutions** | **Purpose** |
 |---|---|
