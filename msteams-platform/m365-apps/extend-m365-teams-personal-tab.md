@@ -1,6 +1,6 @@
 ---
 title: Extend a Teams personal tab app across Microsoft 365
-description: In this article you'll, learn how to extend a Teams personal tab app across Microsoft 365 by updating personal tab to run in both outlook and office.
+description: Update your personal app to run in Outlook and Office. Update manifest and TeamsJS SDK V2, amend consent security, update Azure AD app registration for SSO.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps

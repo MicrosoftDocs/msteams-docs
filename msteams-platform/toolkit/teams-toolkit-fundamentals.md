@@ -24,9 +24,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 # Available for Visual Studio and Visual Studio Code
 
-Teams Toolkit is available for free for Visual Studio Code and supports Visual Studio 2022 Community, Professional, and Enterprise.
-
-Visit the [Install Teams Toolkit documentation](./install-Teams-Toolkit.md) for more information about installation and setup.
+Teams Toolkit is available for free for Visual Studio Code and supports Visual Studio 2022 Community, Professional, and Enterprise. Visit the [Install Teams Toolkit documentation](./install-Teams-Toolkit.md) for more information about installation and setup.
 
 | | Visual Studio | Visual Studio Code |
 | - | ------------- | ------------------ |
