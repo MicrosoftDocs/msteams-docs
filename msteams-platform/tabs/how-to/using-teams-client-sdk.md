@@ -182,31 +182,30 @@ This code:
 
 ```TypeScript
 import * as microsoftTeams from "@microsoft/teams-js";
-
-microsoftTeams.getContext((context: microsoftTeams.Context) => {
-  /* ... */
+microsoftTeams.app.getContext().then((context:  microsoftTeams.app.Context) => { 
+/* ... */ 
 });
 ```
 
 Needs to be updated to:
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
-app.getContext().then((context: Context) => {
-    /*...*/
+app.getContext().then((context: app.Context) => { 
+/*...*/
 });
 ```
 
 ...or the equivalent `async/await` pattern:
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
 async function example() {
-  const context: Context = await app.getContext();
-  /*...*/
-}
+            const context: app.Context = await app.getContext();
+            /*...*/
+          }
 ```
 
 ---
