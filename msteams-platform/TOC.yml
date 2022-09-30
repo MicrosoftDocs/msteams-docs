@@ -1,4 +1,4 @@
-  - name: Microsoft Teams Developer documentation
+- name: Microsoft Teams Developer documentation
   href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
