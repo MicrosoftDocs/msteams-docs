@@ -190,7 +190,7 @@ If you've created Azure function or bot project using Visual Studio Code Toolkit
 
 Basic type of API error response is `ErrorWithCode`, which contains error code and error message. For example, to filter out specific error, you can use the following snippet:
 
-```ts
+```typescript
 try {
   const teamsfx = new TeamsFx();
   await teamsfx.login("User.Read");
@@ -218,7 +218,7 @@ This section provides several code snippets for common scenarios that are relate
 
     1. Import the classes needed.
 
-    ```ts
+    ```typescript
     import {
       createMicrosoftGraphClient,
       TeamsFx,
@@ -227,14 +227,14 @@ This section provides several code snippets for common scenarios that are relate
 
     2. Use `TeamsFx.login()` to get user consent.
 
-    ```ts
+    ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
     await teamsfx.login(["User.Read"]); // Login with scope
     ```
 
     3. You can initialize a TeamsFx instance and graph client and get information from MS Graph by this client.
 
-    ```ts
+    ```typescript
     try {
       const teamsfx = new TeamsFx();
       const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
@@ -266,8 +266,8 @@ This section provides several code snippets for common scenarios that are relate
 
     2. Initialize the provider inside your component.
 
-    ```ts
-    // Import the providers and credential at the top of the page
+    ```typescript
+     // Import the providers and credential at the top of the page
     import {Providers} from '@microsoft/mgt-element';
     import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
     import {TeamsUserCredential} from "@microsoft/teamsfx";
@@ -275,12 +275,12 @@ This section provides several code snippets for common scenarios that are relate
     const scope = ["User.Read"];
     const teamsfx = new TeamsFx();
     const provider = new TeamsFxProvider(teamsfx, scope);
-    Providers.globalProvider = provider;
+    Providers.globalProvider = provider;   
     ```
 
     3. You can use the `teamsfx.login(scopes)` method to get required access token.
 
-    ```ts
+    ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
     await teamsfx.login(this.scope);
     Providers.globalProvider.setState(ProviderState.SignedIn);
@@ -292,14 +292,14 @@ This section provides several code snippets for common scenarios that are relate
     <mgt-person query="me" view="threeLines"></mgt-person>
     ```
 
-    ```ts
+    ```typescript
     public render(): void {
     return (
         <div>
             <Person personQuery="me" view={PersonViewType.threelines}></Person>
         </div>
     );
-    }
+    }    
     ```
 
     For more information on sample to initialize the TeamsFx provider, see the [Contacts Exporter sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-toolkit-contact-exporter).
@@ -314,7 +314,7 @@ This section provides several code snippets for common scenarios that are relate
 
     1. Initialize and add `TeamsBotSsoPrompt` to dialog set.
 
-    ```ts
+    ```typescript
     const { ConversationState, MemoryStorage } = require("botbuilder");
     const { DialogSet, WaterfallDialog } = require("botbuilder-dialogs");
     const { TeamsBotSsoPrompt } = require("@microsoft/teamsfx");
@@ -328,12 +328,12 @@ This section provides several code snippets for common scenarios that are relate
       new TeamsBotSsoPrompt(teamsfx, "TeamsBotSsoPrompt", {
         scopes: ["User.Read"],
       })
-    );
+    );    
     ```
 
     2. Begin the dialog and sign-in.
 
-    ```ts
+    ```typescript
     dialogs.add(
       new WaterfallDialog("taskNeedingLogin", [
         async (step) => {
@@ -349,7 +349,7 @@ This section provides several code snippets for common scenarios that are relate
           }
         },
       ])
-    );
+    );    
     ```
 
     For more information on sample to use graph API in bot application, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
@@ -361,13 +361,13 @@ This section provides several code snippets for common scenarios that are relate
 
     This code snippet shows you how to override `handleTeamsMessagingExtensionQuery` extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithToken` provided by TeamsFx sdk to sign-in to get an access token:
 
-    ``` ts
+    ```typescript
     public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
       return await handleMessageExtensionQueryWithToken(context, null, 'User.Read', 
         async (token: MessageExtensionTokenResponse) => {
           // ... continue to query with access token ...
         });
-    }
+    }    
     ```
 
     For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://aka.ms/teamsfx-me-sso-sample).
@@ -378,7 +378,7 @@ This section provides several code snippets for common scenarios that are relate
 
     This code snippet shows you how to implement `TeamsFxBotSsoCommandHandler` for command bot to call Microsoft API.
 
-    ```ts
+    ```typescript
     import { Activity, TurnContext } from "botbuilder";
     import {
       CommandMessage,
@@ -413,7 +413,7 @@ This section provides several code snippets for common scenarios that are relate
           return "Could not retrieve profile information from Microsoft Graph.";
         }
       }
-    }
+    }    
     ```
 
     For more information about how to use this class in command bot, see [Add single sign-on to Teams app](add-single-sign-on.md). And there's also a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try sso command bot.
@@ -427,7 +427,7 @@ This section provides several code snippets for common scenarios that are relate
 
     1. You can use `CreateApiClient` provided by TeamsFx sdk to call Azure Function:
 
-    ```ts
+    ```typescript
     async function callFunction(teamsfx?: TeamsFx) {
       const teamsfx = new TeamsFx();
 
@@ -442,12 +442,12 @@ This section provides several code snippets for common scenarios that are relate
       // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
       const response = await apiClient.get("RELATIVE_API_PATH");
       return response.data;
-    }
+    }    
     ```
 
     You can also use `axios` library to call Azure Function.
 
-    ```ts
+    ```typescript
     async function callFunction(teamsfx?: TeamsFx) {
       const accessToken = await teamsfx.getCredential().getToken(""); // Get SSO token 
       // teamsfx.getConfig("apiEndpoint") will read REACT_APP_FUNC_ENDPOINT environment variable 
@@ -458,12 +458,12 @@ This section provides several code snippets for common scenarios that are relate
         },
       });
       return response.data;
-    }
+    }    
     ```
 
     2. Call Graph API in Azure function on-behalf of user in response.
 
-    ```ts
+    ```typescript
     export default async function run(
       context: Context,
       req: HttpRequest,
@@ -490,7 +490,7 @@ This section provides several code snippets for common scenarios that are relate
       } catch (e) {
       }
       return res;
-    }
+    }    
     ```
 
     For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
@@ -505,21 +505,21 @@ This section provides several code snippets for common scenarios that are relate
 
     1. You can initialize the `authConfig` by providing a `PEM-encoded key certificate`.
 
-    ```ts
+    ```typescript
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
       certificateContent: "The content of a PEM-encoded public/private key certificate",
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
-    };
+    };    
     ```
 
     2. You can use the `authConfig` to get the token.
 
-    ```ts
+    ```typescript
     const teamsfx = new TeamsFx(IdentityType.App);
     teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();
+    const token = teamsfx.getCredential().getToken();    
     ```
 
     </details>
@@ -531,21 +531,21 @@ This section provides several code snippets for common scenarios that are relate
 
     1. You can initialize the `authConfig` by providing a `client secret`.
 
-    ```ts
+    ```typescript
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
       clientSecret: process.env.M365_CLIENT_SECRET,
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
-    };
+    };    
     ```
 
     2. You can use the `authConfig` to get the token.
 
-    ```ts
+    ```typescript
     const teamsfx = new TeamsFx(IdentityType.App);
     teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();
+    const token = teamsfx.getCredential().getToken();    
     ```
 
     For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
@@ -561,7 +561,7 @@ This section provides several code snippets for other scenarios that are related
 
   This code snippet shows you how to call an existing API in Bot by `ApiKeyProvider`.
 
-  ```ts
+  ```typescript
   const teamsfx = new TeamsFx();
 
   // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
@@ -579,7 +579,7 @@ This section provides several code snippets for other scenarios that are related
   );
 
   // Send a GET request to "RELATIVE_API_PATH", "/api/apiname" for example.
-  const response = await apiClient.get("RELATIVE_API_PATH");
+  const response = await apiClient.get("RELATIVE_API_PATH");  
   ```
 
   </details>
@@ -591,7 +591,7 @@ This section provides several code snippets for other scenarios that are related
 
   1. Set the connection configuration.
 
-  ```ts
+  ```typescript
   // Equivalent to:
   // const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
   //    sqlServerEndpoint: process.env.SQL_ENDPOINT,
@@ -602,18 +602,18 @@ This section provides several code snippets for other scenarios that are related
   // If there's only one SQL database
   const config = await getTediousConnectionConfig(teamsfx);
   // If there are multiple SQL databases
-  const config2 = await getTediousConnectionConfig(teamsfx, "your database name");
+  const config2 = await getTediousConnectionConfig(teamsfx, "your database name");  
   ```
 
   2. Connect to your database.
 
-  ```ts
+  ```typescript
   const connection = new Connection(config);
   connection.on("connect", (error) => {
     if (error) {
       console.log(error);
     }
-  });
+  });  
   ```
 
   > [!NOTE]
@@ -636,7 +636,7 @@ When you set log level then Logging gets enabled. It prints log information to c
 
 Set log level using the following snippet:
 
-```ts
+```typescript
 // Only need the warning and error messages.
 setLogLevel(LogLevel.Warn);
 ```
@@ -646,7 +646,7 @@ setLogLevel(LogLevel.Warn);
 
 #### Redirect by setting custom logger
 
-```ts
+```typescript
 setLogLevel(LogLevel.Info);
 // Set another logger if you want to redirect to Application Insights in Azure Function
 setLogger(context.log);
@@ -654,7 +654,7 @@ setLogger(context.log);
 
 #### Redirect by setting custom log function
 
-```ts
+```typescript
 setLogLevel(LogLevel.Info);
 // Only log error message to Application Insights in bot application.
 setLogFunction((level: LogLevel, message: string) => {
