@@ -155,11 +155,9 @@ microsoftTeams.appInitialization.notifySuccess();
 
 1. Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause app content to be abruptly removed from the DOM). If the app hasn’t registered for the `load` event, it will be removed from the DOM after the unload flow completes.
 
-1. If you want to ensure that you go out of your app doesn't cause app content to be abruptly removed from the DOM, register only the `beforeUnload` handler. If the app hasn’t registered for the `load` event, it will be removed from the DOM after the unload flow completes.
+1. Use the guidance in this document to onboard your app to app caching in Teams meetings first. Meetings are the first surface to support app caching in our new React stack, but if your app is also available in other contexts (channels and chat), app caching support in legacy Angular stack will kick in if your app registers `load/beforeUnload` handlers.
 
-1. Use the guidance in this document to onboard your app to app caching in Teams meetings first. Meetings are the first surface to support app caching in our new React stack, but if your app is also available in other contexts (say channels, chat), app caching support in our legacy Angular stack will kick in if your app registers `load/beforeUnload` handlers.
-
-1. To avail the app caching support only in meetings, register the `load/beforeUnload` handlers only if the context is sidePanel (this also abstracts the app from having to deal with differences in implementation details between our stacks and incrementally extends app caching support to multiple contexts). Going forward, app caching for various contexts will all be supported through the React stack.
+1. To avail the app caching support only in meetings, register the `load/beforeUnload` handlers only if the context is side panel. App caching for various contexts will be supported through the React stack.
 
 1. App caching is not available in meetings where the invited member count is more than 20 participants.
 
