@@ -4,6 +4,7 @@ author: surbhigupta
 description: In this module, learn how Teams apps are managed in different places based on the feature.
 ms.topic: reference
 ms.localizationpriority: medium
+ms.author: lomeybur
 ---
 
 # Teams app permissions
