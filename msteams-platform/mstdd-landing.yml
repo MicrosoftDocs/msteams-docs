@@ -58,6 +58,8 @@ landingContent:
       links:
       - text: Enable app caching to improve subsequent launch time of the apps
         url: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#app-caching
+      - text: Manage SaaS licenses for third party apps in Teams
+        url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center
         url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
@@ -74,9 +76,7 @@ landingContent:
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Update conversation and installation events in your Teams bot [Developer preview]
         url:  bots/how-to/conversations/subscribe-to-conversation-events.md
-      - text: Submit your Outlook- and Office-enabled apps to the Teams store
-        url: m365-apps/overview.md
-
+        
 - title: Get started
   linkLists:
     - linkListType: get-started
