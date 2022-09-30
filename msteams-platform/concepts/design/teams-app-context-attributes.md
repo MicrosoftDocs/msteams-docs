@@ -35,7 +35,7 @@ A Tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-|   | team.internalId & channel.id – ID of Team and Channel where tab is associated
+| &nbsp; | team.internalId & channel.id – ID of Team and Channel where tab is associated
 team.type.- different types of team in O365 for Education
 channel.channelType – indicates whether channel is private, regular or shared | chat.Id – chat ID if the tab is added to a Group Chat context | meeting.ID ID of the meeting used by tab when running in meeting context |
 
@@ -59,8 +59,7 @@ Bot is a conversational interface which has a publicly accessible web service ho
 | --- | --- | --- | --- |
 | readReceiptInfo.IsMessageRead() can be used to get read receipts for select bot messages | turnContext.Activity.TeamsGetTeamInfo() – Get details of the team where bot is installed
 TeamsInfo.GetTeamChannelsAsync – retrieves list of channels in the installed Team
-On installationUpdate event, conversation.ID provides channel ID where bot is installed
- | On installationUpdate event, conversation.ID provides chat ID where bot is installed | On installationUpdate event, conversation.ID provides ID of meeting chat where bot is installed |
+On installationUpdate event, conversation.ID provides channel ID where bot is installed | On installationUpdate event, conversation.ID provides chat ID where bot is installed | On installationUpdate event, conversation.ID provides ID of meeting chat where bot is installed |
 
 ## Messaging Extension
 
