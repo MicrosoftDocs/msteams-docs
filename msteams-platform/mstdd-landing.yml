@@ -57,7 +57,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Manage SaaS licenses for third party apps in Teams
-        url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+        url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center
         url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
