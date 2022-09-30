@@ -111,20 +111,20 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 3. Set the table to Activities & select Done.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Screenshot show how to select the table to activities.":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Screenshot shows how to select the table to activities.":::
 
 5. Select ‘Hide Label’ on the Properties.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Screenshot show how to select hide label.":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Screenshot shows how to select hide label.":::
 
 1. The Tasks control will now display.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Screenshot will show tasks control display.":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Screenshot shows tasks control display.":::
 
 1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app.
 1. Once all controls are added, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot will show Controls form designer.":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot shows Controls form designer.":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
@@ -132,11 +132,11 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Create a new record by selecting **+ New** and then open the record.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="The screenshot is an example that shows the power apps that open the record.":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Screenshot is an example that shows the power apps that open the record.":::
 
 1. Now you can see views for each tab that appear similar to the following image:
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="The screenshot is an example that shows the tasks.":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Screenshot is an example that shows the tasks.":::
 
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
@@ -169,7 +169,7 @@ Use the following instructions to retrieve the Group ID of your Teams team for A
 
 1. Select the ellipse **...** and select **Get link to team**.
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="The screenshot describes how to get the linked to the team.":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="Screenshot describes how to get the linked to the team.":::
 
 1. Copy the link and record the value of `groupId` from the URL. You'll use this value at a later stage while defining the settings of your solution.
 
@@ -183,14 +183,14 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 
      1. **Site ID**: Using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), sign in and give permissions to Directory.ReadWrite.All and User.ReadWrite.All
 
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="The screenshot is an example that shows the Graph Explorer.":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Screenshot is an example that shows the Graph Explorer.":::
 
      1. Ensure that you replace hostname with your hostname and relative path to the site path and make a graph call to `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Following is an example:
          1. If your Site URL = `https://myhostname.sharepoint.com/sites/MySiteName`
          1. Hostname = `myhostname.sharepoint.com`
          1. Relative path to site = `sites/MySiteName`
 
-              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="The screenshot is an example that shows the Graph call.":::
+              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Screenshot is an example that shows the Graph call.":::
 
             Graph call would be, `https://graph.microsoft.com/v1.0/sites/myhostname.sharepoint.com:/sites/MySiteName`.
 
@@ -221,11 +221,11 @@ You would need to add the Settings IDs that you've saved earlier for your applic
 
 1. Launch a control and you can see a window as following:
 
-     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="The screenshot is an example that shows the control window.":::
+     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Screenshot is an example that shows the control window.":::
 
 1. Select **Configure** and navigate to the General tab to add the Group ID.
 
-     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="The screenshot describes how to add the Group ID in General tab.":::
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Screenshot describes how to add the Group ID in General tab.":::
 
 1. Open Files tab to add Site ID and Drive ID.
 
@@ -243,13 +243,13 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens a
 
 1. To create a new task for the team, select **Add a task**. It opens a dialog where you can provide specifics about the task and assign it to the relevant people on the team and select Save.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="The screenshot describes on how to add a task.":::
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Screenshot describes on how to add a task.":::
 
 1. The saved task will appear in the tasks list.
 
 1. As all the tasks are backed by Microsoft Planner. Users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned. To get started, select ellipses **…** in Teams left pane. Search and select Tasks by Planner and To Do.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="The screenshot is an example of the Tasks by Planner and To Do.":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="Screenshot is an example of the Tasks by Planner and To Do.":::
 
 1. After opening the Tasks by Planner and To Do app, users can see all the tasks that were created in your app within the **Assigned to me** section of the app. Users can also view the details of a task, add attachments, and mark them as complete.
 
@@ -264,7 +264,7 @@ Select **Meetings** tab in a record to schedule both internal and external meeti
 
 To schedule an internal meeting, select the dropdown next to the **New meeting** button and then select **Internal meeting**.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="The screenshot describes how to schedule internal meetings.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Screenshot describes how to schedule internal meetings.":::
 
 > [!NOTE]
 >
@@ -276,7 +276,7 @@ Within the **New meeting** dialog, users can provide relevant information about 
 
 To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option isn't available in the **New Meeting** dropdown, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). You can add additional booking types by adding additional services within your Bookings business.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="The screenshot describes on how to schedule customer Bookings.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Screenshot describes on how to schedule customer Bookings.":::
 
 Users can see both Internal meetings and Customer Bookings on their meeting list. After the meeting is started, users can join by selecting the **Join** button, which opens the meeting directly in Microsoft Teams.
 
@@ -290,13 +290,13 @@ Following are the steps to add a shared calendar to your Outlook (optional) :
 
 In the left Pane, under Shared Calendars you should now see an additional calendar with the person's name.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="The screenshot describes on how to schedule customer Bookings.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Screenshot describes on how to schedule customer Bookings.":::
 
 ### Add files
 
 Open the **Files** tab in your application and select **Upload** to upload files from OneDrive for Business or from your computer. When a file is successfully uploaded, the main list view automatically refreshes to show the files in the list.
 
-:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="The screenshot describes how to open shared calendar.":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="Screenshot describes how to open shared calendar.":::
 
 ### Approvals
 
@@ -306,15 +306,15 @@ Approvals allow users to request sign out from others when working in a record. 
 
 1. When there are no approval requests, users see the following screen.
 
-      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="The screenshot is an example that shows no approval requests.":::
+      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="Screenshot is an example that shows no approval requests.":::
 
 1. Select the **New approval request** to open the approval request form.
 
-      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="The screenshot is an example that shows the new approval request form.":::
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Screenshot is an example that shows the new approval request form.":::
 
 1. In the Approval request form, fill the required fields and select **Send**,which creates a request and added to the list.
 
-      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="The screenshot is an example that shows the list of approvals.":::
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="Screenshot is an example that shows the list of approvals.":::
 
 1. Select the approval to view the details.
 
