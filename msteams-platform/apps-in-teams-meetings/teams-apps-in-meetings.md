@@ -44,7 +44,7 @@ This article provides an overview of meeting app extensibility, API references, 
 
 > [!Note]
 >
-> Meeting apps are supported in desktop Teams. And in web client, Meeting apps are supported only when the Dev preview is enabled.
+> Meeting apps are supported in desktop Teams. And in web client, meeting apps are supported only when the dev preview is enabled.
 
 * **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
 * **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
