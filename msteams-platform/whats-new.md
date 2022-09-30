@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Updates for generally available features ":::
+:::image type="icon" source="~/assets/images/general-availabe.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -261,6 +261,7 @@ Explore updates from the previous GA releases listed here.
 </details>
 </details>
 </details>
+
 ::: zone-end
 
 ::: zone pivot="dev-preview"
@@ -272,7 +273,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Updates for features available in developer preview ":::
+:::image type="icon" source="~/assets/images/developer-preview.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -312,7 +313,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/deprecated.png" alt-text="Deprecated features":::
+:::image type="icon" source="~/assets/images/deprecated.png":::
 
 :::column-end:::
 :::column span="2":::
