@@ -159,7 +159,7 @@ Update your Teams app to map to the paid functionality and [Map your Teams app](
 
 Integrate with Graph Usage Right API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
 
-You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. Follow these steps, to call Graph UsageRight API to check user permissions:
+You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. To call Graph UsageRight API to check user permissions, follow the steps:
 
 1. Get user OBO token: [Get access on behalf of a user - Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
 
