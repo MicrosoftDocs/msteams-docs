@@ -675,7 +675,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-missing-forward-guidance.png" alt-text="validation-tabs-missing-fwd-guidance":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="validation-tabs-set-up-new-user":::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="Graphic shows an example of Tab with a dead-end on setup.":::
 
 * The user must not leave the tab configuration experience inside Teams to create content outside Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
@@ -714,7 +714,9 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 * Tabs shouldn't have a duplicate header. Remove duplicate logos from the I-frame since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-no-duplicate-header-logo.png" alt-text="Graphic shows an example of a tab without duplicate headers and logos.":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="Graphic shows an example of a tab with duplicate headers and logos.":::
 
 </details>
 </br>
@@ -727,11 +729,11 @@ The following are the navigation guidelines:
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="Graphic shows an example of navigation in a tab that does not conflict with the primary Teams navigation.":::
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-icon-text.png" alt-text="validation-nav-icon-text":::
 
@@ -768,6 +770,8 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Bottom rail used for navigation in tabs must not conflict with Teams native mobile app navigation. [*Mandatory Fix*]
 
+  :::image type="content" source="../../../../assets/images/submission/validation-tab-bottom-rail-conflicts-with-teams-mobile.png" alt-text="Graphic shows an example of a tab that conflicts with Teams native mobile app navigation.":::
+
 </details>
 </br>
 
@@ -791,9 +795,9 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="validation-usability-responsive-tab":::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="Graphic shows an example of a tab responsive to a theme in Teams.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="Graphic shows an example of a Tab not responsive to theme in Teams.":::
 
 * Tabs must use Teams styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
@@ -810,6 +814,8 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    > * Allow users to share content from their personal tab.
 
 * Tab must not contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized.
+
+   :::image type="content" source="../../../../assets/images/submission/validation-tab-elements-impede-workflow.png" alt-text="Graphic shows an example of tab with elements that impede workflows within the tab.":::
 
 * Tab must not have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features, and deliverables as described in your listing and other related materials. [*Mandatory Fix*]
 
@@ -896,6 +902,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must provide a valid response to invalid user commands. Bots must not dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
 
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-way-forward-for-invalid-command.png" alt-text="Graphic shows an example of bot provining a way forward for an invalid command.":::
+
    :::image type="content" source="../../../../assets/images/submission/validation-bot-display-error-for-valid-command.png" alt-text="Graphic shows an example of bot sending error messages for a valid bot command.":::
 
 * Bot functionality must be relevant to the scope in which the bot is installed and the bot must provide value in the installed scope. [*Mandatory Fix*]
@@ -905,6 +913,10 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Bots must not display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Mandatory Fix*]
 
 * Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged onto the app. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not provideing a valid response for a command in lowercase or uppercase.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged onto the app.":::
 
 * Bots must provide a valid response to **help** command.
 
@@ -934,9 +946,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
   For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="Graphic shows an example of bot not sending a welcome message when the bot has a complex configuration workflow.":::
 
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
 
@@ -955,6 +967,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-clear-way-forward.png" alt-text="Graphic shows an example of bot welcome message with a clear wayforward for the user to complete the task.":::
 
 * Bot installed in a channel or group chat scope must not send proactive welcome message to all the team members in 1:1 chat. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-send-proactive-message-to-all-members.png" alt-text="Graphic shows an example of bot sending proactive welcome message to all the team members.":::
 
 * Notification only bot can send a proactive welcome message in a channel only if the message contains important information for any user to complete the configuration for the bot or clarifies the scenarios when notifications are triggered. [*Mandatory Fix*]
 
@@ -978,7 +992,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot must not send multiple welcome messages when triggered on app install. [*Mandatory Fix*]
 
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-multiple-message-trigger-install.png" alt-text="Graphic shows an example of bot triggering multiple welcome messaged on app install.":::
+
 * App name in the welcome message must match the app name in the manifest. [*Mandatory Fix*]
+
+  :::image type="content" source="../../../../assets/images/submission/validation-app-name-mismatch-manifeast-and-welcome-message.png" alt-text="Graphic shows an example of app name in welcomemessage not matching with the app name in the app manifest.":::
 
 * Welcome message must not display competitor chat based collaborative platform names unless the app provides specific interoperability.
 
@@ -1018,6 +1036,8 @@ Bots must not spam users by sending multiple messages in short duration.
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="Graphic shows an example bot using multi-turn messages to complete a single conversation.":::
 
 * **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
+
+   :::image type="icon" source="../../../../assets/images/submission/validation-bot-send-proactive-message-to-all-members.png" alt-text="Graphic shows an example bot spamming users with same welcome message.":::
 
 </details>
 </br>
@@ -1113,6 +1133,10 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
 * Preview images in Adaptive Cards in messaging extensions must load properly. [*Mandatory Fix*]
 
+  :::image type="content" source="../../../../assets/images/submission/validation-preview-image-adaptive-card-loading.png" alt-text="Graphic shows an example of preview image loading in adaptive card.":::
+
+  :::image type="content" source="../../../../assets/images/submission/validation-preview-image-adaptive-card-not-loading.png" alt-text="Graphic shows an example of preview image not loading in adaptive card.":::
+
 * Messaging extension response card must include the app icon to avoid end user confusion. [*Mandatory Fix*]
 
 * Your app must not have any broken functionality. App must not dead-end or block the user from completing a workflow in a messaging extension. [*Mandatory Fix*]
@@ -1142,9 +1166,9 @@ Action-based message extensions must do the following:
 
 * Incorporate the host app name instead of a generic verb for action commands triggered from a chat message, channel post, or call to action within apps. For example, use **Start a Skype Meeting** for **Start Meeting**, **Upload file to DocuSign** for **Upload file**. [*Suggested Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="Graphic shows an example of host app name for an action command.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="Graphic shows an example of generic verb for an action command.":::
 
 * Invoking a message action must allow the user to complete the workflow. Errors, blank responses, or continuous loading indicators to make the message action functional as intended must not be present. [*Mandatory Fix*]
 
@@ -1316,12 +1340,16 @@ Use the following guidelines for meeting extensions:
 * Must maintain padding and component sizes.
 * Must have a back button if there's more than one layer of navigation.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="validation-in-meeting-exp-back-buttons":::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="Graphic shows an example of back button present.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="validation-in-meeting-exp-back-buttons-absent":::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="Graphic shows an example of back button not present.":::
 
 * Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab.
 * Must not have Horizontal scroll.
+
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-tab-vertical-scroll.png" alt-text="Graphic shows an example of in-meeting tab with vertical scroll.":::
+
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-tab-horizontal-scroll.png" alt-text="Graphic shows an example of in-meeting tab with horizontal scroll.":::
 
 </details>
 
