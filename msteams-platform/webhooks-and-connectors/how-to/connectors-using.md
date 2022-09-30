@@ -1,7 +1,7 @@
 ---
 title: Create and send messages
 author: laujan
-description: In this module, learn how to use Office 365 Connectors and create and send actionable message in Microsoft Teams
+description: Create actionable messages, send message through Incoming Webhook, Office 365 Connector, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
 ms.topic: how-to
 ms.localizationpriority: high
 ---
