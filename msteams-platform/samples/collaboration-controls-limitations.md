@@ -31,15 +31,15 @@ Following are the limitations for Collaboration controls:
 
 **Admin Center does not update when installation or upgrade is complete**
 
-When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when it is completed it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
+When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when it's completed it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
 
 **View during installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="The screenshot shows the process during installation." border="true":::
 
 **View after installation:**
-     :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="The screenshot shows the completeion of the installation." border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="The screenshot shows the completion of the installation." border="true":::
 
-When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/), it must take approximately 15 minutes.
+When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm the upgrade is complete by checking the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/), it must take approximately 15 minutes.
 
 You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
      :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="The screenshot shows the history for specific solutions of the versions that are installed and removed." border="true":::

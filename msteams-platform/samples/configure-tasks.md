@@ -20,7 +20,7 @@ To create external tasks, follow the steps:
 
 1. Create a new custom entity such as Customer or reuse an existing customer entity like Contacts.
 
-1. Create new fields that holds the following information:
+1. Create new fields that hold the following information:
     1. Name
     1. Email
     1. Parent (Lookup to the parent table such as Inspections)
@@ -88,7 +88,7 @@ To create external tasks, follow the steps:
 
     :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Screenshot shows how to paste Fetch XML.":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Screenshot shows how to configue Custom property settings.":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Screenshot shows how to configure Custom property settings.":::
 
 1. Select **Ok** in Configure Property "Custom Tasks" and Set Properties windows.
 
