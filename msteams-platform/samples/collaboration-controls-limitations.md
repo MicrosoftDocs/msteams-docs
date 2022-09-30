@@ -168,7 +168,7 @@ Request that your Power Platform administrator install the controls from AppSour
 
 <summary><b>How do I add the controls to a Model Driven App?</b></summary>
 
-Navigate to Form Designer and drag the controls from the Component pane onto a form.
+Go to Form Designer and drag the controls from the Component pane onto a form.
 
 <br>
 
