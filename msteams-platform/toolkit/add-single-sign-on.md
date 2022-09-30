@@ -102,7 +102,7 @@ The following steps help you to enable SSO in your application:
 
 #### Set up the AAD redirects
 
-1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When single sign-on flows are initiated with AAD, AAD redirects the user to these HTML pages.
+1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When single sign-on flow is initiated with AAD, AAD redirects the user to the HTML pages.
 1. Modify your `bot/src/index` to add the appropriate `restify` routes to HTML pages.
 
     ```ts
@@ -202,7 +202,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an AAD token to call Microso
 
 #### Add a new SSO command to the bot (Optional)
 
-After successfully adding SSO in your project, you can also add a new SSO command.
+After successfully adding SSO in your project, you can add a new SSO command.
 
 1. Create a new file such as `photoSsoCommandHandler.ts` or `photoSsoCommandHandler.js` in `bot/src/` and add your own SSO command handler to call Graph API:
 
