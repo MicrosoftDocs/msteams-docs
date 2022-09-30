@@ -39,13 +39,13 @@ Collaboration Controls include the following solutions:
 
 |**Collaboration solutions** | **Purpose** |
 |---|---|
-| Collaboration controls Tasks  | Includes the Tasks PCF (Power Apps Component framework) control. |
+| Collaboration controls Tasks  | Includes the Tasks PCF (Power Apps component framework) control. |
 | Collaboration controls Events | Includes the Events PCF control for Outlook and Teams meetings and bookings appointments. |
 | Collaboration controls Notes | Includes the notes PCF control, which stores notes in Dataverse. |
 | Collaboration controls Files | Includes the Files PCF control for accessing files on SharePoint. |
 | Collaboration controls Core |Includes custom Collaboration APIs, the Collaboration Data Model and Virtual Tables for Events, Files and Task controls. |
 | Collaboration controls Approvals | Includes the new Approvals PCF control. |
-| Collaboration controls Connector | Includes the new Collaboration Power Automate connector |
+| Collaboration controls connector | Includes the new Collaboration Power Automate connector |
 
 > [!NOTE]
 > If you have an existing version of the controls installed in your environment, you might need to create a fresh environment and complete a new install to successfully upgrade to the latest version.
