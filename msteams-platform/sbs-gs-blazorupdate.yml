@@ -122,7 +122,7 @@ items:
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
     1. In the welcome screen, select **Set up E5 subscription**.
-    1. Set up your administrator account. After you finish, the following screen appears.
+    1. Setup your administrator account. After you finish, the following screen appears.
 
         :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
@@ -433,7 +433,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Illustration shows the option to create a new project.":::
 
-        The **Create a new project** page appears.
+        The **Create a new project** window appears.
 
     1. Select the project details.
 
@@ -447,7 +447,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template.":::
 
-          The **Configure your new project** page appears.
+          The **Configure your new project** window appears.
 
     1.  Configure the new project details.  
 
@@ -468,7 +468,7 @@ items:
 
           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Illustration shows the options to configure new project.":::
 
-          The **Create a new Teams application** page appears.  
+          The **Create a new Teams application** window appears.  
 
     1.  Select Teams app feature. 
 

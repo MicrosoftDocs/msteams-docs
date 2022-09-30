@@ -138,7 +138,7 @@ items:
 
         ![Add client secret to app](~/assets/images/Teams-task-module/clientsecret.png)
 
-    1. In the **Value** column, select **Copy to clipboard**.
+    1. In the **Value** column, select copy to clipboard icon to copy value details.
 
          ![Value of client secret](~/assets/images/Teams-task-module/clientvalue.png)
        
@@ -385,7 +385,7 @@ items:
 
           ![Trust Certificate](~/assets/images/Teams-task-module/certificate.png)
 
-          A webpage opens with a message **.Your bot is ready!**.
+          A webpage opens with a message **. Your bot is ready!**.
 
           ![App ready](~/assets/images/Teams-task-module/appisready.png) 
 
@@ -471,7 +471,7 @@ items:
        * **Password**
        * **Confirm Password**
 
-    1. Select **Sign-up**.
+    1. Select **Sign up**.
 
        ![Custom Form text](~/assets/images/Teams-task-module/custom-text.png)
 

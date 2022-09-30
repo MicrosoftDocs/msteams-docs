@@ -111,33 +111,35 @@ items:
 
         :::image type="content" source="./assets/images/bots/azure-bot_1.png" alt-text="Azure bot.":::
 
-       Create an Azure Bot page appears.
+       The **Create an Azure Bot** window appears.
 
         :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Screenshot showing the Azure bot page.":::
 
     1. Enter the following details to create Azure bot.
 
-        :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
-
         1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
     
         1. Select your **Subscription** and **Resource group** from the dropdown list.
-        
+
+          :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
+      
            You can also create a new resource group by the following steps:
 
-              1. To create new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+              1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
                    :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="Screenshot showing the Selection of new resource group.":::
+
+              1. Select the required location from **New resource group location** dropdown list.
 
                    :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
         1. Select **Type of App** as **Multi Tenant**.
 
-            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
-
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
            You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID** and **MSI resource ID**.
+
+            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
 
            > [!NOTE]
            > You can't create more than one bot with the same **Microsoft App ID**.
