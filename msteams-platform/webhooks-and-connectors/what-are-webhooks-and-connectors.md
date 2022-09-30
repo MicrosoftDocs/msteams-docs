@@ -1,7 +1,7 @@
 ---
 title: Webhooks and connectors
 author: clearab
-description: In this module, understand how webhooks and connectors can connect your web services to the Teams client.
+description: Learn how webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Learn Incoming, Outgoing Webhooks, and Office 365 Connectors.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear

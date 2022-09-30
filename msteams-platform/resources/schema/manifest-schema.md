@@ -1,6 +1,6 @@
 ---
 title: Manifest schema reference
-description: In this article, you'll have the manifest schema for Microsoft Teams reference, schema and sample full manifest.
+description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
 ---
@@ -629,7 +629,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
-|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, <https://notapplicable> to avoid an error response. |
+|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://notapplicable` to avoid an error response. |
 
 ## graphConnector
 
@@ -881,7 +881,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|   
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for users**
