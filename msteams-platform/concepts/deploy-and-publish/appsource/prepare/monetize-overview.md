@@ -1,6 +1,6 @@
 ---
 title: Monetize your app overview
-description: Learn how to monetize your Microsoft Teams app that includes choose a pricing model with Saas offer.
+description: Monetize your app. Supported pricing models are free trials, in-app purchases, and include a SaaS offer with your app.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
