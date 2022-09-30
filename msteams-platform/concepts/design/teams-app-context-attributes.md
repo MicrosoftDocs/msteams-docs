@@ -35,8 +35,8 @@ A Tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| &nbsp; | team.internalId & channel.id – ID of Team and Channel where tab is associated
-team.type.- different types of team in O365 for Education channel.channelType – indicates whether channel is private, regular or shared | chat.Id – chat ID if the tab is added to a Group Chat context | meeting.ID ID of the meeting used by tab when running in meeting context |
+| &nbsp; | team.internalId & channel.id – ID of Team and Channel where tab is associated team.type.- different types of team in O365 for Education channel.channelType – indicates whether channel is private, regular or shared | chat.Id – chat ID if the tab is added to a Group Chat context | meeting.ID ID of the meeting used by tab when running in meeting context |
+
 
 ## Bot
 
