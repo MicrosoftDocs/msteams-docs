@@ -100,9 +100,9 @@ The following steps help you to enable SSO in your application:
 <summary><b>Bot project
 </b></summary>
 
-#### Set up the AAD redirects
+#### Set up the Azure AD redirects
 
-1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When single sign-on flow is initiated with AAD, AAD redirects the user to the HTML pages.
+1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When single sign-on flow is initiated with Azure AD, it redirects the user to the HTML pages.
 1. Modify your `bot/src/index` to add the appropriate `restify` routes to HTML pages.
 
     ```ts
@@ -118,9 +118,9 @@ The following steps help you to enable SSO in your application:
 
 #### Update your app
 
-SSO command handler `ProfileSsoCommandHandler` uses an AAD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
+SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
 
-1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. `ProfileSsoCommandHandler` class is a SSO command handler to get user info with SSO token, follow this method and create your own SSO command handler.
+1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. `ProfileSsoCommandHandler` class is an SSO command handler to get user info with SSO token, follow this method and create your own SSO command handler.
 1. Open `package.json` file and ensure that teamsfx SDK version >= 1.2.0
 1. Execute the `npm install isomorphic-fetch --save` command in `bot` folder.
 1. For ts script, execute the `npm install copyfiles --save-dev` command in `bot` folder and replace following lines in `package.json`:
@@ -363,8 +363,8 @@ Press F5 to debug your application. Teams Toolkit uses the Azure AD manifest fil
 
 ## Customize Azure AD application registration
 
-The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of application registration. You can update the manifest as needed. If you need to include additional API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-To view your Azure AD application in Azure Portal, see [View Azure AD application in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
+The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of application registration. You can update the manifest as needed. If you need to include more API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
+To view your Azure AD application in Azure portal, see [View Azure AD application in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## SSO authentication concepts
 
