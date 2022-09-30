@@ -10,6 +10,7 @@ ms.author: lomeybur
 # Teams app permissions
 
 Microsoft Teams apps are managed in different places depending on app features.
+
 :::image type="content" source="../../assets/images/teams-app-permissions.png" alt-text="The screenshot describes the different Teams app permissions.":::
 
 ## Resource-specific consent
