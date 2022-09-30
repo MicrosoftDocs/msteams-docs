@@ -54,8 +54,8 @@ The following table lists the changes Teams Toolkit makes to your project:
    |--------|--------|-----------|
    |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.|
    |Modify|`manifest.template.json` under `template/appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
-   |Create|`auth/tab`|Reference code, auth redirect pages, and a `README.md` file are generated in this path for a tab project.|
-   |Create|`auth/bot`|Reference code, auth redirect pages, and a `README.md` file are generated in this path for a bot project.|
+   |Create|`auth/tab`|Reference code, auth redirect pages, and `README.md` files are generated in this path for a tab project.|
+   |Create|`auth/bot`|Reference code, auth redirect pages, and `README.md` files are generated in this path for a bot project.|
 
 > [!Note]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
