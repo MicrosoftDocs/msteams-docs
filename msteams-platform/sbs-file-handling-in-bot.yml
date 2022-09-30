@@ -82,7 +82,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource_1.png" alt-text="azure resource selection":::
        
-       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
+       To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
         :::image type="content" source="../msteams-platform/assets/images/bots/newresource.png" alt-text="selection of new resource location":::
 
@@ -343,7 +343,7 @@ items:
 
           * **Name** enter `name for your new connection setting. You can use the name in the settings of your bot service code`.
           * **Service Provider** select `Azure Active Directory V2`.
-          * **Client ID** your `Microsoft App ID`.
+          * **Client ID** you are `Microsoft App ID`.
           * **Client secret** `Value of the client secret ID`.
           * **Token Exchange URL** use the `Application ID URI` obtained previously while exposing API endpoint.
           * **Tenant ID** enter `common`.
@@ -485,7 +485,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received":::
       
         > [!NOTE]
-        >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
+        >  After the bot is installed in the personal scope, the user enters into a one-on-one chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1

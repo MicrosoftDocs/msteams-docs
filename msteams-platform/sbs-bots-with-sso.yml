@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without Single Sign-On (SSO) authentication. With SSO authentication methods, the users don't need to sign-in to the bot multiple times.
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign-in to the bot multiple times.
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -71,7 +71,7 @@ items:
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
-    1. Select **Set up E5 subscription** from the welcome screen.
+    1. Select **Setup E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
           :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
@@ -121,7 +121,7 @@ items:
 
         1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
     
-        1. Select your **Subscription** and **Resource group** from the dropdown list..
+        1. Select your **Subscription** and **Resource group** from the dropdown list.
         
            You can also create a new resource group by the following steps:
 
@@ -313,7 +313,7 @@ items:
 
     1. Select **Add a scope**.
 
-        :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Screenshot Screenshot showing adding a scope.":::
+        :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Screenshot showing adding a scope.":::
 
        The **Add a scope** window appears.
 
@@ -542,7 +542,7 @@ items:
     1. For mobile device, select **Accept** for **Permissions requested**.
 
         > [!NOTE]
-        > Now you have configured SSO with your bot app in mobile, and this configuration is the only time you'll have to give consent.
+        > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
 
         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot showing the mobile signed in to bot.":::
 

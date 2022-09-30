@@ -337,7 +337,7 @@ items:
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"MicrosoftAppId"` to bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to **Value** of **Client secret**.
          * Set `"MicrosoftAppTenantId"` as blank.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
@@ -350,8 +350,8 @@ items:
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
-         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
-         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
+         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with `WebAppDomain` name.
+         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
 
         :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/manifest_1.png" alt-text="Manifest":::
 

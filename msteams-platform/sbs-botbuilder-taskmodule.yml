@@ -84,18 +84,19 @@ items:
         
         ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create_1.png) 
     
-       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
+       To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
         ![New resource group location](~/assets/images/bots/newresource.png)
 
+    1. Select **MultiTenant** under Bot Type.
+
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can also select **Use existing app registration** and enter **App ID** and **App tenant Id** and **MSI resource ID**.
+       You can also select **Use existing app registration** and enter **App ID** and **App tenant ID** and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **MultiTenant** under Bot Type.
     1. Select **Review + create**.
 
         ![Microsoft App ID](~/assets/images/Teams-task-module/multi-tenant-option.png)
@@ -347,8 +348,8 @@ items:
     
     1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
 
-         * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
-         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `YourDeployedBotUrl.com` with `WebAppDomain` name.
+         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
 
         ![Manifest image2](~/assets/images/Teams-task-module/manifest_1.png)
 
@@ -384,7 +385,7 @@ items:
 
           ![Trust Certificate](~/assets/images/Teams-task-module/certificate.png)
 
-          A webpage opens with a message **Your bot is ready!**.
+          A webpage opens with a message **.Your bot is ready!**.
 
           ![App ready](~/assets/images/Teams-task-module/appisready.png) 
 
@@ -470,7 +471,7 @@ items:
        * **Password**
        * **Confirm Password**
 
-    1. Select **Sign up**.
+    1. Select **Sign-up**.
 
        ![Custom Form text](~/assets/images/Teams-task-module/custom-text.png)
 
