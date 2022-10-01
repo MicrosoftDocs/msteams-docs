@@ -79,9 +79,10 @@ items:
     1. Select your **Resource group** from the dropdown list. 
     
         :::image type="content" source="~/assets/images/sbs-messagingextension-action/create-azurebot.png" alt-text="Screenshot shows the steps to select resource Azure bot.":::
-            
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
+       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
+       For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+       
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
      
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
@@ -331,7 +332,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         :::image type="content" source="~/assets/images/sbs-messagingextension-action/appsettingslocation.png" alt-text="Screenshot shows the location of app settings.":::
         
@@ -344,8 +345,8 @@ items:
          * Set `"BaseUrl"` to the fully qualified domain name.
 
         :::image type="content" source="~/assets/images/sbs-messagingextension-action/json-file.png" alt-text="Screenshot shows the app settings.":::
-        
-    1. Navigate to `manifest.json` in cloned repository.
+
+    1. Go to `manifest.json` in cloned repository.
 
         :::image type="content" source="~/assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot shows the Manifest file location.":::
             
@@ -364,7 +365,7 @@ items:
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot shows the steps to open file in Visual Studio Code.":::
           
@@ -385,7 +386,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
+    Go to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -396,7 +397,7 @@ items:
 - title: Add Action Message Extension app to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, navigate to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
+    1. In your cloned repository, go to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -441,7 +442,7 @@ items:
        
     1. Select (...) from the overflow menu.
        
-    1. Navigate to **More actions**.
+    1. Go to **More actions**.
 
     1. Select **Share Message**.
 

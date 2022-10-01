@@ -77,10 +77,12 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
-    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
-        :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot.png" alt-text="Screenshot shows the steps to register the bot.":::
+    1. To create a new resource group, select the required location from **New resource group location** dropdown list.
+        For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
         
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot.png" alt-text="Screenshot shows the steps to register the bot.":::
+
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        Select **Use existing app registration** and enter **Existing app ID** and **Existing app password** for an existing application. Select **Create new Microsoft App ID** for a new application.
@@ -251,8 +253,8 @@ items:
          * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
 
            :::image type="content" source="~/assets/images/Tab-ME-SSO/add-client-application.png" alt-text="Screenshot shows the client id for Teams web app.":::
-               
-       The following image displays the **Client Id**:
+        
+       The following image displays the **Client ID**:
 
          :::image type="content" source="~/assets/images/Tab-ME-SSO/client-id-2.png" alt-text="Screenshot shows the client applications.":::
            
@@ -334,7 +336,7 @@ items:
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         :::image type="content" source="~/assets/images/Tab-ME-SSO/app-setting-folder.png" alt-text="Screenshot shows the app settings location.":::
         
@@ -353,7 +355,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Go to `manifest.json` in cloned repository.
 
         :::image type="content" source="~/assets/images/Tab-ME-SSO/folder-manifest.png" alt-text="Screenshot shows the manifest file location.":::
             
@@ -377,7 +379,7 @@ items:
     # [Visual Studio 2019](#tab/vs2019)
 
        1. Launch **Visual Studio 2019**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot shows the steps to open a file in Visual Studio.":::
           
@@ -401,7 +403,7 @@ items:
                   
     # [Command line](#tab/cli)
 
-    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
+    Go to the **csharp** folder in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -412,7 +414,7 @@ items:
 - title: Upload SSO App to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, navigate to **csharp > App SSO Sample > TeamsAppManifest**.
+    1. In your cloned repository, go to **csharp > App SSO Sample > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -461,8 +463,8 @@ items:
       1. Select your new SSO application.
 
           :::image type="content" source="~/assets/images/Tab-ME-SSO/recent-app-sso.png" alt-text="Screenshot shows the SSO app.":::
-          
-      1. Select **sign-in**.
+
+      1. Select **sign in**.
 
           :::image type="content" source="~/assets/images/Tab-ME-SSO/sign-in-sso1.png" alt-text="Screenshot shows the Sign in page.":::
           

@@ -89,9 +89,8 @@ items:
     
         :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Screenshot shows the steps to select resource azure bot.":::
     
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+       To create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
+       For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
           :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot shows the new resource group location.":::
 
@@ -336,7 +335,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="Screenshot shows the app settings location.":::
 
@@ -349,7 +348,7 @@ items:
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="Screenshot shows the app settings.":::
           
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Screenshot shows the manifest file location.":::
     
@@ -368,7 +367,7 @@ items:
     # [Visual Studio](#tab/vs)
 
        1. Open **Visual Studio**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Screenshot shows the steps to open file in Visual Studio Code.":::
 
@@ -389,7 +388,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
+    Go to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -400,7 +399,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
+    1. In your cloned repository, go to **csharp > Side Panel > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json

@@ -2,7 +2,7 @@
 title: Build search based message extension
 metadata:
   title: Build search based message extension
-  description: Learn how to build a search based message extension for Microsoft teams, which allows users to search external systems.
+  description: Learn how to build a search based message extension for Microsoft Teams, which allows users to search external systems.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022
@@ -79,17 +79,15 @@ items:
     1. Select your **Resource group** from the dropdown list.
     
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/review-plus-create.png" alt-text="Screenshot shows the steps to select resource azure bot.":::
-            
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
+    1.  To create a new resource group, select the required location from **New resource group location** dropdown list. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot shows the location of new resource group.":::
         
     1. Select **MultiTenant** under **Bot Type**.
 
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png" alt-text="Screenshot shows the Bot type.":::
-        
+
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
@@ -333,7 +331,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation.png" alt-text="Screenshot shows the App settings location.":::
         
@@ -346,8 +344,8 @@ items:
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettings.png" alt-text="Screenshot shows the App settings.":::
-        
-    1. Navigate to `manifest.json` in cloned repository.
+
+    1. Go to `manifest.json` in cloned repository.
 
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png" alt-text="Screenshot shows the manifest file location.":::
             
@@ -366,7 +364,7 @@ items:
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="Screenshot shows the steps to open a file in Visual Studio Code.":::
           
@@ -397,7 +395,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
+    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -408,7 +406,7 @@ items:
 - title: Add Search Message Extension app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, navigate to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
+    1. In your cloned repository, go to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
