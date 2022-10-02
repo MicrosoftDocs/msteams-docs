@@ -24,7 +24,7 @@ items:
 
     This step-by-step guide helps you to build notification bot with Teams Toolkit. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Screenshot shows the trigger output.":::
+      :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Screenshot shows the output of a notification.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -155,7 +155,7 @@ items:
     1. Select **HTTP Trigger Restify Server** as the trigger. 
     1. Select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot shows the steps to select the programming language.":::  
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot shows the steps to select a trigger.":::  
 
     1. Select **JavaScript** as the programming language.
 
@@ -163,7 +163,6 @@ items:
 
     1. Select **Default folder** to store your project root folder in default location.
 
-Doc-Improvement-Updating-alt-test-for-images9
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the steps to select Folder.":::
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
@@ -223,7 +222,6 @@ Doc-Improvement-Updating-alt-test-for-images9
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-Doc-Improvement-Updating-alt-test-for-images9
     :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure.png" alt-text="Screenshot shows the structure tab.":::
 
     :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure1.png" alt-text="structure tab":::
@@ -410,7 +408,6 @@ Doc-Improvement-Updating-alt-test-for-images9
 
     1. Select **Provision**.
 
-Doc-Improvement-Updating-alt-test-for-images9
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot shows the provisioning dialog.":::
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
