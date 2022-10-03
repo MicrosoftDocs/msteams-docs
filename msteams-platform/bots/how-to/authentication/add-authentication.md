@@ -279,12 +279,12 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration.
+1. In the Solution Explorer, go to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration.
 
 # [JavaScript](#tab/node-js)
 
 1. Clone [node-auth-sample][teams-auth-bot-js].
-1. In a console, navigate to the project: </br></br>
+1. In a console, go to the project: </br></br>
 `cd samples/javascript_nodejs/46.teams`  
 1. Install modules</br></br>
 `npm install`
@@ -330,7 +330,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 1. Select **Create**.
 1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
-1. In your browser, navigate to the [**Azure portal**][azure-portal].
+1. In your browser, go to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="This screenshot shows how to check resource group and bot.":::
@@ -404,7 +404,7 @@ This releases the user token, and the bot won't be able to act on your behalf un
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. In your browser, navigate to the [**Azure portal**][azure-portal].
+1. In your browser, go to the [**Azure portal**][azure-portal].
 1. Find your resource group.
 1. Select the resource link. The resource page is displayed.
 1. In the resource page, select **Test in Web Chat**. The bot starts and displays the predefined greetings.
@@ -432,14 +432,14 @@ and when for these, and just reference that from here, along with the set of ste
 ## Install and test the bot in Teams
 
 1. In your bot project, ensure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
-1. In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.json` by assigning the following values:
+1. In Solution Explorer, go to the `TeamsAppManifest` folder. Edit `manifest.json` by assigning the following values:
     1. Ensure that the **bot App ID** you received at the time of the bot registration is assigned to `id` and `botId`.
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
 1. Select and **zip** the `manifest.json`, `outline.png`, and `color.png` files.
 1. Open **Microsoft Teams**.
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
-1. Navigate to the `TeamsAppManifest` folder and upload the zipped manifest.
+1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
 The following wizard is displayed:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="This screenshot shows an example of the bot after it is uploaded into Teams.":::
@@ -466,7 +466,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
 1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Teams.
 1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So let's perform these steps:
-    1. In your browser, navigate to the [**Azure portal**][azure-portal].
+    1. In your browser, go to the [**Azure portal**][azure-portal].
     1. Select your **Bot Registration**.
     1. In the left panel, select **Settings**.
     1. In the right panel, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.

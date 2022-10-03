@@ -92,7 +92,7 @@ In Microsoft Teams, a message extension consists of a web service that you host 
 
 For users to interact with your message extension from Outlook, you'll need to add an Outlook channel to your bot:
 
-1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), navigate to your bot resource.
+1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), go to your bot resource.
 
 1. From *Settings*, select **Channels**.
 
