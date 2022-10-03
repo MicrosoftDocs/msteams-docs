@@ -423,7 +423,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
+1. In **App features**, select **Group and channel app**. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
@@ -644,7 +644,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
+1. In **App features**, select **Group and channel app**. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
