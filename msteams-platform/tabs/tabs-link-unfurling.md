@@ -17,26 +17,28 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 Stage View is a full screen UI component that you can invoke to surface your app content. This full screen canvas enable users to have a focused surface to engage with your app. Stage View can be invoked from either an adaptive card or a deep link, in both chats and channels. After your app content has been unfurled in Stage View, users can choose to pin the content as a tab.
 
+### Advantages of Stage View
+
+Stage View helps to provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context. Users can pin the content to the chat or channel for future quick access that leads to a higher user engagement with your app.
+
+Stage View opens as a model, providing users a full canvas to engage with the content.
+
+[![Open a stage from Adaptive Card](~/assets/images/tab-images/stage-view.png)](~/assets/images/tab-images/stage-view.png#lightbox)
+
 ## Collaborative Stage View
 
-Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. When a user opens Stage View from an Adaptive Card within a group chat, it opens the app content in a new Teams window instead of a modal. The Collaborative Stage View also opens an accompanying side-panel chat that shows users the group chat from which they invoked the Collaborative Stage View. This gives users the context to continue collaborating directly within their new window. Collaborative Stage View can only be invoked from an adaptive card in group chats. When invoked from channels, Teams web client, or mobile, the Collaborative Stage View experience fall back to the full screen Stage View modal.
+Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. When a user opens Stage View from an Adaptive Card within a group chat, it opens the app content in a new Teams window instead of a modal. The Collaborative Stage View also opens an accompanying side-panel chat that shows users the group chat from which they invoked the Collaborative Stage View. This gives users the context to continue collaborating directly within their new window.
+
+Collaborative Stage View can only be invoked from an adaptive card in group chats. When invoked from channels, Teams web client, or mobile, the Collaborative Stage View experience fall back to the full screen Stage View modal.
 
 |Feature|Notes|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|-----------|
 |Collaborative Stage View|Invoke from Adaptive Card action|**Chat**: Opens Teams pop-out window with chat pane. <br> **Channel**: Opens Stage View modal.|Opens Stage View modal|Opens Stage View modal|
 |Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not an Adaptive Card.|Opens Stage View modal|Opens Stage View modal|Opens Stage View modal|
 
-## Advantages of Stage View
-
-Stage View helps to provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context. Users can pin the content to the chat or channel for future quick access that leads to a higher user engagement with your app.
-
-## Advantages of Collaborative Stage View
+### Advantages of Collaborative Stage View
 
 Collaborative Stage View helps to provide a more seamless, multi-task experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from the same window. The ability to engage with the content and conversation about the same content leads to higher user engagement with your app.
-
-Stage View opens as a model, providing users a full canvas to engage with the content.
-
-[![Open a stage from Adaptive Card](~/assets/images/tab-images/stage-view.png)](~/assets/images/tab-images/stage-view.png#lightbox)
 
 Collaborative Stage View opens in a new Teams window with the originating chat in the side panel.
 
