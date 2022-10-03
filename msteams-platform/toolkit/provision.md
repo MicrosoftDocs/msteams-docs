@@ -538,7 +538,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template, that sati
 
 You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. You can perform in the following ways:
 
-#### Use an existing Azure AD app for your bot
+#### Use an existing Azure AD app for your Teams app
 
 You can add the following configuration snippet `.fx/configs/config.{env}.json` to use an Azure AD app created by you for your Teams app. To create an Azure AD app, follow the link <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -556,7 +556,7 @@ After adding the snippet, add your client secret to the related environment vari
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
 
-#### Use an existing Azure AD app for your Teams app
+#### Use an existing Azure AD app for your bot
 
 You can add the following configuration snippet to `.fx/configs/config.{env}.json` to use the Azure AD app created for your bot:
 
