@@ -89,10 +89,10 @@ Meeting Apps include tabs that work pre and post meetings, meeting side panel th
 
 - **User Information**: TeamsInfo.GetMeetingParticipantAsync provides information about participants in the meeting:
 
-- user.aadObjectId: AAD ID of the participant
-- user.tenantId: Tenant ID of the participant
-- meeting.role: Role in meeting, that is, Organizer, Presenter and Attendee
-- organizer.tenantId: Organizers Tenant ID
+  - user.aadObjectId: AAD ID of the participant
+  - user.tenantId: Tenant ID of the participant
+  - meeting.role: Role in meeting, that is, Organizer, Presenter, and Attendee
+  - organizer.tenantId: Organizers Tenant ID
 
 ## UI constructs
 
