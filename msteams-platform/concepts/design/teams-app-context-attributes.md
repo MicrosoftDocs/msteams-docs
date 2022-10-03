@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Plan for Teams app context and Attributes
 
-Developing an app in Teams gives you access to certain context and user data unique to Teams and Microsoft 365 services. While reporting above Telemetry, combining it with these attributes gives more insights, useful context around events that help in decision making.
+Developing an app in Teams gives you access to certain context and user data unique to Teams and Microsoft 365 services. While your app reports above Telemetry, combining it with these attributes gives more insights, useful context around events that help in decision making.
 
 Each platform capability or extensibility point exposes different set of user properties and Teams context. As you build your telemetry monitoring, make just use of combination of the attributes given in the following sections.
 
@@ -40,7 +40,7 @@ A Tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 ## Bot
 
-Bot is a conversational interface which has a publicly accessible web service hosting the business logic. Bot’s telemetry instrumentation done in this web service may make use of the following attributes:
+Bot is a conversational interface that has a publicly accessible web service hosting the business logic. Bot’s telemetry instrumentation done in this web service may make use of the following attributes:
 
 - **App information**:
 
@@ -79,7 +79,7 @@ Search Messaging extensions allow to search external system and bring results in
 
 ## Meeting apps
 
-Meeting Apps include tabs that work pre and post meetings, meeting side panel which are iframed web pages and in-meeting notification.
+Meeting Apps include tabs that work pre and post meetings, meeting side panel that are iframed web pages and in-meeting notification.
 
 - **MeetingTab**: when run in context of meeting, tabs get the meeting ID. All context information for tabs from earlier section on ‘Tab’ apply for meeting tabs too.
 - **Meeting Information**: TeamsInfo.GetMeetingInfoAsync API provides meeting specific details:
@@ -96,7 +96,7 @@ Meeting Apps include tabs that work pre and post meetings, meeting side panel wh
 
 ## UI constructs
 
-- **Cards**: Teams supports cards to be sent as messages across scopes. Cards are client side UI containers and can be sent by a bot or via Messaging extensions. Cards support certain actions which are handled by the bot service. Instrumenting may happen in these events
+- **Cards**: Teams supports cards to be sent as messages across scopes. Cards are client side UI containers and can be sent by a bot or via Messaging extensions. Cards support certain actions, which are handled by the bot service. Instrumenting may happen in these events
 
   - openURL: Instrumenting openURL calls will require an intermediary web page to be setup with instrumentation logic and which redirects to the destination URL.
   - messageBack: Sends a message and payload to the bot with metadata:
