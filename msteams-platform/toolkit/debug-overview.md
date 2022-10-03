@@ -114,7 +114,8 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <summary><b>Customize npm install args</b></summary>
 
 * In `.fx/configs/tasks.json`, set npmInstallArgs under **"Install npm packages"**.
-  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
+  
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
 
 </details>
 
