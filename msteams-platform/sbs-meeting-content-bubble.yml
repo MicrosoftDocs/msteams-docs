@@ -89,10 +89,8 @@ items:
      
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png" alt-text="Create resource Azure bot":::
 
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
-
+       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
+       
          :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Create resource Azure bot":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
@@ -339,7 +337,7 @@ items:
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png" alt-text="App settings location":::
 
@@ -354,7 +352,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
@@ -373,7 +371,7 @@ items:
     **To build and run the service using Visual Studio**
 
        1. Open **Visual Studio**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile.png" alt-text="Open file":::
 
@@ -391,7 +389,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
+    1. In your cloned repository, go to **csharp > Resources > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
