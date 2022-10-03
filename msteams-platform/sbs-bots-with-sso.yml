@@ -460,7 +460,7 @@ items:
 
     1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
     
-    1. Navigate to **File** > **Open** > **Project/Solution**.
+    1. Go to **File** > **Open** > **Project/Solution**.
 
         :::image type="content" source="~/assets/images/bots/project-solution.png" alt-text="Screenshot showing the navigation to project/solution.":::
 
@@ -515,7 +515,7 @@ items:
 
     1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
     
-    1. In your cloned repository, navigate to **bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
+    1. In your cloned repository, go to **bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
     
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json

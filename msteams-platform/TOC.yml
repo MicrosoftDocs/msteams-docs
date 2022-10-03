@@ -649,6 +649,9 @@
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, store listing
+    - name: Update Apple App Store Connect Team ID on Partner Center
+      href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
+      displayName: Enable users to install your app on Teams iOS Platform.
     - name: Submit your app
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if your Teams store submission fails
@@ -656,7 +659,7 @@
       displayName: Resubmit your app, multiple submission failures, Microsoft concierge
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-      displayName: Promote your app, stop selling, stop app distribution
+      displayName: Promote your app, stop selling, stop app distribution, analyze app usage
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data, 
