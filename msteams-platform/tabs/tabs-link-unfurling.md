@@ -19,7 +19,7 @@ Stage View is a full screen UI component that you can invoke to surface your app
 
 ## Collaborative Stage View
 
-Collaborative Stage View is an enhancement to Stage View, that allows your app content to exist in multiple Teams windows. when a user opens Stage View from an Adaptive Card within a group chat, it opens the app content in a new Teams window instead of a modal. The Collaborative Stage View also opens an accompanying side-panel chat that shows users the group chat from which they invoked the Collaborative Stage View. This gives users the context to continue collaborating directly within their new window. Collaborative Stage View can only be invoked from an adaptive card in group chats. When invoked from channels, Teams web client, or mobile, the Collaborative Stage View experience fallback to the full screen Stage View modal.
+Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. When a user opens Stage View from an Adaptive Card within a group chat, it opens the app content in a new Teams window instead of a modal. The Collaborative Stage View also opens an accompanying side-panel chat that shows users the group chat from which they invoked the Collaborative Stage View. This gives users the context to continue collaborating directly within their new window. Collaborative Stage View can only be invoked from an adaptive card in group chats. When invoked from channels, Teams web client, or mobile, the Collaborative Stage View experience fall back to the full screen Stage View modal.
 
 |Feature|Notes|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|-----------|
@@ -28,11 +28,11 @@ Collaborative Stage View is an enhancement to Stage View, that allows your app c
 
 ## Advantages of Stage View
 
-Stage View helps to provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context. Users can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
+Stage View helps to provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context. Users can pin the content to the chat or channel for future quick access that leads to a higher user engagement with your app.
 
 ## Advantages of Collaborative Stage View
 
-Collaborative Stage View helps to provide a more seamless, multi-task experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from the same window. The ability to engage with the content and conversation about the same content, leads to higher user engagement with your app.
+Collaborative Stage View helps to provide a more seamless, multi-task experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from the same window. The ability to engage with the content and conversation about the same content leads to higher user engagement with your app.
 
 Stage View opens as a model, providing users a full canvas to engage with the content.
 
@@ -59,7 +59,7 @@ You can invoke Stage View in the following  ways:
 
 When the user enters an app content URL in a chat, the bot is invoked, and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the users client (refer table in the [Collaborative Stage View](#collaborative-stage-view)), this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from an Adaptive Card in a group or meeting chat (and not from a deep link), a new window is opened.
 
-The following images display a stage opened from an Adaptive Card:
+The following images display a Collaborative Stage View opened from an Adaptive Card:
 
 [![Open a stage example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
@@ -109,7 +109,7 @@ The following process helps to invoke Stage View:
 
     * The user shares a URL in a chat.
     * This URL sends an invoke request to the bot (request type: composeExtension/queryLink).
-    * The bot returns the Adaptive Card JSON with tab or tabInfoAction in it.
+    * The bot returns the Adaptive Card JSON with tab or `tabInfoAction` in it.
     * Adaptive Card JSON is rendered.
 
 1. **Opening Stage View**
@@ -163,7 +163,7 @@ Encoded
 >
 > * The `name` is optional in deep link. If not included, the app name replaces it.
 > * The deep link can also be passed through an `OpenURL` action.
-> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
+> * When you launch a Stage View from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Tab information property
 
