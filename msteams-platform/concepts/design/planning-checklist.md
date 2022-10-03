@@ -1,8 +1,7 @@
 ---
 title: Questions to help plan Teams app development
 author: heath-hamilton
-description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development.
-ms.topic: conceptual
+description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle. Plan to host your Teams app.
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---

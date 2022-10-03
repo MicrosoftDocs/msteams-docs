@@ -1,6 +1,6 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
-description: In this article, you'll know about the prerequisites required to run preview builds for extending your Teams apps across Microsoft 365.
+description: Requirements to set up your dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Microsoft Teams and Microsoft Office applications.
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
@@ -64,6 +64,8 @@ For more information on Office 365 release options, see [Set up the Standard or 
 
 ## Install Office apps in your test environment
 
+### Desktop
+
 You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Office 365 Beta Channel build.
 
 To install Office 365 Beta Channel applications in your test environment:
@@ -71,18 +73,39 @@ To install Office 365 Beta Channel applications in your test environment:
 1. Sign in to your test environment with your test tenant credentials.
 1. Download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor and update the *Channel* value to `BetaChannel`.
-1. Open Command Prompt and navigate to the local folder path.
+1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you are running a Beta Channel build.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Go to 'About Outlook' from your Office Account to verify you're running a Beta Channel build.":::
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Search for 'webview' under 'Apps and features' in your Windows Settings":::
 
     If it's not listed, install [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) to your test environment.
+
+### Mobile
+
+You can preview Teams personal tabs running in Office app for Android by joining the beta program.
+
+To install the latest Office app beta, build to your physical Android device, or Android emulator:
+
+1. Ensure you use a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
+1. Launch the **Play Store** on your Android device,.
+1. Search for office and select **Microsoft Office: Edit & Share**.
+1. Select the **Install** button.
+
+    :::image type="content" source="images/office-android-install.png" alt-text="screenshot of Microsoft Office: Edit & Share app in Google Play Store":::
+
+1. Select **Join** under **Join the beta section** after the installation completes.
+
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="screenshot of Join the beta screen":::
+
+1. Launch the Office app and sign in with your test tenant credentials.
+1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+2. Ensure you use Office app version 16.0.15726.20000 or higher for Android.
 
 ## Switch to the Developer Preview version of Teams
 
