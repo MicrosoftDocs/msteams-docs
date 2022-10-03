@@ -61,13 +61,17 @@
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan analytics
-    href: concepts/design/plan-analytics.md
-  - name: Plan app instrumentation and telemetry capture
     items:
-    - name: Overview
-      href: concepts/design/teams-app-telemetry.md
-    - name: Teams app context and attributes
-      href: concepts/design/teams-app-context-attributes.md
+      - name: Analytics for Teams app
+        href: concepts/design/plan-analytics.md
+      - name: Plan app instrumentation and telemetry capture
+        items:
+      - name: Overview
+        href: concepts/design/teams-app-telemetry.md
+      - name: Teams app context and attributes
+        href: concepts/design/teams-app-context-attributes.md
+      - name: Add analytics to Teams app
+        href: concepts/design/add-analytics.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview
