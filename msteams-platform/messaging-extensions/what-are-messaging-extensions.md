@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: In this module, learn messaging extensions and scenarios where message extensions are used on the Microsoft Teams platform
+description: Learn how message extensions are used, it's types, and scenarios where it's used on the Microsoft Teams platform. Samples on action and searched based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -243,3 +243,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [Define search message extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Create a message extension](../build-your-first-app/build-messaging-extension.md)
+* [Universal Actions for search based messaging extensions](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

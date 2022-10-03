@@ -1,7 +1,7 @@
 ---
 title: Create conversation bots for channel or group chat
 author: surbhigupta
-description: Learn how to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines and more.
+description: Learn how to create new conversation threads, work on mentions, and send message on install. Explore Teams file upload sample (.NET, JavaScript, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -24,7 +24,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
 <br>
 
 ## Design guidelines
