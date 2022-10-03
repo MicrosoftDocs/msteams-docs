@@ -74,7 +74,7 @@ Search Messaging extensions allow to search external system and bring results in
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| Not Applicable | conversation.conversationType is “channel” channelData.channel gives channel ID and channelData.team gives Team ID | `conversation.conversationType` is “groupChat” and conversation.`id` is the ID of the Group Chat | `conversation.id` contains Meeting Chat ID; `channelData.meeting.ID` gives meeting ID |
+| Not Applicable | `conversation.conversationType` is “channel”, `channelData.channel` gives channel ID, and `channelData.team` gives Team ID | `conversation.conversationType` is “groupChat” and `conversation.id` is the ID of the Group Chat | `conversation.id` contains Meeting Chat ID; `channelData.meeting.ID` gives meeting ID |
 
 ## Meeting apps
 
@@ -110,9 +110,9 @@ Meeting Apps include tabs that work pre and post meetings, meeting side panel th
     - `entities`: provides locale, platform, timezone and client information
     - `channelData`: provides channel or Team ID, tenant ID
 
-  - signin: Initiates OAuth flow via bot. Include instrumentation of authentication event to capture this event.
+  - `signin`: Initiates OAuth flow via bot. Include instrumentation of authentication event to capture this event.
 
-- **Task Module**: Task modules are modal popup experiences which can contain iframed web page or an Adaptive card. TaskInfo object provides metadata about task module including its width, height,  information on whether it contains a card or web page.
+- **Task Module**: Task modules are modal popup experiences which can contain iframed web page or an Adaptive card. `TaskInfo` object provides metadata about task module including its width, height,  information on whether it contains a card or web page.
 
   - If the task module contains an iframed web page, include telemetry in the web page to track user action. In addition, it will contain context the same as a tab context.
   - If the task module contains adaptive card: all card related telemetry would work when the Adaptive card is inside a task module.
