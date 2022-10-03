@@ -124,7 +124,7 @@ To initiate actions from a message extension, set the `type` parameter to `actio
 
 ### Initiate actions from messages
 
-In addition to initiating actions from the compose message area, you can also use your message extension to initiate an action from a message. This allows you to send the message contents to your bot for processing and optionally reply to that message with a response using the method that is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access message extension from the overflow `...` menu and then selecting `Take action` as in the following image:
+You can initiate actions from the compose message area and also use your message extension to initiate an action from a message, which allows you to send the message contents to your bot for processing. Optionally, you can reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access message extension from the overflow `...` menu and then selecting `Take action` as in the following image:
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -304,7 +304,7 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 ### Request to install your conversational bot
 
-If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module. This can be useful in situations where you need to get more context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module to get more context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
 To facilitate this flow, when your message extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
