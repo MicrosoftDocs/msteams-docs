@@ -192,7 +192,7 @@ gulp ngrok-serve
 ### Upload your application to Teams
 
 1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps** and **Upload a custom app**.
+1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab":::
@@ -423,7 +423,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
+1. In **App features**, select **Group and channel app**. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
@@ -644,7 +644,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
+1. In **App features**, select **Group and channel app**. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
