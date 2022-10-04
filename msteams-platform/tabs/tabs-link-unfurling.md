@@ -61,7 +61,7 @@ You can invoke Stage View in the following  ways:
 
 ## Invoke Collaborative Stage View from Adaptive Cards
 
-When the user enters an app content URL in a chat, the bot is invoked, and returns [Adaptive Cards](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the users client (see, [[Collaborative Stage View](#collaborative-stage-view)](#collaborative-stage-view)), this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
+When the user enters an app content URL in a chat, the bot is invoked, and returns [Adaptive Cards](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the users client (see, [Collaborative Stage View](#collaborative-stage-view), this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
 
 The following images display a Collaborative Stage View opened from Adaptive Cards:
 
