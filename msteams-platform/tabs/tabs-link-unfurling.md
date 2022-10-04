@@ -11,9 +11,7 @@ ms.localizationpriority: high
 
 Stage View is a user interface (UI) component that allows you to render content either a full-sized modal within Teams or as a new window. Stage View also allows users to continue  conversation side-by-side in group chat, and helps to maintain their context and stay productive within their new window experience.
 
-> [!NOTE]
->
-> To use Stage View, developers must enable 'Tab Link Unfurling' for their app. If it is already available, this Stage View update is free, and requires no additional developer investment.
+To use Stage View, developers must enable 'Tab Link Unfurling' for their app. If it's already enable, Stage View update is available, and requires no additional developer investment.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
