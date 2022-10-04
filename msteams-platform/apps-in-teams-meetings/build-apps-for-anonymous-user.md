@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-You can test the experience delivered to anonymous users by selecting the meeting join url present in the meeting invite and joining the meeting via incognito window.
+You can test the experience delivered to anonymous users by selecting the meeting join URL present in the meeting invite and joining the meeting via private window.
 
 > [!NOTE]
 >
@@ -21,6 +21,9 @@ You can test the experience delivered to anonymous users by selecting the meetin
 
 Teams admin can use the admin portal to enable or disable anonymous user app interaction for entire tenant. This setting is enabled by default, unless overridden by the admin. You must enable this to support anonymous user interaction with apps in meetings, [Allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
+> [!NOTE]
+> Teams Client and Bot APIs set the tenantId field from meeting organizer tenant Id for anonymous user.
+
 ## In-Meeting getContext from Teams client SDK
 
 Apps receive the following info pertaining to the anonymous user through the Teams Client SDK `getContext API` when the shared app stage is loaded. Apps can recognize the users as anonymous by the **Unknown** userLicenseType.
@@ -30,7 +33,7 @@ Apps receive the following info pertaining to the anonymous user through the Tea
 "userLicenseType": "Unknown",
 "loginHint": "8:teamsvisitor:<<ID>>",
 "userPrincipalName": "8:teamsvisitor:<<ID>>",
-"tid": "<<User GUID>>"
+"tid": "<<GUID>>"
 ```
 
 ## Payloads of Bot API for anonymous users in a meeting chat
@@ -146,10 +149,12 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
 
 > [!NOTE]
 >
-> * When an anonymous user is added to a meeting, `membersRemoved` payload object doesn't have `aadObjectId` field.
-> * When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
+> * When an anonymous user is removed from a meeting, `membersRemoved` payload object doesn't have `aadObjectId` field.
+> * When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
 
 **Create Conversation API**
+
+Create conversation API is not supported for anonymous users. The anonymous user receives the following error payload:
 
 ```csharp
 { 

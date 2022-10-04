@@ -45,9 +45,9 @@ The following three APIs that are particularly enabling the above scenarios:
 
 |Method| Description| Source|
 |---|---|----|
-|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
-|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
+|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 
 ## Share app content to stage API
 
@@ -62,8 +62,8 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
         "permissions": { 
         "resourceSpecific": [
         { 
-        "name": "MeetingStage.Write.Chat",
-        "type": "Delegated"
+         "name": "MeetingStage.Write.Chat",
+         "type": "Delegated"
         }
         ]
     }
@@ -123,7 +123,7 @@ The following table includes the query parameter:
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
     if (result.isAppSharing) {
-        // Indicates app has permission to share contents to meeting stage.
+        // Indicates if app is sharing content on the meeting stage.
     }
 });
 ```
@@ -183,6 +183,7 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have permissions to allow share to stage.|
 
 ## Code sample
@@ -191,6 +192,7 @@ The following table provides the response codes:
 |----------------|-----------------|--------------|----------------|
 |Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
 ## See also
 

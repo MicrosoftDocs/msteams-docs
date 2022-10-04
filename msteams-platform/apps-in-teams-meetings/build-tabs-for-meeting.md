@@ -166,7 +166,7 @@ To target just the in-meeting side panel experience: 
 
 ### Advanced Tab SDK APIs
 
-The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs using Javascript. Use latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?branch=pr-en-us-6722&tabs=javascript%2Cmanifest-teams-toolkit).
+The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs using Javascript. Use latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
 
 ### Frame context
 
