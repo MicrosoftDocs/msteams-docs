@@ -31,9 +31,7 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 1. For a brainstorming or whiteboard app, a user may want to share a specific board in a meeting vs the entire app with all the boards.  
 
-1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient vs sharing the entire app with all the patients' records or results etc.  
-
-1. For an app like Arcade, the user would want to share individual games to the meeting stage vs the entire Arcade app.  
+1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient vs sharing the entire app with all the patients' records or results etc.
 
 1. A user can want to share content from a single content provider at a time (for example, YouTube, TikTok, Disney, etc) vs sharing the entire an entire video catalog onto stage.
 
