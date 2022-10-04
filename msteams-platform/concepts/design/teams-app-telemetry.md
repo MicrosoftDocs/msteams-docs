@@ -113,19 +113,19 @@ Engagement intends to measure the intensity and depth of interaction between use
 
 **Goal**: Improve product stickiness by way of accruing benefits the more a user engages with the app.
 
-User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits, the more they use a product and their switching costs are high. E.g. When a user starts adding tasks, action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
+User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits, the more they use a product and their switching costs are high. For example, when a user starts adding tasks, action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
 
 > [!TIP]
 >
-> -  Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
+> - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
-> - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, Creating a ticket, creating a new post, a project board etc.
-> - Apps used multiple times (>5 times) in a  month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
+> - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, etc.
+> - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
 
 | Telemetry | Comments |
 | --- | --- |
-| • New User Retention cohort analysis (week over week, month over month) | • Drill down to a tenant level <br> • Retention breakdown by client – Teams Desktop, Web & Mobile App, Non-Teams Web App |
-| • User churn in 14 days, 28 days, 56 days, 72 days | • Drill down to a tenant level <br> • Platform Capability and feature drill down <br> • Churn breakdown by client – Teams Desktop, Web & Mobile App, Non-Teams Web App |
+| • New User Retention cohort analysis (week over week, month over month) | • Drill down to a tenant level <br> • Retention breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
+| • User churn in 14 days, 28 days, 56 days, 72 days | • Drill down to a tenant level <br> • Platform Capability and feature drill down <br> • Churn breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
 | • #, % users using app in more than 1 scope | • Goal would be to encourage use of app across different scopes |
 | • #, % users using more than 1 capability of the app | • Goal would be to encourage users to use different platform capabilities supported by app |
 | • Mean time between [Core Action 1,2..] per user | • Report at tenant level <br> • Goal would be to reduce this time to promote recurring usage |
@@ -140,7 +140,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 
 > [!TIP]
 >
-> - Happiness should be measured in context at right time and contextualized to user. Sending a generic survey on a fixed date might not give accurate happiness measurement as users might not remember their experience. 
+> - Happiness should be measured in context at right time and contextualized to user. Sending a generic survey on a fixed date might not give accurate happiness measurement as users might not remember their experience.
 > - Integrate product driven feedback capture, rating mechanisms for users to easily submit feedback and rating in the flow, after completing Core Action.
 > - Provide adequate product support, helpdesk for users to get their queries clarified, report bugs and feedback.
 
