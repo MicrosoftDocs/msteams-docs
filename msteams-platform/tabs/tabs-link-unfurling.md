@@ -33,14 +33,14 @@ Stage View helps to provide a more seamless experience of viewing content in Tea
 |:-----------|:-----------|
 |Stage View is helpful to display the rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the full-screen canvas. Elevating your content with Collaborative Stage View also allows you to enable rich multi-tasking scenarios for users. It allows users to engage with the content while also continuing to collaborate. The rich experience of the main Teams window can be surfaced for your app in its own dedicated window.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
 
-## Invoke Stage View
+### Invoke Stage View
 
 You can invoke Stage View in the following ways:
 
 * [Invoke Stage View from Adaptive Card](#invoke-stage-view-from-adaptive-card)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
-### Invoke Stage View from Adaptive Card
+#### Invoke Stage View from Adaptive Card
 
 When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. After a stage is launched and the `tabInfo` is provided, you can add the ability to pin the stage as a tab.
 
@@ -50,7 +50,7 @@ The following images display a stage opened from an Adaptive Card:
 
 [![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
-### Example
+##### Example
 
 Following is the code to open a stage from an Adaptive Card:
 
@@ -110,19 +110,18 @@ The following process helps to invoke Stage View:
 > [!NOTE]
 >
 > * On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.<br>
-> * The multi-window Collaborative Stage View can be invoked from the group chats only. It is not available in the Teams web client or mobile. In these scenarios, the Stage View experience fall back to showing users the content in an interstitial modal.
 
-### Invoke Stage View through deep link
+#### Invoke Stage View through deep link
 
 To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience (and not a Teams window). While it's possible for the deep link to be passed through an `OpenURL` Adaptive Card action, the Stage View deep link is intended for the tab canvas. For Adaptive Cards, we encourage developers to follow the [example of JSON Adaptive Card](#json-adaptive-card-example).
 
-### Syntax
+##### Syntax
 
 Following is the deep link syntax:
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
-### Examples
+##### Examples
 
 When a user enters a URL, it's unfurled into Adaptive Cards.
 
@@ -221,6 +220,10 @@ The `invoke` request type must be `composeExtension/queryLink`.
 > * Passing a Stage View deep link into Adaptive Cards is not opened in the Collaborative Stage View; Stage View deep link always open to the Stage View modal.
 > * To open Stage View, ensure the URL of the content is within the list of `validDomains` in your app manifest.
 > * For more information on building cards, see [Cards](../task-modules-and-cards/what-are-cards.md).
+
+> [!NOTE]
+>
+> * The multi-window Collaborative Stage View can be invoked from the group chats only. It is not available in the Teams web client or mobile. In these scenarios, the Stage View experience fall back to showing users the content in an interstitial modal.
 
 ## Tab information property
 
