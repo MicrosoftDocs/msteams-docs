@@ -189,7 +189,7 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
+        foreach (var conversationReference in _conversationReferences.Values) // Loop through all conversation references,you may need to update to get to it from your database.
         {
             var newReference = new ConversationReference()
         {
