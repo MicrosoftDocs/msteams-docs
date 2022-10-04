@@ -13,10 +13,10 @@ As a developer you build an app for millions of Microsoft Teams users to achieve
 
 You'll also be interested in monitoring many data points, such as:
 
-- Who is interested in your app
-- Which users and organizations are using your app
-- How are users engaging with your app
-- Which users have churned away after using your app for some time and
+- Who is interested in your app?
+- Which users and organizations are using your app?
+- How are users engaging with your app?
+- Which users have churned away after using your app for some time?
 
 This information helps you analyze the data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
 
