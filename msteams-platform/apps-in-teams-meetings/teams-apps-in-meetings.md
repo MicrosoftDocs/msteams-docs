@@ -32,8 +32,6 @@ Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) and e
 
 > [!Note]
 >
-> * Currently, adding an app is not supported in mobile. However, a user can view the app and share the app to stage from mobile.
->
 > * Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 >
 > * Currently app experiences are not supported in Teams instant channel meetings.
@@ -43,6 +41,10 @@ The following illustration gives you an idea of the meeting app extensibility fe
 ![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
+
+> [!Note]
+>
+> Meeting apps (side panel, meeting stage) are supported in Teams desktop client. Where as in Teams web client it is supported only when the developer preview is enabled.
 
 * **Extend meeting app**: Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
 * **Configure apps for meetings**: To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
