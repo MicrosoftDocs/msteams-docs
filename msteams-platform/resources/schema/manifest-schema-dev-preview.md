@@ -22,7 +22,6 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -295,12 +294,6 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 **Required** &ndash; Microsoft app ID
 
 The unique Microsoft-generated identifier for this app. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
-
-## packageName
-
-**Required** &ndash; String
-
-A unique identifier for this app in reverse domain notation; for example, com.example.myapp.
 
 ## developer
 
