@@ -15,7 +15,7 @@ Each platform capability or extensibility point exposes different set of user pr
 
 ## Tab
 
-A Tab is Teams aware web page iframed in Teams. In addition to instrumentation that you might have included in your app’s web page, Teams tab provides more context information including:
+A tab is Teams aware web page iframed in Teams. In addition to instrumentation that you might have included in your app’s web page, Teams tab provides more context information including:
 
 - **App information**:
 
@@ -24,7 +24,7 @@ A Tab is Teams aware web page iframed in Teams. In addition to instrumentation t
   - `isMultiWindow`: Indicates whether the page is accessed as a pop out window
   - `app.theme`: Indicates the user interface theme being used, that is, default, dark, contrast
   - `app.locale`: locale that user has configured for the app (for example, en-us)
-  - `app.host.clientType`: type of host client, that is, android, iOS, desktop, web
+  - `app.host.clientType`: Type of host client, that is, android, iOS, desktop, web
   - `app.host.sessionID`: Unique ID for the current Host session for use in correlating telemetry data
 
 - **User information**:
@@ -35,7 +35,7 @@ A Tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| &nbsp; | `team.internalId` and `channel.id`: ID of Team and Channel where tab is `associated team.type`. - different types of team in O365 for Education channel.channelType – indicates whether channel is private, regular or shared | `chat.Id`: chat ID if the tab is added to a Group Chat context | `meeting.ID`: ID of the meeting used by tab when running in meeting context |
+| &nbsp; | `team.internalId` and `channel.id`: ID of Team and Channel where tab is `associated team.type`. <br> - different types of team in O365 for Education channel.channelType <br> – indicates whether channel is private, regular or shared | `chat.Id`: chat ID if the tab is added to a Group Chat context | `meeting.ID`: ID of the meeting used by tab when running in meeting context |
 
 ## Bot
 
@@ -55,11 +55,11 @@ Bot is a conversational interface that has a publicly accessible web service hos
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| `readReceiptInfo.IsMessageRead()` can be used to get read receipts for select bot messages | `turnContext.Activity.TeamsGetTeamInfo()`: Get details of the team where bot is installed TeamsInfo.`GetTeamChannelsAsync`: retrieves list of channels in the installed Team On installationUpdate event, conversation.ID provides channel ID where bot is installed | On installationUpdate event, `conversation.ID` provides chat ID where bot is installed | On `installationUpdate` event, `conversation.ID` provides ID of meeting chat where bot is installed |
+| `readReceiptInfo.IsMessageRead()` can be used to get read receipts for select bot messages | `turnContext.Activity.TeamsGetTeamInfo()`: Get details of the team where bot is installed TeamsInfo.`GetTeamChannelsAsync`: retrieves list of channels in the installed Team On `installationUpdate` event, `conversation.ID` provides channel ID where bot is installed | On `installationUpdate` event, `conversation.ID` provides chat ID where bot is installed | On `installationUpdate` event, `conversation.ID` provides ID of meeting chat where bot is installed |
 
 ## Messaging Extension
 
-Search Messaging extensions allow to search external system and bring results into Teams; Action Message extensions allow to initiate action in external system. Whenever a web page based task module gets invoked from action message extension, telemetry is handled the same as iframed web pages in tab. Messaging extension also provides further context on invoking:
+Search messaging extensions allow to search external system and bring results into Teams; Action Message extensions allow to initiate action in external system. Whenever a web page based task module gets invoked from action message extension, telemetry is handled the same as iframed web pages in tab. Messaging extension also provides further context on invoking:
 
 - **App information**:
 
@@ -70,7 +70,7 @@ Search Messaging extensions allow to search external system and bring results in
 
 - **User Information**:
 
-  - `from.aadObjectId`: AAD ID of the user invoking messaging extension
+  - `from.aadObjectId`: Azure AD ID of the user invoking messaging extension
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ Search Messaging extensions allow to search external system and bring results in
 
 ## Meeting apps
 
-Meeting Apps include tabs that work pre and post meetings, meeting side panel that are iframed web pages and in-meeting notification.
+Meeting apps include tabs that work pre and post meetings, meeting side panel that are iframed web pages and in-meeting notification.
 
 - **MeetingTab**: when run in context of meeting, tabs get the meeting ID. All context information for tabs from earlier section on ‘Tab’ apply for meeting tabs too.
 - **Meeting Information**: TeamsInfo.GetMeetingInfoAsync API provides meeting specific details:
