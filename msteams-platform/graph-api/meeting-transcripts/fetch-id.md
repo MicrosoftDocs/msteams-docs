@@ -2,7 +2,7 @@
 title: Obtain meeting ID and organizer ID for fetching meeting transcripts
 description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts
 ms.localizationpriority: high
-ms.topic: concept
+ms.topic: conceptual
 ---
 # Obtain meeting ID and organizer ID
 
