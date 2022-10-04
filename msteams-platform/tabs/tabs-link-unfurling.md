@@ -56,7 +56,7 @@ Collaborative Stage View helps to provide a more seamless, multi-task experience
 
 You can invoke Stage View in the following  ways:
 
-* [Invoke Collaborative Stage View from Adaptive Cards](#invoke-collaborative-stage-view-from-adaptive-card)
+* [Invoke Collaborative Stage View from Adaptive Cards](#invoke-collaborative-stage-view-from-adaptive-cards)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
 ## Invoke Collaborative Stage View from Adaptive Cards
