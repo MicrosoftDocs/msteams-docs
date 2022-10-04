@@ -828,13 +828,15 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
 
+   :::image type="content" source="../../../../assets/images/submission/validation-configurable-tab-content-personal-scope.png" alt-text="Graphic shows an exaple of content in a confugurable tab with personal scope such as My tasks or My dashboard.":::
+
 * After the configuration experience, the landing page must show a collaborative view for the entire team.
 
 * If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
 
 * Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="Graphic shows an example of content in the landing page of the configurable tabs contextually different for all members.":::
 
 * Configurable tabs must have focused functionality.
 
@@ -894,7 +896,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must always provide a valid response to a user input even if the input is irrelevant or improper. [*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-bot-dead-end-invalid-command.png" alt-text="Graphic shows an example of a failed scenario where a bot sends a same response for a valid and invalid command.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-response-valid-improper-input.png" alt-text="Graphic shows an example of a valid response for improper bot command.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-response-improper-response-invalid-command.png" alt-text="Graphic shows an example of an invalid response for improper bot command.":::
 
 * Special characters such as slash (**/**), must not be prefixed to bot commands. [*Mandatory Fix*]
 
@@ -902,7 +906,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must provide a valid response to invalid user commands. Bots must not dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-way-forward-for-invalid-command.png" alt-text="Graphic shows an example of bot provining a way forward for an invalid command.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-way-forward-for-invalid-command.png" alt-text="Graphic shows an example of bot providing a way forward for an invalid command.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-bot-dead-end-invalid-command.png" alt-text="Graphic shows an example of a failed scenario where a bot sends a same response for a valid and invalid command.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-display-error-for-valid-command.png" alt-text="Graphic shows an example of bot sending error messages for a valid bot command.":::
 
@@ -923,6 +929,10 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="Graphic shows an example of bot sending a valid response to help command.":::
 
 * Bot responses on mobile must be responsive without any data truncation that hampers the end-user's bot usage  to complete desired workflows. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-response-no-truncate-mobile.png" alt-text="Graphic shows an example of a bot message without truncating on mobile.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-response-truncate-mobile.png" alt-text="Graphic shows an example of a bot message truncating on mobile.":::
 
 * All the links in a bot response adaptive card must be responsive. Any link that takes the user outside the Teams platform must have a clear redirect text such as, **View in..** or **This way to..**, a pop-out icon in the bot response action button, or have a suitable redirect text in the bot response message body. [*Mandatory Fix*]
 
@@ -978,6 +988,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot welcome message must clearly call out the limitations related to bot usage in the installed scope. [*Mandatory Fix*]
 
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-messahe-with-app-limitation.png" alt-text="Graphic shows an example of app limitation in not welcome message.":::
+
 * Welcome message must auto trigger on app install in a personal scope. If the bot doesn't send a welcome message in a personal scope, the user is lead to a dead-end. If the app doesn't include a complex configuration workflow, it's optional for the developer to trigger a welcome message in the channel or group chat scope. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message-in-personal-scope.png" alt-text="Graphic shows an example of bot not sending a  welcome message automatically in personal scope.":::
@@ -1026,6 +1038,9 @@ Bots must not spam users by sending multiple messages in short duration.
 
 * **Bot messages in personal apps**:
   * Don't send multiple messages in quick succession.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multuiple messages in quick succession.":::
+
   * Send one message with complete information.
   * Avoid multi-turn conversations to complete a single repetitive workflow.
   * Use a form (or task module) to collect all inputs from a user at one time.
@@ -1129,6 +1144,8 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
 * If your Teams app uses the messaging extension capability, your app must follow the [Messaging extension design guidelines](../../../../messaging-extensions/design/messaging-extension-design.md).
 
+   :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-design-guidelines-fail.png" alt-text="Graphic shows an example of an app not meeting extension guidelines.":::
+
 * Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. Keep your messaging extension simple and display only the components required to effectively complete the action. Complete website must not be I-framed within the messaging extension [*Mandatory Fix*]
 
 * Preview images in Adaptive Cards in messaging extensions must load properly. [*Mandatory Fix*]
@@ -1171,6 +1188,8 @@ Action-based message extensions must do the following:
     :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="Graphic shows an example of generic verb for an action command.":::
 
 * Invoking a message action must allow the user to complete the workflow. Errors, blank responses, or continuous loading indicators to make the message action functional as intended must not be present. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-continous-loading-indicator-action-command.png" alt-text="Graphic shows an example of continuous loading indicator when a bot invokes an action command.":::
 
 * Duplicate action commands must not be present. [*Mandatory Fix*]
 
@@ -1282,6 +1301,8 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * App must not show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
 
+   :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Grpahic shows an example of continous loading screen in an app.":::
+
 * App must not open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
 
 * Meeting apps must complete workflows within the Microsoft Teams platform without redirecting to competitor chat based platforms. [*Mandatory Fix*]
@@ -1364,7 +1385,7 @@ Use the following guidelines for meeting extensions:
 * Must not use task modules.
 * Must align with the center of the meeting stage.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="validation-in-meeting-dialog-not-align":::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="Graphic shows an example of in-meeting dialog not aligning with the center of meeting stage.":::
 
 * Must be dismissed after a user selects a button or performs an action.
 
@@ -1504,6 +1525,8 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, your app can allow payment to book a taxi.
 
 * Payments for digital goods in app aren't allowed on mobile. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-mobile-exp-payments-digital-goods.png" alt-text="Graphic shows an example of payments for digital goods on mobile.":::
 
 * Teams apps must offer an appropriate cross-device mobile experience. [*Mandatory Fix*]
 
