@@ -58,6 +58,10 @@ Create the conversation, after you have the user or channel information.
 
 Create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
+To create a conversation, you need `userId` and `tenantId` for service url. For production tenants, use this global URL endpoint. [link to GCC/GCCH endpoint from above]
+
+Add the sample code
+
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
 If you don't have the `conversationId`, you can [Proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
@@ -81,7 +85,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot

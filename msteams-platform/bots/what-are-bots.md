@@ -49,16 +49,6 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
-<!--- TBD: For quick scanning, see if the above information can be itemized as a list.
---->
-
-## Global endpoint for bots API
-
-If you are not using Bot Framework SDK to create a bot and if you call the Bot APIs directly, you should set the `cloud` parameter as `teams` in the URL to enable the global routing endpoint. For example, the URL should be `https://smba.trafficmanager.net/teams/v3/conversations/12345`.
-
-> [!NOTE]
-> For GCC, GCCH, and DOD tenants the bot needs to call the endpoint specific for the environment (For example, call `https://smba.infra.gcc.teams.microsoft.com` for GCC environment). If the public endpoint is called instead, the requests won't succeed and a 404 status code is returned to the bot.
-
 ## Code samples
 
 |Sample name | Description | C# | Node.js |
