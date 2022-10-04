@@ -337,7 +337,7 @@ items:
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png" alt-text="App settings location":::
 
@@ -352,7 +352,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
@@ -371,7 +371,7 @@ items:
     **To build and run the service using Visual Studio**
 
        1. Open **Visual Studio**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile.png" alt-text="Open file":::
 
@@ -389,7 +389,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
+    1. In your cloned repository, go to **csharp > Resources > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json

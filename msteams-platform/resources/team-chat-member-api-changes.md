@@ -66,4 +66,8 @@ Following are the upcoming API changes:
     > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Bot Framework message. The new API is available with version 4.8 or later of the Bot Framework SDK. It is also available in the Teams SDK extension Bot Framework 3.x. Meanwhile, you can use the [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.
 
 * `TeamsInfo.GetMembersAsync` in C# and `TeamsInfo.getMembers` in TypeScript or Node.js is formally deprecated. Once the new API is available, you must update your bots to use it. This also applies to the [underlying REST API that these APIs use](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
-* By late 2022, bots can't proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use the Graph APIs to retrieve the required information. The new `GetConversationPagedMembers` API can't return the `userPrincipalName` and `email` properties from late 2022. Bots must use Graph API with an access token to retrieve information. 
+* By late 2022, bots can't proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use the Graph APIs to retrieve the required information. The new `GetConversationPagedMembers` API can't return the `userPrincipalName` and `email` properties from late 2022. Bots must use Graph API with an access token to retrieve information.
+
+> [!NOTE]
+>
+> We recommend you to use the [Graph API](/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) with an access token to retrieve information.
