@@ -109,7 +109,7 @@ The following process helps to invoke Stage View:
 
 > [!NOTE]
 >
-> * On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.<br>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.<br>
 
 #### Invoke Stage View through deep link
 
@@ -223,7 +223,7 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 > [!NOTE]
 >
-> * The multi-window Collaborative Stage View can be invoked from the group chats only. It is not available in the Teams web client or mobile. In these scenarios, the Stage View experience fall back to showing users the content in an interstitial modal.
+> The multi-window Collaborative Stage View can be invoked from the group chats only. It is not available in the Teams web client or mobile. In these scenarios, the Stage View experience fall back to showing users the content in an interstitial modal.
 
 ## Tab information property
 
