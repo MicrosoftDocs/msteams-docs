@@ -65,7 +65,7 @@ For the purposes of this article, let’s use the HEART framework to indicate re
 - User stumbles upon the app when it’s shared in a chat, meeting or channel by another user. (Tab or adaptive card)
 - Admin installs the app for users and app sends a welcome message
 
-Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. Likelihood of discovering an app among new users increases more when existing users start using the app in collaborative scope. E.g. Adding channel or meeting tab, adding a bot to channel, sharing messaging extension card in a Group Chat.
+Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. Likelihood of discovering an app among new users increases more when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, sharing messaging extension card in a group chat.
 
 > [!TIP]
 >
@@ -74,21 +74,21 @@ Telemetry designed to improve adoption should aim at improving discoverability o
 
 | Telemetry | Comments |
 | --- | --- |
-| • Users installing the app in R1, R7, R14, R28 days <br> • # Sign-ins (if app has sign-in) | • Segment users based on AAD profile <br> • Segment by Tenant, Org Name |
+| • Users installing the app in R1, R7, R14, R28 days <br> • # Sign-ins (if app has sign-in) | • Segment users based on Azure AD profile <br> • Segment by Tenant, Org Name |
 | • Average time taken to first use (click on Tab, Bot, Adaptive Card, Meeting) | • Report for using the app <br> • Report at a feature or platform capability level |
 | • Extensibility point of first discovery <br> • Scope of first discovery | • Which extensibility point and scope are most of your users discovering your app? |
 | • % of link unfurls leading to app installation |   |
-| • Average time taken to add app in collaborative scope - in Channel, Group Chat, Meeting | -- |
-| • % of users adding app in collaborative scope | • Helps in determining the potential for virality. i.e. organic discovery and use by new users |
+| • Average time taken to add app in collaborative scope - in Channel, Group Chat, Meeting |   |
+| • % of users adding app in collaborative scope | • Helps in determining the potential for virality, that is, organic discovery and use by new users |
 | • % of users configuring the app after adding it in channel or group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
 
 #### Engagement & task success
 
 **Goal**: Grow number of engaged quality users  who complete core actions within the app.
 
-Core Action is defined as that User Action which is central to the business and directly contributes towards the North Star.  E.g. if you are an IT Ticketing solution provider, your core user action could be ‘Creating a Ticket’ with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
+Core Action is defined as that User Action which is central to the business and directly contributes towards the North Star.  For example, if you are an IT Ticketing solution provider, your core user action could be ‘Creating a Ticket’ with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
 
-Engagement intends to measure the intensity and depth of interaction between user and your app. Intensity of engagement measures how much user is using the app (e.g. no. core actions done in the app) and depth of interaction measures the number of various platform capabilities, scopes, app features that user has interacted.
+Engagement intends to measure the intensity and depth of interaction between user and your app. Intensity of engagement measures how much user is using the app (for example, number of core actions done in the app) and depth of interaction measures the number of various platform capabilities, scopes, app features that user has interacted.
 
 > [!TIP]
 >
