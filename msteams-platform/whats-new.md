@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-* ***October 4, 2022***: [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
+***October 4, 2022***: [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
 
 :::column-end:::
 :::row-end:::
@@ -37,11 +37,11 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|30/09/2022 | Manage SaaS licenses for third party apps in Teams | Monetize your app > Include a SaaS offer with your Teams app > [Manage license for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams) |
-| 29/09/2022 | Teams mobile app now supports file downloads to local devices | Integrate device capabilities > Integrate media capabilities > [File download on Teams mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile) |
-| 16/09/2022 | Adaptive Cards in search based message extensions now support Universal Actions | Build message extensions > Search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
+|09/30/2022 | Manage SaaS licenses for third party apps in Teams | Monetize your app > Include a SaaS offer with your Teams app > [Manage license for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams) |
+| 09/29/2022 | Teams mobile app now supports file downloads to local devices | Integrate device capabilities > Integrate media capabilities > [File download on Teams mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile) |
+| 09/16/2022 | Adaptive Cards in search based message extensions now support Universal Actions | Build message extensions > Search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
+| 09/06/2022 | Introduced code snippets for capturing videos using camera through `selectMedia` API| Integrate device capabilities > Integrate media capabilities > [Code Snippets](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
-| 06/09/2022 | Introduced code snippets for capturing videos using camera through `selectMedia` API| Integrate device capabilities > Integrate media capabilities > [Code Snippets](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Link unfurling for share to teams from web apps | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
