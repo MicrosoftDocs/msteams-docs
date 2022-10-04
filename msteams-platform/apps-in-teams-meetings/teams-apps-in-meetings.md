@@ -40,7 +40,7 @@ Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting scenarios. 
 
 ## User roles in Teams meeting
 
-The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
+The following are the participant roles in a meeting:
 
 * **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with a Microsoft 365 account and Teams license can be the organizer, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 
@@ -49,7 +49,9 @@ The default participant settings are determined by an organization's IT administ
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting.
 
 > [!NOTE]
-> Only an organizer or presenter can add, remove, or uninstall apps.
+>
+> * Only an organizer or presenter can add, remove, or uninstall apps.
+> * The default participant settings are determined by an organization's IT administrator.
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 

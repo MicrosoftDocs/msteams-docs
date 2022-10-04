@@ -19,11 +19,11 @@ You can test the experience delivered to anonymous users by selecting the meetin
 
 ## Tenant admin setting for anonymous user app interaction
 
-Teams admin can use the admin portal to enable or disable anonymous user app interaction for entire tenant. This setting is enabled by default, unless overridden by admin. You must enable this to support anonymous user interaction with apps in meetings, [Allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admin can use the admin portal to enable or disable anonymous user app interaction for entire tenant. This setting is enabled by default, unless overridden by the admin. You must enable this to support anonymous user interaction with apps in meetings, [Allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## In-Meeting getContext from Teams client SDK
 
-Apps receive the following info pertaining to the anonymous user through the Teams Client SDK `getContext API` when shared app stage is loaded. Apps recognize the users as anonymous by the **Unknown** userLicenseType and the **anon** userObjectId.
+Apps receive the following info pertaining to the anonymous user through the Teams Client SDK `getContext API` when the shared app stage is loaded. Apps can recognize the users as anonymous by the **Unknown** userLicenseType.
 
 ```csharp
 "userObjectId": "8:anon:<<User GUID>>",
