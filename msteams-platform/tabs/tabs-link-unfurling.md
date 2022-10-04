@@ -23,7 +23,7 @@ Stage View opens as a modal, providing users a full canvas to engage with the co
 
 [![Open a stage from Adaptive Cards](~/assets/images/tab-images/stage-view.png)](~/assets/images/tab-images/stage-view.png#lightbox)
 
-## Stage View vs. Task module
+### Stage View vs. Task module
 
 |Stage View|Task module|
 |:-----------|:-----------|
@@ -47,7 +47,7 @@ Collaborative Stage View helps to provide a more seamless, multi-task experience
 
 Collaborative Stage View can only be invoked from Adaptive Card in group chats. When invoked from channels, Teams web client, or mobile, the Collaborative Stage View experience fall back to the full screen Stage View modal.
 
-|Feature|Invoke action|Desktop|Web|Mobile|
+|Component|Invoke action|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|-----------|
 |Collaborative Stage View|Invoke from Adaptive Card action|**Chat**: Opens Teams pop-out window with chat pane. <br> **Channel**: Opens Stage View modal.|Opens Stage View modal|Opens Stage View modal|
 |Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal|Opens Stage View modal|Opens Stage View modal|
@@ -61,7 +61,7 @@ You can invoke Stage View in the following  ways:
 
 ## Invoke Collaborative Stage View from Adaptive Cards
 
-When the user enters an app content URL in a chat, the bot is invoked, and returns [Adaptive Cards](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the users client (see, [Collaborative Stage View](#collaborative-stage-view)), this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
+When the user enters an app content URL in a chat, the bot is invoked, and returns [Adaptive Cards](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the users client (see, [[Collaborative Stage View](#collaborative-stage-view)](#collaborative-stage-view)), this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
 
 The following images display a Collaborative Stage View opened from Adaptive Cards:
 
