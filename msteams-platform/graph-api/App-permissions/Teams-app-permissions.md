@@ -15,13 +15,13 @@ Microsoft Teams apps are managed in different places depending on app features.
 
 ## Resource-specific consent
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization.
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either Teams or chats, within an organization.
 
 RSC permissions are defined in the app manifest and not in Azure AD. You grant consent to RSC permissions when you add the app to a team. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
 
 ## Azure activity directory
 
-In Azure Active Directory (Azure AD), all users are granted a set of default permissions. A user's access consists of the type of user, their role assignments, and their ownership of individual objects. See [Azure AD default user permissions](/azure/active-directory/fundamentals/users-default-permissions).
+In Azure Active Directory (Azure AD), all users are granted a set of default permissions. A user's access consists of the type of user, their role assignments, and their ownership of individual objects. For more information, see [Azure AD default user permissions](/azure/active-directory/fundamentals/users-default-permissions).
 
 Azure subscriptions have a trust relationship with Azure Active Directory (Azure AD). Azure AD is trusted to authenticate users, services, and devices for the subscription. Each subscription has a tenant ID associated with it, and there are a few ways you can find the tenant ID for your subscription. For more information, see [Azure AD tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
 
