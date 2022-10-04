@@ -15,14 +15,14 @@ App analytics help understand user behavior, motivation, friction points that ca
 
 ## Why is Teams App Telemetry important?
 
-If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams App. The Teams App is another surface to expose your solution to your end user, another window to your SaaS landscape.
+If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user, another window to your SaaS landscape.
 
 As your solution scales across multiple platforms (web, mobile platforms, Teams), it’s important to view your telemetry in layers:
 
 :::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
 
-- **Core Application Telemetry**: Core Telemetry includes tracking and measuring of application-level metrics independent of the platform, client or surface area used by end user. A typical SaaS solution measures Application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, churn among other data. If you have an existing SaaS solution, you would most likely be tracking these metrics already.
-- **Modality specific Telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates telemetry capture unique to that modality. E.g. viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
+- **Core Application Telemetry**: Core Telemetry includes tracking and measuring of application-level metrics independent of the platform, client or surface area used by end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, churn among other data. If you have an existing SaaS solution, you would most likely be tracking these metrics already.
+- **Modality specific Telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This is metadata that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
 
   - User Interactions: User clicks, views, sessions, system and custom events in the modality
   - Application performance monitoring: Performance measures such as time to load, response time of the solution in the modality
@@ -32,9 +32,9 @@ As your solution scales across multiple platforms (web, mobile platforms, Teams)
 
 ## What telemetry data do I track in my Teams app?
 
-It is important to plan for the kind of data, metrics and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action and key events relevant for your business.
+It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
 
-Excerpting from the “Teams Ecosystem - Journey to Marketplace Liquidity Whitepaper”  authored by Michal,
+Excerpting from the “Teams Ecosystem - Journey to Marketplace Liquidity Whitepaper” authored by Michal:
 
 :::row:::
     :::column span="":::
@@ -53,15 +53,13 @@ Your telemetry strategy should ensure measuring of your product across these thr
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use HEART framework to indicate representative set of metrics, events you should consider monitoring for your solution. Please note that the below list is not exhaustive and you are encouraged to add additional telemetry relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics, events you should consider monitoring for your solution. Please note that the below list is not exhaustive and you are encouraged to add additional telemetry relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
 #### Adoption
 
-**Goal**: Acquire new users who can start exploring the app thereby maintaining a healthy top of the funnel.
-
-Discovery and adoption of new apps happen in one of the following ways:
+**Goal**: Acquire new users who can start exploring the app thereby maintaining a healthy top of the funnel. Discovery and adoption of new apps happen in one of the following ways:
 
 - User searches and installs the app on their own
 - User stumbles upon the app when it’s shared in a chat, meeting or channel by another user. (Tab or adaptive card)
