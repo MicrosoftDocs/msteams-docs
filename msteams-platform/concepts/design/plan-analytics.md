@@ -32,11 +32,9 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 Teams usage reports can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
 
 Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the
-[platform capabilities](../../overview-explore.md) used such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. since all of these are a means to surface web-based experiences inside Teams.
+[platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. as all of these capabilities are a means to surface web-based experiences inside Teams.
 
 Plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
-
-//Planned flow: When to plan > Generate insights > Instrumenting app (what) to generate insight > Act on insight > How to grow app > How to monetize, monitor, plan for next update //
 
 ## Plan early for analytics
 
@@ -53,7 +51,7 @@ At the time your production Teams app is live and being used on the marketplace,
 - Events that can be acted on and captured in your SaaS backend only once at the time they are triggered
 
 > [!NOTE]
-> An example of an information that can be captured only once is the Azure AD user ID for a Teams user. It is notified through a bot event only at the installation of the the bot app for that user. This user ID is vital to mapping the user to a real-world profile identity, such as email address, which you can use to send proactive notifications to the user later.
+> An example of information that can be captured only once is the Azure AD user ID for a Teams user. It is notified through a bot event only at the installation of the the bot app for that user. This user ID is vital to mapping the user to a real-world profile identity, such as email address, which you can use to send proactive notifications to the user later.
 
 Additionally, planning analytics enables you to examine your existing data instrumentation practices. It helps you determine if such existing practices would be useful for Teams canvas constructs such as tabs, task modules, meeting apps etc. You can also check the possibility of extending your existing practices to Teams tab experiences you're building.
 
@@ -98,15 +96,13 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
   - Which users have churned from your app in the last three months?
   - Has a specific user used your app in a Teams meeting?
 
-// link user-specific metrics from user ID //
-
 ## Instrumenting your app for analytics
 
 Instrumenting your code with analytics markers (also known as telemetry markers) are standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics, which is required to determine product, growth, marketing, and business decisions.
 
 <!--You must already know that instrumenting your code with analytics markers (also known as telemetry markers) are standard web application development practice. Data instrumentation in your code is critical for long-term success since without robust telemetry instrumentation you'll be unable to measure both aggregate as well as user-specific metrics required to base product, growth, marketing and business decision upon.-->
 
-<!-- Infogfx and links to relevant sections -->
+<!-- Infogfx and links to relevant sections
 
 // Infogfx concept
 
