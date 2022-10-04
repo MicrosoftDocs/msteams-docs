@@ -286,3 +286,4 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Tabs link unfurling and Stage View](../tabs-link-unfurling.md)

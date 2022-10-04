@@ -91,3 +91,4 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
+* [Tabs link unfurling and Stage View](tabs-link-unfurling.md)
