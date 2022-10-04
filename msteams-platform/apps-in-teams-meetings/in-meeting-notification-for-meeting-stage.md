@@ -54,7 +54,7 @@ Sample name | Description | C# | Node.js |
 
 ## See also
 
-* [Build tabs for meeting](~/apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage.md)
+* [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)

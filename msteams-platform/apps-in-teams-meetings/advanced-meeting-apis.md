@@ -949,4 +949,4 @@ The following table provides the response codes:
 
 ## Next steps
 
-[Build tabs for meeting](enable-and-configure-your-app-for-meeting-stage.md)
+[Build tabs for meeting](build-tabs-for-meeting.md)
