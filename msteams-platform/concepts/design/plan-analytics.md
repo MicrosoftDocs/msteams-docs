@@ -187,7 +187,7 @@ After you extract the Teams-specific information from the tab context, use it as
 | --- | --- |
 | User's organization | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for Sales outreach, onboard organization, check in for assistance |
 | User's organization and role | Use license type and tenant SKU to construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly |
-| Host client type, locale and usage context inferences from team/channel names | Enrich the customer’s profile in your user analytics |
+| Host client type, locale and usage context inferences from team or channel names | Enrich the customer’s profile in your user analytics |
 | Use frame context to get information about the context in which the user is using your app, user's journey and usage pattern from various surface areas, capabilities, and scopes. | Craft your user's experiences accordingly and invest more in capabilities popular with your users |
 | User's email address to associate a meaningful, real-world identity with the Teams user, and can provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com | Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing and re-engagement. However, be careful not to misuse this channel or spam the user. |
 | Obtain and store the unique Azure AD user or object ID at the time of app (bot) installation | Send any proactive notification to the user via your bot |
@@ -195,7 +195,7 @@ After you extract the Teams-specific information from the tab context, use it as
 <!--
 - The user’s organization is handy to track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product. You can use the organization name to handoff a “lead” to your sales or customer success teams which can plan sales outreaches to the organization for pitching your SaaS app, onboard the organization as a customer of your service or simply to check-in if they need any assistance.
 - Using the license type and the tenant SKU, you can find out and log which type of organization does the user belong to, user’s role within the organization (for example, F1 license is for Frontline workers vs E5 license is for information workers) construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly.
-- Host client type, locale and usage context inferences from team/channel names etc. can all be used to enrich the customer’s profile in your user analytics.
+- Host client type, locale and usage context inferences from team or channel names etc. can all be used to enrich the customer’s profile in your user analytics.
 - The frame context can give useful information about the context in which the user is using your app to stitch the user’s journey and usage pattern across various surface areas, capabilities and scopes. Knowing this will enable you to craft your experiences accordingly and invest more in capabilities popular with your users.
 - The email address of the user allows you to associate a meaningful, real-world identity with the Teams user and also possibly gives you the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. This will allow you to identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing and re-engagement. However, be careful not to misuse this channel or spam the user.
 - The unique Azure AD user or object ID of the user is a must for your app to send any proactive notification to the user via your bot and must be stored once obtained at the time of app (bot) installation event.
@@ -238,14 +238,14 @@ At the time, your production Teams app is live on the marketplace and customers 
 
 ## Once you’ve implemented analytics for your Teams app, what insights can you generate?
 
-Besides the obvious metrics everyone cares about in the SaaS world such as daily/weekly/monthly active users, time spent in your app etc., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
+Besides the obvious metrics everyone cares about in the SaaS world such as daily, weekly, monthly active users, time spent in your app etc., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
 // How is data for aggregate metrics obtained //
 
 - **Aggregate metrics**
   - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
   - How many days on an average do users use your app in the first week after installing the app?
-  - Week over week / month over month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
+  - Week over week or month over month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
   - How many users use your app only on Teams mobile clients?
   - How many users have used the camera device capability in your app?
   - What does the funnel analysis for your app from app installation to activation to engagement to retention and finally, monetization reveal? Where are the drop-offs happening?
@@ -275,7 +275,7 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
 
 Once you have these insights, visit the [How to monitor analytics, performance, feedback](#how-to-monitor-analytics-performance-feedback) while your app is in the market and action on these pages to learn more about how you can leverage them for growing and monetizing your app.
 
-## How to plan & approach growth for your app?
+## How to plan and approach growth for your app?
 
 Shipping your app on the Teams marketplace is just the beginning. Once shipped, you must meticulously plan how to grow your app, make it a successful product on the marketplace that drives intended business metrics and helps you realize returns on your investment into planning, designing and building the app.
 
@@ -287,9 +287,9 @@ This document provides high-level guidance about how you should plan:
 
 - Via the product itself (product-led growth)
   - Guidance for ISVs on best practices, UX screens and components to build the user experience to help users become familiar with the app and get their first task done, post install
-  - Capture best practices via illustrative guides for capturing & measuring, converting new product qualified customer leads (PQLs) coming from Teams app
+  - Capture best practices via illustrative guides for capturing and measuring, converting new product qualified customer leads (PQLs) coming from Teams app
   - how to do product-led growth (best practices guides)
-- Via sales & marketing-led GTM motions such as //content TBA //
+- Via sales and marketing-led GTM motions such as //content TBA //
   - Launch marketing
   - Sales-led growth
   - Partnering with Microsoft
