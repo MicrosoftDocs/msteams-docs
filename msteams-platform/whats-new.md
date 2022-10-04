@@ -88,7 +88,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 02/11/2022 | Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Build apps for Teams meetings > [Build apps for Teams meetings](apps-in-teams-meetings/build-apps-for-teams-meeting.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 | 02/08/2022 | Introduced step-by-step guide to create Calling and Meeting bot| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
-| 01/25/2022 | Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Advanced meeting APIs](apps-in-teams-meetings/advanced-meeting-apis.md)|
+| 01/25/2022 | Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Advanced meeting APIs](apps-in-teams-meetings/meeting-apps-apis.md)|
 | 01/19/2022 | Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 01/17/2022 | People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
@@ -121,7 +121,7 @@ Explore updates from the previous GA releases listed here.
 |10/28/2021| Monetize your Teams app with a transactable SaaS offer | Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/20/2021| Meeting stage is now available in GA | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/build-tabs-for-meeting.md) |
-|10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/advanced-meeting-apis.md) |
+|10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/meeting-apps-apis.md) |
 |10/18/2021| Tabs link unfurling and stage view | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |10/08/2021| New best practices for designing Adaptive Cards | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
 |10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Block apps by default for users until an admin approves](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |

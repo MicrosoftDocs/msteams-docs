@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build in-meeting notification for Teams meeting
 
-The in-meeting notification is used to engage participants during the meeting and collect information or feedback during the meeting. Use an [in-meeting notification payload](advanced-meeting-apis.md#send-an-in-meeting-notification) to trigger an in-meeting notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting notification is used to engage participants during the meeting and collect information or feedback during the meeting. Use an [in-meeting notification payload](meeting-apps-apis.md#send-an-in-meeting-notification) to trigger an in-meeting notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
 In-meeting notification must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
@@ -58,4 +58,4 @@ Sample name | Description | C# | Node.js |
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](advanced-meeting-apis.md)
+* [Advanced meeting APIs](meeting-apps-apis.md)

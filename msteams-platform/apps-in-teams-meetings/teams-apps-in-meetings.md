@@ -70,6 +70,6 @@ After you design your app based on participant roles in a meeting, you can ident
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](advanced-meeting-apis.md)
+* [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)

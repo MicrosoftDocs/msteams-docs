@@ -201,6 +201,6 @@ The following table provides the response codes:
 * [Build tabs for meeting](build-tabs-for-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](advanced-meeting-apis.md)
+* [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)

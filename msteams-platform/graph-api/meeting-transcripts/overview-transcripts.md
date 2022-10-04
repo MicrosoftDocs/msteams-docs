@@ -54,4 +54,4 @@ For more information about how your app can know when the meetings ends, see [Su
 
 ## See also
 
-- [Advanced meeting APIs](../../apps-in-teams-meetings/advanced-meeting-apis.md)
+- [Advanced meeting APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
