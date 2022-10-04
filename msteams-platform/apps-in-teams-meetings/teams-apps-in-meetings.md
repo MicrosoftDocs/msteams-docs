@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Apps for Teams meetings and calls
 
-Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. The following image gives you an idea of the meeting app extensibility:
+Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle. The following image gives you an idea of the meeting app extensibility:
 
 :::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
 
@@ -36,15 +36,15 @@ Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeti
 
 ## Meeting lifecycle
 
-Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
+Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting scenarios. These experiences may vary depending on a user's role in the meeting.
 
 ## User roles in Teams meeting
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
-* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with a Microsoft 365 account and Teams license can be the organizer, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 
-* **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session.
+* **Presenter**: Presenters in a meeting have similar capabilities as the organizer, with the exception of removing an organizer from the session and modifying meeting options for the session.
 
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting.
 
