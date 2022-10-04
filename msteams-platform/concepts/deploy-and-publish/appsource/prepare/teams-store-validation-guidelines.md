@@ -748,6 +748,8 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
   * Page headers
   * Hamburger menus
 
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of im-meeting dialog with multiple navigation levels.":::
+
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
@@ -893,6 +895,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Bots must respond to user commands without displaying a continuous loading indicator. [*Mandatory Fix*]
 
 * Bot help command response must not redirect the user outside Teams. Bot help command response can redirect user to a canvas within the Teams app or provide a way forward response in an Adaptive Card. [*Mandatory Fix*]
+
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-redirects-user-outside-teams.png" alt-text="Graphic shows an example of bot response redirecting user outside of Teams.":::
 
 * Bots must always provide a valid response to a user input even if the input is irrelevant or improper. [*Mandatory Fix*]
 
@@ -1217,7 +1221,9 @@ Message extensions must preview recognized links in the Teams compose box. Don't
 
 * Search based message extensions must provide text that helps the users to search effectively. [*Mandatory Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-available.png" alt-text="validation-search-command-text-available":::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-available.png" alt-text="Graphic shows an example of a message extension with help text for users to search effectively.":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-not-available.png" alt-text="Graphic shows an example of a message extension without help text for users to search effectively.":::
 
 * @mention executables must be clear, easy to understand, and readable.
 
@@ -1285,6 +1291,8 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not be taken outside the Teams meeting to complete core user workflows of the app. [*Mandatory Fix*]
 
+   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-outside-teams-core-workflows.png" alt-text="Graphic shows an example of an in-meeting experience redirecting user outside Teams for completing core app functionality.":::
+
 * Your app must offer value beyond providing only custom Together Mode scenes in Teams. [*Mandatory Fix*]
 
 * You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile. [*Mandatory Fix*]
@@ -1307,7 +1315,11 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * Meeting apps must complete workflows within the Microsoft Teams platform without redirecting to competitor chat based platforms. [*Mandatory Fix*]
 
+   :::image type="content" source="../../../../assets/images/submission/validation-apps-redirecting-competitor-chat-platform.png" alt-text="Graphic shows an example of an app redirecting to competitor chat based platform.":::
+
 * If your app supports role based views and certain workflows are unavailable to all participants, we recommend that you implement proper messaging for participants in tab and side-panel stating that the app is currently for organizer's view and provide details about how the attendees will receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-way-forward-not-available-for-role-based-views.png" alt-text="Graphic shows an example of an app without a way forward for participants in a role based view.":::
 
 </details>
 <br/>
@@ -1339,6 +1351,8 @@ Use the following guidelines for meeting extensions:
 * Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md).
 * Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**.
+
+   :::image type="content" source="../../../../assets/images/submission/validation-meeting-experience-tab-design-guidelines-fail.png" alt-text="Graphic shows an example of tab not following tab design guidelines.":::
 
 </details>
 
@@ -1379,8 +1393,8 @@ Use the following guidelines for meeting extensions:
 
 * Must be used sparingly and for scenarios that are light and task oriented.
 * Must display content in a single column and not have multiple navigation levels.
-  
-  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of im-meeting dialog with multiple navigation levels.":::
+
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-single-column-layout.png" alt-text="Grapgic shows an example of single column layout for in-meeting dialog.":::
 
 * Must not use task modules.
 * Must align with the center of the meeting stage.
@@ -1523,6 +1537,8 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Use of the word **FREE** in the context of a trial or app upgrade and associated with a link that leads to a landing page with pricing information or payment details on mobile isn't allowed.
 
 * Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, your app can allow payment to book a taxi.
+
+   :::image type="content" source="../../../../assets/images/submission/validation-mobile-exp-pricing-details-on-mobile-fail.png" alt-text="Graphic shows an example of pricing details on mobile.":::
 
 * Payments for digital goods in app aren't allowed on mobile. [*Mandatory Fix*]
 
