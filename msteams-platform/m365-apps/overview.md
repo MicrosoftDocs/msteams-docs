@@ -1,14 +1,14 @@
 ---
 title: Extend Teams apps across Microsoft 365 (preview)
-description: Learn how to build, update, and extend your Teams app across Microsoft M365 (Teams, Outlook, and Office as application hosts). Microsoft AppSource submission.
-ms.date: 05/24/2022
+description: Learn how to extend Teams apps across Microsoft 365 (running in Teams, Outlook, and Office as application hosts).
+ms.date: 10/12/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 # Extend Teams apps across Microsoft 365
 
-With the latest releases of [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) (version 2.0.0 and later), [Teams App manifest](../resources/schema/manifest-schema.md) (version 1.13 and later), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([the Microsoft commercial marketplace](https://appsource.microsoft.com/)).
+With the latest releases of [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) (version 2.0.0 and later), [Teams App manifest](../resources/schema/manifest-schema.md) (version 1.13 and later), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)).
 
 Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Office environments. End users won't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
 
@@ -18,6 +18,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 |--|--|--|--|--|--|
 | [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) (search-based)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
+
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
 \* The [Microsoft 365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) enrollment require admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Office running on Windows.
@@ -41,7 +42,7 @@ You can also extend your search-based Teams message extensions to Outlook on the
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
-Building your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) provides you with a consolidated development process. By enabling you to deliver a streamlined deployment, installation, and admin experience for your customers, you can expand the potential reach and usage of your app.
+Build your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
 
 ## Use Teams app manifest across Microsoft 365
 
