@@ -29,6 +29,7 @@ To complete this tutorial, you'll need:
 * A Microsoft 365 Developer Program sandbox tenant
 * Your sandbox tenant enrolled in *Office 365 Targeted Releases*
 * A machine with Office apps installed from the Microsoft 365 Apps *beta channel*
+* (Optional) An Android device or emulator with Office app for Android installed and enrolled in the *beta program*
 * (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code
 
 > [!div class="nextstepaction"]
@@ -40,7 +41,7 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
 
-Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following quickstart section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams) .
+Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following [Quickstart](#quickstart) section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams) .
 
 ### Quickstart
 
@@ -56,6 +57,15 @@ To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
 
 From here, you can skip ahead to [Sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and Office. (The app manifest and TeamsJS API calls have already been updated for Microsoft 365.)
+
+### SharePoint Framework (SPFx) apps
+
+Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction) (SPFx), Teams personal tabs built and hosted with SPFx are also supported in Outlook and Office. To update a SPFx Teams personal tab app, follow the steps to:
+
+1. [Update the app manifest](#update)
+1. [Update SDK references](#update-sdk-references)
+
+From there, you can skip ahead to [Sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. (You can skip the sections on configuring Content Security Policy and Azure AD app registration.)
 
 ## Update the app manifest
 
@@ -87,7 +97,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
-You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
+You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.x.x. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
@@ -96,8 +106,8 @@ Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.
 
 > [!div class="checklist"]
 >
-> * Import statements for teams-js@2.0.0
-> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.0.0
+> * Import statements for teams-js@2.x.x
+> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.x.x
 > * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
