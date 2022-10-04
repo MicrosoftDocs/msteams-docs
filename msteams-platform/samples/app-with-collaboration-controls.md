@@ -12,7 +12,7 @@ ms.topic: conceptual
 Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Create a model-driven application
 
@@ -22,11 +22,11 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Select **New solution**, so that you can provide a home for all your future customizations.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="The screenshot is an example that shows the new solution.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="Screenshot is an example that shows the new solution, which provides a home for all your future customization.":::
 
 1. Provide the name and publisher of your new solution, this solution is going to hold your Custom Collaboration Manager.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="The screenshot is an example that shows the Collaboration manager.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Screenshot is an example that provides publisher details of your new solution.":::
 
 1. Select **Create**
 
@@ -34,42 +34,41 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 
 1. Before creating your app, create a home for your data. select **New** > **Table** to get started.
 
-     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="The screenshot describes how to create a new table.":::
+     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="Screenshot describes how to create a new table.":::
 
 1. Give your table a name. Under **Advanced options**, select **Creating a new activity**.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="The screenshot describes how to create new activity.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Screenshot describes how to create new activity.":::
 
 1. Select **Save**.
 
-1. After you're done creating your table, you can customize it by adding extra
-columns, relationships, and more (Optional).
+1. After you've created your table, you can customize it by adding extra columns, relationships, and more (Optional).
 
 1. Now you can create a new model-driven app by selecting **New** > **App** > **Model-driven app.**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="The screenshot is an example that shows the new model driven app.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="Screenshot is an example that shows how to create a new model driven app.":::
 
-1. Choose new **Modern app designer (preview)** to open the new app.
+1. Select new **Modern app designer (preview)** to open the new app.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="The screenshot is an example that shows the new model driven app blank.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="Screenshot is an example that shows the new model driven app blank and you can select a creating experience.":::
 
 1. Select **Create.**
 
 1. Give your app a name and select **Create.**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="The screenshot is an example that shows the Collaboration manager for inspection.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Screenshot is an example that shows add the Collaboration manager for inspection and create a new model-driven app.":::
 
 1. Select **Add page.**
 
 1. Select **Table based view and form.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="The screenshot is an example that shows the table based view and form.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="Screenshot is an example that shows the table based view and form and you can select a page type.":::
 
 1. Select **Next.**
 
 1. Search and select the table you've created earlier.
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="The screenshot is an example that shows the table view form pages.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Screenshot is an example that shows the table view form pages and can select the table that you've created.":::
 
 1. Select **Add.**
 
@@ -89,25 +88,25 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 1. Go to the Forms tab for your table.
 
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="The screenshot is an example that shows the forms tab for your table.":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="Screenshot is an example that shows the forms tab for your table.":::
 
 1. Select the Information form of form type **Main** to open it in the form designer.
 
 1. Once you are in the form designer, press and drag in a **1-column tab** from the **Components** section.
 
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="The screenshot is an example that shows the components of power apps.":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Screenshot is an example that shows the components of power apps.":::
 
 1. After selecting the tab, rename the tab to “Tasks” in the property pane.
 
 1. Select the tab name to select the full section and select **Expand first component to full tab** in the Properties pane. This is required as the Collaboration controls are best viewed in full tab views.
 
-    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" The screenshot describes how to select first component to full tab.":::
+    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" Screenshot describes how to select first component to full tab.":::
 
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" The screenshot describes how to expand first component to full tab.":::
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Screenshot describes how to expand first component to full tab.":::
 
 1. Expand the Collaboration (Preview) category on the controls drawer and drag the Tasks (Preview) control onto the section in Tasks form.
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Screenshot describes preview control onto the section in tasks form.":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Screenshot describes how to preview control onto the section in tasks form.":::
 
 3. Set the table to Activities & select Done.
 
@@ -117,26 +116,26 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
      :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Screenshot shows how to select hide label.":::
 
-1. The Tasks control will now display.
+1. The Tasks control appears now.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Screenshot shows tasks control display.":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Screenshot shows is an example of tasks control display.":::
 
-1. Repeat the Tasks steps to add Approvals, Files, Meetings and Notes controls to your app.
-1. Once all controls are added, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.
+1. Repeat the Tasks steps to add Approvals, Files, Meetings, and Notes controls to your app.
+1. After you add all the controls, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot shows Controls form designer.":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot shows Controls form designer are successfully added.":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Screenshot Collaboration manager for inspections.":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Screenshot shows to run your power app by selecting Collaboration manager for inspections.":::
 
 1. Create a new record by selecting **+ New** and then open the record.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Screenshot is an example that shows the power apps that open the record.":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Screenshot shows to create a new record.":::
 
 1. Now you can see views for each tab that appear similar to the following image:
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Screenshot is an example that shows the tasks.":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Screenshot is an example that shows the view for each tab.":::
 
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
@@ -229,7 +228,7 @@ You would need to add the Settings IDs that you've saved earlier for your applic
 
 1. Open Files tab to add Site ID and Drive ID.
 
-     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="The screenshot describes how to add the site ID and drive ID in files tab.":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Screenshot describes how to add the site ID and drive ID in files tab.":::
 
 The Notes control doesn't require a setting value. Now you can create entities such as Tasks and Meetings in your application. If you're facing issues launching and saving the controls recheck the settings values.
 
@@ -272,7 +271,7 @@ To schedule an internal meeting, select the dropdown next to the **New meeting**
 
 Within the **New meeting** dialog, users can provide relevant information about the meeting and select **Save**. The meeting appears in the meetings list.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="The screenshot describes how to schedule a new meeting.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="Screenshot describes how to schedule a new meeting.":::
 
 To schedule an external meeting with the customer, select the dropdown next to the **New meeting** button and select **Customer Booking**. If the **Customer Booking** option isn't available in the **New Meeting** dropdown, confirm if the app is configured to Microsoft Bookings in the Settings and the user has the Bookings Administrator role. For more information, see [add staff to Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). You can add additional booking types by adding additional services within your Bookings business.
 
