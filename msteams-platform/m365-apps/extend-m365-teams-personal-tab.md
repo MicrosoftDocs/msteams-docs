@@ -47,13 +47,17 @@ Alternately, you can use a basic single sign-on *hello world* app already enable
 To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, use Teams Toolkit extension for Visual Studio Code.
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
+1. Select **Create a new Teams app** option.
 1. Select **SSO enabled personal tab**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="The Screenshot is an example that shows the Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit.":::
-
-1. Select a location on your local machine for the workspace folder.
+1. Select preferred programming language.
+1. Select a location on your local machine for the workspace folder and type your application name.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (App Service plan, Storage account, Function App, Managed Identity) in your Azure account.
+1. Select a subscription and a resource group.
+1. Select **Provision**.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
+1. Select **Deploy**.
 
 From here, you can skip ahead to [sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and Office. (The app manifest and TeamsJS API calls have already been updated for Microsoft 365.)
 
@@ -85,7 +89,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update SDK references
 
-To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
+To run in Outlook and Office, your app need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
@@ -220,7 +224,7 @@ To preview your app running in Office on the web:
 
 To view your app running in Office app for Android:
 
-1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you'll need to restart it in order to see it among your installed apps.
+1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you need to restart it in order to see it among your installed apps.
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in Office app for Android.
 
