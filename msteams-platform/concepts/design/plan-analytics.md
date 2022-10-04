@@ -155,19 +155,19 @@ When you build a [tab](../../tabs/how-to/tab-requirements.md), add the [Teams Ja
 | User Principal Name or login hint (user name) in the current tenant (user’s email address) | -- |
 | Team name and channel name Team name and channel name | -- |
 | Unique ID for the current app session inside a tab used for correlating telemetry data (appSessionId) | -- |
-| Meeting ID is used by a tab running in the meeting context | response payload contains the meetingId |
+| Meeting ID is used by a tab running in the meeting context | response payload contains the `meetingId` |
 |  Microsoft Azure Active Directory (Azure AD) ID of the current user | -- |
 -->
 
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure AD, a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name.
-- License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (tenantSKU).
-- The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (frameContext).
-- Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (hostClientType). You can slice your analytics data.
+- License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (`tenantSKU`).
+- The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (`frameContext`).
+- Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (`hostClientType`). You can slice your analytics data.
 - Locale awareness for the user to indicate language for example, en-us, fr-fr, ja-jp etc. (app locale).
 - User Principal Name or login hint (user name) of the current user in the current tenant (usually user’s email address).
 - Team name and channel name Team name and channel name is added (teamName, channelName).
-- Unique ID for the current app session inside a tab used for correlating telemetry data (appSessionId).
-- Meeting ID is used by a tab running in the meeting context and is added for the response payload (meetingId).
+- Unique ID for the current app session inside a tab used for correlating telemetry data (`appSessionId`).
+- Meeting ID is used by a tab running in the meeting context and is added for the response payload (`meetingId`).
 - Microsoft Azure AD ID of the current user.
 
 <!-- replace with cross-functional chart infogfx to show links between Teams-specific information and type of analytics 
