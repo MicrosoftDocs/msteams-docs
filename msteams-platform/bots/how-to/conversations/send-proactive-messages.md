@@ -56,9 +56,23 @@ Create the conversation, after you have the user or channel information.
 
 Create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
-To create a conversation, you need `userId` and `tenantId` for service url. For production tenants, use this global URL endpoint. [link to GCC/GCCH endpoint from above]
+To create a conversation, you need `userId` and `tenantId` for service URL. The following are the example for the `serviceUrl`:
 
-Add the sample code
+```csharp
+const serviceUrl = 'https://smba.trafficmanager.net/uk/';
+        `MicrosoftAppCredentials.trustServiceUrl(serviceUrl);
+```
+
+For production tenants, use the following global URL endpoint:
+
+* GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
+* GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+
+**Code sample**
+
+The following are the code sample to create a conversation bot:
+
+* [Create a Conversation](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs)
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
