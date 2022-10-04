@@ -44,26 +44,7 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
   "members": [ 
     { 
       "id": "<<GUID>>", 
-      "aadObjectId": "<<GUID>>", 
-      "name": "TestName TestSurname", 
-      "givenName": "TestName TestSurname", 
-      "email": "sample", 
-      "userPrincipalName": "sample", 
-      "tenantId": "<<GUID>>", 
-      "userRole": "anonymous" 
-    } 
-  ] 
-} 
-```
-
-**Non-paginated Get Members API**
-
-```csharp
-{ 
-  "members": [ 
-    { 
-      "id": "<<GUID>>", 
-      "name": "AnonTest (Guest)", 
+      "name": "AnonTest (Guest)",  
       "tenantId": "<<GUID>>", 
       "userRole": "anonymous" 
     } 
