@@ -17,7 +17,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 |          | App manifest element | Teams support |Outlook* support | Office* support | Notes |
 |--|--|--|--|--|--|
 | [**Tabs**](../tabs/what-are-tabs.md) personal scope    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) search-based| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
+| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) search-based| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
 | link unfurling | `composeExtensions.messageHandlers` | Web, Desktop | Web (Targeted Release), Desktop (Beta Channel) | - | See [notes](extend-m365-teams-message-extension.md#link-unfurling) |
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
@@ -30,7 +30,7 @@ For guidance about the Teams app manifest and SDK versioning guidance, and furth
 
 ## Personal tabs and messaging extensions in Outlook and Office
 
-Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Office. Teams personal tabs built and hosted with [SharePoint Framework](extend-m365-teams-personal-tab.md#sharepoint-framework-spfx-apps) (SPFx) version 1.16 and later are also supported in Outlook and Office.
+Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Office. Teams personal tabs built and hosted with [SharePoint Framework](extend-m365-teams-personal-tab.md#sharepoint-framework-spfx-apps) (SPFx) version 1.16 (preview) and later are also supported in Outlook and Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Office, and Teams.":::
 
@@ -44,7 +44,7 @@ You can also extend your search-based [Teams message extensions](extend-m365-tea
 
 [Link unfurling](extend-m365-teams-message-extension.md#link-unfurling)  works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
 
-[screenshot]
+:::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
 Build your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
 
