@@ -25,29 +25,19 @@ doc-feature-app-less-adaptive-card-preview-with-schema.org-templates-TFW
 
 ## App less Adaptive Card
 
-User can copy the metadata link from any website and paste it into the Adaptive Card designer, it takes the template of the tag and unfurls into an Adaptive Card based on the type of product it's tagged.
+App less is an internet based service, which draws user's attention without the need to download or register an app.
 
-### Schema.org
+### Enable App less Adaptive Card
 
-Schema.org is an open-source standard for schemas of structured data on the internet. The templates have been leveraged from schema.org to unfurl rich previews for your links in Teams.
+You can copy the metadata link from [schema.org](https://schema.org/) and paste it into the Adaptive Card designer, it takes the template of the tag and unfurls into an Adaptive Card based on the type of product it's tagged.
 
-### Unfurling Adaptive Card
+The following screenshot demonstrates unfurling of an app less Adaptive Card.
 
-1. Copy the link from any website and paste into the **Adaptive Card designer**.
-
-    :::image type="content" source="../../assets/images/adaptive-cards/copy-metadata-link.png" alt-text="Screenshot is an example of copying metadata link from the website.":::
-
-1. Copy the JSON code for the chosen category from your website and paste it in the **Adaptive Card designer** **>** **Sample data editor**
-
-   :::image type="content" source="../../assets/images/adaptive-cards/sample-data-editor.png" alt-text="Screenshot is an example that shows JSON code copied into sample editor.":::
-
-1. Choose a matching template from the template library and paste it into the **card payload editor** you'll see the unfurling of an Adaptive Card.
-
-    :::image type="content" source="../../assets/images/adaptive-cards/card-payload-editor.png"alt-text="Screenshot is an example that shows unfurling of an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/unfurling-adaptive-card.png" alt-text="The screenshot is an example of unfurling an app less Adaptive Card":::
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
