@@ -324,12 +324,11 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Agile Poker tutorial](../sbs-teams-live-share.yml)
+> [Live Share canvas](teams-live-share-canvas.md)
 
 ## See also
 
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Reference docs](https://aka.ms/livesharedocs)
 - [Teams apps in meetings](teams-apps-in-meetings.md)
