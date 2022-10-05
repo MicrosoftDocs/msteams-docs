@@ -55,18 +55,17 @@ Example:
 
 ```javascript
 import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 
 // Initialize the Teams Client SDK
 await microsoftTeams.app.initialize();
 
 // Setup the Fluid container
-const client = new TeamsFluidClient();
+microsoftTeams.liveShare.initialize();
 const schema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await microsoftTeams.liveShare.joinContainer(schema);
 const { liveCanvas } = container.initialObjects;
 
 // Get the canvas host element
@@ -81,7 +80,6 @@ await liveCanvas.initialize(inkingManager);
 
 ```TypeScript
 import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 import { ContainerSchema } from "fluid-framework";
 
@@ -89,11 +87,11 @@ import { ContainerSchema } from "fluid-framework";
 await microsoftTeams.app.initialize();
 
 // Setup the Fluid container
-const client = new TeamsFluidClient();
+microsoftTeams.liveShare.initialize();
 const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await microsoftTeams.liveShare.joinContainer(schema);
 const liveCanvas = container.initialObjects.liveCanvas as LiveCanvas;
 
 // Get the canvas host element

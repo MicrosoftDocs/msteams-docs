@@ -23,7 +23,7 @@ In the Dice Roller sample app, users are shown a die with a button to roll it. W
 
 ## Set up the application
 
-Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams Client SDK](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [liveShare](/javascript/api/@microsoft/teams-js/liveShare) namespace from the Teams Client SDK. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams Client SDK](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
 Applications create Fluid containers using a schema that defines a set of _initial objects_ that will be available to the container. The sample uses a SharedMap to store the most recent die value that was rolled. For more information, see [Data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
@@ -33,9 +33,7 @@ In addition to the `inTeams=true` query parameter, we can use a `view=content|co
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { TeamsFluidClient } from "@microsoft/live-share";
-import { app, pages } from "@microsoft/teams-js";
-import { LOCAL_MODE_TENANT_ID } from "@fluidframework/azure-client";
+import { app, pages, liveShare } from "@microsoft/teams-js";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -95,7 +93,7 @@ start().catch((error) => console.error(error));
 
 Not all of your apps views will need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient), and then calling it's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) method. When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
+Joining the container for the meeting is as simple as calling [liveShare.initialize()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-initialize), and then calling it's [joinContainer()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-joincontainer) method. When running locally you'll need to pass in a custom connection config with a type of `local` but otherwise, join a local container is the same as joining a container in Teams.
 
 ```js
 async function joinContainer() {
@@ -103,10 +101,10 @@ async function joinContainer() {
   let client;
   if (!!searchParams.get("inTeams")) {
     // Create client
-    client = new TeamsFluidClient();
+    liveShare.initialize();
   } else {
     // Create client and configure for testing
-    client = new TeamsFluidClient({
+    liveShare.initialize({
       connection: {
         type: "local",
         tokenProvider: new InsecureTokenProvider("", {
@@ -119,12 +117,12 @@ async function joinContainer() {
   }
 
   // Join container
-  return await client.joinContainer(containerSchema, onContainerFirstCreated);
+  return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
 > [!NOTE]
-> When testing locally, the TeamsFluidClient updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the TeamsFluidClient to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) options passed to the TeamsFluidClient.
+> When testing locally, the `liveShare` namespace updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `liveShare` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/teams-js/liveShare.liveshareoptions?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-liveshareoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/teams-js/liveShare.liveshareoptions?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-liveshareoptions-getlocaltestcontainerid) options passed `liveShare.initialize()`.
 
 ## Write the stage view
 
@@ -195,7 +193,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -223,8 +221,8 @@ function renderSidePanel(elem) {
 
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
-> [!IMPORTANT]
-> The Live Share SDK's [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) is not supported in the tab `settings` context.
+> [!NOTE]
+> The Live Share's' [joinContainer()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-joincontainer) is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 
