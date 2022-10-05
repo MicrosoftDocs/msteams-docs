@@ -38,10 +38,10 @@ yarn add @microsoft/live-share-canvas
 
 Live Share canvas has two primary classes that enable turn-key collaboration: `InkingManager` and `LiveCanvas`. `InkingManager` is responsible for attaching a fully-featured `<canvas>` element to your app, while `LiveCanvas` manages the remote synchronization with other meeting participants. Used together, your app can have complete whiteboard-like functionality in just a few lines of code.
 
-| Classes                                                                     | Description                                                                                                                                                                                                                                               |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [InkingManager](/javascript/api/@microsoft/live-share-canvas/inkingmanager) | Class that attaches a `<canvas>` element to a given `<div>` to automatically manage pen/highlighter strokes, laser pointer, lines & arrows, erasers, and cursors. Exposes a set of APIs to control which tool is active and basic configuration settings. |
-| [LiveCanvas](/javascript/api/@microsoft/live-share-canvas/livecanvas)       | A `SharedObject` class that synchronizes strokes & cursor positions from `InkingManager` for everyone in a Live Share session.                                                                                                                            |
+| Classes                                                                     | Description                                                                                                                                                                                                                                      |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [InkingManager](/javascript/api/@microsoft/live-share-canvas/inkingmanager) | Class that attaches a `<canvas>` element to a given `<div>` to automatically manage pen/highlighter strokes, laser pointer, lines & arrows, and erasers. Exposes a set of APIs to control which tool is active and basic configuration settings. |
+| [LiveCanvas](/javascript/api/@microsoft/live-share-canvas/livecanvas)       | A `SharedObject` class that synchronizes strokes & cursor positions from `InkingManager` for everyone in a Live Share session.                                                                                                                   |
 
 Example:
 
@@ -56,9 +56,6 @@ Example:
 ```javascript
 import * as microsoftTeams from "@microsoft/teams-js";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
-
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
 
 // Setup the Fluid container
 microsoftTeams.liveShare.initialize();
@@ -82,9 +79,6 @@ await liveCanvas.initialize(inkingManager);
 import * as microsoftTeams from "@microsoft/teams-js";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 import { ContainerSchema } from "fluid-framework";
-
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
 
 // Setup the Fluid container
 microsoftTeams.liveShare.initialize();
@@ -198,9 +192,9 @@ document.getElementById("cursors").onclick = () => {
 
 ## Optimizing across devices
 
-For most applications in the web, content will render differently depending on screen size or varying application state. If `InkingManager` isn't optimized correctly for your app, that could cause strokes and cursors to appear differently for each user. Fortunately, Live Share canvas supports a simple set of APIs that can allow the `<canvas>` to adjust stroke positions to align correctly with your content.
+For most applications on the web, content will render differently depending on screen size or varying application state. If `InkingManager` isn't optimized correctly for your app, that could cause strokes and cursors to appear differently for each user. Fortunately, Live Share canvas supports a simple set of APIs that can allow the `<canvas>` to adjust stroke positions to align correctly with your content.
 
-By default, Live Share canvas works a lot like a whiteboard app, with the content being center aligned to the viewport with a 1x zoom level. Only part of the content is being rendered within the visible bounds of the `<canvas>`. Conceptually, it is like a recording a video from birdseye view. While the viewport of the camera is recording a portion of the world beneath it, the real world stretches nearly infinitely in every direction.
+By default, Live Share canvas works a lot like a whiteboard app, with the content being center aligned to the viewport with a 1x zoom level. Only part of the content is being rendered within the visible bounds of the `<canvas>`. Conceptually, it is like recording a video from birdseye view. While the viewport of the camera is recording a portion of the world beneath it, the real world stretches nearly infinitely in every direction.
 
 Here is a simple diagram to help visualize this concept:
 
@@ -209,7 +203,7 @@ Here is a simple diagram to help visualize this concept:
 You can customize this behavior in the following ways:
 
 - Changing the starting reference point to the top-left corner of the canvas.
-- Alter the offset x and y positions of the viewport.
+- Alter the pixel offset x and y positions of the viewport.
 - Change the scale level of the viewport.
 
 > [!NOTE]
@@ -282,14 +276,14 @@ document.getElementById("change-reference").onclick = () => {
 
 ## Ideal scenarios
 
-With web pages coming in all shapes and sizes, it isn't possible to make Live Share canvas work for every scenario. The package is ideal for scenarios at which all users are looking at the same content at the same time. While not all of the content needs to be visible on the screen, it must be content that scales across devices linearly.
+With web pages coming in all shapes and sizes, it isn't possible to make Live Share canvas work for every scenario. The package is ideal for scenarios in which all users are looking at the same content at the same time. While not all of the content needs to be visible on the screen, it must be content that scales across devices linearly.
 
 Here are a couple examples of scenarios where Live Share canvas is a great option for your application:
 
 - Overlay images and videos that render with the same aspect ratio on all clients.
 - Viewing a map, 3D model, or whiteboard from the same rotation angle.
 
-The reason both of these scenarios work well is because being viewed is the same on all devices, even though users may be looking at it with different zoom levels and offsets. If your app content doesn't fit one of these scenarios, it likely isn't a good fit for your scenario.
+The reason both of these scenarios work well is because being viewed is the same on all devices, even though users may be looking at it with different zoom levels and offsets. If your app's layout or content change depending on screen size and it is not possible to generate a common view for all participants, Live Share canvas might not be a good fit for your scenario.
 
 ## Code samples
 
