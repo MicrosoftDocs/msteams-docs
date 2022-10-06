@@ -1073,7 +1073,7 @@ The following table provides the response codes:
 
 ## Register for video effect
 
-The `registerForVideoEffect` API allows you to get the selected effect in Teams client and notify the video extension that the new effect will be applied.
+The `registerForVideoEffect` function allows you to get the selected effect in Teams client and notify the video extension that the new effect will be applied.
 
 ### Query parameter
 
@@ -1081,7 +1081,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**VideoEffectCallBack**|String|Yes|VideEffectCallBack is the callback function as first parameter that passed to registerForVideoEffect function. Video app developer can put logics that want to be called into VideEffectCallBack  after calling registerForVideoEffect.|
+|**VideoEffectCallBack**|String|Yes| VideEffectCallBack is the callback function as first parameter that passed to registerForVideoEffect function.|
 
 ### Example
 
@@ -1093,7 +1093,15 @@ type VideoEffectCallBack = (effectId: string | undefined) => void,
 
 ## Register for video frame
 
-The `registerForVideoFrame` API allows you to get the video frame from the video pipeline, process the video frame and returns the processed video frame to the video pipeline.
+The `registerForVideoFrame` function allows you to get the video frame from the video pipeline, process the video frame and returns the processed video frame to the video pipeline.  The function is used to:
+
+* Get video frames from video pipeline.
+* Get a callback to return processed video frames to video pipeline.
+* Get a callback to notify error.
+
+The `notifyVideoFrameProcessed` is called to signal the Teams client that the processing is done and it can start emitting the processed video frame.
+
+If there is any error to process the video frame, the `notifyError` is called.
 
 ### Query parameter
 
@@ -1106,52 +1114,16 @@ The following table includes the query parameter:
 ### Example
 
 ```typescript
- // import video module from sdk
-
-import { video } from "@microsoft/teams-js";
-
-// The video frame handler for sampleEffect1
-
-function sampleEffectHandler1(videoFrame) {
-    // process the video frame with sampleEffect1
-
-}
-
-// The video frame handler for sampleEffect2
-
-function sampleEffectHandler2(videoFrame) {
-
-    // process the video frame with sampleEffect2
-
-}
-function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
-  // selectedEffectId is the effect id that is using currently in video app
-  switch (selectedEffectId) {
-    case sampleEffect1:
-      sampleEffectHandler1(videoFrame);
-      break;
-    case sampleEffect1:
-      sampleEffectHandler2(videoFrame);
-      break;
-    default:
-      break;
-  }
-  //send notification the effect processing is finshed.
-  notifyVideoProcessed();
-  //send error to Teams if any
-  // if (errorOccurs) {
-  //   notifyError("some error message");
-  // }
-}
-// call registerForVideoFrame
-video.registerForVideoFrame(videoFrameHandler, {
-  format: "NV12",
-});
+ type VideoFrameCallback = ( 
+        frame: VideoFrame, 
+        notifyVideoFrameProcessed: () => void, 
+        notifyError:(errorMessage: string) => void 
+    ) => void; 
 ```
 
 ## Notify selected video effect change
 
-The `notifySelectedVideoEffectChanged` API allows you to notify the user that the video effect is applied.
+The `notifySelectedVideoEffectChanged` function allows you to notify the user that the video effect is applied.
 
 ### Query parameter
 
@@ -1160,7 +1132,7 @@ The following table includes the query parameter:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**effectChangeType**| String | Yes |Video effect change type enum. It includes two types one is for effect changed another is to clear or disable video effect.|
-|**effectId**|String| Yes |The id for the applied effect|
+|**effectId**|String| Yes |The id for the applied effect. The callback function for registerForVideoEffect gives the effectId from the UI.|
 
 ### Example
 
