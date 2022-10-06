@@ -95,17 +95,17 @@ The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` crea
    });
    ```
 
-### Full Launcher.js definition
+### Full launcher.js definition
 
 | Property | HTML attribute | Type | Required | Default | Description |
 | -------------- | ---------------------- | --------------------- | ------- |  ------- |---------------------------------------------------------------------- |
 | url | `data-href` | string | Yes | NA | The URL of the app content to share. |
-| appId | `data-app-id` | string | Yes | NA | ID of the app to share |
-| entityName | `data-entity-name` | string | No | NA | App entity name |
-| entityDescription | `data-entity-description` | string | No | NA | Description of app content to share |
-| locale | `data-locale` | string | No | en-US | User preferred language |
+| appId | `data-app-id` | string | Yes | NA | ID of the app to share. |
+| entityName | `data-entity-name` | string | No | NA | App entity name. |
+| entityDescription | `data-entity-description` | string | No | NA | Description of app content to share. |
+| locale | `data-locale` | string | No | en-US | User preferred language. |
 | target | `data-target` | string | No | self | Specifies whether the link open in the same window, new tab, or new window. |
-| buttonType | `data-button-type` | string | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting` |
+| buttonType | `data-button-type` | string | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
 | buttonSize | `data-button-size` | string | No | NA | The size in pixels of the Share to Teams button to render. |
 
 ## Deep link Format
@@ -114,19 +114,19 @@ When you select Share in Teams Meeting button, it launches the deep link to the 
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
-The query parameters are:
+Deep link parameters:
 
 * `msteams`: All deep links should start with **msteams**, so that Teams app recognizes it and can open the deep link.​
 
-* `meeting-stage`: Verb that Specifies the protocol type and the deep link type​.
+* `meeting-stage`: Verb that specifies the protocol type and the deep link type​.
 
 * `deep link Id`: **GUID/UUID** used for telemetry correlation​.
 
-* `fqdn`: teams.microsoft.com or teams.live.com. FQDN is needed in Teams deep link service for tenant or account checking.
+* `fqdn`: FQDN is needed in Teams deep link service for tenant or for account checking.
 
-  * When the meeting is scheduled with Teams for Life, the fqdn is: **teams.live.com**.
+  * When the meeting is scheduled with Teams for Life, then the fqdn should be: **teams.live.com**.
 
-  * When the meeting is scheduled for Teams for business, the fqdn is: **teams.microsoft.com** or **team.microsoft.us** (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
+  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
 
 ## Deep link example
 
@@ -136,8 +136,8 @@ Required:
 
 ```json
 { ​
-"contentUrl" : "<URL to be opened in the Meeting Stage>", ​
-"appID" : "<Unique ID of the App to be Installed>"​
+"contentUrl" : "<URL to be opened in the meeting stage>", ​
+"appID" : "<Unique ID of the app to be installed>"​
 }
 ```
 
@@ -151,7 +151,7 @@ Optional:
 
 ## End user experience on third party apps
 
-After you enable Share in Teams Meeting on third party apps, you can share the document or web apps in the meeting stage. To access, follow the steps:
+After you enable share in teams meeting on third party apps, you can share the apps to the meeting stage. To access, follow the steps:
 
 If meeting extension is installed:
 
