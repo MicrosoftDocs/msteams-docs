@@ -124,11 +124,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="New client secret":::
     
        The **Add a client secret** window appears.  
 
@@ -136,7 +136,7 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/Teams-Messaging-Extensions-Search/clientsecret.png)
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/clientsecret_1.png" alt-text="Add client secret to app":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
@@ -232,7 +232,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Select scope":::
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -264,7 +264,7 @@ items:
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp_1.png" alt-text="Select client application"::: 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
@@ -289,7 +289,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_1.png" alt-text="Add permission":::
 
     1. Select **Microsoft Graph**.
 
@@ -304,7 +304,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
+         source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Other permissions":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -332,7 +332,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation.png)
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation_1.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
@@ -346,7 +346,7 @@ items:
 
     1. Go to `manifest.json` in cloned repository.
 
-        ![Manifest file location](~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png)
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation_1.png" alt-text="Manifest file location":::
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
@@ -385,7 +385,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/sbs-messagingextension-action/certificate.png)
+          :::image type="content" source="~/assets/images/sbs-messagingextension-action/certificate_1.png" alt-text="Trust Certificate":::
 
           A webpage opens with a message **Your bot is ready!**.
 
@@ -412,7 +412,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/Teams-Messaging-Extensions-Search/zipfile.png) 
+       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/zipfile_1.png" alt-text="Zip file"::: 
 
     1. Go to **Microsoft Teams**.
 
@@ -426,7 +426,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       ![Select zip file](~/assets/images/Teams-Messaging-Extensions-Search/selectzipopen.png)
+       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/selectzipopen_1.png" alt-text="Select zip file":::
 
     1. Select **Add**.
 
