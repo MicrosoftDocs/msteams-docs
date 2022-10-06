@@ -102,6 +102,8 @@ You can build link unfurling apps to your Teams without installing the full app 
 
 You need to set the manifest property `supportsAnonymousAccess` to TRUE.
 
+The following code snippet helps your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
+
  :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
  :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code 2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
