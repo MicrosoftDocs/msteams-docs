@@ -97,7 +97,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app. It's recommended to use [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) to create the single sign-in experience for your users. The following advantages help you to provide enhanced experience to the users:
 
 * Prompt users to unfurl links without installing messaging extension.
-* Authenticate using single sign on.
+* Authenticate using single sign-on.
 * Create welcome card for your app to show preview with placeholder fields.
 
 You need to set the manifest property `supportsAnonymousAccess` to TRUE.
