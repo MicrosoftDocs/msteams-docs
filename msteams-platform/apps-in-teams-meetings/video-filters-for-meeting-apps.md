@@ -44,7 +44,7 @@ The video filter app defines the video filter and applies it to the user's video
 
 1. [Install Microsoft Teams JavaScript SDK](https://github.com/OfficeDev/microsoft-teams-library-js).
 
-1. [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings).
+1. [Enable the video filter app](#enable-the-video-filter-app).
 
 1. [Validate your app package](#validate-your-app-package).
 
