@@ -100,37 +100,30 @@ await liveCanvas.initialize(inkingManager);
 
 ## Canvas tools & cursors
 
-Now that you understand how to set up the Live Share canvas and it is being synchronized, you can now configure the canvas for user interaction, such as with buttons to select a pen tool.
+Now that you understand how to set up the Live Share canvas and it is being synchronized, you can now configure the canvas for user interaction, such as with buttons to select a pen tool. In this section, we will discuss what tools are available and how to use them.
 
-Example:
+### Inking tools
+
+Each of the inking tools in Live Share canvas render strokes as users draw. If using a touch screen or stylus, the tools also support pressure. Configuration settings include brush color, thickness, shape, and an optional end arrow.
+
+#### Pen tool
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Teams Live Share canvas pen tool":::
+
+The pen tool draws solid strokes that are stored into the canvas. The default tip shape is a circle.
 
 ```html
-<body>
-  <div id="canvas-host"></div>
+<div>
   <button id="pen">Enable Pen</button>
-  <label for="pen-color">Select a color for pen:</label>
+  <label for="pen-color">Select a color:</label>
   <input type="color" id="color" name="color" value="#000000" />
-  <button id="pen-tip-size">Increase pen size</button><br />
-
-  <button id="highlighter">Enable Highlighter</button><br />
-
-  <button id="eraser">Enable Eraser</button>
-  <button id="point-eraser">Enable Point Eraser</button><br />
-
-  <button id="laser-pointer">Enable Laser Pointer</button><br />
-
-  <button id="arrow">Enable Line Arrow</button><br />
-
-  <button id="clear">Clear strokes</button><br />
-
-  <button id="cursors">Toggle Cursors</button>
-</body>
+  <button id="pen-tip-size">Increase pen size</button>
+</div>
 ```
 
 ```javascript
 import {
   InkingManager,
-  LiveCanvas,
   InkingTool,
   fromCssColor,
 } from "@microsoft/live-share-canvas";
@@ -149,45 +142,206 @@ document.getElementById("pen-color").onchange = () => {
 document.getElementById("pen-tip-size").onclick = () => {
   inkingManager.penBrush.tipSize = inkingManager.penBrush.tipSize + 1;
 };
-// Change the selected tool to highlighter with custom color
+```
+
+#### Highlighter tool
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Teams Live Share canvas highlighter tool":::
+
+The highlighter tool draws opaque strokes that are stored into the canvas. The default tip shape is a square.
+
+```html
+<div>
+  <button id="highlighter">Enable Highlighter</button><br />
+  <label for="highlighter-color">Select a color:</label>
+  <input type="color" id="highlighter-color" name="highlighter-color" value="#000000" />
+  <button id="highlighter-tip-size">Increase tip size</button>
+</div>
+```
+
+```javascript
+import {
+  InkingManager,
+  InkingTool,
+  fromCssColor,
+} from "@microsoft/live-share-canvas";
+// ...
+
+// Change the selected tool to highlighter
 document.getElementById("highlighter").onclick = () => {
-  inkingManager.highlighterBrush.color = fromCssColor("#3BDE3B"); // optional
   inkingManager.tool = InkingTool.highlighter;
 };
-// Change the selected tool to eraser to erase entire strokes
+// Change the selected color for highlighter
+document.getElementById("highlighter-color").onchange = () => {
+  const colorPicker = document.getElementById("highlighter-color");
+  inkingManager.highlighterBrush.color = fromCssColor(colorPicker.value);
+};
+// Increase the tip size for highlighter
+document.getElementById("highlighter-tip-size").onclick = () => {
+  inkingManager.highlighterBrush.tipSize = inkingManager.penBrush.tipSize + 1;
+};
+```
+
+#### Eraser tool
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Teams Live Share canvas eraser tool":::
+
+The eraser tool erases entire strokes that cross its path.
+
+```html
+<div>
+  <button id="eraser">Enable Eraser</button><br />
+  <button id="eraser-size">Increase eraser size</button>
+</div>
+```
+
+```javascript
+import {
+  InkingManager,
+  InkingTool,
+} from "@microsoft/live-share-canvas";
+// ...
+
+// Change the selected tool to eraser
 document.getElementById("eraser").onclick = () => {
   inkingManager.tool = InkingTool.eraser;
 };
-// Change the selected tool to eraser to erase points in strokes
+// Increase the tip size for eraser
+document.getElementById("eraser-size").onclick = () => {
+  inkingManager.eraserSize = inkingManager.eraserSize + 1;
+};
+```
+
+#### Point eraser tool
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Teams Live Share canvas point eraser tool":::
+
+The point eraser tool erases individual points within strokes that cross its path by splitting existing strokes in half. This tool is computationally expensive and may result in slower frame rates for your users.
+
+> [!NOTE]
+> The point eraser shares the same eraser point size as the regular eraser tool.
+
+```html
+<div>
+  <button id="point-eraser">Enable Point Eraser</button><br />
+</div>
+```
+
+```javascript
+import {
+  InkingManager,
+  InkingTool,
+} from "@microsoft/live-share-canvas";
+// ...
+
+// Change the selected tool to eraser
 document.getElementById("point-eraser").onclick = () => {
   inkingManager.tool = InkingTool.pointEraser;
 };
-// Change the selected tool to laser pointer with disappearing strokes & custom color
-document.getElementById("laser-pointer").onclick = () => {
-  inkingManager.laserPointerBrush.color = fromCssColor("#3BDE3B"); // optional
-  inkingManager.tool = InkingTool.laserPointer;
+```
+
+#### Laser pointer
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Teams Live Share canvas laser pointer tool":::
+
+The laser pointer is unique because the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, they will render for a short period of time before they fade out completely. This tool is perfect for pointing out information on the screen during a meeting, as the presenter doesn't have to switch between tools to erase strokes.
+
+```html
+<div>
+  <button id="laser">Enable Laser Pointer</button><br />
+  <label for="laser-color">Select a color:</label>
+  <input type="color" id="laser-color" name="laser-color" value="#000000" />
+  <button id="laser-tip-size">Increase tip size</button>
+</div>
+```
+
+```javascript
+import {
+  InkingManager,
+  InkingTool,
+  fromCssColor,
+} from "@microsoft/live-share-canvas";
+// ...
+
+// Change the selected tool to laser pointer
+document.getElementById("laser").onclick = () => {
+  inkingManager.tool = InkingTool.highlighter;
 };
-// Change the selected tool to line with arrow at end
-document.getElementById("arrow").onclick = () => {
+// Change the selected color for laser pointer
+document.getElementById("laser-color").onchange = () => {
+  const colorPicker = document.getElementById("laser-color");
+  inkingManager.laserPointerBrush.color = fromCssColor(colorPicker.value);
+};
+// Increase the tip size for laser pointer
+document.getElementById("laser-tip-size").onclick = () => {
+  inkingManager.laserPointerBrush.tipSize = inkingManager.laserPointerBrush.tipSize + 1;
+};
+```
+
+#### Line and arrow tools
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Teams Live Share canvas line tool":::
+
+The line tool allows users to draw straight lines from one point to another, with an optional arrow that can be applied to the end.
+
+```html
+<div>
+  <button id="line">Enable Line</button><br />
+  <button id="line-arrow">Enable Arrow</button><br />
+  <input type="color" id="line-color" name="line-color" value="#000000" />
+  <button id="line-tip-size">Increase tip size</button>
+</div>
+```
+
+```javascript
+import {
+  InkingManager,
+  InkingTool,
+  fromCssColor,
+} from "@microsoft/live-share-canvas";
+// ...
+
+// Change the selected tool to line
+document.getElementById("line").onclick = () => {
   inkingManager.tool = InkingTool.line;
-  inkingManager.lineBrush.endArrow = "open"; // optional
+  inkingManager.lineBrush.endArrow = "none";
 };
-// Clear all strokes, lines, etc. from the canvas
-document.getElementById("clear").onclick = () => {
-  inkingManager.clear();
+// Change the selected tool to line
+document.getElementById("line-arrow").onclick = () => {
+  inkingManager.tool = InkingTool.line;
+  inkingManager.lineBrush.endArrow = "open";
 };
-// Enable cursor sharing within the Live Canvas
-document.getElementById("cursors").onclick = () => {
-  // Optional. Set user display info
-  liveCanvas.onGetLocalUserInfo = () => {
-    return {
-      displayName: "YOUR USER NAME",
-      pictureUri: "YOUR USER PICTURE URI",
-    };
+// Change the selected color for lineBrush
+document.getElementById("line-color").onchange = () => {
+  const colorPicker = document.getElementById("line-color");
+  inkingManager.lineBrush.color = fromCssColor(colorPicker.value);
+};
+// Increase the tip size for lineBrush
+document.getElementById("line-tip-size").onclick = () => {
+  inkingManager.lineBrush.tipSize = inkingManager.lineBrush.tipSize + 1;
+};
+```
+
+#### Clear all strokes
+
+You can easily clear all strokes in the canvas by calling `inkingManager.clear()`. This will delete all strokes from the canvas and start over from scratch.
+
+### Cursors
+
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Teams Live Share cursor sharing":::
+
+If you would like to enable live cursors in your application so users can track each other's cursor positions on the canvas, you can do so easily. Unlike the inking tools mentioned above, cursors operate entirely through the `LiveCanvas` class. You can also optionally provide a name and picture for each user to denote who is who. Cursors can be enabled together with the inking tools or separately.
+
+```javascript
+// Optional. Set user display info
+liveCanvas.onGetLocalUserInfo = () => {
+  return {
+    displayName: "YOUR USER NAME",
+    pictureUri: "YOUR USER PICTURE URI",
   };
-  // Toggle Live Canvas cursor enabled state
-  liveCanvas.isCursorShared = !isCursorShared;
 };
+// Toggle Live Canvas cursor enabled state
+liveCanvas.isCursorShared = !isCursorShared;
 ```
 
 ## Optimizing across devices
