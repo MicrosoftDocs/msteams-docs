@@ -50,7 +50,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample.png" alt-text="Screenshot showing the cloning of repository":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample_1.png" alt-text="Screenshot showing the cloning of repository":::
 
     1. Select **Clone**. 
 
@@ -97,7 +97,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create.png" alt-text="creation of new bot":::   
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create_1.png" alt-text="creation of new bot":::   
 
     1. If the validation passes, select **Create**. 
     
@@ -122,11 +122,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="adding client secret" border="true":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="adding client secret" border="true":::
 
             
        The **Add a client secret** window appears.
@@ -135,7 +135,7 @@ items:
     
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-client-secret.png" alt-text="adding client secret and description"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-client-secret_1.png" alt-text="adding client secret and description"::: 
 
        
     1. In the **Value** column, select **Copy to clipboard**.
@@ -168,7 +168,7 @@ items:
       
     1. Select **Apply**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams.png" alt-text="microsoft teams":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_!.png" alt-text="microsoft teams":::
 
       
     **To create tunnel for local web server**
@@ -235,7 +235,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope.png" alt-text="selection of scope":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_1.png" alt-text="selection of scope":::
 
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -267,7 +267,7 @@ items:
 
     1. Select **Add a client application**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selectclientapp.png" alt-text="client app":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selectclientapp_1.png" alt-text="client app":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
@@ -288,7 +288,7 @@ items:
 
     1. Select **Add a permission**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-permission.png" alt-text="permission added":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-permission_1.png" alt-text="permission added":::
 
     1. Select **Microsoft Graph**.
 
@@ -298,7 +298,7 @@ items:
 
     1. Select **Add permissions**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-permissions.png" alt-text="delegated permissions added":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-permissions_1.png" alt-text="delegated permissions added":::
 
     1. From the left panel, select **Authentication** to set a redirect URI.
 
@@ -309,7 +309,7 @@ items:
         
          1. Select **Web**.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/configure-web.png" alt-text="web configuration"::: 
+            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/configure-web_1.png" alt-text="web configuration"::: 
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -373,7 +373,7 @@ items:
            
     1. Go to **manifest.json** in cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-app-manifest.png" alt-text="open manifest file":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-app-manifest_1.png" alt-text="open manifest file":::
          
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
@@ -412,7 +412,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/certificate.png" alt-text="ca":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/certificate_1.png" alt-text="ca":::
 
           
           A webpage opens with a message **Your bot is ready!**.
