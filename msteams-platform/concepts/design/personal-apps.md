@@ -51,7 +51,7 @@ You can add multiple actions to the upper right NavBar and build an overflow men
 >[!NOTE]
 > A maximum of five actions can be added in the NavBar, including the overflow menu.
 
-:::image type="content" source="../../assets/images/navbar-overflow-menu-optionss.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
 
 To **Configure and add multiple actions in NavBar**, call [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API. and add the `displayMode enum` property to `MenuItem`. The `displayMode enum` defines how a menu appears in the NavBar. The default value of `displayMode enum` is set to `ifRoom`.
 
