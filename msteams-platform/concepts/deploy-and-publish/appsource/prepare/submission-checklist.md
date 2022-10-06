@@ -198,7 +198,7 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Content management |
 | Files & documents |
 | Workflow & business management |
-| IT/Admin | 
+| IT/Admin |
 | Human resources & recruiting|
 | Developer tools |
 | Meetings & scheduling |
