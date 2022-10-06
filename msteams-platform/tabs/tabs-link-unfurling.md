@@ -108,9 +108,16 @@ The `invoke` request type must be `composeExtension/queryLink`.
 > * `invoke` is same as the current `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-> * Passing a Stage View deep link into Adaptive Cards is not opened in the Collaborative Stage View; Stage View deep link always open to the Stage View modal.
-> * To open Stage View, ensure the URL of the content is within the list of `validDomains` in your app manifest.
-> * For more information on building cards, see [Adaptive Cards](../task-modules-and-cards/what-are-cards.md).
+
+Following is the process to invoke Stage View:
+
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
+* `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
+* The bot responds with a `200` code.
+
+> [!NOTE]
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
