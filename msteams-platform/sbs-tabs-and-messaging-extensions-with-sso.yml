@@ -18,9 +18,7 @@ items:
 
    **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
-    * After the first sign-in, Azure AD SSO allows the user to sign in automatically.
-
-    * Allows the user to sign in to other devices without reentering sign-in credentials.
+    * After the first sign-in, Azure AD SSO allows the user to sign in to other devices without reentering sign-in credentials.
 
     * Obtains token for the logged-in user.   
 

@@ -64,10 +64,6 @@ After adding the tabs to an existing meeting on mobile, you can see the same app
 
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-post-meeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Mobile pre-meeting experience":::
-
----
-
 #### In-meeting app experience
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
@@ -95,7 +91,6 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Screenshot is an example of mobile dialog box view.":::
-:::image type="content" source="~/assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view":::
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -118,10 +113,6 @@ The following image illustrates the in-meeting side panel:
 
 :::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile.:::"
 
-:::image type="content" source="~/assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="In-meeting side panel mobilel":::
-
----
-
 The following table describes the behavior of app when it is validated and not validated:
 
 |App capability | App is validated | App isn't validated |
@@ -132,7 +123,7 @@ For more information, see [store validation guidelines](../concepts/deploy-and-p
 
 #### Post-meeting app experience
 
-With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab, get meeting notes, and see the results on which organizers and attendees must take action.
+With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select :::image type="icon" source="../assets/images/apps-in-meetings/plusbutton.png"::: to add a tab, get meeting notes, and see the results on which organizers and attendees must take action.
 
 The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
 

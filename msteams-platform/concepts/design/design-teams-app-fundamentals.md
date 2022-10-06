@@ -8,11 +8,7 @@ ms.topic: overview
 ---
 # Microsoft Teams app design system
 
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
 Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
-
-Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159).
-
 
 ## Layout
 
@@ -40,11 +36,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       An avatar is a graphical representation of a person, team, bot, or entity in Teams. An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space. 
 
-doc-improvement-update-HTML-for-links-and-images-to-Markdown
       * [See full avatar guidelines (Figma)](https://www.figma.com/community/file/916836509871353159).
-
-      * [See full avatar guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
-
 
    :::column-end:::
    :::column span="1":::

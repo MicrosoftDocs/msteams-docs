@@ -96,9 +96,7 @@ Before a meeting, users can add tabs, bots, and message extensions. Users with o
 To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
-
-   :::image type="content" source="../assets/images/apps-in-meetings/pre-meeting.png" alt-text="The screenshot describes how to install the app as a tab in the pre meeting tab in Teams meeting.":::
+1. Select the **Details** tab and select :::image type="icon" source="../assets/images/apps-in-meetings/plusbutton.png":::
 
    :::image type="content" source="../assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Screenshot showing the navigation to + option in the UI.":::
 
@@ -181,7 +179,7 @@ Shared meeting stage allows meeting participants to interact with and collaborat
 
 Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Screenshot is an example of showing the meeting stage using the share to stage button from the app side panel.":::
 
 To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
@@ -207,11 +205,7 @@ For more information, see [app manifest](../resources/schema/manifest-schema-dev
 
 Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
 
-:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="Screenshot is an example that share specific parts of the app.":::
-
 :::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="The screenshot describes how to share specific part of the app to meeting stage in Teams meeting.":::
-
-<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 

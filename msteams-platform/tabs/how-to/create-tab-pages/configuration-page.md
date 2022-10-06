@@ -152,7 +152,7 @@ Choose either **Select Gray** or **Select Red** button in the configuration page
 
 The following image displays the tab content with **Gray** icon selected:
 
-<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="The screenshot is an example of gray icon selected in the configuration page.":::
 
 The following image displays the tab content with **Red** icon selected:
 
