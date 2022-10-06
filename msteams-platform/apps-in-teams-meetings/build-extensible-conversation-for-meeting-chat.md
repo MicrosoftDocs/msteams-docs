@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 
 # Build extensible conversation for meeting chat
 
-App developers can make conversations extensible in Teams meetings. Bots, message extensions, cards and task modules can be combined to deliver an intuitive experience.
+You can make conversations extensible in Teams meetings. Bots, message extensions, cards and task modules can be combined to deliver an intuitive experience.
 
 ## Bots
 
-A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations. Bots that are enabled in group chat scope start functioning in meetings. To implement bots, start with [Build a bot](/microsoftteams/platform//sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode).
+A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations. Bots needs to be enabled in `team` scope for channel meeting and `groupchat` scope for all other meting types. To implement bots, start with [Build a bot](/microsoftteams/platform//sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode).
 
 ### Bot APIs
 
@@ -33,6 +33,16 @@ Message extensions allow the users to interact with your web service through but
 ## Cards and Task modules
 
 Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With task modules, you can create modal pop-up experiences in Microsoft Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and task modules](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
+
+## User types and accessibility's
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Bots | Message extensions | Adaptive Cards | Task modules |
+| :-- | :-- | :-- | :-- | :-- |
+| Anonymous user | Not available | Not available | Interactions in the meeting chat are allowed. | Not available |
+| Guest, part of the tenant Azure AD | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 ## See also
 

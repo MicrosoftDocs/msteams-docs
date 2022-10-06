@@ -222,5 +222,5 @@ When a user selects a button on the Adaptive Card tab, the `tab/submit` request 
 
 ## See also
 
-* [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
+* [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Advanced meeting APIs](meeting-apps-apis.md)
