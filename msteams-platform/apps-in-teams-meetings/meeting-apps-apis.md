@@ -43,6 +43,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 
 > [!NOTE]
 >
+> * The user type is not included in the **getParticipantRole** API.
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 

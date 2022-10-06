@@ -36,11 +36,32 @@ Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeti
 
 ## Meeting lifecycle
 
-Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting scenarios. These experiences may vary depending on a user's role in the meeting.
+Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the user type and user's role in Teams meeting.
+
+## User types in Teams
+
+User types, such as in-tenant, guest, federated or external user in a meeting can do one of the [User roles in Teams meeting](#user-roles-in-teams-meeting).
+
+The following list details the various user types along with their accessibility:
+
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
+
+    > [!NOTE]
+    > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
+
+    > [!IMPORTANT]
+    > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
+
+* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
+
+    > [!NOTE]
+    > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
 ## User roles in Teams meeting
 
-The following are the participant roles in a meeting:
+The following are the user roles in a Teams meeting:
 
 * **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with a Microsoft 365 account and Teams license can be the organizer, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 
@@ -55,8 +76,6 @@ The following are the participant roles in a meeting:
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
-
 > [!TIP]
 >
 > * The default participant settings are determined by an organization's IT administrator. As per default settings, participants joining a meeting have the presenter role.
@@ -67,9 +86,9 @@ After you design your app based on participant roles in a meeting, you can ident
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
-* [Build apps for Teams meeting stage](build-apps-for-teams-meeting.md)
+* [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](meeting-apps-apis.md)
-* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
+* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
