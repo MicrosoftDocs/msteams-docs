@@ -400,7 +400,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/certificate.png" alt-text="Screenshot showing the trust Certificate.":::
+          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/certificate_1.png" alt-text="Screenshot showing the trust Certificate.":::
           
           A webpage opens with a message **Your bot is ready!**.
 
@@ -445,7 +445,7 @@ items:
       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/selectzip.png" alt-text="Screenshot showing the selection of zip file.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/selectzip_1.png" alt-text="Screenshot showing the selection of zip file.":::
       
     1. Select **Add**.
 
