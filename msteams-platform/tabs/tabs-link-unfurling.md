@@ -48,20 +48,6 @@ Collaborative Stage View opens in a new Teams window with the originating chat i
 
 ## Invoke Stage View
 
-The following process helps to invoke Stage View:
-
-1. **Adaptive Card link unfurling**
-
-    1. The user shares a URL in a chat.
-    1. This URL sends an invoke request to the bot (request type: `composeExtension/queryLink`).
-    1. The bot returns the Adaptive Card JSON with tab or `tabInfoAction` in it.
-    1. Adaptive Card JSON is rendered.
-
-1. **Opening Stage View**
-
-    1. A receiver selects an action button on the Adaptive Cards.
-    1. Stage View opens based on the content of the Adaptive Cards.
-
 > [!NOTE]
 >
 > * On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
@@ -90,7 +76,7 @@ Collaborative Stage View opens a window opens with originating chat in the side 
 
 [![Open a stage example1](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
 
-### JSON Adaptive Card example
+### Code snippet
 
 The following code enables to create a Collaborative Stage View button from Adaptive Cards:
 

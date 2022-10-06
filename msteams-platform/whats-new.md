@@ -281,7 +281,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 October**
 
-***October 06, 2022***: [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
+***October 06, 2022***: [Introducing Collaborative Stage View for link unfurling](tabs/tabs-link-unfurling.md)
 
 :::column-end:::
 :::row-end:::
