@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 September**
 
-* ***October 06, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-navbar-and-create-an-overflow-menu-for-multiple-actions).
+* ***October 06, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***October 06, 2022***: [Configure back button](concepts/design/personal-apps.md#configure-back-button)
 * ***September 30, 2022***: [Manage SaaS licenses for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***September 29, 2022***: [Teams mobile app now supports file downloads to local devices.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
