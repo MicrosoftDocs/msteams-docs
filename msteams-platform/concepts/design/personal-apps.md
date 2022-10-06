@@ -44,7 +44,7 @@ With a private workspace, users can view app content that's meaningful to them i
 |C|**More menu**: Includes other app options and information.|
 |D|**Primary navigation**: Provides navigation to your app other main Teams features.|
 
-#### Configure the NavBar and create an overflow menu for multiple actions
+#### Configure NavBar and create an overflow menu for multiple actions
 
 You can configure an app with multiple actions on the upper right NavBar and build an overflow menu for extra actions.
 
