@@ -68,7 +68,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 > [!NOTE]
 > If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
-First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links . The following example explains how to add link unfurling manually:
+First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
 
 ```json
 ...
@@ -92,9 +92,15 @@ First, you need to add the `messageHandlers` array to your app manifest and enab
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-### Add link unfurling without installing app
+### Build link unfurling apps without installing Teams
 
-You can add link unfurling to your Teams without installing app. Users can unfurl links without the message extension. It allows developers to create pre-authenticated Adaptive Card previews for users to view before they install or authenticate. The domain regex in the manifest triggers link unfurling.
+You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app. It's recommended to use [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) to create the single sign-in experience for your users. The following advantages help you to provide enhanced experience to the users:
+
+* Prompt users to unfurl links without installing messaging extension.
+* Authenticate using single sign on.
+* Create welcome card for your app to show preview with placeholder fields.
+
+You need to set the manifest property `supportsAnonymousAccess` to TRUE.
 
  :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
