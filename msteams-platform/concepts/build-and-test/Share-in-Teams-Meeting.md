@@ -149,10 +149,6 @@ Optional:
 }
 ```
 
-## Known limitations
-
-The app developer needs to have a Meeting Extension with Share to Meeting Stage capability.
-
 ## End user experience on third party apps
 
 After you enable Share in Teams Meeting on third party apps, you can share the document or web apps in the meeting stage. To access, follow the steps:
