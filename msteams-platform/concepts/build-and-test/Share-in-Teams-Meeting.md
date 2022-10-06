@@ -5,23 +5,23 @@ ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Teams Meeting
 ---
-# Share in Teams Meeting
+# Share in Teams meeting
 
-Share in Teams Meeting allows users to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together.
+Share in Teams meeting allows users to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together.
 
-Users can select Share in Teams Meeting button and it launches the deep link to the meeting stage. If users not installed meeting extension, it requests users to install the meeting extension app for the third party apps to control the meeting stage, and to have access to the meeting stage.
+Users can select **Share in Teams Meeting** button and it launches the deep link to the meeting stage. If users not installed meeting extension, it requests users to install the meeting extension app for the third party apps to control the meeting stage, and to have access to the meeting stage.
 
-The following image shows the Share in Teams Meeting experience:
+The following image shows the share in teams meeting experience:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/present.PNG" alt-text="share-in-teams-meeting":::
 
 ## Enable Share in Teams Meeting
 
-Following are the options to enable Share in Teams Meeting:
+Following are the different methods to enable share in teams meeting button:
 
-### Option 1
+### Method 1
 
-Scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate Share in Teams Meeting buttons in your page.
+The following scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate Share in Teams Meeting buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -48,7 +48,7 @@ Scans your web page to locate any HTML Elements with the class name of type `tea
    * `data-target`: Specifies whether the link will open in the same window, new tab, or new window.
    * `data-locale`: Specifies desired user language.
 
-### Option 2
+### Method 2
 
 The API `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button**, class name currently on the page. If an optional options object is supplied with a list of elements, those elements will be rendered into share buttons or Share in Teams Meeting buttons.
 
@@ -73,7 +73,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
    ```
 
-### Option 3
+### Method 3
 
 `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams Meeting button which can be executed on selection of a button or menu.
 

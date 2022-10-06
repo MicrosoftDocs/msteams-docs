@@ -26,6 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 September**
 
+* ***October 07, 2022***: [Share in teams meeting](concepts/build-and-test/share-in-teams-meeting.md)
 * ***September 30, 2022***: [Manage SaaS licenses for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***September 29, 2022***: [Teams mobile app now supports file downloads to local devices.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***September 16, 2022***: [Adaptive Cards in search based message extensions now support Universal Actions.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
@@ -40,7 +41,6 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|09/30/2022| Share in Teams Meeting (developer preview) | Integrate with Teams > [Share in Teams Meeting](concepts/build-and-test/share-in-teams-meeting.md) |
 | 09/16/2022 | Adaptive Cards in search based message extensions now support Universal Actions. | Build Message Extensions > Search commands > Define search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
 | 09/06/2022 | `selectMedia` API for capturing videos using camera | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
