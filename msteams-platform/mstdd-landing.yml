@@ -56,6 +56,9 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      
+      - text: Tabs link unfurling and Stage View
+        url: msteams-platform/tabs/tabs-link-unfurling.md
       - text: Manage SaaS licenses for third party apps in Teams
         url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center
