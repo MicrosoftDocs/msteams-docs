@@ -50,7 +50,7 @@ items:
 
     1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
     1. Select **Code**.
-    1. Select **Open with GitHub Desktop** from the dropdown menu list.
+    1. Select **Open with GitHub Desktop** from the dropdown menu.
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository-new_1.png" alt-text="Clone repository":::
 
@@ -91,7 +91,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can also select **Use existing app registration** and enter **App ID** and **App tenant ID** and **MSI resource ID**.
+       You can also select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -100,11 +100,11 @@ items:
 
     1. Select **Review + create**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/register-bot-2.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
 
     1. Once the validation is passed, select **Create**.
 
-       It takes a few moments for your bot service to be provisioned and the following window appears. 
+       It takes a few moments for your bot service to be provisioned. 
 
     1. Select **Go to resource**. 
 
@@ -123,15 +123,13 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-        :::image type="content" source="~/assets/images/Microsoft ID_1.png" alt-text="Microsoft ID":::
-
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot showing the selection of manage option.":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot showing the selection of manage option.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="Screenshot showing the selection of new client secret.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
             
        The **Add a client secret** window appears.
 
@@ -139,7 +137,7 @@ items:
     
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Screenshot showing the add option.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret_1.png" alt-text="Screenshot showing the add option.":::
        
     1. In the **Value** column, select copy to clipboard icon to copy value details.
 
@@ -234,18 +232,11 @@ items:
 
     1. Select **Add a scope**. 
        
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope"::: 
-          
-      The **Add a scope** window appears.
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope":::
     
-    1. Enter the following details to configure scope:
-    
-         * Enter `access_as_user` as the **Scope name**.
+    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
 
-           > [!NOTE]
-           > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
-  
-         * Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent?** to `Admins and users`.
   
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
@@ -273,7 +264,7 @@ items:
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot showing the selection of client application.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp_1.png" alt-text="Screenshot showing the selection of client application.":::
        
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams desktop application. 
    
@@ -311,7 +302,7 @@ items:
 
     1. Select **Add permissions**.
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/other-permissions.png" alt-text="Screenshot showing the addition of other permissions.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot showing the addition of other permissions.":::
          
     1. From the left pane, select **Authentication** to set a redirect URI. 
 
@@ -340,7 +331,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
  
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettingslocation.png" alt-text="Screenshot showing the navigation of app settings location.":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettingslocation_1.png" alt-text="Screenshot showing the navigation of app settings location.":::
       
     1. Open **appsettings.json** in Visual Studio.
     
@@ -355,7 +346,7 @@ items:
         
     1. Go to **manifest.json** in cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifestlocation.png" alt-text="Screenshot showing the manifest file location.":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifestlocation_1.png" alt-text="Screenshot showing the manifest file location.":::
         
     1. Open **manifest.json** in Visual Studio.
 
@@ -393,7 +384,7 @@ items:
           
        1. Select **TeamsLinkUnfurling.csproj** file from **55.teams-link-unfurling** folder.
 
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/csproj.png" alt-text="Screenshot showing the select of folder.":::
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/csproj_1.png" alt-text="Screenshot showing the select of folder.":::
       
        1. Open **Solution Explorer** from **View**.
 
@@ -436,7 +427,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/zipfile.png" alt-text="Screenshot showing the zipping of file.":::
+         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/zipfile_1.png" alt-text="Screenshot showing the zipping of file.":::
        
     1. Go to **Microsoft Teams**.
 
