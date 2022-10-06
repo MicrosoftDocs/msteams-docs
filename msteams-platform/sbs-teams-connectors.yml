@@ -56,7 +56,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository_1.png" alt-text="cloning the repository":::
 
     1. Select **Clone**. 
 
@@ -69,7 +69,7 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
  
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Admin center menu":::
 
     1.  In the left panel, select **Teams apps**.
        
@@ -100,7 +100,7 @@ items:
     
     1.   Select **Developer preview**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Developer preview":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview_1.png" alt-text="Developer preview":::
    
     1.   Select **Switch to developer preview**.
    
@@ -126,7 +126,7 @@ items:
     3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     4. Select **New Connector**.
      
-       ![Add new connector](~/assets/images/sbs-connector/connector.png)
+       :::image type="content" source="~/assets/images/sbs-connector/connector_1.png" alt-text="Add new connector":::
       
     5. Enter the following details to register a new connector:
 
@@ -177,7 +177,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Manifest location](~/assets/images/sbs-connector/zip.png)
+       :::image type="content" source="~/assets/images/sbs-connector/zip_1.png" alt-text="Manifest location":::
 
     1. Go to **Microsoft Teams**.
     1. In the left panel, select **Apps** > **Manage your apps**.
@@ -190,15 +190,15 @@ items:
       
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![manifest](~/assets/images/sbs-connector/open.png)
+       :::image type="content" source="~/assets/images/sbs-connector/open_1.png" alt-text="Manifest":::
 
     1. Select **Add to a team**.
 
-       ![Add the app](~/assets/images/sbs-connector/addtoteam.png)
+       :::image type="content" source="~/assets/images/sbs-connector/addtoteam_1.png" alt-text="Add the app":::
 
     1. Select the team or channel name from the list.
 
-       ![select channel](~/assets/images/sbs-connector/channel.png)
+       :::image type="content" source="~/assets/images/sbs-connector/channel_1.png" alt-text="select channel":::
 
     1. Select **Set up a connector**.
 
@@ -208,7 +208,7 @@ items:
 
     1. Select either **Created** or **Updated** on the registration page and select **Save**.
 
-       ![select](~/assets/images/sbs-connector/create.png)
+       :::image type="content" source="~/assets/images/sbs-connector/create_1.png" alt-text="select":::
 
        After configuration, you can see notification in channel with link to **Task Manager Portal**.
 
@@ -216,11 +216,11 @@ items:
 
     12. Go to **Task Manager Portal**.
 
-        ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
+        :::image type="content" source="~/assets/images/sbs-connector/taskportal_1.png" alt-text="Task manager portal":::
 
     13. Select **Create New**.
        
-        ![create new task](~/assets/images/sbs-connector/tasks.png)
+        :::image type="content" source="~/assets/images/sbs-connector/tasks_1.png" alt-text="create new task":::
        
     14. Enter the new task details:
 
