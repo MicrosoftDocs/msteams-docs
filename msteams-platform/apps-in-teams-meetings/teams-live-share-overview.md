@@ -12,14 +12,14 @@ ms.date: 04/07/2022
 
 # Live Share SDK
 
+> [!VIDEO <https://www.youtube.com/embed/971YIvosuUk>]
+
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings.
 
 Sometimes screen sharing just isn't enough, which is why Microsoft built tools like PowerPoint Live and Whiteboard directly into Teams. By bringing your web application directly to center stage in the meeting interface, your users can seamlessly collaborate during meetings and calls.
 
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
-
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Live Share video sharing experience":::
 
 ## Feature overview
 
@@ -44,7 +44,9 @@ You can find more information about this package on the [core capabilities page]
 
 ### Live Share media
 
-Video and audio are instrumental parts of the modern world and workplace. Live Share media enables **media synchronization** for any media player with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views and license, while providing the highest possible quality available through your app.
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Live Share video sharing experience":::
+
+Video and audio are instrumental parts of the modern world and workplace. Live Share media enables **media synchronization** for any media player with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views, while providing the highest possible quality available through your app. Because Microsoft is not rebroadcasting your media content, your licensing and access requirements are kept intact.
 
 Features supported by Live Share media include:
 
@@ -60,7 +62,9 @@ You can find more information about this package on the [Live Share media page](
 
 ### Live Share canvas
 
-When collaborating in meetings, it is essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add turn-key inking, laser pointers, and cursors to your app for seamless collaboration.
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
+
+When collaborating in meetings, it is essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration.
 
 Features supported by Live Share canvas include:
 
@@ -85,8 +89,6 @@ Here are some key benefits of the Live Share SDK:
 - Turn-key inking, laser pointers, and cursors.
 - Respect meeting privileges using role verification.
 - Free and fully managed service with low latency.
-
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 
 To understand if Live Share is right for your collaborative scenario, it is helpful to understand the differences between Live Share and other collaborative frameworks, including:
 
