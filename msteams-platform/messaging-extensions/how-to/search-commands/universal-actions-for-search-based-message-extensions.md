@@ -23,7 +23,6 @@ Example of a JSON schema with `team` and `groupchat` values:
     "manifestVersion": "1.11",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
