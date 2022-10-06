@@ -44,14 +44,31 @@ With a private workspace, users can view app content that's meaningful to them i
 |C|**More menu**: Includes other app options and information.|
 |D|**Primary navigation**: Provides navigation to your app other main Teams features.|
 
-#### Configure and create an overflow menu for multiple actions
+#### Configure the NavBar and create an overflow menu for multiple actions
 
-You can configure an app with multiple actions on the upper right NavBar and build an overflow menu for extra actions. To configure, see [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true).
+You can configure an app with multiple actions on the upper right NavBar and build an overflow menu for extra actions.
 
 >[!NOTE]
 > A maximum of five actions can be added in the NavBar, including the overflow menu.
 
 :::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="The screenshot is an example that shows the navbar and multiple actions in an overflow menu.":::
+
+To configure, call `setNavBarMenu` API and add the [displayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true) property to `MenuItem`. The `displayMode enum` defines how a menu should appear in the NavBar. The defaults value of `displayMode enum` is set to `ifRoom`.
+
+Based on the requirements and space available in the NavBar, set `displayMode enum` considering one of the following.
+
+* If there's a room, set `ifRoom = 0` to place an item in the NavBar.
+* If there's no room, set `overflowOnly = 1` to never place an item in the NavBar. The item would always be shown in the NavBar's overflow menu.
+
+Following is an example:
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5, item6]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy.":::
 
@@ -108,7 +125,25 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-When a user opens an app within Teams and selects the back button, they immediately exit from the app and go back to Teams. You can configure the back button so that they can go back to previous steps and navigate within the app. To configure, see [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+When a user opens an app within Teams and selects the back button, they immediately exit from the app and go back to Teams. You can configure the back button so that they can go back to previous steps and navigate within the app.
+
+To configure, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) API, which handles back press depending on one of the following conditions:
+
+* When `registerBackButtonHandler` is set to `false`, the JS SDK calls the `navigateBack` API to deregister the back button handler by setting `mIsOnBackButtonHandlerRegistered` to `false` and restimulate the back press by calling `onBackPressed` on `HostActivity`.
+* When `registerBackButtonHandler` is set to `true`, the app handles the back press, and the platform takes no further actions.
+
+Following is an example:
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### Desktop
 
@@ -211,6 +246,6 @@ Unless you created your app specifically for Teams, you probably have features t
 These other design guidelines may help depending on the scope of your personal app:
 
 * [Designing your tab](../../tabs/design/tabs.md)
-* [Designing you bot](../../bots/design/bots.md)
+* [Designing your bot](../../bots/design/bots.md)
 * [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
 * [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
