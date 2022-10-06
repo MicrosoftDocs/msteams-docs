@@ -53,7 +53,7 @@ items:
     1. Select **Code**.
     1. Select **Open with GitHub Desktop** from the dropdown menu.
 
-       ![Clone repository](~/assets/images/Teams-task-module/clonerepository.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/clonerepository_1.png" alt-text="Clone repository":::
 
     1. Select **Clone**. 
 
@@ -82,7 +82,7 @@ items:
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
         
-        ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create_1.png) 
+        :::image type="content" source="~/assets/images/Teams-task-module/review-plus-create_2.png" alt-text="Select resource Azure bot"::: 
     
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
@@ -92,7 +92,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can also select **Use existing app registration** and enter **App ID** and **App tenant ID** and **MSI resource ID**.
+       You can also select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -128,7 +128,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="New client secret":::
     
        The **Add a client secret** window appears.  
 
@@ -136,11 +136,11 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/Teams-task-module/clientsecret.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/clientsecret_1.png" alt-text="Add client secret to app":::
 
     1. In the **Value** column, select copy to clipboard icon to copy value details.
 
-         ![Value of client secret](~/assets/images/Teams-task-module/clientvalue.png)
+         :::image type="content" source="~/assets/images/Teams-task-module/clientvalue_1.png" alt-text="Value of client secret":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -165,7 +165,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/Teams-task-module/configteams_1.png)   
+          ![Select Teams](~/assets/images/Teams-task-module/configteams_1.png)  
     
     **To create tunnel for local web server**
 
@@ -227,7 +227,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Select scope":::
 
        The **Add a scope** window appears.
 
@@ -251,7 +251,7 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/Teams-task-module/addascope_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/addascope_1.png" alt-text="Add a scope":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -263,7 +263,7 @@ items:
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp_1.png" alt-text="Select client application"::: 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
@@ -288,7 +288,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        ![Add permission](~/assets/images/meetings-side-panel/addpermission_1.png)
 
     1. Select **Microsoft Graph**.
 
@@ -303,7 +303,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
+         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions_1.png)
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -330,7 +330,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/Teams-task-module/appsettingslocation.png)
+        ![App settings location](~/assets/images/Teams-task-module/appsettingslocation_1.png)
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
@@ -344,7 +344,7 @@ items:
 
     1. Go to `manifest.json`` in cloned repository.
 
-        ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/manifestlocation_1.png" alt-text="Manifest file location":::
     
     1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
 
@@ -367,7 +367,7 @@ items:
 
        1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
 
-          ![CS proj file](~/assets/images/Teams-task-module/csprojfileopen.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/csprojfileopen_1.png" alt-text="CS proj file":::
 
        1. Open **Solution Explorer** from **View**.
 
@@ -383,7 +383,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/Teams-task-module/certificate.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/certificate_1.png" alt-text="Trust Certificate":::
 
           A webpage opens with a message **. Your bot is ready!**.
 
@@ -432,7 +432,7 @@ items:
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/Teams-task-module/add-app.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/add-app_1.png" alt-text="Add the app":::
 
        The app opens in a chat.
    
@@ -447,7 +447,7 @@ items:
   content: |
     1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Adaptive card](~/assets/images/Teams-task-module/adaptive-card.png)
+       ![Adaptive card](~/assets/images/Teams-task-module/adaptive-card_1.png)
 
     1. Enter any text.
 
@@ -461,7 +461,7 @@ items:
 
     1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Custom form](~/assets/images/Teams-task-module/custom-form.png)
+       ![Custom form](~/assets/images/Teams-task-module/custom-form_1.png)
 
     1. Enter the required information:
 
@@ -485,11 +485,11 @@ items:
 
     1. Select **YouTube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![YouTube](~/assets/images/Teams-task-module/youtube.png)
+       ![YouTube](~/assets/images/Teams-task-module/youtube_1.png)
 
     1. Select **Play**.
 
-       ![YouTube select](~/assets/images/Teams-task-module/youtube-select.png)
+       ![YouTube select](~/assets/images/Teams-task-module/youtube-select_1.png)
 
        The video plays.
 
