@@ -56,7 +56,6 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      
       - text: Tabs link unfurling and Stage View
         url: tabs/tabs-link-unfurling.md
       - text: Manage SaaS licenses for third party apps in Teams
