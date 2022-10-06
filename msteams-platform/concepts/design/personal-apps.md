@@ -131,7 +131,7 @@ To navigate within the app, configure the back button so that when you select th
 
 To configure, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) API, which handles the functionality of the back button depending on one of the following conditions:
 
-* When `registerBackButtonHandler` is set to `false`, the js SDK calls the `navigateBack` API to deregister the back button handler by setting `mIsOnBackButtonHandlerRegistered` to `false` and restimulate the functionality of back button by calling `onBackPressed` on `HostActivity`.
+* When `registerBackButtonHandler` is set to `false`, the Js SDK calls the `navigateBack` API and the Teams platform handles the back button.
 * When `registerBackButtonHandler` is set to `true`, the app handles the functionality of back button, and the Teams platform takes no further actions.
 
 Following is an example:
