@@ -26,7 +26,7 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ### Add link unfurling to your app manifest
@@ -95,6 +95,10 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 ### Add link unfurling without installing app
 
 You can add link unfurling to your Teams without installing app. Users can unfurl links without the message extension. It allows developers to create pre-authenticated Adaptive Card previews for users to view before they install or authenticate. The domain regex in the manifest triggers link unfurling.
+
+ :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
+
+ :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
 
 ### Handle the `composeExtension/queryLink` invoke
 
