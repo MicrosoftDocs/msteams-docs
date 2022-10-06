@@ -96,18 +96,15 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { exampleMap: SharedMap },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -115,18 +112,15 @@ const { container } = await microsoftTeams.liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { ContainerSchema, SharedMap } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -150,15 +144,15 @@ Let's see how `SharedMap` works. In this example, we've used `SharedMap` to buil
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const playlistMap = container.initialObjects.playlistMap as SharedMap;
 
 // Register listener for changes to values in the map
@@ -176,15 +170,15 @@ function onClickAddToPlaylist(video) {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const playlistMap = container.initialObjects.playlistMap as SharedMap;
 
 // Declare interface for object being stored in map
@@ -233,20 +227,20 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import {
   LivePresence,
   PresenceState,
 } from "@microsoft/live-share";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: {
     presence: LivePresence,
   },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const presence = container.initialObjects.presence;
 
 // Register listener for changes to presence
@@ -271,7 +265,7 @@ function onUserDidLogIn(userName, profilePicture) {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LivePresence, PresenceState, LivePresenceUser } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
@@ -281,13 +275,13 @@ interface ICustomUserData {
 }
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: {
     presence: LivePresence<ICustomUserData>,
   },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const presence = container.initialObjects.presence as LivePresence<ICustomUserData>;
 
 // Register listener for changes to presence
@@ -318,15 +312,15 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LiveEvent } from "@microsoft/live-share";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { notifications: LiveEvent },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { notifications } = container.initialObjects;
 
 // Register listener for incoming notifications
@@ -352,7 +346,7 @@ notifications.sendEvent({
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LiveEvent, ILiveEvent } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
@@ -362,13 +356,13 @@ interface ICustomEvent extends ILiveEvent {
 }
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: {
     notifications: LiveEvent<ICustomEvent>,
   },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const notifications = container.initialObjects.notifications as LiveEvent<ICustomEvent>;
 
 // Register listener for incoming notifications
@@ -400,15 +394,15 @@ notifications.sendEvent({
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LiveTimer } from "@microsoft/live-share";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { timer: LiveTimer },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { timer } = container.initialObjects;
 
 // Register listener for when the timer starts its countdown
@@ -453,7 +447,7 @@ timer.play();
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import {
   LiveTimer,
   LiveTimerEvents,
@@ -461,11 +455,11 @@ import {
 } from "@microsoft/live-share";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { timer: LiveTimer },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const timer = container.initialObjects.timer as LiveTimer;
 
 // Register listener for when the timer starts its countdown
@@ -521,15 +515,15 @@ Example using `LiveState`:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LiveState, UserMeetingRole } from "@microsoft/live-share";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { appState: LiveState },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { appState } = container.initialObjects;
 
 // Register listener for changes to state and corresponding custom data
@@ -558,7 +552,7 @@ function onSelectPresentMode(documentId) {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LiveState, UserMeetingRole } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
@@ -568,13 +562,13 @@ interface ICustomState {
 }
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: {
     appState: LiveState<ICustomState>,
   },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const appState = container.initialObjects.appState as LiveState<ICustomState>;
 
 // Register listener for changes to state and corresponding custom data

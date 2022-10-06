@@ -54,15 +54,15 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 
 // Setup the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { liveCanvas } = container.initialObjects;
 
 // Get the canvas host element
@@ -76,16 +76,16 @@ await liveCanvas.initialize(inkingManager);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 import { ContainerSchema } from "fluid-framework";
 
 // Setup the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const liveCanvas = container.initialObjects.liveCanvas as LiveCanvas;
 
 // Get the canvas host element

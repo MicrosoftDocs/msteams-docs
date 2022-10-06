@@ -56,19 +56,16 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession } from "@microsoft/live-share-media";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Setup the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { mediaSession } = container.initialObjects;
 
 // Get the player from your document and create synchronizer
@@ -83,20 +80,17 @@ await mediaSession.initialize(allowedRoles);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { ContainerSchema } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
 
 // Get the player from your document and create synchronizer
@@ -235,13 +229,13 @@ The Live Share SDK supports intelligent audio ducking. You can use the _experime
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -262,13 +256,13 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer: NodeJS.Timeout | undefined;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState: microsoftTeams.meeting.ISpeakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's

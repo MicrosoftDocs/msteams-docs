@@ -115,15 +115,15 @@ Live Share provides a turn-key Azure Fluid Relay service backed by the security 
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LivePresence } from "@microsoft/live-share";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema = {
   initialObjects: { presence: LivePresence },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -131,16 +131,16 @@ const { container } = await microsoftTeams.liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { liveShare } from "@microsoft/teams-js";
 import { LivePresence } from "@microsoft/live-share";
 import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
-microsoftTeams.liveShare.initialize();
+liveShare.initialize();
 const schema: ContainerSchema = {
   initialObjects: { presence: LivePresence },
 };
-const { container } = await microsoftTeams.liveShare.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
