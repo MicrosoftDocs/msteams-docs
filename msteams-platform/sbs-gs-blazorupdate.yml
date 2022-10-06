@@ -594,7 +594,7 @@ items:
         1. Select your **Region**, if new resource group is created.
         1. Select **Provision**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="edit provision window":::
 
            Provision warning displays. 
 
