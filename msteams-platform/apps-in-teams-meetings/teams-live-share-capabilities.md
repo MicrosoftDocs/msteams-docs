@@ -10,12 +10,9 @@ ms.date: 04/07/2022
 
 # Live Share core capabilities
 
-The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
-
-> [!NOTE]
-> Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
-
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-dashboard.png" alt-text="Teams Live Share":::
+
+The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
 ## Install the JavaScript SDK
 
@@ -42,8 +39,8 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
   // ...rest of your manifest here
   "configurableTabs": [
     {
-        "configurationUrl": "https://<<BASE_URI_ORIGIN>>/config",
-        "canUpdateConfiguration": false,
+        "configurationUrl": "<<YOUR_CONFIGURATION_URL>>",
+        "canUpdateConfiguration": true,
         "scopes": [
             "groupchat"
         ],
@@ -86,10 +83,9 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 Follow the steps to join a session that is associated with a user's meeting:
 
-1. Initialize the Teams Client SDK.
-2. Initialize [liveShare](/javascript/api/@microsoft/teams-js/liveShare).
-3. Define the data structures you want to synchronize. For example, `SharedMap`.
-4. Join the container.
+1. Initialize [liveShare](/javascript/api/@microsoft/teams-js/liveShare).
+2. Define the data structures you want to synchronize. For example, `SharedMap`.
+3. Join the container.
 
 Example:
 
@@ -128,6 +124,9 @@ const { container } = await liveShare.joinContainer(schema);
 ---
 
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
+
+> [!TIP]
+> Make sure the Teams Client SDK is initialized before using the `liveShare` API.
 
 ## Fluid distributed data structures
 
@@ -597,6 +596,9 @@ function onSelectPresentMode(documentId: string) {
 ---
 
 Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+
+> [!NOTE]
+> Live Share does not currently support channel meetings.
 
 ## Code samples
 
