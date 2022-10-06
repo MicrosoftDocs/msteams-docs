@@ -57,7 +57,7 @@ items:
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
+     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Clone repository":::
 
    1. Select **Clone**. 
 
@@ -107,7 +107,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create.png" alt-text="Review Create":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create_1.png" alt-text="Review Create":::
 
     1. If the validation passes, select **Create**.
 
@@ -132,11 +132,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-newclientsecret.png" alt-text="New client secret":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-newclientsecret_1.png" alt-text="New client secret":::
         
        The **Add a client secret** window appears.  
 
@@ -144,7 +144,7 @@ items:
     
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret.png" alt-text="Add client secret to app":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret_1.png" alt-text="Add client secret to app":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
@@ -238,7 +238,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Add Scope":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Add Scope":::
             
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -273,7 +273,7 @@ items:
 
     1. Select **Add a client application**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-selectclientapp.png" alt-text="Add client app":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-selectclientapp_1.png" alt-text="Add client app":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
@@ -298,7 +298,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission.png" alt-text="Add Permission":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Add Permission":::
 
     1. Select **Microsoft Graph**.
 
@@ -341,7 +341,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png" alt-text="App settings location":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo_1.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in Visual Studio and update the following information:  
 
@@ -408,15 +408,15 @@ items:
    
     1. In the pop-up window, select **Manage apps**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps.png" alt-text="Manage apps"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps_1.png" alt-text="Manage apps"::: 
    
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app.png" alt-text="Upload custom app"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Upload custom app"::: 
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file.png" alt-text="Upload zip app":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Upload zip app":::
 
     1. Select **Add**.
 
