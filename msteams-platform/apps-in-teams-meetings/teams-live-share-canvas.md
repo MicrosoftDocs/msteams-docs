@@ -1,7 +1,7 @@
 ---
 title: Live Share canvas overview
 author: surbhigupta
-description: In this module, learn more about Live Share canvas, an extension enabling turn-key inking, laser pointers, and cursors for meeting apps.
+description: In this module, learn more about Live Share canvas, an extension enabling inking, laser pointers, and cursors for meeting apps.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -437,7 +437,7 @@ Here are a couple examples of scenarios where Live Share canvas is a great optio
 - Overlay images and videos that render with the same aspect ratio on all clients.
 - Viewing a map, 3D model, or whiteboard from the same rotation angle.
 
-The reason both of these scenarios work well is because being viewed is the same on all devices, even though users may be looking at it with different zoom levels and offsets. If your app's layout or content change depending on screen size and it is not possible to generate a common view for all participants, Live Share canvas might not be a good fit for your scenario.
+The reason both of these scenarios work well is because the content can be viewed the same on all devices, even though users may be looking at it with different zoom levels and offsets. If your app's layout or content change depending on screen size and it is not possible to generate a common view for all participants, Live Share canvas might not be a good fit for your scenario.
 
 ## Code samples
 
