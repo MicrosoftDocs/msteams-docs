@@ -179,7 +179,6 @@ The following *manifest.json* file contains the elements needed to test and subm
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
-  "packageName": "com.sampleapp",
   "developer": {
     "name": "Publisher",
     "websiteUrl": "https://www.microsoft.com",
