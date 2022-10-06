@@ -224,7 +224,7 @@ document.getElementById("ready-up-button")!.onclick = () => {
 
 ## Audio ducking
 
-The Live Share SDK supports intelligent audio ducking. You can use the _experimental_ feature in your application by adding the following to your code:
+The Live Share SDK supports intelligent audio ducking. You can use the feature in your application by adding the following to your code:
 
 # [JavaScript](#tab/javascript)
 
@@ -306,7 +306,7 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 ```
 
 > [!NOTE]
-> The `registerSpeakingStateChangeHandler` API used for audio ducking currently works only for non-local users who are speaking.
+> The `registerSpeakingStateChangeHandler` API used for audio ducking currently only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
 
 ## Code samples
 
