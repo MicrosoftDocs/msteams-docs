@@ -34,15 +34,16 @@ Message extensions allow the users to interact with your web service through but
 
 Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With task modules, you can create modal pop-up experiences in Microsoft Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and task modules](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
 
-## User types and accessibility's
+## User types and accessibility
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
 | User type | Bots | Message extensions | Adaptive Cards | Task modules |
 | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Interactions in the meeting chat are allowed. | Not available |
+| In-tenant user | Available | Available | Available | Available |
 | Guest, part of the tenant Azure AD | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous user | Not available | Not available | Interactions in the meeting chat are allowed. | Not available |
 
 ## See also
 
