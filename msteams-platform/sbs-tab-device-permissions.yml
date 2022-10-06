@@ -71,7 +71,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: | 
-     1. Navigate to **manifest.json** in cloned repository.
+     1. Go to **manifest.json** in cloned repository.
   
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png" alt-text="manifest file":::
 
@@ -84,7 +84,7 @@ items:
 - title: Build and run client app using npm
   durationInMinutes: 1
   content: |
-     1. In your cloned repository, navigate to **samples > tab-device-permissions > nodejs**.
+     1. In your cloned repository, go to **samples > tab-device-permissions > nodejs**.
 
      1. Copy the **nodejs** folder path. 
 
@@ -118,7 +118,7 @@ items:
     # [Desktop](#tab/desktop) 
 
 
-    1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
+    1. In your cloned repository, got to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
     1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json
@@ -157,7 +157,7 @@ items:
     # [Browser](#tab/Browser)
 
     
-    1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
+    1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
     1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json

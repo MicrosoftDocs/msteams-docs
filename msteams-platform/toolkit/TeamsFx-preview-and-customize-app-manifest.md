@@ -220,7 +220,7 @@ The following list provides supported placeholders in `manifest.template.json`:
      }
      ```
 
-2. You can navigate to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
+2. You can go to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
 
 ### Validate manifest
 
@@ -241,14 +241,14 @@ During operations such as, **Zip Teams metadata package**, Teams Toolkit validat
 
 ## To preview values for local and dev environment
 
-In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
+In `manifest.template.json`, you can go to codelens to preview the values for `local` and `dev` environment.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
 
-You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+You can go to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Screenshot is an example of showing the selection of an environment.":::
 

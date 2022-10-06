@@ -330,7 +330,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         ![App settings location](~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation.png)
 
@@ -344,7 +344,7 @@ items:
 
         :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings_1.png" alt-text="App settings":::
 
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Go to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png)
     
@@ -363,7 +363,7 @@ items:
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-VSopenfile_1.png" alt-text="Open file":::
 
@@ -394,7 +394,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
+    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -405,7 +405,7 @@ items:
 - title: Add Search Message Extension app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, navigate to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
+    1. In your cloned repository, go to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json

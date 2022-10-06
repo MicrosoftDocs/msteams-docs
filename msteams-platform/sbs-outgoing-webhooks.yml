@@ -109,7 +109,7 @@ items:
   content: |
        1. Launch the latest version of Visual Studio.
 
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
            ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
 

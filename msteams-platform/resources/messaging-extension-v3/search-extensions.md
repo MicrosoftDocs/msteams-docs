@@ -29,7 +29,6 @@ For search based message extension set the `type` parameter to `query`. Below is
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.bing",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://bingbotservice.azurewebsites.net/",
@@ -82,7 +81,7 @@ For search based message extension set the `type` parameter to `query`. Below is
 
 You can test your message extension by uploading your app.
 
-To open your message extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
+To open your message extension, go to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
 
 ## Add event handlers
 

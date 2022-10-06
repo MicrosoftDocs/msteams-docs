@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send recieve a message, suggested actions, notification, attachments, images, Adaptive Cards, status error code responses for Throttle.
+description: Learn how to send receive a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -279,7 +279,7 @@ Messages received from or sent to your bot can include different types of messag
 
 ## Notifications to your message
 
-You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner, or both a banner and an email.
+You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you can't override these settings. The notification type is either a banner or both a banner and an email.
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
@@ -439,20 +439,39 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
-## Status code responses
+## Status codes from bot conversational APIs
 
-Following are the status codes and their error code and message values:
+Ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the descriptions under which the errors are generated:
 
-| Status code | Error code and message values | Description |
-|----------------|-----------------|-----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in 1:1 chat or a channel through moderation settings. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. |
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot. | Tenant blocked the bot. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. |
-| 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
-| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | The conversation wasn't found. |
-| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size on the incoming request was too large. |
-| 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
+| Status code | Error code and message values | Description | Retry request | Developer action |
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Re-evaluate request payload for errors. Check returned error message for details. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure that the bot ID (AAD ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send additional conversation requests, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
+| 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
+| 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or has been deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
+| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
+| 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
+| 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+
+### Status codes retry guidance
+
+The general retry guidance for each status code is listed in the following table. Bot should avoid retrying on status codes that are not specified in the following table:
+
+|Status code | Retry strategy |
+|----------------|-----------------|
+| 412 | Retry using exponential backoff. |
+| 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available . Otherwise, retry using exponential backoff with thread ID, if possible. |
+| 502 | Retry using exponential backoff. |
+| 503 | Retry using exponential backoff. |
+| 504 | Retry using exponential backoff. |
 
 ## Code sample
 

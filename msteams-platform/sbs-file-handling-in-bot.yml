@@ -356,7 +356,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 2
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file_1.png" alt-text="app settings manifest":::
                       
@@ -371,7 +371,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json1_1.png" alt-text="appsettings file in visual studio":::
            
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-app-manifest.png" alt-text="open manifest file":::
          
@@ -390,7 +390,7 @@ items:
 
        1. Launch Visual Studio.
        
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file_1.png" alt-text="visual studio":::      
         
@@ -423,7 +423,7 @@ items:
  
      # [Command line](#tab/cli)
 
-     Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
+     Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
 
      ```bash
      dotnet run
@@ -434,7 +434,7 @@ items:
 - title: Add file upload bot in Teams
   durationInMinutes: 2
   content: | 
-     1. In your cloned repository, navigate to **csharp_dotnetcore** > **56.teams-file-upload** > **TeamsAppManifest**.
+     1. In your cloned repository, Go to **csharp_dotnetcore** > **56.teams-file-upload** > **TeamsAppManifest**.
 
      1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
