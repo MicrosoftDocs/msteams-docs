@@ -44,12 +44,7 @@ The Collaborative Stage View provides seamless, multitasking experience when wor
 
 ## Invoke Stage View
 
-> [!NOTE]
->
-> * On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
-> * The multi-window Collaborative Stage View is invoked from the group chats only. It is not available in the Teams web client or mobile. In these scenarios, the Stage View experience fall back to showing users the content in an interstitial modal.
-
-You can invoke Stage View in the following two ways:
+You can invoke Stage View in following two ways:
 
 * [Invoke Stage View from Adaptive Card](#invoke-stage-view-from-adaptive-card)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
@@ -104,16 +99,14 @@ The `invoke` request type must be `composeExtension/queryLink`.
 > * `invoke` is same as the current `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-
-Following is the process to invoke Stage View:
-
-* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
-* `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
-* The bot responds with a `200` code.
+> * Passing a Stage View deep link into an adaptive card will not open the Collaborative Stage View; Stage View deep link will always open to the Stage View Modal.
+> * To open Stage View, ensure the URL of the content is within the list of `validDomains` in your app manifest
+> * Learn more about Cards, See [Adaptive Cards](how-to/build-adaptive-card-tabs.md).
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * The multi-window Collaborative Stage View is invoked from the group chats only. It is not available in the Teams web client or mobile. In these scenarios, the Stage View experience fall back to showing users the content in an interstitial modal.
 
 ## Invoke Stage View through deep link
 
