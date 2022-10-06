@@ -24,7 +24,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Microsoft Teams platform features that are available to all app developers.
 
-**2022 September**
+**2022 October**
 
 * ***October 06, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***October 06, 2022***: [Configure back button of an app](concepts/design/personal-apps.md#configure-back-button).
