@@ -491,7 +491,6 @@ This manifest contains information needed by Teams to connect with the bot:
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
-  "packageName": "com.teams.auth.bot",
   "developer": {
     "name": "TeamsBotAuth",
     "websiteUrl": "https://www.microsoft.com",
