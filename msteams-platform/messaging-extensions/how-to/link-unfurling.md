@@ -98,7 +98,7 @@ You can add link unfurling to your Teams without installing app. Users can unfur
 
  :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
- :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
+ :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code 2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
 
 ### Handle the `composeExtension/queryLink` invoke
 
