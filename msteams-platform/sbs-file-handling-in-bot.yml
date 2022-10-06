@@ -441,7 +441,7 @@ items:
        * icon-outline.png
        * icon-color.png 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-upload-manifest.png" alt-text="manifest folder":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-upload-manifest_1.png" alt-text="manifest folder":::
 
       1. Go to **Microsoft Teams**.
 
@@ -455,7 +455,7 @@ items:
 
       1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-manifest.png" alt-text="manifest open"::: 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-manifest_1.png" alt-text="manifest open"::: 
 
       1. Select **Add**.
 
