@@ -82,11 +82,11 @@ The user selects an Adaptive Card button to open content URL.
 
 [![Open a stage example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
-The URL opens in the appropriate Stage View UI.
+The Adaptive Card actions returns with the option to open the URL.
 
 [![Open a stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
-Collaborative Stage View window opens when it's invoked from Adaptive Cards in chat.
+Collaborative Stage View opens a window opens with originating chat in the side panel.
 
 [![Open a stage example1](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
 
