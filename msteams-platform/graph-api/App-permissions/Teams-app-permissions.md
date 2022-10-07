@@ -21,9 +21,11 @@ RSC permissions are defined in the app manifest and not in Azure Active Director
 
 ## Azure active directory
 
-In Azure AD, all users are granted a set of default permissions. A user's access consists of the type of user, their role assignments, and their ownership of individual objects. For more information, see [Azure AD default user permissions](/azure/active-directory/fundamentals/users-default-permissions).
+Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Azure Active Directory also helps them access internal resources like apps on your corporate intranet network, along with any cloud apps developed for your own organization. For more information, see [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis).
 
-Azure subscriptions have a trust relationship with Azure AD and are trusted to authenticate users, services, and devices for the subscription. Each subscription has a tenant ID associated with it, and there are a few ways you can find the tenant ID for your subscription. For more information, see [Azure AD tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
+The application ID, or client ID, is a value the Microsoft identity platform assigns to your application when you register it in Azure AD. The application ID is a GUID value that uniquely identifies the application and its configuration within the identity platform. You add the app ID to your application's code, and authentication libraries include the value in their requests to the identity platform at application runtime.
+
+In Azure AD, all users are granted a set of default permissions. A user's access consists of the type of user, their role assignments, and their ownership of individual objects. For more information, see [Azure AD default user permissions](/azure/active-directory/fundamentals/users-default-permissions).
 
 ## App capability specifics
 
@@ -42,3 +44,7 @@ For your app to access data in Microsoft Graph, the user or administrator must g
 ### Connectors
 
 Connect has a connector ID where permissions are directly configured in the connector portal to perform actions. For example, if you want to send an actionable message, you need to use the connector portal to enable that permission. With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard).
+
+## See also
+
+* [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
