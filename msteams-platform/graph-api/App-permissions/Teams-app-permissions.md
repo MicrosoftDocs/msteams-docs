@@ -21,9 +21,11 @@ RSC permissions are defined in the app manifest and not in Azure Active Director
 
 ## Azure active directory
 
-Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Azure Active Directory also helps them access internal resources like apps on your corporate intranet network, along with any cloud apps developed for your own organization. For more information, see [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis).
+Azure AD is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. For more information, see [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
-The application ID, or client ID, is a value the Microsoft identity platform assigns to your application when you register it in Azure AD. The application ID is a GUID value that uniquely identifies the application and its configuration within the identity platform. You add the app ID to your application's code, and authentication libraries include the value in their requests to the identity platform at application runtime.
+When you create an app in Azure AD, an application ID, or Client ID, is generated. The application ID, or client ID, is a value the Microsoft identity platform assigns to your application when you register it in Azure AD.
+
+The application ID is a GUID value that uniquely identifies the application and its configuration within the identity platform. You add the app ID to your application's code, and authentication libraries include the value in their requests to the identity platform at application runtime.
 
 In Azure AD, all users are granted a set of default permissions. A user's access consists of the type of user, their role assignments, and their ownership of individual objects. For more information, see [Azure AD default user permissions](/azure/active-directory/fundamentals/users-default-permissions).
 
