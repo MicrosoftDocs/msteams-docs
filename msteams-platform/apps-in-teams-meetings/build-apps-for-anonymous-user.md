@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 You can test the experience delivered to anonymous users by selecting the meeting join URL present in the meeting invite and joining the meeting via private window.
 
-When the message sent with bot app, it doesn't display app icon to anonymous user. It displays generic app icon as shown below:
+Anonymous user can't see the app icon when the message is sent through a bot app. It displays only generic app icon as following:
 
 :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
 
