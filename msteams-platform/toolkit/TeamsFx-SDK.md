@@ -178,11 +178,12 @@ If you've created Azure function or bot project using Visual Studio Code Toolkit
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
-* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's a SQL instance
-* sqlUsername (SQL_USER_NAME) // only used when there's a SQL instance
-* sqlPassword (SQL_PASSWORD) // only used when there's a SQL instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's a SQL instance
-* sqlIdentityId (IDENTITY_ID) // only used when there's a SQL instance
+
+* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's an sql instance
+* sqlUsername (SQL_USER_NAME) // only used when there's an sql instance
+* sqlPassword (SQL_PASSWORD) // only used when there's an sql instance
+* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an sql instance
+* sqlIdentityId (IDENTITY_ID) // only used when there's an sql instance
 
 </details>
 
