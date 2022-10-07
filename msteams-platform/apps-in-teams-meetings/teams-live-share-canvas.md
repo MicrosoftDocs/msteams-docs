@@ -104,7 +104,7 @@ Now that you understand how to set up the Live Share canvas and it is being sync
 
 ### Inking tools
 
-Each of the inking tools in Live Share canvas render strokes as users draw. If using a touch screen or stylus, the tools also support pressure. Configuration settings include brush color, thickness, shape, and an optional end arrow.
+Each inking tool in Live Share canvas renders strokes as users draw. If using a touch screen or stylus, the tools also support pressure dynamics, affecting stroke width. Configuration settings include brush color, thickness, shape, and an optional end arrow.
 
 #### Pen tool
 
