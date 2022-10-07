@@ -178,11 +178,11 @@ If you've created Azure function or bot project using Visual Studio Code Toolkit
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
-* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's an sql instance
-* sqlUsername (SQL_USER_NAME) // only used when there's an sql instance
-* sqlPassword (SQL_PASSWORD) // only used when there's an sql instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an sql instance
-* sqlIdentityId (IDENTITY_ID) // only used when there's an sql instance
+* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's a SQL instance
+* sqlUsername (SQL_USER_NAME) // only used when there's a SQL instance
+* sqlPassword (SQL_PASSWORD) // only used when there's a SQL instance
+* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's a SQL instance
+* sqlIdentityId (IDENTITY_ID) // only used when there's a SQL instance
 
 </details>
 
@@ -254,9 +254,9 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
 
-    The [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
+    The [Microsoft Graph Toolkit](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
 
-    The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class that uses `TeamsFx` class to sign in users and acquire tokens to use with Graph.
+    The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class that uses `TeamsFx` class to sign in users and acquire tokens to use with Microsoft Graph.
 
     1. You can install the following required packages:
 
