@@ -18,11 +18,9 @@ This document guides you on how to add link unfurling to your app manifest using
 > * The link unfurling result is cached for 30 minutes.
 > * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
 
-The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
+The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.
 
-:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
-
-doc-feature-app-less-adaptive-card-preview-with-schema.org-templates-TFW
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Screenshot shows an example of message extension unfurling a user pasted URL for an item in Azure DevOps into a card.":::
 
 ## App less Adaptive Card
 
@@ -30,7 +28,7 @@ The most common way to share content in Microsoft Teams is through links. For an
 
 You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!---link to GitHub templates to be added after the PM shares the public link ---> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
-### Enable App less Adaptive Card
+### Preview app less Adaptive Card link unfurling
 
 If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
@@ -56,12 +54,12 @@ You can also experience the rich unfurl experience for other templates in the si
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
 
-To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
+To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section in the app manifest. You can manually add the array or using the Developer Portal. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
 > [!NOTE]
 > Don't add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
@@ -75,14 +73,14 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. Select **Add a domain** under **Preview links** section and then enter valid domain.
 1. Select **Add**. The following image explains the process:
 
-   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot shows an example of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### Add link unfurling manually
 
 > [!NOTE]
 > If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
-To enable your message extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually:
+To enable your message extension to interact with links, first you must add the `messageHandlers` array to your app manifest. You can manually add link unfurling using the following example:
 
 ```json
 ...
@@ -166,7 +164,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-Following is an example of the `invoke` sent to your bot:
+Example of the `invoke` sent to your bot:
 
 ```json
 {
@@ -178,7 +176,7 @@ Following is an example of the `invoke` sent to your bot:
 }
 ```
 
-Following is an example of the response:
+Example of the response:
 
 ```json
 {
