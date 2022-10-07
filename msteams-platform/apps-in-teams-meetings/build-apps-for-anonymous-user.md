@@ -197,7 +197,7 @@ The example shows invoke activities request payload on submit event.
 
 ```json
 {
-  clientMessageId : "<>"
+  clientMessageId : "<<id>>"
   complianceData: {
     action: {
      type: "invoke",
@@ -205,14 +205,14 @@ The example shows invoke activities request payload on submit event.
      }
   }
   conversation: {
-    id: "<>"
+    id: "<<conversation id>>"
   }
   messageType: "RichText/Media_Card"
-  serverMessageId: "<>"
+  serverMessageId: "<<id2>>"
   value: {
-    choice: "<>"
+    choice: "<<user selection object>>"
       data: {
-       <>
+       <<data provided by bot>>
       }
     }
   }
