@@ -43,11 +43,13 @@ Teams Toolkit brings all tools needed for building a Teams app in one place.
 
 Teams Toolkit is available for app development as part of Visual Studio Code and Visual Studio.
 
-* **Teams Toolkit for Visual Studio Code**: Teams Toolkit comes with Visual Studio Code as an extension. After you install the extension, Teams Toolkit helps you to build Teams app. You can use its features to add capabilities, third-party APIs, single sign-on, and many more functionalities. 
-* **Teams Toolkit for Visual Studio 2022**: Teams Toolkit comes with Visual Studio 2022 as a ASP.NET and web development workload.
+* **Teams Toolkit for Visual Studio Code**: Teams Toolkit comes with Visual Studio Code as an extension. After you install the extension, Teams Toolkit helps you to build Teams app. You can use its features to add capabilities, third-party APIs, single sign-on, and many more functionalities.
+  You can create Teams apps using JavaScript, TypeScript, and SharePoint Framework (SPFx) with this flavour.
+
+* **Teams Toolkit for Visual Studio 2022**: Teams Toolkit comes with Visual Studio 2022 as a ASP.NET and web development workload. Use this flavour, if you want to create a Teams app using C# and Blazor framework.
 
     > [!NOTE]
-    > Teams Toolkit is not available in other versions.
+    > Teams Toolkit for Visual Studio is not available in versions apart from Visual Studio 2022.
 
 ## App development lifecycle vs. features
 
