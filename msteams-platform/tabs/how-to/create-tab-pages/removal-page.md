@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create a removal page
 
-You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enable users to rename or remove a channel or group tab and you can permit users to reconfigure your tab after installation. Additionally, the tab removal experience provides the users with post-removal options to delete or archive content.
+You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel or group tab and you can permit users to reconfigure your tab after installation. Additionally, the tab removal experience provides the users with post-removal options to delete or archive content.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
