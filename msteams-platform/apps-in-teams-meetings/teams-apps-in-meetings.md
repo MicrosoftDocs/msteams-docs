@@ -70,9 +70,7 @@ The following are the user roles in a Teams meeting:
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting.
 
 > [!NOTE]
->
-> * Only an organizer or presenter can add, remove, or uninstall apps.
-> * The default participant settings are determined by an organization's IT administrator.
+> Only an organizer or presenter can add, remove, or uninstall apps.
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 

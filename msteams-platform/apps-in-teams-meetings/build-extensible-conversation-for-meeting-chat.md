@@ -34,7 +34,7 @@ Message extensions allow the users to interact with your web service through but
 
 Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With task modules, you can create modal pop-up experiences in Microsoft Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and task modules](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
 
-## User types and accessibility
+## Feature compatibility by user types
 
 The following table provides the user types and lists the features that each user can access in meetings:
 

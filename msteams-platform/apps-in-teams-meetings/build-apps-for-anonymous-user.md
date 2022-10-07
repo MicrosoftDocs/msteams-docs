@@ -11,6 +11,10 @@ ms.localizationpriority: medium
 
 You can test the experience delivered to anonymous users by selecting the meeting join URL present in the meeting invite and joining the meeting via private window.
 
+When the message sent with bot app, it doesn't display app icon to anonymous user. It displays generic app icon as shown below:
+
+:::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
+
 > [!NOTE]
 >
 > * Side panel tabs and content bubbles aren't available for anonymous users at the moment.
@@ -20,9 +24,6 @@ You can test the experience delivered to anonymous users by selecting the meetin
 ## Tenant admin setting for anonymous user app interaction
 
 Teams admin can use the admin portal to enable or disable anonymous user app interaction for entire tenant. This setting is enabled by default, unless overridden by the admin. You must enable this to support anonymous user interaction with apps in meetings, [Allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
-
-> [!NOTE]
-> Teams Client and Bot APIs set the tenantId field from meeting organizer tenant Id for anonymous user.
 
 ## In-Meeting getContext from Teams client SDK
 
@@ -35,6 +36,14 @@ Apps receive the following info pertaining to the anonymous user through the Tea
 "userPrincipalName": "8:teamsvisitor:<<ID>>",
 "tid": "<<GUID>>"
 ```
+
+| **Property Name** | **Description** |
+| --- | --- |
+| `userObjectId` | Invalid value, `userObjectId` is not supported for anonymous user |
+| `userLicenseType` | `Unknown` value represent anonymous user |
+| `loginHint` | Unique ID for anonymous user |
+| `userPrincipalName` | Unique ID for anonymous user |
+| `tid` | Tenant ID of the meeting organizer |
 
 ## Payloads of Bot API for anonymous users in a meeting chat
 
@@ -54,6 +63,16 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
   ] 
 } 
 ```
+
+| **Property Name** | **Description** |
+| --- | --- |
+| `id` | 29:XXXX encrypted user id |
+| `name` | provided by anonymous user, when joining meeting |
+| `tenantId` | Tenant ID of the meeting organizer |
+| `userRole` | `anonymous`, represent anonymous user |
+
+> [!NOTE]
+> The ID returned in bot API payload and Teams Client SDK are not same.
 
 **Get Single Member API**
 
@@ -223,4 +242,4 @@ When a user selects a button on the Adaptive Card tab, the `tab/submit` request 
 ## See also
 
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
-* [Advanced meeting APIs](meeting-apps-apis.md)
+* [Meeting apps APIs](meeting-apps-apis.md)
