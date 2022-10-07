@@ -12,7 +12,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
-After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to invoke, otherwise the user receives an error message **Unable to reach the app**, and any reply to invoke is ignored by the Teams client.
+After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.  
 
 You have the following options to respond:
 
@@ -22,6 +22,11 @@ You have the following options to respond:
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
+
+If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app to the user**. After the user receives the error, any reply to invoke is ignored by the Teams client.
+
+> [!NOTE]
+> The app must defer any long-running actions after the user replies to the invoke request. The long-running actions delivered as a message.
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
