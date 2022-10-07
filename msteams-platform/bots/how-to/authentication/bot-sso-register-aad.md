@@ -97,13 +97,18 @@ In this section, you'll learn to create and deploy bot resource. After you creat
 
         The standard price tier is selected by default. You can change it, if needed.
 
-    1. Select **Microsoft App ID** details: 
+    1. Select **Microsoft App ID** details:
 
         1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
+
+        It's recommended that you select multi-tenant option for your bot app.
 
         1. Select the creation type.
 
             The default selection is **Create new Microsoft App ID**.
+
+            > [!NOTE]
+            > If you've already registered your app in Azure AD, you can add the ID generated for that app at its registration.
 
 1. Select **Next : Tags >**.
 
@@ -141,7 +146,8 @@ In this section, you'll learn to create and deploy bot resource. After you creat
 
 Next, add a client secret and enable bot for working in Teams.
 
-### Create client secret
+<details>
+<summary><b>Create client secret</b></summary>
 
 A client secret is a string that the bot app uses to prove its identity when requesting a token from Azure AD.
 
@@ -186,7 +192,10 @@ A client secret is a string that the bot app uses to prove its identity when req
    > [!NOTE]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
-### Enable bot for Teams
+</details>
+
+<details>
+<summary><b>Enable bot for Teams</b></summary>
 
 You must enable the Teams channel so that the bot can interact with Microsoft Teams.
 
@@ -237,6 +246,8 @@ You must enable the Teams channel so that the bot can interact with Microsoft Te
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/teams-added.png" alt-text="Bot is enabled for Teams" border="false":::
 
 Next, you must configure bot app in Azure AD to enable SSO.
+
+</details>
 
 ## Configure bot resource in Azure AD
 
