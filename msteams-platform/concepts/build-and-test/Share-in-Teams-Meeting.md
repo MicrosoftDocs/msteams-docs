@@ -7,9 +7,9 @@ keywords: Share in Teams Meeting
 ---
 # Share in Teams meeting
 
-Share in Teams meeting allows users to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together.
+Share in Teams meeting allows users to share any documents or third-party app as a web view in the meeting stage and all the participants can interact and edit together.
 
-Users can select **Share in Teams Meeting** button and it launches the deep link to the meeting stage. If users not installed meeting extension, it requests users to install the meeting extension app for the third party apps to control the meeting stage, and to have access to the meeting stage.
+Users can select **Share in Teams Meeting** button and it launches the deep link to the meeting stage. If users not installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
 
 The following image shows the share in teams meeting experience:
 
@@ -163,7 +163,7 @@ If meeting extension is installed:
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/share.PNG" alt-text="This screenshot shows how to share apps in teams meeting.":::
 
-1. Web app is shared to meeting stage and all the participant can interact and edit together.
+1. Web app is shared to meeting stage and all the participants can interact and edit together.
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.PNG" alt-text="This screenshot shows app shared to the teams meeting stage.":::
 
@@ -181,7 +181,7 @@ If meeting extension isn't installed:
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/share.PNG" alt-text="This screenshot shows start sharing button to share your app in meeting.":::
 
-1. Web app is shared to meeting stage and all the participant can interact and edit together.
+1. Web app is shared to meeting stage and all the participants can interact and edit together.
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.PNG" alt-text="This screenshot shows app shared to the teams meeting stage experience.":::
 
