@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create a removal page
 
-You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel or group tab and you can permit users to reconfigure your tab after installation. Additionally, the tab removal experience provides the users with post-removal options to delete or archive content.
+You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enable users to rename or remove a channel or group tab and you can permit users to reconfigure your tab after installation. Additionally, the tab removal experience provides the users with post-removal options to delete or archive content.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -24,9 +24,9 @@ When your tab is uploaded to a channel or group chat, Teams adds a right-click d
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Settings            |   √    |       |The `configurationUrl` page is reloaded in an IFrame allowing the user to reconfigure the tab. |
+|     Settings            |   √    |       |The `configurationUrl` page is reloaded in an iFrame allowing the user to reconfigure the tab. |
 |     Rename              |   √    |   √   | The user can change the tab name as it appears in the tab bar.          |
-|     Remove              |   √    |   √   |  If the  `removeURL` property and value are included in the **configuration page**, the **removal page** is loaded into an IFrame and presented to the user. If a removal page isn't included, the user is presented with a confirm dialog box.          |
+|     Remove              |   √    |   √   |  If the  `removeURL` property and value are included in the **configuration page**, the **removal page** is loaded into an iFrame and presented to the user. If a removal page isn't included, the user is presented with a confirm dialog box.          |
 
 ## Create a tab removal page for your application
 
@@ -105,7 +105,7 @@ The following is a sample tab removal code block:
 
 ***
 
-When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
+When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an iFrame. The user is shown a button loaded with the `onClick()` function that calls `pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page iFrame.
 
 After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 
