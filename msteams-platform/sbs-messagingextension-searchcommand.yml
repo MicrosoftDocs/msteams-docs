@@ -23,7 +23,7 @@ items:
 
     This step-by-step guide helps you to build a search based message extension. You'll see the following output:
 
-    ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
+    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output.png" alt-text="Final.":::
 
 - title: Prerequisites
   durationInMinutes: 1
