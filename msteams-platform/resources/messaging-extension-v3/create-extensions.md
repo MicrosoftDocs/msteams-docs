@@ -12,13 +12,14 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
 
-The following sections describe how to do this:
-
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ## Action type message extensions
 
-To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
+To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search and action-based commands.
+
+ > [!NOTE]
+ >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
 
 ### Complete app manifest example
 
@@ -28,7 +29,6 @@ To initiate actions from a message extension, set the `type` parameter to `actio
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.Todo",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://todobotservice.azurewebsites.net/",
@@ -124,7 +124,7 @@ To initiate actions from a message extension, set the `type` parameter to `actio
 
 ### Initiate actions from messages
 
-In addition to initiating actions from the compose message area, you can also use your message extension to initiate an action from a message. This will allow you to send the message contents to your bot for processing and optionally reply to that message with a response using the method, which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access message extension from the overflow `...` menu and then selecting `Take action` as in the following image:
+You can initiate actions from the compose message area and also use your message extension to initiate an action from a message, which allows you to send the message contents to your bot for processing. Optionally, you can reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access message extension from the overflow `...` menu and then selecting `Take action` as in the following image:
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -222,7 +222,7 @@ Below is an example of the `value` object containing the message details that wi
 
 You can test your message extension by uploading your app. For more information, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
-To open your message extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
+To open your message extension, go to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
 
 ## Collecting input from users
 
@@ -304,7 +304,7 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 ### Request to install your conversational bot
 
-If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module to get more context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
 To facilitate this flow, when your message extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
@@ -370,15 +370,15 @@ These are the different expected responses to a `submitAction`.
 
 ### Task Module response
 
-This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
+Task Module response is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
+Compose extension auth/config response is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
 
 ### Compose extension result response
 
-This is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+Compose extension result response is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {
@@ -439,8 +439,8 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
->[!Note]
->The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
+> [!NOTE]
+> The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
 
 ```json
 {

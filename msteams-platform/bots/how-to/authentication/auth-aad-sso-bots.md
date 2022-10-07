@@ -1,16 +1,18 @@
 ---
 title: Single sign-on support for bots 
-description: Learn how to get a user token and a bot developer can use a sign-in card or the Azure bot service with the OAuth card support.
+description: Enable Single sign-on (SSO) using Azure AD configuration and OAuth card support for Teams bot apps.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 
-# Single sign-on (SSO) support for bots
+# Use SSO authentication for bots
 
 Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
 
 >[!NOTE]
-> OAuth 2.0 is an open standard for authentication and authorization used by Azure AD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+> * OAuth 2.0 is an open standard for authentication and authorization used by Azure AD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+>
+> * Bot SSO is supported only in one-on-one chat.
 
 See the following video to learn about single sign-on (SSO) support for bots:
 <br>
@@ -358,7 +360,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
 
 ### Update the auth sample
 
-Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
+Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth), and then complete the following steps to update it:
 
 1. Update the TeamsBot to handle the deduping of the incoming request by including the following code:
 

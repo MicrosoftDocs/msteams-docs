@@ -1,6 +1,6 @@
 ---
 title: Register calls and meetings bot for Microsoft Teams
-description: In this module, learn how to register a new audio/video calling bot for Microsoft Teams, create a new bot or add calling capability, and add graph permissions.
+description: Learn how to register a new audio/video calling bot for Microsoft Teams, create new bot or add calling capability, add graph permissions. Sample to create call, join meeting and transfer call.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -52,7 +52,7 @@ The following table provides a list of application permissions for calls:
 |Permission    |Display string   |Description |Admin consent required |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Initiate outgoing 1:1 calls from the app preview. |Allows the app to place outbound calls to a single user and transfer calls to users in your organization’s directory, without a signed-in user.|Yes|
-| Calls.InitiateGroupCall.All |Initiate outgoing group calls from the app preview. |Allows the app to place outbound calls to multiple users and add participants to meetings in your organization, without a signed-in user.|Yes|
+| Calls.InitiateGroupCall.All |Initiate outgoing 1:1 and group calls from the app preview. |Allows the app to place outbound calls to a single user, multiple users, transfer calls and add participants to meetings in your organization, without a signed-in user.|Yes|
 | Calls.JoinGroupCall.All |Join group calls and meetings as an app preview. |Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app is joined with the privileges of a directory user to meetings in your tenant.|Yes|
 | Calls.JoinGroupCallasGuest.All |Join group calls and meetings as a guest preview. |Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app is joined as a guest to meetings in your tenant.|Yes|
 | Calls.AccessMedia.All |Access media streams in a call as an app preview. |Allows the app to get direct access to media streams in a call, without a signed-in user.|Yes|
@@ -87,9 +87,10 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## Code sample
 
-| **Sample name** | **Description** | **Graph** |
+| **Sample name** | **Description** | **C#** |
 |---------------|----------|--------|
 | Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Realtime meeting events |The sample app demonstrates how Bot can receive real-time meeting events.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## Step-by-step guide
 
@@ -105,3 +106,4 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up cal
 * [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
+* [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)

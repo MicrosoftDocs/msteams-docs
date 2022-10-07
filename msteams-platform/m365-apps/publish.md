@@ -1,6 +1,6 @@
 ---
 title: Publish Teams apps for Microsoft 365
-description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office.
+description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office. Know about single-tenant, multitenant distribution.
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ---
 # Publish Teams apps for Microsoft 365
 
-Microsoft 365-enabled Teams apps are supported for production use in Microsoft Teams. You can distribute these apps to preview audiences who use the *Targeted Release* versions of outlook.com and office.com, and the *Beta Channel* build of Outlook for Windows desktop. Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
+Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You can distribute these apps to audience who use the *Targeted Release* (dev preview) versions of Outlook.com and Office.com, the *Beta Channel* build of Outlook for Windows desktop, and Office Current Channel (dev preview) build of Office app for Android. Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
 
 After it's published, your app will be discoverable as an installable app from the Outlook and Office app stores, in addition to the Teams store. Your app uses the permissions defined in Teams across Outlook and Office. Teams admins can [manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
-:::image type="content" source="images/outlook-office-app-store.png" alt-text="Outlook and Office.com install screens for the SurveyMonkey and MURAL Teams apps":::
+:::image type="content" source="images/outlook-office-app-store.png" alt-text="The screenshot is an example that shows Outlook and Office.com install screens for the SurveyMonkey and MURAL Teams apps.":::
 
 ## Single-tenant distribution
 

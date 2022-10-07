@@ -1,7 +1,7 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: How to work with conversation events from your Microsoft Teams bot, channel event updates, team member events, and message reaction events with Code samples.
+description: Work with conversation events from your Microsoft Teams bot, channel event updates, team member events, and message reaction events with samples (.NET,Node.js,Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -404,7 +404,7 @@ A member added event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is installed and added to a conversation
 
-   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed from (currently available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
+   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
 
 2. When a user is added to a conversation where the bot is installed
 
@@ -576,7 +576,6 @@ A member removed event is sent to your bot in the following scenarios:
 
 The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
@@ -668,7 +667,6 @@ The `channelData` object in the following payload example is based on adding a m
     }
 }
 ```
-
 
 # [Python](#tab/python)
 
@@ -1330,29 +1328,32 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team (currently available in [Public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 # [C#](#tab/dotnet)
 
 ```csharp
-protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
-var activity = turnContext.Activity; if
-(string.Equals(activity.Action, "Add",
-StringComparison.InvariantCultureIgnoreCase)) {
-// TO:DO Installation workflow }
-else
-{ // TO:DO Uninstallation workflow
-} return; }
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var activity = turnContext.Activity;
+    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        // TO:DO Installation workflow
+    }
+    else
+    {
+        // TO:DO Uninstallation workflow
+    }
+    return;
+}
 ```
 
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
 
 ```csharp
-protected override async Task
-OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken) {
-// TO:DO Installation workflow return;
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
 }
 ```
 

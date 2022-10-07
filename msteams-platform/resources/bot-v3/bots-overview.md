@@ -14,7 +14,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not available in Department of Defense (DOD).
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user":::
 
 ## What you need to know: Bots
 
@@ -45,7 +45,7 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 > [!IMPORTANT]
 > You can develop Teams apps in any other web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
-*Teams App Studio* helps you create and configure your app manifest, and can create your Bot Framework bot for you. It also contains a React control library and an interactive card builder.
+*Developer Portal for Teams* helps you create and configure your app manifest, and can create your Bot Framework bot for you. It also contains a React control library and an interactive card builder.
 
 ## Outgoing webhooks
 

@@ -1,12 +1,12 @@
 ---
-title: Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK
+title: Teams JavaScript client SDK
 author: heath-hamilton
 ms.author: surbhigupta
 description: In this module, Learn Microsoft Teams JavaScript client SDK, which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
-# Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK
+# Teams JavaScript client SDK
 
 The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, Office, and Outlook, where your app content is hosted in an [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The SDK is helpful for developing apps with the following Teams capabilities:
 
@@ -32,18 +32,18 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 |Capability | Host support | Notes |
 |-----------|--------------|-------|
-| app | Teams, Outlook, Office | Namespace representing app initialization and lifecycle. |
+| app | Teams, Outlook, Office, Office app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
 | appInstallDialog | Teams||
-| authentication | Teams, Outlook, Office | |
-| calendar | Teams, Outlook ||
+| authentication | Teams, Outlook, Office, Office app for Android | |
+| calendar | Outlook ||
 | call | Teams||
 | chat |Teams||
 | dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
 | location |Teams| See notes on [App permissions](#app-permissions).|
 | mail | Outlook (Windows desktop only)||
 | media |Teams| See notes on [App permissions](#app-permissions).|
-| pages | Teams, Outlook, Office | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
+| pages | Teams, Outlook, Office, Office app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
 | settings || Deprecated. Replaced by `pages.config`.|
 | sharing | Teams||
@@ -182,31 +182,30 @@ This code:
 
 ```TypeScript
 import * as microsoftTeams from "@microsoft/teams-js";
-
-microsoftTeams.getContext((context: microsoftTeams.Context) => {
-  /* ... */
+microsoftTeams.app.getContext().then((context:  microsoftTeams.app.Context) => { 
+/* ... */ 
 });
 ```
 
 Needs to be updated to:
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
-app.getContext().then((context: Context) => {
-    /*...*/
+app.getContext().then((context: app.Context) => { 
+/*...*/
 });
 ```
 
 ...or the equivalent `async/await` pattern:
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
 async function example() {
-  const context: Context = await app.getContext();
-  /*...*/
-}
+            const context: app.Context = await app.getContext();
+            /*...*/
+          }
 ```
 
 ---
@@ -402,8 +401,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
 | `userTeamRole` | `app.Context.team.userRole`|
-| `userDisplayName` | `app.Context.user.displayName` |
-| N/A | `app.Context.app.host.name`|
+| NA | `app.Context.app.host.name`|
 
 ## Updating to the Teams client SDK v.2.0.0
 

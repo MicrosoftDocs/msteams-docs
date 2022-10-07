@@ -1,6 +1,6 @@
 ---
 title: Extend a Teams personal tab app across Microsoft 365
-description: Learn how to extend a Teams personal tab app across Microsoft 365 by updating personal tab to run in both outlook and office.
+description: Update your personal app to run in Outlook and Office. Update manifest and TeamsJS SDK V2, amend consent security, update Azure AD app registration for SSO.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Office on the web (office.com).
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook and Office desktop and web experiences, as well as Office app for Android.
 
 Updating your personal app to run in Outlook and Office involves these steps:
 
@@ -40,7 +40,7 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
 
-Alternately, you can use a basic Single Sign-On *hello world* app already enabled Microsoft 365 in the following quickstart section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams) .
+Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following quickstart section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams) .
 
 ### Quickstart
 
@@ -135,8 +135,12 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook desktop, mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Some Microsoft 365 client applications share Client IDs.
 
 ## Sideload your app in Teams
 
@@ -158,7 +162,7 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
 
-After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
+After it's sideloaded to Teams, your personal tab is available in Outlook and Office. You must sign in with the same credentials that you used to sideload your app in Teams. When running the Office app for Android, you need to restart the app to use your personal tab app from the Office app.
 
 You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams don't pin it as an app in Office or Outlook.
 
@@ -183,8 +187,8 @@ To view your app running in Outlook on Windows desktop:
 
 To view your app in Outlook on the web:
 
-1. Navigate to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
+1. Go to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
+1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
@@ -194,7 +198,7 @@ To view your app in Outlook on the web:
 To view your app running in Office on Windows desktop:
 
 1. Launch Office and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
+1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
@@ -209,9 +213,22 @@ To preview your app running in Office on the web:
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
 
+### Office app for Android
+
+> [!NOTE]
+> Before installing the app, perform [the steps to install the latest Office app beta build](prerequisites.md#mobile) and be a part of the beta program.
+
+To view your app running in Office app for Android:
+
+1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you'll need to restart it in order to see it among your installed apps.
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
+1. Select your app icon to launch your app in Office app for Android.
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Tap on the 'Apps' option on the side bar of the Office app to see your installed personal tabs":::
+
 ## Troubleshooting
 
-Currently, a subset of Teams application types and capabilities are supported in Outlook and Office clients. This support expands over time.
+Currently, a subset of Teams application types and capabilities is supported in Outlook and Office clients. This support expands over time.
 
 Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
 
@@ -227,11 +244,31 @@ From Teams Toolkit, you can Debug (`F5`) your tab application running in Office 
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Choose from Teams, Outlook, and Office debug targets in Teams Toolkit":::
 
-Upon first run of local debug to Office or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then click on **Continue** to proceed to debug your app in Office/Outlook.
+Upon first run of local debug to Office or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then select **Continue** to proceed to debug your app in Office/Outlook.
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit dialog Teams install":::
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
+
+#### Mobile debugging
+
+Teams Toolkit (`F5`) debugging is not yet supported with Office app for Android. Here's how to remotely debug your app running in Office app for Android:
+
+1. If you debug using a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). This is enabled by default with the Android emulator.
+1. Launch the Office app From your Android device.
+1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot showing Enable remote debugging":::
+
+1. Exit **Settings**.
+1. Exit your profile screen.
+1. Select **Apps** and launch your sideloaded app to run within the Office app.
+1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
+1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="screenshot showing list of webviews in devtool":::
+
+1. Debug your tab app within the Android WebView. In the same way you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
 ## Code sample
 
@@ -240,6 +277,8 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Sample Launch Page (Microsoft 365) | Demonstrates SSO authentication and TeamsJS SDK capabilities as available in different hosts. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders app | Demonstrates how to use Microsoft TeamsJS SDK V2 to extend teams application to other M365 host apps. Works in Teams, Outlook, Office. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
 
