@@ -54,15 +54,17 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
    > [!NOTE]
    > You can also add a tab to an existing meeting using the meeting **Chat** tab.
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop1)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="Tabs during a meeting.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile1)
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
 :::image type="content" source="../assets/images/apps-in-meetings/mobile-post-meeting.png" alt-text="Screenshot is an example that shows mobile pre-meeting experience.":::
+
+---
 
 #### In-meeting app experience
 
@@ -80,11 +82,11 @@ To use tabs during a meeting:
     An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
 1. In the in-meeting dialog box, enter your response as feedback.
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop2)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktop in-meeting view.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile2)
 
 After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
 
@@ -105,11 +107,11 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 The following image illustrates the in-meeting side panel:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop3)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog1.png" alt-text="In-meeting side panel":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile3)
 
 :::image type="content" source="../assets/images/apps-in-meetings/sidepanelmobile.png" alt-text="Screenshot is an example of in-meeting side panel mobile.:::"
 
@@ -127,11 +129,11 @@ With post-meeting app experience, you can view the results of the meeting, such 
 
 The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop4)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Contoso tab with results.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile4)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience.":::
 
