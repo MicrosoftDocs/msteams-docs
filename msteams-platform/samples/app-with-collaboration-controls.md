@@ -311,7 +311,7 @@ Approvals allow users to request sign out from others when working in a record. 
 
       :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Screenshot is an example that shows the new approval request form.":::
 
-1. In the Approval request form, fill the required fields and select **Send**,which creates a request and added to the list.
+1. In the Approval request form, fill the required fields and select **Send**, which creates a request and added to the list.
 
       :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="Screenshot is an example that shows the list of approvals.":::
 
