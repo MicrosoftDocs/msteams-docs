@@ -26,19 +26,37 @@ doc-feature-app-less-adaptive-card-preview-with-schema.org-templates-TFW
 
 ## App less Adaptive Card
 
-App less is an internet based service, which draws user's attention without the need to download or register an app.
+The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link with the information such as image, title, and a description.
+
+You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!---link to GitHub templates to be added after the PM shares the public link ---> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
 ### Enable App less Adaptive Card
 
-You can copy the metadata link from [schema.org](https://schema.org/) and paste it into the Adaptive Card designer, it takes the template of the tag and unfurls into an Adaptive Card based on the type of product it's tagged.
+If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
-The following screenshot demonstrates unfurling of an app less Adaptive Card.
+:::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience.png" alt-text="Screenshot shows an example of rich unfurl preview experience when a link is pasted in the Teams message compose area." lightbox="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience-teams.png":::
 
-:::image type="content" source="../../assets/images/adaptive-cards/unfurling-adaptive-card.png" alt-text="The screenshot is an example of unfurling an app less Adaptive Card":::
+If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
+
+1. Add the [schema.org](https://schema.org/) vocabulary with the [JASON-LD format](https://json-ld.org/) to your web content.
+1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
+1. Open [Adaptive card designer](https://www.adaptivecards.io/designer/) and create a new file.
+1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
+
+   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
+
+1. Add the the supported micro-capability template JSON code in the **CARD PAYLOAD EDITOR**.
+
+   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
+
+1. You can add the attributes available in the template to your website metadata in the **SAMPLE DATA EDITOR**.
+1. To preview the adaptive card unfurl experience, select **Preview mode**.
+
+You can also experience the rich unfurl experience for other templates in the similar way and update your website with the supported template metadata. After you've added [schema.org](<https://schema.org/>) metadata to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
