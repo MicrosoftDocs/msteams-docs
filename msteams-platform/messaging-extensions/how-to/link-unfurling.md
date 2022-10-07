@@ -45,7 +45,7 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
 
-1. Add the the supported micro-capability template JSON code in the **CARD PAYLOAD EDITOR**.
+1. Add the supported micro-capability template JSON code in the **CARD PAYLOAD EDITOR**.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
 
@@ -56,7 +56,7 @@ You can also experience the rich unfurl experience for other templates in the si
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
