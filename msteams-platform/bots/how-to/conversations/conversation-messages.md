@@ -450,6 +450,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation requests, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
+| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|Accessed public API from GCC tenant.|Yes|Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or has been deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
@@ -460,7 +461,6 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
 | 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
 | 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
-||**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|Accessed public API from GCC tenant.|Yes|Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`|
 
 ### Status codes retry guidance
 
@@ -468,12 +468,12 @@ The general retry guidance for each status code is listed in the following table
 
 |Status code | Retry strategy |
 |----------------|-----------------|
+| 403 |Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`.|
 | 412 | Retry using exponential backoff. |
 | 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available . Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
-||Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`.|
 
 ## Code sample
 
