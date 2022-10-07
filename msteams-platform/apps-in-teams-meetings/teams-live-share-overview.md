@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 # Live Share SDK
 
-> [!VIDEO https://www.youtube.com/embed/971YIvosuUk]
+> [!VIDEO <https://www.youtube.com/embed/971YIvosuUk>]
 
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings.
 
@@ -117,11 +117,10 @@ Live Share provides a turn-key Azure Fluid Relay service backed by the security 
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
-import { LivePresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { presence: LivePresence },
 };
@@ -133,12 +132,11 @@ const { container } = await liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
-import { LivePresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
   initialObjects: { presence: LivePresence },
 };

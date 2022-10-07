@@ -83,7 +83,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 Follow the steps to join a session that is associated with a user's meeting:
 
-1. Initialize [liveShare](/javascript/api/@microsoft/teams-js/liveShare).
+1. Initialize [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
 2. Define the data structures you want to synchronize. For example, `SharedMap`.
 3. Join the container.
 
@@ -92,11 +92,11 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
+import { LiveShareClient } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { exampleMap: SharedMap },
 };
@@ -108,11 +108,11 @@ const { container } = await liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
+import { LiveShareClient } from "@microsoft/live-share";
 import { ContainerSchema, SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
@@ -126,7 +126,7 @@ const { container } = await liveShare.joinContainer(schema);
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 > [!TIP]
-> Make sure the Teams Client SDK is initialized before using the `liveShare` API.
+> Make sure the Teams Client SDK is initialized before using the Live Share APIs.
 
 ## Fluid distributed data structures
 
@@ -143,11 +143,11 @@ Let's see how `SharedMap` works. In this example, we've used `SharedMap` to buil
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
+import { LiveShareClient } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
@@ -169,11 +169,11 @@ function onClickAddToPlaylist(video) {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
+import { LiveShareClient } from "@microsoft/live-share";
 import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
@@ -228,14 +228,14 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
 import {
+  LiveShareClient,
   LivePresence,
   PresenceState,
 } from "@microsoft/live-share";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -266,8 +266,12 @@ function onUserDidLogIn(userName, profilePicture) {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
-import { LivePresence, PresenceState, LivePresenceUser } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  LivePresence,
+  PresenceState,
+  LivePresenceUser,
+} from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
 interface ICustomUserData {
@@ -276,7 +280,7 @@ interface ICustomUserData {
 }
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
     presence: LivePresence<ICustomUserData>,
@@ -315,11 +319,10 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
-import { LiveEvent } from "@microsoft/live-share";
+import { LiveEvent, LiveShareClient } from "@microsoft/live-share";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { notifications: LiveEvent },
 };
@@ -349,8 +352,7 @@ notifications.sendEvent({
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
-import { LiveEvent, ILiveEvent } from "@microsoft/live-share";
+import { LiveShareClient, LiveEvent, ILiveEvent } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
 interface ICustomEvent extends ILiveEvent {
@@ -359,7 +361,7 @@ interface ICustomEvent extends ILiveEvent {
 }
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
     notifications: LiveEvent<ICustomEvent>,
@@ -399,11 +401,10 @@ notifications.sendEvent({
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
-import { LiveTimer } from "@microsoft/live-share";
+import { LiveShareClient, LiveTimer } from "@microsoft/live-share";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { timer: LiveTimer },
 };
@@ -452,15 +453,15 @@ timer.play();
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
 import {
+  LiveShareClient,
   LiveTimer,
   LiveTimerEvents,
   ITimerConfig,
 } from "@microsoft/live-share";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { timer: LiveTimer },
 };
@@ -520,11 +521,10 @@ Example using `LiveState`:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
-import { LiveState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { appState: LiveState },
 };
@@ -557,8 +557,7 @@ function onSelectPresentMode(documentId) {
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
-import { LiveState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
 interface ICustomState {
@@ -567,7 +566,7 @@ interface ICustomState {
 }
 
 // Join the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
     appState: LiveState<ICustomState>,

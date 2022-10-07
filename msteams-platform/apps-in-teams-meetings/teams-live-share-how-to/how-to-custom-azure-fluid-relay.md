@@ -22,13 +22,12 @@ While you likely will prefer using our free hosted service, there are situations
 
 ## Connect to Azure Fluid Relay service
 
-When calling `initialize()` from the `liveShare` namespace in the `@microsoft/teams-js` package, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. This example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+When calling initializing `LiveShareClient`, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. This example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare, LiveShareOptions } from "@microsoft/teams-js";
-import { LivePresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
@@ -45,7 +44,7 @@ const options = {
   },
 };
 // Join the Fluid container
-liveShare.initialize(options);
+const liveShare = new LiveShareClient(options);
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -60,13 +59,16 @@ const { container } = await liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare, LiveShareOptions } from "@microsoft/teams-js";
-import { LivePresence } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  ILiveShareClientOptions,
+  LivePresence,
+} from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
-const options: LiveShareOptions = {
+const options: ILiveShareClientOptions = {
   connection: {
     tenantId: "MY_TENANT_ID",
     tokenProvider: new AzureFunctionTokenProvider(
@@ -78,7 +80,7 @@ const options: LiveShareOptions = {
   },
 };
 // Join the Fluid container
-liveShare.initialize(options);
+const liveShare = new LiveShareClient(options);
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -112,7 +114,7 @@ Live Share has features that are beneficial to common meeting scenarios that aug
 
 ### Container mapping
 
-The `liveShare` namespace in `@microsoft/teams-js` is responsible for mapping a unique meeting identifier to your Fluid containers, which ensures that all meeting participants join the same container. As part of this process, the client attempts to connect to a `containerId` mapped to the meeting that one already exists. If one doesn't exist, the `AzureClient` is used to create a container using your `AzureConnectionConfig` and then relay the `containerId` to other meeting participants.
+The `LiveShareClient` in `@microsoft/live-share` is responsible for mapping a unique meeting identifier to your Fluid containers, which ensures that all meeting participants join the same container. As part of this process, the client attempts to connect to a `containerId` mapped to the meeting that one already exists. If one doesn't exist, the `AzureClient` is used to create a container using your `AzureConnectionConfig` and then relay the `containerId` to other meeting participants.
 
 If your app already has a mechanism for creating Fluid containers and sharing them to other members, such as by inserting the `containerId` into the URL shared to the meeting stage, then this may not be necessary for your app.
 

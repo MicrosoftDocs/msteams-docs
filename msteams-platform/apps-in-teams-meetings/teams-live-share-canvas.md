@@ -54,11 +54,11 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { liveShare } from "@microsoft/teams-js";
+import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 
 // Setup the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -76,12 +76,12 @@ await liveCanvas.initialize(inkingManager);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { liveShare } from "@microsoft/teams-js";
+import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 import { ContainerSchema } from "fluid-framework";
 
 // Setup the Fluid container
-liveShare.initialize();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };

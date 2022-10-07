@@ -23,7 +23,7 @@ In the Dice Roller sample app, users are shown a die with a button to roll it. W
 
 ## Set up the application
 
-Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [liveShare](/javascript/api/@microsoft/teams-js/liveShare) namespace from the Teams Client SDK. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams Client SDK](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) class. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams Client SDK](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
 Applications create Fluid containers using a schema that defines a set of _initial objects_ that will be available to the container. The sample uses a SharedMap to store the most recent die value that was rolled. For more information, see [Data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
@@ -33,7 +33,8 @@ In addition to the `inTeams=true` query parameter, we can use a `view=content|co
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { app, pages, liveShare } from "@microsoft/teams-js";
+import { app, pages } from "@microsoft/teams-js";
+import { LiveShareClient, testLiveShare } from "@microsoft/live-share";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -93,36 +94,26 @@ start().catch((error) => console.error(error));
 
 Not all of your apps views will need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as calling [liveShare.initialize()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-initialize), and then calling it's [joinContainer()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-joincontainer) method. When running locally you'll need to pass in a custom connection config with a type of `local` but otherwise, join a local container is the same as joining a container in Teams.
+Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) and calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
+
+When running locally, you can import [testLiveShare](/javascript/api/@microsoft/live-share/testliveshare) and call its [initialize()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-initialize) method. Then, use the [joinContainer()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-joincontainer) method to connect to a session.
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
-  let client;
   if (!!searchParams.get("inTeams")) {
     // Create client
-    liveShare.initialize();
-  } else {
-    // Create client and configure for testing
-    liveShare.initialize({
-      connection: {
-        type: "local",
-        tokenProvider: new InsecureTokenProvider("", {
-          id: "123",
-          name: "Test User",
-        }),
-        endpoint: "http://localhost:7070",
-      },
-    });
+    const liveShare = new LiveShareClient();
+    // Join container
+    return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
   }
-
-  // Join container
-  return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
+  // Create client and configure for testing
+  testLiveShare.initialize();
+  return await testLiveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-> [!NOTE]
-> When testing locally, the `liveShare` namespace updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `liveShare` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/teams-js/liveShare.liveshareoptions?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-liveshareoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/teams-js/liveShare.liveshareoptions?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-liveshareoptions-getlocaltestcontainerid) options passed `liveShare.initialize()`.
+When testing locally, `testLiveShare` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `testLiveShare` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) options passed to `LiveShareClient`.
 
 ## Write the stage view
 
