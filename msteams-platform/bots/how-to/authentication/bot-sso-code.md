@@ -134,6 +134,9 @@ When the user selects **Continue**, one of the following events occurs:
 
 The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your bot app for the granted permissions and scopes.
 
+> [!NOTE]
+> After the app user consents, they're not required to consent again for any other permissions. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
+
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
