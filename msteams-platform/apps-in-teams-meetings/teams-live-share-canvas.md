@@ -154,7 +154,7 @@ The highlighter tool draws translucent strokes that are stored into the canvas. 
 <div>
   <button id="highlighter">Enable Highlighter</button><br />
   <label for="highlighter-color">Select a color:</label>
-  <input type="color" id="highlighter-color" name="highlighter-color" value="#000000" />
+  <input type="color" id="highlighter-color" name="highlighter-color" value="#FFFC00" />
   <button id="highlighter-tip-size">Increase tip size</button>
 </div>
 ```
