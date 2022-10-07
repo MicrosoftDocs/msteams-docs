@@ -32,11 +32,9 @@ The following table provides Stage View invoke action details:
 
 ## Advantages of Stage View
 
-The advantages of Stage View:
-
 * Stage View provides seamless, multitasking experience when working with the content in Teams.
 * Users can open and view the content provided by your app without leaving the context and continue discussion from same window.
-* Collaborative Stage View helps the users can pin the content to the chat for future quick access leading to a higher user engagement with your app.
+* Stage View helps the users to pin the content to the chat for future quick access.
 * The ability to engage and conversation about the same content leads to higher user engagement with your app.
 
 ## Stage View vs. Task module
@@ -47,7 +45,7 @@ The advantages of Stage View:
 
 ## Invoke Stage View
 
-The following list shows to invoke Stage View:
+The following list shows how to invoke Stage View:
 
 * [Invoke Stage View from Adaptive Card](#invoke-stage-view-from-adaptive-card)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
@@ -72,7 +70,7 @@ The following images display invoking Collaborative Stage View from Adaptive Car
 
 ### Code snippet
 
-The following code enables to create a Collaborative Stage View button from Adaptive Cards:
+The following code helps to create a Collaborative Stage View button from Adaptive Cards:
 
 ```JSONCopy
 {
