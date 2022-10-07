@@ -379,6 +379,9 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
     });
     ```
 
+>[!NOTE]
+> `maxMediaCount` is the maximum limit of media allowed to be selected in one go, current max limit is 10 set by office lens. Maximum count of images uploaded is also determined by the total size of array returned by `selectMedia` API. This array size shouldn't exceed 4 MB, if array size exceeds 4 MB API throws error Code 10000 that is SIZE_EXCEEDED error.
+
 ## File download on Teams mobile
 
 You can configure an app to enable users to download files from the webview to their mobile device.
