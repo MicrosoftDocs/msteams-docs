@@ -23,10 +23,10 @@ You have the following options to respond:
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
-If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app to the user**. After the user receives the error, any reply to invoke is ignored by the Teams client.
+If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app** to the user. After the user receives the error, any reply to invoke is ignored by the Teams client.
 
 > [!NOTE]
-> The app must defer any long-running actions after the user replies to the invoke request. The long-running actions delivered as a message.
+> The app must defer any long-running actions after the user replies to the invoke request. The long-running actions can be delivered as a message.
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
@@ -42,7 +42,7 @@ For authentication or configuration, after the user completes the process, the o
 > * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
-If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
+If the app contains a conversational bot, install the bot in the conversation, and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
 
 ## The submitAction invoke event
 
