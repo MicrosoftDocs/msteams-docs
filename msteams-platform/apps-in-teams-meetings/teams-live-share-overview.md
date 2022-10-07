@@ -75,7 +75,7 @@ Features supported by Live Share canvas include:
 - Configuration settings for variable devices and view states.
 - Supports mouse, touch, and stylus inputs.
 
-You can find more information about this package on the [Live Share canvas page](./teams-live-share-capabilities.md).
+You can find more information about this package on the [Live Share canvas page](./teams-live-share-canvas.md).
 
 ## Why build apps with Live Share?
 
