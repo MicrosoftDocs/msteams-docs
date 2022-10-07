@@ -148,7 +148,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Teams Live Share canvas highlighter tool":::
 
-The highlighter tool draws opaque strokes that are stored into the canvas. The default tip shape is a square.
+The highlighter tool draws translucent strokes that are stored into the canvas. The default tip shape is a square.
 
 ```html
 <div>
