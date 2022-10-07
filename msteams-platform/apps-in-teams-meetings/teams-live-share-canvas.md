@@ -100,7 +100,7 @@ await liveCanvas.initialize(inkingManager);
 
 ## Canvas tools & cursors
 
-Now that you understand how to set up the Live Share canvas and it is being synchronized, you can now configure the canvas for user interaction, such as with buttons to select a pen tool. In this section, we will discuss what tools are available and how to use them.
+Now that the Live Share canvas is set up and synchronizing, you can configure the canvas for user interaction, such as buttons to select a pen tool. In this section, we will discuss what tools are available and how to use them.
 
 ### Inking tools
 
