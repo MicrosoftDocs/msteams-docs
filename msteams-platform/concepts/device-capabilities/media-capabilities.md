@@ -380,7 +380,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
     ```
 
 >[!NOTE]
-> [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs?view=msteams-client-js-latest#@microsoft-teams-js-media-mediainputs-maxmediacount) is the maximum limit of media allowed to be selected in one go, current max limit is 10 set by office lens. Maximum count of images uploaded is also determined by the total size of array returned by `selectMedia` API. Ensure that the array size doesn't exceed 4 MB, if array size exceeds 4 MB API generates an error code 10000 that is SIZE_EXCEEDED error.
+> [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) is the maximum limit of media allowed to be selected in one go, current max limit is 10 set by office lens. Maximum count of images uploaded is also determined by the total size of array returned by `selectMedia` API. Ensure that the array size doesn't exceed 4 MB, if array size exceeds 4 MB API generates an error code 10000 that is SIZE_EXCEEDED error.
 
 ## File download on Teams mobile
 
