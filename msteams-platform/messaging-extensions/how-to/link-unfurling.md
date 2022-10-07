@@ -36,21 +36,22 @@ If you've already added [schema.org](<https://schema.org/>) to your website, you
 
 If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
 
-1. Add the [schema.org](https://schema.org/) vocabulary with the [JASON-LD format](https://json-ld.org/) to your web content.
+1. Add the [schema.org](https://schema.org/) metadata with the [JASON-LD format](https://json-ld.org/) to your website.
 1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
 1. Open [Adaptive card designer](https://www.adaptivecards.io/designer/) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
 
-1. Add the supported micro-capability template JSON code in the **CARD PAYLOAD EDITOR**.
+1. Check the micro-capability template and add the template code in the **CARD PAYLOAD EDITOR**.
+
+   If required, update new attributes from the template to your website metadata in the **SAMPLE DATA EDITOR**.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
 
-1. You can add the attributes available in the template to your website metadata in the **SAMPLE DATA EDITOR**.
 1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
 
-You can also experience the rich unfurl experience for other templates in the similar way and update your website with the supported template metadata. After you've added [schema.org](<https://schema.org/>) metadata to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
+Update your website with the supported template metadata. After you've added [schema.org](<https://schema.org/>) metadata to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
 See the following video to learn more about link unfurling:
 <br>
