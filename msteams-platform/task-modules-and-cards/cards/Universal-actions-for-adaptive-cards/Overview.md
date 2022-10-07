@@ -36,7 +36,11 @@ The following image shows the current inconsistent action model:
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Inconsistent action model":::
 
-With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
+With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms.
+
+`Action.Execute` works across hubs, including Teams and Outlook, but it isn't a replacement for `Action.Submit`. However, in a few cases, such as if you want some external system to do an action and the result of the action to be sent back to your conversation, which uses Messaging Extension, `Action.Execute` isn't supported. For link unfurling cards like Hero and Thumbnail Cards, you need to call `Action.Submit`.
+
+In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
 
 The following image shows the new Universal Action model:
 
@@ -104,7 +108,7 @@ Now, you can understand how Adaptive Cards can be transformed with the new Unive
 
 Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enable a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
 
-You can get started by updating scenarios using the [quick start guide].(Work-with-universal-actions-for-adaptive-cards.md) and leverage Universal Actions.
+You can get started by updating scenarios using the [quick start guide].(Work-with-universal-actions-for-adaptive-cards.md) and use Universal Actions.
 
 ## Next step
 
