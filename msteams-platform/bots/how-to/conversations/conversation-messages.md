@@ -460,6 +460,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
 | 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
 | 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+||**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|Accessed public API from GCC tenant.|Yes|Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`|
 
 ### Status codes retry guidance
 
@@ -472,6 +473,7 @@ The general retry guidance for each status code is listed in the following table
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
+||Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`|
 
 ## Code sample
 
