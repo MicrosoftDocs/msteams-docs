@@ -28,7 +28,7 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="content" source="../../../../assets/icons/function.png" alt-text="functionality" link="#general-functionality-and-performance" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="App package and store listing icon." link="#app-package-and-store-listing" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer" border="false":::
@@ -40,7 +40,7 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="Bot icon." link="#bots-1" border="false":::
    :::column-end:::
    :::column span="":::
      :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions" border="false":::
