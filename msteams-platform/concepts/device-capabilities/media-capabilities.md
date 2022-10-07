@@ -17,7 +17,7 @@ For effective integration, you must have a good understanding of [code snippets]
 
 The advantage of integrating device capabilities into your Teams apps is that it uses native Teams controls to provide a rich and immersive experience for your users. The following scenarios showcase the advantages of media capabilities:
 
-* Allow the user to capture the rough mockups drawn on a physical whiteboard through their mobile phone and use the captured images as poll options in Teams group chat.
+* Allow the user to capture the rough model drawn on a physical whiteboard through their mobile phone and use the captured images as poll options in Teams group chat.
 
 * Allow the user to record audio message and attach it to an incident ticket.
 
@@ -46,7 +46,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia), and [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) APIs enable you to use native media capabilities as follows:
 
 * Use the native **microphone** to allow users to **record audio** (record 10 minutes of conversation) from the device.
-* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record upto 5 minutes of video) on the go.
+* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record up to 5 minutes of video) on the go.
 * Use native **gallery support** to allow users to **select device images** as attachments.
 * Use native **image viewer control** to **preview multiple images** at one time.
 * Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
