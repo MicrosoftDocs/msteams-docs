@@ -24,7 +24,7 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 ## App less Adaptive Card
 
-The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link with the information such as image, title, and a description.
+The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive card with the information such as image, title, and a description.
 
 You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!---link to GitHub templates to be added after the PM shares the public link ---> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
@@ -48,7 +48,7 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
 
 1. You can add the attributes available in the template to your website metadata in the **SAMPLE DATA EDITOR**.
-1. To preview the adaptive card unfurl experience, select **Preview mode**.
+1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
 
 You can also experience the rich unfurl experience for other templates in the similar way and update your website with the supported template metadata. After you've added [schema.org](<https://schema.org/>) metadata to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
