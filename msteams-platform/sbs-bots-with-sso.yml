@@ -60,7 +60,7 @@ items:
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/bots/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, contact Teams administrator.
@@ -91,7 +91,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to sign in with your Microsoft account credentials.
+    1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Create a resource**.
 
@@ -117,7 +117,7 @@ items:
 
     1. Enter the following details to create Azure bot.
 
-        1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
+        1. Enter required bot handle name in **Bot handle**.
     
         1. Select your **Subscription** and **Resource group** from the dropdown list.
 
@@ -125,19 +125,19 @@ items:
       
            You can also create a new resource group by the following steps:
 
-              1. To create new resource group, select **Create new** > enter resource name > select **OK**.
+           1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-                   :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="Screenshot showing the Selection of new resource group.":::
+             :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="Screenshot showing the Selection of new resource group":::
 
-              1. Select the required location from **New resource group location** dropdown list.
+           1. Select the required location from **New resource group location** dropdown list.
 
-                   :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
+             :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location":::
 
         1. Select **Type of App** as **Multi Tenant**.
 
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
-           You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID** and **MSI resource ID**.
+           You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
             :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
 
@@ -170,7 +170,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Select Configure":::
 
-       > [!Important]
+       > [!Tip]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
     1. Next to **Microsoft App ID**, select **Manage**.
@@ -193,7 +193,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Screenshot showing the value of client secret copied to clipboard.":::
 
-       > [!Important]
+       > [!Tip]
        > Save the **Client secrets** value or app password for future reference.
        
     **Add bot to the Teams channel**
@@ -206,7 +206,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/select-recent-resources_1.png" alt-text="Select recent resources":::
 
-    1. Select **Channels** in the left pane, and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
+    1. Select **Channels** in the left pane. 
   
         :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Select recent":::
 
@@ -304,14 +304,15 @@ items:
 
         :::image type="content" source="~/assets/images/bots/appidURI.png" alt-text="Screenshot showing the set option.":::
 
-    1. Use the Application ID URI shown and append **api://botid-** at the beginning of the URI.
+    1. Set the Application ID URI in the form of `api://botid-{your AppID}`.
 
     1. Select **Save**.
 
         :::image type="content" source="~/assets/images/bots/exposeAPI_1.png" alt-text="Screenshot showing save option.":::
     
-       > [!Important]
-       > Save the **Application ID URI** for future reference.
+       > [!NOTE]
+       > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+       > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**.
 
@@ -419,9 +420,9 @@ items:
 
         :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
 
-    The **New Connection Setting** window appears.
+       The **New Connection Setting** window appears.
 
-        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
+         :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
 
     1. In **New Connection Setting** page, enter the following details:
 

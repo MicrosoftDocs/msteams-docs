@@ -88,7 +88,7 @@ items:
 
         ![New resource group location](~/assets/images/bots/newresource.png)
 
-    1. Select **MultiTenant** under **Bot Type**.
+    1. Select **Type of App** as **MultiTenant**.
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -304,7 +304,7 @@ items:
 
     1. Select **Add permissions**.
 
-         source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Other permissions":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Other permissions":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 

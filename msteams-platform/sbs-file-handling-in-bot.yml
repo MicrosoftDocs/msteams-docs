@@ -146,7 +146,7 @@ items:
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
-     **To add the Teams channel**
+    **To add the Teams channel**
 
     1. Select **Home**.
 
@@ -155,7 +155,7 @@ items:
        
     1. Select your bot from **Recent resources**.
 
-    1.Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
       
@@ -322,7 +322,7 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/configuration-web_1.png" alt-text="configuration":::
 
-      **To update **TeamsAppManifest**.
+      **To update Manifest**
 
       1. Select **Manifest** from the left pane.
 
