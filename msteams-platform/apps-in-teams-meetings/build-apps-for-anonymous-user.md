@@ -18,7 +18,7 @@ When the message sent with bot app, it doesn't display app icon to anonymous use
 > [!NOTE]
 >
 > * Side panel tabs and content bubbles aren't available for anonymous users at the moment.
-> * You can build conversational extensibility solutions to engage with meeting participants.
+> * You can build Bot, Messaging Extensions, Cards and Task Module solutions in your app to engage with meeting participants..
 > * Apps shared on stage by regular in-tenant users will render for anonymous users.
 
 ## Tenant admin setting for anonymous user app interaction
@@ -186,58 +186,42 @@ Create conversation API is not supported for anonymous users. The anonymous user
 
 **Invoke**
 
-Anonymous users can interact with Adaptive Cards, which use invoke activities. The first snapshot shows a sample response for anonymous user for an invoke call. The following two examples show invoke activities responses of `tab/fetch` and tab or submit.
+Anonymous users can interact with Adaptive Cards, which use invoke activities.
 
-`tab/fetch`:
-
-```csharp
-{ 
-"tab": { 
-    "type": "continue", 
-    "value": { 
-        "cards": [ 
-            { 
-                "card": adaptiveCard1, 
-            }, 
-            { 
-                "card": adaptiveCard2, 
-            } 
-            { 
-                "card": adaptiveCard3 
-            }   
-        ] 
-    }, 
-}, 
-"responseType": "tab" 
-} 
-```
-
-`tab/submit` **continue** POST response:
-
-When a user selects a button on the Adaptive Card tab, the `tab/submit` request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. The Adaptive Card data is available through the data property of the `tab/submit` request. You receive either of the following responses to your request:
+When a user selects a button on the Adaptive Card in meeting chat, the invoke request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. The Adaptive Card data is available through the data property of the request. You receive either of the following responses to your request:
 
 * An HTTP status code `200` response with no body. An empty `200` response results in no action taken by the client.
+* The standard `200` continue response. A continue response triggers the client to update the rendered Adaptive Card with the Adaptive Cards provided in the cards array of the continue response.
 
-* The standard `200` tab continues response, as explained in fetch Adaptive Card. A tab continue response triggers the client to update the rendered Adaptive Card tab with the Adaptive Cards provided in the cards array of the continue response.
+The example shows invoke activities request payload on submit event.
 
-```csharp
+```json
 {
-"tab": {
-    "type": "continue",
-    "value": {
-        "cards": [
-            {
-            "card": adaptiveCard1,
-            },
-            {
-            "card": adaptiveCard2,
-            }
-        ]
-    },
-},
-"responseType": "tab"
-}
+  clientMessageId : "<>"
+  complianceData: {
+    action: {
+     type: "invoke",
+     title: "Submit Vote"
+     }
+  }
+  conversation: {
+    id: "<>"
+  }
+  messageType: "RichText/Media_Card"
+  serverMessageId: "<>"
+  value: {
+    choice: "<>"
+      data: {
+       <>
+      }
+    }
+  }
 ```
+
+| **Property Name** | **Description** |
+| --- | --- |
+| `data` | Object provided by bot to render adaptive card |
+| `choice` | User selected object from adaptive card |
 
 ## See also
 
