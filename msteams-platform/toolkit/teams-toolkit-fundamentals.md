@@ -14,10 +14,7 @@ Teams Toolkit is an extension that you can add to Visual Studio Code and Visual 
 
 You can create, debug, and deploy your Teams app right from Visual Studio Code. App development with the toolkit has the following advantages:
 
-* Integrated identity
-* Access to cloud storage
-* Data from Microsoft Graph
-* Azure and Microsoft 365 services with zero-configuration approach.
+### Quick access to Teams Developer Portal
 
 In this section, you'll learn about the features and functionalities of Teams Toolkit.
 

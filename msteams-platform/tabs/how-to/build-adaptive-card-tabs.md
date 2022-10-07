@@ -52,7 +52,6 @@ Following is a sample Adaptive Card tab manifest:
   "manifestVersion": "1.9",
   "id": "00000000-0000-0000-0000-000000000000",
   "version": "0.0.1",
-  "packageName": "acprototype",
   "developer": {
     "name": "Contoso",
     "websiteUrl": "https://contoso.yourwebsite.com",

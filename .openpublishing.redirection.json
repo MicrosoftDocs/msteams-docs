@@ -790,35 +790,35 @@
       },
       {
         "source_path": "msteams-platform/toolkit/accounts.md",
-        "redirect_url": "/microsoftteams/toolkit/tools-prerequisites"
+        "redirect_url": "/microsoftteams/platform/toolkit/tools-prerequisites"
       },
       {
         "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
-        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
-        "redirect_url": "/microsoftteams/toolkit/create-new-project"
+        "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
       },
       {
         "source_path": "msteams-platform/toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md",
-        "redirect_url": "/microsoftteams/toolkit/teamsfx-preview-and-customize-app-manifest"
+        "redirect_url": "/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest"
       },
       {
         "source_path": "msteams-platform/toolkit/provision-cloud-resources.md",
-        "redirect_url": "/microsoftteams/toolkit/provision"
+        "redirect_url": "/microsoftteams/platform/toolkit/provision"
       },
       {
         "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
-        "redirect_url": "/microsoftteams/toolkit/deploy"
+        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
       },
       {
         "source_path": "msteams-platform/toolkit/visual-studio-overview.md",
-        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
-        "redirect_url": "/microsoftteams/toolkit/debug-overview"
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
       }
     ]
 }

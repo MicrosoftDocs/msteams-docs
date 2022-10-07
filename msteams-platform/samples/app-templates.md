@@ -33,7 +33,7 @@ The Champion Management Platform (CMP) app template helps you manage, scale, and
 
 The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning, and development or organization-wide broadcasts.
 
-The app provides an easy interface for designated users to create, preview, collaborate and send messages.
+The app provides an easy interface for designated users to create, preview, collaborate, and send messages.
 
 It provides a foundation to build custom targeted communication capabilities such as custom telemetry on how many users acknowledged or interacted with a message.
 
@@ -78,13 +78,13 @@ The Get Started app template allows you to bring the power of Microsoft 365 lear
 
 ## Microsoft Teams Emergency Operations Center (TEOC)
 
-The Microsoft Teams Emergency Operations Center (TEOC) solution template leverages the power of the Microsoft 365 platform to centralize incident response, information sharing and field communications using powerful services like Microsoft Lists, SharePoint and more. An open-source solution supported by Microsoft, provides core functionality and can be extended to meet specific agency requirements.
+The Microsoft Teams Emergency Operations Center (TEOC) solution template leverages the power of the Microsoft 365 platform to centralize incident response, information sharing and field communications using powerful services like Microsoft Lists, SharePoint, and more. An open-source solution supported by Microsoft, provides core functionality and can be extended to meet specific agency requirements.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
 
 ## Tournament of Teams
 
-Champions are critical in helping drive adoption and developing new tournaments, helping in your business goals. Make sure you are leveraging your Champions to help identify and build new adoption-themed tournaments, and inspire your organization to learn and participate.
+Champions are critical in helping drive adoption and developing new tournaments, helping in your business goals. Ensure that you are leveraging your Champions to help identify and build new adoption-themed tournaments, and inspire your organization to learn and participate.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-tournament-of-teams)
 
