@@ -124,7 +124,7 @@ To initiate actions from a message extension, set the `type` parameter to `actio
 
 ### Initiate actions from messages
 
-You can initiate actions from the compose message area and also from a message using your message extension, which allows you to send the message contents to your bot for processing. You can optionally respond to that message using the method described in [Responding to submit](#responding-to-submit). The response will be included as a reply to the message, which users can edit before submitting.
+You can initiate actions from the compose message area and also from a message using your message extension, which allows you to send the message contents to your bot for processing. You can optionally respond to that message using the method described in [Responding to submit](#responding-to-submit). The response includeds as a reply to the message, which users can edit before submitting.
 
 Users can access message extension by selecting `Take action` from the overflow `...` menu, as shown in the image:
 
