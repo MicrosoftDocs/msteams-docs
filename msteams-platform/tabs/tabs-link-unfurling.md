@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Tabs link unfurling and Stage View
 
-Stage View is an user interface (UI) component. It allows you to render content either as a full-sized modal within Teams or as a new window.
+Stage View is an user interface (UI) component that allows you to render content either as a full-sized modal within Teams or in a new window.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -105,7 +105,7 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 ## Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience (and not a Teams window). The Stage View deep link is intended for the tab canvas, though it's possible for the deep link to be passed through an `OpenURL` Adaptive Card action, . For Adaptive Cards, developers need to follow the [Code snippet](#code-snippet).
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience (and not a Teams window). The Stage View deep link is intended for the tab canvas, though it's possible for the deep link to be passed through an `OpenURL` Adaptive Card action. For Adaptive Cards, developers need to follow the [Code snippet](#code-snippet).
 
 ### Syntax
 
