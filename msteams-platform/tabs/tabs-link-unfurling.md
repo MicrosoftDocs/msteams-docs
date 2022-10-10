@@ -19,7 +19,7 @@ The link unfurling service is updated so that it's used to turn URLs into a tab 
 
 Collaborative Stage View invoked from Adaptive Cards opens in a new Teams window.
 
-   [![Open a Collaborative view stage from Adaptive Card example](~/assets/images/tab-images/collabrative-stage-view.png)](~/assets/images/tab-images/collabrative-stage-view.png#lightbox)
+   [![Open a Collaborative view stage from Adaptive Card example](~/assets/images/tab-images/Collaborative-stage-view_1.png)](~/assets/images/tab-images/Collaborative-stage-view_1.png#lightbox)
 
 > [!NOTE]
 >
@@ -29,16 +29,14 @@ The following table provides Stage View invoke action details:
 
 |Component|Invoke action|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|-----------|
-|Collaborative Stage View|Invoke from Adaptive Cards.|Opens Teams pop-out window with chat pane.|Opens Stage View modal.|Opens Stage View modal.|
+|Collaborative Stage View|Invoke from Adaptive Cards.|**Chat**: Opens Teams pop-out window with chat pane. **Channel**: Opens Stage View modal|Opens Stage View modal.|Opens Stage View modal.|
 |Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
 
 ## Advantages of Stage View
 
-* Stage View provides seamless, multitasking experience when working with the content in Teams.
-* Users can open and view the content provided by your app without leaving the context and continue discussion from same window.
-* Stage View helps the users to pin the content to the chat for future quick access.
-* The ability to engage and conversation about the same content leads to higher user engagement with your app.
-* Collaborative Stage View allows your app content to exist in multiple Teams windows.
+Stage View helps to provide seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context. Stage View helps the user to pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
+
+Collaborative Stage View provides more seamless, multitasking experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from this window. The ability to engage and conversation about the same content leads to higher user engagement with your app.
 
 ## Stage View vs. Task module
 
@@ -55,7 +53,7 @@ The following list shows how to invoke Stage View:
 
 ### Invoke Stage View from Adaptive Cards
 
-When the user enters an app content URL in a chat, the bot is invoked, and returns [Card actions](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the user's client, this URL is opened in the appropriate Stage View UI. When the Stage View is invoked from Adaptive Cards in a chat, a new window is opened.
+When the user enters an app content URL in a chat, the bot is invoked, and returns [Card actions](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the user's client, this URL is opened in the appropriate Stage View UI.
 
 > [!NOTE]
 >
@@ -65,11 +63,11 @@ When the user enters an app content URL in a chat, the bot is invoked, and retur
 
 1. The Adaptive Card actions return with the option to open Collaborative Stage View. Select **Open** from the Adaptive Card to display the content URL.
 
-   [![Open a stage1 example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
+   [![Open a stage1 example2](~/assets/images/tab-images/stage-view_1.png)](~/assets/images/tab-images/stage-view_1.png#lightbox)
 
 1. Collaborative Stage View opens in a separate window.
 
-   [![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+   [![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/Collaborative-stage-view_1.png)](~/assets/images/tab-images/Collaborative-stage-view_1.png#lightbox)
 
 #### Code snippet
 
