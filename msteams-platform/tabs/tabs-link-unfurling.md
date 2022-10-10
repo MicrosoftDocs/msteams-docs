@@ -63,11 +63,11 @@ When the user enters an app content URL in a chat, the bot is invoked, and retur
 
 **To invoke Collaborative Stage View from Adaptive Card**
 
-1. The Adaptive Card actions return with the option to open Collaborative Stage View. Select **Open** from the Adaptive Card to display content URL.
+1. The Adaptive Card actions return with the option to open Collaborative Stage View. Select **Open** from the Adaptive Card to display the content URL.
 
    [![Open a stage1 example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
-1. Collaborative Stage View opens as a separate window.
+1. Collaborative Stage View opens in a separate window.
 
    [![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
@@ -75,7 +75,7 @@ When the user enters an app content URL in a chat, the bot is invoked, and retur
 
 The following code helps to create a Collaborative Stage View button from Adaptive Cards:
 
-```JSONCopy
+```json
 {
     type: "Action.Submit",
     name: "Open",
