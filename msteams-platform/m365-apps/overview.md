@@ -30,7 +30,7 @@ For guidance about the Teams app manifest and SDK versioning guidance, and furth
 
 ## Personal tabs and messaging extensions in Outlook and Office
 
-Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Office. Teams personal tabs built and hosted with [SharePoint Framework](extend-m365-teams-personal-tab.md#sharepoint-framework-spfx-apps) (SPFx) version 1.16 (preview) and later are also supported in Outlook and Office.
+Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Office, and Teams.":::
 
