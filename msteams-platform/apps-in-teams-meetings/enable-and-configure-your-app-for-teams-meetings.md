@@ -37,6 +37,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
 > * Apps in meetings require `groupchat` or `team` scope. The `team` scope works for tabs in channels or channel meetings.
 > * To support adding tabs in scheduled channel meetings, specify **team** scope in **scopes** section in your app manifest. Without **team** scope the app would not appear in the flyout for channel meetings.
 > * Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`.
+> * The delegated RSC permissions `MeetingStage.Write.Chat` and `ChannelMeetingStage.Write.Group` are required in the manifest to enable meeting stage sharing.
 
 The following code snippet is an example of a configurable tab used in an app for Teams meetings:
 
