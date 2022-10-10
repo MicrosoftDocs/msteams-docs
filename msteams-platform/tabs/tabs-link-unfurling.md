@@ -9,15 +9,15 @@ ms.localizationpriority: high
 
 # Tabs link unfurling and Stage View
 
-Stage View is a user interface (UI) component that allows you to render content either a full-sized modal within Teams or as a new window.
+Stage View is an user interface (UI) component. It allows you to render content either as a full-sized modal within Teams or as a new window.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Stage View
 
-The link unfurling service is updated so that it's used to turn URLs into a tab using an Adaptive Card and chat services. When a user sends a URL in a chat, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
+The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a URL in a chat, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
-Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal. Collaborative Stage View is only invoked from Adaptive Card in group chats.
+Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal. Collaborative Stage View is only invoked from Adaptive Cards in group chats.
 
 > [!NOTE]
 >
@@ -27,7 +27,7 @@ The following table provides Stage View invoke action details:
 
 |Component|Invoke action|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|-----------|
-|Collaborative Stage View|Invoke from Adaptive Card|Opens Teams pop-out window with chat pane.|Opens Stage View modal|Opens Stage View modal|
+|Collaborative Stage View|Invoke from Adaptive Cards|Opens Teams pop-out window with chat pane.|Opens Stage View modal|Opens Stage View modal|
 |Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal|Opens Stage View modal|Opens Stage View modal|
 
 ## Advantages of Stage View
@@ -47,10 +47,10 @@ The following table provides Stage View invoke action details:
 
 The following list shows how to invoke Stage View:
 
-* [Invoke Stage View from Adaptive Card](#invoke-stage-view-from-adaptive-card)
+* [Invoke Stage View from Adaptive Cards](#invoke-stage-view-from-adaptive-cards)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
-## Invoke Stage View from Adaptive Card
+## Invoke Stage View from Adaptive Cards
 
 When the user enters an app content URL in a chat, the bot is invoked, and returns [Card actions](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the user's client, this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
 
@@ -100,12 +100,12 @@ The `invoke` request type must be `composeExtension/queryLink`.
 > * `invoke` is same as the current `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-> * Stage View deep link into an adaptive card will not open the Collaborative Stage View; it will always open to the Stage View modal.
+> * Stage View deep link into Adaptive Cards will not open the Collaborative Stage View; it will always open to the Stage View modal.
 > * To open Stage View, ensure the URL of the content is within the list of `validDomains` in your app manifest.
 
 ## Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience (and not a Teams window). While it's possible for the deep link to be passed through an `OpenURL` Adaptive Card action, the Stage View deep link is intended for the tab canvas. For Adaptive Cards, we encourage developers to follow the [Code snippet](#code-snippet).
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience (and not a Teams window). The Stage View deep link is intended for the tab canvas, though it's possible for the deep link to be passed through an `OpenURL` Adaptive Card action, . For Adaptive Cards, developers need to follow the [Code snippet](#code-snippet).
 
 ### Syntax
 
