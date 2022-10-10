@@ -37,7 +37,7 @@ A bot can also send proactive messages to users. A proactive message is any mess
 
 You can add single sign-on authentication to your conversation bot using the following steps:
 
-* [Set up conversation bot](sbs-teams-conversation-bot)
+* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
 * [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
 
 ## Next step
