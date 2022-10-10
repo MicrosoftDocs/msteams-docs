@@ -92,17 +92,31 @@ First, you need to add the `messageHandlers` array to your app manifest and enab
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-### Build link unfurling apps without installing Teams
+## Enable zero install for link unfurling capabilities
 
-You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app. It's recommended to use [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) to create the single sign-in experience for your users. The following advantages help you to provide enhanced experience to the users:
+ Zero install helps users to unfurl links shared in Teams regardless if the user has discovered or installed the app before. You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app. It's recommended to use [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) to create the single sign-in experience for your users.
+
+### Advantages
+
+The following advantages help you to provide enhanced experience to the users:
 
 * Prompt users to unfurl links without installing messaging extension.
 * Authenticate using single sign-on.
 * Create welcome card for your app to show preview with placeholder fields.
 
-You need to set the manifest property `supportsAnonymousAccess` to TRUE.
+### Limitations
 
-The following code snippet helps your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
+The following list provides the limitations:
+
+* The bot can only send back a response type result or auth in response to composeExtension/anonymousQueryLink invoke. The user can log an error for all other response types, such as, silentAuth and config.
+* The bot cannot send back an acv2 card in response to `composeExtension/anonymousQueryLink`, either as a result or as a pre-auth card in auth.
+* If the bot selects to send back type auth with a pre-auth card, the teams client strips all of its actions
+
+**To get your app ready for zero-install link unfurling**
+
+1. Set the manifest property `supportsAnonymousAccess` to TRUE.
+
+2. Set your app to handle the new invoke request composeExtension/anonymousQueryLink in the manifest.
 
  :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
