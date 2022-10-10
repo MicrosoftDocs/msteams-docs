@@ -21,7 +21,7 @@ Following are the different methods to enable share in teams meeting button:
 
 ### Method 1
 
-The following scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate Share in Teams Meeting buttons in your page.
+The following scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate Share in Teams meeting buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
