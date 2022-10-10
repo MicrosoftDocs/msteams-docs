@@ -161,19 +161,19 @@ The following list provides the limitations:
 
 * For auth, you need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
 
-```json
-{
-  "composeExtension": {
-    "type": "auth",
-    "attachmentLayout": "list",
-    "attachments": [
-      {
-        /*Pre-auth card content goes here*/
-      }
-    ]
-  }
-}
-```
+   ```json
+   {
+     "composeExtension": {
+       "type": "auth",
+       "attachmentLayout": "list",
+       "attachments": [
+         {
+           /*Pre-auth card content goes here*/
+         }
+       ]
+     }
+   }
+   ```
 
 3.
 
