@@ -37,6 +37,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
 > * Apps in meetings require `groupchat` or `team` scope. The `team` scope works for tabs in channels or channel meetings.
 > * To support adding tabs in scheduled channel meetings, specify **team** scope in **scopes** section in your app manifest. Without **team** scope the app would not appear in the flyout for channel meetings.
 > * Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`.
+> * The delegated RSC permissions `MeetingStage.Write.Chat` and `ChannelMeetingStage.Write.Group` are required in the manifest to enable meeting stage sharing.
 
 The following code snippet is an example of a configurable tab used in an app for Teams meetings:
 
@@ -172,7 +173,7 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. You can share your apps to the collaborative meeting stage in the following ways:
 
-* [Share entire app to stage](#share-entire-app-to-stage) using the share to stage button in the meeting side panel of Teams client or through [deeplinks](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+* [Share entire app to stage](#share-entire-app-to-stage) using the share to stage button in Teams client.
 * [Share specific parts of the app to stage](#share-specific-parts-of-the-app-to-stage) using APIs in the Teams client SDK.
 
 ##### Share entire app to stage

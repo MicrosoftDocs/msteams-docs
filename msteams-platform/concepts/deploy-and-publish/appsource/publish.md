@@ -1,6 +1,6 @@
 ---
 title: Overview - Publish your app to the Microsoft Teams store
-description: Underdtand the process fo publishing your app to Microsoft Teams store, what to expect after you submit, tips for rapid approval to publish ypu app and app linked to a SaaS offer.
+description: Understand the process for publishing your app to Microsoft Teams store, what to expect after you submit, tips for rapid approval to publish your app and app linked to a SaaS offer.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
