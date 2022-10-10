@@ -92,7 +92,7 @@ First, you need to add the `messageHandlers` array to your app manifest and enab
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Enable zero install for link unfurling capabilities
+## Enable zero install for link unfurling
 
  Zero install helps users to unfurl links shared in Teams regardless if the user has discovered or installed the app before. You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app. It's recommended to use [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) to create the single sign-in experience for your users.
 
@@ -116,11 +116,62 @@ The following list provides the limitations:
 
 1. Set the manifest property `supportsAnonymousAccess` to TRUE.
 
-2. Set your app to handle the new invoke request composeExtension/anonymousQueryLink in the manifest.
+2. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
 
  :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
  :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code 2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
+
+* For non-auth, you need to send back a response with type result and a card. use the following template:
+
+{
+  "composeExtension": {
+    "type": "result",
+    "attachmentLayout": "list",
+    "attachments": [
+      {
+        "contentType": "application/vnd.microsoft.teams.card.o365connector",
+        "content": {
+          "sections": [
+            {
+              "activityTitle": "[85069]: Create a cool app",
+              "activityImage": "https://placekitten.com/200/200"
+            },
+            {
+              "title": "Details",
+              "facts": [
+                {
+                  "name": "Assigned to:",
+                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                },
+                {
+                  "name": "State:",
+                  "value": "Active"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+* For auth, you need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
+
+{
+  "composeExtension": {
+    "type": "auth",
+    "attachmentLayout": "list",
+    "attachments": [
+      {
+        /*Pre-auth card content goes here*/
+      }
+    ]
+  }
+}
+
+3.
 
 ### Handle the `composeExtension/queryLink` invoke
 
