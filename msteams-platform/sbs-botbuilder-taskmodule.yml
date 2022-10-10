@@ -24,7 +24,7 @@ items:
 
     This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You'll see the following output:
 
-     ![Task module](~/assets/images/Teams-task-module/final_image.png)
+     :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Task module":::
 
 - title: Prerequisites
   durationInMinutes: 1

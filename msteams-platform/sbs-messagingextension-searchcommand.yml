@@ -51,7 +51,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/lonerepository_1.png" alt-text="Clone repository.":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clonerepository_1.png" alt-text="Clone repository.":::
 
 
     1. Select **Clone**. 
@@ -87,7 +87,7 @@ items:
     1.  To create a new resource group, select the required location from **New resource group location** dropdown list.
         For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
-        ![New resource group location](~/assets/images/bots/newresource.png)
+        :::image type="content" source="./assets/images/bots/newresource.png" alt-text="New resource group location":::
 
     1. Select **Type of App** as **MultiTenant**.
 
@@ -435,7 +435,7 @@ items:
 
        A pop-up opens in a chat.
 
-       ![Chat](~/assets/images/Teams-Messaging-Extensions-Search/popup.png)
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Chat":::
    
 - title: Interact with the app in Teams
   durationInMinutes: 1
@@ -444,15 +444,15 @@ items:
 
     1. Enter text and select **send**.
 
-       ![Option](~/assets/images/Teams-Messaging-Extensions-Search/option1.png)
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Option":::
 
        1. Select **Nuget Package**.
 
-          ![Nuget](~/assets/images/Teams-Messaging-Extensions-Search/nuget.png)
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget.png" alt-text="Nuget":::
 
        1. Select **Project**.
 
-          ![Project](~/assets/images/Teams-Messaging-Extensions-Search/project.png)
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project.png" alt-text="Project":::
 
 
 - title: Complete challenge
@@ -460,7 +460,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
+    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output.png" alt-text="Final":::
 
 - content: |
     You've completed the tutorial to get started with Teams message extensions search!
