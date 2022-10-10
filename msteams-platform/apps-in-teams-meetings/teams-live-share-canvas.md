@@ -430,7 +430,7 @@ document.getElementById("change-reference").onclick = () => {
 
 ## Ideal scenarios
 
-With web pages coming in all shapes and sizes, it isn't possible to make Live Share canvas work for every scenario. The package is ideal for scenarios in which all users are looking at the same content at the same time. While not all of the content needs to be visible on the screen, it must be content that scales across devices linearly.
+With web pages coming in all shapes and sizes, it isn't possible to make Live Share canvas to support every scenario. The package is ideal for scenarios in which all users are looking at the same content at the same time. While not all of the content needs to be visible on the screen, it must be content that scales across devices linearly.
 
 Here are a couple examples of scenarios where Live Share canvas is a great option for your application:
 
