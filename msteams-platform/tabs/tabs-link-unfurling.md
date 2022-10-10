@@ -15,9 +15,7 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 ## Stage View
 
-The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. The user can select **View** in the card, and pin the content as a tab directly from Stage View. Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal.
-
-   [![Open a view stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1_1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Collaborative Stage View from Adaptive Cards within a chat, it opens the app content in a new Teams window instead of a modal.
 
 Collaborative Stage View invoked from Adaptive Cards opens in a new Teams window.
 
@@ -40,6 +38,7 @@ The following table provides Stage View invoke action details:
 * Users can open and view the content provided by your app without leaving the context and continue discussion from same window.
 * Stage View helps the users to pin the content to the chat for future quick access.
 * The ability to engage and conversation about the same content leads to higher user engagement with your app.
+* Collaborative Stage View allows your app content to exist in multiple Teams windows.
 
 ## Stage View vs. Task module
 
@@ -62,9 +61,9 @@ When the user enters an app content URL in a chat, the bot is invoked, and retur
 >
 > For more information on cards, see [Adaptive Cards](how-to/build-adaptive-card-tabs.md).
 
-**To invoke collaborative stage view from Adaptive Card**
+**To invoke Collaborative Stage View from Adaptive Card**
 
-1. The Adaptive Card actions return with the option to open Stage View. Select **Open** from the Adaptive Card to display content URL.
+1. The Adaptive Card actions return with the option to open Collaborative Stage View. Select **Open** from the Adaptive Card to display content URL.
 
    [![Open a stage1 example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
