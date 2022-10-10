@@ -9,15 +9,13 @@ ms.localizationpriority: high
 
 # Tabs link unfurling and Stage View
 
-Stage View is an user interface (UI) component that allows you to render content either as a full-sized modal within Teams or in a new window.
+Stage View is a user interface (UI) component that allows you to render content either as full-sized modal within Teams or in a new chat window.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Stage View
 
-The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a URL in a chat, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
-
-Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal. Collaborative Stage View is only invoked from Adaptive Cards in group chats.
+The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. The user can select **View** in the card, and pin the content as a tab directly from Stage View. Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal. Collaborative Stage View is only invoked from Adaptive Cards in group chats.
 
 > [!NOTE]
 >
@@ -27,8 +25,8 @@ The following table provides Stage View invoke action details:
 
 |Component|Invoke action|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|-----------|
-|Collaborative Stage View|Invoke from Adaptive Cards|Opens Teams pop-out window with chat pane.|Opens Stage View modal|Opens Stage View modal|
-|Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal|Opens Stage View modal|Opens Stage View modal|
+|Collaborative Stage View|Invoke from Adaptive Cards.|Opens Teams pop-out window with chat pane.|Opens Stage View modal.|Opens Stage View modal.|
+|Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
 
 ## Advantages of Stage View
 
@@ -64,7 +62,7 @@ The following images display invoking Collaborative Stage View from Adaptive Car
 
    [![Open a stage example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
-1. The Adaptive Card actions returns with the option to open Collaborative Stage View as separate window.
+1. The Adaptive Cards actions return with the option to open Collaborative Stage View as separate window.
 
    [![Open a stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
@@ -105,7 +103,7 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 ## Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience (and not a Teams window). The Stage View deep link is intended for the tab canvas, though it's possible for the deep link to be passed through an `OpenURL` Adaptive Card action. For Adaptive Cards, developers need to follow the [Code snippet](#code-snippet).
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Invoke Stage View from a deep link always default to the modal experience and not a Teams window. For Adaptive Cards, it's recommended to follow the [JSON Adaptive Card example](#code-snippet).
 
 ### Syntax
 
