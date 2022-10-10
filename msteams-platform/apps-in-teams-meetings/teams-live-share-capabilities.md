@@ -603,7 +603,7 @@ function onSelectPresentMode(documentId: string) {
 Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
 > [!NOTE]
-> Live Share does not currently support channel meetings.
+> Currently, Live Share doesn't support channel meetings.
 
 ## Code samples
 
