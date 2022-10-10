@@ -41,7 +41,7 @@ Teams Toolkit supports the following debug features:
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
 
-Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug.You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
+Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
 
 ### Start debugging
 
