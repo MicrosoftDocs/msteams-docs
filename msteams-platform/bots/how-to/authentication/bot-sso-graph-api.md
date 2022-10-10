@@ -112,7 +112,9 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The platform is configured and displayed in the **Platform configurations** page.
 
-## Acquire access token for MS Graph
+//TBA: Add cross-reference to code sample for acquiring access token for MS Graph. //
+
+<!--## Acquire access token for MS Graph
 
 You'll need to acquire access token for Microsoft Graph.
 
@@ -141,4 +143,4 @@ The following code provides an example of using the access token obtained in the
     }
 ```
 
-When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for Graph permissions. After the app user gives consent, the Graph permissions are granted.
+When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for Graph permissions. After the app user gives consent, the Graph permissions are granted.-->

@@ -36,7 +36,9 @@ You can configure them in any order. For this tutorial, you'll configure your ap
 
 # [Bot resource](#tab/bot-res)
 
-You can enable SSO for your bot app by creating a bot resource in Azure AD and configure OAuth connection. It includes:
+You can enable SSO for your bot app by creating a bot resource in Azure AD and configure OAuth connection.
+
+<!--It includes:
 
 1. Create and deploy bot resource in Azure AD
     1. Enable bot for Teams
@@ -248,6 +250,7 @@ You must enable the Teams channel so that the bot can interact with Microsoft Te
 Next, you must configure bot app in Azure AD to enable SSO.
 
 </details>
+-->
 
 ## Configure bot resource in Azure AD
 
