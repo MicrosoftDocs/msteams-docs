@@ -49,6 +49,13 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
+## Add SSO authentication to your conversation bots
+
+You can add single sign-on authentication to your conversation bot using the following steps:
+
+* [Set up conversation bot](sbs-teams-conversation-bot?tutorial-step=2)
+* [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
+
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
 

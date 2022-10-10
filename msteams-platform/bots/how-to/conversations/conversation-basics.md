@@ -33,6 +33,13 @@ Each message in a bot conversation is an `Activity` object of type `messageType:
 
 A bot can also send proactive messages to users. A proactive message is any message sent by a bot that is not in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
 
+## Add SSO authentication to your conversation bots
+
+You can add single sign-on authentication to your conversation bot using the following steps:
+
+* [Set up conversation bot](sbs-teams-conversation-bot?tutorial-step=2)
+* [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
+
 ## Next step
 
 > [!div class="nextstepaction"]

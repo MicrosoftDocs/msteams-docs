@@ -14,7 +14,7 @@ In this section, you'll learn to:
 
 - [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad)
 - [Configure authentication for different platforms](#configure-authentication-for-different-platforms)
-- [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)
+<!--- [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)-->
 
 ## Configure API permissions in Azure AD
 
