@@ -1,6 +1,6 @@
 ---
 title: Extend a Teams message extension across Microsoft 365
-description: Here's how to update your search-based message extension to run in Outlook, in addition to Microsoft Teams.
+description: Learn how to update your search-based message extension to run in Outlook, in addition to Microsoft Teams.
 ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
@@ -34,7 +34,7 @@ To complete this tutorial, you'll need:
 
 ## Link unfurling
 
-If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, completing the steps of this tutorial will also enable link unfurling in Outlook on the web and Windows desktop environments. The [Code samples](#code-sample) section below provides a simple link unfurling app for testing.
+If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, completing the steps of this tutorial also enables link unfurling in Outlook on the web and Windows desktop environments. The [Code samples](#code-sample) section below provides a simple link unfurling app for testing.
 
 ## Prepare your message extension for the upgrade
 
