@@ -526,15 +526,15 @@
         href: messaging-extensions/how-to/authentication/msgex-sso-graph-api.md
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-  - name: Use third party OAuth IdP authentication
+  - name: Use third party IdP authentication
     items:
     - name: Overview
       href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Add third party OAuth IdP authentication to tab app
+    - name: Add third party IdP authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Add third party OAuth IdP authentication to bot app
+    - name: Add third party IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
-    - name: Add third party OAuth IdP authentication to message extension app
+    - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
