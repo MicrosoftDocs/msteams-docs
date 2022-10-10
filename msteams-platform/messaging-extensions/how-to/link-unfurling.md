@@ -124,40 +124,40 @@ The following list provides the limitations:
 
 * For non-auth, you need to send back a response with type result and a card. use the following template:
 
-```json
-{
-  "composeExtension": {
-    "type": "result",
-    "attachmentLayout": "list",
-    "attachments": [
-      {
-        "contentType": "application/vnd.microsoft.teams.card.o365connector",
-        "content": {
-          "sections": [
-            {
-              "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
-            },
-            {
-              "title": "Details",
-              "facts": [
-                {
-                  "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
-                },
-                {
-                  "name": "State:",
-                  "value": "Active"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
-```
+   ```json
+   {
+     "composeExtension": {
+       "type": "result",
+       "attachmentLayout": "list",
+       "attachments": [
+         {
+           "contentType": "application/vnd.microsoft.teams.card.o365connector",
+           "content": {
+             "sections": [
+               {
+                 "activityTitle": "[85069]: Create a cool app",
+                 "activityImage": "https://placekitten.com/200/200"
+               },
+               {
+                 "title": "Details",
+                 "facts": [
+                   {
+                     "name": "Assigned to:",
+                     "value": "[Larry Brown](mailto:larryb@example.com)"
+                   },
+                   {
+                     "name": "State:",
+                     "value": "Active"
+                   }
+                 ]
+               }
+             ]
+           }
+         }
+       ]
+     }
+   }
+   ```
 
 * For auth, you need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
 
