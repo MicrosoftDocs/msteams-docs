@@ -126,7 +126,7 @@ const { container } = await liveShare.joinContainer(schema);
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 > [!TIP]
-> Make sure the Teams Client SDK is initialized before using the Live Share APIs.
+> Ensure that the Teams Client SDK is initialized before using the Live Share APIs.
 
 ## Fluid distributed data structures
 
