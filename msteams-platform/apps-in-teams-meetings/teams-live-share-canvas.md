@@ -330,7 +330,7 @@ You can clear all strokes in the canvas by calling `inkingManager.clear()`. This
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Teams Live Share cursor sharing":::
 
-If you would like to enable live cursors in your application so users can track each other's cursor positions on the canvas, you can do so easily. Unlike the inking tools mentioned above, cursors operate entirely through the `LiveCanvas` class. You can also optionally provide a name and picture for each user to denote who is who. Cursors can be enabled together with the inking tools or separately.
+You can enable live cursors in your application for users to track each other's cursor positions on the canvas. Unlike the inking tools, cursors operate entirely through the `LiveCanvas` class. You can optionally provide a name and picture to identify each user. You can enable cursors separately or with the inking tools.
 
 ```javascript
 // Optional. Set user display info
