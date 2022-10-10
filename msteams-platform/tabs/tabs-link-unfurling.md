@@ -56,25 +56,21 @@ The following list shows how to invoke Stage View:
 
 ### Invoke Stage View from Adaptive Cards
 
-When the user enters an app content URL in a chat, the bot is invoked, and returns [Card actions](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the user's client, this URL is opened in the appropriate Stage View UI. When the Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
+When the user enters an app content URL in a chat, the bot is invoked, and returns [Card actions](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the user's client, this URL is opened in the appropriate Stage View UI. When the Stage View is invoked from Adaptive Cards in a chat, a new window is opened.
 
 > [!NOTE]
 >
 > For more information on cards, see [Adaptive Cards](how-to/build-adaptive-card-tabs.md).
 
-The following images display invoking Collaborative Stage View from Adaptive Cards:
+**To invoke collaborative stage view from Adaptive Card**
 
-1. The user selects an Adaptive Card button to open content URL.
+1. The Adaptive Card actions return with the option to open Stage View. Select **Open** from the Adaptive Card to display content URL.
 
    [![Open a stage1 example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
-1. The Adaptive Card actions return with the option to open Stage View.
+1. Collaborative Stage View opens as a separate window.
 
-   [![Open a stage2 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
-
-1. Stage View opens as a separate window.
-
-[![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+   [![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
 #### Code snippet
 
