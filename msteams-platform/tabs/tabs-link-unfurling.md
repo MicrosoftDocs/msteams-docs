@@ -17,7 +17,7 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 Stage View is a full screen UI component that you can invoke to surface your web content. The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. The user can select **View** in the card, and pin the content as a tab directly from Stage View. Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal. Collaborative Stage View is only invoked from Adaptive Cards in group chats.
 
-   [![Open a stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1_1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+   [![Open a view stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1_1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
 > [!NOTE]
 >
@@ -62,15 +62,15 @@ The following images display invoking Collaborative Stage View from Adaptive Car
 
 1. The user selects an Adaptive Card button to open content URL.
 
-   [![Open a stage example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
+   [![Open a stage1 example2](~/assets/images/tab-images/collab-stage-view-example3.png)](~/assets/images/tab-images/collab-stage-view-example3.png#lightbox)
 
 1. The Adaptive Cards actions return with the option to open Stage View.
 
-   [![Open a stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+   [![Open a stage2 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example1.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
 1. Stage View opens as a separate window.
 
-[![Open a stage from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
+[![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example1.png#lightbox)
 
 #### Code snippet
 
