@@ -123,8 +123,7 @@ items:
 
              :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
       
-        1. To create a new resource group, select the required location from **New resource group location** dropdown list.
-           For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+        1. To create a new resource group, select **Create new** > enter resource name > **OK**. Now, select the required location from **New resource group location** dropdown list.
         
              :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location":::
         
