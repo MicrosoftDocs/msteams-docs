@@ -440,7 +440,7 @@ When a deep link is selected in an app by a user who is part of an ongoing meeti
 
 :::image type="content" source="../../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="The screenshot is an example that shows a permission pop-up window.":::
 
-When user isn't in a meeting then user is redirected to the Teams calendar where user needs to join a meeting or an instant meeting (Meet now) can be initiated.
+When a user isn't in a meeting then the user is redirected to the Teams calendar where they can join a meeting or initiate instant meeting (Meet now).
 
 :::image type="content" source="../../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="The screenshot is an example that shows a pop-up window when there's no ongoing meeting.":::
 
@@ -459,7 +459,7 @@ The query parameters for the app context are:
 * `useMeetNow`: This includes a boolean parameter that can be either true or false.
   * **True** - When the `UseMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
 
-  * **False** - The default value of `UseMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. When there's an ongoing meeting, then sharing can be done directly.
+  * **False** - The default value of `UseMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
 
 Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example.
 
@@ -500,8 +500,8 @@ The query parameters are:
 
 To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
->[!NOTE]
-When creating a deeplink from your website, web app, or Adaptive Card, the approved string/copy is "Share in meeting." Otherwise, it will be rejected when you submit your app for validation.
+> [!NOTE]
+> For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
 ## Generate a deep link to a call
 
