@@ -382,9 +382,9 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 You must have a short and long description for your app. The descriptions in your app configuration and Partner Center must be the same.
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information.png" alt-text="Graphic shows an example of adequete app descriprion in the Teams app.":::
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequete.png" alt-text="Graphic shows a failed scenario for an inadequete app description.":::
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequete.png" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
 
 <br></br>
 <details><summary>Expand to know more</summary>
@@ -504,7 +504,7 @@ The long description can provide an engaging narrative that highlights your app'
 
 * Include links to AppSource.
 
-  :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource.png" alt-text="Graphic shows an example of a fail scenarion with links to Appsource in app long desscription.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource.png" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
 
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
@@ -726,7 +726,7 @@ The following are the navigation guidelines:
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="Graphic shows an example of navigation in a tab that does not conflict with the primary Teams navigation.":::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
 
@@ -739,7 +739,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
   * Page headers
   * Hamburger menus
 
-  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of im-meeting dialog with multiple navigation levels.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
@@ -756,7 +756,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 * In-meeting dialogs used in your app must not allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
 * Task modules used in your app must not allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
 
-* Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope is not allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
+* Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-allowed-scenarios.png" alt-text="Graphic shows examples of all the scenarios in mobile where horizontal scroll is allowed.":::
 
@@ -920,7 +920,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged onto the app. [*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not provideing a valid response for a command in lowercase or uppercase.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged onto the app.":::
 
@@ -940,7 +940,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set `isNotificationOnly` to true in the manifest. [*Mandatory Fix*]
 
-  :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Graphic shows an example of notification only bot not responding for a users message.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Graphic shows an example of notification only bot not responding for a user's message.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-true.png" alt-text="Graphic shows an example of notification only property set to true in the app manifest.":::
 
@@ -974,9 +974,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Welcome message must not dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-no-way-forward.png" alt-text="Graphic shows an example of a failed scenario where the bot has no wayforward for the user in a welcome message.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-no-way-forward.png" alt-text="Graphic shows an example of a failed scenario where the bot has no way forward for the user in a welcome message.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-clear-way-forward.png" alt-text="Graphic shows an example of bot welcome message with a clear wayforward for the user to complete the task.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-clear-way-forward.png" alt-text="Graphic shows an example of bot welcome message with a clear way forward for the user to complete the task.":::
 
 * Bot installed in a channel or group chat scope must not send proactive welcome message to all the team members in 1:1 chat. [*Mandatory Fix*]
 
@@ -1012,7 +1012,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * App name in the welcome message must match the app name in the manifest. [*Mandatory Fix*]
 
-  :::image type="content" source="../../../../assets/images/submission/validation-app-name-mismatch-manifeast-and-welcome-message.png" alt-text="Graphic shows an example of app name in welcomemessage not matching with the app name in the app manifest.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-app-name-mismatch-manifeast-and-welcome-message.png" alt-text="Graphic shows an example of app name in welcome message not matching with the app name in the app manifest.":::
 
 * Welcome message must not display competitor chat based collaborative platform names unless the app provides specific interoperability.
 
@@ -1043,7 +1043,7 @@ Bots must not spam users by sending multiple messages in short duration.
 * **Bot messages in personal apps**:
   * Don't send multiple messages in quick succession.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multuiple messages in quick succession.":::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
 
   * Send one message with complete information.
   * Avoid multi-turn conversations to complete a single repetitive workflow.
@@ -1099,7 +1099,7 @@ Apps that provide only notifications with content such as, **You have a new noti
    :::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
 
 > [!TIP]
-> Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
+> Preview information and provide basic inline user actions in the posted card so that the user isn't required to navigate outside Teams for all actions (irrespective of complexity).
 
 </details>
 <br/>
@@ -1305,7 +1305,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * App must not show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Grpahic shows an example of continous loading screen in an app.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Graphic shows an example of continuous loading screen in an app.":::
 
 * App must not open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
 
@@ -1392,7 +1392,7 @@ Use the following guidelines for meeting extensions:
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-single-column-layout.png" alt-text="Graphic shows an example of single column layout for in-meeting dialog.":::
 
-  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-multiple-column-layout.png" alt-text="Graphic shows an example of multiple column layout for in-meeting dialog.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-multiple-column-layout.png" alt-text="Graphic shows an example of multiple column layouts for in-meeting dialog.":::
 
 * Must not use task modules.
 * Must align with the center of the meeting stage.
