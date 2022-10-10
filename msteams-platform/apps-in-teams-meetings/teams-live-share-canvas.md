@@ -437,7 +437,7 @@ Here are a couple examples of scenarios where Live Share canvas is a great optio
 - Overlay images and videos that render with the same aspect ratio on all clients.
 - Viewing a map, 3D model, or whiteboard from the same rotation angle.
 
-The reason both of these scenarios work well is because the content can be viewed the same on all devices, even though users may be looking at it with different zoom levels and offsets. If your app's layout or content change depending on screen size and it is not possible to generate a common view for all participants, Live Share canvas might not be a good fit for your scenario.
+Both the scenarios work well because the content can be viewed the same on all devices even if the users are looking at it with different zoom levels and offsets. If your app's layout or content changes depending on screen size and it isn't possible to generate a common view for all participants, Live Share canvas might not be a good fit for your scenario.
 
 ## Code samples
 
