@@ -9,7 +9,7 @@ keywords: Share in Teams Meeting
 
 Share in Teams meeting allows users to share any document or third-party app in the meeting stage and all the participants can interact and edit together.
 
-Users can select **Share in Teams Meeting** button and it launches the deep link to the meeting stage. If users have not installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
+Users can select **Share in Teams Meeting** button and it launches the deep link to the meeting stage. If users haven't installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
 
 The following image shows the share in teams meeting experience:
 
