@@ -47,16 +47,16 @@ items:
 
     ### Check for sideloading option
 
-        After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+         After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
-       > [!NOTE]
-       > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+        > [!NOTE]
+        > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
-       Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+        Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Store**.
+    1. In the Teams client, select **Apps**.
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
@@ -121,20 +121,20 @@ items:
     
         1. Select your **Subscription** and **Resource group** from the dropdown list.
 
-          :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
+             :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
       
         1. To create a new resource group, select the required location from **New resource group location** dropdown list.
            For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
-
-             :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location":::            
-
-        1. Select **Type of App** as **Multi Tenant**.
+        
+             :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location":::
+        
+        1. Select **Type of App** as **Multi Tenant**. 
 
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
            You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
-            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
+             :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
 
            > [!NOTE]
            > You can't create more than one bot with the same **Microsoft App ID**.
