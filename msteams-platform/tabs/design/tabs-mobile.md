@@ -60,7 +60,7 @@ The following table describes tab availability and behavior when the app is list
 |Personal app|No|Not applicable|
 
 > [!NOTE]
-> If a mobile app has both bot and tab capabilities, bot messages will be shown in chat section. When the user selects More in the chat of the bot app, tab apps are not shown in that list. If user selects More from the lower right of the Chat section tab apps are shown with a link to the bot app capability of that app.
+> If a mobile app has both bot and tab capabilities, bot messages is shown in chat section. When the user selects **More** in the chat of the bot app, tab apps are not shown in that list. However, if user selects **More** from the lower right of the Chat section, tab apps are shown with a link to the bot app capability of that app.
 
 ### Apps not on Teams store
 
