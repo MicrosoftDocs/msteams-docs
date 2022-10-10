@@ -126,7 +126,7 @@ Deep link parameters:
 
   * When the meeting is scheduled with Teams for Life, then the fqdn should be: **teams.live.com**.
 
-  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
+  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client will find the right linked identity and suggest switching to the right one.​
 
 ## Deep link example
 
