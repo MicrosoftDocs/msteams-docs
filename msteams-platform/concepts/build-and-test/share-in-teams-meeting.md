@@ -9,13 +9,13 @@ keywords: Share in Teams Meeting
 
 Share in Teams meeting allows users to share any document or third-party app in the meeting stage and all the participants can interact and edit together.
 
-Users can select **Share in Teams Meeting** button and it launches the deep link to the meeting stage. If users haven't installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
+Users can select **Share in Teams meeting** button and it launches the deep link to the meeting stage. If users haven't installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
 
 The following image shows the share in teams meeting experience:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/present.PNG" alt-text="share-in-teams-meeting":::
 
-## Enable Share in Teams Meeting
+## Enable share in Teams meeting
 
 Following are the different methods to enable share in teams meeting button:
 
@@ -42,7 +42,7 @@ The following scans your web page to locate any HTML Elements with the class nam
    </div>
    ```
 
-3. Following are the other attributes to customize Share in Teams Meeting button:
+3. Following are the other attributes to customize Share in Teams meeting button:
    * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
    * `data-button-size`: Specifies the size of the button in pixel.
    * `data-target`: Specifies whether the link open in the same window, new tab, or new window.
@@ -50,7 +50,7 @@ The following scans your web page to locate any HTML Elements with the class nam
 
 ### Method 2
 
-The `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button**, class name currently on the page. If an optional options object is supplied with a list of elements, those elements will be rendered into share buttons or Share in Teams Meeting buttons.
+The `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button**, class name currently on the page. If an optional options object is supplied with a list of elements, those elements will be rendered into share buttons or Share in Teams meeting buttons.
 
 **Args:**
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
@@ -75,7 +75,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ### Method 3
 
-The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams Meeting button which can be executed on selection of a button or menu.
+The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for Share in Teams meeting button which can be executed on selection of a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -108,9 +108,9 @@ The API `async shareInMeetingClickHandler(content: IShareInMeetingContent)` crea
 | buttonType | `data-button-type` | string | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
 | buttonSize | `data-button-size` | string | No | NA | The size in pixels of the Share to Teams button to render. |
 
-## Deep link Format
+## Deep link format
 
-When you select Share in Teams Meeting button, it launches the deep link to the meeting stage. The following is the deep link format:
+When you select Share in Teams meeting button, it launches the deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
@@ -155,7 +155,7 @@ After you enable share in teams meeting on third-party apps, you can share the a
 
 If meeting extension is installed:
 
-1. Open web app in the browser and select **Share in Teams Meeting** button.
+1. Open web app in the browser and select **Share in Teams meeting** button.
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.PNG" alt-text="This screenshot shows share in teams meeting button on web app.":::
 
@@ -169,7 +169,7 @@ If meeting extension is installed:
 
 If meeting extension isn't installed:
 
-1. Open web app in the browser and select **Share in Teams Meeting** button.
+1. Open web app in the browser and select **Share in Teams meeting** button.
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.PNG" alt-text="This screenshot shows share in teams meeting button on web app in meeting.":::
 
