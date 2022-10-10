@@ -13,7 +13,7 @@ Users can select **Share in Teams meeting** button and it launches the deep link
 
 The following image shows the share in teams meeting experience:
 
-:::image type="content" source="../../assets/images/share-in-teams-meeting/present.PNG" alt-text="share-in-teams-meeting":::
+:::image type="content" source="../../assets/images/share-in-teams-meeting/present.png" alt-text="This screenshot shows the share-in-teams-meeting experience.":::
 
 ## Enable share in Teams meeting
 
@@ -157,33 +157,33 @@ If meeting extension is installed:
 
 1. Open web app in the browser and select **Share in Teams meeting** button.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.PNG" alt-text="This screenshot shows share in teams meeting button on web app.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="This screenshot shows share in teams meeting button on web app.":::
 
 1. Select **Start sharing** button.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.PNG" alt-text="This screenshot shows how to share apps in teams meeting.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="This screenshot shows how to share apps in teams meeting.":::
 
 1. Web app is shared to meeting stage and all the participants can interact and edit together.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.PNG" alt-text="This screenshot shows app shared to the teams meeting stage.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="This screenshot shows app shared to the teams meeting stage.":::
 
 If meeting extension isn't installed:
 
 1. Open web app in the browser and select **Share in Teams meeting** button.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.PNG" alt-text="This screenshot shows share in teams meeting button on web app in meeting.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="This screenshot shows share in teams meeting button on web app in meeting.":::
 
 1. Select **Add** to install meeting extension app.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/meeting-extension-app.PNG" alt-text="This screenshot shows add button to install meeting extension app.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/meeting-extension-app.png" alt-text="This screenshot shows add button to install meeting extension app.":::
 
 1. Select **Start sharing** button.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.PNG" alt-text="This screenshot shows start sharing button to share your app in meeting.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="This screenshot shows start sharing button to share your app in meeting.":::
 
 1. Web app is shared to meeting stage and all the participants can interact and edit together.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.PNG" alt-text="This screenshot shows app shared to the teams meeting stage experience.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="This screenshot shows app shared to the teams meeting stage experience.":::
 
 ## See also
 
