@@ -53,7 +53,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 You can add single sign-on authentication to your conversation bot using the following steps:
 
-* [Set up conversation bot](sbs-teams-conversation-bot?tutorial-step=2)
+* [Set up conversation bot](sbs-teams-conversation-bot)
 * [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
 
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
