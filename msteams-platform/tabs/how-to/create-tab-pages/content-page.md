@@ -83,7 +83,7 @@ You can access additional content by using the SDK to interact with Teams, creat
 
 ### Use the SDK to interact with Teams
 
-The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions that you can find useful while developing your content page.
+The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many more functions that you can find useful while developing your content page.
 
 ### Deep links
 
@@ -114,7 +114,7 @@ To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
 1. Call `app.initialize();`.
-1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  is not called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
+1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
 1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`.
 1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and, optionally, provide a failure message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 

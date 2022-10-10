@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+Personal tabs, along with personal-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
@@ -26,7 +26,7 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
     npm install yo gulp-cli --global
     ```
 
-1. At the command prompt, install Microsoft Teams App generator by entering the following command:
+1. At the command prompt, install Microsoft Teams app generator by entering the following command:
 
     ```cmd
     npm install generator-teams --global
@@ -45,13 +45,13 @@ Following are the steps to create a personal tab:
 
 1. At the command prompt, create a new directory for your personal tab.
 
-1. Enter the following command in your new directory to start the Microsoft Teams App generator:
+1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
     ```cmd
     yo teams
     ```
 
-1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file.
+1. Provide your values to a series of questions prompted by Microsoft Teams app generator to update your `manifest.json` file.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator":::
 
@@ -218,7 +218,7 @@ gulp build
 
 #### Run your application
 
-1. At the command prompt enter the following command to start a local web server:
+1. At the command prompt, enter the following command to start a local web server:
 
     ```cmd
     gulp serve
@@ -257,7 +257,7 @@ gulp ngrok-serve
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
-   Now you have successfully created and added your personal tab in Teams.
+   Now you've successfully created and added your personal tab in Teams.
   
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
@@ -374,7 +374,7 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
+At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -386,7 +386,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The app package file name is `tab.zip` and it is available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
+1. The app package file name is `tab.zip` and it's available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
 
 1. Select `tab.zip` and open it in the Developer Portal.
 
@@ -398,7 +398,7 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
 
 1. Select **Save**.
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Now you have successfully created and added your personal tab in Teams.
+   Now you've successfully created and added your personal tab in Teams.
   
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
@@ -541,7 +541,7 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
+At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -569,7 +569,7 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
 
 1. Select **Save**.
 
@@ -583,7 +583,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-   Now you have successfully created and added your personal tab in Teams.
+   Now you've successfully created and added your personal tab in Teams.
 
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
