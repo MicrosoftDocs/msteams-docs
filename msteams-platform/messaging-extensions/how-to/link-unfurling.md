@@ -22,13 +22,13 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Screenshot shows an example of message extension unfurling a user pasted URL for an item in Azure DevOps into a card.":::
 
-## App less Adaptive Card
+## Micro-capabilities for website links
 
 The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and a description.
 
-You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!---link to GitHub templates to be added after the PM shares the public link ---> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
+You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
-### Preview app less Adaptive Card link unfurling
+### Enable Rich unfurl previews of links 
 
 If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
@@ -53,7 +53,7 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
