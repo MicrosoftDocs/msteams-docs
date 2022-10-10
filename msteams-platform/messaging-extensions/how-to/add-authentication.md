@@ -1,12 +1,12 @@
 ---
-title: Add third party OAuth authentication to your message extension
+title: Add third party authentication to your message extension
 author: surbhigupta
-description: Enable authentication in Teams message extension app using third-party OAuth provider with Azure AD configuration and code sample.
+description: Enable authentication in Teams message extension app using third-party provider with Azure AD configuration and code sample.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Add third party OAuth authentication to your message extension
+# Add third party authentication to your message extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
