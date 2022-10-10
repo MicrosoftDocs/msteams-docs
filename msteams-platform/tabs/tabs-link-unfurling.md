@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Tabs link unfurling and Stage View
 
-Stage View is a user interface (UI) component that allows you to render content either as full-sized modal within Teams or in a new chat window.
+Stage View is a user interface (UI) component that allows you to render content either as a full-sized modal within Teams or in a new chat window.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -19,7 +19,7 @@ The link unfurling service is updated so that it's used to turn URLs into a tab 
 
 > [!NOTE]
 >
-> Currently Collaborative Stage View is available only in [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
+> Collaborative Stage View is available only in [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
 
 The following table provides Stage View invoke action details:
 
@@ -48,7 +48,7 @@ The following list shows how to invoke Stage View:
 * [Invoke Stage View from Adaptive Cards](#invoke-stage-view-from-adaptive-cards)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
-## Invoke Stage View from Adaptive Cards
+### Invoke Stage View from Adaptive Cards
 
 When the user enters an app content URL in a chat, the bot is invoked, and returns [Card actions](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL. Depending on the context and the user's client, this URL is opened in the appropriate Stage View UI. When the Collaborative Stage View is invoked from Adaptive Cards in a group or meeting chat (and not from a deep link), a new window is opened.
 
