@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prepare to build apps using Microsoft Teams Toolkit
+# Prepare to build apps using Teams Toolkit
 
 Teams Toolkit supports environments for creating apps. Teams Toolkit also helps to integrate Azure Functions capabilities as well as cloud services in the Teams app you've built.
 
@@ -61,7 +61,7 @@ Azure Function integrates with an array of [cloud services](add-resource.md#type
 
 * When building a web API
 * Processing to database changes
-* Processing Iot data streams
+* Processing IoT data streams
 * Managing message queues
 
 ## See also

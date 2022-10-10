@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: In this module, learn how to respond to the task module submit action from a messaging extension action command with Proactive message and more
+description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
