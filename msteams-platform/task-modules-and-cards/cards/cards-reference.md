@@ -269,7 +269,7 @@ The following code shows an example of an Adaptive Card:
 
 ### Adaptive Card loop
 
-Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and outlook. You can change an Adaptive Card to a loop component, which has actionable content, enabling users to make quick updates without switching context, and changes made in the loop component stays in sync when its shared across Teams.
+Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. You can change an Adaptive Card to a loop component, which has actionable content, enabling users to make quick updates without switching context, and changes made in the loop component stays in sync when its shared across Teams.
 
 > [!NOTE]
 > Adaptive Card loop component is available from Adaptive Card version 1.6.
