@@ -40,8 +40,8 @@ Live Share canvas has two primary classes that enable turn-key collaboration: `I
 
 | Classes                                                                     | Description                                                                                                                                                                                                                                      |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [InkingManager](/javascript/api/@microsoft/live-share-canvas/inkingmanager) | Class that attaches a `<canvas>` element to a given `<div>` to automatically manage pen/highlighter strokes, laser pointer, lines & arrows, and erasers. Exposes a set of APIs to control which tool is active and basic configuration settings. |
-| [LiveCanvas](/javascript/api/@microsoft/live-share-canvas/livecanvas)       | A `SharedObject` class that synchronizes strokes & cursor positions from `InkingManager` for everyone in a Live Share session.                                                                                                                   |
+| [InkingManager](/javascript/api/@microsoft/live-share-canvas/inkingmanager) | Class that attaches a `<canvas>` element to a given `<div>` to automatically manage pen or highlighter strokes, laser pointer, lines and arrows, and erasers. Exposes a set of APIs (to control which tool is active) and basic configuration settings. |
+| [LiveCanvas](/javascript/api/@microsoft/live-share-canvas/livecanvas)      | A `SharedObject` class that synchronizes strokes and cursor positions from `InkingManager` for everyone in a Live Share session.                                                                                                                   |
 
 Example:
 
