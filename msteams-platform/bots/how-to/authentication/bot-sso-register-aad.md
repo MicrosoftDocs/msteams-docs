@@ -19,29 +19,24 @@ See the following video to learn about SSO in a bot app:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
-> [!NOTE]
-> Before you enable SSO for your bot app, you must register and configure your app in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml#tutorial-step=2).
-
 ## Enable SSO for your bot app
 
-To enable SSO for your bot app in Azure AD:
+Before you enable SSO for your bot app, you must register and configure your app in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
-- **[Configure your app in Azure AD](#configure-your-app-in-azure-ad)**: You'll need to register your app with Azure AD before you configure it. Then, to enable it for SSO:
+You update the bot app details in Azure AD for enabling SSO.
+
+<!--- **[Configure your app in Azure AD](#configure-your-app-in-azure-ad)**: You'll need to register your app with Azure AD before you configure it. Then, to enable it for SSO:
   - Configure scope for access token
   - Configure access token version
-- **[Configure bot resource in Azure AD](#configure-bot-resource-in-azure-ad)**: You'll need to create and configure a bot resource in Azure AD beforehand. To enable SSO for the bot resource:
-  - Add messaging endpoint
-  - Update OAuth connection
+- **[Configure bot resource in Azure AD](#configure-bot-resource-in-azure-ad)**: You'll need to create and configure a bot resource in Azure AD beforehand.-->
+
+// Infographic to be updated for updated topics in this page. //
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/register-bot-aad.png" alt-text="Register bot in Azure AD":::
 
-You can configure them in any order. For this tutorial, you'll configure your app with Azure AD, and then configure a bot resource for enabling SSO.
-
-# [Bot resource](#tab/bot-res)
-
-You can enable SSO for your bot app by creating a bot resource in Azure AD and configure OAuth connection.
-
-
+To enable SSO for the bot resource:
+- Add messaging endpoint
+- Update OAuth connection
 
 ## Configure bot resource in Azure AD
 
