@@ -324,7 +324,7 @@ document.getElementById("line-tip-size").onclick = () => {
 
 #### Clear all strokes
 
-You can easily clear all strokes in the canvas by calling `inkingManager.clear()`. This will delete all strokes from the canvas and start over from scratch.
+You can clear all strokes in the canvas by calling `inkingManager.clear()`. This deletes all strokes from the canvas.
 
 ### Cursors
 
