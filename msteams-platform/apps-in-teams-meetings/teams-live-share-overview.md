@@ -58,7 +58,7 @@ Features supported by Live Share media include:
 You can find more information about this package on the [Live Share media page](./teams-live-share-media-capabilities.md).
 
 > [!NOTE]
-> Live Share does not rebroadcast media content. It is designed for use with embedded web players, such as HTML5 `<video>` or Azure Media Player.
+Live Share doesn't rebroadcast media content. It's designed for use with embedded web players, such as HTML5 `<video>` or Azure Media Player.
 
 ### Live Share canvas
 
