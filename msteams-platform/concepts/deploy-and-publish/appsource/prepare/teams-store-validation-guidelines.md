@@ -424,9 +424,9 @@ Descriptions must not directly or through insinuation disparage another brand (M
 
 * If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-fail.png" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
-
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-fail.png" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
 
 #### Short description
 
@@ -482,9 +482,9 @@ The long description can provide an engaging narrative that highlights your app'
 * Exceed 500 words.
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
 
-  :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-not-abbreviated.png" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-abbreviated.png" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
 
-  :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-abbreviated.png" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-not-abbreviated.png" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
 
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 
@@ -498,9 +498,9 @@ The long description can provide an engaging narrative that highlights your app'
 * Include typos, grammatical errors.
 * Unnecessarily capitalize the entire manifest or AppSource long description or app content.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
-
    :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass.png" alt-text="Graphic shows an example of app long description without errors.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
 
 * Include links to AppSource.
 
@@ -739,7 +739,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
   * Page headers
   * Hamburger menus
 
-  :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
