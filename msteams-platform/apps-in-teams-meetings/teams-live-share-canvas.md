@@ -244,7 +244,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Teams Live Share canvas laser pointer tool":::
 
-The laser pointer is unique because the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, they will render for a short period of time before they fade out completely. This tool is perfect for pointing out information on the screen during a meeting, as the presenter doesn't have to switch between tools to erase strokes.
+The laser pointer is unique as the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, the trailing effect renders for a short period before it fades out completely. This tool is perfect to point out information on the screen during a meeting, as the presenter doesn't have to switch between tools to erase strokes.
 
 ```html
 <div>
