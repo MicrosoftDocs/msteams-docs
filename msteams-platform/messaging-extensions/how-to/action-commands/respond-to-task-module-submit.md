@@ -23,10 +23,10 @@ You have the following options to respond:
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
-If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app** to the user. After the user receives the error, any reply to invoke is ignored by the Teams client.
+If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
 > [!NOTE]
-> The app must defer any long-running actions after the user replies to the invoke request. The long-running actions can be delivered as a message.
+> The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
