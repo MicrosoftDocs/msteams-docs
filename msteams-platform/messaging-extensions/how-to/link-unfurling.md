@@ -10,7 +10,7 @@ ms.author: v-amprasad
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing app.
+The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing app.
 
 :::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="link unfurling without app installation" lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
@@ -109,7 +109,7 @@ The following advantages help you to provide enhanced experience to the users:
 The following list provides the limitations:
 
 * The bot can only send back a response type result or auth in response to composeExtension/anonymousQueryLink invoke. The user can log an error for all other response types, such as, silentAuth and config.
-* The bot cannot send back an acv2 card in response to `composeExtension/anonymousQueryLink`, either as a result or as a pre-auth card in auth.
+* The bot can't send back an acv2 card in response to `composeExtension/anonymousQueryLink`, either as a result or as a pre-auth card in auth.
 * If the bot selects to send back type auth with a pre-auth card, the teams client strips all of its actions
 
 **To get your app ready for zero-install link unfurling**
@@ -124,6 +124,7 @@ The following list provides the limitations:
 
 * For non-auth, you need to send back a response with type result and a card. use the following template:
 
+```json
 {
   "composeExtension": {
     "type": "result",
@@ -156,9 +157,11 @@ The following list provides the limitations:
     ]
   }
 }
+```
 
 * For auth, you need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
 
+```json
 {
   "composeExtension": {
     "type": "auth",
@@ -170,6 +173,7 @@ The following list provides the limitations:
     ]
   }
 }
+```
 
 3.
 
