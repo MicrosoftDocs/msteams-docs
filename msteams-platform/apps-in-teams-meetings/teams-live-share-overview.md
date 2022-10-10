@@ -72,7 +72,7 @@ Features supported by Live Share canvas include:
 - Convey ideas using the pen, highlighter, line, and arrow tools.
 - Present effectively using the laser pointer.
 - Follow along with real-time mouse cursors.
-- Configuration settings for variable devices and view states.
+- Configure settings for variable devices and view states.
 - Supports mouse, touch, and stylus inputs.
 
 You can find more information about this package on the [Live Share canvas page](./teams-live-share-canvas.md).
