@@ -24,7 +24,7 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 ## App less Adaptive Card
 
-The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive card with the information such as image, title, and a description.
+The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and a description.
 
 You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!---link to GitHub templates to be added after the PM shares the public link ---> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
@@ -38,20 +38,18 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
 
 1. Add the [schema.org](https://schema.org/) metadata with the [JASON-LD format](https://json-ld.org/) to your website.
 1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
-1. Open [Adaptive card designer](https://www.adaptivecards.io/designer/) and create a new file.
+1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
 
 1. Check the micro-capability template and add the template code in the **CARD PAYLOAD EDITOR**.
 
-   If required, update new attributes from the template to your website metadata in the **SAMPLE DATA EDITOR**.
-
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
 
-1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
+   If required, add new attributes from the template to your website metadata in the **SAMPLE DATA EDITOR**.
 
-Update your website with the supported template metadata. After you've added [schema.org](<https://schema.org/>) metadata to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
+1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
 
 See the following video to learn more about link unfurling:
 <br>
