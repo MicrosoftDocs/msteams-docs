@@ -84,7 +84,7 @@ Following code snippet is an example of calling the API from the Teams app built
 </body>
 <script>
     function openPurchaseExperience() {
-      micorosfTeams.app.initialize();
+      micorosftTeams.app.initialize();
       var planInfo = {
           planId: "<Plan id>", // Plan Id of the published SAAS Offer
           term: "<Plan Term>" // Term of the plan.
