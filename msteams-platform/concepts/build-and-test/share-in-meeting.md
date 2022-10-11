@@ -1,6 +1,6 @@
 ---
 title: Share in Meeting
-description: Learn to add the Share in Meeting button on app and document to share in the meeting stage
+description: Learn to add the share in meeting button which allows users to share any document or third-party app to the meeting stage.
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
@@ -21,7 +21,7 @@ Following are the different methods to enable share in meeting button:
 
 ### Method 1
 
-The following scans your web page to locate any HTML Elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
+The following scans your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -62,7 +62,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Create an HTML Element and specify the required attributes.
+2. Create an HTML element and specify the required attributes.
 
    ```javascript
    const shareInMeetingButton = document.createElement("div");
@@ -84,7 +84,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Create an HTML Element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute.
+2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute.
 
    ```javascript
    var customShareInMeetingButton = document.createElement("a");
