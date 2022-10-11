@@ -14,7 +14,7 @@ You can show rich unfurl previews of your links without installing your app in M
 
 ## Add schema.org to your website
 
-[schema.org](https://schema.org/docs/gs.html)is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews for your links in Microsoft Teams.
+[schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews for your links in Microsoft Teams.
 
 ### Enable rich unfurl previews of links
 
@@ -38,7 +38,7 @@ Following are the examples of the supported micro-capability templates and their
 
 ---
 
-You can validate if your structure data is as per the schema.org requirement. Visit [schema.org validator](https://validator.schema.org/),add your website url and select **RUN TEST**.
+You can validate if your structure data is as per the schema.org requirement. Visit [schema.org validator](https://validator.schema.org/), add your website url and select **RUN TEST**.
 
 > [!NOTE]
 > If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
