@@ -40,7 +40,7 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
 
-Alternately, you can use a basic single sign-on *hello world* app already enabled for Microsoft 365 in the following quickstart section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
+Alternately, you can use a basic single sign-on *hello world* app already enabled for Microsoft 365 in the following **Quickstart** section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
 
 ### Quickstart
 
@@ -158,13 +158,13 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot describes how to select 'Developer Preview' option.":::
 
-1. Select **Apps** to open the **Manage your apps** pane. Then select **Publish an app**.
+1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the 'Manage your apps' pane and select 'Publish an app'.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Manage your apps pane and Publish an app options.":::
 
-1. Choose **Upload a custom app** option and select your app package.
+1. Choose **Upload a customized app** option and select your app package.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the 'upload a custom app' option in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the option to upload am app in Teams.":::
 
 After it's sideloaded to Teams, your personal tab is available in Outlook and Office. You must sign in with the same credentials that you used to sideload your app into Teams. When running the Office app for Android, you need to restart the app to use your personal tab app from the Office app.
 
@@ -228,7 +228,7 @@ To view your app running in Office app for Android:
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in Office app for Android.
 
-:::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Office app to see your installed personal tabs.":::
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Office app to see your installed personal tabs.":::
 
 ## Troubleshooting
 
