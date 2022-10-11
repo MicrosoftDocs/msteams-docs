@@ -374,6 +374,9 @@
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
     displayName: Domain listings can include wildcards
+  - name: Micro-capabilities for website links
+    href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
+    displayName: App less link unfurling  
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
