@@ -21,13 +21,13 @@ The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScrip
 ### npm
 
 ```bash
-npm install @microsoft/live-share --save
+npm install @microsoft/live-share@next --save
 ```
 
 ### yarn
 
 ```bash
-yarn add @microsoft/live-share
+yarn add @microsoft/live-share@next
 ```
 
 ## Register RSC permissions

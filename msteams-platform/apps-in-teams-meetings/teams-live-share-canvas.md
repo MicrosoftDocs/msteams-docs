@@ -21,8 +21,8 @@ To enable more seamless collaboration, Microsoft created PowerPoint Live, which 
 To add the latest version of the SDK to your application using npm:
 
 ```bash
-npm install @microsoft/live-share --save
-npm install @microsoft/live-share-canvas --save
+npm install @microsoft/live-share@next --save
+npm install @microsoft/live-share-canvas@next --save
 ```
 
 OR
@@ -30,8 +30,8 @@ OR
 To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
-yarn add @microsoft/live-share
-yarn add @microsoft/live-share-canvas
+yarn add @microsoft/live-share@next
+yarn add @microsoft/live-share-canvas@next
 ```
 
 ## Setting up the package

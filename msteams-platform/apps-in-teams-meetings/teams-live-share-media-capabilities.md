@@ -21,8 +21,8 @@ The Live Share SDK enables robust **media synchronization** for any HTML `<video
 To add the latest version of the SDK to your application using npm:
 
 ```bash
-npm install @microsoft/live-share --save
-npm install @microsoft/live-share-media --save
+npm install @microsoft/live-share@next --save
+npm install @microsoft/live-share-media@next --save
 ```
 
 OR
@@ -30,8 +30,8 @@ OR
 To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
-yarn add @microsoft/live-share
-yarn add @microsoft/live-share-media
+yarn add @microsoft/live-share@next
+yarn add @microsoft/live-share-media@next
 ```
 
 ## Media sync overview
