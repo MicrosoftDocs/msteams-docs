@@ -486,7 +486,7 @@ Each command item is an object with the following structure:
 |`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymousAccess`|Boolean||||A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. the default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`|
+|`messageHandlers.supportsAnonymousAccess`|Boolean|||A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. the default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`|
 |`parameters`|Array of object|5|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
