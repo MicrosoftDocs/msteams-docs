@@ -92,10 +92,10 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
 
     The constant is being exported as it appends to the `contentUrl` in the Microsoft Teams settings, and later for parsing the container ID in the content page. It's a common pattern to store important query parameter keys as constants, rather than typing the raw string each time.
 
-    Before the client can create any containers, it needs a `containerSchema` that define the shared objects used in this application. This example uses a SharedMap as the `initialObjects`, but any shared object can be used.
+    Before the client can create any containers, it needs a `containerSchema` that defines the shared objects used in this application. This example uses a SharedMap as the `initialObjects`, but any shared object can be used.
 
     > [!NOTE]
-    > The `map` is the ID of the `SharedMap` object and it must be unique within the container as with any other DDSes.
+    > The `map` is the ID of the `SharedMap` object and it must be unique within the container as any other DDSes.
 
 1. Replace `TODO: 2` with the following code.
 
