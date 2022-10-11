@@ -76,7 +76,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ### Method 3
 
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button which can be executed by selecting a button or menu.
+`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -127,7 +127,7 @@ Deep link parameters:
 
   * When the meeting is scheduled with Teams for Life, then the fqdn should be: **teams.live.com**.
 
-  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client will find the right linked identity and suggest switching to the right one.​
+  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggest switching to the right one.​
 
 ## Deep link example
 
