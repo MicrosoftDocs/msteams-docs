@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Generate a deep link to share content to stage in meetings
+        url: concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
       - text: Manage SaaS licenses for third party apps in Teams
         url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center
@@ -74,8 +76,6 @@ landingContent:
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Update conversation and installation events in your Teams bot [Developer preview]
         url:  bots/how-to/conversations/subscribe-to-conversation-events.md
-      - text: Submit your Outlook- and Office-enabled apps to the Teams store
-        url: m365-apps/overview.md
 
 - title: Get started
   linkLists:
