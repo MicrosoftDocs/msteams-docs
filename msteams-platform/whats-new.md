@@ -24,7 +24,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Microsoft Teams platform features that are available to all app developers.
 
-**2022 September**
+**2022 October**
 
 * ***October 12, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation)
 
