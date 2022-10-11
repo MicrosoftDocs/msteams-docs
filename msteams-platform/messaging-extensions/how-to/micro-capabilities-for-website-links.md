@@ -81,9 +81,7 @@ To enable rich unfurl previews of your links, follow these steps:
 The following are the supported micro-capability templates for Teams client:
 
 > [!NOTE]
->
-> * Currently, the micro-capability templates aren't supported in in-meetings chats or windows. If a link with micro-capability template is pasted in a meeting chat, Teams defaults the link to the current URL preview unfurling.
-> * If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current URL preview unfurling.
+> If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current URL preview unfurling.
 
 # [Article](#tab/article)
 
@@ -243,23 +241,6 @@ The following is an example of schema metadata mapped to the rich unfurling prev
 Go to [schema.org validator](https://validator.schema.org/) to validate if your website link metadata is as per schema.org standards. After the validation is successful, paste the website link in Teams compose message area to view rich unfurl preview of your link.
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows an example of rich unfurl preview experience of a micro-capability website link in Teams.":::
-
-## Manually check rich unfurl previews of links
-
-If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
-
-1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
-1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
-
-   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor.":::
-
-1. Check the micro-capability template and add the template code in the **CARD PAYLOAD EDITOR**.
-
-   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor.":::
-
-   If necessary, add new properties from the template to your website metadata in the **SAMPLE DATA EDITOR**.
-
-1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
 
 ## See also
 
