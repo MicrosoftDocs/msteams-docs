@@ -1,10 +1,10 @@
 ---
 title: Micro-capabilities for website links
-author: surbhigupta
-description: Add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually. Add link unfurling using Developer Portal. How to update your web service code to handle the invoke request.
+author: v-ypalikila
+description: Use micro-capability templates and schema.org metadata to unfurl rich previews for your links in Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: anclear
+ms.author: v-ypalikila
 ---
 # Micro-capabilities for website links
 
@@ -22,7 +22,7 @@ Specify the [schema.org](https://schema.org/) metadata and the supported `@type`
 
 To specify the schema.org metadata to your website, follow these steps:
 
-1. In index.html file, create a <script> element with the type as to application/ld+json.
+1. In index.html file, create a `<script>` element with the type as `application/ld+json`.
 
    ```html
    <head>
@@ -52,57 +52,57 @@ To specify the schema.org metadata to your website, follow these steps:
 
 1. Add the required properties listed in the micro-capability template.
 
-Following are the examples of the supported micro-capability templates and their unfurl experience:
+You can check the following supported micro-capability templates and properties:
 
 # [Article](#tab/article)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     | Article        |
-|image    | Image of the link.        |
-|name    |  Name of the author.       |
+|image    | Image of the link        |
+|name    |  Name of the author       |
 |headline    | The headline for the article        |
-|creator     | The author of the article.        |
+|creator     | The author of the article        |
 |description    | A summary about the article        |
-|url     |  The  url of the article's official website.      |
+|url     |  The  url of the article's official website      |
 
-The following is an example of the unfurl experience for article attribute:
+Example of the unfurling experience for article type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a preview unfurl experience of the article template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a unfurling experience of the article template in Microsoft Teams.":::
 
 # [Product](#tab/product)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Product       |
-|image    | Image of the link.        |
-|name    |  Name of the product.       |
+|image    | Image of the link        |
+|name    |  Name of the product       |
 |offers.price     | Price of the product         |
-|offers.priceCurrency      |  The currency of the Product.       |
+|offers.priceCurrency      |  The currency of the Product       |
 |description    |  A summary about the product       |
 |url     | url of the product's website        |
 
-The following is an example of the unfurl experience for product attribute:
+Example of the unfurling experience for the product type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-product.png" alt-text="Screenshot shows a preview unfurl experience of the product template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-product.png" alt-text="Screenshot shows a unfurling experience of the product template in Microsoft Teams.":::
 
 # [Event](#tab/event)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Event       |
-|image    | Image of the link.        |
-|name    |  Name of the event.       |
+|image    | Image of the link        |
+|name    |  Name of the event       |
 |description     |  Description of the event       |
 |startDate       |  The start date and time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format       |
 |address       |  Address of the event       |
-|geo.latitude     | The latitude of the event location.        |
+|geo.latitude     | The latitude of the event location        |
 |url     |  url of the event's official website       |
-|geo.longitude      | The longitude of the event location.        |
+|geo.longitude      | The longitude of the event location        |
 
-The following is an example of the unfurl experience for event attribute:
+Example of the unfurling experience for the event type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-event.png" alt-text="Screenshot shows a preview unfurl experience of the event template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-event.png" alt-text="Screenshot shows the unfurling experience of the event template in Microsoft Teams.":::
 
 # [Restaurant](#tab/restaurant)
 
@@ -111,101 +111,101 @@ The following is an example of the unfurl experience for event attribute:
 |`@type`     |  Restaurant       |
 |image    | Image of the link.        |
 |name    |  Name of the author.       |
-|priceRange      |  The price range of the restaurant.       |
+|priceRange      |  The price range of the restaurant       |
 |aggregateRating.ratingValue       | Average Rating of the restaurant        |
 |address     |  Physical address of the restaurant       |
 |url     | link to the restaurant's website        |
-|geo.latitude     | The latitude of the restaurant location.        |
-|geo.longitude      |  The longitude of the restaurant location.       |
+|geo.latitude     | The latitude of the restaurant location       |
+|geo.longitude      |  The longitude of the restaurant location       |
 |aggregateRating.reviewCount      | Average number of reviews of the restaurant        |
 |aggregateRating.ratingCount      | Average number of ratings of the business        |
 
-The following is an example of the unfurl experience for restaurant attribute:
+Example of the unfurling experience for the restaurant type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows a preview unfurl experience of the restaurant template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows the unfurling experience of the restaurant template in Microsoft Teams.":::
 
 # [Recipe](#tab/recipe)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Recipe       |
-|image    | Image of the link.        |
-|name    |  Name of the recipe.       |
+|image    | Image of the link        |
+|name    |  Name of the recipe       |
 |aggregateRating.ratingValue     | The average rating of the recipe        |
 |aggregateRating.reviewCount      |  The average  review  of the recipe   |
 |description    |  A summary of the recipe       |
 |recipeYeild    |  The quantity of the recipe       |
 |prepTime      | The time to prepare the recipe        |
 
-The following is an example of the unfurl experience for recipe attribute:
+Example of the unfurling experience for the recipe attribute type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-recipe.png" alt-text="Screenshot shows a preview unfurl experience of the recipe template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-recipe.png" alt-text="Screenshot shows the unfurling experience of the recipe template in Microsoft Teams.":::
 
 # [Local business](#tab/localbuisness)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |         |
-|image    | Image of the link.        |
-|name    |  Name of the business.       |
+|image    | Image of the link        |
+|name    |  Name of the business       |
 |aggregateRating.ratingValue     | Average Rating of the business        |
 |address      | Physical address of the business        |
-|geo.latitude     | The latitude of the business location.        |
-|geo.longitude      | The longitude of the business location.        |
+|geo.latitude     | The latitude of the business location        |
+|geo.longitude      | The longitude of the business location        |
 |aggregateRating.reviewCount      | Average number of reviews of the business        |
 |aggregateRating.ratingCount       | Average number of ratings of the business        |
 
-The following is an example of the unfurl experience for local business attribute:
+Example of the unfurling experience for the local business type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-local-business.png" alt-text="Screenshot shows a preview unfurl experience of the local business template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-local-business.png" alt-text="Screenshot shows the unfurling experience of the local business template in Microsoft Teams.":::
 
 # [Course](#tab/course)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |   Course      |
-|image    | Image of the link.        |
-|name    |  Name of the course.       |
+|image    | Image of the link        |
+|name    |  Name of the course       |
 |priceRange    |  The price of the course       |
 |aggregateRating.ratingValue      |  The average rating of the course       |
 |description    |  A summary about the course       |
 |url     |  url of the course website       |
-|aggregateRating.reviewCount      |  Average number of reviews of the course        |
+|aggregateRating.reviewCount      | Average number of reviews of the course        |
 |aggregateRating.ratingCount      | Average number of ratings of the course        |
 
-The following is an example of the unfurl experience for course attribute:
+Example of the unfurling experience for the course type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows a preview unfurl experience of the course template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows the unfurling experience of the course template in Microsoft Teams.":::
 
 # [Person](#tab/person)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |   Person      |
-|image    | url of the image of the link.        |
-|name    |  Name of the person.       |
+|image    | url of the image of the link        |
+|name    |  Name of the person       |
 |jobTitle    |    Job title of the person     |
 |description    |   Summary of the person      |
 |url     |  url of the person's website        |
 
-The following is an example of the unfurl experience for person attribute:
+Example of the unfurl experience for the person type:
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-person.png" alt-text="Screenshot shows a preview unfurl experience of the person template in Microsoft Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-person.png" alt-text="Screenshot shows the unfurling experience of the person template in Microsoft Teams.":::
 
 # [Website](#tab/website)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     |         |
-|image    | Image of the link.        |
-|name    |  Name of the author.       |
-|description    |  A summary of the website.       |
+|image    | Image of the link        |
+|name    |  Name of the author       |
+|description    |  A summary of the website       |
 
 ---
 
-### validate your structured data
+### Validate your structured data
 
-You can validate if your structure data is as per the schema.org requirement. Visit [schema.org validator](https://validator.schema.org/), add your website url and select **RUN TEST**.
+You can validate if your structured data is as per the schema.org requirement. Visit [schema.org validator](https://validator.schema.org/), to validate your website.
 
 > [!NOTE]
 > If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
@@ -221,20 +221,15 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
 1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
 
-   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
+   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor.":::
 
 1. Check the micro-capability template and add the template code in the **CARD PAYLOAD EDITOR**.
 
-   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
+   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor.":::
 
-   If required, add new attributes from the template to your website metadata in the **SAMPLE DATA EDITOR**.
+   If necessary, add new properties from the template to your website metadata in the **SAMPLE DATA EDITOR**.
 
 1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
-
-See the following video to learn more about link unfurling:
-<br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
-<br>
 
 ## See also
 
