@@ -33,10 +33,10 @@ Collaborative Stage View opens in a new Teams window with the originating chat i
 
 The following table provides Stage View invoke action details:
 
-|Component|Invoke action|Desktop|Web|Mobile|
-|-----------|-----------|-----------|-----------|-----------|
-|Collaborative Stage View|Invoke from Adaptive Cards.|**Chat**: Opens Teams pop-out window with chat pane. </br> **Channel**: Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
-|Stage View|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
+|Invoke action|Desktop|Web|Mobile|
+|-----------|-----------|-----------|-----------|
+|Invoke from Adaptive Cards.|**Chat**: Opens Teams pop-out window with chat pane. </br> **Channel**: Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
+|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
 
 ## Advantages of Stage View
 
