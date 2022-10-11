@@ -136,7 +136,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     };
     ```
 
-    Since you're creating the container in the configuration page and appending it to the `contentUrl` in Microsoft Teams setting, you need to return the container ID after attaching the container.
+    As you're creating the container in the configuration page and appending it to the `contentUrl` in Microsoft Teams setting, you need to return the container ID after attaching the container.
 
 1. Replace `TODO: 6` with the following code.
 
@@ -147,13 +147,13 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     };
     ```
 
-    When you fetch the Fluid container, you want to return the container itself since your application will need to interact with the container and the DDSes inside it in the content page.
+    When you retrieve the Fluid container, you need to return the container. As your application needs to interact with the container and the DDSes in the content page.
 
 ### Create Fluid container in the configuration page
 
 1. Open the file `src/client/<your tab name>/<your tab name>Config.tsx` in your code editor.
 
-    The standard Teams tab application flow goes from configuration to content page. To enable collaboration, persisting the container while loading into the content page is crucial. The best solution to persist the container is to append the container ID onto the `contentUrl` and `websiteUrl`, the URLs of the content page, as a query parameter. Since the save button in the Teams configuration page is the gateway between the configuration page and the content page, it's a great place to create the container and append the container ID in the settings.
+    The standard Teams tab application flow goes from the configuration to the content page. To enable collaboration, maintaining the container while loading into the content page is crucial. To maintain the container is to append the container ID onto the `contentUrl` and `websiteUrl`, the URLs of the content page, as a query parameter. Save button in the Teams configuration page is the gateway between the configuration page and the content page. It's a place to create the container and append the container ID in the settings.
 
 1. Add the following import statement.
 
@@ -178,7 +178,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     };
     ```
 
-    Ensure you replace `<your tab name>` with the actual tab name from your project.
+    Ensure you replace `<your tab name>` with the tab name from your project.
 
     > [!WARNING]
     > Since the content page URL is used to store the container ID, this record will be removed if the Teams tab is deleted.
@@ -195,7 +195,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     import { getContainer, containerIdQueryParamKey } from "./Util";
     ```
 
-1. Now remove all the code below the import statements inside the content page and replace it with the following.
+1. Remove all the code below the import statements in the content page and replace it with the following.
 
     ```ts
     export const <your tab name> = () => {
@@ -208,7 +208,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     }
     ```
 
-    Make sure to replace `<your tab name>` with the tab name you defined for your project.
+    Ensure you replace `<your tab name>` with the tab name that you define for your project.
 
 1. Replace `TODO 1` with the following code.
 
@@ -216,7 +216,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     microsoftTeams.initialize();
     ```
 
-    For the content page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
+    To display the content page in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
 
 1. Replace `TODO 2` with the following code.
 
@@ -232,7 +232,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     const [fluidContainer, setFluidContainer] = useState<IFluidContainer | undefined>(undefined);
     ```
 
-    Using a React state for the container will provide the ability to dynamically update the container and the data objects inside it.
+    Use a React state for the container that enables dynamically update the container and the data objects in it.
 
 1. Replace `TODO 4` with the following code.
 
@@ -247,7 +247,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     };
     ```
 
-    Here you'll parse the URL to get the query parameter string, defined by `containerIdQueryParamKey`, and retrieve the container ID. With the container ID, you can now load the container to get the container. Once you have the container, set the `fluidContainer` React state, defined above.
+    You'll analyze the URL to get the query parameter string, defined by `containerIdQueryParamKey`, and retrieve the container ID. With the container ID, you can load the container. Once you have the container, set the `fluidContainer` React state, see above step.
 
 1. Replace `TODO 5` with the following code.
 
@@ -264,7 +264,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     ```
 
     Now that you've defined how to get the Fluid container, you need to tell React to call `getFluidContainer` on load, and then store the result in state based on if the application is inside Teams.
-    React's [useState hook](https://reactjs.org/docs/hooks-state.html) will provide the storage needed, and [useEffect](https://reactjs.org/docs/hooks-effect.html) will allow you to call `getFluidContainer` on render, passing the returned value into `setFluidContainer`.
+    React's [useState hook](https://reactjs.org/docs/hooks-state.html) provides the required storage, and [useEffect](https://reactjs.org/docs/hooks-effect.html) allows you to call `getFluidContainer` on render, passing the returned value into `setFluidContainer`.
 
     By adding `inTeams` in the dependency array at the end of the `useEffect`, the app ensures that this function only gets called on content page load.
 
@@ -293,11 +293,11 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
 
 ### Create React component for Fluid view and data
 
-Now that you've integrated the basic creation flow of Teams and Fluid, you can now create your own React component that handles the interactions between the application view and Fluid data. From this point on, the logic and flow behaves just like any other Fluid-powered application. With the basic structure established, you can create any of the [Fluid examples](https://github.com/microsoft/FluidExamples) as a Teams application by changing the `ContainerSchema` and the application view's interaction with the DDSes/data objects on the content page.
+You've integrated the basic creation flow of Teams and Fluid. You can now create your own React component that handles the interactions between the application view and Fluid data. From now, the logic and flow behaves just like other Fluid-powered application. With the basic structure set up, you can create any of the [Fluid examples](https://github.com/microsoft/FluidExamples) as a Teams application by changing the `ContainerSchema` and the application view's interaction with the DDSes/data objects in the content page.
 
 ## Start the Fluid server and run the application
 
-If you're running your Teams application locally with Azure Client local mode, make sure to run the following command in the Command Prompt to start the Fluid service.
+If you're running your Teams application locally with Azure Client local mode, ensure you run the following command in the Command Prompt to start the Fluid service.
 
 ```cmd
 npx @fluidframework/azure-local-service@latest
@@ -306,22 +306,22 @@ npx @fluidframework/azure-local-service@latest
 To run and start the Teams application, open another terminal, and follow the [instructions to run the application server](create-channel-group-tab.md#upload-your-application-to-teams)
 
 > [!WARNING]
-> Hostnames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. This means that anytime a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, please visit [the section below](#use-azureclient-with-azure-fluid-relay)
+> Hostnames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. When a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, see [the section below](#use-azureclient-with-azure-fluid-relay)
 
 > [!NOTE]
-> You may need to install an additional dependency to make this demo compatible with Webpack 5. If you receive a compilation error related to a "buffer" package, please run `npm install -D buffer` and try again. This will be resolved in a future release of Fluid Framework.
+> Install an additional dependency to make this demo compatible with Webpack 5. If you receive a compilation error related to a "buffer" package, run `npm install -D buffer` and try again. This will be resolved in a future release of Fluid Framework.
 
 ## Next steps
 
 ### Use AzureClient with Azure Fluid Relay
 
-Because this is a Teams tab application, collaboration and interaction are the main focuses. Consider replacing the local mode `AzureClientProps` provided above with non-local credentials from your Azure service instance, so others can join in and interact with you in the application! Check out [how to provision your Azure Fluid Relay service](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal).
+Because this is a Teams tab application, collaboration and interaction are the main focuses. Replace the local mode `AzureClientProps` provided above with non-local credentials from your Azure service instance, so that others can join in and interact with you in the application. See [how to provision your Azure Fluid Relay service](/azure/azure-fluid-relay/how-tos/provision-fluid-azure-portal).
 
 > [!IMPORTANT]
-> It is important to hide the credentials you are passing into `AzureClientProps` from being accidentally committed to source control. The Teams project comes with a `.env` file where you can store your credentials as environment variables and the file itself is already included in the `.gitignore`. Refer to the section below if you want to use the environment variables in Teams.
+> It's important to hide the credentials that you are passing into `AzureClientProps` from being accidentally committed to source control. The Teams project comes with a `.env` file where you can store your credentials as environment variables and the file itself is already included in the `.gitignore`. To use the environment variables in Teams, see [Set and get environment variable](#set-and-get-environment-variable).
 
 > [!WARNING]
-> `InsecureTokenProvider` is a convenient way to test the application locally. It will be your responsibility to handle any user authentication and use a [secure token](/azure/azure-fluid-relay/how-tos/connect-fluid-azure-service) for any production environment.
+> `InsecureTokenProvider` is a convenient way to test the application locally. It's your responsibility to handle any user authentication and use a [secure token](/azure/azure-fluid-relay/how-tos/connect-fluid-azure-service) for any production environment.
 
 ### Set and get environment variable
 
@@ -346,7 +346,7 @@ webpack.EnvironmentPlugin({
 }),
 ```
 
-Now, let's access the environment variable in `Util.ts`
+You can access the environment variable in `Util.ts`
 
 ```ts
 // Util.ts
@@ -355,10 +355,11 @@ tokenProvider: new InsecureTokenProvider(JSON.parse(process.env.REACT_APP_TENANT
 ```
 
 > [!TIP]
-> When you make changes to the code the project will automatically rebuild and the application server will reload. However, if you make changes to the container schema, they will only take effect if you close and restart the application server. To do this, give focus to the Command Prompt and press Ctrl-C twice. Then run `gulp serve` or `gulp ngrok-serve` again.
+> When you make changes to the code the project automatically rebuilds and the application server reloads. However, if you make changes to the container schema, they will only take effect if you close and restart the application server. To do this, go to the Command Prompt and press Ctrl-C twice. Then run `gulp serve` or `gulp ngrok-serve` again.
 
 ## See also
 
-* [Azure Fluid Relay documentation](/azure/azure-fluid-relay)
+- [Azure Fluid Relay documentation](/azure/azure-fluid-relay)
+
 - [Fluid Framework documentation](https://fluidframework.com/docs/)
 - [Fluid examples GitHub Repo](https://github.com/microsoft/FluidExamples)
