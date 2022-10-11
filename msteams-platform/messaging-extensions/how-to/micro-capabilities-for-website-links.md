@@ -236,7 +236,7 @@ Go to [schema.org validator](https://validator.schema.org/) to validate if your 
 > [!NOTE]
 > If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
-   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience.png" alt-text="Screenshot shows an example of rich unfurl preview experience when a link is pasted in the Teams message compose area." lightbox="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience-teams.png":::
+   :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows an example of rich unfurl preview experience of a micro-capability website link in Teams.":::
 
 ## Test the rich unfurl preview experience manually
 
