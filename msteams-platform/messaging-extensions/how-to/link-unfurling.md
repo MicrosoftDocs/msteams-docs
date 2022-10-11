@@ -111,12 +111,16 @@ The following list provides the limitations:
 * The bot can't send back an acv2 card in response to `composeExtension/anonymousQueryLink`, either as a result or as a pre-auth card in auth.
 * If the bot selects to send back type auth with a pre-auth card, the teams client strips all of its actions
 
-**To get your app ready for zero-install link unfurling**
+**To get your app ready for zero install link unfurling**
+
+The following image provides sequential flow to enable and use zero install link unfurling:
+
+   :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
 
 1. Set the manifest property `supportsAnonymousAccess` to TRUE.
 
-> [!NOTE]
-> The manifest property will be changed to `supportsAnonymizedPayload`.
+   > [!NOTE]
+   > The manifest property will be changed to `supportsAnonymizedPayload`.
 
 2. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
 
@@ -229,8 +233,6 @@ The following list provides the limitations:
 3. You can create a new welcome card for your app showing users a preview with placeholder fields that will populate on the card on sign-in, to get more users to discover and learn about your app even before they’ve installed it.  
 
    :::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
-
-   :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
 
 ### Handle the `composeExtension/queryLink` invoke
 
