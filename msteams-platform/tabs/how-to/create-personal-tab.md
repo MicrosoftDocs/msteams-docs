@@ -188,13 +188,13 @@ Create a content page and update the existing files of the personal tab applicat
 
 1. Save the updated `manifest.json` file.
 
-1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
+1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an iFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. Add the following to the list of IFrame decorators:
+1. Add the following to the list of iFrame decorators:
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -480,7 +480,7 @@ This folder contains the following required app package files:
 * A **transparent outline icon** measuring 32 x 32 pixels.
 * A `manifest.json` file that specifies the attributes of your app.
 
-These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
+These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an iFrame, and renders it in your tab.
 
 #### .csproj
 
