@@ -94,14 +94,13 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 ## Enable zero install for link unfurling
 
- Zero install helps users to unfurl links shared in Teams regardless if the user has discovered or installed the app before. You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app. It's recommended to use [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) to create the single sign-in experience for your users.
+ Zero install helps users to unfurl links shared in Teams regardless if the user has discovered or installed the app before. You can build link unfurling apps to your Teams without installing the full app or the required messaging extension. You can create pre-authenticated Adaptive Card previews for users to view before they install or authenticate the app.
 
 ### Advantages
 
 The following advantages help you to provide enhanced experience to the users:
 
 * Prompt users to unfurl links without installing messaging extension.
-* Authenticate using single sign-on.
 * Create welcome card for your app to show preview with placeholder fields.
 
 ### Limitations
@@ -115,6 +114,9 @@ The following list provides the limitations:
 **To get your app ready for zero-install link unfurling**
 
 1. Set the manifest property `supportsAnonymousAccess` to TRUE.
+
+> [!NOTE]
+> The manifest property
 
 2. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
 
@@ -298,3 +300,4 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
 * [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
