@@ -12,7 +12,7 @@ The most common way to share content in Microsoft Teams is through links. For an
 
 ## Add schema.org to your website
 
-[schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews of your links in Microsoft Teams.
+[Schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews of your links in Microsoft Teams.
 
 ### Enable rich unfurl previews of links
 
