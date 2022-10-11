@@ -38,7 +38,7 @@ The following table provides Stage View invoke action details:
 
 > [!NOTE]
 >
-> It's recommended when calling from your tab app, and not Adaptive Cards.
+> Invoke through deep link is recommended when calling from your tab app, and not Adaptive Cards.
 
 ## Advantages of Stage View
 
