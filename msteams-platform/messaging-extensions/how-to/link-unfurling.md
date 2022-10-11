@@ -181,6 +181,10 @@ The following list provides the limitations:
 
 3.
 
+ :::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
+
+ :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
+
 ### Handle the `composeExtension/queryLink` invoke
 
 After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
