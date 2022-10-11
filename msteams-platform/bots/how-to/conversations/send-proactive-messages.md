@@ -71,9 +71,6 @@ If the `serviceUrl` isn't available from an incoming activity triggering the pro
 * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
 * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
-> [!NOTE]
-> The bot receives a `403` response code if the incorrect endpoint is used for the targeted environment.
-
 **Code sample**
 
 The following is the code sample to create a conversation bot:
