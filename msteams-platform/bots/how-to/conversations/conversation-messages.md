@@ -13,7 +13,7 @@ Each message in a conversation is an `Activity` object of type `messageType: mes
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
 * Easy access to the Bot Framework connector.
-* Another functionality to manage conversation flow and state.
+* Functionality to manage conversation flow and state.
 * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
@@ -448,9 +448,9 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Re-evaluate request payload for errors. Check returned error message for details. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure that the bot ID (AAD ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation requests, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
-| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|Accessed public API from GCC tenant.|Yes|Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`|
+| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.|Yes|Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or has been deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
@@ -468,7 +468,7 @@ The general retry guidance for each status code is listed in the following table
 
 |Status code | Retry strategy |
 |----------------|-----------------|
-| 403 |Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com`.|
+| 403 |Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
 | 412 | Retry using exponential backoff. |
 | 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available . Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
