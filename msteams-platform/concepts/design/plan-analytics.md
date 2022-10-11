@@ -212,14 +212,14 @@ A bot can access additional context data about a team, chat, meeting, 1:1 call o
 
 Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed.
 
-Use your bot to get user information for enriching user experience:
+Use this information for enriching the bot's functionality and the user experience:
 
-- List of members and their basic user profiles, including Teams user IDs and Microsoft Azure AD information, such as name and Azure AD user or object ID.
-- Details of a particular user using their Teams user ID, UPN or Azure AD user or object ID.
-- A user’s first name, surname, email address, tenant ID and user’s role in the team using the user’s Azure AD user or object ID, you can find the user’s first name, surname, email address, tenant ID and user’s role in the team.
-- Metadata about that team where the bot it's installed. It includes:
-  - Azure AD group ID and the team’s name.
-  - List of channels in the team that returns channel IDs and names.
+- Query the bot for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure AD information, such as name and Azure AD user or object ID.
+
+- Use the user’s Azure AD user or object ID to find the user’s first name, surname, email address, tenant ID and user’s role in the team. Leverage these details as described for hosted web canvas constructs above.
+
+- If your bot is installed in a team, query it for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team which returns channel ids and names. Leverage this information for configuration, setup, and personalization.
+
 - Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting such as GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown; conversation type, organizer tenant ID etc.
 
 Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. All of which can be leveraged in a similar fashion as described for hosted web canvas constructs.
