@@ -230,9 +230,11 @@ The following image provides sequential flow to enable and use zero install link
    }
    ```
 
-3. You can create a new welcome card for your app showing users a preview with placeholder fields that will populate on the card on sign-in, to get more users to discover and learn about your app even before they’ve installed it.  
+3. Create a welcome card for your app that users can render. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.  
 
    :::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
+
+   :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
 
 ### Handle the `composeExtension/queryLink` invoke
 
