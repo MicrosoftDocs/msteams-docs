@@ -57,25 +57,50 @@ Use the following code snippet example for requesting a token:
 
 # [csharp](#tab/cs)
 
-```csharp
-    var attachment = new Attachment
+    ```csharp
+    public class AdapterWithErrorHandler : CloudAdapter
+    {
+        public AdapterWithErrorHandler(IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger<IBotFrameworkHttpAdapter> logger, IStorage storage, ConversationState conversationState)
+            : base(configuration, httpClientFactory, logger)
+        {
+            if (configuration.GetValue<bool>("UseSingleSignOn"))
             {
-                Content = new OAuthCard
+                base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+            }
+
+            OnTurnError = async (turnContext, exception) =>
+            {
+                // Log any leaked exception from the application.
+                // NOTE: In production environment, you should consider logging this to
+                // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
+                // to add telemetry capture to your bot.
+                logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
+
+                // Send a message to the user
+                await turnContext.SendActivityAsync("The bot encountered an error or bug.");
+                await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
+
+                if (conversationState != null)
                 {
-                    TokenExchangeResource = new TokenExchangeResource
+                    try
                     {
-                        Id = requestId
+                        // Delete the conversationState for the current conversation to prevent the
+                        // bot from getting stuck in a error-loop caused by being in a bad state.
+                        // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
+                        await conversationState.DeleteAsync(turnContext);
                     }
-                },
-                ContentType = OAuthCard.ContentType,
+                    catch (Exception e)
+                    {
+                        logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
+                    }
+                }
+
+                // Send a trace activity, which will be displayed in the Bot Framework Emulator
+                await turnContext.TraceActivityAsync("OnTurnError Trace", exception.Message, "https://www.botframework.com/schemas/error", "TurnError");
             };
-            var activity = MessageFactory.Attachment(attachment);
-
-            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. 
-            // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
-
-       await turnContext.SendActivityAsync(activity, cancellationToken);
-```
+        }
+    }
+    ```
 
 # [JavaScript](#tab/js)
 
@@ -289,7 +314,7 @@ The following is a typical decoded payload of an access token.
 
 This section provides Bot authentication v3 SDK sample.
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Sample name** | **Description** | **C#** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
