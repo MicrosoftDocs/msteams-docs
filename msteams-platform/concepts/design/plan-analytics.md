@@ -31,8 +31,7 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 
 Teams usage reports can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the
-[platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. as all of these capabilities are a means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. as all of these capabilities are a means to surface web-based experiences inside Teams.
 
 Plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
 
@@ -274,12 +273,12 @@ Besides the obvious metrics everyone cares about in the SaaS world such as daily
 // link user-specific metrics from user ID //
 
 -->
-
+<!--
 ## How can you act on these insights?
 
 Once you have these insights, visit the [How to monitor analytics, performance, feedback](#how-to-monitor-analytics-performance-feedback) while your app is in the market and action on these pages to learn more about how you can leverage them for growing and monetizing your app.
 
-<!--
+
 ## How to plan and approach growth for your app?
 
 Shipping your app on the Teams marketplace is just the beginning. Once shipped, you must meticulously plan how to grow your app, make it a successful product on the marketplace that drives intended business metrics and helps you realize returns on your investment into planning, designing and building the app.
