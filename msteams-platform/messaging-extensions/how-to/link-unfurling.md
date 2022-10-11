@@ -122,7 +122,9 @@ The following list provides the limitations:
 
    :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code 2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
 
-* For non-auth, you need to send back a response with type result and a card. Use the following template:
+### Scenarios
+
+* For non-auth scenarios, you need to send back a response with type result and a card. Use the following template:
 
    ```json
    {
@@ -159,7 +161,7 @@ The following list provides the limitations:
    }
    ```
 
-* For auth, you need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
+* For auth scenarios, you need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
 
    ```json
    {
