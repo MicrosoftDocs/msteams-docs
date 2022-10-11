@@ -771,8 +771,8 @@
       displayName: Share to Teams for Education
     - name: Share to Teams from personal app or tab
       href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
-  - name: Share in Teams meeting
-    href: concepts/build-and-test/share-in-teams-meeting.md
+  - name: Share in meeting
+    href: concepts/build-and-test/share-in-meeting.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links

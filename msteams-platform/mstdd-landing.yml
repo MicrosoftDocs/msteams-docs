@@ -52,8 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Share-in-Teams-Meeting
-        url: ~/concepts/build-and-test/share-in-teams-meeting.md
+      - text: Share-in-Meeting
+        url: ~/concepts/build-and-test/share-in-meeting.md
       - text: Manage SaaS licenses for third party apps in Teams
         url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center

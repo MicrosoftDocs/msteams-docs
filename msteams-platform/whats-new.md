@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 September**
 
-* ***October 07, 2022***: [Share in teams meeting](concepts/build-and-test/share-in-teams-meeting.md)
+* ***October 12, 2022***: [Share in meeting](concepts/build-and-test/share-in-meeting.md)
 * ***September 30, 2022***: [Manage SaaS licenses for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***September 29, 2022***: [Teams mobile app now supports file downloads to local devices.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***September 16, 2022***: [Adaptive Cards in search based message extensions now support Universal Actions.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
