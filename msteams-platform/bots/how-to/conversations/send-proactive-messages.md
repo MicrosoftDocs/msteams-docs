@@ -58,23 +58,21 @@ Create the conversation if it doesn't exist or you don't know the `conversationI
 
 To create a conversation, you need `userId`, `tenantId` and `serviceUrl`.
 
-For `serviceUrl`, if the value isn't available, use the value from the incoming activity triggering the flow or one of the global service URLs. The following is the example for the `serviceUrl`:
+For `serviceUrl`, use the value from the incoming activity triggering the flow or one of the global service URLs. The following is the example for the `serviceUrl`:
 
 ```csharp
 const serviceUrl = 'https://smba.trafficmanager.net/uk/';
         `MicrosoftAppCredentials.trustServiceUrl(serviceUrl);
 ```
 
-If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints.
-
-For production tenants, use the following global URL endpoints:
+If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
 * Production: `https://smba.trafficmanager.net/teams/`
 * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
 * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
 > [!NOTE]
-> If you use wrong endpoint for these environments, the bot receives `403` response code.
+> The bot receives a `403` response code if the incorrect endpoint is used for the targeted environment.
 
 **Code sample**
 
