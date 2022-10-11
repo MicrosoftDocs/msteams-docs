@@ -179,7 +179,7 @@ The following list provides the limitations:
    }
    ```
 
-3.
+3. You can create a new welcome card for your app showing users a preview with placeholder fields that will populate on the card on sign-in, to get more users to discover and learn about your app even before they’ve installed it.  
 
    :::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
 
