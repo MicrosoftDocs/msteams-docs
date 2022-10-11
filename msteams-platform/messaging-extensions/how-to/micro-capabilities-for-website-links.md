@@ -40,15 +40,15 @@ To specify the schema.org metadata to your website, follow these steps:
 
 1. Add the `@type` and `name` attributes to the script tag.
 
-```html
+    ```html
 
-    {
-      "@context": "http://schema.org/",
-      "@type": "Article",
-      "name": "Contoso news"
-    }
+      {
+          "@context": "http://schema.org/",
+          "@type": "Article",
+          "name": "Contoso news"
+      }
 
-```
+    ```
 
 1. Add the required properties listed in the micro-capability template.
 
@@ -58,94 +58,152 @@ Following are the examples of the supported micro-capability templates and their
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
+|`@type`     | Article        |
 |image    | Image of the link.        |
 |name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|headline    | The headline for the article        |
+|creator     | The author of the article.        |
+|description    | A summary about the article        |
+|url     |  The  url of the article's official website.      |
 
-# [Restaurant](#tab/restaurunt)
+The following is an example of the unfurl experience for article attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a preview unfurl experience of the article template in Microsoft Teams.":::
+
+# [Product](#tab/product)
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
+|`@type`     |  Product       |
+|image    | Image of the link.        |
+|name    |  Name of the product.       |
+|offers.price     | Price of the product         |
+|offers.priceCurrency      |  The currency of the Product.       |
+|description    |  A summary about the product       |
+|url     | url of the product's website        |
+
+The following is an example of the unfurl experience for product attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-product.png" alt-text="Screenshot shows a preview unfurl experience of the product template in Microsoft Teams.":::
+
+# [Event](#tab/event)
+
+|Property |Description  |
+|---------|---------|
+|`@type`     |  Event       |
+|image    | Image of the link.        |
+|name    |  Name of the event.       |
+|description     |  Description of the event       |
+|startDate       |  The start date and time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format       |
+|address       |  Address of the event       |
+|geo.latitude     | The latitude of the event location.        |
+|url     |  url of the event's official website       |
+|geo.longitude      | The longitude of the event location.        |
+
+The following is an example of the unfurl experience for event attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-event.png" alt-text="Screenshot shows a preview unfurl experience of the event template in Microsoft Teams.":::
+
+# [Restaurant](#tab/restaurant)
+
+|Property |Description  |
+|---------|---------|
+|`@type`     |  Restaurant       |
 |image    | Image of the link.        |
 |name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|priceRange      |  The price range of the restaurant.       |
+|aggregateRating.ratingValue       | Average Rating of the restaurant        |
+|address     |  Physical address of the restaurant       |
+|url     | link to the restaurant's website        |
+|geo.latitude     | The latitude of the restaurant location.        |
+|geo.longitude      |  The longitude of the restaurant location.       |
+|aggregateRating.reviewCount      | Average number of reviews of the restaurant        |
+|aggregateRating.ratingCount      | Average number of ratings of the business        |
+
+The following is an example of the unfurl experience for restaurant attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows a preview unfurl experience of the restaurant template in Microsoft Teams.":::
 
 # [Recipe](#tab/recipe)
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
+|`@type`     |  Recipe       |
 |image    | Image of the link.        |
-|name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|name    |  Name of the recipe.       |
+|aggregateRating.ratingValue     | The average rating of the recipe        |
+|aggregateRating.reviewCount      |  The average  review  of the recipe   |
+|description    |  A summary of the recipe       |
+|recipeYeild    |  The quantity of the recipe       |
+|prepTime      | The time to prepare the recipe        |
+
+The following is an example of the unfurl experience for recipe attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-recipe.png" alt-text="Screenshot shows a preview unfurl experience of the recipe template in Microsoft Teams.":::
 
 # [Local business](#tab/localbuisness)
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
+|`@type`     |         |
 |image    | Image of the link.        |
-|name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|name    |  Name of the business.       |
+|aggregateRating.ratingValue     | Average Rating of the business        |
+|address      | Physical address of the business        |
+|geo.latitude     | The latitude of the business location.        |
+|geo.longitude      | The longitude of the business location.        |
+|aggregateRating.reviewCount      | Average number of reviews of the business        |
+|aggregateRating.ratingCount       | Average number of ratings of the business        |
+
+The following is an example of the unfurl experience for local business attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-local-business.png" alt-text="Screenshot shows a preview unfurl experience of the local business template in Microsoft Teams.":::
 
 # [Course](#tab/course)
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
+|`@type`     |   Course      |
 |image    | Image of the link.        |
-|name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|name    |  Name of the course.       |
+|priceRange    |  The price of the course       |
+|aggregateRating.ratingValue      |  The average rating of the course       |
+|description    |  A summary about the course       |
+|url     |  url of the course website       |
+|aggregateRating.reviewCount      |  Average number of reviews of the course        |
+|aggregateRating.ratingCount      | Average number of ratings of the course        |
+
+The following is an example of the unfurl experience for course attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows a preview unfurl experience of the course template in Microsoft Teams.":::
 
 # [Person](#tab/person)
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
-|image    | Image of the link.        |
-|name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|`@type`     |   Person      |
+|image    | url of the image of the link.        |
+|name    |  Name of the person.       |
+|jobTitle    |    Job title of the person     |
+|description    |   Summary of the person      |
+|url     |  url of the person's website        |
+
+The following is an example of the unfurl experience for person attribute:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-person.png" alt-text="Screenshot shows a preview unfurl experience of the person template in Microsoft Teams.":::
 
 # [Website](#tab/website)
 
 |Property |Description  |
 |---------|---------|
-|Type     |         |
+|`@type`     |         |
 |image    | Image of the link.        |
 |name    |  Name of the author.       |
-|headline    |         |
-|creator     |         |
-|description    |         |
-|url     |         |
-|Row8     |         |
+|description    |  A summary of the website.       |
 
 ---
+
+### validate your structured data
 
 You can validate if your structure data is as per the schema.org requirement. Visit [schema.org validator](https://validator.schema.org/), add your website url and select **RUN TEST**.
 
@@ -153,6 +211,8 @@ You can validate if your structure data is as per the schema.org requirement. Vi
 > If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience.png" alt-text="Screenshot shows an example of rich unfurl preview experience when a link is pasted in the Teams message compose area." lightbox="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience-teams.png":::
+
+## Test the rich unfurl preview experience manually
 
 If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
 
@@ -176,169 +236,6 @@ See the following video to learn more about link unfurling:
 > [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
-## Add link unfurling to your app manifest
-
-To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section in the app manifest. You can manually add the array or using the Developer Portal. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
-
-> [!NOTE]
-> Don't add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
-
-### Add link unfurling using Developer Portal
-
-1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
-1. Load your app manifest.
-1. On the **Messaging Extension** page under **App features**, select existing bot or create a new bot.
-1. Select **Save**.
-1. Select **Add a domain** under **Preview links** section and then enter valid domain.
-1. Select **Add**. The following image explains the process:
-
-   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot shows an example of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
-
-### Add link unfurling manually
-
-> [!NOTE]
-> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
-
-To enable your message extension to interact with links, first you must add the `messageHandlers` array to your app manifest. You can manually add link unfurling using the following example:
-
-```json
-...
-"composeExtensions": [
-  {
-    "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
-    "messageHandlers": [
-      {
-        "type": "link",
-        "value": {
-          "domains": [
-            "*.trackeddomain.com"
-          ]
-        }
-      }
-    ]
-  }
-],
-...
-```
-
-For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
-
-## Handle the `composeExtension/queryLink` invoke
-
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
-
-The following card types are supported:
-
-* [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-
-For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
-
-### Example
-
-# [C#/.NET](#tab/dotnet)
-
-```csharp
-protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
-{
-    //You'll use the query.link value to search your service and create a card response
-    var card = new HeroCard
-    {
-        Title = "Hero Card",
-        Text = query.Url,
-        Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
-    };
-
-    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
-    var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
-
-    return new MessagingExtensionResponse(result);
-}
-```
-
-# [JavaScript/Node.js](#tab/javascript)
-
-```javascript
-class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
-  handleTeamsAppBasedLinkQuery(context, query) {
-    const attachment = CardFactory.thumbnailCard('Thumbnail Card',
-      query.url,
-      ['https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png']);
-
-    const result = {
-      attachmentLayout: 'list',
-      type: 'result',
-      attachments: [attachment]
-    };
-
-    const response = {
-      composeExtension: result
-    };
-    return response;
-  }
-}
-```
-
-# [JSON](#tab/json)
-
-Example of the `invoke` sent to your bot:
-
-```json
-{
-  "type": "invoke",
-  "name": "composeExtension/queryLink",
-  "value": {
-    "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
-  }
-}
-```
-
-Example of the response:
-
-```json
-{
-  "composeExtension": {
-    "type": "result",
-    "attachmentLayout": "list",
-    "attachments": [
-      {
-        "contentType": "application/vnd.microsoft.teams.card.o365connector",
-        "content": {
-          "sections": [
-            {
-              "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
-            },
-            {
-              "title": "Details",
-              "facts": [
-                {
-                  "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
-                },
-                {
-                  "name": "State:",
-                  "value": "Active"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
-```
-
-* * *
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
-
 ## See also
 
-* [Cards](~/task-modules-and-cards/what-are-cards.md)
-* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+[Add link unfurling](link-unfurling.md)
