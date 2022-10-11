@@ -1,24 +1,27 @@
 ---
 title: Micro-capabilities for website links
 author: v-ypalikila
-description: Use micro-capability templates and schema.org metadata to unfurl rich previews for your links in Microsoft Teams.
-ms.localizationpriority: medium
+description: In this article, lean how to use micro-capability templates and schema.org metadata to unfurl rich previews for your links in Microsoft Teams.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: v-ypalikila
 ---
 # Micro-capabilities for website links
 
-The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and description. You can show rich unfurl previews of your links without installing your app in Microsoft Teams.
+The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and description. You can use the **schema.org** metadata and the **micro-capability** templates to show rich unfurl previews of your links without installing your app in Microsoft Teams.
 
 ## Add schema.org to your website
 
-[Schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews of your links in Microsoft Teams.
+[Schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. Add schema.org to your website and use the properties in the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews of your links in Microsoft Teams.
 
 ### Enable rich unfurl previews of links
 
-Specify the [schema.org](https://schema.org/) metadata and the supported `@type` attribute to your website. For each `@type` attribute, include the properties available in the micro-capability template that apply to your website.
+> [!NOTE]
+> If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
 
-To enable rich unfurl previews of your links, follow the steps:
+Specify the [schema.org](https://schema.org/) and the supported `@type` attribute to your website. For each `@type` attribute, include the properties available in the micro-capability template that apply to your website.
+
+To enable rich unfurl previews of your links, follow these steps:
 
 1. In the index.html file, create a `<script>` element with the type as `application/ld+json`.
 
@@ -73,12 +76,14 @@ To enable rich unfurl previews of your links, follow the steps:
 
     You can also add the properties for each type available in the schema.org to your website. Teams recognizes all the properties for the supported micro-capability templates available at schema.org.
 
+1. After you've added all the properties to the script tag, add the script tag to your website HTML page.
+
 The following are the supported micro-capability templates for Teams client:
 
 > [!NOTE]
 >
-> * Currently, the micro-capability templates are not supported in in-meetings chats or windows. If a link with micro-capability template is pasted in a meeting chat, Teams defaults the link to the current url preview unfurling.
-> * If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current url preview unfurling.
+> * Currently, the micro-capability templates aren't supported in in-meetings chats or windows. If a link with micro-capability template is pasted in a meeting chat, Teams defaults the link to the current URL preview unfurling.
+> * If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current URL preview unfurling.
 
 # [Article](#tab/article)
 
@@ -229,21 +234,20 @@ Example of the unfurl experience for the person type:
 
 ---
 
+The following is an example of schema metadata mapped to the rich unfurling preview of an Adaptive Card:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-schema-map-actionable-previews.png" alt-text="Graphic shows an example of schema metadata mapped to elements in the rich unfurling preview of an Adaptive Card.":::
+
 ### Validate your website link
 
-Go to [schema.org validator](https://validator.schema.org/) to validate if your website link metadata is as per schema.org standards.
+Go to [schema.org validator](https://validator.schema.org/) to validate if your website link metadata is as per schema.org standards. After the validation is successful, paste the website link in Teams compose message area to view rich unfurl preview of your link.
 
-> [!NOTE]
-> If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
-
-   :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows an example of rich unfurl preview experience of a micro-capability website link in Teams.":::
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows an example of rich unfurl preview experience of a micro-capability website link in Teams.":::
 
 ## Manually check rich unfurl previews of links
 
 If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
 
-1. Add the [schema.org](https://schema.org/) metadata with the [JASON-LD format](https://json-ld.org/) to your website.
-1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
 1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
 
