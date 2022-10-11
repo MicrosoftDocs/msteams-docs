@@ -8,21 +8,19 @@ ms.author: v-ypalikila
 ---
 # Micro-capabilities for website links
 
-The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and a description.
-
-You can show rich unfurl previews of your links without installing your app in Microsoft Teams using schema.org and micro-capability templates. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
+The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and description. You can show rich unfurl previews of your links without installing your app in Microsoft Teams.
 
 ## Add schema.org to your website
 
-[schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews for your links in Microsoft Teams.
+[schema.org](https://schema.org/docs/gs.html) is an open-source standard for schemas of structured data on the internet. You can use the schema.org metadata and the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> to unfurl rich previews of your links in Microsoft Teams.
 
 ### Enable rich unfurl previews of links
 
-Specify the [schema.org](https://schema.org/) metadata and the supported `@type` attribute to your website. For each `@type` attribute, include the properties available in the micro-capability template that apply to your web page. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
+Specify the [schema.org](https://schema.org/) metadata and the supported `@type` attribute to your website. For each `@type` attribute, include the properties available in the micro-capability template that apply to your website.
 
-To specify the schema.org metadata to your website, follow these steps:
+To enable rich unfurl previews of your links, follow the steps:
 
-1. In index.html file, create a `<script>` element with the type as `application/ld+json`.
+1. In the index.html file, create a `<script>` element with the type as `application/ld+json`.
 
    ```html
    <head>
@@ -34,37 +32,60 @@ To specify the schema.org metadata to your website, follow these steps:
 1. Add the `@context` attribute with the value as  `http://schema.org` in the script tag.
 
    ```html
-    "@context": "http://schema.org/",
+    <script type="application/ld+json">
+     {
+        "@context": "http://schema.org/",
+     }
+    </script>
 
    ```
 
 1. Add the `@type` and `name` attributes to the script tag.
 
     ```html
-
+    <script type="application/ld+json">
       {
           "@context": "http://schema.org/",
           "@type": "Article",
           "name": "Contoso news"
       }
+    </script>
 
     ```
 
-1. Add the required properties listed in the micro-capability template.
+1. Add the properties listed in the micro-capability template.
 
-You can check the following supported micro-capability templates and properties:
+    ```html
+    <script type="application/ld+json">
+      {
+          "@context": "http://schema.org/",
+          "@type": "Article",
+          "name": "Contoso news"
+      }
+      {
+
+
+
+      }
+    </script>
+
+    ```
+
+    You can also add the properties for each type available in the schema.org to your website. Teams recognizes all the properties for the supported micro-capability templates available at schema.org.
+
+The following are the supported micro-capability templates for Teams client:
 
 # [Article](#tab/article)
 
 |Property |Description  |
 |---------|---------|
 |`@type`     | Article        |
-|image    | Image of the link        |
-|name    |  Name of the author       |
-|headline    | The headline for the article        |
-|creator     | The author of the article        |
-|description    | A summary about the article        |
-|url     |  The  url of the article's official website      |
+|image    | URL of the image of for the article.        |
+|name    |  Name of the author.       |
+|headline    | Headline for the article.        |
+|creator     | Author of the article.        |
+|description    | Summary about the article.        |
+|url     |  URL of the article's official website.      |
 
 Example of the unfurling experience for article type:
 
@@ -75,12 +96,12 @@ Example of the unfurling experience for article type:
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Product       |
-|image    | Image of the link        |
-|name    |  Name of the product       |
-|offers.price     | Price of the product         |
-|offers.priceCurrency      |  The currency of the Product       |
-|description    |  A summary about the product       |
-|url     | url of the product's website        |
+|image    | URL of the image of for the product.        |
+|name    |  Name of the product.       |
+|offers.price     | Price of the product.         |
+|offers.priceCurrency      |  Currency of the Product.       |
+|description    |  Summary about the product.       |
+|url     | URL of the product's website.        |
 
 Example of the unfurling experience for the product type:
 
@@ -91,14 +112,14 @@ Example of the unfurling experience for the product type:
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Event       |
-|image    | Image of the link        |
-|name    |  Name of the event       |
-|description     |  Description of the event       |
-|startDate       |  The start date and time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format       |
-|address       |  Address of the event       |
-|geo.latitude     | The latitude of the event location        |
-|url     |  url of the event's official website       |
-|geo.longitude      | The longitude of the event location        |
+|image    | URL of the image of for the event.        |
+|name    |  Name of the event.       |
+|description     |  Description of the even.t       |
+|startDate       |  Start date and time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.       |
+|address       |  Address of the event.       |
+|geo.latitude     | Latitude of the event location.        |
+|url     |  URL of the event's official website.       |
+|geo.longitude      | Longitude of the event location.        |
 
 Example of the unfurling experience for the event type:
 
@@ -109,16 +130,16 @@ Example of the unfurling experience for the event type:
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Restaurant       |
-|image    | Image of the link.        |
+|image    | URL of the image of for the restaurant.        |
 |name    |  Name of the author.       |
-|priceRange      |  The price range of the restaurant       |
-|aggregateRating.ratingValue       | Average Rating of the restaurant        |
-|address     |  Physical address of the restaurant       |
-|url     | link to the restaurant's website        |
-|geo.latitude     | The latitude of the restaurant location       |
-|geo.longitude      |  The longitude of the restaurant location       |
-|aggregateRating.reviewCount      | Average number of reviews of the restaurant        |
-|aggregateRating.ratingCount      | Average number of ratings of the business        |
+|priceRange      |  Price range of the restaurant.       |
+|aggregateRating.ratingValue       | Average Rating of the restaurant.        |
+|address     |  Physical address of the restaurant.       |
+|url     | Link to the restaurant's website.        |
+|geo.latitude     | Latitude of the restaurant location.       |
+|geo.longitude      |  Longitude of the restaurant location.       |
+|aggregateRating.reviewCount      | Average number of reviews for the restaurant.        |
+|aggregateRating.ratingCount      | Average number of ratings for the restaurant.        |
 
 Example of the unfurling experience for the restaurant type:
 
@@ -129,15 +150,15 @@ Example of the unfurling experience for the restaurant type:
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Recipe       |
-|image    | Image of the link        |
-|name    |  Name of the recipe       |
-|aggregateRating.ratingValue     | The average rating of the recipe        |
-|aggregateRating.reviewCount      |  The average  review  of the recipe   |
-|description    |  A summary of the recipe       |
-|recipeYeild    |  The quantity of the recipe       |
-|prepTime      | The time to prepare the recipe        |
+|image    | URL of the image of for the recipe.        |
+|name    |  Name of the recipe.       |
+|aggregateRating.ratingValue     | Average rating of the recipe.        |
+|aggregateRating.reviewCount      |  Average  review  of the recipe.   |
+|description    |  Summary of the recipe.       |
+|recipeYeild    |  Quantity of the recipe.       |
+|prepTime      | Time to prepare the recipe.        |
 
-Example of the unfurling experience for the recipe attribute type:
+Example of the unfurling experience for the recipe type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-recipe.png" alt-text="Screenshot shows the unfurling experience of the recipe template in Microsoft Teams.":::
 
@@ -145,15 +166,15 @@ Example of the unfurling experience for the recipe attribute type:
 
 |Property |Description  |
 |---------|---------|
-|`@type`     |         |
-|image    | Image of the link        |
-|name    |  Name of the business       |
-|aggregateRating.ratingValue     | Average Rating of the business        |
-|address      | Physical address of the business        |
-|geo.latitude     | The latitude of the business location        |
-|geo.longitude      | The longitude of the business location        |
-|aggregateRating.reviewCount      | Average number of reviews of the business        |
-|aggregateRating.ratingCount       | Average number of ratings of the business        |
+|`@type`     |  Local business       |
+|image    | URL of the image of for the business.        |
+|name    |  Name of the business.       |
+|aggregateRating.ratingValue     | Average Rating of the business.        |
+|address      | Physical address of the business.        |
+|geo.latitude     | Latitude of the business location.        |
+|geo.longitude      | Longitude of the business location.        |
+|aggregateRating.reviewCount      | Average number of reviews for the business.        |
+|aggregateRating.ratingCount       | Average number of ratings for the business.        |
 
 Example of the unfurling experience for the local business type:
 
@@ -164,14 +185,14 @@ Example of the unfurling experience for the local business type:
 |Property |Description  |
 |---------|---------|
 |`@type`     |   Course      |
-|image    | Image of the link        |
-|name    |  Name of the course       |
-|priceRange    |  The price of the course       |
-|aggregateRating.ratingValue      |  The average rating of the course       |
-|description    |  A summary about the course       |
-|url     |  url of the course website       |
-|aggregateRating.reviewCount      | Average number of reviews of the course        |
-|aggregateRating.ratingCount      | Average number of ratings of the course        |
+|image    | URL of the image of for the course.        |
+|name    |  Name of the course.       |
+|priceRange    |  Price of the course.       |
+|aggregateRating.ratingValue      |  Average rating of the course.       |
+|description    |  Summary about the course.       |
+|url     |  URL of the course website.       |
+|aggregateRating.reviewCount      | Average number of reviews for the course.        |
+|aggregateRating.ratingCount      | Average number of ratings for the course.        |
 
 Example of the unfurling experience for the course type:
 
@@ -182,11 +203,11 @@ Example of the unfurling experience for the course type:
 |Property |Description  |
 |---------|---------|
 |`@type`     |   Person      |
-|image    | url of the image of the link        |
-|name    |  Name of the person       |
-|jobTitle    |    Job title of the person     |
-|description    |   Summary of the person      |
-|url     |  url of the person's website        |
+|image    | URL of the image for the person.        |
+|name    |  Name of the person.       |
+|jobTitle    |    Job title of the person.    |
+|description    |   Summary of the person.      |
+|url     |  URL of the person's website.        |
 
 Example of the unfurl experience for the person type:
 
@@ -196,16 +217,16 @@ Example of the unfurl experience for the person type:
 
 |Property |Description  |
 |---------|---------|
-|`@type`     |         |
-|image    | Image of the link        |
-|name    |  Name of the author       |
-|description    |  A summary of the website       |
+|`@type`     |   Website      |
+|image    | URL of the image of for the website.        |
+|name    |  Name of the author.      |
+|description    |  Summary of the website.      |
 
 ---
 
-### Validate your structured data
+### Validate your website link
 
-You can validate if your structured data is as per the schema.org requirement. Visit [schema.org validator](https://validator.schema.org/), to validate your website.
+Go to [schema.org validator](https://validator.schema.org/) to validate if your website link metadata is as per schema.org standards.
 
 > [!NOTE]
 > If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
