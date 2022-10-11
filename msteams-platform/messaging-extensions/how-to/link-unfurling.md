@@ -116,7 +116,7 @@ The following list provides the limitations:
 1. Set the manifest property `supportsAnonymousAccess` to TRUE.
 
 > [!NOTE]
-> The manifest property
+> The manifest property will be changed to `supportsAnonymizedPayload`.
 
 2. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
 
