@@ -1,6 +1,6 @@
 ---
 title: Extend a Teams personal tab app across Microsoft 365
-description: Here's how to update your personal tab app to run in Outlook and Office, in addition to Microsoft Teams.
+description: Learn how to update your personal tab app to run in Outlook and Office, in addition to Microsoft Teams.
 ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
@@ -57,15 +57,6 @@ To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
 
 From here, you can skip ahead to [Sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and Office. (The app manifest and TeamsJS API calls have already been updated for Microsoft 365.)
-
-### SharePoint Framework (SPFx) apps
-
-Starting with version 1.16 (preview) of [SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction) (SPFx), Teams personal tabs built and hosted with SPFx are also supported in Outlook and Office. To update a SPFx Teams personal tab app, you'll need to first [install the latest preview version of SPFx](/sharepoint/dev/spfx/release-1.16#install-the-latest-preview-version), then follow the steps in this article to:
-
-1. [Update the app manifest](#update-the-app-manifest)
-1. [Update SDK references](#update-sdk-references)
-
-From there, you can skip ahead to [Sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. (You can skip the sections on configuring Content Security Policy and Azure AD app registration.)
 
 ## Update the app manifest
 
