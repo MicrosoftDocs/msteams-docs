@@ -45,12 +45,12 @@ The following scans your web page to locate any HTML elements with the class nam
 3. Following are the other attributes to customize share in meeting button:
    * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
    * `data-button-size`: Specifies the size of the button in pixel.
-   * `data-target`: Specifies whether the link open in the same window, new tab, or new window.
+   * `data-target`: Specifies whether the link open in the same window, new tab, or a new window.
    * `data-locale`: Specifies desired user language.
 
 ### Method 2
 
-`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button** class name on the page. If an optional options object is supplied with a list of elements as shown in following code, those elements will be rendered into share buttons or share in meeting buttons.
+`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button** class name on the page. If an optional options object is supplied with a list of elements as shown in the following code, those elements are rendered into share buttons or share in meeting buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
@@ -76,7 +76,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ### Method 3
 
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button which can be executed by selecting a button or menu.
+`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -127,7 +127,7 @@ Deep link parameters:
 
   * When the meeting is scheduled with Teams for Life, then the fqdn should be: **teams.live.com**.
 
-  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client will find the right linked identity and suggest switching to the right one.​
+  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggest switching to the right one.​
 
 ## Deep link example
 
