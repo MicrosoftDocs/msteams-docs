@@ -15,9 +15,9 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 ## Stage View
 
-The link unfurling service is updated so that it's used to turn URLs into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. The user can pin the content as a tab directly from Stage View.
+The link unfurling service is updated so that it's used to turn links into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. The user can pin the content as a tab directly from Stage View.
 
-Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Collaborative Stage View from Adaptive Cards within a chat, it opens the app content in a new Teams window instead of a modal.
+Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Collaborative Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal.The Collaborative Stage View also opens with side panel that provides users the context to continue collaborating directly within their new window.
 
 Stage View opens as a modal, providing users a full canvas to engage with content.
 
@@ -36,13 +36,13 @@ The following table provides Stage View invoke action details:
 |Invoke action|Desktop|Web|Mobile|
 |-----------|-----------|-----------|-----------|
 |Invoke from Adaptive Cards.|**Chat**: Opens Teams pop-out window with chat pane. </br> **Channel**: Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
-|Invoke from deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
+|Invoke through deep link only. It's recommended when calling from your tab app, and not Adaptive Cards.|Opens Stage View modal.|Opens Stage View modal.|Opens Stage View modal.|
 
 ## Advantages of Stage View
 
 Stage View helps to provide seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context. Stage View helps the user to pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
-Collaborative Stage View provides more seamless, multitasking experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from this window. The ability to engage and conversation about the same content leads to higher user engagement with your app.
+Collaborative Stage View provides seamless, multitasking experience when working with content in Teams. Users can open and view your app content inside a new Teams window instead of a modal and continue discussion from this window. The ability to engage and conversation about the same content leads to higher user engagement with your app.
 
 ## Stage View vs. Task module
 
@@ -67,11 +67,11 @@ When the user enters an app content URL in a chat, the bot is invoked, and retur
 
 **To invoke Collaborative Stage View from Adaptive Card**
 
-1. The Adaptive Card actions return with the option to open Collaborative Stage View. Select **Open** from the Adaptive Card to display the content URL.
+1. Select **Open** from the Adaptive Card to display the content URL from chat in desktop.
 
    [![Open a stage1 example2](~/assets/images/tab-images/stage-view_1.png)](~/assets/images/tab-images/stage-view_1.png#lightbox)
 
-1. Stage View opens  as a full screen modal.
+1. Stage View opens as a full screen modal.
 
   [![Open a stage2 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
 
@@ -120,7 +120,7 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 > [!NOTE]
 >
-> Deep link does not support for Collaborative Stage View.
+> Deep links does not support for Collaborative Stage View.
 
 #### Syntax
 
