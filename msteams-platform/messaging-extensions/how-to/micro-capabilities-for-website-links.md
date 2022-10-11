@@ -238,7 +238,7 @@ Go to [schema.org validator](https://validator.schema.org/) to validate if your 
 
    :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows an example of rich unfurl preview experience of a micro-capability website link in Teams.":::
 
-## Test the rich unfurl preview experience manually
+## Manually check rich unfurl previews of links
 
 If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
 
