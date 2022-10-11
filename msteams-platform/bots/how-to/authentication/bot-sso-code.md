@@ -13,6 +13,9 @@ Before you add code to enable SSO, ensure that you've configured your app with A
 
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
+> [!NOTE]
+> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
