@@ -122,7 +122,54 @@ The following list provides the limitations:
 
    :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the link unfurling code." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_2.PNG" alt-text="Screenshot of the link unfurling code 2." lightbox="../../assets/images/tdp/link-unfurl_2.PNG":::
+   ```json
+   {
+      "name":"composeExtension/anonymousQueryLink",
+      "type":"invoke",
+      "timestamp":"2021-12-02T08:12:21.148Z",
+      "localTimestamp":"2021-12-02T00:12:21.148-08:00",
+      "id":"f:43d59e15-6114-bd53-08c3-b232aa648ec1",
+      "channelId":"msteams",
+      "serviceUrl":"https://smba.trafficmanager.net/amer/",
+      "from":{
+         "id":"redacted",
+         "name":"redacted"
+      },
+      "conversation":{
+         "isGroup":true,
+         "conversationType":"groupChat",
+         "tenantId":"redacted",
+         "id":" redacted",
+         "name":" redacted"
+      },
+      "recipient":{
+         "id":"28:85fa138c-7654-4236-86eb-466160687029",
+         "name":"test bot"
+      },
+      "entities":[
+         {
+            "locale":"en-US",
+            "country":"US",
+            "platform":"Mac",
+            "timezone":"America/Los_Angeles",
+            "type":"clientInfo"
+         }
+      ],
+      "channelData":{
+         "tenant":{
+            "id":" redacted"
+         },
+         "source":{
+            "name":"compose"
+         }
+      },
+      "value":{
+         "url":"https://test.test.com/test"
+      },
+      "locale":"en-US",
+      "localTimezone":"America/Los_Angeles"
+   }
+   ```
 
 ### Scenarios
 
