@@ -234,7 +234,7 @@ You can create a welcome card for your app that users can render. You can either
 
 :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
 
-:::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
+:::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the link unfurling code custom card." lightbox="../../assets/images/tdp/custom-card.PNG":::
 
 ### Handle the `composeExtension/queryLink` invoke
 
