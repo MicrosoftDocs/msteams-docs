@@ -230,11 +230,11 @@ The following image provides sequential flow to enable and use zero install link
    }
    ```
 
-3. Create a welcome card for your app that users can render. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.  
+You can create a welcome card for your app that users can render. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
-   :::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
+:::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
 
-   :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
+:::image type="content" source="../../assets/images/tdp/card-anatomy.PNG" alt-text="Screenshot of the link unfurling code card anatomy." lightbox="../../assets/images/tdp/card-anatomy.PNG":::
 
 ### Handle the `composeExtension/queryLink` invoke
 
