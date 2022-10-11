@@ -75,6 +75,11 @@ To enable rich unfurl previews of your links, follow the steps:
 
 The following are the supported micro-capability templates for Teams client:
 
+> [!NOTE]
+>
+> * Currently, the micro-capability templates are not supported in in-meetings chats or windows. If a link with micro-capability template is pasted in a meeting chat, Teams defaults the link to the current url preview unfurling.
+> * If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current url preview unfurling.
+
 # [Article](#tab/article)
 
 |Property |Description  |
