@@ -20,21 +20,130 @@ You can show rich unfurl previews of your links without installing your app in M
 
 Specify the [schema.org](https://schema.org/) metadata and the supported `@type` attribute to your website. For each `@type` attribute, include the properties available in the micro-capability template that apply to your web page. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
+To specify the schema.org metadata to your website, follow these steps:
+
+1. In index.html file, create a <script> element with the type as to application/ld+json.
+
+   ```html
+   <head>
+    <script type="application/ld+json">
+    </script>
+   </head>
+   ```
+
+1. Add the `@context` attribute with the value as  `http://schema.org` in the script tag.
+
+   ```html
+    "@context": "http://schema.org/",
+
+   ```
+
+1. Add the `@type` and `name` attributes to the script tag.
+
+```html
+
+    {
+      "@context": "http://schema.org/",
+      "@type": "Article",
+      "name": "Contoso news"
+    }
+
+```
+
+1. Add the required properties listed in the micro-capability template.
+
 Following are the examples of the supported micro-capability templates and their unfurl experience:
 
 # [Article](#tab/article)
 
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
+
 # [Restaurant](#tab/restaurunt)
+
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
 
 # [Recipe](#tab/recipe)
 
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
+
 # [Local business](#tab/localbuisness)
+
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
 
 # [Course](#tab/course)
 
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
+
 # [Person](#tab/person)
 
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
+
 # [Website](#tab/website)
+
+|Property |Description  |
+|---------|---------|
+|Type     |         |
+|image    | Image of the link.        |
+|name    |  Name of the author.       |
+|headline    |         |
+|creator     |         |
+|description    |         |
+|url     |         |
+|Row8     |         |
 
 ---
 
