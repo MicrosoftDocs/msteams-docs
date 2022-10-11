@@ -14,7 +14,7 @@ Extending your Teams app across Microsoft 365 provides a streamlined way to deli
 
 The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. Here's the current support of Teams app platform elements across Microsoft 365 (Teams, Outlook, and Office as application hosts):
 
-|          | App manifest element | Teams support |Outlook* support | Office* support | Notes |
+| Teams app features| App manifest element | Teams support |Outlook* support | Office* support | Notes |
 |--|--|--|--|--|--|
 | [**Tabs**](../tabs/what-are-tabs.md) personal scope    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) search-based| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
