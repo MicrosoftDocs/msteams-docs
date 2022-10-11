@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
-title: Create Teams conversation bot
+title: Create Teams workflow bot
 metadata:
-  title: Create Teams conversation bot
-  description: With this learning module, you'll learn to create basic conversation bot in Microsoft Teams application.
+  title: Create Teams workflow bot
+  description: With this learning module, you'll learn to create a workflow bot in Microsoft Teams with the Adaptive Card action handler feature.
   audience: Developer
   level: Beginner
-  ms.date: 04/01/2022
+  ms.date: 28/09/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/conversations/channel-and-group-conversations.md
   nextTutorialTitle: Channel and group chat conversations with a bot
@@ -100,7 +100,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/microsoft-app-id.png" alt-text="Microsoft App Id.":::
 
-    1. Select **Manage** adjacent to **Microsoft App ID**.
+    1. Select **Manage** next to **Microsoft App ID**.
 
        :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage bot":::
 
@@ -207,7 +207,7 @@ items:
     1. Zip the contents of the **TeamsAppManifest** folder to create **manifest.zip**.
     
         > [!NOTE]
-        > The `manifest.zip` shouldn't contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > The `manifest.zip` shouldn't contain any more folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Run your solution in Visual Studio and upload your manifest in your demo tenant for organization or your Teams account.
     
     **To run solution in Visual Studio**
