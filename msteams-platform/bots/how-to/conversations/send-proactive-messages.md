@@ -56,7 +56,7 @@ Create the conversation, after you have the user or channel information.
 
 Create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
-To create a conversation, you need `userId`, `tenantId` and `serviceUrl`.
+To create a conversation, you need `userId`, `tenantId`, and `serviceUrl`.
 
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. The following is an example for the `serviceUrl`:
 
