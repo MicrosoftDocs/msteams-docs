@@ -15,7 +15,7 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 ## Stage View
 
-The link unfurling service is updated so that it's used to turn links into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. The user can pin the content as a tab directly from Stage View. Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Collaborative Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal.
+The link unfurling service is updated so that it's used to turn links into a tab using  Adaptive Cards and chat services. When a user sends a link in a chat, the link is unfurled to Adaptive Cards. Collaborative Stage View is an enhancement to Stage View that allows your app content to exist in multiple Teams windows. The user opens Collaborative Stage View from Adaptive Cards within a group chat, it opens the app content in a new Teams window instead of a modal.
 
 Stage View opens as a modal, providing users a full canvas to engage with content.
 
