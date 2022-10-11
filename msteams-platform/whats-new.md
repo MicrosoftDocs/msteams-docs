@@ -281,7 +281,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 October**
 
-* ***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+* ***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
