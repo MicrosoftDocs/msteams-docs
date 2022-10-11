@@ -73,7 +73,7 @@ When the user enters an app content URL in a chat, the bot is invoked, and retur
 
 1. Stage View opens  as a full screen modal.
 
-  [![Open a stage3 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
+  [![Open a stage2 from Adaptive Card example](~/assets/images/tab-images/collab-stage-view-example2.png)](~/assets/images/tab-images/collab-stage-view-example2.png#lightbox)
 
 1. Collaborative Stage View opens in a separate window.
 
