@@ -143,16 +143,19 @@ items:
       
         > [!NOTE]
         > You can also change the default location by selecting **Browse...**
+        
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-workspace-folder.png" alt-text=" select to add workspace folder":::
        
     1. Enter a suitable name for your app, such as workflow bot as the application name.
         > [!NOTE]
         > Ensure that you use only alphanumeric characters in the application name.
+        
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png" alt-text="enter application name":::
 
     1. Select Enter.
         
     1. The workflow bot app is created in a few seconds, and you can see the scaffolding:
+        
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
