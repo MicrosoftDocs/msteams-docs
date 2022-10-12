@@ -21,7 +21,7 @@ Following are the different methods to enable share in meeting button:
 
 ### Method 1
 
-The following steps scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
+The following steps scans your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -76,7 +76,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ### Method 3
 
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button by selecting a button or menu.
+`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.s
 
 1. Add the `launcher.js` script on your webpage.
 
