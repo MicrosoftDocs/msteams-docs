@@ -7,46 +7,48 @@ ms.localizationpriority: medium
 ms.author: lomeybur
 ---
 
-# Teams app permissions
+# Permissions in teams app
 
-Microsoft Teams apps are managed in different places depending on app features.
+Permissions for Teams apps are managed in two places.
+
+* [Resource-specific consent (RSC)](#resource-specific-consent)
+* [Azure Active Directory (Azure AD)](#azure-active-directory)
 
 :::image type="content" source="../../assets/images/teams-app-permissions.png" alt-text="The screenshot describes the different Teams app permissions.":::
 
 ## Resource-specific consent
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either Teams or chats, within an organization.
+RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either Teams or chats, within an organization. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
 
-RSC permissions are defined in the app manifest and not in Azure Active Directory (Azure AD). You grant consent to RSC permissions when you add the app to a team. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
+RSC permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure AD portal and are declared in the Teams app manifest (JSON) file.
 
-## Azure active directory
+## Azure Active Directory
 
 Azure AD is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. For more information, see [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
-When you create an app in Azure AD, an application ID, or Client ID, is generated. The application ID, or client ID, is a value the Microsoft identity platform assigns to your application when you register it in Azure AD.
+#### Microsoft Graph API permission
 
-The application ID is a GUID value that uniquely identifies the application and its configuration within the identity platform. You add the app ID to your application's code, and authentication libraries include the value in their requests to the identity platform at application runtime.
+Graph API permissions are managed in Azure AD. For your app to access data in Microsoft Graph, the user or administrator must grant it the correct permissions via a consent process. For more information, see [Microsoft Graph permissions](/graph/permissions-reference).
 
-In Azure AD, all users are granted a set of default permissions. A user's access consists of the type of user, their role assignments, and their ownership of individual objects. For more information, see [Azure AD default user permissions](/azure/active-directory/fundamentals/users-default-permissions).
+## Capability wise management
 
-## App capability specifics
+### Bot and messaging extension
 
-Microsoft Teams apps are a way to aggregate one or more capabilities into apps that can be installed, upgraded, and uninstalled. Capabilities of apps include:
+The bot or messaging extension ID is generated based on the following registration platform. This ID is required to add a bot or messaging extension to a Teams app.
 
-* Bots
-* Messaging extensions
-* Connectors
+* Azure AD portal
+* Developer or Bot Framework portal
 
-For more information, see [Microsoft Teams apps permissions and considerations](/microsoftteams/app-permissions).
+**Azure AD portal**
 
-### Microsoft Graph API permission
+When a bot or messaging extension is registered on Azure AD portal, it will have an Azure AD app ID associated with it, which can be found in **Azure AD** portal > **App Registrations**. Endpoints and other bot configurations are managed in the Azure portal.
 
-For your app to access data in Microsoft Graph, the user or administrator must grant it the correct permissions via a consent process. This topic lists the permissions associated with each major set of Microsoft Graph APIs. It also provides guidance about how to use the permissions. For more information, see [Microsoft Graph permissions](/graph/permissions-reference).
+**Developer or Bot Framework portal**
+
+When a bot or messaging extension is registered in the Developer or Bot Framework portal, it will not have an Azure AD ID. However, the bot or messaging extension ID can be found on the Bot Framework portal. Endpoints and other bot configurations are managed in the Bot Framework portal.
+
+Other Teams' specific configuration for the bot can be managed in the Developer portal section for the app.
 
 ### Connectors
 
-Connect has a connector ID where permissions are directly configured in the connector portal to perform actions. For example, if you want to send an actionable message, you need to use the connector portal to enable that permission. With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard).
-
-## See also
-
-* [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
+Connectors have a connector ID and is registered and managed through the Connector Developer Dashboard. This ID is necessary for introducing a connector to the Teams App. Other Teams specific configuration for connectors can be managed in the developer portal section for the app.
