@@ -353,7 +353,7 @@ The query parameters are:
 
   Apps can read a chat ID through app context in Teams, incoming payload to bot, or through Graph APIs.
 
-* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageid`is returned. You can also get the `messageid` using the Microsoft Graph APIs. For example, `1563480968434`.
+* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageid` is returned. You can also get the `messageid` using the Microsoft Graph APIs. For example, `1563480968434`.
 * `context`: Specify the contextType as chat.
 
 ### Generate deep links to file in channel
