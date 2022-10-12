@@ -15,7 +15,7 @@ A content page is a webpage that is rendered within the Teams client, which is a
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module. The page is rendered inside the modal pop-up.
 
-This article is specific to using content pages as tabs; however most of the guidance here applies regardless of how the content page is presented to the user.
+This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -91,7 +91,7 @@ You can create deep links to entities in Teams. They're used to create links tha
 
 ### Task modules
 
-A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### Valid domains
 

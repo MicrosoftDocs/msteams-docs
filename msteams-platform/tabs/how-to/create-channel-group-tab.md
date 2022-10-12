@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a channel tab
 
-Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
+Channel or group tabs deliver content to channels and group chats, which helps to create collaborative spaces around dedicated web-based content.
 
 Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
 

@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Dice Roller code tutorial
 
-In the Dice Roller sample app, users are shown a dice with a button to roll it. When the die is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
+In the Dice Roller sample app, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -95,7 +95,7 @@ start().catch((error) => console.error(error));
 
 ## Join a Fluid container
 
-Not all of your apps views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
+Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
 Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) and calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
 
@@ -126,7 +126,7 @@ Many Teams Meeting Extensibility applications are designed to use React for thei
 
 It's easy to create the view using local data without any Fluid functionality, then add Fluid by changing some key pieces of the app.
 
-The `renderStage` function appends the `stageTemplate` to the passed HTML element, and creates a working dice roller with a random dice value each time the **Roll** button is selected. The `diceMap` is used in the next few steps.
+The `renderStage` function appends the `stageTemplate` to the passed HTML element and creates a working dice roller with a random dice value each time the **Roll** button is selected. The `diceMap` is used in the next few steps.
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -167,7 +167,7 @@ rollButton.onclick = () =>
 
 ### Rely on Fluid data
 
-The next change that needs to be made is to change the `updateDice` function so it no longer accepts an arbitrary value. This means the app can no longer directly modify the local dice value. Instead, the value is retrieved from the `SharedMap` each time `updateDice` is called.
+The next change that needs to be made is to change the `updateDice` function, as it no longer accepts an arbitrary value. This means the app can no longer directly modify the local dice value. Instead, the value is retrieved from the `SharedMap` each time `updateDice` is called.
 
 ```js
 const updateDice = () => {

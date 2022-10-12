@@ -64,7 +64,7 @@ To integrate the configuration experience:
 
 1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
 
-This event gives your service an opportunity to perform any cleanup actions.
+This event gives your service an opportunity to perform any clean up actions.
 
 The following code provides a sample HTML to create a connector configuration page without the customer service and support:
 
@@ -155,7 +155,7 @@ This call is made as part of your save event handler. Then, when the `contentUrl
 
 #### Handle removals
 
-You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform cleanup operations, such as removing entries from a database.
+You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform clean up operations, such as removing entries from a database.
 
 ### Include the connector in your Manifest
 
