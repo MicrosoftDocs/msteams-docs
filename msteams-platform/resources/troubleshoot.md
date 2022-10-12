@@ -25,6 +25,10 @@ If you aren't seeing your content in the tab view, it could be:
 > [!NOTE]
 > A blank tab appears when the given tab URL redirects to login screen. Login pages don’t render in iFrames as a safeguard against clickjacking. Your authentication logic must use a method other than redirect.
 
+### Changes to my web app aren't reflected in its Teams tab
+
+Check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers as needed to ensure your desired client caching behavior.
+
 ### The Save button isn't enabled on the settings dialog
 
 Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
