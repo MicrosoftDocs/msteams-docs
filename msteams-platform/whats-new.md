@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-* ***October 12, 2022***: [Apps are supported in one-on-one Teams calls.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***October 12, 2022***: [Apps are supported in instant meetings, one-on-one, and group calls.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***October 12, 2022***: [Live Share canvas](apps-in-teams-meetings/teams-live-share-canvas.md)
 :::column-end:::
 :::row-end:::
