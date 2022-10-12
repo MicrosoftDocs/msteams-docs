@@ -56,9 +56,10 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-
       - text: Introducing Collaborative Stage View for link unfurling
         url: tabs/tabs-link-unfurling.md#invoke-stage-view-from-adaptive-cards
+      - text: Generate a deep link to share content to stage in meetings.
+        url: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
       - text: Manage SaaS licenses for third party apps in Teams
         url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center

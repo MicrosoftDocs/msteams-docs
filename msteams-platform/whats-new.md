@@ -282,13 +282,14 @@ Developer preview is a public program that provides early access to unreleased T
 **2022 October**
 
 ***October 06, 2022***: [Introducing Collaborative Stage View for link unfurling](tabs/tabs-link-unfurling.md#invoke-stage-view-from-adaptive-cards)
+***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|09/23/2033 | Introduced meeting app support for Scheduled Channel Meetings | Build apps for Teams meetings and calls > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md)
+| 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Unified meetings apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
