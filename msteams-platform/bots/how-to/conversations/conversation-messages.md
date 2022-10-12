@@ -444,6 +444,8 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 ```
 
+---
+
 ## Status codes from bot conversational APIs
 
 Ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the descriptions under which the errors are generated:
