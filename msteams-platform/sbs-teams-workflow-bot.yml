@@ -14,17 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams conversation bots allow users to interact with your web service through text, interactive cards, and task modules. Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
+    The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by you to complete a sequential workflow.
+    When you get an Adaptive Card, it can provide one or more buttons in the card to ask for your input. You can do something like calling some APIs, and then send another adaptive card in your conversation in response to the card action.
 
-    * Easy access to the Bot Framework connector.
-    * Additional functionality to manage conversation flow and state.
-    * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
+    In this tutorial, you'll learn:
 
-    When your bot is first added to a group or team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
- 
-    This step-by-step guide helps you to create basic conversation bot in the Teams application. You'll see the following output:
-
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
+      * How to build workflow bot with Teams Toolkit.
+      * About the directory structure of your app.
+      * Customize installation of your bot with the Adaptive card response.
+    This step-by-step guide helps you to build workflow bot with Teams Toolkit. You can see the following output:
+    
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot output"
 
 - title: Prerequisites
   durationInMinutes: 1
