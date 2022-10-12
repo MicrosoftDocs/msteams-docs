@@ -19,7 +19,7 @@ See the following video to learn about SSO in a bot app:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
-# [Azure AD app](#bot-id/aad)
+# [Azure AD app](#botid/aad)
 
 Before you enable SSO for your bot app, you must register and configure your app in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
@@ -123,7 +123,7 @@ You need:
 
     The application ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Application ID URI is updated" border="true":::
 
 1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
 
@@ -404,7 +404,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     The application ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="App ID URI updated" border="true":::
 
 1. Note and save the application ID URI. You'll need it for updating the Teams app manifest later.
 
