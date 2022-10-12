@@ -98,7 +98,7 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## Canvas tools & cursors
+## Canvas tools and cursors
 
 Now that the Live Share canvas is set up and synchronizing, you can configure the canvas for user interaction, such as buttons to select a pen tool. In this section, we'll discuss what tools are available and how to use them.
 
@@ -361,7 +361,7 @@ You can customize this behavior in the following ways:
 - Change the scale level of the viewport.
 
 > [!NOTE]
-> Reference points, offsets, and scale levels are local to the client and arent synchronized across meeting participants.
+> Reference points, offsets, and scale levels are local to the client and aren't synchronized across meeting participants.
 
 Example:
 
