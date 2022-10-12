@@ -213,7 +213,7 @@ function renderSidePanel(elem) {
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
-> The Live Share's' [joinContainer()](/javascript/api/@microsoft/teams-js/liveShare?view=msteams-client-js-latest#@microsoft-teams-js-liveShare-joincontainer) is not supported in the tab `settings` context.
+> The Live Share's' [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-liveshareclient-joincontainer) is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 
