@@ -413,7 +413,7 @@
     - name: Media synchronization
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
       displayName: Media synchronization, audio ducking
-    - name: Inking & cursors
+    - name: Canvas
       href: apps-in-teams-meetings/teams-live-share-canvas.md
       displayName: Inking, cursors, live canvas
     - name: How-to guides
