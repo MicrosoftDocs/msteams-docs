@@ -346,12 +346,15 @@ Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f020
 
 The query parameters are:
 
-* `chatId`: ChatId of the conversation. You can get the `chatId` from URL of the chat in Teams web client or using the [Microsoft Graph API](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+* `chatId`: ChatId of the conversation. You can get the `chatId` from URL of the chat in Teams web client or using the [Microsoft Graph API](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true). The supported format for `chatId` is 19:XXX. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
 
-  Apps can read a group chat ID through context using the Microsoft Teams JavaScript library or from the incoming request payload to Bot.
+  > [!NOTE]
+  > For 1:1 chats with bot, the bot receives an incoming payload in a:xxx ID format.
 
-* `messageId`: Message ID of the conversation. For example, `1563480968434`.
-* `contextObject`: Specify the contextType as chat.
+  Apps can read a group chat ID through context using the Microsoft Teams JavaScript library, through app context in Teams,  incoming payload to bot, or through graph APIs.
+
+* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, it gives back a `messageid`. You can also get the `messageid` using the Microsoft Graph API. For example, `1563480968434`.
+* `context`: Specify the contextType as chat.
 
 ### Generate deep links to file in channel
 
