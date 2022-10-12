@@ -122,7 +122,7 @@ items:
     To build workflow bot using Visual Studio Code, perform the following steps:
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Side Bar.
     1. Select **Create a new Teams** app.
       
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png" alt-text="create a new teams app in side panel.":::
@@ -141,19 +141,17 @@ items:
 
     1. Select Default folder to store your project root folder in default location.
       
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-workspace-folder.png" alt-text=" select to add workspace folder":::
-       
         > [!NOTE]
         > You can also change the default location by selecting **Browse...**
-
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-workspace-folder.png" alt-text=" select to add workspace folder":::
+       
     1. Enter a suitable name for your app, such as workflow bot as the application name.
-
+        > [!NOTE]
+        > Ensure that you use only alphanumeric characters in the application name.
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png" alt-text="enter application name":::
 
     1. Select Enter.
-        > [!NOTE]
-        > Ensure that you use only alphanumeric characters in the application name.
-
+        
     1. The workflow bot app is created in a few seconds, and you can see the scaffolding:
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
 
@@ -163,7 +161,7 @@ items:
     
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
 
     1. Select Add.
 
