@@ -76,9 +76,7 @@ landingContent:
         url: resources/schema/manifest-schema.md
       - text: Enhanced collaboration with Live Share SDK [Developer preview]
         url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Update conversation and installation events in your Teams bot [Developer preview]
-        url:  bots/how-to/conversations/subscribe-to-conversation-events.md
-
+    
 
 - title: Get started
   linkLists:
