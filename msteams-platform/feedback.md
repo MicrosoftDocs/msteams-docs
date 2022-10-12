@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams developer community support and feedback
-description: Learn Microsoft Teams product team responds to the developer community across various feedback and support channels.
+description: Learn about Developer community and help required to raise issues, limitations, and general questions. Ask questions related to SDK and samples, documentation feedback, feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
 ---
