@@ -86,7 +86,7 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 Teams Toolkit allows you to customize the debug settings to create your tab or bot.
 
 > [!NOTE]
-> To get a full list of customizable options visit our [debug settings doc](https://github.com/kuojianlu/TeamsFx-local-debug-transparency-sample/wiki/Debug-Tasks)
+> For more information on the full list of customizable options, see [debug settings doc](https://github.com/kuojianlu/TeamsFx-local-debug-transparency-sample/wiki/Debug-Tasks).
 
 ### Customize Scenarios
 
@@ -96,7 +96,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 <summary><b>Skip prerequisite checks</b></summary>
 
-* In `.fx/configs/tasks.json` under **"Validate & install prerequisites"** > **"args"**     > **"prerequisites"**, comment the prerequisite checks you wish to skip.
+* In `.fx/configs/tasks.json` under **"Validate & install prerequisites"** > **"args"**     > **"prerequisites"**, update the prerequisite checks you wish to skip.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="skip the prerequisite checks":::
 
@@ -145,7 +145,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <details>
 <summary><b>Use your own tunnel</b></summary>
 
-1. In `.fx/configs/tasks.json` under "Start Teams App Locally", you can comment **"Start Local tunnel"**
+1. In `.fx/configs/tasks.json` under "Start Teams App Locally", you can update **"Start Local tunnel"**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Use your own tunnel":::
 1. Launch your own tunnel service then update "botMessagingEndpoint" to your own message endpoint in `.fx/configs/tasks.json` under "Set up bot"
@@ -161,7 +161,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
- > Ensure to start a new local debug after you add new environment variables as the environment variables don't support hot reload.
+ > Ensure to start a new local debug after you add new environment variables, as the environment variables don't support hot reload.
 
 </details>
 
@@ -170,7 +170,7 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 
 Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, message extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
 
-1. Comment **`Attach to Bot`** and **`Attach to Backend`** from debug compound in `.vscode/launch.json`.
+1. Update **`Attach to Bot`** and **`Attach to Backend`** from debug compound in `.vscode/launch.json`.
 
    ```json
    {
@@ -190,7 +190,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
    }
    ```
 
-2. Comment **`Start Backend`** and Start Bot from Start All task in .vscode/tasks.json.
+2. Update **`Start Backend`** and `Start Bot` from Start All task in .vscode/tasks.json.
 
    ```json
    {

@@ -22,7 +22,7 @@ The debug process workflow is as follows:
 
 4. Microsoft Edge or Google Chrome launches a new browser instance and opens a web page to load Teams client.
 
-## Teams Toolkit verification of prerequisites
+## Verification of prerequisites
 
 Teams Toolkit checks the following prerequisites during the debug process:
 
