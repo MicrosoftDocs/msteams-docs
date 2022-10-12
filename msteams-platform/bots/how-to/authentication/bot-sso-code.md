@@ -68,7 +68,7 @@ Update your app's code with the following code snippets:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-1. Use the following code snippet for requesting a token<!--without needing the app user to sign-in-->. 
+1. Use the following code snippet for requesting a token. After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
     # [csharp](#tab/cs)
     
@@ -78,11 +78,10 @@ Update your app's code with the following code snippets:
         public AdapterWithErrorHandler(IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger<IBotFrameworkHttpAdapter> logger, IStorage storage, ConversationState conversationState)
             : base(configuration, httpClientFactory, logger)
         {
-            if (configuration.GetValue<bool>("UseSingleSignOn"))
-            {
+            (configuration.GetValue<bool>("UseSingleSignOn"))
+            
                 base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-            }
-
+            
             OnTurnError = async (turnContext, exception) =>
             {
                 // Log any leaked exception from the application.
@@ -190,7 +189,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
             {
                 var token = tokenResponse.Token;
 
-            // Login Successful, token contains sign in token, do whatever is required with this token 
+            // On successful login, the token contains sign in token. You can do whatever is required with this token. 
 
             return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
             { Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
