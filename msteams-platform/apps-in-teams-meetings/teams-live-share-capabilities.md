@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Live Share core capabilities
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot shows an example of users playing agile poker game in a Teams meeting which showcases the Live share capability.":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot shows an example of users playing agile poker game in a Teams meeting, which showcases the Live share capability.":::
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
@@ -81,7 +81,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 ## Join a meeting session
 
-Follow the steps to join a session that is associated with a user's meeting:
+Follow the steps to join a session that's associated with a user's meeting:
 
 1. Initialize [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
 2. Define the data structures you want to synchronize. For example, `SharedMap`.
@@ -312,7 +312,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ### LiveEvent example
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there is a change in the event.":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there's a change in the event.":::
 
 `LiveEvent` is a great way to send simple events to other clients in a meeting. It's useful for scenarios like sending session notifications.
 
