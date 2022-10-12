@@ -26,7 +26,7 @@ RSC permissions are only available to Teams apps installed on the Teams client a
 
 Azure AD is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. For more information, see [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
-#### Microsoft Graph API permission
+### Microsoft Graph API permission
 
 Graph API permissions are managed in Azure AD. For your app to access data in Microsoft Graph, the user or administrator must grant it the correct permissions via a consent process. For more information, see [Microsoft Graph permissions](/graph/permissions-reference).
 
@@ -51,4 +51,4 @@ Other Teams' specific configuration for the bot can be managed in the Developer 
 
 ### Connectors
 
-Connectors have a connector ID and is registered and managed through the Connector Developer Dashboard. This ID is necessary for introducing a connector to the Teams App. Other Teams specific configuration for connectors can be managed in the developer portal section for the app.
+Connectors have a connector ID and are registered and managed through the Connector Developer Dashboard. This ID is necessary for introducing a connector to the Teams App. Other Teams specific configuration for connectors can be managed in the developer portal section for the app.
