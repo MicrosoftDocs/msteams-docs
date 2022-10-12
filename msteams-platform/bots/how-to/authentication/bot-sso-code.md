@@ -14,7 +14,7 @@ Before you add code to enable SSO, ensure that you've configured your app with A
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
 > [!NOTE]
-> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO in JavaScript and TypeScript apps in Visual Studio Code. For C# apps, Teams Toolkit 17.4 preview 3.
+> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript and TypeScript apps in Visual Studio Code. For C# apps, Teams Toolkit 17.4 preview 3.
 
 This section covers:
 
@@ -226,6 +226,9 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 ### Validate the access token
 
 Web APIs on your server must decode the access token, and verify if it's sent from the client.
+
+> [!NOTE]
+> If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines in this section.
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens)
 
