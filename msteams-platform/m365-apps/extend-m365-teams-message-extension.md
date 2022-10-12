@@ -30,7 +30,11 @@ To complete this tutorial, you need:
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
-> [Publish Teams apps extended for Microsoft 365](publish.md)
+> [Install prerequisites](prerequisites.md)
+
+## Link unfurling
+
+If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, completing the steps of this tutorial also enables link unfurling in Outlook on the web and Windows desktop environments. The [Code samples](#code-sample) section below provides a simple link unfurling app for testing.
 
 ## Prepare your message extension for the upgrade
 
@@ -199,6 +203,7 @@ As you test your message extension, you can identify the source (originating fro
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## Next step
 
