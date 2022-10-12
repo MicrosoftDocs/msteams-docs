@@ -301,7 +301,7 @@ After you've started running your app locally with `npm run start`, you can then
 
 1. Open Teams.
 
-1. Schedule a meeting from the calendar in Teams. Ensure you invite atleast one attendee to the meeting.
+1. Schedule a meeting from the calendar in Teams. Ensure you invite at least one attendee to the meeting.
 
 1. Join the meeting.
 
