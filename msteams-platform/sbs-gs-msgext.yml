@@ -354,6 +354,10 @@ items:
     ### Build and run your app locally
 
     1. Select **F5** in Visual Studio Code to run your application in debug mode.
+
+        > [!NOTE]
+        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+
         <!-- markdownlint-disable MD033 -->
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
@@ -366,9 +370,6 @@ items:
           - Supported Node.js version is installed.
           - Ngrok is installed.
           - Port required by bot app is available.
-
-          > [!NOTE]
-          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
         2. Install npm packages
         3. Starts Ngrok to create a HTTP tunnel.
