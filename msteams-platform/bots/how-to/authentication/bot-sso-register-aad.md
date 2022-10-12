@@ -782,7 +782,7 @@ Next, you must configure bot app in Azure AD to enable SSO.
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
 
 ---
--->
+
 ## Next step
 
 > [!div class="nextstepaction"]
