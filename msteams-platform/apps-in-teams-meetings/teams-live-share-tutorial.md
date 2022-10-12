@@ -95,7 +95,7 @@ start().catch((error) => console.error(error));
 
 ## Join a Fluid container
 
-Not all of your apps views will need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
+Not all of your apps views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
 Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) and calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
 
@@ -156,7 +156,7 @@ function renderStage(diceMap, elem) {
 
 ### Modify Fluid data
 
-To begin using Fluid in the application, the first thing to change is what happens when the user selects the `rollButton`. Instead of updating the local state directly, the button updates the number stored in the `value` key of the passed in `diceMap`. Because the `diceMap` is a Fluid `SharedMap`, changes are distributed to all clients. Any changes to the `diceMap` will cause a `valueChanged` event to be emitted, and an event handler can trigger an update of the view.
+To begin using Fluid in the application, the first thing to change is what happens when the user selects the `rollButton`. Instead of updating the local state directly, the button updates the number stored in the `value` key of the passed in `diceMap`. Because the `diceMap` is a Fluid `SharedMap`, changes are distributed to all clients. Any changes to the `diceMap` can cause a `valueChanged` event to be emitted, and an event handler can trigger an update of the view.
 
 This pattern is common in Fluid because it enables the view to behave the same way for both local and remote changes.
 
