@@ -7,9 +7,9 @@ ms.localizationpriority: medium
 ms.author: lomeybur
 ---
 
-# Permissions in teams app
+# Permissions in Teams app
 
-Permissions for Teams apps are managed in two places.
+Permissions for Teams app are managed in two places, depending on the app feature:
 
 * [Resource-specific consent (RSC)](#resource-specific-consent)
 * [Azure Active Directory (Azure AD)](#azure-active-directory)
