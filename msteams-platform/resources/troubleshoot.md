@@ -27,7 +27,7 @@ If you aren't seeing your content in the tab view, it could be:
 
 ### Changes to my web app aren't reflected in its Teams tab
 
-Check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers as needed to ensure your desired client caching behavior.
+If you experience consistent or intermittent caching issues where updates to your web app aren't appearing when its hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers as needed to ensure your desired client caching behavior.
 
 ### The Save button isn't enabled on the settings dialog
 
