@@ -145,7 +145,30 @@ items:
        
         > [!NOTE]
         > You can also change the default location by selecting **Browse...**
-        
+
+    1. Enter a suitable name for your app, such as workflow bot as the application name.
+
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png" alt-text="enter application name":::
+
+    1. Select Enter.
+        > [!NOTE]
+        > Ensure that you use only alphanumeric characters in the application name.
+
+    1. The workflow bot app is created in a few seconds, and you can see the scaffolding:
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
+
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
+    
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
+    
+    1. Select **Start Debugging** button.
+
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
+
+    1. Select Add.
+
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add- local-debug.png" alt-text="select add to add your workflow bot app":::
+
 - title: Interaction with the conversation bot
   durationInMinutes: 2
   content: |
