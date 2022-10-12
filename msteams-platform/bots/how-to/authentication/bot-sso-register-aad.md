@@ -19,6 +19,8 @@ See the following video to learn about SSO in a bot app:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
+# [Azure AD app](#bot-id/aad)
+
 ## Enable SSO for your bot app
 
 Before you enable SSO for your bot app, you must register and configure your app in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
@@ -267,7 +269,6 @@ With the Client ID and Client secret provided, the token store exchanges the tok
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
 
-<!--
 # [Azure AD app](#tab/aad)
 
 To create and configure your app in Azure AD for enabling SSO:
