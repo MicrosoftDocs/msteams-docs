@@ -190,3 +190,20 @@ To preview your bot app in Teams:
   Teams opens the bot app and you can use it.
 
   Congratulations! You've enabled SSO for your bot app.
+
+## SSO support in Developer Portal
+
+You can also upload your SSO-enabled app in Developer Portal. To enable SSO support in Developer Portal after you've imported it:
+
+1. Open Developer Portal.
+1. Select **Tools**, and from the list of apps that appears select your app to open it in Developer Portal.
+1. Select **Configure**.
+    The **Configure** page appears.
+
+1. Enter the messaging endpoint you configured in Azure AD as **Endpoint address**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/dev-portal-sso.png" alt-text="Developer Portal support for SSO in a bot app":::
+
+1. Select **Save**.
+
+Developer Portal would now support SSO for your app.
