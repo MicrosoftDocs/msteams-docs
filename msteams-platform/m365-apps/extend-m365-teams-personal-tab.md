@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams personal tab app across Microsoft 365
-description: Update your personal app to run in Outlook and Office. Update manifest and TeamsJS SDK V2, amend consent security, update Azure AD app registration for SSO.
-ms.date: 05/24/2022
+description: Learn how to update your personal tab app to run in Outlook and Office, in addition to Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
@@ -29,6 +29,7 @@ To complete this tutorial, you need:
 * A Microsoft 365 Developer Program sandbox tenant
 * Your sandbox tenant enrolled in *Office 365 Targeted Releases*
 * A machine with Office apps installed from the Microsoft 365 Apps *beta channel*
+* (Optional) An Android device or emulator with Office app for Android installed and enrolled in the *beta program*
 * (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code
 
 > [!div class="nextstepaction"]
@@ -39,12 +40,6 @@ To complete this tutorial, you need:
 If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
-
-Alternately, you can use a basic single sign-on *hello world* app already enabled for Microsoft 365 in the following **Quickstart** section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
-
-### Quickstart
-
-To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, use Teams Toolkit extension for Visual Studio Code.
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
 1. Select **Create a new Teams app** option.
@@ -91,7 +86,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 To run in Outlook and Office, your app need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
-You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
+You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.x.x. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
@@ -100,8 +95,8 @@ Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.
 
 > [!div class="checklist"]
 >
-> * Import statements for teams-js@2.0.0
-> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.0.0
+> * Import statements for teams-js@2.x.x
+> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.x.x
 > * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
@@ -238,7 +233,7 @@ Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-sdk.md#micros
 
 For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
-You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 

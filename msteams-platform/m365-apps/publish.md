@@ -1,7 +1,7 @@
 ---
 title: Publish Teams apps for Microsoft 365
-description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office. Know about single-tenant, multitenant distribution.
-ms.date: 05/24/2022
+description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office through single tenant and multitenant distribution.
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
