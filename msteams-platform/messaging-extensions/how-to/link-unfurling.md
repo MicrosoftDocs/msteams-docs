@@ -109,7 +109,7 @@ The following list provides the limitations:
 
 * The bot can only send back a response type result or auth in response to composeExtension/anonymousQueryLink invoke. The user can log an error for all other response types, such as, silentAuth and config.
 * The bot can't send back an acv2 card in response to `composeExtension/anonymousQueryLink`, either as a result or as a pre-auth card in auth.
-* If the bot selects to send back type auth with a pre-auth card, the teams client strips all of its actions
+* If the bot selects to send back type auth with a pre-auth card, the teams client strips all of its actions.
 
 **To get your app ready for zero install link unfurling**
 
@@ -232,7 +232,11 @@ The following image provides sequential flow to enable and use zero install link
 
 You can create a welcome card for your app that users can render. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
+The following image illustrates default card preview:
+
 :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
+
+You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates customized card preview:
 
 :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the link unfurling code custom card." lightbox="../../assets/images/tdp/custom-card.PNG":::
 
