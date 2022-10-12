@@ -58,7 +58,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more information, see [Entry points for Teams apps](../extensibility-points.md).</br>
 > * `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
-> * Maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by `selectMedia` API. Ensure that the array size doesn't exceed four MB, if array size exceeds four MB API generates an error code 10000 that is SIZE_EXCEEDED error.
+> * Maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by `selectMedia` API. Ensure that the array size doesn't exceed 4 MB, if array size exceeds 4 MB API generates an error code 10000 that is SIZE_EXCEEDED error.
 
 The following table lists set of APIs to enable your device's media capabilities:
 
@@ -379,9 +379,6 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
     });
     });
     ```
-
->[!NOTE]
-> [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) is the maximum limit of media allowed to be selected, current max limit is 10 set by office lens. Maximum count of images uploaded is also determined by the total size of array returned by `selectMedia` API. Ensure that the array size doesn't exceed 4 MB, if array size exceeds 4 MB API generates an error code 10000 that is SIZE_EXCEEDED error.
 
 ## File download on Teams mobile
 
