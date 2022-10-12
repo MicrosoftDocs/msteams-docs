@@ -7,7 +7,7 @@ keywords: Share in Meeting
 ---
 # Share in meeting
 
-Share in meeting allows users to share any document or third-party app in the meeting stage and all the participants can interact and edit together.
+Share in meeting allows users to share any document or third-party app to the meeting stage and all the participants can interact and edit together.
 
 Users can select **Share in meeting** button and it launches the deep link to the meeting stage. If users haven't installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
 
@@ -125,9 +125,9 @@ Deep link parameters:
 
 * `fqdn`: FQDN is needed in Teams deep link service for tenant or for account checking.
 
-  * When the meeting is scheduled with Teams for Life, then the fqdn should be: **teams.live.com**.
+  * When the meeting is scheduled with Teams for Life, then the fqdn should be **teams.live.com**.
 
-  * When the meeting is scheduled for Teams for business, then the fqdn should be: **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggest switching to the right one.​
+  * When the meeting is scheduled for Teams for business, then the fqdn should be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggest switching to the right one.​
 
 ## Deep link example
 

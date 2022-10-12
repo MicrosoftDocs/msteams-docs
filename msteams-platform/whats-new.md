@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-***October 12, 2022***: [Share in meeting](concepts/build-and-test/share-in-meeting.md).
+***October 12, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
 
 :::column-end:::
 :::row-end:::
