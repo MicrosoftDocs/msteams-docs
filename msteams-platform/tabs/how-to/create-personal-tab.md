@@ -92,7 +92,7 @@ Following are the steps to create a personal tab:
 
     * **The URL where you will host this solution?**
 
-      By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+      By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
 
     * **Would you like show a loading indicator when your app/tab loads?**
 

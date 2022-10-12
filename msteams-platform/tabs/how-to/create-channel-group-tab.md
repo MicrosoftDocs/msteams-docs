@@ -91,7 +91,7 @@ Following are the steps to create a channel or group tab:
 
     * **The URL to host this solution?**
 
-        By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+        By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
 
     * **Would you like show a loading indicator when your app/tab loads?**
 
@@ -174,7 +174,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
-1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
+1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
 
