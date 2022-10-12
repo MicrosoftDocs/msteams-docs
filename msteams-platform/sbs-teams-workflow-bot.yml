@@ -168,8 +168,19 @@ items:
 
     1. Select Add.
 
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add- local-debug.png" alt-text="select add to add your workflow bot app":::
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="select add to add your workflow bot app":::
 
+    1. Select the **workflow bot** and **Enter**.
+
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="select add to add your workflow bot app":::
+
+    You'll receive the following command response in adaptive card:
+
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="select add to add your workflow bot app":::
+
+    Then you can click the DoStuff button to invoke the action, and you will receive the following updated adaptive card:
+
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
 - title: Interaction with the conversation bot
   durationInMinutes: 2
   content: |
