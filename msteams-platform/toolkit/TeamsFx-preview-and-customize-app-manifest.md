@@ -90,11 +90,11 @@ To preview manifest file using Visual Studio Code:
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot is an example of showing the selection of provision in the cloud resource.":::
 
-To preview manifest file using command palatte:
+To preview manifest file using command palette:
 
 * Trigger **Teams: Provision in the cloud** from command palette.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot is an example of showing provision cloud resource using command palatte.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot is an example of showing provision cloud resource using command palette.":::
 
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
@@ -345,7 +345,7 @@ The changes are updated to Teams Developer Portal.
 
 > [!NOTE]
 >
-> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any maual updates that can be overwritten in the Develope Portal.
+> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in the Developer Portal.
 > * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and existing **Bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::

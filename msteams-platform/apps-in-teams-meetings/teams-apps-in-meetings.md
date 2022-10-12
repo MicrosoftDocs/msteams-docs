@@ -42,7 +42,7 @@ The following illustration gives you an idea of the meeting app extensibility fe
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-> [!Note]
+> [!NOTE]
 >
 > Meeting apps (side panel, meeting stage) are supported in Teams desktop client. Where as in Teams web client it is supported only when the developer preview is enabled.
 
@@ -51,7 +51,10 @@ This article provides an overview of meeting app extensibility, API references, 
 * **Customize with Together Mode scenes**: The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
 * **Customize app permission in shared channel**: If your app shares important information in shared channel, you can customize the app permission for external members. App permissions in [Shared channels](../concepts/build-and-test/Shared-channels.md) follow host team's app roster and host tenant's app policy.
 * **Retrieve meeting transcripts**: You can access and retrieve meeting transcripts in a post-meeting scenario. Configure your app to get transcripts automatically for a scheduled meeting, and use them for insights, intelligent analysis, and more.
+
 * **Video filters for meeting apps**: Video filters allow you to add filters, frames, makeups, and so on, to videos and make your videos more presentable for meetings.
+
+* **Generate a deep link to share content to stage in meetings**: You can generate a deep link to share the app to stage and start or join a meeting.
 
 ## Next step
 
