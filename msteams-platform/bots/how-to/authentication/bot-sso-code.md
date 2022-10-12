@@ -134,7 +134,7 @@ Update your app's code with the following code snippets:
     
     ---
 
-<!--> [!NOTE]
+<!--[!NOTE]
 > For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true)-->
 
 ### Consent dialog for getting access token

@@ -112,8 +112,11 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The platform is configured and displayed in the **Platform configurations** page.
 
-//TBA: Add cross-reference to code sample for acquiring access token for MS Graph. //
+After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/46.teams-auth/SimpleGraphClient.cs).
 
+When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for Graph permissions. After the app user gives consent, the Graph permissions are granted.
+
+<!--
 ## Acquire access token for MS Graph
 
 You'll need to acquire access token for Microsoft Graph.
@@ -142,5 +145,5 @@ The following code provides an example of using the access token obtained in the
       return await stepContext.endDialog();
     }
 ```
+-->
 
-When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for Graph permissions. After the app user gives consent, the Graph permissions are granted.
