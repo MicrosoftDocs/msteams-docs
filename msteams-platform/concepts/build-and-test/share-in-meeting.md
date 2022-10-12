@@ -13,7 +13,7 @@ Users can select **Share in meeting** button and it launches the deep link to th
 
 The following image shows the share in meeting experience:
 
-:::image type="content" source="../../assets/images/share-in-teams-meeting/share-to-stage.png" alt-text="This screenshot shows the share-in-teams-meeting experience.":::
+:::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="This screenshot shows share in meeting stage experience.":::
 
 ## Enable share in meeting
 
