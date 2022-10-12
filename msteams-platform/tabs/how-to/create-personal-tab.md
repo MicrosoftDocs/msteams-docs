@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a personal tab
 
-Personal tabs, along with personal-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 

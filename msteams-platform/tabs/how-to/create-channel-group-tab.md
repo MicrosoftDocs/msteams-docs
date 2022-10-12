@@ -71,7 +71,7 @@ Following are the steps to create a channel or group tab:
 
     * **Your (company) name? (max 32 characters)**
 
-        Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+        Your company name can be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
     * **Which manifest version would you like to use?**
 
@@ -89,7 +89,7 @@ Following are the steps to create a channel or group tab:
 
         Select **( &ast; ) A Tab**.
 
-    * **The URL where you will host this solution?**
+    * **The URL to host this solution?**
 
         By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
 
@@ -535,15 +535,15 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Models
 
-**ChannelGroup.cs** presents a message object and methods that will be called from the controllers during configuration.
+**ChannelGroup.cs** presents a message object and methods that can be called from the controllers during configuration.
 
 #### Views
 
 These are the different views in ASP.NET Core MVC:
 
-* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** can be displayed as the home page for your application.
 
-* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It will also reference the Teams Library.
+* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements that also reference the Teams Library.
 
 #### Controllers
 
