@@ -41,6 +41,12 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
 
+Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following [Quickstart](#quickstart) section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams).
+
+### Quickstart
+
+To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, use Teams Toolkit extension for Visual Studio Code.
+
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
 1. Select **Create a new Teams app** option.
 1. Select **SSO enabled personal tab**.
