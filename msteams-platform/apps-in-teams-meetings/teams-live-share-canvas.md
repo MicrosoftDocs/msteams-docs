@@ -348,7 +348,7 @@ liveCanvas.isCursorShared = !isCursorShared;
 
 For most applications on the web, content renders differently depending on the screen size or varying application state. If `InkingManager` isn't optimized correctly for your app, it might cause strokes and cursors to appear differently for each user. Live Share canvas supports a simple set of APIs, which allows the `<canvas>` to adjust stroke positions to align correctly with your content.
 
-By default, Live Share canvas works a lot like a whiteboard app, with the content being center aligned to the viewport with a 1x zoom level. Only part of the content is being rendered within the visible bounds of the `<canvas>`. Conceptually, it is like recording a video from birdseye view. While the viewport of the camera is recording a portion of the world beneath it, the real world stretches nearly infinitely in every direction.
+By default, Live Share canvas works a lot like a whiteboard app, with the content being center aligned to the viewport with a 1x zoom level. Only part of the content is being rendered within the visible bounds of the `<canvas>`. Conceptually, it's like recording a video from bird's-eye view. While the viewport of the camera is recording a portion of the world beneath it, the real world stretches nearly infinitely in every direction.
 
 Here is a simple diagram to help visualize this concept:
 
