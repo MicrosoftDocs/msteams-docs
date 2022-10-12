@@ -79,7 +79,7 @@ items:
     
     > [!NOTE]
     > Before you run TeamsFx in PowerShell terminals, ensure you enable the **remote signed** execution policy for PowerShell.
-    ---
+    
     ## Set up your Teams development tenant
 
     A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test your app.
