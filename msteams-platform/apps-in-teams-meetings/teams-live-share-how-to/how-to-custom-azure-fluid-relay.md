@@ -114,7 +114,7 @@ Live Share has features that are beneficial to common meeting scenarios that aug
 
 ### Container mapping
 
-The `LiveShareClient` in `@microsoft/live-share` is responsible for mapping a unique meeting identifier to your Fluid containers, which ensures that all meeting participants join the same container. As part of this process, the client attempts to connect to a `containerId` mapped to the meeting that one already exists. If one doesn't exist, the `AzureClient` is used to create a container using your `AzureConnectionConfig`, and then relay the `containerId` to other meeting participants.
+The `LiveShareClient` in `@microsoft/live-share` is responsible for mapping a unique meeting identifier to your Fluid containers, which ensures that all meeting participants join the same container. As part of this process, the client attempts to connect to a `containerId` mapped to the meeting that one already exists. If one doesn't exist, the `AzureClient` is used to create a container using your `AzureConnectionConfig` and then relay the `containerId` to other meeting participants.
 
 If your app already has a mechanism for creating Fluid containers and sharing them to other members, such as by inserting the `containerId` into the URL shared to the meeting stage, then this may not be necessary for your app.
 
