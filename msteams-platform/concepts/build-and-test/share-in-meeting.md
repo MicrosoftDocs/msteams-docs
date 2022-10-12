@@ -13,7 +13,7 @@ Users can select **Share in meeting** button and it launches the deep link to th
 
 The following image shows the share in meeting experience:
 
-:::image type="content" source="../../assets/images/share-in-teams-meeting/present.png" alt-text="This screenshot shows the share-in-teams-meeting experience.":::
+:::image type="content" source="../../assets/images/share-in-teams-meeting/share-to-stage.png" alt-text="This screenshot shows the share-in-teams-meeting experience.":::
 
 ## Enable share in meeting
 
@@ -42,7 +42,7 @@ The following scans your web page to locate any HTML elements with the class nam
    </div>
    ```
 
-3. Following are the other attributes to customize share in meeting button:
+3. Following are the additional attributes to customize share in meeting button:
    * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
    * `data-button-size`: Specifies the size of the button in pixel.
    * `data-target`: Specifies whether the link open in the same window, new tab, or a new window.
@@ -158,7 +158,7 @@ If meeting extension is installed:
 
 1. Open web app in the browser and select **Share in meeting** button.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="This screenshot shows share in meeting button on web app.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="This screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
 
 1. Select **Start sharing** button.
 
@@ -172,7 +172,7 @@ If meeting extension isn't installed:
 
 1. Open web app in the browser and select **Share in meeting** button.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="This screenshot shows share in meeting button on web app in meeting.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="This screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
 
 1. Select **Add** to install meeting extension app.
 
@@ -188,5 +188,5 @@ If meeting extension isn't installed:
 
 ## See also
 
-* [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)
 * [Share to Teams from web apps](share-to-teams-from-web-apps.md)
+* [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)
