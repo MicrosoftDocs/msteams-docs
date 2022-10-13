@@ -41,7 +41,7 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 
 | If access token is needed... | Call getAuthToken()... |
 | --- | --- |
-| When app user accesses the app | From inside `microsoftTeams.initialize()`. |
+| When app user accesses the app | After the `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
 ### Add code for getAuthToken
