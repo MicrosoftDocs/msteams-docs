@@ -62,16 +62,16 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 ```csharp
 const serviceUrl = 'https://smba.trafficmanager.net/uk/';
-        `MicrosoftAppCredentials.trustServiceUrl(serviceUrl);
+        MicrosoftAppCredentials.trustServiceUrl(serviceUrl);
 ```
 
 If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
-* Production: `https://smba.trafficmanager.net/teams/`
+* Public: `https://smba.trafficmanager.net/teams/`
 * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
 * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
-Code sample to [**create a conversation bot**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
+For code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
