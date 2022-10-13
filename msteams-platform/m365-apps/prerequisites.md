@@ -56,7 +56,7 @@ To enroll your test tenant for Office 365 targeted releases:
     1. **Target release for everyone**
     1. **Target release for select users**
 
-    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="The screenshot is an example that shows the Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
+    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="The screenshot is an example that shows the Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected.":::
 
 1. Select **Save**.
 
@@ -78,11 +78,11 @@ To install Office 365 Beta Channel applications in your test environment:
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="The screenshot is an example that shows About Outlook to verify that you're running a Beta Channel build.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="The screenshot is an example that shows about Outlook to verify that you're running a Beta Channel build.":::
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
-    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="The screenshot is an example that shows the search filed in your Windows settings.":::
+    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="The screenshot is an example that shows the search field in your Windows settings.":::
 
     If it's not listed, install [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) to your test environment.
 
