@@ -246,6 +246,8 @@ items:
     * Set `options.cardAction.actions` to include more action handlers
     * Set `options.{feature}.enabled` to enable more `ConversationBot` functionality
 
+    To learn more, visit [additional initialization customization](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#customize-initialization).
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
