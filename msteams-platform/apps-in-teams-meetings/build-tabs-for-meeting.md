@@ -170,7 +170,7 @@ The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs usin
 
 ### Frame context
 
-Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel. This allows you to build customized experiences according to the size of the frame in which your app is loaded. For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
+Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel and meetingStage. This allow you to build customised experienecs based on where the app is rendering. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting prepartion UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
 ## Code sample
 
