@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Deploy Teams app to the cloud
 
-Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
+Teams Toolkit helps you to deploy or upload the front-end and back-end code in your application to your provisioned cloud resources in Azure.
 
 ::: zone pivot="visual-studio-code"
 
@@ -19,8 +19,8 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 
 You can deploy the following to the cloud:
 
-* The tab, such as frontend applications are deployed to Azure Storage and configured for static web hosting or a sharepoint site.
-* The backend APIs are deployed to Azure Functions.
+* The tab, such as front-end applications are deployed to Azure Storage and configured for static web hosting or a sharepoint site.
+* The back-end APIs are deployed to Azure Functions.
 * The bot or message extension is deployed to Azure App Service.
 
   > [!NOTE]
