@@ -248,6 +248,14 @@ items:
 
     To learn more, visit [additional initialization customization](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#customize-initialization).
 
+    ### Customize installation
+    A Teams bot can be installed into a team, or a group chat, or as personal app, depending on difference scopes.
+    You can choose the installation target when adding the App.
+    See Distribute your [Microsoft Teams app](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview)
+    for more install options.
+
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-customize installation.png" alt-text="selecting example of customizing installation":::
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
