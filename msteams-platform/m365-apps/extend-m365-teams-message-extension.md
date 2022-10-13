@@ -18,7 +18,7 @@ The process to update your search-based Teams message extension to run in Outloo
 > * Add an Outlook channel for your bot.
 > * Sideload your updated app in Teams.
 
-The rest of this guide walks you through the above steps and show how to preview your message extension in Outlook for Windows, Desktop, and Web.
+The rest of this guide walks you through the above steps and show how to preview your message extension in Outlook for Windows desktop and Web.
 
 ## Prerequisites
 
