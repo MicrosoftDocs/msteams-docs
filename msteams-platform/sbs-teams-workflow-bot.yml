@@ -158,9 +158,9 @@ items:
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
+    1. Select Run and Debug :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
     
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
+    1. Select Debug(Edge) or Debug(Chrome) from the dropdown list.
     
     1. Select **Start Debugging** button.
 
@@ -170,9 +170,15 @@ items:
 
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="select add to add your workflow bot app":::
 
-    1. Select the **workflow bot** and **Enter**.
 
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="select add to add your workflow bot app":::
+- title: Interaction with the workflow bot
+  durationInMinutes: 2
+  content: |
+    You can interact with the bot in Teams by sending a helloWorld command. After running this template you get a response as below:
+    
+    Select the **workflow bot** and **Enter**.
+
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="select add to add your workflow bot app":::
 
     You'll receive the following command response in adaptive card:
 
@@ -182,29 +188,12 @@ items:
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
 
-- title: Interaction with the conversation bot
-  durationInMinutes: 2
-  content: |
-    You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot responds to the following strings:
-
-    In the left pane of the Teams, select the ellipses ●●●, and then select your app from the list. The bot shows **Suggestions** as follows:
-
-    :::image type="content" source="./assets/images/conversation-bot/suggestions.png" alt-text="Suggestions card.":::
-
-    | MentionMe    | Show Welcome   | MessageAllMembers |
-    | --- | --- | --- |
-    | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
-    | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
-    | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
-
-    You can select an option from the command list by typing **@TeamsConversationBot** into the compose message area and **What can I do?** text above the compose area.
-
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app" lightbox="assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png":::
     
 - content: |
-    You've completed the tutorial to get started with conversation bot for Microsoft Teams.
+    You've completed the tutorial to get started with workflow bot for Microsoft Teams.
