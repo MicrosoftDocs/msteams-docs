@@ -41,7 +41,7 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
 
-Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following [Quickstart](#quickstart) section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams).
+Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following [Quickstart](#quickstart) section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
 
 ### Quickstart
 
@@ -53,7 +53,7 @@ To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="The Screenshot is an example that shows the Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit.":::
 1. Select preferred programming language.
-1. Select a location on your local machine for the workspace folder and type your application name.
+1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (App Service plan, Storage account, Function App, Managed Identity) in your Azure account.
 1. Select a subscription and a resource group.
 1. Select **Provision**.
@@ -186,7 +186,7 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Outlook desktop client to see your installed personal tabs.":::
 
 ### Outlook on the web
 
@@ -196,7 +196,7 @@ To view your app in Outlook on the web:
 1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
 
 ### Office on Windows
 
@@ -206,7 +206,7 @@ To view your app running in Office on Windows desktop:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office.
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs.":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Office desktop client to see your installed personal tabs.":::
 
 ### Office on the web
 
@@ -216,7 +216,7 @@ To preview your app running in Office on the web:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office on the web.
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the 'More apps' option on the side bar of office.com to see your installed personal tabs.":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the (More apps) option on the side bar of office.com to see your installed personal tabs.":::
 
 ### Office app for Android
 
