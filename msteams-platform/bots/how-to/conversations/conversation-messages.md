@@ -115,7 +115,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Send a message
 
-To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
+To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
@@ -366,7 +366,7 @@ There are two ways to send a notification from your application.
 * By setting `Notification.Alert` property on bot message.
 * By sending an activity feed notification using the Graph API.
 
-You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings and you can't override these settings.
+You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings, and you can't override these settings.
 
 If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
 
@@ -470,12 +470,12 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 ### Status codes retry guidance
 
-The general retry guidance for each status code is listed in the following table. Bot should avoid retrying on status codes that are not specified in the following table:
+The general retry guidance for each status code is listed in the following table. Bot should avoid retrying on status codes that aren't specified in the following table:
 
 |Status code | Retry strategy |
 |----------------|-----------------|
 | 412 | Retry using exponential backoff. |
-| 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available . Otherwise, retry using exponential backoff with thread ID, if possible. |
+| 429 | Retry using `Retry-After` header to determine to wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
