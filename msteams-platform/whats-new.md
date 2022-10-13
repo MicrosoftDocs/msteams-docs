@@ -26,8 +26,10 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-* ***October 12, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+* ***October 13, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+* ***October 12, 2022***: [Apps are supported in instant meetings, one-on-one, and group calls.](apps-in-teams-meetings/teams-apps-in-meetings.md).
 * ***October 12, 2022***: [Live Share canvas](apps-in-teams-meetings/teams-live-share-canvas.md)
+
 :::column-end:::
 :::row-end:::
 
@@ -204,7 +206,7 @@ Explore updates from the previous GA releases listed here.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
+| 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deep links to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/tab-sso-overview.md) |
 | 10/31/2019 | Conversational bots and message extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and message extension documentation |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
@@ -294,7 +296,6 @@ Developer preview is a public program that provides early access to unreleased T
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
-| 06/30/2022 | Apps for instant meetings, one-on-one, and group calls| Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | Introduced app manifest version 1.13 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 | 01/17/2022 | People Picker in Adaptive cards for mobile | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
