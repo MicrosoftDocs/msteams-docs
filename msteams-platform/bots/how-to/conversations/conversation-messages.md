@@ -285,7 +285,7 @@ To enhance your message, you can include pictures as attachments to that message
 
 Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
-Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
+Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
 
 * Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -361,9 +361,9 @@ For more information on cards and cards in bots, see [cards documentation](~/tas
 
 ## Add notifications to your message
 
-There are two ways to send a notification from your application.
+There are two ways to send a notification from your application:
 
-* By setting `Notification.Alert` property on bot message.
+* By setting the `Notification.Alert` property on bot message.
 * By sending an activity feed notification using the Graph API.
 
 You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings, and you can't override these settings.
@@ -470,12 +470,12 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 ### Status codes retry guidance
 
-The general retry guidance for each status code is listed in the following table. Bot should avoid retrying on status codes that aren't specified in the following table:
+The general retry guidance for each status code is listed in the following table, bot must avoid retrying status codes that aren't specified:
 
 |Status code | Retry strategy |
 |----------------|-----------------|
 | 412 | Retry using exponential backoff. |
-| 429 | Retry using `Retry-After` header to determine to wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
+| 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
