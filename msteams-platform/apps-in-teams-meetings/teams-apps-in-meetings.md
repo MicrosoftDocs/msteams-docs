@@ -16,7 +16,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 >
 > * Apps for scheduled public channel meetings are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
-> * Apps aren't supported in the following
+> * Apps aren't supported in the following:
 >
 >   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 >   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
