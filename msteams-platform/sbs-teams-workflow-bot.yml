@@ -188,6 +188,43 @@ items:
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
 
+    ## Take tour of source code
+
+    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
+    
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png" alt-text="select add to add your workflow bot app":::
+
+    | Folder | Content |
+    |   ---  |   ---   |
+    |`.fx`   | Project level settings, configurations, and environment information.|
+    |`.vscode`| Visual Studio Code files for local debug |
+    |`bot`   | The source code for the workflow bot Teams application.|
+    |`templates`| Templates for the Teams application manifest and for provisioning Azure resources.|
+
+    The core implementation for the Teams bot is in `bot/` folder. The following files under `bot/` folder provide the business logic for the workflow bot.
+    These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started:
+
+    | Folder | Content |
+    |   ---  |   ---   |
+    |`src/index.js(ts)` | Application entry point and `restify` handlers for the workflow bot.|
+    |`src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
+    |`src/commands/helloworldCommandHandler.js(ts)` | Responds to the command message.|
+    |`src/cardActions/doStuffActionHandler.js(ts)` | Responds to the `doStuff` card action.|
+    |`src/cardModels.js(ts)` | The default Adaptive Card data model.|
+
+    The following files implement the core workflow bot on the Bot Framework. You generally don't need to customize these files.
+
+    | File/Folder | Content |
+    |   ---  |   ---   |
+    | `src/internal/initialize.js(ts)`| Application initialization and bot message handling|
+
+    The following files are project-related files. You generally don't need to customize these files.
+    
+    | File/Folder | Content |
+    |   ---  |   ---   |
+    | `.gitignore` | Git ignore file|
+    | `package.json` | NPM package file|
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
