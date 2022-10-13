@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams message extension across Microsoft 365
-description: In this article, learn how to update search-based Teams message extension to run in Outlook by updating app manifest, adding an outlook channel, and sideloading updated app.
-ms.date: 05/24/2022
+description: Learn how to update your search-based message extension to run in Outlook, in addition to Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
-The process to update your search-based Teams message extension to run in Outlook involves the following steps:
+The process to update your search-based Teams message extension involves the following steps:
 
 > [!div class="checklist"]
 >
@@ -110,7 +110,7 @@ For users to interact with your message extension from Outlook, you need to add 
 
 1. Confirm that your Outlook channel is listed along with Teams in your bot's **Channels** pane.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="The screenshot is an example that shows the Azure Bot Channels pane listing both Teams and Outlook channels":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="The screenshot is an example that shows the Azure Bot Channels pane listing both Teams and Outlook channels.":::
 
 ## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
 
@@ -153,7 +153,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="../assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the 'Upload a customized app' option in Teams.":::
 
-After it's sideloaded through Teams, your message extension will be available in Outlook for Windows desktop and web.
+After being sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
 ## Preview your message extension in Outlook
 
