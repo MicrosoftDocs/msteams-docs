@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Live Share core capabilities
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot shows an example of users playing agile poker game in a Teams meeting, which showcases the Live share capability.":::
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
@@ -81,7 +81,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 ## Join a meeting session
 
-Follow the steps to join a session that is associated with a user's meeting:
+Follow the steps to join a session that's associated with a user's meeting:
 
 1. Initialize [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
 2. Define the data structures you want to synchronize. For example, `SharedMap`.
@@ -216,7 +216,7 @@ The Live Share SDK includes a set of new Live Share `SharedObject` classes, whic
 
 ### LivePresence example
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Teams Live Share presence":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot shows an example of showing people who available in a sessionTeams using Live Share presence.":::
 
 The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name or profile picture. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
 
@@ -312,7 +312,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ### LiveEvent example
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Teams Live Share event for displaying notifications":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there's a change in the event.":::
 
 `LiveEvent` is a great way to send simple events to other clients in a meeting. It's useful for scenarios like sending session notifications.
 
@@ -394,7 +394,7 @@ notifications.sendEvent({
 
 ### LiveTimer example
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Teams Live Share countdown timer":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
 `LiveTimer` enables scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
 

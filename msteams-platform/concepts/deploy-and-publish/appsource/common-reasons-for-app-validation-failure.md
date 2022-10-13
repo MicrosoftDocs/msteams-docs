@@ -1,6 +1,6 @@
 ---
 title: Common reasons for app validation failure
-description: Learn the most common reasons for your app to fail the app validation. Broken links, errors in description, invalid policy links, valid domain guidelines violation, invalid support links, and more.
+description: Learn the most common reasons for app validation failure such as broken links, unexpected errors, crashes, valid domain guidelines violation, functional bugs.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
