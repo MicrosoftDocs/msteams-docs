@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
-The process of updating your search-based Teams message extension to run in Outlook involves the following steps:
+The process to update your search-based Teams message extension to run in Outlook involves the following steps:
 
 > [!div class="checklist"]
 >
