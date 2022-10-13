@@ -16,7 +16,12 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 >
 > * Apps for scheduled public channel meetings are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
-> * Apps aren't supported in [Public Switched Telephone Network (PSTN)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options) and [end-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90).
+> * Apps aren't supported in the following
+>
+>   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+>   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+>   * [Instant Channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+>   * [Shared Channel meetings](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop)
 
 Teams supports access to apps during meeting for the following meeting types:
 
