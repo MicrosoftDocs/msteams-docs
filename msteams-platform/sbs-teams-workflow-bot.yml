@@ -176,6 +176,8 @@ items:
     
     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png" alt-text="select add to add your workflow bot app":::
 
+    The created app is a normal TeamsFx project that will contain following folders:
+
     | Folder | Content |
     |   ---  |   ---   |
     |`.fx`   | Project level settings, configurations, and environment information.|
