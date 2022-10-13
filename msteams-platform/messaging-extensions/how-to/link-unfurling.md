@@ -232,11 +232,11 @@ The following image provides sequential flow to enable and use zero install link
 
 You can create a welcome card for your app that users can render. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
-The following image illustrates default card preview:
+The following image illustrates a default card preview:
 
 :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
 
-You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates customized card preview:
+You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
 :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the link unfurling code custom card." lightbox="../../assets/images/tdp/custom-card.PNG":::
 
