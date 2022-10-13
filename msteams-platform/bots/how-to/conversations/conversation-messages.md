@@ -468,7 +468,7 @@ The general retry guidance for each status code is listed in the following table
 
 |Status code | Retry strategy |
 |----------------|-----------------|
-| 403 |Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
+| 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
 | 412 | Retry using exponential backoff. |
 | 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available . Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
