@@ -12,7 +12,7 @@ ms.date: 07/21/2022
 
 # Custom Azure Fluid Relay service
 
-While you likely will prefer using our free hosted service, there are situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While you likely will prefer using our free hosted service, there are situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
 ## Pre-requisites
 

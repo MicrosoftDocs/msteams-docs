@@ -10,9 +10,9 @@ ms.date: 10/04/2022
 
 # Live Share canvas overview
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Teams Live Share media synchronization":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Screenshot shows an example of a canvas in sync with other meeting participants in a Teams meeting.":::
 
-In conference rooms and classrooms across the globe, whiteboards are a pivotal part of collaboration. In modern times however, the whiteboard is no longer enough. With numerous digital tools such as PowerPoint being the focal point of collaboration in the modern era, it is essential to enable the same creative potential.
+In conference rooms and classrooms across the globe, whiteboards are a pivotal part of collaboration. In modern times however, the whiteboard is no longer enough. With numerous digital tools such as PowerPoint being the focal point of collaboration in the modern era, it's essential to enable the same creative potential.
 
 To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
 
@@ -98,9 +98,9 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## Canvas tools & cursors
+## Canvas tools and cursors
 
-Now that the Live Share canvas is set up and synchronizing, you can configure the canvas for user interaction, such as buttons to select a pen tool. In this section, we will discuss what tools are available and how to use them.
+Now that the Live Share canvas is set up and synchronizing, you can configure the canvas for user interaction, such as buttons to select a pen tool. In this section, we'll discuss what tools are available and how to use them.
 
 ### Inking tools
 
@@ -108,7 +108,7 @@ Each inking tool in Live Share canvas renders strokes as users draw. If using a 
 
 #### Pen tool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Teams Live Share canvas pen tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF shows an example of drawing strokes on the canvas using the pen tool.":::
 
 The pen tool draws solid strokes that are stored into the canvas. The default tip shape is a circle.
 
@@ -146,7 +146,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### Highlighter tool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Teams Live Share canvas highlighter tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF shows an example of drawing translucent strokes on the canvas using the highlighter tool.":::
 
 The highlighter tool draws translucent strokes that are stored into the canvas. The default tip shape is a square.
 
@@ -184,7 +184,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### Eraser tool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Teams Live Share canvas eraser tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF shows an example of erasing  strokes on the canvas using the eraser tool.":::
 
 The eraser tool erases entire strokes that cross its path.
 
@@ -214,7 +214,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### Point eraser tool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Teams Live Share canvas point eraser tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF shows an example of removing individual points within strokes on the canvas using the point eraser tool.":::
 
 The point eraser tool erases individual points within strokes that cross its path by splitting existing strokes in half. This tool is computationally expensive and may result in slower frame rates for your users.
 
@@ -242,7 +242,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### Laser pointer
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Teams Live Share canvas laser pointer tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF shows an example of drawing strokes on the canvas using the the laser pointer tool.":::
 
 The laser pointer is unique as the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, the trailing effect renders for a short period before it fades out completely. This tool is perfect to point out information on the screen during a meeting, as the presenter doesn't have to switch between tools to erase strokes.
 
@@ -280,7 +280,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### Line and arrow tools
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Teams Live Share canvas line tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF shows an example of drawing straight lines on a canvas using the line and arrow tool .":::
 
 The line tool allows users to draw straight lines from one point to another, with an optional arrow that can be applied to the end.
 
@@ -328,7 +328,7 @@ You can clear all strokes in the canvas by calling `inkingManager.clear()`. This
 
 ### Cursors
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Teams Live Share cursor sharing":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF shows an example of users sharing a cursor on a canvas.":::
 
 You can enable live cursors in your application for users to track each other's cursor positions on the canvas. Unlike the inking tools, cursors operate entirely through the `LiveCanvas` class. You can optionally provide a name and picture to identify each user. You can enable cursors separately or with the inking tools.
 
@@ -350,9 +350,9 @@ For most applications on the web, content renders differently depending on the s
 
 By default, Live Share canvas works a lot like a whiteboard app, with the content being center aligned to the viewport with a 1x zoom level. Only part of the content is being rendered within the visible bounds of the `<canvas>`. Conceptually, it's like recording a video from bird's-eye view. While the viewport of the camera is recording a portion of the world beneath it, the real world stretches nearly infinitely in every direction.
 
-Here is a simple diagram to help visualize this concept:
+Here's a simple diagram to help visualize this concept:
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Live Share canvas viewport visualization":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Screenshot shows the full screen canvas layout for desktop and mobile users together.":::
 
 You can customize this behavior in the following ways:
 
@@ -361,7 +361,7 @@ You can customize this behavior in the following ways:
 - Change the scale level of the viewport.
 
 > [!NOTE]
-> Reference points, offsets, and scale levels are local to the client and are not synchronized across meeting participants.
+> Reference points, offsets, and scale levels are local to the client and aren't synchronized across meeting participants.
 
 Example:
 
@@ -430,7 +430,7 @@ document.getElementById("change-reference").onclick = () => {
 
 ## Ideal scenarios
 
-With web pages coming in all shapes and sizes, it isn't possible to make Live Share canvas to support every scenario. The package is ideal for scenarios in which all users are looking at the same content at the same time. While not all of the content needs to be visible on the screen, it must be content that scales across devices linearly.
+With web pages coming in all shapes and sizes, it isn't possible to make Live Share canvas to support every scenario. The package is ideal for scenarios in which all users are looking at the same content at the same time. While not all the content needs to be visible on the screen, it must be content that scales across devices linearly.
 
 Here are a couple examples of scenarios where Live Share canvas is a great option for your application:
 
