@@ -245,7 +245,7 @@ items:
     * Set `options.command.commands` to include more command handlers
     * Set `options.cardAction.actions` to include more action handlers
     * Set `options.{feature}.enabled` to enable more `ConversationBot` functionality
-`
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
