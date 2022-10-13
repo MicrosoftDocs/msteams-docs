@@ -83,10 +83,7 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your tab or bot.
-
-> [!NOTE]
-> For more information on the full list of customizable options, see [debug settings doc](https://github.com/kuojianlu/TeamsFx-local-debug-transparency-sample/wiki/Debug-Tasks).
+Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://github.com/kuojianlu/TeamsFx-local-debug-transparency-sample/wiki/Debug-Tasks).
 
 ### Customize Scenarios
 
@@ -96,7 +93,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 <summary><b>Skip prerequisite checks</b></summary>
 
-* In `.fx/configs/tasks.json` under `"Validate & install prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you wish to skip.
+In `.fx/configs/tasks.json` under `"Validate & install prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you wish to skip.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="skip the prerequisite checks":::
 
@@ -113,7 +110,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <details>
 <summary><b>Customize npm install args</b></summary>
 
-* In `.fx/configs/tasks.json`, set npmInstallArgs under `"Install npm packages"`.
+In `.fx/configs/tasks.json`, set npmInstallArgs under `"Install npm packages"`.
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
 
@@ -136,7 +133,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 <details>
 <summary><b>Use your own app package</b></summary>
 
-* In `.fx/configs/tasks.json`, set `"appPackagePath"` under `"Build & upload Teams manifest"` to your app package's path.
+In `.fx/configs/tasks.json`, set `"appPackagePath"` under `"Build & upload Teams manifest"` to your app package's path.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="use your own app package path":::
 
