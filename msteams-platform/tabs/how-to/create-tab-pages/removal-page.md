@@ -34,7 +34,7 @@ The optional removal page is an HTML page that you host and is displayed when th
 
 ### Register a remove handler
 
-Optionally, within your removal page logic, you can invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) interface and executes the code in the handler when a user attempts to remove content. The method is used to perform cleanup operations such as removing the underlying resource powering the tab content. At a time only one remove handler can be registered.
+Optionally, within your removal page logic, you can invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) interface and executes the code in the handler when a user attempts to remove content. The method is used to perform clean up operations such as removing the underlying resource powering the tab content. At a time only one, remove handler can be registered.
 
 The `RemoveEvent` interface describes an object with two methods:
 
@@ -61,9 +61,8 @@ The following is a sample tab removal code block:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

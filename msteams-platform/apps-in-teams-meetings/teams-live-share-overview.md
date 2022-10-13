@@ -44,9 +44,9 @@ You can find more information about this package on the [core capabilities page]
 
 ### Live Share media
 
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Live Share video sharing experience":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Screenshot shows an example of Live Share video sharing experience.":::
 
-Video and audio are instrumental parts of the modern world and workplace. Live Share media enables **media synchronization** for any media player with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views, while providing the highest possible quality available through your app. Because Microsoft is not rebroadcasting your media content, your licensing and access requirements are kept intact.
+Video and audio are instrumental parts of the modern world and workplace. Live Share media enables **media synchronization** for any media player with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views, while providing the highest possible quality available through your app. Because Microsoft isn't rebroadcasting your media content, your licensing and access requirements are kept intact.
 
 Features supported by Live Share media include:
 
@@ -62,7 +62,7 @@ You can find more information about this package on the [Live Share media page](
 
 ### Live Share canvas
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Screenshots shows an example of multiple users drawing on a canvas during a meeting.":::
 
 When collaborating in meetings, it's essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration.
 
@@ -90,7 +90,7 @@ Here are some key benefits of the Live Share SDK:
 - Respect meeting privileges using role verification.
 - Free and fully managed service with low latency.
 
-To understand if Live Share is right for your collaborative scenario, it is helpful to understand the differences between Live Share and other collaborative frameworks, including:
+To understand if Live Share is right for your collaborative scenario, it's helpful to understand the differences between Live Share and other collaborative frameworks, including:
 
 - [Web sockets](#web-sockets)
 - [Azure Fluid Relay](#azure-fluid-relay)
@@ -168,7 +168,7 @@ For more information, see the custom Azure Fluid Relay service [how-to guide](./
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | During a marketing review, a user wants to collect feedback on their latest video edit. | User shares the video to the meeting stage and starts the video. As needed, the user pauses the video to discuss the scene and participants draw over parts of the screen to emphasize key points. |
 | A project manager plays Agile Poker with their team during planning.                    | Manager shares an Agile Poker app to the meeting stage that enables playing the planning game until the team has consensus.                                                                        |
-| A financial advisor reviews PDF documents with clients before signing.                  | The financial advisor shares the PDF contract to the meeting stage. All attendees can see each others cursors and highlighted text in the PDF, after which both parties sign the agreement.        |
+| A financial advisor reviews PDF documents with clients before signing.                  | The financial advisor shares the PDF contract to the meeting stage. All attendees can see each other's cursors and highlighted text in the PDF, after which both parties sign the agreement.        |
 
 > [!IMPORTANT]
 > Live Share is licensed under the [Microsoft Live Share SDK License](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE). To use these capabilities in your app, you must first read and agree to these terms.
