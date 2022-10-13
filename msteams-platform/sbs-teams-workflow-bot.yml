@@ -226,6 +226,26 @@ items:
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
     
+    ### Card action handler
+
+    To simplify the development, the TeamsFx SDK provides an adaptive card action handler (`TeamsFxAdaptiveCardActionHandler`) to let you focus only 
+    on the development of business logic to respond to the card action without learning the Bot Framework SDK.
+
+    The following diagram illustrated how to respond to a adaptive card action with TeamsFx SDK:
+  
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="select add to add your workflow bot app":::
+
+    ### Customize the initialization
+
+    The default initialization is located in `bot/src/internal/initialize.js(ts)`.
+
+    You can update the initialization logic to:
+
+    * Set `options.adapter` to use your own `BotFrameworkAdapter`.
+    * Set `options.command.commands` to include more command handlers
+    * Set `options.cardAction.actions` to include more action handlers
+    * Set `options.{feature}.enabled` to enable more `ConversationBot` functionality
+`
 - title: Complete challenge
   durationInMinutes: 1
   content: |
