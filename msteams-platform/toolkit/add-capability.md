@@ -70,7 +70,7 @@ You can add capabilities by the following methods:
   |-----------------------|----------|
   |To add notification bot |`teamsfx add notification`|
   |To add command bot |`teamsfx add command-and-response`|
-  |To add sso-enabled tab |`teamsfx add sso-tab`|
+  |To add SSO-enabled tab |`teamsfx add sso-tab`|
   |To add tab |`teamsfx add tab`|
   |To add bot |`teamsfx add bot`|
   |To add message extension |`teamsfx add message extension`|
@@ -84,7 +84,7 @@ The following table shows the changes that can be seen in the files of your app 
 |Bot, message extension and tab|Includes a **hello world**&nbsp;bot or tab application template into your project.|A frontend bot or tab template code is added into a subfolder with path `yourProjectFolder/bot` or `yourProjectFolder/tab` respectively.|
 | Bot, message extension and tab |Includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
 | Bot and message extension|Includes bot or tab-related information in the manifest file that represents your application in Teams Platform.|File`manifest.template.json` under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are visible in ID of your bot, scopes of your bot, and the commands that hello world bot or tab application can respond to.|
-|Tab|Includes bot or tab-related information in the manifest file that represents your application in Teams Platform.|File`manifest.template.json` under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are visible in configurable and static tabs, and scopes of the tabs.|
+|Tab|Includes bot or tab-related information in the manifest file that represents your application in Teams Platform.|File `manifest.template.json` under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are visible in configurable and static tabs, and scopes of the tabs.|
 |Bot, message extension and tab|Includes bot or tab-related&nbsp;information in the teamsfx and provision files that are for integrating Azure functions.|Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep files are regenerated.|
 |Bot, message extension and tab|Ensures your project is set with right configurations for newly added capability.|Files under `.fx/config` are regenerated|
 

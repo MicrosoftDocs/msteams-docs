@@ -75,7 +75,6 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
   "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-  "packageName": "com.contoso.teamsauthsso",
   "developer": {
     "name": "Microsoft",
     "websiteUrl": "https://www.microsoft.com",

@@ -61,7 +61,7 @@ Azure Function integrates with an array of [cloud services](add-resource.md#type
 
 * When building a web API
 * Processing to database changes
-* Processing Iot data streams
+* Processing IoT data streams
 * Managing message queues
 
 ## See also
