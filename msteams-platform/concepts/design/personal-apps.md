@@ -70,6 +70,9 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 })
 ```
 
+> [!NOTE]
+> The `setNavBarMenu` API doesn't control the **Refresh** button. It appears by default.
+
 :::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="The screenshot is an example that shows the navbar and multiple actions in an overflow menu.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy.":::
