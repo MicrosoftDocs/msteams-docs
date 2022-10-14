@@ -9,85 +9,68 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-You can build Bot, Messaging Extensions, Cards and Task Module solutions in your app to engage with anonymous participants in meeting. You can test the experience delivered to anonymous users by selecting the meeting join URL present in the meeting invite and joining the meeting via private window.
+You can build Bot, Messaging Extensions, Cards and Task Module solutions in your app to engage with anonymous meeting participants.
 
-> [!NOTE]
->
-> * Side panel tabs and content bubbles aren't available for anonymous users at the moment.
-> * Apps shared on stage by regular in-tenant users will render for anonymous users.
+To test your app's experience for anonymous users, select the meeting join URL in the meeting invite and join the meeting from a private browser window.
 
-## Tenant admin setting for anonymous user app interaction
+## Admin setting for anonymous user app interaction
 
-Teams admin can use the admin portal to enable or disable anonymous user app interaction for entire tenant. This setting is enabled by default, unless overridden by the admin. You must enable this to support anonymous user interaction with apps in meetings, [Allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the admin portal to enable or disable anonymous user app interaction for the entire tenant. This setting is enabled by default. For more information, see [Allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## In-Meeting getContext from Teams client SDK
 
-Apps receive the following info pertaining to the anonymous user through the Teams Client SDK `getContext API` when the shared app stage is loaded. Apps can recognize the users as anonymous by the **Unknown** userLicenseType.
+Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of **Unknown**.
 
 ```csharp
 "userObjectId": "8:anon:<<GUID1>>",
 "userLicenseType": "Unknown",
 "loginHint": "8:teamsvisitor:<<ID>>",
 "userPrincipalName": "8:teamsvisitor:<<ID>>",
-"tid": "<<GUID2>>"
+"tid": "<<meeting organizer tenant ID>>"
 ```
 
-| **Property Name** | **Description** |
+| **Property name** | **Description** |
 | --- | --- |
-| `userObjectId` | Currently, invalid value is returned in `userObjectId`, using this value for identifying anonymous user is not advised |
+| `userObjectId` | Unique generated value for the anonymous user. This value cannot be used in calls to Graph APIs. |
 | `userLicenseType` | `Unknown`, represents anonymous user |
-| `loginHint` | Unique ID for anonymous user |
-| `userPrincipalName` | Unique ID for anonymous user |
+| `loginHint` | Unique generated value. This value cannot be used as a hint in login flows. |
+| `userPrincipalName` | Unique generated value. This value cannot be used in calls to Graph APIs. |
 | `tid` | Tenant ID of the meeting organizer |
 
-## Payloads of Bot API for anonymous users in a meeting chat
+Note that the user IDs are generated anew when an anonymous users joins a meeting. If an anonymous user leaves the meeting, then rejoins, the IDs will be different the second time.
 
-Bot APIs make your bot meeting aware. Following are some examples of bot APIs and how they allow you to differentiate between regular and anonymous users:
+## Bot activities and APIs
 
-**Paged Get Members API**
+With a few differences, the activities sent to your bot, and the responses that it receives from bot APIs, are consistent between anonymous and non-anonymous meeting participants. In general:
+* The user ID is a generated value that is different each time the anonymous user joins the meeting.
+* The `aadObjectId` property is omitted.
+* The `userRole` property is set to **anonymous**.
+* The provided tenant ID is set to the tenant ID of the meeting organizer.
 
-```csharp
-{ 
-  "members": [ 
-    { 
-      "id": "<<GUID1>>", 
-      "name": "<<AnonTest (Guest)>>",  
-      "tenantId": "<<GUID2>>", 
-      "userRole": "anonymous" 
-    } 
-  ] 
-} 
-```
+### Get Members and Get Single Member APIs
 
-| **Property Name** | **Description** |
-| --- | --- |
-| `id` | Anonymous user ID |
-| `name` | Provided by anonymous user, when joining meeting |
-| `tenantId` | Tenant ID of the meeting organizer |
-| `userRole` | `anonymous`, represents anonymous user |
+The [Get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-the-roster-or-user-profile) and [Get single member](/microsoftteams/platform/bots/how-to/get-teams-context#get-single-member-details) APIs return limited information for anonymous users:
 
-> [!NOTE]
-> The ID received in bot API payload and Teams Client SDK API are not same.
-
-**Get Single Member API**
-
-```csharp
+```json
 { 
   "id": "<<GUID1>>", 
-  "name": "<<AnonTest (Guest)>>", 
+  "name": "<<AnonTest (Guest)>>",  
   "tenantId": "<<GUID2>>", 
   "userRole": "anonymous" 
 } 
 ```
 
-| **Property Name** | **Description** |
+| **Property name** | **Description** |
 | --- | --- |
-| `id` | Anonymous user ID |
-| `name` | Provided by anonymous user, when joining meeting |
+| `id` | Unique generated value for the anonymous user |
+| `name` | Name provided by the anonymous user when joining the meeting |
 | `tenantId` | Tenant ID of the meeting organizer |
 | `userRole` | `anonymous`, represents anonymous user |
 
-**ConversationUpdate Event – MembersAdded Payload object**
+> [!NOTE]
+> The ID received from the bot APIs and the Teams client SDK API are not the same.
+
+### ConversationUpdate activity MembersAdded and MembersRemoved
 
 ```csharp
 { 
@@ -125,75 +108,23 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
 } 
 ```
 
-| **Property Name** | **Description** |
+| **Property name** | **Description** |
 | --- | --- |
-| `membersAdded`.`id` | Anonymous user ID |
-| `from`.`id` | Meeting organizer ID |
-| `conversation`.`tenantId` | Tenant ID of the meeting organizer |
-| `conversation`.`id` | Conversation ID |
-| `recipient`.`id` | Bot ID |
-| `tenant`.`id` | Tenant ID of the meeting organizer |
+| `membersAdded.id` | Anonymous user ID |
+| `from.id` | Meeting organizer ID |
+| `conversation.tenantId` | Tenant ID of the meeting organizer |
+| `conversation.id` | Conversation ID of the meeting chat |
+| `tenant.id` | Tenant ID of the meeting organizer |
+
+Similar changes apply to the `membersRemoved` activity payload.
 
 > [!NOTE]
 >
-> * When an anonymous user is added to the meeting, `membersAdded` payload object doesn't have `aadObjectId` field.
-> * When an anonymous user is added to the meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.
+> * When an anonymous user joins or leaves a meeting, the `from` object in the payload always has the id of the meeting organizer, even if the action was taken by someone else.
 
-**ConversationUpdate Event – MembersRemoved Payload object**
+### Create Conversation API
 
-```csharp
-{
-  "membersRemoved": [
-    {
-      "id": "<<GUID1>>" 
-    }
-  ],
-  "type": "conversationUpdate",
-  "timestamp": "<<timestamp>>",
-  "id": "<<event unique identifier>>",
-  "channelId": "msteams",
-  "serviceUrl": "<<serviceURL>>",
-  "from": {
-    "id": "<<GUID2>>"
-  },
-  "conversation": {
-    "isGroup": true,
-    "tenantId": "<<tenant id>>",
-    "id": "<<conversation id>>"
-  },
-  "recipient": {
-    "id": "<<bot id>>",
-    "name": "<<bot name>>"
-  },
-  "channelData": {
-    "tenant": {
-      "id": "<<tenant id>>"
-    },
-    "source": null,
-    "meeting": {
-      "id": "<<meeting id>>"
-    }
-  }
-}
-```
-
-| **Property Name** | **Description** |
-| --- | --- |
-| `membersRemoved`.`id` | Anonymous user ID |
-| `from`.`id` | Meeting organizer ID |
-| `conversation`.`tenantId` | Tenant ID of the meeting organizer |
-| `conversation`.`id` | Conversation ID |
-| `recipient`.`id` | Bot ID |
-| `tenant`.`id` | Tenant ID of the meeting organizer |
-
-> [!NOTE]
->
-> * When an anonymous user is removed from a meeting, `membersRemoved` payload object doesn't have `aadObjectId` field.
-> * When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
-
-**Create Conversation API**
-
-Create conversation API is not supported for anonymous users. If a bot attempts to create a conversation with an anonymous user, it will receive a `400` Bad Request status code, with the following payload:
+Bots are not allowed to initiate a 1:1 conversation with an anonymous user. If a bot calls the Create Conversation API with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
 
 ```csharp
 { 
@@ -204,17 +135,19 @@ Create conversation API is not supported for anonymous users. If a bot attempts 
 } 
 ```
 
-**Invoke**
+### Adaptive cards
 
-Anonymous users can interact with Adaptive Cards, which use invoke activities. The payload received by bot on invoke activities for anonymous user is exactly same as the payload received for any user.
+Anonymous users can view and interact with Adaptive Cards in the meeting chat. Adaptive card actions behave the same way for anonymous and non-anonymous users. For more information, see [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
-Anonymous users can interact with Adaptive Cards, which use invoke activities. When an invoke request is sent from anonymous user to the bot, the payload request will not have `imdisplayname`. The `from`.`id` and `from`.`name` fields will include anonymous user details. For more information, see [cards action](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
+## Known issues and limitations
 
-### Adaptive card for anonymous users
+* Side panel tabs and content bubbles aren't available for anonymous users. Anonymous users can still see app content shared to the meeting stage by regular users.
 
-Currently, anonymous users can't see the app icon when the message is sent through a bot app. It displays only generic app icon as following:
+* For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 
-:::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
+* Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon. For example:
+
+    :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
 
 ## See also
 
