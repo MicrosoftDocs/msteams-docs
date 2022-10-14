@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     The Adaptive Card action handler feature enables the app to respond to adaptive card actions triggered by you to complete a sequential workflow.
-    When you get an Adaptive Card, it can provide one or more buttons in the card to ask for your input. You can do something like calling some APIs, and then send another adaptive card in your conversation in response to the card action.
+    When you get an Adaptive Card, it can provide one or more buttons in the card to ask for your input. You can do something like calling API, and then send another adaptive card in your conversation in response to the card action.
 
     In this tutorial, you'll learn:
 
@@ -231,31 +231,10 @@ items:
     To simplify the development, the TeamsFx SDK provides an adaptive card action handler (`TeamsFxAdaptiveCardActionHandler`) to let you focus only 
     on the development of business logic to respond to the card action without learning the Bot Framework SDK.
 
-    The following diagram illustrated how to respond to a adaptive card action with TeamsFx SDK:
+    The following diagram illustrates how to respond to an adaptive card action with TeamsFx SDK:
   
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="select add to add your workflow bot app":::
-
-    ### Customize the initialization
-
-    The default initialization is located in `bot/src/internal/initialize.js(ts)`.
-
-    You can update the initialization logic to:
-
-    * Set `options.adapter` to use your own `BotFrameworkAdapter`.
-    * Set `options.command.commands` to include more command handlers
-    * Set `options.cardAction.actions` to include more action handlers
-    * Set `options.{feature}.enabled` to enable more `ConversationBot` functionality
-
-    To learn more, visit [additional initialization customization](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#customize-initialization).
-
-    ### Customize installation
-    A Teams bot can be installed into a team, or a group chat, or as personal app, depending on difference scopes.
-    You can choose the installation target when adding the App.
-    See [Distribute your Microsoft Teams app](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview)
-    for more install options.
-
-    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-customize installation.png" alt-text="selecting example of customizing installation":::
-
+   
 - title: Complete challenge
   durationInMinutes: 1
   content: |
