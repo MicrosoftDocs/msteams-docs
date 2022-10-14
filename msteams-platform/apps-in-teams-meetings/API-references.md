@@ -694,13 +694,13 @@ The following table provides the response codes:
 
 ## Get app content stage sharing capabilities API
 
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage. The `getAppContentStageSharingCapabilities` API  enables the app to render the share to stage button. If the app has sharing capabilities, then the button appears.
+The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing the app content to meeting stage. Apps need to call the `getAppContentStageSharingCapabilities` API to either enable or disable the custom share to stage button for a meeting participant in the meeting side panel. The share to stage button will not appear if a meeting participant doesn't have permission to share the app content to meeting stage.
 
 The app sharing capabilities depends on the tenant user type and participant roles in a meeting.
 
 * **User type**: In-tenant, guest, and external user type participants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't see, share, or interact with the app that is being shared on the stage. For more information on user types, see [user types in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting)
 
-* **Participant roles**: Presenter and organizer meeting role participants can share the app to stage. Attendee won't have the share to stage button enabled and ability to share the app to stage. For more information on participant roles, see [participant roles in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#participant-roles-in-a-meeting)
+* **Participant roles**: Participants with presenter and organizer meeting roles can share the app to stage. Attendee won't have the share to stage button enabled and ability to share the app to stage. For more information on participant roles, see [participant roles in a meeting.](~/apps-in-teams-meetings/meeting-app-extensibility.md#participant-roles-in-a-meeting)
 
 ### Query parameter
 
@@ -715,7 +715,7 @@ The following table includes the query parameter:
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
     if (result.doesAppHaveSharePermission) {
-        // Indicates app has permission to share contents to meeting stage.
+        // Indicates if the meeting participant has permission to share content to the meeting stage.
     }
 });
 ```
