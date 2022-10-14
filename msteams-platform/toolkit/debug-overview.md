@@ -83,7 +83,7 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://github.com/kuojianlu/TeamsFx-local-debug-transparency-sample/wiki/Debug-Tasks).
+Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://aka.ms/teamsfx-debug-tasks).
 
 ### Customize Scenarios
 
