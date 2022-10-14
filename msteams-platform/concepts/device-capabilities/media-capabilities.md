@@ -15,15 +15,15 @@ For effective integration, you must have a good understanding of [code snippets]
 
 ## Advantages
 
-The main advantage of integrating device capabilities in your Teams apps is it uses native Teams controls to provide a rich and immersive experience to your users. The following scenarios showcase the advantages of media capabilities:
+The advantage of integrating device capabilities into your Teams apps is that it uses native Teams controls to provide a rich and immersive experience for your users. The following scenarios showcase the advantages of media capabilities:
 
-* Allow the user to capture the rough mockups drawn on a physical whiteboard through the cell phone and use the captured images as poll options in Teams group chat.
+* Allow the user to capture the rough mockups drawn on a physical whiteboard through their mobile phone and use the captured images as poll options in Teams group chat.
 
 * Allow the user to record audio message and attach it to an incident ticket.
 
 * Allow the user to scan the physical documents from the smartphone to file a car insurance claim.
 
-* Allow the user to record a video at a worksite and upload for attendance.
+* Allow the user to record a video at a worksite and upload it for attendance.
 
 > [!NOTE]
 >
@@ -64,7 +64,7 @@ The following table lists set of APIs to enable your device's media capabilities
 | API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Camera)**| This API allows users to **capture or select media from the device camera** and return it to the web-app. The users can edit, crop, rotate, annotate, or draw over images before submission. In response to `selectMedia`, the web-app receives the media IDs of selected images and a thumbnail of the selected media. This API can be further configured through the [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) configuration. |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) to `4` (Audio) in `selectMedia` API for accessing microphone capability. This API also allows users to record audio from the device microphone and return recorded clips to the web app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) to `4` (Audio) in `selectMedia` API for accessing microphone capability. This API also allows users to record audio from the device microphone and return recorded clips to the web app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recordings. <br/> Use `maxDuration`, if you need to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
@@ -75,7 +75,6 @@ The following image depicts the web app experience of `selectMedia` API for the 
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile.":::
 
 > [!NOTE]
->
 > In devices with Android version under 7, the `selectMedia` API launches the native Android camera experience instead of the native Teams camera experience.
 
 The following image depicts the web app experience of `selectMedia` API for the microphone capability:
@@ -164,7 +163,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
        `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wants to record video while reading content on the device screen.
 
-       This mode also supports `isStopButtonVisible: true` which adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
+       This mode also supports `isStopButtonVisible: true` that adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
 
        Following is an example to stop the recording with `maxDuration` time specified:
 
@@ -378,6 +377,23 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
         }
     });
     });
+    ```
+
+## File download on Teams mobile
+
+You can configure an app to enable users to download files from the webview to their mobile device.
+
+>[!NOTE]
+> Downloading files is only supported on Android Teams mobile client and only unauthenticated files can be downloaded.
+
+To enable, follow the steps:
+
+1. Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
+
+2. Use the following format and add the HMTL download attribute to the webpage:
+
+    ```html
+    <a href="path_to_file" download="download">Download</a>
     ```
 
 ## See also

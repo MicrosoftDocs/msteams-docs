@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
     
     > [!NOTE]
-    > In this tutorial, you'll create a tab app with Javascript.
+    > In this tutorial, you'll create a tab app with JavaScript.
 
     In this tutorial, you'll learn:
 
@@ -229,7 +229,7 @@ items:
         
         <details>
         <summary>A quick recap of creating a Teams app.</summary>
-        Watch this short recap for creating a Teams app.
+         Watch this short recap for creating a Teams app.
 
         ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
         </details>
