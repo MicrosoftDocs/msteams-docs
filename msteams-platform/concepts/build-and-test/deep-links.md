@@ -338,7 +338,7 @@ The query parameters are:
 
 ### Generate deep links to chat messages
 
-Use this deep link format to go to a message in personal and group chats in Teams:
+Use this deep link format to navigate a user to a message in a personal or group chat in Teams:
 
 `http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
 
@@ -346,14 +346,15 @@ Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f020
 
 The query parameters are:
 
-* `chatId`: ChatId of the conversation. You can get the `chatId` from URL of the chat in Teams web client or using the [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true). The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+* `chatId`: ChatId of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+
+Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
   > [!NOTE]
   > For One-on-One chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
 
-  Apps can read a chat ID through app context in Teams, incoming payload to bot, or through Graph APIs.
+* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
 
-* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageid` is returned. You can also get the `messageid` using the Microsoft Graph APIs. For example, `1563480968434`.
 * `context`: Specify the contextType as chat.
 
 ### Generate deep links to file in channel
