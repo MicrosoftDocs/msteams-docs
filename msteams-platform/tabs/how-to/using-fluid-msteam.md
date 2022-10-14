@@ -153,7 +153,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
 
 1. Open the file `src/client/<your tab name>/<your tab name>Config.tsx` in your code editor.
 
-    The standard Teams tab application flow goes from the configuration to the content page. To enable collaboration, preserving the container while loading into the content page is crucial. To preserve the container, you can append the container ID onto the `contentUrl` and `websiteUrl`, the URLs of the content page, as a query parameter. Save button in the Teams configuration page is the gateway between the configuration page and the content page. It's a place to create the container and append the container ID in the settings.
+    The standard Teams tab application flow goes from the configuration to the content page. To enable collaboration, persisting the container while loading into the content page is crucial. The best solution to persist the container is to append the container ID onto the `contentUrl` and `websiteUrl`, the URLs of the content page, as a query parameter. Save button in the Teams configuration page is the gateway between the configuration page and the content page. It's a place to create the container and append the container ID in the settings.
 
 1. Add the following import statement:
 
