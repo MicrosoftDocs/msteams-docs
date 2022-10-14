@@ -120,7 +120,7 @@ Similar changes apply to the `membersRemoved` activity payload.
 
 > [!NOTE]
 >
-> * When an anonymous user joins or leaves a meeting, the `from` object in the payload always has the id of the meeting organizer, even if the action was taken by someone else.
+> When an anonymous user joins or leaves a meeting, the `from` object in the payload always has the id of the meeting organizer, even if the action was taken by someone else.
 
 ### Create Conversation API
 
