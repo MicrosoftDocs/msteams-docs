@@ -210,7 +210,7 @@ Anonymous users can interact with Adaptive Cards, which use invoke activities. T
 
 Anonymous users can interact with Adaptive Cards, which use invoke activities. When an invoke request is sent from anonymous user to the bot, the payload request will not have `imdisplayname`. The `from`.`id` and `from`.`name` fields will include anonymous user details. For more information, see [cards action](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
-## Adaptive card for anonymous users
+### Adaptive card for anonymous users
 
 Currently, anonymous users can't see the app icon when the message is sent through a bot app. It displays only generic app icon as following:
 
