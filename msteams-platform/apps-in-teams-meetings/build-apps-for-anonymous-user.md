@@ -34,8 +34,8 @@ Apps receive the following info pertaining to the anonymous user through the Tea
 
 | **Property Name** | **Description** |
 | --- | --- |
-| `userObjectId` | Currently `userObjectId` is invalid value and it is not supported for anonymous user |
-| `userLicenseType` | `Unknown` value represent anonymous user |
+| `userObjectId` | Currently, invalid value is returned in `userObjectId`, using this value for identifying anonymous user is not advised |
+| `userLicenseType` | `Unknown`, represents anonymous user |
 | `loginHint` | Unique ID for anonymous user |
 | `userPrincipalName` | Unique ID for anonymous user |
 | `tid` | Tenant ID of the meeting organizer |
@@ -67,7 +67,7 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
 | `userRole` | `anonymous`, represents anonymous user |
 
 > [!NOTE]
-> The ID returned in bot API payload and Teams Client SDK are not same.
+> The ID received in bot API payload and Teams Client SDK API are not same.
 
 **Get Single Member API**
 
@@ -127,12 +127,12 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
 
 | **Property Name** | **Description** |
 | --- | --- |
-| `id` under `membersAdded` | Anonymous user ID |
-| `id` under `from` | Meeting organizer ID |
-| `tenantId` | Tenant ID of the meeting organizer |
-| `id` under `conversation` | Conversation ID |
-| `id` under `recipient` | Bot ID |
-| `id` under `tenant` | Tenant ID of the meeting organizer |
+| `membersAdded`.`id` | Anonymous user ID |
+| `from`.`id` | Meeting organizer ID |
+| `conversation`.`tenantId` | Tenant ID of the meeting organizer |
+| `conversation`.`id` | Conversation ID |
+| `recipient`.`id` | Bot ID |
+| `tenant`.`id` | Tenant ID of the meeting organizer |
 
 > [!NOTE]
 >
@@ -179,12 +179,12 @@ Bot APIs make your bot meeting aware. Following are some examples of bot APIs an
 
 | **Property Name** | **Description** |
 | --- | --- |
-| `id` under `membersRemoved` | Anonymous user ID |
-| `id` under `from` | Meeting organizer ID |
-| `tenantId` | Tenant ID of the meeting organizer |
-| `id` under `conversation` | Conversation ID |
-| `id` under `recipient` | Bot ID |
-| `id` under `tenant` | Tenant ID of the meeting organizer |
+| `membersRemoved`.`id` | Anonymous user ID |
+| `from`.`id` | Meeting organizer ID |
+| `conversation`.`tenantId` | Tenant ID of the meeting organizer |
+| `conversation`.`id` | Conversation ID |
+| `recipient`.`id` | Bot ID |
+| `tenant`.`id` | Tenant ID of the meeting organizer |
 
 > [!NOTE]
 >
@@ -206,9 +206,9 @@ Create conversation API is not supported for anonymous users. If a bot attempts 
 
 **Invoke**
 
-Anonymous users can interact with Adaptive Cards, which use invoke activities. When an invoke request is sent from anonymous user to the bot, the payload request will not have `imdisplayname`.
+Anonymous users can interact with Adaptive Cards, which use invoke activities. The payload received by bot on invoke activities for anonymous user is exactly same as the payload received for any user.
 
-For more information on [invoke activities with Adaptive card](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
+Anonymous users can interact with Adaptive Cards, which use invoke activities. When an invoke request is sent from anonymous user to the bot, the payload request will not have `imdisplayname`. The `from`.`id` and `from`.`name` fields will include anonymous user details. For more information, see [cards action](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
 ## Adaptive card for anonymous users
 
@@ -220,3 +220,4 @@ Currently, anonymous users can't see the app icon when the message is sent throu
 
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
+* [How Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp)
