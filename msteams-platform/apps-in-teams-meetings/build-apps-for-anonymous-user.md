@@ -220,4 +220,4 @@ Currently, anonymous users can't see the app icon when the message is sent throu
 
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
-* [How Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp)
+* [How Microsoft Teams bots work](https://learn.microsoft.com/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp)
