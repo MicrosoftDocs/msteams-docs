@@ -21,7 +21,7 @@ Teams Toolkit in Visual Studio Code gives you the features to automate debugging
 
 > [!NOTE]
 >
-> * You can upgrade your old Teams Toolkit project to use new tasks, for more information see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
+> You can upgrade your old Teams Toolkit project to use new tasks, for more information see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
 
 ## Set up your Teams Toolkit for debugging
 
