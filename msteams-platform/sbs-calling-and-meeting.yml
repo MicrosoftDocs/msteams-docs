@@ -153,7 +153,7 @@ items:
         * `OnlineMeetings.ReadWrite.All`
     1. Select **Add permissions**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/add-api-permissions_1.png" alt-text="Screenshot showing the add API permissions.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/api-permissions_1.png" alt-text="Screenshot showing the add API permissions.":::
 
     **Create bot channel registration in Azure account**
 
