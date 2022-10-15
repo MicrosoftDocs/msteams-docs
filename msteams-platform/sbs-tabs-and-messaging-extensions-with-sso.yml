@@ -36,7 +36,7 @@ items:
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -426,7 +426,7 @@ items:
           :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="App ready.":::
 
         
-    # [Command line](#tab/cli)
+    # [command line](#tab/cli)
 
     Go to the **csharp** folder in a Command Prompt window and enter the following command:
 
@@ -487,7 +487,7 @@ items:
              
       1. Select your new SSO application.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso_1" alt-text="SSO app.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso_1.png" alt-text="SSO app.":::
 
       1. Select **sign in**.
 
