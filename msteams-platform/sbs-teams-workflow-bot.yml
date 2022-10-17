@@ -226,12 +226,7 @@ items:
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
     
-    ### Card action handler
-
-    To simplify the development, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`) to let you focus only 
-    on the development of business logic to respond to the card action without learning the Bot Framework SDK.
-
-    The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
+      The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
   
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="select add to add your workflow bot app":::
    
