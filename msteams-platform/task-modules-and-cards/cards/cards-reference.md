@@ -530,7 +530,7 @@ The following table provides the properties of a hero card:
 
 :::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
 
-The following code shows an example of a hero card
+The following code shows an example of a hero card:
 
 ```json
 {
