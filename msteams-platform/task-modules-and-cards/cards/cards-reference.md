@@ -267,9 +267,9 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
-## Adaptive Card loop
+## Adaptive Card loop component
 
-Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/en-us/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) - like a table, task list, or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/en-us/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
+Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/en-us/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) - like a table, task list, Adaptive Card or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/en-us/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
 
 Adaptive Card with loop component has actionable content and enable users to make quick updates without switching context. Changes made in the loop component stays in sync when its shared across Teams.
 
@@ -471,6 +471,10 @@ The following code shows an example of an Adaptive Card loop with `metadata` `we
   }
 }
 ```
+
+Example of Adaptive Card loop component:
+
+:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component":::
 
 #### Additional information on Adaptive Cards
 
