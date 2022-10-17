@@ -23,13 +23,13 @@ items:
 
     This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. You'll see the following output:
        
-      ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
+      :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="output.":::
     
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment
+    Ensure you install the following tools and set up your development environment:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
@@ -51,7 +51,8 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/sbs-messagingextension-action/botbuilder-sample.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/botbuilder-sample.png" alt-text="Clone repository.":::
+
 
     1. Select **Clone**. 
 
@@ -74,14 +75,14 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+         :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list. 
     
-        ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/create-azurebot.png) 
+        ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/create-azurebot_1.png) 
     
        To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
        For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
