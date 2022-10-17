@@ -79,69 +79,70 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** from the dropdown list.
-    1. Select your **Resource group** from the dropdown list. 
+    1. Select your **Subscription** and **Resource group** from the respective dropdown list.
+        
+         :::image type="content" source="./assets/images/sbs-messagingextension-action/create-azurebot_1.png" alt-text="Select resource Azure bot.":::
     
-        ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/create-azurebot_1.png) 
+       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
-       For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+    1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
+
+        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
        
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
-     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+    
+       You can also select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **MultiTenant** under **Bot Type**.
-
-        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
-        ![Create Microsoft App ID](~/assets/images/sbs-messagingextension-action/review-create.png)
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
 
-    1. If the validation passes, select **Create**. 
+    1. Once the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/sbs-messagingextension-action/resource-file.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot_1.png" alt-text="Azure bot resource created.":::
+   
+        Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
-        Your Azure bot is created.
-
-        ![Azure bot resource created](assets/images/sbs-messagingextension-action/created-azure-bot.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot_2.png" alt-text="Azure bot resource created2.":::
 
     **To create client secret**
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
+       :::image type="content" source="~/assets/images/bs-messagingextension-action/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/sbs-messagingextension-action/adding-client-secret.png)
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
     
        The **Add a client secret** window appears.  
 
-    1. Enter **Description**.
+    1. Enter **Description** to the client secret.
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/sbs-messagingextension-action/add-a-clientsecret.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-a-clientsecret_1.png" alt-text="Add client secret to app.":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/sbs-messagingextension-action/client-secret.png)
+         :::image type="content" source="./assets/images/sbs-messagingextension-action/client-secret_1.png" alt-text="Value of client secret.":::
+
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -150,7 +151,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/sbs-messagingextension-action/select-home.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/select-home_1.png" alt-text="Home page.":::
 
     1. Select your bot from **Recent resources**.
 
@@ -162,11 +163,12 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/sbs-messagingextension-action/agree.png)
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
 
-    1. Select **Save**.
+    1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/sbs-messagingextension-action/configure-msteams.png)   
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/apply.png" alt-text="Screenshot showing the selection of Teams.":::
+
     
     **To create tunnel for local web server**
 
@@ -183,17 +185,17 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-messagingextension-action/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
+    1. In **Settings**, select **Configuration**.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![App URI](~/assets/images/sbs-messagingextension-action/appuri.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/appuri_1.png" alt-text="appuri."::
 
     1. Select **Apply**.
 
@@ -211,24 +213,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/sbs-messagingextension-action/app.-registerations.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/app-registerations_1.png" alt-text="App registration.":::
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/sbs-messagingextension-action/set-exposeanapi.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/set-exposeanapi_1.png" alt-text="Expose an API.":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/sbs-messagingextension-action/set-link.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/set-link_1.png" alt-text="set link.":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://2bb1****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![Expose](~/assets/images/sbs-messagingextension-action/exposeanapi.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/exposeanapi_1.png" alt-text="Expose.":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -236,8 +238,8 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/sbs-messagingextension-action/addascope.png)
-    
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope":::
+
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
@@ -256,49 +258,46 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/sbs-messagingextension-action/addascopeuser.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/addascopeuser_1.png" alt-text="Add a scope.":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://2bb1****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/sbs-messagingextension-action/scopes.png) 
+        ![Scopes](~/assets/images/sbs-messagingextension-action/scopes_1.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/sbs-messagingextension-action/clientapps.png) 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp_1.png" alt-text="Screenshot showing the selection of client application.":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/sbs-messagingextension-action/addclientapplication1.png) 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot showing addition of client application":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/sbs-messagingextension-action/addclientapplication2.png) 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of adding client ID.":::
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/sbs-messagingextension-action/authorizedscope.png) 
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/authorizedscope_1.png" alt-text="Add client application 2.":::
 
        The following image displays the client IDs:
 
-        ![Client applications](~/assets/images/sbs-messagingextension-action/clientapp.png) 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot showing the client app."::: 
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+    1. Select **Microsoft Graph** > **Delegated permissions**. 
 
-
-    1. Select **Microsoft Graph**.
-
-    1. Select **Delegated permissions**.
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/add-permission_1.png" alt-text="Add permission.":::
 
     1. Add the following permissions:</br>
          * **email**
@@ -309,9 +308,9 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/sbs-messagingextension-action/other-permissions.png)
+         :::image type="content" source="./assets/images/sbs-messagingextension-action/other-permissions.png" alt-text="other permissions.":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -319,7 +318,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/sbs-messagingextension-action/web.png)
+            :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://2bb1****.ngrok.io/auth-end`. </br>
@@ -330,7 +329,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/sbs-messagingextension-action/authend.png)
+            :::image type="content" source="./assets/images/sbs-messagingextension-action/authend_1.png" alt-text="auth end.":::
 
 
 - title: Set up app settings and manifest files
@@ -338,7 +337,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/sbs-messagingextension-action/appsettingslocation.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation_1.png" alt-text="location.":::
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
@@ -348,18 +347,19 @@ items:
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        ![App settings](~/assets/images/sbs-messagingextension-action/json-file.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
 
     1. Go to `manifest.json` in cloned repository.
 
-        ![Manifest file location](~/assets/images/sbs-messagingextension-action/manifestlocation.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest location.png" alt-text="manifest location.":::
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/sbs-messagingextension-action/botid1.png)
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest_1.png" alt-text="manifest file.":::
+
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -371,21 +371,21 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
+          :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile_1.png" alt-text="open file.":::
 
        1. Select **TeamsMessagingExtensionsAction.csproj** file from **csharp_dotnet** folder.
 
-          ![Solution File](~/assets/images/sbs-messagingextension-action/openproject.png)
+          :::image type="content" source="./assets/images/sbs-messagingextension-action/openproject_1.png" alt-text="open project.":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/sbs-messagingextension-action/certificate.png)
+          :::image type="content" source="./assets/images/sbs-messagingextension-action/certificate_1.png" alt-text="certificate.":::
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/sbs-messagingextension-action/appisready.png) 
+          :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="App ready."::: 
 
         
     # [Command line](#tab/cli)
@@ -408,25 +408,29 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/sbs-messagingextension-action/zipfile.png) 
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore_1.png" alt-text="Zip file":::
 
     1. Go to **Microsoft Teams**.
     
     1. Select **Apps**.
 
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore_1.png" alt-text="Zip file":::
+   
     1. Select **Manage your apps**.
+
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
     
     1. Select **Upload a custom app**.
    
-       ![Upload](~/assets/images/sbs-messagingextension-action/uploadacustomapp1.png)
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp_1.png" alt-text="Upload custom app":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/sbs-messagingextension-action/openzipfile.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile_1.png" alt-text="select zip.":::
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/sbs-messagingextension-action/add.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add_1.png" alt-text="Add the app.":::
     
                     
 - title: Interact with the app in Teams
@@ -434,7 +438,7 @@ items:
   content: |
     1. Select **Create Card** command from the compose box command list.
 
-       ![card](~/assets/images/sbs-messagingextension-action/create-card.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="create card.":::
 
     1. Enter your information in the modal pop-up.
 
@@ -442,19 +446,18 @@ items:
 
     1. Select **Submit**.
 
-       ![submit](~/assets/images/sbs-messagingextension-action/submit.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="information.":::
 
-    1. Select (...) from the overflow menu.
+    1. Right-click the card.
        
-    1. Go to **More actions**.
+    1. Go to **More actions** > **Share Message**.
 
-    1. Select **Share Message**.
-
-       ![Share card](~/assets/images/sbs-messagingextension-action/sharemessage.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Share card.":::
 
     1. Select the checkbox if you need to include image and submit.
 
-       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Share output.":::
+
 
 - title: Complete challenge
   durationInMinutes: 1
