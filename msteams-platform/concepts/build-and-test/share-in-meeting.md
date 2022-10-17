@@ -59,19 +59,21 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 1. Add the `launcher.js` script on your webpage.
 
    ```html
-   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
    ```
 
-2. Create an HTML element and specify the required attributes.
+2. Create an HTML element and specify the required attributes. Ensure that rendering logic is executed after launcher script has been fully loaded. 
 
    ```javascript
-   const shareInMeetingButton = document.createElement("div");
-   shareInMeetingButton.setAttribute("data-app-id", "<app-id>");
-   shareInMeetingButton.textContent = "Share Test App"
-   shareInMeetingButton.setAttribute("data-href", "<app-content-url>");
-   shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
-   shareInMeetingButton.setAttribute("data-locale", "fr-CA");
-   shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});   
+   async function onLoadComplete() {
+      const shareInMeetingButton = document.createElement("div");
+      shareInMeetingButton.setAttribute("data-app-id", "<app-id>");
+      shareInMeetingButton.textContent = "Share Test App"
+      shareInMeetingButton.setAttribute("data-href", "<app-content-url>");
+      shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
+      shareInMeetingButton.setAttribute("data-locale", "fr-CA");
+      await window.shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
+   }   
    ```
 
 ### Method 3
@@ -81,19 +83,21 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 1. Add the `launcher.js` script on your webpage.
 
    ```html
-   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
    ```
 
-2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute.
+2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute. Ensure that onclick logic is created after launcher script has been fully loaded.
 
    ```javascript
-   var customShareInMeetingButton = document.createElement("a");
-   customShareInMeetingButton.onclick = shareToMicrosoftTeams.shareInMeetingClickHandler({
-   url: "<app-content-url>",
-   appId: "<app-id>",
-   entityName: "<app-entity-name>",
-   entityDescription: "<app-content-description>",
-   });   
+   async function onLoadComplete() {
+      var customShareInMeetingButton = document.createElement("a");
+      customShareInMeetingButton.onclick = window.shareToMicrosoftTeams.shareInMeetingClickHandler({
+      url: "<app-content-url>",
+      appId: "<app-id>",
+      entityName: "<app-entity-name>",
+      entityDescription: "<app-content-description>",
+      });   
+   }
    ```
 
 ### Full launcher.js definition
