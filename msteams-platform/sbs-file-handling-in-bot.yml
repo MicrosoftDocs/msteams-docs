@@ -18,9 +18,9 @@ items:
    
    **Key features of uploading file in Teams using bot** 
    
-     * Upload files to Teams using a bot.
+     * upload files to Teams using a bot.
      * Receive a file sent to bot as an attachment.
-     * Fetch inline images sent in message.
+     * fetch inline images sent in message.
 
    This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
@@ -31,12 +31,12 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment: 
 
-     | &nbsp; | Install | For using... |
+     | &nbsp; | install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
+     | **required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Visual studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | you can install the enterprise version in visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | customized bindings for local debugging and Azure functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
       > [!NOTE]
@@ -47,7 +47,7 @@ items:
   content: |  
 
     1. Open [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples).
-    1. Select **Code**.
+    1. Select **code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample_1.png" alt-text="Screenshot showing the cloning of repository":::
@@ -59,7 +59,7 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal:
     
-    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create Azure bot resource to register bot with Azure bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
