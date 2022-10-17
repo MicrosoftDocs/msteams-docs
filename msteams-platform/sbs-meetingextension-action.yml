@@ -125,7 +125,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/bs-messagingextension-action/manage-bot-label.png" alt-text="manage":::
+       :::image type="content" source="~/assets/images/sbs-messagingextension-action/manage-bot-label.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -195,7 +195,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/appuri_1.png" alt-text="appuri."::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/appuri_1.png" alt-text="App uri.":::
 
     1. Select **Apply**.
 
