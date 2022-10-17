@@ -442,7 +442,7 @@ items:
 
     1. Enter your information in the modal pop-up.
 
-       ![information](~/assets/images/sbs-messagingextension-action/output-card.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="information.":::
 
     1. Select **Submit**.
 
@@ -456,7 +456,7 @@ items:
 
     1. Select the checkbox if you need to include image and submit.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Share output.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Submit output.":::
 
 
 - title: Complete challenge
