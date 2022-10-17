@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, log in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, Office 365 Connector, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -63,7 +63,7 @@ You can identify and use different types of cards based on your application requ
 | Thumbnail card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
 | List card | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
 | Receipt card | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
-| Log in card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Sign in card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 >
@@ -267,9 +267,11 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
-### Adaptive Card loop
+## Adaptive Card loop
 
-Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. You can change an Adaptive Card to a loop component, which has actionable content and enable users to make quick updates without switching context. Changes made in the loop component stays in sync when its shared across Teams.
+Adaptive Card loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/en-us/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) - like a table, task list, or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/en-us/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
+
+Adaptive Card with loop component has actionable content and enable users to make quick updates without switching context. Changes made in the loop component stays in sync when its shared across Teams.
 
 > [!NOTE]
 > Adaptive Card loop component is available from version 1.6.
