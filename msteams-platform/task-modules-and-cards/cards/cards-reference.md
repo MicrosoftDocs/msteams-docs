@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, Office 365 Connector, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of it's own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -49,7 +49,7 @@ You can identify and use different types of cards based on your application requ
 | [List card](#list-card) | This card contains a scrolling list of items. |
 | [Office 365 Connector card](#office-365-connector-card) | This card has a flexible layout with multiple sections, fields, images, and actions. |
 | [Receipt card](#receipt-card) | This card provides a receipt to the user. |
-| [Signin card](#signin-card) | This card enables a bot to request that a user signs in. |
+| [Sign in card](#sign-in-card) | This card enables a bot to request that a user signs in. |
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
 
@@ -269,18 +269,18 @@ The following code shows an example of an Adaptive Card:
 
 ## Adaptive Card Loop component
 
-Adaptive Card Loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/en-us/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) like a table, task list, Adaptive Card or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/en-us/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
+Adaptive Card Loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) like a table, task list, Adaptive Card, or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
 
-Adaptive Card with loop component has actionable content and enable users to make quick updates without switching context. Changes made in the loop component stays in sync when its shared across Teams.
+Adaptive Card with loop component has actionable content and enable users to make quick updates without switching context. Any changes made in the loop component are synced across the Teams where the loop component is shared.
 
 Following is an example of an Adaptive Card with loop component:
 
 :::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component":::
 
 > [!NOTE]
-> Adaptive Card loop component is available from version 1.6.
+> Adaptive Card loop component is available from Adaptive Card version 1.6.
 
-To enable an Adaptive Card with loop component, you need to add the `metadata` `webUrl` to the Adaptive Card schema. If you want your bot to post an Adaptive Card with loop component, add the `metadata` `webUrl` to the card payload.
+To enable an Adaptive Card with loop component, add the `webUrl` of the `metadata` to the Adaptive Card schema. If you want your bot to post an Adaptive Card with loop component, add the `webUrl` of `metadata` to the card payload.
 
 The following code shows an example of an Adaptive Card loop with `metadata` `webUrl`:
 
@@ -586,7 +586,7 @@ The following table provides the properties of a list card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines.|
 | items | Array of list items | Set of items applicable to the card.|
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
@@ -679,7 +679,7 @@ The important difference between using connector cards from a connector and usin
 | --- | --- |
 | The endpoint receives the card payload through HTTP POST. | The `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.|
 
-Each connector card can display a maximum of ten sections, and each section can contain a maximum of five images and five actions.
+Each connector card can display a maximum of 10 sections, and each section can contain a maximum of five images and five actions.
 
 > [!NOTE]
 > Any additional sections, images, or actions in a message do not appear.
@@ -693,7 +693,7 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 | Value | Description |
 | --- | --- |
 | `avatar` | Default, `activityImage` is cropped as a circle. |
-| `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
+| `article` | `activityImage` is displayed as a rectangle and retains it's aspect ratio. |
 
 For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams doesn't currently support are as follows:
 
@@ -840,9 +840,9 @@ Bot Framework reference:
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## Signin card
+## Sign in card
 
-The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
+The sign in card in Teams is similar to the sign in card in the Bot Framework except that the sign in card in Teams only supports two actions `signin` and `openUrl`.
 
 The log in action can be used from any card in Teams, not just the log in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -854,7 +854,7 @@ The following table provides the features that support sign in cards:
 | --- | --- | --- | ---  |
 | ✔️ | ❌ | ❌ | ✔️ |
 
-### Additional information on signin cards
+### Additional information on sign in cards
 
 Bot Framework reference:
 
@@ -881,8 +881,8 @@ The following table provides the properties of a thumbnail card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines.|
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines.|
+| subtitle | Rich text | Subtitle of the card. Maximum two lines.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Array of images | Image displayed at the top of the card. Aspect ratio 1:1 square. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
@@ -957,7 +957,7 @@ The following table provides the features that support carousel collections:
 | ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
-> A carousel can display a maximum of ten cards per message.
+> A carousel can display a maximum of 10 cards per message.
 
 #### Properties of a carousel card
 
@@ -1156,7 +1156,7 @@ The following table provides the features that support list collections:
 
 Properties of list collections are same as the hero or thumbnail cards.
 
-A list can display a maximum of ten cards per message.
+A list can display a maximum of 10 cards per message.
 
 > [!NOTE]
 > Some combinations of list cards are not yet supported on iOS and Android.
