@@ -212,7 +212,7 @@ items:
 - title: Interaction with the workflow bot
   durationInMinutes: 2
   content: |
-    You can interact with the bot in Teams by sending a helloWorld command. After running this template you get a response as below:
+    You can interact with the bot in Teams by sending a helloWorld command. After running this template, you get a response as below:
     
     Select the **workflow bot** and **Enter**.
 
