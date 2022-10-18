@@ -79,8 +79,8 @@ items:
       1. In **Supported account types**, select the accounts you would like your application to support.
       1. In **Redirect URI (optional)**, select the type of app **Web or Public client (mobile & desktop)**, and then enter the redirect URI for your application.
 
-        > [!NOTE]
-        > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
+      > [!NOTE]
+      > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
 
     1. Select **Register**.
 
@@ -210,7 +210,7 @@ items:
     1. Select the checkbox to accept the **Terms of service**
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
+        :::image type="content" source="~/assets/images/calls-and-meetings/terms.png" alt-text="Terms of service":::
    
     1. Select **Apply**.
     1. Select **Microsoft Teams** and select **Calling** tab on Teams channel page.
