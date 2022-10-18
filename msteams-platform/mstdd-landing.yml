@@ -59,13 +59,13 @@ landingContent:
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
       - text: Generate a deep link to share content to stage in meetings
-        url: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
       - text: Manage SaaS licenses for third party apps in Teams
         url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
       - text: Update Apple App Store Connect Team ID on Partner Center
         url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
-        url: apps-in-teams-meetings/meeting-app-extensibility.md
+        url: apps-in-teams-meetings/teams-apps-in-meetings.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Collaboration controls [Developer preview]
@@ -135,8 +135,8 @@ landingContent:
         url: ~/concepts/design/design-teams-app-overview.md
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-      - text: Unified meetings apps
-        url:  ~/apps-in-teams-meetings/meeting-app-extensibility.md
+      - text: Build apps for Teams meeting stage
+        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
     - linkListType: whats-new
       links:
       - text: What's new
