@@ -229,7 +229,7 @@ The response with the token is sent through an invoke activity with the same sch
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
-> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token.
+> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 Use the following code snippet example to invoke response:
 
@@ -356,7 +356,14 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ### Validate the access token
 
-Web APIs on your server must decode the access token, and verify if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.
+Web APIs on your server must decode the access token, and verify if it's sent from the client. 
+
+> [!NOTE]
+> If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines in this section.
+
+For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens)
+
+<!--The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.-->
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
