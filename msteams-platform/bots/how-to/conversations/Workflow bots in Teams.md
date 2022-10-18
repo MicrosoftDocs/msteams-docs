@@ -132,24 +132,25 @@ Add handler to implement `TeamsFxAdaptiveCardActionHandler` to process the logic
 * The `actionData` is the data associated with the action, which may include dynamic user input or some contextual data provided in the data property of your action.
 * If an Adaptive Card is returned, then the existing card will be replaced with it by default.
 
-```
-import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
-import { TurnContext, InvokeResponse } from "botbuilder";
-import { TeamsFxAdaptiveCardActionHandler, InvokeResponseFactory } from "@microsoft/teamsfx";
-import responseCard from "../adaptiveCards/responseCard.json";
+    ```
+   import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+   import { TurnContext, InvokeResponse } from "botbuilder";
+   import { TeamsFxAdaptiveCardActionHandler, InvokeResponseFactory } from "@microsoft/teamsfx";
+   import responseCard from "../adaptiveCards/responseCard.json";
 
-export class Handler1 implements TeamsFxAdaptiveCardActionHandler { 
-    triggerVerb = "doStuff";
+   export class Handler1 implements TeamsFxAdaptiveCardActionHandler { 
+       triggerVerb = "doStuff";
 
-    async handleActionInvoked(context: TurnContext, actionData: any): Promise<InvokeResponse> { 
+       async handleActionInvoked(context: TurnContext, actionData: any): Promise<InvokeResponse> { 
         const responseCardJson = AdaptiveCards.declare(responseCard).render(actionData);
         return InvokeResponseFactory.adaptiveCard(responseCardJson);
-    } 
-}
-```
+    }
 
-> [!NOTE]
-> You can follow this section to customize the card action handler according to your business need.
+}
+    ```
+
+   > [!NOTE]
+   > You can follow this section to customize the card action handler according to your business need.
 
 ### Step 4: Register the action handler
 
@@ -158,20 +159,20 @@ To register the action handler, follow the steps below:
 1. Go to bot/src/internal/initialize.js(ts);
 1. Update your conversationBot initialization to enable cardAction feature and add the handler to actions array:
 
-```
-export const conversationBot = new ConversationBot({ 
-  ... 
-  cardAction: { 
-    enabled: true, 
-    actions: [ 
-      new Handler1() 
-    ], 
-  } 
-});
-```
+   ```
+   export const conversationBot = new ConversationBot({
+     ...
+     cardAction: {
+       enabled: true,
+       actions: [
+         new Handler1()
+       ],
+     }
+   });
+   ```
 
-> [!NOTE]
-> For more code snippets and details, see [Respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
+   > [!NOTE]
+   > For more code snippets and details, see [Respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
 
 ## Customize the action response
 
@@ -186,4 +187,36 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
 
 1. `AdaptiveCardResponse.NewForAll`: The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card.
+
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
+
+### Response with text message
+
+You can also respond with text messages instead of using adaptive card for card action response, using `InvokeResponseFactory.textMessage`:
+
+```
+async handleActionInvoked(context: TurnContext, actionData: any): Promise<InvokeResponse> {
+    return InvokeResponseFactory.textMessage("This is a sample card action response!");
+}
+```
+
+You will see the below response message in Teams:
+
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sample-card-action-response.png" alt-text="sample card response displayed":::
+
+### Response with error messages
+
+When you want to return error response message to the client, then you can leverage the `InvokeResponseFactory.errorResponse` to build your invoke response, for example:
+
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed":::
+
+> [!NOTE]
+> For more details about the invoke response format, see [Response format](/adaptive-cards/authoring-cards/universal-action-model).
+
+### Customize the adaptive card content
+
+You can edit the file `src/adaptiveCards/helloworldCommand.json` to customize the Adaptive Card to your preference. The file `src/cardModels.ts` defines a data structure that is used to fill data for the Adaptive Card.
+
+The binding between the model and the Adaptive Card is done by name matching (for example,CardData.title maps to `${title}` in the Adaptive Card). You can add, edit, or remove properties and their bindings to customize the Adaptive Card to your needs.
+
+You can also add new cards if appropriate for your application. How to build different types of adaptive cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
