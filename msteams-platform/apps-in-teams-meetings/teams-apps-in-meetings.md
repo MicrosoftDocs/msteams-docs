@@ -37,8 +37,6 @@ Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeti
 >   * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
 >   * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
 
-Users can add apps to the meeting using the **+** option from their Teams meeting window.
-
 ## Meeting lifecycle
 
 A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the user type and user's role in a Teams meeting.
