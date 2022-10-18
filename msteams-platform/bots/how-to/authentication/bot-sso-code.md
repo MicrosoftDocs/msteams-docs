@@ -237,7 +237,7 @@ The response with the token is sent through an invoke activity with the same sch
 
 Use the following code snippet to invoke response:
 
-# [csharp](#tab/csharp)
+# [csharp](#tab/cs3)
 
 ```csharp
 private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
@@ -262,7 +262,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
         }
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/js3)
 
 ```JavaScript
 async loginStep(stepContext) {
@@ -335,9 +335,11 @@ The following is a typical decoded payload of an access token.
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
+# [csharp](#tab/cs4)
+
 ```csharp
-private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
-CancellationToken cancellationToken = default(CancellationToken))
+    private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
+    CancellationToken cancellationToken = default(CancellationToken))
         {
             if (innerDc.Context.Activity.Type == ActivityTypes.Message)
             {
@@ -349,11 +351,11 @@ CancellationToken cancellationToken = default(CancellationToken))
                     // The UserTokenClient encapsulates the authentication processes.
                     var userTokenClient = innerDc.Context.TurnState.Get<UserTokenClient>();
                     await userTokenClient.SignOutUserAsync(
-innerDc.Context.Activity.From.Id, 
-ConnectionName, 
-innerDc.Context.Activity.ChannelId, 
-cancellationToken
-).ConfigureAwait(false);
+    innerDc.Context.Activity.From.Id, 
+    ConnectionName, 
+    innerDc.Context.Activity.ChannelId, 
+    cancellationToken
+    ).ConfigureAwait(false);
 
                     await innerDc.Context.SendActivityAsync(MessageFactory.Text("You have been signed out."), cancellationToken);
                     return await innerDc.CancelAllDialogsAsync(cancellationToken);
@@ -363,6 +365,27 @@ cancellationToken
             return null;
         }
 ```
+
+# [JavaScript](#tab/js4)
+
+```JavaScript
+    async interrupt(innerDc) {
+        if (innerDc.context.activity.type === ActivityTypes.Message) {
+            const text = innerDc.context.activity.text.toLowerCase();
+            if (text === 'logout') {
+                const userTokenClient = innerDc.context.turnState.get(innerDc.context.adapter.UserTokenClientKey);
+
+                const { activity } = innerDc.context;
+                await userTokenClient.signOutUser(activity.from.id, this.connectionName, activity.channelId);
+
+                await innerDc.context.sendActivity('You have been signed out.');
+                return await innerDc.cancelAllDialogs();
+            }
+        }
+    }
+```
+
+---
 
 
 ## Code sample
