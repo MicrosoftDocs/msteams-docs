@@ -10,28 +10,32 @@ ms.date: 04/07/2022
 
 # Build tabs for meeting
 
-Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest.
+Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in the meeting scope within their app manifest.
 
 ## Tabs in Teams meetings
 
 Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [Build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
-Specifically, before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view and meeting stage view.
+Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view and meeting stage view.
 
 ### Meeting details view
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select :::image type="content" source="../assets/icons/add-icon.png" Border = "false" alt-text="This screenshot shows the add button on the meeting stage to add apps.":::. The app gallery appears.
+1. Select the **Details** tab and select :::image type="icon" source="../assets/icons/add-icon.png" Border = "false":::. The app gallery appears.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="This screenshot shows the pre-meeting app experience in Teams meeting.":::
 
-1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
+1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
 # [Desktop](#tab/desktop)
+
+The following image shows a tab added to the meeting details page in the Teams desktop client:
 
    :::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
 
 # [Mobile](#tab/mobile)
+
+The following image shows a tab added to the meeting details page in the Teams mobile client:
 
    :::image type="content" source="../assets/images/mobile-tab.png" alt-text="The screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
 
@@ -41,25 +45,25 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 
 1. From the Teams chat panel, select the meeting chat view.
 
-1. Select + and the app gallery appears.
+1. Select :::image type="icon" source="../assets/icons/add-icon.png" Border = "false"::: and the app gallery appears.
 
-1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
+1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in the Teams meeting.":::
 
 ### Meeting side panel view
 
-1. During a meeting, Users can add apps to the meeting using the + option from their Teams meeting window.
+1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon.png" Border = "false"::: **Apps** from Teams meeting window to add apps to the meeting.
 
    :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="This screenshot shows how to add an app in Teams meeting window.":::
 
-1. In the app gallery, select the app that you want to add and follow the steps as required. After adding the tab, you can view it as.
+1. In the app gallery, select the app that you want to add and follow the steps as required. The app is added to the meeting side panel.
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="This screenshot shows side panel view with the list of apps.":::
 
 ### Meeting stage view
 
-1. Once a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
+1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
@@ -69,26 +73,26 @@ Specifically, before creating a meeting tab, it's important to learn about the s
 
 A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
 
-However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a "Development" channel has a "Polly" tab. If you create a "Standup" meeting in that channel, that meeting would not have a "Polly" tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
+However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a *Development* channel has a *Polly* tab. If you create a *Standup* meeting in that channel, that meeting would not have a *Polly* tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
 
-In public scheduled channel meetings, after a meeting tab is added it can be accessed from the meeting details page by selecting on the meeting object.
+In public scheduled channel meetings, after a meeting tab is added, you can select the meeting object in the meeting details page to access the tab.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/after-a-meeting1.png" alt-text="After a meeting":::
 
 > [!NOTE]
-> On mobile, anonymous users will not be able to access apps in scheduled public channel meetings.
+> On mobile, anonymous users can't access apps in scheduled public channel meetings.
 
 ### App manifest settings for Tabs in meeting
 
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) with fine grained context prop to target the above different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under configurableTabs section.
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the configurableTabs section.
 
 #### Scope
 
 The scope defines who can access the apps.
 
-* `groupchat` scope makes your app available in group scope and enables app to be added in a call or meeting (scheduled private meeting/ instant meetings).
+* `groupchat` scope makes your app available in a group scope and enables the app to be added in a call or meeting (scheduled private meeting or instant meetings).
 
-* `team` scope makes your app available in team scope and enables your app to be added in team or channel or scheduled channel meeting.
+* `team` scope makes your app available in a team scope and enables your app to be added in team or channel or scheduled channel meeting.
 
 #### Context
 
@@ -105,7 +109,7 @@ The `context` property determines if the app is available in specific view after
 
 #### Configure tab app for a meeting
 
-Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`. Once a meeting participant installs an app and configures the tab in meeting, all targeted other contexts of the app for the given meeting will start rendering the tab.
+Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`. After a meeting participant installs an app and configures the tab in meeting, all the targeted other contexts of the app for the given meeting starts to render the tab.
 
 The following code snippet is an example of a configurable tab used in an app for Teams meetings:
 
@@ -146,7 +150,7 @@ Default context for tabs (if not specified) is: 
      ] 
 ```
 
-To prevent an app from showing in non-meeting group chats, you would set the following context on their tab:
+To prevent an app from showing in non-meeting group chats, you must set the following context:
 
 ```json
 "context":[ 
@@ -156,7 +160,7 @@ To prevent an app from showing in non-meeting group chats, you would set the fol
      ] 
 ```
 
-To target just the in-meeting side panel experience:  
+For in-meeting side panel experience only:  
 
 ```json
 "context":[ 
@@ -166,11 +170,11 @@ To target just the in-meeting side panel experience: 
 
 ### Advanced Tab SDK APIs
 
-The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs using Javascript. Use latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
+The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
 
 ### Frame context
 
-Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel and meetingStage. This allow you to build customised experienecs based on where the app is rendering. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting prepartion UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
+Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
 ## Code sample
 
@@ -183,7 +187,9 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
 > [!NOTE]
-> Meeting apps (side panel and meeting stage) are fully supported in Teams desktop client. Whereas in Teams web client it is supported only when the developer preview is enabled.
+>
+> * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
+> * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
 
 ## Step-by-step guides
 

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build in-meeting notification for Teams meeting
 
-The in-meeting notification is used to engage participants during the meeting and collect information or feedback during the meeting. Use an [in-meeting notification payload](meeting-apps-apis.md#send-an-in-meeting-notification) to trigger an in-meeting notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting notification is used to engage participants and collect information or feedback during the meeting. Use an [in-meeting notification payload](meeting-apps-apis.md#send-an-in-meeting-notification) to trigger an in-meeting notification. As part of the notification payload request, include the URL where the content to be shown is hosted.
 
 An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 

@@ -10,13 +10,13 @@ ms.date: 04/07/2022
 
 # Build apps for Teams meeting stage
 
-Share to stage allows users to share an app to the meeting stage from the app side panel in an ongoing meeting. This sharing is interactive & collaborative as opposed to passive screen sharing.
+Share to stage allows users to share an app to the meeting stage from the meeting side panel in an ongoing meeting. This sharing is interactive and collaborative in comparison to passive screen sharing.
 
-Users can invoke share to stage by selecting on the **Share to Stage** icon on the top right side of the app side panel. This is a native Teams client button and selecting it shares the entire app to the meeting stage.  
+To invoke share to stage, users can select the **Share to Stage** icon on the top right side of the meeting side panel. **Share to Stage** icon is native to Teams client and selecting it shares the entire app to the meeting stage.
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, the app must call the meeting side panel experience in manifest setting:
+To share an app to the meeting stage, update the `context` property in the app manifest as follows::
 
 ```json
 "context":[ 
@@ -29,21 +29,21 @@ To share an app to the meeting stage, the app must call the meeting side panel e
 
 There are many scenarios where sharing the entire app to the meeting stage isn't as useful as sharing specific parts of the app:  
 
-1. For a brainstorming or whiteboard app, a user may want to share a specific board in a meeting vs the entire app with all the boards.  
+1. For a brainstorming or whiteboard app, a user may want to share a specific board in a meeting versus the entire app with all the boards.  
 
-1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient vs sharing the entire app with all the patients' records or results etc.
+1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
 
-1. A user can want to share content from a single content provider at a time (for example, YouTube, TikTok, Disney, etc) vs sharing the entire an entire video catalog onto stage.
+1. A user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
-To solve for these scenarios, we released APIs within the Teams Client SDK that allows you to programmatically invoke share to stage for specific parts of the app from a button in the app side panel.
+To help users in such scenarios, we released APIs within the Teams Client SDK that allows you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
 :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
 
-The following three APIs that are particularly enabling the above scenarios:
+Use the following APIs to share specific part of the app:
 
 |Method| Description| Source|
 |---|---|----|
-|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 
@@ -68,7 +68,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
     }
     ```
 
-* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API would return 501.
+* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
 ### Query parameter
 
