@@ -217,7 +217,7 @@ items:
 
     1. Select **Set**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/set-exposeanapi_1.png" alt-text="Expose an API.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/set-exposeanapi_2.png" alt-text="Expose an API.":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
@@ -351,11 +351,11 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
 
-    1. Go to `manifest.json` in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest location.png" alt-text="manifest location.":::
     
-    1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -410,8 +410,6 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore_1.png" alt-text="Zip file":::
-
     1. Go to **Microsoft Teams**.
     
     1. Select **Apps** > **Manage your apps** > **Upload an app** > **Upload a custom app**.
@@ -430,7 +428,7 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. Select **Create Card** command from the compose box command list.
+    1. Select your card and then select **Create Card** command from the compose box command list.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="create card.":::
 
@@ -440,7 +438,7 @@ items:
 
     1. Select **Submit**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="information.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="information card.":::
 
     1. Right-click the card.
        
@@ -450,7 +448,7 @@ items:
 
     1. Select the checkbox if you need to include image and submit.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Submit output.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Submit output.":::
 
 
 - title: Complete challenge
