@@ -235,16 +235,16 @@ The following gif image illustrates how user-specific view displays in Teams:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.gif":::
 
-### Steps to add user-specific view
+## Steps to add user-specific view
 
 Below are the steps to implement this pattern with TeamsFx SDK:
 
-1. [Enable refresh in a base adaptive card](#step-1-enable-refresh-in-a-base-adaptive-card)
+1. [Enable refresh in base adaptive card](#step-1-enable-refresh-in-base-adaptive-card)
 1. Add use-specific Adaptive Cards
 1. Add card action handler to refresh views
 1. Register action handler
 
-### Step 1:  Enable refresh in a base adaptive card
+### Step 1:  Enable refresh in base adaptive card
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, for example,  the card1. There are two options to achieve this:
 
@@ -253,31 +253,58 @@ As illustrated above, user-specific views are refreshed from a base card, for ex
 Below is a sample that returns a case card as command response that can auto-refresh to specific user, for example,  the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. Ensure that you provide the following info to define the refresh section:
 
 * `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in userIds list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
-`verb`: A string to identify the refresh action.
-`data`: An optional data to associate with the refresh action.
+* `verb`: A string to identify the refresh action.
+* `data`: An optional data to associate with the refresh action.
 
-   ```
-       import baseCard from "../adaptiveCards/baseCard.json";
+    ```
+      import baseCard from "../adaptiveCards/baseCard.json";
+      import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 
-import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+      export class MyCommandHandler1 implements TeamsFxBotCommandHandler {
+      triggerPatterns: TriggerPatterns = "helloWorld";
 
-export class MyCommandHandler1 implements TeamsFxBotCommandHandler {
-  triggerPatterns: TriggerPatterns = "helloWorld";
+      async handleCommandReceived(context: TurnContext, message: CommandMessage): 
+      Promise<string | Partial<Activity> | void> {
+      const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
+      const userIds = [ context.activity.from.id ]; // users who will be refreshed
+      const data = { key: "value"};                 // optional data associated with the action
 
-  async handleCommandReceived(
-    context: TurnContext,
-    message: CommandMessage
-  ): Promise<string | Partial<Activity> | void> {
-    const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
-    const userIds = [ context.activity.from.id ]; // users who will be refreshed
-    const data = { key: "value"};                 // optional data associated with the action
-
-    const responseCard = AdaptiveCards
+      const responseCard = AdaptiveCards
         .declare(baseCard)
         .refresh(refreshVerb, userIds, data)
         .render(cardData);
     
-    return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+          return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
   }
+
 }
-   ```
+     ```
+
+* Option 2: Enable user-specific view to refresh your Adaptive Card.
+
+Here is a sample refresh action defined in `baseCard.json`:
+
+```
+{ 
+  "type": "AdaptiveCard", 
+  "refresh": { 
+    "action": { 
+      "type": "Action.Execute", 
+      "title": "Refresh", 
+      "verb": "userViewRefresh" ,
+      "data": { 
+        "key": "value" 
+      }
+    }, 
+    "userIds": [ 
+      "${userID}" 
+    ] 
+  }, 
+  "body": [ 
+    ... 
+  ], 
+  ... 
+}
+```
+
+You need to replace `${userID}` with user MRI in code, when rendering your card content.
