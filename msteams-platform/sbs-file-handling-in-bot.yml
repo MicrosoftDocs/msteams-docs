@@ -356,7 +356,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 2
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in the cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file_1.png" alt-text="app settings manifest":::
                       
@@ -371,7 +371,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json1_1.png" alt-text="appsettings file in visual studio":::
            
-    1. Go to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in the cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-app-manifest_1.png" alt-text="open manifest file":::
          

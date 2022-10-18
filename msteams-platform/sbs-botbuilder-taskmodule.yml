@@ -328,11 +328,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in the cloned repository.
 
         :::image type="content" source="~/assets/images/Teams-task-module/appsettingslocation_1.png" alt-text="App settings location":::
 
-    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
+    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -342,11 +342,11 @@ items:
 
         ![App settings](~/assets/images/Teams-task-module/appsettings_1.png)
 
-    1. Go to `manifest.json`` in cloned repository.
+    1. Go to **manifest.json** in the cloned repository.
 
         :::image type="content" source="~/assets/images/Teams-task-module/manifestlocation_1.png" alt-text="Manifest file location":::
     
-    1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `YourDeployedBotUrl.com` with `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
@@ -356,7 +356,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio or Command line**
+    **To build and run the service using the latest version of Visual Studio or Command line**
 
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
