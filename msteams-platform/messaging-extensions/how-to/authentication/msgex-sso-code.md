@@ -145,7 +145,7 @@ To update your app's code:
     }
     ```
 
-# [JavaScript](#tab/js2)
+    # [JavaScript](#tab/js2)
     
     ```JavaScript
     adapter.onTurnError = async (context, error) => {
@@ -200,6 +200,7 @@ To update your app's code:
         await adapter.process(req, res, (context) => bot.run(context));
     });
     ```
+
 ---
 
 ### Consent dialog for getting access token
