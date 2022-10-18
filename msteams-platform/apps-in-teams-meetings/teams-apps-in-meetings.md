@@ -37,6 +37,17 @@ Teams supports access to apps during meeting for the following meeting types:
 >   * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
 
 Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
+> [!NOTE]
+>
+> * Apps for scheduled public channel meetings are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Apps aren't supported in the following:
+>   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+>   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+>   * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+>   * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
+
+Users can add apps to the meeting using the **+** option from their Teams meeting window.
 
 ## Meeting lifecycle
 
@@ -45,6 +56,10 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 ## User types in Teams
 
 Teams supports user types, such as in-tenant, guest, federated or external user in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
+
+> [!NOTE]
+>
+> Currently when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
 
 The following list details the various user types along with their accessibility:
 
