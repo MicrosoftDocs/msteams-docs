@@ -59,10 +59,10 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 1. Add the `launcher.js` script on your webpage.
 
    ```html
-   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
    ```
 
-2. Create an HTML element and specify the required attributes.
+2. Create an HTML element and specify the required attributes. Ensure that rendering logic is executed after launcher script is fully loaded.
 
    ```javascript
    const shareInMeetingButton = document.createElement("div");
