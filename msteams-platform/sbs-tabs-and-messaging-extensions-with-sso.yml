@@ -52,7 +52,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
+       ![Clone repository](~/assets/images/clonerepository_1.png)
 
     1. Select **Clone**. 
 
@@ -83,9 +83,7 @@ items:
 
        :::image type="content" source="./assets/images/azure-subscription.png" alt-text="Azure subscription.":::
 
-           You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
+       You can also create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
 
        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
