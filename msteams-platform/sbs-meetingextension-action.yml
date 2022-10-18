@@ -266,7 +266,7 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://2bb1****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/sbs-messagingextension-action/scopes_1.png) 
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/scopes_1.png" alt-text="scopes."::: 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -428,7 +428,7 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. Select your card and then select **Create Card** command from the compose box command list.
+    1. Select **Create Card** command from the compose box command list.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="create card.":::
 
@@ -456,7 +456,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Output.":::
 
 
 - content: |
