@@ -60,28 +60,46 @@ The request to get the token is a POST message request using the existing messag
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-Update your app's code with the following code snippets:
+To update your app's code:
 
-1. Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code:
+1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
+
+    # [csharp](#tab/cs1)
+
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code:
 
     ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
+    # [JavaScript](#tab/js1)
+    
+    ```JavaScript
+    const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
+    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+    adapter.use(tokenExchangeMiddleware);
+    ```
+    
+    ---
+
+
 1. Use the following code snippet for requesting a token. After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
-    # [csharp](#tab/cs)
+    # [csharp](#tab/cs2)
     
     ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
-        public AdapterWithErrorHandler(IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger<IBotFrameworkHttpAdapter> logger, IStorage storage, ConversationState conversationState)
+        public AdapterWithErrorHandler(
+            IConfiguration configuration,
+            IHttpClientFactory httpClientFactory,
+            ILogger<IBotFrameworkHttpAdapter> logger,
+            IStorage storage,
+            ConversationState conversationState)
             : base(configuration, httpClientFactory, logger)
         {
-            (configuration.GetValue<bool>("UseSingleSignOn"))
-            
-                base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-            
+            base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+
             OnTurnError = async (turnContext, exception) =>
             {
                 // Log any leaked exception from the application.
@@ -110,25 +128,69 @@ Update your app's code with the following code snippets:
                 }
 
                 // Send a trace activity, which will be displayed in the Bot Framework Emulator
-                await turnContext.TraceActivityAsync("OnTurnError Trace", exception.Message, "https://www.botframework.com/schemas/error", "TurnError");
+                await turnContext.TraceActivityAsync(
+                    "OnTurnError Trace",
+                    exception.Message,
+                    "https://www.botframework.com/schemas/error",
+                    "TurnError");
             };
         }
     }
     ```
     
-    # [JavaScript](#tab/js)
+    # [JavaScript](#tab/js2)
     
     ```JavaScript
-    var attachment = {
-        content: {
-            tokenExchangeResource: {
-                id: requestId
-                    }
-                },
-        contentType: "application/vnd.microsoft.card.oauth",
+    adapter.onTurnError = async (context, error) => {
+        // This check writes out errors to console log .vs. app insights.
+        // NOTE: In production environment, you should consider logging this to Azure
+        //       application insights. See https://aka.ms/bottelemetry for telemetry
+        //       configuration instructions.
+        console.error(`\n [onTurnError] unhandled error: ${ error }`);
+    
+        // Send a trace activity, which will be displayed in Bot Framework Emulator
+        await context.sendTraceActivity(
+            'OnTurnError Trace',
+            `${ error }`,
+            'https://www.botframework.com/schemas/error',
+            'TurnError'
+        );
+    
+        // Send a message to the user
+        await context.sendActivity('The bot encountered an error or bug.');
+        await context.sendActivity('To continue to run this bot, please fix the bot source code.');
+        // Clear out state
+        await conversationState.delete(context);
     };
-    await context.sendActivity({
-        attachments: [attachment]
+    
+    // Define the state store for your bot.
+    // See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
+    // A bot requires a state storage system to persist the dialog and user state between messages.
+    //const memoryStorage = new MemoryStorage();
+    
+    // Create conversation and user state with in-memory storage provider.
+    const conversationState = new ConversationState(memoryStorage);
+    const userState = new UserState(memoryStorage);
+    
+    // Create the main dialog.
+    const dialog = new MainDialog();
+    // Create the bot that will handle incoming messages.
+    const bot = new TeamsBot(conversationState, userState, dialog);
+    
+    // Create HTTP server.
+    const server = restify.createServer();
+    server.use(restify.plugins.bodyParser());
+    
+    server.listen(process.env.port || process.env.PORT || 3978, function() {
+        console.log(`\n${ server.name } listening to ${ server.url }`);
+        console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
+        console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
+    });
+    
+    // Listen for incoming requests.
+    server.post('/api/messages', async (req, res) => {
+        // Route received a request to adapter for processing
+        await adapter.process(req, res, (context) => bot.run(context));
     });
     ```
     
@@ -308,9 +370,9 @@ cancellationToken
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** | **Node.js** |
-| --- | --- | --- | --- |
-| Bot framework SDK | This sample code demonstrates how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) |
+| **Sample name** | **Description** | **C#** | **JavaScript** | **Node.js** |
+| --- | --- | --- | --- | --- |
+| Bot framework SDK | This sample code demonstrates how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) |
 
 ## Next step
 
