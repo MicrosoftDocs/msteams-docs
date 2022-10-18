@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 28/09/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/conversations/channel-and-group-conversations.md
-  nextTutorialTitle: Channel and group chat conversations with a bot
+  nextTutorialHref: bots/how-to/conversations/workflow-bots-in-teams.md
+  nextTutorialTitle: Workflow bots in Teams
   ms.custom: mvc
   ms.localizationpriority: none
 items:

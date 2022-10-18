@@ -190,7 +190,7 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
 
-### Response with text message
+### Respond with text message
 
 You can also respond with text messages instead of using adaptive card for card action response, using `InvokeResponseFactory.textMessage`:
 
@@ -204,7 +204,7 @@ You will see the below response message in Teams:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sample-card-action-response.png" alt-text="sample card response displayed":::
 
-### Response with error messages
+### Respond with error messages
 
 When you want to return error response message to the client, then you can leverage the `InvokeResponseFactory.errorResponse` to build your invoke response, for example:
 
@@ -213,10 +213,16 @@ When you want to return error response message to the client, then you can lever
 > [!NOTE]
 > For more details about the invoke response format, see [Response format](/adaptive-cards/authoring-cards/universal-action-model).
 
-### Customize the adaptive card content
+### Customize adaptive card content
 
 You can edit the file `src/adaptiveCards/helloworldCommand.json` to customize the Adaptive Card to your preference. The file `src/cardModels.ts` defines a data structure that is used to fill data for the Adaptive Card.
 
-The binding between the model and the Adaptive Card is done by name matching (for example,CardData.title maps to `${title}` in the Adaptive Card). You can add, edit, or remove properties and their bindings to customize the Adaptive Card to your needs.
+The binding between the model and the Adaptive Card is done by matching name (for example, CardData.title maps to `${title}` in the Adaptive Card). You can add, edit, or remove properties and their bindings to customize the Adaptive Card to your needs.
 
-You can also add new cards if appropriate for your application. How to build different types of adaptive cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards if appropriate for your application. How to build different types of adaptive cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+
+## Auto-refresh to user-specific view
+
+Earlier when Adaptive Cards were sent in a Teams channel or group chat, all users could see the same card content. Now, with the new refresh model for Adaptive Cards universal action, users can view user specific view. The auto refresh feature also facilitates scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrated how to provide user-specific view with `refresh` model:
+
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-view-autoreferesh.png" alt-text="Diagramatic view of user specific autorefresh model":::
