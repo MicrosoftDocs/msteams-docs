@@ -1,7 +1,7 @@
 ---
 title: Link unfurling
 author: surbhigupta
-description: In this module, learn how to add link unfurling with messaging extension in a Teams app with app manifest or manually using code examples and samples.
+description: Add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually. Add link unfurling using Developer Portal. How to update your web service code to handle the invoke request.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -10,12 +10,13 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to add link unfurling to your app manifest using App studio or manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area. You can respond with a card that the user can unfurl for additional information or actions. This works as a search command with the URL as the search term.
+This document guides you on how to add link unfurling to your app manifest using Developer Portal or manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area. You can respond with a card that the user can unfurl for additional information or actions. This works as a search command with the URL as the search term.
 
 > [!NOTE]
 >
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
+> * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
 
 The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
 
@@ -28,18 +29,21 @@ See the following video to learn more about link unfurling:
 
 ## Add link unfurling to your app manifest
 
-To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
+To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
 > [!NOTE]
 > Don't add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
-### Add link unfurling using App Studio
+### Add link unfurling using Developer Portal
 
-1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
+1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
 1. Load your app manifest.
-1. On the **Message Extension** page, add the domain that you want to look for in the **Message handlers** section. The following image explains the process:
+1. On the **Messaging Extension** page under **App features**, select existing bot or create a new bot.
+1. Select **Save**.
+1. Select **Add a domain** under **Preview links** section and then enter valid domain.
+1. Select **Add**. The following image explains the process:
 
-    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Message handlers section in App Studio":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### Add link unfurling manually
 

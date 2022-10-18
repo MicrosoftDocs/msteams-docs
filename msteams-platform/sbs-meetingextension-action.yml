@@ -18,10 +18,10 @@ items:
 
     **Key features of action based message extension**
 
-    * Presents the user with a modal popup to collect or display information.
+    * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. You'll see the following output:
        
       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
     
@@ -31,10 +31,13 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -80,8 +83,9 @@ items:
     
         ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/create-azurebot.png) 
     
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
+       To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
+       For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+       
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
      
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
@@ -91,7 +95,7 @@ items:
 
     1. Select **MultiTenant** under **Bot Type**.
 
-        ![Type](~/assets/images/sbs-messagingextension-action/bot-type.png)
+        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
 
     1. Select **Review + create**.
 
@@ -149,9 +153,9 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -168,11 +172,11 @@ items:
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
-     ngrok http -host-header=localhost 3978
+     ngrok http --host-header=localhost 3978
      ```
 
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
     **To add messaging endpoint**
 
@@ -288,7 +292,8 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/sbs-messagingextension-action/addpermission.png)
+        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+
 
     1. Select **Microsoft Graph**.
 
@@ -330,7 +335,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         ![App settings location](~/assets/images/sbs-messagingextension-action/appsettingslocation.png)
 
@@ -338,13 +343,13 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID** .
+         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
         ![App settings](~/assets/images/sbs-messagingextension-action/json-file.png)
 
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Go to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/sbs-messagingextension-action/manifestlocation.png)
     
@@ -363,7 +368,7 @@ items:
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
 
@@ -384,7 +389,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
+    Go to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -395,7 +400,7 @@ items:
 - title: Add Action Message Extension app to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, navigate to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
+    1. In your cloned repository, go to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -430,7 +435,7 @@ items:
 
        ![card](~/assets/images/sbs-messagingextension-action/create-card.png)
 
-    1. Enter your information in the modal popup.
+    1. Enter your information in the modal pop-up.
 
        ![information](~/assets/images/sbs-messagingextension-action/output-card.png)
 
@@ -440,7 +445,7 @@ items:
 
     1. Select (...) from the overflow menu.
        
-    1. Navigate to **More actions**.
+    1. Go to **More actions**.
 
     1. Select **Share Message**.
 

@@ -1,7 +1,7 @@
 ---
 title: Create and send task module
 author: surbhigupta
-description: In this module, learn how to handle the initial invoke action and respond with a task module from an action messaging extension command
+description: Learn how to create and send task modules. Handle the initial invoke action and respond with a task module from an action message extension command.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -643,7 +643,7 @@ Respond to the invoke request with a `task` object that contains either a `taskI
 
 |Property name|Purpose|
 |---|---|
-|`type`| Can be either `continue` to present a form, or `message` for a simple popup. |
+|`type`| Can be either `continue` to present a form, or `message` for a simple pop-up. |
 |`value`| Either a `taskInfo` object for a form, or a `string` for a message. |
 
 The schema for the taskInfo object is:

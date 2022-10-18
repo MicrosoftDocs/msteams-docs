@@ -33,11 +33,14 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:
 
-    * Microsoft Teams with an account (not a guest account)
-    * [Visual Studio Code](https://code.visualstudio.com/)
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
-    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
+     &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams with an account (not a guest account)](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
 
 - title: Create a Bot Registration in Microsoft Azure portal
   durationInMinutes: 2
@@ -52,7 +55,7 @@ items:
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
     ```bash
-    ngrok http -host-header=rewrite 3978
+    ngrok http --host-header=rewrite 3978
     ```
 
     **To create Azure Bot resource**
@@ -62,7 +65,10 @@ items:
     1. Search for **Azure bot** in the search box.
     1. Select **Azure Bot**.
 
+        :::image type="content" source="~/assets/images/azure-bot.png" alt-text="Azure bot.":::
+
        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
@@ -70,13 +76,14 @@ items:
     1. Select your **Resource group** from the dropdown list.
         
         To create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
-
+        For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+        
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
         ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
 
         > [!NOTE]
-        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
+        > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app ID** field, and enter value in **Existing app password** field.
 
     1. Select **Review + create**.
 
@@ -111,7 +118,8 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
 
-        ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+        ![New Client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+        
 
     1. Enter **Description** and select **Add**.
  
@@ -130,7 +138,7 @@ items:
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        ![Channel Teams](~/assets/images/adaptive-cards/channel-teams.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
 
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
@@ -259,7 +267,7 @@ items:
         | ----- | ----- |
         | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
         | Service Provider | Select **Azure Active Directory V2**. |
-        | Client id | Saved previously as your **Microsoft App ID**. |
+        | Client ID | Saved previously as your **Microsoft App ID**. |
         | Client secret | Saved previously as **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
         | Tenant ID | Enter **common**. |

@@ -1,6 +1,6 @@
 ---
 title: Overview - Publish your app to the Microsoft Teams store
-description: Learn the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
+description: Publish your app to Microsoft Teams store or AppSource. What to expect after you submit, tips for rapid approval and publishing apps linked to a SaaS offer.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
@@ -118,7 +118,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **Post app submission**
 
-  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report,, or if you need any extra support to resolve the reported issues.
+  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report, or if you need any extra support to resolve the reported issues.
 
   * Ensure that you've adequate developer bandwidth to resolve any reported issues until the app is approved.
 
@@ -140,7 +140,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. You've correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
 
-      1. You must ensure your linked SaaS offer is designed to support licenses assigned on a named [per user model](/azure/marketplace/create-new-saas-offer-plans). Linked SaaS offers that support other pricing models such as flat rate are currently not accepted for publishing to the Teams store.
+      1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
       1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
 

@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # In-app purchases
 
-Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
+Microsoft Teams provides APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
 
 ## Implement in-app purchases
 
@@ -47,32 +47,54 @@ To enable in-app purchase experience, update your Teams app `manifest.json` file
 
 To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
 
-Following is an example of calling the API from the app:
+Following code snippet is an example of calling the API from the Teams app built using Teams JavaScript client SDK:
+
+# [TeamsJS v1](#tab/jsonV11)
 
 ```json
-<body> 
 <div> 
-<div class="sectionTitle">openPurchaseExperience</div> 
-<button onclick="openPurchaseExperience()">openPurchaseExperience</button> 
-</div> 
-</body> 
-<script> 
-   function openPurchaseExperience() {
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+   function openPurchaseExperience()
       microsoftTeams.initialize();
       let callbackcalled = false;
       microsoftTeams.monetization.openPurchaseExperience((e) => {
-      console.log("callback is being called");
-      callbackcalled = true;  
-      if (!!e && typeof e !== "string") {
-            e = JSON.stringify(e);
-            alert(e);
-        }
-        return;
-      });
+            console.log("callback is being called");
+            console.log(e);
+            if (!!e && typeof e !== "string") {
+                  alert(JSON.stringify(e));
+              }
+              return;
+            });
       console.log("after callback: ",callbackcalled);
-    } 
-</script> 
+    }
+</script>
 ```
+
+# [TeamsJS V2](#tab/jsonV2)
+
+```json
+<div>
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+    function openPurchaseExperience() {
+      micorosftTeams.app.initialize();
+      var planInfo = {
+          planId: "<Plan id>", // Plan Id of the published SAAS Offer
+          term: "<Plan Term>" // Term of the plan.
+      }
+      monetization.openPurchaseExperience(planInfo);
+    }
+</script>
+```
+
+---
 
 ## End-user in-app purchasing experience
 

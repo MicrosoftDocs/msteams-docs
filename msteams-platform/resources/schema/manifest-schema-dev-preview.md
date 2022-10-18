@@ -1,6 +1,6 @@
 ---
 title: Public developer preview manifest schema reference
-description: Learn sample manifest file and description of all its components that are supported for Microsoft Teams.
+description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
@@ -22,7 +22,6 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -63,7 +62,8 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
             "scopes": [
                 "team",
                 "groupchat"
-            ]"context": []
+            ],
+            "context": []
         }
     ],
     "staticTabs": [
@@ -295,12 +295,6 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 The unique Microsoft-generated identifier for this app. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
-## packageName
-
-**Required** &ndash; String
-
-A unique identifier for this app in reverse domain notation; for example, com.example.myapp.
-
 ## developer
 
 Required:
@@ -528,7 +522,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **Optional**, except **Required** where noted
 
-A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
+A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you shouldn't include accounts.google.com in `validDomains[]`.
 
@@ -661,6 +655,17 @@ You can define any of the following properties:
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
 
+## supportedChannelTypes
+
+**Optional** - array
+
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
+
+> [!NOTE]
+>
+> * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
+> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
+
 ## defaultInstallScope
 
 **Optional** - string
@@ -707,6 +712,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
+|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
 
 ### meetingExtensionDefinition.scenes
 
@@ -757,6 +763,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for chats or meetings**
 
@@ -766,21 +773,14 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for users**
 
     |**Name**|**Description**|
     |---|---|
     |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
-
-* **Resource-specific permissions for Teams live share**
-
-   |Name| Description |
-   | ----- | ----- |
-   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
-   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
-   |`MeetingStage.Write.Chat`|<!--- need info --->|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## See also
 

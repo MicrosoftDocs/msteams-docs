@@ -1,6 +1,6 @@
 ---
 title: Create deep links 
-description: Learn how to create deep links and how to use and navigate them in your Microsoft Teams apps with tabs.
+description: In this article, learn how to create deep links and navigate them in your Microsoft Teams apps with tabs.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -10,14 +10,13 @@ ms.localizationpriority: high
 Deep links are a navigation mechanism that you can use to connect users with information and features within Teams and Teams apps. Some scenarios where creating deep links can be useful are as follows:
 
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
-* Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
+* Your app automates or simplifies certain user tasks. You can  create a chat or schedule a meeting, by pre-populating the deep links with required parameters. Avoids the need for users to manually enter information.
 
-The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or even launching a chat dialog, the SDK provides strongly typed APIs that make for an improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
+The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. The SDK provides typed APIs that provide improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
 >
 > **Tab**:  
@@ -46,7 +45,7 @@ You can create deep links to entities in Teams apps. This method is used to crea
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-To implement this, add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, call [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+To implement, add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, call [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -86,7 +85,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 
 ### Consume a deep link from a tab
 
-When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Teams JavaScript library to retrieve the sub-page ID if it exists.
+When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Teams JavaScript library to retrieve the subpage ID if it exists.
 
 The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -97,7 +96,7 @@ While it's recommended to use `shareDeepLink()` to generate a deep link to your 
 > [!NOTE]
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, See the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still go to the tab but cannot provide the sub entity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
@@ -123,10 +122,10 @@ The query parameters are:
 | Parameter name | Description | Example |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from Teams Admin Center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
+| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking continue to use entityID as a parameter name in the URL. When configuring the tab the context object refers to the entityID as {page.id}. |Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context.subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
+| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking continue to use subEntityId as the parameter name in the URL. When configuring the tab the context object refers to the subEntityID as subPageID. |Task456 |
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
@@ -164,7 +163,7 @@ The query parameters are:
 
 ## Navigation from your tab
 
-You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using the SDK. The following sections show both methods, but where possible use of the strongly typed capabilities of the SDK is recommended.
+You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using the SDK. The following sections show both methods, but where possible use of the typed capabilities of the SDK is recommended.
 
 One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS SDK organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
@@ -205,9 +204,27 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 > [!NOTE]
 > In order to open the scheduling dialog in Teams, developers need to continue using the original deep-link URL based method, since Teams does not yet support the calendar capability.
 
-For more information about working with the calendar, see, the [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
+For more information about working with the calendar, see [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
-### tab/Teams JS v1
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+// Open a scheduling dialog from your tab
+if(calendar.isSupported()) {
+   const calendarPromise = calendar.composeMeeting({
+      attendees: ["joe@contoso.com", "bob@contoso.com"],
+      content: "test content",
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
+      subject: "test subject"});
+   calendarPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -216,9 +233,11 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 ---
 
+Alternatively, you can manually create deep links to the Teams built-in scheduling dialog.
+
 #### Generate a deep link to the scheduling dialog
 
-While it's recommended to use the strongly typed APIs of TeamsJS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
+While it's recommended to use the typed APIs of TeamsJS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
@@ -283,7 +302,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-While use of the strongly typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card:
+While use of the typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -292,14 +311,14 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 The query parameters are:
 
 * `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name, in the case of a chat with three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
+* `topicName`: An optional field for chat's display name, if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
 ### Generate deep links to channel conversation
 
-Use this deep link format to navigate to a particular conversation within channel thread:
+Use this deep link format to go to a particular conversation within channel thread:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 
@@ -310,7 +329,7 @@ The query parameters are:
 * `channelId`: Channel ID of the conversation. For example, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
 * `tenantId`: Tenant ID such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `groupId`: Group ID of the file. For example, `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
-* `parentMessageId`: Parent message Id of the conversation.
+* `parentMessageId`: Parent message ID of the conversation.
 * `teamName`: Name of the team.
 * `channelName`: Name of the team's channel.
 
@@ -360,10 +379,13 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 
-### Deep linking to an app
+## Deep linking to an app
 
-Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
-  
+Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install or open the app.
+
+> [!NOTE]
+> If your app has been approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+
 ### Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or message extension card:
@@ -383,9 +405,9 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### Navigate to an audio or audio-video call
+## Navigate to an audio or audio-video call
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In the case of a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
@@ -405,9 +427,85 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-#### Generate a deep link to a call
+## Generate a deep link to share content to stage in meetings
 
-While use of the strongly typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
+You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
+
+> [!NOTE]
+>
+> * Currently, the deep link to share content to stage in meetings is undergoing UX improvements and is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Deep link to share content to stage in meeting is supported in Teams desktop client only.
+
+When a deep link is selected in an app by a user who is part of an ongoing meeting, then the app is shared to the stage and a permission pop-up window appears. Users can grant access to the participants to collaborate with an app.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="The screenshot is an example that shows a permission pop-up window.":::
+
+When a user isn't in a meeting then the user is redirected to the Teams calendar where they can join a meeting or initiate instant meeting (Meet now).
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="The screenshot is an example that shows a pop-up window when there's no ongoing meeting.":::
+
+Once the user initiates an instant meeting (Meet now), they can add participants and interact with the app.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="The screenshot is an example that shows an option to add participants and how to interact with the app.":::
+
+To add a deep link to share content on stage, you need to have an app context. The app context allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. The following is an example of an app context.
+
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+
+The query parameters for the app context are:
+
+* `appID`: This is the ID that can be obtained from the app manifest.
+* `appSharingUrl`: The URL which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL is not a valid domain, an error dialog will pop-up to provide the user with a description of the error.
+* `useMeetNow`: This includes a boolean parameter that can be either true or false.
+  * **True** - When the `UseMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
+
+  * **False** - The default value of `UseMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
+
+Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example.
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+A deep link can be launched either from the Teams web or from the Teams desktop client.
+
+* **Teams web** - Use the following format to launch a deep link from the Teams web to share content on stage.
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Deep link|Format|Example|
+    |---------|---------|---------|
+    |To share the app and open Teams calendar, when UseMeeetNow is "false", default.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |To share the app and initiate instant meeting, when UseMeeetNow is "true".|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **Team desktop client** - Use the following format to launch a deep link from the Teams desktop client to share content on stage.
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    Example: `msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Deep link|Format|Example|
+    |---------|---------|---------|
+    |To share the app and open Teams calendar, when UseMeeetNow is "false", default.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |To share the app and initiate instant meeting, when UseMeeetNow is "true".|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+The query parameters are:
+
+* `deepLinkId`: Any identifier used for telemetry correlation.
+* `fqdn`: `fqdn` is an optional parameter, which can be used to switch to an appropriate environment of a meeting to share an app on stage. It supports scenarios where a specific app share happens in a particular environment. The default value of `fqdn` is enterprise URL and possible values are `Teams.live.com` for Teams for Life, `teams.microsoft.com`, or `teams.microsoft.us`.
+
+To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
+
+> [!NOTE]
+> For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
+
+## Generate a deep link to a call
+
+While use of the typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
 
 | Deep link | Format | Example |
 |-----------|--------|---------|

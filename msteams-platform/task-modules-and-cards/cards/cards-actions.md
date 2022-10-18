@@ -24,7 +24,7 @@ Cards used by bots and message extensions in Teams support the following activit
 >
 >* Teams does not support `CardAction` types not listed in the previous table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service. Suggested actions are not supported in Microsoft Teams. If you want buttons to appear on a Teams bot message, use a card.
+>* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service.
 >* If you are using a card action as part of a message extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
 
 ## Action type openUrl
@@ -32,7 +32,9 @@ Cards used by bots and message extensions in Teams support the following activit
 `openUrl` action type specifies a URL to launch in the default browser.
 
 > [!NOTE]
-> Your bot does not receive any notice on which button was selected.
+>
+> * Your bot doesn't receive any notice on which button was selected.
+> * Machine names with numbers aren't supported in URL.
 
 With `openUrl`, you can create an action with the following properties:
 
@@ -62,7 +64,7 @@ var button = new CardAction()
 {
     Type = ActionTypes.OpenUrl,
     Title = "Tabs in Teams",
-    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+    Value = "https://learn.microsoft.com/microsoftteams/platform/"
 };
 ```
 
@@ -75,7 +77,7 @@ CardFactory.actions([
 {
     type: 'openUrl',
     title: 'Tabs in Teams',
-    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+    value: 'https://learn.microsoft.com/microsoftteams/platform/'
 }])
 ```
 

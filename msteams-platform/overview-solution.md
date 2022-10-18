@@ -1,7 +1,7 @@
 ---
 title: Teams solution for building apps
 author: heath-hamilton
-description: Learn the overview of Teams solution for building apps and provide support from planning your app to distributing it.
+description: Understand how to plan, design, build, extend to Microsoft 365, test, distribute, monetize, and integrate your app with Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
@@ -119,7 +119,7 @@ From designing to building and distributing a Teams app, you can use various too
         Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
         > [!div class="nextstepaction"]
-        > [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+        > [See app scenarios](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
     :::column-end:::
 :::row-end:::
 

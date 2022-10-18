@@ -20,7 +20,11 @@ Microsoft Power Platform combines four robust Microsoft technologies, such as Po
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform services":::
 
 > [!NOTE]
-> You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>
+> - If you're interested in publishing your power apps in the Teams Store for users across all organizations, please fill out this [form](https://go.microsoft.com/fwlink/?linkid=2204468).
+> - If you're interested in publishing an app for a specific organization, see the following:
+>   - [Power Apps and Microsoft Teams integration](/power-apps/teams/overview)
+>   - [Create apps in Microsoft Teams by using Power Apps](/power-apps/teams/create-apps-overview)
 
 ### ✔ Teams and Power BI
 
@@ -34,7 +38,7 @@ The new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143374) in Tea
 
 ### ✔ Teams and Power Automate
 
-You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/flows-teams). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
+You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/teams/install-teams-app). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
 
 ### ✔ Teams and Power Virtual Agents
 
@@ -50,10 +54,10 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 |  Topic  |  Links  |
 |:---------|:----------------------|
-|Power BI|[Power BI for App Makers](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps for App Makers](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate for App Makers](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI for App Makers](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power Apps for App Makers](/training/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate for App Makers](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### ✔ Project Oakdale (preview)
 

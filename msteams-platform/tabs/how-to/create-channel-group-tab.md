@@ -1,16 +1,20 @@
 ---
-title: Create a channel tab
+title: Create a channel tab or group tab
 author: laujan
-description: In this module, learn how to create a channel and group tab with the Yeoman Generator for Microsoft Teams, including reviewing source code with code examples.
-ms.localizationpriority: medium
+description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Create a channel tab
+# Create a channel tab or group tab
 
-Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
+Channel or group tabs deliver content to channels and group chats, which helps to create collaborative spaces around dedicated web-based content.
+
+Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -22,7 +26,7 @@ Channel or group tabs deliver content to channels and group chats, and are a gre
     npm install yo gulp-cli --global
     ```
 
-2. At the command prompt, install Microsoft Teams App generator by entering the following command:
+2. At the command prompt, install Microsoft Teams app generator by entering the following command:
 
     ```cmd
     npm install generator-teams --global
@@ -40,13 +44,13 @@ Following are the steps to create a channel or group tab:
 
 1. At the command prompt, create a new directory for your channel or group tab.
 
-1. Enter the following command in your new directory to start the Microsoft Teams App generator:
+1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
     ```cmd
     yo teams
     ```
 
-1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file:
+1. Provide your values to a series of questions prompted by Microsoft Teams app generator to update your `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -67,7 +71,7 @@ Following are the steps to create a channel or group tab:
 
     * **Your (company) name? (max 32 characters)**
 
-        Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+        Your company name can be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
     * **Which manifest version would you like to use?**
 
@@ -85,9 +89,9 @@ Following are the steps to create a channel or group tab:
 
         Select **( &ast; ) A Tab**.
 
-    * **The URL where you will host this solution?**
+    * **The URL to host this solution?**
 
-        By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+        By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
 
     * **Would you like show a loading indicator when your app/tab loads?**
 
@@ -160,7 +164,7 @@ gulp build
 
 #### Run your application
 
-1. At the command prompt enter the following command to start a local web server:
+1. At the command prompt, enter the following command to start a local web server:
 
     ```bash
     gulp serve
@@ -170,7 +174,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
-1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
+1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
 
@@ -188,7 +192,7 @@ gulp ngrok-serve
 ### Upload your application to Teams
 
 1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps** and **Upload a custom app**.
+1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab":::
@@ -205,12 +209,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Follow the directions for adding a tab. There is a custom configuration dialog for your channel or group tab.
+1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
 
-    Now you have succesfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -243,27 +247,28 @@ Following are the steps to create a channel or group tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Review the source code</b></summary>
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### wwwroot folder
@@ -314,7 +319,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
+At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -328,17 +333,20 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
     > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Insert a call to `microsoftTeams.initialize();` in the `script` tag.
+1. Insert a call to `microsoftTeams.app.initialize();` in the `script` tag.
 
-1. In Visual Studio Solution Explorer go to the **Pages** folder and open **Tab.cshtml**
+1. In Visual Studio Solution Explorer, go to the **Pages** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. The parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -347,27 +355,29 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     ```javascript
         
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
             });
         }
 
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
-        });
+            });
         }
     ```
 
@@ -416,7 +426,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
+1. In **App features**, select **Group and channel app**. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
@@ -430,7 +440,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
 
-    Now you have succesfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -463,27 +473,28 @@ Following are the steps to create a channel or group tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Review the source code</b></summary>
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### wwwroot folder
@@ -502,7 +513,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you see the following code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you, see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -524,15 +535,15 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Models
 
-**ChannelGroup.cs** presents a Message object and methods that will be called from the controllers during configuration.
+**ChannelGroup.cs** presents a message object and methods that can be called from the controllers during configuration.
 
 #### Views
 
 These are the different views in ASP.NET Core MVC:
 
-* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** can be displayed as the home page for your application.
 
-* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It will also reference the Teams Library.
+* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements that also reference the Teams Library.
 
 #### Controllers
 
@@ -542,7 +553,7 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
+At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -556,17 +567,20 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
     > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Insert a call to `microsoftTeams.initialize();` in the `script` tag.
+1. Insert a call to `microsoftTeams.app.initialize();` in the `script` tag.
 
-1. In Visual Studio Solution Explorer go to the **Tab** folder and open **Tab.cshtml**
+1. In Visual Studio Solution Explorer, go to the **Tab** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. The parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -575,24 +589,26 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     ```javascript
 
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });
         }
     
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });
@@ -634,7 +650,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
+1. In **App features**, select **Group and channel app**. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
@@ -648,7 +664,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
 
-    Now you have succesfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -664,3 +680,4 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create a removal page](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

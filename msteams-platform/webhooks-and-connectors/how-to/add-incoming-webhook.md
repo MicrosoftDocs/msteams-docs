@@ -1,7 +1,7 @@
 ---
 title: Create an Incoming Webhook
 author: laujan
-description: In this module, learn how to add Incoming Webhook to Teams app and post any external requests to Teams using it
+description: Create Incoming Webhook to Teams app and post external requests to Teams. Remove Incoming Webhook. Sample code(C#,Node.js) to  send card using Incoming Webhook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
@@ -14,6 +14,9 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Bots
 * Message extensions
 * Connectors
+
+> [!IMPORTANT]
+> You can choose to build notification bot Teams app other than incoming webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and explore. For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
 
 See the following video to learn how to create an Incoming Webhooks:
 <br>
@@ -47,16 +50,16 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 1. Open the channel in which you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Select **Connectors** from the dropdown menu:
 
-    ![Select Connector](~/assets/images/connectors.png)
+   :::image type="content" source="../../assets/images/connectors.png" alt-text="This screenshot show how to select connector.":::
 
 1. Search for **Incoming Webhook** and select **Add**.
 1. Select **Configure**, provide a name, and upload an image for your webhook if necessary:
 
-    ![Configure button](~/assets/images/configure.png)
+   :::image type="content" source="../../assets/images/configure.png" alt-text="This screenshot shows how to configure and upload an image for your webhooks.":::
 
 1. Copy and save the unique webhook URL present in the dialog window. The URL maps to the channel and you can use it to send information to Teams. Select **Done**.
 
-    ![Unique URL](~/assets/images/url.png)
+   :::image type="content" source="../../assets/images/url.png" alt-text="This screenshot shows the unique webhook URL.":::
 
 The webhook is available in the Teams channel.
 
@@ -74,25 +77,25 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 1. Select **Configured** under **Manage**.
 1. Select the **<*1*> Configured** to see a list of your current connectors:
 
-    ![Configured webhook](~/assets/images/configured.png)
+   :::image type="content" source="../../assets/images/configured.png" alt-text="This screenshot shows how to configured to see list of your current connectors.":::
 
 1. Select **Manage** for the connector that you want to remove:
 
-    ![Manage webhook](~/assets/images/manage.png)
+   :::image type="content" source="../../assets/images/manage.png" alt-text="This screenshot shows how to manage for connector that you want to remove.":::
 
 1. Select **Remove** to view the **Remove Configuration** dialog box.
 
-    ![Remove Configuration](~/assets/images/removeconfiguration.png)
+   :::image type="content" source="../../assets/images/removeconfiguration.png" alt-text="This screenshot shows how to view the remove configuration dialog box.":::
 
 1. Complete the dialog box fields and checkboxes and select **Remove**.
 
-    ![Final Remove](~/assets/images/finalremove.png)
+   :::image type="content" source="../../assets/images/finalremove.png" alt-text="This screenshot shows how to remove an Incoming Webhooks from Teams channel.":::
 
 ## Code sample
 
-| Sample Name           | Description | C#    | Node.js   |
+| Sample Name           | Description | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|Incoming Webhook|This sample code demonstrates how to send card using incoming webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|Incoming Webhook|This sample code demonstrates how to send card using incoming webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/incoming-webhook-notification) |
 
 ## See also
 
@@ -102,3 +105,5 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Secure access and data in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app)
+* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
+* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)

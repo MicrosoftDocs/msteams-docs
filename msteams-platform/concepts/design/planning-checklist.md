@@ -1,8 +1,7 @@
 ---
 title: Questions to help plan Teams app development
 author: heath-hamilton
-description: Questions to consider while you plan your app, understand your user and their needs, problems that your app solves, user authentication and their onboarding experience.
-ms.topic: conceptual
+description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle. Plan to host your Teams app.
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
@@ -22,12 +21,14 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <details>
 <summary>Understand your user</summary>
 
+Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution. For more information, see [understand your use cases](understand-use-cases.md).
+
 | # | Consider... |
 | --- | --- |
-| 1 | Are the users primarily front-line workers on mobile clients? |
-| 2 | Do you expect many guest users to need access to your app? |
+| 1 | Are the users primarily frontline workers on mobile clients? |
+| 2 | Do you expect many external users to need access to your app? |
 | 3 | Do they use teams and channels or primarily group chats? |
-| 4 | How technically sophisticated are your primary users? |
+| 4 | How technically advanced are your primary users? |
 | 5 | Do you need a thorough onboarding experience or a few pointers might do? |
 
 </details>
@@ -58,10 +59,12 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <details>
 <summary>Provide authentication</summary>
 
+Authentication is all about validating app users and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app. For more information, see [authenticate users in Microsoft Teams](../authentication/authentication.md).
+
 | # | Consider...|
 |--- | --- |
 | 1 | Will the users access different views of data based on their roles? |
-| 2 | Is there PII involved? |
+| 2 | Is there customer content involved? |
 | 3 | Will the interactions also be based on the user roles? |
 | 4 | Will external users access the app? |
 
@@ -69,6 +72,8 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <br>
 <details>
 <summary>Plan onboarding experience</summary>
+
+Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../sbs-teams-conversation-bot.yml).
 
 | # | Consider... |
 | --- | --- |
@@ -104,11 +109,15 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 <details>
 <summary>Choose build environment</summary>
 
+With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started. For more information, see [plan your app with Teams features](../app-fundamentals-overview.md).
+
 Suggestion: Options that help select the correct environment based on app needs.
 </details>
 <br>
 <details>
 <summary>Plan for testing app</summary>
+
+After integrating your app with Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For more information, see [test your app](../build-and-test/test-app-overview.md).
 
 Suggestion: Options that help determine the best testing environment for the app.
 </details>
@@ -116,15 +125,17 @@ Suggestion: Options that help determine the best testing environment for the app
 <details>
 <summary>Plan for app distribution</summary>
 
+You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors, including users' needs, business and technical requirements, and your goals for the app. For more information, see [distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md).
+
 Suggestion: Options that help determine the best distribution model.
 
 </details>
 
 ## Plan for hosting your Teams app
 
-Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains a only configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
+Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app.":::
 
 ## Plan beyond app building
 

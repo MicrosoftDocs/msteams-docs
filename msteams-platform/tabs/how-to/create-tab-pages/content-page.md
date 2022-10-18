@@ -1,8 +1,8 @@
 ---
 title: Create a content page
 author: surbhigupta
-description: In this module, learn how to create a content page for your tab and tab content and design guidelines
-ms.localizationpriority: medium
+description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside task module.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -15,19 +15,22 @@ A content page is a webpage that is rendered within the Teams client, which is a
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module. The page is rendered inside the modal pop-up.
 
-This article is specific to using content pages as tabs; however most of the guidance here applies regardless of how the content page is presented to the user.
+This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Tab content and design guidelines
 
-Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose. 
+Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose.
 
 You need to focus on making your tab design clean, navigation intuitive, and content immersive.For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
 For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
+
+> [!NOTE]
+> It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
 
 The following code provides an example of how your page and the Teams client communicate:
 
@@ -38,14 +41,16 @@ The following code provides an example of how your page and the Teams client com
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
 </head>
-
 <body>
 ...
     <script>
-    app.initialize();
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -61,7 +66,6 @@ The following code provides an example of how your page and the Teams client com
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -79,7 +83,7 @@ You can access additional content by using the SDK to interact with Teams, creat
 
 ### Use the SDK to interact with Teams
 
-The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions that you can find useful while developing your content page.
+The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many more functions that you can find useful while developing your content page.
 
 ### Deep links
 
@@ -87,7 +91,7 @@ You can create deep links to entities in Teams. They're used to create links tha
 
 ### Task modules
 
-A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### Valid domains
 
@@ -110,7 +114,7 @@ To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
 1. Call `app.initialize();`.
-1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  is not called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
+1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
 1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`.
 1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and, optionally, provide a failure message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
