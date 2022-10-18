@@ -1,7 +1,7 @@
 ---
 title: Build tabs for meeting
 author: surbhigupta
-description: Learn how to build a tabs for a meeting chat, meeting side panel and meeting stage in Microsoft Teams meeting.
+description: Learn how to build a tabs for a meeting chat, meeting side panel, and meeting stage in Microsoft Teams meeting.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
