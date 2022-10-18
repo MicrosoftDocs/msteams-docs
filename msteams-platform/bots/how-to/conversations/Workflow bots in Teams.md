@@ -179,4 +179,11 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
 1. `AdaptiveCardResponse.ReplaceForInteractor`: This is the default behavior. The response card will be replaced the current one (the card where the button is defined) for the interactor who triggers the action. Users in the conversation still view the original action card.
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif:::
+
+1. `AdaptiveCardResponse.ReplaceForAll`: The response card will be replaced by the Action Card for all users in the chat, and they can view this response card.
+
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
+
+1. `AdaptiveCardResponse.NewForAll`: The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card.
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
