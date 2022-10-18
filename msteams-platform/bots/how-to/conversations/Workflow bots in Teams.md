@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 # Workflow bots in Teams
 
-A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns a hard-coded Adaptive Card. You can customize this logic with your business logic. Often your business logic might require you to call your existing APIs. Users can create a workflow bot to respond to Adaptive card that are triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
+A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns a hard-coded Adaptive Card. You can customize this logic with your business logic. Often your business logic might require you to call your existing APIs. Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
 
 > [!NOTE]
 > You can choose the installation target when adding the app. For more install options see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
@@ -22,7 +22,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png":::
 
 * `Action Card`: The card where you define your action that users can invoke (click button).
-* `Card Action Handler`: Triggered when user invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
+* `Card Action Handler`: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
 * `Response Card`: The card to respond to the action when user invokes it from the action card.
 
 To handle card actions with TeamsFx SDK, each card action handler should implement `TeamsFxAdaptiveCardActionHandler` interface. Below is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
@@ -153,7 +153,7 @@ export class Handler1 implements TeamsFxAdaptiveCardActionHandler {
 
 ### Step 4: Register the action handler
 
-To register the action handler follow the steps below:
+To register the action handler, follow the steps below:
 
 1. Go to bot/src/internal/initialize.js(ts);
 1. Update your conversationBot initialization to enable cardAction feature and add the handler to actions array:
@@ -172,3 +172,11 @@ export const conversationBot = new ConversationBot({
 
 > [!NOTE]
 > For more code snippets and details, see [Respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
+
+## Customize the action response
+
+You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. There are three options to customize:
+
+1. `AdaptiveCardResponse.ReplaceForInteractor`: This is the default behavior. The response card will be replaced the current one (the card where the button is defined) for the interactor who triggers the action. Users in the conversation still view the original action card.
+
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card":::
