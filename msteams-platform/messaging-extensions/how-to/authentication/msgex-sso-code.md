@@ -63,7 +63,31 @@ The request to get the token is a POST message request using the existing messag
 >[!NOTE]
 > The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-Use the following code snippet example for requesting a token:
+To update your app's code:
+
+1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
+
+    # [csharp](#tab/cs1)
+
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code:
+
+    ```csharp
+    base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+    ```
+
+    # [JavaScript](#tab/js1)
+    
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code:
+    
+    ```JavaScript
+    const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
+    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+    adapter.use(tokenExchangeMiddleware);
+    ```
+    
+    ---
+
+1. Use the following code snippet for requesting a token.
 
 # [csharp](#tab/cs)
 
