@@ -26,7 +26,11 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-***October 12, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+* ***October 30, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+* ***October 13, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
+* ***October 13, 2022***: [Configure back button of an app](concepts/design/personal-apps.md#configure-back-button).
+* ***October 12, 2022***: [Apps are supported in instant meetings, one-on-one, and group calls.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***October 12, 2022***: [Live Share canvas](apps-in-teams-meetings/teams-live-share-canvas.md)
 
 :::column-end:::
 :::row-end:::
@@ -37,10 +41,10 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 09/30/2022 | Manage SaaS licenses for third party apps in Teams | Monetize your app > [Include a SaaS offer with your Teams app](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams) |
-| 09/29/2022 | Teams mobile app now supports file downloads to local devices | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile) |
-| 09/16/2022 | Adaptive Cards in search based message extensions now support Universal Actions | Build Message Extensions > Search commands > Define search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
-| 09/06/2022 | Introduced code snippets for capturing videos using camera through `selectMedia` API | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#code-snippets) |
+| 09/30/2022|Manage SaaS licenses for third party apps in Teams|Monetize your app > Include a SaaS offer with your Teams app > [Manage license for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 09/29/2022|Teams mobile app now supports file downloads to local devices.|Integrate device capabilities > Integrate media capabilities > [File download on Teams mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
+| 09/16/2022|Adaptive Cards in search based message extensions now support Universal Actions.|Build message extensions > Search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
+| 09/06/2022|Introduced code snippets for capturing videos using camera through `selectMedia` API.| Integrate device capabilities > Integrate media capabilities > [Code snippets](concepts/device-capabilities/media-capabilities.md#code-snippets)|
 | 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
@@ -204,7 +208,7 @@ Explore updates from the previous GA releases listed here.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
+| 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deep links to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/tab-sso-overview.md) |
 | 10/31/2019 | Conversational bots and message extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and message extension documentation |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
@@ -294,7 +298,6 @@ Developer preview is a public program that provides early access to unreleased T
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
-| 06/30/2022 | Apps for instant meetings, one-on-one, and group calls| Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | Introduced app manifest version 1.13 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 | 01/17/2022 | People Picker in Adaptive cards for mobile | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
