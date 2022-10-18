@@ -436,9 +436,9 @@ items:
 
        The app opens in a chat.
    
-    1. Enter any text and select Enter. 
+    1. Enter any text and send. 
 
-       ![Chat](~/assets/images/Teams-task-module/chat_ready.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/chat_ready_1.png" alt-text="Chat":::
     
        The app displays **Task Module Invocation from Hero Card** and **Task Module Invocation from Adaptive Card**.         
 
