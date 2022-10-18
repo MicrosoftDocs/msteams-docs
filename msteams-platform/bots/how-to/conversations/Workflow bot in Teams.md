@@ -233,4 +233,4 @@ Earlier when Adaptive Cards were sent in a Teams channel or group chat, all user
 
 The following gif image illustrates how user-specific views displays in Teams:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text=":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.gif":::
