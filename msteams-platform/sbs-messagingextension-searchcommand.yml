@@ -390,7 +390,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/Teams-Messaging-Extensions-Search/appisready.png) 
+          :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appisready.png" alt-text="App ready"::: 
 
         
     # [Command line](#tab/cli)
