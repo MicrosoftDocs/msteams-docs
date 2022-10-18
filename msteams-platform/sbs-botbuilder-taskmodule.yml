@@ -99,7 +99,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/Teams-task-module/multi-tenant-option.png" alt-text="Microsoft App ID":::
+        :::image type="content" source="~/assets/images/Teams-task-module/multi-tenant-option_1.png" alt-text="Microsoft App ID":::
 
     1. Once the validation is passed, select **Create**. 
 
@@ -107,7 +107,7 @@ items:
 
     1. Select **Go to resource**. 
 
-        :::image type="content" source="~/assets/images/Teams-task-module/bot-deployment_1.png" alt-text="Deploy App":::
+        :::image type="content" source="~/assets/images/Teams-task-module/bot-deployment_2.png" alt-text="Deploy App":::
 
         Your Azure bot is created.
 
