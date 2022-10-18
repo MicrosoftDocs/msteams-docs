@@ -33,6 +33,13 @@ To update the development environment variables:
 
 1. Open the bot app project.
 1. Open the `./env` file for your project.
+1. 1. Update the following variables:
+
+    - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
+    - For `MicrosoftAppPassword`, update the Bot registration client secret.
+    - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
+    - For `MicrosoftAppTenantId`, update the tenant ID.
+<!--
 1. Find the variable `MICROSOFT_APP_PASSWORD` and update its value as shown below:
 
     ```text
@@ -44,7 +51,7 @@ To update the development environment variables:
     ```text
     SSO_CONNECTION_NAME={{OAUTH_CONNECTION_SETTING_NAME}}
     ```
-
+-->
 1. Save the file.
 
 You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
