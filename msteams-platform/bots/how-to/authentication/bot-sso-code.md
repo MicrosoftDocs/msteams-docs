@@ -74,6 +74,8 @@ To update your app's code:
 
     # [JavaScript](#tab/js1)
     
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code:
+    
     ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
