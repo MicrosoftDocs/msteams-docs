@@ -84,10 +84,11 @@ To update your app's code:
     
     ---
 
-
-1. Use the following code snippet for requesting a token. After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+1. Use the following code snippet for requesting a token.
 
     # [csharp](#tab/cs2)
+    
+    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
     
     ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
@@ -198,8 +199,8 @@ To update your app's code:
     
     ---
 
-<!--[!NOTE]
-> For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true)-->
+> [!NOTE]
+> For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
 ### Consent dialog for getting access token
 
