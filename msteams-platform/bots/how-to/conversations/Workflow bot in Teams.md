@@ -229,7 +229,7 @@ Earlier when Adaptive Cards were sent in a Teams channel or group chat, all user
 
 * `Base Card`: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card will be automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
-* `Refresh behavior`: After the user views the message then Teams clients automatically triggers a refresh after a minute of the last refresh response. The user-specific view handler will be invoked to return a card view (`Response Card`) for specific user (`UserA`). And for other users in the conversation, they still view the base card.
+* `Refresh behavior`: After the user views the message then. Teams clients automatically trigger a refresh after a minute of the last refresh response. The user-specific view handler will be invoked to return a card view (`Response Card`) for specific user (`UserA`). And for other users in the conversation, they still view the base card.
 
 The following gif image illustrates how user-specific view displays in Teams:
 
@@ -240,11 +240,11 @@ The following gif image illustrates how user-specific view displays in Teams:
 Below are the steps to implement this pattern with TeamsFx SDK:
 
 1. [Enable refresh in base adaptive card](#step-1-enable-refresh-in-base-adaptive-card)
-1. Add use-specific Adaptive Cards
-1. Add card action handler to refresh views
-1. Register action handler
+1. [Add use-specific Adaptive Cards](#step-2-add-user-specific-adaptive-cards)
+1. [Add card action handler to refresh views](#step-3-add-card-action-handler-to-refresh-views)
+1. [Register action handler](#step-4-register-the-action-handler-1)
 
-### Step 1:  Enable refresh in base adaptive card
+### Step 1: Enable refresh in base adaptive card
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, for example,  the card1. There are two options to achieve this:
 
@@ -282,7 +282,7 @@ Below is a sample that returns a case card as command response that can auto-ref
 
 * Option 2: Enable user-specific view to refresh your Adaptive Card.
 
-Here is a sample refresh action defined in `baseCard.json`:
+Here's a sample refresh action defined in `baseCard.json`:
 
 ```
 { 
@@ -308,3 +308,78 @@ Here is a sample refresh action defined in `baseCard.json`:
 ```
 
 You need to replace `${userID}` with user MRI in code, when rendering your card content.
+
+### Step 2: Add user-specific Adaptive Cards
+
+You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for userA in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
+
+```
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "This is a user-specific view"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}
+```
+
+### Step 3: Add card action handler to refresh views
+
+Add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
+
+```
+import responseCard from "../adaptiveCards/responseCard.json"; 
+
+export class Handler1 implements TeamsFxBotCardActionHandler { 
+    triggerVerb: string = "userViewRefresh";
+ 
+    async handleActionInvoked(context: TurnContext, actionData: any): Promise<InvokeResponse> {
+      /**
+       * If you have multiple userIds defined in your refresh action, for example: userIds: [ "<UserA>", "<userB>" ] ,
+       * and you can return different card response for those users respectively with the following code sample.
+        
+        const currentUserId = context.activity.from.id;
+        switch (currentUserId) {
+          case "<userA's id>":
+            const card1 = AdaptiveCards.declare(card1).render(actionData);
+            return InvokeResponseFactory.adaptiveCard(card1);
+          case "<userB's id>":
+            const card1 = AdaptiveCards.declare(card2).render(actionData);
+            return InvokeResponseFactory.adaptiveCard(card2);
+        }
+     */
+      const responseCardJson = AdaptiveCards.declare(responseCard).render(actionData);
+      return InvokeResponseFactory.adaptiveCard(responseCardJson);
+    } 
+}
+```
+
+### Step 4: register the action handler
+
+Register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
+
+```
+export const commandBot = new ConversationBot({ 
+  ... 
+  cardAction: { 
+    enabled: true, 
+    actions: [ 
+      new Handler1() 
+    ], 
+  } 
+})
+```
+
+### Access Microsoft Graph
+
+If you're responding to a command that needs access to Microsoft Graph, you can use single sign-on (SSO) to use the logged-in Teams user token to access their Microsoft Graph data. Read more about how Teams Toolkit can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+
+### Connect to existing APIs
+
+You need to often connect to existing APIs for retrieving data to send to Teams. Teams Toolkit makes it easy for you to configure and manage authentication for existing APIs. For more information, see how to [integrate existing third party APIs](../../../toolkit/add-API-connection.md).
