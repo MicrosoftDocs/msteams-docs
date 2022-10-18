@@ -50,7 +50,7 @@ Sample name | Description | C# | Node.js |
 
 ## Step-by-step guides
 
-* Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
+Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
 
 ## See also
 
