@@ -379,7 +379,7 @@ items:
 
     1. Select **Add a permission**.
 
-       Request API permission page appears:
+       The **Request API permission** window appears.
 
     1. Select **Microsoft Graph**.
         
@@ -416,7 +416,7 @@ items:
 
        The **New Connection Setting** window appears.
 
-         :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
+         
 
     1. In **New Connection Setting** page, enter the following details:
 
@@ -430,7 +430,9 @@ items:
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
-    1. Select **Save** > **Apply**.
+    1. Select **Save**.
+
+       :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
 
        You have now configured SSO for your bot.
 
