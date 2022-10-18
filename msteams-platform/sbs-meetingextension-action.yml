@@ -337,11 +337,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in the cloned repository.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation_1.png" alt-text="location.":::
 
-    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
+    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -351,7 +351,7 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
 
-    1. Go to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in the cloned repository.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest location.png" alt-text="manifest location.":::
     
