@@ -233,45 +233,44 @@ The response with the token is sent through an invoke activity with the same sch
 
 Use the following code snippet example to invoke response:
 
-# [csharp](#tab/csharp)
+# [csharp](#tab/cs3)
 
 ```csharp
-    protected override async Task<InvokeResponse> OnInvokeActivityAsync
-    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
+        }
+
+private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            
+            var tokenResponse = (TokenResponse)stepContext.Result;
+            if (tokenResponse?.Token != null)
             {
-                try
-                {
-                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
-                    {
-                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
-                        return new InvokeResponse() { Status = 200 };
-                    }
-                    else
-                    {
-                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
-                    }
-                }
-                catch (InvokeResponseException e)
-                {
-                    return e.CreateInvokeResponse();
-                }
+                var token = tokenResponse.Token;
+
+                 // On successful login, the token contains sign in token.
             }
+            await stepContext.Context.SendActivityAsync(
+            MessageFactory.Text("Login was not successful please try again."), cancellationToken);
+
+            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+        }
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/js3)
 
 ```JavaScript
-async onSignInInvoke(context) {
-        if (context.activity && context.activity.name === tokenExchangeOperationName) {
-            await onTokenResponseEvent(context);
-            const response = {
-                        status: 200
-                    };
-                    return response;
+async loginStep(stepContext) {
+        // Get the token from the previous step. Note that we could also have gotten the
+        // token directly from the prompt itself. There is an example of this in the next method.
+        const tokenResponse = stepContext.result;
+        if (!tokenResponse || !tokenResponse.token) {
+            await stepContext.context.sendActivity('Login was not successful please try again.');
+        } else {
+            const token = new SimpleGraphClient(tokenResponse.token);
         }
-        else {
-            return await super.onInvokeActivity(context);
-        }
+        return await stepContext.endDialog();
     }
 ```
 ---
