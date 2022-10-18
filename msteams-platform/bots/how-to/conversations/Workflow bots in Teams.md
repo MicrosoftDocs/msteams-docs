@@ -11,7 +11,7 @@ ms.localizationpriority: high
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns a hard-coded Adaptive Card. You can customize this logic with your business logic. Often your business logic might require you to call your existing APIs. Users can create a workflow bot to respond to Adaptive card that are triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
 
 > [!NOTE]
-> You can choose the installation target when adding the app. For more install options see [Distribute your Teams app](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview).
+> You can choose the installation target when adding the app. For more install options see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
 
 ## Card Action Handler
 
@@ -19,7 +19,7 @@ To simplify the development, the TeamsFx SDK provides an adaptive card action ha
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png":::
 
 * `Action Card`: The card where you define your action that users can invoke (click button).
 * `Card Action Handler`: Triggered when user invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
@@ -72,7 +72,7 @@ You can follow the below steps to add more card actions.
 1. [Add an action to your Adaptive Card](#step-1-add-an-action-to-your-adaptive-card)
 1. [Add Adaptive Card for action response](#step-2-add-adaptive-card-for-action-response)
 1. [Add action handler](#step-3-add-action-handler)
-1. [Register the action handler]
+1. [Register the action handler](#step-4-register-the-action-handler)
 
 ### Step 1: Add an action to your Adaptive Card
 
@@ -151,7 +151,7 @@ export class Handler1 implements TeamsFxAdaptiveCardActionHandler {
 > [!NOTE]
 > You can follow this section to customize the card action handler according to your business need.
 
-### Register the action handler
+### Step 4: Register the action handler
 
 To register the action handler follow the steps below:
 
