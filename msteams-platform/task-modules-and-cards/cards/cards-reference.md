@@ -275,7 +275,7 @@ Adaptive Card with loop component has actionable content and enable users to mak
 
 Following is an example of an Adaptive Card with loop component:
 
-:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component":::
+:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
 
 > [!NOTE]
 > Adaptive Card loop component is available from Adaptive Card version 1.6.
