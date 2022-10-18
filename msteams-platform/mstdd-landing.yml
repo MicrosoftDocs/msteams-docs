@@ -58,7 +58,6 @@ landingContent:
       links:
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
-      - text: Generate a deep link to share content to stage in meetings.
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
       - text: Generate a deep link to share content to stage in meetings
