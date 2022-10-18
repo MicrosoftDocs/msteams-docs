@@ -226,3 +226,11 @@ You can also add new cards if appropriate for your application. How to build dif
 Earlier when Adaptive Cards were sent in a Teams channel or group chat, all users could see the same card content. Now, with the new refresh model for Adaptive Cards universal action, users can view user specific view. The auto refresh feature also facilitates scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrated how to provide user-specific view with `refresh` model:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-view-autoreferesh.png" alt-text="Diagramatic view of user specific autorefresh model" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-view-autoreferesh.png":::
+
+* `Base Card`: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card will be automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
+
+* `Refresh behavior`: After the user views the message then Teams clients automatically triggers a refresh after a minute of the last refresh response. The user-specific view handler will be invoked to return a card view (`Response Card`) for specific user (`UserA`). And for other users in the conversation, they still view the base card.
+
+The following gif image illustrates how user-specific views displays in Teams:
+
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text=":::
