@@ -199,9 +199,6 @@ To update your app's code:
     
     ---
 
-> [!NOTE]
-> For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
-
 ### Consent dialog for getting access token
 
 If the app user is using the application for the first time and user consent is required, the following dialog box appears:
@@ -278,6 +275,9 @@ async loginStep(stepContext) {
     }
 ```
 ---
+
+> [!NOTE]
+> The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
 <!--
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens and refresh them as needed by the app user.-->
