@@ -248,7 +248,7 @@ Below are the steps to implement this pattern with TeamsFx SDK:
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, for example,  the card1. There are two options to achieve this:
 
-* Option 1: Enable user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned.
+**Option 1**: Enable user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned.
 
 Below is a sample that returns a case card as command response that can auto-refresh to specific user, for example,  the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. Ensure that you provide the following info to define the refresh section:
 
@@ -280,7 +280,7 @@ Below is a sample that returns a case card as command response that can auto-ref
 }
      ```
 
-* Option 2: Enable user-specific view to refresh your Adaptive Card.
+**Option 2**: Enable user-specific view to refresh your Adaptive Card.
 
 Here's a sample refresh action defined in `baseCard.json`:
 
