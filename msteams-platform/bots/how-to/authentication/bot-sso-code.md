@@ -247,19 +247,14 @@ private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepCo
 
 private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            // Get the token from the previous step. Note that we could also have gotten the
-            // token directly from the prompt itself. There is an example of this in the next method.
+            
             var tokenResponse = (TokenResponse)stepContext.Result;
             if (tokenResponse?.Token != null)
             {
                 var token = tokenResponse.Token;
 
-            // On successful login, the token contains sign in token. You can do whatever is required with this token. 
-
-            return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions 
-            { Prompt = MessageFactory.Text("Would you like to view your token?") }, cancellationToken);
+                 // On successful login, the token contains sign in token.
             }
-
             await stepContext.Context.SendActivityAsync(
             MessageFactory.Text("Login was not successful please try again."), cancellationToken);
 
@@ -270,17 +265,16 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
 # [JavaScript](#tab/javascript)
 
 ```JavaScript
-async onSignInInvoke(context) {
-        if (context.activity && context.activity.name === tokenExchangeOperationName) {
-            await onTokenResponseEvent(context);
-            const response = {
-                        status: 200
-                    };
-                    return response;
+async loginStep(stepContext) {
+        // Get the token from the previous step. Note that we could also have gotten the
+        // token directly from the prompt itself. There is an example of this in the next method.
+        const tokenResponse = stepContext.result;
+        if (!tokenResponse || !tokenResponse.token) {
+            await stepContext.context.sendActivity('Login was not successful please try again.');
+        } else {
+            const token = new SimpleGraphClient(tokenResponse.token);
         }
-        else {
-            return await super.onInvokeActivity(context);
-        }
+        return await stepContext.endDialog();
     }
 ```
 ---
