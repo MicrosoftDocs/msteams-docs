@@ -89,68 +89,117 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-# [csharp](#tab/cs)
+    # [csharp](#tab/cs2)
 
-```csharp
-public class AdapterWithErrorHandler : CloudAdapter
-{
-    public AdapterWithErrorHandler(IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger<IBotFrameworkHttpAdapter> logger, IStorage storage, ConversationState conversationState)
-        : base(configuration, httpClientFactory, logger)
+    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+    
+    ```csharp
+        ```csharp
+    public class AdapterWithErrorHandler : CloudAdapter
     {
-        if (configuration.GetValue<bool>("UseSingleSignOn"))
+        public AdapterWithErrorHandler(
+            IConfiguration configuration,
+            IHttpClientFactory httpClientFactory,
+            ILogger<IBotFrameworkHttpAdapter> logger,
+            IStorage storage,
+            ConversationState conversationState)
+            : base(configuration, httpClientFactory, logger)
         {
             base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-            }
 
-        OnTurnError = async (turnContext, exception) =>
-        {
-            // Log any leaked exception from the application.
-            // NOTE: In production environment, you should consider logging this to
-            // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
-            // to add telemetry capture to your bot.
-            logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
-
-            // Send a message to the user
-            await turnContext.SendActivityAsync("The bot encountered an error or bug.");
-            await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
-
-            if (conversationState != null)
+            OnTurnError = async (turnContext, exception) =>
             {
-                try
-                {
-                    // Delete the conversationState for the current conversation to prevent the
-                    // bot from getting stuck in a error-loop caused by being in a bad state.
-                    // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
-                    await conversationState.DeleteAsync(turnContext);
-                }
-                catch (Exception e)
-                {
-                    logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
-                }
-            }
+                // Log any leaked exception from the application.
+                // NOTE: In production environment, you should consider logging this to
+                // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
+                // to add telemetry capture to your bot.
+                logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
-            // Send a trace activity, which will be displayed in the Bot Framework Emulator
-            await turnContext.TraceActivityAsync("OnTurnError Trace", exception.Message, "https://www.botframework.com/schemas/error", "TurnError");
-        };
+                // Send a message to the user
+                await turnContext.SendActivityAsync("The bot encountered an error or bug.");
+                await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
+
+                if (conversationState != null)
+                {
+                    try
+                    {
+                        // Delete the conversationState for the current conversation to prevent the
+                        // bot from getting stuck in a error-loop caused by being in a bad state.
+                        // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
+                        await conversationState.DeleteAsync(turnContext);
+                    }
+                    catch (Exception e)
+                    {
+                        logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
+                    }
+                }
+
+                // Send a trace activity, which will be displayed in the Bot Framework Emulator
+                await turnContext.TraceActivityAsync(
+                    "OnTurnError Trace",
+                    exception.Message,
+                    "https://www.botframework.com/schemas/error",
+                    "TurnError");
+            };
+        }
     }
-}
-```
+    ```
 
-# [JavaScript](#tab/js)
-
-```JavaScript
-var attachment = {
-    content: {
-        tokenExchangeResource: {
-            id: requestId
-                }
-            },
-    contentType: "application/vnd.microsoft.card.oauth",
-};
-await context.sendActivity({
-    attachments: [attachment]
-});
-```
+# [JavaScript](#tab/js2)
+    
+    ```JavaScript
+    adapter.onTurnError = async (context, error) => {
+        // This check writes out errors to console log .vs. app insights.
+        // NOTE: In production environment, you should consider logging this to Azure
+        //       application insights. See https://aka.ms/bottelemetry for telemetry
+        //       configuration instructions.
+        console.error(`\n [onTurnError] unhandled error: ${ error }`);
+    
+        // Send a trace activity, which will be displayed in Bot Framework Emulator
+        await context.sendTraceActivity(
+            'OnTurnError Trace',
+            `${ error }`,
+            'https://www.botframework.com/schemas/error',
+            'TurnError'
+        );
+    
+        // Send a message to the user
+        await context.sendActivity('The bot encountered an error or bug.');
+        await context.sendActivity('To continue to run this bot, please fix the bot source code.');
+        // Clear out state
+        await conversationState.delete(context);
+    };
+    
+    // Define the state store for your bot.
+    // See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
+    // A bot requires a state storage system to persist the dialog and user state between messages.
+    //const memoryStorage = new MemoryStorage();
+    
+    // Create conversation and user state with in-memory storage provider.
+    const conversationState = new ConversationState(memoryStorage);
+    const userState = new UserState(memoryStorage);
+    
+    // Create the main dialog.
+    const dialog = new MainDialog();
+    // Create the bot that will handle incoming messages.
+    const bot = new TeamsBot(conversationState, userState, dialog);
+    
+    // Create HTTP server.
+    const server = restify.createServer();
+    server.use(restify.plugins.bodyParser());
+    
+    server.listen(process.env.port || process.env.PORT || 3978, function() {
+        console.log(`\n${ server.name } listening to ${ server.url }`);
+        console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
+        console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
+    });
+    
+    // Listen for incoming requests.
+    server.post('/api/messages', async (req, res) => {
+        // Route received a request to adapter for processing
+        await adapter.process(req, res, (context) => bot.run(context));
+    });
+    ```
 ---
 
 ### Consent dialog for getting access token
