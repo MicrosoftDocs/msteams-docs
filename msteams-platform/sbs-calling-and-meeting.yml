@@ -122,7 +122,7 @@ items:
 
     1. Replace `azure-client-id` with your **Microsoft App ID** and `object-id` with the **Tenant ID** of your account used to sign in to the Teams (Copy the link as shown in the following image and you can find the tenant ID of your Teams account in the link obtained).
 
-        :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new_1.png" alt-text="Screenshot shows the replacement of Microsoft-App ID.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot shows the replacement of Microsoft-App ID.":::
 
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script.
     1. Sign in with your Teams account when PowerShell prompts.
@@ -263,7 +263,7 @@ items:
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
         * You can obtain the `Tenant ID` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenant ID`.
         
-            :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new_2.png" alt-text="Screenshot showing the Teams link.":::
+            :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
         
         * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
             * Sign in to the page using your Teams account.
