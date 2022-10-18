@@ -161,11 +161,11 @@ items:
     
     1. Select **Agree**.
 
-          :::image type="content" source="~/assets/images/Teams-task-module/terms_1.png" alt-text="Terms of service":::
+          :::image type="content" source="~/assets/images/Teams-task-module/terms_2.png" alt-text="Terms of service":::
 
     1. Select **Apply**.
 
-          :::image type="content" source="~/assets/images/Teams-task-module/configteams_1.png" alt-text="Select Teams":::  
+          :::image type="content" source="~/assets/images/Teams-task-module/configteams_2.png" alt-text="Select Teams":::  
     
     **To create tunnel for local web server**
 
@@ -227,7 +227,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Select scope":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_2.png" alt-text="Select scope":::
 
        The **Add a scope** window appears.
 
@@ -257,7 +257,7 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        :::image type="content" source="~/assets/images/Teams-task-module/scopes_2.png" alt-text="Scopes"::: 
+        :::image type="content" source="~/assets/images/Teams-task-module/scopes_3.png" alt-text="Scopes"::: 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -288,7 +288,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_1.png" alt-text="Add permission":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_2.png" alt-text="Add permission":::
 
     1. Select **Microsoft Graph**.
 
