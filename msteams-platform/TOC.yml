@@ -271,7 +271,9 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
+  - name: Use Fluid with Microsoft Teams
+    href: tabs/how-to/using-fluid-msteam.md
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -378,15 +380,20 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Unified meetings apps
-    href: apps-in-teams-meetings/meeting-app-extensibility.md
-    displayName: Chat tab, poll survey, user access, federated users
-  - name: Enable and configure apps for meetings
-    href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    displayName: meeting token generator app, meeting scenario
-  - name: Meeting apps API references
-    href: apps-in-teams-meetings/API-references.md
-    displayName: CART URL, channel, permissions, access, audio state
+  - name: Enable and configure apps for Teams meetings
+    items:
+    - name: Build tabs for meeting
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+    - name: Build apps for meeting stage
+      href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+    - name: Build in-meeting notification for meeting
+      href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+    - name: Build extensible conversations for meeting chat
+      href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
+    - name: Build apps for anonymous users
+      href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
+    - name: Meeting apps APIs
+      href: apps-in-teams-meetings/meeting-apps-apis.md
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
