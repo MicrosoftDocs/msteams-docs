@@ -1,12 +1,12 @@
 ---
-title: Workflow bots in Teams
+title: Workflow bot in Teams
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Workflow bots in Teams
+# Workflow bot in Teams
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns a hard-coded Adaptive Card. You can customize this logic with your business logic. Often your business logic might require you to call your existing APIs. Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
 
