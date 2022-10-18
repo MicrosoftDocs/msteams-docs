@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+    Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
     You can build your tabs with relevant user interface (UI) building blocks native on desktop, web, and mobile.
 
@@ -224,7 +224,7 @@ items:
     * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
     * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
 
-        ![Add client application](~/assets/images/adaptive-cards/add-client-aapplication.png)      
+        ![Add client application](~/assets/images/adaptive-cards/add-client-application.png)      
     
     **To add any necessary API permissions for downstream calls**
 
@@ -310,7 +310,7 @@ items:
     
     1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** to open the folder.
     1. Open the `manifest.json` file in Visual Studio Code.
-    1. In the `manifest.json` file, find **{contentBotId}** and add your Microsoft App ID and save.
+    1. In the `manifest.json` file, find **{contentBotId}** and **{Microsoft App ID} add your Microsoft App ID and save.
 
         ![Manifest config](~/assets/images/adaptive-cards/manifest-vsc.png)
 
