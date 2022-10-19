@@ -825,7 +825,7 @@
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis"
       },
       {
-        "source_path": "microsoftteams/apps-in-teams-meetings/teams-apps-in-meetingsy.md",
+        "source_path": "microsoftteams/platform/apps-in-teams-meetings/meeting-app-extensibility.md",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings"
       },
       {
@@ -834,3 +834,4 @@
       }
     ]
 }
+
