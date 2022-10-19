@@ -1,6 +1,6 @@
 ---
-title: Meeting apps API references
-author: surbhigupta
+title: Meeting apps APIs
+author: v-sdhakshina
 description: In this article, learn meeting apps API references that are available for Teams client and Bot Framework SDK's with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
 
-# Meeting apps API references
+# Meeting apps APIs
 
 The meeting extensibility provides APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
 
@@ -19,7 +19,7 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 > [!NOTE]
 > Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
 
-The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
+The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
 |Method| Description| Source|
 |---|---|----|
@@ -48,6 +48,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 
 > [!NOTE]
 >
+> * The user type is not included in the **getParticipantRole** API.
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
@@ -352,8 +353,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 > [!NOTE]
 >
 > * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
->
-> * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer`is the person who created the channel post.
+> * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer` is the person who created the channel post.
 
 ### Query parameter
 
@@ -528,7 +528,7 @@ The JSON response body for Meeting Details API is as follows:
 | **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
 | **details.joinUrl** | The URL used to join the meeting. |
 | **details.title** | The title of the meeting. |
-| **details.type** | The meeting's type (GroupCall, ChannelScheduled, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown). |
+| **details.type** | The meeting's type (OneToOneCall, GroupCall, Scheduled, Recurring, MeetNow, ChannelScheduled, and ChannelRecurring). |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
@@ -584,7 +584,7 @@ Content-Length: 22
 Hello I’m Cortana, welcome to my meeting. 
 ```
 
-> [!Note]  
+> [!NOTE]  
 > Each POST request generates a new line of captions. To ensure that the end user has enough time to read the content, limit each POST request body to 80-120 characters.
 
 ### Error codes
@@ -597,142 +597,6 @@ The following table provides the error codes:
 | **401** | Unauthorized. Bad or expired token. If you receive this error, generate a new CART URL in Teams. |
 | **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
 | **500** |Internal server error. For more information, [contact support or provide feedback](../feedback.md).|
-
-## Share app content to stage API
-
-The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
-
-### Prerequisite
-
-* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
-
-    ```json
-    "authorization": {
-        "permissions": { 
-        "resourceSpecific": [
-        { 
-        "name": "MeetingStage.Write.Chat",
-        "type": "Delegated"
-        }
-        ]
-    }
-    }
-    ```
-
-* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
-
-### Query parameter
-
-The following table includes the query parameters:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
-|**appContentURL**| String | Yes | The URL that will be shared on to the stage.|
-
-### Example
-
-```javascript
-const appContentUrl = "https://www.bing.com/";
-
-microsoftTeams.meeting.shareAppContentToStage((err, result) => {
-    if (result) {
-        // handle success
-    }
-    if (err) {
-        // handle error
-    }
-}, appContentUrl);
-```
-
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
-## Get app content stage sharing state API
-
-The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
-
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
-
-### Example
-
-```javascript
-microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
-    if (result.isAppSharing) {
-        // Indicates app has permission to share contents to meeting stage.
-    }
-});
-```
-
-The JSON response body for the `getAppContentStageSharingState` API is:
-
-```json
-{
-   "isAppSharing":true
-} 
-```
-
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
-## Get app content stage sharing capabilities API
-
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
-
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The result can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
-
-### Example
-
-```javascript
-microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
-    if (result.doesAppHaveSharePermission) {
-        // Indicates app has permission to share contents to meeting stage.
-    }
-});
-```
-
-The JSON response body for `getAppContentStageSharingCapabilities` API is:
-
-```json
-{
-   "doesAppHaveSharePermission":true
-} 
-```
-
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **1000** | App doesn't have permissions to allow share to stage.|
 
 ## Get real-time Teams meeting events API
 
@@ -1156,11 +1020,11 @@ sampleEffect1Element.addEventListener("click", function () {
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting meetingSidePanel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Details Tab in Meeting | Teams meeting extensibility sample for interacting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|Meeting Events Sample|Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
-|Meeting Recruitment Sample|Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
-|App installation using QR code|Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
+| Meeting Events Sample | Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+| Meeting Recruitment Sample |Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
+| App installation using QR code |Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
 ## See also
 
@@ -1170,5 +1034,4 @@ sampleEffect1Element.addEventListener("click", function () {
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+[Build tabs for meeting](build-tabs-for-meeting.md)

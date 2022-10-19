@@ -14,7 +14,6 @@ Common terms and definitions used in Teams developer documentation.
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of message extension app that uses a pop-up to collect or display information. <br>**See also**: [Message extension](#m); [Search commands](#s) |
 | [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or message extension. Use text, graphics, and buttons with these cards for rich communication. |
-| [Anonymous user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**See also**: [Federated user](#f) |
 | [App Catalog](../toolkit/publish.md) | A site that stores SharePoint and Office apps for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file, color icon, and outline icon. |
@@ -80,7 +79,6 @@ Common terms and definitions used in Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They're also called External users. <br>**See also**: [Anonymous user](#a) |
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product.The FRE helps users to get started with the functions, features, and benefits of the product and influences users' to come back and continue using your product.|
 
 ## G
@@ -98,7 +96,7 @@ Common terms and definitions used in Teams developer documentation.
 | --- | --- |
 | [Identity provider](../concepts/authentication/authentication.md) | An entity which stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: [Authentication](#a) |
 | [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
-| [In-meeting app experience](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
+| [In-meeting app experience](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
 
 ## L
 
@@ -116,8 +114,7 @@ Common terms and definitions used in Teams developer documentation.
 | --- | --- |
 | [Media capability](../concepts/device-capabilities/media-capabilities.md) | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: [Capability](#c); [Device capability](#d) |
 | [Meeting bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: [Call bot](#c); [Chat bot](#c) |
-| [Meeting lifecycle](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and message extensions in each stage of the meeting lifecycle. <br>**See also**: [In-meeting experience](#i) |
-|Meeting lobby| The meeting lobby is a logical pre-admission holding area that a meeting presenter uses to preview the identities of people who have a meeting admission key and want to join a meeting.|
+| [Meeting lifecycle](../apps-in-teams-meetings/teams-apps-in-meetings.md) | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and message extensions in each stage of the meeting lifecycle. <br>**See also**: [In-meeting experience](#i) |
 | [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It's a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
 | [Message extension](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
