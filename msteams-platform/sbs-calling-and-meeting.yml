@@ -266,8 +266,8 @@ items:
         
             :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
         
-        * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
-            * Sign in to the page using your Teams account.
+        * You can obtain the `displayName` and `id` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
+            * Sign in to the page using your Teams tenant account.
             * Add `Users` at the end of the URl in the search box.
             * Select **Run query**.
             
@@ -285,7 +285,7 @@ items:
     1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with your **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with your **Value**.
     1. Update `BotBaseUrl` with `ngrok` URL.
     1. Update `Tenant ID` and `UserId`.
-    1. Update `DisplayName` and `UserId`.
+    1. Update `DisplayName` and `Id`.
 
         :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot showing the Appsettings Json.":::
 
