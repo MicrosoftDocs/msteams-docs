@@ -21,14 +21,9 @@ Here's what you'll learn in this section:
 
 App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this, and use SSO to authenticate and authorize the app users. Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. The app user who has signed into Teams can be given access to your bot app.
 
-See the following video to learn about SSO in a bot app:
-<br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
-<br>
-
 - Teams authenticates and stores the identity of its app user.
-- Your tab app uses the stored identity of the app user who is already validated by Teams.
-- The app user needs to give consent to Teams for using the identity to access for using your tab app.
+- Your bot uses the stored identity of the app user who is already validated by Teams.
+- The app user needs to give consent to Teams for using the identity to access for using your bot.
 - The app user can access the app on web, desktop, or mobile client.
 
 ### Enhance user experience with SSO
