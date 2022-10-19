@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Adaptive Cards overflow menu
+        url: task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
       - text: Generate a deep link to share content to stage in meetings
@@ -74,9 +76,7 @@ landingContent:
         url: concepts/build-and-test/Shared-channels.md
       - text: Introduced app manifest v1.14
         url: resources/schema/manifest-schema.md
-      - text: Enhanced collaboration with Live Share SDK [Developer preview]
-        url: apps-in-teams-meetings/teams-live-share-overview.md
-
+      
 - title: Get started
   linkLists:
     - linkListType: get-started

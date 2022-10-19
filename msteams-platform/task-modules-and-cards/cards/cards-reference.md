@@ -973,4 +973,3 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
-

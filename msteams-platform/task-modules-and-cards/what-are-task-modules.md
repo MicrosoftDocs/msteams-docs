@@ -1,7 +1,7 @@
 ---
 title: Task modules
 author: surbhigupta
-description: In this module, learn how to add modal pop-up experiences to collect or display information to your users from your Microsoft Teams apps
+description: In this module, learn how to add modal pop-up experiences to collect or display information to your users from your Microsoft Teams apps.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -52,4 +52,5 @@ A task module includes the following as shown in the previous image:
 
 ## See also
 
-[Cards](~/task-modules-and-cards/what-are-cards.md)
+* [Cards](~/task-modules-and-cards/what-are-cards.md)
+* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
