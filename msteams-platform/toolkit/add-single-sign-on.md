@@ -6,9 +6,10 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
+zone_pivot_groups: teams-app-platform
 ---
 
-# Add single sign-on to Teams app
+# Add single sign-on to Teams app for Visual Studio Code
 
 Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application
 
@@ -397,3 +398,251 @@ For more information about TeamsFx SDK, see:
 ## See also
 
 * [Prerequisites for creating your Teams app](tools-prerequisites.md)
+
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## Add single sign-on to Teams app for Visual Studio
+
+Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application.
+
+For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+
+## Enable SSO support
+
+Teams Toolkit helps you to add SSO to the following Teams capabilities:
+
+* Tab
+* Notification bot: restify server
+* Command bot
+
+### Add SSO using Visual Studio
+
+The following steps help you to add SSO using Teams Toolkit in Visual Studio
+
+1. Open **Microsoft Visual Studio**.
+1. Open the Microsoft Teams app project.
+1. Select Project.
+1. Select Teams Toolkit.
+1. Select `Add Authentication Code`
+
+## Customize your project using Teams Toolkit
+
+The following table lists the changes Teams Toolkit makes to your project:
+
+   |**Type**|**File**|**Purpose**|
+   |--------|--------|-----------|
+   |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.|
+   |Modify|`manifest.template.json` under `template/appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
+   |Modify|`appsettings.json` and `appsettings.Development.json`|Configs that will be used by TeamsFx SDK will be added into your app settings. Please update add the 'TeamsFx' object if you have other appsettings files.|
+   |Create|`Auth/tab`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a tab project.|
+   |Create|`Auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
+
+> [!Note]
+> By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
+
+## Update your application to use SSO
+
+The following steps help you to enable SSO in your application.
+
+> [!NOTE]
+> These changes are based on the templates we scaffold.
+---
+<br>
+<br><details>
+<summary><b>Tab project
+</b></summary>
+
+1. Move `GetUserProfile.razor` file from `Auth/tab` folder to `Components/` folder.
+    * `GetUserProfile`: This file implements a function that uses TeamsFx SDK to call Microsoft Graph API to get user info.
+
+1. Rplace the 'AddSSO' component with 'GetUserProfile' component. To do this, just replace the following line: '<AddSSO />' with '<GetUserProfile />' in 'Components/Welcome.razor' file.
+
+</details>
+<details>
+<summary><b>Bot project
+</b></summary>
+
+1. Please upgrade your SDK and make sure your SDK version:
+   * TeamsFx: >= 1.1.0
+   * Microsoft.Bot.Builder >= 4.17.1
+
+2. Create `Pages` folder and move files in `Auth/bot/Pages` folder to `Pages`
+
+    `Auth/bot/Pages` folder contains HTML pages that hosted by bot application. When single sign-on flows are initiated with AAD, AAD will redirect the user to these pages.
+
+3. Create `SSO` folder and move files in `Auth/bot/SSO` folder to `SSO`. This folder contains two files as reference for SSO implementation:
+
+    * `SsoDialog.cs`: This creates a ComponentDialog that used for SSO.
+
+    * `TeamsSsoBot.cs`: This create a TeamsActivityHandler with `SsoDialog` and add `showUserInfo` as a command that can be triggered.
+
+    * `SsoOperations.cs`: This implements class with a function to get user info with SSO token. You can follow this method and create your own method that requires SSO token.
+
+    > Note: Remember to replace '{Your_NameSpace}' with your project namespace.
+4. Update 'Program.cs'
+
+    1. Find code:
+
+    ```csharp
+    builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
+    ```
+
+    and add the following code below:
+
+    ```csharp
+     builder.Services.AddRazorPages();
+        // Create the Bot Framework Adapter with error handling enabled.                                        
+        builder.Services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
+        builder.Services.AddSingleton<IStorage, MemoryStorage>();
+        // Create the Conversation state. (Used by the Dialog system itself.)
+        builder.Services.AddSingleton<ConversationState>();
+        // The Dialog that will be run by the bot.
+        builder.Services.AddSingleton<SsoDialog>();
+        // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
+        builder.Services.AddTransient<IBot, TeamsSsoBot<SsoDialog>>();
+        builder.Services.AddOptions<AuthenticationOptions>().Bind(builder.Configuration.GetSection("TeamsFx").GetSection(AuthenticationOptions.Authentication)).ValidateDataAnnotations();
+        builder.Services.AddOptions<BotAuthenticationOptions>().Configure<IOptions<AuthenticationOptions>>((botAuthOption, authOptions) => {
+            AuthenticationOptions authOptionsValue = authOptions.Value;
+            botAuthOption.ClientId = authOptionsValue.ClientId;
+            botAuthOption.ClientSecret = authOptionsValue.ClientSecret;
+            botAuthOption.OAuthAuthority = authOptionsValue.OAuthAuthority;
+            botAuthOption.ApplicationIdUri = authOptionsValue.ApplicationIdUri;
+            botAuthOption.InitiateLoginEndpoint = authOptionsValue.Bot.InitiateLoginEndpoint;
+        }).ValidateDataAnnotations();
+    ```
+
+    2. Find and delete the following code:
+
+        ```csharp
+        // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
+        builder.Services.AddTransient<IBot, TeamsBot>();
+        ```
+
+    3. Find the following code:
+
+        ```csharp
+        app.UseEndpoints(endpoints =>
+        {
+          endpoints.MapControllers();
+        });
+        ```
+
+        and replace with:
+
+        ```csharp
+        app.UseEndpoints(endpoints =>
+        {
+          endpoints.MapControllers();
+          endpoints.MapRazorPages();
+        });
+        ```
+
+5. Register your command in the Teams app manifest. Open 'Templates/appPackage/manifest.template.json', and add following lines under `command` in `commandLists` of your bot:
+
+   ```JSON
+   {
+       "title": "show",
+       "description": "Show user profile using Single Sign On feature"
+   }
+   ```
+
+</details>
+<details>
+<summary><b>Add a new command to the bot
+</b></summary>
+
+> [!NOTE]
+> Currently, these instructions applies to `command bot`.
+The following steps help you to add a new command, after you add SSO in your project:
+
+1. Create a new method in class SsoOperations in `SSO/SsoOperations` and add your own business logic to call Graph API:
+
+    ```csharp
+    public static async Task GetUserImageInfo(ITurnContext stepContext, string token, BotAuthenticationOptions botAuthOptions)
+    {
+        await stepContext.SendActivityAsync("Retrieving user information from Microsoft Graph ...");
+        var authProvider = new DelegateAuthenticationProvider((request) =>
+        {
+            request.Headers.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            return Task.CompletedTask;
+        });
+        var graphClient = new GraphServiceClient(authProvider);
+        // You can add following code to get your photo size:
+        // var photo = await graphClient.Me.Photo.Request().GetAsync();
+        // await stepContext.SendActivityAsync($"Size of your photo is: {photo.Width} * {photo.Height}");
+    }
+    ```
+
+2. Register a new command
+
+   Find the following line:
+
+    ```csharp
+    ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
+    ```
+
+    and add following lines after the above line to register a new command 'photo' and hook up with method 'GetUserImageInfo' added above:
+
+    ```csharp
+    ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
+    ```
+
+3. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `command` in `commandLists` of your bot:
+
+   ```JSON
+   {
+       "title": "photo",
+       "description": "Show user photo size using Single Sign On feature"
+   }
+   ```
+
+</details>
+<br>
+
+## Debug your application
+
+Press F5 to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD application for SSO. For Teams Toolkit local debug functionalities, see [Debug your Teams app locally](debug-local.md).
+
+## Customize Azure AD application registration
+
+The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of application registration. You can update the manifest as needed. If you need to include additional API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
+To view your Azure AD application in Azure Portal, see [View Azure AD application in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
+
+## SSO authentication concepts
+
+The following concepts help you for SSO authentication:
+
+### Working of SSO in Teams
+
+Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign-in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically.
+
+Teams tabs and bots have similar flow for SSO support, for more information, see:
+
+1. [Single sign-on (SSO) authentication in Tabs](../tabs/how-to/authentication/tab-sso-overview.md)
+2. [Single sign-on (SSO) authentication in Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
+
+### Simplified SSO with TeamsFx
+
+TeamsFx helps to reduce the developer tasks by using SSO and accessing cloud resources down to single line statements with zero configuration.
+
+With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
+
+1. User identity in browser environment: `TeamsUserCredential` represents Teams current user's identity.
+
+For more information about TeamsFx SDK, see:
+
+* [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
+* [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
+
+## How to use an existing AAD app
+
+Follow the [instruction](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project) to use an existing AAD app in your TeamsFx project.
+
+::: zone-end
+
+## See also
+
+* [Prepare accounts to build Teams apps](accounts.md)
