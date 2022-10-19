@@ -503,9 +503,11 @@
   - name: Enable SSO for your Teams app
     items:
     - name: Overview
-      href: tabs/how-to/authentication/tab-sso-overview.md
+      href: 
     - name: Enable SSO for your tab app
       items:
+      - name: Overview for tab SSO
+        href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Configure your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
@@ -516,6 +518,8 @@
         href: tabs/how-to/authentication/tab-sso-graph-api.md
     - name: Enable SSO for your bot app
       items:
+      - name: Overview for bot SSO
+        href: bots/how-to/authentication/bot-sso-overview.md
       - name: Configure your bot app in Azure AD
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
