@@ -433,7 +433,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required**—HTML Hex color code
 
-A color to use and as a background for your outline icons.
+A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
