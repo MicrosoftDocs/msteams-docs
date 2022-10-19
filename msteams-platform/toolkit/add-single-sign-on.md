@@ -409,7 +409,7 @@ For more information about TeamsFx SDK, see:
 
 ## Add single sign-on to Teams app for Visual Studio
 
-Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application.
+Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application.
 
 For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
@@ -452,40 +452,41 @@ The following steps help you to enable SSO in your application.
 
 > [!NOTE]
 > These changes are based on the templates we scaffold.
+
 ---
 <br>
 <br><details>
 <summary><b>Tab project
 </b></summary>
 
-1. Move `GetUserProfile.razor` file from `Auth/tab` folder to `Components/` folder.
-    * `GetUserProfile`: This file implements a function that uses TeamsFx SDK to call Microsoft Graph API to get user info.
+1. Move `GetUserProfile.razor` file from `Auth/tab` folder to `Components/` folder. `GetUserProfile` file implements a function that uses TeamsFx SDK to call Microsoft Graph API to get user info.
 
-1. Rplace the 'AddSSO' component with 'GetUserProfile' component. To do this, just replace the following line: '<AddSSO />' with '<GetUserProfile />' in 'Components/Welcome.razor' file.
+1. Replace the `AddSSO` component with `GetUserProfile` component. To do this, just replace the following line: `<AddSSO />` with `<GetUserProfile />` in `Components/Welcome.razor` file.
 
 </details>
 <details>
 <summary><b>Bot project
 </b></summary>
 
-1. Please upgrade your SDK and make sure your SDK version:
+1. You can upgrade your SDK and ensure your SDK version:
    * TeamsFx: >= 1.1.0
    * Microsoft.Bot.Builder >= 4.17.1
 
-2. Create `Pages` folder and move files in `Auth/bot/Pages` folder to `Pages`
-
-    `Auth/bot/Pages` folder contains HTML pages that hosted by bot application. When single sign-on flows are initiated with AAD, AAD will redirect the user to these pages.
+2. Create `Pages` folder and move files in `Auth/bot/Pages` folder.
+    `Auth/bot/Pages` folder contains HTML pages that are hosted by bot application. When single sign-on flows are initiated with Azure AD, that will redirect the user to these pages.
 
 3. Create `SSO` folder and move files in `Auth/bot/SSO` folder to `SSO`. This folder contains two files as reference for SSO implementation:
 
-    * `SsoDialog.cs`: This creates a ComponentDialog that used for SSO.
+    * `SsoDialog.cs`: This file creates a `ComponentDialog` that used for SSO.
 
-    * `TeamsSsoBot.cs`: This create a TeamsActivityHandler with `SsoDialog` and add `showUserInfo` as a command that can be triggered.
+    * `TeamsSsoBot.cs`: This file creates a `TeamsActivityHandler` with `SsoDialog` that adds and triggers a command `showUserInfo`.
 
-    * `SsoOperations.cs`: This implements class with a function to get user info with SSO token. You can follow this method and create your own method that requires SSO token.
+    * `SsoOperations.cs`: This file implements class with a function to get user info with SSO token. You can follow this method and create your own method that requires SSO token.
 
-    > Note: Remember to replace '{Your_NameSpace}' with your project namespace.
-4. Update 'Program.cs'
+    > [!NOTE]
+    > Ensure to replace `{Your_NameSpace}` with your project namespace.
+
+4. Update `Program.cs`
 
     1. Find code:
 
@@ -543,7 +544,7 @@ The following steps help you to enable SSO in your application.
         });
         ```
 
-5. Register your command in the Teams app manifest. Open 'Templates/appPackage/manifest.template.json', and add following lines under `command` in `commandLists` of your bot:
+5. Register your command in the Teams app manifest. Open `Templates/appPackage/manifest.template.json`, and add following lines under `command` in `commandLists` of your bot:
 
    ```JSON
    {
