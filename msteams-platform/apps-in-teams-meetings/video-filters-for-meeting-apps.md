@@ -358,9 +358,19 @@ Ensure that you implement the following guidelines to use the video extensibilit
   * Memory size must be less than 150 MB.
   * Latency must be less than 100 ms.
 
-## Sideload the video filter app
+## Upload the video filter app
 
-Sideload the video filter app to your tenant in Teams. For more information, see [enable sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). After sideloading, you can use the video filter app to apply video filters to videos in Teams meetings.
+Upload the video filter app manifest package to Teams and select **Submit an app to your org**. For more information, see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
+
+If you are creating an app for an EDU tenant, create a new version of the app and follow the steps below:
+
+1. . Add a suffix **for EDU** to the app name.
+
+1. Update the `applicableLicenseCategories` property in the app manifest with EducationStudent, EducationTeacher as its value.
+
+  `:::image type="content" source="../assets/images/apps-in-meetings/video-filters-edu-tenant-manifest.png" alt-text="Screenshot shows an example of app manifest with applicableLicenseCategories property.":::
+
+1. Save the manifest file and [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md).
 
 ## Diversity and Inclusion requirements
 
@@ -370,14 +380,19 @@ The following are the guiding principles for defining requirements and app appro
 1. The video filters feature should be perceived as diverse and inclusive.
 1. The filter app developer should provide filters only within their area of expertise.
 1. A filter shouldn't allow dysmorphia. For example, morphing the face, eyes, and nose, to skinnier, fatter, or distorted.
-1. A filter shouldn't allow skin smoothing.
 1. A filter shouldn't be offensive or contain objectionable content.
 1. A filter thumbnail should be inclusive. For example, it shouldn't indicate to the user that only a certain type of person can use this filter.
 
 A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities. The following are the diversity categories for video filters:
 </br>
 
-# [Category 1](#tab/category-1)
+# [Category 1: Must cater to](#tab/category-1)
+
+Here are some examples of category 1 diversity:
+
+* Gender identity
+
+* Skin tones
 
 The filter app must cater to at least one type of Category 1 diversity.
 
@@ -385,13 +400,15 @@ The filter app must cater to at least one type of Category 1 diversity.
 
    1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, black and middle skin tone in the color spectrum.
 
-Here are some examples of category 1 diversity:
+# [Category 2: May cater to](#tab/category-2)
 
-* Skin tones
+Here are some examples of category 2 diversity:
 
-* Gender identity
+* Age
 
-# [Category 2](#tab/category-2)
+* Eyes
+
+* Hair
 
 A video filter app can cater to at least one type of Category 2 diversity.
 
@@ -399,17 +416,7 @@ A video filter app can cater to at least one type of Category 2 diversity.
 
    1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum.
 
-Here are some examples of category 2 diversity:
-
-* Age
-
-* Hair
-
-* Eyes
-
-# [Category 3](#tab/category-3)
-
-A video filter app must avoid a combination of filters related to diversities in Category 3.
+# [Category 3: Must Avoid](#tab/category-3)
 
 Here are some examples of category 3 diversity:
 
@@ -440,6 +447,8 @@ Here are some examples of category 3 diversity:
 * Outlook on life
 * Epistemology
 * Any other type not mentioned above
+
+A video filter app must avoid the diversities in Category 3.
 
 ---
 
