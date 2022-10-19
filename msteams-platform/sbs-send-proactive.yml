@@ -27,7 +27,7 @@ items:
     * Proactive hello message as an Adaptive Card.
     ![proactive hello in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) 
 
-- title: Prerequisites
+- title: Prerequisites 
   durationInMinutes: 2
   content: |
     Ensure that you install the following:    
