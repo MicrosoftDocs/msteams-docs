@@ -274,7 +274,7 @@ items:
             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Graph Explorer.":::
 
             * Display names and User IDs linked to your account are generated.
-            * Pick any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
+            * Choose any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
        
             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Graph Explorer.":::
 
