@@ -11,7 +11,7 @@ Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive 
 
 There are two ways of invoking task modules:
 
-* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, with `task/fetch`, task module either a URL or an Adaptive Card, is fetched dynamically from your bot.
+* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, task module either a URL or an Adaptive Card, is fetched dynamically from your bot.
 * Deep link URLs: Using the [deep link syntax for task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ When the `value` object of the `invoke` card action or `Action.Submit` is initia
 
 :::image type="content" source="../../assets/images/task-module/task-module-invoke-request-response.png" alt-text="task/fetch request or response":::
 
-The following steps provide the invoke task module using task/fetch:
+The following steps provide the invoke task module using `task/fetch`:
 
 1. This image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
 1. The bot receives the `invoke` HTTP POST message.
@@ -56,7 +56,7 @@ The next section provides details on submitting the result of a task module.
 
 When the user is finished with the task module, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module). There are a few differences as follows:
 
-* HTML or JavaScript that is `TaskInfo.url`: Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. When you call `submitTask()` with the optional `appIds` parameter, Teams validates that the app sending the result is the same one that invoked the task module, helping prevent malicious apps from retrieving the result. Multiple app IDs can be specified because a web app from a single underlying domain can power multiple apps across different environments and branding schemes. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
+* HTML or JavaScript that is `TaskInfo.url`: Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. When you call `submitTask()` with the optional `appIds` parameter, Teams validates that the app sending the result is the same that invoked the task module, and helps prevent malicious apps from retrieving the result. Multiple app IDs can be specified because a web app from a single underlying domain can power multiple apps across different environments and branding schemes. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
 * Adaptive Card that is `TaskInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
 
 The next section provides details on the flexibility of `task/submit`.
@@ -88,7 +88,7 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
 
-## Example of task/fetch and task/submit invoke messages in Node.js and C#
+## Example of task/fetch and task/submit invoke messages in Node.js and C #
 
 # [Node.js](#tab/nodejs)
 

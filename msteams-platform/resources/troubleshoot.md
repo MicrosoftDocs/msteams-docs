@@ -27,11 +27,11 @@ If you aren't seeing your content in the tab view, it could be:
 
 ### Changes to my web app aren't reflected in its Teams tab
 
-If you experience consistent or intermittent caching issues where updates to your web app aren't appearing when its hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers as needed to ensure your desired client caching behavior.
+If you experience consistent or intermittent caching issues where updates to your web app aren't appearing when it's hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers to ensure your desired client caching behavior.
 
 ### The Save button isn't enabled on the settings dialog
 
-Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
+Ensure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
 
 ### The tab settings can't be saved on selecting Save
 
@@ -57,7 +57,7 @@ Unless you're doing silent authentication, you must follow the authentication pr
 > [!NOTE]
 > We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
-For more information about authentication, see [Authenticate a user](~/concepts/authentication/authentication.md).
+For more information about authentication, see [authenticate a user](~/concepts/authentication/authentication.md).
 
 ### Static tabs not showing up
 
@@ -67,11 +67,11 @@ There's a known issue where updating an existing bot app with a new or updated s
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. In some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. In some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ### Can't add bot as a member of a team
 
-Bots must first be uploaded in a team before it's accessible within any channel of that team. For more information on this process, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
+Bots must first be uploaded in a team before it's accessible within any channel of that team. For more information on this process, see [uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
 ### My bot doesn't get my message in a channel
 
