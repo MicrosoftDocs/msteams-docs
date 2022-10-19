@@ -1,7 +1,7 @@
 ---
 title: Build apps for Teams meeting stage
 author: v-sdhakshina
-description: In this article, learn how to build meeting apps API references that are available for Teams client.
+description: Learn how to build apps for Teams meeting stage, share to stage APIs, and generate a deep link to share content to stage in meetings.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
