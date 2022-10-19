@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-* ***October 18, 2022***: [Developer Portal for Teams is now available for GCC tenants](concepts/build-and-test/teams-developer-portal.md).
+* ***October 19, 2022***: [Developer Portal for Teams is now available for GCC tenants](concepts/build-and-test/teams-developer-portal.md).
 * ***October 13, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***October 13, 2022***: [Configure back button of an app](concepts/design/personal-apps.md#configure-back-button).
 * ***October 12, 2022***: [Apps are supported in instant meetings, one-on-one, and group calls.](apps-in-teams-meetings/teams-apps-in-meetings.md)
