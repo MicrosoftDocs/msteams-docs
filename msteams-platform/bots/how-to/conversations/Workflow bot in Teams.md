@@ -212,13 +212,13 @@ When you want to return error response message to the client, then you can apply
 > [!NOTE]
 > For more information about the invoke response format, see [Response format](/adaptive-cards/authoring-cards/universal-action-model).
 
-### Customize adaptive card content
+### Customize Adaptive Card content
 
 You can edit the file `src/adaptiveCards/helloworldCommand.json` to customize Adaptive Card to your preference. The file `src/cardModels.ts` defines a data structure that is used to fill data for the Adaptive Card.
 
 The binding between the model and the Adaptive Card is done by matching name (for example, `CardData.title` maps to `${title}` in Adaptive Card). You can add, edit, or remove properties and their bindings to customize the Adaptive Card to your needs.
 
-You can also add new cards if appropriate for your application. How to build different types of adaptive cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards if appropriate for your application. How to build different types of Adaptive Cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
 ## Auto-refresh to user-specific view
 
@@ -238,12 +238,12 @@ The following gif image illustrates how user-specific view displays in Teams:
 
 Below are the steps to implement this pattern with TeamsFx SDK:
 
-1. [Enable refresh in base adaptive card](#step-1-enable-refresh-in-base-adaptive-card)
+1. [Enable refresh in base Adaptive Card](#step-1-enable-refresh-in-base-adaptive-card)
 1. [Add use-specific Adaptive Cards](#step-2-add-user-specific-adaptive-cards)
 1. [Add card action handler to refresh views](#step-3-add-card-action-handler-to-refresh-views)
 1. [Register action handler](#step-4-register-the-action-handler-1)
 
-#### Step 1: Enable refresh in base adaptive card
+#### Step 1: Enable refresh in base Adaptive Card
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, such as  the card1. There are two options to achieve this:
 
@@ -309,7 +309,7 @@ You need to replace `${userID}` with user MRI in code, when rendering your card 
 
 #### Step 2: Add user-specific Adaptive Cards
 
-You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for userA in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
+You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for user A in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
 
 ```
 {
@@ -384,9 +384,9 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 ## Frequently Asked Questions
 
-### How to extend workflow bot with Notification feature?
+### How to extend workflow bot with notification feature?
 
-The notification feature adds the ability for your application to send Adaptive Cards in response to external events. For example, when a message is posted to Event Hub your application can respond and send an appropriate Adaptive Card to Teams.
+The notification feature adds the ability for your application to send Adaptive Cards in response to external events. For example, when a message is posted to Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
 To add the notification feature:
 
@@ -426,7 +426,7 @@ To add the notification feature:
 
 1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using your favorite tool to send HTTP POST request to `https://localhost:3978/api/notification`.
 
-### How to extend workflow bot with Command and response feature?
+### How to extend workflow bot with command and response feature?
 
 The default workflow bot comes with command and response, see [how to add more command and response](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#How-to-add-more-command-and-response).
 
