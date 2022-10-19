@@ -387,7 +387,6 @@ Use the following code snippet to handle the access token in case the app user l
 
 ---
 
-
 ## Code sample
 
 | **Sample name** | **Description** | **C#** | **JavaScript** | **Node.js** |
