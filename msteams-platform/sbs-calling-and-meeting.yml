@@ -75,6 +75,7 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
     
     The **Register an application** window opens. Enter your application's registration information.
+
       1. Enter a meaningful application **Name** that is displayed to users of the app.
       1. In **Supported account types**, select the accounts you would like your application to support.
       1. In **Redirect URI (optional)**, select the type of app **Web or Public client (mobile & desktop)**, and then enter the redirect URI for your application.
@@ -166,7 +167,7 @@ items:
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
-    1. Select your **Subscription** **Resource group** and from the dropdown list.
+    1. Select your **Subscription** and **Resource group** from the dropdown list.
         
         :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot showing the creation of Azure bot.":::
       
@@ -186,7 +187,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot showing the selection of multi tenant.":::
 
-    1. If the validation passes, select **Create**.
+    1. Once the validation passed, select **Create**.
 
        It takes a few moments for your bot service to be provisioned.
 
@@ -286,7 +287,7 @@ items:
     1. Update `Tenant ID` and `UserId`.
     1. Update `DisplayName` and `UserId`.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/appsettings.png" alt-text="Screenshot showing the Appsettings Json.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot showing the Appsettings Json.":::
 
     1. Select **Save**.
 
@@ -297,7 +298,7 @@ items:
     1. In the `manifest.json` file, find **{id}, {BotId}** and add your Microsoft App ID.
     1. Add your ngrok url in **validDomains** excluding https:// and save.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/manifest.png" alt-text="Screenshot showing the manifest.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot showing the manifest.":::
 
     1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
