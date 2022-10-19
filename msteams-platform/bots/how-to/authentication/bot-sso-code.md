@@ -287,7 +287,7 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 Web APIs on your server must decode the access token, and verify if it's sent from the client.
 
 > [!NOTE]
-> If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines in this section.
+> If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines given in this section.
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens)
 

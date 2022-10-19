@@ -501,9 +501,7 @@
   - name: Overview
     href: concepts/authentication/authentication.md
   - name: Enable SSO for your Teams app
-    items:
-    - name: Overview
-      href: 
+    items: 
     - name: Enable SSO for your tab app
       items:
       - name: Overview for tab SSO

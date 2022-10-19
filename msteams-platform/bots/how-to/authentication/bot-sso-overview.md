@@ -52,8 +52,8 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Bot service → Teams Client |  |
-| 2 | Teams Client → Azure AD |  |
+| 1 | Bot service → Teams Client | The SSO flow for a Teams bot app is triggered when an app user sends a message (or an activity) to the bot service. The app user uses the Teams client to send a message to the bot service. On receiving the message, the bot sends a oAuth Card to Teams client with a request for a token. |
+| 2 | Teams Client → Azure AD | The Teams client receives the OAuth card and the token exchange request from the bot service. It sends this OAuth Card to Azure AD requesting for an access token. |
 | 3 | Azure AD → Consent dialog |  |
 | 4 | Bot service → Bot Framework Token service |  |
 | 5 | Bot Framework Token service → Azure AD |  |
