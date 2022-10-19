@@ -433,7 +433,7 @@ The following steps help you to add SSO using Teams Toolkit in Visual Studio
 
 ## Customize your project using Teams Toolkit
 
-The following table lists the changes Teams Toolkit makes to your project:
+The following table lists the changes Teams Toolkit makes in your project:
 
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
@@ -443,8 +443,8 @@ The following table lists the changes Teams Toolkit makes to your project:
    |Create|`Auth/tab`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a tab project.|
    |Create|`Auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
 
-> [!Note]
-> By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
+> [!NOTE]
+> By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. You can update your code to ensure that SSO is working in the project.
 
 ## Update your application to use SSO
 
@@ -618,11 +618,7 @@ To view your Azure AD application in Azure Portal, see [View Azure AD applicatio
 
 ## SSO authentication concepts
 
-The following concepts help you for SSO authentication:
-
-### Working of SSO in Teams
-
-Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign-in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically.
+The following concepts help you to authenticate SSO in Teams. SSO authentication with Azure AD silently refreshes the authentication token to minimize the number of times users need to enter their sign-in credentials. If users agree to use your app, they don't have to provide consent again on in another device as they're signed in automatically.
 
 Teams tabs and bots have similar flow for SSO support, for more information, see:
 
@@ -631,20 +627,16 @@ Teams tabs and bots have similar flow for SSO support, for more information, see
 
 ### Simplified SSO with TeamsFx
 
-TeamsFx helps to reduce the developer tasks by using SSO and accessing cloud resources down to single line statements with zero configuration.
-
-With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
-
-1. User identity in browser environment: `TeamsUserCredential` represents Teams current user's identity.
+TeamsFx helps to reduce your tasks by using SSO and accessing cloud resources down to single line statements with zero configuration. With TeamsFx SDK, you can write user authentication code in a simplified way using credentials such as for browser environment the user identity is `TeamsUserCredential`.
 
 For more information about TeamsFx SDK, see:
 
 * [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
-## How to use an existing AAD app
+## How to use an existing Azure AD app
 
-Follow the [instruction](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project) to use an existing AAD app in your TeamsFx project.
+Follow the [instruction](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project) to use an existing Azure AD app in your TeamsFx project.
 
 ::: zone-end
 
