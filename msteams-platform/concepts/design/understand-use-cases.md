@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: In this article, you'll learn Microsoft Teams app capabilities, plan and understand Teams app and features, and also user problems that Teams app would solve.
+description: Learn about Microsoft Teaams app cabilities- tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, shared app experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear

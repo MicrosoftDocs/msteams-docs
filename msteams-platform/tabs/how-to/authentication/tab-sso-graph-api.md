@@ -1,6 +1,6 @@
 ---
 title: Extend tab app with Microsoft Graph permissions
-description: Describes configuring API permissions with Microsoft Graph
+description: Configure additional permissions and scopes with Microsoft Graph for enabling Single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
@@ -214,8 +214,9 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
 4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD wouldn't ask for other scopes.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
-5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
 
+    To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
+5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
 
 ## See also
