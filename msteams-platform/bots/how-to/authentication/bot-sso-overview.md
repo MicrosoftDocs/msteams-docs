@@ -14,8 +14,8 @@ With SSO in Teams, app users have the advantage of using Teams to access apps. A
 Here's what you'll learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience. App users can use your app without signing in again.
-2. **SSO in Teams at runtime**: Your tab app interacts with Azure AD at runtime for one-time authentication and authorization for your app users.
-3. **Enable SSO for your tab app**: Implement the tasks involved to implement SSO in your tab app.
+2. **SSO in Teams at runtime**: Your bot app interacts with Azure AD at runtime for one-time authentication and authorization for your app users.
+3. **Enable SSO for your bot app**: Implement the tasks involved to implement SSO in your bot app.
 
 ## SSO user experience in Teams
 
@@ -44,9 +44,9 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app client and server, Teams client, and Azure AD. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multi-tenant environment.
+Achieve SSO in a bot app by obtaining access token for the Teams app user who's currently logged in. This process involves the bot app client and server, Teams client, and Azure AD. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multi-tenant environment.
 
-The following image shows how SSO works when a Teams app user attempts to access the tab app:
+The following image shows how SSO works when a Teams app user attempts to access the bot app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png" alt-text="Bots at runtime" lightbox="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png":::
 
