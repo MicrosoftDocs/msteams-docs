@@ -267,22 +267,23 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
-## Adaptive Card Loop component
+### Adaptive Card based Loop component
 
-Adaptive Card Loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) like a table, task list, Adaptive Card, or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
+Loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) like a table, task list, or paragraph — where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
 
-Adaptive Card with loop component has actionable content and enable users to make quick updates without switching context. Any changes made in the loop component are synced across the Teams where the loop component is shared.
-
-Following is an example of an Adaptive Card with loop component:
-
-:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
+Adaptive Card based Loop component has actionable content and enable users to make quick updates without switching context. Any changes made in the Adaptive Card based Loop component are synced across the Teams where the Adaptive Card is shared.
 
 > [!NOTE]
 > Adaptive Card loop component is available from Adaptive Card version 1.6.
 
-To enable an Adaptive Card with loop component, add the `webUrl` of the `metadata` to the Adaptive Card schema. If you want your bot to post an Adaptive Card with loop component, add the `webUrl` of `metadata` to the card payload.
+To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` to the Adaptive Card schema. If you want your bot to post an Adaptive Card based Loop component, add the `metadata` and `webUrl` to the card payload.
 
-The following code shows an example of an Adaptive Card loop with `metadata` `webUrl`:
+|Property|Type|Description|Required|
+|---|---|---|---|
+| [`metadata`](https://adaptivecards.io/explorer/) | Metadata | Defines various metadata properties typically not used for rendering the card | No |
+| [`webUrl`](https://adaptivecards.io/explorer/Metadata.html) | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.|No|
+
+The following code shows an example of an Adaptive Card based Loop component with `metadata` and `webUrl`:
 
 ```json
 {
@@ -396,26 +397,7 @@ The following code shows an example of an Adaptive Card loop with `metadata` `we
           "title": "Action 4",
           "type": "Action.Submit"
         },
-        {
-          "title": "Action 5",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 6",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 7",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 8",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 9",
-          "type": "Action.Submit"
-        }
+        ...
       ],
       "type": "ActionSet"
     },
@@ -475,6 +457,10 @@ The following code shows an example of an Adaptive Card loop with `metadata` `we
   }
 }
 ```
+
+Following is an example of an Adaptive Card based loop component:
+
+:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
 
 #### Additional information on Adaptive Cards
 
