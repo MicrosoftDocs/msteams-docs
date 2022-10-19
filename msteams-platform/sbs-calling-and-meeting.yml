@@ -26,7 +26,7 @@ items:
  
     This step-by-step guide helps you to create a bot with calling and meeting functionality. By the end of this tutorial you can achieve the following output:
 
-    ![Final output](~/assets/images/calls-and-meetings/final-output.png)
+    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -77,7 +77,9 @@ items:
     The **Register an application** window opens. Enter your application's registration information.
 
       1. Enter a meaningful application **Name** that is displayed to users of the app.
+
       1. In **Supported account types**, select the accounts you would like your application to support.
+
       1. In **Redirect URI (optional)**, select the type of app **Web or Public client (mobile & desktop)**, and then enter the redirect URI for your application.
 
       > [!NOTE]
@@ -117,8 +119,10 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/PowerShell-script.png" alt-text="Screenshot shows the PowerShell script.":::
 
         ```PowerShell
+
         New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
         Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
+
         ```
 
     1. Replace `azure-client-id` with your **Microsoft App ID** and `object-id` with the **Tenant ID** of your account used to sign in to the Teams (Copy the link as shown in the following image and you can find the tenant ID of your Teams account in the link obtained).
@@ -267,13 +271,18 @@ items:
             :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
         
         * You can obtain the `displayName` and `id` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
+
             * Sign in to the page using your Teams tenant account.
+
             * Add `Users` at the end of the URl in the search box.
+
             * Select **Run query**.
             
             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Graph Explorer.":::
 
+
             * Display names and User IDs linked to your account are generated.
+
             * Choose any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
        
             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Graph Explorer.":::
@@ -347,7 +356,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Final output](~/assets/images/calls-and-meetings/final-output.png)
+    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
     
 - content: |
     You've completed the tutorial to get started with bot calling and meeting app for Microsoft Teams.
