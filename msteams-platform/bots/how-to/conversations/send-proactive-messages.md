@@ -61,8 +61,8 @@ To create a conversation, you need `userId`, `tenantId`, and `serviceUrl`.
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. The following is an example for the `serviceUrl`:
 
 ```csharp
-const serviceUrl = 'https://smba.trafficmanager.net/uk/';
-        MicrosoftAppCredentials.trustServiceUrl(serviceUrl);
+var serviceUrl = "https://smba.trafficmanager.net/uk/";
+MicrosoftAppCredentials.TrustServiceUrl(serviceUrl);
 ```
 
 If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
