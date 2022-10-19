@@ -55,3 +55,13 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png" alt-text="Bots at runtime":::
 
+| # | Interaction | What's going on |
+| --- | --- | --- |
+| 1 | Tab app → Teams Client | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token. |
+| 2 | Teams Client → Azure AD | Teams requests Azure AD endpoint for the access token for the current app user based on Teams identity. |
+| 3 | Azure AD → Consent form | If the current app user is using your tab app for the first time, Teams displays request prompt to consent, if the app needs to access some protected data. The app user (or the administrator) must give consent to Teams for using the app user's Teams identity to obtain access token from Azure AD. <br> Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication. |
+| 4 | Azure AD → Teams Client | Azure AD sends the access token to the Teams Client. The token is a JSON Web Token (JWT), and it's validation works just like token validation in most standard OAuth flows. Teams caches the token on your behalf so that future calls to `getAuthToken()` return the cached token. |
+| 5 | Teams Client → Tab app client | Teams sends the access token to the tab app as part of the result object returned by the `getAuthToken()` call. |
+| 6 | Tab app (between client & server) | The tab app parses the access token using JavaScript to extract required information, such as the app user's email address. The token returned to the tab app is both an access token and an identity token. |
+
+For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
