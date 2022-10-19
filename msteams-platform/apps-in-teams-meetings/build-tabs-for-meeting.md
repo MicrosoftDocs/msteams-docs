@@ -1,7 +1,7 @@
 ---
 title: Build tabs for meeting
 author: surbhigupta
-description: Learn how to enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features and more.
+description: Learn how to build a tabs for a meeting chat, meeting side panel, and meeting stage in Microsoft Teams meeting.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high

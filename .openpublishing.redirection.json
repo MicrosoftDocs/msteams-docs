@@ -744,10 +744,6 @@
         "source_path": "msteams-platform/concepts/build-and-test/app-studio-overview.md",
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/teams-developer-portal"
       },
-      {
-        "source_path": "msteams-platform/apps-in-teams-meetings/meeting-app-extensibility.md",
-        "redirect_url": "/msteams-platform/apps-in-teams-meetings/teams-apps-in-meetings"
-      },
       { 
         "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-flow-bot.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/auth-flow-bot"
@@ -793,16 +789,8 @@
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/teams-developer-portal"
       },
       {
-        "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
-        "redirect_url": "/msteams-platform/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-meeting-stage"
-      },
-      {
         "source_path": "msteams-platform/toolkit/accounts.md",
         "redirect_url": "/msteams-platform/toolkit/tools-prerequisites"
-      },
-      {
-        "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
-        "redirect_url": "/msteams-platform/apps-in-teams-meetings/advanced-meeting-apis.md"
       },
       {
         "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
@@ -831,6 +819,18 @@
       {
         "source_path": "msteams-platform/toolkit/visual-studio-overview.md",
         "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
+        "redirect_url": "/msteams-platform/apps-in-teams-meetings/meeting-apps-apis"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/meeting-app-extensibility.md",
+        "redirect_url": "/msteams-platform/apps-in-teams-meetings/teams-apps-in-meetings"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
+        "redirect_url": "/msteams-platform/platform/apps-in-teams-meetings/build-tabs-for-meeting"
       }
     ]
 }
