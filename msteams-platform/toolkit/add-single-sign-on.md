@@ -9,9 +9,13 @@ ms.date: 05/20/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Add single sign-on to Teams app for Visual Studio Code
+# Add single sign-on to Teams app
 
 Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application
+
+::: zone pivot="visual-studio-code"
+
+## Add single sign-on to Teams app for Visual Studio Code
 
 For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
