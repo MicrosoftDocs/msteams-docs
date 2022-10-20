@@ -430,9 +430,9 @@ items:
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
-    1. Select **Save**.
+        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
 
-       :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
+    1. Select **Save**.
 
        You have now configured SSO for your bot.
 

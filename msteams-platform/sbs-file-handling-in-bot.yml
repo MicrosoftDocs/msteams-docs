@@ -126,7 +126,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="adding client secret" border="true":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_2.png" alt-text="adding client secret" border="true":::
 
             
        The **Add a client secret** window appears.
@@ -157,7 +157,7 @@ items:
 
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-       :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Select Teams in channels":::
+       :::image type="content" source="~/assets/images/adaptive-cards/channel-teams_1.png" alt-text="Select Teams in channels":::
       
     1. Select the checkbox to accept the **Terms of Service**.
     
