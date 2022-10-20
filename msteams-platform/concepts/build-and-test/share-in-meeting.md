@@ -62,7 +62,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
    ```
 
-2. Create an HTML element and specify the required attributes. Ensure that rendering logic is executed after launcher script is fully loaded.
+2. Create an HTML element and specify the required attributes. After the launcher script is fully loaded, ensure that the rendering logic is executed.
 
    ```javascript
    async function onLoadComplete() {
@@ -78,7 +78,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ### Method 3
 
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.s
+`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -86,7 +86,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
    ```
 
-2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute. Ensure that onclick logic is created after launcher script has been fully loaded.
+2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute. After the launcher script is fully loaded, ensure that the onclick logic is created.
 
    ```javascript
    async function onLoadComplete() {
@@ -96,8 +96,8 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
       appId: "<app-id>",
       entityName: "<app-entity-name>",
       entityDescription: "<app-content-description>",
-      });   
-   }  
+      });
+   }
    ```
 
 ### Full launcher.js definition
