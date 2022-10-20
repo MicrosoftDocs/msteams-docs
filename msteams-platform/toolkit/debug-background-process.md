@@ -16,13 +16,13 @@ The debug process workflow is as follows:
 
 1. `launch.json` file configures the debugger in Visual Studio Code.
 
-2. Visual Studio Code runs the compound **preLaunchTask**, **Pre Debug Check & Start All** in `.vscode/tasks.json` file.
+2. Visual Studio Code runs the compound **preLaunchTask**, **Start Teams App Locally** in `.vscode/tasks.json` file.
 
 3. Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
 4. Microsoft Edge or Google Chrome launches a new browser instance and opens a web page to load Teams client.
 
-## Teams Toolkit verification of prerequisites
+## Verification of prerequisites
 
 Teams Toolkit checks the following prerequisites during the debug process:
 
@@ -37,9 +37,6 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
-* Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin` manages the Ngrok binary version 2.3 that is applicable for bot and message extension.
-* Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and **macOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 3 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
-* Teams Toolkit installs .NET Core SDK for **Windows** and **MacOS** in `~/.fx/bin/dotnet`, if .NET Core SDK version applicable for Azure Functions isn't installed or the version doesn't match the requirement. For Linux, the local debug terminates.
 * Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 * Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and **MacOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 * Teams Toolkit installs .NET Core SDK for **Windows** and **MacOS** in `~/.fx/bin/dotnet`.NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement. For Linux, the local debug terminates.
@@ -98,7 +95,7 @@ Use the following .NET Core versions:
 
 When you select **Start Debugging (F5)**, the Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
 ## Register and configure Teams app
 
