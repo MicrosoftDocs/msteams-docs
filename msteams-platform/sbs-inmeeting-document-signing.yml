@@ -198,15 +198,15 @@ items:
 
     1. Select **Home**.
 
-        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-home.png" alt-text="Select Home":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-home.png" alt-text="Select Home":::
 
     1. Select your bot from the list of **Recent** resources.
 
-        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-your-bot-resources.png" alt-text="Select your bot resource":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-your-bot-resources.png" alt-text="Select your bot resource":::
 
-    1. Select **Channels** in the left pane and select <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> **Microsoft Teams**.
+    1. Select **Channels** in the left pane, and select <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> **Microsoft Teams**.
 
-        ::::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-teams.png" alt-text="Select Teams":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-teams.png" alt-text="Select Teams":::
 
     1. Select the checkbox to accept the **Terms of Service**, and then select **Agree**.
 
@@ -297,7 +297,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png" alt-text="Add a scope page":::
 
-       1. Enter *access_as_user* as the **Scope name**.
+       1. Enter 'access_as_user' as the **Scope name**.
 
           > [!NOTE]
           > The **Scope name** must match with the **Application ID URI** with `/access_as_user` appended at the end.
@@ -306,13 +306,13 @@ items:
   
        1. Configure the admin and user consent prompts with appropriate values for `access_as_user` scope:</br>
     
-          * Enter *Teams can access the user’s profile* as **Admin consent display name**.
+          * Enter 'Teams can access the user’s profile' as **Admin consent display name**.
 
-          * Enter *Allows Teams to call the app’s web APIs as the current user* as **Admin consent description**.
+          * Enter 'Allows Teams to call the app’s web APIs as the current user' as **Admin consent description**.
 
-          * Enter *Teams can access the user profile and make requests on the user’s behalf* as **User consent display name**.
+          * Enter 'Teams can access the user profile and make requests on the user’s behalf' as **User consent display name**.
 
-          * Enter *Enable Teams to call this app’s APIs with the same rights as the user* as **User consent description**.
+          * Enter 'Enable Teams to call this app’s APIs with the same rights as the user' as **User consent description**.
   
        1. Ensure that **State** is set to **Enabled**.
   
@@ -334,19 +334,19 @@ items:
 
       1. Enter the **Client ID** for for the application that you want to authorize. It's the application ID of the client that you want to authorize. Use the following IDs for client applications that you want to authorize:
 
-      | **Client ID** | **For authorizing** |
-      | --- | --- |
-      | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-      | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+        | **Client ID** | **For authorizing** |
+        | --- | --- |
+        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
     
-      > [!NOTE]
-      > You'll need to add authorization for desktop and web application separately.
+        > [!NOTE]
+        > You'll need to add authorization for desktop and web application separately.
 
       1. Select **Authorized scopes** to determine which type of token is returned by the service.
 
       The following image displays the client ID:
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
+      :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
   
     **Configure Graph permissions**
 
@@ -369,11 +369,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/delegated-permission.png" alt-text="Delegated-permission"::: 
 
-    1. Select the Graph permissions":
+    1. Select the Graph permissions:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permissions.png" alt-text="Delegated-permission":::
 
-        1. From list of permissions, select the following permissions:</br>
+        1. From the list of permissions, select the following:</br>
          * **email**
          * **offline_access**
          * **OpenId**
