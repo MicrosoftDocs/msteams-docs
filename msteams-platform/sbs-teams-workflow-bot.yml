@@ -131,7 +131,7 @@ items:
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
 
-    1. Ensure that workflow bot is selected under **Scenario-based Teams app** as the capability that you want to build in your app.
+    1. Ensure that workflow bot is selected under **Scenario-based Teams apps** as the capability that you want to build in your app.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities":::
 
@@ -160,11 +160,11 @@ items:
 
     1. Select Run and Debug :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
     
-    1. Select Debug(Edge) or Debug(Chrome) from the dropdown list.
+    1. Select Debug (Edge) or Debug (Chrome) from the dropdown list.
     
-    1. Select **Start Debugging** button.
+       :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
 
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
+    1. Select **Start Debugging** button.
 
     1. Select Add.
 
