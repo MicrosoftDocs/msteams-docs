@@ -103,11 +103,11 @@ items:
       1. Enter **Description** to the client secret.
       1. Select **Add**.
  
-         :::image type="content" source="./assets/images/calls-and-meetings/add-client_1.png" alt-text="Screenshot showing the client secret being added.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot showing the client secret being added.":::
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret value for future reference.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/client-secret_1.png" alt-text="Screenshirt showing the value being copied to clipboard.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/client-secret_2.png" alt-text="Screenshirt showing the value being copied to clipboard.":::
 
     **Run PowerShell script to create a policy**
 
