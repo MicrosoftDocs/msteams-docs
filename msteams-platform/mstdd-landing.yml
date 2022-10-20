@@ -58,6 +58,8 @@ landingContent:
       links:
       - text: Adaptive Cards overflow menu
         url: task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu
+      - text: Developer Portal for Teams is now available for GCC tenants
+        url: concepts/build-and-test/teams-developer-portal.md
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
       - text: Generate a deep link to share content to stage in meetings
@@ -67,7 +69,7 @@ landingContent:
       - text: Update Apple App Store Connect Team ID on Partner Center
         url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
-        url: apps-in-teams-meetings/meeting-app-extensibility.md
+        url: apps-in-teams-meetings/teams-apps-in-meetings.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Collaboration controls [Developer preview]
@@ -76,7 +78,7 @@ landingContent:
         url: concepts/build-and-test/Shared-channels.md
       - text: Introduced app manifest v1.14
         url: resources/schema/manifest-schema.md
-      
+     
 - title: Get started
   linkLists:
     - linkListType: get-started
@@ -135,8 +137,8 @@ landingContent:
         url: ~/concepts/design/design-teams-app-overview.md
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-      - text: Unified meetings apps
-        url:  ~/apps-in-teams-meetings/meeting-app-extensibility.md
+      - text: Build apps for Teams meeting stage
+        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
     - linkListType: whats-new
       links:
       - text: What's new
