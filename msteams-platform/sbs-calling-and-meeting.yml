@@ -85,7 +85,7 @@ items:
       > [!NOTE]
       > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
 
-    1. Select **Register**.
+      1. Select **Register**.
 
         :::image type="content" source="./assets/images/calls-and-meetings/reg-app_1.png" alt-text="Screenshot showing the selection of register.":::
 
@@ -191,7 +191,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot showing the selection of multi tenant.":::
 
-    1. Once the validation passed, select **Create**.
+    1. Once the validation is passed, select **Create**.
 
        It takes a few moments for your bot service to be provisioned.
 
@@ -261,7 +261,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot showing the repo download.":::
 
-    1. Ensure to note the Path of the repository that is downloaded.
+    1. Ensure to note the path of the repository that is downloaded.
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
@@ -278,14 +278,14 @@ items:
 
             * Select **Run query**.
             
-            :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Graph Explorer.":::
+              :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Graph Explorer.":::
 
 
             * Display names and User IDs linked to your account are generated.
 
             * Choose any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
        
-            :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Graph Explorer.":::
+              :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Graph Explorer.":::
 
        
         > [!NOTE]
