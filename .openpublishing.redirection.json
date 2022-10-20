@@ -822,15 +822,16 @@
       },
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
-        "redirect_url": "/msteams-platform/apps-in-teams-meetings/meeting-apps-apis"
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis"
       },
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/meeting-app-extensibility.md",
-        "redirect_url": "/msteams-platform/apps-in-teams-meetings/teams-apps-in-meetings"
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings"
       },
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
-        "redirect_url": "/msteams-platform/platform/apps-in-teams-meetings/build-tabs-for-meeting"
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
       }
     ]
 }
+
