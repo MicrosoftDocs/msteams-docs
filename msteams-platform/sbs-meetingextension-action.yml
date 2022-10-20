@@ -211,7 +211,7 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/app-registerations_1.png" alt-text="App registration.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/app-registerations_2.png" alt-text="App registration.":::
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -325,7 +325,7 @@ items:
             :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://2bb1****.ngrok.io/auth-end`. </br>
+           `https://*******.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
