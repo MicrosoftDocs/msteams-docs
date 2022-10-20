@@ -125,13 +125,13 @@ items:
       
            You can also create a new resource group by the following steps:
 
-              1. To create new resource group, select **Create new** > enter resource name > select **OK**.
+            1. To create new resource group, select **Create new** > enter resource name > select **OK**.
 
-                   :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="Screenshot showing the Selection of new resource group.":::
+                :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="Screenshot showing the Selection of new resource group.":::
 
-              1. Select the required location from **New resource group location** dropdown list.
+            1. Select the required location from **New resource group location** dropdown list.
 
-                   :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
+                :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
         1. Select **Type of App** as **Multi Tenant**.
 
