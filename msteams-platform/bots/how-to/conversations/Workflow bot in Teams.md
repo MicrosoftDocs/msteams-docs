@@ -8,14 +8,14 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns a hard-coded Adaptive Card. You can customize this logic with your business logic. Often your business logic might require you to call your existing APIs. Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
+A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns an Adaptive Card. You can customize this logic with your business requirement. Often this might require you to call your existing APIs. Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
 
 > [!NOTE]
 > You can choose the installation target when adding the app. For more install options see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
 
-## Card Action Handler
+## Card action handler
 
-To simplify the development, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`) to let you focus only on the development of business logic to respond to the card action without learning the Bot Framework.
+To simplify the development, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`) to let you focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
@@ -65,16 +65,16 @@ You can update the initialization logic to:
 
 For more information on initialization customization, see [additional initialization customization](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#customize-initialization)
 
-## Add more card action
+## Add card action
 
-You can follow the steps below to add more card actions.
+Steps you can follow to add card actions:
 
-1. [Add an action to your Adaptive Card](#step-1-add-an-action-to-your-adaptive-card)
-1. [Add Adaptive Card for action response](#step-2-add-adaptive-card-for-action-response)
-1. [Add action handler](#step-3-add-action-handler)
-1. [Register the action handler](#step-4-register-the-action-handler)
+1. [Add an action to your Adaptive Card](#1-add-an-action-to-your-adaptive-card)
+1. [Add Adaptive Card for action response](#2-add-adaptive-card-for-action-response)
+1. [Add action handler](#3-add-action-handler)
+1. [Register the action handler](#4-register-the-action-handler)
 
-### Step 1: Add an action to your Adaptive Card
+### 1. Add an action to your Adaptive Card
 
 User universal action, `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. Here's a sample `Action.Execute` action:
 
@@ -102,7 +102,7 @@ User universal action, `Action.Execute` defines your action in an Adaptive Card,
 > [!NOTE]
 > Verb property is required here so that the TeamsFx conversation SDK can invoke the corresponding action handler when the action is invoked in Teams. When you're using a general string that might cause a collision with other bot actions, then ensure to provide a global unique string for the verb property, else you can experience unexpected behavior.
 
-### Step 2: Add Adaptive Card for action response
+### 2. Add Adaptive Card for action response
 
 You can return a new adaptive card for each action invoke to display the response to end user. You can use [adaptive card designer](https://adaptivecards.io/designer/) to design your card layout according to your business needs.
 
@@ -124,7 +124,7 @@ To get-started, you can just create a sample card (`responseCard.json`) with the
 }
 ```
 
-### Step 3: Add action handler
+### 3. Add action handler
 
 Add action handler to implement `TeamsFxAdaptiveCardActionHandler` to process the logic when corresponding action is executed.
 
@@ -151,7 +151,7 @@ Add action handler to implement `TeamsFxAdaptiveCardActionHandler` to process th
    > [!NOTE]
    > You can follow this section to customize the card action handler according to your business need.
 
-### Step 4: Register the action handler
+### 4. Register the action handler
 
 To register the action handler, follow the steps below:
 
@@ -382,7 +382,7 @@ If you're responding to a command that needs access to Microsoft Graph, you can 
 
 You need to often connect to existing APIs for retrieving data to send to Teams. Teams Toolkit makes it easy for you to configure and manage authentication for existing APIs. For more information, see how to [integrate existing third party APIs](../../../toolkit/add-API-connection.md).
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### How to extend workflow bot with notification feature?
 
