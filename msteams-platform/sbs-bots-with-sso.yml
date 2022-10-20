@@ -121,7 +121,7 @@ items:
     
         1. Select your **Subscription** and **Resource group** from the dropdown list.
 
-          :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
+             :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
       
           You can also create a new resource group by the following steps:
 
