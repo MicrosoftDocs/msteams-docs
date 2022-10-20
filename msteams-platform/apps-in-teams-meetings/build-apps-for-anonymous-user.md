@@ -1,7 +1,7 @@
 ---
 title: Build apps for anonymous user
 author: v-sdhakshina
-description: In this article, learn how to test the experience delivered to the anonymous users in meeting apps with all admin settings.
+description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
