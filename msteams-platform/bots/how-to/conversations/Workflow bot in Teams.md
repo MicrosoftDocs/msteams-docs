@@ -72,7 +72,7 @@ Steps you can follow to add card actions:
 1. [Add an action to your Adaptive Card](#add-an-action-to-your-adaptive-card)
 1. [Add Adaptive Card for action response](#add-adaptive-card-for-action-response)
 1. [Add action handler](#add-action-handler)
-1. [Register the action handler](#register-the-action-handler)
+1. [Register the action handler](#step-4-register-the-action-handler)
 
 ### Add an action to your Adaptive Card
 
@@ -199,7 +199,7 @@ async handleActionInvoked(context: TurnContext, actionData: any): Promise<Invoke
 }
 ```
 
-You can see the below response message in Teams:
+You can see the following response message in Teams:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sample-card-action-response.png" alt-text="sample card response displayed":::
 
