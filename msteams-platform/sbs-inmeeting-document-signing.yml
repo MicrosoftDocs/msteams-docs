@@ -75,7 +75,7 @@ items:
         > [!NOTE]
         > Contact Teams administrator, if you don't find the option to upload a custom app.  
 
-    # Download the sample code
+    ## Download the sample code
 
       You can get started with the [In-Meeting Document Signing](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp) sample code. To use this sample, clone this sample code repository from GitHub.
 
@@ -92,7 +92,8 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials
+    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials.
+
     1. Select **Create a resource**.
 
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-createbot.png" alt-text="Select Create Bot":::
@@ -102,6 +103,7 @@ items:
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/enter-azure-bot.png" alt-text="Enter Azure Bot":::
 
     1. Select **Enter**.
+
     1. Select **Azure Bot**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-bot.png" alt-text="Select Azure Bot":::
@@ -249,7 +251,6 @@ items:
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
-
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
@@ -424,7 +425,6 @@ items:
 
          * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name without `https://`.
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
-         * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png" alt-text="Manifest image2":::
 
