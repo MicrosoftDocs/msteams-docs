@@ -29,7 +29,6 @@ Users can use the video filter app in the meeting lobby and in-meeting scenarios
 The video filter app takes permission from a user to access their video stream, modifies the video stream by applying effects, and then feeds that video stream back into Teams.
 
 :::image type="content" source="../assets/images/apps-in-meetings/video-filter-app-process.png" alt-text="Diagram that shows how a video is received, processed and sent as an output. ":::
-abs
 
 ## Create a video filter app
 
@@ -360,17 +359,32 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 ## Upload the video filter app
 
-Upload the video filter app manifest package to Teams and select **Submit an app to your org**. For more information, see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
+You can upload the video filter app to your organization's store or distribute the app directly to the Microsoft Teams store.
 
-If you are creating an app for an EDU tenant, create a new version of the app and follow the steps below:
+1. Upload the video filter app to your organization's store:
 
-1. . Add a suffix **for EDU** to the app name.
+   1. Go to Teams.
+   1. Select **Apps** > **Manage your apps** and **Upload an app**.
+   1. Select **Submit an app to your org**.
+   1. Select your app manifest package. The video filter app is submitted to your IT admin for approval.
 
-1. Update the `applicableLicenseCategories` property in the app manifest with EducationStudent, EducationTeacher as its value.
+1. Upload the video filter app to the Microsoft Teams store:
 
-  `:::image type="content" source="../assets/images/apps-in-meetings/video-filters-edu-tenant-manifest.png" alt-text="Screenshot shows an example of app manifest with applicableLicenseCategories property.":::
+   * If you're creating an app for a **Non-EDU tenant**, you can directly [publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md).
 
-1. Save the manifest file and [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md).
+   * If you're creating an app for an **EDU tenant**, follow these steps:
+
+     1. Create a new version of the app.
+
+     1. Add a suffix **for EDU** to the app name.
+
+     1. Update the `applicableLicenseCategories` property in the app manifest with `EducationStudent` and `EducationTeacher` as it's value.
+
+        The following is example of an app manifest with the `applicableLicenseCategories` property:
+
+        :::image type="content" source="../assets/images/apps-in-meetings/video-filters-edu-tenant-manifest.png" alt-text="Screenshot shows an example of app manifest with applicableLicenseCategories property.":::
+
+     1. [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md).
 
 ## Diversity and Inclusion requirements
 
