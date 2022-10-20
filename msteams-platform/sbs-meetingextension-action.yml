@@ -98,7 +98,7 @@ items:
 
     1. Select **Review + create**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
+       :::image type="content" source="~/assets/images/sbs-messagingextension-action/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
 
     1. Once the validation is passed, select **Create**.
 
@@ -161,7 +161,7 @@ items:
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
+       :::image type="content" source="~/assets/images/sbs-messagingextension-action/terms.png" alt-text="Terms of service":::
 
     1. Select **Apply**.
 
@@ -297,10 +297,12 @@ items:
 
     1. Select **Add a permission**.
 
-    1. Select **Microsoft Graph** > **Delegated permissions**. 
+    1. Select **Microsoft Graph**. 
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/add-permission_2.png" alt-text="Add permission.":::
 
+    1. Select **Delegated permissions**. 
+    
     1. Add the following permissions:</br>
          * **email**
          * **offline_access**
