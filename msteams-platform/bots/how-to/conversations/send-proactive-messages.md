@@ -56,7 +56,7 @@ Create the conversation, after you have the user or channel information.
 
 You can create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
-To create a conversation, you need `userId`, `tenantId`, and `serviceUrl`.
+To create the conversation, you need a `userId`, `tenantId`, and `serviceUrl`.
 
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. The following is an example for the `serviceUrl`:
 
@@ -71,7 +71,7 @@ If the `serviceUrl` isn't available from an incoming activity triggering the pro
 * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
 * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
-For the code sample, see call `CreateConversationAsync` in the [**sample**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
+For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
