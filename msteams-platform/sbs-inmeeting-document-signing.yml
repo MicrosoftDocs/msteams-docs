@@ -406,21 +406,31 @@ items:
    
          1. Select **Configure**.
 
+    You have completed Azure AD app registration and configuration.
+
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    After you've configured the Azure AD app, you need to configure app details in the app code and manifest file. 
+
+    **To configure app settings**
+
+    1. Open the **appsettings.json** from the cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettingslocation.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in Visual Studio and update the following information:  
 
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
-         * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
+         * Replace all occurrences of `<<client secret>>` with your bot's client secret.
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings":::
-          
-    1. Navigate to **manifest.json** in cloned repository.
+
+    1. Save the file.
+
+    ** To configure app manifest file**
+
+    1. Open the **manifest.json** from the cloned repository.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifestlocation.png" alt-text="Manifest file location":::
     
@@ -430,6 +440,10 @@ items:
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png" alt-text="Manifest image2":::
+
+    1. Save the file.
+
+    You have configured app settings and app manifest details.
 
 - title: Build and run the service
   durationInMinutes: 1
