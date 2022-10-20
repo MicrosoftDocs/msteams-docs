@@ -82,10 +82,10 @@ items:
 
       1. In **Redirect URI (optional)**, select the type of app **Web or Public client (mobile & desktop)**, and then enter the redirect URI for your application.
 
-      1. Select **Register**.
-
       > [!NOTE]
       > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
+
+      1. Select **Register**.
 
          :::image type="content" source="./assets/images/calls-and-meetings/reg-app_1.png" alt-text="Screenshot showing the selection of register.":::
 
