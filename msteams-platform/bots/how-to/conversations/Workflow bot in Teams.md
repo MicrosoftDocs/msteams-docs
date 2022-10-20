@@ -72,7 +72,7 @@ Steps you can follow to add card actions:
 1. [Add an action to your Adaptive Card](#add-an-action-to-your-adaptive-card)
 1. [Add Adaptive Card for action response](#add-adaptive-card-for-action-response)
 1. [Add action handler](#add-action-handler)
-1. [Register the action handler](#step-4-register-the-action-handler)
+1. [Register the action handler](#register-the-action-handler)
 
 ### Add an action to your Adaptive Card
 
@@ -238,12 +238,12 @@ The following gif image illustrates how user-specific view displays in Teams:
 
 Below are the steps to implement this pattern with TeamsFx SDK:
 
-1. [Enable refresh in base Adaptive Card](#step-1-enable-refresh-in-base-adaptive-card)
-1. [Add use-specific Adaptive Cards](#step-2-add-user-specific-adaptive-cards)
-1. [Add card action handler to refresh views](#step-3-add-card-action-handler-to-refresh-views)
-1. [Register action handler](#step-4-register-the-action-handler-1)
+1. [Enable refresh in base Adaptive Card](#enable-refresh-in-base-adaptive-card)
+1. [Add use-specific Adaptive Cards](#add-user-specific-adaptive-cards)
+1. [Add card action handler to refresh views](#add-card-action-handler-to-refresh-views)
+1. [Register action handler](#register-the-action-handler-1)
 
-#### Step 1: Enable refresh in base Adaptive Card
+#### Enable refresh in base Adaptive Card
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, such as  the card1. There are two options to achieve this:
 
@@ -307,7 +307,7 @@ Here's a sample refresh action defined in `baseCard.json`:
 
 You need to replace `${userID}` with user MRI in code, when rendering your card content.
 
-#### Step 2: Add user-specific Adaptive Cards
+#### Add user-specific Adaptive Cards
 
 You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for user A in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
 
@@ -327,7 +327,7 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 }
 ```
 
-#### Step 3: Add card action handler to refresh views
+#### Add card action handler to refresh views
 
 Add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
@@ -358,7 +358,7 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 }
 ```
 
-#### Step 4: Register the action handler
+#### Register the action handler
 
 Register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
