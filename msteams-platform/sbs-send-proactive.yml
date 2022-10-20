@@ -21,10 +21,12 @@ items:
      
     This step-by-step guide helps you to send a proactive message from a bot. You'll see the following outputs:
 
-    * Proactive hello message in chat.     
+    * Proactive hello message in chat.  
+
     :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
 
     * Proactive hello message as an Adaptive Card.
+    
     :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card"::: 
 
 - title: Prerequisites 
