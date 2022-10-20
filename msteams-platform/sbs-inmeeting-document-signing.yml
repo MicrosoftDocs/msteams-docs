@@ -277,7 +277,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="App URI":::
         
-       The following image shows the domain name:
+       The following image shows the Application ID URI:
         
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri1.png" alt-text="App ID URI":::
 
@@ -289,20 +289,20 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Select scope":::
     
-    Add a scope panel appears.
+        The **Add a scope** section appears.
 
     1. Enter the following details to add a scope.
 
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png" alt-text="Add a scope page":::
 
-       1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+       1. Enter `access_as_user` as the **Scope name**.
 
           > [!NOTE]
           > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.
   
        1. Set **Who can consent?** to `Admins and users`.
   
-       1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+       1. Configure the admin and user consent prompts with appropriate values for `access_as_user` scope:</br>
     
           * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
@@ -314,9 +314,9 @@ items:
   
        1. Ensure that **State** is set to **Enabled**.
   
-       1. Select **Add scope** to save.
+       1. Select **Add scope** to save the scope details.
 
-          Your Application ID URI is created with **Scope name**.
+          Your app scope is configured.
 
             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes1.png" alt-text="Scopes":::
   
@@ -326,22 +326,24 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-application.png" alt-text="Select client application":::
 
-       Add a client application panel appears.
+       The **Add a client application** section appears.
 
-    1. Enter the **Client ID** for desktop and web application separately that you want to authorize. It's the application ID of the client that you want to authorize.
-
-       |**Client ID**|**For authorizing**|
-       |--------|-------------|
-       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
-    
-    1. Select **Authorized scopes** to determine which type of token is returned by the service.
+    1. Enter the client application details:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png" alt-text="Add client application 2":::
 
-       The following image displays the client Id:
+      1. Enter the **Client ID** for desktop and web application separately that you want to authorize. It's the application ID of the client that you want to authorize. Use the following IDs for client applications that you want to authorize:
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
+        | **Client ID** | **For authorizing** |
+        | --- | --- |
+        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+    
+      1. Select **Authorized scopes** to determine which type of token is returned by the service.
+
+        The following image displays the client Id:
+
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
   
     **Configure Graph permissions**
 
@@ -376,28 +378,33 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permissions.png" alt-text="Delegated-permission"::: 
 
-    **To set redirect URI**
+    **To set redirect URI for configuring platform**
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
-         1. Select **Add a platform**.
-         1. Select **Web**.
+    1. Select **Add a platform**.
+          
+        The **Configure platform** section appears.
 
-             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication":::
+    1. Select **Web**.
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://your ngrok/auth-end`. </br>
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication":::
+
+    1. Configure the platform details:
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
+
+        1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+       `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
              * **Access tokens**
    
          1. Select **Configure**.
-
-             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
