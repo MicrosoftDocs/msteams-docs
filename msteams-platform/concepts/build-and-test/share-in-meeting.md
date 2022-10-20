@@ -62,7 +62,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
    ```
 
-2. Create an HTML element and specify the required attributes. Ensure that rendering logic is executed after launcher script has been fully loaded. 
+2. Create an HTML element and specify the required attributes. Ensure that rendering logic is executed after launcher script is fully loaded.
 
    ```javascript
    async function onLoadComplete() {
@@ -73,7 +73,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
       shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
       shareInMeetingButton.setAttribute("data-locale", "fr-CA");
       await window.shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
-   }   
+   }  
    ```
 
 ### Method 3
@@ -96,7 +96,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
       appId: "<app-id>",
       entityName: "<app-entity-name>",
       entityDescription: "<app-content-description>",
-      });   
+      });
    }
    ```
 
