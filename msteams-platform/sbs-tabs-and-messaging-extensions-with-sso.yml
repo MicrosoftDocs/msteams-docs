@@ -53,7 +53,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/clonerepository_1.png)
+       :::image type="content" source="./assets/images/clonerepository_1.png" alt-text= "Clone repository.":::
 
     1. Select **Clone**. 
 
@@ -127,7 +127,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
 
        The **Add a client secret** window appears.  
 
@@ -160,11 +160,11 @@ items:
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
+       :::image type="content" source="~/assets/images//Tab-ME-SSO/terms.png" alt-text="Terms of service":::
 
     1. Select **Apply**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/apply.png" alt-text="Screenshot showing the selection of Teams.":::
+       :::image type="content" source="~/assets/images//Tab-ME-SSO/apply.png" alt-text="Screenshot showing the selection of Teams.":::
     
     **To create tunnel for local web server**
 
@@ -256,7 +256,7 @@ items:
     
     1. Select **Add a client application**.
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp_1.png" alt-text="Screenshot showing the selection of client application.":::
+       :::image type="content" source="../msteams-platform/assets/images/mTab-ME-SSO/selectclientapp_1.png" alt-text="Screenshot showing the selection of client application.":::
 
     1. Enter each of the following client IDs and select the authorized scope:</br>
 
@@ -331,7 +331,7 @@ items:
        > [!Tip]
        > If you're already testing your bot in Teams, you must sign out of the bot and sign out of Teams. Then sign in again to see this change.
 
-       ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
+       :::image type="content" source="./assets/images/bots/update-manifest.png" alt-text= "update manifest.":::
 
     **To set up Bot Service connection**
 
@@ -360,7 +360,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder.png" alt-text="app location.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder_1.png" alt-text="app location.":::
 
     1. Open **appsettings.json** in **Visual Studio **Code**.
 
@@ -495,9 +495,9 @@ items:
 
       1. Open message extension and select your application.
 
-      1. Select your profile under search box. You'll see something like this:
+      1. Select your profile under search box. You'll see the following output:
 
-          ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile_1.png)
+          :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile_1.png" alt-text= "Profile.":::
 
       1. Send `https://profile.botframework.com` to the application to get a profile card.
        
@@ -506,7 +506,7 @@ items:
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
+    Did you come up with output like this?
 
     :::image type="content" source="./assets/images/Tab-ME-SSO//hello-megan-profile245_1.png" alt-text="Congratulation image.":::
     
