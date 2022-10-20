@@ -417,11 +417,11 @@ items:
 
     1. In **Configuration page**, select **Add OAuth Connection Settings**.
 
-        :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
+         :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
 
-    The **New Connection Setting** window appears.
+        The **New Connection Setting** window appears.
 
-        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
+         :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
 
     1. In **New Connection Setting** page, enter the following details:
 
