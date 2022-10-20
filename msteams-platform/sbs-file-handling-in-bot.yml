@@ -235,7 +235,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_1.png" alt-text="selection of scope":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_2.png" alt-text="selection of scope":::
 
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
