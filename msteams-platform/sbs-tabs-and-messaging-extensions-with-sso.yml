@@ -256,7 +256,7 @@ items:
     
     1. Select **Add a client application**.
 
-       :::image type="content" source="../msteams-platform/assets/images/mTab-ME-SSO/selectclientapp_1.png" alt-text="Screenshot showing the selection of client application.":::
+       :::image type="content" source="../msteams-platform/assets/images/Tab-ME-SSO/selectclientapp_1.png" alt-text="Screenshot showing the selection of client application.":::
 
     1. Enter each of the following client IDs and select the authorized scope:</br>
 
