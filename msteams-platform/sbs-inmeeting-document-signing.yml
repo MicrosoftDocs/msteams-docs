@@ -19,7 +19,7 @@ items:
     * Purchase agreements.
     * Purchase orders.
     
-    The template is also applicable for other scenarios. such as for reviewing and approving code samples and collaborative documents.
+    The template is also applicable for other scenarios, such as for reviewing and approving code samples and collaborative documents.
     The users can customize to incorporate other types of signatures: 
     * Handwritten signatures
     * Certificate based signatures.
@@ -33,22 +33,22 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
+    * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution.
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) 
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
+    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download).
 
     Ensure you have the following accounts and set up your development environment: 
 
-    * [Microsoft](https://teams.microsoft.com/) account
+    * [Microsoft](https://teams.microsoft.com/) account.
 
       > [!TIP]
       > Ensure the Microsoft Teams account isn't a guest account.
 
-    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app  
+    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app.
 
     ## Set up your Teams development tenant
 
