@@ -451,7 +451,8 @@ items:
     **To build and run the service using Visual Studio**
 
        1. Open **Visual Studio**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+
+       1. Go to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/project-solution.png" alt-text="Open file":::
 
@@ -471,22 +472,23 @@ items:
 
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready1.png" alt-text="App ready"::: 
       
-      Now, you're ready to sideload the app into Teams client.
+        Now, you're ready to sideload the app into Teams client.
 
 - title: Add Meeting Signing app to Teams
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **Source > MeetingSigning.Web > Manifest**.
+    1. In your cloned repository, go to **Source > MeetingSigning.Web > Manifest**.
 
-    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+    1. Create a zipped app package (a .zip file) with the following files that are present in the **Manifest** folder:
+
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/zipfile.png" alt-text="Zip file"::: 
     
-    1. Create a meeting with a few presenters and attendees.
+    1. Create a meeting in Teams with a few presenters and attendees.
    
     1. After the meeting is started, Select **Apps** > **Manage apps**.
 
@@ -496,11 +498,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-an-app.png" alt-text="Upload an app to Teams"::: 
     
-    1. Select manifest file and select **Open**.
+    1. Select the meeting signing app package that you created, and then select **Open**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-open.png" alt-text="Select Open"::: 
 
-    1. Select **Add**.    
+    1. Select **Add** to install the app in the meeting.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Add the app":::
 
@@ -508,11 +510,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-to-meeting.png" alt-text="Add app to meeting":::
     
-    1. Go back to the meeting details page and select **Apps** > **Meeting Signing** app.
+    1. Go back to the meeting details page, and select **Apps** > **Meeting Signing** app.
         
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-meeting-signing-app.png" alt-text="Add meeting signing app to meeting":::
 
-       Meeting Signing window appears.
+       The **Meeting Signing** window appears.
 
     1. Select **Save**.
 
@@ -522,26 +524,26 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png" alt-text="Meeting signing app":::         
 
-    1. Go the meeting chat in Teams and select **Meeting Signing** tab > **Create Documents**.
+    1. Go the meeting chat in Teams, and select **Meeting Signing** tab > **Create Documents**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Create Documentation"::: 
 
-       Meeting Signing window appears.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documents.png" alt-text="Create Documents":::    
+       The **Meeting Signing** window appears.  
 
     1. Enter the following details in the Meeting Signing window.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documents.png" alt-text="Create Documents":::  
 
         1. Select the required documents that you want to review. 
         1. Enter viewers of the documents.
         1. Enter signers of the documents.
         1. Select **Done**.
 
-    1. Select **Consent** to access some data from your account.
+    1. Select **Consent** to give permission to the app to access data from your account.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/give-consent.png" alt-text="Give Consent"::: 
 
-       Browser window appears.
+       The browser window appears.
 
     1. Sign in into Teams with your credentials and select **Sign in**.
 
@@ -551,7 +553,9 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Doc Success Upload":::              
 
-     1. Go back to Teams meeting and now you can view the documents in the side panel. Select **Share to meeting** to share the document in meeting.
+     1. Go back to Teams meeting and now you can view the documents in the side panel. 
+     
+     1. Select **Share to meeting** to share the document in meeting.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="View doc in sidepanel":::
 
@@ -574,4 +578,4 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **In-meeting Signing** app!
+    Congratulation! You've completed the tutorial to create the **In-meeting Signing** app!
