@@ -133,7 +133,7 @@ items:
     
            You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
-             :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
+             :::image type="content" source="~/assets/images/bots/Review-Create_1.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
 
            > [!NOTE]
            > You can't create more than one bot with the same **Microsoft App ID**.
@@ -142,7 +142,7 @@ items:
     
     1. After the validation is passed, select **Create**.
 
-         :::image type="content" source="~/assets/images/bots/validationpass.png" alt-text="Screenshot showing the validation Pass.":::
+         :::image type="content" source="~/assets/images/bots/validationpass_1.png" alt-text="Screenshot showing the validation Pass.":::
   
        It takes a few moments for your bot service to be provisioned and the following page appears.
 
@@ -173,7 +173,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**.
 
-          :::image type="content" source="~/assets/images/bots/newclientsecret.png" alt-text="Screenshot showing the selection of new client secret.":::
+          :::image type="content" source="~/assets/images/bots/newclientsecret_2.png" alt-text="Screenshot showing the selection of new client secret.":::
 
        The **Add a client secret** window appears.
 
@@ -181,7 +181,7 @@ items:
     
     1. Select **Add**.
  
-        :::image type="content" source="~/assets/images/bots/addclientsecret.png" alt-text="Screenshot showing adding client secret to app.":::
+        :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot showing adding client secret to app.":::
 
     1. In the **Value** column, select copy to clipboard icon to copy the value details. 
 
@@ -216,7 +216,7 @@ items:
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/bots/apply.png" alt-text="Screenshot showing the option apply":::
+        :::image type="content" source="~/assets/images/bots/apply_1.png" alt-text="Screenshot showing the option apply":::
     
     **To create tunnel for local web server**
 
