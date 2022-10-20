@@ -49,7 +49,7 @@ The video filter app defines the video filter and applies it to the user's video
 
 1. [Invoke the Video extensibility APIs](#video-extensibility-api-reference).
 
-1. [Sideload your app to Teams](#sideload-the-video-filter-app).
+1. [Upload the video filter app](#upload-the-video-filter-app).
 
 ## Install the JavaScript SDK
 
