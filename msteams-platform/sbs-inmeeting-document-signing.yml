@@ -334,13 +334,13 @@ items:
 
       1. Enter the **Client ID** for for the application that you want to authorize. It's the application ID of the client that you want to authorize. Use the following IDs for client applications that you want to authorize:
 
-        | **Client ID** | **For authorizing** |
-        | --- | --- |
-        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+       | **Client ID** | **For authorizing** |
+       | --- | --- |
+       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
     
-        > [!NOTE]
-        > You'll need to add authorization for desktop and web application separately.
+       > [!NOTE]
+       > You'll need to add authorization for desktop and web application separately.
 
       1. Select **Authorized scopes** to determine which type of token is returned by the service.
 
