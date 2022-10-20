@@ -18,33 +18,33 @@ For applications that interact with the user in a chat, a Team, or a channel, SS
 
 Teams Toolkit helps you to add SSO to the following Teams capabilities:
 
-- Tab
-- Bot
-- Notification bot: restify server
-- Command bot
-- Message extension
+* Tab
+* Bot
+* Notification bot: restify server
+* Command bot
+* Message extension
 
 ### Add SSO using Visual Studio Code
 
-The following steps help you to add SSO using Teams Toolkit in Visual Studio Code
+To add SSO using Teams Toolkit in Visual Studio Code, following these steps:
 
 1. Open **Microsoft Visual Studio Code**.
-2. Select Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
+2. Select Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="Screenshot is an example of the Teams Toolkit option in Visual Studio Code."::: from left navigation bar.
 3. Select **Add features** under **DEVELOPMENT**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="Screenshot shows the Add features option under the Development option in the Visual Studio Code.":::
 
-   - You can also open command palette and select **Teams: Add features**
+   * You can also open command palette and select **Teams: Add features**.
 
 4. Select **Single Sign-On**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="sso select":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="Screenshot shows the Single Sign-on feature highlighted in red in the Visual Studio Code.":::
 
 ### Add SSO using TeamsFx CLI
 
-You can run `teamsfx add sso` command in your **project root directory**
+You can run `teamsfx add sso` command in your **project root directory**.
 
-> [!Note]
+> [!NOTE]
 > The feature enables SSO for all existing applicable capabilities. Follow the same steps to enable SSO if you add capability later to the project.
 
 ## Customize your project using Teams Toolkit
@@ -58,12 +58,12 @@ The following table lists the changes Teams Toolkit makes to your project:
 | Create   | `auth/tab`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a tab project.                                                                                  |
 | Create   | `auth/bot`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a bot project.                                                                                  |
 
-> [!Note]
+> [!NOTE]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
 
 ## Update your application to use SSO
 
-The following steps help you to enable SSO in your application:
+To enable SSO in your application, following these steps:
 
 > [!NOTE]
 > These changes are based on the templates we scaffold.
@@ -79,9 +79,9 @@ The following steps help you to enable SSO in your application:
 
 2. Copy `sso` folder under `auth/tab` to `tabs/src/sso/`.
 
-   - `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized
+   * `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized.
 
-   - `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info
+   * `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info.
 
 3. Execute `npm install @microsoft/teamsfx-react` under `tabs/`.
 
@@ -123,9 +123,9 @@ The following steps help you to enable SSO in your application:
 SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
 
 1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. `ProfileSsoCommandHandler` class is an SSO command handler to get user info with SSO token, follow this method and create your own SSO command handler.
-1. Open `package.json` file and ensure that teamsfx SDK version >= 1.2.0
-1. Execute the `npm install isomorphic-fetch --save` command in `bot` folder.
-1. For ts script, execute the `npm install copyfiles --save-dev` command in `bot` folder and replace following lines in `package.json`:
+1. Open `package.json` file and ensure that teamsfx SDK version >= 1.2.0.
+1. Execute the `npm install isomorphic-fetch --save` command in the `bot` folder.
+1. For ts script, execute the `npm install copyfiles --save-dev` command in the `bot` folder and replace following lines in `package.json`:
 
    ```json
    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
@@ -366,12 +366,13 @@ After successfully adding SSO in your project, you can add a new SSO command.
 <summary><b>Message extension project
 </b></summary>
 
-The sample business logic provides a handler `TeamsBot` extends TeamsActivityHandler and override `handleTeamsMessagingExtensionQuery`. 
+The sample business logic provides a handler `TeamsBot` extends TeamsActivityHandler and override `handleTeamsMessagingExtensionQuery`.
 
-You can update the query logic in the `handleMessageExtensionQueryWithToken` with token which is obtained by using the logged-in Teams user token.
+You can update the query logic in the `handleMessageExtensionQueryWithToken` with token, which is obtained by using the logged-in Teams user token.
 
 To make this work in your application:
-1. Move the `auth/bot/public` folder to `bot`. This folder contains HTML pages that the bot application hosts. When single sign-on flows are initiated with AAD, AAD will redirect the user to these pages.
+
+1. Move the `auth/bot/public` folder to `bot`. This folder contains HTML pages that the bot application hosts. When single sign-on flows are initiated with Azure AD, Azure AD will redirect the user to these pages.
 
 1. Modify your `bot/index` to add the appropriate `restify` routes to these pages.
 
@@ -392,14 +393,16 @@ To make this work in your application:
 
 1. Install `isomorphic-fetch` npm packages in your bot project.
 
-1. (For ts only) Install `copyfiles` npm packages in your bot project, add or update the `build` script in `bot/package.json` as following
+1. (For ts only) Install `copyfiles` npm packages in your bot project, add or update the `build` script in `bot/package.json` as follows:
 
     ```json
     "build": "tsc --build && copyfiles ./public/*.html lib/",
     ```
+
     By doing this, the HTML pages used for auth redirect will be copied when building this bot project.
 
 1. Update `templates/appPackage/aad.template.json` your scopes which used in `handleMessageExtensionQueryWithToken`.
+
     ```json
     "requiredResourceAccess": [
         {
@@ -452,9 +455,9 @@ With TeamsFx SDK, you can write user authentication code in a simplified way usi
 
 For more information about TeamsFx SDK, see:
 
-- [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
-- [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
+* [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
+* [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
 ## See also
 
-- [Prerequisites for creating your Teams app](tools-prerequisites.md)
+* [Prerequisites for creating your Teams app](tools-prerequisites.md)
