@@ -9,15 +9,15 @@ keywords: Share in Meeting
 
 Share in meeting allows users to share any document or third-party app to the meeting stage and all the participants can interact and edit together.
 
-Users can select **Share in meeting** button and it launches the deep link to the meeting stage. If users haven't installed meeting extension, it requests users to install the meeting extension app for the third-party apps to control the meeting stage, and to have access to the meeting stage.
+When users select the **Share in meeting** button, it launches a deep link to the meeting stage. If users haven't installed any meeting extension, it requests users to install the meeting extension app for the third-party apps to control and access the meeting stage.
 
 The following image shows the share in meeting experience:
 
-:::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="This screenshot shows share in meeting stage experience.":::
+:::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows share in meeting stage experience.":::
 
 ## Enable share in meeting
 
-Following are the different methods to enable share in meeting button:
+Following are the different methods to enable share in meeting:
 
 ### Method 1
 
@@ -29,7 +29,7 @@ The following steps scans your web page to locate any HTML elements with the cla
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Add the following HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-description` attributes.
+2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-description` attributes.
 
    ```html
    <div
@@ -45,12 +45,12 @@ The following steps scans your web page to locate any HTML elements with the cla
 3. Following are the additional attributes to customize share in meeting button:
    * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
    * `data-button-size`: Specifies the size of the button in pixel.
-   * `data-target`: Specifies whether the link open in the same window, new tab, or a new window.
-   * `data-locale`: Specifies desired user language.
+   * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
+   * `data-locale`: Specifies the desired user language.
 
 ### Method 2
 
-`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have **teams-share-button** or **teams-share-in-meeting-button** class name on the page. If an optional options object is supplied with a list of elements as shown in the following code, those elements are rendered into share buttons or share in meeting buttons.
+`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
@@ -104,7 +104,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 | Property | HTML attribute | Type | Required | Default | Description |
 | -------------- | ---------------------- | --------------------- | ------- |  ------- |---------------------------------------------------------------------- |
-| url | `data-href` | String | Yes | NA | The URL of the app content to share. |
+| url | `data-href` | String | Yes | NA | URL of the app content to share. |
 | appId | `data-app-id` | String | Yes | NA | ID of the app to share. |
 | entityName | `data-entity-name` | String | No | NA | App entity name. |
 | entityDescription | `data-entity-description` | String | No | NA | Description of app content to share. |
@@ -115,11 +115,11 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ## Deep link format
 
-When you select share in meeting button, it launches the deep link to the meeting stage. The following is the deep link format:
+When you select share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
-Deep link parameters:
+The query parameters are:
 
 * `msteams`: All deep links should start with **msteams**, so that Teams app recognizes it and can open the deep link.​
 
@@ -133,9 +133,9 @@ Deep link parameters:
 
   * When the meeting is scheduled for Teams for business, then the fqdn should be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggest switching to the right one.​
 
-## Deep link example
+Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=teams.microsoft.com&appContext=`
 
-`https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=teams.microsoft.com&appContext=`
+The following is the example for `json` attribute in deep link:
 
 Required:
 
@@ -160,35 +160,35 @@ After you enable share in meeting on third-party apps, you can share the apps to
 
 If meeting extension is installed:
 
-1. Open web app in the browser and select **Share in meeting** button.
+1. Open the web app in the browser and select **Share in meeting**.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="This screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="Screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
 
-1. Select **Start sharing** button.
+1. Select **Start sharing**.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="This screenshot shows how to share apps in teams meeting.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="Screenshot shows how to share apps in teams meeting.":::
 
-1. Web app is shared to meeting stage and all the participants can interact and edit together.
+1. The web app is shared to meeting stage and all the participants can interact and edit together.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="This screenshot shows app shared to the teams meeting stage.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
 
 If meeting extension isn't installed:
 
-1. Open web app in the browser and select **Share in meeting** button.
+1. Open the web app in the browser and select **Share in meeting**.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="This screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="Screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
 
-1. Select **Add** to install meeting extension app.
+1. To install the meeting extension app, select **Add**.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/meeting-extension-app.png" alt-text="This screenshot shows add button to install meeting extension app.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/meeting-extension-app.png" alt-text="Screenshot shows add button to install meeting extension app.":::
 
-1. Select **Start sharing** button.
+1. Select **Start sharing**.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="This screenshot shows start sharing button to share your app in meeting.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="Screenshot shows start sharing button to share your app in meeting.":::
 
-1. Web app is shared to meeting stage and all the participants can interact and edit together.
+1. The web app is shared to meeting stage and all the participants can interact and edit together.
 
-   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="This screenshot shows app shared to the teams meeting stage experience.":::
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows app shared to the teams meeting stage experience.":::
 
 ## See also
 
