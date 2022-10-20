@@ -202,7 +202,7 @@ items:
 
           You have successfully set up a bot in Azure Bot Service.
    
-- title: Update the Azure AD app registration
+- title: Update the Azure AD app registration 
   durationInMinutes: 5
   content: |
     1. Go to the [Azure portal](https://portal.azure.com/).
