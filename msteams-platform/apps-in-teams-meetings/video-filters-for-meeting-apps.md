@@ -359,7 +359,7 @@ Ensure that you implement the following guidelines to use the video extensibilit
 
 ## Upload the video filter app
 
-You can upload the video filter app to your organization's store or distribute the app directly to the Microsoft Teams store.
+You can upload the video filter app to your organization's store or publish the app directly to the Microsoft Teams store.
 
 1. Upload the video filter app to your organization's store:
 
