@@ -66,7 +66,7 @@ To update your app's code:
 
     # [csharp](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code:
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
     ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
@@ -74,7 +74,7 @@ To update your app's code:
 
     # [JavaScript](#tab/js1)
     
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code:
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
     
     ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
@@ -83,6 +83,9 @@ To update your app's code:
     ```
     
     ---
+
+    >[!NOTE]
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
@@ -143,7 +146,48 @@ To update your app's code:
     
     # [JavaScript](#tab/js2)
     
+    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+    
     ```JavaScript
+    // index.js is used to setup and configure your bot
+
+    // Import required pckages
+    const path = require('path');
+    
+    // Read botFilePath and botFileSecret from .env file.
+    const ENV_FILE = path.join(__dirname, '.env');
+    require('dotenv').config({ path: ENV_FILE });
+    
+    const restify = require('restify');
+    
+    // Import required bot services.
+    // See https://aka.ms/bot-services to learn more about the different parts of a bot.
+    const {
+        CloudAdapter,
+        ConversationState,
+        MemoryStorage,
+        UserState,
+        ConfigurationBotFrameworkAuthentication,
+        TeamsSSOTokenExchangeMiddleware
+    } = require('botbuilder');
+    
+    const { TeamsBot } = require('./bots/teamsBot');
+    const { MainDialog } = require('./dialogs/mainDialog');
+    const { env } = require('process');
+    
+    const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(process.env);
+    
+    var conname = env.connectionName;
+    
+    console.log(`\n${ conname } is the con name`);
+    
+    // Create adapter.
+    // See https://aka.ms/about-bot-adapter to learn more about how bots work.
+    const adapter = new CloudAdapter(botFrameworkAuthentication);
+    const memoryStorage = new MemoryStorage();
+    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+    
+    adapter.use(tokenExchangeMiddleware);
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
         // NOTE: In production environment, you should consider logging this to Azure
@@ -228,9 +272,6 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../.
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
-
->[!NOTE]
-> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 Use the following code snippet to invoke response:
 
@@ -351,11 +392,11 @@ Use the following code snippet to handle the access token in case the app user l
                     // The UserTokenClient encapsulates the authentication processes.
                     var userTokenClient = innerDc.Context.TurnState.Get<UserTokenClient>();
                     await userTokenClient.SignOutUserAsync(
-    innerDc.Context.Activity.From.Id, 
-    ConnectionName, 
-    innerDc.Context.Activity.ChannelId, 
-    cancellationToken
-    ).ConfigureAwait(false);
+                    innerDc.Context.Activity.From.Id, 
+                    ConnectionName, 
+                    innerDc.Context.Activity.ChannelId, 
+                    cancellationToken
+                    ).ConfigureAwait(false);
 
                     await innerDc.Context.SendActivityAsync(MessageFactory.Text("You have been signed out."), cancellationToken);
                     return await innerDc.CancelAllDialogsAsync(cancellationToken);
