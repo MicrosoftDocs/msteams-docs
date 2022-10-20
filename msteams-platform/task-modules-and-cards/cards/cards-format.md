@@ -591,7 +591,7 @@ In the following example, all the actions are marked as secondary, therefore, a 
 
 # [Overflow menu on desktop](#tab/desktop)
 
-**Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
+When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
 
   :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop.":::
 
@@ -601,7 +601,7 @@ In the following example, all the actions are marked as secondary, therefore, a 
 
 # [Overflow menu on mobile](#tab/mobile)
 
-**Overflow menu on mobile**: When a user selects the overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
+When a user selects the overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
 
   :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile.":::
 
