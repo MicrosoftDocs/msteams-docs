@@ -260,7 +260,7 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
-### App caching
+## App caching
 
 App caching helps you to improve subsequent launch time of the apps that are loaded in the meeting side panel.
 
@@ -269,7 +269,7 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
 > * App caching is not supported on chats, channels, and personal apps.
 
-#### Enable app caching
+### Enable app caching
 
 To enable app caching in your meetings side panel, follow the steps:
 
@@ -307,7 +307,7 @@ Following are the parameters to control the conditions that cause apps to be add
 1. When the app is cached, the number of SDK requests shouldn't exceed five for every 12 seconds.
 1. The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed.
 
-#### Code example
+### Code example
 
 The following code snippet is an example to enable app caching on your app in Teams meeting:
 
@@ -327,7 +327,7 @@ microsoftTeams.appInitialization.notifySuccess();
 }); 
 ```
 
-#### Limitations
+### Limitations
 
 1. Single-page apps that use client-side routing for page navigation is the type of app that can benefit from app caching. It's also recommended that the same domain be used across all contexts of your app launch. Using bar.foo.com for chats and baz.foo.com for personal app isn't recommended as you need to go to the new domain in the load handler.
 
