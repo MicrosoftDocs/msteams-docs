@@ -57,7 +57,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Enable app caching to improve subsequent launch time of the apps
-        url: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#app-caching
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#app-caching
       - text: Developer Portal for Teams is now available for GCC tenants
         url: concepts/build-and-test/teams-developer-portal.md
       - text: Live Share canvas
