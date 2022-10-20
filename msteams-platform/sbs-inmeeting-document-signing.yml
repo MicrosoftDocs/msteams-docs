@@ -428,7 +428,7 @@ items:
 
     1. Save the file.
 
-    ** To configure app manifest file**
+    **To configure app manifest file**
 
     1. Open the **manifest.json** from the cloned repository.
 
@@ -455,9 +455,11 @@ items:
     
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/project-solution.png" alt-text="Open file":::
 
-       1. Select **SidePanel.sln** file from **Source** folder.
+       1. Select the solution file from **Source** folder.
 
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png" alt-text="Solution File":::   
+
+          The solution opens in Visual Studio.
 
        1. Press **F5** to run the project.
     
@@ -469,6 +471,8 @@ items:
 
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready1.png" alt-text="App ready"::: 
       
+      Now, you're ready to sideload the app into Teams client.
+
 - title: Add Meeting Signing app to Teams
   durationInMinutes: 1
   content: |
