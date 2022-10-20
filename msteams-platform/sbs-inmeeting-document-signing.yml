@@ -411,7 +411,6 @@ items:
 
     1. Open **appsettings.json** in Visual Studio and update the following information:  
 
-         * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name without `https://`.
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<client secret>>` with your bot's client secret ID value.
 
@@ -423,7 +422,7 @@ items:
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name without `https://`.
+         * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png" alt-text="Manifest image2":::
