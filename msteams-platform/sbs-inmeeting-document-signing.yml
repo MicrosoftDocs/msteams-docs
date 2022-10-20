@@ -75,6 +75,10 @@ items:
         > [!NOTE]
         > Contact Teams administrator, if you don't find the option to upload a custom app.  
 
+    # Download the sample code
+
+      You can get started with the [In-Meeting Document Signing](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp) sample code. To use this sample, clone this sample code repository from GitHub.
+
 - title: Create and register your bot
   durationInMinutes: 5
   content: |
