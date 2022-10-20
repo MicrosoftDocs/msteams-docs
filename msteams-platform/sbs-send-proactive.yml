@@ -23,11 +23,11 @@ items:
 
     * Proactive hello message in chat.  
 
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
 
     * Proactive hello message as an Adaptive Card.
     
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card"::: 
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card"::: 
 
 - title: Prerequisites 
   durationInMinutes: 2
@@ -74,9 +74,9 @@ items:
        * Linux or OS X: Unzip ngrok from the terminal and run the `unzip /path/to/ngrok.zip` command.
     1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
-     ```bash
-     ngrok http --host-header=localhost 3978
-     ```
+        ```bash
+        ngrok http --host-header=localhost 3978
+        ```
         
     1. From ngrok, copy the HTTPS URL. 
 
