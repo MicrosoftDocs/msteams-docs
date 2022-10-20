@@ -25,7 +25,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 * `Card Action Handler`: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
 * `Response Card`: The card to respond to the action when user invokes it from the action card.
 
-To handle card actions with TeamsFx SDK, each card action handler should implement `TeamsFxAdaptiveCardActionHandler` interface. Below is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
+To handle card actions with TeamsFx SDK, each card action handler should implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
 ``` Export interface
 
@@ -69,12 +69,12 @@ For more information on initialization customization, see [additional initializa
 
 Steps you can follow to add card actions:
 
-1. [Add an action to your Adaptive Card](#1-add-an-action-to-your-adaptive-card)
-1. [Add Adaptive Card for action response](#2-add-adaptive-card-for-action-response)
-1. [Add action handler](#3-add-action-handler)
-1. [Register the action handler](#4-register-the-action-handler)
+1. [Add an action to your Adaptive Card](#add-an-action-to-your-adaptive-card)
+1. [Add Adaptive Card for action response](#add-adaptive-card-for-action-response)
+1. [Add action handler](#add-action-handler)
+1. [Register the action handler](#register-the-action-handler)
 
-### 1. Add an action to your Adaptive Card
+### Add an action to your Adaptive Card
 
 User universal action, `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. Here's a sample `Action.Execute` action:
 
@@ -102,7 +102,7 @@ User universal action, `Action.Execute` defines your action in an Adaptive Card,
 > [!NOTE]
 > Verb property is required here so that the TeamsFx conversation SDK can invoke the corresponding action handler when the action is invoked in Teams. When you're using a general string that might cause a collision with other bot actions, then ensure to provide a global unique string for the verb property, else you can experience unexpected behavior.
 
-### 2. Add Adaptive Card for action response
+### Add Adaptive Card for action response
 
 You can return a new adaptive card for each action invoke to display the response to end user. You can use [adaptive card designer](https://adaptivecards.io/designer/) to design your card layout according to your business needs.
 
@@ -124,7 +124,7 @@ To get-started, you can just create a sample card (`responseCard.json`) with the
 }
 ```
 
-### 3. Add action handler
+### Add action handler
 
 Add action handler to implement `TeamsFxAdaptiveCardActionHandler` to process the logic when corresponding action is executed.
 
@@ -151,9 +151,9 @@ Add action handler to implement `TeamsFxAdaptiveCardActionHandler` to process th
    > [!NOTE]
    > You can follow this section to customize the card action handler according to your business need.
 
-### 4. Register the action handler
+### Register the action handler
 
-To register the action handler, follow the steps below:
+To register the action handler, follow these steps:
 
 1. Go to `bot/src/internal/initialize.js(ts)`;
 1. Update your `conversationBot` initialization to enable cardAction feature and add the handler to actions array:
@@ -177,15 +177,15 @@ To register the action handler, follow the steps below:
 
 You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. There are three options to customize:
 
-1. `AdaptiveCardResponse.ReplaceForInteractor`: This is the default behavior. The response card will be replaced by the current one (the card where the button is defined) for the interactor that triggers the action. Users in the conversation still view the original action card.
+* `AdaptiveCardResponse.ReplaceForInteractor`: This is the default behavior. The response card will be replaced by the current one (the card where the button is defined) for the interactor that triggers the action. Users in the conversation still view the original action card.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif":::
 
-1. `AdaptiveCardResponse.ReplaceForAll`: The response card will be replaced by the Action Card for all users in the chat, and they can view this response card.
+* `AdaptiveCardResponse.ReplaceForAll`: The response card will be replaced by the Action Card for all users in the chat, and they can view this response card.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
 
-1. `AdaptiveCardResponse.NewForAll`: The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card.
+* `AdaptiveCardResponse.NewForAll`: The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
 
