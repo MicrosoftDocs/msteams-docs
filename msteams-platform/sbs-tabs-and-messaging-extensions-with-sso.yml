@@ -24,7 +24,8 @@ items:
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
-     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
+     :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245_1.png" alt-text="Congratulation image.":::
+   
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -81,7 +82,7 @@ items:
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
 
-       :::image type="content" source="./assets/images/azure-subscription.png" alt-text="Azure subscription.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/azure-subscription.png" alt-text="Azure subscription.":::
 
        You can also create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
 
@@ -94,7 +95,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as `Multi Tenant`.
+    1. Select **Type of App** as **Multi Tenant**.
     1. Select **Review + create**.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/tenant-review.png" alt-text="tenant review.":::
@@ -159,7 +160,7 @@ items:
     
     1. Select **Agree**.
 
-    :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/terms.png" alt-text="Terms of service":::
 
     1. Select **Apply**.
 
@@ -269,7 +270,7 @@ items:
         
        The following image displays the **Client ID**:
 
-         ![Client applications](~/assets/images/Tab-ME-SSO/client-id-2.png) 
+       :::image type="content" source="./assets/images/Tab-ME-SSO//client-id-2.png" alt-text="Client applications."::: 
   
     1.  Select **Authorized scopes**.
 
@@ -284,9 +285,11 @@ items:
 
     1. Select **Add a permission**.
 
-    1. Select **Microsoft Graph** > **Delegated permissions**.
+    1. Select **Microsoft Graph**.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/microsoft-graph_1.png" alt-text="microsoft-graph.":::
+
+    1. Select **Delegated permissions**.
 
     1. Add the following permissions:</br>
         * **email**
@@ -304,10 +307,9 @@ items:
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
-         1. Select **Add a platform**.
-         1. Select **Web**.
+         1. Select **Add a platform** > **Web**.
 
-            :::image type="content" source="./assets/images/Tab-ME-SSO/configure-platform1_1.png" alt-text="web paltform.":::
+            :::image type="content" source="./assets/images/Tab-ME-SSO/configure-platform1_1.png" alt-text="web platform.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -379,12 +381,12 @@ items:
   content: |
     1. Go to `manifest.json` in cloned repository.
 
-        ![Manifest file location](~/assets/images/Tab-ME-SSO/folder-manifest.png)
+        :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest_1.png" alt-text="Manifest file location.":::
     
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
-         * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
-         * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
+         * Set `[DOMAIN-NAME]` with your ngrok domain name. 
+         * Set `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
 
              > [!NOTE]
              > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
@@ -407,11 +409,7 @@ items:
 
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
 
-          ![Project folder](~/assets/images/Tab-ME-SSO/project-folder1.png)
-
-       1. You'll see the following output:
-
-          ![Token File](~/assets/images/Tab-ME-SSO/output1.png)
+          :::image type="content" source="./assets/images/Tab-ME-SSO/project-folder1_1.png" alt-text= Project folder.":::
 
        1. Press **F5** to run the project.
     
@@ -448,11 +446,7 @@ items:
    
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
-
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore_1.png" alt-text="Zip file":::
-    
-    1. Select **Manage your apps**.
+    1. Select **Apps** > **Manage your apps**.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
    
@@ -489,32 +483,32 @@ items:
 
       1. Select **sign in**.
 
-          ![Sign in](~/assets/images/Tab-ME-SSO/sign-in-sso1.png)
+          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1_1.png" alt-text= "sign in.":::
 
       1. Enter your credentials in sign-in box, and select **Next**.
 
-          ![Sign in box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
+          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Sign in box.":::
       
       1. Select **Accept**.
 
-          ![consent box](~/assets/images/Tab-ME-SSO/concent-box.png)
+          :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "consent box.":::
 
       1. Open message extension and select your application.
 
       1. Select your profile under search box. You'll see something like this:
 
-          ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)
+          ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile_1.png)
 
       1. Send `https://profile.botframework.com` to the application to get a profile card.
        
-          ![Profile card](~/assets/images/Tab-ME-SSO/profile-card.png)
+          :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card_1.png" alt-text= "Profile card.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)
+    :::image type="content" source="./assets/images/Tab-ME-SSO//hello-megan-profile245.png" alt-text="Congratulation image.":::
     
     
 
