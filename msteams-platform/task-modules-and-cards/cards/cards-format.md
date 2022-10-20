@@ -530,7 +530,7 @@ Following are the two types of overflow menu:
 
 ### Enable overflow menu
 
-To enable overflow menu you need to specify primary or secondary buttons, configure `mode` to `primary` or `secondary`. Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
+To enable overflow menu specify primary or secondary buttons in the schema, configure the `mode` property with the value as `primary` or `secondary`. Following is an example, on how to use the `mode` property for actions and action set.
 
 **Actions**
 
@@ -561,7 +561,7 @@ In the following example, there are two primary actions (by default) and one sec
 
 **Action set**
 
-In the following example, all the actions are marked as secondary therefore, a single overflow menu appears on the card.
+In the following example, all the actions are marked as secondary, therefore, a single overflow menu appears on the card.
 
 ``` json
 {
@@ -589,17 +589,17 @@ In the following example, all the actions are marked as secondary therefore, a s
 }
 ```
   
-**Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that are set as secondary appears in Adaptive Card.
+**Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
 
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="desktop-overflow-menu"border="true":::
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop.":::
 
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="overflow-desktop"border="true":::
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="Screenshot shows an example of an Adaptive Card with the list of actions in an overflow menu on Teams desktop.":::
   
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="desktop3"border="true":::
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop.":::
 
-**Overflow menu on mobile**: When a user selects overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
+**Overflow menu on mobile**: When a user selects the overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
 
-  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Overflow menu Mobile":::
+  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile.":::
 
 ## Format cards with HTML
 
