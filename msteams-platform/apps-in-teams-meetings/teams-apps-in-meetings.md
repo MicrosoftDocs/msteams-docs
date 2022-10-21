@@ -58,7 +58,7 @@ The following list details the various user types along with their accessibility
     > [!NOTE]
     > Teams users can add apps when they host meetings or chats with other organizations. When an external users share apps to the meeting, all the user can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization, will be in effect.
 
-* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous users cannot view the bot logo in the meeting chat. An anonymous user can be a presenter or an attendee, but can't be an organizer.
+* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't view the bot logo in the meeting chat. An anonymous user can be a presenter or an attendee, but can't be an organizer.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
