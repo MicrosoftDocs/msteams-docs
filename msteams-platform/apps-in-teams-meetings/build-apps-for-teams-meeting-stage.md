@@ -299,5 +299,4 @@ The following participant roles may be involved:
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
-* [Build in-meeting document signing](sbs-inmeeting-document-signing.yml)
-
+* [Build in-meeting document signing](../sbs-inmeeting-document-signing.yml)
