@@ -79,144 +79,14 @@ items:
 
       You must use the [In-Meeting Document Signing](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp) code sample for this step-by-step guide. To use the code sample, clone the repository from GitHub.
 
-- title: Create and register your bot
+- title: Create and register your app
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal.
+    The following steps help you to create and register your app in Azure portal.
 
-    * Create Azure Bot resource to register your bot with Azure Bot Service.
-    * Create client secret to enable SSO authentication for the bot.
-    * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
-    * Add messaging endpoint to the ngrok tunnel you created.
-
-    **To create Azure Bot resource**
-
-    1. Go to the [Azure portal](https://portal.azure.com/). The portal prompts you to sign in with your Microsoft account credentials.
-
-    1. Select **Create a resource**.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-createbot.png" alt-text="Select Create Bot":::
-
-    1. In the search box, enter **Azure Bot**.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/enter-azure-bot.png" alt-text="Enter Azure Bot":::
-
-    1. Select **Azure Bot** from the list.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-bot.png" alt-text="Select Azure Bot":::
-
-    1. Select **Create**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-create.png" alt-text="Select Azure Bot":::
-
-       The **Create an Azure bot** page appears.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-an-azure-bot-page.png" alt-text="Create an Azure bot page":::
-
-    1. Enter the following details to create Azure bot.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-subscription.png" alt-text="Select subscription":::
-
-       1. Enter a unique identifier for your bot as the **Bot handle**.
-       1. Select your **Subscription** from the dropdown list.
-       1. Select your **Resource group** from the dropdown list.
     
-          You can also create a new resource group using the following steps:
-
-           1. To create new resource group, select **Create new** > enter resource **Name** > select **OK**.
-
-              :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresourcecreation.png" alt-text="New resource creation":::
-
-           1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
-        
-              :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/newresource.png" alt-text="New resource":::
-    
-       1. Select **Multi Tenant** as **Type of App**.
-
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select review-create.png" alt-text="Select review and create":::
-
-       1. In the **Microsoft App ID** section, select one of the following options:
-       
-          - **Create new Microsoft App ID**: This is the default option. Azure AD creates a new app ID for your bot resource.
-          - **Use existing app registration**: Select an existing app ID. You'll need to enter **Existing app ID** and **Existing app password**  if you select this option.
-
-          > [!NOTE]
-          > You can create single bot with the same **Microsoft App ID**.
-
-       1. Select **Review + create**.
-
-    1. After successful validation, select **Create**. 
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/validation-passed.png" alt-text="Validation Pass":::
-
-       It takes a few minutes to provision your bot service. After the deployment of bot resource is complete, the **Overview** appears:
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/bot-service-provision.png" alt-text="Bot Service Provision":::
-
-    1. Select **Go to resource**. 
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/go-to-resource.png" alt-text="Go to resource":::
-
-        Your Azure bot page appears, and you can see its **Resource group** and **Subscription ID**.
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-bot-created.png" alt-text="Azure bot resource created":::
-
-    **To create client secret for your bot**
-
-    1. In the left panel, select **Configuration**.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-configuration1.png" alt-text="Select configuration":::
-
-       > [!TIP]
-       > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **Manage**, which is next to **Microsoft App ID**.
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-manage1.png" alt-text="Select manage":::
-
-        The **Certificates & secrets** page appears.
-
-    1. In the **Client secrets** section, select **New client secret**. 
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-client-secret.png" alt-text="New client secret":::
-    
-       The **Add a client secret** window appears.  
-
-    1. Enter **Description**, and then select **Add**.
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-secret.png" alt-text="Add client secret":::
-
-    1. In the **Value** column, select **Copy to clipboard**.
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/copy-client-secret.png" alt-text="Copy client secret":::
-       
-       > [!IMPORTANT]
-       > Save the **Client secrets** value for future reference. This is your app's password.
-
-    **To add the Teams channel**
-
-    1. Select **Home**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-home.png" alt-text="Select Home":::
-
-    1. Select your bot from the list of **Recent** resources.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-your-bot-resources.png" alt-text="Select your bot resource":::
-
-    1. Select **Channels** in the left pane, and select <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> **Microsoft Teams**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-teams.png" alt-text="Select Teams":::
-
-    1. Select the checkbox to accept the **Terms of Service**, and then select **Agree**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/checkbox.png" alt-text="Select Checkbox":::
-
-    1. Select **Apply**.  
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-apply.png" alt-text="Select Apply":::
-    
-    **To create a tunnel for local web server**
+    ## To create a tunnel for local web server
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -228,28 +98,6 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
 
-    **To add Messaging endpoint**
-
-    1. From ngrok, copy the HTTPS URL.
-
-       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok2.png" alt-text="ngrok HTTPS URL":::
-
-        > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
-
-    1. Go back to the Azure portal page, and select your bot.
-    1. Select **Configuration** under **Settings** for the Azure bot that you created.
-
-         :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/configuration.png" alt-text="Configuration":::
-
-    1. In **Messaging endpoint**, paste the HTTPS URL copied from ngrok tunnel. At the end of the URL, add **/api/messages**.
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-message-endpoint1.png" alt-text="Messaging Endpoint":::
-
-    1. Select **Apply**.
-
-        You have successfully set up a bot resource in Azure Bot Service.
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
