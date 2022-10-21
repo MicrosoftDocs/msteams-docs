@@ -354,7 +354,7 @@ items:
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
+    Did you come up with output like this?
 
     :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
     
