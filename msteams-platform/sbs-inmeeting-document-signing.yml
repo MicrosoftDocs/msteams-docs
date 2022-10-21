@@ -165,7 +165,7 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
-    1. Select your bot.
+    1. Select your app.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registration.png" alt-text="App registration":::
 
@@ -328,8 +328,8 @@ items:
 
     1. Update the following information in appsettings.json:  
 
-         * Replace all occurrences of `<<aad-id>>` with your bot's Microsoft App ID.
-         * Replace all occurrences of `<<client secret>>` with your bot's client secret.
+         * Replace all occurrences of `<<aad-id>>` with your app's Microsoft App ID.
+         * Replace all occurrences of `<<client secret>>` with your app's client secret.
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings":::
 
@@ -344,7 +344,7 @@ items:
     1. Make the following changes in manifest.json:
 
          * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name.
-         * Replace all occurrences of `<<aad-id>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<aad-id>>` with your app's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png" alt-text="Manifest image2":::
 
