@@ -310,7 +310,7 @@ items:
 
     1. Select **Add a scope**.
 
-        :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Screenshot showing adding a scope.":::
+        :::image type="content" source="~/assets/images/bots/Addascope_1.png" alt-text="Screenshot showing adding a scope.":::
 
        The **Add a scope** window appears.
 
@@ -451,7 +451,7 @@ items:
 
     1. Select **BotSSOCSharp.csproj** file from **csharp_dotnetcore** folder.
 
-        :::image type="content" source="~/assets/images/bots/filepath.png" alt-text="Screenshot showing the folder path.":::
+        :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot showing the folder path.":::
 
     1. Open the **appsettings.json** file.
 
@@ -507,7 +507,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/bots/manifest.png" alt-text="Screenshot showing how to zip a manifest folder":::
+        :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot showing how to zip a manifest folder":::
 
     1. Go to Teams client.
     1. Select **Store**.
