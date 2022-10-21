@@ -192,11 +192,7 @@ items:
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="select add to add your workflow bot app":::
     Then you can select DoStuff button to invoke the action, that responds with the following updated Adaptive Card:
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
-    
-    The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
-  
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="select add to add your workflow bot app":::
-   
+       
 - title: Complete challenge
   durationInMinutes: 1
   content: |
