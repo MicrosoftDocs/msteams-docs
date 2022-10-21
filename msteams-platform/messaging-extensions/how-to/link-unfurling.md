@@ -276,7 +276,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Respond to the `composeExtension/anonymousQueryLink` payload.
 
-   1. For non-auth scenarios: You need to send back a response with type result and a card. Use the following template:
+   1. For non-auth scenarios: You need to send back a response with the `type` as `result` and a card. Use the following template:
 
       ```json
       {
@@ -313,7 +313,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-   1. For auth scenarios: You need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
+   1. For auth: You need to send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
   
       ```json
       {
@@ -329,7 +329,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-1. Pre-auth card: Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
+1. Pre-auth card (For auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
    You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
@@ -352,7 +352,9 @@ Zero install link unfurling helps you provide enhanced experience to the users, 
 The following are the limitations:
 
 * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
+
 * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+
 * If the bot selects to send back type auth with a pre-auth card, the Teams client strips all it's actions.
 
 ## Step-by-step guide
