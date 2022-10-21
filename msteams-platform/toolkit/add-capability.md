@@ -23,6 +23,7 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 |**Scenario-based Teams app**|             |
 | Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab, tab|
 | Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |SSO-enabled tab, tab|
+| Workflow bot| Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.|SSO-enabled tab, tab|
 
 > [!NOTE]
 > You can add tabs up to 16 instances. As for your bot and message extension, you can add one for each instance at a time.
