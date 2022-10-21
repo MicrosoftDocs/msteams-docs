@@ -27,6 +27,7 @@ items:
   durationInMinutes: 1
   content: |
     Here's a list of tools you need for building and deploying your apps.
+
     | &nbsp; | Install | For using |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
@@ -99,6 +100,7 @@ items:
     1. Set up administrator account. After you finish, the following screen displays.
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
     1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
+
 - title: Build workflow bot
   durationInMinutes: 5
   content: |
@@ -146,15 +148,20 @@ items:
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
     
     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png" alt-text="select add to add your workflow bot app":::
+    
+    
     The created bot is a normal TeamsFx project that will contain following folders:
+    
     | Folder | Content |
     |   ---  |   ---   |
     |`.fx`   | Project level settings, configurations, and environment information.|
     |`.vscode`| Visual Studio Code files for local debug |
     |`bot`   | The source code for the workflow bot Teams application.|
     |`templates`| Templates for the Teams application manifest and for provisioning Azure resources.|
+    
     The core implementation for the Teams bot is in `bot/` folder. The following files under `bot/` folder provide the business logic for the workflow bot.
     These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started:
+    
     | Folder | Content |
     |   ---  |   ---   |
     |`src/index.js(ts)` | Application entry point and `restify` handlers for the workflow bot.|
@@ -166,6 +173,7 @@ items:
     | File/Folder | Content |
     |   ---  |   ---   |
     | `src/internal/initialize.js(ts)`| Application initialization and bot message handling.|
+    
     The following files are project-related files. You generally don't need to customize these files.
     
     | File/Folder | Content |
@@ -183,7 +191,7 @@ items:
     Then you can select DoStuff button to invoke the action, that responds with the following updated Adaptive Card:
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
     
-      The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
+    The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
   
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="select add to add your workflow bot app":::
    
