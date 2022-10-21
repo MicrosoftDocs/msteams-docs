@@ -264,7 +264,7 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 
 You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
 
-You can use the signing app to:
+You can use an in-meeting signing app to:
 
 - Add documents to be reviewed during a meeting
 - Share documents to be reviewed to main stage
@@ -276,9 +276,9 @@ The participants can review and sign documents, such as purchase agreements and 
 
 The following participant roles may be involved during the meeting:
 
-- **Document creator**: This role can add their own documents to be signed.
-- **Signer**: This role can sign documents reviewed.
-- **Reader**: This role can view the documents reviewed.
+- **Document creator**: This role can add their own documents to be reviewed and signed.
+- **Signer**: This role can sign reviewed documents.
+- **Reader**: This role can view the documents added to the meeting.
 
 ## Code sample
 
@@ -299,4 +299,4 @@ The following participant roles may be involved during the meeting:
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
-* [Step-by-step guide to Build in-meeting document signing](../sbs-inmeeting-document-signing.yml)
+* [Step-by-step guide to build an in-meeting document signing app](../sbs-inmeeting-document-signing.yml)
