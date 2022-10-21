@@ -456,7 +456,7 @@ items:
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
+    Did you come up with output like this?
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Output.":::
 
