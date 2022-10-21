@@ -355,7 +355,7 @@ The following are the limitations:
 
 * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-* If the bot selects to send back type auth with a pre-auth card, the Teams client strips all it's actions.
+* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips all it's actions.
 
 ## Step-by-step guide
 
