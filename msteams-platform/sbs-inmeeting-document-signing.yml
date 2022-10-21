@@ -5,7 +5,7 @@ metadata:
   description: With this learning module, learn how to build in-meeting document signing app in Teams.
   audience: Developer
   level: Beginner
-  ms.date: 27/07/2021
+  ms.date: 27/07/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
   nextTutorialTitle: Read more to build apps for Teams meeting stage
@@ -73,7 +73,7 @@ items:
         :::image type="content" source="~/assets/images/bots/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > Contact Teams administrator, if you don't find the option to upload a custom app.  
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.  
 
     ## Download the code sample
 
@@ -112,7 +112,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="App registration page on Azure AD Portal.":::
 
-    5. Select **Multitenant* as the type of user account that can access your app.
+    5. Select **Multitenant** as the type of user account that can access your app.
 
     6. Select **Register**.
         A message pops up on the browser stating that the app was created.
@@ -163,7 +163,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Select Set":::
 
-    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}` and select **Save**.
+    1. Set the **Application ID URI** in the form of `api://your ngrok/AppID` and select **Save**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="App URI":::
         
