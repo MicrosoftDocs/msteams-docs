@@ -266,6 +266,8 @@ Meeting Signing is a Teams sample app that demonstrates the scenario of enabling
 
 The sample app could be customized to incorporate other kind of signatures like handwritten signatures or certificate based signatures.
 
+ ![in-meeting document signing app](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+
 User roles
 
 This sample has 3 main personas:
