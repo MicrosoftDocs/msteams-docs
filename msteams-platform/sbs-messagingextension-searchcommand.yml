@@ -23,7 +23,7 @@ items:
 
     This step-by-step guide helps you to build a search based message extension. You'll see the following output:
 
-    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output.png" alt-text="Final.":::
+    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output_1.png" alt-text="Final.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -217,7 +217,7 @@ items:
 
     1. Select **Set**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/exposeanapi_1.png" alt-text="Expose an API":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/exposeanapi_2.png" alt-text="Expose an API":::
 
     1. Set the **Application ID URI** in the form of `api://WebAppDomain/{AppID}`.
 
@@ -448,7 +448,7 @@ items:
 
        1. Select **Nuget Package**.
 
-          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget.png" alt-text="Nuget":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget_1.png" alt-text="Nuget":::
 
        1. Select **Project**.
 
@@ -460,7 +460,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output.png" alt-text="Final":::
+    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output_1.png" alt-text="Final":::
 
 - content: |
     You've completed the tutorial to get started with Teams message extensions search!
