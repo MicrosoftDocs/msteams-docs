@@ -91,9 +91,11 @@ The following table shows the changes that can be seen in the files of your app 
 
 ## Step-by-step guide
 
-* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
+* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams.
 
 * Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-workflow-bot.yml) guide to build workflow bot in Microsoft Teams.
 
 ## See also
 

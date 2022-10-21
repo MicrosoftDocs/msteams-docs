@@ -20,6 +20,7 @@ items:
       * How to build workflow bot with Teams Toolkit.
       * About the directory structure of your app.
       * Customize installation of your bot with the Adaptive Card response.
+    
     You can see the following output:
     
     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot output.":::
@@ -55,9 +56,8 @@ items:
     1. Select **Install** next to the Teams Toolkit.
        :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
     
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
-    
+    The Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar."::: icon appears in the Visual Studio Code sidebar after it's installed.
+        
     You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
     
     # [Command line](#tab/cli)
@@ -195,7 +195,7 @@ items:
     
     The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
   
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="select add to add your workflow bot app":::
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="select add to add your workflow bot app":::
    
 - title: Complete challenge
   durationInMinutes: 1
