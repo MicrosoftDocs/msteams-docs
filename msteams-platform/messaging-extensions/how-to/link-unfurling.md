@@ -26,7 +26,7 @@ The following image is an example of link unfurling using the Azure DevOps messa
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
