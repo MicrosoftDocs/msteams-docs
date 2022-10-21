@@ -7,19 +7,23 @@ keywords: Share in Meeting
 ---
 # Share in meeting
 
-Share in meeting allows users to share any document or third-party app to the meeting stage and all the participants can interact and edit together.
-
-When users select the **Share in meeting** button, it launches a deep link to the meeting stage. If users haven't installed any meeting extension, it requests users to install the meeting extension app for the third-party apps to control and access the meeting stage.
+Share in meeting allows users to share any document or a third-party apps to the meeting stage. This enables all the participants to interact on a third-party apps and edit the document together.
 
 The following image shows the share in meeting experience:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows share in meeting stage experience.":::
 
+When users select the **Share in meeting** button, it launches a deep link to the meeting stage if users installed any meeting extension app. If users haven't installed any meeting extension, it requests users to install the meeting extension app for the third-party apps to control and access the meeting stage.
+
 ## Enable share in meeting
 
-Following are the different methods to enable share in meeting:
+Following are three methods to enable share in meeting:
 
-### Method 1
+* [teams-share-in-meeting-button](#teams-share-in-meeting-button)
+* [async shareToMicrosoftTeams.renderButtons(options)](#async-sharetomicrosoftteamsrenderbuttonsoptions)
+* [async shareInMeetingClickHandler(content: IShareInMeetingContent)](#async-shareinmeetingclickhandlercontent-ishareinmeetingcontent)
+
+### teams-share-in-meeting-button
 
 The following steps scans your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
@@ -48,7 +52,7 @@ The following steps scans your web page to locate any HTML elements with the cla
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
 
-### Method 2
+### async shareToMicrosoftTeams.renderButtons(options)
 
 `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
@@ -76,7 +80,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    }  
    ```
 
-### Method 3
+### async shareInMeetingClickHandler(content: IShareInMeetingContent)
 
 `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
@@ -125,9 +129,9 @@ The query parameters are:
 
 * `meeting-stage`: Verb that specifies the protocol type and the deep link type​.
 
-* `deep link Id`: **GUID/UUID** used for telemetry correlation​.
+* `deeplinkId`: **GUID/UUID** used for telemetry correlation​.
 
-* `fqdn`: FQDN is needed in Teams deep link service for tenant or for account checking.
+* `fqdn`: It is needed in Teams deep link service for tenant or for account checking.
 
   * When the meeting is scheduled with Teams for Life, then the fqdn should be **teams.live.com**.
 
