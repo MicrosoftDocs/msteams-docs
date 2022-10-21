@@ -42,10 +42,12 @@
   - name: Build notification bot with JavaScript
     href: sbs-gs-notificationbot.yml
   - name: Build command bot with JavaScript
-    href: sbs-gs-commandbot.yml  
+    href: sbs-gs-commandbot.yml
+  - name: Build workflow bot
+    href: sbs-teams-workflow-bot.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
-- name: Plan your app
+  - name: Plan your app
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
