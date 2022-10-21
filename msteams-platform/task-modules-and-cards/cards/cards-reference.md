@@ -274,7 +274,7 @@ Loop components are interactive units that sync across Microsoft 365 apps such a
 Adaptive Card based Loop component has actionable content and enable users to make quick updates without switching context. Any changes made in the Adaptive Card based Loop component are synced across the Teams where the Adaptive Card is shared.
 
 > [!NOTE]
-> Adaptive Card loop component is available from Adaptive Card version 1.6.
+> Adaptive Card based Loop component is available from Adaptive Card version 1.6.
 
 To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` to the Adaptive Card schema. If you want your bot to post an Adaptive Card based Loop component, add the `metadata` and `webUrl` to the card payload.
 
