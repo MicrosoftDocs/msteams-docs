@@ -251,9 +251,9 @@ As illustrated above, user-specific views are refreshed from a base card, for ex
 
 Below is a sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. Ensure that you provide the following info to define the refresh section:
 
-* `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
-* `verb`: A string to identify the refresh action.
-* `data`: An optional data to associate with the refresh action.
+  - * `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
+  - * `verb`: A string to identify the refresh action.
+  - * `data`: An optional data to associate with the refresh action.
 
     ```
         import baseCard from "../adaptiveCards/baseCard.json";
