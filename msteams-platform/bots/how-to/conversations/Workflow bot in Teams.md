@@ -249,11 +249,11 @@ As illustrated above, user-specific views are refreshed from a base card, for ex
 
 * Enable user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned.
 
-Below is a sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. Ensure that you provide the following info to define the refresh section:
+Below is a sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
-  - * `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
-  - * `verb`: A string to identify the refresh action.
-  - * `data`: An optional data to associate with the refresh action.
+  1. `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
+  1. `verb`: A string to identify the refresh action.
+  1. `data`: An optional data to associate with the refresh action.
 
     ```
         import baseCard from "../adaptiveCards/baseCard.json";
@@ -280,7 +280,7 @@ Below is a sample that returns a base card as command response that can auto-ref
   }
       ```
 
-**Option 2**: Enable user-specific view to refresh your Adaptive Card.
+* Enable user-specific view to refresh your Adaptive Card.
 
 Here's a sample refresh action defined in `baseCard.json`:
 
