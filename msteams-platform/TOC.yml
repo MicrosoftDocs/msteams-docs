@@ -383,7 +383,7 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md 
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
     - name: Build in-meeting notification for meeting
