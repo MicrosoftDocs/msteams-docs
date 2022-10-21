@@ -296,7 +296,7 @@ items:
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
              * **Access tokens**
-   
+
          1. Select **Configure**.
 
     You have completed Azure AD app registration and configuration.
