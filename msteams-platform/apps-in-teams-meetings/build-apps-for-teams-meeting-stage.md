@@ -262,13 +262,21 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 
 ## Build in-meeting document signing app
 
-Meeting Signing is a Teams sample app that demonstrates the scenario of enabling users to sign documents in real time during meetings making possible to review and sign documents in a single session. This sample lets users electronically sign documents with their current tenant identity. Some example documents that can be signed during meetings are Purchase Agreements and Purchase Orders. This template is also applicable, and could be adapted for other scenarios like reviewing and approving code reviews or collaborative reviewing of documents
+You can build an in-meeting app for enabling meeting participants to sign documents in real time during meetings. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
 
-The sample app could be customized to incorporate other kind of signatures like handwritten signatures or certificate based signatures.
+The following participant roles may be involved:
+
+- Document creator: this role can add their own documents to be signed using the app
+- Signer: this role will be able to sign documents reviewed during the meeting
+- Reader: this role will only be able to read the documents reviewed during the meeting
+
+// Meeting Signing is a Teams sample app that demonstrates the scenario of enabling users to sign documents in real time during meetings making possible to review and sign documents in a single session. This sample lets users electronically sign documents with their current tenant identity. Some example documents that can be signed during meetings are Purchase Agreements and Purchase Orders. This template is also applicable, and could be adapted for other scenarios like reviewing and approving code reviews or collaborative reviewing of documents
+
+The sample app could be customized to incorporate other kind of signatures like handwritten signatures or certificate based signatures.//
 
  ![in-meeting document signing app](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
 
-User roles
+// User roles
 
 This sample has 3 main personas:
 
@@ -279,7 +287,7 @@ Reader: this role will only be able to read the documents reviewed during the me
 Scenarios:
 Add documents to be reviewed during a meeting
 Share documents to be reviewed to main stage
-Sign documents using the signer’s identity
+Sign documents using the signer’s identity //
 
 
 ## Code sample
