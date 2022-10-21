@@ -247,7 +247,7 @@ Below are the steps to implement this pattern with TeamsFx SDK:
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, such as  the card1. There are two options to achieve this:
 
-**Option 1**: Enable user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned.
+* Enable user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned.
 
 Below is a sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. Ensure that you provide the following info to define the refresh section:
 
@@ -256,27 +256,29 @@ Below is a sample that returns a base card as command response that can auto-ref
 * `data`: An optional data to associate with the refresh action.
 
     ```
-      import baseCard from "../adaptiveCards/baseCard.json";
-      import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+        import baseCard from "../adaptiveCards/baseCard.json";
+        import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 
-      export class MyCommandHandler1 implements TeamsFxBotCommandHandler {
-      triggerPatterns: TriggerPatterns = "helloWorld";
+        export class MyCommandHandler1 implements TeamsFxBotCommandHandler {
+        triggerPatterns: TriggerPatterns = "helloWorld";
 
-      async handleCommandReceived(context: TurnContext, message: CommandMessage): 
-      Promise<string | Partial<Activity> | void> {
-      const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
-      const userIds = [ context.activity.from.id ]; // users who will be refreshed
-      const data = { key: "value"};                 // optional data associated with the action
+        async handleCommandReceived(context: TurnContext, message: CommandMessage): 
+        Promise<string | Partial<Activity> | void> {
+        const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
+        const userIds = [ context.activity.from.id ]; // users who will be refreshed
+        const data = { key: "value"};                 // optional data associated with the action
 
-      const responseCard = AdaptiveCards
-        .declare(baseCard)
-        .refresh(refreshVerb, userIds, data)
-        .render(cardData);
+        const responseCard = AdaptiveCards
+          .declare(baseCard)
+          .refresh(refreshVerb, userIds, data)
+          .render(cardData);
     
-          return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+            return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+
     }
+
   }
-     ```
+      ```
 
 **Option 2**: Enable user-specific view to refresh your Adaptive Card.
 
