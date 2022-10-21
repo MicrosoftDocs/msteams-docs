@@ -333,7 +333,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
-   :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the a customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.PNG":::
+   :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.PNG":::
 
    If you've not customized your card, Teams unfurls a default preview card that prompts users to sign in. The following image illustrates a default preview card:
 
@@ -343,7 +343,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-* Unfurl helpful previews for your links that users share in Teams even before they have installed your app.
+* Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
 
 * Create welcome card for your app to show a preview with the placeholder fields.
 
@@ -355,7 +355,7 @@ The following are the limitations:
 
 * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips all it's actions.
+* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips all its actions.
 
 ## Step-by-step guide
 
