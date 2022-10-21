@@ -97,7 +97,7 @@ items:
 
     2. Select the **App registrations** icon.
 
-    :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Azure AD Portal page.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Azure AD Portal page.":::
 
     The **App registrations** page appears.
 
@@ -135,7 +135,7 @@ items:
 
         The page with app ID and other configurations is displayed.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/tab-app-created.png" alt-text="App registration is successful.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="App registration is successful.":::
 
     8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
