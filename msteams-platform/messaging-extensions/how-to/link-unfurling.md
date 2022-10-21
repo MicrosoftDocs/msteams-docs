@@ -12,7 +12,7 @@ ms.author: v-amprasad
 
 The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing app.
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="link unfurling without app installation" lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
+:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows an example of link unfurling without app installation." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
 > [!NOTE]
 >
@@ -62,186 +62,6 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. Select **Add**. The following image explains the process:
 
    :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
-
-## Add link unfurling manually
-
-> [!NOTE]
-> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
-
-First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
-
-```json
-...
-"composeExtensions": [
-  {
-    "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
-    "messageHandlers": [
-      {
-        "type": "link",
-        "value": {
-          "domains": [
-            "*.trackeddomain.com"
-          ]
-        }
-      }
-    ]
-  }
-],
-...
-```
-
-For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
-
-## Enable zero install for link unfurling
-
-Zero install link unfurling helps you unfurl previews for your shared links even before a user has discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create pre-authenticated Adaptive Card previews for users to view before they install or authenticate your app.
-
-The following image provides sequential flow to enable and use zero install link unfurling:
-
-   :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
-
-### Enable zero install link unfurling
-
-To get your app ready for zero install link unfurling, follow these steps:
-
-1. Set the manifest property `supportsAnonymousAccess` to TRUE.
-
-1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
-
-   Example of app manifest declaration:
-
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
-
-   Example of the invoke request payload:
-
-   ```json
-   {
-      "name":"composeExtension/anonymousQueryLink",
-      "type":"invoke",
-      "timestamp":"2021-12-02T08:12:21.148Z",
-      "localTimestamp":"2021-12-02T00:12:21.148-08:00",
-      "id":"f:43d59e15-6114-bd53-08c3-b232aa648ec1",
-      "channelId":"msteams",
-      "serviceUrl":"https://smba.trafficmanager.net/amer/",
-      "from":{
-         "id":"redacted",
-         "name":"redacted"
-      },
-      "conversation":{
-         "isGroup":true,
-         "conversationType":"groupChat",
-         "tenantId":"redacted",
-         "id":" redacted",
-         "name":" redacted"
-      },
-      "recipient":{
-         "id":"28:85fa138c-7654-4236-86eb-466160687029",
-         "name":"test bot"
-      },
-      "entities":[
-         {
-            "locale":"en-US",
-            "country":"US",
-            "platform":"Mac",
-            "timezone":"America/Los_Angeles",
-            "type":"clientInfo"
-         }
-      ],
-      "channelData":{
-         "tenant":{
-            "id":" redacted"
-         },
-         "source":{
-            "name":"compose"
-         }
-      },
-      "value":{
-         "url":"https://test.test.com/test"
-      },
-      "locale":"en-US",
-      "localTimezone":"America/Los_Angeles"
-   }
-   ```
-
-1. Respond to the `composeExtension/anonymousQueryLink` payload:
-
-   1. For non-auth scenarios, you need to send back a response with type result and a card. Use the following template:
-
-      ```json
-      {
-         "composeExtension": {
-           "type": "result",
-           "attachmentLayout": "list",
-           "attachments": [
-            {
-         "contentType": "application/vnd.microsoft.teams.card.o365connector",
-         "content": {
-           "sections": [
-             {
-               "activityTitle": "[85069]: Create a cool app",
-               "activityImage": "https://placekitten.com/200/200"
-             },
-             {
-               "title": "Details",
-               "facts": [
-                 {
-                   "name": "Assigned to:",
-                   "value": "[Larry Brown](mailto:larryb@example.com)"
-                 },
-                 {
-                   "name": "State:",
-                   "value": "Active"
-                 }
-               ]
-             }
-           ]
-         }
-       }
-      ]
-      }
-      }
-      ```
-
-   1. For auth scenarios: You need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
-  
-      ```json
-      {
-       "composeExtension": {
-       "type": "auth",
-      "attachmentLayout": "list",
-      "attachments": [
-       {
-         /*Pre-auth card content goes here*/
-       }
-      ]
-      }
-      }
-      ```
-
-1. Pre-auth card: Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
-
-   You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
-
-   :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the link unfurling code custom card." lightbox="../../assets/images/tdp/custom-card.PNG":::
-
-   If you've not customized your card, Teams unfurls a default preview card that prompts users to sign in. The following image illustrates a default preview card:
-
-   :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
-
-### Advantages
-
-The following advantages help you to provide enhanced experience to the users:
-
-* Prompt users to unfurl links without installing messaging extension.
-* Create welcome card for your app to show preview with placeholder fields.
-
-### Limitations
-
-The following list provides the limitations:
-
-* The bot can only send back a response type result or auth in response to composeExtension/anonymousQueryLink invoke. The user can log an error for all other response types, such as, silentAuth and config.
-* The bot can't send back an acv2 card in response to `composeExtension/anonymousQueryLink`, either as a result or as a pre-auth card in auth.
-* If the bot selects to send back type auth with a pre-auth card, the teams client strips all of its actions.
 
 ### Handle the `composeExtension/queryLink` invoke
 
@@ -353,6 +173,187 @@ Following is an example of the response:
 ```
 
 * * *
+
+## Add link unfurling manually
+
+> [!NOTE]
+> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+
+First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
+
+```json
+...
+"composeExtensions": [
+  {
+    "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
+    "messageHandlers": [
+      {
+        "type": "link",
+        "value": {
+          "domains": [
+            "*.trackeddomain.com"
+          ]
+        }
+      }
+    ]
+  }
+],
+...
+```
+
+For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
+
+## Enable zero install for link unfurling
+
+Zero install link unfurling helps you unfurl previews for your shared links even before a user  discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
+
+The following image provides sequential flow to enable and use zero install link unfurling:
+
+   :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
+
+### Enable zero install link unfurling
+
+To get your app ready for zero install link unfurling, follow these steps:
+
+1. Set the manifest property `supportsAnonymousAccess` to TRUE.
+
+1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
+
+   Example of the app manifest declaration:
+
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
+
+   Example of the invoke request payload:
+
+   ```json
+   {
+      "name":"composeExtension/anonymousQueryLink",
+      "type":"invoke",
+      "timestamp":"2021-12-02T08:12:21.148Z",
+      "localTimestamp":"2021-12-02T00:12:21.148-08:00",
+      "id":"f:43d59e15-6114-bd53-08c3-b232aa648ec1",
+      "channelId":"msteams",
+      "serviceUrl":"https://smba.trafficmanager.net/amer/",
+      "from":{
+         "id":"redacted",
+         "name":"redacted"
+      },
+      "conversation":{
+         "isGroup":true,
+         "conversationType":"groupChat",
+         "tenantId":"redacted",
+         "id":" redacted",
+         "name":" redacted"
+      },
+      "recipient":{
+         "id":"28:85fa138c-7654-4236-86eb-466160687029",
+         "name":"test bot"
+      },
+      "entities":[
+         {
+            "locale":"en-US",
+            "country":"US",
+            "platform":"Mac",
+            "timezone":"America/Los_Angeles",
+            "type":"clientInfo"
+         }
+      ],
+      "channelData":{
+         "tenant":{
+            "id":" redacted"
+         },
+         "source":{
+            "name":"compose"
+         }
+      },
+      "value":{
+         "url":"https://test.test.com/test"
+      },
+      "locale":"en-US",
+      "localTimezone":"America/Los_Angeles"
+   }
+   ```
+
+1. Respond to the `composeExtension/anonymousQueryLink` payload.
+
+   1. For non-auth scenarios: You need to send back a response with type result and a card. Use the following template:
+
+      ```json
+      {
+         "composeExtension": {
+           "type": "result",
+           "attachmentLayout": "list",
+           "attachments": [
+            {
+         "contentType": "application/vnd.microsoft.teams.card.o365connector",
+         "content": {
+           "sections": [
+             {
+               "activityTitle": "[85069]: Create a cool app",
+               "activityImage": "https://placekitten.com/200/200"
+             },
+             {
+               "title": "Details",
+               "facts": [
+                 {
+                   "name": "Assigned to:",
+                   "value": "[Larry Brown](mailto:larryb@example.com)"
+                 },
+                 {
+                   "name": "State:",
+                   "value": "Active"
+                 }
+               ]
+             }
+           ]
+         }
+       }
+      ]
+      }
+      }
+      ```
+
+   1. For auth scenarios: You need to send back type auth with an optional pre-auth card in the attachments. Use the following template:
+  
+      ```json
+      {
+       "composeExtension": {
+       "type": "auth",
+      "attachmentLayout": "list",
+      "attachments": [
+       {
+         /*Pre-auth card content goes here*/
+       }
+      ]
+      }
+      }
+      ```
+
+1. Pre-auth card: Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
+
+   You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
+
+   :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the a customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.PNG":::
+
+   If you've not customized your card, Teams unfurls a default preview card that prompts users to sign in. The following image illustrates a default preview card:
+
+   :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
+
+### Advantages
+
+Zero install link unfurling helps you provide enhanced experience to the users, such as:
+
+* Unfurl helpful previews for your links that users share in Teams even before they have installed your app.
+
+* Create welcome card for your app to show a preview with the placeholder fields.
+
+### Limitations
+
+The following are the limitations:
+
+* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
+* The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+* If the bot selects to send back type auth with a pre-auth card, the Teams client strips all it's actions.
 
 ## Step-by-step guide
 
