@@ -233,7 +233,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Select scope":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_2.png" alt-text="Select scope":::
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -290,7 +290,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_1.png" alt-text="Add permission":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_2.png" alt-text="Add permission":::
 
     1. Select **Microsoft Graph**.
 
@@ -305,7 +305,7 @@ items:
 
     1. Select **Add permissions**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Other permissions":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_2.png" alt-text="Other permissions":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -366,7 +366,7 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution**.
     
-          :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-VSopenfile_1.png" alt-text="Open file":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file_1.png" alt-text="Open file":::
 
        1. Select **TeamsMessagingExtensionsSearch.csproj** file from **50.teams-messaging-extensions-search** folder.
 
