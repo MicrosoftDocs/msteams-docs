@@ -104,7 +104,7 @@ landingContent:
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
       - text: Build workflow bot
-      - url: sbs-gs-workflow-bot.yml
+        url: sbs-gs-workflow-bot.yml
      
 - title: Monetize your app
   linkLists:
