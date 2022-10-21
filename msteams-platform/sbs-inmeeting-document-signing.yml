@@ -84,6 +84,7 @@ items:
   content: |
     The following steps help you to create and register your app in Azure portal.
 
+    * Create an Azure AD app registration
     * Use ngrok to create a tunnel to your web server's endpoints.
     
     ## Create an app registration in Azure AD
@@ -246,9 +247,9 @@ items:
 
         1. Select **Authorized scopes** to determine which type of token is returned by the service.
 
-      The following image displays the client ID:
+        The following image displays the client ID:
 
-      :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
   
     **Configure Graph permissions**
 
