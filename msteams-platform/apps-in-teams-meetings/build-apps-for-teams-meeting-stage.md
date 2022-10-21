@@ -276,9 +276,9 @@ The participants can review and sign documents, such as purchase agreements and 
 
 The following participant roles may be involved:
 
-- **Document creator**: this role can add their own documents to be signed using the app
-- **Signer**: this role will be able to sign documents reviewed during the meeting
-- **Reader**: this role will only be able to read the documents reviewed during the meeting
+- **Document creator**: This role can add their own documents to be signed using the app.
+- **Signer**: This role will be able to sign documents reviewed during the meeting.
+- **Reader**: This role will only be able to read the documents reviewed during the meeting.
 
 ## Code sample
 
@@ -299,3 +299,5 @@ The following participant roles may be involved:
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
+* [Build in-meeting document signing](sbs-inmeeting-document-signing.yml)
+
