@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. When you respond to Adaptive Card action triggered, then a sequential workflow is completed.
+    The workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. When you respond to Adaptive Card action triggered, then a sequential workflow is completed.
     When you get an Adaptive Card, it provides one or more buttons in the card to ask for your input. You can call an API, and then send another Adaptive Card in your conversation in response to the card action.
 
     In this tutorial, you'll learn:
