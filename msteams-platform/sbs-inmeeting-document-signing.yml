@@ -128,7 +128,7 @@ items:
         > [!NOTE]
         > You don't need  to enter **Redirect URI** for enabling SSO for a tab app.
 
-    7. Select **Register**.
+    6. Select **Register**.
         A message pops up on the browser stating that the app was created.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Register app on Azure AD Portal.":::
@@ -137,7 +137,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="App registration is successful.":::
 
-    8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
+    7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Azure AD. You should now have app ID for your tab app.
 
