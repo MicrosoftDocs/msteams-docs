@@ -80,7 +80,7 @@ items:
         
     1. From ngrok, copy the HTTPS URL. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="ngrok base URL":::   
+        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="ngrok base URL."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
 
 - title: Enable developer preview
   durationInMinutes: 1
