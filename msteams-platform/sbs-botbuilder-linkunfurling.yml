@@ -79,7 +79,7 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** and **Resource group** from the respective dropdown list
+    1. Select your **Subscription** and **Resource group** from the respective dropdown list.
         
         :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create_1.png" alt-text="Select resource Azure bot":::
        
