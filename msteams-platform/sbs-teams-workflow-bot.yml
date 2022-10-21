@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions triggered by you to complete a sequential workflow.
-    When you get an Adaptive Card, it can provide one or more buttons in the card to ask for your input. You can do something like calling API, and then send another Adaptive Card in your conversation in response to the card action.
+    The Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. When you respond to Adaptive Card action triggered, then a sequential workflow is completed.
+    When you get an Adaptive Card, it provides one or more buttons in the card to ask for your input. You can call an API, and then send another Adaptive Card in your conversation in response to the card action.
 
     In this tutorial, you'll learn:
 
       * How to build workflow bot with Teams Toolkit.
       * About the directory structure of your app.
       * Customize installation of your bot with the Adaptive card response.
-    This step-by-step guide helps you to build workflow bot with Teams Toolkit. You can see the following output:
+    You can see the following output:
     
     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot output.":::
 
@@ -34,7 +34,7 @@ items:
     | &nbsp; | Install | For using |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
+    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
     | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use version 14 or 16.|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
@@ -131,7 +131,7 @@ items:
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
 
-    1. Ensure that workflow bot is selected under **Scenario-based Teams apps** as the capability that you want to build in your app.
+    1. Under **Scenario-based Teams apps** select Workflow bot as the capability that you want to build in your app.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities":::
 
@@ -154,7 +154,7 @@ items:
 
     1. Select Enter.
         
-    1. The workflow bot is created in a few seconds, and you can see the scaffolding:
+    1. The workflow bot is created in a few seconds, and you can see the scaffolding.
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
 
@@ -166,7 +166,7 @@ items:
 
     1. Select **Start Debugging** button.
 
-    1. Select Add.
+    1. Select **Add**.
 
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="select add to add your workflow bot app":::
 
@@ -212,9 +212,7 @@ items:
 - title: Interaction with the workflow bot
   durationInMinutes: 2
   content: |
-    You can interact with the bot in Teams by sending a helloWorld command. After running this template, you get a response as below:
-    
-    Select the **workflow bot** and **Enter**.
+    You can interact with the bot in Teams by sending a helloWorld command. After running this template, you get a response then select the **workflow bot** and **Enter**.
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="select add to add your workflow bot app":::
 

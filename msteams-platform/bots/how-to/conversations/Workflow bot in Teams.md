@@ -177,15 +177,15 @@ To register the action handler, follow these steps:
 
 You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. There are three options to customize:
 
-* `AdaptiveCardResponse.ReplaceForInteractor`: This is the default behavior. The response card will be replaced by the current one (the card where the button is defined) for the interactor that triggers the action. Users in the conversation still view the original action card.
+* The response card will be replaced by the current one (the card where the button is defined) for the interactor that triggers the action. Users in the conversation still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif":::
 
-* `AdaptiveCardResponse.ReplaceForAll`: The response card will be replaced by the Action Card for all users in the chat, and they can view this response card.
+* The response card will be replaced by the Action Card for all users in the chat, and they can view this response card `AdaptiveCardResponse.ReplaceForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
 
-* `AdaptiveCardResponse.NewForAll`: The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card.
+* The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card `AdaptiveCardResponse.NewForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
 
