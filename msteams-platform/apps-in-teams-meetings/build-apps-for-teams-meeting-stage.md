@@ -260,6 +260,26 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
+## Build in-meeting document signing app
+
+Meeting Signing is a Teams sample app that demonstrates the scenario of enabling users to sign documents in real time during meetings making possible to review and sign documents in a single session. This sample lets users electronically sign documents with their current tenant identity. Some example documents that can be signed during meetings are Purchase Agreements and Purchase Orders. This template is also applicable, and could be adapted for other scenarios like reviewing and approving code reviews or collaborative reviewing of documents
+
+The sample app could be customized to incorporate other kind of signatures like handwritten signatures or certificate based signatures.
+
+User roles
+
+This sample has 3 main personas:
+
+Document creator: this role can add their own documents to be signed using the app
+Signer: this role will be able to sign documents reviewed during the meeting
+Reader: this role will only be able to read the documents reviewed during the meeting
+
+Scenarios:
+Add documents to be reviewed during a meeting
+Share documents to be reviewed to main stage
+Sign documents using the signer’s identity
+
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
