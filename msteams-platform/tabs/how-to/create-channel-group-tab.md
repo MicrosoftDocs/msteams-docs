@@ -1,5 +1,5 @@
 ---
-title: Create a channel tab
+title: Create a channel tab or group tab
 author: laujan
 description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams
 ms.localizationpriority: high
@@ -8,7 +8,7 @@ ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Create a channel tab
+# Create a channel tab or group tab
 
 Channel or group tabs deliver content to channels and group chats, which helps to create collaborative spaces around dedicated web-based content.
 
