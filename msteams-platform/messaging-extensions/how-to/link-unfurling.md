@@ -20,7 +20,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 > * The link unfurling result is cached for 30 minutes.
 > * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
 
-The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
+The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
 
@@ -224,7 +224,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the link unfurling code custom card." lightbox="../../assets/images/tdp/custom-card.PNG":::
 
-   If you've not customized your card, Teams unfurls a default preview card which prompts users to sign in. The following image illustrates a default preview card:
+   If you've not customized your card, Teams unfurls a default preview card that prompts users to sign in. The following image illustrates a default preview card:
 
    :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
 
