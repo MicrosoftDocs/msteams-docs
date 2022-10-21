@@ -7,17 +7,20 @@ keywords: Share in Meeting
 ---
 # Share in meeting
 
-Share in meeting allows users to share any document or a third-party apps to the meeting stage. This enables all the participants to interact on a third-party apps and edit the document together.
+Share in meeting allows users to share documents or third-party web apps to the meeting stage. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
 
-The following image shows the share in meeting experience:
+> [!NOTE]
+> Share in meeting works only for apps enabled for meeting extension (need to link the doc with meeting extension).
 
-:::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows share in meeting stage experience.":::
+The following image shows the share in meeting button on the web app:
 
-When users select the **Share in meeting** button, it launches a deep link to the meeting stage if users installed any meeting extension app. If users haven't installed any meeting extension, it requests users to install the meeting extension app for the third-party apps to control and access the meeting stage.
+:::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
+
+During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
 
 ## Enable share in meeting
 
-Following are three methods to enable share in meeting:
+You can enable share in meeting button using in three ways:
 
 * [teams-share-in-meeting-button](#teams-share-in-meeting-button)
 * [async shareToMicrosoftTeams.renderButtons(options)](#async-sharetomicrosoftteamsrenderbuttonsoptions)
@@ -131,11 +134,7 @@ The query parameters are:
 
 * `deeplinkId`: **GUID/UUID** used for telemetry correlation​.
 
-* `fqdn`: It is needed in Teams deep link service for tenant or for account checking.
-
-  * When the meeting is scheduled with Teams for Life, then the fqdn should be **teams.live.com**.
-
-  * When the meeting is scheduled for Teams for business, then the fqdn should be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggest switching to the right one.​
+* `fqdn`: It is needed in Teams deep link service for tenant or for account checking. When the meeting is scheduled for Teams for Life, the `fqdn`value must be **teams.live.com** and for Teams for business, the `fqdn` value must be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggests switching to the right one.​
 
 Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=teams.microsoft.com&appContext=`
 
