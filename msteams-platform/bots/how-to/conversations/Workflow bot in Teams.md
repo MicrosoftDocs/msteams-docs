@@ -78,7 +78,7 @@ Steps you can follow to add card actions:
 
 User universal action, `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. Here's a sample `Action.Execute` action:
 
-```Action.Execute
+```
 
 { 
   "type": "AdaptiveCard", 
@@ -108,7 +108,7 @@ You can return a new adaptive card for each action invoke to display the respons
 
 To get-started, you can just create a sample card (`responseCard.json`) with the following content, and put it in `bot/src/adaptiveCards` folder:
 
-```
+```responseCard.json
 {
   "type": "AdaptiveCard",
   "body": [
@@ -158,7 +158,7 @@ To register the action handler, follow these steps:
 1. Go to `bot/src/internal/initialize.js(ts)`;
 1. Update your `conversationBot` initialization to enable cardAction feature and add the handler to actions array:
 
-   ```
+   ```initialize.js(ts)
    export const conversationBot = new ConversationBot({
      ...
      cardAction: {
@@ -253,7 +253,7 @@ As illustrated above, user-specific views are refreshed from a base card, for ex
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
-    ```
+      ```
         import baseCard from "../adaptiveCards/baseCard.json";
         import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 
@@ -272,36 +272,35 @@ As illustrated above, user-specific views are refreshed from a base card, for ex
           .render(cardData);
     
             return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+        }
       }
-    }
-    ```
+      ```
 
 * Second option enables user-specific view to refresh your Adaptive Card. This is a sample refresh action defined in `baseCard.json`:
 
-```
+  ```baseCard.json
 
-{
-  "type": "AdaptiveCard",
-  "refresh": {
-    "action": {
-      "type": "Action.Execute",
-      "title": "Refresh",
-      "verb": "userViewRefresh" ,
-      "data": {
-        "key": "value"
-      }
+  {
+    "type": "AdaptiveCard",
+    "refresh": {
+      "action": {
+        "type": "Action.Execute",
+        "title": "Refresh",
+        "verb": "userViewRefresh" ,
+        "data": {
+          "key": "value"
+        }
+      },
+      "userIds": [
+        "${userID}"
+      ]
     },
-    "userIds": [
-      "${userID}"
-    ]
-  },
-  "body": [
+    "body": [
+      ...
+    ],
     ...
-  ],
-  ...
-}
-
-```
+  }
+  ```
 
 You need to replace `${userID}` with user MRI in code, when rendering your card content.
 
@@ -357,14 +356,13 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
       return InvokeResponseFactory.adaptiveCard(responseCardJson);
     } 
 }
-
 ```
 
 #### Register the action handler
 
 Register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
-```
+```initialize.js(ts)
 
 export const commandBot = new ConversationBot({
   ...
@@ -398,7 +396,7 @@ To add the notification feature:
 
 1. Update your `conversationBot` initialization to enable notification feature:
 
-   ```
+   ```initialize.js(ts)
 
    const conversationBot = new ConversationBot({
      ...
@@ -417,7 +415,7 @@ To add the notification feature:
 
 1. To quickly add a sample notification triggered by HTTP request, you can add the following sample code in `bot\src\index.js(ts)`:
 
-   ```
+   ```index.js(ts)
 
       server.post("/api/notification", async (req, res) => {
 
