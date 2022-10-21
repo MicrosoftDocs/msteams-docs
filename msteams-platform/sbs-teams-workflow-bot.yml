@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 28/09/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/conversations/conversation-messages.md
-  nextTutorialTitle: Workflow bot in Teams
+  nextTutorialHref: toolkit/add-capability.md
+  nextTutorialTitle: Add capabilities to Teams apps
   ms.custom: mvc
   ms.localizationpriority: none
 items:
