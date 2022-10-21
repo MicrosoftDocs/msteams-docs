@@ -247,15 +247,13 @@ Below are the steps to implement this pattern with TeamsFx SDK:
 
 As illustrated above, user-specific views are refreshed from a base card, for example, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, such as  the card1. There are two options to achieve this:
 
-* First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned.
-
-Below is a sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
+* First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in a `handleCommandReceived` of a command handler, or in a `handleActionInvoked` of card action handler where the base card is returned. In the following sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use the `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
   1. `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
-     ```
+    ```
         import baseCard from "../adaptiveCards/baseCard.json";
         import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 
@@ -274,37 +272,35 @@ Below is a sample that returns a base card as command response that can auto-ref
           .render(cardData);
     
             return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
-
+      }
     }
+    ```
 
-  }
-     ```
-
-* Second option enables user-specific view to refresh your Adaptive Card.
-
-Here's a sample refresh action defined in `baseCard.json`:
+* Second option enables user-specific view to refresh your Adaptive Card. This is a sample refresh action defined in `baseCard.json`:
 
 ```
-{ 
-  "type": "AdaptiveCard", 
-  "refresh": { 
-    "action": { 
-      "type": "Action.Execute", 
-      "title": "Refresh", 
+
+{
+  "type": "AdaptiveCard",
+  "refresh": {
+    "action": {
+      "type": "Action.Execute",
+      "title": "Refresh",
       "verb": "userViewRefresh" ,
-      "data": { 
-        "key": "value" 
+      "data": {
+        "key": "value"
       }
-    }, 
-    "userIds": [ 
-      "${userID}" 
-    ] 
-  }, 
-  "body": [ 
-    ... 
-  ], 
-  ... 
+    },
+    "userIds": [
+      "${userID}"
+    ]
+  },
+  "body": [
+    ...
+  ],
+  ...
 }
+
 ```
 
 You need to replace `${userID}` with user MRI in code, when rendering your card content.
@@ -314,6 +310,7 @@ You need to replace `${userID}` with user MRI in code, when rendering your card 
 You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for user A in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
 
 ```
+
 {
   "type": "AdaptiveCard",
   "body": [
@@ -327,6 +324,7 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.4"
 }
+
 ```
 
 #### Add card action handler to refresh views
@@ -334,11 +332,12 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 Add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
 ```
-import responseCard from "../adaptiveCards/responseCard.json"; 
 
-export class Handler1 implements TeamsFxBotCardActionHandler { 
+import responseCard from "../adaptiveCards/responseCard.json";
+
+export class Handler1 implements TeamsFxBotCardActionHandler {
     triggerVerb: string = "userViewRefresh";
- 
+
     async handleActionInvoked(context: TurnContext, actionData: any): Promise<InvokeResponse> {
       /**
        * If you have multiple userIds defined in your refresh action, for example: userIds: [ "<UserA>", "<userB>" ] ,
@@ -358,6 +357,7 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
       return InvokeResponseFactory.adaptiveCard(responseCardJson);
     } 
 }
+
 ```
 
 #### Register the action handler
@@ -365,15 +365,17 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 Register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
 ```
-export const commandBot = new ConversationBot({ 
-  ... 
-  cardAction: { 
-    enabled: true, 
-    actions: [ 
-      new Handler1() 
-    ], 
-  } 
+
+export const commandBot = new ConversationBot({
+  ...
+  cardAction: {
+    enabled: true,
+    actions: [
+      new Handler1()
+    ],
+  }
 })
+
 ```
 
 ### Access Microsoft Graph
@@ -397,23 +399,26 @@ To add the notification feature:
 1. Update your `conversationBot` initialization to enable notification feature:
 
    ```
-   const conversationBot = new ConversationBot({ 
-     ... 
-     cardAction: { 
-       enabled: true, 
-       actions: [ 
-         new Handler1() 
-       ], 
+
+   const conversationBot = new ConversationBot({
+     ...
+     cardAction: {
+       enabled: true,
+       actions: [
+         new Handler1()
+       ],
      },
      notification: {
        enabled: true
-     } 
+     }
    });
+
    ```
 
 1. To quickly add a sample notification triggered by HTTP request, you can add the following sample code in `bot\src\index.js(ts)`:
 
    ```
+
       server.post("/api/notification", async (req, res) => {
 
      for (const target of await conversationBot.notification.installations()) {
@@ -422,6 +427,7 @@ To add the notification feature:
 
      res.json({});
    });
+
    ```
 
 1. Uninstall your previous bot installation from Teams, and select `F5` to start your application.
