@@ -169,7 +169,9 @@ items:
     |`src/commands/helloworldCommandHandler.js(ts)` | Responds to the command message.|
     |`src/cardActions/doStuffActionHandler.js(ts)` | Responds to the `doStuff` card action.|
     |`src/cardModels.js(ts)` | The default Adaptive Card data model.|
+    
     The following files implement the core workflow bot on the Bot Framework. You generally don't need to customize these files.
+    
     | File/Folder | Content |
     |   ---  |   ---   |
     | `src/internal/initialize.js(ts)`| Application initialization and bot message handling.|
