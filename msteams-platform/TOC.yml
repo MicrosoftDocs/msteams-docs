@@ -141,8 +141,6 @@
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Edit Azure AD manifest
           href: toolkit/AAD-manifest-customization.md
-      - name: TeamsFx SDK
-        href: toolkit/TeamsFx-SDK.md
       - name: Debug your Teams app
         items: 
         - name: Overview
@@ -174,7 +172,9 @@
       - name: Integrate with Developer Portal
         href: toolkit/Integrate-with-developer-portal.md
     - name: FAQ
-      href: toolkit/faq.md        
+      href: toolkit/faq.md  
+  - name: TeamsFx SDK
+    href: toolkit/TeamsFx-SDK.md      
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
   - name: Developer Portal for Teams
