@@ -19,7 +19,7 @@ To simplify the development, the TeamsFx SDK provides an Adaptive Card action ha
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
 * `Action Card`: The card where you define your action that users can invoke (DoStuff button).
 * `Card Action Handler`: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
@@ -177,15 +177,15 @@ To register the action handler, follow these steps:
 
 You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. There are three options to customize:
 
-* The response card will be replaced by the current one (the card where the button is defined) for the interactor that triggers the action. Users in the conversation still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
+* The response card is replaced by the current one (the card where the button is defined) for the interactor that triggers the action. Users in the conversation still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif":::
 
-* The response card will be replaced by the Action Card for all users in the chat, and they can view this response card `AdaptiveCardResponse.ReplaceForAll`.
+* The response card is replaced by the Action Card for all users in the chat, and they can view this response card `AdaptiveCardResponse.ReplaceForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
 
-* The response card will be sent as a separate message in the conversation that won't replace the action card. And all users in the chat can view this response card `AdaptiveCardResponse.NewForAll`.
+* The response card is sent as a separate message in the conversation that can't replace the action card. And all users in the chat can view this response card `AdaptiveCardResponse.NewForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
 
@@ -205,7 +205,7 @@ You can see the following response message in Teams:
 
 ### Respond with error messages
 
-When you want to return error response message to the client, then you can apply the `InvokeResponseFactory.errorResponse` to build your invoke response, for example:
+When you want to return an error response message to the client, then you can apply the `InvokeResponseFactory.errorResponse` to build your invoke response, for example:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed":::
 
@@ -218,13 +218,13 @@ You can edit the file `src/adaptiveCards/helloworldCommand.json` to customize Ad
 
 The binding between the model and the Adaptive Card is done by matching name (for example, `CardData.title` maps to `${title}` in Adaptive Card). You can add, edit, or remove properties and their bindings to customize the Adaptive Card to your needs.
 
-You can also add new cards if appropriate for your application. How to build different types of Adaptive Cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards if appropriate for your application. To build different types of Adaptive Cards with a list or a table of dynamic contents using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
 ## Auto-refresh to user-specific view
 
 Earlier when Adaptive Cards were sent in a Teams channel or group chat, all users could see the same card content. Now, with the new refresh model for Adaptive Cards universal action, users can have a user specific view. The auto refresh feature also facilitates scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrates how to provide user-specific view with `refresh` model:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-view-autoreferesh.png" alt-text="Diagramatic view of user specific autorefresh model" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-view-autoreferesh.png":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png" alt-text="Diagramatic view of user specific autorefresh model" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png":::
 
 * `Base Card`: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card will be automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
