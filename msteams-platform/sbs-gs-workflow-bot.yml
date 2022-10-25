@@ -115,7 +115,7 @@ items:
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
     1. Under **Scenario-based Teams apps** select Workflow bot as the capability that you want to build in your app.
     
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities":::
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
     1. Select TypeScript as the programming language.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-program-lang.png" alt-text=" select option type script for programming language":::
