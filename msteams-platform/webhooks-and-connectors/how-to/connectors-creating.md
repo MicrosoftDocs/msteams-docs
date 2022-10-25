@@ -42,14 +42,14 @@ Users can complete the entire connector configuration experience without having 
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
     > * The configuration experience is loaded inline within Teams.
 
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
+You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Teams JavaScript library. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
 
 To integrate the configuration experience:
 
 > [!NOTE]
-> Starting with Teams JavaScript client SDK (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+> Starting with Teams JavaScript client library (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
 
-1. Initialize the SDK by calling `app.initialize()`.
+1. Initialize TeamsJS by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
 
     > [!NOTE]

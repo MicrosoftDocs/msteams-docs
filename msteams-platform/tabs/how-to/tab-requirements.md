@@ -27,7 +27,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, otherwise your page will not be displayed.
 
-* For authentication to work on mobile clients, you must upgrade to Teams JavaScript SDK 1.4.1 and later.
+* For authentication to work on mobile clients, you must upgrade to TeamsJS version 1.4.1 or later.
 
 * If you choose to have your channel or group tab to appear on Teams mobile client, the `setConfig()` configuration must have a value for the `websiteUrl` property.
 

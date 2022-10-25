@@ -1,7 +1,7 @@
 ---
 title: Integrate location capabilities
 author: Rajeshwari-v
-description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples.
+description: Learn how to use Teams JavaScript client library to leverage location capabilities using Code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -11,13 +11,13 @@ ms.author: surbhigupta
 
 You can integrate the location capabilities of native device with your Teams app.  
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
+You can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) (TeamsJS), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Advantages of integrating location capabilities
 
-The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
+The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client library.
 
 Following examples show how the integration of location capabilities is used in different scenarios:
 

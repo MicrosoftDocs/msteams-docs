@@ -206,7 +206,7 @@ tools:
       imageSrc: ./assets/icons/graph-icon-1.png
       url: https://learn.microsoft.com/graph/sdks/sdks-overview
     # Card
-    - title: JavaScript client SDK for tabs and other hosted experiences
+    - title: TeamsJS client library for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk

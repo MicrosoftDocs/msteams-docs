@@ -91,7 +91,7 @@ You have three different types of basic Teams app and directory structure looks 
 | - `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
 | - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-| - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
+| - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
 | - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
 | - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
 | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |

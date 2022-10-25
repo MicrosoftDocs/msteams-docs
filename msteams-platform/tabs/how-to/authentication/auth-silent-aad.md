@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 > Microsoft support and development for Active Directory Authentication Library (ADAL) including the security fixes, ends on **June 30, 2022**. To continue receiving support, update your applications to use Microsoft Authentication Library (MSAL).See [Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration).
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, ensure that you're using Teams JavaScript SDK version 1.4.1 or later.
+> For authentication to work for your tab on mobile clients, ensure that you're using Teams JavaScript library version 1.4.1 or later.
 
 Silent authentication in Azure AD minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/tab-sso-overview.md).
 

@@ -71,7 +71,7 @@ To prompt an unauthenticated user, to sign in, respond with a suggested action o
 
 ### Start the sign in flow
 
-Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
+Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client), which uses message passing.
 
 As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `app.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
 

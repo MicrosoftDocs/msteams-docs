@@ -70,7 +70,7 @@ For more information, see [Update code to enable SSO](tab-sso-code.md).
 > [!IMPORTANT]
 > The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
-Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab app, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
+Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab app, add [Teams Javascript client library](/javascript/api/overview/msteams-client?), and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
 
 ### Use cases for enabling SSO
 
@@ -109,7 +109,7 @@ For Teams mobile, client versions that support SSO are:
 
 - Teams for Android (1416/1.0.0.2020073101 and later)
 - Teams for iOS (version: 2.0.18 and later)  
-- Teams JavaScript SDK (version: 1.11 and later) for SSO to work in meeting side panel
+- Teams JavaScript library (version: 1.11 and later) for SSO to work in meeting side panel
 
 For the best experience with Teams, use the latest version of iOS and Android.
 

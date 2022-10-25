@@ -15,7 +15,7 @@ Updating your personal app to run in Outlook and Office involves these steps:
 > [!div class="checklist"]
 >
 > * Update your app manifest.
-> * Update your TeamsJS SDK references.
+> * Update your TeamsJS library references.
 > * Amend your Content Security Policy headers.
 > * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO).
 > * Sideload your updated app in Teams.
@@ -84,11 +84,11 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
 
-## Update SDK references
+## Update TeamsJS references
 
 To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
-You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.x.x. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
+You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.x.x. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
@@ -279,7 +279,7 @@ Teams Toolkit (`F5`) debugging is not yet supported with Office app for Android.
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Sample Launch Page (Microsoft 365) | Demonstrates SSO authentication and TeamsJS SDK capabilities as available in different hosts. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
-| Northwind Orders app | Demonstrates how to use Microsoft TeamsJS SDK V2 to extend teams application to other M365 host apps. Works in Teams, Outlook, Office. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| Northwind Orders app | Demonstrates how to use Microsoft TeamsJS V2 to extend teams application to other M365 host apps. Works in Teams, Outlook, Office. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
 

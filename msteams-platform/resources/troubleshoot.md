@@ -48,7 +48,7 @@ When adding a tab, if you select **Save** but receive an error message indicatin
 
 ### Can't authenticate the user or display your auth provider in your tab
 
-Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.

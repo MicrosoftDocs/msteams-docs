@@ -1,6 +1,6 @@
 ---
 title: Integrate People Picker
-description: In this article, learn how to use Teams JavaScript client SDK to integrate People Picker control and advantages of using people picker.
+description: In this article, learn how to use Teams JavaScript client library to integrate People Picker control and advantages of using people picker.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 People Picker is an input control in Teams that allows users to search and select people. You can integrate People Picker input control in a web app, which allows end users to perform different functions such as, search and select people in a chat, channel, or across the organization within Teams. The People Picker control is available across all Teams clients, such as web, desktop, and mobile.
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the `selectPeople` API to integrate the People Picker input control in your web app.
+You can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the `selectPeople` API to integrate the People Picker input control in your web app.
 
 ## Advantages of using People Picker
 

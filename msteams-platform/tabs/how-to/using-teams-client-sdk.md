@@ -1,25 +1,25 @@
 ---
-title: Teams JavaScript client SDK
+title: Teams JavaScript client library
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, Learn Microsoft Teams JavaScript client SDK, which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
+description: In this module, Learn Microsoft Teams JavaScript client library (TeamsJS), which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
-# Teams JavaScript client SDK
+# Teams JavaScript client library
 
-The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, Office, and Outlook, where your app content is hosted in an [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The SDK is helpful for developing apps with the following Teams capabilities:
+The Microsoft Teams JavaScript client library can help you create hosted experiences in Teams, Office, and Outlook, where your app content is hosted in an [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Office](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Office.
+Starting with version `2.0.0`, the existing Teams client library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Office](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Office.
 
 Here's the current versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client SDK.
+The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client library.
 
 ### Microsoft 365 support (running Teams apps in Office and Outlook)
 
@@ -84,7 +84,7 @@ This API provides the equivalent of navigating to a deep link (as the now deprec
 
 ##### Deep links out of your app
 
-For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS SDK. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
+For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
 For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
 
@@ -115,7 +115,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 
 Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existing Teams app, you'll see deprecation warnings for any code calling APIs that have changed.
 
-An API translation layer (mapping v.1 SDK to v.2 SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
+An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
 
 #### Teams-only apps
 
@@ -339,7 +339,7 @@ Additionally, this capability has been split into a main capability (`dialog`) f
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS SDK to run other Microsoft 365 hosts such as Office and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the TeamsJS library to run other Microsoft 365 hosts such as Office and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
@@ -403,7 +403,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 | `userTeamRole` | `app.Context.team.userRole`|
 | NA | `app.Context.app.host.name`|
 
-## Updating to the Teams client SDK v.2.0.0
+## Updating to the Teams client library v.2.0.x
 
 The easiest way to update your Teams app to use TeamsJS v.2.0 is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
@@ -411,7 +411,7 @@ The easiest way to update your Teams app to use TeamsJS v.2.0 is to use the [Tea
 
 In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit** and install version `2.10.0` or later.
 
-### 2. Update SDK references
+### 2. Update TeamsJS references
 
 To run in Outlook and Office, your app will need to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
@@ -460,5 +460,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the Microsoft Teams JavaScript client SDK.
+* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the Microsoft Teams JavaScript client library.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.

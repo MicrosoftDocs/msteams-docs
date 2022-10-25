@@ -35,7 +35,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 
 ## Access device permissions
 
-The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
+The [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
 
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop.
 
