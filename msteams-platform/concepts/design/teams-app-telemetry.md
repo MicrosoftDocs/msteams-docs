@@ -98,16 +98,16 @@ Engagement intends to measure the intensity and depth of interaction between use
 
 | Telemetry | Comments |
 | --- | --- |
-| • # App users (R7, R14, R28) – DAU and MAU <br> • # App Users Trendline | • Segment users based on AAD profile, <br> • Report by Client – Desktop, Web and Mobile <br> • Segment by Tenant, Org Name <br> • Segment by product feature (Active users at feature level) |
-| • % of users using key features in Teams App Vs. using the same feature in Web / Native App | • Report at app feature level <br> • Indicates discoverability, ease of use, and value of features within Teams App |
-| • #, % users using the app across different scopes (R28) | • Report by scope <br> • Ability to drill down by capability |
-| • #, % users using the app in different platform capabilities (R28) <br> • #, % Interacting with Tab <br> • #, % Interacting with Messaging extension <br> • #, % Interacting with Bot <br> • #, % Interacting with side panel in meeting <br> • #, % Interacting with Stage view | • If usage of any of platform capabilities is low, consider drilling into details on ease of use, value add. |
+| • # App users (R7, R14, R28) – DAU and MAU <br> • # App Users Trendline | • App & Feature level engagement <br> • Segment users based on AAD profile, <br> • Report by Client – Desktop, Web and Mobile <br> • Segment by Tenant, Org Name <br> • Segment by product feature (Active users at feature level) |
+| • % of users using key features in Teams App Vs. using the same feature in Web / Native App | • Indicates discoverability, ease of use, and value of using the feature within Teams App  <br> • Report at app feature level |
+| • #, % users using the app across different scopes (R28) | • Engagement penetration <br> • Report by scope <br> • Ability to drill down by capability |
+| • #, % users using the app in different platform capabilities (R28) <br> • #, % Interacting with Tab <br> • #, % Interacting with Messaging extension <br> • #, % Interacting with Bot <br> • #, % Interacting with side panel in meeting <br> • #, % Interacting with Stage view | • Engagement and value prop of app capabilities <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use, value add. |
 | Task Success |  |
-| • % of users completing Core Action | • Report at a week level |
-| • User Journey in Teams app – Funnel view with user drop offs | • Drill down at a tenant level |
-| • Lostness Score for Core Action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action" border="false"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different, unique steps performed while performing Core Action. <br> **S** = The total number of steps performed while performing Core Action including repeat steps. <br> **R** = The minimum number of steps required to complete Core Action. | • Drill down at region & tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
-| • Mean time taken to perform Core Action | • Report alongside meantime taken performing core action outside Teams App |
-| • Average number of times Core Action was performed in a month <br> • Average number of times Key Business events were performed in a month | • View month over month trend <br> • Drill down by Tenant |
+| • % of users completing Core Action | • Ease of performing core task <br> • Report at a week level |
+| • User Journey in Teams app – Funnel view with user drop offs | • Friction points in user journey <br> • Drill down at a tenant level |
+| • Lostness Score for Core Action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action" border="false"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different, unique steps performed while performing Core Action. <br> **S** = The total number of steps performed while performing Core Action including repeat steps. <br> **R** = The minimum number of steps required to complete Core Action. | • Ease of use with regional drill provides insights on need for locale <br> • Drill down at region & tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
+| • Mean time taken to perform Core Action | • Ease of use <br> • Report alongside meantime taken performing core action outside Teams App |
+| • Average number of times Core Action was performed in a month <br> • Average number of times Key Business events were performed in a month | • Level and intensity of engagement <br> • View month over month trend <br> • Drill down by Tenant |
 
 #### Retention
 
