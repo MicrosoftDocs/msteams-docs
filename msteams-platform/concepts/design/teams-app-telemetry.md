@@ -122,15 +122,15 @@ User retention measures how frequent users come back to use the product. It esse
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, etc.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
 
-| Telemetry | Comments |
+| Telemetry | Insight |
 | --- | --- |
-| • New User Retention cohort analysis (week over week, month over month) | • Drill down to a tenant level <br> • Retention breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
-| • User churn in 14 days, 28 days, 56 days, 72 days | • Drill down to a tenant level <br> • Platform Capability and feature drill down <br> • Churn breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
-| • #, % users using app in more than 1 scope | • Goal would be to encourage use of app across different scopes |
-| • #, % users using more than 1 capability of the app | • Goal would be to encourage users to use different platform capabilities supported by app |
-| • Mean time between [Core Action 1,2..] per user | • Report at tenant level <br> • Goal would be to reduce this time to promote recurring usage |
-| • % of users performing Creation events <br> • % of users performing Consumption events. Track: <br> &nbsp;&nbsp;- Read receipts for bot messages <br> &nbsp;&nbsp;- Notification clicks |   |
-| • App capability or scope with high recurring usage |   |
+| • New User Retention cohort analysis (week over week, month over month) | • Retention breakdown by client – Teams Desktop, Web & Mobile App, Non-Teams Web App <br> • Drill down to a tenant level |
+| • User churn in 14 days, 28 days, 56 days, 72 days | • User churn <br> • Drill down to a tenant level <br> • Platform Capability and feature drill down <br> • Churn breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
+| • #, % users using app in more than 1 scope | • Depth of engagement. Goal would be to encourage use of app across different scopes |
+| • #, % users using more than 1 capability of the app | • Depth of engagement <br> • Goal would be to encourage users to use different platform capabilities supported by app |
+| • Mean time between [Core Action 1,2..] per user | • Intensity of engagement <br> • Report at tenant level <br> • Goal would be to reduce this time to promote recurring usage |
+| • % of users performing Creation events <br> • % of users performing Consumption events. Track: <br> &nbsp;&nbsp;- Read receipts for bot messages <br> &nbsp;&nbsp;- Notification clicks | • Intensity of engagement. App retention is higher when more users perform creation events compared to pure consumption |
+| • App capability or scope with high recurring usage | •	Highly retentive capabilities or features of the app |
 
 #### Happiness
 
@@ -144,10 +144,9 @@ Happiness intends to measure your user’s attitude towards your product and can
 > - Integrate product driven feedback capture, rating mechanisms for users to easily submit feedback and rating in the flow, after completing Core Action.
 > - Provide adequate product support, helpdesk for users to get their queries clarified, report bugs and feedback.
 
-| Telemetry | Comments |
+| Telemetry | Insight |
 | --- | --- |
-| • App NPS or Feedback submission | • AAD, Tenant information |
+| • App NPS from app source | • Net Promoter Score <br> • AAD, Tenant information |
 | • % of happy / satisfied users | • Drill down at tenant level <br> • Report trend over time |
-| • # new SaaS subscriptions via Teams App Store |   |
 | • % users using Teams App Vs. Web or Mobile App | • Report month over month |
-| • User feedback on experience after completing Core Action | • Introduce product led way for collecting feedback after completing Core Action |
+| • User feedback on experience after completing Core Action | • Introduce product led way for collecting feedback after completing Core Action (for example, In app message to submit feedback) |
