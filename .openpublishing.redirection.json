@@ -831,6 +831,10 @@
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/using-teams-client-sdk.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/using-teams-client-library"
       }
     ]
 }

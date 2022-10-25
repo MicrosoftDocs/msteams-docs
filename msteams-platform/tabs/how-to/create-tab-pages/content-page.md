@@ -83,7 +83,7 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 ### Use TeamsJS to interact with Teams
 
-The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-sdk.md) provides many more functions that you can find useful while developing your content page.
+The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-library.md) provides many more functions that you can find useful while developing your content page.
 
 ### Deep links
 

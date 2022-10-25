@@ -216,7 +216,7 @@ The following table lists commonly used context properties of the *context* obje
 | channel.defaultOneNoteSectionId | defaultOneNoteSectionId | The OneNote section ID that is linked to the channel. |
 | page.isMultiWindow | isMultiWindow | The indication whether the tab is in a pop out window. |
 
-For more information, see [Updates to the *Context* interface](using-teams-client-sdk.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
+For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
 
 ## Retrieve context in private channels
 

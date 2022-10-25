@@ -88,7 +88,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
-You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.x.x. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
+You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.x.x. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-20) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
@@ -98,9 +98,9 @@ Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.
 > [!div class="checklist"]
 >
 > * Import statements for teams-js@2.x.x
-> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.x.x
-> * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) interface changes
-> * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
+> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-20) for teams-js@2.x.x
+> * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface) interface changes
+> * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
 > Code inside *.html* files is not supported by the upgrade tooling and require manual changes.
@@ -231,11 +231,11 @@ To view your app running in Office app for Android:
 
 Currently, a subset of Teams application types and capabilities is supported in Outlook and Office clients. This support expands over time.
 
-Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
+Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-library.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
 
 For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
-You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience).
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 

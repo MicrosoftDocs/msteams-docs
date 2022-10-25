@@ -167,7 +167,7 @@ You can navigate to content in Teams from your tab using TeamsJS or deep links. 
 
 One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS library organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
-For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md#apis-organized-into-capabilities).
 
 ### Navigate within your app
 

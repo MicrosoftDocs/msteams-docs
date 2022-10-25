@@ -209,7 +209,7 @@ tools:
     - title: TeamsJS client library for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
-      url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
+      url: /microsoftteams/platform/tabs/how-to/using-teams-client-library
     # Card
     - title: Node.js Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace
