@@ -8,19 +8,19 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. You can create a workflow bot in a number of scenarios for your end users like incident management, ticketing, approval workflow, project management cards. In addition to these, simplified use cases such as creating & assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system. A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns an Adaptive Card. You can customize this logic with your business requirement. Often this might require you to call your existing APIs.
+A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your end users like incident management, ticketing, approval workflow, project management cards. In addition to these, simplified use cases such as creating & assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system. A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
 Advantages of creating a workflow bot:
 
 1. Automates business processes and repetitive workflows without leaving the context of conversations.
-1. Sequential workflow supports users through various cards progressively without sending additional cards.
+1. Sequential workflow supports users through various cards progressively without sending other cards.
 1. Provides user-specific views and are always up-to-date.
 1. Simplified programming model with TeamsFx SDK.
 
 > [!NOTE]
 > You can choose the installation target when adding the app. For more install options see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
 
-Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs that sends another Adaptive Card in conversation to respond to the respective card action.
+Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs. The API send another Adaptive Card in conversation to respond to the respective card action.
 
 ## Card action handler
 
@@ -109,11 +109,11 @@ User universal action, `Action.Execute` defines your action in an Adaptive Card,
 ```
 
 > [!NOTE]
-> When the action is invoked in Teams, Verb property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler. Ensure to provide a global unique string for the verb property, when you're using a general string that might cause a collision with other bot, which can avoid an unexpected behavior.
+> When the action is invoked in Teams, verb property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler. Ensure to provide a global unique string for the verb property, when you're using a general string that might cause a collision with other bot. This can avoid an unexpected behavior.
 
 ### Add Adaptive Card for action response
 
-You can return a new Adaptive Card for each action invoked to display the response to end user. You can use [Adaptive Card designer](https://adaptivecards.io/designer/) to design your card layout according to your business needs.
+You can return a new Adaptive Card for each action invoked to display the response to end user. You can use [Adaptive Card designer](https://adaptivecards.io/designer/) to design your card layout according to your business need.
 
 To get started, you can create a sample card (`responseCard.json`) with the following content, and put it in `bot/src/adaptiveCards` folder:
 
@@ -397,7 +397,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 ### How to extend workflow bot with notification feature?
 
-The notification feature adds the ability for your application to send Adaptive Cards in response to external events. For example, when a message is posted to Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
+The notification feature adds the ability for your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
 To add the notification feature:
 
