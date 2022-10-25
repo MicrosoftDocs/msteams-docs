@@ -72,13 +72,13 @@ Telemetry designed to improve adoption should aim at improving discoverability o
 > - Measure usage of app in collaborative scope, time taken to discover your app features in collaborative or meeting scope. If the usage is low or time taken is high, socialize said features better in app or via marketing efforts.
 > - While measuring overall adoption is good to start, measure adoption at a platform capability and feature level.
 
-| Telemetry | Comments |
+| Telemetry | Insights |
 | --- | --- |
-| • Users installing the app in R1, R7, R14, R28 days <br> • # Sign-ins (if app has sign-in) | • Segment users based on Azure AD profile <br> • Segment by Tenant, Org Name |
-| • Average time taken to first use (click on Tab, Bot, Adaptive Card, Meeting) | • Report for using the app <br> • Report at a feature or platform capability level |
-| • Extensibility point of first discovery <br> • Scope of first discovery | • Which extensibility point and scope are most of your users discovering your app? |
-| • % of link unfurls leading to app installation |   |
-| • Average time taken to add app in collaborative scope - in Channel, Group Chat, Meeting |   |
+| • Users installing the app in R1, R7, R14, R28 days <br> • # Sign-ins (if app has sign-in) | • App level adoption broken down at tenant, region, segment <br> • Segment users based on Azure AD profile <br> • Segment by Tenant, Org Name |
+| • Average time taken to first use (click on Tab, Bot, Adaptive Card, Meeting) | • Report at a feature or platform capability level to measure feature level adoption |
+| • Extensibility point of first discovery <br> • Scope of first discovery | • Use the data to measure which extensibility point and scope are most used to discover your app by your end users |
+| • % of link unfurls leading to app installation | • Users interested in installing app, post discovery |
+| • Average time taken to add app in collaborative scope - in Channel, Group Chat, Meeting | • Usage penetration within the app |
 | • % of users adding app in collaborative scope | • Helps in determining the potential for virality, that is, organic discovery and use by new users |
 | • % of users configuring the app after adding it in channel or group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
 
