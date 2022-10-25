@@ -62,7 +62,8 @@ The following image shows how SSO works when a Teams app user attempts to access
 Flow for authentication app user
 
 1. An app user attempts to access the Teams bot app by sending a message to the bot service.
-    1. Check for existing valid token for the app user: The bot service checks for existing token for the app user. If it exists, the app user is given access. If not, it checks the token cache for a valid token. If a token exists that hasn't expired, the app user is given access.
+    1. The message that app user sends is received by Teams client, which sends it to the bot service.
+    2. Check for existing valid token for the app user: The bot service checks for existing token for the app user. If it exists, the app user is given access. If not, it checks the token cache for a valid token. If a token exists that hasn't expired, the app user is given access.
 1. The bot service accesses the Bot Framework token store to obtain an OAuth card for the user, and send it to Teams client.
 1. After the Teams client received an OAuth card for the app user, it sends a token exchange request for the app user.
 1. The app user must consent for token. In this case, the Teams client displays a message to the app user for giving consent.
