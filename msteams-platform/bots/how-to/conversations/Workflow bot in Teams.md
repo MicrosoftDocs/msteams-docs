@@ -306,9 +306,9 @@ You need to replace `${userID}` with user MRI in code, when rendering your card 
 
 #### Add user-specific Adaptive Cards
 
-You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for user A in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
+You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for userA in above sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
 
-```
+```responseCard.json
 
 {
   "type": "AdaptiveCard",
@@ -378,7 +378,7 @@ export const commandBot = new ConversationBot({
 
 ### Access Microsoft Graph
 
-If you're responding to a command that needs access to Microsoft Graph, you can use single sign-on (SSO) to use the logged-in Teams user token to access their Microsoft Graph data. Read more about how Teams Toolkit can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+If you're responding to a command that needs to access Microsoft Graph data of an already logged-in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Teams Toolkit can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
 
 ### Connect to existing APIs
 
