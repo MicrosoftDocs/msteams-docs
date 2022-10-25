@@ -100,7 +100,7 @@ User universal action, `Action.Execute` defines your action in an Adaptive Card,
 ```
 
 > [!NOTE]
-> Verb property is required here so that the TeamsFx conversation SDK can invoke the corresponding action handler when the action is invoked in Teams. When you're using a general string that might cause a collision with other bot actions, then ensure to provide a global unique string for the verb property, else you can experience an unexpected behavior.
+> Verb property is required here so that the TeamsFx conversation SDK can invoke the corresponding action handler when the action is invoked in Teams. When you're using a general string that might cause a collision with other bot actions, then ensure to provide a global unique string for the verb property, otherwise you can experience an unexpected behavior.
 
 ### Add Adaptive Card for action response
 
@@ -185,7 +185,7 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
 
-* The response card is sent as a separate message in the conversation that can't replace the action card. And all users in the chat can view this response card `AdaptiveCardResponse.NewForAll`.
+* The response card is sent as a separate message in the conversation that can't replace the action card. All users in the chat can view this response card `AdaptiveCardResponse.NewForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
 
