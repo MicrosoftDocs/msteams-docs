@@ -15,11 +15,11 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
 
 ## Card action handler
 
-To simplify the development, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`) to let you focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
+To simplify the development, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`). You can now focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
 * `Action Card`: The card where you define your action that users can invoke (click button).
 * `Card Action Handler`: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
