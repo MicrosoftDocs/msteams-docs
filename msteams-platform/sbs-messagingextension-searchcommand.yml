@@ -16,7 +16,7 @@ items:
   content: |
     Message extensions allow users to interact with web services in the Microsoft Teams client. They help to search in an external system from the compose message area, the command box, or directly from a message. 
     
-    **Key features of search based message extension**
+    **Key features of search based message extension:**
 
     * Allow users to search external systems.
     * Insert search results into a message in the form of a card.
@@ -34,7 +34,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -64,7 +64,7 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create a tunnel to your web server's endpoints by using ngrok.
     * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**

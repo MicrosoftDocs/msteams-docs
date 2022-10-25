@@ -34,7 +34,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams with an account (not a guest account)](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place. |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development** <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -86,7 +86,7 @@ items:
     1. Create Azure Bot resource to register bot with Azure Bot Service.
     1. Create client secret to enable SSO authentication of the bot.
     1. Add Teams channel to deploy the bot.
-    1. Use ngrok to create a tunnel to your web server's endpoints.
+    1. Create a tunnel to your web server's endpoints by using ngrok.
     1. Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
@@ -144,9 +144,7 @@ items:
 
          :::image type="content" source="~/assets/images/bots/validationpass_1.png" alt-text="Screenshot showing the validation Pass.":::
   
-       It takes a few moments for your bot service to be provisioned and the following page appears.
-
-         :::image type="content" source="~/assets/images/bots/provisionpage_1.png" alt-text="Provision Page":::
+       It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**.
 
@@ -246,7 +244,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="~/assets/images/bots/messagingURL_1.png" alt-text="Messaging endpoint":::
+        :::image type="content" source="~/assets/images/bots/messagingURL_2.png" alt-text="Messaging endpoint":::
 
     1. Select **Apply**.
 
@@ -383,7 +381,7 @@ items:
 
     1. Select **Microsoft Graph**.
         
-        :::image type="content" source="~/assets/images/bots/select-microsoft-graph_1.png" alt-text="Screenshot showing the Selection of Microsoft Graph.":::
+        :::image type="content" source="~/assets/images/bots/select-microsoft-graph_2.png" alt-text="Screenshot showing the Selection of Microsoft Graph.":::
 
     1. Select **Delegated permissions**.
 
@@ -460,7 +458,7 @@ items:
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously in the Azure.
 
-         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Sceenshot showing the appsettings json option.":::
+         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Sceenshot showing the appsettings json option."lightbox="~/assets/images/bots/appsettingsjson.png":::
 
     1. Select **F5**  to run the project.
 
@@ -513,7 +511,7 @@ items:
     1. Select **Store**.
     1. Select **Manage your apps**.
 
-        :::image type="content" source="~/assets/images/bots/manage-your-app.png" alt-text="Screenshot showing the selection of manage your app.":::
+        :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot showing the selection of manage your app.":::
 
     1. Select **Upload a custom app**.
     
@@ -525,7 +523,7 @@ items:
 
     1. Select **Add** to add the conversation bot to your chat.
 
-        :::image type="content" source="~/assets/images/bots/add-conversation-bot.png" alt-text="Screenshot showing the option add conversation bot.":::
+        :::image type="content" source="~/assets/images/bots/add-conversation-bot_1.png" alt-text="Screenshot showing the option add conversation bot.":::
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to **sign-out**.
 
