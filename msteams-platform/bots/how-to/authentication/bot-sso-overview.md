@@ -59,4 +59,14 @@ The following image shows how SSO works when a Teams app user attempts to access
 | 5 | Bot Framework Token service → Azure AD | The Bot Framework Token service requests Azure AD for token exchange. It also validates the access token that it receives from Azure AD for the app user, and stores it. |
 | 6 | Bot Framework Token service → Bot service | The Bot Framework Token service shares the validated access token with the Bot service, and the app user is given access. The app user doesn't need to consent for Microsoft Graph permissions as the app user can access them using the access token received from Azure AD. |
 
+Flow for authentication app user
+
+1. An app user attempts to access the Teams bot app by sending a message to the bot service.
+    1. Check for existing valid token for the app user: The bot service checks for existing token for the app user. If it exists, the app user is given access. If not, it checks the token cache for a valid token. If a token exists that hasn't expired, the app user is given access.
+1. The bot service accesses the Bot Framework token store to obtain an OAuth card for the user, and send it to Teams client.
+1. After the Teams client received an OAuth card for the app user, it sends a token exchange request for the app user.
+1. The app user must consent for token. In this case, the Teams client displays a message to the app user for giving consent.
+    1. In case the consent is unsuccessful, the authentication falls back to the sign-in prompt and the app user must sign in to use the bot app.
+
+
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
