@@ -52,7 +52,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Bot service → Teams Client | The SSO flow for a Teams bot app is triggered when an app user sends a message (or an activity) to the bot service. The app user uses the Teams client to send a message to the bot service. On receiving the message, the bot sends a oAuth Card to Teams client with a request for a token. |
+| 1 | Bot service → Teams Client | The SSO flow for a Teams bot app is triggered when an app user sends a message (or an activity) to the bot service. The app user uses the Teams client to send a message to the bot service. On receiving the message, the bot sends a OAuth Card to Teams client with a request for a token. |
 | 2 | Teams Client → Azure AD | The Teams client receives the OAuth card and the token exchange request from the bot service. It sends this OAuth Card to Azure AD requesting for an access token. |
 | 3 | Azure AD → Consent dialog | If the current app user is using your bot service for the first time, Teams client displays request prompt to consent. The app user (or the administrator) must give consent to Teams for using the app user's Teams identity to obtain access token from Azure AD. |
 | 4 | Bot service → Bot Framework Token service | Following app user's consent, the bot service registers the token with Bot Framework Token service. |
@@ -63,7 +63,7 @@ Flow for authentication app user
 
 1. An app user attempts to access the Teams bot app by sending a message to the bot service.
     1. The message that app user sends is received by Teams client, which sends it to the bot service.
-    1. If the app user's consent is not needed, the bot service receives a token, and then it's sent to the Bot Framework token service.
+    1. If the app user's consent isn't needed, the bot service receives a token, and then it's sent to the Bot Framework token service.
     1. If the app user has used the bot service earlier, the token is saved in the Bot Framework token service.
     1. Check for existing valid token for the app user: The Bot Framework token checks for existing token for the app user. If it exists, the app user is given access. If not, it checks the token cache for a valid token. If a token exists that hasn't expired, the app user is given access.
     1. If the app user doesn't have a token, it triggers the auth flow.
