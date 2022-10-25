@@ -21,7 +21,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-card-action-handler-diag.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
-* `Action Card`: The card where you define your action that users can invoke (click button).
+* `Action Card`: The card where you define your action that users can invoke (DoStuff button).
 * `Card Action Handler`: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
 * `Response Card`: The card to respond to the action when user invokes it from the action card.
 
@@ -100,7 +100,7 @@ User universal action, `Action.Execute` defines your action in an Adaptive Card,
 ```
 
 > [!NOTE]
-> Verb property is required here so that the TeamsFx conversation SDK can invoke the corresponding action handler when the action is invoked in Teams. When you're using a general string that might cause a collision with other bot actions, then ensure to provide a global unique string for the verb property, else you can experience unexpected behavior.
+> Verb property is required here so that the TeamsFx conversation SDK can invoke the corresponding action handler when the action is invoked in Teams. When you're using a general string that might cause a collision with other bot actions, then ensure to provide a global unique string for the verb property, else you can experience an unexpected behavior.
 
 ### Add Adaptive Card for action response
 
