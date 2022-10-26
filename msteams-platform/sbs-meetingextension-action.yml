@@ -322,7 +322,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web." lightbox="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web.":::
+            :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web." lightbox="./assets/images/sbs-messagingextension-action/web_1.png":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://*******.ngrok.io/auth-end`. </br>
