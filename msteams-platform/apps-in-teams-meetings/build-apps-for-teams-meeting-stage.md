@@ -302,3 +302,4 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
+* [Step-by-step guide to build an in-meeting document signing app](../sbs-inmeeting-document-signing.yml)
