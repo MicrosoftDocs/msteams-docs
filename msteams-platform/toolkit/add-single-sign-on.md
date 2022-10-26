@@ -703,3 +703,4 @@ Follow the [instruction](https://github.com/OfficeDev/TeamsFx/wiki/Using-existin
 ## See also
 
 * [Prerequisites for creating your Teams app](tools-prerequisites.md)
+* [Prepare accounts to build Teams apps](accounts.md)
