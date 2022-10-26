@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your end users like incident management, ticketing, approval workflow, project management cards. The other simplified use cases are creating & assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system. A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
-Advantages of creating a workflow bot:
+**Advantages of creating a workflow bot**:
 
 1. Automates business processes and repetitive workflows without leaving the context of conversations.
 1. Sequential workflow supports users through various cards progressively without sending additional cards.
@@ -32,9 +32,9 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
-* Action Card: The card where you define your action that users can invoke (DoStuff button).
-* Card Action Handler: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
-* Response Card: The card which respond to the action when user invokes it from the action card.
+* **Action Card**: The card where you define your action that users can invoke (DoStuff button).
+* **Card Action Handler**: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
+* **Response Card**: The card which respond to the action when user invokes it from the action card.
 
 To handle card actions with TeamsFx SDK, each card action handler should implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
@@ -237,9 +237,9 @@ When Adaptive Cards are sent in a Teams channel or group chat, all users can see
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png" alt-text="Diagramatic view of user specific autorefresh model" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png":::
 
-* Base Card: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card will be automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
+* **Base Card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card will be automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
-* Refresh behavior: After the user views the message, Teams client automatically triggers a refresh after a minute of the last refresh response. The user-specific view handler will be invoked to return a card view (`Response Card`) for specific user (`UserA`). Other users in the conversation, can still view the base card.
+* **Refresh behavior**: After the user views the message, Teams client automatically triggers a refresh after a minute of the last refresh response. The user-specific view handler will be invoked to return a card view (`Response Card`) for specific user (`UserA`). Other users in the conversation, can still view the base card.
 
 The following gif image illustrates how user-specific view is displayed in Teams:
 
