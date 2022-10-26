@@ -272,7 +272,7 @@ You can use an in-meeting signing app to:
 
 The participants can review and sign documents, such as purchase agreements and purchase orders.
 
-![in-meeting document signing app](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="In-meeting document signing app":::
 
 The following participant roles may be involved during the meeting:
 
