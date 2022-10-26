@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Azure Active Directory Single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
+   The Azure Active Directory single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
 
    **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
@@ -38,7 +38,7 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
@@ -110,7 +110,7 @@ items:
 
       Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/app-overview_1.png" alt-text="app overview.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/app-overview_1.png" alt-text="app overview." lightbox="./assets/images/Tab-ME-SSO/app-overview_1.png":::
         
     **To create client secret**
 
@@ -267,18 +267,14 @@ items:
          * Enter **Client ID**:`5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
            :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of adding client ID.":::
-        
-       The following image displays the **Client ID**:
-
-       :::image type="content" source="./assets/images/Tab-ME-SSO//client-id-2.png" alt-text="Client applications."::: 
-  
+               
     1.  Select **Authorized scopes**.
 
         The following image displays the **Client ID**:
 
-        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot showing the client app."::: 
+        :::image type="content" source="../msteams-platform/assets/images/ab-ME-SSO/client-id-2.png" alt-text="Screenshot showing the client app."::: 
 
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -372,7 +368,7 @@ items:
          * Set `"ConnectionName"` to the name of OAuth connection setting.
          * Set `"ClientId"` to your bot's **Microsoft App ID**.
          * Set `"AppSecret"` to your bot's client secret ID value.
-         * Set `"ApplicationIdURI"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.
+         * Set `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting1.png" alt-text="App settings.":::
 
@@ -391,7 +387,7 @@ items:
              > [!NOTE]
              > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
 
-         * Set `"resource"` as `api://584f****.ngrok.io/botid-{AppID}`.</br>
+         * Set `"resource"` as `api://*******.ngrok.io/botid-{AppID}`.</br>
         
         ![Manifest image2](~/assets/images/Tab-ME-SSO/vs-manifest.png)
 
@@ -463,7 +459,7 @@ items:
        :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app_1.png" alt-text="add app.":::
     
     1. Send a message to the bot. 
-    1. The bot will perform Single sign-on and display profile card along with option prompt to view token.
+    1. The bot performs SSO and display profile card along with option prompt to view token.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image_1.png" alt-text="Congratulation image.":::
 
@@ -471,7 +467,7 @@ items:
       
        :::image type="content" source="./assets/images/Tab-ME-SSO/token-view1_1.png" alt-text="token view.":::
 
-      1. If SSO isn't performed, then the bot will perform default authentication method for your tab.
+      1. If SSO isn't performed, then the bot performs default authentication method for your tab.
 
          :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11_1.png" alt-text="not login.":::
 
@@ -487,7 +483,7 @@ items:
 
       1. Enter your credentials in sign-in box, and select **Next**.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Sign in box.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "sign-in box.":::
       
       1. Select **Accept**.
 
