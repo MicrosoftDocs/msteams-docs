@@ -329,7 +329,7 @@ items:
 
         You can interact with this bot after debugging in Visual Studio.
 
-- title: Interaction with the Calling and Meeting Bot
+- title: Interaction with the calling and meeting bot
   durationInMinutes: 2
   content: |
     Bot allows you to access services and content in a dedicated space within a channel or in a chat.
