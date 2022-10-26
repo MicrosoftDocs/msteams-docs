@@ -55,7 +55,7 @@ items:
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-      :::image type="content" source="./assets/images/clonerepository_1.png" alt-text= "Clone repository.":::
+      :::image type="content" source="./assets/images/meetings-side-panel/clonerepository_1.png" alt-text= "Clone repository.":::
 
    1. Select **Clone**. 
            
@@ -471,7 +471,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="Token in Meet"::: 
+       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Token in Meet"::: 
 
 
 - content: |
