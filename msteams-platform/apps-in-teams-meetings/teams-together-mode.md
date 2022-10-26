@@ -83,8 +83,8 @@ To build a scene using the Scene studio, follow these steps:
 
    :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Add images into environment.":::
 
-    >[!NOTE]
-    >You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
+    > [!NOTE]
+    > You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
 
 1. Select the image that you've added.
 
@@ -208,13 +208,16 @@ Now that you've gone through the sample scene.json, you can activate the custom 
 
 ## Activate custom Together Mode scenes
 
+> [!NOTE]
+> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you have a [Teams Premium license](http://www.contoso.com/).
+
 Get more information of how a user engages with scenes in custom Together Mode scenes.
 
 To select scenes and activate custom Together Mode scenes, follow these steps:
 
 1. Create a new test meeting.
 
-    >[!NOTE]
+    > [!NOTE]
     > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is shipped as an app, users see these scenes in the scene gallery.
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
