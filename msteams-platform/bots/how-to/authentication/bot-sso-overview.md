@@ -61,7 +61,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 -->
 Flow for authentication app user being authenticated for the first time:
 
-1. An app user attempts to access the Teams bot app by sending a message to the bot service.
+1. An app user attempts to access the bot app by sending a message to the Teams client.
     1. The message that app user sends is received by Teams client, which sends it to the bot service.
     1. If the app user's consent isn't needed, the bot service receives a token, and then it's sent to the Bot Framework token service.
     1. If the app user has used the bot service earlier, the token is saved in the Bot Framework token service.
@@ -87,6 +87,12 @@ Flow for authenticating app user at subsequent bot access:
     1. The Sign in page is rendered.
     1. The app user signs in and granted access to the bot from Azure AD.
 
+Notes:
 
+1. The authentication flow does not follow as for tabs. If the developer would use the Teams identity to seek consent, they would need to implementing the authentication without using Bot Framework token store.
+    1. It follows that there would initially be two ways to implement authentication: using token store, or not using it.
+
+1. If the app scope defines a set of permissions and then changes the permissions (or the number of permissions), the existing token would be matched for the permissions as per the scope. If the permissions don't match, the app user would need to consent again (as they had to do the first time they used to bot app).
+1. 
 
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
