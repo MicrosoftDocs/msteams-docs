@@ -288,6 +288,10 @@ The following participant roles may be involved during the meeting:
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build an in-meeting document signing app.
+
 ## See also
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
@@ -298,4 +302,3 @@ The following participant roles may be involved during the meeting:
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
-* [Step-by-step guide to build an in-meeting document signing app](../sbs-inmeeting-document-signing.yml)
