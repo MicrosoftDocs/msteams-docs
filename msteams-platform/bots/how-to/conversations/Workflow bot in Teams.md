@@ -22,9 +22,11 @@ Advantages of creating a workflow bot:
 
 Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs. The APIs send another Adaptive Card in conversation to respond to the respective card action.
 
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button":::
+
 ## Card action handler
 
-To simplify the development, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`). You can now focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
+To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`). You can now focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
