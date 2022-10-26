@@ -166,16 +166,18 @@ items:
     1. Select **create a resource**.
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
+    1. Select **Create**.
 
         :::image type="content" source="./assets/images/calls-and-meetings/azure-bot_1.png" alt-text="Screenshot showing the Azure bot homepage.":::
+      
+       The **Create an Azure Bot** window appears.
 
-    1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
         
         :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot showing the creation of Azure bot.":::
       
-       You can also create a new resource group, select **Create new** > enter resource name > select **OK**).
+       You can also create a new resource group, select **Create new** > enter resource name > select **OK**.
     
     1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
