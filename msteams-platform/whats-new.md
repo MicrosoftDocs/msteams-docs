@@ -13,7 +13,7 @@ zone_pivot_groups: What-new-features
 Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Generally available
-
+ 
 :::row:::
 :::column:::
 
@@ -26,6 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
+* ***October 19, 2022***: [Developer Portal for Teams is now available for GCC tenants](concepts/build-and-test/teams-developer-portal.md).
 * ***October 13, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***October 13, 2022***: [Configure back button of an app](concepts/design/personal-apps.md#configure-back-button).
 * ***October 12, 2022***: [Apps are supported in instant meetings, one-on-one, and group calls.](apps-in-teams-meetings/teams-apps-in-meetings.md)
@@ -40,6 +41,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 10/26/2022 | Build an in-meeting app for enabling meeting participants to sign documents in real time | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > Build apps for Teams meeting stage > [Build in-meeting document signing app](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-in-meeting-document-signing-app) |
 | 09/30/2022|Manage SaaS licenses for third party apps in Teams|Monetize your app > Include a SaaS offer with your Teams app > [Manage license for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
 | 09/29/2022|Teams mobile app now supports file downloads to local devices.|Integrate device capabilities > Integrate media capabilities > [File download on Teams mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
 | 09/16/2022|Adaptive Cards in search based message extensions now support Universal Actions.|Build message extensions > Search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
