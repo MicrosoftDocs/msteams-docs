@@ -399,10 +399,6 @@ For more information about TeamsFx SDK, see:
 * [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
-## See also
-
-* [Prerequisites for creating your Teams app](tools-prerequisites.md)
-
 ::: zone-end
 
 ::: zone pivot="visual-studio"
@@ -643,3 +639,4 @@ Follow the [instruction](https://github.com/OfficeDev/TeamsFx/wiki/Using-existin
 ## See also
 
 * [Prepare accounts to build Teams apps](accounts.md)
+* [Prerequisites for creating your Teams app](tools-prerequisites.md)
