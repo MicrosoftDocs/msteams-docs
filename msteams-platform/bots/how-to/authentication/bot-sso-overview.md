@@ -93,6 +93,6 @@ Notes:
     1. It follows that there would initially be two ways to implement authentication: using token store, or not using it.
 
 1. If the app scope defines a set of permissions and then changes the permissions (or the number of permissions), the existing token would be matched for the permissions as per the scope. If the permissions don't match, the app user would need to consent again (as they had to do the first time they used to bot app).
-1. 
+
 
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
