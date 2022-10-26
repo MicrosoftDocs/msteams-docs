@@ -87,7 +87,7 @@ Steps you can follow to add card actions:
 
 ### Add an action to your Adaptive Card
 
-User universal action, `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. Here's a sample `Action.Execute` action:
+User universal action `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. Here's a sample `Action.Execute` action:
 
 ```
 
