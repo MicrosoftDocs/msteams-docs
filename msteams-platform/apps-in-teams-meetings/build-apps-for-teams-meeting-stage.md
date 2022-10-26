@@ -260,6 +260,26 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
+## Build in-meeting document signing app
+
+You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
+
+You can use an in-meeting signing app to:
+
+- Add documents to be reviewed during a meeting
+- Share documents to be reviewed to main stage
+- Sign documents using the signer’s identity
+
+The participants can review and sign documents, such as purchase agreements and purchase orders.
+
+![in-meeting document signing app](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+
+The following participant roles may be involved during the meeting:
+
+- **Document creator**: This role can add their own documents to be reviewed and signed.
+- **Signer**: This role can sign reviewed documents.
+- **Reader**: This role can view the documents added to the meeting.
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
@@ -278,3 +298,4 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
+* [Step-by-step guide to build an in-meeting document signing app](../sbs-inmeeting-document-signing.yml)
