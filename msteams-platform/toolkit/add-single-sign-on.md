@@ -469,8 +469,6 @@ For more information about TeamsFx SDK, see:
 
 ## Add single sign-on to Teams app for Visual Studio
 
-Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application.
-
 For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
 ## Enable SSO support
@@ -483,13 +481,27 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities:
 
 ### Add SSO using Visual Studio
 
-The following steps help you to add SSO using Teams Toolkit in Visual Studio
+You can follow these steps to add SSO using Teams Toolkit in Visual Studio:
 
-1. Open **Microsoft Visual Studio**.
-1. Open the Microsoft Teams app project.
-1. Select Project.
-1. Select Teams Toolkit.
-1. Select `Add Authentication Code`
+1. Open **Microsoft Visual Studio** and select **Create a new project**.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-proj.png" alt-text="open visual studio code to create a new project":::
+
+1. Select **Microsoft Teams app** project by searching for **Teams** in the search box and then select **Next**.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png" alt-text="Select a Microsoft teams project by searching for teams.":::
+
+1. Select to create a new Teams application, uncheck the **Configure the single sign-on** check box and select **create**.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png" alt-text="select the teams app to be created and unchec sso check box":::
+
+1. Enter your project and Solution name and select **Create**.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png" alt-text="enter project and solution name":::
+
+1. After the project is created with the new Teams application, select **Project** > **Teams Toolkit** > **Add Authentication Code**.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-add-auth-code.png" alt-text="Add authentication code":::
 
 ## Customize your project using Teams Toolkit
 
