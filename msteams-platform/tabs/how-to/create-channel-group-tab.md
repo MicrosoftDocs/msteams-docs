@@ -1,5 +1,5 @@
 ---
-title: Create a channel tab
+title: Create a channel tab or group tab
 author: laujan
 description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams
 ms.localizationpriority: high
@@ -8,9 +8,9 @@ ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Create a channel tab
+# Create a channel tab or group tab
 
-Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
+Channel or group tabs deliver content to channels and group chats, which helps to create collaborative spaces around dedicated web-based content.
 
 Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
 
@@ -26,7 +26,7 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
     npm install yo gulp-cli --global
     ```
 
-2. At the command prompt, install Microsoft Teams App generator by entering the following command:
+2. At the command prompt, install Microsoft Teams app generator by entering the following command:
 
     ```cmd
     npm install generator-teams --global
@@ -44,13 +44,13 @@ Following are the steps to create a channel or group tab:
 
 1. At the command prompt, create a new directory for your channel or group tab.
 
-1. Enter the following command in your new directory to start the Microsoft Teams App generator:
+1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
     ```cmd
     yo teams
     ```
 
-1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file:
+1. Provide your values to a series of questions prompted by Microsoft Teams app generator to update your `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -71,7 +71,7 @@ Following are the steps to create a channel or group tab:
 
     * **Your (company) name? (max 32 characters)**
 
-        Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+        Your company name can be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
     * **Which manifest version would you like to use?**
 
@@ -89,9 +89,9 @@ Following are the steps to create a channel or group tab:
 
         Select **( &ast; ) A Tab**.
 
-    * **The URL where you will host this solution?**
+    * **The URL to host this solution?**
 
-        By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+        By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
 
     * **Would you like show a loading indicator when your app/tab loads?**
 
@@ -164,7 +164,7 @@ gulp build
 
 #### Run your application
 
-1. At the command prompt enter the following command to start a local web server:
+1. At the command prompt, enter the following command to start a local web server:
 
     ```bash
     gulp serve
@@ -174,7 +174,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
-1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
+1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
 
@@ -319,7 +319,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
+At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -333,7 +333,10 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -341,9 +344,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Insert a call to `microsoftTeams.app.initialize();` in the `script` tag.
 
-1. In Visual Studio Solution Explorer go to the **Pages** folder and open **Tab.cshtml**
+1. In Visual Studio Solution Explorer, go to the **Pages** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml** the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -510,7 +513,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you see the following code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you, see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -532,15 +535,15 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Models
 
-**ChannelGroup.cs** presents a Message object and methods that will be called from the controllers during configuration.
+**ChannelGroup.cs** presents a message object and methods that can be called from the controllers during configuration.
 
 #### Views
 
 These are the different views in ASP.NET Core MVC:
 
-* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** can be displayed as the home page for your application.
 
-* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It will also reference the Teams Library.
+* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements that also reference the Teams Library.
 
 #### Controllers
 
@@ -550,7 +553,7 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
+At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -564,7 +567,10 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -572,9 +578,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Insert a call to `microsoftTeams.app.initialize();` in the `script` tag.
 
-1. In Visual Studio Solution Explorer go to the **Tab** folder and open **Tab.cshtml**
+1. In Visual Studio Solution Explorer, go to the **Tab** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml** the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 

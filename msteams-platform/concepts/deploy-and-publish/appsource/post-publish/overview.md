@@ -1,6 +1,6 @@
 ---
 title: Maintain and support your published app
-description: Learn to maintain your published Microsoft Teams app and what to do after your store is listed on the Teams store and AppSource. Analyze app usage, publish updates, promote your app, complete Microsoft 365 Certification.
+description: Maintain your published Microsoft Teams app. Analyze app usage, publish updates, promote your app, complete Microsoft 365 Certification.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
@@ -17,11 +17,6 @@ You can track your app usage in the [Teams app usage report](/office/dev/store/t
 Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
-
-> [!NOTE]
-> Teams store has evolved:
->
-> Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
 
 You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
