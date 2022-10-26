@@ -87,13 +87,13 @@ items:
 
       1. Select **Register**.
 
-         :::image type="content" source="./assets/images/calls-and-meetings/reg-app_1.png" alt-text="Screenshot showing the selection of register." lightbox="./assets/images/calls-and-meetings/reg-app_1.png":::
+         :::image type="content" source="./assets/images/calls-and-meetings/reg-app_2.png" alt-text="Screenshot showing the selection of register." lightbox="./assets/images/calls-and-meetings/reg-app_1.png":::
 
     **To create client secret**
 
     1. In **Overview** page of your bot, select **Essentials** and save the **Application client ID** (Microsoft App ID) for future reference.
     
-       :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_1.png" alt-text="Screenshot showing the Microsoft App ID.":::
+       :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot showing the Microsoft App ID.":::
     
     1. In **Manage**, select **Certificates & secrets**.
     1. Select **Client secrets** > **New client secret**.
@@ -115,8 +115,6 @@ items:
 
         > [!NOTE]
         > Run Windows PowerShell PSI as an administrator and execute the script.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/PowerShell-script.png" alt-text="Screenshot shows the PowerShell script.":::
 
         ```PowerShell
 
@@ -309,7 +307,7 @@ items:
     1. In the `manifest.json` file, replace **{id}, {BotId}** with your Microsoft App ID.
     1. Add ngrok url in **validDomains** excluding https:// and save.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot showing the manifest.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot showing the manifest." lightbox= "./assets/images/calls-and-meetings/manifest_1.png" :::
 
     1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
@@ -341,15 +339,15 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
-    1. Select **Create Call** to create a call.
+    1. You can ask bot to create a call.
 
         :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="Screenshot showing the placed call.":::
 
-    1. Select **Transfer Call** to transfer the call.
+    1. You can ask bot to transfer the call.
 
         :::image type="content" source="./assets/images/calls-and-meetings/transfer-call.png" alt-text="Screenshot shows the transfer call.":::
 
-    1. Select **Join scheduled meeting** to schedule the meeting and **Invite Participant to meeting** to invite the participants.
+    1. You can ask bot to schedule a meeting and invite the participants.
 
         :::image type="content" source="./assets/images/calls-and-meetings/meeting.png" alt-text="Screenshot shows the meeting bot.":::
 
