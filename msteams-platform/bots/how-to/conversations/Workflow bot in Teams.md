@@ -13,7 +13,7 @@ A workflow bot allows users to interact with an Adaptive Card, enabled by the Ad
 Advantages of creating a workflow bot:
 
 1. Automates business processes and repetitive workflows without leaving the context of conversations.
-1. Sequential workflow supports users through various cards progressively without sending other cards.
+1. Sequential workflow supports users through various cards progressively without sending additional cards.
 1. Provides user-specific views and are always up-to-date.
 1. Simplified programming model with TeamsFx SDK.
 
@@ -190,11 +190,11 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif":::
 
-* The response card is replaced by the action card for all users in the chat, and they can view this response card `AdaptiveCardResponse.ReplaceForAll`.
+* The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.gif" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.gif":::
 
-* The response card is sent as a separate message in the conversation that can't replace the action card. All users in the chat can view this response card `AdaptiveCardResponse.NewForAll`.
+* The response card is sent as a separate message in the conversation that can't replace the action card. All users in the chat can view the response card `AdaptiveCardResponse.NewForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.gif" alt-text="Response card sent for all as new." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.gif":::
 
@@ -254,11 +254,11 @@ Steps to implement this pattern with TeamsFx SDK:
 
 #### Enable refresh in base Adaptive Card
 
-As illustrated, user-specific views are refreshed from a base card, the card2 is refreshed from card1. So you need to enable auto-refresh on the base card, such as the card1. There are two options to achieve this:
+As illustrated, user-specific views are refreshed from a base card, card2 is refreshed from card1. So you need to enable auto-refresh on the base card, such as the card1. There are two options to achieve this:
 
 * First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. So you can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. In the following sample that returns a base card as command response that can auto-refresh to specific user, such as the command sender. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
-  1. `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](../get-teams-context.md).
+  1. `userIds`: A set of user MRIs for those who can trigger auto refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?branch=pr-en-us-7291&tabs=dotnet).
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
