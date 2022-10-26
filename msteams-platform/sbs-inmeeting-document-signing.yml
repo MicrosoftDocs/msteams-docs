@@ -125,7 +125,7 @@ items:
 
     7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
-    Your app is registered in Azure AD. You should now have app ID for your app.
+    Your app is registered in Azure AD. You should now have the app ID for your app.
 
     ## To create a tunnel for local web server
 
@@ -299,7 +299,7 @@ items:
 
          1. Select **Configure**.
 
-    You have completed Azure AD app registration and configuration.
+    You have completed Azure AD app registration and configuration.v
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -413,11 +413,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/install-meeting-signing.png" alt-text="Install meeting signing app"::: 
 
-       Now Meeting Signing app is visible in the meeting window. 
+       Now the Meeting Signing app is visible in the meeting window.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png" alt-text="Meeting signing app":::         
 
-    1. Go the meeting chat in Teams, and select **Meeting Signing** tab, and then select **Create Documents**.
+    1. Go to the meeting chat in Teams, and select **Meeting Signing** tab, and then select **Create Documents**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Create Documentation"::: 
 
@@ -442,7 +442,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png" alt-text="Teams Login after Consent"::: 
 
-       In Teams, you'll get notification for successfully creating the document.
+       In Teams, you'll get a notification for successfully creating the document.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Doc Success Upload":::              
 
@@ -470,4 +470,4 @@ items:
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="final output for Meeting Signing app"::: 
 
 - content: |
-    Congratulation! You've completed the tutorial to create the **In-meeting Signing** app!
+    Congratulations! You've completed the tutorial to create the **In-meeting Signing** app!
