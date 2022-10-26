@@ -232,7 +232,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://*******.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `********.ngrok.io` is the new ngrok subdomain name.
+        > `For example: api://*******.ngrok.io/00000000-000-0000-0000-000000000`, where `********.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
@@ -362,7 +362,7 @@ items:
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest_1.png" alt-text="manifest file.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest_1.png" alt-text="manifest file." lightbox="./assets/images/sbs-messagingextension-action/manifest_1.png" :::
 
 
 - title: Build and run the service
