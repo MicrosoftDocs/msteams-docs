@@ -16,7 +16,7 @@ items:
   content: |
     Message extensions allow users to interact with web services in the Microsoft Teams client. They help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
-    **Key features of action based message extension**
+    **Key features of action based message extension:**
 
     * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
@@ -61,13 +61,13 @@ items:
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, add messaging endpoint, and then perform the following steps:
 
-    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create Azure bot resource to register bot with Azure bot service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    * Add messaging endpoint to the created ngrok tunnel.
 
-    **To create Azure Bot resource**
+    **To create Azure bot resource**
 
     1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
@@ -224,7 +224,7 @@ items:
        :::image type="content" source="./assets/images/sbs-messagingextension-action/set-link_1.png" alt-text="set link.":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://2bb1****.ngrok.io/{AppID}`</br>
+        `api://*******.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
@@ -232,7 +232,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+        > `For example: api://*******.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `********.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
@@ -264,7 +264,7 @@ items:
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://2bb1****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://*******.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/scopes_1.png" alt-text="scopes."::: 
   
@@ -299,7 +299,7 @@ items:
 
     1. Select **Microsoft Graph**. 
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/add-permission_2.png" alt-text="Add permission.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/add-permission_2.png" alt-text="Add permission." lightbox= "./assets/images/sbs-messagingextension-action/add-permission_2.png":::
 
     1. Select **Delegated permissions**. 
     
@@ -322,7 +322,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web.":::
+            :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web." lightbox="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://*******.ngrok.io/auth-end`. </br>
