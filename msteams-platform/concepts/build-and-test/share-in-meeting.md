@@ -20,13 +20,9 @@ During the meeting, when a user selects the **Share in meeting** button from the
 
 ## Enable share in meeting
 
-You can enable share in meeting button using in three ways:
+The following are three different methods to enable share in meeting, you can use one of the method to enable share in meeting:
 
-* [teams-share-in-meeting-button](#teams-share-in-meeting-button)
-* [async shareToMicrosoftTeams.renderButtons(options)](#async-sharetomicrosoftteamsrenderbuttonsoptions)
-* [async shareInMeetingClickHandler(content: IShareInMeetingContent)](#async-shareinmeetingclickhandlercontent-ishareinmeetingcontent)
-
-### teams-share-in-meeting-button
+### Method 1
 
 The following steps scans your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
@@ -55,7 +51,7 @@ The following steps scans your web page to locate any HTML elements with the cla
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
 
-### async shareToMicrosoftTeams.renderButtons(options)
+### Method 2
 
 `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
@@ -83,7 +79,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    }  
    ```
 
-### async shareInMeetingClickHandler(content: IShareInMeetingContent)
+### Method 3
 
 `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
@@ -122,7 +118,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 ## Deep link format
 
-When you select share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
+When you select the share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
