@@ -272,7 +272,7 @@ You can use an in-meeting signing app to:
 
 The participants can review and sign documents, such as purchase agreements and purchase orders.
 
-![in-meeting document signing app](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="In-meeting document signing app":::
 
 The following participant roles may be involved during the meeting:
 
@@ -302,4 +302,3 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 * [Advanced meeting APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
-* [Step-by-step guide to build an in-meeting document signing app](../sbs-inmeeting-document-signing.yml)

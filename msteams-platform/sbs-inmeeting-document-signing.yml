@@ -262,14 +262,13 @@ items:
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permissions.png" alt-text="Delegated-permission":::
 
         1. From the list of permissions, select the following:</br>
-         * **email**
-         * **offline_access**
-         * **OpenId**
-         * **profile**
-         * **User.Read**
-         * **User.ReadBasic.All**
-
-        1. Select **Add permissions**.  
+           * **email**
+           * **offline_access**
+           * **OpenId**
+           * **profile**
+           * **User.Read**
+           * **User.ReadBasic.All**
+         1. Select **Add permissions**.  
 
     **To set redirect URI for configuring platform**
 
@@ -299,7 +298,7 @@ items:
 
          1. Select **Configure**.
 
-    You have completed Azure AD app registration and configuration.v
+    You have completed Azure AD app registration and configuration.
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
