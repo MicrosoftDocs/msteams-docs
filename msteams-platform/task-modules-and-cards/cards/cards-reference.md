@@ -271,12 +271,18 @@ The following code shows an example of an Adaptive Card:
 
 Loop components are interactive units that sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, and make decisions together. [Send a component](https://support.microsoft.com/office/send-a-loop-component-in-teams-chat-ca5252e7-8201-4490-a6d9-59f20df864c6) like a table, task list, or paragraph where everyone in your chat can edit inline and see the changes as they're made. For more information on Loop component, see [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
 
-Adaptive Card based Loop component has an actionable content and enable users to make quick updates without switching context. Any changes made in the Adaptive Card based Loop component are synced across the Teams where the Adaptive Card is shared.
+Adaptive Card based Loop component has actionable content and enables users to make quick updates without switching context. Any changes made in the Adaptive Card based Loop component are synced across the Teams where the Adaptive Card is shared.
 
 > [!NOTE]
 > Adaptive Card based Loop component is available from Adaptive Card version 1.6.
 
-To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` to the Adaptive Card schema. If you want your bot to post an Adaptive Card based Loop component, add the `metadata` and `webUrl` to the card payload.
+Following is an example of an Adaptive Card based loop component:
+
+:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
+
+To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` properties to the [Adaptive Card schema](https://adaptivecards.io/explorer/). If you want your bot to post an Adaptive Card based Loop component, add the `metadata` and `webUrl` properties to the card payload.
+
+Following table describes the `metadata` and `webUrl` properties:
 
 |Property|Type|Description|Required|
 |---|---|---|---|
@@ -457,10 +463,6 @@ The following code shows an example of an Adaptive Card based Loop component wit
   }
 }
 ```
-
-Following is an example of an Adaptive Card based loop component:
-
-:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
 
 #### Additional information on Adaptive Cards
 
