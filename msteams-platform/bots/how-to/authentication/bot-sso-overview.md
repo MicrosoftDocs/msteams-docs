@@ -61,6 +61,9 @@ The following image shows how SSO works when a Teams app user attempts to access
 -->
 Flow for authentication app user being authenticated for the first time:
 
+Message to Teams client > Teams client to Teams bot service > Bot > Token store > If not found at token store -> check Cache for valid token > If token isn't in cache (or expired) -> Bot sends OAuth card to Token store to get sign in url for OAuth card for the app user > Teams client gets OAuth card and sends it for Token exchange request > Bot seeks consent to exchange token > if consent fails -> Teams client shows the sign-in prompt -> Teams client/Bot saves the token in Token store
+
+
 1. An app user attempts to access the bot app by sending a message to the Teams client.
     1. The message that app user sends is received by Teams client, which sends it to the bot service.
     1. If the app user's consent isn't needed, the bot service receives a token, and then it's sent to the Bot Framework token service.
