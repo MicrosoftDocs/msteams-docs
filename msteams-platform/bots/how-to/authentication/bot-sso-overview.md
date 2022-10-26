@@ -59,7 +59,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 | 5 | Bot Framework Token service → Azure AD | The Bot Framework Token service requests Azure AD for token exchange. It also validates the access token that it receives from Azure AD for the app user, and stores it. |
 | 6 | Bot Framework Token service → Bot service | The Bot Framework Token service shares the validated access token with the Bot service, and the app user is given access. The app user doesn't need to consent for Microsoft Graph permissions as the app user can access them using the access token received from Azure AD. |
 
-Flow for authentication app user
+Flow for authentication app user being authenticated for the first time:
 
 1. An app user attempts to access the Teams bot app by sending a message to the bot service.
     1. The message that app user sends is received by Teams client, which sends it to the bot service.
@@ -74,7 +74,5 @@ Flow for authentication app user
     1. The Sign in button pops up in Teams.
     1. The Sign in page is rendered.
     1. The app user signs in and granted access to the bot from Azure AD.
-    1. 
-
 
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
