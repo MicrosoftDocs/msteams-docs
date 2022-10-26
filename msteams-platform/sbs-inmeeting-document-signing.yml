@@ -61,7 +61,7 @@ items:
        > [!NOTE]
        > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
-       Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+       Do you already have a tenant, and do you have admin access? Let's check if you really do!
 
     To verify sideload apps in Teams:
 
@@ -89,7 +89,7 @@ items:
     
     ## Create an app registration in Azure AD
 
-    Register a new app in Azure AD, and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
+    Register a new app in Azure AD and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
 
     ### To register a new app in Azure AD
 
@@ -108,7 +108,7 @@ items:
 
         The **Register an application** page appears.
 
-    4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage, if you want to.
+    4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage if you want to.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="App registration page on Azure AD Portal.":::
 
@@ -125,7 +125,7 @@ items:
 
     7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
-    Your app is registered in Azure AD. You should now have app ID for your app.
+    Your app is registered in Azure AD. You should now have the app ID for your app.
 
     ## To create a tunnel for local web server
 
@@ -220,7 +220,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png" alt-text="Add client application 2":::
 
-        1. Enter the **Client ID** for for the application that you want to authorize. It's the application ID of the client that you want to authorize. Use the following IDs for client applications that you want to authorize:
+        1. Enter the **Client ID** for the application that you want to authorize. It's the application ID of the client application that you want to authorize. Use the following IDs for client applications for authorizing them:
 
            | **Client ID** | **For authorizing** |
            | --- | --- |
@@ -299,7 +299,7 @@ items:
 
          1. Select **Configure**.
 
-    You have completed Azure AD app registration and configuration.
+    You have completed Azure AD app registration and configuration.v
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -413,11 +413,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/install-meeting-signing.png" alt-text="Install meeting signing app"::: 
 
-       Now Meeting Signing app is visible in the meeting window. 
+       Now the Meeting Signing app is visible in the meeting window.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png" alt-text="Meeting signing app":::         
 
-    1. Go the meeting chat in Teams, and select **Meeting Signing** tab, and then select **Create Documents**.
+    1. Go to the meeting chat in Teams, and select **Meeting Signing** tab, and then select **Create Documents**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Create Documentation"::: 
 
@@ -442,7 +442,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png" alt-text="Teams Login after Consent"::: 
 
-       In Teams, you'll get notification for successfully creating the document.
+       In Teams, you'll get a notification for successfully creating the document.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Doc Success Upload":::              
 
@@ -470,4 +470,4 @@ items:
        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="final output for Meeting Signing app"::: 
 
 - content: |
-    Congratulation! You've completed the tutorial to create the **In-meeting Signing** app!
+    Congratulations! You've completed the tutorial to create the **In-meeting Signing** app!
